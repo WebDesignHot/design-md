@@ -1,0 +1,797 @@
+---
+name: HP
+tagline: Cyan-blue `#0096d6` HP-circle on white with Forma DJR — the 84-year-old technology brand''s mainstream face.
+author: webdesignhot
+source_url: https://www.hp.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace, media]
+tags: [light, technology, hardware, mainstream, corporate, sans, business]
+preview_swatch: ['#ffffff', '#0096d6', '#1c1c1c']
+related: [microsoft, ibm, dell]
+description: 'HP is the 84-year-old technology brand''s mainstream consumer face — a paper-white canvas (`#ffffff`) anchored by the iconic **HP-circle** wordmark in `#0096d6` cyan-blue (the same hex Hewlett-Packard adopted in the 2008 brand refresh and has barely budged since). Type runs **Forma DJR**, the proprietary humanist sans Pentagram designed for HP in 2016 — a friendlier, more open Helvetica with subtle inkwell terminals. The brand voice is "technology for everybody": laptops, printers, monitors, gaming Omen, professional Z workstations all share the same blue-on-white canvas with sentence-case Forma headlines. Where Apple is premium-minimal and Razer is gamer-aggressive, HP is approachable-mainstream — the technology brand your parents and your kids both recognise.'
+
+colors:
+  bg: '#ffffff'                  # paper-white canvas
+  bg-soft: '#f7f7f7'             # near-white surface tier 1
+  bg-cool: '#f0f4f8'             # cool-grey surface tier 2
+  bg-deep: '#1c1c1c'             # near-black inverted band, gaming Omen sub-brand
+  bg-omen: '#000000'             # Omen gaming sub-brand black
+  surface: '#ffffff'             # default card
+  surface-soft: '#f7f7f7'        # raised card / popover floor
+  surface-cool: '#f0f4f8'        # alternating section band
+  surface-strong: '#e0e6ed'      # hovered card, selected sidebar
+  surface-input: '#ffffff'       # form input fill
+  text: '#1c1c1c'                # primary body
+  text-strong: '#000000'         # display headlines
+  text-soft: '#5d6770'           # secondary metadata
+  text-faint: '#8a939d'          # tertiary captions
+  text-disabled: '#b8c0c8'
+  text-on-dark: '#ffffff'
+  text-link: '#0096d6'           # link blue (HP cyan)
+  brand: '#0096d6'               # HP Cyan — the iconic logo blue
+  brand-light: '#33acdd'         # lighter brand
+  brand-deep: '#005d83'          # deeper brand for hero gradients
+  brand-darkest: '#002d4c'       # darkest brand
+  brand-hover: '#0080b8'         # hovered brand
+  brand-active: '#005d83'        # pressed brand
+  brand-gradient: 'linear-gradient(135deg, #0096d6 0%, #005d83 100%)' # signature HP gradient
+  on-brand: '#ffffff'
+  cta-primary: '#0096d6'         # HP cyan CTA
+  cta-primary-hover: '#0080b8'
+  omen-red: '#e60000'            # Omen gaming sub-brand accent
+  omen-red-hover: '#c40000'
+  omen-deep: '#1c1c1c'           # Omen gaming dark surface
+  z-charcoal: '#3c4148'          # Z workstation pro brand accent
+  link-default: '#0096d6'
+  link-visited: '#0096d6'
+  link-hover: '#0080b8'
+  border: '#e0e6ed'              # 1px cool-grey hairline
+  border-soft: '#f0f4f8'         # softer divider
+  border-strong: '#0096d6'       # focused input
+  scrim: 'rgba(0,0,0,0.5)'
+  shadow-soft: 'rgba(0,90,150,0.06)'
+  shadow-card: 'rgba(0,90,150,0.1)'
+  shadow-elev: 'rgba(0,90,150,0.15)'
+  shadow-modal: 'rgba(0,0,0,0.25)'
+  badge-new: '#0096d6'
+  badge-deal: '#e60000'          # red deal/sale badge
+  badge-eco: '#2d8659'           # eco-conscious green
+  badge-energy-star: '#1d4f9e'   # ENERGY STAR partnership blue
+  price: '#1c1c1c'
+  price-strikethrough: '#8a939d'
+  price-discount: '#e60000'
+  rating-star: '#ff9500'
+  success: '#2d8659'
+  warning: '#ff9500'
+  danger: '#e60000'
+  info: '#0096d6'
+
+typography:
+  display:
+    family: '"Forma DJR Display", "Forma DJR Banner", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Forma DJR Text", "Forma DJR Micro", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: '"Consolas", "SF Mono", monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 64, weight: 700, lineHeight: 1.1,  tracking: '-0.015em', family: display, notes: 'Homepage hero "Reinvent how you work"' }
+    display-xl:      { size: 48, weight: 700, lineHeight: 1.15, tracking: '-0.01em', family: display, notes: 'Product launch hero, category H1' }
+    display-lg:      { size: 36, weight: 700, lineHeight: 1.2,  tracking: '-0.005em', family: display, notes: 'Section banner' }
+    display-md:      { size: 28, weight: 700, lineHeight: 1.25, tracking: '0',       family: display, notes: 'Product detail H1' }
+    display-sm:      { size: 22, weight: 500, lineHeight: 1.3,  tracking: '0',       family: display, notes: 'Card title, modal heading' }
+    section-head:    { size: 14, weight: 700, lineHeight: 1.2,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Section bands "LAPTOPS", "PRINTERS"' }
+    sub-section:     { size: 18, weight: 500, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Sub-heading within product page' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',       family: body, notes: 'Hero supporting copy' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',       family: body, notes: 'Default body' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Sidebar copy, spec list' }
+    body-xs:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Caption, footer, legal' }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.0,  tracking: '0',       family: display, notes: 'Top nav: Shop · Support · Print Solutions' }
+    sub-nav-link:    { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',       family: display, notes: 'Sub-nav category labels' }
+    button-cta:      { size: 15, weight: 500, lineHeight: 1.0,  tracking: '0',       family: display, notes: 'Add to cart, Buy Now' }
+    button-md:       { size: 14, weight: 500, lineHeight: 1.0,  tracking: '0',       family: display, notes: 'Compare, Wishlist' }
+    button-sm:       { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',       family: display, notes: 'Inline pills, filters' }
+    badge:           { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: '"NEW", "SALE", "ENERGY STAR"' }
+    price:           { size: 22, weight: 700, lineHeight: 1.0,  tracking: '-0.005em', family: display, opentype: ['tnum'], notes: 'Product price (HP renders prices large)' }
+    spec-label:      { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0',       family: body, notes: 'Spec table label' }
+    spec-value:      { size: 16, weight: 500, lineHeight: 1.4,  tracking: '0',       family: body, opentype: ['tnum'], notes: 'Spec value' }
+    code:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',       family: mono, notes: 'Setup steps' }
+
+radius:
+  none: 0
+  micro: 2
+  sm: 4            # tags, small buttons
+  md: 6            # default cards (HP cards run 6px not 8px)
+  lg: 12           # featured product card
+  xl: 16           # hero card, modal
+  pill: 9999       # primary CTAs, profile avatars
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 96   # HP runs a tall 2-tier nav
+  main-nav-height: 56
+  promo-bar-height: 40 # dark promotional band above main nav
+  sub-nav-height: 48
+  product-card: '320x460'
+  hero-banner: '1920x720'
+
+components:
+  button-primary:
+    bg: '#0096d6'
+    color: '#ffffff'
+    radius: 9999
+    padding: '12px 28px'
+    font: button-cta
+    border: 'none'
+    hover-bg: '#0080b8'
+    box-shadow: '0 1px 3px rgba(0,90,150,0.1)'
+    use: '"Add to Cart" / "Buy Now" — HP''s primary cyan-blue pill CTA. White label on cyan fill.'
+  button-primary-hover:
+    bg: '#0080b8'
+    color: '#ffffff'
+    box-shadow: '0 4px 12px rgba(0,150,214,0.25)'
+    use: 'Hover state — deeper cyan + stronger drop shadow.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#0096d6'
+    radius: 9999
+    padding: '12px 28px'
+    font: button-cta
+    border: '1px solid #0096d6'
+    hover-bg: '#f0f4f8'
+    use: 'Outline pill — "Compare" / "Learn more" secondary action.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#0096d6'
+    radius: 0
+    padding: '8px 0'
+    font: button-md
+    use: 'Inline text-link with arrow — "Shop the lineup →".'
+  button-omen:
+    bg: '#e60000'
+    color: '#ffffff'
+    radius: 9999
+    padding: '12px 28px'
+    font: button-cta
+    hover-bg: '#c40000'
+    use: 'Omen gaming sub-brand red CTA — only on Omen pages.'
+  product-card:
+    bg: '#ffffff'
+    color: '#1c1c1c'
+    radius: 6
+    padding: '20px'
+    border: '1px solid #e0e6ed'
+    hover-shadow: '0 8px 24px rgba(0,90,150,0.1)'
+    width: 320
+    use: 'Standard product card — white floor with cool-grey hairline, product hero image, title 18/500 dark, large 22/700 price (HP emphasises price), spec strip (CPU/RAM/Storage), "Add to Cart" CTA. Hover lifts a soft cool-tinted shadow.'
+  product-card-featured:
+    bg: '#ffffff'
+    color: '#1c1c1c'
+    radius: 12
+    padding: '32px'
+    border: '1px solid #e0e6ed'
+    box-shadow: '0 8px 24px rgba(0,90,150,0.1)'
+    use: 'Featured product card — larger 32px padding, deeper shadow, gradient floor on accents.'
+  hero-card:
+    bg: 'linear-gradient(135deg, #0096d6 0%, #005d83 100%)'
+    color: '#ffffff'
+    radius: 16
+    padding: '64px 48px'
+    use: 'Brand-gradient hero — cyan to deep-blue diagonal, white headline left, product right.'
+  promo-bar:
+    bg: '#1c1c1c'
+    color: '#ffffff'
+    height: 40
+    padding: '0 24px'
+    font: body-sm
+    use: 'Dark promo band above main nav — "Free shipping on orders $25+ · Save up to 40% on select laptops" in 14/400 white. Click-through to deals page.'
+  spec-strip:
+    bg: '#f7f7f7'
+    color: '#1c1c1c'
+    radius: 6
+    padding: '12px 16px'
+    use: 'Inline spec strip on product cards — 4 spec values (CPU · RAM · Storage · Display) on a soft grey floor, separated by hairline dividers.'
+  badge-new:
+    bg: '#0096d6'
+    color: '#ffffff'
+    radius: 4
+    padding: '4px 10px'
+    font: badge
+    use: '"NEW" cyan pill badge.'
+  badge-sale:
+    bg: '#e60000'
+    color: '#ffffff'
+    radius: 4
+    padding: '4px 10px'
+    font: badge
+    use: '"SALE" or "SAVE $200" red pill.'
+  badge-energy-star:
+    bg: 'transparent'
+    color: '#1d4f9e'
+    radius: 4
+    padding: '4px 10px'
+    border: '1px solid #1d4f9e'
+    font: badge
+    use: '"ENERGY STAR" certified outline badge — partnership signal.'
+  badge-eco:
+    bg: 'transparent'
+    color: '#2d8659'
+    radius: 4
+    padding: '4px 10px'
+    border: '1px solid #2d8659'
+    font: badge
+    use: '"EPEAT GOLD" / "OCEAN-BOUND PLASTIC" eco green outline.'
+  text-input:
+    bg: '#ffffff'
+    color: '#1c1c1c'
+    radius: 6
+    height: 48
+    padding: '12px 16px'
+    border: '1px solid #e0e6ed'
+    focus-border: '1px solid #0096d6'
+    focus-shadow: '0 0 0 3px rgba(0,150,214,0.15)'
+    font: body-md
+    use: 'Form input — white floor, cool-grey hairline, focus lights cyan border + glow ring.'
+  search-bar:
+    bg: '#f7f7f7'
+    color: '#1c1c1c'
+    radius: 9999
+    height: 48
+    padding: '12px 16px 12px 48px'
+    border: '1px solid transparent'
+    use: 'Top-bar search — soft-grey pill with magnifier icon left.'
+  primary-nav:
+    bg: '#ffffff'
+    color: '#1c1c1c'
+    height: 56
+    border-bottom: '1px solid #e0e6ed'
+    use: 'Top nav — HP-circle logo anchored left in cyan, "Shop · Support · Print Solutions · Business · Deals" in 14/500 sentence-case, search/account/cart flush right.'
+  hp-logomark:
+    bg: 'transparent'
+    color: '#0096d6'
+    use: 'HP-circle logomark — the iconic cyan circle with "hp" wordmark inside. 32px on nav, scales up to 64px on hero. Always cyan on white, always white on dark/gradient.'
+  modal-backdrop:
+    bg: 'rgba(0,0,0,0.5)'
+    use: 'Modal scrim.'
+  modal-surface:
+    bg: '#ffffff'
+    color: '#1c1c1c'
+    radius: 16
+    box-shadow: '0 24px 48px rgba(0,0,0,0.25)'
+    use: 'Modal floor.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  card-hover: 'product card lifts -2px Y + drop shadow deepens to 0 8px 24px rgba(0,90,150,0.1) over 250ms'
+  cta-press: 'button scales 0.98 + shadow tightens over 150ms on :active'
+  carousel-slide: 'product carousel slides 400ms ease-emphasized'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — card lift suppressed; transitions become opacity-only.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,90,150,0.06) 0 1px 3px'
+  soft: 'rgba(0,90,150,0.1) 0 8px 24px'
+  card: 'rgba(0,90,150,0.15) 0 12px 32px'
+  modal: 'rgba(0,0,0,0.25) 0 24px 48px'
+  ring: '0 0 0 3px rgba(0,150,214,0.15)'
+
+accessibility:
+  contrast-text-on-bg: 16.5         # #1c1c1c on #ffffff — AAA
+  contrast-strong-on-bg: 21.0       # #000000 on #ffffff — AAA
+  contrast-soft-on-bg: 7.0          # #5d6770 on #ffffff — AAA
+  contrast-link-on-bg: 4.5          # #0096d6 on #ffffff — AA
+  contrast-cta-text: 4.5            # #ffffff on #0096d6 — AA
+  contrast-faint-on-bg: 3.4         # #8a939d on #ffffff — AA at large sizes
+  focus-ring: '3px rgba(0,150,214,0.15) outset glow + 1px solid #0096d6 border'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab traverses promo-bar → logo → primary nav → search → utilities → main → footer; Esc closes modals; Enter activates.'
+
+dark-mode: optional   # HP main consumer site is light-only; Omen gaming sub-brand uses #000000/#1c1c1c dark theme
+
+lineage:
+  summary: |
+    HP''s visual lineage runs through 84-year-old American technology corporate trade dress (founded 1939; the cyan-circle logomark adopted in the 2008 Moving Brands refresh), mainstream consumer-electronics retail (the page is engineered for parents, students, IT directors, and small business owners simultaneously), and Pentagram corporate identity work (the 2016 Forma DJR commission joins a lineage that includes Mastercard, Slack, Asana). The current site solidified around 2018 with Forma DJR Display in headlines and the simplified cyan-on-white surface. Brand position: mainstream technology — informative, friendly, broadly accessible.
+  influences:
+    - name: Pentagram (Forma DJR commission, 2016)
+      role: Pentagram-commissioned proprietary humanist sans with optical sizing.
+      url: https://www.pentagram.com/work/hewlett-packard
+    - name: Moving Brands (2008 brand redesign)
+      role: The cyan-circle HP logomark established in the 2008 brand refresh.
+      url: https://www.movingbrands.com
+    - name: Apple consumer hardware photography
+      role: White seamless with pastel shadow pools influence on HP product imagery.
+      url: https://www.apple.com
+    - name: Best Buy / Staples retail
+      role: Mainstream electronics merchandising layout — price-forward with spec-strip card pattern.
+      url: https://www.bestbuy.com
+    - name: Microsoft Surface
+      role: Competing premium consumer technology brand with parallel light-canvas sans-serif system.
+      url: https://www.microsoft.com/surface
+    - name: Dell
+      role: Direct competitor in commercial PC market with parallel light-canvas blue-accent system.
+      url: https://www.dell.com
+---
+
+## 1. Visual Theme & Atmosphere
+
+HP is the 84-year-old technology brand's mainstream face — Hewlett-Packard founded in 1939 in a Palo Alto garage, now a global hardware brand whose laptops, printers, and monitors live in nearly every classroom, home office, and corporate procurement order in the world. The page reflects that scale through restraint: a paper-white canvas (`#ffffff`) anchored by the iconic **HP-circle** wordmark in **HP Cyan** (`#0096d6`) — the same hex Hewlett-Packard adopted in the 2008 brand refresh designed by Moving Brands and has barely budged since.
+
+The brand voice is **technology for everybody**. Headlines run **Forma DJR Display** at 48–64px Bold 700, sentence-case, with subtle negative tracking. Forma DJR is the proprietary humanist sans Pentagram designed for HP in 2016 (the David Jonathan Ross cut, hence "DJR"). It reads as a friendlier, more open Helvetica with subtle inkwell terminals — designed specifically to give HP a typographic voice between Microsoft's Segoe (too system-utility) and Apple's San Francisco (too premium-minimal). The result is approachable corporate.
+
+Product photography is **mainstream-clean**: every laptop is shot at 3/4 angle on white seamless with a soft cool-tinted shadow pool beneath. HP's product family is broad — consumer Pavilion, premium Spectre, professional EliteBook, gaming Omen, workstation Z series, printers across every price tier — and the marketing site standardises the photography across all of them, so a Spectre x360 shoots like an Omen 16 shoots like a LaserJet Pro: same canvas, same lighting, same shadow tone.
+
+The interaction language is **conservative-clean**. Cards are 6px-radius rectangles (slightly less rounded than Logitech's 12px) with cool-grey hairlines. Primary CTAs are pill-shaped (9999 radius) cyan blue. Spec strips appear inline on product cards — a 4-cell horizontal block with CPU / RAM / Storage / Display — because HP customers are price-and-spec shoppers more than gaming enthusiasts. Prices render at **22/700** (HP's prices are notably larger than its competitors; they're a primary purchase signal).
+
+Sub-brands carry slight variations: **Omen** (gaming) flips to a `#000000` dark canvas with a `#e60000` red CTA. **Z** (workstations) introduces a `#3c4148` charcoal accent. **Spectre** (premium consumer) deepens to a navy gradient. But the underlying typographic and chrome system stays the same — HP is one parent brand expressed through colour-tonal sub-brand variants.
+
+**Key Characteristics:**
+- Paper-white `#ffffff` canvas with cool-grey `#e0e6ed` hairline borders
+- HP Cyan `#0096d6` — the iconic logomark colour, used for every brand accent and primary CTA
+- Forma DJR (Pentagram, 2016) at 700 for headlines, 400 for body — humanist sans with subtle warmth
+- HP-circle logomark anchored top-left on every page in cyan on white
+- Pill-shaped (9999 radius) primary CTAs in cyan
+- 6px-radius cards (slightly less rounded than Logitech / Bose)
+- Large 22/700 price display — HP customers shop on price-and-spec
+- Inline 4-cell spec strip on product cards — CPU · RAM · Storage · Display
+- Dark `#1c1c1c` promotional bar above main nav with rotating deal copy
+- Sub-brand colour variants: Omen red `#e60000`, Z charcoal `#3c4148`, ENERGY STAR `#1d4f9e`
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): the page floor — corporate paper-white
+- **Bg Soft** (`#f7f7f7`): near-white surface tier 1, used for spec strips and alternating bands
+- **Bg Cool** (`#f0f4f8`): cool-grey surface tier 2, used for soft sections
+- **Bg Deep** (`#1c1c1c`): near-black inverted band, promotional bar, Omen sub-brand surface
+- **Bg Omen** (`#000000`): Omen gaming sub-brand pure black
+- **Text Primary** (`#1c1c1c`): soft near-black body
+- **Text Strong** (`#000000`): display headlines
+- **Border** (`#e0e6ed`): 1px cool-grey hairline
+
+### Brand
+- **HP Cyan** (`#0096d6`): the iconic logomark colour and primary brand accent
+- **HP Cyan Light** (`#33acdd`): brighter brand for hover states on icons
+- **HP Cyan Deep** (`#005d83`): deeper brand for gradient stops
+- **HP Cyan Darkest** (`#002d4c`): darkest brand for high-contrast surfaces
+- **Brand Gradient** (`linear-gradient(135deg, #0096d6 0%, #005d83 100%)`): the signature HP gradient on flagship hero bands
+- **Brand Hover** (`#0080b8`): hovered brand for CTAs
+- **Brand Active** (`#005d83`): pressed brand
+
+### Sub-Brand Accents
+- **Omen Red** (`#e60000`): the gaming sub-brand accent — used only on Omen product pages and Omen Gaming Hub
+- **Omen Red Hover** (`#c40000`): hovered Omen
+- **Omen Deep** (`#1c1c1c`): Omen dark canvas
+- **Z Charcoal** (`#3c4148`): Z workstation pro brand accent
+- **Spectre Navy** (`#001a33`): Spectre premium consumer deeper navy
+
+### Interactive
+- **Link** (`#0096d6`): same as brand — HP collapses link into accent
+- **Link Hover** (`#0080b8`): deeper cyan on hover
+- **Link Visited** (`#0096d6`): unchanged
+- **Disabled** (`#b8c0c8`): muted cool-grey
+- **Selected** (`#0096d6`): selected radio / checkbox / tab fill
+
+### Neutral Scale
+- **Text** (`#1c1c1c`) — primary body
+- **Text Strong** (`#000000`) — display headlines
+- **Text Soft** (`#5d6770`) — secondary metadata
+- **Text Faint** (`#8a939d`) — tertiary captions
+- **Text Disabled** (`#b8c0c8`) — disabled labels
+- **Text on Dark** (`#ffffff`) — text on inverted bands
+- **Border** (`#e0e6ed`) — 1px cool-grey hairline
+- **Border Soft** (`#f0f4f8`) — softer divider
+- **Border Strong** (`#0096d6`) — focused input
+
+### Surface & Borders
+HP's depth ladder: `#ffffff` → `#f7f7f7` → `#f0f4f8` → `#e0e6ed`. Four near-whites within 8% lightness. The brand position: stay corporate-bright, let the cyan brand accent and the product photography carry the visual interest.
+
+### Shadow Colors
+**Cool-tinted blue-undertone shadows** with a slightly heavier blue weight than Logitech's. `rgba(0,90,150, *)` base — the blue undertone ties depth to the brand cyan. Modal shadows use neutral `rgba(0,0,0, *)` for stronger emphasis on dialogs.
+
+### Semantic
+- **Success** (`#2d8659`): also EPEAT eco-badge green
+- **Warning** (`#ff9500`): amber warnings
+- **Danger** (`#e60000`): red — also Omen sub-brand and SALE badge
+- **Info** (`#0096d6`): brand cyan doubles as info
+- **Energy Star** (`#1d4f9e`): partnership-specific blue, used only for ENERGY STAR certification badges
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `Forma DJR Display` and `Forma DJR Banner` — the headline cuts of the Pentagram-commissioned Forma DJR family designed by David Jonathan Ross for HP in 2016. Forma DJR was conceived as a corporate humanist sans with optical sizing built in: Banner for poster-scale 100px+ display, Display for headline 32–96px, Text for body 12–24px, Micro for sub-12px caption. Falls back to `"Helvetica Neue", Arial, sans-serif`. Weights: 400 (regular), 500 (medium), 700 (bold).
+
+**Body**: `Forma DJR Text` and `Forma DJR Micro` for sub-12px contexts. The Text cut is optimised for 14–18px readability with subtly inkwell-traced terminals.
+
+**Mono**: `Consolas, "SF Mono", monospace` — appears in technical documentation and BIOS/firmware update steps.
+
+**OpenType features**: `kern`, `liga` enabled by default. `tnum` enabled on price text and spec values. Optical-sizing via `font-variation-settings` where supported.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Forma DJR Display | 64 | 700 | 1.1 | -0.015em | — | Homepage hero "Reinvent how you work" |
+| display-xl | Forma DJR Display | 48 | 700 | 1.15 | -0.01em | — | Product launch hero, category H1 |
+| display-lg | Forma DJR Display | 36 | 700 | 1.2 | -0.005em | — | Section banner |
+| display-md | Forma DJR Display | 28 | 700 | 1.25 | 0 | — | Product detail H1 |
+| display-sm | Forma DJR Display | 22 | 500 | 1.3 | 0 | — | Card title, modal heading |
+| section-head | Forma DJR Display | 14 | 700 | 1.2 | 0.05em | uppercase | "LAPTOPS", "PRINTERS" |
+| sub-section | Forma DJR Display | 18 | 500 | 1.4 | 0 | — | Sub-heading within product |
+| body-lg | Forma DJR Text | 18 | 400 | 1.55 | 0 | — | Hero supporting copy |
+| body-md | Forma DJR Text | 16 | 400 | 1.55 | 0 | — | Default body |
+| body-sm | Forma DJR Text | 14 | 400 | 1.5 | 0 | — | Sidebar copy, spec list |
+| body-xs | Forma DJR Micro | 12 | 400 | 1.4 | 0 | — | Caption, footer, legal |
+| nav-link | Forma DJR Text | 14 | 500 | 1.0 | 0 | — | "Shop · Support · Print Solutions" |
+| sub-nav-link | Forma DJR Text | 13 | 400 | 1.0 | 0 | — | Sub-nav category labels |
+| button-cta | Forma DJR Text | 15 | 500 | 1.0 | 0 | — | Add to cart, Buy Now |
+| button-md | Forma DJR Text | 14 | 500 | 1.0 | 0 | — | Compare, Wishlist |
+| button-sm | Forma DJR Text | 13 | 500 | 1.0 | 0 | — | Inline pills, filters |
+| badge | Forma DJR Display | 11 | 700 | 1.0 | 0.1em | uppercase | "NEW", "SALE", "ENERGY STAR" |
+| price | Forma DJR Display | 22 | 700 | 1.0 | -0.005em | tnum | Product price (HP renders large) |
+| spec-label | Forma DJR Text | 12 | 500 | 1.3 | 0 | — | Spec table label |
+| spec-value | Forma DJR Text | 16 | 500 | 1.4 | 0 | tnum | Spec value |
+| code | Consolas | 13 | 400 | 1.5 | 0 | — | Setup steps |
+
+### Principles
+
+- **Forma DJR's optical sizing is the brand's typographic signature.** Different cuts for Banner / Display / Text / Micro mean a 96px hero and a 12px caption render with proportional weight rather than mechanically scaled glyphs.
+- **Sentence-case headlines.** HP rejects the all-caps display common in tech-aggressive brands. Even hero copy reads "Reinvent how you work" not "REINVENT HOW YOU WORK".
+- **Negative tracking on display.** -0.015em on hero, -0.01em on display-xl, -0.005em on display-lg. The negative tracking compresses Forma's slightly open silhouette.
+- **Price renders large at 22/700.** HP's customers are price-and-spec shoppers — the price is a primary scanning element, not metadata. Forma DJR Display 700 with `tnum` gives prices precise alignment.
+- **Forma DJR Text for body.** The Text cut at 16/400 with 1.55 line-height is the canonical body — slightly more open than Helvetica.
+- **Section heads at 14/700 with 0.05em uppercase tracking** — only marginally tracked. HP doesn't reach for the wide 0.15em tracking that Razer uses; the slim 0.05em tracking signals "label" without shouting.
+- **Open-source fallback: Inter or Mulish.** Forma DJR is proprietary; Inter at 400/500/700 is the closest free analogue.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — HP Cyan pill: solid `#0096d6` fill, white label in 15/500 sentence-case (e.g. "Add to Cart"), 12×28px padding, 9999 radius, soft `0 1px 3px rgba(0,90,150,0.1)` ambient shadow. Hover deepens to `#0080b8` + larger shadow.
+
+**`button-secondary`** — outline pill: white fill, `#0096d6` blue label and 1px border. Hover fills cool-grey `#f0f4f8`.
+
+**`button-tertiary`** — inline link with arrow: `#0096d6` text + "→".
+
+**`button-omen`** — Omen gaming red CTA: `#e60000` solid fill, white label, 9999 pill radius. Used only on Omen sub-brand pages.
+
+### Cards
+
+**`product-card`** — 320×460 with white floor, 1px `#e0e6ed` border, 6px radius, 20px padding. Stack: 16:9 product hero on white, "NEW" / "SALE" badge top-left, title 18/500 dark sentence-case, sub-title 14/400 muted, **22/700 price** (large), inline 4-cell spec strip on `#f7f7f7` floor (CPU · RAM · Storage · Display), "Add to Cart" pill CTA.
+
+**`product-card-featured`** — 32px padding, 12px radius, deeper drop shadow at rest.
+
+**`hero-card`** — full-bleed cyan-to-deep-blue gradient (`#0096d6 → #005d83`), 16px radius, 64×48px padding.
+
+**`spec-strip`** — inline horizontal block on product cards: `#f7f7f7` floor, 12×16px padding, 4 spec values separated by `#e0e6ed` hairline dividers. Each cell: 12/500 muted label above 16/500 dark value. Example: "Intel i7 · 16GB · 512GB SSD · 14" Touch".
+
+### Promotional Bar
+
+**`promo-bar`** — dark `#1c1c1c` band 40px tall above main nav. White text 14/400 with rotating deal copy "Free shipping on orders $25+", "Save up to 40% on select laptops", "Refurbished + free shipping". Click-through anchored right.
+
+### Badges
+
+**`badge-new`** — `#0096d6` cyan pill, white "NEW" label.
+
+**`badge-sale`** — `#e60000` red pill, white "SALE" or "SAVE $200" label.
+
+**`badge-energy-star`** — outline `#1d4f9e` ENERGY STAR partnership blue.
+
+**`badge-eco`** — outline `#2d8659` "EPEAT GOLD" / "OCEAN-BOUND PLASTIC" green eco label.
+
+### Inputs / Forms
+
+**`text-input`** — white floor, 1px `#e0e6ed` border, 6px radius, 48px height. Focus lights cyan border + 3px `rgba(0,150,214,0.15)` glow.
+
+**`search-bar`** — soft-grey pill `#f7f7f7` floor with magnifier icon left, 9999 radius, 48px height.
+
+### Navigation
+
+**`primary-nav`** — 56px tall white floor with `#e0e6ed` bottom border. HP-circle logomark in cyan anchored left at 32px. "Shop · Support · Print Solutions · Business · Deals" labels in 14/500 sentence-case. Search trigger, account, cart flush right.
+
+**`hp-logomark`** — the iconic cyan circle with "hp" wordmark inside, lowercase, in cyan on white surfaces and white on dark/gradient surfaces. Always 1:1 aspect ratio.
+
+### Modals
+
+**`modal-backdrop`** — `rgba(0,0,0,0.5)` translucent.
+
+**`modal-surface`** — white fill, 16px radius, `0 24px 48px rgba(0,0,0,0.25)` deep shadow.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **8px** with 4px sub-steps
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section gap: **80–128px** between major bands
+- Card internal padding: **20–32px**
+- Gutters: **20–24px** between product cards
+
+### Grid & Container
+
+- Max content width: **1440px** with 80–120px outer gutters at wide viewports
+- Product grid: 4 columns at 1280–1440px → 3 → 2 → 1
+- Promo bar: full-bleed at 40px tall above main nav
+- Hero band: full-bleed gradient with content centred at 1280px
+
+### Whitespace Philosophy
+
+HP runs **structured-mainstream**. Marketing pages breathe at 80–128px between bands; product list pages tighten to 48–64px. The rhythm is conservative — generous enough to feel premium, dense enough to ship the broad product family efficiently.
+
+### Section Cadence
+
+Pages alternate **white canvas** (`#ffffff`), **soft-grey bands** (`#f7f7f7`), occasional **cool-grey deep bands** (`#f0f4f8`), and one **gradient brand band** per page (the cyan-to-deep-blue diagonal on flagship hero only).
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Promo bar, full-bleed photography |
+| Micro | 2px | Inset surfaces — rare |
+| Small | 4px | Tags, badges |
+| Medium | 6px | Default cards, inputs |
+| Large | 12px | Featured product card |
+| XL | 16px | Modal surface, hero card |
+| Pill | 9999px | All primary CTAs, search bar |
+
+The radius vocabulary is **slightly squarer than Logitech**. Cards live at 6px (HP) vs 12px (Logitech) — a more conservative corporate posture. Pills for CTAs.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Default for most surfaces |
+| 1 — Ambient | `rgba(0,90,150,0.06) 0 1px 3px` | Default card at rest |
+| 2 — Soft | `rgba(0,90,150,0.1) 0 8px 24px` | Card on hover |
+| 3 — Card | `rgba(0,90,150,0.15) 0 12px 32px` | Featured card |
+| 4 — Modal | `rgba(0,0,0,0.25) 0 24px 48px` | Modal surface |
+
+### Shadow Philosophy
+
+HP's shadows are **cool-tinted with a heavier blue weight** than Logitech's — `rgba(0,90,150, *)` vs Logitech's `rgba(0,32,77, *)`. The deeper saturation reads as more corporate-substantial, less consumer-soft. Modals revert to neutral black for stronger emphasis.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 150ms | Button colour swap |
+| Standard | 250ms | Card hover |
+| Slow | 400ms | Carousel, modal enter |
+
+### Per-Component Recipes
+
+- **Card hover**: -2px Y + shadow deepens over 250ms.
+- **CTA hover**: fill deepens + shadow grows over 150ms.
+- **CTA active**: scales 0.98 + shadow tightens over 150ms.
+- **Promo bar rotation**: copy fades through deal messages over 400ms every 5s.
+- **Modal enter**: scrim fades, dialog scales 0.98 → 1.0 + opacity over 250ms.
+
+### Reduced Motion
+
+Card lift suppresses; promo bar copy rotation freezes (shows first message); modal becomes opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #1c1c1c text on #ffffff canvas | 16.5 | AAA |
+| #5d6770 soft on #ffffff | 7.0 | AAA |
+| #0096d6 link on #ffffff | 4.5 | AA |
+| #ffffff on #0096d6 CTA | 4.5 | AA |
+| #ffffff on #1c1c1c promo bar | 16.5 | AAA |
+| #ffffff on #e60000 Omen CTA | 5.9 | AA |
+
+Cyan-on-white sits at 4.5 — borderline AA. HP compensates with 15/500 button labels and 22/700 price emphasis.
+
+### Focus Indicators
+
+3px `rgba(0,150,214,0.15)` outset glow + 1px solid `#0096d6` border on inputs. Buttons get an outset 3px cyan glow ring without changing fill.
+
+### ARIA Patterns
+
+- Search: `role="search"`, input `aria-label="Search HP"`
+- Product card: full `<a>` with `aria-label` containing title, price, key spec
+- Promo bar: `role="region"` `aria-live="polite"` for rotating copy
+- Mega-menu: `role="navigation"` with `aria-expanded`
+- Spec strip: `<dl>` with `<dt>/<dd>` pairs for label/value
+
+### Keyboard Navigation
+
+- Tab: promo-bar → logo → primary nav → search → utilities → main → footer
+- Esc closes modals
+- Enter activates
+- Arrow keys cycle product carousels
+
+### Reduced Motion
+
+Card lift suppresses; promo-bar rotation freezes.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Promo bar simplifies to single deal; nav collapses to logo + hamburger; product grid 1-up |
+| Tablet | 600–960px | Product grid 2-up; sub-nav horizontal scroll |
+| Desktop | 960–1280px | Default — 3-up grid |
+| Wide | 1280px+ | 4-up grid with 1440 cap |
+
+### Touch Targets
+
+- CTA buttons: 48px height — exceeds AAA
+- Search bar: 48px
+- Product card: full tile is the tap target
+
+### Collapsing Strategy
+
+- Promo bar: full message → truncated → hidden on mobile
+- Top nav: utilities collapse first; primary nav hamburgers
+- Spec strip: 4-cell → 2x2 grid → stacked
+- Hero: 2-column → stacked
+- Section padding: 128px → 80px → 48px
+
+### Image Behavior
+
+Product photography delivered at multiple aspect crops. `<picture>` with `srcset` for WebP/AVIF. Hero photography uses art-direction sources for mobile vs desktop crops.
+
+### Container Queries
+
+Used in product card spec strip when stacked in narrow rails — collapses 4-cell to 2x2 grid below 280px container width.
+
+## 11. Content & Voice
+
+### Tone
+
+Approachable-corporate. HP's voice is **technology for everybody** — confident in the product's mainstream relevance, conversational in delivery, never aggressive or overly aspirational.
+
+Examples: "Reinvent how you work." "Designed for productivity." "Get more done with HP." Never: "OUTSMART. OUTPLAY." (Razer's idiom). Never: "Think different." (Apple's idiom).
+
+### Microcopy Patterns
+
+- **Button verbs**: "Add to Cart", "Buy Now", "Compare", "Learn More", "Configure", "View Details" — sentence-case, action-imperative
+- **Error message recipe**: helpful + actionable — "Sorry, this configuration is unavailable. Please choose a different option or contact us."
+- **Success confirmations**: warm + transactional — "Added to cart. Continue shopping or proceed to checkout."
+- **Field labels**: short sentence-case — "Email", "Password", "Shipping address"
+- **Stock urgency**: factual — "Ships in 3–5 business days", "In stock — usually delivered within 1 week"
+
+### Empty States
+
+Empty cart: "Your cart is empty. Browse our laptops, printers, or accessories to find what you need."
+
+Empty wishlist: "No items saved yet. Tap the heart on any product to save it for later."
+
+Empty search: "No matches for [query]. Try a different keyword or browse our shop."
+
+### CTA Verb Conventions
+
+- Primary: **"Add to Cart"**, **"Buy Now"**, **"Configure"** (for built-to-order systems), **"Shop Now"**
+- Save: **"Add to Wishlist"** — universal save verb
+- Tertiary: **"Compare"**, **"Learn More"**, **"View Specs"**, **"Watch the video"**
+- Avoided: "Get started" (too SaaS), "Click here" (too low-effort), "Discover" (too vague)
+
+## 12. Dark Mode & Theming
+
+**Light-default with Omen dark sub-brand.** HP main consumer site is light-only across canonical product pages. The **Omen** gaming sub-brand pages flip to a dark theme:
+- Canvas: `#ffffff` → `#000000`
+- Surface: `#f7f7f7` → `#1c1c1c`
+- Border: `#e0e6ed` → `#3a3a3a`
+- Text: `#1c1c1c` → `#ffffff`
+- Brand: `#0096d6` cyan → `#e60000` Omen red
+
+The brand position: light is canonical for everyday HP, dark is contextual to Omen gaming.
+
+## 13. Lineage & Influences
+
+HP's visual lineage runs through three traditions: **84-year-old American technology corporate trade dress** (HP was founded in 1939; the brand has cycled through multiple identities — the 1960s "blue rectangle" wordmark, the 1980s monochrome "hp", the 2008 Moving Brands cyan circle, the 2016 Pentagram Forma DJR refresh — but has consistently anchored on cyan-blue and a circular logomark since the 1980s); **mainstream consumer-electronics retail** (Best Buy, Staples, big-box procurement — the page is engineered to ship to a mass audience that includes parents, students, IT directors, and small business owners simultaneously); and **modern Pentagram corporate identity work** (the 2016 Forma DJR commission joins a Pentagram lineage that includes Mastercard, Slack, Shake Shack, and Asana — humanist sans systems with optical sizing).
+
+The current site solidified around 2018 with the rollout of Forma DJR Display in headlines and the simplified cyan-on-white surface. Subsequent updates have refined the promo-bar treatment and the spec-strip card pattern but have not changed the colour or typographic foundations.
+
+What HP rejects: gamer-aggression on consumer pages (Omen sub-brand carries that voice instead), uppercase-tracked everything (only labels), neon accents on consumer products, dense data tables on marketing pages, premium-minimal restraint (HP fills the page with information because customers shop on spec). The brand position: **mainstream technology — informative, friendly, broadly accessible**.
+
+**Influences:**
+- Pentagram (2016 Forma DJR commission and brand system) — the typographic refresh
+- Moving Brands (2008 brand redesign) — the cyan circle logomark
+- Apple consumer hardware photography — white seamless with pastel shadow pools
+- Best Buy / Staples retail — mainstream electronics merchandising layout (price-forward, spec-strip)
+- Microsoft Surface — competing premium consumer technology brand
+- Dell — direct competitor in commercial PC market with parallel light-canvas blue-accent system
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the page on `#ffffff` paper-white canvas with `#e0e6ed` cool-grey hairline borders
+- Use HP Cyan `#0096d6` for the logomark, primary CTAs, links, focus borders, and brand accents
+- Display the HP-circle logomark anchored top-left in cyan on white surfaces
+- Use Forma DJR Display 700 with `-0.015em` tracking for hero headlines at 48–64px sentence-case
+- Render product prices large at 22/700 — HP customers shop on price
+- Show inline 4-cell spec strips on product cards (CPU · RAM · Storage · Display)
+- Use cool-tinted shadows `rgba(0,90,150, *)` for elevation
+- Render primary CTAs as `#0096d6` solid pills (9999 radius) with white labels
+- Display the dark `#1c1c1c` promotional bar above main nav with rotating deal copy
+- Use sentence-case section heads — uppercase only on tiny badges
+- Show ENERGY STAR / EPEAT GOLD outline badges for sustainability certifications
+- Switch to Omen red `#e60000` and dark `#000000` canvas only on Omen sub-brand pages
+
+**Don't**
+- Don't replace HP Cyan with another brand colour — `#0096d6` is canonical
+- Don't pluralise the HP-circle — never two logos, always one anchored top-left
+- Don't use uppercase tracked headlines on marketing pages (sentence-case is canonical)
+- Don't soften card corners past 12px on featured cards or 6px on default — HP is corporate-rectangular
+- Don't write tech-aggressive copy — HP's voice is "Reinvent how you work", not "OUTSMART. OUTPLAY."
+- Don't hide the price — make it large at 22/700 (HP customers price-shop)
+- Don't skip the spec strip — laptops without inline CPU / RAM / Storage / Display fail HP merchandising
+- Don't use Omen red on non-Omen pages — sub-brand colour discipline matters
+- Don't pile shadows on inverted dark bands — dark mode (Omen) relies on tonal borders
+- Don't use serifs anywhere — Forma DJR sans is canonical
+- Don't pad sections at 32px on marketing — HP breathes at 80–128px
+- Don't use neon brights or pastel candy colours — HP is corporate-blue mainstream
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Bg Soft:          #f7f7f7
+HP Cyan:          #0096d6
+HP Cyan Hover:    #0080b8
+HP Cyan Deep:     #005d83
+Brand Gradient:   linear-gradient(135deg, #0096d6 0%, #005d83 100%)
+Text:             #1c1c1c
+Text Soft:        #5d6770
+Border:           #e0e6ed
+Promo Bar:        #1c1c1c
+Sale Red:         #e60000
+Omen Red:         #e60000
+Energy Star:      #1d4f9e
+Shadow Base:      rgba(0,90,150, *)
+```
+
+### Example Component Prompts
+
+- "Create an HP Add to Cart button: solid `#0096d6` fill, white label 'Add to Cart' in Forma DJR 15/500 sentence-case, 12×28px padding, 9999 radius (fully pilled), `0 1px 3px rgba(0,90,150,0.1)` ambient shadow. On hover, fill deepens to `#0080b8` and shadow grows."
+- "Build an HP product card: 320×460 with white floor, 1px `#e0e6ed` cool-grey border, 6px radius, 20px padding. Stack inside: 16:9 product hero on white, 'NEW' or 'SALE' badge top-left if applicable, title in Forma DJR 18/500 dark sentence-case (e.g. 'HP Spectre x360 14'), sub-title 14/400 muted, **22/700 price** (large), inline 4-cell spec strip on `#f7f7f7` floor with hairline dividers showing 'Intel i7 · 16GB · 512GB SSD · 14\" Touch', 'Add to Cart' cyan pill CTA. Hover lifts -2px Y + shadow deepens to `0 8px 24px rgba(0,90,150,0.1)` over 250ms."
+- "Design an HP hero band: full-bleed cyan-to-deep-blue gradient `linear-gradient(135deg, #0096d6 0%, #005d83 100%)`, 16px radius if contained, 64×48px padding. Headline in Forma DJR Display 700 at 64px / 1.1 line-height / -0.015em tracking, white, sentence-case (e.g. 'Reinvent how you work.'). Below it body-lg 18/400 white. Product photography floats right with subtle shadow."
+- "Build an HP promo bar: 40px-tall full-bleed `#1c1c1c` near-black band above main nav. White text 14/400 sentence-case rotating between deals: 'Free shipping on orders \$25+ · Save up to 40% on select laptops · Refurbished + free shipping'. Aria-live polite for screen readers. Click-through link anchored right in cyan."
+- "Create an HP spec strip: inline horizontal block on product cards, `#f7f7f7` soft-grey floor, 12×16px padding, 4 cells separated by `#e0e6ed` 1px hairline dividers. Each cell stacks: 12/500 muted label (Processor · Memory · Storage · Display), 16/500 dark value (Intel i7 · 16GB · 512GB SSD · 14\" Touch). Tabular numerals on values."
+- "Design an HP top nav: 56px-tall white floor with 1px `#e0e6ed` bottom border. HP-circle logomark in `#0096d6` cyan anchored left at 32px. Nav items 'Shop · Support · Print Solutions · Business · Deals' centred in Forma DJR 14/500 sentence-case `#1c1c1c`. Search trigger, account icon, cart count flush right."
+
+### Iteration Guide
+
+1. **Start with the white.** If your canvas isn't `#ffffff` corporate paper-white with `#e0e6ed` cool-grey hairlines, it isn't HP.
+2. **HP Cyan is the only brand colour.** `#0096d6` for logo, every CTA, every link, every focus. Don't introduce a second saturated colour outside the Omen sub-brand red.
+3. **Forma DJR is the typographic signature.** Pentagram-commissioned, optical-sized. Inter is the closest free fallback.
+4. **Sentence-case headlines.** "Reinvent how you work" not "REINVENT HOW YOU WORK". HP rejects uppercase display.
+5. **Render prices large at 22/700.** HP customers shop on price; the price is a primary scanning element.
+6. **Inline 4-cell spec strip on every laptop card.** CPU · RAM · Storage · Display in `#f7f7f7` floor with hairline dividers.
+7. **Pill CTAs at 9999 radius.** Cyan fill, white label, 15/500 sentence-case.
+8. **The dark promo bar is canonical.** 40px `#1c1c1c` above main nav with rotating deal copy.

@@ -1,0 +1,681 @@
+---
+name: Airtable
+tagline: White-canvas editorial workflow software with full-bleed coral and forest signature cards punctuating a near-black pill-CTA system.
+author: webdesignhot
+source_url: https://airtable.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas, dev-tools]
+tags: [light, editorial, sans, warm, signature-cards, near-black-cta]
+preview_swatch: ['#ffffff', '#181d26', '#aa2d00']
+related: [notion, linear, figma]
+description: 'Airtable''s marketing surface reads like a sober workflow publication — a white canvas, dark-ink Haas Grotesk type at modest weights, and a near-black pill CTA that never fights for attention. Brand voltage doesn''t come from gradients; it comes from full-bleed signature cards in coral (#aa2d00), forest (#0a2e0e), cream (#f5e9d4), and dark navy (#181d26) that punctuate long-scroll explainer pages every two or three screens. Demo-card grids carry product UI fragments on warm pastel surfaces (peach, mint, yellow, mustard) — the actual base-UI palette translated into marketing surfaces. The pricing page runs its own dialect: Inter Display at mid-weight 475, pill-shaped buttons that don''t appear anywhere else, and a 4-tier comparison grid.'
+
+colors:
+  bg: '#ffffff'                    # canvas — page floor
+  bg-soft: '#f8fafc'               # surface-soft — tabbed feature cards, featured pricing tier
+  bg-strong: '#e0e2e6'             # surface-strong — light gray pre-footer CTA banner
+  bg-dark: '#181d26'               # surface-dark — mid-page dark CTA cards
+  bg-dark-elevated: '#1d1f25'      # articles hero behind rainbow stripe overlay
+  surface: '#f8fafc'               # alias of bg-soft for clarity
+  text: '#181d26'                  # ink — h1/h2 display + primary button text-on-light
+  text-body: '#333840'             # default running-text
+  text-muted: '#41454d'            # captions, footer links, breadcrumbs
+  text-faint: '#9297a0'            # disabled secondary button outline tone
+  brand: '#181d26'                 # primary — same hex as ink; CTA bg + dark surfaces
+  brand-active: '#0d1218'          # press state on primary
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  link: '#1b61c9'                  # link blue — NOT the primary button color
+  link-active: '#1a3866'
+  border: '#dddddd'                # hairline — input outlines, table dividers
+  border-strong: '#9297a0'         # disabled secondary button outline
+  border-soft: '#eceef0'           # softer divider rare use
+  signature-coral: '#aa2d00'       # large full-bleed coral signature card
+  signature-forest: '#0a2e0e'      # deep-green signature card sibling
+  signature-cream: '#f5e9d4'       # cream callout band
+  signature-peach: '#fcab79'       # demo-grid pastel
+  signature-mint: '#a8d8c4'        # demo-grid pastel
+  signature-yellow: '#f4d35e'      # demo-grid pastel
+  signature-mustard: '#d9a441'     # demo-grid pastel
+  pricing-ink: '#1d1f25'           # Inter Display sub-system text
+  info: '#254fad'                  # info badge bg
+  info-border: '#458fff'           # focused-input outline
+  success: '#006400'
+  success-border: '#39bf45'
+  danger: '#c41c1c'
+  warning: '#d9a441'
+
+typography:
+  display:
+    family: '"Haas Groot Disp", "Haas", "Inter Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500]
+  body:
+    family: '"Haas", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600]
+  pricing-display:
+    family: '"Inter Display", system-ui, sans-serif'
+    weights: [475, 575]
+  scale:
+    display-xl:        { size: 48,    weight: 500, lineHeight: 1.10, tracking: 0,        family: display, notes: 'articles page h2 — second-tier editorial' }
+    display-lg:        { size: 40,    weight: 400, lineHeight: 1.20, tracking: 0,        family: display, notes: 'homepage hero h1' }
+    display-md:        { size: 32,    weight: 400, lineHeight: 1.20, tracking: 0,        family: display, notes: 'platform-page h2 — feature heads' }
+    title-lg:          { size: 24,    weight: 400, lineHeight: 1.35, tracking: '0.12px', family: body }
+    title-md:          { size: 20,    weight: 400, lineHeight: 1.50, tracking: 0,        family: display }
+    title-sm:          { size: 18,    weight: 500, lineHeight: 1.40, tracking: 0,        family: body }
+    label-md:          { size: 16,    weight: 500, lineHeight: 1.40, tracking: 0,        family: body }
+    button:            { size: 16,    weight: 500, lineHeight: 1.40, tracking: 0,        family: body }
+    body-md:           { size: 14,    weight: 400, lineHeight: 1.25, tracking: 0,        family: body }
+    caption:           { size: 14,    weight: 500, lineHeight: 1.35, tracking: '0.16px', family: body }
+    legal:             { size: 13.12, weight: 600, lineHeight: 1.20, tracking: 0,        family: body }
+    pricing-display:   { size: 44.8,  weight: 475, lineHeight: 1.10, tracking: 0,        family: pricing-display }
+    pricing-section:   { size: 28,    weight: 475, lineHeight: 1.20, tracking: 0,        family: pricing-display }
+    pricing-card-title: { size: 20,    weight: 475, lineHeight: 1.30, tracking: 0,        family: pricing-display }
+
+radius:
+  micro: 2
+  sm: 6
+  md: 10
+  lg: 12
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: lg
+    padding: '16px 24px'
+    use: 'every primary CTA — Sign up for free, Get started for free'
+  button-primary-active:
+    backgroundColor: brand-active
+    textColor: on-brand
+    use: 'press state on primary'
+  button-secondary:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '16px 24px'
+    border: '1px solid border'
+    use: 'Book demo / less-committed pair next to primary'
+  button-secondary-on-dark:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '16px 24px'
+    use: 'white button preserved on coral / forest / dark surfaces'
+  button-pricing-pill:
+    backgroundColor: bg
+    textColor: pricing-ink
+    rounded: pill
+    padding: '12px 24px'
+    use: 'pricing-page CTA — only place pill-shape appears'
+  button-legal:
+    backgroundColor: link
+    textColor: on-brand
+    rounded: micro
+    padding: '12px 10px'
+    use: 'cookie-consent / legal banner — system-required surface'
+  button-icon-circular:
+    backgroundColor: bg
+    textColor: text
+    rounded: full
+    size: 40
+    use: 'carousel controls, share, back affordances'
+  text-link:
+    backgroundColor: transparent
+    textColor: link
+    use: 'inline body link — no underline by default'
+  hero-band:
+    backgroundColor: bg
+    textColor: text
+    padding: 96
+    use: 'white-canvas hero with primary + secondary CTA pair'
+  signature-coral-card:
+    backgroundColor: signature-coral
+    textColor: on-dark
+    rounded: lg
+    padding: 48
+    use: 'full-bleed homepage anchor — Production apps in prototype speed'
+  signature-forest-card:
+    backgroundColor: signature-forest
+    textColor: on-dark
+    rounded: lg
+    padding: 48
+    use: 'deep-green sibling to coral inside demo-grid clusters'
+  hero-card-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: lg
+    padding: 48
+    use: 'mid-page dark navy CTA — The path to 10x'
+  feature-card-tabbed:
+    backgroundColor: bg-soft
+    textColor: text
+    rounded: lg
+    padding: 32
+    use: 'tabbed customer feature cards — left rail labels, right pane content'
+  cream-callout-card:
+    backgroundColor: signature-cream
+    textColor: text
+    rounded: md
+    padding: 24
+    use: 'beige callout — softer than dark/coral but still a signature surface'
+  demo-grid-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: 16
+    use: '3 or 4-up product UI fragment grid — uneven heights'
+  demo-grid-card-pastel:
+    backgroundColor: signature-peach
+    textColor: text
+    rounded: md
+    padding: 16
+    use: 'pastel-tinted demo card variants (peach/mint/yellow/mustard)'
+  article-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: 16
+    use: 'trending-stories grid on articles page'
+  topic-filter-rail:
+    backgroundColor: bg
+    textColor: text-body
+    width: 240
+    use: 'left rail on articles page'
+  text-input:
+    backgroundColor: bg
+    textColor: text
+    rounded: sm
+    padding: '12px 16px'
+    height: 44
+    border: '1px solid border'
+  text-input-focus:
+    border: '1px solid info-border'
+  pricing-tier-card:
+    backgroundColor: bg
+    textColor: pricing-ink
+    rounded: md
+    padding: 32
+    use: 'standard pricing tier — Inter Display sub-system'
+  pricing-tier-card-featured:
+    backgroundColor: bg-soft
+    textColor: pricing-ink
+    rounded: md
+    padding: 32
+    use: 'featured tier — surface-soft tone shift, no badge'
+  pricing-comparison-row:
+    backgroundColor: bg
+    textColor: text-body
+    padding: 12
+    use: 'comparison table row — hairline divider'
+  cta-band-light:
+    backgroundColor: bg-strong
+    textColor: text
+    rounded: lg
+    padding: 48
+    use: 'pre-footer Start building with Airtable strip'
+  logo-strip:
+    backgroundColor: bg
+    textColor: text-muted
+    padding: 32
+    use: 'monochrome partner-logo row — HBO, Netflix, Time'
+  top-nav:
+    backgroundColor: bg
+    textColor: text
+    height: 64
+    use: 'light nav stays light over every section — never inverted'
+  footer:
+    backgroundColor: bg
+    textColor: text-body
+    padding: 64
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transitions reduced to opacity-only at 100ms; signature card on-scroll reveals are skipped'
+
+breakpoints:
+  mobile: 768
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'none on most surfaces — borders define structure'
+  standard: '0 1px 0 rgba(24,29,38,0.04) — barely visible card hairline shadow'
+  elevated: '0 8px 24px rgba(24,29,38,0.08) — only on floating popovers'
+  deep: '0 24px 48px rgba(24,29,38,0.16) — only on modals'
+  ring: '0 0 0 2px rgba(69,143,255,0.5)'
+  button-rest: 'subtle blue-tinted glow at low alpha under primary CTA'
+  button-focus: '0 0 0 2px #458fff — outer blue ring on keyboard focus'
+
+accessibility:
+  contrast-text-on-bg: 17.4              # AAA — #181d26 on #ffffff
+  contrast-body-on-bg: 12.1              # AAA — #333840 on #ffffff
+  contrast-muted-on-bg: 9.3              # AAA — #41454d on #ffffff
+  contrast-on-brand: 16.6                # AAA — white on #181d26
+  contrast-on-coral: 6.2                 # AA — white on #aa2d00 at body sizes
+  focus-ring: '2px solid #458fff with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'light-only marketing — Airtable does not ship a dark marketing variant. The signature-dark-card (#181d26) provides intra-page contrast.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Airtable's marketing surfaces are quietly editorial. The base atmosphere is white canvas (`#ffffff`), dark-ink type, generous whitespace, and a near-black pill CTA — nothing is fighting for attention until a section needs to. The brand voltage doesn't come from gradient washes or accent walls; it comes from **full-bleed signature cards** in `#aa2d00` coral, `#0a2e0e` forest, and `#181d26` dark navy that punctuate long-scroll explainer pages every two or three screens. Between those signature bands, the page reads like a print magazine: a headline, supporting copy, a small image cluster, then breathing room.
+
+Type voice is Haas Grotesk at modest weights (400 for display, 500 for sub-titles and buttons). Display headlines never go bolder than 500 — emphasis comes from size and color contrast, not from weight. Body copy stays at 14px / 400 throughout. The pricing surface runs its own dialect: **Inter Display** at unusual mid-weights (475 / 575) and **pill-shaped buttons** (`9999px`) that don't appear on any other page — a deliberate sub-system signaling "this page is about commercial precision."
+
+The brand's voltage moments — coral, forest, dark — borrow their color sense directly from the actual product. Inside the live Airtable base, users colour-code rows using the same warm pastel palette (peach, mint, mustard) that surfaces in the marketing demo-card grids. The marketing site, in effect, dramatizes the database UI by promoting its row-tag colours to full-bleed surface mode.
+
+Where Notion reaches for warm-grey neutrals and Linear commits to a near-black canvas, Airtable holds the white page as scaffolding and lets the signature cards do the punctuation. The result is a confident, typography-first publication — a workflow magazine that quietly reminds the reader that every screenshot is a real product UI.
+
+**Key Characteristics:**
+- Primary CTA is `#181d26` near-black with white text and a 12px corner — confident, not decorative.
+- Secondary CTA is a white button with a hairline outline in `#dddddd`. The two together are Airtable's signature button row.
+- Hero is white canvas. No atmospheric gradient, no mesh, no aurora.
+- Brand voltage lives in **signature surface cards**: coral, forest, dark, cream — each a full-bleed editorial moment.
+- Demo-card grids carry product UI fragments on warm pastel surfaces (peach, mint, yellow, mustard).
+- Section rhythm: white → coral → white → cream → dark → white → cream → footer. Canvas resets between every signature surface.
+- Border radius is hierarchical: 12px primary CTA + signature cards, 10px content cards, 6px inputs, full circles for icon buttons. Pricing buttons jump to pill (9999px) to flag the sub-system.
+- Vertical rhythm is **96px** between major bands — universal across every page.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#ffffff`): The default page floor — the white of every editorial body.
+- **Text / Ink** (`#181d26`): Display type, body emphasis, primary button text-on-light.
+- **Brand / Primary CTA** (`#181d26`): Same hex as ink because they share a role at type and button layers.
+
+### Brand & Dark
+- **Brand Active** (`#0d1218`): Press state on the primary CTA.
+- **Surface Dark** (`#181d26`): The dark navy mid-page CTA cards ("The path to 10× every person in your organization").
+- **Surface Dark Elevated** (`#1d1f25`): Articles-page hero base behind the rainbow-stripe overlay.
+
+### Accent — Signature Cards (the brand voltage)
+- **Signature Coral** (`#aa2d00`): The largest full-bleed signature card on the homepage. Dark coral / oxide red holding white type.
+- **Signature Forest** (`#0a2e0e`): Deep green signature card sibling to coral.
+- **Signature Cream** (`#f5e9d4`): Beige callout band — softer surface holding dark type.
+- **Signature Peach** (`#fcab79`), **Mint** (`#a8d8c4`), **Yellow** (`#f4d35e`), **Mustard** (`#d9a441`): Demo-card surfaces inside multi-card grid sections.
+
+### Interactive
+- **Link** (`#1b61c9`): Inline body links and anchor text. No underline by default.
+- **Link Active** (`#1a3866`): Pressed link state.
+- **Selected**: Selection background uses the system blue tint at 12% alpha.
+- **Disabled** (`#9297a0`): Disabled secondary button outline tone.
+
+### Neutral Scale
+- **Ink** (`#181d26`): Strongest type and primary CTA bg.
+- **Text Body** (`#333840`): Default running-text.
+- **Text Muted** (`#41454d`): Footer links, breadcrumbs, captions.
+- **Text Faint** (`#9297a0`): Disabled secondary button outline.
+- **Hairline** (`#dddddd`): 1px input borders, table dividers, secondary-button outlines.
+
+### Surface & Borders
+- **Bg** (`#ffffff`): Canvas.
+- **Bg Soft** (`#f8fafc`): Tabbed feature cards and the featured pricing tier surface.
+- **Bg Strong** (`#e0e2e6`): The light-gray "Start building with Airtable" pre-footer banner.
+- **Bg Dark** (`#181d26`): Mid-page dark navy CTA cards.
+- **Border** (`#dddddd`): Default 1px hairline.
+- **Border Strong** (`#9297a0`): Disabled secondary button outline.
+
+### Shadow Colors
+- **Card Flat**: No shadow; relies on color contrast against the surface band.
+- **Button Rest**: Soft drop with subtle blue-tinted glow at low alpha — the link-blue tint reads as a faint accent under the dark button.
+- **Button Focus**: Outer 2px blue ring at higher alpha for keyboard focus.
+
+### Semantic
+- **Info** (`#254fad`) / **Info Border** (`#458fff`): Inline info badges and focused-input outline.
+- **Success** (`#006400`) / **Success Border** (`#39bf45`): Confirmation states.
+- **Danger** (`#c41c1c`): Destructive actions, validation errors.
+- **Warning** (`#d9a441`): Caution states — same hex as the mustard demo-card surface.
+
+A note on the misleading CSS variable: Airtable's stylesheet exposes `--theme_button-background-primary: #1b61c9` at `:root`, but this maps to the **link** colour, not the primary button. The primary button is always `#181d26`. Treating link-blue as the brand action is the most common mistake when reading Airtable's CSS.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Haas Groot Disp", "Haas", "Inter Display"` for display (h1/h2 sizes); `"Haas", "Inter"` for everything ≤ 24px.
+- **Pricing sub-system**: `"Inter Display", system-ui, sans-serif` at variable mid-weights 475 / 575.
+- **Fallback chain**: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`.
+- **OpenType features**: defaults, no aggressive feature toggling — Haas reads cleanest at its natural settings.
+- **Substitutes**: If Haas Grotesk and Haas Groot Disp are unavailable, **Inter Display** (variable) is the closest open-source pair for both. Adjust line-height down by ~5% to match Haas's tighter cap-height.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-xl | Haas Groot Disp | 48 | 500 | 1.10 | 0 | — | Articles page h2 — second-tier editorial |
+| display-lg | Haas Groot Disp | 40 | 400 | 1.20 | 0 | — | Homepage hero h1 |
+| display-md | Haas Groot Disp | 32 | 400 | 1.20 | 0 | — | Platform-page h2 — feature heads |
+| title-lg | Haas | 24 | 400 | 1.35 | 0.12px | — | Section titles |
+| title-md | Haas Groot Disp | 20 | 400 | 1.50 | 0 | — | Sub-section titles inside tabbed cards |
+| title-sm | Haas | 18 | 500 | 1.40 | 0 | — | Article-card titles |
+| label-md | Haas | 16 | 500 | 1.40 | 0 | — | Demo-card titles, list labels |
+| button | Haas | 16 | 500 | 1.40 | 0 | — | Standard CTA button labels |
+| body-md | Haas | 14 | 400 | 1.25 | 0 | — | Body copy, footer links, top-nav |
+| caption | Haas | 14 | 500 | 1.35 | 0.16px | — | Light captions, meta text |
+| legal | Haas | 13.12 | 600 | 1.20 | 0 | — | Cookie / legal CTA buttons |
+| pricing-display | Inter Display | 44.8 | 475 | 1.10 | 0 | — | Pricing-page h1 |
+| pricing-section | Inter Display | 28 | 475 | 1.20 | 0 | — | Pricing-page section heads |
+| pricing-card-title | Inter Display | 20 | 475 | 1.30 | 0 | — | Pricing tier card plan name |
+| pricing-feature-row | Inter Display | 14 | 475 | 1.40 | 0 | — | Comparison table row text |
+
+### Principles
+- **Display sits at 400 / 500 — never bold.** A 40px h1 is *not* `font-weight: 700`. Visual emphasis is delegated to size, color contrast, and the signature surface cards.
+- **Two type sub-systems.** Haas (Groot Disp + Grotesk) carries the editorial body across every page; Inter Display 475 / 575 is reserved for the pricing surface. Never mix the two in one band.
+- **Bold is for legal surfaces only.** The single 600-weight role is `legal` — cookie / GDPR CTAs. Bold reads as "system-required" not "brand-loud."
+- **Tracking stays neutral.** No aggressive negative tracking; emphasis comes from size, not from compression.
+- **Body at 14px / 400** is uncommonly small for tech marketing — it preserves the publication-feel by holding column density that matches print rather than landing pages.
+- **Caption uppercase tracking** of 0.16px (caption role) signals "metadata" without going full uppercase eyebrow.
+
+## 4. Component Stylings
+
+### Buttons (5 variants)
+
+**`button-primary`** — The signature CTA. Background `#181d26`, text `#ffffff`, type 16px / 500 Haas, padding 16px × 24px, radius 12px. This is the "Get started for free" / "Sign up for free" button visible on every hero. Reads as confident and final — the system uses it sparingly (one per viewport).
+- *Active state*: `button-primary-active` darkens to `#0d1218`.
+
+**`button-secondary`** — White outline. Background `#ffffff`, text `#181d26`, type 16px / 500, padding 16px × 24px, radius 12px, 1px hairline `#dddddd`. The "Book demo" / less-committed pair next to primary.
+
+**`button-secondary-on-dark`** — Same shape as secondary but used over coral / forest / dark surfaces. Background stays `#ffffff`, text stays `#181d26` — the system never inverts to a translucent on-dark style.
+
+**`button-pricing-pill`** — The pricing-page CTA family. Background `#ffffff`, text `#1d1f25`, radius 9999px, padding 12px × 24px. The only place pill-shape appears in marketing.
+
+**`button-legal`** — Cookie-consent and legal-banner CTAs. Background `#1b61c9`, text white, type 13.12px / 600, radius 2px, padding 12px × 10px. The 2px corner and 600 weight signal "this is a required system surface."
+
+**`button-icon-circular`** — 40 × 40px circular button with white background, hairline border, ink icon. Used for carousel controls, share, back affordances.
+
+### Cards
+
+**`hero-band`** — Full-page-width white-canvas hero. No surface card, no border, no shadow, no atmospheric gradient. Just the headline, sub-headline, and primary + secondary button pair sitting in 96px of whitespace.
+
+**`signature-coral-card`** — Large full-bleed coral card. Background `#aa2d00`, text `#ffffff`, rounded 12px, internal padding 48px. Carries an h2 in display-md, supporting copy in body-md, and `button-secondary-on-dark` as the CTA.
+
+**`signature-forest-card`** — Deep green signature card. Background `#0a2e0e`, otherwise identical shape to coral. Used as a demo-grid sibling.
+
+**`hero-card-dark`** — Mid-page dark navy CTA. Background `#181d26`, text `#ffffff`, rounded 12px, padding 48px. Same hex as the primary button background — the system uses ink as both type color and signature dark surface.
+
+**`feature-card-tabbed`** — Light-cream cards. Background `#f8fafc`, rounded 12px, padding 32px. Left rail carries vertically-stacked tab labels in title-md; right pane shows the active tab's content.
+
+**`cream-callout-card`** — Beige callout. Background `#f5e9d4`, rounded 10px, padding 24px. Carries product UI fragments or stat callouts.
+
+**`demo-grid-card`** — Used in multi-card grids. Background can be `#ffffff` or one of the demo-grid pastel surfaces (`#fcab79`, `#a8d8c4`, `#f4d35e`, `#d9a441`). Rounded 10px, padding 16px. Each card frames a product UI fragment. **Card heights vary deliberately** to dodge a uniform "spec sheet" feel.
+
+**`article-card`** — Trending-stories grid. White, rounded 10px, padding 16px. 16:9 illustrated thumbnail, small uppercase category tag, title-sm title, meta line.
+
+### Badges & Pills
+- **Demo-card category tag**: small uppercase 14px / 500 in body-md, transparent or `#f8fafc` background.
+- Pricing-card "Most popular" badge: rare; the system prefers using surface-tone shift (bg-soft) rather than a badge.
+
+### Inputs / Forms
+
+**`text-input`** — Default. Background `#ffffff`, text `#181d26`, type body-md, rounded 6px, padding 12px × 16px, height 44px. 1px hairline border `#dddddd`.
+
+**`text-input-focus`** — Border thickens or recolors to `#458fff` (info-border).
+
+### Navigation
+
+**`top-nav`** — 64px-tall white bar pinned to top of every page. Wordmark left; primary horizontal menu (Platform, Solutions, Resources, Enterprise, Pricing) center-left; right cluster carries "Book Demo" outline link, "Sign up for free" primary button, "Log In" text link. Stays light on every page — never inverted over dark sections.
+
+**`footer`** — Light surface, 6-column link list at desktop covering Platform / Solutions / Resources / Learn / Company. Vertical padding 96px split across upper link block and lower legal row.
+
+### Pricing Sub-System (separate dialect)
+
+**`pricing-tier-card`** — Standard tier. Background `#ffffff`, text `#1d1f25`, type pricing-card-title (20 / 475), rounded 10px, padding 32px. Plan name + price block in pricing-display (44.8 / 475), feature checklist, `button-pricing-pill` at bottom.
+
+**`pricing-tier-card-featured`** — Featured tier. Background shifts to `#f8fafc`. No accent border, no badge — surface-tone shift is the only signal.
+
+**`pricing-comparison-row`** — Each row of the long comparison table. Labels left column; checkmarks or values across 4 plan columns. 12px vertical padding per row, hairline divider between rows.
+
+### Decorative
+
+**Articles vertical rainbow stripe hero** — Multi-color vertical bands at varying widths sitting on `#1d1f25`. The h1 + sub-head + CTA cluster sits center-left on top of the stripes. Single-page hero treatment, not a system-wide signature.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `xxs:4 · xs:8 · sm:12 · md:16 · lg:24 · xl:32 · xxl:48 · section:96`. Section padding is **96px** between every major editorial band — universal vertical rhythm constant. Card internal padding ranges 16–48px depending on card density: 32px for tabbed feature cards and pricing tier cards; 48px for signature coral / forest / dark cards; 24px for cream callouts; 16px for demo-grid cards.
+
+### Grid & Container
+- **Max content width**: ~1280px centered, with 48px horizontal breathing room.
+- **Editorial body**: single 8/12-column at large breakpoints, collapsing to single-column on mobile.
+- **Demo-card grids**: 3 or 4 columns at desktop, 2 at tablet, 1 at mobile. **Card sizes are deliberately uneven** within the grid.
+- **Logo strip**: 6 monochrome partner logos at desktop; wraps to 3-up on mobile.
+
+### Whitespace Philosophy
+Airtable uses whitespace as the dominant atmospheric tool. Hero sections sit in 96px+ of pure whitespace above and below the headline + sub-headline pair, with no decoration in that whitespace. The hero is intentionally calm — there is no gradient, no aurora, no atmospheric mesh. The system trusts whitespace alone.
+
+### Section Cadence
+Page rhythm: white canvas → coral signature card → white body → cream callout band → dark navy CTA → light gray pre-footer banner → footer. The canvas resets between every signature surface — two whites in a row read as a typography blog, not Airtable.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Cookie-consent and legal CTA buttons — system-required surfaces |
+| Standard | sm | 6px | Text inputs, small inline buttons |
+| Comfortable | md | 10px | Secondary content cards, article cards, cream callouts |
+| Large | lg | 12px | Primary CTA buttons, signature surface cards, tabbed feature cards |
+| Pill | pill | 9999px | Pricing-page CTAs only — sub-system signal |
+| Full | full | 9999px / 50% | Circular icon buttons, avatars |
+
+There are no compound radii. Photography geometry: product UI screenshots inside demo-card grids retain native aspect ratios (4:3 or 16:10) and crop into 10px-radius containers. Hero illustrations bleed full-width with no rounding. Article-card thumbnails use 16:9 with 10px corners. Avatars are perfect circles.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Body sections, top nav, footer, signature cards |
+| 1 — Hairline | 1px `#dddddd` border | Inputs, sub-nav rails, comparison-table dividers, secondary buttons |
+| 2 — Button rest | Soft drop with subtle blue-tinted glow at low alpha | Primary CTA buttons (the blue tint is a holdover from link color) |
+| 3 — Button focus | Outer 2px blue ring at higher alpha | Keyboard focus state |
+| 4 — Card flat | No shadow; color contrast against surface band | Signature coral / forest / dark cards, cream callouts |
+| 5 — Modal | `0 24px 48px rgba(24,29,38,0.16)` | Floating popovers, modals only |
+
+### Shadow Philosophy
+The elevation philosophy is **color-block first, shadow second**. Shadows are minimal; depth is delegated to the contrast between white canvas and signature surface cards. There is no soft-glow / atmospheric-shadow / heavy-elevation language anywhere in the marketing system. Photography-as-depth: every demo-card carries a real product UI screenshot or mockup, contributing depth through legible artifact density rather than decorative effects.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for color transitions, button feedback.
+- **Emphasized ease**: `cubic-bezier(0.16, 1, 0.3, 1)` — used on signature card hover and section reveals.
+
+### Duration Buckets
+- **Fast (120ms)**: Color transitions, focus ring expansion.
+- **Standard (200ms)**: Card hover, button press feedback, dropdown opens.
+- **Slow (320ms)**: Signature card reveal, section-on-scroll fade-in, modal entrance.
+
+### Per-Component Micro-States
+- **Button hover (primary)**: Background brightens slightly via 4% white overlay; no transform. 200ms standard ease.
+- **Button press (primary)**: Background drops to `#0d1218` over 80ms.
+- **Button hover (secondary)**: Border thickens from 1px `#dddddd` → 1px `#181d26` over 120ms.
+- **Card hover (signature)**: No transform, no shadow shift. Internal CTA underline grows 1px → 2px.
+- **Tab hover (feature card tabbed)**: Active tab gains a 1px left-rail accent in `#181d26` over 120ms.
+- **Link hover**: Underline appears (none → 1px) over 120ms standard ease.
+- **Input focus**: Border recolors `#dddddd` → `#458fff` over 120ms; 2px outer ring expands from 0 → 2px.
+
+### Page Transitions
+Standard browser navigation. Section-on-scroll reveals are a 320ms fade-in-up (16px offset) gated by `IntersectionObserver`. Demo-card grids stagger in left-to-right with 80ms increments. Signature cards reveal with no stagger — they're meant to feel monumental.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, transitions reduced to opacity-only at 100ms, demo-card stagger reveals are skipped, signature card on-scroll reveals fade in without offset.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#181d26` on `#ffffff` = **17.4** — AAA at every size.
+- **Body on bg**: `#333840` on `#ffffff` = **12.1** — AAA.
+- **Muted on bg**: `#41454d` on `#ffffff` = **9.3** — AAA.
+- **On-brand on brand**: `#ffffff` on `#181d26` = **16.6** — AAA.
+- **On-coral**: `#ffffff` on `#aa2d00` = **6.2** — AA at body sizes (use display sizes for AAA).
+- **On-cream**: `#181d26` on `#f5e9d4` = **15.1** — AAA.
+- **Link on bg**: `#1b61c9` on `#ffffff` = **5.7** — AA.
+
+### Focus Indicators
+Every focusable element shows a 2px solid `#458fff` ring with 2px offset. The info-border blue is used (rather than the link blue) so the ring stays distinct from inline text links.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; `aria-label` only when icon-only (carousel controls, share).
+- **Tabs (feature card)**: ARIA `role="tablist"` + `role="tab"` with `aria-selected` and `aria-controls`.
+- **Pricing comparison table**: `<table>` with `<thead>` plan headers, `<th scope="row">` for feature labels.
+- **Navigation**: `<nav aria-label="Primary">` for top nav; mobile drawer uses `aria-expanded`.
+- **Signature cards**: `<section>` with `aria-labelledby` referencing the card's h2.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link at top of every page jumps to `<main>`. Mobile nav sheet traps focus when open; Escape closes. Demo-card links activate on Enter/Space. Pricing tier cards expose CTA as the primary keyboard target, with feature checklists reachable via tab.
+
+### Screen Reader Hints
+Demo-card screenshots use descriptive `alt` text describing the product UI fragment shown ("Airtable base view showing project tracker"). Decorative chrome (rainbow stripes on the articles hero) uses `aria-hidden="true"`. The Airtable wordmark in nav uses `aria-label="Airtable home"`.
+
+### Reduced Motion Handling
+All transforms and stagger reveals are removed. Signature card on-scroll fade-ins are skipped — cards appear in their final state. Tab transitions inside feature cards become instant.
+
+## 10. Responsive Behavior
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 768px | Single-column body; top nav collapses to hamburger; demo-grid drops to 1-up; signature cards stay full-bleed; logo strip wraps to 2 rows; footer collapses to single-column |
+| Tablet | 768–1024px | 2-up demo-grid; top nav stays horizontal but tightens; cream-callout cards stack 2-up; pricing comparison table becomes horizontally scrollable |
+| Desktop | 1024–1280px | 3-up demo-grid (and 4-up for tighter content); full top-nav with all menu items visible; pricing tier cards render 4-across |
+| Wide | > 1280px | Same as Desktop with more outer breathing room; max content width caps at ~1280px and the page adds outer margin rather than scaling type up |
+
+### Touch Targets
+- `button-primary` and siblings render at 48×48px minimum (16px vertical padding + 16px line-height) — comfortably above WCAG AAA's 44×44.
+- `button-icon-circular` is exactly 40×40px — slightly under WCAG's recommended 44, but the centered icon and dot-radius compensate visually.
+- `text-input` height is 44px.
+
+### Collapsing Strategy
+- Top nav collapses to a hamburger at < 768px; the menu opens as a full-screen sheet rather than a dropdown.
+- Card grids reduce columns rather than scaling cards down.
+- The `feature-card-tabbed` re-stacks the tab rail above the content pane on mobile.
+- The pricing comparison table converts to horizontally-scrollable swipe at < 1024px; the four plan headers stay visible while body rows scroll.
+
+### Image Behavior
+- Demo-card UI screenshots crop to fit their container rather than scaling up.
+- Hero illustrations bleed full-width on mobile, losing horizontal margin.
+- Signature card images compress to card width without cropping.
+
+## 11. Content & Voice
+
+### Tone
+**Editorial, sober, workflow-pragmatic.** Airtable writes as a publication for builders. There is no "transform your business" theatre, no "magic" framing. Headlines describe what the product does in production-grade language ("Production apps in prototype speed", "The path to 10× every person in your organization"). Body copy supports with concrete customer examples (HBO, Time, Conde Nast, Netflix).
+
+### Microcopy Patterns
+- **CTA verbs**: "Sign up for free", "Get started for free", "Book demo", "Read the customer story". Never "Try the magic" or "Start your journey".
+- **Section labels**: 14px uppercase eyebrow at 0.16px tracking — "Customers", "Solutions", "Resources".
+- **Demo-card titles**: One-line capability descriptions — "Build a project tracker" not "Unleash your team's potential".
+
+### Empty States
+Where empty states appear (search results, filtered article list), the recipe is: a single line in `text-muted` ("No articles match your filter — try a broader topic") with a link-blue link to all articles.
+
+### Error Messages
+Pattern: short, declarative, action-oriented. "Email already in use — try signing in" not "Oops! Something went wrong." Errors carry an icon-x in `#c41c1c` and inline guidance.
+
+### Success Confirmations
+Single-line toast in `#181d26` text on `#ffffff` background with a 4px-radius success-border accent stripe at the left. "Demo booked" not "Hooray!".
+
+### CTA verb conventions
+The brand prefers the simple, declarative present-imperative: "Get started", "Sign up", "Book demo", "Read more". Pricing CTAs add specificity: "Start free", "Talk to sales", "Contact us". The pricing pill button always pairs with verb-noun specificity ("Start free", not just "Start").
+
+## 12. Dark Mode & Theming
+
+Airtable's marketing surface is **light-only**. There is no dark-mode toggle on airtable.com — the publication metaphor depends on white canvas. Intra-page dark contrast is achieved through the signature `bg-dark` (`#181d26`) cards, not via a global theme switch.
+
+In-product surfaces (the actual Airtable base UI behind login) ship with their own theme system that includes dark variants — those are out of scope for this marketing spec. Customer-facing app extensions (the embeddable forms and shared base views) inherit the marketing light theme by default.
+
+## 13. Lineage & Influences
+
+Airtable descends from the **editorial-tech-marketing tradition** — sites like Stripe, Notion, and Linear that treat product copy as long-form publication. The signature surface card is Airtable's own contribution to the genre: a full-bleed full-color card carrying a single product callout, pioneered (in this exact form) by Airtable's 2022–2023 redesigns. The near-black pill CTA discipline echoes Linear's near-black surface approach but pivots from "near-black canvas" to "near-black CTA over white canvas" — a different relationship between dark and light.
+
+Pricing-page Inter Display at weight 475 references Stripe's pricing page typography (Stripe ships Sohne at custom mid-weights for similar reasons). The 4-tier pricing comparison grid pattern is borrowed from the SaaS canon — Notion, Asana, Linear all ship variants — but Airtable's strict typographic separation between marketing (Haas) and pricing (Inter Display) is unusually disciplined.
+
+- **Stripe** — Confident single-color CTA discipline; pricing-page typographic sub-system. https://stripe.com
+- **Linear** — Near-black surface as primary brand voltage. https://linear.app
+- **Notion** — White-canvas editorial publication metaphor. https://notion.so
+- **Print magazine grids (Wired, NYT Magazine)** — Hairline borders + signature full-bleed cards as editorial cadence.
+- **Inter Display variable** (Rasmus Andersson) — The pricing sub-system's mid-weight (475) discipline.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep `button-primary` near-black (`#181d26`). The brand's primary CTA is ink, not the link blue.
+- Reserve `button-primary` for one primary action per viewport. The system is designed for scarcity at the brand-action layer.
+- Use `button-secondary` (white with hairline outline) as the natural pair with `button-primary` — Airtable's signature button row.
+- Trust whitespace as the hero atmosphere. Hero bands are intentionally calm — no gradient, no mesh, no atmospheric backdrop.
+- Use `signature-coral-card`, `signature-forest-card`, and `hero-card-dark` to break editorial monotony — these are the brand's voltage moments.
+- Keep `demo-grid-card` heights uneven within a grid. Uniform heights feel like a spec sheet.
+- Treat the pricing surface as its own dialect: keep `pricing-display`, `pricing-card-title`, and `button-pricing-pill` together. Mixing them with Haas / 12px-radius button breaks the sub-system's voice.
+- Anchor every editorial band with **96px** vertical padding.
+- Use real product UI screenshots inside demo-grid cards. Photography-as-depth.
+
+### Don't
+- Don't make `#1b61c9` (link blue) the primary button color. It is the link color. The primary button is `#181d26`.
+- Don't add a gradient backdrop to the hero. Airtable's hero is white, full stop.
+- Don't bold display-weight type. `display-xl` and `display-lg` are intentionally weight 400 / 500 — going to 700 reads as marketing-page-template.
+- Don't use `pill` (9999px) outside the pricing surface.
+- Don't repeat the same surface mode in two consecutive bands. Two whites in a row read as a typography blog.
+- Don't introduce additional accent colors beyond the documented signature card palette.
+- Don't apply box-shadow elevation to content cards — the system uses borders and color contrast.
+- Don't use cool greys. Airtable's neutrals are warm-shifted (`#41454d` body has a faint warm cast).
+- Don't invert the top nav over dark sections — it stays light over every band.
+- Don't bold inside the editorial body. The only true 600 is `legal`.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:     #ffffff (white — never tint)
+Text / Ink:      #181d26 (near-black with faint warm cast)
+Body:            #333840 (default running-text)
+Muted:           #41454d (captions, footer, breadcrumbs)
+Brand / CTA:     #181d26 (same hex as ink — single role at two layers)
+Coral:           #aa2d00 (signature card — homepage anchor)
+Forest:          #0a2e0e (signature card — coral sibling)
+Cream:           #f5e9d4 (cream callout band)
+Dark navy:       #181d26 (mid-page CTA card surface)
+Hairline:        #dddddd (every 1px border in the system)
+Link:            #1b61c9 (NOT the primary button color)
+On-brand:        #ffffff (white text on near-black CTAs)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#ffffff` canvas with Haas Groot Disp 40px / 400 / line-height 1.2 headline ('Build the apps your team needs'), 16px / 400 `#333840` subhead, primary CTA (`#181d26` background, white text, 16px / 500 Haas, 12px radius, 16×24px padding) and secondary CTA (white background, `#181d26` text, 1px `#dddddd` border, same radius and padding). 96px vertical padding. No background gradient."
+
+2. "Build a full-bleed signature card on `#aa2d00` coral background, `#ffffff` text, 12px radius, 48px padding. h2 in 32px / 400 Haas, supporting copy in 14px / 400 white. CTA is `button-secondary-on-dark` — white button, dark text, 1px hairline border."
+
+3. "Compose a 3-up demo-grid: each card on `#ffffff` (or rotate through `#fcab79` peach, `#a8d8c4` mint, `#f4d35e` yellow), 10px radius, 16px padding, 1px `#dddddd` border, deliberately uneven heights. Each card carries a product UI screenshot at 16:10, a 14px uppercase category tag, and a 16px / 500 label."
+
+4. "Design a pricing tier card on `#ffffff` (`#f8fafc` for the featured tier — surface tone shift only, no badge), 10px radius, 32px padding. Plan name in Inter Display 20px / 475, price in Inter Display 44.8px / 475, feature checklist in body-md 14px / 400. CTA is `button-pricing-pill` — white background, `#1d1f25` text, 9999px radius, 12×24px padding."
+
+5. "Build a tabbed feature card: light surface `#f8fafc`, 12px radius, 32px padding. Left rail vertically-stacked tab labels in Haas 20px / 400; right pane shows the active tab's headline in Haas 24px / 400 plus body-md description and a small text link in `#1b61c9`."
+
+6. "Design a top nav: 64px tall white bar, Airtable wordmark left, horizontal menu (Platform / Solutions / Resources / Enterprise / Pricing) center-left in Haas 14px / 400 `#181d26`, right cluster carries 'Book Demo' text link, primary 'Sign up for free' button, 'Log In' text link. Stays white on every page — never inverts."
+
+### Iteration Guide
+1. Start with `#ffffff` canvas. The white is the brand. Tinting it cream or warm-grey breaks the publication metaphor.
+2. Place one `button-primary` per viewport. If you find yourself wanting a second, demote it to `button-secondary`.
+3. Pick exactly one signature surface per major band — coral, forest, dark, or cream. Two signature surfaces side-by-side reads as a portfolio site, not Airtable.
+4. Keep display weight at 400 / 500. If a headline doesn't feel emphatic enough, scale up before bolding.
+5. Use the warm pastel palette (peach / mint / yellow / mustard) only inside demo-grid cards. They are the product's row-tag colors promoted to surface mode — promoting them further (full bands, hero backgrounds) overplays the metaphor.
+6. Anchor every band at 96px vertical padding. The vertical rhythm is the brand.
+7. When in doubt about emphasis: bigger type before bolder type, signature surface card before solid accent.
+8. Pricing-page work uses Inter Display 475 + pill buttons + `#f8fafc` for featured tier. Don't drift back to Haas + 12px-radius button on pricing — the dialect is the signal.

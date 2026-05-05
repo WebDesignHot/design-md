@@ -1,0 +1,722 @@
+---
+name: Krea
+tagline: A pure-black studio with Suisse Intl set quietly at 60px — a creative-AI gallery that lets the work and the cobalt CTA carry the colour.
+author: webdesignhot
+source_url: https://www.krea.ai
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [ai, design-tools, media]
+tags: [dark, sans, spacious, minimal, structured, cool, multi-theme]
+preview_swatch: ['#000000', '#ffffff', '#0b0f15']
+related: [vercel, linear, openai]
+description: 'Krea''s site is a black-room gallery for creative AI. The canvas is pure `#000`, the type is **Suisse Intl** at 60px regular weight (not bold), and the chrome is a tight neutral grey ladder — every pixel of saturation belongs to the videos in the hero grid. The single chromatic accent is a deep cobalt declared in `oklch(0.579 0.2497 257)`, used as a quiet hover and link tone. The brand''s rainbow is the user-generated work, not the wrapper. Where Midjourney goes cosmic-violet and Runway goes editorial near-black, Krea commits to absolute `#000000` and trusts Swiss-Typefaces'' Suisse Intl at weight 400 to set the headline — a museum placard, not a marketing banner.'
+
+colors:
+  # Primary
+  bg: '#000000'                  # pure black gallery canvas
+  bg-alt: '#0b0f15'              # near-black alternate panel for inset zones
+  surface: '#171717'             # neutral-900 raised card
+  surface-soft: '#262626'        # neutral-800 panel
+  surface-elevated: '#2a2a2a'    # popover / modal raised
+  surface-iced: '#f5f5f5'        # neutral-100 light surface for support pages
+  surface-paper: '#fafafa'       # rare paper-light background
+  text: '#ffffff'                # display white on dark
+  text-strong: '#ffffff'         # primary copy on black
+  text-muted: '#a3a3a3'          # neutral-400 captions and metadata
+  text-soft: '#737373'           # neutral-500 quiet labels
+  text-faint: '#525252'          # neutral-600 disabled
+  text-paper: '#404040'          # body on light surfaces
+  text-paper-muted: '#737373'    # muted on light
+  # Brand
+  brand: '#3b82f6'               # cobalt declared via oklch(0.579 0.2497 257)
+  brand-deep: '#2563eb'          # pressed cobalt
+  brand-soft: 'rgba(59, 130, 246, 0.15)' # cobalt wash for hover/tint
+  on-brand: '#ffffff'            # white label on cobalt
+  # Interactive
+  link: '#ffffff'                # links stay white on dark; underlined
+  link-hover: '#3b82f6'          # cobalt on hover
+  link-paper: '#171717'          # links on light surfaces
+  selected-bg: 'rgba(255, 255, 255, 0.08)' # 8% white selected state
+  disabled: '#525252'
+  # Borders
+  border: 'rgba(255, 255, 255, 0.08)'   # ~8% white hairline on dark
+  border-strong: 'rgba(255, 255, 255, 0.16)' # emphasized rule
+  border-subtle: 'rgba(255, 255, 255, 0.04)' # quietest division
+  border-paper: 'rgba(0, 0, 0, 0.05)'   # 5% black hairline on light
+  border-cobalt: 'rgba(59, 130, 246, 0.40)' # brand-tinted ring
+  # Semantic
+  success-bg: 'rgba(34, 197, 94, 0.12)'
+  success-text: '#86efac'
+  warning-bg: 'rgba(234, 179, 8, 0.12)'
+  warning-text: '#fde047'
+  danger-bg: 'rgba(239, 68, 68, 0.12)'
+  danger-text: '#fca5a5'
+  info-bg: 'rgba(59, 130, 246, 0.12)'
+  info-text: '#93c5fd'
+
+typography:
+  display:
+    family: '"Suisse Intl", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+    weights: [400, 500, 600]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Suisse Intl", ui-sans-serif, system-ui, sans-serif'
+    weights: [400, 500]
+    opentype-features: ['kern']
+  mono:
+    family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-hero:    { size: 80, weight: 400, lineHeight: 1.0,  tracking: '-0.01em', family: display, opentype: 'kern liga' }
+    display:         { size: 60, weight: 400, lineHeight: 1.05, tracking: '0',       family: display, opentype: 'kern liga' }
+    h1:              { size: 48, weight: 400, lineHeight: 1.05, tracking: '-0.005em', family: display }
+    h2:              { size: 36, weight: 400, lineHeight: 1.1,  tracking: '-0.01em', family: display }
+    h3:              { size: 24, weight: 500, lineHeight: 1.2,  tracking: '0',       family: display }
+    h4:              { size: 20, weight: 500, lineHeight: 1.3,  tracking: '0',       family: display }
+    h5:              { size: 16, weight: 500, lineHeight: 1.4,  tracking: '0',       family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0.08em',  family: display, transform: uppercase }
+    body-large:      { size: 20, weight: 400, lineHeight: 1.5, family: body }
+    body:            { size: 18, weight: 400, lineHeight: 1.5, family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5, family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4, family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.4, family: mono, opentype: 'tnum' }
+    label:           { size: 12, weight: 500, lineHeight: 1.3, family: display }
+    code:            { size: 13, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero' }
+    code-micro:      { size: 11, weight: 400, lineHeight: 1.4, family: mono }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  card: 16
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 48, 64, 96, 128, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  site-gutter: 'clamp(24px, 5vw, 64px)'
+  header-height: 56
+  grid-columns: 12
+  hero-grid: '4-column generative video tiles, 1:1 aspect ratio'
+  section-rhythm: '96-160px'
+
+components:
+  button-primary:
+    background: '#3b82f6'
+    text: '#ffffff'
+    padding: '10px 20px'
+    radius: 8
+    border: 'none'
+    font: 'Suisse Intl 500 / 14px'
+    hover-bg: '#2563eb'
+    active-bg: '#1d4ed8'
+    use: 'Primary CTA — cobalt is the only chromatic moment in the chrome.'
+  button-secondary:
+    background: 'transparent'
+    text: '#ffffff'
+    padding: '10px 20px'
+    radius: 8
+    border: '1px solid rgba(255, 255, 255, 0.16)'
+    font: 'Suisse Intl 500 / 14px'
+    hover-bg: 'rgba(255, 255, 255, 0.06)'
+    use: 'Outline twin — same shape, hairline border, calm hover.'
+  button-ghost:
+    background: 'transparent'
+    text: '#ffffff'
+    padding: '8px 12px'
+    radius: 8
+    font: 'Suisse Intl 500 / 14px'
+    hover-bg: 'rgba(255, 255, 255, 0.06)'
+    use: 'Quiet utility — nav links, repeated inline actions.'
+  button-paper:
+    background: '#ffffff'
+    text: '#0a0a0a'
+    padding: '10px 20px'
+    radius: 8
+    font: 'Suisse Intl 500 / 14px'
+    hover-bg: '#f5f5f5'
+    use: 'Inverted CTA on dark — paper button on black ground.'
+  card:
+    background: '#171717'
+    border: '1px solid rgba(255, 255, 255, 0.08)'
+    radius: 16
+    padding: '20px'
+    use: 'Quiet info card — neutral-900 fill, hairline edge, no shadow at rest.'
+  card-video-tile:
+    background: '#171717'
+    border: 'none'
+    radius: 16
+    padding: '0'
+    aspect-ratio: '1 / 1'
+    use: 'Hero generative video tile — 1:1 cell, 16px radius, video bleeds to edge.'
+  input:
+    background: '#171717'
+    border: '1px solid rgba(255, 255, 255, 0.16)'
+    radius: 8
+    padding: '10px 14px'
+    font: 'Suisse Intl 400 / 14px'
+    placeholder-color: '#737373'
+    focus-ring: '0 0 0 2px #3b82f6'
+    use: 'Form fields, search, prompt composer.'
+  prompt-input:
+    background: '#171717'
+    border: '1px solid rgba(255, 255, 255, 0.16)'
+    radius: 9999
+    padding: '12px 16px 12px 20px'
+    font: 'Suisse Intl 400 / 16px'
+    inner-button: '36px cobalt circle, white arrow'
+    use: 'Studio prompt — wide pill input that opens the studio.'
+  badge-tag:
+    background: 'rgba(255, 255, 255, 0.08)'
+    text: '#a3a3a3'
+    padding: '4px 10px'
+    radius: 9999
+    font: 'Suisse Intl 500 / 12px'
+    use: 'Style tag chip — quiet white-wash pill.'
+  nav-link:
+    background: 'transparent'
+    text: '#ffffff'
+    padding: '8px 12px'
+    font: 'Suisse Intl 500 / 14px'
+    hover-text: '#a3a3a3'
+    active-bg: 'rgba(255, 255, 255, 0.08)'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-gallery: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — looping videos pause, all transforms collapse to opacity-only, durations halve.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.20) 0 1px 3px'
+  standard: 'rgba(0, 0, 0, 0.30) 0 4px 12px'
+  elevated: 'rgba(0, 0, 0, 0.40) 0 16px 32px -8px'
+  modal: 'rgba(0, 0, 0, 0.60) 0 24px 48px -12px'
+  ring: '0 0 0 2px #3b82f6'
+  ring-soft: '0 0 0 3px rgba(59, 130, 246, 0.30)'
+
+accessibility:
+  contrast-text-on-bg: 21.0        # #ffffff on #000000 — AAA at all sizes
+  contrast-text-muted-on-bg: 7.5   # #a3a3a3 on #000000 — AAA at body sizes
+  contrast-text-soft-on-bg: 4.9    # #737373 on #000000 — AA at body sizes
+  contrast-text-on-brand: 4.6      # #ffffff on #3b82f6 — AA at body sizes
+  contrast-text-paper-on-paper: 10.4 # #404040 on #fafafa — AAA
+  focus-ring: '2px solid #3b82f6 with 2px offset on dark; 2px solid #3b82f6 on light'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order: skip-link → masthead → studio CTA → hero tiles → footer; Esc dismisses modals.'
+  prose-line-length: 'capped at 720px on text pages; gallery pages bleed to viewport.'
+
+dark-mode: optional                 # Krea is dark-first; light mode exists for support pages and the docs portal.
+colors-dark: same as colors          # primary surface is already dark — see colors map.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Krea opens as a black-room gallery. The canvas is pure `#000000` — not the warm near-black of Suno, not the violet near-black of Midjourney, the flat absolute black that turns the page into a cinema. The hero is a looping 4-column mosaic of generative video tiles, each at 1:1 aspect ratio with 16px radius. The headline — "Krea is the world's most powerful creative AI suite." — sits set in **Suisse Intl** at 60px on a 63px line-height, tracked at 0, weight **400**. The refusal to bold the display copy is the brand's most disciplined move on the page: it reads as a museum placard, not a marketing banner.
+
+The neutral palette is engineered as an OKLCH grey ladder, declared in modern CSS so the steps stay perceptually even on P3 displays. The text rests at `#ffffff`, captions step down to `oklch(0.708)` ≈ `#a3a3a3`, quietest labels to `oklch(0.556)` ≈ `#737373`. The single chromatic accent is a deep cobalt declared as `oklch(0.579 0.2497 257)` ≈ `#3b82f6`, used quietly for links on hover and the primary CTA. Every pixel of saturation on the page comes from the work — the looping video grid in the hero is the brand's rainbow, not the chrome.
+
+The atmospheric vocabulary: **black-room, museum-placard, OKLCH-engineered, gallery-as-product, single-cobalt, restraint-as-authority, Swiss-typographic, 60px-not-72px, 400-not-700.** Card radii sit at 16px — softer than Linear's 6–8px, harder than Apple's 20–24px. Section rhythm runs 96–160px between major blocks; the page breathes the way an art gallery breathes. There are no gradients, no meshes, no glow. The black is the wall.
+
+When the cobalt appears, it lands hard. The primary CTA at the head of the page pulls the eye because everything else is grayscale; on hover, links shift from white to cobalt over 100ms — the only chromatic shift in the chrome. The discipline keeps the cobalt-on-black pairing recognisable from a thumbnail.
+
+**Key Characteristics**
+- Pure `#000000` canvas — absolute black, not warm-tinted
+- Suisse Intl by Swiss Typefaces — display at 60px, weight 400 (the refusal to bold)
+- OKLCH-declared neutral grey ladder — perceptually even on P3
+- Single cobalt accent `oklch(0.579 0.2497 257)` ≈ `#3b82f6`
+- 4-column generative video tile grid as the hero
+- 16px card radius — Krea's signature shape
+- 8% white hairlines — tonal stacking, no heavy shadows
+- 96–160px section rhythm — gallery-paced cadence
+- No gradients, no meshes, no glow — flat dark canvas
+- Dark-first; light mode exists for support pages only
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** `#000000` — pure black gallery canvas; the absolute black is the wall.
+- **text** `#ffffff` — display white; the maximum value contrast against `#000`.
+- **bg-alt** `#0b0f15` — faintly tinted near-black for inset zones (footer, sticky panels).
+- **brand-cta-bg** `#3b82f6` — cobalt; the page's only chromatic moment.
+
+### Brand & Accent
+
+- **brand** `#3b82f6` — declared `oklch(0.579 0.2497 257)`. Used on primary CTA, link hover, focus ring.
+- **brand-deep** `#2563eb` — pressed/active state.
+- **brand-soft** `rgba(59, 130, 246, 0.15)` — cobalt wash for selected pills, info callout.
+
+### Interactive
+
+- **link** `#ffffff` — links stay white on dark; underlined for affordance.
+- **link-hover** `#3b82f6` — cobalt on hover; the only chromatic shift in the chrome.
+- **link-paper** `#171717` — links on light support pages; underlined.
+- **selected-bg** `rgba(255, 255, 255, 0.08)` — selected nav, active filter chip.
+- **disabled** `#525252` — neutral-600 disabled chrome.
+
+### Neutral Scale (OKLCH-engineered)
+
+- **white** `#ffffff` — `oklch(1)` display.
+- **neutral-400** `#a3a3a3` — `oklch(0.708)` muted captions.
+- **neutral-500** `#737373` — `oklch(0.556)` quiet labels.
+- **neutral-600** `#525252` — `oklch(0.43)` disabled.
+- **neutral-700** `#404040` — `oklch(0.34)` body on light surface.
+- **neutral-800** `#262626` — `oklch(0.22)` panel.
+- **neutral-900** `#171717` — `oklch(0.15)` raised card.
+- **neutral-950** `#0a0a0a` — `oklch(0.075)` rare deep panel.
+- **near-black** `#0b0f15` — slightly cooled near-black for alternate ground.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#000000` pure black.
+- **surface-1 (panel)** — `#0b0f15` near-black alternate.
+- **surface-2 (raised)** — `#171717` neutral-900 card.
+- **surface-3 (elevated)** — `#262626` neutral-800 panel.
+- **surface-paper** — `#fafafa`, used only on docs/legal pages.
+- **border** `rgba(255, 255, 255, 0.08)` — 8% white hairline, the default rule on dark.
+- **border-strong** `rgba(255, 255, 255, 0.16)` — emphasized rule on inputs and dividers.
+- **border-subtle** `rgba(255, 255, 255, 0.04)` — quietest division.
+
+### Shadow Colors
+
+Shadows on Krea are **deep-black, low-opacity, and rare**. The dark canvas absorbs cast shadows, so most surfaces lift via tonal stepping (`#000` → `#171717` → `#262626`) rather than blur. When shadows do appear (modals, floating menus), they're declared at 20–60% black at large blur radii. The brand never uses brand-tinted shadows — the cobalt stays in fills.
+
+### Semantic
+
+- **success** — bg `rgba(34, 197, 94, 0.12)`, text `#86efac` (green-300).
+- **warning** — bg `rgba(234, 179, 8, 0.12)`, text `#fde047` (yellow-300).
+- **danger** — bg `rgba(239, 68, 68, 0.12)`, text `#fca5a5` (red-300).
+- **info** — bg `rgba(59, 130, 246, 0.12)`, text `#93c5fd` (blue-300) — borrows the brand cobalt at low saturation.
+
+Note: Krea uses **Tailwind 300-step text colours** for semantic text on dark to maintain AA contrast against the black ground while staying calm. Saturated 500s would feel loud against the gallery wall.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: `"Suisse Intl", ui-sans-serif, system-ui, sans-serif` — Swiss Typefaces' modern grotesque, licensed and self-hosted. Closer in proportions to Helvetica than to Inter; slightly more relaxed terminals than the SF-tech default.
+- **Mono**: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace` — for prompt parameters, seed values, dimensions, and rare inline code.
+- **OpenType features**: `kern` and `liga` always enabled. `tnum` (tabular figures) and `zero` (slashed zero) enabled in mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | Suisse Intl | 80px | 400 | 1.0 | -0.01em | kern liga | Reserved for major launches |
+| Display | Suisse Intl | 60px | 400 | 1.05 | 0 | kern liga | Homepage hero — the signature |
+| H1 | Suisse Intl | 48px | 400 | 1.05 | -0.005em | liga | Page title |
+| H2 | Suisse Intl | 36px | 400 | 1.1 | -0.01em | liga | Major section heading |
+| H3 | Suisse Intl | 24px | 500 | 1.2 | normal | — | Sub-section heading |
+| H4 | Suisse Intl | 20px | 500 | 1.3 | normal | — | Card heading |
+| H5 | Suisse Intl | 16px | 500 | 1.4 | normal | — | Inline emphasis |
+| Eyebrow | Suisse Intl | 12px | 500 | 1.4 | 0.08em | uppercase | Section pre-label |
+| Body Large | Suisse Intl | 20px | 400 | 1.5 | normal | — | Lede paragraph |
+| Body | Suisse Intl | 18px | 400 | 1.5 | normal | — | Default body |
+| Body Small | Suisse Intl | 14px | 400 | 1.5 | normal | — | Compact UI body |
+| Caption | Suisse Intl | 13px | 400 | 1.4 | normal | — | Image captions, helper |
+| Caption Tabular | mono | 13px | 500 | 1.4 | normal | tnum | Seed values, dimensions |
+| Label | Suisse Intl | 12px | 500 | 1.3 | normal | — | UI labels, chips |
+| Code | mono | 13px | 400 | 1.55 | normal | tnum zero | Inline + block |
+| Code Micro | mono | 11px | 400 | 1.4 | normal | — | Footnote, model version |
+
+### Principles
+
+- **Display weight 400 is the brand statement.** Suisse Intl at 60px / 400 / no tracking is the typographic move that distinguishes Krea from Stripe / Vercel marketing-hero conventions. The refusal to bold puts the brand in Linear's product-chrome register.
+- **Single-family discipline.** Suisse Intl carries display, body, captions, labels — everything except tabular numerals.
+- **Bold (600) is for ui emphasis only — never marketing display.** The discipline is non-negotiable.
+- **Negative tracking only at 80px+.** -0.01em at 80px, slight -0.005em at 48px, normal at 24px and below.
+- **Body size 18px / line-height 1.5.** Slightly larger than Vercel's 14–16px body but the same proportions — Suisse Intl reads warm at 18.
+- **Eyebrow uses 0.08em tracking.** Wider than Anthropic's 0.04em, signalling the gallery-placard register.
+- **No italics in display.** Italics belong to citations in body copy and image captions.
+- **Mono only for tabular data.** Prompt parameters, seed values, dimensions — never UI chrome or button labels.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Cobalt)**
+- Background: `#3b82f6` cobalt. Text: `#ffffff`, Suisse Intl 500 / 14px.
+- Padding: `10px 20px`. Radius: `8px`. No border.
+- Hover: bg → `#2563eb`; transition `200ms ease-standard`.
+- Active: bg → `#1d4ed8`.
+- Focus: 2px cobalt ring with 2px offset.
+- Use: Primary CTA — *Open studio, Sign up, Get started.*
+
+**Secondary (Outline)**
+- Background: transparent. Text: `#ffffff`, Suisse Intl 500 / 14px.
+- Border: `1px solid rgba(255, 255, 255, 0.16)`.
+- Hover: bg → `rgba(255, 255, 255, 0.06)`; border → `rgba(255, 255, 255, 0.24)`.
+- Use: Twin to primary — *Read more, Watch demo.*
+
+**Ghost (Quiet)**
+- Background: transparent. Text: `#ffffff`, Suisse Intl 500 / 14px.
+- Padding: `8px 12px`.
+- Hover: bg → `rgba(255, 255, 255, 0.06)`.
+- Use: Nav links, footer, repeated inline actions.
+
+**Paper (Inverted)**
+- Background: `#ffffff`. Text: `#0a0a0a`, Suisse Intl 500 / 14px.
+- Padding: `10px 20px`. Radius: `8px`.
+- Hover: bg → `#f5f5f5`.
+- Use: Rare inverted CTA — paper button on black ground for press / launch contexts.
+
+### Cards
+
+**Editorial Card**
+- Background: `#171717`. Border: `1px solid rgba(255, 255, 255, 0.08)`. Radius: `16px`. Padding: `20px`.
+- Shadow: none at rest; on hover, `rgba(0, 0, 0, 0.30) 0 4px 12px`.
+- Use: Feature card, capability tile, blog index entry.
+
+**Video Tile (Hero)**
+- Background: `#171717` (placeholder ground while video loads). Border: none. Radius: `16px`. Aspect: 1:1.
+- Hover: 24px soft shadow at 30% black + 1.02× scale.
+- Use: Hero generative video grid — videos auto-loop, sound off, tile-radius matches card system.
+
+**Inset Card**
+- Background: `#0b0f15`. Border: `1px solid rgba(255, 255, 255, 0.04)`. Radius: `12px`. Padding: `16px`.
+- Use: Quiet info zone — cookie banner, in-feed announcement.
+
+### Badges, Tags, Pills
+
+**Tag Chip** — bg `rgba(255, 255, 255, 0.08)`, text `#a3a3a3`, Suisse Intl 500 / 12px, padding `4px 10px`, radius `9999`. Hover deepens bg to `rgba(255, 255, 255, 0.12)`.
+
+**Cobalt Pill** — bg `rgba(59, 130, 246, 0.15)`, text `#93c5fd`, border `rgba(59, 130, 246, 0.40)`, radius `9999`. Used for "new feature" beta badges.
+
+**Eyebrow Label** — no chrome, just type. Suisse Intl 500 / 12px / uppercase / 0.08em tracking, colour `#737373`.
+
+### Inputs / Forms
+
+**Text Input**
+- Background: `#171717`. Border: `1px solid rgba(255, 255, 255, 0.16)`. Radius: `8px`. Padding: `10px 14px`.
+- Font: Suisse Intl 400 / 14px. Placeholder: `#737373`.
+- Focus: `0 0 0 2px #3b82f6` ring, border → `#3b82f6`.
+- Error: border → `#ef4444`, helper red below.
+
+**Prompt Input (Studio)**
+- Background: `#171717`. Border: `1px solid rgba(255, 255, 255, 0.16)`. Radius: `9999` (pill). Padding: `12px 16px 12px 20px`.
+- Font: Suisse Intl 400 / 16px. Placeholder: `#737373`.
+- Inner button: 36px cobalt circle, white arrow icon.
+- Focus: ring grows to 3px at 30% cobalt.
+- Use: Studio entry — wide pill input on the home page.
+
+### Navigation
+
+- Header height `56px`. Background `transparent` over hero (uses `backdrop-filter: blur(12px)` on scroll).
+- Logo: Krea wordmark in white, weight 500.
+- Nav links: Suisse Intl 500 / 14px, colour `#ffffff`, padding `8px 12px`. Hover: text → `#a3a3a3`.
+- Right-side: ghost "Sign in" + primary cobalt "Open studio".
+- Mobile (<640px): hamburger collapses to a full-screen sheet; links stack at 18px / 500.
+
+### Optional Components
+
+**Dropdown Menu** — bg `#171717`, border `rgba(255, 255, 255, 0.08)`, radius `8px`, shadow `rgba(0, 0, 0, 0.40) 0 12px 24px -8px`. Items: Suisse Intl 400 / 14px, hover bg `rgba(255, 255, 255, 0.06)`.
+
+**Tooltip** — bg `#262626`, text `#ffffff`, radius `4px`, padding `6px 10px`, font `12px / 500`.
+
+**Toast** — bg `#171717`, border `rgba(255, 255, 255, 0.08)`, radius `8px`, padding `12px 16px`, shadow `rgba(0, 0, 0, 0.40) 0 8px 24px -4px`.
+
+**Modal** — bg `#171717`, radius `16px`, shadow `rgba(0, 0, 0, 0.60) 0 24px 48px -12px`, max-width `560px`. Backdrop: 70% black.
+
+**Decorative**: occasional subtle blue glow behind hero text (`radial-gradient(rgba(59, 130, 246, 0.10), transparent)`); used sparingly.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128, 160 — gallery-paced.
+- **Density observation**: Krea is *under-dense* at the chrome level (96–160px section rhythm) and *medium-dense* at the tile level (4-column grid with 16px gutters). The chrome breathes; the work packs.
+
+### Grid & Container
+
+- **Page max width**: `1440px` — broad cinematic frame.
+- **Site gutter**: `clamp(24px, 5vw, 64px)` — generous on desktop, accommodating on mobile.
+- **Grid**: 12 columns with 24px gutters.
+- **Hero grid**: 4-column 1:1 video tile mosaic with 16px gutters.
+- **Hero treatment**: 60px headline left-aligned with the grid, body 18–20px below, hero video grid begins 64px below.
+
+### Whitespace Philosophy
+
+The whitespace is **gallery-paced**. Section gutters run 96–160px between major editorial blocks; minor blocks sit on 64–96px gaps; intra-section spacing uses 24–48px. The page reads like an art gallery hang — work has room to register before the next piece begins.
+
+### Section Cadence
+
+- Hero (black, 4-column video grid) → Feature ladder (black, 12-col with capability cards) → Testimonial / quote band (black) → Studio CTA (black) → Footer (`#0b0f15` near-black).
+- The whole site stays in dark territory; no light/dark alternation. The exception is the docs portal at `/docs`, which uses the light support-page palette.
+- Section breaks are vertical space + occasional 1px hairlines (`rgba(255, 255, 255, 0.08)`).
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Decorative dividers, icon-corner inheritance |
+| Standard (sm) | 4px | Compact chips, status pills (rare) |
+| Comfortable (md) | 8px | Buttons, inputs — the dominant `--radius--main` |
+| Relaxed (lg) | 12px | Inset cards, dropdowns |
+| Featured (xl) | 16px | Cards, video tiles, modal dialogs — Krea's signature |
+| Pill | 9999px | Studio prompt input, tag chips, sign-in chip |
+
+Krea's signature radius is **16px on cards and video tiles** — softer than Linear's 6–8px, harder than Apple's 20–24px. Buttons land at 8px; inputs at 8px. Pills (`9999px`) are reserved for the studio prompt and tag chips. There are no zero-radius surfaces. Compound radii are rare; the system reads as a flat ladder.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default page surface, hero, body sections |
+| 1 | Tonal — `#171717` against `#000000` | Cards, inset panels |
+| 2 | `rgba(0,0,0,0.20) 0 1px 3px` | Sticky nav on scroll |
+| 3 | `rgba(0,0,0,0.30) 0 4px 12px` | Hover-lifted cards, video tiles |
+| 4 | `rgba(0,0,0,0.40) 0 16px 32px -8px` | Dropdowns, popovers |
+| 5 | `rgba(0,0,0,0.60) 0 24px 48px -12px` | Modals, dialogs |
+
+### Shadow Philosophy
+
+Krea's depth is **OKLCH-tonal first, shadow second**. The grayscale ladder (`#000` → `#171717` → `#262626`) does the primary elevation work — surfaces step up by value rather than by cast shadow. Cast shadows appear only for floating elements (dropdowns, modals) and use deep-black at 20–60% opacity. The brand never uses brand-tinted shadows; the cobalt stays in fills. The black canvas absorbs shadows, so depth is read as tonal contrast rather than blur.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **`ease-standard`**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, colour transitions.
+- **`ease-emphasized`**: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; modal enter, hero reveal.
+- **`ease-gallery`**: `cubic-bezier(0.32, 0.72, 0, 1)` — slow-out, fast-settle; tile reveal on scroll.
+
+### Duration Buckets
+
+- **Fast (100ms)** — colour transitions, focus rings, link hovers.
+- **Standard (200ms)** — button hover, card hover, dropdown reveal.
+- **Slow (320ms)** — modal enter/exit, page section fade-in.
+- **Page (480ms)** — route transitions, hero reveal sequences.
+
+### Per-Component Micro-States
+
+- **Button hover (primary)**: bg `#3b82f6` → `#2563eb` over 200ms; no transform.
+- **Card hover**: border `rgba(255, 255, 255, 0.08)` → `rgba(255, 255, 255, 0.16)`; no shadow change at base level.
+- **Video tile hover**: scale 1.02× over 200ms + 24px soft shadow at 30% black.
+- **Link hover**: colour `#ffffff` → `#3b82f6` over 100ms; underline thickens 1px → 2px.
+- **Input focus**: 2px cobalt ring fades in over 100ms; border picks up brand cobalt.
+- **Studio input focus**: ring grows from 2px to 3px at 30% cobalt over 200ms.
+
+### Page Transitions
+
+Hero video grid auto-plays loops with `prefers-reduced-motion` honoured (videos pause). Below-fold sections use `IntersectionObserver` to fade in at 80% viewport, 320ms duration, 12px translate-up.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)` — looping videos pause and show a static frame; all transforms collapse to opacity-only; durations halve.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#ffffff` text on `#000000` bg**: 21.0:1 — AAA at all sizes.
+- **`#a3a3a3` text on `#000000` bg**: 7.5:1 — AAA at body sizes.
+- **`#737373` text on `#000000` bg**: 4.9:1 — AA at body sizes; AA large at all.
+- **`#ffffff` text on `#3b82f6` cobalt**: 4.6:1 — AA at body sizes; safe for buttons.
+- **`#a3a3a3` text on `#171717` surface**: 6.3:1 — AAA at body sizes.
+- **`#404040` text on `#fafafa` paper**: 10.4:1 — AAA at all sizes (light support pages).
+
+### Focus Indicators
+
+- Default ring: `0 0 0 2px #3b82f6` with 2px offset on dark surfaces.
+- Soft ring (studio prompt focus): `0 0 0 3px rgba(59, 130, 246, 0.30)`.
+- All interactive surfaces show a visible focus state.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link to `#main-content`.
+- **Studio prompt**: `<form role="search" aria-label="Open studio">` with `aria-label` on the input.
+- **Hero video grid**: `aria-label="Generative video gallery"`; each video has `aria-label` matching its caption.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Live regions**: `aria-live="polite"` for status messages.
+
+### Keyboard Navigation
+
+- Tab order: skip-link → masthead nav → studio CTA → hero tiles → footer.
+- Arrow keys navigate within hero tile grid; Space/Enter activates a tile.
+- `Esc` closes dropdowns, modals.
+
+### Screen Reader Hints
+
+- Decorative video tiles have `aria-label` matching the prompt that generated them.
+- Icon-only buttons have `aria-label`.
+- Looping background videos with no semantic content: `aria-hidden="true"`.
+
+### Reduced Motion
+
+Honoured globally. Hero videos pause and show static frame; tile-scale hover disabled; durations halved.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single-column, full-bleed video tiles |
+| Tablet | 640–1024px | 2-column tile grid |
+| Desktop | 1024–1280px | 3-column tile grid, full nav |
+| Wide | 1280–1440px | 4-column tile grid (hero default) |
+| Ultra | > 1440px | Page locks at 1440px; gutters expand |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px.
+- Buttons: 44px minimum on mobile.
+- Video tile: full tile is the tap target; no inner controls until hover/tap reveals them.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 60px → 48px → 36px headline across desktop/tablet/mobile.
+- **Tile grid**: 4-up → 3-up → 2-up → 1-up across sizes.
+- **Section spacing**: 160px → 96px → 64px across sizes.
+
+### Image Behavior
+
+- Hero videos use `<video autoplay muted loop playsinline>` with poster frame for `prefers-reduced-motion`.
+- Static images use `srcset` with breakpoint-derived sizes; native lazy-loading.
+- Aspect ratio is locked at 1:1 for tiles; 16:9 for full-bleed feature embeds.
+
+### Container Queries
+
+Used inside capability cards to switch icon-left vs. icon-top layout when card width crosses 320px.
+
+## 11. Content & Voice
+
+### Tone
+
+**Confident, technical, gallery-curatorial.** Krea writes like a curator describing a show — full sentences, no marketing exuberance, no exclamation marks. Headlines describe capabilities ("Real-time AI image generation"); subheads contextualise. The voice positions Krea as a serious creative tool, not a consumer toy.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Open studio," "Sign in," "Generate," "Save," "Share." Never "Get started for free!" never "Start your AI journey."
+- **Error messages**: "Couldn't connect to the studio. Try again, or [contact support]."
+- **Success confirmations**: "Saved to library." "Generation complete." Brief.
+- **Loading states**: "Generating…" with subtle cobalt progress indicator.
+
+### Empty States
+
+- *"Your library is empty. Open the studio to start creating."* — explain, offer next step.
+- *"No matching results."* — search empty.
+- Never uses "Oops!" or apologetic exclamation marks.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Open studio," "Try Krea," "Get started"
+- Secondary: "Watch the demo," "View the gallery," "Read the docs"
+- Footer: "Pricing," "API," "Careers," "Discord"
+
+The voice is **invitational with curatorial confidence** — the studio is open, the gallery is curated, you're invited to look and to make.
+
+## 12. Dark Mode & Theming
+
+**Dark-first; light mode exists only for support pages and the docs portal.** The marketing surface, the studio, and the gallery are all rendered on the absolute black canvas — that's the brand's defining choice.
+
+The light-mode tokens (used at `/docs`, `/legal`, `/privacy`) flip the palette: `bg: #ffffff`, `text: #171717`, `text-muted: #737373`, `border: rgba(0, 0, 0, 0.05)`. The cobalt stays at `#3b82f6` (slightly darker for AA contrast on white). Card surfaces lift to `#fafafa`. The light variant is utilitarian — it doesn't carry the brand's gallery atmosphere; it's there to make documentation legible.
+
+The single rule: **never** show the brand's main marketing surface in light mode. The black canvas is the gallery; light mode is the back office.
+
+## 13. Lineage & Influences
+
+Krea's design DNA is **Linear's OKLCH-engineered restraint + Vercel's pure-black canvas + Swiss Typefaces' Suisse Intl + the Bauhaus discipline of "less, more"**. Where Midjourney goes cosmic-violet with custom display faces, where Runway goes editorial near-black with Söhne, where Stable Diffusion's UI defaults to dev-tool grey — Krea commits to absolute `#000000` and trusts Suisse Intl at weight 400 to set the headline. The refusal to bold is the brand's most disciplined move.
+
+What it inherits: Linear's OKLCH-native colour system (perceptually-even greys on P3), Vercel's pure-black canvas with monochrome chrome, Swiss editorial geometry (12-column grid, generous whitespace), Bauhaus discipline (restricted palette, function-led layout). What it borrows from contemporaries: Apple's thumbnail-grid hero pattern, Notion's calm chrome. What it rejects: gradient meshes, neon accents, hero animations, AI-tech iconography clichés (purple gradients, robotic faces).
+
+**Named influences:**
+
+- **Linear** — OKLCH-native neutral grey ladder; restraint-as-authority chrome. *https://linear.app*
+- **Vercel** — pure-black canvas with monochrome chrome and product as the colour. *https://vercel.com*
+- **Swiss Typefaces (Suisse Intl)** — the neutral grotesque that sets the gallery-wall typographic tone. *https://swisstypefaces.com*
+- **Apple** — thumbnail-grid hero pattern; calm dark canvas register.
+- **Bauhaus / Swiss Style** — discipline of restricted palette, function-led layout, geometric grid.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** keep the canvas at pure `#000000`. Absolute black is the gallery wall.
+- **Do** typeset display in Suisse Intl at weight **400**. The refusal to bold is the discipline.
+- **Do** declare the neutral ladder in OKLCH so steps stay perceptually even on P3 displays.
+- **Do** reserve the cobalt `#3b82f6` for primary CTA, link hover, and focus ring — never for backgrounds.
+- **Do** use 8% white hairlines (`rgba(255, 255, 255, 0.08)`) for borders. Solid borders are too loud.
+- **Do** lift cards via tonal stepping (`#000` → `#171717`) rather than shadow.
+- **Do** keep card radius at 16px — softer than Linear, harder than Apple.
+- **Do** loop hero videos silently with `playsinline` and pause on `prefers-reduced-motion`.
+- **Do** use `tnum` mono for seed values, dimensions, prompt parameters.
+- **Do** keep section rhythm at 96–160px — gallery-paced cadence.
+
+### Don't
+
+- **Don't** introduce additional chromatic accents — saturation belongs to the work.
+- **Don't** mix multiple type families; Suisse Intl carries the entire system.
+- **Don't** use cast shadows for elevation; the OKLCH tonal ladder does the work.
+- **Don't** bold display headlines — Krea's signature is weight 400 at 60px.
+- **Don't** push display headlines above 80px — the chrome is calm.
+- **Don't** use the cobalt as a background; it stays in fills, hover, and focus only.
+- **Don't** insert gradients, meshes, or glow effects beyond a rare, subtle hero halo.
+- **Don't** run the marketing surface in light mode — light is for support pages only.
+- **Don't** drop body weight below 400; Suisse Intl loses its character below.
+- **Don't** apologise in microcopy — empty states are normal, not failures.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #000000
+bg-alt: #0b0f15
+surface: #171717
+surface-soft: #262626
+text: #ffffff
+text-muted: #a3a3a3
+text-soft: #737373
+brand: #3b82f6
+brand-deep: #2563eb
+border: rgba(255, 255, 255, 0.08)
+border-strong: rgba(255, 255, 255, 0.16)
+```
+
+### Example Component Prompts
+
+1. **"Create a Krea-style hero — pure black `#000000` canvas, 60px headline in Suisse Intl weight **400** with no tracking and white text, 18px body in Suisse Intl regular below in `#a3a3a3`. Below the headline, a 4-column 1:1 video tile grid with 16px gutters and 16px tile radius. Single primary cobalt `#3b82f6` 'Open studio' button at 8px radius."**
+
+2. **"Design a Krea video tile — 1:1 aspect, 16px radius, `#171717` placeholder ground while video loads, no border, autoplay loop muted. Hover scales 1.02× with a 24px soft shadow at 30% black. Tile caption below uses Suisse Intl 13px in `#a3a3a3`."**
+
+3. **"Build a Krea capability card — `#171717` background, 1px `rgba(255, 255, 255, 0.08)` border, 16px radius, 20px padding, 24px Suisse Intl 500 heading in white, 16px body in `#a3a3a3`. Hover deepens border to 16% white."**
+
+4. **"Compose a Krea nav — 56px header, transparent background with 12px backdrop-blur on scroll, wordmark hard-left in white Suisse Intl 500. Link list Suisse Intl 500 / 14px white with `#a3a3a3` hover. Right-side: ghost 'Sign in' + primary cobalt 'Open studio' button."**
+
+5. **"Render a Krea studio prompt input — `#171717` background, `1px rgba(255, 255, 255, 0.16)` border, 9999 radius (pill), 12px×16px×12px×20px padding, 16px placeholder text in `#737373`. 36px cobalt `#3b82f6` circle hard-right with white arrow icon. Focus expands ring to 3px at 30% cobalt."**
+
+6. **"Create a Krea feature panel — full-bleed black canvas, 96px vertical padding, 36px Suisse Intl 400 headline in white left-aligned with 12-col grid, 18px body in `#a3a3a3` constrained to a 720px column. Single ghost-outline 'Read more' CTA below."**
+
+### Iteration Guide
+
+1. **Start with absolute `#000000`.** If the bg is `#0a0a0a` or `#111111`, you've softened the canvas. Pure black is the entry ticket.
+2. **Drop display weight to 400.** If the headline is bold, the brand collapses into Stripe-marketing register. Suisse Intl 400 is the discipline.
+3. **Declare greys in OKLCH.** `oklch(0.708)` instead of `#a3a3a3` — the perceptual evenness is part of the brand's quiet engineering signal.
+4. **Reserve cobalt for one beat.** Cobalt `#3b82f6` should appear once in view (CTA, focus ring, link hover) — not in backgrounds, never in fills beyond the primary button.
+5. **Replace shadows with tonal stepping.** `#000` → `#171717` separates panels; explicit shadows only for floating elements.
+6. **Use 8% white hairlines.** Solid `#262626` borders are too structural; the brand uses `rgba(255, 255, 255, 0.08)`.
+7. **Compress display tracking.** -0.01em at 80px+, normal everywhere else. Krea doesn't use Anthropic-style negative tracking on h2/h3.
+8. **Calm the verbs.** Replace "Sign up free!" with "Open studio"; replace "Get started today!" with "Try Krea."

@@ -1,0 +1,691 @@
+---
+name: Height
+tagline: AI-PM workspace dressed in chalk pastels — Inter at modest weights over a near-paper canvas, with a single confident accent and an AI-purple voltage moment.
+author: webdesignhot
+source_url: https://height.app
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas, productivity]
+tags: [light, pastel, sans, calm, ai, project-management]
+preview_swatch: ['#fdfcf9', '#7551dc', '#0e0e10']
+related: [linear, notion, asana]
+description: 'Height''s marketing surface reads like an AI-native project tool that grew up reading Linear and Notion at the same time. The canvas is a near-paper `#fdfcf9` cream-white — not pure white — and the type is Inter at modest mid-weights (450/500/600) sitting in generous whitespace. Brand voltage comes from a single chalk-purple `#7551dc` for AI moments and primary CTAs, paired with pastel surface cards in lavender, peach, mint, and butter that punctuate long-scroll feature pages. There is no decorative gradient mesh and no aurora — emphasis is delegated to the pastel cards and a single dark `#0e0e10` mid-page CTA band that resets section rhythm. The whole system reads as "AI-PM with taste" — Inter''s neutral voice carrying a chalk-pastel palette over an explicitly off-white paper canvas, with the AI-voltage purple held in reserve for the brand''s most important moments.'
+
+colors:
+  bg: '#fdfcf9'                  # near-paper cream canvas
+  bg-soft: '#f7f6f1'             # softer card surface
+  bg-elev: '#ffffff'             # full white only inside elevated modals/popovers
+  bg-strong: '#ebe9e1'           # cream pre-footer band
+  bg-dark: '#0e0e10'             # mid-page dark CTA band
+  bg-dark-elev: '#17171a'        # dark popover surface (rare)
+  surface: '#f7f6f1'             # alias for bg-soft
+  text: '#0e0e10'                # ink — display + body emphasis
+  text-body: '#272730'           # default running-text
+  text-muted: '#5a5a66'          # captions, footer links
+  text-faint: '#9a9aa3'           # placeholder, disabled
+  brand: '#7551dc'               # AI-purple — chalk lavender at high saturation
+  brand-hover: '#6745c8'         # press / hover slightly darker
+  brand-active: '#5a3bb2'        # active / focused
+  brand-soft: '#ede7fb'          # tonal pastel surface for AI moments
+  on-brand: '#ffffff'
+  on-dark: '#fbfbf7'             # cream-tinted white over dark — never #fff
+  link: '#3344c8'                # link blue, distinct from brand
+  link-hover: '#2229a8'
+  pastel-lavender: '#ede7fb'     # AI / Copilot card
+  pastel-peach: '#fbe6d3'        # demo-grid pastel
+  pastel-mint: '#d9efe1'         # demo-grid pastel
+  pastel-butter: '#faf0c8'       # demo-grid pastel
+  pastel-blush: '#f7d8da'        # demo-grid pastel
+  pastel-sky: '#dbe8f8'          # demo-grid pastel
+  border: '#e6e3da'              # warm hairline against cream canvas
+  border-strong: '#cfcbbf'       # stronger card border
+  border-soft: '#efece4'         # softest divider
+  shadow-tint: 'rgba(20, 18, 30, 0.08)'    # warm-ink tinted shadow
+  shadow-deep: 'rgba(20, 18, 30, 0.16)'    # deeper modal shadow
+  info: '#3344c8'
+  success: '#2c8a52'
+  success-soft: '#d9efe1'
+  warning: '#c69022'
+  warning-soft: '#faf0c8'
+  danger: '#cb3946'
+  danger-soft: '#f7d8da'
+  selection: 'rgba(117, 81, 220, 0.18)'    # brand at 18% — text selection
+  ring: 'rgba(117, 81, 220, 0.45)'         # focus ring at 45% brand
+
+typography:
+  display:
+    family: '"Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: 'ss01, ss03, cv11 (single-storey g) for Inter character'
+  body:
+    family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 450, 500, 600]
+    opentype-features: 'tnum (tabular figures) inside data tables; ss01 for the squared-i; cv11 single-storey g'
+  mono:
+    family: '"Berkeley Mono", "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 500, lineHeight: 1.05, tracking: '-0.022em', family: display, opentype: 'ss01, cv11', notes: 'mega hero — single-page anchor only' }
+    display-xl:      { size: 56, weight: 500, lineHeight: 1.07, tracking: '-0.02em',  family: display, opentype: 'ss01, cv11', notes: 'homepage hero h1' }
+    display-lg:      { size: 44, weight: 500, lineHeight: 1.10, tracking: '-0.018em', family: display, opentype: 'ss01', notes: 'feature section h2' }
+    display-md:      { size: 36, weight: 500, lineHeight: 1.14, tracking: '-0.014em', family: display, opentype: 'ss01', notes: 'pricing-page section heads' }
+    title-lg:        { size: 28, weight: 500, lineHeight: 1.20, tracking: '-0.008em', family: display }
+    title-md:        { size: 22, weight: 500, lineHeight: 1.30, tracking: '-0.004em', family: display }
+    title-sm:        { size: 18, weight: 500, lineHeight: 1.35, tracking: 0,           family: body }
+    label-md:        { size: 16, weight: 500, lineHeight: 1.40, tracking: 0,           family: body }
+    button:          { size: 15, weight: 500, lineHeight: 1.20, tracking: 0,           family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: 0,           family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: 0,           family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 0,           family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.40, tracking: '0.02em',    family: body, notes: 'soft uppercase eyebrow with gentle tracking' }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.30, tracking: 0,           family: body, opentype: 'tnum', notes: 'metric / numeric chips' }
+    legal:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.01em',    family: body }
+    code-md:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 0,           family: mono }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.40, tracking: 0,           family: mono }
+
+radius:
+  micro: 2
+  sm: 6
+  md: 10
+  lg: 14
+  xl: 20
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+  card-padding-default: 32
+  card-padding-large: 48
+  section-padding: 96
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: lg
+    padding: '12px 20px'
+    use: 'primary CTA — Sign up free / Get started — Height''s AI-purple anchor'
+  button-primary-hover:
+    backgroundColor: brand-hover
+    textColor: on-brand
+    use: 'pointer hover — slight darken, no transform'
+  button-secondary:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '12px 20px'
+    border: '1px solid border-strong'
+    use: 'Watch demo / Talk to sales / soft pair next to primary'
+  button-tertiary:
+    backgroundColor: transparent
+    textColor: text
+    rounded: lg
+    padding: '10px 16px'
+    use: 'inline text-link-style button inside dense feature lists'
+  button-on-dark:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '12px 20px'
+    use: 'white-pill CTA over the dark mid-page band'
+  button-icon:
+    backgroundColor: bg
+    textColor: text
+    rounded: full
+    size: 36
+    border: '1px solid border'
+    use: 'carousel arrows, share, copy-link affordances'
+  card-pastel-lavender:
+    backgroundColor: pastel-lavender
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'AI / Copilot feature card — Height''s signature surface for AI moments'
+  card-pastel-peach:
+    backgroundColor: pastel-peach
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'task-creation / inbox demo card'
+  card-pastel-mint:
+    backgroundColor: pastel-mint
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'sprint / status demo card'
+  card-pastel-butter:
+    backgroundColor: pastel-butter
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'milestone / planning demo card'
+  card-default:
+    backgroundColor: bg-soft
+    textColor: text
+    rounded: lg
+    padding: 32
+    border: '1px solid border'
+    use: 'default content card on cream canvas'
+  card-elevated:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: lg
+    padding: 32
+    border: '1px solid border-soft'
+    shadow: 'standard'
+    use: 'pricing tier card, integration card'
+  hero-card-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: xl
+    padding: 64
+    use: 'mid-page dark CTA band — section reset and AI demo anchor'
+  badge-ai:
+    backgroundColor: brand-soft
+    textColor: brand-active
+    rounded: pill
+    padding: '4px 10px'
+    fontSize: 12
+    use: 'inline AI badge — appears next to AI-Copilot demos'
+  badge-tag:
+    backgroundColor: bg-soft
+    textColor: text-muted
+    rounded: pill
+    padding: '4px 10px'
+    fontSize: 12
+    use: 'category / status pill inside demo cards'
+  text-input:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: md
+    padding: '10px 14px'
+    height: 40
+    border: '1px solid border-strong'
+    fontFamily: body
+    use: 'email capture, signup, in-page demo input'
+  text-input-focus:
+    border: '1px solid brand'
+    shadow: '0 0 0 3px rgba(117,81,220,0.2)'
+    use: 'focus state — chalk-purple ring'
+  top-nav:
+    backgroundColor: 'rgba(253,252,249,0.85)'
+    textColor: text
+    height: 64
+    use: 'sticky cream-tinted bar with backdrop-blur — Height wordmark left, menu center, AI-Copilot toggle and CTA right'
+  footer:
+    backgroundColor: bg-strong
+    textColor: text-muted
+    padding: 96
+    use: 'cream pre-footer band carrying multi-column link list and small wordmark'
+  toast:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: md
+    padding: '12px 16px'
+    shadow: deep
+    use: 'inline confirmation — Saved to Height'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  ease-spring: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-instant: 80
+  duration-fast: 140
+  duration-standard: 220
+  duration-slow: 360
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transforms removed, transitions reduced to opacity-only at 100ms; pastel-card scroll reveals fade in without offset'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 2px rgba(20,18,30,0.04)'
+  standard: '0 6px 20px rgba(20,18,30,0.06)'
+  elevated: '0 14px 40px rgba(20,18,30,0.10), 0 2px 6px rgba(20,18,30,0.04)'
+  deep: '0 28px 60px rgba(20,18,30,0.18), 0 6px 12px rgba(20,18,30,0.08)'
+  ring: '0 0 0 3px rgba(117,81,220,0.45)'
+
+accessibility:
+  contrast-text-on-bg: 18.6              # AAA — #0e0e10 on #fdfcf9
+  contrast-body-on-bg: 12.4              # AAA — #272730 on #fdfcf9
+  contrast-muted-on-bg: 5.7              # AA — #5a5a66 on #fdfcf9
+  contrast-on-brand: 5.6                 # AA — white on #7551dc at body sizes; AAA at display sizes
+  contrast-on-dark: 17.2                 # AAA — #fbfbf7 on #0e0e10
+  contrast-link-on-bg: 8.1               # AAA — #3344c8 on #fdfcf9
+  focus-ring: '3px solid rgba(117,81,220,0.45) with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav-honored: true
+
+dark-mode: 'optional — Height ships an in-product dark variant that mirrors the marketing palette by inverting bg/text and de-saturating brand to a slightly cooler chalk-purple. The marketing surface is light-only.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Height's marketing surface is a quiet, deliberately understated AI-PM workspace dressed as a paper publication. The canvas is a near-paper cream `#fdfcf9` — not pure white — with the type set in Inter at modest mid-weights. There is no aurora gradient, no atmospheric mesh, no glassmorphic panels. The page reads, atmospherically, like an editorial product page that happens to ship AI features.
+
+Brand voltage comes from a single chalk-purple `#7551dc` for AI moments and primary CTAs, paired with pastel surface cards in lavender, peach, mint, butter, blush, and sky that punctuate long-scroll feature pages. The pastel cards are not decorative — each carries a real product UI fragment (a task list, a sprint kanban, a Copilot prompt) framed in 48px of internal padding. Between pastel bands, Height returns to the cream canvas and a single dark `#0e0e10` mid-page CTA band resets section rhythm with editorial confidence.
+
+The voice is calm. Headlines top out at 56–72px in Inter Display 500 — the system never goes 700. Display tracking is gently negative (`-0.018em` to `-0.022em`), enough to compress the headline into a single visual gesture without screaming. Body sits at 16–18px / 400 with 1.55 line-height — generous, paper-like, designed for long scroll.
+
+The result is "AI-PM with taste": Inter's neutral voice carrying a chalk-pastel palette over an explicitly off-white paper canvas, with the AI-voltage purple held in reserve for the brand's most important moments. Linear's near-black inheritance is rejected outright; Notion's warm-neutral publication metaphor is borrowed but pivoted toward pastels and chalk-purple instead of black-and-blue.
+
+**Key Characteristics:**
+- Canvas is **off-white cream** (`#fdfcf9`), not pure white — a quiet differentiation from Notion's pure paper.
+- Display type is Inter at **500 only** — never 700. Emphasis comes from size, not weight.
+- Brand voltage = `#7551dc` chalk-purple, used for primary CTA and AI moments (Copilot, AI badge, AI-card).
+- Pastel surface cards (lavender / peach / mint / butter / blush / sky) carry product UI demos; they are the brand's signature.
+- One dark `#0e0e10` mid-page band resets section rhythm — never a second dark band on the same page.
+- Section padding is **96px** between every editorial band — the universal vertical rhythm constant.
+- Hairlines are warm (`#e6e3da`), not cool — they read as paper-fold creases, not steel rules.
+- Cards round at **20px (xl)** for pastel surfaces, 14px for primary CTAs, 10px for content cards, 6px for inputs.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#fdfcf9`): Near-paper cream. Not `#ffffff` — the off-tint is intentional and reads as warmer than Notion or Linear.
+- **Text / Ink** (`#0e0e10`): Display headlines, primary body emphasis, primary button text-on-light surfaces (rare — Height's primary CTA is purple-on-white).
+- **Brand / AI Purple** (`#7551dc`): The single signature voltage. Used for primary CTA, AI moments, brand wordmark when colored.
+
+### Brand & Dark
+- **Brand Hover** (`#6745c8`): Press state on primary.
+- **Brand Active** (`#5a3bb2`): Active / focused.
+- **Brand Soft** (`#ede7fb`): Tonal pastel surface specifically for AI moments — the "Copilot is enabled" badge background, the pastel-lavender card.
+- **Bg Dark** (`#0e0e10`): Mid-page dark CTA band, dark popover, and toast surface.
+- **Bg Dark Elevated** (`#17171a`): Slightly lighter dark surface for elevated dark popovers (rare).
+- **On-Dark** (`#fbfbf7`): Cream-tinted white over dark surfaces. Never pure `#ffffff` — the cream-tint preserves continuity with the canvas.
+
+### Accent — Pastel Card Surfaces
+- **Pastel Lavender** (`#ede7fb`): AI / Copilot feature card.
+- **Pastel Peach** (`#fbe6d3`): Task-creation / inbox demo card.
+- **Pastel Mint** (`#d9efe1`): Sprint / status demo card.
+- **Pastel Butter** (`#faf0c8`): Milestone / planning demo card.
+- **Pastel Blush** (`#f7d8da`): Reminder / alert demo card.
+- **Pastel Sky** (`#dbe8f8`): Calendar / time-block demo card.
+
+### Interactive
+- **Link** (`#3344c8`): Inline body links — distinct from brand purple. No underline by default; appears on hover at 1px.
+- **Link Hover** (`#2229a8`): Pressed state.
+- **Selection** (`rgba(117, 81, 220, 0.18)`): Text selection background — brand at 18% alpha.
+- **Disabled**: Use `text-faint` (`#9a9aa3`) for disabled type and `border-soft` (`#efece4`) for disabled outlines.
+
+### Neutral Scale
+- **Ink** (`#0e0e10`): Display + emphasis.
+- **Text Body** (`#272730`): Default running-text.
+- **Text Muted** (`#5a5a66`): Captions, footer links.
+- **Text Faint** (`#9a9aa3`): Placeholder, disabled.
+- **Bg Strong** (`#ebe9e1`): Pre-footer cream band (slightly darker than canvas).
+- **Bg Soft** (`#f7f6f1`): Default card surface.
+
+### Surface & Borders
+- **Bg** (`#fdfcf9`): Canvas.
+- **Bg Soft** (`#f7f6f1`): Default card.
+- **Bg Elev** (`#ffffff`): Pure white only inside elevated modals / popovers.
+- **Border** (`#e6e3da`): Default 1px hairline — warm-tinted to read as paper-fold not steel.
+- **Border Strong** (`#cfcbbf`): Stronger card border for elevated cards / inputs.
+- **Border Soft** (`#efece4`): Softest divider — quiet table dividers.
+
+### Shadow Colors
+- All shadows use the warm-ink tint `rgba(20, 18, 30, 0.04 → 0.18)`. Never neutral black — Height's shadows are 6% warm to match the cream canvas.
+- Focus ring is brand-purple at 45% — a chalk-purple halo, not a neon line.
+
+### Semantic
+- **Info** (`#3344c8`): Inline info badges, focused links.
+- **Success** (`#2c8a52`) on `#d9efe1` mint: success states.
+- **Warning** (`#c69022`) on `#faf0c8` butter: caution states.
+- **Danger** (`#cb3946`) on `#f7d8da` blush: destructive actions.
+
+The unusual choice: Height tints **everything** — canvas, hairline, shadow, on-dark text, even the pastel cards — toward warm cream rather than cool grey. This is the brand's quiet differentiation move from Linear (cool dark) and Asana (cool light).
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Inter Display"` for display sizes (≥ 28px); `"Inter"` for everything else.
+- **Mono**: `"Berkeley Mono"` (with `JetBrains Mono` and `SF Mono` fallback) for code blocks, IDs, command snippets.
+- **Fallback chain**: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`.
+- **OpenType features**: `ss01` (single-storey g preserved as Inter's character mark), `cv11` (alternate digit shapes for tabular alignment), `tnum` inside data tables. Inter's default features otherwise — no aggressive feature toggling.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter Display | 72 | 500 | 1.05 | -0.022em | ss01, cv11 | Mega hero — single-page anchor only |
+| display-xl | Inter Display | 56 | 500 | 1.07 | -0.02em | ss01, cv11 | Homepage hero h1 |
+| display-lg | Inter Display | 44 | 500 | 1.10 | -0.018em | ss01 | Feature section h2 |
+| display-md | Inter Display | 36 | 500 | 1.14 | -0.014em | ss01 | Pricing-page section heads |
+| title-lg | Inter Display | 28 | 500 | 1.20 | -0.008em | — | Section titles |
+| title-md | Inter Display | 22 | 500 | 1.30 | -0.004em | — | Card titles |
+| title-sm | Inter | 18 | 500 | 1.35 | 0 | — | Small card titles |
+| label-md | Inter | 16 | 500 | 1.40 | 0 | — | List labels, demo-card titles |
+| button | Inter | 15 | 500 | 1.20 | 0 | — | CTA button labels |
+| body-lg | Inter | 18 | 400 | 1.55 | 0 | — | Editorial body, hero subhead |
+| body-md | Inter | 16 | 400 | 1.55 | 0 | — | Default running-text |
+| body-sm | Inter | 14 | 400 | 1.50 | 0 | — | Caption support, dense lists |
+| caption | Inter | 13 | 500 | 1.40 | 0.02em | — | Soft uppercase eyebrow |
+| caption-tabular | Inter | 13 | 500 | 1.30 | 0 | tnum | Metric / numeric chips |
+| legal | Inter | 12 | 400 | 1.40 | 0.01em | — | Footer legal, fine print |
+| code-md | Berkeley Mono | 14 | 400 | 1.50 | 0 | — | Code block default |
+| code-micro | Berkeley Mono | 12 | 400 | 1.40 | 0 | — | Inline IDs, short snippets |
+
+### Principles
+- **Display weight is locked at 500.** Going to 700 reads as marketing-template. Height's confidence comes from generous tracking compression, not from weight.
+- **Negative tracking scales with size.** -0.022em at 72px tightens to 0 at 16px — Inter Display's metric-aware tracking discipline.
+- **One sub-system, no font swaps.** Unlike Airtable, Height does not swap to a different display family on pricing — Inter Display + Inter carries every page.
+- **Line-height is generous on body.** 1.55 at 16px reads paper-like and is unusually wide for tech marketing. The whitespace is the brand.
+- **Mono is reserved for code-only.** Don't reach for Berkeley Mono as a display accent — Inter's `tnum` covers tabular numerics for metric chips.
+- **Eyebrow tracking is gentle.** 0.02em (not 0.08em or full uppercase) — the eyebrow is a whisper, not a shout.
+
+## 4. Component Stylings
+
+### Buttons (5 variants)
+
+**`button-primary`** — The signature CTA. Background `#7551dc` chalk-purple, text `#ffffff`, type 15px / 500 Inter, padding 12 × 20px, radius 14px. Used for "Sign up free" / "Get started" — one per viewport. Hover lightens slightly via 4% white overlay; active darkens to `#6745c8`. Focus shows a 3px brand-purple ring at 45% alpha with 2px offset.
+
+**`button-secondary`** — Cream-on-cream pair. Background `#fdfcf9` (matches canvas), text `#0e0e10`, type 15px / 500, padding 12 × 20px, radius 14px, 1px hairline `#cfcbbf`. The "Watch demo" / "Talk to sales" pair next to primary.
+
+**`button-tertiary`** — Inline text-link button. Background transparent, text `#0e0e10`, padding 10 × 16px, radius 14px. Used for less-committed actions inside dense feature lists.
+
+**`button-on-dark`** — Used over the dark mid-page band. Background `#fdfcf9` (cream), text `#0e0e10`, same shape and padding as secondary. The system never inverts to a translucent on-dark style.
+
+**`button-icon`** — 36 × 36px circular. Background `#fdfcf9`, 1px hairline border, ink icon. Used for carousel arrows, share, copy-link affordances.
+
+### Cards
+
+**`card-pastel-lavender`** — The AI / Copilot signature card. Background `#ede7fb`, text `#0e0e10`, rounded 20px, padding 48px. Carries an h2 in display-lg, supporting copy in body-md, and optionally a product UI screenshot framed inside a smaller nested card (10px radius).
+
+**`card-pastel-peach` / `card-pastel-mint` / `card-pastel-butter` / `card-pastel-blush` / `card-pastel-sky`** — Demo-grid pastel siblings. Identical shape and padding to lavender; the surface color signals which feature family ships in that card (peach=task-creation, mint=sprint, butter=milestone, blush=reminder, sky=calendar).
+
+**`card-default`** — Default content card on cream canvas. Background `#f7f6f1`, rounded 14px, padding 32px, 1px border `#e6e3da`. Used between pastel bands as a neutral surface.
+
+**`card-elevated`** — Pricing tier card, integration card. Background `#ffffff` (pure white), rounded 14px, padding 32px, 1px border `#efece4`, standard shadow. The pure-white surface signals "this is an elevated decision" against the cream canvas.
+
+**`hero-card-dark`** — Mid-page dark CTA band. Background `#0e0e10`, text `#fbfbf7` (cream-tinted white, never pure), rounded 20px, padding 64px. Used as the section reset between pastel grids — typically appears once per long-scroll page.
+
+### Badges & Pills
+
+- **`badge-ai`** — Inline AI badge. Background `#ede7fb`, text `#5a3bb2` (brand-active), rounded pill, padding 4 × 10px, font-size 12px. Appears next to AI-Copilot demo headlines.
+- **`badge-tag`** — Category / status pill. Background `#f7f6f1`, text `#5a5a66`, rounded pill, padding 4 × 10px, 12px.
+- **Status badges** — Use the semantic-soft palettes: success on mint, warning on butter, danger on blush.
+
+### Inputs / Forms
+
+**`text-input`** — Default. Background `#ffffff`, text `#0e0e10`, rounded 10px, padding 10 × 14px, height 40px, 1px border `#cfcbbf`. Inter 16px / 400.
+
+**`text-input-focus`** — Border recolors to `#7551dc` (brand) and a 3px brand-purple ring at 20% alpha appears outside the border. The chalk-purple focus is unique to Height — Linear and Notion use neutral focus rings; Height uses brand-as-focus.
+
+**`text-input-error`** — Border `#cb3946`, helper text `#cb3946`, optional icon-x prefix.
+
+### Navigation
+
+**`top-nav`** — 64px-tall sticky bar with `rgba(253,252,249,0.85)` cream-tinted backdrop and 16px backdrop-blur. Wordmark left; primary horizontal menu (Product, Solutions, Pricing, Customers, Resources) center; right cluster carries an "AI Copilot" badge-link, "Talk to sales" text link, "Sign up free" `button-primary`. Stays cream-tinted on every page — never inverted.
+
+**`footer`** — `bg-strong` cream band, 96px vertical padding, 6-column desktop link grid (Product / Solutions / Resources / Company / Legal / Social). Lower legal row in legal type at 12px / 400.
+
+### Toasts & Modals
+
+**`toast`** — Background `#0e0e10`, text `#fbfbf7`, rounded 10px, padding 12 × 16px, deep shadow. Inline confirmation strings — "Saved to Height", "Copied link". Auto-dismiss after 3s.
+
+**Modal** — Background `#ffffff`, rounded 20px, padding 48px, deep shadow, with cream-tinted backdrop overlay at 70% alpha. Close-x in `text-muted` top-right.
+
+### Decorative
+
+**`Copilot prompt card`** — A nested pastel-lavender card inside larger feature sections. Carries a fake-input field showing a typed AI prompt with a blinking cursor, plus a generated response in body-md. Uses Berkeley Mono 14px for the prompt text.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`. Section padding is **96px** between every major editorial band — universal vertical rhythm constant. Card internal padding is 32px (default cards), 48px (pastel cards), 64px (dark hero band). Inputs use 10–14px internal padding for 40px height.
+
+### Grid & Container
+- **Max content width**: 1200px centered, 48px horizontal breathing room at desktop, 24px at tablet, 16px at mobile.
+- **Editorial body**: single-column at the prose width (720px) for hero copy; 2-column or 3-up grid for demo cards.
+- **Pastel-card grid**: 2-up at desktop, 1-up at mobile. Cards are equal-height inside a row but rows can vary.
+- **Comparison / pricing**: 3-up tier grid at desktop, stacking to 1-up at mobile.
+
+### Whitespace Philosophy
+Height uses whitespace as the dominant atmospheric tool. Hero sections sit in 96px+ of cream above and below the headline. The hero is intentionally calm — no gradient, no aurora, no atmospheric mesh. The pastel cards punctuate; the cream canvas breathes between them.
+
+### Section Cadence
+Page rhythm: cream hero → 2-up pastel grid → cream caption-band → dark mid-page CTA → 3-up pastel grid → cream comparison band → pre-footer cream-strong band → footer. The canvas resets between every dark band — cream + dark + cream creates the rhythm.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Cookie / legal bar buttons, hairline accents |
+| Standard | sm | 6px | Inputs, small chips, status tags |
+| Comfortable | md | 10px | Default content cards, table cells, inline tags |
+| Relaxed | lg | 14px | Primary CTAs, secondary buttons, default cards |
+| Featured | xl | 20px | Pastel surface cards, dark hero card, modals |
+| Pill | pill | 9999px | Badges, AI tag, status pills |
+| Full | full | 9999px / 50% | Avatars, icon buttons, carousel arrows |
+
+No compound radii. Photography geometry: product UI screenshots inside pastel cards retain native aspect ratios (typically 16:10) and crop into a nested 10px-radius container with a 1px `#e6e3da` outline. Hero illustrations bleed full-width with no rounding.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Canvas, top nav background, footer band |
+| 1 — Hairline | 1px `#e6e3da` border | Default cards, inputs, dividers, secondary buttons |
+| 2 — Ambient | `0 1px 2px rgba(20,18,30,0.04)` | Resting cards, button rest |
+| 3 — Standard | `0 6px 20px rgba(20,18,30,0.06)` | Hover state on cards, sticky nav at scroll |
+| 4 — Elevated | `0 14px 40px rgba(20,18,30,0.10), 0 2px 6px rgba(20,18,30,0.04)` | Pricing-tier cards, integration cards, popovers |
+| 5 — Deep | `0 28px 60px rgba(20,18,30,0.18), 0 6px 12px rgba(20,18,30,0.08)` | Modals, command palette, large overlays |
+
+### Shadow Philosophy
+All shadows are warm-ink-tinted (`rgba(20, 18, 30, …)` not pure black) — the 6% warm shift keeps the shadow continuous with the cream canvas. Height does not stack heavy multi-layer shadows on top of pastel cards — the pastel surfaces carry depth through color alone. Shadows appear on elevated cards (pricing, integration) and modals; pastel cards stay flat.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard** `cubic-bezier(0.4, 0, 0.2, 1)` — default for color, opacity, simple transforms.
+- **Emphasized** `cubic-bezier(0.16, 1, 0.3, 1)` — pastel card reveals, dark hero band entrance, modal entrance.
+- **Spring** `cubic-bezier(0.32, 0.72, 0, 1)` — Copilot prompt typing animation, AI badge appearance.
+
+### Duration Buckets
+- **Instant (80ms)**: Color hover, cursor-state changes.
+- **Fast (140ms)**: Button hover, focus-ring expansion, input border recolor.
+- **Standard (220ms)**: Card hover lift, dropdown open, tab switch.
+- **Slow (360ms)**: Pastel card reveal on scroll, modal entrance, dark hero band fade-in.
+- **Page (480ms)**: Inter-page route transition (fade + 12px translate-y).
+
+### Per-Component Micro-States
+- **Button hover (primary)**: Background lightens 4% via white overlay; no transform. 140ms standard ease.
+- **Button hover (secondary)**: Border thickens from 1px `#cfcbbf` → 1px `#0e0e10`; 140ms.
+- **Card hover (pastel)**: 4px translate-y lift + standard shadow appears; 220ms emphasized ease.
+- **Card hover (default)**: Border darkens `#e6e3da` → `#cfcbbf`; 140ms.
+- **Link hover**: Underline grows 0 → 1px under the text; 140ms.
+- **Input focus**: Border recolors `#cfcbbf` → `#7551dc`; brand-purple ring expands 0 → 3px at 20% alpha; 140ms.
+- **AI badge appear**: Spring entrance — scale 0.9 → 1.0 with 0 → 1 opacity; 360ms spring ease.
+- **Copilot typing**: Mono characters appear one-at-a-time at 40ms each; cursor blinks at 800ms cycle.
+
+### Page Transitions
+Default Astro / Next-style fade. Inter-page route is a 480ms emphasized fade-in with 12px translate-y. Section-on-scroll reveals are 360ms emphasized fade + 16px offset, gated by `IntersectionObserver`. Pastel cards stagger left-to-right at 80ms increments inside a single grid row.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, transitions reduced to opacity-only at 100ms, pastel-card scroll reveals fade in at their final position with no offset, AI badge appears instantly, Copilot typing animation skips to the final state.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#0e0e10` on `#fdfcf9` = **18.6** — AAA at every size.
+- **Body on bg**: `#272730` on `#fdfcf9` = **12.4** — AAA.
+- **Muted on bg**: `#5a5a66` on `#fdfcf9` = **5.7** — AA at body sizes.
+- **On-brand**: `#ffffff` on `#7551dc` = **5.6** — AA at body sizes; AAA at display sizes.
+- **On-dark**: `#fbfbf7` on `#0e0e10` = **17.2** — AAA.
+- **Link on bg**: `#3344c8` on `#fdfcf9` = **8.1** — AAA.
+- **AI badge text on brand-soft**: `#5a3bb2` on `#ede7fb` = **6.4** — AA at body sizes.
+
+### Focus Indicators
+Every focusable element shows a 3px solid brand-purple ring at 45% alpha with 2px offset. The chalk-purple focus reads as branded but never aggressive — it is the same hue as `button-primary` background, scaled down to ring intensity.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; `aria-label` only when icon-only.
+- **Tabs (feature cards)**: ARIA `role="tablist"` + `role="tab"` with `aria-selected` and `aria-controls`.
+- **Combobox (Copilot prompt input)**: `role="combobox"` with `aria-expanded`, `aria-autocomplete="list"`, owned `role="listbox"`.
+- **Dialog (modals)**: `role="dialog"` with `aria-modal="true"` and focus trap. Close button has `aria-label="Close"`.
+- **Navigation**: `<nav aria-label="Primary">` for top nav; mobile drawer uses `aria-expanded`.
+- **AI Copilot status**: `aria-live="polite"` region announces "Copilot generated a response" once typing completes.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link at top of every page jumps to `<main>`. Mobile nav sheet traps focus when open; Escape closes. Pastel-card CTAs activate on Enter/Space. The Copilot prompt field accepts arrow-keys to navigate suggestion list and Enter to submit.
+
+### Screen Reader Hints
+Pastel-card screenshots use descriptive `alt` text describing the product UI fragment shown ("Height task list with three open tasks"). Decorative chrome (background dots, gradient halos behind hero) uses `aria-hidden="true"`. The Height wordmark in nav uses `aria-label="Height home"`. The AI badge announces as "AI feature" rather than "AI" alone.
+
+### Reduced Motion Handling
+All transforms and stagger reveals are removed. Pastel-card scroll reveals are skipped. Copilot typing animation jumps to final state.
+
+## 10. Responsive Behavior
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Single-column body; top nav collapses to hamburger; pastel grid drops to 1-up; hero h1 scales down to 36px / 500; section padding reduces to 64px |
+| Tablet | 640–1024px | 2-up pastel grid; top nav stays horizontal but tightens; hero scales to 44px |
+| Desktop | 1024–1200px | 2-up or 3-up pastel grid; full top-nav with all menu items; hero at 56px |
+| Wide | > 1200px | Same as desktop with more outer breathing room; max content width caps at 1200px and the page adds outer margin rather than scaling type up |
+
+### Touch Targets
+- `button-primary` and siblings render at 44 × 44px minimum (12px vertical padding + 20px line-height). At desktop padding rises to 12 × 20 = 44px tall, satisfying WCAG AAA.
+- `button-icon` is 36 × 36px — slightly under WCAG's recommended 44, used only inside dense desktop UI clusters.
+- `text-input` height is 40px at default; bumps to 44px at mobile breakpoints.
+
+### Collapsing Strategy
+- Top nav collapses to a hamburger at < 640px; the menu opens as a full-screen sheet rather than a dropdown.
+- Pastel-card grids reduce columns rather than scaling cards down.
+- Pricing comparison table converts to horizontally-scrollable swipe at < 1024px; the four plan headers stay visible while body rows scroll.
+- Footer 6-column link list collapses to 2-up at tablet and 1-up at mobile.
+
+### Image Behavior
+- Pastel-card UI screenshots crop to fit their container rather than scaling up.
+- Hero illustrations bleed full-width on mobile, losing horizontal margin.
+- Customer logo strip wraps to 2 rows at tablet, 3 rows at mobile.
+
+### Container Queries
+Pricing tier cards use `@container (min-width: 360px)` to switch from stacked-vertical to inline-row pricing layout — independent of viewport width.
+
+## 11. Content & Voice
+
+### Tone
+**Calm, AI-pragmatic, builder-first.** Height writes as a workspace built by makers for makers. Headlines describe what the product does in concrete language ("Project management with AI Copilot built in", "Tasks, sprints, docs — and a Copilot that knows them all"). Body copy supports with concrete workflow examples — engineering team, product team, design team. There is no "transform your business" theatre, no breathless "magic" framing — Copilot is described as a teammate, not a miracle.
+
+### Microcopy Patterns
+- **CTA verbs**: "Sign up free", "Get started", "Talk to sales", "Watch demo", "See how it works". Never "Try the magic" or "Start your journey".
+- **Section eyebrows**: 13px caption with 0.02em tracking — "AI COPILOT", "INTEGRATIONS", "PRICING".
+- **Demo-card titles**: One-line capability descriptions — "Generate sprint plans" not "Unleash team velocity".
+- **AI badge label**: "AI" in a pill — never "✨ AI" or "Beta AI".
+
+### Empty States
+Where empty states appear (search results, integration filter), the recipe is: a single line in `text-muted` ("No integrations match — try a different category") with a link-blue link to all integrations. No illustration of an empty box, no "feeling lonely?" copy.
+
+### Error Messages
+Pattern: short, declarative, action-oriented. "Email already in use — sign in instead" not "Oops! Something went wrong." Errors carry an icon-x in `#cb3946` and inline guidance.
+
+### Success Confirmations
+Single-line toast in `#fbfbf7` text on `#0e0e10` background, rounded 10px, deep shadow, auto-dismiss after 3s. "Saved to Height", "Copied link", "Workspace created".
+
+### CTA verb conventions
+The brand prefers the simple, declarative present-imperative: "Sign up free", "Get started", "Talk to sales". The free-tier nudge "Sign up free" is preferred over "Start trial" — Height's free tier is permanent, and the copy reflects that. AI-related CTAs use the verb "Generate" or "Ask Copilot" — never "Run AI" or "Use AI".
+
+## 12. Dark Mode & Theming
+
+Height ships an in-product dark variant (the actual workspace UI) but the marketing surface is **light-only**. The marketing publication metaphor depends on the cream canvas; flipping the home page to dark would break the AI-pastel voltage moments.
+
+The in-product dark variant inverts canvas to `#0e0e10`, lifts text to `#fbfbf7`, de-saturates brand purple slightly to `#8866dd` (cooler chalk), and replaces pastel surfaces with low-saturation tonal variants. Those tokens are out of scope for this marketing spec — see Height's product design system for the full dark token map.
+
+In-page dark contrast on the marketing surface is achieved through the single `hero-card-dark` (`#0e0e10`) band per page. That band is the only dark surface on the entire site.
+
+## 13. Lineage & Influences
+
+Height descends from the **AI-PM editorial-marketing tradition** — sites like Linear, Notion, and Asana that treat product copy as long-form publication. The chalk-purple AI voltage is Height's own contribution: a single signature hue at one saturation, used for primary CTA and AI moments alike, anchoring the entire system. The cream-not-white canvas is borrowed from the print-publication tradition (NYT Magazine, The Atlantic) and Notion's warm-grey neutrals — but Height pushes the tint warmer.
+
+Pastel surface cards as feature anchors trace back to Stripe's pastel feature-strip cards (pre-2023) and Airtable's signature surface cards (post-2022). Height's contribution is the AI-lavender sub-system: a single pastel reserved exclusively for AI moments, never used for non-AI features. Linear's near-black inheritance is rejected — Height never goes dark on canvas. Notion's pure-white is similarly rejected — the cream tint differentiates.
+
+- **Linear** — Editorial product-page rhythm, Inter-display discipline, near-monochrome neutrals. https://linear.app
+- **Notion** — Cream-warm canvas, publication-metaphor, single confident accent. https://notion.so
+- **Asana** — Pastel surface cards as feature anchors. https://asana.com
+- **Stripe** — Single-color CTA discipline; pricing-page sub-system rigor. https://stripe.com
+- **Inter Display** (Rasmus Andersson) — The display family's mid-weight (500) discipline.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep the canvas at `#fdfcf9` cream — not pure white. The off-tint is the brand.
+- Use `button-primary` with brand purple `#7551dc` for the single AI-voltage CTA per viewport.
+- Reserve pastel-lavender (`#ede7fb`) for AI moments. Other features use peach, mint, butter, blush, sky.
+- Trust whitespace as the hero atmosphere — 96px between bands, no atmospheric gradient.
+- Use real product UI screenshots inside pastel cards — photography-as-depth.
+- Anchor every editorial band with **96px** vertical padding.
+- Keep display weight at 500. Going to 700 reads as marketing-template.
+- Use `hero-card-dark` once per long-scroll page as the section reset.
+- Pair the AI badge with `caption` (13px / 500 / 0.02em tracking) — soft eyebrow voice.
+- Use Berkeley Mono only inside code blocks and Copilot prompt fields — never as a display accent.
+
+### Don't
+- Don't use pure white `#ffffff` for the canvas. Cream `#fdfcf9` is the brand.
+- Don't bold display type. Inter Display 500 is the ceiling.
+- Don't use brand purple `#7551dc` outside primary CTA and AI moments. It is the brand voltage — diluting it kills the signature.
+- Don't apply a gradient backdrop to the hero. Height's hero is cream, full stop.
+- Don't repeat the same pastel surface in two consecutive bands — variation is the rhythm.
+- Don't use cool greys for borders. Height's hairlines are warm-tinted (`#e6e3da`).
+- Don't pure-black shadow. Shadows are warm-ink-tinted (`rgba(20, 18, 30, …)`).
+- Don't invert the top nav over the dark band — it stays cream-tinted on every page.
+- Don't pair the link blue (`#3344c8`) and brand purple (`#7551dc`) inside the same paragraph — they belong to different layers (inline link vs. brand-action).
+- Don't add a "✨" emoji prefix to the AI badge. The pill alone signals AI.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:          #fdfcf9  (cream — NOT pure white)
+Text / Ink:           #0e0e10  (near-black)
+Body:                 #272730
+Muted:                #5a5a66
+Brand / AI Purple:    #7551dc  (chalk lavender)
+Brand Soft / AI bg:   #ede7fb  (lavender — AI surface)
+Pastel Peach:         #fbe6d3
+Pastel Mint:          #d9efe1
+Pastel Butter:        #faf0c8
+Pastel Blush:         #f7d8da
+Pastel Sky:           #dbe8f8
+Bg Dark:              #0e0e10  (single mid-page CTA band)
+On-Dark:              #fbfbf7  (cream-tinted white — not #fff)
+Link:                 #3344c8  (inline body link)
+Hairline:             #e6e3da  (warm-tinted)
+On-Brand:             #ffffff  (white text on chalk-purple CTAs)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#fdfcf9` cream canvas with Inter Display 56px / 500 / line-height 1.07 / -0.02em tracking headline ('Project management with AI Copilot built in'), 18px / 400 `#272730` subhead at 1.55 line-height, primary CTA (`#7551dc` background, white text, 15px / 500 Inter, 14px radius, 12 × 20px padding) and secondary CTA (cream background, ink text, 1px `#cfcbbf` border, same radius). 96px vertical padding. No background gradient."
+
+2. "Build a 2-up pastel-card grid: lavender `#ede7fb` for AI feature, peach `#fbe6d3` for task creation. Each card 20px radius, 48px padding. Card title in Inter Display 28px / 500 / -0.008em, body in 16px / 400 / 1.55 line-height, plus a nested 10px-radius product UI screenshot framed with 1px `#e6e3da` outline."
+
+3. "Compose a mid-page dark CTA band: full-bleed `#0e0e10` background, 64px padding inside a 20px-radius outer card. Eyebrow caption in cream `#fbfbf7` at 13px / 500 / 0.02em tracking ('AI COPILOT'). Headline in Inter Display 44px / 500 / -0.018em. Body in 18px / 400 cream. Single white-on-cream `button-on-dark` CTA — never invert to translucent."
+
+4. "Design a Copilot prompt card: nested inside a `card-pastel-lavender`, this is a smaller 14px-radius white card with 1px `#e6e3da` border. Carries a Berkeley Mono 14px / 400 prompt string ('Plan next sprint for the design team'), then a generated response in Inter 16px / 400 underneath. Soft AI badge (pill, brand-soft background, brand-active text, 12px font) sits above the prompt."
+
+5. "Build a pricing tier card: white surface `#ffffff`, 14px radius, 32px padding, 1px border `#efece4`, ambient shadow. Plan name in Inter Display 22px / 500, price in 36px / 500 / -0.014em, feature checklist in 16px / 400 with check icons in `#2c8a52`. Primary CTA at the bottom — `#7551dc` background, white text, 15px / 500 Inter, 14px radius."
+
+6. "Design a top nav: 64px-tall sticky bar, `rgba(253,252,249,0.85)` cream-tinted backdrop with 16px backdrop-blur. Height wordmark left in Inter 18px / 500 ink. Horizontal menu (Product / Solutions / Pricing / Customers / Resources) center in 15px / 500 ink. Right cluster: small 'AI Copilot' badge-link in brand-soft pill, 'Talk to sales' text link, 'Sign up free' primary CTA. Stays cream on every page."
+
+### Iteration Guide
+1. Start with cream `#fdfcf9` — never pure white. The cream is the brand.
+2. Place one `button-primary` per viewport. If you want a second action, use `button-secondary`.
+3. Reserve brand purple `#7551dc` for primary CTA and AI moments. Don't dilute it across the page.
+4. Pick exactly one pastel per major band. Two adjacent lavenders read as a portfolio site.
+5. Keep display weight at 500. Compress with negative tracking before reaching for 700.
+6. The pastel-lavender card is for AI features only. Other capabilities pull peach, mint, butter, blush, or sky.
+7. Anchor every band at 96px. Vertical rhythm is the brand.
+8. Use one `hero-card-dark` per long-scroll page — never two. The dark band is a section reset, not a recurring motif.

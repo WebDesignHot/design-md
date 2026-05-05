@@ -1,0 +1,654 @@
+---
+name: Things
+tagline: Cool light-blue canvas, system-ui sans, vivid Things-blue accent — a task manager that ships like an Apple Pro Display.
+author: webdesignhot
+source_url: https://culturedcode.com/things
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas]
+tags: [light, minimal, sans, soft, cool, structured, apple-native]
+preview_swatch: ['#f2f5f7', '#5c9cf5', '#303336']
+related: [apple, bear-app, notion]
+description: 'Things'' marketing site mirrors macOS itself — the canvas is a cool `#f2f5f7` system-grey (the same hue macOS uses for inactive window backgrounds), the typography is unstyled Apple system-ui (so SF Pro on Mac, San Francisco on iOS, Segoe UI on Windows), and the only saturated color is the vivid Things-blue (`#5c9cf5`) borrowed directly from the app icon. Translucent navy-on-white text at 50% opacity carries secondary nav, the same convention macOS Big Sur introduced for inactive UI elements. The page reads like a Pro Display screenshot — neutral, polished, almost intentionally bureaucratic in its restraint.'
+
+colors:
+  bg: '#f2f5f7'                  # cool system-grey canvas — macOS inactive-window hue
+  bg-soft: '#ffffff'             # white card surface
+  surface: '#e8ecef'             # slightly cooler nested panel
+  surface-elev: '#dde2e6'        # deeper cool grey for nested cards
+  surface-card: '#ffffff'        # cards lift to white against cool ground
+  text: '#303336'                # primary body copy, near-navy black
+  text-strong: '#0a1320'         # display copy, deep navy ink
+  text-body: '#3f454d'           # secondary running-text inside long features
+  text-muted: '#26344a80'        # nav links at 50% opacity (rgba 38,52,74,.5)
+  text-soft: '#000f24a3'         # secondary "Products" / "Support" header (rgba 0,15,36,.46)
+  text-faint: '#26344a40'        # disabled link text, sparingly used
+  brand: '#5c9cf5'               # vivid Things-blue, app icon hue — the singular voltage
+  brand-hover: '#4385e0'         # pressed/hover state
+  brand-soft: '#dceaff'          # soft blue chip / hover surface
+  brand-softer: '#eaf2ff'        # paler blue tint for badge background
+  brand-deep: '#2c6dbf'          # deep blue link state on dark surfaces
+  on-brand: '#ffffff'            # white text on brand blue
+  cta-bg: '#1a1a1f'              # App Store CTA pill — near-black, Apple's affordance
+  cta-text: '#ffffff'            # white text on App Store pill
+  border: '#26344a1a'            # 10% navy hairline (rgba 38,52,74,.1)
+  border-soft: '#26344a10'       # 6% navy for very subtle dividers
+  border-strong: '#26344a2e'     # 18% navy for focused inputs
+  shadow-icon: 'rgba(20,30,50,0.08)'   # iOS app-icon style soft drop shadow
+  shadow-card: 'rgba(20,30,50,0.04)'   # subtle card shadow
+  shadow-elev: 'rgba(20,30,50,0.10)'   # heavier hover lift
+  scrim: 'rgba(10,19,32,0.50)'   # modal backdrop, navy-tinted
+  success: '#34a853'             # confirmation green, macOS HIG-aligned
+  success-soft: '#e6f4ea'
+  warning: '#f59e0b'             # advisory amber
+  warning-soft: '#fff8e1'
+  danger: '#dc3545'              # form-error red
+  danger-soft: '#fde7ea'
+  info: '#5c9cf5'                # informational accent — same as brand (HIG convention)
+  info-soft: '#dceaff'
+
+typography:
+  display:
+    family: 'ui-sans-serif, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: 'ui-sans-serif, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 56, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display, opentype: ['kern'] }
+    display-xl:      { size: 48, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.20, tracking: '-0.01em',  family: display }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.20, tracking: '-0.01em',  family: display }
+    display-sm:      { size: 24, weight: 700, lineHeight: 1.30, tracking: '-0.005em', family: display }
+    title-lg:        { size: 22, weight: 700, lineHeight: 1.30, tracking: '0',        family: display }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.40, tracking: '0',        family: display }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.40, tracking: '0',        family: display }
+    section-label:   { size: 15, weight: 700, lineHeight: 1.40, tracking: '0.04em',   family: display, transform: uppercase }
+    body-lg:         { size: 19, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-md:         { size: 17, weight: 400, lineHeight: 1.60, tracking: '0',        family: body }
+    body-sm:         { size: 15, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.40, tracking: '0',        family: body }
+    label:           { size: 12, weight: 700, lineHeight: 1.30, tracking: '0.04em',   family: body, transform: uppercase }
+    overline:        { size: 11, weight: 600, lineHeight: 1.30, tracking: '0.06em',   family: body, transform: uppercase }
+    button-md:       { size: 15, weight: 600, lineHeight: 1.20, tracking: '0',        family: body }
+    link:            { size: 17, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    nav-link:        { size: 15, weight: 500, lineHeight: 1.40, tracking: '0',        family: body }
+
+radius:
+  micro: 2
+  sm: 6
+  md: 8
+  lg: 12          # white feature card radius
+  xl: 16
+  squircle: 24    # iOS app-icon "squircle" — Things icon at hero
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96]
+
+layout:
+  page-width: 1100
+  prose-width: 680
+  header-height: 64
+  hero-icon-size: 192
+  feature-card-min-width: 280
+
+components:
+  cta-blue-link:
+    bg: 'transparent'
+    color: '#5c9cf5'
+    underline: 'none'
+    use: '"Watch Introduction Video" link — the page''s only saturated text moment.'
+  cta-blue-link-hover:
+    color: '#4385e0'
+    underline: '1px solid currentColor'
+    use: 'Hover state — slightly darker blue, hairline underline appears.'
+  app-store-badge:
+    bg: 'transparent'
+    use: 'Standard "Download on the Mac App Store" / "Download on the App Store" badges — Apple''s SVG affordance, used unmodified.'
+  app-store-pill:
+    bg: '#1a1a1f'
+    color: '#ffffff'
+    radius: 12
+    padding: '12px 22px'
+    height: 44
+    font: button-md
+    use: 'Custom black-pill download fallback when Apple''s SVG badge is not used.'
+  device-icon-hero:
+    bg: 'transparent'
+    radius: 24
+    width: 192
+    height: 192
+    shadow: 'rgba(20,30,50,0.08) 0 8px 24px -4px'
+    use: 'Things app icon (squircle) centered above the H1 — the page''s only graphic move.'
+  feature-card-white:
+    bg: '#ffffff'
+    color: '#303336'
+    radius: 12
+    border: '1px solid #26344a1a'
+    padding: '32px'
+    shadow: 'rgba(20,30,50,0.04) 0 2px 8px -1px'
+    use: 'White feature card lifted against the cool grey canvas. Subtle shadow only.'
+  section-divider-light:
+    bg: '#26344a10'
+    height: 1
+    use: 'Hairline divider between sections — 6% navy on cool canvas.'
+  nav-link-translucent:
+    color: '#26344a80'
+    use: 'Top-nav "Products / Support / Account" links at 50% navy opacity — Big Sur convention.'
+  nav-link-active:
+    color: '#303336'
+    use: 'Active page nav link — full opacity navy.'
+  text-input:
+    bg: '#ffffff'
+    color: '#0a1320'
+    radius: 8
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #26344a1a'
+    focus: 'border thickens to 1.5px #5c9cf5 + faint blue ring'
+    use: 'Standard form input — newsletter signup, contact form.'
+  badge-blue:
+    bg: '#dceaff'
+    color: '#2c6dbf'
+    radius: 9999
+    padding: '4px 10px'
+    font: caption
+    use: 'Inline category tag — "iOS", "Mac", "iPad" — soft blue pill.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  link-hover: 'colour 100ms standard + underline appears 200ms standard'
+  card-hover: 'no lift; shadow tier intensifies fractionally over 200ms'
+  icon-bounce: 'hero icon micro-bounce 1.0 → 1.02 → 1.0 over 400ms once on page-load'
+  scroll-reveal: 'sections fade in over 300ms ease-out-soft when entering viewport'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transforms suppressed, fade-only.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(20,30,50,0.04) 0 1px 2px 0'
+  icon: 'rgba(20,30,50,0.08) 0 8px 24px -4px'
+  card: 'rgba(20,30,50,0.04) 0 2px 8px -1px'
+  elevated: 'rgba(20,30,50,0.10) 0 12px 24px -8px, rgba(20,30,50,0.04) 0 4px 8px -2px'
+  ring: '0 0 0 2px #5c9cf5'
+
+accessibility:
+  contrast-text-on-bg: 12.6          # #303336 on #f2f5f7 — AAA
+  contrast-text-strong-on-bg: 18.2   # #0a1320 on #f2f5f7 — AAA
+  contrast-text-on-brand: 4.9        # #ffffff on #5c9cf5 — AA body, AAA large
+  contrast-translucent-on-bg: 5.1    # rgba(38,52,74,0.5) on #f2f5f7 — AA body
+  contrast-text-on-cta: 14.7         # #ffffff on #1a1a1f — AAA
+  focus-ring: '2px solid #5c9cf5 + 2px outline-offset (matches macOS focus convention)'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: null   # Light-only marketing surface. The Things app itself ships system-controlled light/dark themes; the public marketing site mirrors macOS active-window light styling only.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Things' marketing site is a Mac App Store landing page in disguise. The canvas sits at `#f2f5f7` — the **same cool inactive-window system-grey macOS uses behind unfocused windows** — and the typography is **unstyled `ui-sans-serif`** (SF Pro on Mac, San Francisco on iOS, Segoe UI on Windows, Roboto on Android). The hero is a centered Things app icon above an H1 in system-bold. There is no custom typeface, no gradient, no hero-band inversion — just the icon, the title, the deck.
+
+The single chromatic moment is the vivid Things-blue (`#5c9cf5`) — pulled directly from the app icon — used on the "Watch Introduction Video" link only. Even the secondary nav uses translucent navy at 50% opacity (`rgba(38,52,74,0.5)`) instead of a solid grey, the same convention macOS Big Sur introduced for inactive UI elements. Cultured Code is the rare developer that treats Apple's Human Interface Guidelines not as inspiration but as an actual style guide — the page is closer to a Mac App Store landing than a typical SaaS site.
+
+The atmosphere is **bureaucratic restraint as positioning**. There is no marketing hyperbole, no lifestyle photography, no testimonial pull-quotes in giant serif. Just the icon, the title, the screenshot, the App Store badge. The 1100px container width is narrower than most modern marketing sites — and the page is single-column for the hero, with a two-column feature grid below. Everything is symmetric and calm — no asymmetric layouts, no full-bleed sections, no parallax.
+
+The page's power is its quiet confidence. Things is a paid productivity app on the Mac and iOS App Stores; the marketing site signals that the product is *part of the OS*, not an alternative to it. The system-ui choice means the type changes per platform — and that's the point. The page renders in SF Pro on a Mac (matching the user's OS), in San Francisco on iOS (matching the user's iPhone), in Segoe UI on Windows (matching the user's PC). Things lives where the user lives.
+
+**Key Characteristics:**
+- Cool system-grey canvas (`#f2f5f7`) — the macOS inactive-window hue
+- White cards lift against the cool ground (`#ffffff` cards on `#f2f5f7` canvas)
+- Unstyled `ui-sans-serif` typography — no custom web fonts, ever
+- Single chromatic accent: Things-blue (`#5c9cf5`) — used only on the intro-video text link
+- Translucent navy at 50% opacity for secondary nav (`rgba(38,52,74,0.5)`) — Big Sur convention
+- Deep navy ink (`#0a1320`, `#303336`) — never pure black
+- 192px Things app icon as the hero — the iOS squircle shape with subtle drop shadow
+- App Store badge for Mac / iOS / iPad downloads — Apple's SVG, used unmodified
+- 1100px max-width container — narrower than typical SaaS, magazine-tight
+- 10% navy hairlines (`rgba(38,52,74,0.1)`) — the only border tone
+- No custom button component — text links + App Store badges carry the conversion
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#f2f5f7`): cool system-grey floor — the macOS inactive-window hue. Distinguishes Things from typical white-canvas SaaS at a single glance.
+- **Ink** (`#303336`): the dominant text colour — near-navy black with a subtle cool undertone. Body paragraphs, primary nav.
+- **Ink Strong** (`#0a1320`): deep navy display copy — the heaviest type lives here.
+- **Brand Things-blue** (`#5c9cf5`): the singular voltage. Used only on the "Watch Introduction Video" text link.
+
+### Brand & Sub-Brand
+- **Brand Hover** (`#4385e0`): pressed/hover on the Things-blue link — slightly darker.
+- **Brand Soft** (`#dceaff`): soft blue chip surface for inline category tags ("iOS", "Mac").
+- **Brand Softer** (`#eaf2ff`): paler blue tint for badge backgrounds.
+- **Brand Deep** (`#2c6dbf`): deep blue text on soft-blue chips — passes AAA.
+- **CTA Black** (`#1a1a1f`): App Store-style download pill background — Apple's affordance, used unmodified for custom download buttons.
+
+### Accent
+There are no decorative accents. The page is monochrome navy + a single Things-blue link.
+
+### Interactive
+- **Link** (`#5c9cf5`): inline links — Things-blue, no underline at rest. Underline appears on hover.
+- **Link Hover** (`#4385e0`): hover — slightly darker blue, 1px underline appears.
+- **Selected** (`#5c9cf5` fill, `#ffffff` text on the rare segmented control).
+- **Disabled** (`#26344a40` text — 25% navy opacity, sparingly used).
+
+### Neutral Scale
+- **Ink Strong** (`#0a1320`) — peak display copy, deep navy
+- **Ink** (`#303336`) — body, primary nav, dominant text colour
+- **Body** (`#3f454d`) — secondary running-text in long-form features
+- **Muted** (`rgba(38,52,74,0.5)`) — translucent navy nav links — the Big Sur convention
+- **Soft** (`rgba(0,15,36,0.46)`) — section header micro-labels ("Products", "Support")
+- **Faint** (`rgba(38,52,74,0.25)`) — disabled link text
+
+### Surface & Borders
+- **Canvas** (`#f2f5f7`) — cool system-grey page floor
+- **Surface** (`#e8ecef`) — slightly cooler nested panel
+- **Surface Elev** (`#dde2e6`) — deeper cool grey for nested cards
+- **Surface Card** (`#ffffff`) — white feature cards lift against the cool ground
+- **Hairline** (`rgba(38,52,74,0.1)`) — default 10% navy border tone — never solid grey
+- **Hairline Soft** (`rgba(38,52,74,0.06)`) — 6% navy for subtle dividers
+- **Hairline Strong** (`rgba(38,52,74,0.18)`) — 18% navy for focused inputs
+
+### Shadow Colors
+Things uses **navy-tinted** shadows — `rgba(20, 30, 50, …)` rather than pure black. The cool tint matches the page's navy ink temperature. The signature shadow is on the hero Things icon — a soft drop shadow the way iOS app icons cast on the home screen at `rgba(20,30,50,0.08) 0 8px 24px -4px`.
+
+- `rgba(20,30,50,0.04) 0 1px 2px 0` — ambient
+- `rgba(20,30,50,0.04) 0 2px 8px -1px` — card subtle shadow
+- `rgba(20,30,50,0.08) 0 8px 24px -4px` — iOS app-icon style
+- `rgba(20,30,50,0.10) 0 12px 24px -8px, rgba(20,30,50,0.04) 0 4px 8px -2px` — elevated dropdown
+
+### Semantic
+- **Success** (`#34a853` on `#e6f4ea`) — macOS HIG-aligned green
+- **Warning** (`#f59e0b` on `#fff8e1`) — advisory amber
+- **Danger** (`#dc3545` on `#fde7ea`) — form-error red
+- **Info** (`#5c9cf5` on `#dceaff`) — informational accent (intentionally same as brand — HIG convention treats info and brand as the same blue)
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `ui-sans-serif, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif`. The fallback stack is the entire face — there is no custom web font. On Apple platforms this renders as **SF Pro** (specifically SF Pro Display at large sizes, SF Pro Text at body sizes, courtesy of `-apple-system`). On Windows it renders as **Segoe UI**. On Android (rare) it renders as **Roboto**.
+
+**Mono companion**: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` — used essentially never on the marketing site (Things has no developer-docs surface).
+
+**OpenType features**: `kern` and `liga` always on. SF Pro's optical-size axis is leveraged automatically by `-apple-system` — display sizes use SF Pro Display, body sizes use SF Pro Text, with appropriate spacing and stem differences. There are no manually enabled `ss01`/`ss02` features — the system face is used unmodified.
+
+The system stack is the entire type system. Things makes a single typographic choice: *don't choose*. Let the OS render its native face.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | system | 56 | 700 | 1.15 | -0.015em | kern | Hero "Things" — the bold display moment |
+| display-xl | system | 48 | 700 | 1.15 | -0.015em | — | Section opener |
+| display-lg | system | 40 | 700 | 1.20 | -0.01em | — | Sub-section opener |
+| display-md | system | 32 | 700 | 1.20 | -0.01em | — | Feature title |
+| display-sm | system | 24 | 700 | 1.30 | -0.005em | — | Mid-page section head |
+| title-lg | system | 22 | 700 | 1.30 | 0 | — | Card title on white feature card |
+| title-md | system | 18 | 600 | 1.40 | 0 | — | Sub-card title |
+| title-sm | system | 16 | 600 | 1.40 | 0 | — | Inline emphasis title |
+| section-label | system | 15 | 700 | 1.40 | 0.04em | uppercase | Section eyebrow ("Products") |
+| body-lg | system | 19 | 400 | 1.55 | 0 | — | Hero deck — slightly larger body |
+| body-md | system | 17 | 400 | 1.60 | 0 | — | Default running-text |
+| body-sm | system | 15 | 400 | 1.55 | 0 | — | Card meta, captions |
+| caption | system | 13 | 500 | 1.40 | 0 | — | Timestamp, metadata |
+| label | system | 12 | 700 | 1.30 | 0.04em | uppercase | Form labels, section micro-labels |
+| overline | system | 11 | 600 | 1.30 | 0.06em | uppercase | Top-of-section overline |
+| button-md | system | 15 | 600 | 1.20 | 0 | — | App Store pill / button label |
+| link | system | 17 | 400 | 1.55 | 0 | — | Inline body link (matches body) |
+| nav-link | system | 15 | 500 | 1.40 | 0 | — | Top-nav item |
+
+### Principles
+
+- **Don't load a web font.** The page renders in the OS native face — SF Pro on Apple, Segoe UI on Windows. Loading a custom face would break the "we are part of the OS" positioning.
+- **Bold at large size is the entire display strategy.** Display copy sits at weight 700; body sits at weight 400. There is no medium-weight middle ground (except for nav-link at 500 and titles at 600).
+- **Negative tracking for display only.** The hero uses `-0.015em`; section openers use `-0.01em`. Body and caption sit at zero tracking.
+- **Generous body leading.** Body sits at 1.60 line-height — lush by SaaS standards. The extra leading is what makes long-form copy comfortable on the cool grey canvas.
+- **17px body, not 16px.** Things sits at 17px — matching macOS body convention rather than web body convention (16px).
+- **Translucent navy nav is the platform signal.** Secondary nav at `rgba(38,52,74,0.5)` rather than a solid grey is borrowed directly from macOS Big Sur — it announces platform allegiance.
+- **Inter is the closest open-source substitute** if `ui-sans-serif` is unavailable. Inter at weight 700 for display, weight 400 for body, with a -0.015em tracking adjustment on display.
+
+## 4. Component Stylings
+
+### Buttons
+
+Things uses **almost no custom buttons**. The page's primary affordances are text links and App Store badges. Where a custom button does appear, it follows the App Store-pill pattern.
+
+**`cta-blue-link`** — The signature CTA. Plain "Watch Introduction Video" text link in `#5c9cf5`, no underline at rest. On hover, the colour darkens to `#4385e0` and a 1px underline appears. **No padding, no fill, no border** — it's a pure text affordance.
+
+**`app-store-pill`** — Custom black-pill download fallback when Apple's SVG badge is not used. `#1a1a1f` fill (Apple's exact black), white text at 15px / 600, **12px radius**, 12×22px padding, 44px height. This is Apple's affordance lifted unchanged.
+
+**`app-store-badge`** — Standard "Download on the Mac App Store" / "Download on the App Store" badges. Apple's SVG, used unmodified. The brand stays consistent across web and Apple-controlled surfaces.
+
+### Cards
+
+**`feature-card-white`** — White card lifted against the cool grey canvas. `#ffffff` fill, ink text, **12px radius**, 1px hairline border (`rgba(38,52,74,0.1)`), 32px padding, subtle shadow (`rgba(20,30,50,0.04) 0 2px 8px -1px`). The shadow is intentionally minimal — the card lifts via *ground-vs-card colour contrast* (`#f2f5f7` canvas vs `#ffffff` card) more than via shadow.
+
+**`device-icon-hero`** — The Things app icon as a hero element. 192×192px, 24px radius (the iOS app-icon "squircle"), no background or border — just the icon raster with a soft `rgba(20,30,50,0.08) 0 8px 24px -4px` drop shadow. This is the page's only graphic move.
+
+### Badges, Tags, Pills
+
+**`badge-blue`** — Inline category tag ("iOS", "Mac", "iPad"). `#dceaff` fill, deep-blue (`#2c6dbf`) text at 13px / 500, 9999px radius, 4×10px padding.
+
+### Inputs / Forms
+
+**`text-input`** — White fill, 1px navy hairline (`rgba(38,52,74,0.1)`), 8px radius, 44px height, 12×14px padding. Body placeholder in 17px / 400 muted. On focus, border thickens to 1.5px Things-blue (`#5c9cf5`) and a faint blue ring appears (`rgba(92,156,245,0.18) 0 0 0 4px`).
+
+### Navigation
+
+**`top-nav`** — Cool grey surface (matches canvas — no separation), 64px height, 1px bottom hairline (`rgba(38,52,74,0.1)`). Wordmark flush left in 18px / 600. Three nav links centred (Products, Support, Account) in 15px / 500. The signature detail: secondary nav links render at `rgba(38,52,74,0.5)` — translucent navy — rather than solid grey.
+
+**`nav-link-translucent`** — `rgba(38,52,74,0.5)` text — 50% navy opacity. The macOS Big Sur convention for inactive UI.
+
+**`nav-link-active`** — Full opacity navy (`#303336`) on the active page.
+
+### Section Dividers
+
+**`section-divider-light`** — A 1px hairline at `rgba(38,52,74,0.06)` between sections — barely visible, structural rather than decorative.
+
+### Decorative
+
+There are no decorative elements on Things' marketing site. No illustrations, no gradients, no watercolor blobs, no ornamental flourishes. The page's expressive moments are:
+
+1. The Things app icon (the iOS squircle with drop shadow)
+2. Product screenshots (the actual macOS / iOS / iPad app captures)
+3. The single Things-blue text link
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96`
+- Section padding (vertical): 64–96px for major bands — slightly tighter than typical SaaS marketing (Things wants the page to feel calm-and-narrow, not generous-and-airy)
+- Card internal padding: 32px on `feature-card-white`; 24px on smaller nested elements
+- Inter-card gutters: 24px between feature cards in 2-up grid
+
+### Grid & Container
+
+- Max content width: ~1100px on the inner grid with 24px gutters
+- The narrow container is intentional — Things' marketing site is *narrower* than typical SaaS (1280–1440px), which reinforces its magazine-tight feel
+- Hero: single-column, centred, with the 192px app icon, H1, deck, and download badges stacked vertically
+- Feature grid: 2-up at desktop, 1-up at mobile — never 3+ columns. The grid is sparse on purpose
+
+### Whitespace Philosophy
+
+The page is calm, symmetric, and centred. There are no asymmetric layouts, no full-bleed sections, no parallax. Sections get 64–96px of vertical padding — slightly tighter than typical SaaS because the narrower container already creates breathing room horizontally. The hero alone occupies a near-full viewport with massive whitespace above and below the icon — which is unusual; most pages compress hero whitespace to fit more content above the fold.
+
+### Section Cadence
+
+A typical Things page runs:
+
+1. Cool grey hero (192px app icon, 56px / 700 H1, 19px / 400 deck, App Store badges)
+2. White feature card 2-up (a single feature highlighted per card, with screenshot + caption)
+3. Cool grey body section (long-form description in 17px / 400 body, 1.60 line-height)
+4. Single product screenshot (full-width, with subtle drop shadow)
+5. Closing band (smaller H2, App Store badges, "Made by Cultured Code in Stuttgart")
+6. Footer (Products, Support, Company columns in 13px / 500 muted with translucent navy)
+
+The page does not light/dark alternate — it stays cool grey + white throughout. The "alternation" is *grey/white surface contrast* rather than light/dark mode shift.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Internal sub-elements (rare) |
+| Small | 6px | Internal card chrome (rare) |
+| Standard | 8px | Text inputs, fine controls |
+| Comfortable | 12px | Feature cards, App Store pill, hardware screenshot framing |
+| Featured | 16px | Hero band, large screenshot framing |
+| Squircle | 24px | The iOS app-icon "squircle" — the Things hero icon |
+| Pill | 9999px | Soft-blue category badges, occasional segmented controls |
+
+The Things icon's **24px squircle** is unusual — this is the iOS app-icon shape, technically a superellipse approximation rather than a true rounded rectangle. On the marketing site it's rendered as a 24px radius which is close enough to read as the squircle shape at 192px size. The squircle is reserved for the hero icon only.
+
+There are no compound radii. Buttons, cards, inputs all round uniformly.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Canvas, body sections, nav (~85% of surfaces) |
+| 1 — Card | `rgba(20,30,50,0.04) 0 2px 8px -1px` | White feature cards on cool grey ground — minimal shadow, leans on grey-vs-white contrast |
+| 2 — Icon | `rgba(20,30,50,0.08) 0 8px 24px -4px` | The 192px Things app icon — iOS app-icon-style soft drop shadow |
+| 3 — Elevated | `rgba(20,30,50,0.10) 0 12px 24px -8px, rgba(20,30,50,0.04) 0 4px 8px -2px` | Dropdowns, popovers (rare on Things) |
+| 4 — Modal | scrim `rgba(10,19,32,0.50)` + dialog with elevated shadow | Sign-in modal (rare) |
+
+### Shadow Philosophy
+
+Things uses **cool-tinted** shadows (`rgba(20, 30, 50, …)`) that match the page's navy ink temperature. The signature shadow is on the hero Things icon — a soft drop shadow the way iOS app icons cast on the home screen. This is the page's only depth flourish; everything else is essentially flat. Cards lift via *colour contrast* (`#ffffff` cards on `#f2f5f7` canvas) more than via shadow stacking. The page's elevation language is: white = elevated, cool grey = ground, deep navy = ink. Three tones, no shadows needed.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover state colour swaps, hairline transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — section reveals on scroll
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Link colour swaps, focus-ring fades |
+| Standard | 200ms | Hover state transitions, hairline tone shifts |
+| Slow | 300ms | Modal entry, scroll-reveal |
+
+### Per-Component Recipes
+
+- **Things-blue link hover**: colour `#5c9cf5` → `#4385e0` over 100ms, then 1px underline fades in over 200ms standard.
+- **App Store pill hover**: background brightens fractionally (`#1a1a1f` → `#2a2a2f`) over 200ms standard. **No transform, no scale.**
+- **Feature card hover**: shadow tier intensifies fractionally over 200ms — no translate, no border deepening.
+- **Hero icon entry animation**: on page-load the 192px Things icon plays a one-shot 1.0 → 1.02 → 1.0 micro-bounce over 400ms. Subtle — visible only on first paint.
+- **Scroll-reveal**: sections fade in over 300ms ease-out-soft when entering viewport. One-shot per section.
+
+### Page Transitions
+
+Page-to-page navigation uses a 300ms cross-fade. The fixed top-nav stays static. Smooth-scroll anchored links use 600ms emphasized easing.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. All `translate` and `scale` transforms suppress. The hero icon micro-bounce becomes a static render. Scroll-reveal becomes static render-on-mount. Link underlines appear instantly on hover rather than fading in.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #303336 ink on #f2f5f7 canvas | 12.6 | AAA |
+| #0a1320 ink-strong on #f2f5f7 | 18.2 | AAA |
+| #ffffff on #5c9cf5 brand-blue | 4.9 | AA body / AAA large |
+| #2c6dbf on #dceaff soft-blue | 5.6 | AA body |
+| rgba(38,52,74,0.5) translucent on #f2f5f7 | 5.1 | AA body — calculated against effective background |
+| #ffffff on #1a1a1f CTA black | 14.7 | AAA |
+| #303336 on #ffffff white card | 12.5 | AAA |
+
+The translucent navy nav (`rgba(38,52,74,0.5)`) is calibrated to *exactly* AA contrast against the cool canvas — Cultured Code is precise: the 50% opacity hits 5.1, which passes WCAG 2.1 AA for body text.
+
+### Focus Indicators
+
+Focus ring is `2px solid #5c9cf5` (Things-blue) with 2px outline-offset — matching the macOS focus convention. The ring is the only place the brand blue appears as a saturated fill; everywhere else it's a text colour.
+
+### ARIA Patterns
+
+- **Top nav**: `<nav>` landmark with `aria-label="Primary"`. Translucent links carry full `aria-label` text — opacity is visual only; screen readers receive the full label.
+- **App Store badges**: `<a>` with `aria-label="Download Things on the Mac App Store"`. The image is decorative (`aria-hidden`); the link carries the verbal label.
+- **Hero icon**: `<img alt="Things app icon">` — minimal alt text since the icon is decorative-supportive of the H1.
+- **Feature cards**: card-level `<a>` if the entire card is a link; otherwise inner element-level links with descriptive text.
+
+### Keyboard Navigation
+
+- Top nav: Tab moves logo → Products → Support → Account
+- Hero: Tab moves into the App Store badges and the "Watch Introduction Video" link
+- Feature cards: Tab moves card → card; arrow keys do not navigate
+
+### Screen Reader Hints
+
+The translucent navy nav is **not visually obvious** at first glance — to screen readers and keyboard users, the links are present and labelled at full strength. The opacity is purely a visual convention; the underlying semantics carry full intent. Feature cards label their interactive surfaces explicitly — "Open Things on the Mac App Store" rather than just "Mac App Store".
+
+### Reduced Motion
+
+All transitions degrade to opacity-only. The hero icon micro-bounce disables. Scroll-reveal becomes static. Link hover underline appears instantly.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top nav collapses to logo + hamburger; hero icon shrinks 192 → 128px; H1 drops 56 → 36px; feature cards 1-up; App Store badges stack vertically |
+| Tablet | 640–1024px | Top nav keeps inline links; hero icon at 160px; H1 settles at 48px; feature cards 2-up tight |
+| Desktop | 1024–1280px | Full top nav; hero icon at 192px; H1 at 56px; feature cards 2-up |
+| Wide | >1280px | Content width caps at 1100px; gutters absorb the rest |
+
+### Touch Targets
+
+- App Store pill: 44px height — Apple's standard tap target
+- Things-blue text link: passes touch target via the 17px / 1.55 line-height (44px effective row height)
+- Top-nav links: minimum 44×44px hit area even at 15px text size
+
+### Collapsing Strategy
+
+- Top product-nav links collapse into a hamburger sheet below 640px
+- Hero icon scales proportionally — never crops, never deforms
+- App Store badges: side-by-side at desktop, stacked vertically at mobile
+- Feature cards: 2 → 1 column
+
+### Image Behavior
+
+Hardware mockups (Mac, iPhone, iPad screenshots) carry intrinsic aspect ratios and downscale proportionally. The Things icon scales by viewport but maintains its 24px squircle radius (rendered as a fraction of width on smaller sizes).
+
+### Container Queries
+
+Not used. The page is wide-enough at all breakpoints that viewport-based queries are sufficient.
+
+## 11. Content & Voice
+
+### Tone
+
+Calm, plainspoken, almost intentionally bureaucratic. Things' voice avoids both Silicon Valley enthusiasm ("Get more done!") and luxury-brand aspirational language ("Thoughtfully crafted for productivity"). Headlines are nouns ("Things"), descriptions are facts ("The award-winning personal task manager that helps you plan your day, manage your projects, and make real progress towards your goals"). The voice trusts the reader to recognize the product category — there is no preamble.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Download", "Try free", "Watch Introduction Video", "Sign in" — direct, never "Click here" or "Get started"
+- **Error message recipe**: `[What went wrong]` — no hype, no apology — e.g., "We couldn't sign you in. Try again."
+- **Success confirmations**: minimal — "Welcome." or "Your purchase is complete."
+- **Field labels**: single-word ("Email", "Password") — no friendly framing
+
+### Empty States
+
+The empty list state inside the marketing screenshots: "Today is empty." — observational, factual, declarative. Things' product copy and marketing copy share the same restrained voice.
+
+### CTA Verb Conventions
+
+- Primary action: **"Download"** (App Store badges), **"Watch Introduction Video"** (intro link), **"Try free"** (free trial)
+- Secondary action: **"Sign in"** (account access), **"Learn more"** (rare)
+- Tertiary text: **"See pricing"**, **"View documentation"**
+- Avoided: "Submit", "Click here", "Buy now", "Get started" — Things uses outcome verbs only
+
+## 12. Dark Mode & Theming
+
+**Light-only marketing surface.** The Things app itself ships with full system-controlled light/dark themes (the dark theme uses near-black surfaces with the same Things-blue accent). The public marketing site is light-only — it mirrors macOS *active-window light styling* specifically.
+
+The brand position: the marketing site is a Mac App Store landing page in disguise. Mac App Store landing pages render in light mode by default regardless of the user's system preference (Apple's editorial choice). Things follows that convention.
+
+If a future dark variant is shipped, the token swap would be: canvas `#0a1320`, surface `#1a2230`, ink `#f2f5f7`, brand unchanged at `#5c9cf5` (the brand passes AA on both light and dark grounds because it's a mid-saturation blue).
+
+## 13. Lineage & Influences
+
+Things' visual lineage runs through three traditions: **Apple's Mac App Store landing pages** (cool grey canvas, system-ui typography, single hero icon, App Store badges); **macOS Big Sur Human Interface Guidelines** (translucent navy on white for inactive UI, cool system greys, no custom branding); and **the indie-Mac developer aesthetic** of Tweetbot, Day One, Fantastical (restraint as positioning, "we are part of the OS"). Cultured Code is the rare developer that treats Apple's HIG not as inspiration but as an actual style guide.
+
+The choice of `ui-sans-serif` over a custom typeface is the page's most political decision. Loading SF Pro from Apple's CDN, or substituting Inter as a "system-like" face, would both signal "third-party tool dressed as Apple". By using `ui-sans-serif` — which renders as the actual OS face — Things signals "we are part of your operating system". The page changes type per platform, which is the point.
+
+The translucent navy nav (`rgba(38,52,74,0.5)`) is borrowed directly from macOS Big Sur's Vibrancy / Materials system — Apple introduced the convention in 2020 for inactive UI elements (window chrome, secondary nav, sidebar items). Things adopted it for its marketing site within months. The page is constantly being updated to match the latest macOS / iOS visual conventions.
+
+What Things rejects: custom web fonts, gradient washes, hero illustrations, particle backgrounds, asymmetric layouts, parallax scrolls, multi-colour brand systems, exclamation marks. The brand is bureaucratic-Apple: the page is calm, the type is the OS, the colour is restrained.
+
+**Influences:**
+- Apple Mac App Store — source of every visual move; system-ui typography, cool grey canvas, single icon-driven hero, [apple.com/app-store](https://www.apple.com/app-store/)
+- macOS Big Sur HIG — translucent navy on white text, soft system greys, no custom branding, [developer.apple.com/design/human-interface-guidelines](https://developer.apple.com/design/human-interface-guidelines/)
+- Tweetbot / Day One / Fantastical — indie-Mac developer aesthetic; restraint as positioning, "we are part of the OS", [tapbots.com/tweetbot](https://tapbots.com/tweetbot/)
+- Cultured Code (the studio behind Things) — Stuttgart-based; the studio's German precision is in the page DNA
+
+## 14. Do's and Don'ts
+
+**Do**
+- Use `ui-sans-serif, -apple-system, system-ui` exclusively — loading a web font would break the "we are part of the OS" positioning
+- Keep the canvas at the cool macOS system-grey `#f2f5f7`; warm cream reads as "indie productivity tool", not "Apple-native"
+- Reserve Things-blue (`#5c9cf5`) for a single text link per band — saturated buttons would break the restraint
+- Use translucent navy at 50% opacity (`rgba(38,52,74,0.5)`) for nav text — the macOS Big Sur convention
+- Set the 192px Things icon at the hero centre with a soft iOS-app-icon drop shadow
+- Use App Store badges for download CTAs — Apple's SVG, used unmodified
+- Set body at 17px / 1.60 line-height — the macOS body convention, not the web 16px standard
+- Keep the container at 1100px max — narrower than typical SaaS, magazine-tight
+- Use 10% navy hairlines (`rgba(38,52,74,0.1)`) instead of solid grey borders
+- Render section divider lines at `rgba(38,52,74,0.06)` — barely visible, structural rather than decorative
+- Use display weight 700 only at large sizes; body stays at 400 — no medium-weight middle ground
+
+**Don't**
+- Don't add gradient washes, hero illustrations, or particle backgrounds — the page's power is its bureaucracy
+- Don't use solid grey for nav text — translucent navy at 50% opacity is the macOS Big Sur convention
+- Don't raise display weight beyond 700; the system-ui bold at large size is the entire display strategy
+- Don't use saturated Things-blue (`#5c9cf5`) for button fills — it lives only as a text-link colour
+- Don't introduce a second brand colour — the entire chromatic palette is Things-blue + navy + cool grey
+- Don't use square corners on cards or buttons — 12px and 8px respectively
+- Don't widen the container beyond 1100px — the magazine-tight measure is the brand
+- Don't use exclamation marks in microcopy — Things' voice is calm, factual, declarative
+- Don't compress body line-height below 1.55 — the lush 1.60 leading is the macOS convention
+- Don't use yellow, orange, or warm accent colours — the entire palette is cool
+- Don't use shadows on UI chrome — only on the hero icon and very subtly on white feature cards
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:        #f2f5f7
+Card:          #ffffff
+Ink:           #303336
+Ink-strong:    #0a1320
+Brand-blue:    #5c9cf5
+Brand-hover:   #4385e0
+CTA-black:     #1a1a1f
+Hairline:      rgba(38,52,74,0.10)
+Translucent:   rgba(38,52,74,0.50)
+Soft:          rgba(0,15,36,0.46)
+Brand-soft:    #dceaff
+```
+
+### Example Component Prompts
+
+- "Create a Things-style hero: cool grey canvas (#f2f5f7), centred 192×192px Things app icon at 24px radius (the iOS squircle) with a soft drop shadow at rgba(20,30,50,0.08) 0 8px 24px -4px. Below the icon: 56px / 700 system-ui H1 'Things' in ink-strong (#0a1320) with -0.015em tracking. Beneath: 19px / 400 deck in ink (#303336) at 1.55 line-height. Below: stacked Apple App Store badge SVGs (Download on the Mac App Store / App Store)."
+- "Design a Things text-link CTA: plain 17px / 400 system-ui text in Things-blue (#5c9cf5) with no underline at rest. On hover, colour darkens to #4385e0 and a 1px underline appears, both transitioning over 100ms. No padding, no border, no fill — pure text affordance. Label: 'Watch Introduction Video'."
+- "Build a Things feature card: white fill (#ffffff), 12px radius, 1px navy hairline at rgba(38,52,74,0.1), 32px padding, very subtle shadow rgba(20,30,50,0.04) 0 2px 8px -1px. Inside: a 22px / 700 system-ui title in ink-strong, then 17px / 400 body at 1.60 line-height in ink (#303336). The card lifts against the cool grey canvas via colour contrast more than shadow."
+- "Create the Things nav: cool grey surface (#f2f5f7 — same as canvas, no separation), 64px height, 1px bottom hairline at rgba(38,52,74,0.1). Wordmark left in 18px / 600 system-ui ink. Three centred links (Products, Support, Account) at 15px / 500 in translucent navy rgba(38,52,74,0.5) — the Big Sur convention."
+- "Design a Things App Store pill (custom fallback): #1a1a1f fill (Apple's exact black), white text at 15px / 600 system-ui, 12px radius, 12×22px padding, 44px height. The pill is Apple's affordance, used unmodified."
+- "Build a Things download section: stacked vertically below the hero. App Store badge for Mac, 8px gap, App Store badge for iPhone, 8px gap, App Store badge for iPad. Centred. Below: 13px / 500 caption in muted (rgba(0,15,36,0.46)) reading 'Made by Cultured Code in Stuttgart, Germany.'"
+
+### Iteration Guide
+
+1. **Don't load a web font.** `ui-sans-serif, -apple-system, system-ui` is the entire type system. Substituting Inter or a custom face breaks the "we are part of the OS" positioning.
+2. **Cool grey canvas, white cards.** The page is `#f2f5f7` ground with `#ffffff` cards lifted against it. Warm cream or off-white reads as a different brand.
+3. **Things-blue is text-only.** `#5c9cf5` lives as a link colour and a focus ring. It never fills a button. The entire conversion path is App Store badges.
+4. **Translucent navy for inactive UI.** `rgba(38,52,74,0.5)` for secondary nav links — the Big Sur convention. Solid grey breaks the platform tie.
+5. **Bold + body, no medium.** Display sits at 700, body at 400. The system has no medium-weight middle ground for headlines.
+6. **17px body, 1.60 line-height.** The macOS body convention. 16px / 1.5 is the SaaS web standard; Things sits at the macOS measure.
+7. **1100px max container.** Narrower than typical SaaS. The page should feel calm, magazine-tight, not generous-and-airy.
+8. **Hero icon is the only graphic.** No illustrations, gradients, particles, or watercolor blobs. The Things icon, drop-shadowed, is the entire decorative system.

@@ -1,0 +1,834 @@
+---
+name: Cal.com
+tagline: Open-source calendly with one bold custom font — Cal Sans on a soft `#f4f4f4` paper canvas.
+author: webdesignhot
+source_url: https://cal.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas, dev-tools]
+tags: [light, minimal, sans, soft, spacious, mono]
+preview_swatch: ['#f4f4f4', '#111111', '#ffffff']
+related: [linear, vercel, plain]
+description: 'Cal.com is built around a single typographic decision — Cal Sans, a custom display family released as open-source, set huge on a paper-white `#f4f4f4` canvas. The rest of the system gets out of its way: monochrome surfaces, pill-shaped section anchors, near-black `#111111` CTAs, and product UI fragments shown directly inside cards instead of stock illustrations. The system reads as friendly modern SaaS — generous whitespace, soft 12px-rounded cards, and a dark navy footer that visually closes long-scroll pages.'
+
+colors:
+  bg: '#f4f4f4'                # soft paper canvas — warmer than #fafafa, cooler than #ffffff
+  bg-soft: '#fafafa'            # alternate light surface
+  surface: '#ffffff'            # cards, navigation pills, elevated regions
+  surface-soft: '#f8f9fa'       # subtle elevated band
+  surface-card: '#f5f5f5'       # feature card background
+  surface-strong: '#e5e7eb'     # tertiary surface
+  surface-dark: '#101010'       # footer / dark CTA region
+  surface-dark-elev: '#1a1a1a'  # elevated dark surface
+  text: '#111111'               # body emphasis — near-black
+  text-strong: '#000000'        # display emphasis (rare)
+  text-body: '#374151'          # default running paragraph
+  text-soft: '#6b7280'          # captions, metadata
+  text-muted: '#898989'         # secondary metadata
+  text-faint: '#9ca3af'         # disabled
+  brand: '#111111'              # Cal's brand "color" is text-color
+  brand-active: '#242424'       # press state
+  brand-disabled: '#e5e7eb'     # disabled CTA
+  on-brand: '#ffffff'           # white text on near-black CTA
+  on-dark: '#ffffff'            # text on dark footer
+  on-dark-soft: '#a1a1aa'       # secondary text on dark footer
+  link: '#0000ee'               # browser default link blue (preserved as ideology)
+  link-visited: '#551a8b'       # browser default visited
+  link-hover: '#0000aa'         # darker on hover
+  border: 'rgba(0, 0, 0, 0.08)' # translucent low-contrast
+  border-soft: '#f3f4f6'        # nested row
+  border-strong: '#e5e7eb'      # input + secondary
+  brand-accent: '#3b82f6'       # rare blue accent (in-product)
+  badge-orange: '#fb923c'       # rating stars
+  badge-pink: '#ec4899'         # community badges
+  badge-violet: '#8b5cf6'       # community badges
+  badge-emerald: '#34d399'      # community badges
+  semantic-success: '#10b981'   # success state
+  semantic-warning: '#f59e0b'   # warning
+  semantic-danger: '#ef4444'    # error
+  semantic-info: '#3b82f6'      # info banner
+
+typography:
+  display:
+    family: '"Cal Sans", -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [600]
+    opentype: ['kern', 'liga']
+  body:
+    family: 'Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    opentype: ['kern', 'liga']
+  mono:
+    family: '"JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+    opentype: ['tnum']
+  scale:
+    display-hero:   { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.03em',  family: display, opentype: 'kern' }
+    display-large:  { size: 48, weight: 600, lineHeight: 1.10, tracking: '-0.025em', family: display, opentype: 'kern' }
+    h1:             { size: 36, weight: 600, lineHeight: 1.15, tracking: '-0.02em',  family: display }
+    h2:             { size: 28, weight: 600, lineHeight: 1.20, tracking: '-0.015em', family: display }
+    h3:             { size: 22, weight: 600, lineHeight: 1.30, tracking: '-0.013em', family: body }
+    h4:             { size: 18, weight: 600, lineHeight: 1.40, tracking: '0',        family: body }
+    body-large:     { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:           { size: 16, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    body-small:     { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    label-mono:     { size: 11, weight: 500, lineHeight: 1.40, tracking: '0.06em',   family: mono, opentype: 'tnum', transform: 'uppercase' }
+    button:         { size: 14, weight: 600, lineHeight: 1.00, tracking: '0',        family: body }
+    button-small:   { size: 13, weight: 600, lineHeight: 1.00, tracking: '0',        family: body }
+    link:           { size: 16, weight: 500, lineHeight: 1.50, tracking: '0',        family: body }
+    caption:        { size: 13, weight: 500, lineHeight: 1.40, tracking: '0',        family: body }
+    caption-small:  { size: 12, weight: 400, lineHeight: 1.40, tracking: '0',        family: body }
+    micro:          { size: 11, weight: 500, lineHeight: 1.30, tracking: '0.04em',   family: body }
+    code-body:      { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: mono }
+    code-bold:      { size: 14, weight: 500, lineHeight: 1.50, tracking: '0',        family: mono }
+    code-label:     { size: 11, weight: 500, lineHeight: 1.40, tracking: '0.04em',   family: mono, transform: 'uppercase' }
+
+radius:
+  micro: 4
+  sm: 6
+  md: 8
+  lg: 12
+  xl: 16
+  featured: 20
+  pill: 9999
+
+spacing:
+  base: 4
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section-sm: 64
+  section: 96
+  section-lg: 160
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — pill scroll-snap stays; card hover transforms collapse to opacity'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0, 0, 0, 0.04) 0 1px 2px'
+  standard: 'rgba(0, 0, 0, 0.06) 0 2px 8px'
+  elevated: 'rgba(0, 0, 0, 0.10) 0 8px 24px'
+  deep: 'rgba(0, 0, 0, 0.14) 0 16px 40px'
+  ring: '0 0 0 2px #111111'
+  inset-pill: 'inset 0 1px 2px rgba(0, 0, 0, 0.08)'
+
+accessibility:
+  contrast-text-on-bg: 18.2          # #111111 on #f4f4f4 — AAA
+  contrast-text-on-brand: 19.5       # #ffffff on #111111 — AAA
+  contrast-body-on-bg: 7.9           # #374151 on #f4f4f4 — AAA at body
+  contrast-link-on-bg: 8.3           # #0000ee on #f4f4f4 — AAA at body
+  focus-ring: '2px solid #111111 with 2px offset on light, white on dark'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual; skip-link present; pill section anchors keyboard accessible'
+
+components:
+  button-primary:
+    background: '#111111'
+    text: '#ffffff'
+    radius: 8
+    padding: '12px 20px'
+    height: 40
+    font: button
+    hover: 'background #242424; no transform'
+    active: 'background #242424'
+    disabled: 'background #e5e7eb; text #6b7280'
+    use: 'primary CTA — Sign up / Get Started'
+  button-secondary:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid #e5e7eb'
+    radius: 8
+    padding: '12px 20px'
+    height: 40
+    font: button
+    hover: 'background #f5f5f5; border #d1d5db'
+    use: 'secondary action — Log in / Watch demo'
+  button-ghost:
+    background: 'transparent'
+    text: '#111111'
+    radius: 8
+    padding: '10px 14px'
+    font: button
+    hover: 'background rgba(0, 0, 0, 0.04)'
+    use: 'tertiary text-only action'
+  button-danger:
+    background: '#ef4444'
+    text: '#ffffff'
+    radius: 8
+    padding: '12px 20px'
+    font: button
+    hover: 'background #dc2626'
+    use: 'destructive confirms — Delete account'
+  button-icon-circular:
+    background: '#ffffff'
+    text: '#111111'
+    radius: 9999
+    size: 36
+    use: 'icon-only chrome — close, expand'
+  button-text-link:
+    background: 'transparent'
+    text: '#111111'
+    font: button
+    use: 'inline text-link CTA'
+  card:
+    background: '#f5f5f5'
+    text: '#111111'
+    radius: 12
+    padding: 32
+    use: 'feature card / testimonial — light gray on canvas'
+  feature-icon-card:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid rgba(0, 0, 0, 0.08)'
+    radius: 12
+    padding: 24
+    use: 'icon feature card — white surface on canvas'
+  product-mockup-card:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid rgba(0, 0, 0, 0.08)'
+    radius: 12
+    padding: 24
+    shadow: 'rgba(0, 0, 0, 0.04) 0 1px 2px'
+    use: 'product UI fragment shown inside card — calendar / scheduling form'
+  pricing-card:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid #e5e7eb'
+    radius: 12
+    padding: 32
+    use: 'pricing tier card'
+  pricing-card-featured:
+    background: '#101010'
+    text: '#ffffff'
+    radius: 12
+    padding: 32
+    use: 'featured pricing tier — inverts to dark, no colored ribbon'
+  testimonial-card:
+    background: '#f5f5f5'
+    text: '#111111'
+    radius: 12
+    padding: 24
+    use: 'wall-of-love quote card'
+  hero-app-mockup-card:
+    background: '#ffffff'
+    text: '#111111'
+    radius: 16
+    use: 'hero phone-screenshot frame — app mockup'
+  section-anchor-pill:
+    background: '#ffffff'
+    text: '#111111'
+    radius: 9999
+    padding: '8px 18px'
+    shadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.08)'
+    use: 'floating section anchor on canvas — Benefits / Testimonials / App store'
+  app-store-chip:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid #e5e7eb'
+    radius: 7
+    padding: '8px 16px'
+    use: 'iPhone / Android download chip — smallest radius in system'
+  input:
+    background: '#ffffff'
+    text: '#111111'
+    border: '1px solid #e5e7eb'
+    radius: 8
+    padding: '10px 14px'
+    height: 40
+    focus: 'border #111111; ring 0 0 0 2px rgba(17, 17, 17, 0.16)'
+    use: 'email / search / form input'
+  badge:
+    background: '#f5f5f5'
+    text: '#111111'
+    radius: 9999
+    padding: '4px 12px'
+    font: caption
+    use: 'NEW / category badge'
+  rating-stars:
+    background: 'transparent'
+    text: '#fb923c'
+    font: caption
+    use: 'star rating row'
+  category-tab:
+    background: 'transparent'
+    text: '#6b7280'
+    radius: 8
+    padding: '8px 14px'
+    font: button
+    use: 'category filter tab — default state'
+  category-tab-active:
+    background: '#ffffff'
+    text: '#111111'
+    radius: 8
+    padding: '8px 14px'
+    font: button
+    use: 'category filter tab — active state'
+  cta-band-light:
+    background: '#f5f5f5'
+    text: '#111111'
+    radius: 12
+    padding: 48
+    use: 'pre-footer CTA band on light canvas'
+  footer:
+    background: '#101010'
+    text: '#a1a1aa'
+    padding: 64
+    use: 'dark navy footer — visually closes long-scroll pages'
+  nav-link:
+    background: 'transparent'
+    text: '#111111'
+    font: body
+    padding: '8px 12px'
+    hover: 'background rgba(0, 0, 0, 0.04)'
+    use: 'top-nav menu (Product / Pricing / Customers / Resources)'
+  nav-pill-group:
+    background: '#f8f9fa'
+    text: '#111111'
+    radius: 9999
+    padding: 6
+    use: 'nav pill group container — segmented control'
+
+dark-mode: optional
+
+lineage:
+  summary: |
+    Cal.com is the open-source counter-Calendly, and its design carries
+    that ideology. The headline is set in Cal Sans — a custom display
+    family that Cal commissioned and then released for free under the
+    SIL Open Font License — at 64px, weight 600. That single typographic
+    move is the entire brand identity: a paper-white `#f4f4f4` canvas
+    (warmer than `#fafafa`, cooler than `#ffffff`), near-black `#111111`
+    text, the default browser link blue (`#0000ee`) preserved on
+    secondary links as a deliberate "open web" tell. Section anchors
+    are pill-shaped (`9999px` radius) and float on the soft canvas —
+    the only chromed element on the page. There is no gradient, no
+    glassmorphism, no hero illustration; the typography does the entire
+    job. The influence is part Vercel (clean type-first sans-serif
+    sites), part Stripe Press (paper-white editorial restraint), but
+    executed with an open-source sensibility — monospace fallbacks
+    pulled from the system `ui-monospace`, weights kept minimal
+    (400/500/600 only), and a typographic hero that any developer could
+    copy in CSS that night. Cards hold product UI fragments directly —
+    actual scheduling forms and calendar widgets — instead of stock
+    illustrations, signaling "this is the product, not a marketing
+    rendering."
+  influences:
+    - name: 'Cal Sans (designed by Pablo Stanley)'
+      role: 'Custom display family, open-source under SIL OFL — the entire brand identity'
+      url: 'https://github.com/calcom/font'
+    - name: 'Vercel'
+      role: 'Clean type-first sans-serif marketing surface; minimalism over illustration'
+      url: 'https://vercel.com'
+    - name: 'Stripe Press'
+      role: 'Paper-white editorial restraint; monospace fallback discipline'
+      url: 'https://press.stripe.com'
+    - name: 'Calendly'
+      role: 'Direct competitor — Cal.com positions itself as the open-source alternative; the design is the differentiation'
+      url: 'https://calendly.com'
+    - name: 'Inter'
+      role: 'Open-source body sans companion to Cal Sans display'
+      url: 'https://rsms.me/inter/'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Cal.com runs on a single, audacious typographic decision. The hero headline — "The better way to schedule your meetings" — is set in Cal Sans at 64px / weight 600 over a soft `#f4f4f4` canvas, and that's essentially the entire brand identity. No hero illustration, no gradient, no glassmorphic card. The display family was commissioned by Cal and released as open-source (SIL OFL) — the design itself is part of the open-source mission.
+
+What makes it distinctive vs. Calendly and the rest of the scheduling category: every competitor reaches for stock illustration and pastel gradients. Cal strips it all back to type on paper. The category-default link blue (`#0000ee`) is preserved on secondary navigation pills as a deliberate "we trust the web's defaults" signal — the kind of move only an open-source-native team would make.
+
+The system's second visual signature is **product UI fragments shown directly inside cards** — calendar widgets, scheduling forms, automation diagrams, integration tiles. Cal.com doesn't paint marketing illustrations of the product; it shows the actual product chrome at small scale embedded in the marketing flow. The card surface is the picture frame; the content is real product UI.
+
+The dark navy footer (`#101010`) is the page's only tonal break — it visually closes long-scroll pages without breaking the paper-white discipline of the chrome above. Reading the homepage feels like flipping through an open-source project's README rendered at marketing scale: confident, slightly understated, generous with whitespace.
+
+**Key Characteristics:**
+- Soft paper canvas `#f4f4f4` — warmer than `#fafafa`, cooler than pure white.
+- Single typographic decision: Cal Sans display weight 600, that's the brand.
+- Two-family system: Cal Sans display + Inter body. Three weights: 400/500/600.
+- Browser-default link blue `#0000ee` preserved as ideological tell.
+- 12px card radius — soft rectangle, never pill (except section anchors).
+- Section anchors as floating pills (9999) — only chromed element.
+- Product UI fragments inside cards — never stock illustrations.
+- Dark `#101010` footer closes long pages — the only tonal break.
+- 96–160px section gutters — generous open-source pacing.
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **Background** (`#f4f4f4`): soft paper canvas, warmer than `#fafafa`, the page's defining surface.
+- **Text** (`#111111`): near-black, hair of warmth — body emphasis.
+- **Brand / CTA** (`#111111`): Cal's brand "color" is essentially text-color. The CTA fill is the same hue as headline text.
+
+### Brand & Dark
+
+- **Surface Dark** (`#101010`): footer background — visually closes long-scroll pages.
+- **Surface Dark Elevated** (`#1a1a1a`): elevated dark surface (rare).
+- **Brand Active** (`#242424`): press state for primary CTA.
+- **Brand Disabled** (`#e5e7eb`): disabled CTA background.
+
+### Accent
+
+Cal.com is essentially **chromatically minimal**. The only intentional accent is the preserved browser-default link blue. The product itself uses a brand-accent blue `#3b82f6` inside calendar widgets, but the marketing chrome stays monochrome.
+
+- **Link Blue** (`#0000ee`): browser default — preserved as ideological tell.
+- **Brand Accent (in-product)** (`#3b82f6`): used inside scheduling form widgets, not on chrome.
+
+### Interactive
+
+- **Link** (`#0000ee`): preserved browser default.
+- **Link Visited** (`#551a8b`): preserved browser default.
+- **Link Hover** (`#0000aa`): darker on hover.
+- **Focus Ring** (`2px solid #111111`): near-black ring with 2px offset on light canvas; white on dark footer.
+
+### Neutral Scale
+
+- **Text Strong** (`#000000`): pure black — used sparingly for display emphasis.
+- **Text** (`#111111`): default near-black.
+- **Text Body** (`#374151`): default running paragraph.
+- **Text Soft** (`#6b7280`): captions, metadata.
+- **Text Muted** (`#898989`): secondary metadata.
+- **Text Faint** (`#9ca3af`): disabled state.
+
+### Surface & Borders
+
+- **Surface** (`#ffffff`): cards, navigation pills, elevated regions.
+- **Surface Soft** (`#f8f9fa`): subtle elevated band.
+- **Surface Card** (`#f5f5f5`): feature card light-gray background.
+- **Surface Strong** (`#e5e7eb`): tertiary surface.
+- **Border** (`rgba(0, 0, 0, 0.08)`): translucent low-contrast — most cards use this hairline.
+- **Border Soft** (`#f3f4f6`): nested row.
+- **Border Strong** (`#e5e7eb`): input + secondary button border.
+
+### Shadow Colors
+
+- **Shadow Ambient** (`rgba(0, 0, 0, 0.04) 0 1px 2px`): product mockup cards.
+- **Shadow Standard** (`rgba(0, 0, 0, 0.06) 0 2px 8px`): hover lift on testimonials.
+- **Shadow Inset Pill** (`inset 0 1px 2px rgba(0, 0, 0, 0.08)`): the only inset shadow — section anchor pills.
+
+### Decorative (Community badges)
+
+- **Badge Orange** (`#fb923c`): rating stars.
+- **Badge Pink** (`#ec4899`): community accent.
+- **Badge Violet** (`#8b5cf6`): community accent.
+- **Badge Emerald** (`#34d399`): community accent.
+
+### Semantic
+
+- **Success** (`#10b981`): success state.
+- **Warning** (`#f59e0b`): warning state.
+- **Danger** (`#ef4444`): destructive confirm, error.
+- **Info** (`#3b82f6`): informational banner.
+
+### On-Dark (footer)
+
+- **On Dark** (`#ffffff`): primary text on `#101010` footer.
+- **On Dark Soft** (`#a1a1aa`): secondary text on footer.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary (display):** `"Cal Sans", -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif`. Custom geometric face by Pablo Stanley, open-sourced under SIL OFL. Single weight: 600. Cut for display use.
+- **Body (sans):** `Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif`. Open-source body companion. Weights: 400, 500, 600.
+- **Mono:** `"JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace`. System mono fallback consistent with the open-source posture.
+- **OpenType features:** `kern`, `liga` enabled site-wide. `tnum` activated on label-mono and code surfaces.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Cal Sans | 64 | 600 | 1.05 | -0.03em (-2px) | kern | Homepage h1 — the brand identity |
+| display-large | Cal Sans | 48 | 600 | 1.10 | -0.025em (-1.5px) | kern | Section h1 |
+| h1 | Cal Sans | 36 | 600 | 1.15 | -0.02em (-1px) | kern | Page h1 |
+| h2 | Cal Sans | 28 | 600 | 1.20 | -0.015em (-0.5px) | kern | Section heads |
+| h3 | Inter | 22 | 600 | 1.30 | -0.013em (-0.3px) | kern | Sub-section heads (Inter, not Cal Sans) |
+| h4 | Inter | 18 | 600 | 1.40 | 0 | kern | Card titles |
+| body-large | Inter | 18 | 400 | 1.55 | 0 | kern, liga | Hero subhead |
+| body | Inter | 16 | 400 | 1.50 | 0 | kern, liga | Default paragraph copy |
+| body-small | Inter | 14 | 400 | 1.50 | 0 | kern | Footer body |
+| label-mono | JetBrains Mono | 11 | 500 | 1.40 | 0.06em | tnum, uppercase | Eyebrow label (rare) |
+| button | Inter | 14 | 600 | 1.00 | 0 | kern | CTA button label |
+| button-small | Inter | 13 | 600 | 1.00 | 0 | kern | Compact button |
+| link | Inter | 16 | 500 | 1.50 | 0 | kern | Inline text link |
+| caption | Inter | 13 | 500 | 1.40 | 0 | kern | Photo / figure caption |
+| caption-small | Inter | 12 | 400 | 1.40 | 0 | kern | Footer microcopy |
+| micro | Inter | 11 | 500 | 1.30 | 0.04em | kern | UI hint |
+| code-body | JetBrains Mono | 14 | 400 | 1.50 | 0 | tnum | Code sample |
+| code-bold | JetBrains Mono | 14 | 500 | 1.50 | 0 | tnum | Inline emphasis in code |
+| code-label | JetBrains Mono | 11 | 500 | 1.40 | 0.04em | tnum, uppercase | Code-block filename header |
+
+### Principles
+
+- **Cal Sans is reserved for display only.** It's a display cut — paragraph use breaks the design. h1, h2, hero, display all get Cal Sans; everything below h3 falls to Inter.
+- **Three weights total.** Cal Sans ships with weight 600 only; Inter uses 400/500/600. The system's typographic restraint is an open-source value — slim font payload, system fallbacks.
+- **Negative tracking on display.** -0.03em (-2px) at 64px scaling down to neutral at 18px body.
+- **Family-based hierarchy, not weight-based.** The shift from Cal Sans (display) to Inter (body) carries hierarchy more than weight changes do.
+- **Open-source mono fallback.** `ui-monospace` on Apple devices, JetBrains Mono if installed. No paid mono license. Consistent with open-source ideology.
+- **The hierarchy can be cloned in an evening.** Any developer reading the site can implement Cal's typography stack in CSS the same night — that's the design intent.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary** — Background `#111111`, text `#ffffff`, 8px radius, padding `12px 20px`, height 40px, button font (14/600). Hover: background `#242424`, no transform. **Use:** Sign up / Get Started.
+
+**Secondary** — Background `#ffffff`, text `#111111`, 1px `#e5e7eb` border, 8px radius, same padding/height as primary. Hover: background `#f5f5f5`, border `#d1d5db`. **Use:** Log in / Watch demo.
+
+**Ghost** — Transparent background, ink text, 8px radius, padding `10px 14px`. Hover: `rgba(0, 0, 0, 0.04)` background. **Use:** tertiary text-only action.
+
+**Danger** — Background `#ef4444`, white text, 8px radius. Hover `#dc2626`. **Use:** Delete account / destructive confirm.
+
+**Icon Circular** — `#ffffff` background, ink text, 9999 radius, 36px square. **Use:** close / expand chrome.
+
+**Text Link** — Transparent background, ink text, button font. **Use:** inline CTA inside body copy.
+
+### Cards
+
+**Feature Card (Light Gray)** — Background `#f5f5f5`, ink text, 12px radius, 32px padding. **No border.** The light gray on canvas creates the depth.
+
+**Feature Icon Card (White Hairline)** — Background `#ffffff`, 1px `rgba(0, 0, 0, 0.08)` border, 12px radius, 24px padding. Used when product UI fragment lives inside.
+
+**Product Mockup Card** — `#ffffff` background, 1px hairline, 12px radius, 24px padding, ambient shadow. Holds actual product UI fragments — calendar widget, scheduling form, integration row.
+
+**Pricing Card** — `#ffffff` background, 1px `#e5e7eb` border, 12px radius, 32px padding.
+
+**Pricing Card Featured** — Inverts to dark. Background `#101010`, white text, 12px radius, 32px padding. No colored ribbon — the dark inversion is the highlight.
+
+**Testimonial Card** — `#f5f5f5` background, ink text, 12px radius, 24px padding.
+
+**Hero App Mockup Card** — White surface, 16px radius, holds a phone screenshot frame.
+
+### Section Anchors (signature)
+
+**Section Anchor Pill** — `#ffffff` background, ink text, 9999 radius, `8px 18px` padding, inset shadow `inset 0 1px 2px rgba(0, 0, 0, 0.08)` (the only inset on the page). The pill floats on the canvas as the page's only chromed element. **Use:** Benefits / Testimonials / App store / Wall of love anchors.
+
+**App Store Chip** — `#ffffff` background, ink text, 1px `#e5e7eb` border, **7px radius** (the smallest in the system, reserved for app-store chips), `8px 16px` padding. **Use:** iPhone / Android download chips.
+
+### Badges & Tags
+
+**Badge** — `#f5f5f5` background, ink text, 9999 radius, `4px 12px` padding, caption font.
+
+**Rating Stars** — Transparent background, `#fb923c` (badge-orange) text. Used in testimonial cards.
+
+### Inputs & Forms
+
+**Text Input** — Background `#ffffff`, 1px `#e5e7eb` border, 8px radius, padding `10px 14px`, height 40px, body font. Focus: border `#111111`, ring `0 0 0 2px rgba(17, 17, 17, 0.16)`.
+
+### Navigation
+
+**Top Nav** — Background `#ffffff` (over `#f4f4f4` canvas), 64px height. Layout: Cal.com wordmark left, horizontal menu (Product / Pricing / Customers / Resources / Enterprise), Log In + Sign Up CTA right.
+
+**Nav Link** — Transparent background, ink text, body font, `8px 12px` padding. Hover: `rgba(0, 0, 0, 0.04)` background.
+
+**Nav Pill Group** — `#f8f9fa` background, 9999 radius, 6px padding container. Houses segmented control tabs.
+
+### Decorative
+
+**CTA Band Light** — Pre-footer band on `#f5f5f5` background, 12px radius, 48px padding. Centered display-large headline + primary CTA.
+
+**Footer** — `#101010` background, `#a1a1aa` text, 64px padding. Multi-column link grid. The page's only tonal break.
+
+**Category Tab** — Tab navigation (default `#6b7280` text on transparent / active `#ffffff` background with ink text). 8px radius, `8px 14px` padding, button font.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit:** 4px.
+- **Scale:** 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160.
+- **Section padding:** 96px standard, 160px between major regions.
+- **Card padding:** 24–32px depending on size.
+
+### Grid & Container
+
+- **Max content width:** 1200px on desktop.
+- **Single-column anchored center-page** for hero and prose.
+- **Feature grids:** 2-up at desktop for splits, 3-up for benefit lists.
+- **Pricing:** 3-up at desktop, 2-up at tablet, 1-up at mobile.
+
+### Whitespace Philosophy
+
+Generous vertical gutters of 96–160px between regions; the page breathes. Mobile collapses cleanly because nothing was layered to begin with — there's no third tier to worry about. The asymmetry — tight inside cards (24–32px padding), wide outside — gives the page its open-source pacing.
+
+### Section Cadence
+
+- White hero on `#f4f4f4` canvas → floating section anchor pills → light-gray feature cards → testimonial wall → light-gray pricing → light-gray CTA band → dark `#101010` footer.
+- The dark footer is the only tonal break. Everything above stays paper-white.
+- No alternating light/dark sections in the chrome.
+
+## 6. Shapes & Radius Scale
+
+| Token | Value | Use |
+|---|---|---|
+| micro | 4px | Inline elements (rare) |
+| sm | 6px | Compact rows |
+| md | 8px | **Buttons, inputs** — soft rectangle, the developer-dialect default |
+| lg | 12px | **Cards** — feature, pricing, testimonial, mockup |
+| xl | 16px | **Hero app mockup card** |
+| featured | 20px | Larger feature shells (rare) |
+| pill | 9999px | **Section anchors, badges, avatars, app-store chips at 7px** |
+
+The shape language is intentionally limited: pill (section anchor + badge), soft-rect (button at 8px), card (12–16px). The 7px app-store chip is the smallest in the system, deliberately referencing iOS app-store conventions. The pill at 9999 is reserved for floating elements that need to feel "on" the canvas rather than "of" it.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | `#f4f4f4` canvas | Body bands |
+| 1 — Card | `#ffffff` or `#f5f5f5` + optional 1px `rgba(0, 0, 0, 0.08)` | Feature, pricing, testimonial cards |
+| 2 — Section Anchor | `#ffffff` + inset shadow `inset 0 1px 2px rgba(0, 0, 0, 0.08)` | Floating pill anchors — the page's single elevation moment |
+| 3 — Modal / Dialog | `#ffffff` + 12px radius + elevated shadow | Modals (rare) |
+| 4 — Footer | `#101010` flat | Dark navy footer — tonal break |
+
+### Shadow Philosophy
+
+Two-tier elevation only — the canvas and the cards. Borders are rare; cards float on the canvas via the slight `#ffffff` or `#f5f5f5`-on-`#f4f4f4` contrast plus an optional translucent hairline. Section anchor pills are the only inset-elevation on the page (`inset 0 1px 2px`). No drop shadows on chrome cards. The dark footer ends the page without any elevation device — it's flat against the canvas above it.
+
+## 8. Interaction & Motion
+
+### Easing & Duration
+
+- **ease-standard:** `cubic-bezier(0.4, 0, 0.2, 1)` — material default.
+- **ease-emphasized:** `cubic-bezier(0.2, 0, 0, 1)` — used for section anchor pill scroll-snap.
+- **ease-entrance:** `cubic-bezier(0, 0, 0.2, 1)` — content fade-in.
+- **duration-fast:** 150ms — color transitions on hover.
+- **duration-standard:** 250ms — opacity / transform on cards.
+- **duration-slow:** 400ms — section transitions.
+
+### Per-Component Micro-States
+
+- **Button hover:** background `#111111` → `#242424`, no transform. 150ms.
+- **Card hover (feature):** subtle background shift `#f5f5f5` → `#f0f0f0` (subtle). No lift. 250ms.
+- **Section anchor pill hover:** inset shadow deepens slightly. 150ms.
+- **Link hover:** color shifts to `#0000aa` (darker browser blue). Underline persists (it's a default link). 150ms.
+- **Input focus:** border `#e5e7eb` → `#111111`, ring fades in. 150ms.
+- **Nav link hover:** subtle `rgba(0, 0, 0, 0.04)` background. 150ms.
+
+### Page Transitions
+
+The homepage uses on-scroll fade-in for cards entering viewport (opacity 0 → 1, translateY(8px) → 0, 400ms). Section anchor pills scroll-snap to viewport center on smooth-scroll. No hero animation — the typography is the entrance.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. When set:
+- Card hover transforms collapse to opacity-only.
+- Section anchor scroll-snap disabled (smooth-scroll → instant).
+- On-scroll reveals appear instantly.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | WCAG |
+|---|---|---|
+| `#111111` text on `#f4f4f4` canvas | 18.2 | AAA |
+| `#374151` body on `#f4f4f4` canvas | 7.9 | AAA at body |
+| `#ffffff` on `#111111` CTA | 19.5 | AAA |
+| `#0000ee` link on `#f4f4f4` | 8.3 | AAA at body |
+| `#6b7280` muted on `#f4f4f4` | 4.7 | AA |
+| `#ffffff` on `#101010` footer | 19.7 | AAA |
+| `#a1a1aa` soft on `#101010` footer | 7.0 | AAA at body |
+
+### Focus Indicators
+
+2px solid `#111111` ring with 2px offset on light canvas. White ring on dark footer. Applied to every interactive element — buttons, links, inputs, section anchors, nav.
+
+### ARIA Patterns
+
+- **Tablist:** `role="tablist"` for category filter tabs.
+- **Dialog:** `role="dialog"` + `aria-modal="true"` + focus trap on signup modal.
+- **Listbox:** `role="listbox"` for nav search autocomplete.
+
+### Keyboard Nav
+
+- Tab order strictly visual.
+- Skip-link present in header (visible on focus).
+- Section anchors are real `<a href="#section">` — keyboard accessible by default.
+- Escape closes modals.
+
+### Screen Reader
+
+- Decorative product mockup illustrations marked `aria-hidden="true"`.
+- Section anchor pills include text content (no icon-only).
+- Footer link groups use `<nav aria-label="Footer">`.
+
+### Reduced Motion
+
+Honored — see §8.
+
+## 10. Responsive Behavior
+
+| Breakpoint | Range | Key Changes |
+|---|---|---|
+| Mobile | < 640px | display-hero 64→32px; section anchors collapse to inline buttons; feature 1-up; nav hamburger |
+| Tablet | 640–1024px | display-hero 48px; feature 2-up; pricing 2-up |
+| Desktop | 1024–1280px | display-hero 64px; feature 3-up; pricing 3-up |
+| Wide | > 1280px | Content caps at 1200px; section anchors float center |
+
+### Touch Targets
+
+- Primary CTA: 40px height — at WCAG AA, padded for AAA.
+- Section anchor pills: 36px height padded internally.
+- Nav links: 32px tap target padded externally.
+
+### Collapsing Strategy
+
+- Top nav switches to hamburger below 768px.
+- Section anchors → inline button row on mobile.
+- Pricing 3-up → 1-up below 768px.
+- Hero phone-mockup: scales fluidly with viewport.
+- Footer: multi-column → stacked single-column.
+
+### Image Behavior
+
+Product UI fragments inside cards are real product chrome (HTML/CSS), not raster — they scale fluidly. Phone-mockup hero uses `srcset` 1x/2x/3x.
+
+### Container Queries
+
+Used inside product mockup cards — calendar widget reflows from week-view to day-view when card width drops below 480px.
+
+## 11. Content & Voice
+
+### Tone
+
+Friendly, confident, slightly understated. Cal.com's voice sounds like an open-source maintainer presenting at OSS Summit — informed, generous, slightly self-deprecating about the calendar problem ("scheduling is hard; we made it less hard"). Sentences trend short. Headlines are declarative ("The better way to schedule your meetings").
+
+### Microcopy Patterns
+
+- **Button verbs:** "Get started for free", "Sign up", "Log in", "Watch demo", "Book a call", "Contact sales", "View on GitHub".
+- **Error recipe:** `[What failed] — [Why] — [What to do]`. Example: "Couldn't sync calendar. Token expired. Reconnect to continue."
+- **Success confirmations:** terse — "Booked", "Saved", "Synced". No exclamation, no emoji.
+- **Empty states:** instructional. "No meetings yet — create a link to share."
+
+### CTA Verb Conventions
+
+- Primary: "Get started for free", "Sign up", "Try it free".
+- Secondary: "Watch demo", "View on GitHub", "Read the docs", "Contact sales".
+- Avoid: "Sign up now!", emoji-heavy CTAs, "Join thousands of teams".
+- Open-source signal: "View on GitHub" appears prominently in nav and footer — Cal embraces the OSS identity.
+
+### Empty States
+
+When a Wall-of-Love filter has no results, Cal.com shows: "No testimonials match. Try a different filter." Plain text, no illustration. The minimalism IS the empty state.
+
+## 12. Dark Mode & Theming
+
+Cal.com's marketing site is **light-only by default**. The dark `#101010` footer is the only dark tonal element. The product itself ships with a dark mode (preference inside the dashboard), but marketing chrome stays paper-white.
+
+If a dark variant were rendered (preference inside docs):
+- `bg` → `#0a0a0a`
+- `text` → `#f4f4f4` (the canvas becomes the ink)
+- `surface` → `#1a1a1a`
+- `border` → `rgba(255, 255, 255, 0.08)`
+- Link blue `#0000ee` shifts to a lighter `#6699ff` for contrast on dark.
+
+But this is product, not marketing.
+
+## 13. Lineage & Influences
+
+Cal.com sits at the intersection of **open-source minimalism** (Cal Sans released free, system mono fallback, Inter body), **type-first marketing sites** (Vercel, Linear), and **paper-white editorial restraint** (Stripe Press). It rejects the SaaS-blue-CTA orthodoxy by using `#111111` near-black for the action surface — the same color as headline text — and rejects the stock-illustration orthodoxy by showing actual product UI fragments inside cards.
+
+The custom Cal Sans display family (designed by Pablo Stanley and released open-source under SIL OFL) is the brand's deepest investment. Where Linear leans on Inter and Vercel uses Geist, Cal commissioned a face and gave it away — the move is part marketing, part open-source ideology. Inter as body companion keeps the system slim; the whole typography stack is implementable in an evening.
+
+The browser-default link blue `#0000ee` preserved on secondary navigation pills is the most ideological choice on the page. It signals: "we trust the web's defaults; we don't need to design over them."
+
+**Named influences:**
+
+- **Cal Sans** (Pablo Stanley, SIL OFL open-source) — the entire brand identity.
+- **Inter** (Rasmus Andersson, open-source) — body sans companion.
+- **Vercel** — clean type-first sans-serif marketing surface.
+- **Stripe Press** — paper-white editorial restraint, hairline-only depth.
+- **Calendly** — direct competitor; Cal positions as the open-source alternative.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** anchor the canvas at `#f4f4f4` paper-white — warmer than `#fafafa`, cooler than `#ffffff`.
+- **Do** anchor the entire identity on Cal Sans. Cal Sans IS the brand — strip away the illustrations and the gradient and let type carry the page.
+- **Do** preserve browser defaults where they fit your ideology — the `#0000ee` link blue is a tell that the team trusts the open web.
+- **Do** keep the surface palette to two tiers (canvas + white). Three tiers would dilute the paper feel.
+- **Do** use Cal Sans for display only — h1 / h2 / hero. Fall back to Inter for h3 and below.
+- **Do** show actual product UI fragments inside cards — calendar widgets, scheduling forms — instead of stock illustrations.
+- **Do** use `#111111` near-black for primary CTAs. The brand color IS the text color.
+- **Do** scope chromatic accents to in-product widgets (calendar `#3b82f6` blue) — never on chrome.
+- **Do** close long pages with the dark `#101010` footer. It's the page's only tonal break.
+- **Do** keep weights minimal: Cal Sans 600, Inter 400/500/600. Three weights total.
+
+### Don't
+
+- **Don't** introduce a chromatic accent color. Cal's "brand color" is essentially text-on-paper.
+- **Don't** add hero illustrations or product screenshots above the fold. The headline is the hero.
+- **Don't** use Cal Sans for body copy — it's a display cut. Fall back to Inter / system sans for paragraph text.
+- **Don't** override the browser-default link blue with a custom blue. The `#0000ee` is the open-web signal.
+- **Don't** use pill (9999) on buttons. Buttons are 8px soft rectangles. Pills are reserved for section anchors and badges.
+- **Don't** add drop shadows to feature cards. Light gray `#f5f5f5` on canvas creates the depth.
+- **Don't** introduce a third sans family beyond Cal Sans + Inter.
+- **Don't** mix in stock illustrations for features. Show product UI fragments instead.
+- **Don't** clutter the chrome with banners, marquees, or announcement bars. The discipline IS the brand.
+- **Don't** scale Cal Sans below 22px. Below that, fall back to Inter — Cal Sans is cut for display.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Background:    #f4f4f4
+Surface:       #ffffff
+Surface Card:  #f5f5f5
+Surface Dark:  #101010
+Text:          #111111
+Body Text:     #374151
+Brand / CTA:   #111111
+Link Blue:     #0000ee  (browser default — preserved)
+Border:        rgba(0, 0, 0, 0.08)
+On Dark:       #ffffff
+```
+
+### Example Component Prompts
+
+- **"Create a hero section in the Cal.com style"** — `#f4f4f4` paper canvas, 64px Cal Sans h1 at weight 600 with `-0.03em` tracking, 18px Inter body subhead at weight 400, two CTAs (`#111111` near-black primary + white secondary). No hero illustration; the typography is the hero.
+
+- **"Design a feature card in the Cal.com style"** — `#f5f5f5` light gray background (no border), 12px radius, 32px padding. h4 title in Inter 18/600, body in Inter 16/400. Holds a product UI fragment (calendar widget / scheduling form) inside the card body — not a stock illustration.
+
+- **"Build a primary CTA in the Cal.com style"** — `#111111` near-black background, white text, 8px radius (NOT pill), `12px 20px` padding, 40px height, button font (14/600). Hover background `#242424`. The brand color IS the text color.
+
+- **"Make a section anchor in the Cal.com style"** — `#ffffff` background, ink text, 9999 pill radius, `8px 18px` padding, inset shadow `inset 0 1px 2px rgba(0, 0, 0, 0.08)`. Floats on the canvas as the only chromed element. **Use:** Benefits / Testimonials / App store anchors.
+
+- **"Render a pricing tier in the Cal.com style"** — Standard tier: `#ffffff` background, 1px `#e5e7eb` border, 12px radius, 32px padding. Featured tier inverts to `#101010` background with white text — same shape, dark inversion as the highlight.
+
+- **"Design a footer in the Cal.com style"** — `#101010` dark navy background, `#a1a1aa` muted text, 64px padding. Multi-column link grid. Sits as the only tonal break at the bottom of the page.
+
+### Iteration Guide
+
+1. Start with Cal Sans on `#f4f4f4` canvas. Display weight 600, negative tracking. The typography IS the brand.
+2. Apply `#111111` near-black for CTAs and headlines. Same color as text — the brand is text-color.
+3. Cards use 12px radius. Light gray `#f5f5f5` on canvas creates depth without borders or shadows.
+4. Section anchors are pills (9999 radius) with inset shadow. The only chromed element on the page.
+5. Show actual product UI inside cards. Don't paint marketing illustrations of features.
+6. Preserve browser-default link blue `#0000ee` on secondary nav pills. Open-web ideology.
+7. Close long pages with the dark `#101010` footer. The only tonal break.
+8. Three weights: Cal Sans 600, Inter 400/500/600. Resist adding more.

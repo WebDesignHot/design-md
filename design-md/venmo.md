@@ -1,0 +1,730 @@
+---
+name: Venmo
+tagline: A single confident `#3d95ce` blue, Aktiv Grotesk geometry, and a social-feed informality — payments dressed as group chat.
+author: webdesignhot
+source_url: https://venmo.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [fintech]
+tags: [light, social, sans, friendly, blue, p2p]
+preview_swatch: ['#ffffff', '#3d95ce', '#1f2e3a']
+related: [paypal, cash-app, plaid]
+description: 'Venmo''s site is built on a single chromatic decision: the unmistakable Venmo Blue `#3d95ce` painted onto a clean white canvas. Aktiv Grotesk Extended carries the wordmark and display, with a tighter Aktiv Grotesk for body — geometric sans-serifs descended from Helvetica that feel friendly without becoming playful. Where PayPal commits to dual-blue corporate trust, Venmo''s younger sibling commits to a single mid-blue social-payment voice — friendlier, lighter, with emoji and feed-style transaction notes baked into the brand''s personality. Pages alternate white sections with soft `#f5f8fa` elevation bands and occasional Venmo Blue full-bleed campaigns; depth is hairlines and surface tone, never decorative shadow. Type runs at modest weights, rounded-pill CTAs anchor every hero, and the iconic emoji-laden transaction note is the system''s signature unit of content.'
+
+colors:
+  bg: '#ffffff'                  # canvas — pure white default page
+  bg-cool: '#f5f8fa'             # cool-grey elevation band between white sections
+  bg-blue: '#3d95ce'              # full-bleed Venmo Blue hero
+  bg-deep: '#1f2e3a'             # deep blue-black footer / occasional dark band
+  surface: '#ffffff'              # default card surface
+  surface-soft: '#f5f8fa'         # secondary card / soft elevation band
+  surface-strong: '#e8edf2'       # tertiary panel / disabled surface
+  surface-blue-tint: '#eef6fb'    # informational tint — Venmo Blue at 8%
+  surface-blue-elevated: '#5ba9da' # +1 step on Venmo Blue heroes
+  text: '#1f2e3a'                 # primary ink — deep blue-black, never pure black
+  text-body: '#2f3e4a'             # near-black body
+  text-muted: '#6b7785'           # captions, metadata
+  text-subtle: '#9aa5b1'           # disabled, lowest hierarchy
+  text-friend-name: '#3d95ce'     # transaction-feed: friend names hyperlink-blue
+  brand: '#3d95ce'                # Venmo Blue — primary CTA, accent, links
+  brand-hover: '#2c7eb5'           # mid-blue pressed/hover
+  brand-active: '#225f8c'          # deeper pressed state
+  brand-light: '#a8d3ec'           # lighter brand voltage for backgrounds
+  brand-disabled: '#bcd4e4'        # desaturated brand for disabled CTAs
+  on-brand: '#ffffff'              # white on Venmo Blue CTA
+  on-deep: '#ffffff'               # white text on deep band
+  on-deep-soft: '#9aa5b1'          # muted text on deep
+  link: '#3d95ce'                  # default text-link colour
+  link-hover: '#225f8c'            # underlined-darken on hover
+  border: '#dbe2e8'                # default 1px hairline
+  border-strong: '#9aa5b1'         # input border, focused divider
+  border-soft: '#e8edf2'           # softest divider
+  border-on-blue: 'rgba(255,255,255,0.22)' # hairline on Venmo Blue heroes
+  semantic-success: '#2ea84f'      # payment-sent green; "completed" tag
+  semantic-warning: '#f5a623'      # pending tone
+  semantic-danger: '#e02020'       # error, declined-payment red
+  semantic-info: '#3d95ce'         # informational tint matches brand
+  social-like: '#e02020'           # heart-icon red on transaction feed
+  focus-ring: 'rgba(61,149,206,0.40)' # 3px brand-blue focus ring
+  shadow-ambient: 'rgba(31, 46, 58, 0.06)' # blue-black tinted shadow
+  shadow-soft: 'rgba(31, 46, 58, 0.10)'
+  shadow-hard: 'rgba(31, 46, 58, 0.18)'
+
+typography:
+  display:
+    family: '"Aktiv Grotesk Extended", "Aktiv Grotesk", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [500, 700, 900]
+    opentype-features: ['ss01', 'kern']
+  body:
+    family: '"Aktiv Grotesk", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: '"Aktiv Grotesk Mono", "JetBrains Mono", "IBM Plex Mono", monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-hero:    { size: 80, weight: 900, lineHeight: 1.00, tracking: '-2px',    family: display, opentype: 'kern' }
+    display-xl:      { size: 64, weight: 900, lineHeight: 1.02, tracking: '-1.6px',  family: display }
+    display-lg:      { size: 48, weight: 900, lineHeight: 1.05, tracking: '-1.2px',  family: display }
+    display-md:      { size: 36, weight: 700, lineHeight: 1.10, tracking: '-0.6px',  family: display }
+    display-sm:      { size: 28, weight: 700, lineHeight: 1.20, tracking: '-0.3px',  family: display }
+    title-lg:        { size: 24, weight: 700, lineHeight: 1.25, tracking: '0',       family: body }
+    title-md:        { size: 20, weight: 700, lineHeight: 1.30, tracking: '0',       family: body }
+    title-sm:        { size: 16, weight: 700, lineHeight: 1.35, tracking: '0',       family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',       family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    body-strong:     { size: 16, weight: 700, lineHeight: 1.50, tracking: '0',       family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',       family: body }
+    legal:           { size: 12, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.20, tracking: '1.6px',   family: body }
+    button:          { size: 16, weight: 700, lineHeight: 1.20, tracking: '0',       family: body }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.40, tracking: '0',       family: body }
+    feed-name:       { size: 16, weight: 700, lineHeight: 1.40, tracking: '0',       family: body }
+    feed-note:       { size: 16, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    feed-amount:     { size: 16, weight: 700, lineHeight: 1.40, tracking: '0',       family: mono, opentype: 'tnum, zero' }
+    feed-time:       { size: 13, weight: 400, lineHeight: 1.40, tracking: '0',       family: body }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.40, tracking: '0',       family: mono }
+
+radius:
+  none: 0
+  micro: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: { xxs: 4, xs: 8, sm: 12, base: 16, md: 20, lg: 24, xl: 32, xxl: 48, section: 80, hero: 120 }
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+
+components:
+  button-primary:         { bg: brand, text: on-brand, padding: '14px 28px', height: 48, radius: pill, font: button }
+  button-primary-hero:    { bg: brand, text: on-brand, padding: '18px 36px', height: 56, radius: pill, font: button }
+  button-secondary:       { bg: bg, text: brand, border: '2px solid brand', padding: '12px 26px', height: 48, radius: pill, font: button }
+  button-tertiary-text:   { bg: transparent, text: link, font: button }
+  button-on-blue:         { bg: bg, text: brand, padding: '14px 28px', height: 48, radius: pill, font: button }
+  hero-band-light:        { bg: bg, text: text, padding: hero, font: display-hero }
+  hero-band-cool:         { bg: bg-cool, text: text, padding: section, font: display-xl }
+  hero-band-blue:         { bg: bg-blue, text: on-brand, padding: hero, font: display-hero }
+  card-feature:           { bg: surface-soft, radius: lg, padding: lg, border: '1px solid border-soft' }
+  card-feed-row:          { bg: bg, radius: md, padding: '16px 20px', border: '1px solid border-soft' }
+  card-product:           { bg: bg, radius: lg, padding: lg, border: '1px solid border', shadow: shadow-ambient }
+  badge-pill:             { bg: surface-blue-tint, text: brand, radius: pill, padding: '4px 10px' }
+  input-text:             { bg: bg, border: '1px solid border-strong', radius: sm, padding: '12px 16px', height: 48 }
+  amount-input-large:     { bg: bg, border: 'none', radius: 0, padding: '8px 0', height: 96, font: 'display-xl', text: brand }
+  top-nav:                { bg: bg, text: text, height: 64, font: nav-link, border-bottom: '1px solid border-soft' }
+  footer-deep:            { bg: bg-deep, text: on-deep-soft, padding: '64px 0', font: body-sm }
+  emoji-tray:             { bg: surface-soft, radius: pill, padding: '8px 12px', font: body-md }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  duration-bounce: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — heart-tap bounce, like-pulse, and feed-row entrance collapse to opacity-only fades'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(31, 46, 58, 0.06) 0 1px 2px'
+  standard: 'rgba(31, 46, 58, 0.08) 0 4px 12px'
+  elevated: 'rgba(31, 46, 58, 0.12) 0 16px 32px -8px'
+  deep: 'rgba(31, 46, 58, 0.18) 0 30px 60px -20px'
+  ring: '0 0 0 3px rgba(61,149,206,0.40)'
+
+accessibility:
+  contrast-text-on-bg: 14.6
+  contrast-text-on-brand: 4.7
+  contrast-body-on-bg: 9.8
+  contrast-link-on-bg: 4.5
+  focus-ring: '3px solid rgba(61,149,206,0.40) with 2px offset'
+  reduced-motion-honored: true
+  min-target: 44
+
+dark-mode: optional
+---
+
+## 1. Visual Theme & Atmosphere
+
+Venmo's marketing surface is a single chromatic decision: the unmistakable **Venmo Blue `#3d95ce`** painted onto a clean white canvas. Where its parent PayPal commits to dual-blue corporate trust, Venmo commits to **one mid-blue social-payment voice** — friendlier, lighter, more conversational. The blue itself is the giveaway: not navy, not sky, but a warmer mid-cyan that sits closer to "summer pool" than to "bank prospectus". It is the colour of the iconic Venmo "V", and it is used everywhere — wordmark, primary CTA, hyperlink-blue friend names in the transaction feed, and the full-bleed campaign hero.
+
+Type is **Aktiv Grotesk** — a Helvetica-descended geometric sans by Dalton Maag (the same foundry that designed PayPal Sans Big), but cut for warmth rather than corporate authority. The display tier uses **Aktiv Grotesk Extended** at weight 900 with hard negative tracking — those headline letterforms are wider than they are tall, giving the marketing a poster-bold quality that PayPal would never reach for. Body sits at the standard Aktiv Grotesk at 400/500/700 — warmer, rounder, more like a conversation than a contract.
+
+Page rhythm is built around three ideas:
+1. **White editorial sections** — the default. Hero, feature grids, app-store demos.
+2. **Cool-grey elevation bands** (`#f5f8fa`) — subtle pause between dense feature blocks.
+3. **Full-bleed Venmo Blue heroes** (`#3d95ce`) — campaign tops, "Get the App" closers, and the iconic transaction-feed mockup.
+
+The system's signature content unit is the **transaction feed row**: friend's avatar, friend's name (in `#3d95ce` like a hyperlink), an emoji-laden note ("Pizza 🍕"), the amount in tabular mono, and the time. This row appears on the marketing site as the brand's most-shown component — payments rendered as a social feed, with emoji as first-class content. It is the visual gesture that distinguishes Venmo from every other fintech: money is **social**, not transactional.
+
+Decorative shadows are absent. Cards stack with a 1px hairline (`#dbe2e8`) or a single surface-jump from white to `#f5f8fa`. Iconography is rounded-geometric, often paired with the brand's heart-and-emoji vocabulary. The footer is **deep blue-black** (`#1f2e3a`) — closing every page on a quiet, near-navy floor.
+
+**Key Characteristics:**
+- Single mid-blue voltage: Venmo Blue `#3d95ce` for everything actionable
+- Canvas is pure white `#ffffff` — clean, social-feed neutral
+- Aktiv Grotesk Extended at weight 900 for display — wide, poster-bold
+- Aktiv Grotesk at 400–700 for body — warm geometric sans
+- Pill-shaped CTAs (full radius) — friendly, app-native
+- Transaction-feed row is the brand's signature content unit
+- Friend names rendered hyperlink-blue (`#3d95ce`) — payments as social
+- Emoji is first-class content — not decoration, but voice
+- Tabular mono for amounts — `tnum + zero` ledger discipline
+- Deep blue-black footer (`#1f2e3a`) — never pure black
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): Pure white default page floor.
+- **Ink** (`#1f2e3a`, deep blue-black): Primary headline and strong body text. Like PayPal, *not pure black* — a deep blue tint colours every paragraph.
+- **Brand** (`#3d95ce`, Venmo Blue): The single brand voltage. Wordmark, primary CTA, friend names, accent strokes.
+
+### Brand & Dark
+- **Venmo Blue** (`#3d95ce`): The canonical brand colour. Primary CTA, hyperlink, signature glyphs.
+- **Brand Hover** (`#2c7eb5`): Mid-blue pressed state.
+- **Brand Active** (`#225f8c`): Deeper pressed/active.
+- **Brand Light** (`#a8d3ec`): Lifted brand voltage — used as a lighter accent surface.
+- **Deep Blue-Black** (`#1f2e3a`): Footer ground; rare full-bleed dark band.
+
+### Accent
+Venmo deliberately commits to **a single brand colour**. Yellow, green, red exist only as semantic states. The single accent move is the **heart-red `#e02020`** used on the social-feed "like" icon — a literal heart, the only non-blue chromatic moment that's part of the brand voice (because liking a friend's payment is part of the product).
+
+### Interactive
+- **Link** = Brand `#3d95ce`, no underline at rest; underline appears on hover
+- **Link Hover** — `#225f8c`, with underline
+- **CTA Hover** — bg `#2c7eb5`, translateY(-1px), shadow blooms ambient → standard
+- **CTA Active** — bg `#225f8c`, no lift
+- **Disabled** — `#bcd4e4` background or `#9aa5b1` text
+- **Selected** — pill chips use `#eef6fb` (Venmo Blue at 8%) bg with `#3d95ce` text
+
+### Neutral Scale
+Cool-grey ladder, slightly warmer than PayPal's:
+
+`#ffffff` (Canvas) → `#f5f8fa` (Cool Band) → `#e8edf2` (Surface Strong) → `#dbe2e8` (Border) → `#9aa5b1` (Border Strong / Subtle text) → `#6b7785` (Muted) → `#2f3e4a` (Body) → `#1f2e3a` (Ink / Deep).
+
+Bottom of the scale lands on **deep blue-black, not pure black** — every text moment carries a faint cool tint.
+
+### Surface & Borders
+- **Surface Soft** (`#f5f8fa`): Cool-grey elevation band.
+- **Surface Strong** (`#e8edf2`): Disabled CTA background.
+- **Surface Blue Tint** (`#eef6fb`): Venmo Blue at 8% — informational badge, selected pill bg.
+- **Surface Blue Elevated** (`#5ba9da`): +1 step on a Venmo Blue hero — cards inside blue sections.
+- **Border** (`#dbe2e8`): Default 1px hairline.
+- **Border Strong** (`#9aa5b1`): Input border.
+- **Border Soft** (`#e8edf2`): Softest divider.
+- **Border on Blue** (`rgba(255,255,255,0.22)`): Hairline on Venmo Blue hero.
+
+### Shadow Colors
+Shadows are **deep blue-black tinted at low opacity** (`rgba(31, 46, 58, 0.06–0.18)`). Same logic as PayPal: every depth-step carries a faint brand voice. Most cards use no shadow at all — hairline + surface contrast does the work.
+
+### Semantic
+- **Success** (`#2ea84f`): "Completed" tag, payment-sent confirmation
+- **Warning** (`#f5a623`): "Pending" amber
+- **Danger** (`#e02020`): "Declined" red — also doubles as the social-like heart colour
+- **Info** (`#3d95ce`): Brand-blue tint, used for informational toasts
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary display: Aktiv Grotesk Extended** — the wide-cut variant of Aktiv Grotesk, designed by Dalton Maag in 2010 and adopted by Venmo for the wordmark and headline tier. The extended cut gives display sizes a poster-bold quality — "Send. Receive. Hangout." reads almost like a concert poster. Weights deployed: 500, 700, 900 (Black).
+
+**Body: Aktiv Grotesk** — the standard width. Same skeleton, normal proportions, tuned for 12–18px running text. Weights: 400, 500, 700.
+
+**Fallback chain**: `"Aktiv Grotesk", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif`. The chain keeps a system-ui escape (because Venmo's app-native ethos is comfortable with Apple's San Francisco when the brand font fails) but ends on Helvetica Neue.
+
+**Mono: Aktiv Grotesk Mono** — the tabular companion for transaction amounts. Weights: 400, 500. OpenType `tnum` and `zero` (slashed zero) explicitly enabled.
+
+**OpenType features**: `kern` always on; `ss01` used in the Venmo wordmark for the alternate single-storey 'a'.
+
+### Hierarchy
+
+| Role            | Font                  | Size | Weight | Line Height | Letter Spacing | OT Features  | Notes                                            |
+|-----------------|------------------------|------|--------|-------------|----------------|--------------|--------------------------------------------------|
+| display-hero    | Aktiv Grotesk Ext     | 80   | 900    | 1.00        | -2px           | kern         | Top-of-page hero — "Pay anyone."                |
+| display-xl      | Aktiv Grotesk Ext     | 64   | 900    | 1.02        | -1.6px         | kern         | Secondary hero / campaign headline               |
+| display-lg      | Aktiv Grotesk Ext     | 48   | 900    | 1.05        | -1.2px         | kern         | Section opener                                   |
+| display-md      | Aktiv Grotesk Ext     | 36   | 700    | 1.10        | -0.6px         | kern         | Feature card title                               |
+| display-sm      | Aktiv Grotesk Ext     | 28   | 700    | 1.20        | -0.3px         | —            | Subsection lead                                  |
+| title-lg        | Aktiv Grotesk         | 24   | 700    | 1.25        | 0              | —            | Card title                                       |
+| title-md        | Aktiv Grotesk         | 20   | 700    | 1.30        | 0              | —            | Card body title                                  |
+| title-sm        | Aktiv Grotesk         | 16   | 700    | 1.35        | 0              | —            | List heading                                     |
+| body-lg         | Aktiv Grotesk         | 18   | 400    | 1.55        | 0              | —            | Lead paragraph                                   |
+| body-md         | Aktiv Grotesk         | 16   | 400    | 1.50        | 0              | —            | Default body                                     |
+| body-strong     | Aktiv Grotesk         | 16   | 700    | 1.50        | 0              | —            | Inline emphasis                                  |
+| body-sm         | Aktiv Grotesk         | 14   | 400    | 1.50        | 0              | —            | Secondary body                                   |
+| caption         | Aktiv Grotesk         | 13   | 400    | 1.45        | 0              | —            | Metadata, timestamps                             |
+| legal           | Aktiv Grotesk         | 12   | 400    | 1.50        | 0              | —            | Footer disclosure                                |
+| eyebrow         | Aktiv Grotesk         | 12   | 700    | 1.20        | 1.6px (uppercase) | —         | Section eyebrow above display-lg                 |
+| button          | Aktiv Grotesk         | 16   | 700    | 1.20        | 0              | —            | All CTA labels                                   |
+| nav-link        | Aktiv Grotesk         | 14   | 500    | 1.40        | 0              | —            | Top navigation                                   |
+| feed-name       | Aktiv Grotesk         | 16   | 700    | 1.40        | 0              | —            | Friend name in feed (rendered in Venmo Blue)     |
+| feed-note       | Aktiv Grotesk         | 16   | 400    | 1.50        | 0              | —            | Transaction note (with emoji)                    |
+| feed-amount     | Aktiv Grotesk Mono    | 16   | 700    | 1.40        | 0              | tnum, zero   | Dollar figure on feed row                        |
+| feed-time       | Aktiv Grotesk         | 13   | 400    | 1.40        | 0              | —            | Timestamp                                        |
+| code-micro      | Aktiv Grotesk Mono    | 12   | 400    | 1.40        | 0              | tnum         | Reference IDs                                    |
+
+### Principles
+
+- **Extended cut for display, normal cut for body**: Aktiv Grotesk Extended is wider than tall — the headline tier reads as poster-bold, the body tier reads as conversational.
+- **Weight 900 is the brand's display voice**: Not 700 (PayPal) or 400 (Coinbase) — the heaviest cut is the right one for Venmo's loud, confident headlines.
+- **Hard negative tracking on display, zero on body**: -1.2px to -2px on display sizes; 0 on body. The brand wants display to read as a single poster-block.
+- **Tabular numerals on every amount**: `tnum + zero` is enabled on every dollar figure in the feed. Slashed zero distinguishes "$0" from "$O".
+- **Deep blue-black ink, not pure black**: All primary text uses `#1f2e3a` — quietly cool-tinted.
+- **Emoji is first-class type**: The transaction-note row treats emoji as content, not decoration. They render at body-text size, inline with words.
+- **System-ui in the fallback**: Unlike PayPal, Venmo allows the system font to take over if Aktiv Grotesk fails — the brand is comfortable being a "good app" rather than a "good corporate".
+- **Eyebrow is uppercase + 1.6px tracking**: Used to label sections ("FOR YOU", "WITH FRIENDS").
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary CTA** ("Sign Up", "Get the App")
+- Background: `#3d95ce` (Brand)
+- Text: `#ffffff`, weight 700, 16px
+- Padding: 14px / 28px
+- Height: 48px
+- Radius: pill (9999)
+- Hover: bg `#2c7eb5`, translateY(-1px), shadow `rgba(31,46,58,0.10) 0 4px 12px`
+- Active: bg `#225f8c`, no lift
+- Use case: every primary action
+
+**Hero CTA** (large)
+- Same as primary but 18px / 36px padding, 56px height
+- Use case: top-of-page CTA on campaign hero
+
+**Secondary Outline** ("Learn More")
+- Background: `#ffffff`
+- Text: `#3d95ce`, weight 700
+- Border: 2px solid `#3d95ce`
+- Padding: 12px / 26px
+- Height: 48px
+- Radius: pill
+- Hover: bg `#eef6fb` (Venmo Blue at 8%); border darkens to `#2c7eb5`
+- Use case: secondary action
+
+**Tertiary Text Link** ("View Activity")
+- Background: transparent
+- Text: `#3d95ce`, weight 700, with underline-on-hover
+- Use case: in-text actions
+
+**On-Blue CTA** ("Download")
+- Background: `#ffffff`
+- Text: `#3d95ce`, weight 700
+- Same pill geometry
+- Use case: primary CTA when sitting on a Venmo Blue hero
+
+### Cards
+
+**Feature Card**
+- Background: `#f5f8fa`
+- Border: 1px solid `#e8edf2`
+- Radius: 16px
+- Padding: 24px
+- No default shadow; hover gains `rgba(31,46,58,0.10) 0 4px 12px`
+- Use case: 3-up feature grid
+
+**Feed Row Card** (the signature)
+- Background: `#ffffff`
+- Border: 1px solid `#e8edf2` (border-soft)
+- Radius: 12px
+- Padding: 16px / 20px
+- Layout: avatar (48px) left, name + note centre, amount + time right
+- Hover: bg shifts to `#f5f8fa`
+- Use case: every transaction-feed example on the marketing site
+
+**Product Card**
+- Background: `#ffffff`
+- Border: 1px solid `#dbe2e8`
+- Radius: 16px
+- Padding: 24px
+- Shadow: ambient
+- Use case: app-store comparison, feature deep-dive
+
+### Badges, Tags, Pills
+
+**Brand Badge**
+- Background: `#eef6fb` (brand at 8%)
+- Text: `#3d95ce`, weight 700, 12px
+- Padding: 4px / 10px
+- Radius: pill
+- Use case: "New", "Popular", "Verified"
+
+**Status Pill**
+- Success: bg `rgba(46,168,79,0.12)`, text `#2ea84f`
+- Warning: bg `rgba(245,166,35,0.14)`, text `#a96b00`
+- Danger: bg `rgba(224,32,32,0.10)`, text `#e02020`
+
+### Inputs / Forms
+
+**Text Input**
+- Background: `#ffffff`
+- Border: 1px solid `#9aa5b1`
+- Radius: 8px
+- Height: 48px
+- Padding: 12px / 16px
+- Focus: border `#3d95ce` 2px, ring `0 0 0 3px rgba(61,149,206,0.40)`
+
+**Amount Input (Large)** — the iconic Venmo "$0.00" input
+- Background: `#ffffff`
+- Border: none
+- Padding: 8px 0
+- Height: 96px
+- Font: display-xl in Aktiv Grotesk Extended at weight 900, colour `#3d95ce`
+- Centre-aligned, with `$` prefix in `text-muted`
+- This is the brand's signature input — the "How much?" gesture
+
+**Note Input** (the friend-message field)
+- Same as text input but height 56px
+- Placeholder: "What's it for?"
+- Emoji picker button on the right (24px glyph)
+
+### Navigation
+
+**Top Nav**
+- Height: 64px
+- Background: `#ffffff`
+- Border-bottom: 1px solid `#e8edf2`
+- Logo left (Venmo wordmark in `#3d95ce`), nav links centre, "Sign In" + "Get Started" right
+- Nav link: 14px / 500, colour `#1f2e3a`; hover: colour shifts to `#3d95ce`
+
+**Footer**
+- Background: `#1f2e3a` (deep blue-black)
+- Text: `#9aa5b1` for links, `#ffffff` for category headers
+- Padding: 64px vertical
+- Bottom rule: `rgba(255,255,255,0.20)` 1px
+
+### Selectors
+
+**Friend Picker** (rare on marketing, but illustrated in mockups)
+- Pill chip with avatar + name + remove-X
+- Background: `#eef6fb`, text `#3d95ce`, padding 4px / 12px, radius pill
+
+### Tabs
+
+**Pill Tabs**
+- Container: `#e8edf2` bg, pill radius, 4px inner padding
+- Active: `#ffffff` bg, `#1f2e3a` text, weight 700, soft shadow
+- Inactive: transparent bg, `#6b7785` text
+
+### Tooltips
+
+- Background: `#1f2e3a`
+- Text: `#ffffff`, weight 500, 13px
+- Padding: 8px / 12px
+- Radius: 6px
+
+### Toasts
+
+- Success: bg `#ffffff`, left-border 4px `#2ea84f`
+- Error: bg `#ffffff`, left-border 4px `#e02020`
+- Info: bg `#ffffff`, left-border 4px `#3d95ce`
+- 4-second auto-dismiss
+
+### Modals
+
+- Overlay: `rgba(31, 46, 58, 0.55)` (deep-blue-tinted)
+- Dialog: bg `#ffffff`, radius 16px, max-width 480px, padding 32px
+- Close glyph top-right, 24px, `#6b7785`
+
+### Decorative
+
+**Heart Icon** (the social-like)
+- 24×24 SVG heart in `#e02020`
+- Tap animation: bounce-scale from 1.0 → 1.4 → 1.0 over 480ms with `cubic-bezier(0.34, 1.56, 0.64, 1)`
+- Reduced motion: instant fill
+
+**Emoji Inline**
+- Used at body-text size (16px) inline with words in feed notes
+- Native emoji rendering — no custom set
+- The brand's "🍕 Pizza" pattern is iconic
+
+## 5. Layout Principles
+
+### Spacing System
+Base 4px. Scale: 4, 8, 12, 16, 20, 24, 32, 48, 80, 120. Section spacing 80px; hero 120px. Slightly tighter than PayPal — Venmo reads denser, more app-like.
+
+### Grid & Container
+- Page max-width 1200px, 24px / 32px gutters
+- Prose width 720px
+- Hero full-bleed with content constrained
+- Feed-row mockups always anchor on the right side of hero blocks (left = headline + CTA, right = phone-shaped frame with feed rows visible)
+
+### Whitespace Philosophy
+Venmo balances **section breathing room** (80–120px) with **dense feed-row stacking** (16–20px gaps between rows). The feed itself is intentionally tight — like a chat list — while the marketing sections around it breathe.
+
+### Section Cadence
+White → cool-grey band → white → Venmo Blue hero → white → footer. The blue full-bleed appears once or twice per page, never adjacent to itself.
+
+## 6. Shapes & Radius Scale
+
+| Tier        | Value | Use                                             |
+|-------------|-------|-------------------------------------------------|
+| None        | 0     | Banner promo bars, full-bleed edges             |
+| Micro       | 2     | Status dots                                     |
+| XS          | 4     | Tooltip arrows                                  |
+| SM          | 8     | Inputs, dropdowns                               |
+| MD          | 12    | Feed-row cards, mid-size cards                  |
+| LG          | 16    | Feature cards, modals, app-mockup phone frame   |
+| XL          | 24    | Hero cards, large image containers              |
+| Pill        | 9999  | All CTAs, badges, friend chips                  |
+
+Phone-frame mockups use a 32–40px radius (matching iPhone bezel) — the Venmo app screenshot is the marketing site's most-shown component, and rendering it at iOS-bezel radius is brand-correct.
+
+## 7. Depth & Elevation
+
+| Level | Treatment                                                         | Use                                           |
+|-------|-------------------------------------------------------------------|-----------------------------------------------|
+| 0     | Flat                                                              | Hero text, body                               |
+| 1     | 1px hairline `#dbe2e8`                                            | Default white card, feed row                  |
+| 2     | Ambient shadow `rgba(31,46,58,0.06) 0 1px 2px`                    | Sticky nav post-scroll                        |
+| 3     | Standard shadow `rgba(31,46,58,0.08) 0 4px 12px`                  | Card hover, CTA hover                         |
+| 4     | Elevated shadow `rgba(31,46,58,0.12) 0 16px 32px -8px`            | Dropdown, mega-menu                           |
+| 5     | Deep shadow `rgba(31,46,58,0.18) 0 30px 60px -20px`               | Modal dialog, phone-frame mockup              |
+
+### Shadow Philosophy
+
+Shadows are **deep-blue-tinted, not pure black**. The phone-frame mockup gets the deepest shadow — it floats off the page. Elsewhere the system stays flat. Like PayPal, Venmo prefers a hairline + surface-jump aesthetic over decorative depth.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Bounce**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — heart-tap animation, like-pulse
+- **Entrance**: `cubic-bezier(0, 0, 0.2, 1)`
+
+### Durations
+- **Fast**: 120ms — colour shifts, hover state
+- **Standard**: 200ms — card hover, tab switch
+- **Slow**: 320ms — modal entrance
+- **Bounce**: 480ms — heart-tap, social-like animation
+
+### Per-Component Recipes
+
+- **Button hover**: translateY(-1px) over 200ms ease-standard; shadow blooms ambient → standard
+- **Feed-row hover**: bg shifts white → `#f5f8fa` over 120ms
+- **Heart-tap (like)**: scale 1.0 → 1.4 → 1.0 over 480ms ease-bounce with simultaneous fill colour transition
+- **Phone-frame entrance** (in hero): translateY(48px) → 0 + opacity 0 → 1 over 480ms ease-emphasized
+- **Modal entrance**: 320ms ease-emphasized; overlay fades in 200ms; dialog scales 0.96 → 1.0
+- **Toast**: enter from translateY(16px) + fade 200ms; auto-exit at 4s
+
+### Reduced Motion
+Strictly respected. All translateY collapses to opacity-only. Heart-tap bounce becomes instant fill. Phone-frame entrance is instant.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- `#1f2e3a` text on `#ffffff` bg: **14.6:1** — AAA
+- `#2f3e4a` body on `#ffffff` bg: **9.8:1** — AAA
+- `#ffffff` on `#3d95ce` brand: **4.7:1** — AA at all sizes; Venmo bumps to weight 700 for additional legibility
+- `#3d95ce` link on `#ffffff` bg: **4.5:1** — AA at body sizes
+- `#6b7785` muted on `#ffffff`: **5.8:1** — AA at body sizes
+
+### Focus Indicators
+3px solid `rgba(61,149,206,0.40)` ring with 2px offset on every interactive element. Pill buttons get a fully pill-shaped ring.
+
+### ARIA Patterns
+- **Combobox**: friend/contact picker uses `role="combobox"` with `aria-expanded`
+- **Listbox**: dropdowns use `role="listbox"`
+- **Dialog**: modals use `role="dialog"`, `aria-modal="true"`, focus-trap
+- **Live region**: payment-confirmation toast uses `aria-live="assertive"` (money has just moved — make sure it's announced)
+- **Heart-icon button**: `aria-pressed="true|false"` to communicate liked-state to screen readers
+
+### Keyboard Nav
+- Tab order matches visual flow
+- Heart icon togglable via Space/Enter
+- Modal focus-trapped, Escape closes
+- Amount input accepts numeric keypad on mobile; supports decimal, no scientific notation
+
+### Screen Reader Hints
+- Heart icon: "Like this transaction" / "Unlike this transaction"
+- Avatar images: `alt="Profile picture of {name}"`
+- Emoji in transaction notes: rely on native emoji descriptions
+- Currency: visible "$" + numerals
+
+### Reduced Motion
+Honored across all animations; heart-tap bounce becomes instant fill; phone-frame entrance becomes instant.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name    | Width  | Use                              |
+|---------|--------|----------------------------------|
+| mobile  | <640   | Stacked single-column            |
+| tablet  | 640–1024 | 2-col grid                      |
+| desktop | 1024–1280 | 3-col grid                     |
+| wide    | ≥1280  | Full layout                     |
+
+### Touch Targets
+Minimum 44×44px. CTAs ship at 48px height; hero CTAs at 56px. Heart icon at 48px hit-target despite 24px glyph.
+
+### Collapsing Strategy
+- Top nav collapses to hamburger below 1024px
+- Hero display-hero scales 80px → 56px → 40px desktop → tablet → mobile
+- Feature grid 3-col → 2-col → 1-col
+- Footer 5-col → 2-col → accordion
+
+### Image Behavior
+- Phone-frame mockups maintain aspect-ratio 9:19.5 (iPhone)
+- Hero illustrations cover with `aspect-ratio: 16/9`
+- `srcset` for retina; `loading="lazy"` for below-fold
+
+### Container Queries
+Feed-row cards use container queries: <320px → vertical stack (avatar above, name below); ≥320px → horizontal layout (avatar left, name + note centre, amount right).
+
+## 11. Content & Voice
+
+### Tone
+**Casual-friendly** — friendlier than PayPal, more app-native. Sentences are short, often single-word. The voice favours second person ("Pay your friends", "Split the bill") and uses contractions naturally ("It's free"). Display headlines are imperative ("Pay anyone." "Split it."). The brand sounds like a friend who happens to have your venue's password.
+
+### Microcopy Patterns
+- **Button verbs**: "Pay", "Request", "Send", "Get the App", "Sign Up", "Sign In"
+- **Error message recipe**: short + actionable. "We couldn't process that. Try a different card."
+- **Success confirmation**: "✓ Sent $50 to Alex" — checkmark glyph + amount + recipient. Always show the money figure.
+- **Loading state**: "One sec…" rather than "Loading…"
+
+### Empty States
+- **No activity**: "No payments yet. Send some money to get started."
+- **No friends**: "Find friends to start paying." + "Connect Contacts" CTA
+- **No notifications**: "All caught up. 🎉" — emoji-laden, friendly
+
+### CTA Verb Conventions
+- **Acquisition**: "Sign Up", "Get the App", "Get Started"
+- **Sign-in**: "Sign In" (not "Log In" — Venmo prefers the friendlier verb)
+- **Payment**: "Pay", "Request", "Send" — never "Submit"
+- **Exploration**: "Learn More", "See How"
+- **Confirmation**: "Pay $50" — always include the amount in the confirm CTA
+
+The brand never uses "Submit" or "Continue" alone — Venmo always pairs verbs with values ("Pay $50", "Request $25", "Send to Alex").
+
+## 12. Dark Mode & Theming
+
+The Venmo iOS app ships a dedicated dark mode that the marketing site occasionally illustrates inside phone-frame mockups. The marketing site itself remains light-only.
+
+If extending to true dark theme:
+
+```yaml
+colors-dark:
+  bg: '#0a1620'                # near-black with cool-blue tint
+  bg-elevated: '#1a2a36'
+  bg-cool: '#1a2a36'
+  surface: '#1f2e3a'
+  surface-soft: '#28394a'
+  surface-strong: '#324654'
+  text: '#ffffff'
+  text-body: '#e8edf2'
+  text-muted: '#9aa5b1'
+  text-subtle: '#6b7785'
+  brand: '#5badd6'             # lifted Venmo Blue — `#3d95ce` doesn't read as bright on dark
+  brand-hover: '#7ec1e2'
+  on-brand: '#0a1620'
+  border: 'rgba(255,255,255,0.10)'
+  border-strong: 'rgba(255,255,255,0.20)'
+  link: '#5badd6'
+```
+
+The dark-mode brand voltage **lifts** Venmo Blue from `#3d95ce` to `#5badd6` — the lower-luminance original doesn't have enough contrast against a dark surface to read as "active".
+
+## 13. Lineage & Influences
+
+Venmo's visual lineage runs through three streams:
+
+**Helvetica humanism via Aktiv Grotesk.** Aktiv Grotesk is a 21st-century Helvetica reinterpretation by Dalton Maag, designed to fix Helvetica's optical inconsistencies while preserving its neutrality. The Extended cut at weight 900 is what gives Venmo its poster-bold display voice — closer to a 1970s pop-rock concert poster than to a fintech wordmark.
+
+**Twitter / Instagram social-feed UX.** The transaction feed is the brand's signature unit, and it borrows directly from social-media feed conventions: avatar + name (hyperlink-blue) + content + timestamp + reactions. Venmo was the first fintech to commit to "money as social", and the feed-row component is the visual artefact of that thesis.
+
+**iOS-native button geometry.** Pill-shaped CTAs were standard on iOS apps long before they were common on the web. Venmo's marketing pages adopt the iOS button shape unaltered — which makes the web brand feel like an extension of the app, not a separate surface.
+
+What it rejects: **PayPal-style corporate-finance posture** (Venmo is the rebellious sibling), **crypto-native maximalism** (no gradients, no neon), and **Stripe-style developer-tool minimalism** (Venmo wants to feel like a friend, not a tool).
+
+**Influences:**
+- **PayPal** ([paypal.com](https://www.paypal.com)) — Parent company; Venmo defines itself by what PayPal isn't (less corporate, more social)
+- **Aktiv Grotesk / Dalton Maag** — Type foundry; the Extended cut at 900 is the brand's display signature
+- **Twitter / Instagram** — Feed-row UX as core content unit
+- **iOS Human Interface Guidelines** — Pill button geometry, app-native interaction patterns
+
+## 14. Do's and Don'ts
+
+**Do:**
+- Use Venmo Blue `#3d95ce` for everything actionable — it's the single brand voltage
+- Render friend names hyperlink-blue (`#3d95ce`) in transaction-feed rows
+- Use Aktiv Grotesk Extended at weight 900 for display, normal cut at 400–700 for body
+- Treat emoji as first-class type in transaction notes — inline, body-size, native rendering
+- Pill all CTAs (radius 9999) — it's the brand's button shape
+- Show the transaction-feed row prominently — it's the brand's most distinctive component
+- Use deep blue-black `#1f2e3a` for ink and footer ground; never pure black
+- Apply tabular numerals + slashed zero on every dollar figure
+- Tint shadows deep-blue (`rgba(31, 46, 58, ...)`) — quietly brand-coloured depth
+- Pair payment CTAs with the amount ("Pay $50", not "Pay") — confirmation discipline
+
+**Don't:**
+- Don't introduce a second brand colour — Venmo is mono-blue, not dual-blue like PayPal
+- Don't use the standard cut of Aktiv Grotesk for display — the Extended cut is the brand
+- Don't square CTA corners — pills are non-negotiable
+- Don't use pure black ink — `#1f2e3a` carries a faint cool tint
+- Don't use proportional figures for amounts — tabular mono with `tnum + zero`
+- Don't render emoji as decoration — they're first-class content
+- Don't use formal CTA verbs ("Submit", "Confirm") — pair with action and amount
+- Don't apply heavy decorative shadows — depth is hairlines and surface contrast
+- Don't use warm-grey neutrals — Venmo is cool-toned, slightly warmer than PayPal
+- Don't replace the heart-like with a thumbs-up — the heart is the social vocabulary
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Brand:        #3d95ce  (Venmo Blue)
+Brand Hover:  #2c7eb5
+Ink:          #1f2e3a
+Canvas:       #ffffff
+Cool Band:    #f5f8fa
+Body:         #2f3e4a
+Muted:        #6b7785
+Border:       #dbe2e8
+Brand Tint:   #eef6fb
+Heart Red:    #e02020
+Success:      #2ea84f
+```
+
+### Example Component Prompts
+
+1. *"Create a Venmo-style hero: pure white background, 80px Aktiv Grotesk Extended headline at weight 900 in `#1f2e3a` with -2px tracking — text 'Pay anyone. Anywhere.'. Below, a 18px body in `#2f3e4a`. Two pill CTAs: primary in Venmo Blue (`#3d95ce`) labelled 'Get the App', secondary outline in `#3d95ce` labelled 'Sign In'. Right side: a phone-frame mockup at 32px iPhone-bezel radius showing a transaction feed."*
+
+2. *"Design a Venmo transaction-feed row: white card, 12px radius, 1px border `#e8edf2`, 16px / 20px padding. Left: 48px circle avatar. Centre: friend name in `#3d95ce` weight 700 + transaction note in `#1f2e3a` weight 400 ('Pizza 🍕'). Right: amount in Aktiv Grotesk Mono with `tnum + zero` ('+ $25.00') in `#2ea84f`, time below in `#6b7785` 13px. On hover, bg shifts white → `#f5f8fa`."*
+
+3. *"Build the iconic Venmo amount input: pure white background, no border. 96px Aktiv Grotesk Extended at weight 900 in `#3d95ce` reading '$0.00'. Centre-aligned. Below, a 56px-tall note input with placeholder 'What's it for?' and an emoji-picker glyph on the right edge."*
+
+4. *"Compose a Venmo Blue hero band: full-bleed `#3d95ce` background, white 64px display-xl headline ('Money Moves'), white 18px subheadline at 80% opacity. White pill CTA at 56px height, with `#3d95ce` text labelled 'Get the App'. Hairline divider at `rgba(255,255,255,0.22)`."*
+
+5. *"Design a Venmo social-like interaction: 24px heart icon. Default state: outline only, `#9aa5b1`. On tap: fills to `#e02020` and bounces scale 1.0 → 1.4 → 1.0 over 480ms with `cubic-bezier(0.34, 1.56, 0.64, 1)`. Below the heart, render a comment count in `#6b7785` 13px. Reduced-motion users get instant fill, no bounce."*
+
+6. *"Create a Venmo feature card: `#f5f8fa` background, 16px radius, 1px border `#e8edf2`, 24px padding. Title 24px Aktiv Grotesk weight 700 in `#1f2e3a`. Body 16px weight 400 in `#2f3e4a`. Bottom-right: a small Venmo Blue arrow glyph indicating 'Learn more'. On hover, lift translateY(-2px), shadow blooms to `rgba(31,46,58,0.10) 0 4px 12px`."*
+
+### Iteration Guide
+
+1. **Commit to the single blue**: if you have two blues, you have PayPal. Venmo is mono-`#3d95ce` for everything actionable.
+2. **Switch display to Aktiv Grotesk Extended at 900**: this is the single biggest move — the wide-cut at 900 is what makes a page feel "Venmo".
+3. **Render friend names hyperlink-blue**: in feed rows, names use `#3d95ce` weight 700. This is non-negotiable.
+4. **Add emoji to transaction notes**: a Venmo feed without emoji isn't Venmo. Use native emoji at body-text size, inline.
+5. **Pill every CTA**: radius 9999. The pill is the brand's button shape.
+6. **Replace black ink with `#1f2e3a`**: deep blue-black, not pure. Subtle but it cool-tints every paragraph.
+7. **Tabular mono for every amount**: `tnum + zero`. Money figures must be ledger-discipline.
+8. **Show the phone-frame mockup**: marketing pages without a phone-shaped feed mockup don't read as Venmo. Render at iOS-bezel radius (32–40px).

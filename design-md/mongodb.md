@@ -1,0 +1,721 @@
+---
+name: MongoDB
+tagline: Signature MongoDB green #00ed64 pill CTAs over deep-teal hero bands and stark white documentation surfaces — database brand made playful-credible.
+author: webdesignhot
+source_url: https://mongodb.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [light, dual-mode, sans, green-cta, database, documentation]
+preview_swatch: ['#001e2b', '#00ed64', '#ffffff']
+related: [supabase, planetscale, neon]
+description: 'MongoDB carries a strong dual-mode visual identity — dark deep-teal hero bands (#001e2b) with bright MongoDB green (#00ed64) pill CTAs paired with stark white documentation surfaces. The signature green pill button is unmistakable across product, pricing, learning, and AI use-case surfaces; on light surfaces it sits as a vivid action color, on dark teal hero bands it provides the contrast lift. The system uses Euclid Circular A as its display face, anchors a 3-tier pricing comparison (Free / Flex / Dedicated), and presents extensive course catalogs in card grids with colored category tags. Coverage spans homepage, Atlas product page, Community Edition, MongoDB University, AI use cases, and pricing.'
+
+colors:
+  bg: '#ffffff'                    # canvas — light marketing pages, docs, learning
+  bg-dark: '#001e2b'               # canvas-dark — deep teal hero bands, dark CTA strips
+  bg-surface: '#f9fbfa'            # subtle surface tint
+  bg-soft: '#f4f7f6'               # softer surface for nested cards
+  bg-feature: '#e3fcef'             # surface-feature — soft green wash for feature callouts
+  surface: '#f9fbfa'                # alias of bg-surface
+  text: '#001e2b'                   # ink — display + body emphasis (matches bg-dark)
+  text-charcoal: '#1c2d38'          # charcoal — secondary headings
+  text-slate: '#3d4f5b'             # slate — sub-titles
+  text-steel: '#5c6c7a'             # steel — body running-text
+  text-stone: '#7c8c9a'             # stone — captions
+  text-muted: '#a8b3bc'             # muted — disabled, placeholder
+  text-deep-on-brand: '#001e2b'     # text on green CTAs
+  brand: '#00ed64'                  # MongoDB green — primary CTA on light or dark
+  brand-deep: '#00b545'             # deeper green hover
+  brand-pressed: '#008c34'          # pressed state
+  brand-dark: '#00684a'             # forest variant — used inside Atlas illustrations
+  brand-mid: '#00a35c'              # mid-green — never primary, only accents
+  brand-soft: '#c3f0d2'             # soft green tint surface
+  on-brand: '#001e2b'               # NEAR-BLACK on green pill — never white
+  on-dark: '#ffffff'                # white text on dark teal canvas
+  on-dark-muted: '#a8b3bc'          # muted on dark canvas
+  brand-teal-deep: '#001e2b'        # signature deep-teal hero
+  brand-teal: '#003d4f'             # mid-teal — secondary dark surface
+  brand-teal-mid: '#00684a'         # forest accent — same as brand-dark
+  accent-purple: '#7b3ff2'          # use-case accent — AI, vector
+  accent-orange: '#fa6e39'          # use-case accent — analytics
+  accent-pink: '#f06bb8'            # use-case accent — community
+  accent-blue: '#3d4f9f'            # use-case accent — search
+  link: '#016bf8'                   # documentation link blue
+  link-hover: '#0046a8'
+  border: '#e1e5e8'                 # hairline default
+  border-soft: '#eceff1'            # softer hairline
+  border-strong: '#c1ccd6'          # stronger outline — secondary button
+  border-dark: '#1c2d38'            # divider on dark canvas
+  semantic-success: '#00b545'       # confirmation green
+  semantic-warning-bg: '#fff8e0'
+  semantic-warning-text: '#946f3f'
+  semantic-error: '#db3030'
+  semantic-info: '#016bf8'
+
+typography:
+  display:
+    family: '"Euclid Circular A", "Inter Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    weights: [400, 500, 600, 700]
+  body:
+    family: '"Euclid Circular A", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: '"Source Code Pro", "JetBrains Mono", ui-monospace, SF Mono, Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    hero-display:        { size: 72, weight: 500, lineHeight: 1.10, tracking: '-1.5px',  family: display, notes: 'homepage hero h1 over deep-teal' }
+    display-lg:          { size: 56, weight: 500, lineHeight: 1.15, tracking: '-1px',    family: display, notes: 'product page heroes' }
+    heading-1:           { size: 48, weight: 500, lineHeight: 1.20, tracking: '-0.5px',  family: display }
+    heading-2:           { size: 36, weight: 500, lineHeight: 1.25, tracking: '-0.5px',  family: display }
+    heading-3:           { size: 28, weight: 500, lineHeight: 1.30, tracking: 0,         family: display }
+    heading-4:           { size: 22, weight: 500, lineHeight: 1.35, tracking: 0,         family: display }
+    heading-5:           { size: 18, weight: 600, lineHeight: 1.40, tracking: 0,         family: display }
+    subtitle:            { size: 18, weight: 400, lineHeight: 1.50, tracking: 0,         family: body }
+    body-md:             { size: 16, weight: 400, lineHeight: 1.55, tracking: 0,         family: body }
+    body-md-medium:      { size: 16, weight: 500, lineHeight: 1.55, tracking: 0,         family: body }
+    body-sm:             { size: 14, weight: 400, lineHeight: 1.50, tracking: 0,         family: body }
+    body-sm-medium:      { size: 14, weight: 500, lineHeight: 1.50, tracking: 0,         family: body }
+    caption:             { size: 13, weight: 400, lineHeight: 1.40, tracking: 0,         family: body }
+    caption-bold:        { size: 13, weight: 600, lineHeight: 1.40, tracking: 0,         family: body }
+    micro:               { size: 12, weight: 500, lineHeight: 1.40, tracking: 0,         family: body }
+    micro-uppercase:     { size: 11, weight: 600, lineHeight: 1.40, tracking: '1px',     family: body, transform: uppercase }
+    button-md:           { size: 14, weight: 600, lineHeight: 1.30, tracking: 0,         family: body }
+    code-md:             { size: 14, weight: 400, lineHeight: 1.55, tracking: 0,         family: mono }
+    code-sm:             { size: 13, weight: 400, lineHeight: 1.50, tracking: 0,         family: mono }
+
+radius:
+  micro: 4
+  sm: 6
+  md: 8
+  lg: 12
+  xl: 16
+  xxl: 24
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: text-deep-on-brand
+    rounded: pill
+    padding: '10px 22px'
+    use: 'every primary CTA — Try Free, Get Started, Talk to Sales (light or dark)'
+  button-primary-pressed:
+    backgroundColor: brand-pressed
+    textColor: text-deep-on-brand
+    rounded: pill
+  button-primary-disabled:
+    backgroundColor: border
+    textColor: text-muted
+    rounded: pill
+  button-secondary:
+    backgroundColor: transparent
+    textColor: text
+    rounded: pill
+    padding: '10px 22px'
+    border: '1px solid border-strong'
+    use: 'less-committed pair next to primary on light surfaces'
+  button-on-dark:
+    backgroundColor: brand
+    textColor: text-deep-on-brand
+    rounded: pill
+    padding: '10px 22px'
+    use: 'green pill stays the same over dark teal hero — no color shift'
+  button-secondary-on-dark:
+    backgroundColor: transparent
+    textColor: on-dark
+    rounded: pill
+    padding: '10px 22px'
+    border: '1px solid border-dark'
+    use: 'transparent outline button on dark teal'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: text
+    rounded: md
+    padding: '8px 12px'
+    use: 'inline ghost — nav menu, dropdown trigger'
+  hero-band-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    padding: 120
+    use: 'homepage hero — deep teal canvas with green pill CTA + product mockup'
+  hero-band-light:
+    backgroundColor: bg
+    textColor: text
+    padding: 96
+    use: 'docs / learning page hero — white surface'
+  feature-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: 32
+    border: '1px solid border'
+    use: '3-up benefit grid on light surfaces'
+  feature-card-dark:
+    backgroundColor: brand-teal
+    textColor: on-dark
+    rounded: lg
+    padding: 32
+    use: '3-up benefit grid on dark teal hero band'
+  feature-callout-green:
+    backgroundColor: bg-feature
+    textColor: text
+    rounded: lg
+    padding: 32
+    use: 'soft green wash callout band — Atlas highlights'
+  pricing-tier-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: 32
+    border: '1px solid border'
+    use: 'standard pricing tier — Free / Flex / Dedicated'
+  pricing-tier-card-featured:
+    backgroundColor: bg-soft
+    textColor: text
+    rounded: lg
+    padding: 32
+    use: 'featured tier — surface tone shift'
+  pricing-comparison-row:
+    backgroundColor: bg
+    textColor: text-steel
+    padding: 12
+    use: 'pricing-page comparison table row'
+  course-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: 24
+    border: '1px solid border'
+    use: 'MongoDB University course catalog card'
+  course-card-tag:
+    backgroundColor: brand-soft
+    textColor: brand-dark
+    rounded: pill
+    padding: '4px 10px'
+    use: 'course category tag — colored variants per topic'
+  customer-logo-tile:
+    backgroundColor: bg
+    textColor: text-stone
+    padding: 24
+    use: 'monochrome logo strip tile'
+  text-input:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: '12px 16px'
+    height: 44
+    border: '1px solid border'
+  text-input-focus:
+    border: '2px solid brand-deep'
+  badge-pill:
+    backgroundColor: brand-soft
+    textColor: brand-dark
+    rounded: pill
+    padding: '4px 10px'
+    use: 'NEW, BETA, AVAILABLE NOW'
+  badge-uppercase:
+    backgroundColor: transparent
+    textColor: text-charcoal
+    use: 'micro-uppercase eyebrow label'
+  cta-band-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    padding: 96
+    use: 'pre-footer CTA — deep teal with green pill + outline-on-dark pair'
+  cta-band-light:
+    backgroundColor: bg-feature
+    textColor: text
+    rounded: lg
+    padding: 64
+    use: 'soft green callout strip — secondary CTA placement'
+  code-block:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: md
+    padding: 20
+    use: 'inline / fenced code on docs and product pages'
+  top-nav:
+    backgroundColor: bg
+    textColor: text
+    height: 64
+    use: 'sticky white nav — leaf logo + green pill CTA right'
+  footer:
+    backgroundColor: bg-dark
+    textColor: on-dark-muted
+    padding: 96
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  duration-fast: 120
+  duration-standard: 220
+  duration-slow: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transitions reduced to opacity-only at 100ms; section-on-scroll reveals skip translate offset'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 2px rgba(0,30,43,0.04)'
+  standard: '0 4px 12px rgba(0,30,43,0.08)'
+  elevated: '0 12px 32px rgba(0,30,43,0.12)'
+  deep: '0 24px 48px rgba(0,30,43,0.16)'
+  ring: '0 0 0 2px rgba(0,237,100,0.5)'
+  on-dark: 'none — dark canvases use brightness-step elevation rather than shadow'
+
+accessibility:
+  contrast-text-on-bg: 16.8                # AAA — #001e2b on #ffffff
+  contrast-body-on-bg: 7.2                 # AAA — #3d4f5b on #ffffff
+  contrast-stone-on-bg: 4.5                # AA — #7c8c9a on #ffffff at body sizes
+  contrast-on-dark: 16.8                   # AAA — #ffffff on #001e2b
+  contrast-on-brand: 14.6                  # AAA — #001e2b on #00ed64
+  contrast-link-on-bg: 5.4                 # AA — #016bf8 on #ffffff
+  focus-ring: '2px solid #00b545 with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'dual-mode by section, not global toggle — light pages (docs, learning, pricing) stay white; hero bands and footer ship in deep teal #001e2b. The system has no marketing-wide dark theme; the deep teal is structural to the brand identity rather than a user preference.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+MongoDB's marketing surface operates as a **dual-mode brand**: stark white documentation and learning pages alternate with deep-teal hero bands (`#001e2b`) where the signature MongoDB green pill (`#00ed64`) lives as the primary CTA. The contrast between the dark teal and the vivid green is the brand's defining moment — green-on-teal carries an immediate database-product recognition that rivals Stripe's purple or Vercel's gradient.
+
+The signature green is unmistakable: `#00ed64` sits between safety-vest neon and lime, vivid enough to read as a single-color brand even in monochrome contexts. The pill button (full pill radius, 10×22px padding) places near-black text on the green — never white. White-on-green doesn't carry the contrast weight that the deep navy on green does, and MongoDB's calibration of the green-to-text relationship is part of the brand signal.
+
+Display type is **Euclid Circular A** (Swiss Typefaces), a geometric sans with rounded terminals and humanist proportions. Display sizes hit 72px at weight 500 with -1.5px tracking; the negative tracking is what gives "Build the next big thing" headlines their compressed, engineered feel without crossing into bombastic territory. Body type drops to 16px / 400 with 1.55 line-height — slightly looser than typical SaaS body, calibrated for documentation density.
+
+The page rhythm alternates dark hero band → 3-up feature grid → soft-green callout → pricing teaser → course catalog → dark CTA band → dark footer. The dark teal is **structural** rather than thematic — it's not a "dark mode" but a deliberate inversion that punctuates the white documentation pages. MongoDB University course-catalog pages stay white throughout; product hero pages anchor the dark teal moments.
+
+The brand's secondary signal is the **leaf wordmark** (the stylized green leaf) which pairs the green CTA with a recognizable graphic mark. Real product mockups (Atlas dashboard, Compass UI, query results) anchor most product pages.
+
+**Key Characteristics:**
+- **MongoDB Green** (`#00ed64`) — the single most recognizable brand signal. Pill-shape, never sharp corners.
+- **Deep Teal hero bands** (`#001e2b`) — dual-mode brand, with white text and green pill CTA.
+- **Euclid Circular A** display at weight 500 with -1.5px tracking on hero h1.
+- **Pill radius (9999px)** on every primary CTA — green stays green on both light and dark surfaces.
+- **3-tier pricing comparison** (Free / Flex / Dedicated) with surface-tone-shift for featured tier.
+- **MongoDB University card grid** with colored category tags in soft-green pill format.
+- **Source Code Pro** for every code block — inline, fenced, and Atlas command examples.
+- 96–120px section padding; 120px on hero, 96px on CTA bands.
+- **Leaf wordmark** + green pill = the brand's two-symbol signature.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#ffffff`): The default page floor for docs, learning, and most marketing surfaces.
+- **Bg Dark / Canvas Dark** (`#001e2b`): Deep teal hero ground. Same hex as `text` (ink and dark canvas share a role).
+- **Text / Ink** (`#001e2b`): Display headlines, body emphasis, near-black on green pill CTA.
+- **Brand / Primary CTA** (`#00ed64`): MongoDB green — the unmistakable action color.
+
+### Brand & Dark
+- **Brand Deep** (`#00b545`): Deeper green for hover and focus rings.
+- **Brand Pressed** (`#008c34`): Pressed state.
+- **Brand Dark** (`#00684a`): Forest variant — used inside Atlas illustrations and course-tag chips.
+- **Brand Mid** (`#00a35c`): Mid-green — never primary, only inside multi-stop gradient illustrations.
+- **Brand Soft** (`#c3f0d2`): Soft green tint surface for callouts and badges.
+- **Brand Teal Deep** (`#001e2b`): Signature deep-teal canvas.
+- **Brand Teal** (`#003d4f`): Mid-teal — secondary dark surface, often inside dark feature cards.
+
+### Accent — Use-case Illustrations
+Used inside specific use-case illustrations only — never on marketing chrome.
+- **Accent Purple** (`#7b3ff2`): AI / vector search.
+- **Accent Orange** (`#fa6e39`): Analytics.
+- **Accent Pink** (`#f06bb8`): Community.
+- **Accent Blue** (`#3d4f9f`): Search.
+
+### Interactive
+- **Link** (`#016bf8`): Documentation link blue (a deeper blue than the use-case illustration accent).
+- **Link Hover** (`#0046a8`): Pressed link state.
+- **Selected**: Selection bg uses brand-deep at 20% alpha.
+
+### Neutral Scale
+- **Ink / Text** (`#001e2b`): Display, body emphasis, primary CTA bg/dark canvas.
+- **Charcoal** (`#1c2d38`): Secondary headings, footer headings.
+- **Slate** (`#3d4f5b`): Sub-titles, secondary body.
+- **Steel** (`#5c6c7a`): Body running-text default.
+- **Stone** (`#7c8c9a`): Captions, breadcrumbs.
+- **Muted** (`#a8b3bc`): Disabled, placeholder, on-dark-muted.
+
+### Surface & Borders
+- **Surface** (`#f9fbfa`): Subtle gray-green tint.
+- **Bg Soft** (`#f4f7f6`): Softer surface for nested cards.
+- **Bg Feature** (`#e3fcef`): Soft green wash callout surface — Atlas highlights, feature blocks.
+- **Border** (`#e1e5e8`): Default 1px hairline.
+- **Border Soft** (`#eceff1`): Lighter hairline.
+- **Border Strong** (`#c1ccd6`): Stronger outline — secondary button, focus context.
+- **Border Dark** (`#1c2d38`): Divider on dark teal canvas.
+
+### Shadow Colors
+- **Ambient** (`rgba(0,30,43,0.04)`): Barely-visible card shadow.
+- **Standard** (`rgba(0,30,43,0.08)`): Default elevated card.
+- **Elevated** (`rgba(0,30,43,0.12)`): Floating popovers.
+- **Deep** (`rgba(0,30,43,0.16)`): Modals.
+- Dark canvases use **brightness-step elevation** rather than shadow — `#001e2b` → `#003d4f` → `#1c2d38`.
+
+### Semantic
+- **Success** (`#00b545`): Confirmation — same hex as brand-deep.
+- **Warning Bg** (`#fff8e0`) / **Warning Text** (`#946f3f`): Caution callouts.
+- **Error** (`#db3030`): Validation errors, destructive actions.
+- **Info** (`#016bf8`): Info notices — same as link blue.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Euclid Circular A", "Inter Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`. Euclid Circular A (Swiss Typefaces) carries every text role.
+- **Mono**: `"Source Code Pro", "JetBrains Mono", ui-monospace, SF Mono, Menlo, monospace`. Source Code Pro is the brand's choice for every code surface — inline code, fenced blocks, Atlas command examples, query snippets.
+- **Substitutes**: If Euclid Circular A is unavailable, **Inter** is the closest open-source pair, with letter-spacing -0.01em adjustment to match Euclid's tighter cap-height. Source Code Pro is on Google Fonts.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| hero-display | Euclid Circular A | 72 | 500 | 1.10 | -1.5px | — | Homepage hero h1 |
+| display-lg | Euclid Circular A | 56 | 500 | 1.15 | -1px | — | Product page heroes |
+| heading-1 | Euclid Circular A | 48 | 500 | 1.20 | -0.5px | — | Major section heads |
+| heading-2 | Euclid Circular A | 36 | 500 | 1.25 | -0.5px | — | Sub-section heads |
+| heading-3 | Euclid Circular A | 28 | 500 | 1.30 | 0 | — | Card titles |
+| heading-4 | Euclid Circular A | 22 | 500 | 1.35 | 0 | — | Inline emphasis heads |
+| heading-5 | Euclid Circular A | 18 | 600 | 1.40 | 0 | — | Smallest heading — uses 600 weight |
+| subtitle | Euclid Circular A | 18 | 400 | 1.50 | 0 | — | Hero subhead, intro paragraphs |
+| body-md | Euclid Circular A | 16 | 400 | 1.55 | 0 | — | Default body |
+| body-md-medium | Euclid Circular A | 16 | 500 | 1.55 | 0 | — | Body emphasis |
+| body-sm | Euclid Circular A | 14 | 400 | 1.50 | 0 | — | Footer body, secondary copy |
+| body-sm-medium | Euclid Circular A | 14 | 500 | 1.50 | 0 | — | Card metadata |
+| caption | Euclid Circular A | 13 | 400 | 1.40 | 0 | — | Photo captions |
+| caption-bold | Euclid Circular A | 13 | 600 | 1.40 | 0 | — | Card category labels |
+| micro | Euclid Circular A | 12 | 500 | 1.40 | 0 | — | Tiny meta text |
+| micro-uppercase | Euclid Circular A | 11 | 600 | 1.40 | 1px | — | Uppercase eyebrow labels |
+| button-md | Euclid Circular A | 14 | 600 | 1.30 | 0 | — | CTA labels (note: 600 weight on buttons) |
+| code-md | Source Code Pro | 14 | 400 | 1.55 | 0 | — | Code blocks, Atlas commands |
+| code-sm | Source Code Pro | 13 | 400 | 1.50 | 0 | — | Inline code, breadcrumb tokens |
+
+### Principles
+- **Display weight stays at 500.** Going to 700 reads as marketing-shouty. The smallest heading (`heading-5` at 18px) uses 600 to hold weight at small sizes.
+- **Buttons run weight 600.** Unlike Miro and Airtable (which use 500 on buttons), MongoDB's button labels carry 600 — adds heft to balance the green pill's cheery saturation.
+- **Linear negative tracking** on display sizes: -1.5px at 72px, -1px at 56px, -0.5px at 48px and 36px. Stops at 0 below 28px.
+- **Body line-height is 1.55** (looser than typical 1.5) — calibrated for documentation density where bodies often run several paragraphs.
+- **Source Code Pro on every code surface.** No system-font fallback for code — the typographic separation between prose and code is part of the doc-trust contract.
+- **Uppercase eyebrow micro** (11px / 600 / 1px tracking) — the section-label rhythm. Note the wider 1px tracking (vs Miro's 0.5px and Composio's 0.88px) — MongoDB likes its labels generously spaced.
+
+## 4. Component Stylings
+
+### Buttons (5 variants)
+
+**`button-primary`** — The signature MongoDB green pill. Background `#00ed64`, text `#001e2b` (near-black, NOT white), type 14px / 600 Euclid, padding 10×22px, full pill radius. Used on every primary action across light or dark surfaces.
+- *Pressed*: `button-primary-pressed` deepens to `#008c34`.
+- *Disabled*: Background `#e1e5e8`, text `#a8b3bc`.
+- *On-dark variant*: Identical green on dark teal bands — no color shift between light and dark.
+
+**`button-secondary`** — Transparent with `#c1ccd6` border. Text `#001e2b`. Same pill shape, same padding. The "less-committed" pair next to primary on light surfaces.
+
+**`button-secondary-on-dark`** — Transparent with `#1c2d38` border. Text `#ffffff`. Same pill shape. Used over deep-teal hero bands.
+
+**`button-ghost`** — Inline ghost. Transparent, text `#001e2b`, smaller padding (8×12px), 8px radius — the rare place the system uses non-pill radius on a button.
+
+### Cards
+
+**`hero-band-dark`** — Homepage hero. Deep-teal canvas (`#001e2b`), white text, 120px vertical padding. Hero-display headline + subtitle + green pill CTA + secondary outline-on-dark pair. Atlas dashboard mockup floats right or below.
+
+**`hero-band-light`** — Docs / learning page hero. White canvas, dark text, 96px vertical padding. Hero-display headline + subtitle + primary green pill.
+
+**`feature-card`** — 3-up benefit grid card on light surfaces. White background, 12px radius, 32px padding, 1px `#e1e5e8` border. Carries icon, heading-3 title, body-md description.
+
+**`feature-card-dark`** — 3-up grid on dark teal hero band. Background `#003d4f`, white text, 12px radius, 32px padding, no border.
+
+**`feature-callout-green`** — Soft green wash callout band. Background `#e3fcef`, dark text, 12px radius, 32px padding. Atlas highlights, feature blocks.
+
+**`code-block`** — Inline/fenced code block. Background `#001e2b` (deep teal), white text in Source Code Pro, 8px radius, 20px padding. The dark teal bg ties code visually to the brand's dark hero language.
+
+### Pricing (3-tier comparison)
+
+**`pricing-tier-card`** — Free / Flex / Dedicated. White, 12px radius, 32px padding, 1px `#e1e5e8` border. Plan name in heading-4, price in heading-1 (48 / 500 / -0.5px), feature checklist in body-md, primary green pill at bottom.
+
+**`pricing-tier-card-featured`** — Featured tier (typically Flex). Surface shifts to `#f4f7f6`. No badge — surface tone shift is the only signal.
+
+**`pricing-comparison-row`** — Comparison table row. Hairline divider, 12px vertical padding, label left + checkmarks across 3 plan columns.
+
+### MongoDB University Course Cards
+
+**`course-card`** — Course catalog tile. White, 12px radius, 24px padding, 1px `#e1e5e8` border. Course thumbnail at top (16:9), category tag, course title in heading-4, description in body-sm, instructor + duration meta line.
+
+**`course-card-tag`** — Category tag pill. Background `#c3f0d2` (brand-soft) for default; rotates through accent-soft variants per topic (purple-soft, orange-soft, pink-soft). Text in caption-bold (13 / 600), full pill, 4×10px padding.
+
+### Badges & Pills
+
+**`badge-pill`** — "NEW", "BETA", "AVAILABLE NOW". Background `#c3f0d2`, text `#00684a`, full pill, 4×10px padding, type micro-uppercase.
+
+**`badge-uppercase`** — Section eyebrow. Transparent, text `#1c2d38`, type micro-uppercase (11 / 600 / 1px tracking).
+
+### Inputs / Forms
+
+**`text-input`** — White, 8px radius, 12×16px padding, 44px height, 1px `#e1e5e8` border.
+
+**`text-input-focus`** — Border thickens to 2px solid `#00b545` (brand-deep — never the vivid `#00ed64`, which would be too saturated for a focus ring).
+
+### Navigation
+
+**`top-nav`** — 64px-tall sticky white bar. Leaf wordmark + "MongoDB" type left, horizontal menu (Products / Solutions / Resources / Pricing / Company) center, "Try Free" green pill + "Sign In" text link right. Stays white on every page (including dark hero pages — the nav is constant).
+
+**`footer`** — Deep teal ground (`#001e2b`), white headings, `#a8b3bc` link tone. Multi-column — Atlas / Community / Resources / Company / Legal. 96px vertical padding.
+
+### CTA Bands
+
+**`cta-band-dark`** — Pre-footer CTA. Deep teal (`#001e2b`), white text, 96px padding. Headline in heading-1, subhead, primary green pill + secondary outline-on-dark pair.
+
+**`cta-band-light`** — Soft green callout strip. Background `#e3fcef`, dark text, 12px radius, 64px padding. Used as secondary CTA placement between content bands.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `xxs:4 · xs:8 · sm:12 · md:16 · lg:20 · xl:24 · xxl:32 · xxxl:40 · section-sm:48 · section:64 · section-lg:96 · hero:120`. Section padding alternates: 64px between minor bands, 96px between major bands, 120px for hero spaces. Card internal padding: 24px course card, 32px feature card, 32px pricing tier card.
+
+### Grid & Container
+- **Max content width**: ~1280px centered, with 32px horizontal breathing room.
+- **Hero**: Full-width dark teal band, 120px padding, type column constrained to ~720px with mockup floating right.
+- **3-up feature grid**: 3 columns desktop, 2 tablet, 1 mobile.
+- **Pricing tier grid**: 3-up at desktop with the featured tier in column 2.
+- **Course catalog grid**: 4-up at desktop with category-filter rail at left (240px wide).
+- **Comparison table**: Single full-width table, hairline rows.
+
+### Whitespace Philosophy
+The dual-mode rhythm (light docs / dark hero) needs deliberate spacing on both surfaces. Light pages use generous 96–120px section padding to keep the white canvas from feeling cramped. Dark hero bands use 120px padding to give the green pill CTA room to breathe — green-on-teal is high-contrast, and tight padding makes it feel cluttered.
+
+### Section Cadence
+Page rhythm: dark hero band → 3-up feature grid (light) → soft-green callout (light) → product mockup (light) → pricing teaser (light) → customer logo strip (light) → dark CTA band → dark footer. The dark surfaces bookend the light content — opening and closing with deep teal.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 4px | Inline tags inside data tables |
+| Standard | sm | 6px | Compact rows |
+| Comfortable | md | 8px | Form inputs, ghost buttons, code blocks |
+| Large | lg | 12px | Feature cards, pricing tier cards, course cards |
+| XL | xl | 16px | Hero illustration containers |
+| XXL | xxl | 24px | Decorative containers (rare) |
+| Pill | pill | 9999px | Every CTA, every badge, course tags |
+
+The pill on every CTA is non-negotiable — green pill is the brand. Sharp-cornered green CTAs read as wrong. Cards stay at 12px to feel solid and stable; code blocks stay at 8px for the slightly tighter "this is data" feel.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow | Body sections, top nav (until scrolled), dark hero bands |
+| 1 — Ambient | `0 1px 2px rgba(0,30,43,0.04)` | Sticky nav after scroll |
+| 2 — Standard | `0 4px 12px rgba(0,30,43,0.08)` | Default elevated cards (feature, pricing, course) |
+| 3 — Elevated | `0 12px 32px rgba(0,30,43,0.12)` | Floating popovers, dropdowns |
+| 4 — Deep | `0 24px 48px rgba(0,30,43,0.16)` | Modals, dialogs |
+| 5 — Brightness-step | `#001e2b` → `#003d4f` | Dark canvas elevation — no shadow |
+
+### Shadow Philosophy
+Light surfaces use **softly tinted shadows** (teal-tinted at low alpha). Dark teal canvases use **brightness-step elevation** — shadows are invisible on dark grounds, so the system layers via `#001e2b` → `#003d4f` → `#1c2d38`. Atlas dashboard mockups inside hero bands carry their own internal depth (cards inside the mockup), so the surrounding container stays quiet.
+
+There is no "atmospheric glow" or "spotlight" effect — MongoDB's depth is entirely structural rather than decorative. The closest decorative effect is the leaf wordmark's subtle gradient fill, applied to the leaf only and never to surrounding elements.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for color, border, opacity transitions.
+- **Emphasized ease**: `cubic-bezier(0.16, 1, 0.3, 1)` — section-on-scroll reveals, mockup pan-in.
+
+### Duration Buckets
+- **Fast (120ms)**: Color transitions on hover, focus ring expansion, link hover.
+- **Standard (220ms)**: Card hover lift, button press feedback, dropdown opens.
+- **Slow (360ms)**: Mockup pan-in, modal entrance, hero illustration reveal.
+
+### Per-Component Micro-States
+- **Button hover (primary)**: Background brightens via `filter: brightness(1.05)` over 120ms; no transform.
+- **Button press**: Background drops to `#008c34` over 80ms.
+- **Button hover (secondary)**: Border thickens from 1px → 1.5px (effective via box-shadow inset).
+- **Card hover (feature)**: Card lifts via `translateY(-2px)` over 220ms; shadow intensifies to elevated.
+- **Course card hover**: Card lifts `translateY(-2px)`; thumbnail subtly zooms via `transform: scale(1.02)`.
+- **Link hover**: Underline color shifts from `#016bf8` → `#0046a8` over 120ms.
+- **Input focus**: Border recolors from `#e1e5e8` → 2px `#00b545` over 120ms; outer 2px ring at 50% alpha appears.
+
+### Page Transitions
+Standard browser navigation. Section-on-scroll reveals are a 360ms fade-in-up (24px offset) gated by `IntersectionObserver`. Pricing tier cards stagger in left-to-right with 80ms increments. Atlas mockups inside hero bands animate via subtle parallax (-2% vertical translate on scroll).
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, transitions reduced to opacity-only at 100ms, parallax disabled, card hover lifts removed (cards stay flat). Course-card thumbnail zoom is removed.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#001e2b` on `#ffffff` = **16.8** — AAA at every size.
+- **Body on bg**: `#3d4f5b` on `#ffffff` = **7.2** — AAA at body sizes.
+- **Stone on bg**: `#7c8c9a` on `#ffffff` = **4.5** — AA at body sizes; do not use below 14px.
+- **On-dark on bg-dark**: `#ffffff` on `#001e2b` = **16.8** — AAA.
+- **On-brand on brand**: `#001e2b` on `#00ed64` = **14.6** — AAA. **Note**: white-on-green would be ~2.0 contrast (fails) — this is why MongoDB uses near-black on green.
+- **On-feature**: `#001e2b` on `#e3fcef` = **15.6** — AAA.
+- **Link on bg**: `#016bf8` on `#ffffff` = **5.4** — AA.
+
+### Focus Indicators
+Every focusable element shows a 2px solid `#00b545` (brand-deep) ring with 2px offset. Brand-deep is used (rather than `#00ed64`) because the vivid green has poor contrast against light surfaces; the deeper variant ensures the ring is visible.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; `aria-label` only when icon-only.
+- **Pricing comparison table**: `<table>` with `<thead>` and `<th scope="row">`. The featured-tier surface change is reinforced with `aria-label="Most popular plan"` on the column header.
+- **Course catalog**: `<article>` for each course card with `aria-labelledby` referencing the course title.
+- **Code blocks**: `<pre><code>` with `aria-label` describing the language ("MongoDB shell command", "JavaScript driver example").
+- **Navigation**: `<nav aria-label="Primary">`; mobile drawer uses `aria-expanded`.
+- **Atlas mockup**: Wrapped in `<figure>` with `<figcaption>` describing the dashboard view.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link at top of every page jumps to `<main>`. Mobile nav drawer traps focus when open; Escape closes. Course catalog filter rail is keyboard-navigable; selected category is announced via `aria-live="polite"`.
+
+### Screen Reader Hints
+Atlas mockups use descriptive `alt` text describing the dashboard ("MongoDB Atlas dashboard showing cluster metrics, query performance, and document storage"). The leaf wordmark in nav uses `aria-label="MongoDB home"`. Code blocks include `<span class="sr-only">Code example:</span>` prefixes.
+
+### Reduced Motion Handling
+All transforms removed. Card hover lifts removed. Atlas mockup parallax disabled. Course card thumbnail zoom removed. Mockup pan-in becomes a static reveal.
+
+## 10. Responsive Behavior
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Hero h1 72→36px; mockup stacks below type column; nav collapses to hamburger; pricing tier grid stacks 1-up |
+| Tablet | 640–1024px | Hero h1 56px; mockup right-aligned; 3-up feature grid stays; pricing tier grid 2-up with horizontal scroll for comparison table |
+| Desktop | 1024–1280px | Full hero h1 72px; 3-up feature grid; 3-up pricing; 4-up course catalog |
+| Wide | > 1280px | Content caps at 1280px; outer breathing room expands |
+
+### Touch Targets
+- Primary CTA: 44px height (10px padding × 2 + 14px line-height + ample touch area). Meets WCAG AAA.
+- Course card CTAs: full-width on mobile.
+- Comparison-table row tap targets: 44px minimum via padding.
+
+### Collapsing Strategy
+Top nav collapses to hamburger below 1024px. 3-up feature grid: 3 → 2 → 1. Pricing tier grid: 3 → 2 → 1; comparison table converts to horizontally-scrollable swipe at <1024px with sticky plan headers.
+
+### Image Behavior
+Atlas mockups retain native aspect ratios; horizontal scroll preserved on mobile. Customer logos stay at native widths; logo strip wraps to 2 rows on mobile. Course thumbnails maintain 16:9 across breakpoints.
+
+## 11. Content & Voice
+
+### Tone
+**Technical, credible, slightly playful.** MongoDB writes for developers, architects, and engineering managers. Headlines describe outcomes ("Build the next big thing", "Run your AI stack on MongoDB Atlas"); body copy supports with concrete capability statements. The voice avoids both "magic" framing and dry enterprise jargon — it sits between Stripe's developer-respect tone and Linear's restraint.
+
+### Microcopy Patterns
+- **CTA verbs**: "Try Free", "Get Started", "Talk to Sales", "View Pricing", "Read the Docs". Never "Start your journey".
+- **Section labels**: 11px micro-uppercase eyebrow at 1px tracking — "ATLAS", "AI USE CASES", "ENTERPRISE READY".
+- **Course card titles**: Capability-led — "Build a Vector Search App with MongoDB Atlas" not "Become a Database Pro".
+
+### Empty States
+Where empty states appear (search results, course filter, query examples), the recipe is: a single line in `text-stone` ("No courses match 'foo' — try a broader topic") with a brand-deep link to all courses.
+
+### Error Messages
+Pattern: short, declarative, action-oriented. "Connection refused — check your IP allowlist" not "Oops!". Errors carry an icon-x in `#db3030` and inline guidance with a code snippet for resolution.
+
+### Success Confirmations
+Single-line toast in `text` color over `surface` background with a `success` (#00b545) accent stripe at the left. "Cluster deployed" not "Hooray!".
+
+### CTA verb conventions
+The brand prefers the simple, declarative present-imperative: "Try Free", "Get Started", "Talk to Sales". Pricing CTAs add specificity: "Start Free with Atlas", "Contact Sales". The "Free" qualifier appears nearly everywhere — Atlas's free tier is genuinely robust and the marketing leans into that.
+
+## 12. Dark Mode & Theming
+
+MongoDB ships a **dual-mode brand by section, not by user preference**. There is no light/dark toggle on mongodb.com — instead, hero bands and footers ship in deep teal (`#001e2b`) while documentation and learning pages stay white. The dual-mode is structural to the brand identity rather than a theme.
+
+The in-product Atlas dashboard ships its own dark/light theme system (separate from this marketing spec), behind login. The marketing site doesn't expose those theme tokens.
+
+If a future marketing-wide dark theme ships, the natural mapping would be: bg → `#001e2b`, text → `#ffffff`, surface → `#003d4f`, border → `#1c2d38`, code-block stays `#001e2b` (it's already dark), brand stays `#00ed64`. The pricing tier cards and course cards would need a darker variant — `#003d4f` background with `#1c2d38` border.
+
+## 13. Lineage & Influences
+
+MongoDB descends from the **database-product marketing tradition** — Oracle's enterprise authority, Postgres's documentation-first approach, and the more recent Stripe-influenced documentation-as-product canon. The signature green pill is MongoDB's own contribution to the genre — there's no clear precedent for "vivid neon-green-on-teal CTA" as a database brand color (most database brands stay in blue or earthtones).
+
+The dual-mode brand (dark hero / light docs) traces back to AWS's marketing pages (deep navy hero, white documentation), but MongoDB's commitment to the deep-teal hero across product pages is more disciplined than AWS's varied hero treatments. The Atlas dashboard mockup inside hero bands is borrowed from Stripe's payment-flow visualizations — both rely on real product UI as the credibility lever.
+
+Euclid Circular A is from Swiss Typefaces (the same foundry behind Söhne in different families). MongoDB's selection of a geometric humanist sans places it in the same neighborhood as Vercel (Geist), Linear (Inter), and Notion (NotionInter) — but Euclid's slightly rounded terminals give MongoDB a friendlier voice than its Linear/Vercel peers.
+
+- **AWS** — Dual-mode brand (dark hero / light docs); enterprise authority. https://aws.amazon.com
+- **Stripe** — Documentation-as-product credibility; real product mockups in hero. https://stripe.com
+- **PostgreSQL** — Documentation-first approach to database marketing. https://postgresql.org
+- **Swiss Typefaces (Euclid Circular A)** — Geometric humanist sans family. https://swisstypefaces.com
+- **Adobe Fonts (Source Code Pro)** — The mono companion. https://fonts.adobe.com/fonts/source-code-pro
+
+## 14. Do's and Don'ts
+
+### Do
+- Use **near-black (`#001e2b`) text on the green pill** — never white. White-on-green fails contrast.
+- Reserve `brand` (`#00ed64`) for the primary CTA and the leaf wordmark. It's a destination color.
+- Use **pill radius (9999px)** on every primary CTA — green stays green, pill stays pill, on both light and dark surfaces.
+- Anchor major product pages with a deep-teal (`#001e2b`) hero band; keep docs and learning pages white.
+- Use **Source Code Pro** on every code surface — inline, fenced, Atlas command examples.
+- Apply 1px tracking on micro-uppercase eyebrow labels (more generous than peer brands).
+- Use the soft green (`#c3f0d2`) for course-tag pills and "NEW / BETA" badges.
+- Keep button labels at weight 600 — heavier than peer brands (500), calibrated to balance the green pill's saturation.
+- Apply brightness-step elevation on dark canvases (`#001e2b` → `#003d4f`); shadows on dark are invisible.
+- Use the leaf wordmark + "MongoDB" type pairing in the nav — never the leaf alone except as a favicon.
+
+### Don't
+- Don't put white text on the green pill. The brand's calibration is `#001e2b` on `#00ed64`.
+- Don't use sharp-cornered CTAs. Every primary action is full pill.
+- Don't use the vivid `#00ed64` as a focus ring — it has poor contrast on light surfaces. Use brand-deep `#00b545`.
+- Don't introduce a serif. The single-family Euclid discipline is the brand.
+- Don't use cool blue-grays. MongoDB's neutrals lean slightly green-cool (`#3d4f5b` body has a faint teal cast).
+- Don't apply box-shadow elevation on dark teal canvases — shadows are invisible. Use `#003d4f` brightness-step.
+- Don't repeat the dark-hero treatment in two consecutive bands. Cadence requires alternation: dark hero → light feature grid → dark CTA.
+- Don't mix `#016bf8` (link blue) with `#00ed64` (brand green) on the same element. They belong to different layers.
+- Don't bold body text beyond 500. Body emphasis goes to weight 500 (`body-md-medium`) — never 600+.
+- Don't use the use-case accent palette (purple, orange, pink, blue) outside use-case illustrations.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:     #ffffff (white — docs, learning, pricing)
+Bg Dark:         #001e2b (deep teal — hero bands, footer, code blocks)
+Text:            #001e2b (near-black with green-cool tint — same hex as bg-dark)
+Body:            #3d4f5b (slate)
+Stone:           #7c8c9a (captions)
+Brand:           #00ed64 (MongoDB green — primary CTA only)
+Brand Deep:      #00b545 (focus ring, deeper green)
+Brand Soft:      #c3f0d2 (course tags, NEW badges)
+Brand Teal:      #003d4f (dark feature card surface)
+On-Brand:        #001e2b (NEAR-BLACK on green pill — never white)
+Surface:         #f9fbfa (subtle gray-green tint)
+Bg Feature:      #e3fcef (soft green wash callout)
+Border:          #e1e5e8 (1px hairline)
+Link:            #016bf8 (documentation link blue)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#001e2b` deep teal canvas with Euclid Circular A 72px / 500 / -1.5px tracking white headline ('Build the next big thing'), 18px / 400 `#a8b3bc` subhead, primary green pill CTA (`#00ed64` bg, `#001e2b` text, full pill radius, 10×22px padding, button-md weight 600) and secondary outline-on-dark button (transparent, white text, 1px `#1c2d38` border, full pill). 120px vertical padding. Atlas dashboard mockup floats right or below."
+
+2. "Build a 3-up feature grid on `#ffffff` canvas: each card on `#ffffff`, 12px radius, 32px padding, 1px `#e1e5e8` border. Each card carries an icon glyph (forest green `#00684a`), heading-3 title (Euclid 28 / 500), body-md description (16 / 400 `#3d4f5b`)."
+
+3. "Compose a 3-tier pricing comparison: Free / Flex / Dedicated. Each card 12px radius, 32px padding, 1px `#e1e5e8` border (Flex tier shifts to `#f4f7f6` background — surface tone shift only, no badge). Plan name in heading-4, price in heading-1 (Euclid 48 / 500 / -0.5px), feature checklist in body-md, full-width green pill CTA at bottom."
+
+4. "Design a MongoDB University course card: white background, 12px radius, 24px padding, 1px `#e1e5e8` border. 16:9 thumbnail at top, course-tag pill (`#c3f0d2` bg, `#00684a` text, full pill, micro-uppercase weight 600), course title in heading-4, body-sm description, instructor + duration meta in caption."
+
+5. "Create a code block: `#001e2b` deep teal background, white text in Source Code Pro 14px / 400 / 1.55 line-height, 8px radius, 20px padding. Inline code in body uses `#001e2b` text on `#f4f7f6` background, Source Code Pro 13px."
+
+6. "Build a top nav: 64px tall sticky white bar with green leaf wordmark + 'MongoDB' type left (Euclid 18 / 600), horizontal menu (Products / Solutions / Resources / Pricing / Company) center in body-md-medium (`#001e2b`), 'Sign In' text link + green pill 'Try Free' button right. Stays white on every page including dark hero pages."
+
+### Iteration Guide
+1. Start with the dual-mode in mind: dark teal (`#001e2b`) for product hero + footer + CTA bands, white for docs / learning / pricing / feature grids.
+2. Place one green pill CTA per viewport. Two greens in one band is too saturated.
+3. Always use near-black text on the green pill. White-on-green fails contrast and breaks brand calibration.
+4. Keep button labels at Euclid 14 / 600 — the heavier weight balances the green pill's saturation.
+5. Use Source Code Pro on every code surface — no system fallback. The mono separation is the doc-trust contract.
+6. Pricing-page work uses the 3-tier (Free / Flex / Dedicated) layout with surface-tone shift on the featured tier (no badge).
+7. Course catalog work uses the colored category-tag system: brand-soft for default, accent variants per topic (purple/orange/pink/blue at 30% saturation).
+8. When in doubt about emphasis, scale the type up before bolding. Display max weight is 500; 600 only on heading-5 and button labels.
+9. Atlas mockups are the brand's credibility lever. Use real Atlas dashboard screenshots — cluster metrics, query performance, document storage views visible.

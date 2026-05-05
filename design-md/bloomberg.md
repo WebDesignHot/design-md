@@ -1,0 +1,782 @@
+---
+name: Bloomberg
+tagline: Iconic black-orange financial broadsheet — BWHaasHead headlines, AvenirNextPForBBG chrome, terminal-grade data density.
+author: webdesignhot
+source_url: https://www.bloomberg.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, sans, dense, financial, news, dark, orange, terminal]
+preview_swatch: ['#000000', '#fa7900', '#ffffff']
+related: [ft, theeconomist, nytimes]
+description: 'Bloomberg is the world''s largest financial-news brand and its visual system is anchored by two iconic decisions: pure-black masthead band (`#000000`) and the legendary Bloomberg orange (`#fa7900`) — the same orange that lights every Bloomberg Terminal screen on every trading floor on earth. The web product ports the terminal''s data discipline to consumer reading: BWHaasHead carries the headlines (a custom cut of Christian Schwartz''s Neue Haas Grotesk, commissioned 2015), AvenirNextPForBBG runs UI chrome (links, buttons, navigation), and BWHaasGroteskWeb sets body. The pairing is unmistakably Bloomberg — a black-orange-white chromatic triad that doubles as the terminal''s color signature, with tabular numerals on every market context, green-up / red-down market-data convention, and a dense river-of-news feed pattern that mirrors the terminal''s information architecture. Where the FT runs salmon-pink and the WSJ runs square-broadsheet, Bloomberg runs terminal — black-banded, orange-accented, data-dense.'
+
+colors:
+  bg: '#ffffff'                  # editorial reading canvas
+  bg-masthead: '#000000'          # the iconic Bloomberg black band — masthead, top nav, terminal-mode
+  bg-terminal: '#000000'          # full terminal-mode dark surfaces
+  bg-section-markets: '#ffffff'   # markets pages stay white with black + orange chrome
+  bg-section-pursuits: '#fbfaf7'  # Pursuits (luxury) section runs warm cream
+  bg-section-businessweek: '#fffaee' # Bloomberg Businessweek warm magazine cream
+  bg-dark: '#0d0d0d'
+  surface: '#ffffff'
+  surface-soft: '#f6f6f6'         # Bloomberg gray panel
+  surface-strong: '#e6e6e6'       # disabled fill, table-row alternate
+  surface-quote: '#fff8eb'        # warm pull-quote backdrop
+  surface-terminal: '#0d0d0d'     # data tables that mimic the terminal aesthetic
+  text: '#000000'                 # primary text — pure black is the Bloomberg signature
+  text-strong: '#000000'
+  text-muted: '#5c5c5c'           # bylines, datelines
+  text-soft: '#8a8a8a'             # captions
+  text-faint: '#b3b3b3'             # disabled, terminal-button label observed
+  text-on-dark: '#f3f4ef'           # off-white observed on bloomberg.com link over black bg
+  brand: '#fa7900'                 # Bloomberg orange — the terminal signature color
+  brand-hover: '#e26b00'
+  brand-active: '#cc5e00'
+  brand-soft: '#fdebd2'             # tint surface for badges, selected nav
+  brand-deep: '#a14a00'             # darkest orange
+  accent-deep-orange: '#fa7900'     # primary accent
+  accent-amber: '#ffb800'           # warning + secondary highlight
+  accent-yellow-flash: '#ffe066'    # ticker flash for unchanged
+  link: '#fa7900'                  # orange-as-link is the Bloomberg signature (not blue)
+  link-hover: '#e26b00'
+  link-visited: '#5c5c5c'
+  link-on-dark: '#fa7900'           # orange link over black masthead
+  on-brand: '#000000'               # black text on orange CTA fill (high-contrast pairing)
+  on-dark: '#ffffff'
+  border: '#e0e0e0'                # default hairline
+  border-soft: '#f0f0f0'
+  border-strong: '#999999'
+  border-rule: '#000000'             # black section rule — broadsheet weight
+  border-orange: '#fa7900'           # active-state border for selected nav
+  shadow-card: 'rgba(0,0,0,0.06)'
+  shadow-elev: 'rgba(0,0,0,0.12)'
+  shadow-modal: 'rgba(0,0,0,0.32)'
+  scrim: 'rgba(0,0,0,0.65)'
+  success: '#2ea44f'                  # green for "up" market data
+  success-soft: '#e1f1e7'
+  warning: '#ffb800'                  # amber for advisory
+  warning-soft: '#fff3d2'
+  danger: '#d8232a'                   # red for "down" market data and form errors
+  danger-soft: '#fbe1e2'
+  info: '#fa7900'
+  info-soft: '#fdebd2'
+  market-up: '#2ea44f'                # Bloomberg green for positive movements
+  market-down: '#d8232a'              # Bloomberg red for negative movements
+  market-neutral: '#5c5c5c'           # gray for unchanged
+  bw-businessweek: '#fa7900'           # Businessweek wordmark orange
+  bw-pursuits: '#1a1a1a'                # Pursuits luxe section anchor
+  bw-opinion: '#0066cc'                 # Opinion section accent blue (rare blue use)
+
+typography:
+  display:
+    family: '"BWHaasHead", "Neue Haas Grotesk Display", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+    opentype-features: ['liga', 'kern', 'ss01']
+  body:
+    family: '"BWHaasGroteskWeb", "Neue Haas Grotesk Text", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  ui:
+    family: '"AvenirNextPForBBG", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  serif:
+    family: '"BWHaasHead Serif", "Caslon Doric", Georgia, "Times New Roman", serif'
+    weights: [400, 700]
+  mono:
+    family: '"BWHaasMono", Menlo, Consolas, "Courier New", monospace'
+    weights: [400, 500]
+  scale:
+    masthead-wordmark:   { size: 32, weight: 700, lineHeight: 1.0,  tracking: '-0.02em', family: display, opentype: ['liga'] }
+    headline-mega:       { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    headline-jumbo:      { size: 42, weight: 600, lineHeight: 1.08, tracking: '-0.015em', family: display }
+    headline-xl:         { size: 32, weight: 600, lineHeight: 1.12, tracking: '-0.01em',  family: display }
+    headline-lg:         { size: 26, weight: 500, lineHeight: 1.15, tracking: '-0.005em', family: display }
+    headline-md:         { size: 22, weight: 500, lineHeight: 1.2,  tracking: '0',         family: display }
+    headline-sm:         { size: 18, weight: 500, lineHeight: 1.25, tracking: '0',         family: display }
+    deck:                { size: 18, weight: 400, lineHeight: 1.4,  tracking: '0',         family: body }
+    body-md:             { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body-sm:             { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    pull-quote:          { size: 30, weight: 500, lineHeight: 1.3,  tracking: '-0.005em',  family: display }
+    byline:              { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0',         family: ui }
+    dateline:            { size: 12, weight: 400, lineHeight: 1.3,  tracking: '0.02em',    family: ui, transform: uppercase }
+    section-label:       { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.1em',     family: ui, transform: uppercase }
+    nav-link:            { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0.06em',    family: ui, transform: uppercase }
+    button-label:        { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0.08em',    family: ui, transform: uppercase }
+    caption:             { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',         family: ui }
+    photo-credit:        { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.04em',    family: ui, transform: uppercase }
+    micro-meta:          { size: 11, weight: 500, lineHeight: 1.2,  tracking: '0.04em',    family: ui, transform: uppercase }
+    market-ticker:       { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0',         family: mono, opentype: ['tnum', 'zero'] }
+    data-tabular:        { size: 14, weight: 500, lineHeight: 1.3,  tracking: '0',         family: mono, opentype: ['tnum', 'zero'] }
+    code-micro:          { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',         family: mono }
+
+radius:
+  micro: 0
+  sm: 2
+  md: 3
+  lg: 4
+  pill: 9999
+  none: 0
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 640
+  feature-width: 1080
+  header-height: 60
+  masthead-rule-weight: 2
+  section-rule-weight: 1
+  hairline-weight: 1
+
+components:
+  button-primary:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 0
+    padding: '14px 24px'
+    height: 44
+    font: button-label
+    use: 'Subscribe, Continue — black-fill primary CTA. The black-on-white pairing is broadsheet weight.'
+  button-primary-hover:
+    bg: '#fa7900'
+    color: '#000000'
+    use: 'Pointer-down flips to orange fill with black text — the Bloomberg signature reverse pairing.'
+  button-orange:
+    bg: '#fa7900'
+    color: '#000000'
+    radius: 0
+    padding: '14px 24px'
+    height: 44
+    use: 'Featured CTA — Subscribe to Bloomberg.com, terminal-trial. Orange ground with black text is the brand signature.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#000000'
+    border: '1px solid #000000'
+    radius: 0
+    padding: '14px 24px'
+    height: 44
+    use: 'Already a subscriber, secondary actions over white.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#fa7900'
+    use: 'Inline body links — orange text with subtle underline on hover.'
+  card-headline:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    border: 'top 1px solid #e0e0e0'
+    use: 'Default river card. BWHaasHead 22/500 headline, BWHaasGroteskWeb 16/400 deck, AvenirNextPForBBG 13/600 byline.'
+  card-photo:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    use: 'Photo card with image-above + headline below; 16:9 aspect.'
+  card-markets-data:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    border: '1px solid #e0e0e0'
+    use: 'Markets data table — tabular BWHaasMono numerics with green/red up/down columns, alternating row tint.'
+  card-terminal:
+    bg: '#000000'
+    color: '#fa7900'
+    radius: 0
+    use: 'Terminal-mode dark card — black ground with orange data and white labels. Used on Pro and terminal-promo zones.'
+  pull-quote:
+    bg: '#fff8eb'
+    color: '#000000'
+    border: 'left 4px solid #fa7900'
+    padding: '24px 32px'
+    use: 'Warm-cream pull-quote with 4px orange left bar. BWHaasHead 30/500 headline, no italic.'
+  text-input:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 2
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #999999'
+    focus: 'border thickens to 2px orange'
+    use: 'Email entry, search input.'
+  paywall-cta:
+    bg: '#000000'
+    color: '#ffffff'
+    padding: '40px 32px'
+    use: 'Black ground paywall with orange Subscribe button — terminal aesthetic ports to consumer.'
+  nav-section-link:
+    color: '#000000'
+    font: nav-link
+    padding: '14px 12px'
+    use: 'Section nav (Markets, Technology, Politics, Wealth, Pursuits, Opinion). Hover: orange underline grows from below.'
+  market-ticker:
+    bg: '#000000'
+    color: '#ffffff'
+    padding: '8px 12px'
+    use: 'Live ticker bar — black ground with white labels and tabular BWHaasMono numerals; up cells flash green, down flash red, unchanged amber.'
+  edition-selector:
+    bg: '#000000'
+    color: '#ffffff'
+    font: nav-link
+    use: 'Top-right edition picker (US, Europe, Asia, Middle East) — black bar above masthead.'
+  pro-badge:
+    bg: '#fa7900'
+    color: '#000000'
+    radius: 0
+    padding: '4px 8px'
+    font: section-label
+    use: '"BLOOMBERG PRO" badge — orange chip with black uppercase text marking premium content.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  market-tick-flash: 'green/red ticker cell flashes 240ms on price update — flash bg is green/red at 0.4 alpha, fades to neutral over 240ms'
+  card-hover: 'image scales 1.0 → 1.02; headline gains a 1px orange underline; 200ms standard'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — market-tick flash becomes instant color set, transforms suppressed; ticker scrollers pause when reduced motion is honored.'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.04) 0 1px 2px'
+  standard: 'rgba(0,0,0,0.06) 0 2px 6px'
+  elevated: 'rgba(0,0,0,0.12) 0 8px 20px'
+  deep: 'rgba(0,0,0,0.24) 0 16px 40px'
+  ring: '0 0 0 2px #fa7900'
+
+accessibility:
+  contrast-text-on-bg: 21.0                # #000000 on #ffffff — AAA at any size
+  contrast-text-on-orange: 9.6              # #000000 on #fa7900 — AAA — black-on-orange is the brand pairing
+  contrast-link-on-bg: 3.5                  # #fa7900 on #ffffff — AA large only; pairs underline + bold weight to compensate at body
+  contrast-text-on-black: 21.0              # #ffffff on #000000 — AAA
+  contrast-muted-on-bg: 7.0                 # #5c5c5c on #ffffff — AAA body
+  focus-ring: '2px solid #fa7900 (Bloomberg orange) + 2px outline-offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves edition selector → masthead → primary nav → utility (Subscribe, Sign in, Search). Skip-link first.'
+
+dark-mode: optional
+colors-dark:
+  bg: '#0d0d0d'
+  bg-masthead: '#000000'
+  surface: '#1a1a1a'
+  surface-soft: '#262626'
+  surface-strong: '#333333'
+  text: '#ffffff'
+  text-strong: '#ffffff'
+  text-muted: '#b3b3b3'
+  text-soft: '#8a8a8a'
+  brand: '#fa7900'                 # orange holds — the signature color is identical in both modes
+  link: '#fa7900'
+  border: '#333333'
+  border-rule: '#fa7900'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Bloomberg is **terminal first, broadsheet second**. Every visual decision on bloomberg.com traces back to the Bloomberg Terminal — the orange-on-black command-line trading workstation that has anchored institutional finance since 1981. The orange (`#fa7900`) is the same orange that lights 325,000+ terminal screens on every trading floor on earth; the black mastheads are the same black; and the data discipline — tabular numerals, green-up / red-down convention, dense scrollable rivers — comes directly from the terminal's information architecture. Where the FT runs calm-restrained-salmon and the WSJ runs square-broadsheet, Bloomberg runs **financial-data-dense**.
+
+Type sets in **BWHaasHead** for headlines — a custom cut of Christian Schwartz's Neue Haas Grotesk Display, commissioned for Bloomberg's 2015 redesign by Pentagram (Luke Hayman). The face is precise, geometric, and built for both magazine display sizes (Bloomberg Businessweek) and consumer-news headlines. Body sets in **BWHaasGroteskWeb** (the text companion), and UI chrome — links, buttons, navigation, photo credits — runs in **AvenirNextPForBBG**, a custom commission of Avenir Next licensed to Bloomberg's brand alone. The trio is unmistakably terminal-grade: precision sans for chrome, geometric grotesk for editorial, and a black-orange-white chromatic triad that signals authority without decoration.
+
+The chromatic system is **black + orange + white**, with green and red reserved exclusively for market-up / market-down data signaling. The black masthead band runs at full width, edge-to-edge, with the wordmark "Bloomberg" set in BWHaasHead 700 white. The orange is used sparingly but identifyingly — primary CTAs, active-nav indicators, the Pro badge, the link-hover underline, the focus ring, and the ticker-flash animation. Pure black-on-white body sets the broadsheet aesthetic; the orange announces brand and action; green-up / red-down announces data direction.
+
+Density is the brand voice. Bloomberg's homepage runs a multi-column river-of-news pattern with 12+ headlines visible above the fold on desktop, alternating-row data tables, and a live market ticker at the very top. This density mirrors the terminal: information per square inch is the value proposition, not whitespace. The Pursuits (luxury) and Businessweek (long-form) sub-brands break the rule — they run warm-cream backgrounds and magazine pacing — but the core news product is dense, dark-chromed, and terminal-flavored.
+
+**Key Characteristics:**
+- **Bloomberg orange (`#fa7900`)** — the same orange that lights every Bloomberg Terminal on every trading floor; a brand-defining decision since 1981
+- **Black masthead band (`#000000`)** — full-width, edge-to-edge, with the BWHaasHead 700 white wordmark
+- **Custom type trio**: BWHaasHead (display) + BWHaasGroteskWeb (body) + AvenirNextPForBBG (UI) — Pentagram + Schwartz, 2015
+- Orange-as-link (not blue) — the Bloomberg signature CTA color
+- Black-on-orange pairing for active CTAs (`#000000` on `#fa7900`) — high-contrast brand reverse
+- Square broadsheet aesthetic — 0px radius on cards, 2–4px on inputs only
+- Tabular BWHaasMono numerals (`tnum` + `zero`) on every market context
+- Green-up (`#2ea44f`) / red-down (`#d8232a`) market-data convention with ticker-cell flash on price update
+- River-of-news density — 12+ headlines above fold, alternating-row data tables
+- Pursuits (luxury) and Businessweek (long-form) sub-brands flip to warm cream
+- Edition selector (US / Europe / Asia / Middle East) above the masthead — global newsroom signal
+- Pro badge in orange — premium content marker
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Black Masthead** (`#000000`): the brand banner. Used for masthead, top-edition bar, terminal-mode panels, paywall ground, primary CTA fill.
+- **Bloomberg Orange** (`#fa7900`): the terminal signature color. Primary action accent — links, active-nav indicator, focus ring, Pro badge, hover underline, ticker emphasis.
+- **White Canvas** (`#ffffff`): editorial reading ground. Pure white — broadsheet weight.
+
+### Brand & Sub-Brand
+- **Brand Orange** (`#fa7900`)
+- **Orange Hover** (`#e26b00`)
+- **Orange Active** (`#cc5e00`)
+- **Orange Soft** (`#fdebd2`) — Pro badge tint, selected-nav background
+- **Orange Deep** (`#a14a00`) — heaviest orange for icons
+- **Brand Black** (`#000000`)
+- **Black-Sub** (`#0d0d0d`) — terminal-mode panels
+- **Businessweek Cream** (`#fffaee`) — Bloomberg Businessweek section ground
+- **Pursuits Cream** (`#fbfaf7`) — Pursuits (luxury) section ground
+- **Opinion Blue** (`#0066cc`) — rare blue accent reserved for Opinion section masthead
+
+### Accent
+- **Amber** (`#ffb800`) — secondary highlight, warning, ticker unchanged-flash
+- **Yellow Flash** (`#ffe066`) — ticker neutral flash
+
+### Interactive
+- **Default Link** (`#fa7900` text + underline-on-hover) — orange-as-link is the Bloomberg signature
+- **Link Hover** (`#e26b00`)
+- **Link Visited** (`#5c5c5c`) — visited dims to muted gray
+- **Active CTA** (orange fill on black text — the reverse pairing)
+- **Disabled** (`#b3b3b3` text, `#e6e6e6` fill)
+- **Selected** (orange-soft chip with orange text)
+
+### Neutral Scale
+- **Pure Black** (`#000000`) — body, headlines (Bloomberg uses absolute black, not warmed)
+- **Muted** (`#5c5c5c`) — bylines, datelines
+- **Soft** (`#8a8a8a`) — captions, photo credits
+- **Faint** (`#b3b3b3`) — disabled, muted UI labels (observed on terminal-button label)
+- **Hairline** (`#e0e0e0`) — universal 1px rule
+- **Off-White on Dark** (`#f3f4ef`) — observed link-text-color over the black masthead band
+
+### Surface & Borders
+- **White Canvas** (`#ffffff`)
+- **Surface Soft** (`#f6f6f6`) — Bloomberg gray panel, table-row alternate
+- **Surface Strong** (`#e6e6e6`) — disabled fill
+- **Surface Quote** (`#fff8eb`) — warm pull-quote backdrop
+- **Hairline** (`#e0e0e0`)
+- **Border Strong** (`#999999`) — form input border
+- **Border Rule** (`#000000`) — black section rule, broadsheet weight
+- **Border Orange** (`#fa7900`) — active-nav indicator, focus ring
+
+### Shadow Colors
+Shadows are **neutral black-tinted**, kept light. Bloomberg favors flat broadsheet aesthetic over elevated UI:
+- `rgba(0,0,0,0.04) 0 1px 2px` — minimal ambient
+- `rgba(0,0,0,0.06) 0 2px 6px` — dropdown
+- `rgba(0,0,0,0.12) 0 8px 20px` — overlay
+- `rgba(0,0,0,0.24) 0 16px 40px` — modal
+
+### Semantic
+- **Success / Market Up** (`#2ea44f` on `#e1f1e7`) — Bloomberg green for "up" market data
+- **Warning** (`#ffb800` on `#fff3d2`) — amber advisory; also ticker-unchanged
+- **Danger / Market Down** (`#d8232a` on `#fbe1e2`) — Bloomberg red for "down" market data and form errors
+- **Info** (`#fa7900` on `#fdebd2`) — info shares brand orange
+- **Market Neutral** (`#5c5c5c`) — gray for unchanged market data
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `BWHaasHead` — a custom cut of Neue Haas Grotesk Display by Christian Schwartz, commissioned for Bloomberg's 2015 redesign by Pentagram (Luke Hayman). A precise geometric grotesk built for narrow column display sizes and Businessweek covers. Available in 400, 500, 600, 700, 800. Fallback: `"Neue Haas Grotesk Display", "Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**Body**: `BWHaasGroteskWeb` — the text companion to BWHaasHead. Available in 400, 500, 700. Fallback: `"Neue Haas Grotesk Text", "Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**UI**: `AvenirNextPForBBG` — Bloomberg's branded cut of Avenir Next. Used for navigation, button labels, bylines, photo credits, and section labels. Available in 400, 500, 600, 700. The "PForBBG" suffix marks it as Bloomberg-licensed. Fallback: `"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**Mono**: `BWHaasMono` — used on market data, tickers, and code. Tabular figures (`tnum`) and slashed-zero (`zero`) are mandatory for column-aligned numerics. Fallback: `Menlo, Consolas, "Courier New", monospace`.
+
+**Serif**: A small companion serif appears in long-form Businessweek features (custom Caslon Doric variant). Used sparingly.
+
+**OpenType features**: BWHaasHead uses standard ligatures and ss01 stylistic set (alternative `a` form) at headline sizes. BWHaasMono uses **tabular figures (`tnum`) + slashed zero (`zero`)** universally on market tickers, data tables, and price displays — column alignment is load-bearing for trading-floor UX patterns ported to consumer.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| masthead-wordmark | BWHaasHead | 32 | 700 | 1.0 | -0.02em | liga | "Bloomberg" wordmark white on black |
+| headline-mega | BWHaasHead | 56 | 600 | 1.05 | -0.02em | — | Cover-class headline (Businessweek) |
+| headline-jumbo | BWHaasHead | 42 | 600 | 1.08 | -0.015em | — | Top-of-fold lead |
+| headline-xl | BWHaasHead | 32 | 600 | 1.12 | -0.01em | — | Above-fold secondary |
+| headline-lg | BWHaasHead | 26 | 500 | 1.15 | -0.005em | — | River lead |
+| headline-md | BWHaasHead | 22 | 500 | 1.2 | 0 | — | River sub |
+| headline-sm | BWHaasHead | 18 | 500 | 1.25 | 0 | — | Compact module |
+| deck | BWHaasGroteskWeb | 18 | 400 | 1.4 | 0 | — | Standfirst — sans, weight 400 |
+| body-md | BWHaasGroteskWeb | 18 | 400 | 1.55 | 0 | — | Default running text |
+| body-sm | BWHaasGroteskWeb | 16 | 400 | 1.5 | 0 | — | Compact card body |
+| pull-quote | BWHaasHead | 30 | 500 | 1.3 | -0.005em | — | Pull-quote with orange left bar |
+| byline | AvenirNextPForBBG | 13 | 600 | 1.3 | 0 | — | "By Tom Maloney and Jenny Surane" |
+| dateline | AvenirNextPForBBG | 12 | 400 | 1.3 | 0.02em | uppercase | "5 NOVEMBER 2024 5:00 AM EST" |
+| section-label | AvenirNextPForBBG | 11 | 700 | 1.0 | 0.1em | uppercase | "MARKETS" / "POLITICS" / "WEALTH" |
+| nav-link | AvenirNextPForBBG | 13 | 600 | 1.0 | 0.06em | uppercase | "Markets" / "Technology" |
+| button-label | AvenirNextPForBBG | 13 | 600 | 1.0 | 0.08em | uppercase | "SUBSCRIBE" / "SIGN IN" |
+| caption | AvenirNextPForBBG | 13 | 400 | 1.4 | 0 | — | Photo / chart caption |
+| photo-credit | AvenirNextPForBBG | 11 | 500 | 1.3 | 0.04em | uppercase | "Photographer: Bloomberg" |
+| micro-meta | AvenirNextPForBBG | 11 | 500 | 1.2 | 0.04em | uppercase | "5 MIN READ" / "PRO" |
+| market-ticker | BWHaasMono | 13 | 600 | 1.0 | 0 | tnum, zero | "S&P 500 5,847.87 +0.42%" |
+| data-tabular | BWHaasMono | 14 | 500 | 1.3 | 0 | tnum, zero | Markets table cell |
+| code-micro | BWHaasMono | 12 | 400 | 1.4 | 0 | — | Code blocks (rare) |
+
+### Principles
+
+- **Three-face system enforces role discipline.** BWHaasHead = editorial. BWHaasGroteskWeb = body. AvenirNextPForBBG = UI chrome. Each face has a single job; mixing roles is forbidden.
+- **Tabular numerals are mandatory on every market context.** BWHaasMono with `tnum` + `zero` enabled — column alignment is load-bearing for financial data.
+- **Headlines stay at 500–600 weight, not 700.** Bloomberg display restraint is editorial — heavier weights look populist, not authoritative.
+- **Negative tracking on all display sizes.** -0.005em → -0.02em on headlines; tracking grows toward 0 as size shrinks. Tracked uppercase (0.06em–0.1em) reserved for AvenirNextPForBBG section labels and button labels.
+- **Black absolute, not warmed.** Body text is `#000000` — pure broadsheet black, not the navy-warm calibration FT and NYT use.
+- **Orange-as-link.** Inline editorial links are orange, not blue. The orange-as-link is a Bloomberg-defining decision that ports the terminal's color language to consumer reading.
+- **Sans for everything; serif only for Businessweek long-form.** The core news product is sans-only — terminal-flavored, not magazine-flavored.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Black fill (`#000000`), white text in AvenirNextPForBBG 13/600 uppercase tracked 0.08em, 0px radius, 14×24px padding, 44px height. The primary CTA is broadsheet-square. Press: flips to orange fill (`#fa7900`) with black text — the Bloomberg signature reverse pairing.
+
+**`button-orange`** — Orange fill (`#fa7900`) with black text — featured CTAs (Subscribe, Terminal Trial). High-contrast brand pairing reserved for premium-action moments.
+
+**`button-secondary`** — Transparent fill, black text, 1px black border, 0px radius. "Already a subscriber? Sign in" over white.
+
+**`button-text-link`** — Plain orange text (`#fa7900`), no surface, no border. Subtle underline grows on hover.
+
+### Cards
+
+**`card-headline`** — White surface, 0px radius, top 1px hairline (`#e0e0e0`), no shadow. BWHaasHead 22/500 headline, BWHaasGroteskWeb 16/400 deck, AvenirNextPForBBG 13/600 byline.
+
+**`card-photo`** — Image-above + headline below, 16:9 aspect ratio. The image fills full card width, no padding inside the photo region.
+
+**`card-markets-data`** — Pure white surface, 1px hairline border, alternating-row tint for legibility. Tabular BWHaasMono numerics with green-up / red-down columns. Used on Markets data tables.
+
+**`card-terminal`** — **Black ground** (`#000000`) with **orange data** (`#fa7900`) and white labels. Terminal-mode aesthetic — used on Pro promotion zones and terminal-trial cards. The black-orange pairing literally reproduces the Bloomberg Terminal's color language.
+
+### Pull-Quote
+
+**`pull-quote`** — Warm-cream backdrop (`#fff8eb`) with **4px orange left bar** (`#fa7900`). BWHaasHead 30/500, no italic. The orange bar marks the pull-out without italic — Bloomberg display restraint extends to pull-quotes.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px `#999999` border, 2px radius (the only place radius creeps above 0), 44px height, 12×14px padding. Focus: border thickens to 2px orange (`#fa7900`).
+
+**`paywall-cta`** — **Black ground** (`#000000`) with white headline, orange Subscribe button, BWHaasHead 28/600 headline. The terminal aesthetic ports to consumer paywall — black-orange-white triad.
+
+### Navigation
+
+**`top-nav`** — White surface, 60px height, with the **black masthead band** sitting on top: full-width edge-to-edge `#000000` band with the BWHaasHead 700 wordmark "Bloomberg" centered in white, edition selector top-right (US / Europe / Asia / Middle East), Subscribe + Sign In + Search top-right.
+
+**`section-nav`** — Horizontal AvenirNextPForBBG 13/600 uppercase tracked links separated by ample whitespace. Hover: orange underline grows from below over 200ms standard.
+
+**`market-ticker-bar`** — **Black ground** (`#000000`) with white labels and tabular BWHaasMono numerals scrolling green-up / red-down market data. Cell flashes on price update over 240ms.
+
+### Decorative
+
+**`section-rule`** — 1px black rule.
+
+**`hairline-rule`** — 1px `#e0e0e0` gray rule between river stories.
+
+**`pro-badge`** — Orange chip (`#fa7900`) with black AvenirNextPForBBG 11/700 uppercase tracked 0.1em "PRO" label, 0px radius, 4×8px padding. Marks premium content.
+
+**`live-indicator`** — Red dot (`#d8232a`) + "LIVE" label in red AvenirNextPForBBG 11/700 uppercase. Used on live-blogs and breaking news.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120`
+- Section padding: 64px between page bands; 32px on mobile
+- Card internal: 16px between image and headline; 8px between headline and deck
+
+### Grid & Container
+
+- Max content width: **1280px** centered on 12-column grid
+- Reading column: **640px** for article body
+- Feature container: **1080px** for hero + sidebar pairings
+- Markets data: 1280px full-width tabular grid
+- Footer: 5-column link list
+
+### Whitespace Philosophy
+
+Bloomberg runs **dense**. Density is the brand voice — information per square inch is the value proposition, mirroring the terminal. The homepage shows 12+ headlines above the fold on desktop, alternating-row data tables, and a live ticker at the very top. The Pursuits and Businessweek sub-brands break the rule with magazine pacing and warm cream grounds, but core news is dense, dark-chromed, and terminal-flavored.
+
+### Section Cadence
+
+- Markets / Technology / Politics / Wealth / Pursuits: black masthead band → white reading canvas → black footer
+- Businessweek (long-form magazine): warm cream `#fffaee` ground with magazine pacing
+- Pursuits (luxury lifestyle): warm cream `#fbfaf7` with editorial photography
+- Opinion: white canvas with rare blue (`#0066cc`) section accent
+- Live blogs: white canvas with red live indicator
+- Pro / Terminal Trial: black-ground terminal-mode panels
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Cards, photos, sections, alerts, paywall, buttons — broadsheet aesthetic |
+| Micro | 2px | Text inputs (the only place radius creeps above 0) |
+| Small | 3px | Search input, dropdown trigger |
+| Standard | 4px | Modal corners, dropdown corners |
+| Pill | 9999px | Save-article chip, audio play button — only when icon is round |
+
+Bloomberg sits firmly in the **square broadsheet** camp. 0px on cards, photos, buttons, and editorial surfaces; 2–4px reserved for inputs and dropdowns where 0px reads as harsh against text fields. The square radius is editorial signaling — newspaper-of-record weight.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Article body, hero, section bands, masthead, ticker |
+| 1 — Hairline | 1px `#e0e0e0` rule | River cards, table rows |
+| 2 — Section Rule | 1px `#000000` rule | Section break, masthead bottom |
+| 3 — Brand Band | full-width black band | Masthead, ticker, paywall, edition selector |
+| 4 — Dropdown | `rgba(0,0,0,0.06) 0 2px 6px` | Account menu, edition selector |
+| 5 — Overlay | `rgba(0,0,0,0.12) 0 8px 20px` | Search overlay |
+| 6 — Modal | `rgba(0,0,0,0.24) 0 16px 40px` | Paywall modal |
+
+### Shadow Philosophy
+
+Bloomberg's depth is **flat-broadsheet by default** — depth is signaled through chromatic bands (black masthead, ticker, paywall, footer), not through shadow elevation. Shadows appear only on chrome (dropdowns, modals), and they're neutral black-tinted at low alpha. The terminal-mode panels use full-black grounds with no shadow whatsoever — the chromatic flip is the depth signal.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)`
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Color swaps, hairline thickening |
+| Standard | 200ms | Card hover, link underline grow, nav transitions |
+| Slow | 320ms | Modal enter, paywall reveal |
+| Tick Flash | 240ms | Market ticker price-update flash |
+
+### Per-Component Recipes
+
+- **Card hover**: image scales 1.0 → 1.02; headline gains a 1px orange underline that grows from 0 to full width over 200ms standard.
+- **Market ticker tick flash**: when a price updates, the cell flashes background green (`#2ea44f`) or red (`#d8232a`) at 0.4 alpha for 240ms, then fades to neutral. The flash is the most identifying motion on Bloomberg — telegraphs live data and ports terminal behavior to consumer.
+- **Section-nav link hover**: orange underline grows from below over 200ms standard; active section gets persistent 2px orange underline.
+- **Edition-selector dropdown**: scale(0.96 → 1.0) + opacity(0 → 1) over 200ms standard.
+- **Paywall modal enter**: scrim fades 0 → 0.65 black alpha over 200ms; modal translates 16px to 0 + opacity 0 → 1 over 320ms emphasized.
+- **Pro-badge appearance**: micro pulse (1.0 → 1.05 → 1.0 scale) when a Pro article first becomes visible; 200ms ease-emphasized.
+- **Live indicator**: red dot pulses 1.0 → 1.4 → 1.0 over 1000ms; suppressed when reduced motion is honored.
+
+### Page Transitions
+
+200ms cross-fade. Black masthead persists across page transitions for brand continuity.
+
+### Reduced Motion
+
+Market ticker flash becomes instant color set (no fade); ticker scrollers pause; live-indicator pulse suppressed; card hovers degrade to underline-only; transforms suppressed.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #000000 black on #ffffff white | 21.0 | AAA |
+| #000000 on #fa7900 orange | 9.6 | AAA |
+| #ffffff on #000000 black | 21.0 | AAA |
+| #fa7900 on #ffffff (link) | 3.5 | AA large only — pairs with bold weight + underline at body |
+| #fa7900 on #000000 (terminal) | 6.0 | AA |
+| #5c5c5c muted on #ffffff | 7.0 | AAA |
+| #2ea44f success on #ffffff | 3.5 | AA large only |
+| #d8232a danger on #ffffff | 5.6 | AA body |
+
+### Focus Indicators
+
+Focus ring: `2px solid #fa7900` (Bloomberg orange) with 2px outline-offset. Orange pairs cleanly with both white and black grounds — visible on the masthead band and on body content.
+
+### ARIA Patterns
+
+- **Market ticker**: `role="region"` with `aria-label="Live market data"` and `aria-live="polite"` on the ticker so significant price changes announce
+- **Edition selector**: `role="combobox"`, `aria-haspopup="listbox"`, edition options as `role="option"`
+- **Paywall modal**: `role="dialog"`, `aria-modal="true"`, focus trapped, Esc closes
+- **Live blog**: `role="feed"`, new entries `aria-live="polite"`
+- **Up/Down market data**: cells use `aria-label="Up 0.42 percent"` rather than relying on the green color alone
+- **Pro badge**: `aria-label="Bloomberg Pro premium content"`
+
+### Keyboard Navigation
+
+- Top edition bar: Tab moves edition selector → Subscribe → Sign in → Search
+- Masthead: Tab on the wordmark exposes a "Skip to content" link
+- Section nav: Tab traverses sections left-to-right
+- Market data table: Tab moves cell-to-cell; arrow keys also navigate
+- Skip-link first
+
+### Screen Reader Hints
+
+- Market ticker cells announce direction explicitly ("Up 0.42 percent" not just "0.42")
+- Photo credits announce as "Photo by [Name] / Bloomberg"
+- Edition selector announces "United States edition selected" / "Asia edition selected"
+- Pro articles announce as "Pro premium content"
+- Live blogs announce as "Live: [headline] — [time-ago]"
+
+### Reduced Motion
+
+Market ticker flash → instant color set; live indicator pulse suppressed; ticker scrollers pause; card hovers → underline-only; transforms suppressed.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Edition bar collapses; masthead becomes hamburger + wordmark + Subscribe; section nav into hamburger; river cards 1-up; market ticker compresses to a horizontal scroller showing 4 indices |
+| Tablet | 640–1024px | Section nav as horizontal scroller; river cards 2-up; market ticker shows 6 indices visible |
+| Desktop | 1024–1440px | Full section nav; river cards 3-up; sidebar appears on article pages; market ticker shows 10+ indices |
+| Wide | >1440px | Content caps at 1280px |
+
+### Touch Targets
+
+- Primary CTAs: 44×44px
+- Section nav: 44px tap area
+- Edition selector: 44px on mobile
+- Market ticker tap target: 36px row
+
+### Collapsing Strategy
+
+- Edition selector + utility nav collapse first
+- Section nav becomes scroller, then hamburger
+- Subscribe stays visible at all breakpoints
+- River cards drop column count: 4 → 3 → 2 → 1
+- Sidebar collapses below article body on tablet
+- Market ticker compresses indices count by viewport
+- Pro badge stays at all breakpoints
+
+### Image Behavior
+
+- River-card images: `aspect-ratio: 16/9` desktop, `4/3` mobile
+- Hero images: full-bleed up to 1080px
+- Photo essays: scroll-snap on touch surfaces
+- Charts: sized to container with tabular labels in BWHaasMono
+
+### Container Queries
+
+Pursuits sub-brand cards use container queries to switch between magazine 2-up and editorial 3-up layouts; right-rail "Most read" list compresses to single-line truncate when narrow.
+
+## 11. Content & Voice
+
+### Tone
+
+Authoritative, data-grounded, globally-financial, terminal-flavored. Bloomberg's voice is calibrated for professional financial readers — sentences are precise, numbers are sourced, and the publication assumes financial literacy. Headlines lead with the news + the financial consequence ("Fed Cuts Rates 25bps as Jobs Data Cools Inflation Worries"); decks add specifics with named institutions, basis points, and percentages. The Pursuits and Businessweek sub-brands soften the tone toward magazine-feature voice, but core news is direct and number-anchored.
+
+### Microcopy Patterns
+
+- **Subscribe verbs**: "Subscribe", "Continue", "Start trial", "Sign in" — minimal CTA verbs
+- **Paywall messages**: "You've reached your free article limit. Subscribe to Bloomberg.com for unlimited access."
+- **Date format**: "November 5, 2024 at 5:00 AM EST" — US convention with timezone
+- **Section labels in AvenirNextPForBBG uppercase**: "MARKETS", "TECHNOLOGY", "POLITICS", "WEALTH", "PURSUITS", "OPINION"
+- **Market data**: "S&P 500 ▲ 5,847.87 +0.42% +24.32" — direction triangle + price + percent + delta
+- **Live indicators**: "LIVE — [time-ago]" with red dot and pulse animation
+- **Pro markers**: orange "PRO" chip on premium content
+
+### CTA Verb Conventions
+
+- Primary: **"Subscribe"**, **"Continue"**, **"Start free trial"**, **"Sign in"**, **"Read"**
+- Secondary: **"Save"**, **"Share"**, **"Listen"**, **"Watch"**
+- Tertiary: **"More on this story"**, **"View all"**, **"See the chart"**
+- Avoided: "Click here", "Submit", "Buy now", "Learn more"
+
+### Empty States
+
+- Saved articles: "Your saved articles will appear here. Subscribe to save unlimited articles."
+- Search no results: "No stories match your search. Try different keywords or check our sections."
+- Market data unavailable: "Market data is currently unavailable. Try again in a few moments." (data outages get explicit messaging — terminal-flavored honesty)
+- Watchlist empty: "Add tickers to your watchlist to track them across Bloomberg."
+
+## 12. Dark Mode & Theming
+
+Bloomberg supports a **system-level dark mode**. The token swap is unique because the brand orange holds — the signature color is identical in both modes:
+
+- `bg`: `#0d0d0d` — near-black canvas
+- `bg-masthead`: `#000000` — masthead stays pure black
+- `surface`: `#1a1a1a`
+- `surface-soft`: `#262626`
+- `text`: `#ffffff` — body inverts to pure white
+- `text-strong`: `#ffffff`
+- `text-muted`: `#b3b3b3`
+- `text-soft`: `#8a8a8a`
+- `brand`: `#fa7900` — orange holds, the terminal color is mode-independent
+- `link`: `#fa7900`
+- `border`: `#333333`
+- `border-rule`: `#fa7900` — section rules invert from black to orange
+
+The dark mode is itself the brand's terminal pairing — orange-on-black is the Bloomberg Terminal's literal color language since 1981. Dark mode for Bloomberg isn't a token swap, it's a brand homecoming.
+
+## 13. Lineage & Influences
+
+Bloomberg's visual lineage is **the Bloomberg Terminal itself**. Michael Bloomberg founded the company in 1981 and shipped the first terminal in 1982 — orange-on-black command-line trading software. The orange (`#fa7900`) was chosen because it was the most legible color on the green-phosphor CRT monitors of the early 1980s; black was simply the unlit phosphor. The web product, redesigned by Pentagram (Luke Hayman) in 2015, ports those decisions directly to consumer reading: orange accents, black-banded chrome, tabular numerals, green-up / red-down market convention.
+
+Christian Schwartz designed BWHaasHead and BWHaasGroteskWeb as a Neue Haas Grotesk variant for Bloomberg's brand. AvenirNextPForBBG is a custom commission of Avenir Next licensed to Bloomberg. The three faces work as a system: Haas for editorial, Avenir for chrome, and BWHaasMono for data — each face has a single role.
+
+Bloomberg Businessweek (the magazine, redesigned by Richard Turley 2009–2014, then continued under Robert Vargas) influences the long-form web aesthetic — warm cream backgrounds, magazine pacing, large-format photography. Pursuits (luxury) borrows from Condé Nast's lifestyle magazine vocabulary. The core news product, however, stays close to the terminal aesthetic.
+
+What Bloomberg rejects: blue-as-link (orange is the link color), italic decks (the FT and NYT use italic standfirsts; Bloomberg uses sans 400), rounded corners on editorial surfaces, decorative gradients, and the salmon-pink-broadsheet convention that defines the FT's print and web identity. Bloomberg is the terminal-as-brand; everything else follows.
+
+**Influences:**
+- Bloomberg Terminal (1982) — orange-on-black financial workstation, the brand's chromatic source — [bloomberg.com/professional/products/bloomberg-terminal](https://www.bloomberg.com/professional/products/bloomberg-terminal)
+- Bloomberg Businessweek redesign (2009 — Richard Turley) — magazine modernism that ported back to web
+- Pentagram (Luke Hayman, 2015) — bloomberg.com web redesign that codified the current system
+- Christian Schwartz — BWHaasHead/BWHaasGroteskWeb custom commission — [christianschwartz.com](https://christianschwartz.com)
+- Neue Haas Grotesk — the parent face of BWHaasHead — [commercialtype.com/catalog/neue_haas_grotesk](https://commercialtype.com/catalog/neue_haas_grotesk)
+- Reuters / Dow Jones — financial-data-density convention (Bloomberg pushed it further into editorial)
+
+## 14. Do's and Don'ts
+
+**Do**
+- Use Bloomberg orange (`#fa7900`) for primary action — links, CTA accents, focus rings, Pro badges
+- Run the black masthead band edge-to-edge full width with the BWHaasHead 700 wordmark in white
+- Set headlines in BWHaasHead at modest weight 500–600 — typographic restraint is editorial voice
+- Run body in BWHaasGroteskWeb at 18/1.55 — pure black text on pure white
+- Use AvenirNextPForBBG for all UI chrome (links, buttons, navigation, photo credits) — never for editorial
+- Use tabular BWHaasMono numerals (`tnum` + `zero`) on every market context — tickers, tables, prices
+- Apply green-up / red-down convention on market data with cell-flash animation on price updates
+- Use the black-on-orange reverse pairing for featured CTAs (Subscribe, Terminal Trial)
+- Use the terminal aesthetic — black ground with orange data — for Pro promotion zones
+- Use the live indicator (red dot + "LIVE" label) on breaking news and live blogs
+- Use US date format with timezone ("November 5, 2024 at 5:00 AM EST")
+
+**Don't**
+- Don't use blue as a link color — orange (`#fa7900`) is the Bloomberg link signature
+- Don't use rounded card corners — broadsheet aesthetic is square (0px on cards/photos/buttons)
+- Don't push display weight to 700+ — restraint at 500–600 is brand voice
+- Don't put italic on decks or pull-quotes — Bloomberg uses sans weight 400 standfirsts (FT/NYT use italic)
+- Don't apply heavy shadows to article cards — depth comes from the black masthead band, not elevation
+- Don't drop the tabular numeric convention on market data — column alignment is load-bearing
+- Don't mix BWHaasHead, BWHaasGroteskWeb, and AvenirNextPForBBG roles — each face has a single job
+- Don't use absolute black for body without paying attention to ink saturation — Bloomberg uses pure `#000`, not warmed
+- Don't use "Click here", "Submit", "Buy now" — verbs are "Subscribe", "Continue", "Start trial"
+- Don't use a salmon ground — that's the FT, and the chromatic clash with Bloomberg orange would be jarring
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Bloomberg-Black:   #000000  (masthead, primary CTA fill, pure body text)
+Bloomberg-Orange:  #fa7900  (terminal signature — links, accents, focus ring)
+Orange-Hover:      #e26b00
+White:             #ffffff
+Muted:             #5c5c5c
+Hairline:          #e0e0e0
+Market-Up:         #2ea44f
+Market-Down:       #d8232a
+Businessweek-Cream: #fffaee
+Pursuits-Cream:    #fbfaf7
+```
+
+### Example Component Prompts
+
+- "Create a Bloomberg article header on white (#ffffff) with the **black masthead band** (#000000) full-width above: section label in AvenirNextPForBBG 11/700 uppercase tracked 0.1em ('MARKETS' or 'POLITICS') in black, 1px black rule below, headline in BWHaasHead 42/600 black with -0.015em tracking, BWHaasGroteskWeb 18/400 deck, AvenirNextPForBBG 13/600 byline ('By Tom Maloney and Jenny Surane'), AvenirNextPForBBG 12/400 uppercase dateline ('5 NOVEMBER 2024 5:00 AM EST')."
+- "Design a Bloomberg market ticker bar: black ground (#000000) edge-to-edge, white labels in AvenirNextPForBBG 11/600 uppercase, tabular BWHaasMono 13/600 numerals with `tnum` and `zero` enabled ('S&P 500 ▲ 5,847.87 +0.42%'). On price update, the cell flashes background green (#2ea44f) or red (#d8232a) at 0.4 alpha for 240ms then fades. Place above the masthead."
+- "Build a Bloomberg primary CTA: black fill (#000000) with white text in AvenirNextPForBBG 13/600 uppercase tracked 0.08em ('SUBSCRIBE'), 0px radius (broadsheet square), 14×24px padding, 44px height. Hover flips to orange fill (#fa7900) with black text — the Bloomberg signature reverse pairing."
+- "Create a Bloomberg Pro badge: orange chip (#fa7900) with black AvenirNextPForBBG 11/700 uppercase tracked 0.1em 'PRO' label, 0px radius, 4×8px padding. Place inline with article headline to mark premium content."
+- "Build a Bloomberg terminal-mode card: black ground (#000000) with orange (#fa7900) data labels in BWHaasMono 14/500 tabular numerics, white headline in BWHaasHead 22/500. The orange-on-black pairing literally reproduces the Bloomberg Terminal's color language since 1981."
+- "Design a Bloomberg paywall modal: black ground (#000000) with white BWHaasHead 28/600 headline ('You've reached your free article limit'), white BWHaasGroteskWeb 16/400 sub-copy, orange (#fa7900) Subscribe CTA with black text. Behind: 65% black scrim. The terminal aesthetic ports to consumer paywall."
+
+### Iteration Guide
+
+1. **Orange is the link, not blue.** `#fa7900` is the Bloomberg signature. Inline editorial links, hover underlines, focus rings, and active-nav indicators all use orange.
+2. **Black masthead band is mandatory.** Full-width, edge-to-edge, with the BWHaasHead 700 white wordmark. The black band is the brand banner.
+3. **Three-face system enforces role discipline.** BWHaasHead = editorial. BWHaasGroteskWeb = body. AvenirNextPForBBG = UI chrome. Never mix roles.
+4. **Tabular numerals on every market context.** Enable `font-variant-numeric: tabular-nums` and `slashed-zero` on tickers, prices, data tables. Column alignment is load-bearing.
+5. **Square radius (0px) on cards, photos, buttons.** Broadsheet aesthetic. Inputs and dropdowns get 2–4px max.
+6. **Density is brand voice.** Don't widen whitespace — Bloomberg shows 12+ headlines above the fold; that's the value proposition.
+7. **Green-up / red-down with ticker-cell flash.** Markets data uses success green (`#2ea44f`) for positive, danger red (`#d8232a`) for negative; cell flashes at 0.4 alpha for 240ms on price update.
+8. **Pure black body, not warmed.** Body uses `#000000` — don't warm it like FT navy or NYT charcoal. Bloomberg's broadsheet is absolute black.

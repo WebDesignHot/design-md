@@ -1,0 +1,765 @@
+---
+name: Amazon Web Services
+tagline: Squid-ink navy with Smile-orange CTAs — the densest tile-portal on the cloud-platform internet.
+author: webdesignhot
+source_url: https://aws.amazon.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [light, dense, sans, structured, technical, cool]
+preview_swatch: ['#ffffff', '#ff9900', '#232f3e']
+related: [datadog, hashicorp, vercel]
+description: 'AWS is the grand-central station of the public internet — a paper-white marketing canvas (`#ffffff`) anchored by a squid-ink navy (`#232f3e`) header and the unmistakable Amazon Smile orange (`#ff9900`) for every primary CTA. Amazon Ember — the in-house humanist sans Amazon commissioned in 2014 — carries the entire console, the marketing site, the docs, and the receipts in your inbox. The supporting blue (`#0073bb`) carries links and "Learn more" affordances, while the deep-navy footer (`#161e2d`) closes the page like the bottom of a freight manifest. Where Stripe sells trust through restraint and Linear through monochrome velocity, AWS sells **breadth** — 240+ services, 100+ regions, 30+ industries — and the visual system is engineered to make that breadth survivable: hairline `#eaeded` borders, dense 4-up tile grids, tabular-numeral pricing, and a chromatic discipline so tight that only two brand colors (orange + navy) ever ship outside diagrams.'
+
+colors:
+  bg: '#ffffff'                # page canvas
+  bg-soft: '#fafafa'           # alternating section
+  bg-section: '#f2f3f3'        # observed feature-band ground
+  bg-deep: '#232f3e'           # squid-ink header / navy band
+  bg-darker: '#161e2d'         # footer ground (deeper navy)
+  bg-nav-secondary: '#37475a'  # mid-navy secondary nav strip
+  surface: '#ffffff'           # card panel
+  surface-soft: '#fafafa'      # tile resting
+  surface-hover: '#f2f3f3'     # tile hover ground
+  surface-selected: '#fff8eb'  # observed orange-tinted selected row
+  text: '#16191f'              # primary body text — near-black with blue undertone
+  text-strong: '#0d1116'       # observed h1 strongest ink
+  text-body: '#16191f'         # body paragraph
+  text-muted: '#545b64'        # observed secondary copy
+  text-faint: '#687078'        # caption / metadata
+  text-on-deep: '#ffffff'      # white on navy band
+  text-on-deep-muted: '#d5dbdb' # subdued white on navy
+  brand: '#ff9900'             # Amazon Smile orange — primary CTA
+  brand-hover: '#ec7211'       # observed pressed state
+  brand-active: '#d45b07'      # deeper press
+  brand-soft: '#fff8eb'        # info/orange-tinted ground
+  brand-on: '#000000'          # black-on-orange (best contrast)
+  navy: '#232f3e'              # primary AWS dark navy
+  navy-deep: '#161e2d'         # footer navy
+  navy-mid: '#37475a'          # secondary nav navy
+  accent: '#0073bb'            # AWS link blue
+  accent-hover: '#005a92'      # link pressed
+  accent-soft: '#f1faff'       # info background tint
+  accent-strong: '#005d8c'     # darker link variant
+  link: '#0073bb'              # default anchor
+  link-hover: '#005a92'        # hover state
+  link-visited: '#5a3aa3'      # visited link (rare)
+  border: '#eaeded'            # hairline default
+  border-strong: '#aab7b8'     # tile separator
+  border-subtle: '#f2f3f3'     # faintest divider
+  border-input: '#879596'      # input chrome
+  ring-focus: '#0073bb'        # 2px focus ring
+  shadow-tile: 'rgba(0,28,36,0.06)'      # tile drop
+  shadow-elevated: 'rgba(0,28,36,0.20)'  # hover-lifted tile
+  on-brand: '#000000'          # black on orange (Amazon convention)
+  on-accent: '#ffffff'         # white on link blue
+  on-navy: '#ffffff'           # white on navy
+  success: '#1d8102'
+  success-bg: '#f2f8f0'
+  warning: '#8d6708'
+  warning-bg: '#fff8eb'
+  danger: '#d13212'
+  danger-bg: '#fdf3f1'
+  info: '#0073bb'
+  info-bg: '#f1faff'
+
+typography:
+  display:
+    family: '"Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [300, 400, 500, 700]
+    opentype-features: 'kern, liga, tnum'
+  body:
+    family: '"Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: '"Amazon Ember Mono", "SF Mono", Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 56, weight: 700, lineHeight: 1.10, tracking: '-0.018em', family: display, opentype: 'kern, liga' }
+    display-xl:      { size: 44, weight: 700, lineHeight: 1.14, tracking: '-0.012em', family: display }
+    display-lg:      { size: 36, weight: 700, lineHeight: 1.20, tracking: '-0.008em', family: display }
+    h1:              { size: 32, weight: 700, lineHeight: 1.22, tracking: '-0.004em', family: display }
+    h2:              { size: 24, weight: 700, lineHeight: 1.28, tracking: '0',        family: display }
+    h3:              { size: 20, weight: 700, lineHeight: 1.32, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 700, lineHeight: 1.40, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.30, tracking: '0.08em',   family: display, transform: uppercase }
+    lead:            { size: 18, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    body-lg:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    body-sm:         { size: 13, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.40, tracking: '0.01em',   family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.40, tracking: '0',        family: body }
+    cta:             { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.005em',  family: display }
+    nav-link:        { size: 13, weight: 400, lineHeight: 1.30, tracking: '0',        family: display }
+    nav-link-strong: { size: 14, weight: 700, lineHeight: 1.30, tracking: '0',        family: display }
+    code:            { size: 13, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.45, tracking: '0',        family: mono }
+    price:           { size: 28, weight: 700, lineHeight: 1.10, tracking: '-0.01em',  family: display, opentype: 'tnum' }
+    metric:          { size: 36, weight: 700, lineHeight: 1.05, tracking: '-0.01em',  family: display, opentype: 'tnum' }
+
+radius:
+  micro: 1
+  sm: 2
+  md: 4
+  lg: 8
+  xl: 12
+  xxl: 16
+  pill: 9999
+  button: 4
+  card: 8
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 36
+  secondary-nav-height: 36
+  product-grid-cols: 4
+  feature-grid-cols: 3
+
+components:
+  button-primary: { bg: '#ff9900', text: '#000000', padding: '8px 18px', radius: 4, font: cta, weight: 700, hover-bg: '#ec7211', use: 'Hero CTA, Sign up, Get started' }
+  button-secondary: { bg: '#ffffff', text: '#16191f', padding: '7px 17px', radius: 4, border: '1px solid #545b64', hover-bg: '#fafafa', hover-border: '#16191f', use: 'Learn more, Read documentation' }
+  button-ghost: { bg: 'transparent', text: '#0073bb', padding: '6px 0', font: cta, weight: 700, hover-text: '#005a92', icon-suffix: '›', use: 'Inline link-CTA inside cards' }
+  button-tertiary: { bg: 'transparent', text: '#0073bb', padding: '8px 12px', radius: 4, hover-bg: '#f1faff', use: 'Toolbar action, console quick-action' }
+  service-tile: { bg: '#ffffff', border: '1px solid #eaeded', radius: 8, padding: 20, hover-shadow: 'rgba(0,28,36,0.20) 0 4px 12px', hover-lift: '-2px', use: 'AWS service catalog tile' }
+  card: { bg: '#ffffff', border: '1px solid #eaeded', radius: 8, padding: '20px 24px', shadow: 'rgba(0,28,36,0.06) 0 1px 4px', use: 'Feature card, doc card' }
+  pricing-card: { bg: '#ffffff', border: '1px solid #aab7b8', radius: 8, padding: '24px 28px', highlight-border: '#ff9900', use: 'Pricing tier card' }
+  badge: { bg: '#fff8eb', text: '#8d6708', padding: '2px 8px', radius: 2, font: caption, weight: 700, use: 'New, Preview, Generally Available' }
+  badge-new: { bg: '#ff9900', text: '#000000', padding: '2px 8px', radius: 2, font: caption, weight: 700, use: 'New service launch' }
+  input: { bg: '#ffffff', border: '1px solid #879596', radius: 4, padding: '6px 10px', focus-ring: '2px solid #0073bb', use: 'Console search, sign-in form' }
+  nav-link: { padding: '0 14px', height: 36, font: nav-link, color-rest: '#ffffff', color-hover: '#ff9900', bg: '#232f3e', use: 'Top-nav primary on navy' }
+  breadcrumb: { font: body-sm, color: '#0073bb', separator: '›', use: 'Console breadcrumb trail' }
+  alert-info: { bg: '#f1faff', border: '1px solid #0073bb', radius: 0, padding: '12px 16px', use: 'Console info banner — sharp corners' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 260
+  duration-page: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce — tile lifts disappear, only opacity transitions retained; console renders without enter animations'
+
+breakpoints:
+  mobile: 600
+  tablet: 900
+  desktop: 1200
+  wide: 1400
+
+shadows:
+  ambient: 'rgba(0,28,36,0.04) 0 1px 2px'
+  standard: 'rgba(0,28,36,0.06) 0 1px 4px'
+  elevated: 'rgba(0,28,36,0.20) 0 4px 12px'
+  deep: 'rgba(0,28,36,0.30) 0 8px 24px -4px'
+  ring: '0 0 0 2px #0073bb'
+
+accessibility:
+  contrast-text-on-bg: 16.9              # #16191f on #ffffff — AAA
+  contrast-text-on-brand: 11.6           # #000000 on #ff9900 — AAA (Amazon's deliberate choice)
+  contrast-text-on-navy: 12.8            # #ffffff on #232f3e — AAA
+  contrast-link-on-bg: 5.6               # #0073bb on #ffffff — AA
+  focus-ring: '2px solid #0073bb, 2px offset'
+  reduced-motion-honored: true
+  keyboard-trap-free: true
+
+dark-mode: optional
+
+lineage:
+  summary: |
+    AWS's marketing identity descends from two ancestors. Visually, it owes
+    the dense-tile portal pattern to enterprise software catalogs of the
+    late 1990s — IBM WebSphere, Oracle iAS, BEA WebLogic — modernized with
+    hairline borders and 8px radii. Typographically, the 2014 move to
+    Amazon Ember (Dalton Maag) optimized for 13/14px console legibility
+    before high-DPI was universal. The navy + orange palette dates to the
+    1995 Amazon launch — Bezos's original logo was navy with an orange
+    smile, and 30 years later AWS still carries the same chromatic memory.
+    The black-on-orange CTA pair is a holdover from amazon.com retail
+    discipline where AAA contrast is non-negotiable.
+  influences:
+    - name: 'Amazon.com'
+      role: '30-year-old chromatic memory of navy + orange smile, transactional copy discipline, AAA-contrast button heritage.'
+      url: https://www.amazon.com
+    - name: 'IBM WebSphere / Oracle iAS'
+      role: 'Enterprise dense-tile portal pattern — categories then services then resources information architecture.'
+      url: https://www.ibm.com
+    - name: 'Helvetica / Akzidenz-Grotesk lineage'
+      role: 'Amazon Ember humanist-sans heritage, screen-density tuning at 13–14px body sizes.'
+      url: https://en.wikipedia.org/wiki/Helvetica
+    - name: 'Stripe Documentation'
+      role: 'Hairline-border + 8px-radius card grammar adopted by AWS docs in 2018.'
+      url: https://stripe.com/docs
+---
+
+## 1. Visual Theme & Atmosphere
+
+AWS is the grand-central station of the public internet, and the marketing surface looks the part — a paper-white concourse (`#ffffff`) framed by a squid-ink navy header (`#232f3e`) and signed off with the unmistakable Amazon Smile orange (`#ff9900`) wherever a primary action lives. The visual atmosphere is **freight-manifest, not boutique**: dense tile grids, tabular pricing, hairline `#eaeded` borders, and a chromatic discipline so tight that only two brand colors — orange and navy — ever ship outside service-architecture diagrams. Walk into aws.amazon.com and the page reads like the lobby of a transcontinental rail company circa 1950: you can smell the brass and the print ink, and you trust that whatever you're booking will arrive on time.
+
+The defining type voice is **Amazon Ember**, the humanist sans Amazon commissioned in 2014 from Dalton Maag. It carries the entire console, the marketing site, the docs, and the receipts that arrive in your inbox at 4am after a CloudFront cache invalidation. Ember is slightly warmer than Helvetica, slightly tighter than Inter — the apertures are open enough to read at 12px in a console table, and the cap-heights are tall enough to anchor a 56px hero without breathing-help. Display weights run 700 (hero) and 700 (h1–h4); body runs 400 with a body-strong 500 reserved for emphasis. Caption type drops to 12/400, and the only mono is **Amazon Ember Mono** — used in code blocks, the CLI snippets, and the `arn:aws:s3:::your-bucket-name` resource identifiers that define cloud-engineer life.
+
+Layout-wise the site is engineered for **breadth survival**. AWS sells 240+ services across 100+ regions to 30+ industries, and the visual system makes that survivable through three patterns: (1) the 4-up service tile grid, where every product tile is a uniform 8px-radius rectangle with hairline border; (2) the tabbed pricing matrix, where Amazon Ember's `tnum` opentype feature aligns dollar amounts down to the third decimal; and (3) the navy header strip itself, which carries 80+ services in a mega-menu without ever feeling claustrophobic because the chrome is so disciplined. Where Stripe sells trust through restraint and Vercel sells velocity through monochrome dark-mode, AWS sells **completeness** — and it sells it by making completeness legible.
+
+The signature flare is the **orange-on-black CTA**. Amazon's primary button is `#ff9900` ground with `#000000` text — the 11.6:1 contrast pair is deliberately AAA, a holdover from amazon.com's retail-site discipline where button accessibility is non-negotiable. Hover darkens the orange to `#ec7211`; active drops to `#d45b07`. The button sits at 4px radius (not pill, not 8px) — a square-ish silhouette that reads as **commerce-grade, not consumer-app**. Pair it with a `#ffffff` outlined-`#545b64`-bordered secondary "Learn more" button and the CTA group becomes the most recognizable shape in cloud marketing.
+
+The footer closes every page in **deeper navy** (`#161e2d`) — a tone darker than the header, signed-off with a dense link-mesh of 80+ AWS services, 30+ regional sites, and the Amazon corporate footer. It's the freight manifest at the bottom of the bill of lading: every service we offer, every continent we serve, every service-level commitment we hold to, listed in 13/400 Amazon Ember on white-text-on-navy.
+
+**Key Characteristics**
+- Paper-white `#ffffff` canvas with `#232f3e` squid-ink navy header and `#161e2d` footer
+- Amazon Ember sans across all hierarchy — 300/400/500/700 weights, no italic in display
+- Amazon Smile orange (`#ff9900`) for every primary CTA, with **black** text for AAA contrast
+- AWS link blue (`#0073bb`) for anchors, breadcrumbs, and ghost-link CTAs
+- 4px button radius (not pill, not 8px) — commerce-grade silhouette
+- Hairline `#eaeded` borders, never heavy strokes
+- 4-up service tile grid with 8px tile radius and 2px hover-lift
+- Tabular-numeral (`tnum`) pricing matrices — every dollar aligned
+- Console-grade information density — many things visible at once
+- Sharp-corner alert banners (radius 0) — a console-chrome holdover
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** (`#ffffff`): page canvas — the paper-white concourse
+- **text** (`#16191f`): primary body — near-black with a faint blue undertone (not pure black, distinguishes from print)
+- **text-strong** (`#0d1116`): display copy at strongest ink
+- **brand** (`#ff9900`): Amazon Smile orange — primary CTA fill, brand wordmark accent
+- **on-brand** (`#000000`): **black** on orange — Amazon's deliberate AAA contrast choice (5.1:1 white-on-orange would only pass AA Large)
+
+### Brand & Dark
+
+- **navy** (`#232f3e`): squid-ink — primary header strip, dark hero band
+- **navy-deep** (`#161e2d`): footer ground — a deeper register than the header
+- **navy-mid** (`#37475a`): secondary nav strip below the header
+- **brand-hover** (`#ec7211`): orange CTA pressed
+- **brand-active** (`#d45b07`): orange CTA deep press
+- **brand-soft** (`#fff8eb`): orange-tinted background for selected console rows, badge surfaces
+
+### Accent (AWS Link Blue)
+
+- **accent** (`#0073bb`): default link, breadcrumb, ghost-CTA text
+- **accent-hover** (`#005a92`): pressed link
+- **accent-soft** (`#f1faff`): info-band background, alert-info ground
+- **accent-strong** (`#005d8c`): darker link variant for emphasis
+- **link-visited** (`#5a3aa3`): visited links — rarely surfaced but spec'd
+
+### Interactive
+
+- **link** (`#0073bb`): same as accent
+- **link-hover** (`#005a92`): underline grows from text-only to 1px
+- **selected** (`#fff8eb`): orange-tinted ground for selected console rows
+- **disabled-text** (`#aab7b8`): muted control text
+- **disabled-bg** (`#f2f3f3`): disabled control surface
+
+### Neutral Scale (cool — slight blue undertone, distinguishes from Helvetica neutral)
+
+- `#0d1116` heading-strong
+- `#16191f` body
+- `#414d5c` body-secondary (observed h2 secondary copy)
+- `#545b64` body-muted
+- `#687078` caption
+- `#879596` input-border / disabled-text-strong
+- `#aab7b8` border-strong / disabled-text
+- `#d5dbdb` border-disabled / on-navy-muted
+- `#eaeded` border-default
+- `#f2f3f3` surface-section / surface-hover
+- `#fafafa` surface-soft
+- `#ffffff` page-bg
+
+### Surface & Borders
+
+- **surface** (`#ffffff`): card and tile ground
+- **surface-soft** (`#fafafa`): tile resting tier
+- **surface-section** (`#f2f3f3`): alternating feature band
+- **bg-deep** (`#232f3e`): squid-ink dark band, header
+- **border** (`#eaeded`): hairline default
+- **border-strong** (`#aab7b8`): table-row separator, pricing-card chrome
+- **border-input** (`#879596`): input rest border
+- **border-subtle** (`#f2f3f3`): faintest divider inside dense tables
+
+### Shadow Colors
+
+AWS shadows are **navy-tinted** (`rgba(0,28,36,0.x)`) rather than neutral black — a subtle nod to the navy header and a colorful trick to keep elevation feeling cohesive with the brand:
+
+- **shadow-tile** (`rgba(0,28,36,0.06) 0 1px 4px`): default tile
+- **shadow-elevated** (`rgba(0,28,36,0.20) 0 4px 12px`): hover lift
+- **shadow-deep** (`rgba(0,28,36,0.30) 0 8px 24px -4px`): modal / overlay
+
+### Semantic
+
+- **success** (`#1d8102`) on **success-bg** (`#f2f8f0`): "Service available", deployment-succeeded
+- **warning** (`#8d6708`) on **warning-bg** (`#fff8eb`): "Approaching quota", retention warnings (warning-bg shares hue with brand-soft — orange family)
+- **danger** (`#d13212`) on **danger-bg** (`#fdf3f1`): "Service disrupted", error states
+- **info** (`#0073bb`) on **info-bg** (`#f1faff`): notice, breadcrumb, learn-more
+
+## 3. Typography Rules
+
+### Font Family
+
+**Amazon Ember** is the primary — a humanist sans commissioned by Amazon from Dalton Maag in 2014, designed specifically for screens. Stack:
+
+```
+"Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif
+```
+
+The Helvetica Neue fallback is deliberate — when Ember fails to load (still rare), the cascade lands close enough that the visual rhythm survives. Body and display share the family; weight does the work. The mono companion is **Amazon Ember Mono** — used for CLI snippets, ARN identifiers, and the inline code that defines AWS engineering life.
+
+OpenType features used: `kern` (always), `liga` (standard), `tnum` for all pricing tables, metrics dashboards, and the console's tabular data. Display sizes ≥32px enable `kern` and `liga` only; no stylistic alternates.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Tracking | OT Features | Notes |
+|------|------|-----:|-------:|-------:|---------:|-------------|-------|
+| display-hero | Amazon Ember | 56 | 700 | 1.10 | -0.018em | kern, liga | Re:Invent campaign hero |
+| display-xl | Amazon Ember | 44 | 700 | 1.14 | -0.012em | kern, liga | Service launch headline |
+| display-lg | Amazon Ember | 36 | 700 | 1.20 | -0.008em | kern | Section title |
+| h1 | Amazon Ember | 32 | 700 | 1.22 | -0.004em | kern | Page title |
+| h2 | Amazon Ember | 24 | 700 | 1.28 | 0 | kern | Major section |
+| h3 | Amazon Ember | 20 | 700 | 1.32 | 0 | kern | Card title, tile title |
+| h4 | Amazon Ember | 18 | 700 | 1.40 | 0 | kern | Sub-card |
+| eyebrow | Amazon Ember | 12 | 700 | 1.30 | 0.08em | uppercase | Above-hero label |
+| lead | Amazon Ember | 18 | 400 | 1.50 | 0 | — | Hero subhead |
+| body-lg | Amazon Ember | 16 | 400 | 1.55 | 0 | — | Marketing prose |
+| body | Amazon Ember | 14 | 400 | 1.50 | 0 | — | Default — note the 14px floor (smaller than Stripe's 16px) |
+| body-sm | Amazon Ember | 13 | 400 | 1.50 | 0 | — | Console table copy |
+| label | Amazon Ember | 13 | 700 | 1.40 | 0.01em | — | Form label, breadcrumb |
+| caption | Amazon Ember | 12 | 400 | 1.40 | 0 | — | Asterisk, fine print |
+| cta | Amazon Ember | 14 | 700 | 1.0 | 0.005em | — | Button label |
+| nav-link | Amazon Ember | 13 | 400 | 1.30 | 0 | — | Top-nav (on navy ground) |
+| price | Amazon Ember | 28 | 700 | 1.10 | -0.01em | tnum | Pricing tier |
+| metric | Amazon Ember | 36 | 700 | 1.05 | -0.01em | tnum | Dashboard KPI |
+| code | Amazon Ember Mono | 13 | 400 | 1.55 | 0 | — | CLI snippet |
+| code-micro | Amazon Ember Mono | 12 | 400 | 1.45 | 0 | — | Inline ARN, resource ID |
+
+### Principles
+
+- **14px is the body floor**. Where Stripe and Notion default to 16px body, AWS's body baseline is 14px — a console-density holdover that lets the marketing site share components with the AWS Console without re-typesetting.
+- **Weight 700 is the only display weight**. AWS doesn't use 600 or 500 for display sizes — it commits to 700 for everything ≥18px. The result reads decisive, never tentative.
+- **Tabular numerals are non-negotiable on prices and metrics**. Pricing tiers, region pricing tables, calculator outputs — every number runs `tnum` so digits align across rows. Marketing prose stays proportional.
+- **Eyebrows shout once, in uppercase**. 12/700 with +0.08em tracking, used above hero and above section headers — the only place AWS marketing uses uppercase typography.
+- **No italic in display**. The brand voice is declarative — italics would soften the freight-manifest tone. Italics survive only inside body prose for foreign words and titles.
+- **Mono is reserved for code-context only**. Amazon Ember Mono never appears outside `<code>` and CLI snippets — labels, prices, and metrics all stay in Amazon Ember sans with `tnum`.
+- **Negative tracking only at ≥32px**. Below that, tracking returns to 0; the legibility floor at 14px body is sacrosanct.
+
+## 4. Component Stylings
+
+### Button — Primary (Amazon Smile Orange)
+
+- Background `#ff9900` (Amazon Smile orange); text `#000000` weight 700
+- Padding 8×18, radius 4 (commerce-grade silhouette, not pill)
+- Font `cta` (Amazon Ember 14/1.0, +0.005em)
+- Hover: bg → `#ec7211` (deeper orange), 100ms `cubic-bezier(0.4, 0, 0.2, 1)`
+- Active: bg → `#d45b07`, scale(0.98)
+- Focus: ring `0 0 0 2px #0073bb`, 2px offset
+- Use: hero CTA "Sign up", "Get started for free", "Create an AWS account"
+
+### Button — Secondary (Outlined Gray)
+
+- Background `#ffffff`; text `#16191f` weight 700
+- Border `1px solid #545b64`, padding 7×17 (1px reduced for border)
+- Hover: border → `#16191f`, bg → `#fafafa`
+- Active: bg → `#f2f3f3`
+- Use: "Learn more", "Read documentation", "View pricing"
+
+### Button — Tertiary (Ghost Link Blue)
+
+- Background transparent; text `#0073bb` weight 700
+- Padding 8×12, radius 4
+- Hover: bg → `#f1faff` (faint blue tint)
+- Use: console toolbar action, breadcrumb-adjacent action
+
+### Button — Ghost (Inline Link CTA)
+
+- Background transparent; text `#0073bb` weight 700, no border
+- Padding 6×0 (vertical only); icon suffix `›` 1ch right
+- Hover: text → `#005a92`, icon translates `+2px` right
+- Use: inside cards, "Read more ›", "View documentation ›"
+
+### Service Tile
+
+- Background `#ffffff`; border `1px solid #eaeded`; radius 8
+- Padding 20; height auto, min 144px
+- Service icon 32×32 top-left in service brand hue (S3 green, EC2 orange, Lambda orange-pink, etc.)
+- Title `h3` (20/1.32 700) below icon, gap 12
+- Description `body-sm` (13/1.50 400) — 2-line clamp
+- Hover: shadow `rgba(0,28,36,0.20) 0 4px 12px`, transform `translateY(-2px)`, transition 180ms
+- Use: AWS service catalog, console favorites, "All services" portal
+
+### Card
+
+- Background `#ffffff`; border `1px solid #eaeded`; radius 8
+- Padding 20×24
+- Shadow `rgba(0,28,36,0.06) 0 1px 4px`
+- Hover: shadow `rgba(0,28,36,0.10) 0 2px 8px` (no lift)
+- Use: feature card, doc card, customer testimonial
+
+### Pricing Card
+
+- Background `#ffffff`; border `1px solid #aab7b8`; radius 8
+- Padding 24×28
+- Highlighted variant: border `2px solid #ff9900` + ribbon "Most popular" in orange
+- Plan title `h3` (20/1.32 700); price `price` (28/1.10 700, tnum)
+- Use: Pricing tiers (Free / Developer / Business / Enterprise)
+
+### Badge — Default
+
+- Background `#fff8eb`; text `#8d6708`; padding 2×8; radius 2
+- Font `caption` (12/1.40 700, +0.01em)
+- Variants: New, Preview, GA, Limited
+- Use: service status flags, feature flags
+
+### Badge — New (Orange)
+
+- Background `#ff9900`; text `#000000`; padding 2×8; radius 2
+- Font `caption` (12/1.40 700)
+- Use: brand-new service launches (≤30 days post-launch)
+
+### Input
+
+- Background `#ffffff`; border `1px solid #879596`; radius 4
+- Padding 6×10; font `body` (14/1.50 400)
+- Focus: border → `#0073bb`, ring `0 0 0 2px rgba(0,115,187,0.20)`
+- Error: border → `#d13212`, helper-text below in `caption` red
+- Use: console search, sign-in form, IAM policy editor
+
+### Navigation — Primary (Navy Header)
+
+- Top bar height 36px; bg `#232f3e`; bottom border none
+- AWS logo at left (orange smile + white "aws" wordmark)
+- Nav links: padding 0×14, font `nav-link` (13/1.30 400), color `#ffffff`
+- Hover: color → `#ff9900` (Amazon Smile orange — same hue as primary CTA)
+- Mega-menu drops on hover with 6-column service-category grid
+
+### Navigation — Secondary (Mid-Navy Strip)
+
+- Strip height 36px; bg `#37475a`; sits below primary nav on console pages
+- Used for breadcrumbs and tab switchers within a service
+- Font `nav-link-strong` (14/1.30 700) for active tab; 400 for inactive
+
+### Breadcrumb
+
+- Font `body-sm` (13/1.50 400) in `#0073bb`
+- Separator `›` in `#545b64`
+- Hover: underline appears
+- Use: console hierarchy, service navigation
+
+### Alert — Info (Sharp Corners)
+
+- Background `#f1faff`; border-left `4px solid #0073bb`; radius 0 (sharp corners — console holdover)
+- Padding 12×16; font `body-sm` (13/1.50 400)
+- Variants: info, success, warning, danger — same shape, palette swap
+- Use: console banners, "New region available", quota warnings
+
+### Tabs
+
+- Tab list: row of buttons, 16px gap, no fill
+- Active tab: text `#16191f` 700 with 3px underline `#ff9900` extending the full label width
+- Inactive: text `#545b64` 400
+- Use: pricing tier toggle, service feature comparison, console resource tabs
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit `4px`. Scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96, 128. The full marketing site lives on the 4px grid; the console honors the same grid with 8px atomic units (so 16, 24, 32 always work). Display heroes use 64–96px top-margin; sections use 64–96px between blocks; card padding lands at 20–24; tile gaps default to 16 — tighter than Stripe (24) or Vercel (32) because density is the AWS posture.
+
+### Grid & Container
+
+- Page max-width `1280px` with 24–48px side padding (narrower than Adobe's 1440 — AWS optimizes for high-density consoles)
+- Prose containers cap at 720px (lead + body) for readability
+- Service grid: 4-up at desktop ≥1200, 3-up at tablet 900–1199, 2-up at 600–899, 1-up below 600
+- Feature grid: 3-up default, collapses to 2-up then 1-up
+- Hero often runs full-bleed with text container constrained inside (max-1280)
+
+### Whitespace Philosophy
+
+AWS is **anti-Apple** on whitespace. Where Apple breathes (huge negative space around hero stills), AWS *packs density*: a typical product page may show 30+ subservices, 12 use-cases, 8 customer logos, 6 pricing tiers, and 4 documentation links above the fold. The discipline is *uniformity of chrome*: every tile shares the same border, radius, padding, and icon size. Whitespace appears between sections (64–96px) but disappears within them (16px gaps).
+
+### Section Cadence
+
+- Hero (full-bleed white or `#232f3e` navy band — re:Invent campaigns)
+- Service grid section (white, dense, 4-up)
+- Customer logo band (`#fafafa`, single row, dim)
+- Feature trio (white, 3-up cards)
+- Use-case spotlight (`#f2f3f3`, alternating with white)
+- Pricing matrix (white, tnum-aligned table)
+- Documentation links (white, dense list)
+- "Get started" CTA band (`#232f3e` navy with orange CTA)
+- Footer (`#161e2d` deeper navy, white text, dense link mesh)
+
+The deeper-navy footer is a deliberate signature — most cloud sites use the same dark tone for header and footer; AWS uses two distinct registers (`#232f3e` header, `#161e2d` footer) to signal "you've reached the bottom of the freight manifest."
+
+## 6. Shapes & Radius Scale
+
+| Tier | Radius | Use |
+|------|------:|-----|
+| Sharp | 0 | Alert banners, console table corners (legacy holdover) |
+| Micro | 1 | — (rare) |
+| Small | 2 | Badges, status pills |
+| Medium | 4 | Buttons (primary, secondary, tertiary), inputs |
+| Large | 8 | Cards, service tiles, pricing cards |
+| XL | 12 | Hero feature cards, modal corners |
+| XXL | 16 | Premium feature spotlights |
+| Pill | 9999 | Avatar, count chip (rare) |
+
+The `4px button radius` is AWS's signature shape — distinct from Adobe's pill, Stripe's 6px, Vercel's 6px, and GCP's 4px (which AWS predates). It reads as commerce-grade rather than consumer-app. Sharp-corner (radius 0) alert banners are a console-chrome holdover that bleeds through to marketing for `aws-console-aware` pages.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|------:|-----------|-----|
+| 0 | Flat — page background | Body text, hero copy |
+| 1 | `rgba(0,28,36,0.04) 0 1px 2px` | Subtle card, plan card resting |
+| 2 | `rgba(0,28,36,0.06) 0 1px 4px` | Default card, service tile resting |
+| 3 | `rgba(0,28,36,0.20) 0 4px 12px` | Hover-lifted tile, dropdown menu |
+| 4 | `rgba(0,28,36,0.30) 0 8px 24px -4px` | Modal, mega-menu |
+| 5 | `rgba(0,28,36,0.40) 0 16px 40px -8px` | Top-most overlay |
+
+**Shadow Philosophy** — AWS shadows are **navy-tinted** rather than neutral black. The `rgba(0,28,36,...)` channel is observable when stacked: a tile hover-shadow on white reads with a faint blue cast, and that cast cohere with the navy header. The brand owns elevation through *hue + opacity*, not through layered drop-shadows like Stripe (which uses `rgba(50,50,93,0.25)` blue-purple tints). AWS shadows stay single-layer, low-blur, low-opacity — restrained because the dense tile grids would become visually chaotic with virtuoso shadow-craft.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **standard** `cubic-bezier(0.4, 0, 0.2, 1)`: default for color, opacity, transform
+- **emphasized** `cubic-bezier(0.2, 0, 0, 1)`: hero CTA hover, premium-tile lift
+- **out** `cubic-bezier(0, 0, 0.2, 1)`: modal entry, drawer slide-in
+
+### Duration Buckets
+
+- **fast** 100ms — hover color change, link underline grow (faster than Adobe's 130 because console latency is the brand's enemy)
+- **standard** 180ms — tile lift, card shadow intensify, button press
+- **slow** 260ms — modal fade-in, mega-menu drop
+- **page** 360ms — route transition (cross-fade only)
+
+### Per-Component Recipes
+
+- **Button hover**: `bg-color 100ms standard`, no transform — the orange-to-deeper-orange shift is fast enough to feel instant
+- **Button press**: `transform: scale(0.98) 100ms standard`
+- **Tile hover**: `translateY(-2px) + shadow intensify, 180ms standard`, both properties on the same transition
+- **Link hover**: underline appears (`text-decoration: underline`) at 100ms — AWS links are not underlined by default, only on hover
+- **Tab switch**: underline slides on x-axis 200ms `emphasized`, color crossfades 180ms `standard`
+- **Mega-menu drop**: opacity 0→1 + translateY -4px → 0, 260ms `out`
+- **Console row select**: bg → `#fff8eb` (orange-tinted), 100ms — instant feedback for cloud-engineer rapid-clicking
+- **Loading skeleton**: pulse 1500ms ease-in-out, alternating `#f2f3f3 ↔ #eaeded`
+
+### Page Transitions
+
+Cross-fade only. AWS's marketing site is engineered for back-button-frequent navigation (cloud engineers compare 4 services at once) — slide transitions would feel disorienting. Pages "load" rather than "navigate."
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)`: tile lifts disappear (translateY → 0), shadow intensification removed, modal fade duration capped at 100ms, mega-menu drops in instantly, console loading skeletons swap to static `#f2f3f3` panels. Color and opacity transitions retained for state legibility.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (WCAG)
+
+- Body `#16191f` on `#ffffff` — **16.9:1, AAA** (display, body)
+- Strong `#0d1116` on `#ffffff` — **18.7:1, AAA**
+- Muted `#545b64` on `#ffffff` — **7.8:1, AAA**
+- **Black on Amazon Smile orange `#ff9900`** — **11.6:1, AAA** (Amazon's deliberate AAA choice — white-on-orange would only pass AA Large)
+- White on navy `#232f3e` — **12.8:1, AAA** (header, footer)
+- Link `#0073bb` on `#ffffff` — **5.6:1, AA**
+- Border `#eaeded` on `#ffffff` — decorative only
+
+### Focus Indicators
+
+All interactive elements receive a `2px solid #0073bb` ring with 2px offset. Orange-CTA hover preserves the ring underneath (the blue ring is visible against the orange fill at 4.0:1, sufficient to remain perceivable).
+
+### ARIA Patterns
+
+- **Mega-menu** uses `role="menu"` + `aria-haspopup="menu"` on the trigger; arrow keys navigate, Escape closes, Tab exits
+- **Service catalog** uses `role="region"` with `aria-labelledby` pointing at the section heading; each tile is a single anchor with combined `aria-label`
+- **Pricing matrix** uses `<table>` with proper `<thead>` / `<tbody>` and `scope="col"` / `scope="row"` headers
+- **Console row select** uses `role="row"` + `aria-selected="true"` on the active row
+- **Modal** uses `role="dialog"` + `aria-modal="true"`; focus trapped, Escape closes
+- **Alert banners** use `role="status"` (info, success) or `role="alert"` (warning, danger)
+
+### Keyboard Navigation
+
+- Tab order follows DOM (no `tabindex` overrides except for skip-link)
+- Skip-link at top jumps to `#main`
+- Mega-menu: Tab into trigger → Enter to open → Arrow keys within → Escape returns to trigger
+- Pricing matrix: Tab between cells, Enter activates plan-select
+- Service tiles: Tab through grid, Enter opens service detail page
+- Console resource tables: Tab between rows, Space toggles selection
+
+### Screen Reader Hints
+
+- AWS smile-logo image has `alt="AWS"` (the brand name, no decorative description)
+- Service icons inside tiles are `aria-hidden="true"`; the title text carries the accessible name
+- "New" badges include visually-hidden text "New service" for clarity
+- Pricing `tnum` numerics include `aria-label="$0.023 per GB-month"` since SR pronouncers vary on raw price strings
+
+### Reduced Motion
+
+Honored via `@media (prefers-reduced-motion: reduce)` — see §8.
+
+## 10. Responsive Behavior
+
+| Breakpoint | Width | Behavior |
+|-----------|------:|----------|
+| mobile | 0–599 | 1-up tiles, stacked nav, hamburger menu, simplified pricing |
+| tablet | 600–899 | 2-up tiles, condensed nav, hamburger remains, pricing 2-up |
+| desktop-sm | 900–1199 | 3-up tiles, full nav, mega-menu enabled |
+| desktop | 1200–1399 | 4-up tiles, full nav, mega-menu, max-width 1280 |
+| wide | 1400+ | 4-up tiles, container caps at 1280 with side gutters |
+
+### Touch Targets
+
+Minimum 44×44px for all interactive elements (buttons, nav links, tile-anchors). Console rows on mobile compress to 40px row-height (rare exception, due to data density).
+
+### Collapsing Strategy
+
+- **Nav** — desktop: horizontal mega-menu with 6-column service grid; mobile: vertical hamburger drawer with accordion sections grouped by service category
+- **Service grid** — 4-up → 3-up → 2-up → 1-up, gutter shrinks 16 → 12 → 8 → 8
+- **Pricing matrix** — desktop: full table; tablet: collapses non-tier columns; mobile: stacked cards per tier
+- **Hero** — desktop: text-left + image-right; mobile: text-top + image-below, image cap-height 50vw
+
+### Image Behavior
+
+`srcset` with 1x, 2x, 3x for service icons and customer logos. Hero stills are JPEG with art-direction (`<picture>` source media queries). Lazy-loading default for below-fold. Console icons are SVG sprite (24×24, 32×32 sizes).
+
+### Container Queries
+
+Used for the **service tile** itself — when tile container falls below 280px wide, the icon shrinks 32→24 and the description hides. Containerized so the same tile component works in 4-up portals and 2-up sidebar embeds.
+
+## 11. Content & Voice
+
+### Tone
+
+Professional, technical, builder-facing. AWS marketing is the senior infrastructure engineer who's seen every outage and isn't going to oversell. Sentences are declarative; verbs are active. Adjectives are technical ("scalable", "reliable", "cost-effective") rather than emotional. Customer testimonials lead with quantitative proof ("Reduced costs by 47%", "Scaled to 12M concurrent users") — never feelings.
+
+### Microcopy Patterns
+
+- **Buttons**: "Sign up", "Get started for free", "Create an AWS account", "View pricing", "Read documentation", "Talk to an expert"
+- **Errors**: "We couldn't complete that action. Check the [troubleshooting guide] or [contact support]." — direct, with paired action
+- **Success**: "Your account is ready. Sign in to the console." — confirmation + next step
+- **Empty states**: "No resources to display. Create your first [resource]." — functional, never witty
+- **Pricing**: "Pay only for what you use" / "Free tier eligible" / "Volume discounts available"
+
+### CTA Verb Conventions
+
+- "Sign up" — top-of-funnel, free-tier signup
+- "Get started for free" — preferred over "Try" — emphasizes free tier
+- "Create an AWS account" — formal action, account portal
+- "Sign in to the Console" — returning user
+- "View pricing" — pricing-page entry
+- "Read documentation" — docs entry, never "Learn more about docs"
+- "Contact sales" / "Talk to an expert" — enterprise pages only
+
+### Empty States
+
+AWS empty states are functional — they say what's missing and offer the action to fix it. They don't try to be witty. "No EC2 instances in this region. Launch your first instance." is more typical than "Looks like this region's empty — fancy launching something?" The voice is consultant-grade, not playful.
+
+### Tone Guardrails
+
+- Never use "delight", "magical", "beautiful" in product copy
+- Never use exclamation marks except in promotional banners ("Save up to 75% with Reserved Instances!")
+- Never use "we" in product copy — say "AWS" or "Amazon S3"; the personal pronoun is reserved for blog posts and re:Invent keynotes
+- Always use the full service name on first mention ("Amazon Simple Storage Service (Amazon S3)") then short form ("S3" or "Amazon S3") thereafter
+- Pricing copy always includes the "you pay only for…" framing — Amazon's signature transactional honesty
+
+## 12. Dark Mode & Theming
+
+Light-only on the marketing site. AWS does not honor `prefers-color-scheme: dark` on aws.amazon.com. The closest the site comes to dark is the **navy header** (`#232f3e`) and the **deeper-navy footer** (`#161e2d`) — both are local zone-treatments, not whole-page themes.
+
+The **AWS Console**, however, ships a full dark mode (since 2023): bg `#0f1b2d`, surface `#1a2532`, text `#d5dbdb`, border `rgba(255,255,255,0.10)`. Brand orange `#ff9900` and link blue `#0073bb` survive unchanged in dark mode (both pass AA on `#0f1b2d`). The console's dark theme reads as "operations center" — green-on-black terminal lineage filtered through Amazon's chromatic discipline.
+
+Rationale for marketing being light-only: AWS marketing pages must show 30+ service icons in a single view, each with its own brand hue. A site-wide dark mode would conflict with the chromatic chips (S3 green, EC2 orange, Lambda orange-pink, DynamoDB blue, etc.), all of which are calibrated against white. The console can dark-mode because it shows one service at a time; the marketing portal can't.
+
+If implementing a derivative dark theme: invert bg ↔ text, swap surface to `#1a2532`, lift border to `rgba(255,255,255,0.10)`, keep brand `#ff9900` and accent `#0073bb` unchanged, replace navy-tinted shadows with hairline highlights `rgba(255,255,255,0.04) 0 1px 0 inset`.
+
+## 13. Lineage & Influences
+
+AWS's marketing identity descends from two distinct ancestors. Visually, it owes the dense-tile-portal pattern to **enterprise software catalogs of the late 1990s** — IBM's WebSphere portal, Oracle's iAS console, BEA's WebLogic admin. The 4-up grid of branded service tiles against neutral chrome predates the cloud era; AWS modernized it with hairline borders and 8px radii, but the underlying information architecture (categories → services → resources → instances) is unchanged.
+
+Typographically, the move to **Amazon Ember** in 2014 was Amazon's quiet acknowledgement that Helvetica's neutrality wouldn't survive screen-density at 13/14px body sizes. Ember was commissioned to optimize for cloud-engineering legibility — open apertures, generous x-height, weights tuned for 96dpi screens before high-DPI displays were universal. The choice of black-on-orange CTA (rather than white-on-orange) is a holdover from amazon.com's retail discipline, where button accessibility is non-negotiable and the AAA contrast pair was tested against millions of nightly checkout flows.
+
+The **navy + orange** palette itself dates to the 1995 Amazon launch — Bezos's original logo was navy with an orange smile, and 30 years later AWS still carries the same chromatic memory. Where Stripe's purple is brand-as-warmth and Linear's grayscale is brand-as-velocity, AWS's navy + orange is **brand-as-commerce**: a chromatic signal that this is the same company that ships the books, the streaming, the smart speakers, and now the planet's largest cloud.
+
+Where AWS rejects: editorial-magazine typography (no serif, no display oddities); Apple-style negative-space drama (cloud breadth demands density); Notion-style warm palette (Amazon's neutrals are cool with a navy undertone, never warm); Vercel-style monochrome dark-mode marketing (the chromatic chips can't survive dark backgrounds).
+
+**Influences**
+
+- Amazon.com — 30-year navy + orange smile chromatic memory and AAA-contrast button heritage (https://www.amazon.com)
+- IBM WebSphere / Oracle iAS — enterprise dense-tile portal pattern adopted by AWS service catalogs (https://www.ibm.com)
+- Helvetica / Akzidenz-Grotesk — humanist-sans lineage that Amazon Ember inherits and screen-tunes
+- Stripe Documentation — hairline-border + 8px-radius card grammar AWS docs adopted in 2018 (https://stripe.com/docs)
+- Re:Invent keynotes — the typographic-discipline-meets-density that defines AWS marketing pages
+
+## 14. Do's and Don'ts
+
+**Do**
+
+- **Do** keep the canvas paper-white `#ffffff`; alternate sections with `#fafafa` or `#f2f3f3`, never gray
+- **Do** use Amazon Ember (or Helvetica Neue fallback) across all hierarchy — single-family discipline
+- **Do** use `#ff9900` orange + `#000000` text for primary CTAs — the AAA contrast pair is the brand's accessibility heritage
+- **Do** ship the navy `#232f3e` header and **deeper navy** `#161e2d` footer — two distinct registers signal completeness
+- **Do** lift service tiles 2px on hover with `rgba(0,28,36,0.20) 0 4px 12px` navy-tinted shadow
+- **Do** use 4px button radius (not pill, not 8px) — commerce-grade silhouette
+- **Do** stack 4-up service grids on desktop, 2-up on tablet, 1-up on mobile
+- **Do** use `tnum` opentype on every price, metric, and pricing-matrix cell
+- **Do** ship sharp-corner (radius 0) alert banners as a console-chrome holdover
+- **Do** use 14px body floor — console density is part of the brand
+- **Do** use the AWS link blue `#0073bb` for anchors and ghost-CTAs
+
+**Don't**
+
+- **Don't** introduce a serif accent — AWS marketing is sans-only by discipline (Amazon Ember owns 100%)
+- **Don't** apply orange to body text, headlines, or non-CTA surfaces — orange is reserved for primary CTAs and select badges
+- **Don't** use white-on-orange for buttons — the contrast is only AA Large; black-on-orange is the AWS standard
+- **Don't** mix navy `#232f3e` and orange `#ff9900` on the same surface as a gradient — they belong to different layers (chrome vs action)
+- **Don't** use heavy shadows; max y-offset is 24px and max opacity is 0.30
+- **Don't** use warm greys (`#6e6e6e`, `#a8a29e`); AWS greys are cool with blue undertone (`#545b64`, `#687078`, `#aab7b8`)
+- **Don't** use exclamation marks outside promotional banners — voice is technical, not playful
+- **Don't** ship a site-wide dark mode — chromatic chips don't survive it
+- **Don't** use "delight" or "magical" in product copy — AWS voice is consultant-grade
+- **Don't** use a single-tone footer — the deeper-navy `#161e2d` footer is a brand cue
+- **Don't** tighten tracking below 14px — display tracking is reserved for ≥32px
+- **Don't** forget the `tnum` on pricing — misaligned digits read as amateur on aws.amazon.com
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #ffffff
+text: #16191f
+text-muted: #545b64
+brand (orange): #ff9900
+brand-hover: #ec7211
+on-brand: #000000
+navy (header): #232f3e
+navy-deep (footer): #161e2d
+accent (link blue): #0073bb
+border: #eaeded
+surface-section: #f2f3f3
+on-navy: #ffffff
+```
+
+### Example Component Prompts
+
+1. *"Create a hero section in AWS's style: paper-white `#ffffff` ground, 56px Amazon Ember weight 700 headline 'Build on the world's most comprehensive cloud', 18px lead paragraph in `#16191f`, primary orange CTA `#ff9900` with **black** text 'Sign up' and outlined-gray secondary 'Learn more' (border `#545b64`), side-by-side, 4px button radius."*
+2. *"Design an AWS service catalog: 4-up tile grid, each tile `#ffffff` bg with 1px `#eaeded` border, 8px radius, 32px service icon top-left in service brand hue, Amazon Ember 700 service title at 20px, 13px body-sm description, hover lifts tile -2px with `rgba(0,28,36,0.20) 0 4px 12px` navy-tinted shadow."*
+3. *"Build a navy AWS header: `#232f3e` ground, 36px tall, AWS logo (orange smile + white wordmark) at left, nav links in Amazon Ember 13/400 white, hover color → `#ff9900` orange, mega-menu drops on hover with 6-column service-category grid."*
+4. *"Create an AWS pricing matrix: white card `#ffffff` with `#aab7b8` 1px border, 8px radius, plan title in Amazon Ember 700/20, price in 28/700 with `font-variant-numeric: tabular-nums`, orange `#ff9900` 'Sign up' CTA, middle tier highlighted with 2px orange border + 'Most popular' ribbon."*
+5. *"Design a deeper-navy AWS footer: `#161e2d` ground, white text, 8-column dense link mesh of services, regions, support, partners, AWS logo at top-left, 13/400 Amazon Ember links, hover color → `#ff9900` orange."*
+6. *"Build a sharp-corner AWS alert banner: `#f1faff` bg with 4px left border `#0073bb`, radius 0 (console-chrome holdover), 12×16 padding, 13/400 body text in `#16191f`, optional close button at right."*
+
+### Iteration Guide
+
+1. **Strip color first**. Start with black on white in Amazon Ember. Only add orange `#ff9900` after the type hierarchy reads. The orange should feel earned — never decorative.
+2. **One CTA per viewport**. AWS lands one primary `#ff9900` button per visible region; secondary actions go outlined-gray or ghost-blue. Two orange buttons = brand violation.
+3. **Black-on-orange, not white-on-orange**. The AAA contrast pair is the brand's accessibility heritage from amazon.com. Reverse it and the page reads as a cheap clone.
+4. **Navy header + deeper navy footer**. Two distinct registers (`#232f3e` and `#161e2d`) signal completeness. A single-tone navy reads as Vercel or Linear, not AWS.
+5. **Tile uniformity is non-negotiable**. Every tile in a service grid must share border, radius, padding, and icon size. Variation comes from the icon's brand hue, not the chrome.
+6. **Density is a feature**. Don't try to "breathe" AWS layouts — the cloud engineer wants to compare 12 services in one viewport. Tighten gutters before widening them.
+7. **Verify `tnum` on pricing**. Open the rendered HTML and confirm `font-variant-numeric: tabular-nums` is set on every price cell. Misaligned digits read as amateur.
+8. **Check the navy footer**. If the page lacks a `#161e2d` deeper-navy footer with white-text dense link mesh, it doesn't read as AWS — the deep-navy footer is the brand's grounding rod.

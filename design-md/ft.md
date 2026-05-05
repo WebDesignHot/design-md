@@ -1,0 +1,735 @@
+---
+name: Financial Times
+tagline: Salmon-pink page (`#fff1e5`) — the world''s most recognizable newspaper background, paired with Financier display + MetricWeb sans for global markets coverage.
+author: webdesignhot
+source_url: https://www.ft.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, serif, dense, structured, news, financial, salmon-pink, light]
+preview_swatch: ['#fff1e5', '#0d7680', '#262a33']
+related: [substack, ghost, medium]
+description: 'The Financial Times is the only major newspaper whose page background is its most identifying brand asset. The salmon-pink canvas (`#fff1e5`) — which the FT has carried in print since 1893 — ports directly to the web, making the page identifiable from a thumbnail alone. Body sets in the bespoke Financier serif (David Berlow / Kris Sowersby, 2014) and FT Sans Display for headlines; meta runs in MetricWeb. The brand teal (`#0d7680`) anchors links and primary CTAs, navy `#262a33` carries dark sub-bands, and the FT''s color-coded section system (markets sub-pages get accent stripes) signals trading-floor data-density. Typographic restraint is the FT''s strongest editorial signature — heavy use of italic decks, no excessive type scale, narrow columns, and the salmon-pink ground that never lets you forget you''re reading the FT.'
+
+colors:
+  bg: '#fff1e5'                  # the iconic FT salmon-pink — the brand''s most identifying asset
+  bg-section-news: '#fff1e5'      # news section default
+  bg-section-markets: '#fff1e5'   # markets carries the salmon, with subtle gray data tables
+  bg-section-opinion: '#fff1e5'   # opinion stays salmon
+  bg-section-magazine: '#fff1e5'
+  bg-dark: '#262a33'              # FT dark navy — used on dark sub-bands and the dark mode body
+  bg-darkest: '#1c1f26'
+  surface: '#fff1e5'              # cards inherit canvas
+  surface-paper: '#ffffff'        # photo cards and chart panels lift onto pure white
+  surface-soft: '#f4e8dd'          # slightly darker salmon for sub-band
+  surface-strong: '#e6dccf'        # disabled fill, breadcrumb back tile
+  surface-quote: '#fef5ea'         # lighter salmon for pull-quote backdrop
+  text: '#262a33'                # FT navy — primary text and rule color (warmer than absolute black)
+  text-strong: '#000000'
+  text-muted: '#66605c'           # bylines, dateline (warm-gray on salmon)
+  text-soft: '#807973'           # captions, photo credits
+  text-faint: '#a39e9a'           # disabled
+  brand: '#0d7680'                # FT teal — primary CTA, links, brand accent
+  brand-hover: '#0a5a62'           # darker teal
+  brand-soft: '#cce5e8'            # tint surface
+  brand-deep: '#06434a'            # heaviest teal
+  brand-navy: '#262a33'            # FT navy — masthead band, dark sub-band
+  link: '#0d7680'                  # FT teal as link color
+  link-hover: '#0a5a62'
+  link-visited: '#66605c'         # visited dims
+  on-brand: '#ffffff'
+  on-navy: '#fff1e5'              # salmon-on-navy is the FT'​s reverse pairing
+  border: '#cdc6c0'              # warm-gray hairline (calibrated for salmon ground, not white)
+  border-soft: '#e0d9d2'
+  border-strong: '#807973'
+  border-rule: '#262a33'          # navy section rule
+  shadow-card: 'rgba(38,42,51,0.06)'  # navy-tinted shadow
+  shadow-elev: 'rgba(38,42,51,0.1)'
+  shadow-modal: 'rgba(38,42,51,0.2)'
+  scrim: 'rgba(38,42,51,0.55)'
+  success: '#0a8754'                # green for "up" market data
+  success-soft: '#d4e8de'
+  warning: '#cc7a00'                # amber for advisory
+  warning-soft: '#fde9cc'
+  danger: '#a63335'                # red for "down" market data and form errors
+  danger-soft: '#f0d4d4'
+  info: '#0d7680'
+  info-soft: '#cce5e8'
+  market-up: '#0a8754'              # FT green for positive movements
+  market-down: '#a63335'            # FT red for negative movements
+  market-neutral: '#66605c'         # gray for unchanged
+  ft-weekend: '#a63335'             # FT Weekend masthead red (saturday edition)
+  how-to-spend-it: '#a63335'        # How to Spend It (luxe) sub-brand red
+  alphaville: '#0d7680'             # FT Alphaville (markets blog) sub-brand teal
+
+typography:
+  display:
+    family: '"Financier Display", "Financier", Georgia, "Times New Roman", serif'
+    weights: [300, 400, 500, 600, 700]
+    opentype-features: ['liga', 'kern']
+  body:
+    family: '"FinancierText", "Financier Text", "Financier", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 700]
+  sans:
+    family: '"MetricWeb", "Metric", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [300, 400, 500, 600, 700]
+  mono:
+    family: 'Menlo, Consolas, "Courier New", monospace'
+    weights: [400]
+  scale:
+    masthead-wordmark:   { size: 56, weight: 700, lineHeight: 1.0,  tracking: '-0.01em', family: display, opentype: ['liga'] }
+    headline-mega:       { size: 48, weight: 600, lineHeight: 1.07, tracking: '-0.01em', family: display }
+    headline-jumbo:      { size: 38, weight: 600, lineHeight: 1.1,  tracking: '-0.005em', family: display }
+    headline-xl:         { size: 30, weight: 600, lineHeight: 1.13, tracking: '0',         family: display }
+    headline-lg:         { size: 24, weight: 600, lineHeight: 1.18, tracking: '0',         family: display }
+    headline-md:         { size: 20, weight: 600, lineHeight: 1.22, tracking: '0',         family: display }
+    headline-sm:         { size: 17, weight: 600, lineHeight: 1.25, tracking: '0',         family: display }
+    deck-italic:         { size: 18, weight: 400, lineHeight: 1.4,  tracking: '0',         family: display, style: italic }
+    body-md:             { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body-sm:             { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    pull-quote:          { size: 28, weight: 400, lineHeight: 1.3,  tracking: '0',         family: display, style: italic }
+    byline:              { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0',         family: sans }
+    dateline:            { size: 12, weight: 400, lineHeight: 1.3,  tracking: '0',         family: sans }
+    section-label:       { size: 12, weight: 600, lineHeight: 1.0,  tracking: '0.06em',    family: sans, transform: uppercase }
+    caption:             { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0',         family: sans }
+    photo-credit:        { size: 11, weight: 400, lineHeight: 1.3,  tracking: '0.04em',    family: sans, transform: uppercase }
+    micro-meta:          { size: 12, weight: 500, lineHeight: 1.2,  tracking: '0.04em',    family: sans, transform: uppercase }
+    button-label:        { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0.04em',    family: sans, transform: uppercase }
+    nav-link:            { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0.04em',    family: sans, transform: uppercase }
+    market-ticker:       { size: 14, weight: 500, lineHeight: 1.0,  tracking: '0',         family: sans, opentype: ['tnum'] }
+    data-tabular:        { size: 14, weight: 400, lineHeight: 1.3,  tracking: '0',         family: sans, opentype: ['tnum'] }
+
+radius:
+  micro: 0
+  sm: 2
+  md: 4
+  pill: 9999
+  none: 0
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120]
+
+layout:
+  page-width: 1220
+  prose-width: 620
+  feature-width: 1024
+  header-height: 56
+  masthead-rule-weight: 1.5
+  section-rule-weight: 1
+  hairline-weight: 1
+
+components:
+  button-primary:
+    bg: '#0d7680'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 22px'
+    height: 44
+    font: button-label
+    use: 'Subscribe, Continue — primary CTA. FT teal fill.'
+  button-primary-hover:
+    bg: '#0a5a62'
+    color: '#ffffff'
+    use: 'Pointer-down on teal CTAs.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#262a33'
+    border: '1px solid #262a33'
+    radius: 4
+    padding: '12px 22px'
+    height: 44
+    use: 'Already a subscriber, secondary actions over salmon.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#0d7680'
+    use: 'Inline body links — underlined on hover.'
+  card-headline:
+    bg: '#fff1e5'
+    color: '#262a33'
+    radius: 0
+    border: 'top 1px solid #cdc6c0'
+    use: 'Default river card on salmon. Photo or chart above (often onto pure white surface), Financier 20/600 headline, italic Financier 18/400 deck, MetricWeb 13/600 byline.'
+  card-photo:
+    bg: '#ffffff'                # photos and charts lift onto pure white inside the salmon page
+    color: '#262a33'
+    radius: 0
+    use: 'Photo and chart panels — pure white surface inside the salmon page.'
+  card-markets-data:
+    bg: '#ffffff'
+    color: '#262a33'
+    radius: 0
+    use: 'Markets data table on white. Tabular MetricWeb numerics with green/red up/down columns.'
+  card-opinion:
+    bg: '#fff1e5'
+    color: '#262a33'
+    radius: 0
+    border: 'top 1px solid #262a33'
+    use: 'Opinion column — heavier ink top rule, italic Financier deck.'
+  pull-quote:
+    bg: 'transparent'
+    color: '#262a33'
+    border: 'top 1px solid #262a33; bottom 1px solid #262a33'
+    padding: '24px 0'
+    use: 'Italic Financier Display 28px between two navy rules over salmon ground.'
+  text-input:
+    bg: '#ffffff'
+    color: '#262a33'
+    radius: 4
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #807973'
+    focus: 'border thickens to 2px navy'
+    use: 'Email entry, search input — white inside the salmon page.'
+  paywall-cta:
+    bg: '#262a33'
+    color: '#fff1e5'
+    padding: '32px 24px'
+    use: 'Navy paywall ground with salmon text — the FT''s reverse pairing.'
+  nav-section-link:
+    color: '#262a33'
+    font: nav-link
+    padding: '14px 12px'
+    use: 'Section nav (World, Companies, Markets, Opinion). Hover: teal underline.'
+  search-icon:
+    bg: 'transparent'
+    color: '#262a33'
+    use: '32×32 navy magnifying-glass on salmon.'
+  market-ticker:
+    bg: '#ffffff'
+    color: '#262a33'
+    padding: '8px 12px'
+    use: 'Live market ticker — tabular MetricWeb numbers, green up / red down.'
+  edition-label:
+    bg: 'transparent'
+    color: '#66605c'
+    font: section-label
+    use: 'Top-right "GLOBAL EDITION" / "UK" / "US" / "ASIA" edition selector.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  market-tick-flash: 'green/red ticker cell flashes 200ms on price update — flash bg is 0.3 alpha for 200ms then fades'
+  card-hover: 'image scales 1.0 → 1.02; headline gains teal underline; 200ms standard'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — market-tick flash becomes instant color set, transforms suppressed.'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 0 0 #cdc6c0'
+  standard: 'rgba(38,42,51,0.06) 0 2px 4px'
+  elevated: 'rgba(38,42,51,0.1) 0 6px 16px'
+  deep: 'rgba(38,42,51,0.2) 0 12px 32px'
+  ring: '0 0 0 2px #0d7680'
+
+accessibility:
+  contrast-text-on-bg: 12.4              # #262a33 on #fff1e5 — AAA
+  contrast-text-on-brand-teal: 5.4        # #ffffff on #0d7680 — AA body, AAA large
+  contrast-muted-on-bg: 5.5               # #66605c on #fff1e5 — AA
+  contrast-link-on-bg: 4.7                # #0d7680 on #fff1e5 — AA body
+  contrast-text-on-navy: 12.0             # #fff1e5 on #262a33 — AAA (the reverse pairing)
+  focus-ring: '2px solid #0d7680 (FT teal) + 2px outline-offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves logo → section nav → utility (Subscribe, Sign in, Search). Skip-link first.'
+
+dark-mode: optional
+colors-dark:
+  bg: '#262a33'
+  bg-section: '#1c1f26'
+  surface: '#262a33'
+  surface-soft: '#1c1f26'
+  surface-quote: '#33373f'
+  text: '#fff1e5'                 # salmon stays as the text color in dark mode — the inversion preserves brand
+  text-strong: '#ffffff'
+  text-muted: '#cdc6c0'
+  text-soft: '#a39e9a'
+  brand: '#4ca9b3'                 # teal lightens for AA on dark
+  link: '#4ca9b3'
+  border: '#3a4049'
+  border-rule: '#fff1e5'
+---
+
+## 1. Visual Theme & Atmosphere
+
+The Financial Times is the only major newspaper whose **page background is the brand**. Salmon-pink (`#fff1e5`) — adopted in 1893 to make the FT distinguishable from rival London papers on news-stands at a glance — is the most identifying single chromatic decision in news design. Every page on ft.com loads with the salmon canvas; photos and chart panels lift onto pure white inserts; cards stay on the salmon. You can identify an FT page from a thumbnail without seeing the masthead.
+
+Type runs **Financier** — the bespoke serif family commissioned in 2014 from Kris Sowersby (Klim Type Foundry) and David Berlow (The Font Bureau). Financier Display carries headlines at modest 600 weights (lighter than NYT's 700 or Economist's 800), Financier Text carries body, and **MetricWeb** — the FT's geometric sans — runs all bylines, captions, section labels, and the all-important market ticker numerals. The Financier+MetricWeb pairing is one of the most cohesive custom type systems on the web; both faces were designed to read at narrow column widths and to handle the data-density of markets pages.
+
+The FT's color discipline is **teal as accent over salmon as ground**. The brand teal `#0d7680` carries the primary CTA, the inline link state, the underline-grow on hovered headlines, and the focus ring. The brand navy `#262a33` (warmer than absolute black, calibrated for salmon contrast) carries the body text, the masthead rule, the reverse-pairing dark sub-bands, and the markets-data column headers. Markets data carries red `#a63335` for "down" and green `#0a8754` for "up" — the only place the system shows green or strong red.
+
+Typographic restraint is the FT's strongest editorial signature. Display weights stay at 600, line-heights run loose (1.4–1.55), tracking stays close to zero on body, and the page never escalates type beyond what's necessary. The FT trusts its salmon canvas and its narrow columns to do the visual lifting; it does not rely on heavy type, large hero images, or chromatic noise.
+
+**Key Characteristics:**
+- **Salmon-pink (`#fff1e5`) page canvas** — adopted 1893, the FT's single most identifying brand asset
+- Custom Financier (display + text) serif + MetricWeb sans — the most cohesive trio in financial publishing
+- FT teal (`#0d7680`) for primary CTA, links, hover underlines, focus ring
+- FT navy (`#262a33`) for body text and reverse-pairing dark sub-bands (paywall, dark mode, markets headers)
+- Photos and chart panels lift onto pure white surfaces inside the salmon page
+- Display weight 600 (lighter than NYT/Economist) — typographic restraint is brand voice
+- Tabular MetricWeb numerals with green-up / red-down market data
+- 620px reading column over salmon
+- Edition selector top-right ("GLOBAL EDITION", "UK", "US", "ASIA") — global bureau system
+- 1px `#cdc6c0` warm-gray hairlines (calibrated for salmon ground, not white)
+- Italic Financier Display deck and pull-quote — magazine-flavored editorial decoration
+- Live market ticker with cell-flash on price updates
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Salmon Canvas** (`#fff1e5`): the brand. Every page, every section, every card. The single most-identifying decision on ft.com.
+- **FT Navy** (`#262a33`): primary text and rule color. Warmer than absolute black — calibrated for salmon contrast. Used for body, headlines, masthead rule, dark sub-bands.
+- **FT Teal** (`#0d7680`): the brand accent. Primary CTA fill, inline link, hover underline, focus ring.
+
+### Brand & Sub-Brand
+- **Brand Teal** (`#0d7680`)
+- **Teal Hover** (`#0a5a62`)
+- **Teal Soft** (`#cce5e8`)
+- **Brand Navy** (`#262a33`) — masthead band, paywall, dark sub-band
+- **Navy Darkest** (`#1c1f26`) — heaviest dark sub-band
+- **FT Weekend Red** (`#a63335`) — Saturday edition masthead red
+- **How to Spend It Red** (`#a63335`) — luxe sub-brand red (sub-section only)
+- **Alphaville Teal** (`#0d7680`) — markets blog sub-brand (uses brand teal)
+
+### Accent
+- **Editorial Link Teal** (`#0d7680`) — inline body links use brand teal — distinct from typical blue
+- **Link Hover** (`#0a5a62`)
+- **Link Visited** (`#66605c`) — visited dims to muted
+
+### Interactive
+- **Default Link** (`#0d7680` text + underline-on-hover)
+- **Active CTA** (`#0d7680` teal fill on Subscribe)
+- **Disabled** (`#a39e9a` text)
+- **Selected** (saved-article chip with teal fill)
+
+### Neutral Scale (Calibrated for Salmon)
+- **Navy** (`#262a33`) — body, headlines (the salmon ground requires warmer-than-black for harmony)
+- **Muted** (`#66605c`) — bylines, datelines (warm-gray on salmon)
+- **Soft** (`#807973`) — captions, photo credits
+- **Faint** (`#a39e9a`) — disabled
+- **Hairline** (`#cdc6c0`) — universal rule color (warm-gray, calibrated for salmon)
+
+### Surface & Borders
+- **Salmon** (`#fff1e5`) — canvas
+- **Paper** (`#ffffff`) — photo and chart panel surface inside the salmon page (the pure-white insert)
+- **Surface Soft** (`#f4e8dd`) — slightly darker salmon for sub-band
+- **Surface Strong** (`#e6dccf`) — disabled fill
+- **Surface Quote** (`#fef5ea`) — lighter salmon pull-quote backdrop
+- **Hairline** (`#cdc6c0`) — default 1px rule (warm-gray)
+- **Border Strong** (`#807973`) — form input border
+- **Border Rule** (`#262a33`) — navy section rule
+
+### Shadow Colors
+Shadows are **navy-tinted** (not neutral-gray) on the FT — calibrated for salmon harmony:
+- `rgba(38,42,51,0.06) 0 2px 4px` — dropdown ambient
+- `rgba(38,42,51,0.1) 0 6px 16px` — overlay
+- `rgba(38,42,51,0.2) 0 12px 32px` — modal lift
+
+### Semantic
+- **Success / Market Up** (`#0a8754` on `#d4e8de`) — green for "up" market data, also subscribe-success
+- **Warning** (`#cc7a00` on `#fde9cc`) — amber for advisory
+- **Danger / Market Down** (`#a63335` on `#f0d4d4`) — red for "down" market data and form errors
+- **Info** (`#0d7680` on `#cce5e8`) — info shares brand teal
+- **Market Neutral** (`#66605c`) — gray for unchanged market data
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `Financier Display` — Kris Sowersby (Klim Type Foundry) and David Berlow (The Font Bureau), commissioned for the FT's 2014 redesign. A book-modern serif with subtle slab terminals, designed for narrow columns. Available in 300, 400, 500, 600, 700. Fallback: `Georgia, "Times New Roman", serif`.
+
+**Body**: `Financier Text` — the body cut, optimized for legibility at reading sizes. Available in 400, 500, 700.
+
+**Sans**: `MetricWeb` — Klim Type Foundry's Metric, ported for web. A geometric sans with humanist calibration. Used for bylines, captions, section labels, navigation, button labels, and — critically — the market ticker. Available in 300, 400, 500, 600, 700. Fallback: `"Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**Mono**: System mono — `Menlo, Consolas, "Courier New", monospace`. Used only on code and rare data displays.
+
+**OpenType features**: Financier Display uses standard ligatures and tightly-tuned kerning at display sizes. MetricWeb uses **tabular figures (`tnum`)** universally on market tickers, data tables, and price displays — the FT's data-density requires column-aligned numerics everywhere.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| masthead-wordmark | Financier Display | 56 | 700 | 1.0 | -0.01em | liga, kern | "Financial Times" wordmark |
+| headline-mega | Financier Display | 48 | 600 | 1.07 | -0.01em | — | Cover-class headline |
+| headline-jumbo | Financier Display | 38 | 600 | 1.1 | -0.005em | — | Top-of-fold lead |
+| headline-xl | Financier Display | 30 | 600 | 1.13 | 0 | — | Above-fold secondary |
+| headline-lg | Financier Display | 24 | 600 | 1.18 | 0 | — | River lead |
+| headline-md | Financier Display | 20 | 600 | 1.22 | 0 | — | River sub |
+| headline-sm | Financier Display | 17 | 600 | 1.25 | 0 | — | Compact module |
+| deck-italic | Financier Display (italic) | 18 | 400 | 1.4 | 0 | — | Standfirst — italic, weight 400 |
+| body-md | Financier Text | 18 | 400 | 1.55 | 0 | — | Default running text |
+| body-sm | Financier Text | 16 | 400 | 1.5 | 0 | — | Compact card body |
+| pull-quote | Financier Display (italic) | 28 | 400 | 1.3 | 0 | — | Italic display between two navy rules |
+| byline | MetricWeb | 13 | 600 | 1.3 | 0 | — | "Robert Armstrong in New York" |
+| dateline | MetricWeb | 12 | 400 | 1.3 | 0 | — | "5 November 2024" |
+| section-label | MetricWeb | 12 | 600 | 1.0 | 0.06em | uppercase | "MARKETS" / "OPINION" / "WORLD" |
+| caption | MetricWeb | 14 | 400 | 1.4 | 0 | — | Photo / chart caption |
+| photo-credit | MetricWeb | 11 | 400 | 1.3 | 0.04em | uppercase | "© Bloomberg" / "FT montage" |
+| micro-meta | MetricWeb | 12 | 500 | 1.2 | 0.04em | uppercase | "5 min read" |
+| button-label | MetricWeb | 14 | 600 | 1.0 | 0.04em | uppercase | "SUBSCRIBE" / "SIGN IN" |
+| nav-link | MetricWeb | 13 | 600 | 1.0 | 0.04em | uppercase | "World" / "Markets" |
+| market-ticker | MetricWeb | 14 | 500 | 1.0 | 0 | tnum | "S&P 500 ▲ 5,847.87 +0.42%" |
+| data-tabular | MetricWeb | 14 | 400 | 1.3 | 0 | tnum | Markets table cell |
+
+### Principles
+
+- **Display weight 600 (typographic restraint).** The FT runs the lightest display weight of the major news brands — NYT/WaPo/Economist all use 700+. The lighter weight is editorial restraint; combined with the salmon ground, it gives the page calm authority.
+- **MetricWeb tnum on every market context.** Tabular figures are mandatory on tickers, tables, and price displays. Column-aligned numerics are load-bearing for financial data legibility.
+- **Italic deck (standfirst).** The 18px italic Financier Display 400 standfirst is a magazine convention — distinguishes the FT from broadsheet conservative-roman decks.
+- **Tracking stays close to zero on body.** Display 30px+ uses -0.005em → -0.01em; body sits at 0; meta sits at 0.04em → 0.06em on tracked uppercase labels.
+- **Italic Financier pull-quote.** The 28px italic Financier Display between two navy rules over salmon — the brand's signature pull-out.
+- **620px reading column.** Slightly wider than the NYT's 600px because Financier Text is calibrated to read well at this width.
+- **Photos and charts onto pure white.** A photo placed directly on the salmon would visually fight; FT lifts photo and chart panels onto white surfaces inside the salmon page. The white insert is part of the layout vocabulary.
+- **Source Serif Pro / Crimson Pro are the closest open-source serif fallbacks**; Inter / Helvetica for sans; tabular figures must be enabled (`font-variant-numeric: tabular-nums`) for ticker contexts.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — FT teal fill (`#0d7680`), white text, 4px radius, 12×22px padding, 44px height, 14px / 600 MetricWeb uppercase tracked 0.04em. Press: darkens to `#0a5a62`.
+
+**`button-secondary`** — Transparent fill, navy text, 1px navy border, 4px radius. "Already a subscriber? Sign in" over salmon.
+
+**`button-text-link`** — Plain teal text (`#0d7680`), no surface, no border. Underlined on hover.
+
+### Cards
+
+**`card-headline`** — Salmon surface (inherits canvas), 0px radius, top 1px hairline (`#cdc6c0`), no shadow. Photo above (lifted onto pure white inside the salmon), Financier Display 20/600 headline, italic Financier Display 18/400 deck, MetricWeb 13/600 byline.
+
+**`card-photo`** — Photo or chart panel on pure white inside the salmon page. The white insert is the FT's visual vocabulary for image content.
+
+**`card-markets-data`** — Pure white surface with tabular MetricWeb data — green up / red down columns. Used on Markets data tables.
+
+**`card-opinion`** — Salmon surface with a 1px navy top rule, italic Financier deck under columnist name.
+
+### Pull-Quote
+
+**`pull-quote`** — Italic Financier Display 28/1.3, navy ink, between two 1px navy rules at 24px vertical padding. The salmon ground gives the pull-out a magazine flavor — distinct from NYT/WaPo white-ground pull-quotes.
+
+### Inputs / Forms
+
+**`text-input`** — White surface (lifts off salmon), 1px `#807973` border, 4px radius, 44px height, 12×14px padding. Focus: border thickens to 2px navy.
+
+**`paywall-cta`** — **Navy ground** (`#262a33`) — the FT's reverse pairing — with **salmon text** (`#fff1e5`). Headline in salmon Financier Display 22/600. White-outline "Subscribe" CTA. Behind: navy-tinted scrim. The reverse pairing is identifying — the salmon-on-navy is as much a brand asset as navy-on-salmon.
+
+### Navigation
+
+**`top-nav`** — Salmon surface, 56px height, 1.5px bottom navy rule. "Financial Times" wordmark center-aligned in Financier Display 700, edition selector top-right, Subscribe + Sign In + Search top-right.
+
+**`section-nav`** — Horizontal MetricWeb 13/600 uppercase tracked links separated by ample whitespace. Hover: teal underline grows from below over 200ms.
+
+**`market-ticker-bar`** — Live ticker strip on Markets pages — pure white surface inside the salmon page, tabular MetricWeb numerals scrolling green-up / red-down market data.
+
+### Decorative
+
+**`section-rule`** — 1px navy rule.
+
+**`hairline-rule`** — 1px `#cdc6c0` warm-gray rule between river stories. Calibrated for salmon ground.
+
+**`dark-sub-band`** — Optional navy sub-band (`#262a33`) for paywall, podcast cards, "FT Weekend" cover sections — uses salmon text in reverse pairing.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120`
+- Section padding: 64px between page bands
+- Card internal: 16px between image and headline; 8px between headline and deck
+
+### Grid & Container
+
+- Max content width: **1220px** centered on 12-column grid
+- Reading column: **620px** over salmon
+- Feature container: **1024px**
+- Footer: 4-column link list
+- Markets data: 1220px full-width tabular grid
+
+### Whitespace Philosophy
+
+The FT runs **calm and restrained** — display weight 600, modest type scale, generous reading column line-height. The salmon ground does most of the brand-identification work, so the layout doesn't need typographic muscle. The contrast: photos and charts lift onto pure white inside the salmon, creating moments of visual punctuation.
+
+### Section Cadence
+
+- World / Companies / Markets / Opinion / Lex / Tech / Climate: salmon ground, hairline-separated
+- FT Weekend (Saturday edition): salmon ground with FT Weekend red (`#a63335`) masthead accent
+- How to Spend It (luxe magazine): salmon with red sub-brand accent
+- Markets data: salmon-page with white-card data inserts
+- Alphaville (markets blog): salmon ground with sub-brand teal
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Cards, photos, sections, alerts, paywall — broadsheet aesthetic |
+| Micro | 2px | Photo-credit chip, micro-tags |
+| Standard | 4px | Buttons, text inputs |
+| Pill | 9999px | Save-article chip, audio play button — only when icon is round |
+
+The FT splits the difference between Guardian (pill CTAs) and NYT/WaPo (square CTAs) — it uses 4px buttons and inputs, and 0px on cards and editorial surfaces. The 4px button rounding is the broadsheet's most-modest concession to ergonomics.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Article body, hero, section bands |
+| 1 — Hairline | 1px `#cdc6c0` rule | River cards, table rows |
+| 2 — Section Rule | 1px `#262a33` rule | Section break |
+| 3 — White Insert | pure white onto salmon | Photo, chart, data-table panels |
+| 4 — Dropdown | `rgba(38,42,51,0.06) 0 2px 4px` | Account menu, edition selector |
+| 5 — Overlay | `rgba(38,42,51,0.1) 0 6px 16px` | Search overlay |
+| 6 — Modal | `rgba(38,42,51,0.2) 0 12px 32px` | Paywall modal |
+
+### Shadow Philosophy
+
+The FT's most distinctive depth tier is **the white insert** — a pure-white card lifted off the salmon page to host photos, charts, and data tables. The salmon-to-white contrast creates visual punctuation without shadows. Shadows themselves are navy-tinted (calibrated for salmon harmony, not neutral-gray as on white-ground sites). The system trusts the salmon ground and the white insert to do most depth work; shadows appear only on chrome.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)`
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Color swaps, hairline thickening |
+| Standard | 200ms | Card hover, link underline grow |
+| Slow | 320ms | Modal enter |
+| Tick Flash | 200ms | Market ticker price-update flash |
+
+### Per-Component Recipes
+
+- **Card hover**: image scales 1.0 → 1.02 inside white insert; headline gains a 1px teal underline (grows from 0 to full width over 200ms standard).
+- **Market ticker tick flash**: when a price updates, the cell flashes background green or red at 0.3 alpha for 200ms, then fades. The flash is the most identifying motion on the FT — telegraphs live data.
+- **Section-nav link hover**: teal underline grows from below over 200ms standard.
+- **Edition-selector dropdown**: scale(0.96 → 1.0) + opacity(0 → 1) over 200ms standard.
+- **Paywall modal enter**: scrim fades 0 → 0.55 navy alpha over 200ms; modal translates 16px to 0 + opacity 0 → 1 over 320ms emphasized.
+
+### Page Transitions
+
+200ms cross-fade. The salmon canvas means the transition is visible-but-subtle (any other-canvas page would feel jarring against the salmon).
+
+### Reduced Motion
+
+Market ticker flash becomes instant color set (no fade); card hovers degrade to underline-only; transforms suppressed.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #262a33 navy on #fff1e5 salmon | 12.4 | AAA |
+| #ffffff on #0d7680 teal | 5.4 | AA / AAA large |
+| #0d7680 link on #fff1e5 | 4.7 | AA body |
+| #66605c muted on #fff1e5 | 5.5 | AA |
+| #807973 soft on #fff1e5 | 4.0 | AA large only |
+| #fff1e5 salmon on #262a33 navy (reverse) | 12.0 | AAA |
+| #0a8754 success on #fff1e5 | 4.7 | AA body |
+| #a63335 danger on #fff1e5 | 5.0 | AA body |
+
+### Focus Indicators
+
+Focus ring: `2px solid #0d7680` (FT teal) with 2px outline-offset. The teal pairs cleanly with both salmon and navy grounds.
+
+### ARIA Patterns
+
+- **Market ticker**: `role="region"` with `aria-label="Live market data"` and `aria-live="polite"` on the ticker so significant price changes announce
+- **Edition selector**: `role="combobox"`, `aria-haspopup="listbox"`, edition options as `role="option"`
+- **Paywall modal**: `role="dialog"`, `aria-modal="true"`, focus trapped, Esc closes
+- **Audio narration**: every premium feature has `aria-label="Listen to this article, X minutes Y seconds"`
+- **Up/Down market data**: cells use `aria-label="Up 0.42 percent"` rather than relying on the green color alone
+
+### Keyboard Navigation
+
+- Top nav: Tab moves Logo → Section nav → Subscribe → Sign In → Search → Edition selector
+- Section nav: Tab traverses sections left-to-right
+- Market data table: Tab moves cell-to-cell; arrow keys also navigate
+- Skip-link first
+
+### Screen Reader Hints
+
+- Market ticker cells announce direction explicitly ("Up 0.42 percent" not just "0.42")
+- Photo credits announce as "Photo by [Name] / [Outlet]" or "FT montage"
+- Edition selector announces "Global edition selected" / "UK edition selected"
+- Save-article chip carries `aria-pressed`
+
+### Reduced Motion
+
+Market ticker flash → instant color set; card hovers → underline-only; transforms suppressed.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top nav collapses to hamburger + wordmark + Subscribe; section nav into hamburger; river cards 1-up; market ticker compresses to a horizontal scroller |
+| Tablet | 640–1024px | Section nav as horizontal scroller; river cards 2-up; market ticker shows 6 indices visible |
+| Desktop | 1024–1440px | Full section nav; river cards 3-up; sidebar appears on article pages; market ticker shows 10+ indices |
+| Wide | >1440px | Content caps at 1220px |
+
+### Touch Targets
+
+- Primary CTAs: 44×44px
+- Section nav: 44px tap area
+- Edition selector: 44px on mobile
+- Market ticker tap target: 36px row
+
+### Collapsing Strategy
+
+- Section nav collapses to scroller, then hamburger
+- Subscribe stays visible at all breakpoints
+- River cards drop column count: 4 → 3 → 2 → 1
+- Sidebar collapses below article body on tablet
+- Market ticker compresses indices count by viewport
+
+### Image Behavior
+
+- Photos and charts: lift onto pure white surface inside the salmon page (the white insert is the layout vocabulary)
+- River-card images: `aspect-ratio: 16/9` desktop, `4/3` mobile
+- Hero images: full-bleed up to 1024px
+- Photo essays: scroll-snap on touch surfaces
+
+### Container Queries
+
+The right-rail "Most viewed" list compresses to single-line truncate when narrow.
+
+## 11. Content & Voice
+
+### Tone
+
+Authoritative, sober, data-grounded, globally-cosmopolitan. The FT's voice is calibrated for international financial readers — sentences are precise, claims are sourced, and the publication assumes financial literacy. Headlines lead with the news + the consequence ("US Fed signals two more rate cuts as inflation falls below target"); decks add specifics with named institutions and figures.
+
+### Microcopy Patterns
+
+- **Subscribe verbs**: "Subscribe", "Continue", "Sign in" — minimal CTA verbs
+- **Paywall messages**: "You've reached your monthly limit. Subscribe for full access to ft.com."
+- **Date format**: "5 November 2024" — UK convention, day first
+- **Section labels in MetricWeb uppercase**: "MARKETS", "OPINION", "WORLD"
+- **Market data**: "S&P 500 ▲ 5,847.87 +0.42%" — direction triangle + tabular numerals + percent
+
+### CTA Verb Conventions
+
+- Primary: **"Subscribe"**, **"Continue"**, **"Sign in"**, **"Read"**
+- Secondary: **"Save"**, **"Share"**, **"Listen"**
+- Tertiary: **"More on this story"**, **"View all"**
+- Avoided: "Click here", "Submit", "Buy now", "Try free"
+
+### Empty States
+
+- Saved articles: "Your saved articles will appear here."
+- Search no results: "No articles match your search. Try different keywords or check our sections."
+- Market data unavailable: "Market data is currently unavailable. Try again in a few moments." (data outages get explicit messaging)
+
+## 12. Dark Mode & Theming
+
+The FT supports a **system-level dark mode**. The token swap is one of the most distinctive in news because the dark mode preserves the **salmon as text color** instead of inverting to white:
+
+- `bg`: `#262a33` — FT navy
+- `surface`: `#262a33`
+- `surface-soft`: `#1c1f26`
+- `text`: `#fff1e5` — salmon stays as the text color, preserving the brand reverse-pairing
+- `text-strong`: `#ffffff`
+- `text-muted`: `#cdc6c0` — warm-gray on navy
+- `brand`: `#4ca9b3` — teal lifts for AA on dark
+- `link`: `#4ca9b3`
+- `border`: `#3a4049`
+- `border-rule`: `#fff1e5` — section rules invert navy → salmon
+
+The dark mode is itself the brand's reverse pairing — salmon text on navy ground. This is unusual; most dark modes shift text to white. The FT preserves the salmon-and-navy pairing in both directions.
+
+## 13. Lineage & Influences
+
+The FT's visual lineage is **the salmon ground itself** — adopted in 1893 to distinguish the FT on London news-stands from rival papers, and continuous since. The 2014 web redesign, led by Caspar Llewellyn Smith and the FT's product-design team, commissioned Financier from Klim and the Font Bureau as a custom typeface family that would read well on narrow columns over the salmon ground. MetricWeb (Klim's geometric sans, ported for web) was paired as the meta + data face.
+
+The FT's most significant editorial-design innovation is the **white insert on salmon** — photos, charts, and data tables lift onto pure white surfaces inside the salmon page, creating visual punctuation without shadows. This pattern is unique to the FT and ports the print-edition's white-photo-on-salmon-newsprint to web.
+
+Markets data design — green up, red down, tabular MetricWeb, cell-flash on price updates — is industry-leading and has been imitated by Bloomberg, Reuters, and the Wall Street Journal. The FT's Lex column (the markets opinion column, anonymous like the Economist's leaders) is set with the same display restraint as news: weight 600, no headshots, italic deck.
+
+What the FT rejects: rounded corners on cards, decorative gradients, illustrative chrome, brand color used decoratively, dark-mode-by-default, paywall modal interruption beyond the meter limit. What it borrows from: **The Wall Street Journal's** financial-data-density convention (with more typographic restraint), **The Economist's** anonymous-leaders tradition (Lex column), and **modern Klim/Font-Bureau design discipline** (Financier and Metric are both Klim-pedigree).
+
+**Influences:**
+- Salmon page (1893) — the FT's adoption of pink newsprint for shelf differentiation
+- Financier (2014) — Kris Sowersby, Klim Type Foundry — [klim.co.nz/retail-fonts/financier-display](https://klim.co.nz/retail-fonts/financier-display)
+- MetricWeb (2014) — Klim Type Foundry — [klim.co.nz/retail-fonts/metric](https://klim.co.nz/retail-fonts/metric)
+- Lex column — anonymous markets opinion since 1945
+- The Wall Street Journal — financial-data convention
+- Bloomberg — markets-data design lineage
+
+## 14. Do's and Don'ts
+
+**Do**
+- Use the salmon canvas (`#fff1e5`) as the page background — it's the brand
+- Set headlines in Financier Display at modest weight 600 — typographic restraint is voice
+- Run body in Financier Text at 18/1.55 in a 620px column over salmon
+- Use FT teal (`#0d7680`) for primary CTA, links, hover underlines, focus ring
+- Use FT navy (`#262a33`) for body text — warmer than absolute black, calibrated for salmon
+- Lift photos and chart panels onto pure white surfaces inside the salmon page (the white insert)
+- Use tabular MetricWeb numerals (`tnum`) on every market context — tickers, tables, prices
+- Apply green-up / red-down convention on market data (success `#0a8754` / danger `#a63335`)
+- Use the salmon-on-navy reverse pairing for paywall, podcast cards, dark mode
+- Use UK date format ("5 November 2024") — day first
+
+**Don't**
+- Don't use white as the page background — the salmon is the brand
+- Don't use black absolute (#000) for body — navy `#262a33` is calibrated for salmon
+- Don't push display weight to 700+ — restraint at 600 is brand voice
+- Don't put photos directly on the salmon — lift them onto pure white inserts
+- Don't use a generic blue link — FT teal (`#0d7680`) is the link color
+- Don't apply shadows to article cards — depth comes from the white-on-salmon contrast
+- Don't drop the tabular numeric convention on market data — column alignment is load-bearing
+- Don't use cardinal date format ("November 5, 2024") — UK day-first is mandatory
+- Don't use rounded card corners — broadsheet aesthetic is square
+- Don't use "Click here", "Submit", "Buy now" — verbs are "Subscribe", "Continue", "Sign in"
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Salmon-Canvas:    #fff1e5
+FT-Navy:          #262a33
+FT-Teal:          #0d7680
+Teal-Hover:       #0a5a62
+Muted:            #66605c
+Hairline:         #cdc6c0
+White-Insert:     #ffffff (for photos/charts inside the salmon page)
+Market-Up:        #0a8754
+Market-Down:      #a63335
+FT-Weekend-Red:   #a63335
+```
+
+### Example Component Prompts
+
+- "Create a Financial Times article header on salmon (#fff1e5): section label in MetricWeb 12/600 uppercase tracked 0.06em ('MARKETS' or 'OPINION'), 1px navy rule below, headline in Financier Display 38/600 navy with -0.005em tracking, italic Financier Display 18/400 deck, MetricWeb 13/600 byline ('Robert Armstrong in New York'), MetricWeb 12/400 dateline ('5 November 2024' — UK day-first format)."
+- "Design an FT market ticker: pure white (#ffffff) surface inserted into the salmon page, MetricWeb 14/500 with tabular numerals ('S&P 500 ▲ 5,847.87 +0.42%'). On price update, the cell flashes background green (#0a8754) at 0.3 alpha for 200ms then fades. Down direction uses red (#a63335)."
+- "Build an FT Subscribe button: teal (#0d7680) fill, white text in MetricWeb 14/600 uppercase tracked 0.04em ('SUBSCRIBE'), 4px radius, 12×22px padding, 44px height. Press: darkens to #0a5a62. Place over salmon canvas."
+- "Create an FT pull-quote: italic Financier Display 28/1.3, navy (#262a33) text, between two 1px navy rules, 24px vertical padding, over salmon canvas (#fff1e5). The salmon ground gives the pull-quote magazine flavor."
+- "Design an FT photo card: pure white (#ffffff) surface inserted into the salmon page (the 'white insert' pattern). 16:9 photo above, MetricWeb 14/400 caption italic optional, MetricWeb 11/400 uppercase photo credit ('© Bloomberg' or 'FT montage')."
+- "Build an FT paywall modal with the **reverse pairing**: navy (#262a33) ground, salmon (#fff1e5) text. Headline 'Subscribe to the FT' in salmon Financier Display 22/600. Sub-copy in salmon Financier Text 16/400. White-outline 'Subscribe' button. Behind: 55% navy scrim. The salmon-on-navy is identifying."
+
+### Iteration Guide
+
+1. **Start on salmon, not white.** `#fff1e5` is the page. White is reserved for photos and chart inserts.
+2. **Display weight 600 (typographic restraint).** Don't push to 700 — that's NYT/WaPo. The FT's lighter weight is editorial restraint and brand voice.
+3. **Photos lift onto white inserts.** Do not put photos directly on the salmon — the white insert pattern is the layout vocabulary.
+4. **Tabular numerals on every market context.** Enable `font-variant-numeric: tabular-nums` on tickers, prices, data tables. Column alignment is load-bearing.
+5. **Green-up / red-down convention.** Markets data uses success green (`#0a8754`) for positive, danger red (`#a63335`) for negative. Color is part of the data signal.
+6. **Navy text, not absolute black.** Body uses `#262a33` — calibrated to harmonize with the salmon ground.
+7. **Reverse pairing for dark sub-bands.** Paywall, podcast cards, dark mode use navy ground with salmon text — the FT's signature inversion.
+8. **620px reading column over salmon.** Don't widen — Financier Text is calibrated for this column width.

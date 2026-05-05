@@ -1,0 +1,781 @@
+---
+name: Expedia
+tagline: Navy commerce + Mango yellow voltage — Expedia Sans, dense travel-funnel density with One Key loyalty colour-coding.
+author: webdesignhot
+source_url: https://www.expedia.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace]
+tags: [light, marketplace, travel, sans, dense, commercial, booking-funnel, loyalty]
+preview_swatch: ['#ffffff', '#00255d', '#ffc72c']
+related: [booking, kayak, airbnb]
+description: 'Expedia runs the canonical American travel-marketplace surface — a near-white canvas (`#ffffff`) anchored on the deep, almost-black-blue **Expedia navy** (`#00255d`) that paints the masthead, the wordmark, primary CTAs, and the One Key loyalty band, accented by a single voltage of warm **Mango yellow** (`#ffc72c`) that fires on the One Key reward badge, the savings ribbon, and the hero search-bar accent stroke. Type runs **Expedia Sans**, the in-house humanist sans, at modest 500–700 weights — display 28–40px / 700, body 16/400 — with the friendly, slightly rounded character that distinguishes it from Bookin Sans''s more geometric chassis. Cards round at 8–12px (slightly more rounded than Booking — Expedia leans warmer, more consumer-friendly), CTAs are pill (9999px) at 48px height, and the entire surface integrates the **One Key** loyalty programme across every product flow (Hotels, Flights, Cars, Cruises) as a unified colour-coded tier system. The result is a travel-funnel that successfully balances Booking-grade commercial density with Airbnb-grade consumer warmth, anchored by a loyalty programme that gives every page a unified visual identity.'
+
+colors:
+  bg: '#ffffff'                   # canvas — Expedia has limited public dark mode (app-only)
+  bg-alt: '#f7f7f7'               # alt-band footer, secondary surfaces
+  surface: '#ffffff'              # cards inherit canvas
+  surface-soft: '#f1f2f3'         # disabled inputs, alt rows
+  surface-strong: '#e8e9eb'       # divider band
+  surface-navy-soft: '#e8eef5'    # informational tint
+  surface-yellow: '#fff4d6'       # promo banner soft yellow
+  surface-onekey: '#152e54'       # One Key loyalty band ground (slightly lighter than masthead navy)
+  surface-onekey-deep: '#0a1f3f'  # deepest One Key loyalty surface
+  surface-deal: '#fff8eb'         # savings cell tint
+  text: '#191e3b'                 # primary ink — slightly cool warm-black
+  text-strong: '#0d1023'          # heading ink at maximum punch
+  text-body: '#26293f'            # body copy
+  text-muted: '#4f5375'           # secondary metadata
+  text-soft: '#797d96'            # caption, faint counts
+  text-on-brand: '#ffffff'        # white on navy
+  text-on-yellow: '#191e3b'       # ink on yellow
+  text-onekey: '#ffc72c'          # One Key brand text colour (yellow on navy)
+  brand: '#00255d'                # Expedia deep navy — masthead, primary CTA, wordmark
+  brand-hover: '#001b47'          # hover deepens
+  brand-active: '#001436'         # pressed
+  brand-mid: '#1668e3'             # mid-blue used for links and informational accents
+  brand-mid-hover: '#1153b8'      # link hover
+  brand-light: '#e8eef5'          # informational banner tint
+  yellow: '#ffc72c'               # Mango yellow — One Key, savings, accent
+  yellow-hover: '#e6b427'         # CTA yellow hover
+  yellow-active: '#cc9f23'        # pressed yellow
+  yellow-deep: '#7f6116'          # deep yellow text on light yellow surface
+  onekey-gold: '#ffc72c'          # One Key gold (= yellow)
+  onekey-platinum: '#dfdfe2'       # One Key Platinum tier silver
+  onekey-blue: '#00255d'           # One Key Blue tier (entry tier, navy)
+  star-rating: '#191e3b'          # ink star ratings (not yellow — Expedia uses ink for stars)
+  link: '#1668e3'                 # default link blue
+  link-hover: '#1153b8'
+  link-visited: '#5a4392'         # browser-like visited purple
+  border: '#dcdee5'               # default 1px hairline
+  border-soft: '#eaecf0'          # editorial divider
+  border-strong: '#9da1b3'        # input outline
+  border-input-focus: '#00255d'    # focused input thickens to navy
+  divider: '#dcdee5'
+  scrim: 'rgba(13,16,35,0.6)'      # navy-tinted modal backdrop
+  shadow-card: 'rgba(13,16,35,0.08)'
+  shadow-elev: 'rgba(13,16,35,0.16)'
+  shadow-deep: 'rgba(0,37,93,0.16)'
+  success: '#0c8a4a'               # "Free cancellation" green
+  success-soft: '#e7f6ed'
+  success-deep: '#075f33'
+  warning: '#d97706'               # advisory amber
+  warning-soft: '#fff8eb'
+  danger: '#c81e34'                # validation error red
+  danger-soft: '#fde8eb'
+  info: '#1668e3'                  # informational
+  info-soft: '#e8eef5'
+  best-deal: '#c81e34'             # "Best deal" / strikethrough red
+  member-price: '#0c8a4a'          # "Member price" green tag
+  high-rating: '#0c5e3a'           # high-rating badge
+
+typography:
+  display:
+    family: '"Expedia Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['tnum', 'ss01']
+  body:
+    family: '"Expedia Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: 'SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace'
+    weights: [400]
+  scale:
+    hero-display:    { size: 40, weight: 700, lineHeight: 1.10, tracking: '-0.5px',  family: display }
+    page-title:      { size: 32, weight: 700, lineHeight: 1.13, tracking: '-0.25px', family: display }
+    section-head:    { size: 24, weight: 700, lineHeight: 1.17, tracking: '0',       family: display }
+    sub-section:     { size: 20, weight: 700, lineHeight: 1.20, tracking: '0',       family: display }
+    property-title:  { size: 20, weight: 700, lineHeight: 1.20, tracking: '0',       family: display }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.33, tracking: '0',       family: body }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.25, tracking: '0',       family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',       family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.38, tracking: '0',       family: body }
+    micro:           { size: 12, weight: 400, lineHeight: 1.33, tracking: '0',       family: body }
+    price-display:   { size: 28, weight: 700, lineHeight: 1.0,  tracking: '-0.25px', family: body, opentype: ['tnum'] }
+    price-card:      { size: 22, weight: 700, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'] }
+    price-strike:    { size: 14, weight: 400, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'] }
+    review-score:    { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, opentype: ['tnum'] }
+    review-label:    { size: 14, weight: 600, lineHeight: 1.14, tracking: '0',       family: body }
+    button-md:       { size: 16, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body }
+    button-sm:       { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body }
+    nav-link:        { size: 16, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body }
+    badge:           { size: 11, weight: 700, lineHeight: 1.18, tracking: '0.32px',  family: body, transform: uppercase }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8        # buttons, inputs, smaller cards
+  lg: 12       # property cards, larger feature cells
+  xl: 16
+  pill: 9999   # primary CTAs, filter chips, score chips, One Key tier badge
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 76
+  masthead-height: 60
+  search-bar-height: 64
+  property-rail-width: 320
+
+components:
+  button-primary:
+    bg: '#00255d'
+    color: '#ffffff'
+    radius: 9999
+    padding: '14px 32px'
+    height: 48
+    font: button-md
+    use: 'Search, Reserve, Continue — every primary action.'
+  button-primary-hover:
+    bg: '#001b47'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Hover state — deeper navy.'
+  button-primary-active:
+    bg: '#001436'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Pointer-down state.'
+  button-cta-yellow:
+    bg: '#ffc72c'
+    color: '#191e3b'
+    radius: 9999
+    padding: '14px 32px'
+    height: 48
+    font: button-md
+    use: 'One Key reward CTA, "Unlock Member price" — yellow voltage moment.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#00255d'
+    border: '2px solid #00255d'
+    radius: 9999
+    padding: '12px 30px'
+    height: 48
+    use: 'Sign in, Save, Compare — secondary action over white.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#00255d'
+    use: '"Show more" links, modal close labels — underlined on hover.'
+  search-bar:
+    bg: '#ffffff'
+    color: '#191e3b'
+    radius: 9999
+    height: 64
+    border: '1px solid #dcdee5'
+    use: 'Home page search bar — Going to / Dates / Travelers / Search button. Pill-shaped, segmented internally.'
+  search-bar-segment:
+    bg: '#ffffff'
+    color: '#191e3b'
+    radius: 9999
+    height: 60
+    use: 'Inner segment of the search bar — separated by vertical hairlines.'
+  search-button:
+    bg: '#00255d'
+    color: '#ffffff'
+    radius: 9999
+    height: 56
+    width: 56
+    use: 'Circular navy search button at right end of search bar — terminates the pill.'
+  property-card:
+    bg: '#ffffff'
+    color: '#191e3b'
+    radius: 12
+    border: '1px solid #dcdee5'
+    use: 'Search result card — left photo (~40% width), right meta+price column. 12px outer radius.'
+  property-card-hover:
+    bg: '#ffffff'
+    radius: 12
+    shadow: 'rgba(13,16,35,0.16) 0 8px 24px'
+    use: 'Hover state — shadow intensifies + tiny 1px lift.'
+  review-score-chip:
+    bg: '#00255d'
+    color: '#ffffff'
+    radius: 6
+    padding: '4px 8px'
+    font: review-score
+    use: 'Property card review score — navy chip with white "8.4" displayed prominently.'
+  filter-chip:
+    bg: '#ffffff'
+    color: '#191e3b'
+    radius: 9999
+    padding: '8px 16px'
+    border: '1px solid #9da1b3'
+    use: 'Filter pills inside search results — pill outline, ink text.'
+  filter-chip-active:
+    bg: '#e8eef5'
+    color: '#00255d'
+    radius: 9999
+    border: '2px solid #00255d'
+    use: 'Active filter — light navy tint with navy outline.'
+  text-input:
+    bg: '#ffffff'
+    color: '#191e3b'
+    radius: 8
+    height: 56
+    padding: '14px 16px'
+    border: '1px solid #9da1b3'
+    focus: 'border thickens to 2px navy (#00255d)'
+    use: 'Form fields — name, email, payment.'
+  date-picker-day:
+    bg: 'transparent'
+    color: '#191e3b'
+    radius: 9999
+    size: 40
+    use: '40×40px circular day cell with day number.'
+  date-picker-day-selected:
+    bg: '#00255d'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Selected day — navy fill, white text.'
+  onekey-badge:
+    bg: '#00255d'
+    color: '#ffc72c'
+    radius: 9999
+    padding: '4px 10px'
+    font: badge
+    use: '"One Key" loyalty marker — navy with yellow text. Appears across product surfaces.'
+  member-price-tag:
+    bg: '#0c8a4a'
+    color: '#ffffff'
+    radius: 4
+    padding: '2px 6px'
+    font: badge
+    use: '"MEMBER PRICE" green pill on rate cards.'
+  best-deal-flag:
+    bg: '#c81e34'
+    color: '#ffffff'
+    radius: 4
+    padding: '2px 6px'
+    font: badge
+    use: '"BEST DEAL" red urgency flag on property cards.'
+  free-cancel-tag:
+    bg: 'transparent'
+    color: '#0c8a4a'
+    radius: 0
+    font: caption
+    use: 'Inline "Fully refundable" green text below price.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 320
+  card-hover-lift: '0 → -1px translate, shadow tier intensifies'
+  filter-pill-active: 'background 150ms standard, border thickens 1 → 2px'
+  modal-enter: 'scrim 200ms ease-out + dialog 240ms emphasized translate-y +12 → 0'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transforms suppressed, opacity-only.'
+
+breakpoints:
+  mobile: 600
+  tablet: 900
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(13,16,35,0.04) 0 1px 2px'
+  card: 'rgba(13,16,35,0.08) 0 4px 8px'
+  hover: 'rgba(13,16,35,0.16) 0 8px 24px'
+  dropdown: 'rgba(13,16,35,0.16) 0 8px 24px, rgba(13,16,35,0.04) 0 0 0 1px'
+  modal: 'rgba(0,37,93,0.16) 0 12px 36px, rgba(13,16,35,0.16) 0 16px 48px'
+  ring: '0 0 0 2px #00255d'
+
+accessibility:
+  contrast-text-on-bg: 16.4              # #191e3b on #ffffff — AAA
+  contrast-text-on-brand: 13.5            # #ffffff on #00255d — AAA
+  contrast-text-on-yellow: 12.0           # #191e3b on #ffc72c — AAA
+  contrast-link-on-bg: 4.7                # #1668e3 on #ffffff — AA body / AAA large
+  contrast-muted-on-bg: 7.2               # #4f5375 on #ffffff — AA
+  focus-ring: '2px solid #00255d + 2px outline offset — navy ring matches brand for funnel surfaces'
+  reduced-motion-honored: true
+  touch-target-min: 48
+  keyboard-nav: 'Search bar: Tab Going-to → Dates → Travelers → Search. Filter sidebar: Tab top → bottom; Space toggles checkboxes.'
+
+dark-mode: null   # Light-only public web. Expedia mobile app ships dark mode; web is engineered around white-canvas commerce density and the navy + yellow brand surfaces.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Expedia is the American sibling of European travel commerce — where Booking goes blue-and-yellow Dutch-functional, Expedia goes deep-navy-and-mango more polished, more consumer-warm, more programmatic about loyalty. The base canvas is **pure white** (`#ffffff`), the dominant brand surface is the deep, almost-black **Expedia navy** (`#00255d`) that paints the masthead, primary CTAs, the wordmark, and every product hero, accented by a single voltage of warm **Mango yellow** (`#ffc72c`) that fires on the One Key reward badge, the savings ribbon, the home-page search-bar accent, and select promotional CTAs.
+
+Type runs **Expedia Sans**, the in-house humanist sans introduced around 2022 alongside the One Key loyalty rebrand. Where Bookin Sans is geometrically clean, Expedia Sans is warmer — slightly rounded terminals, a friendlier `g`, optical adjustments at smaller sizes. It sits at modest 500–700 weights — display 28–40px / 700, body 16/400 (notably one notch larger than Booking's 14/400 default, reflecting Expedia's slightly more consumer-warm density). The hero h1 ("Find your kind of trip") renders at 40px / 700, a confident American-marketing scale that signals "this is a destination experience" rather than "this is a search engine".
+
+The shape language is **softer than Booking, harder than Airbnb**. Buttons round at 9999px (full pill — Expedia commits to consumer-warm pill geometry), property cards at 12px (more rounded than Booking's 8px), search-bar segments at 9999px. The system trusts pill geometry to read as "approachable, modern, consumer-friendly" while still serving a dense funnel.
+
+The atmosphere is **commerce with hospitality polish**. The page is dense — search results, filter sidebars, urgency flags, price strikethroughs, member-price tags — but every dense element wears a slightly softer skin than Booking. Cards have 12px radius (warmer), CTAs are pill (warmer), shadows are slightly softer, and the One Key loyalty programme weaves a unified visual identity across every product flow (Hotels, Flights, Cars, Cruises, Activities) so the entire surface reads as a single integrated brand rather than a federation of product silos.
+
+**Key Characteristics:**
+- Two-voltage brand: deep navy `#00255d` + Mango yellow `#ffc72c`, with the One Key loyalty programme as a unifying visual layer
+- Expedia Sans humanist at 500–700 — display 28–40px, body 16/400, warmer and slightly larger than Booking
+- Pill geometry on buttons and filter chips (9999px), rounded cards at 12px — softer than Booking, harder than Airbnb
+- Circular navy search button (56×56px) terminates the right edge of the pill-shaped search bar — a recognisable Expedia signature
+- Strict semantic colour: red = best deal/urgency, green = member price/free-cancel, yellow = One Key/savings, navy = brand, mid-blue = link
+- One Key loyalty as a horizontal visual layer — yellow on navy badges appearing across every product card
+- Density softened by warmer geometry — 18 cards visible per scroll instead of Booking's 25, but each card breathes more
+- 4-product top nav (Stays, Flights, Cars, Cruises) with hand-illustrated icons and an integrated One Key account utility
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): the default page floor for every public page. Expedia's web property is light-only.
+- **Ink** (`#191e3b`): the dominant text colour. Slightly cool warm-black with a navy bias — reinforces the brand subliminally on every page.
+- **Expedia Navy** (`#00255d`): the brand colour. Masthead, primary CTA, wordmark, focus ring, review-score chip, OneKey badge ground.
+- **Mango Yellow** (`#ffc72c`): the secondary voltage. One Key reward badge text, savings ribbon, search-bar accent, select promotional CTAs.
+
+### Brand & Sub-Brand
+- **Navy Hover** (`#001b47`): hover deepens the navy further.
+- **Navy Active** (`#001436`): pressed state at maximum depth.
+- **One Key Surface** (`#152e54`): a slightly lighter navy used on the One Key loyalty band ground — distinguishes the loyalty band from the masthead.
+- **Mid Blue** (`#1668e3`): secondary blue — used on inline links and informational accents. Notably brighter than Booking's `#0071c2` link blue.
+- **Yellow Hover** (`#e6b427`): CTA yellow hover state.
+- **Yellow Deep** (`#7f6116`): deep yellow text colour used on light yellow surface tints (savings ribbon, promo banners).
+- **One Key Gold** (`#ffc72c`): the loyalty programme's "Gold" tier colour (= yellow voltage).
+- **One Key Platinum** (`#dfdfe2`): the loyalty programme's "Platinum" tier silver.
+
+### Accent
+- **Star Rating** (`#191e3b`): property star rating renders in ink, not yellow — Expedia chose ink stars to differentiate from Booking's yellow stars and to coexist with the yellow voltage without colour-noise.
+- **Member Price** (`#0c8a4a`): the loyalty member-price tag colour — green to signal "savings unlocked".
+- **Best Deal** (`#c81e34`): the red urgency tag for "Best deal", "Limited time", "Sold out elsewhere".
+
+### Interactive
+- **Link** (`#1668e3`): the default inline link colour — bright mid-blue, distinct from brand navy.
+- **Link Hover** (`#1153b8`): hover deepens the mid-blue.
+- **Link Visited** (`#5a4392`): browser-like visited purple.
+- **Selected** (`#00255d` fill, `#ffffff` text — date-picker days, active filter chips).
+- **Disabled** (`#9da1b3` text on `#f1f2f3` surface).
+
+### Neutral Scale
+- **Ink** (`#191e3b`) — display, body, primary labels
+- **Body** (`#26293f`) — secondary running text
+- **Muted** (`#4f5375`) — sub-titles, metadata, footer secondary labels
+- **Soft** (`#797d96`) — captions, faint counts
+- **Border Strong** (`#9da1b3`) — input outlines, disabled controls
+- **Border** (`#dcdee5`) — default 1px hairline (card outlines, dividers)
+- **Border Soft** (`#eaecf0`) — alt-row separators
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — page floor
+- **Surface Soft** (`#f1f2f3`) — disabled fields, alt rows
+- **Surface Strong** (`#e8e9eb`) — divider band
+- **Surface Navy Soft** (`#e8eef5`) — informational tint, active filter chip
+- **Surface Yellow** (`#fff4d6`) — soft yellow surface for savings/promo
+- **Surface One Key** (`#152e54`) — One Key loyalty band ground
+
+### Shadow Colors
+Expedia uses navy-tinted shadows on cards and modals — every shadow carries a hint of brand colour, reinforcing the brand subliminally even at the depth layer.
+
+- `rgba(13,16,35,0.04) 0 1px 2px` — flat ambient
+- `rgba(13,16,35,0.08) 0 4px 8px` — card resting
+- `rgba(13,16,35,0.16) 0 8px 24px` — card hover
+- `rgba(0,37,93,0.16) 0 12px 36px` — modal (deeper navy-tinted)
+
+### Semantic
+- **Success** (`#0c8a4a` on `#e7f6ed`) — "Fully refundable" green, member-price tag, in-stock confirmation
+- **Warning** (`#d97706` on `#fff8eb`) — advisory amber for low availability, fee changes
+- **Danger** (`#c81e34` on `#fde8eb`) — validation error red, also strikethrough discount price, "Best deal" urgency
+- **Info** (`#1668e3` on `#e8eef5`) — informational banners
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Expedia Sans` — the in-house humanist sans introduced around 2022 alongside the One Key loyalty rebrand. Fallback chain: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`. Inter sits as the first non-system fallback because Expedia Sans is essentially a humanist-optimised cousin of Inter — the substitution renders convincingly close.
+
+**Mono companion**: not used in the public marketing surface — Expedia's developer docs are off-domain. Monospace appears only inside booking-confirmation reference numbers.
+
+**OpenType features**: `tnum` is enabled aggressively across prices, rating numbers, room counts, and review-count totals so columns align in the dense search results. `ss01` is enabled on the wordmark and select display copy.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| hero-display | Expedia Sans | 40 | 700 | 1.10 | -0.5px | — | Homepage h1 ("Find your kind of trip") |
+| page-title | Expedia Sans | 32 | 700 | 1.13 | -0.25px | — | Search results h1 ("New York: 2,847 properties") |
+| section-head | Expedia Sans | 24 | 700 | 1.17 | 0 | — | Editorial bands ("Trending now") |
+| sub-section | Expedia Sans | 20 | 700 | 1.20 | 0 | — | Sub-section titles inside detail pages |
+| property-title | Expedia Sans | 20 | 700 | 1.20 | 0 | — | Property card title |
+| title-md | Expedia Sans | 18 | 600 | 1.33 | 0 | — | Filter sidebar section heads, card sub-titles |
+| title-sm | Expedia Sans | 16 | 600 | 1.25 | 0 | — | Card meta labels |
+| body-md | Expedia Sans | 16 | 400 | 1.5 | 0 | — | Default running-text |
+| body-sm | Expedia Sans | 14 | 400 | 1.43 | 0 | — | Card meta lines, dates, distance |
+| caption | Expedia Sans | 13 | 500 | 1.38 | 0 | — | "Fully refundable", "Includes breakfast" tags |
+| micro | Expedia Sans | 12 | 400 | 1.33 | 0 | — | Footer legal, fine-print disclosures |
+| price-display | Expedia Sans | 28 | 700 | 1.0 | -0.25px | tnum | Property detail price ("$247") |
+| price-card | Expedia Sans | 22 | 700 | 1.0 | 0 | tnum | Property card price |
+| price-strike | Expedia Sans | 14 | 400 | 1.0 | 0 | tnum | Strikethrough discount price (red text) |
+| review-score | Expedia Sans | 16 | 700 | 1.0 | 0 | tnum | Review score chip number ("8.4") |
+| review-label | Expedia Sans | 14 | 600 | 1.14 | 0 | — | "Excellent", "Wonderful" review qualifier |
+| button-md | Expedia Sans | 16 | 600 | 1.0 | 0 | — | Primary CTA labels |
+| button-sm | Expedia Sans | 14 | 600 | 1.0 | 0 | — | Filter chip labels |
+| nav-link | Expedia Sans | 16 | 600 | 1.0 | 0 | — | Top product-nav labels (Stays, Flights, Cars) |
+| badge | Expedia Sans | 11 | 700 | 1.18 | 0.32px | uppercase | "ONE KEY", "MEMBER PRICE", "BEST DEAL" |
+
+### Principles
+
+- **Body sits at 16, not 14.** Expedia commits to standard SaaS body density (16/400) rather than Booking's compressed 14/400 — this is the brand's explicit choice to feel more consumer-warm and accessible. Cards breathe a little more; fewer cards per scroll, but each is more readable.
+- **Display weight is 700 across the entire scale.** Hierarchy comes from size alone — display headlines all sit at 700, with size scaling 20 → 24 → 32 → 40 across tiers. The system trusts size to do the work, not weight.
+- **Negative tracking only on display.** -0.5px on hero-display, -0.25px on page-title and price-display; everything else sits at 0.
+- **Tabular numerals on every numeric.** Prices, rating numbers, room counts, review counts, distance figures all render with `tnum` so columns align across cards.
+- **Weight ladder for body hierarchy.** Title-md (18/600), title-sm (16/600), body-md (16/400), body-sm (14/400), caption (13/500) — hierarchy comes from a 400/500/600 weight ladder at decreasing sizes, keeping vertical rhythm coherent.
+- **Inter is the closest open-source substitute** if Expedia Sans is unavailable. The fallback is intentional — Expedia Sans was designed with Inter compatibility in mind. Adjust display headlines down by ~2% in line-height to match Expedia Sans's slightly tighter cap height.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Navy (`#00255d`) fill, white text, **9999px radius (full pill)**, 14×32px padding, 48px height, weight 600. The most common CTA across the system: "Search", "Reserve", "Continue", "Sign in". Hover deepens to `#001b47`; active flips to `#001436`.
+
+**`button-cta-yellow`** — Mango yellow (`#ffc72c`) fill, ink (`#191e3b`) text, 9999px radius, 14×32px padding, 48px height. Used on "Unlock Member price", "Join One Key", and select promotional CTAs — the yellow voltage moment. Hover deepens to `#e6b427`.
+
+**`button-secondary`** — White fill with navy text and a 2px navy outline. 9999px radius, 48px height. Used for "Save", "Compare", and inverse CTAs over navy surfaces.
+
+**`button-tertiary-text`** — Plain navy text, no surface, no border. Underlined on hover. Used for "Show more" links, modal close labels.
+
+### Cards
+
+**`property-card`** — Two-column horizontal layout: left photo column (~40% width, 1:1 aspect ratio with 12px radius matching the card outer radius), right meta column with property title (`property-title`), location, amenity icons, review chip + label, member-price tag (when applicable), strikethrough discount price, current price (`price-card`), "Fully refundable" green tag, and a navy `button-primary` "View options" CTA. 12px outer radius, 1px hairline border. Hover intensifies shadow + 1px lift.
+
+**`destination-card`** — Editorial card on the homepage trending-destinations band. 4:3 image with 12px radius, white surface beneath, city name in `title-md` ink + property count in `body-sm` muted.
+
+**`detail-rail-card`** — Right rail card on property detail. White surface, 12px radius, 1px hairline, 24px padding, sticky positioning. Contains check-in/out, guest stepper, member-price unlock CTA (yellow), full-width navy "Reserve" CTA, price breakdown.
+
+**`onekey-card`** — One Key loyalty band on logged-in user state. Surface `#152e54` ground, yellow text, 12px radius, 24px padding. Contains user tier, points balance, perks list, "View dashboard" link.
+
+**`flight-card`** — 4-segment horizontal card for flight search: airline logo + flight number, depart time + airport code, duration + stops, arrive time + airport code, price + Select CTA. 12px radius, hairline border, hover intensifies shadow.
+
+### Badges, Tags, Pills
+
+**`review-score-chip`** — Navy fill, white text, 6px radius (slightly more rounded than Booking's asymmetric chip — Expedia uses a uniform soft-square). 4×8px padding. Holds the score in `review-score` (e.g., "8.4"). Always paired with a `review-label` ("Wonderful") and total review count beneath.
+
+**`onekey-badge`** — Navy fill, yellow text, 9999px pill, 4×10px padding. Carries "One Key" wordmark in 11px / 700 uppercase. Appears on logged-in user state and on rate cards eligible for One Key benefits.
+
+**`member-price-tag`** — Green (`#0c8a4a`) fill, white text, 4px radius. "MEMBER PRICE" label fires on logged-in member rate cards — the green colour signals "savings unlocked".
+
+**`best-deal-flag`** — Red (`#c81e34`) fill, white text, 4px radius. "BEST DEAL", "LIMITED TIME" — fires on top-left of property card image.
+
+**`free-cancel-tag`** — Plain green text (`#0c8a4a`), no surface. "Fully refundable" / "Free cancellation" — appears below the price on property cards.
+
+**`filter-chip`** — Pill-shaped (9999px), 1px hairline border, ink text. Active chip flips to navy-tint surface (`#e8eef5`) with 2px navy outline and navy text.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px hairline (`#9da1b3`) border, 8px radius, 56px height, 14×16px padding. Stacked label above (in `caption` muted). On focus the border thickens to 2px navy and the colour flips to `#00255d` — no glow ring.
+
+**`search-bar`** — Pill-shaped (9999px) global search bar. White surface, 64px height, 1px hairline border + soft drop shadow. Internally divided by vertical hairlines into Going to / Dates / Travelers segments. Each segment holds an uppercase caption label above a placeholder line in `caption`. Right edge terminates in a 56×56px circular navy `search-button` with a white magnifying-glass icon.
+
+**`search-button`** — Circular navy button anchored at the right edge of the search-bar pill. 56×56px, fully rounded, white icon centred. The single most-tapped element on the homepage.
+
+### Navigation
+
+**`top-nav`** — White surface, 76px height, 1px bottom hairline. Wordmark flush left, four product tabs centred (Stays, Flights, Cars, Cruises), and account utilities (One Key, Help, Sign in / List property) flush right.
+
+**`product-tab-active`** — Ink label in `nav-link`, 32px hand-illustrated icon, 2px navy underline beneath the icon-label pair.
+
+**`product-tab-inactive`** — Muted label, illustrated icon, no underline.
+
+**`onekey-band`** — A sticky horizontal band that appears beneath the masthead on logged-in user state. Surface `#152e54` ground, yellow text, 40px height, displays user tier, points balance, and a "View benefits" link.
+
+### Date Picker
+
+**`date-picker-day`** — 40×40px circular cell carrying the day number in `body-sm`. Default state transparent fill, ink text. Hover state fills `#e8eef5` light navy.
+
+**`date-picker-day-selected`** — Navy fill (`#00255d`), white text, full circle. Range cells between two selected days carry a `#e8eef5` light-navy background that connects them.
+
+### Modals & Overlays
+
+**`modal`** — Centred dialog over a 60%-opacity navy-tinted scrim (`rgba(13,16,35,0.6)`). White surface, 12px radius, no border, navy-tinted modal shadow. Close button is a 32px square icon-button anchored top-right.
+
+**`tooltip`** — Ink fill (`#191e3b`), white text in `body-sm`, 4px radius, 8×12px padding.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section padding (vertical): 64–80px for editorial bands, 48px for search-results bands — looser than Booking's 32–48px because Expedia trades density for warmth
+- Card internal padding: 20px for property-card meta column, 24px for detail-rail-card, 16px for flight-card
+- Gutters: 16px between property cards (vertical stack), 20px between filter sections, 12px on dense filter-chip rows
+
+### Grid & Container
+
+- Max content width: ~1280px centred on the homepage and editorial pages
+- Search results: ~1200px centred — 320px left filter sidebar + ~860px right results column
+- Footer: 4-column link grid at desktop with destinations, product types, "About", "Help" — collapses to 1-column on mobile
+- Property detail: 2-column with photo gallery + amenity body on the left (~62% width) and a sticky reservation rail on the right (~32%)
+- Hero search: full-width white band with the pill-shaped search bar centred at ~1024px max width, framed by 64px section padding
+
+### Whitespace Philosophy
+
+The system gives editorial bands 64–80px of vertical breathing room and stacks search-result cards at 16px gutters. The ratio is 4–5× density between editorial and results — slightly less aggressive than Booking's 6× ratio, reflecting Expedia's softer commerce-with-hospitality stance.
+
+### Section Cadence
+
+Light/dark alternation appears in two places: the navy masthead (always navy) and the One Key loyalty band (Surface One Key navy when logged-in, just beneath the masthead). The rest of the page stays on white through 90% of the surface. Soft yellow (`#fff4d6`) appears as a banner tint on promotional bands; soft navy (`#e8eef5`) appears as informational banner tint.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | OneKey badge inner accent |
+| Small | 4px | Best Deal flag, Member Price tag, deal stripes |
+| Medium | 8px | Text inputs, smaller cards, tooltips |
+| Large | 12px | Property cards, modals, detail-rail-card, OneKey card, flight card |
+| Featured | 16px | Hero callout cards |
+| Pill | 9999px | All buttons (primary, secondary, CTA-yellow), filter chips, search bar, OneKey badge, date-picker days |
+
+The system commits to **pill geometry on every button**. Where Booking rejects pill (4px buttons), Expedia commits to it (9999px) — this is the single most distinctive shape decision separating the two brands. Pill on buttons reads as consumer-warm and hospitality-coded; the rounded 12px property cards reinforce the same softening.
+
+The single design rule: **buttons are always pill, cards are always 12px, inputs are always 8px**. The radius hierarchy maps directly to interaction frequency — the more often you tap it, the rounder it is.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, hero, footer, masthead, filter sidebar (~80% of surfaces) |
+| 1 — Resting card | `rgba(13,16,35,0.04) 0 1px 2px, rgba(13,16,35,0.08) 0 4px 8px` | Property cards, flight cards at rest |
+| 2 — Hover | `rgba(13,16,35,0.16) 0 8px 24px` | Property cards on pointer hover, dropdowns |
+| 3 — Modal | `rgba(0,37,93,0.16) 0 12px 36px, rgba(13,16,35,0.16) 0 16px 48px` | Centred dialogs |
+| 4 — Scrim | `rgba(13,16,35,0.6)` ground | Global modal backdrop tone — navy-tinted |
+
+### Shadow Philosophy
+
+Expedia uses **navy-tinted shadows throughout** — every shadow carries a hint of `rgba(13,16,35, …)` rather than pure black. The brand subliminally appears in every depth layer, which makes the page feel more cohesive than a system with neutral black shadows. Modal shadow uses an even deeper navy tint (`rgba(0,37,93, …)`) to reinforce "this is a brand surface, lifted above the page".
+
+Shadow tiers are progressive: resting cards have a soft 2-layer shadow; hover intensifies the second layer to 16% opacity at 24px blur; modals stack three layers; the scrim is navy-tinted at 60% opacity. The progression reads cleanly — each elevation event is visually distinct.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — the default for hover lifts, hairline transitions, scrim fades
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, sticky-rail snap-in
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — date-picker month flip, image gallery slide
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 150ms | Hover state colour swaps, hairline border thickening, filter-chip toggle |
+| Standard | 240ms | Card hover lift, modal scrim fade |
+| Slow | 320ms | Page transitions, image gallery slide |
+
+### Per-Component Recipes
+
+- **Property card hover**: `transform: translateY(-1px); shadow: hover tier; transition: 240ms standard.` A subtle 1px lift (lighter than Airbnb's 2px) signals interactivity without being jumpy.
+- **Filter chip toggle**: background fades from `#ffffff` → `#e8eef5` over 150ms standard, border thickens 1 → 2px and shifts to navy.
+- **Search button hover**: navy circle scales 1.0 → 1.04 over 150ms — the only place subtle scale appears.
+- **Yellow CTA hover**: background `#ffc72c` → `#e6b427` over 150ms standard.
+- **Modal enter**: scrim fades in over 200ms ease-out, then dialog translates from `translateY(12px) opacity(0)` to `translateY(0) opacity(1)` over 240ms emphasized.
+- **One Key tier badge**: when user upgrades tier, badge does a 400ms colour swap with a subtle scale-bounce (1.0 → 1.08 → 1.0) — the only celebratory motion in the system.
+
+### Page Transitions
+
+Page-to-page navigation uses a soft fade and content swap — 200ms fade-out + 320ms fade-in, with a slight content-up animation on the new page (12px translate). The funnel feels gently propelled rather than abruptly switched.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. All transforms suppress; only opacity transitions remain. Card hover lift becomes shadow-only; modal enter becomes 200ms opacity-only fade; One Key tier upgrade becomes instant colour swap.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #191e3b ink on #ffffff canvas | 16.4 | AAA |
+| #ffffff on #00255d navy | 13.5 | AAA |
+| #191e3b on #ffc72c yellow | 12.0 | AAA |
+| #1668e3 link on #ffffff | 4.7 | AA body |
+| #4f5375 muted on #ffffff | 7.2 | AA |
+| #ffc72c on #00255d One Key | 11.7 | AAA — yellow on navy |
+| #0c8a4a success on #ffffff | 4.8 | AA body |
+
+### Focus Indicators
+
+Focus ring is `2px solid #00255d` with 2px outline-offset — Expedia uses brand navy on focus, matching Booking's approach. The funnel is keyboard-heavy (forms, filter checkboxes, date pickers, payment fields), and brand-coloured focus reinforces the funnel surface.
+
+### ARIA Patterns
+
+- **Search bar**: `role="search"` on the outer pill; each segment is a `<button>` that opens a `role="dialog"` overlay
+- **Property card**: heart save uses `aria-pressed`; the entire card is wrapped in a `<a>` with verbose `aria-label`
+- **Filter sidebar**: each filter section is a `<fieldset>` with a `<legend>`; checkboxes are native with `aria-describedby`
+- **Review-score chip**: `aria-label="Rated 8.4 out of 10, Wonderful"`
+- **One Key badge**: `aria-label="One Key member, Gold tier"` so screen readers announce loyalty status
+- **Modal**: focus trap, Esc closes, click outside closes, focus returns to trigger
+
+### Keyboard Navigation
+
+- Top nav: Tab moves left → right (logo → product tabs → One Key → help → sign-in)
+- Search bar: Tab through Going to → Check-in → Check-out → Travelers → Search button
+- Filter sidebar: Tab top → bottom; Space toggles; Enter expands sections
+- Property card grid: Tab moves card → card
+- Date picker: arrow keys navigate days, Enter selects, Esc closes
+
+### Screen Reader Hints
+
+Every CTA has a verb ("View options" not "Click here"); every review chip has an aria-label that expands the score; the One Key badge expands its tier in aria-label. Icon-only buttons (heart save, share) carry `aria-label`.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only when `prefers-reduced-motion: reduce` is set.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Top nav collapses to logo + hamburger; product tabs hide behind a sheet; search bar becomes a single tappable card; property cards 1-up vertically stacked; filter sidebar moves to a bottom-sheet drawer |
+| Tablet | 600–900px | Top nav keeps product tabs; search bar narrows to 2-row layout; property cards 1-up with image left meta right; filter sidebar slides in from left |
+| Desktop | 900–1200px | Full top nav with 4 product tabs; pill-shaped search bar at full width with all 3 segments; property cards 1-up with full 2-column layout (image | meta+price); filter sidebar 280px wide |
+| Wide | >1200px | Content width caps at 1280px; gutters absorb the rest |
+
+### Touch Targets
+
+- Primary CTAs: minimum 48×48px
+- Search button (circular navy): 56×56px
+- Filter-chip: 32×32px minimum
+- Date-picker day cells: 40×40px circular
+- Heart save: 36×36px (slightly larger than Booking)
+
+### Collapsing Strategy
+
+- Top product tabs collapse into a hamburger sheet below 600px
+- Search bar's 3 segments collapse into a single-tap entry that opens a full-screen search overlay on mobile
+- Filter sidebar transforms into a bottom-sheet drawer on mobile (Apply/Clear buttons sticky at the bottom)
+- Property cards reflow from 2-column horizontal layout (image | meta+price) to vertical stack at <600px
+- Detail-rail-card switches from sticky right-rail to a sticky bottom CTA on mobile
+
+### Image Behavior
+
+Property card images use `aspect-ratio: 1/1` on desktop and `aspect-ratio: 16/9` on mobile. Fill with `object-fit: cover`. Gallery uses CSS scroll-snap on touch surfaces. Lazy-loaded with low-res blurhash placeholders.
+
+### Container Queries
+
+The detail-rail-card uses container queries to compress its fee breakdown when the right rail narrows below ~300px.
+
+## 11. Content & Voice
+
+### Tone
+
+Friendly American commerce — direct, optimistic, occasionally aspirational. Where Booking is transactional and Airbnb is poetic, Expedia is warmly commercial. Headlines lead with the user's intent ("Find your kind of trip", "Save more with One Key") rather than the inventory ("3,247 properties"). The brand reinforces commerce metaphors but softens them with hospitality framing ("save", "unlock", "discover").
+
+### Microcopy Patterns
+
+- **Button verbs**: "Search", "Reserve", "View options", "Continue", "Sign in", "Unlock Member price" — direct and outcome-named
+- **Loyalty recipe**: `[One Key benefit] + [Tier-specific perk] + [Action]` — e.g., "Save 10% with Member price. Sign in to your One Key account to unlock."
+- **Error message recipe**: `[What went wrong] + [How to fix]` — e.g., "Choose your check-out date — your stay needs to be at least one night."
+- **Success confirmations**: warm and personalized — "Your trip to Maui is booked! Confirmation #EXP-3247-129"
+- **Field labels**: short and instructive — "Going to", "Check-in", "Check-out", "Travelers"
+
+### Empty States
+
+Empty wishlist: "Save trips you love. Tap the heart on any property, flight, or activity to save it for later."
+Empty search results: "No matches with your filters. Try adjusting dates, removing a filter, or expanding your search area." — names cause and suggests three remedies.
+
+### CTA Verb Conventions
+
+- Primary action: **"Search"** (entry funnel), **"View options"** (results), **"Reserve"** (detail), **"Confirm and pay"** (final step)
+- Secondary action: **"Sign in"**, **"Sign up"**, **"Save"**, **"Compare"**
+- Tertiary text: **"Show more"**, **"View all reviews"**, **"View on map"**
+- Loyalty action: **"Unlock Member price"**, **"Join One Key"**, **"View benefits"**
+- Avoided: "Submit", "Click here", "Buy now"
+
+## 12. Dark Mode & Theming
+
+**Light-only on the public web.** The Expedia mobile app ships a system-controlled dark mode (near-black surface, white text, navy unchanged on CTAs and chips, yellow unchanged), but the marketing site, search-results, and property-detail pages are explicitly light-only.
+
+The brand position: dense commerce surfaces are easier to scan on white, and the navy + yellow brand surfaces (masthead, One Key band) provide enough visual contrast that a dark canvas is unnecessary. Expedia's One Key loyalty band is itself a dark surface that punctuates the white canvas — adding global dark mode would dilute that visual hierarchy.
+
+The single nod to dark surfaces in marketing: the navy masthead at the top of every page (always navy), and the One Key loyalty band (always Surface One Key navy when logged-in). Promotional surfaces occasionally use soft yellow tints (`#fff4d6`) for limited-time campaign bands.
+
+## 13. Lineage & Influences
+
+Expedia's visual lineage runs through three traditions: **American consumer marketplace polish** (Amazon, Target, eBay — dense, commercial, but warmly designed); **European travel commerce density** (Booking, Kayak — the funnel pattern, the urgency flags, the price strikethrough); and **loyalty programme integration** (Marriott Bonvoy, Hilton Honors — the idea that loyalty is a unifying visual layer that binds disparate product flows into a single brand experience). The Expedia Sans typeface is the most distinctive brand choice — a humanist sans designed alongside the 2022 One Key rebrand to give the brand a softer, more approachable voice than the previous Helvetica-derived stack.
+
+The colour discipline — deep navy + Mango yellow — is borrowed from American transit signage (Yellow + navy is the classic "school bus + business suit" American colour pairing — readable, trustworthy, friendly without being playful). The pill geometry on buttons (9999px) is borrowed from modern consumer SaaS (Stripe, Airbnb, Square) — it explicitly rejects the enterprise SaaS 4–8px button radius that Booking uses, signalling "consumer-friendly first, transactional second".
+
+What Expedia rejects: square button geometry (too commercial-cold), heavy chrome (must convert), illustrative gradients (must scan), and dark mode on web (white canvas is the brand surface). The One Key loyalty programme is the brand's most distinctive integration — every product flow (Hotels, Flights, Cars, Cruises, Activities) carries the same navy + yellow loyalty visual identity, which is rare for a multi-product travel marketplace.
+
+**Influences:**
+- Airbnb — pill geometry on buttons, photographic property cards, [airbnb.com](https://www.airbnb.com)
+- Booking — travel-funnel UX pattern, urgency flags, dense filter sidebar, [booking.com](https://www.booking.com)
+- Marriott Bonvoy — loyalty programme as unified visual layer, [marriott.com](https://www.marriott.com)
+- Amazon — dense product card e-commerce, [amazon.com](https://www.amazon.com)
+- Inter / Roboto — humanist sans typographic ancestry of Expedia Sans
+
+## 14. Do's and Don'ts
+
+**Do**
+- Commit to the navy + yellow palette — these are the two brand colours, used in strict colour-by-function discipline
+- Run body at 16/400 — Expedia's slightly looser density vs Booking is intentional
+- Use pill geometry (9999px) on every button — primary, secondary, yellow CTA all round fully
+- Round property cards at 12px — softer than Booking's 8px, more consumer-warm
+- Render prices, ratings, and counts with `tnum`
+- Use red for best deal/urgency, green for member price/free-cancel, yellow for One Key/savings, navy for brand, mid-blue for link
+- Terminate the search bar with a 56×56px circular navy search button — it's an Expedia signature
+- Use navy-tinted shadows throughout — every shadow carries the brand subliminally
+- Lead with verbs that name the outcome ("View options", "Reserve", "Unlock Member price")
+- Integrate One Key consistently — the loyalty programme is the unifying visual layer
+
+**Don't**
+- Don't use square radius on buttons — Expedia commits to pill (9999px) on every button
+- Don't introduce a third brand colour — navy + yellow + One Key is the entire system
+- Don't use 14/400 body — that's Booking's density; Expedia is warmer at 16/400
+- Don't render star ratings in yellow — Expedia uses ink stars to differentiate from Booking
+- Don't mix the colour-by-function semantics (red ≠ free-cancel, green ≠ urgency)
+- Don't introduce dark mode on web — One Key dark band already provides the dark surface punctuation
+- Don't decouple the search button from the search bar — they always share the pill
+- Don't break the 12px property card radius — every card in the system rounds at exactly 12px
+- Don't use neutral black shadows — Expedia's shadows are navy-tinted throughout
+- Don't omit the One Key band on logged-in user state — the loyalty programme is the brand's spine
+- Don't use exclamation marks except in upgrade-tier microcopy
+- Don't break the search bar's circular search button — it's the most-tapped element on the homepage
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Ink:              #191e3b
+Expedia-navy:     #00255d
+Mid-blue (link):  #1668e3
+Mango-yellow:     #ffc72c
+Yellow-hover:     #e6b427
+Surface-soft:     #f1f2f3
+Surface-navy-soft: #e8eef5
+Hairline:         #dcdee5
+Muted:            #4f5375
+Success-green:    #0c8a4a
+Best-deal-red:    #c81e34
+OneKey-surface:   #152e54
+```
+
+### Example Component Prompts
+
+- "Create an Expedia-style hero: white canvas, 40px / 700 ink headline ('Find your kind of trip'), and beneath it a pill-shaped search bar (9999px radius, 64px height, white surface, 1px hairline border) divided by vertical hairlines into Going-to / Dates / Travelers segments. Right edge terminates in a 56×56px circular navy (#00255d) search button with white magnifying-glass icon."
+- "Design a property card: 12px outer radius, 1px hairline border (#dcdee5), two-column horizontal layout: ~40% width 1:1 image with 12px radius on the left, right meta column with property title at 20px / 700 ink, location and amenities in 14px / 400 muted (#4f5375), navy review-score chip beneath (6px radius, navy fill, white '8.4' at 16px / 700 tnum, 'Wonderful' label beneath); price row with strikethrough discount in red, current price '$247' at 22px / 700 tnum, green 'Fully refundable' tag, navy pill (9999px) 'View options' CTA at 48px height."
+- "Build a primary CTA: navy (#00255d) fill, white text at 16px / 600, 9999px radius (full pill), 14×32px padding, 48px height. Hover deepens to #001b47. Active flips to #001436."
+- "Create a yellow CTA: Mango yellow (#ffc72c) fill, ink (#191e3b) text at 16px / 600, 9999px radius, 14×32px padding, 48px height. Hover deepens to #e6b427. Use for One Key reward CTAs ('Unlock Member price', 'Join One Key')."
+- "Design a One Key loyalty band: surface ground #152e54, yellow text (#ffc72c) at 14px / 600, 12px outer radius, 24px padding. Show user tier badge ('GOLD', navy fill with yellow text in 11px / 700 uppercase pill), points balance, perks list, and a yellow 'View dashboard' link."
+- "Build a stacked text input: white surface, 1px hairline (#9da1b3) border, 8px radius, 56px height, 14×16px padding. Stacked label above in 13px / 500 muted. On focus, border thickens to 2px navy (#00255d)."
+
+### Iteration Guide
+
+1. **Start on white.** The white canvas is the system; navy is the brand surface (masthead, One Key, modals); yellow is the One Key loyalty voltage. If the canvas isn't white, you've broken the brand.
+2. **Pill on every button.** Buttons round at 9999px (full pill) — primary, secondary, yellow CTA all commit. No exceptions. This is the single decision that separates Expedia from Booking visually.
+3. **Cards round at 12px, inputs at 8px.** The radius hierarchy maps to interaction frequency.
+4. **Body at 16/400, not 14/400.** Expedia is warmer than Booking — body breathes.
+5. **One Key is the unifying layer.** Logged-in user state shows the One Key band beneath the masthead; rate cards show the One Key badge; member-price tags appear in green. The loyalty programme is the brand's spine.
+6. **Tabular numerals on every numeric.** Prices, ratings, room counts, review counts.
+7. **Circular search button is signature.** The 56×56px circular navy button at the right edge of the search bar is Expedia's most recognisable element — don't replicate the search bar without it.
+8. **Navy-tinted shadows.** Every shadow uses `rgba(13,16,35, …)` — the brand subliminally appears in depth layer.

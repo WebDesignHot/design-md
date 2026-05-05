@@ -1,0 +1,690 @@
+---
+name: Superhuman
+tagline: White paper canvas, a custom Super Sans variable, and a single confident lavender — premium email dressed as a stationery brand.
+author: webdesignhot
+source_url: https://superhuman.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas, dev-tools]
+tags: [light, minimal, sans, spacious, soft, structured, premium]
+preview_swatch: ['#ffffff', '#714cb6', '#292827']
+related: [linear, notion, raycast]
+description: 'Superhuman''s site reads like a stationery brand that learned to ship software. The canvas is paper-white (`#ffffff`), body text sits in a near-black `#292827` warmed with a hint of brown, and the typography is a single custom variable face — Super Sans VF — used at every level from 11px label to the 64px hero. The action layer is a confident lavender (`#714cb6`) softened by a paler `#d4c7ff` for secondary chips. The variable axis pinned at 540 — sub-bold, sub-medium — is the design fingerprint: it reads heavier than Inter Medium but lighter than Inter Semibold, giving the page the engraved-business-card weight that matches the product''s price tier.'
+
+colors:
+  bg: '#ffffff'                  # paper-white canvas, the workspace-as-stationery metaphor
+  bg-soft: '#fafaf8'             # warm-white panel base for grouped feature blocks
+  surface: '#f4f1ec'             # cream feature card, leans warm not cool
+  surface-elev: '#ebe7df'        # slightly deeper cream for nested cards
+  text: '#292827'                # body copy, near-black with warmth
+  text-strong: '#15140f'         # display copy on white — coffee-bean dark
+  text-body: '#3a3935'           # secondary running-text inside long features
+  text-muted: '#8a857d'          # captions, timestamps, byline metadata
+  text-soft: '#a8a39a'            # disabled link text, sparingly used
+  text-on-hero: '#ffffff'        # hero copy on dark gradient bands
+  text-on-hero-muted: '#cfc7d9'  # secondary deck on dark hero bands
+  brand: '#714cb6'               # primary lavender CTA — the singular voltage
+  brand-soft: '#d4c7ff'          # secondary chip / nav "Sign up" pill
+  brand-softer: '#ece6ff'        # hover-tint for soft-lavender chip
+  brand-hover: '#5b3da0'         # pressed/hover state on primary
+  brand-deep: '#3d2467'          # deep lavender used in hero gradient anchor
+  brand-glow: '#9a7ce0'          # lighter lavender glow on dark gradient bands
+  on-brand: '#ffffff'            # white text on primary lavender
+  hero-gradient-start: '#3d2467' # deep aubergine top of dark hero band
+  hero-gradient-end: '#1a0f33'   # near-black bottom of hero gradient
+  accent-cream: '#f4ebd9'        # feature illustration backdrop
+  accent-paper: '#f7f4ed'        # softer cream for inset stationery panels
+  border: '#0000001a'            # 10% black hairline — never solid grey
+  border-soft: '#00000010'       # 6% black for very subtle dividers
+  border-strong: '#0000002e'     # 18% black for focused inputs
+  border-on-dark: '#ffffff20'    # 12% white hairline on dark hero bands
+  shadow-card: 'rgba(23,22,15,0.04)'   # subtle ambient on white cards
+  shadow-elev: 'rgba(23,22,15,0.08)'   # heavier hover lift
+  shadow-brand: 'rgba(113,76,182,0.18)' # lavender-tinted glow on primary CTA hover
+  scrim: 'rgba(20,18,15,0.55)'   # modal backdrop, warm-tinted black
+  success: '#3a7b3a'             # confirmation green, muted not neon
+  success-soft: '#eaf3ea'        # success surface tint
+  warning: '#a35e0a'             # advisory amber, ink-leaning
+  warning-soft: '#fbf1de'
+  danger: '#a8362f'              # form-error red, distinct from lavender
+  danger-soft: '#f7e6e4'
+  info: '#345897'                # informational accent, slate-blue
+  info-soft: '#e6ecf5'
+
+typography:
+  display:
+    family: '"Super Sans VF", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 460, 540, 620]
+    opentype-features: ['ss01', 'ss02', 'kern', 'liga']
+  body:
+    family: '"Super Sans VF", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 460, 540]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 64, weight: 540, lineHeight: 0.96, tracking: '-0.01em',  family: display, opentype: ['ss01', 'kern'] }
+    display-xl:      { size: 48, weight: 460, lineHeight: 0.96, tracking: '-0.005em', family: display }
+    display-lg:      { size: 40, weight: 540, lineHeight: 1.05, tracking: '-0.01em',  family: display }
+    display-md:      { size: 32, weight: 540, lineHeight: 1.10, tracking: '-0.005em', family: display }
+    display-sm:      { size: 26, weight: 460, lineHeight: 1.30, tracking: '0',        family: display }
+    title-lg:        { size: 22, weight: 540, lineHeight: 1.30, tracking: '0',        family: display }
+    title-md:        { size: 18, weight: 540, lineHeight: 1.35, tracking: '0',        family: display }
+    title-sm:        { size: 16, weight: 540, lineHeight: 1.40, tracking: '0',        family: display }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 460, lineHeight: 1.45, tracking: '0',        family: body }
+    label:           { size: 11, weight: 540, lineHeight: 1.30, tracking: '0.04em',   family: body, transform: uppercase }
+    overline:        { size: 12, weight: 540, lineHeight: 1.30, tracking: '0.06em',   family: body, transform: uppercase }
+    button-lg:       { size: 16, weight: 540, lineHeight: 1.20, tracking: '0',        family: body }
+    button-md:       { size: 14, weight: 540, lineHeight: 1.20, tracking: '0',        family: body }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.50, tracking: '0',        family: mono }
+
+radius:
+  micro: 2
+  sm: 6           # input fields
+  md: 8           # primary button radius — the signature CTA shape
+  lg: 12          # large CTA / feature card
+  xl: 20          # hero shell, dark band shells
+  pill: 9999      # nav "Sign up" lavender chip
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
+
+layout:
+  page-width: 1240
+  prose-width: 680
+  header-height: 72
+  hero-band-height: 720
+  feature-card-min-width: 320
+
+components:
+  button-primary:
+    bg: '#714cb6'
+    color: '#ffffff'
+    radius: 8
+    padding: '12px 22px'
+    height: 44
+    font: button-lg
+    use: 'Get Superhuman, Try free, Continue — every primary action.'
+  button-primary-hover:
+    bg: '#5b3da0'
+    color: '#ffffff'
+    shadow: 'rgba(113,76,182,0.18) 0 8px 22px -6px'
+    use: 'Pointer hover state — subtle lavender glow lifts beneath.'
+  button-soft-lavender:
+    bg: '#d4c7ff'
+    color: '#15140f'
+    radius: 9999
+    padding: '8px 16px'
+    height: 36
+    font: button-md
+    use: 'Nav "Sign up" chip — fully-pill secondary action over white.'
+  button-ghost:
+    bg: 'transparent'
+    color: '#292827'
+    border: '1px solid #0000001a'
+    radius: 8
+    padding: '12px 22px'
+    use: 'Tertiary "Watch demo" button on white surface.'
+  button-on-dark:
+    bg: '#ffffff'
+    color: '#15140f'
+    radius: 8
+    padding: '12px 22px'
+    use: 'Primary CTA over dark hero gradient bands.'
+  feature-card:
+    bg: '#f4f1ec'
+    color: '#292827'
+    radius: 12
+    border: '1px solid #0000001a'
+    padding: '32px'
+    use: 'Cream feature panel — flat, hairline-bordered, no shadow.'
+  feature-card-paper:
+    bg: '#fafaf8'
+    color: '#292827'
+    radius: 12
+    border: '1px solid #00000010'
+    padding: '32px'
+    use: 'Lighter cream nested panel for in-flow feature content.'
+  hero-band-dark:
+    bg: 'linear-gradient(180deg, #3d2467 0%, #1a0f33 100%)'
+    color: '#ffffff'
+    radius: 20
+    use: 'Inverted hero band carrying 64px Super Sans white display.'
+  testimonial-quote:
+    bg: '#ffffff'
+    color: '#292827'
+    radius: 12
+    border: '1px solid #0000001a'
+    padding: '32px 28px'
+    use: 'Pull-quote card with avatar, name, role beneath. No shadow.'
+  text-input:
+    bg: '#ffffff'
+    color: '#15140f'
+    radius: 6
+    height: 44
+    padding: '10px 14px'
+    border: '1px solid #0000001a'
+    focus: 'border thickens to 1.5px #714cb6 + subtle lavender glow'
+    use: 'Email signup field on hero — single-line.'
+  badge-pill:
+    bg: '#ece6ff'
+    color: '#3d2467'
+    radius: 9999
+    padding: '4px 10px'
+    font: caption
+    use: 'New / Beta announcement chip — soft-lavender on white.'
+  link-inline:
+    color: '#714cb6'
+    underline: '1px solid currentColor'
+    use: 'Inline body links — lavender + hairline underline.'
+  nav-link:
+    color: '#292827'
+    use: 'Top-nav item — ink with no underline; underline appears on hover.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 220
+  duration-slow: 360
+  button-hover: 'background 220ms standard + shadow 220ms standard — no transform'
+  card-hover: 'no lift; border tone deepens 10% → 18% black over 220ms'
+  hero-band-parallax: 'dark gradient band shifts 20px parallax over scroll, 40ms throttled'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions become opacity-only fades.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(23,22,15,0.04) 0 1px 2px 0'
+  card: 'rgba(23,22,15,0.04) 0 4px 12px -2px'
+  elevated: 'rgba(23,22,15,0.08) 0 12px 24px -8px, rgba(23,22,15,0.04) 0 4px 8px -2px'
+  brand-glow: 'rgba(113,76,182,0.18) 0 8px 22px -6px'
+  ring: '0 0 0 2px #714cb6'
+  ring-on-dark: '0 0 0 2px #ffffff'
+
+accessibility:
+  contrast-text-on-bg: 13.4         # #292827 on #ffffff — AAA
+  contrast-text-strong-on-bg: 17.8  # #15140f on #ffffff — AAA
+  contrast-text-on-brand: 5.6       # #ffffff on #714cb6 — AA body, AAA large
+  contrast-muted-on-bg: 4.6         # #8a857d on #ffffff — AA body
+  contrast-text-on-soft: 12.6       # #15140f on #d4c7ff — AAA
+  focus-ring: '2px solid #714cb6 + 2px outline-offset on white; 2px solid #ffffff on dark hero bands'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: null   # Light-only marketing surface. The product (the email client) is offered in light + dark themes; the public site is paper-white only.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Superhuman's marketing site reads as a stationery brand for software. The body bg stays paper-white at `#ffffff`, copy sits in a warm near-black `#292827` (with a faint coffee-bean undertone, never the sterile `#000`), and a single custom variable face — **Super Sans VF** — carries every type role from the 11px uppercase label to the 64px hero "Superpowers, everywhere you work." The custom variable axis pinned at **540** — heavier than Inter Medium, lighter than Inter Semibold — is the design fingerprint: it reads as engraved business card rather than marketing-bold.
+
+The action layer is a single confident lavender, `#714cb6`, with `#d4c7ff` as the soft secondary chip used in the navigation. Hero modules occasionally flip to a deep aubergine-to-black gradient wash that holds white type, but the page resolves back to white between each band. The result is closer to a Cartier ad or a Loro Piana product page than a productivity SaaS — restrained, warm, premium.
+
+Where most productivity sites stack hero illustrations against gradient washes, Superhuman keeps the page bg flat at `#ffffff` and lets a custom display weight do the visual work. Body copy at the warm `#292827` rather than pure `#000` is the signal: Superhuman wants to feel softer, more handwritten, more *editorial*, than the stark Apple-style mail apps it is replacing.
+
+The atmosphere is **paper-thin elevation, deep typographic confidence**. Cards lift via warm tonal layering and 10% black hairlines rather than shadow stacks. Drop shadows are reserved for hardware mockups (an iPhone, a MacBook with the product on screen); the marketing chrome itself is flat. Even the dark hero bands gain depth from gradient washes rather than elevation — the page is a sequence of "spreads" rather than a layered scroll.
+
+**Key Characteristics:**
+- Paper-white canvas (`#ffffff`) — never warm cream, never cool grey
+- Single custom variable face: Super Sans VF at 540 axis (sub-bold) for display, 400 for body
+- One brand voltage: lavender (`#714cb6`) for primary CTAs, soft `#d4c7ff` for secondary chips only
+- Warm near-black ink (`#292827` body, `#15140f` display) — not pure black
+- Cream feature surfaces (`#f4f1ec`, `#fafaf8`) layered by warm tonal lift, never shadow
+- Dark hero bands use a deep aubergine-to-black gradient (`#3d2467` → `#1a0f33`)
+- 10% black hairlines (`#0000001a`) instead of solid grey borders
+- Buttons land at 8px radius — never fully-pill except the lavender nav chip
+- Hero composed as a sequence of "magazine spreads" rather than a single scroll
+- Modest typographic muscle — 64px max display; the variable axis carries the weight
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): paper-white floor for every public page. There is no dark variant on the marketing surface.
+- **Ink** (`#292827`): the dominant text colour — near-black with a hint of warmth. Display headlines, body paragraphs, primary nav links.
+- **Ink Strong** (`#15140f`): coffee-bean dark used for the heaviest display moments (the 64px hero) and for inset card titles.
+- **Brand Lavender** (`#714cb6`): the singular voltage. Primary CTA backgrounds, hero accent text, inline body links.
+
+### Brand & Dark
+- **Brand Hover** (`#5b3da0`): pressed/hover state on the primary lavender — slightly darker, slightly more saturated.
+- **Brand Deep** (`#3d2467`): deep aubergine anchoring the hero gradient top, also used for caption text on soft-lavender chips.
+- **Brand Glow** (`#9a7ce0`): lighter lavender accent that surfaces only on dark hero bands as accent text.
+- **Hero Gradient Top** (`#3d2467`) → **Hero Gradient Bottom** (`#1a0f33`): the dark band wash. A vertical linear-gradient with no mid-stops.
+
+### Accent
+- **Brand Soft** (`#d4c7ff`): the soft-lavender secondary chip — only appears on the nav "Sign up" pill and as a hover-tint over light surfaces. Never on a primary CTA.
+- **Brand Softer** (`#ece6ff`): even paler lavender used as the badge-pill fill (e.g., "Beta" or "New" announcement).
+- **Cream** (`#f4ebd9`): feature illustration backdrop — warm parchment, not white.
+- **Paper** (`#f7f4ed`): inset stationery panel for grouped product testimonials.
+
+### Interactive
+- **Link** (`#714cb6`): inline body links — lavender with a 1px underline. Underline always present (not hover-only).
+- **Link Hover** (`#5b3da0`): hover state — slightly darker lavender, underline thickens 1 → 1.5px.
+- **Selected** (`#714cb6` fill, `#ffffff` text): selected state on toggle pills, segmented controls.
+- **Disabled** (`#a8a39a` text, `#ebe7df` fill): disabled CTA — drained warm grey.
+
+### Neutral Scale
+- **Ink Strong** (`#15140f`) — display copy on white, peak ink
+- **Ink** (`#292827`) — body, primary nav, the dominant text colour
+- **Body** (`#3a3935`) — secondary running-text inside long testimonial blocks
+- **Muted** (`#8a857d`) — captions, byline metadata, timestamp text
+- **Soft** (`#a8a39a`) — disabled link text, sparingly used
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — page floor
+- **Surface Soft** (`#fafaf8`) — warm-white nested panel
+- **Surface** (`#f4f1ec`) — cream feature card, the most common card surface
+- **Surface Elev** (`#ebe7df`) — slightly deeper cream for nested cards inside features
+- **Hairline** (`#0000001a`) — default 10% black border tone — never solid grey
+- **Hairline Soft** (`#00000010`) — 6% black for very subtle dividers
+- **Hairline Strong** (`#0000002e`) — 18% black for focused inputs
+
+### Shadow Colors
+Superhuman keeps shadow tones **warm-tinted** — never pure black, never blue-tinted. Shadow values use `rgba(23, 22, 15, …)` rather than `rgba(0, 0, 0, …)` so the cast picks up the page's warm ink temperature. The brand-glow shadow on primary CTA hover uses a **lavender** tint (`rgba(113, 76, 182, 0.18)`) rather than neutral.
+
+- `rgba(23,22,15,0.04) 0 1px 2px 0` — ambient
+- `rgba(23,22,15,0.04) 0 4px 12px -2px` — card hover
+- `rgba(23,22,15,0.08) 0 12px 24px -8px` + `rgba(23,22,15,0.04) 0 4px 8px -2px` — elevated
+- `rgba(113,76,182,0.18) 0 8px 22px -6px` — primary CTA hover glow
+
+### Semantic
+- **Success** (`#3a7b3a` on `#eaf3ea`) — confirmation banner; muted forest-green, never neon
+- **Warning** (`#a35e0a` on `#fbf1de`) — advisory; ink-leaning amber rather than yellow
+- **Danger** (`#a8362f` on `#f7e6e4`) — form-error red; distinct from any lavender
+- **Info** (`#345897` on `#e6ecf5`) — slate-blue informational; never competes with brand lavender
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Super Sans VF`, Superhuman's in-house variable typeface. Fallback chain: `system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif`. The fallback stack is intentionally long — the layout never reflows when the variable font is still loading because cap heights across system-ui faces are close to Super Sans's metrics.
+
+**Mono companion**: `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace` — used only for the rare keyboard-shortcut bubble in feature copy.
+
+**OpenType features**: `ss01` and `ss02` are enabled on display copy for the alternate single-storey `a` and the slightly-shorter terminal on `t` that give Super Sans its softer, more humanist feel. `kern` and `liga` are always on. There are no swash or oldstyle figure features — the type stays modern.
+
+The variable font carries the entire scale through a single axis (weight) rather than separate display/body files. Weight values used: 400 (body), 460 (sub-medium captions and section heads), 540 (display), 620 (rare emphasis on inset card titles).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Super Sans VF | 64 | 540 | 0.96 | -0.01em | ss01, kern | Hero "Superpowers, everywhere you work" — peak typographic moment |
+| display-xl | Super Sans VF | 48 | 460 | 0.96 | -0.005em | — | Section opener on dark hero bands |
+| display-lg | Super Sans VF | 40 | 540 | 1.05 | -0.01em | — | Feature spread h2 |
+| display-md | Super Sans VF | 32 | 540 | 1.10 | -0.005em | — | Sub-feature opener |
+| display-sm | Super Sans VF | 26 | 460 | 1.30 | 0 | — | Mid-page section head |
+| title-lg | Super Sans VF | 22 | 540 | 1.30 | 0 | — | Card title on cream feature card |
+| title-md | Super Sans VF | 18 | 540 | 1.35 | 0 | — | Sub-card title, footer column heads |
+| title-sm | Super Sans VF | 16 | 540 | 1.40 | 0 | — | Inline emphasis title in body flow |
+| body-lg | Super Sans VF | 18 | 400 | 1.55 | 0 | — | Hero deck — the line beneath the hero h1 |
+| body-md | Super Sans VF | 16 | 400 | 1.55 | 0 | — | Default running-text |
+| body-sm | Super Sans VF | 14 | 400 | 1.50 | 0 | — | Card meta lines, testimonial bylines |
+| caption | Super Sans VF | 13 | 460 | 1.45 | 0 | — | Form helper text, timestamp |
+| label | Super Sans VF | 11 | 540 | 1.30 | 0.04em | uppercase | Section eyebrow ("Made for the chosen ones"), nav micro-label |
+| overline | Super Sans VF | 12 | 540 | 1.30 | 0.06em | uppercase | Page-section label above display-md |
+| button-lg | Super Sans VF | 16 | 540 | 1.20 | 0 | — | Primary CTA label |
+| button-md | Super Sans VF | 14 | 540 | 1.20 | 0 | — | Secondary chip / nav button label |
+| code | mono | 14 | 400 | 1.55 | 0 | — | Keyboard-shortcut callout |
+| code-micro | mono | 12 | 400 | 1.50 | 0 | — | Inline ⌘K-style shortcut bubble |
+
+### Principles
+
+- **The 540 axis is the brand fingerprint.** Pinning the variable axis between standard medium (500) and semibold (600) gives display copy the engraved-business-card feel that defines Superhuman's premium positioning. Substituting Inter Semibold or Inter Medium will collapse the page into generic SaaS.
+- **Two-mode weight discipline.** Body sits at 400; display sits at 540 (occasionally 460 for the lighter, more editorial feel). Weight 620 is reserved for two or three peak moments per page — it is not a workhorse.
+- **Negative tracking only on display.** The hero h1 uses `-0.01em`, sub-displays use `-0.005em`, body and caption sit at zero. Positive tracking (`0.04em`–`0.06em`) is used only on uppercase labels for legibility.
+- **Tight leading at large sizes.** The 64px hero rides at 0.96 line-height — display copy compresses vertically at large sizes, the way a magazine masthead does.
+- **Generous body leading.** Body sits at 1.55 line-height, which is lush by SaaS standards (typical is 1.4–1.5). The extra leading is what gives long-form copy its editorial calm.
+- **Single typeface across the entire page.** No serif companion, no mono in body. The discipline is editorial — one voice, weight-modulated rather than family-modulated.
+- **Inter Medium is the closest open-source substitute** if Super Sans is unavailable. Pin the weight at exactly 510–520 (custom axis if available) — Inter Medium at 500 reads too light; Inter Semibold at 600 reads too heavy.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — The signature lavender CTA. `#714cb6` fill, white text at 16px / 540, **8px radius**, 12×22px padding, 44px height. Used for "Get Superhuman", "Try free", and account-flow primaries. There is exactly one primary CTA per band.
+
+**`button-primary-hover`** — Pointer hover state. Background flips to `#5b3da0` and a subtle lavender-tinted glow (`rgba(113,76,182,0.18) 0 8px 22px -6px`) appears beneath. No transform, no scale.
+
+**`button-soft-lavender`** — The signature secondary chip in the top nav: "Sign up" pill at 9999px radius, `#d4c7ff` fill, ink-strong (`#15140f`) text at 14px / 540, 8×16px padding, 36px height. The fully-pill radius is what differentiates it from a generic secondary button — it telegraphs *invitation* over *action*.
+
+**`button-ghost`** — Tertiary button on white surface. Transparent fill, ink text, 1px hairline border (`#0000001a`), 8px radius. Used for "Watch demo" or "Learn more" links beside the primary CTA.
+
+**`button-on-dark`** — Primary CTA over the dark hero gradient band. White fill, ink-strong text, 8px radius. The colour inverts because lavender on aubergine has insufficient contrast.
+
+### Cards
+
+**`feature-card`** — Cream feature panel. `#f4f1ec` fill, ink text, **12px radius**, 1px hairline border (`#0000001a`), 32px padding. **Flat — no shadow.** The cream surface plus hairline border is the elevation language. Used for product feature blocks, testimonial groupings, pricing tiers.
+
+**`feature-card-paper`** — Lighter nested cream panel. `#fafaf8` fill, 6% black hairline. Used inside feature stacks where the cream-on-cream stacking would lose contrast.
+
+**`testimonial-quote`** — Pull-quote card. White surface, 12px radius, hairline border, 32×28px padding. Quote in 22px / 540 ink-strong, byline beneath in caption muted with avatar circle (40px) flush left.
+
+**`hero-band-dark`** — Inverted hero shell. Vertical linear-gradient `#3d2467` → `#1a0f33`, 20px radius, white display copy at 64px / 540 inside, primary CTA inverted to `button-on-dark`. Occupies a single full-viewport band; the page resolves back to white above and below.
+
+### Badges, Tags, Pills
+
+**`badge-pill`** — Soft-lavender announcement chip. `#ece6ff` fill, `#3d2467` text at 13px / 460, 9999px radius, 4×10px padding. Used for "New" or "Beta" announcements at the very top of the hero. There is at most one badge-pill per page.
+
+**`category-tag`** — Cream rectangular tag with 8px radius, used inside feature cards to mark "Email", "Calendar", "AI" categories. 11px / 540 uppercase label with 0.04em tracking.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px hairline (`#0000001a`), **6px radius** (note: smaller than buttons — inputs feel finer), 44px height, 10×14px padding. Body placeholder in 16px / 400 muted. On focus the border thickens to 1.5px lavender (`#714cb6`) and a faint lavender glow appears (`rgba(113,76,182,0.12) 0 0 0 4px`) — a soft ring rather than a hard outline.
+
+**`email-input-hero`** — Inline email signup on the hero. White fill, hairline, 6px radius, 44px height. The "Try free" CTA sits flush right of the input as a single combined affordance (no gap).
+
+### Navigation
+
+**`top-nav`** — White surface, 72px height, 1px bottom hairline (`#0000001a`). Wordmark flush left in display-sm / 540, three nav links centred (Product, Pricing, About) in body-md ink, "Sign in" text + soft-lavender "Sign up" chip flush right.
+
+**`nav-link`** — Ink (`#292827`), no underline at rest. Hairline underline appears on hover (1px lavender). Active page gets a 1.5px lavender underline.
+
+### Tooltips & Toasts
+
+**`tooltip`** — Ink-strong fill (`#15140f`), white text in 13px / 460, 6px radius, 8×12px padding. Arrow caret as a 6px triangle. Used sparingly — mostly on keyboard-shortcut callouts inside product screenshots.
+
+**`toast`** — White fill, 12px radius, hairline border, ink text. 16×24px padding. No coloured semantic accent strip — toasts rely on icon + text only.
+
+### Decorative
+
+**`handwritten-emphasis`** — A custom hand-drawn underline rendered as a lavender SVG path beneath emphasis words inside hero copy. Optional ornament; appears at most once per page.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px** with a 2px micro-step
+- Scale: `2 · 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128`
+- Section padding (vertical): 96–128px for major bands — generous, magazine-spread cadence
+- Card internal padding: 32px on `feature-card` and `testimonial-quote`; 24px on smaller nested panels
+- Inter-card gutters: 24px between feature cards in a 3-up grid; 16px in dense 4-up grids
+
+### Grid & Container
+
+- Max content width: ~1240px on the inner grid with 24px gutters
+- Prose width: ~680px for long-form testimonial body — narrower than the page gutter so reading flow stays magazine-tight
+- Hero treatment: full-bleed canvas with content centred at 1240px max; the hero band itself can extend edge-to-edge but content respects the inner grid
+- Feature grid pattern: 3-up at desktop, 2-up at tablet, 1-up at mobile — never 4+ columns
+
+### Whitespace Philosophy
+
+The page is structured as a sequence of "spreads" — each section gets 96–128px of vertical breathing room top and bottom. The cadence is closer to a magazine than a scroll-tracked SaaS. Between dark hero bands and white feature stacks, the white returns immediately — there are no gradient transitions, no parallax bleeds. The page resolves back to paper-white on every band boundary.
+
+### Section Cadence
+
+Light/dark alternation is the page's primary rhythm device. A typical page runs:
+
+1. White hero (64px display, lavender CTA, soft-lavender chip in nav)
+2. White feature stack (3-up cream cards on white)
+3. Dark hero band (aubergine gradient, white display, inverted CTA)
+4. White testimonial spread (centred 22px quote, avatar byline)
+5. White pricing band (3-up cream cards, primary lavender CTA inside the recommended tier)
+6. Dark CTA close ("Try free for 30 days" — gradient band, white display, inverted CTA)
+
+The dark bands are deployed at most twice per page — they're emotional punctuation, not workhorse surfaces.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Inline tags, fine-grained badges (rare) |
+| Small | 6px | Text inputs, fine controls |
+| Standard | 8px | Buttons, ghost CTAs, on-dark primary — the signature button shape |
+| Comfortable | 12px | Feature cards, testimonial cards, toast |
+| Featured | 20px | Hero band shell, full-bleed dark gradient containers |
+| Pill | 9999px | Nav "Sign up" lavender chip, soft announcement badge |
+
+The system avoids compound radii entirely — every shape rounds uniformly on all four corners. The single design rule: **buttons land at 8px, cards at 12px, hero shells at 20px, and the lavender nav chip is the only fully-pill element.** The contrast between rectangular buttons and the singular pill chip is intentional — it reserves the fully-round shape for the conversion moment.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Canvas, hero band content, feature cards on cream surface (~85% of surfaces) |
+| 1 — Ambient | `rgba(23,22,15,0.04) 0 1px 2px 0` | Top-nav at scroll, very subtle inputs |
+| 2 — Card hover | `rgba(23,22,15,0.04) 0 4px 12px -2px` | Optional hover on testimonial cards (most stay flat) |
+| 3 — Elevated | `rgba(23,22,15,0.08) 0 12px 24px -8px, rgba(23,22,15,0.04) 0 4px 8px -2px` | Dropdowns, popovers |
+| 4 — Brand glow | `rgba(113,76,182,0.18) 0 8px 22px -6px` | Primary lavender CTA on hover only |
+| 5 — Modal | scrim `rgba(20,18,15,0.55)` + dialog with elevated shadow | Sign-in modal |
+
+### Shadow Philosophy
+
+Superhuman is a **tonal-elevation** system, not a shadow-elevation system. Depth comes from warm tonal layering (`#ffffff` → `#fafaf8` → `#f4f1ec` → `#ebe7df`) and 10% black hairlines, not from layered drop shadows. Shadows are reserved for two cases: (1) hardware mockups (an iPhone, MacBook, iPad rendering the product on its screen — these get realistic Apple-style shadows), and (2) primary CTA hover, where a lavender-tinted glow appears beneath the button. The marketing chrome itself is flat. The dark hero bands derive their depth from gradient washes rather than elevation.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover state colour swaps, hairline transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, hero-band parallax
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — section reveals on scroll
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Hairline tone swaps, focus-ring fades |
+| Standard | 220ms | Button hover, link colour shifts, card hover border deepening |
+| Slow | 360ms | Modal entry, page-band cross-fade |
+
+### Per-Component Recipes
+
+- **Primary button hover**: background `#714cb6` → `#5b3da0` over 220ms standard. Lavender glow shadow (`rgba(113,76,182,0.18) 0 8px 22px -6px`) fades in over 220ms. **No transform, no scale, no lift.** The hover is colour + glow only.
+- **Soft-lavender chip hover**: background `#d4c7ff` → `#ece6ff` over 220ms. Text colour darkens fractionally.
+- **Card hover (testimonial)**: hairline tone deepens 10% → 18% black over 220ms standard. No translate, no shadow lift.
+- **Link hover**: lavender colour darkens to `#5b3da0` over 120ms. Underline thickens 1 → 1.5px over 220ms.
+- **Hero band parallax**: dark gradient band shifts 20px on scroll, throttled at 40ms. Subtle — visible only on full-viewport scroll.
+- **Modal enter**: scrim fades in over 220ms standard, then dialog scales `0.96 → 1.0` and fades from `opacity 0 → 1` over 360ms emphasized.
+- **Page-band cross-fade**: dark-to-light section transitions cross-fade over 360ms — there are no slide or curtain transitions.
+
+### Page Transitions
+
+Between page navigations (homepage → pricing → about), a subtle 360ms cross-fade carries the body. The fixed top-nav stays static; only the body band cross-fades. Smooth-scroll anchored links use 600ms emphasized easing.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. All `translate`, `scale`, and parallax transforms suppress. The lavender CTA hover loses its glow shadow — the hover becomes background-colour-only. Modal entry becomes an instant fade rather than scale + fade. Hero band parallax disables entirely.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #292827 ink on #ffffff canvas | 13.4 | AAA |
+| #15140f ink-strong on #ffffff | 17.8 | AAA |
+| #ffffff on #714cb6 lavender | 5.6 | AA body / AAA large |
+| #15140f on #d4c7ff soft-lavender | 12.6 | AAA |
+| #8a857d muted on #ffffff | 4.6 | AA body |
+| #292827 on #f4f1ec cream | 11.8 | AAA |
+| #ffffff on #3d2467 brand-deep (hero gradient top) | 12.4 | AAA |
+
+### Focus Indicators
+
+Focus ring is `2px solid #714cb6` (the brand lavender) with 2px outline-offset on white surfaces. On dark hero bands the ring inverts to `2px solid #ffffff`. The 4px stand-off (2px ring + 2px offset) is calibrated so the ring never visually merges with the button border at 8px radius. Focus-visible (`:focus-visible`) is used to suppress focus rings on mouse interactions while preserving them on keyboard navigation.
+
+### ARIA Patterns
+
+- **Top nav**: standard `<nav>` landmark with `aria-label="Primary"`. The "Sign up" chip is a `<button>` (not an `<a>`) because it triggers a modal flow.
+- **Hero band sign-up**: `<form>` with `aria-label="Sign up for Superhuman"`. The inline email input + CTA combine as a single visual affordance but render as a paired `<input>` + `<button>` for screen readers.
+- **Pricing toggle** (monthly/annual): `role="radiogroup"` with two `role="radio"` buttons. `aria-checked` reflects the selected billing cadence.
+- **Modal** (sign-in): focus trap inside, Esc closes, click outside closes, focus returns to the trigger on close. `role="dialog"` with `aria-labelledby` pointing at the modal title.
+
+### Keyboard Navigation
+
+- Top nav: Tab moves logo → Product → Pricing → About → Sign in → Sign up
+- Hero email signup: Tab focuses the input, then the CTA. Enter from the input submits the form.
+- Pricing tier cards: Tab moves card → card; arrow keys do not navigate (single-column on mobile, three-up on desktop)
+- Modal: Tab cycles through interactive elements inside the dialog only
+
+### Screen Reader Hints
+
+The lavender CTA on dark hero bands inverts to white because the lavender-on-aubergine contrast (3.4) fails AA. This is structural, not stylistic — the colour swap is required for accessibility. The soft-lavender nav chip on white passes AAA at 12.6 contrast, so the secondary action stays at large-target friendliness without sacrificing readability.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only when `prefers-reduced-motion: reduce` is set. Brand-glow shadow on CTA hover suppresses (the colour change persists). Hero band parallax disables. Modal scale-in becomes a flat fade.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top nav collapses to logo + hamburger; hero h1 drops 64 → 40px; feature stacks 1-up; cream cards span full width with 16px page padding |
+| Tablet | 640–1024px | Top nav keeps inline links; hero h1 settles at 48px; feature stacks 2-up; pricing tiers 1-up stacked |
+| Desktop | 1024–1280px | Full top nav with all links inline; hero h1 at 64px; feature stacks 3-up; pricing 3-up centred |
+| Wide | >1280px | Content width caps at 1240px; gutters absorb the rest |
+
+### Touch Targets
+
+- Primary CTAs: minimum 44×44px
+- Soft-lavender nav chip: 36px height with 16px horizontal padding — passes WCAG AAA when combined with the visible label area
+- Email input field: 44px height
+- Inline link tap-target: 44px row height even when text height is 24px (line-height 1.55 × 16px adds spacing)
+
+### Collapsing Strategy
+
+- Top product-nav links collapse into a hamburger sheet below 640px
+- Hero CTA + email input stack vertically on mobile — the inline-paired affordance becomes a stacked pair at full width
+- 3-up feature grids drop to 2-up at tablet, 1-up at mobile — never reflow rows; always reduce columns
+- Dark hero bands keep their gradient at all widths but the inner content padding tightens (96px → 48px vertical)
+
+### Image Behavior
+
+Hardware mockups (iPhone, MacBook) carry their own intrinsic aspect ratios and downscale proportionally. Background gradient on dark hero bands uses CSS gradients (no image asset), so it renders crisply at any resolution.
+
+### Container Queries
+
+Used sparingly. The pricing card uses container queries to compact the feature-list bullets when the card narrows below 280px — the bullets switch from a 2-column to 1-column layout.
+
+## 11. Content & Voice
+
+### Tone
+
+Confident, direct, premium-without-shouting. Superhuman positions itself as a craft tool for the chosen ones — the voice avoids both Silicon Valley over-explanation and luxury-brand evasion. Headlines lead with capability ("Superpowers, everywhere you work") rather than process ("Email, faster"). Body copy trusts the reader to know the product category — there is no "Tired of slow email?" framing.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get Superhuman", "Try free", "Sign in", "Continue" — direct, outcome-named, never "Submit" or "Click here"
+- **Error message recipe**: `[What went wrong] + [What to try]` — e.g., "We couldn't verify that email. Try a different address or contact support."
+- **Success confirmations**: short and personal — "You're in. Welcome to Superhuman." rather than "Sign up successful"
+- **Field labels**: minimal — usually a single word ("Email", "Password") because the layout's whitespace makes function obvious
+
+### Empty States
+
+The trial-expired state: "Your 30 days are up. Reactivate to keep your superpowers." Always action-oriented — the empty state names the next move.
+
+The unsupported-browser state: "Superhuman runs on Chrome, Safari, and Firefox. Install one to continue." — names the cause and lists three concrete remedies.
+
+### CTA Verb Conventions
+
+- Primary action: **"Get Superhuman"** (top nav, hero), **"Try free"** (secondary hero), **"Continue"** (multi-step onboarding)
+- Secondary action: **"Sign up"** (nav chip — invitation-coded), **"Watch demo"** (tertiary)
+- Tertiary text: **"Learn more"**, **"See pricing"**
+- Avoided: "Submit", "Click here", "Buy now", "Subscribe" — Superhuman frames the relationship as joining, not buying
+
+## 12. Dark Mode & Theming
+
+**Light-only marketing surface.** The product itself — the email client — ships with both light and dark themes, but the public marketing site is paper-white only. The dark hero bands (deep aubergine `#3d2467` → `#1a0f33`) are punctuation within a light page, not a full theme swap.
+
+The brand position: paper-white reads as stationery; warm cream reads as Loro Piana / Aesop / Cartier. A dark canvas would push the page toward Linear / Raycast territory, which is the wrong category. Superhuman is a *premium consumer* product dressed as software, not a *developer tool* dressed as luxury.
+
+The dark hero bands invert the token palette as needed (text becomes `#ffffff`, primary CTA becomes `button-on-dark` with white fill, hairlines become `#ffffff20`) — but these are scoped to the band, never page-wide.
+
+## 13. Lineage & Influences
+
+Superhuman's visual lineage runs through three traditions: **Stripe's in-house typography as brand signature** (Sohne for Stripe, Super Sans for Superhuman); **Linear's single-confident-accent discipline** (indigo for Linear, lavender for Superhuman); and **Apple Mail / Apple system marketing** (paper-white canvas, generous breathing room, modest display weights). The product Superhuman is dethroning is Apple Mail, and the marketing site borrows Apple's spacing rhythm but warms the neutrals to differentiate.
+
+The 540 axis on a variable font is the design fingerprint — a custom weight that reads heavier than Inter Medium but lighter than Inter Semibold. This kind of axis-pinning is unusual outside of luxury brand work (Off-White's Helvetica cuts, Bottega Veneta's Bottega Sans) and signals craft. Superhuman is one of the few SaaS brands willing to license a custom variable face purely for the *weight* it can sit at.
+
+The lavender choice is itself a borrowing — `#714cb6` is closer to Loro Piana cashmere or Cartier purple than to the indigo most productivity tools default to. Where Linear picks indigo (cool, technical) and Stripe picks blue (universal, payments-coded), Superhuman picks a warmer purple-violet that signals premium without tipping into kitschy luxury.
+
+What Superhuman rejects: gradient washes (except on dark bands), illustrated chrome, multi-colour brand systems, exclamation-mark microcopy, "Click here" CTAs. The brand is editorial-minimalist — the page is a spread, the type is a single voice, the colour is one voltage.
+
+**Influences:**
+- Linear — single-confident-accent discipline over near-monochrome neutral, [linear.app](https://linear.app)
+- Stripe — in-house typography as brand signature; Sohne for Stripe, Super Sans for Superhuman, [stripe.com](https://stripe.com)
+- Apple Mail — the product being dethroned; spacing rhythm borrowed but neutrals warmed, [apple.com/macos/mail](https://www.apple.com/macos/mail)
+- Loro Piana / Cartier — premium-luxury restraint as positioning, paper-white-and-one-accent
+- Bottega Veneta / Off-White — custom-axis variable typography as craft signal
+
+## 14. Do's and Don'ts
+
+**Do**
+- Pin display copy to the 540 variable axis — that custom weight is the brand fingerprint
+- Keep the action palette to a single confident lavender (`#714cb6`); secondary uses the soft `#d4c7ff`, never a third hue
+- Warm the neutrals — body at `#292827` not `#000`, surfaces at `#f4f1ec` not `#f5f5f7`
+- Reserve the fully-pill radius (9999px) for the nav "Sign up" chip — it's the only pill on the page
+- Use 8px radius for buttons, 12px for cards, 20px for hero shells — never mix radii inside a single primitive
+- Layer surfaces tonally (white → warm-white → cream) instead of with shadow stacks
+- Reserve drop shadows for hardware mockups and the primary CTA hover glow
+- Set body line-height at 1.55 — the generous leading is the editorial calm
+- Use lavender hairlines on dark hero bands (`#ffffff20`); 10% black hairlines on white
+- Compose the page as magazine spreads — 96–128px section padding, full-bleed band boundaries
+- Render star ratings, ratings, or numerical proof points in tabular numerals (`tnum`)
+
+**Don't**
+- Don't use Inter or system-ui as a substitute display face — Super Sans has no acceptable fallback for hero copy
+- Don't mix lavender shades within a single CTA group — primary is `#714cb6`, secondary is `#d4c7ff`, never a third tone
+- Don't apply heavy drop shadows to feature cards — the cream surface plus hairline border is the elevation language
+- Don't introduce a second brand colour — lavender carries every primary action, full stop
+- Don't pin display weight at 460 for hero copy — the 540 axis is the signature; 460 is the secondary axis only
+- Don't use pure black (`#000`) anywhere — the warmth of `#292827` and `#15140f` is the brand temperature
+- Don't extend dark hero bands beyond two per page — they're emotional punctuation, not workhorse surfaces
+- Don't use exclamation marks in microcopy — the voice is confident, never giddy
+- Don't break the radius hierarchy — 8px buttons, 12px cards, never the reverse
+- Don't add gradient washes outside dark hero bands — the white canvas is non-negotiable
+- Don't let the focus ring be ink — it stays lavender on white, white on dark, so action and access stay tied to brand colour
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:        #ffffff
+Ink:           #292827
+Ink-strong:    #15140f
+Brand:         #714cb6
+Brand-soft:    #d4c7ff
+Brand-hover:   #5b3da0
+Brand-deep:    #3d2467
+Surface-soft:  #fafaf8
+Surface:       #f4f1ec
+Hairline:      rgba(0,0,0,0.10)
+Muted:         #8a857d
+Hero-grad-top: #3d2467
+Hero-grad-end: #1a0f33
+```
+
+### Example Component Prompts
+
+- "Create a Superhuman-style hero: paper-white canvas (#ffffff), 64px / 540 weight Super Sans VF headline 'Superpowers, everywhere you work' in #15140f with -0.01em tracking and 0.96 line-height, 18px / 400 deck beneath in #292827 at 1.55 line-height. Below: a primary lavender CTA (#714cb6 fill, white text, 8px radius, 12×22px padding, 44px height) labelled 'Get Superhuman'. The whole layout sits at max-width 1240px centred."
+- "Design a Superhuman feature card: cream fill (#f4f1ec), 12px radius, 1px hairline border at rgba(0,0,0,0.1), 32px padding, no shadow. Inside: a 22px / 540 ink-strong title, then 16px / 400 ink body at 1.55 line-height, then a single inline lavender link (#714cb6 with 1px underline) at the bottom."
+- "Build a Superhuman dark hero band: vertical linear-gradient from #3d2467 to #1a0f33, 20px radius shell, full-bleed at any width. Inside, centred: 48px / 460 white display copy, 18px / 400 white-90% deck beneath, then a white-fill primary CTA (white background, #15140f text, 8px radius, 'Try free for 30 days' label)."
+- "Create the Superhuman nav: 72px tall white surface, 1px bottom hairline at rgba(0,0,0,0.1). Wordmark left in 22px / 540 ink. Three centred links (Product, Pricing, About) in 16px / 400 ink, no underline at rest. Right side: 'Sign in' text link in ink, then a fully-pill (9999px radius) lavender chip — soft fill #d4c7ff, ink-strong text #15140f, 'Sign up' label at 14px / 540, 8×16px padding, 36px height."
+- "Build a Superhuman email signup: white-fill input with 1px hairline border, 6px radius, 44px height, body placeholder 'Enter your work email' at 16px / 400 muted #8a857d. On focus, border thickens to 1.5px lavender (#714cb6) with a faint lavender glow ring (rgba(113,76,182,0.12) 0 0 0 4px). The 'Try free' lavender CTA sits flush right of the input with no gap, forming a single combined affordance."
+- "Design a Superhuman testimonial card: white fill, 12px radius, 1px hairline border, 32×28px padding, no shadow. Inside: 22px / 540 ink-strong quote in upper portion, then 40px circular avatar flush left with name (16px / 540 ink) and role (14px / 400 muted #8a857d) stacked beside it."
+
+### Iteration Guide
+
+1. **Canvas stays paper-white.** Anything other than `#ffffff` reads as a different brand. The cream surface (`#f4f1ec`) is for cards, not the page.
+2. **One lavender voltage per fold.** If your composition has two or more lavender CTAs visible at once, demote one — the brand colour draws the eye, not papers the page.
+3. **Pin Super Sans to 540 for display.** Inter Medium (500) will read too light; Inter Semibold (600) too heavy. The 540 axis is the entire design signal.
+4. **Body copy at `#292827`, never `#000`.** Pure black collapses the page back into Apple-mail territory. The warmth is the differentiator.
+5. **Layer surfaces tonally.** White → warm-white (`#fafaf8`) → cream (`#f4f1ec`) — never resort to shadow stacks for hierarchy.
+6. **8 / 12 / 20 — buttons / cards / hero.** The radius hierarchy is invariant. Don't round buttons to 12px or cards to 8px.
+7. **Reserve the pill chip for the nav.** Fully-round (9999px) is the conversion shape — using it elsewhere dilutes the moment.
+8. **Hero bands are punctuation, not workhorses.** Two dark bands per page maximum. White always returns between them.

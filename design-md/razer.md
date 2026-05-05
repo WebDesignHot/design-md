@@ -1,0 +1,818 @@
+---
+name: Razer
+tagline: Neon `#44d62c` snake-green on jet black with Roboto — the For Gamers, By Gamers visual signature.
+author: webdesignhot
+source_url: https://www.razer.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace, media]
+tags: [dark, gaming, neon, bold, hardware, peripherals, esports, industrial]
+preview_swatch: ['#000000', '#44d62c', '#ffffff']
+related: [steam, nvidia, riot-games]
+description: 'Razer is the undisputed visual loudest brand in PC gaming hardware — a jet-black canvas (`#000000`) overlaid with Razer''s signature neon snake-green `#44d62c` set against industrial sans-serif Roboto type. Every product card is a black-on-black still life with a single venomous green accent: Chroma RGB lighting bleeds across keyboard hero shots, the triple-headed snake mark stamps itself on every page, and primary CTAs glow against deep black with the same radioactive green that defines the brand''s LED signature. The voice is gamer-aggressive but engineering-credible — no glassmorphism softening, no friendly serifs, no light mode. Razer reads as if the page itself were a backlit gaming peripheral.'
+
+colors:
+  bg: '#000000'                  # canvas — jet black, the brand ground
+  bg-deep: '#0d0d0d'             # near-black header / footer band
+  bg-darkest: '#000000'          # modal scrim, video background
+  surface: '#111111'             # default card surface
+  surface-soft: '#1a1a1a'        # raised card / popover floor
+  surface-strong: '#262626'      # hovered card, selected sidebar
+  surface-elevated: '#1f1f1f'    # elevated panel, sub-nav band
+  surface-product-band: '#080808' # product hero band, "Featured Products"
+  surface-input: '#1a1a1a'       # form input fill
+  text: '#ffffff'                # primary body — pure white on black
+  text-strong: '#ffffff'         # display headlines, button labels
+  text-soft: '#b3b3b3'           # secondary metadata, sub-copy
+  text-faint: '#7a7a7a'          # tertiary captions, disclaimers
+  text-disabled: '#4a4a4a'
+  text-link: '#44d62c'           # link green — same as brand
+  brand: '#44d62c'               # Razer Green — the snake-green signature
+  brand-hover: '#5fe849'         # hovered brand
+  brand-active: '#2db516'        # pressed brand
+  brand-deep: '#1f8a0f'          # deeper brand for inactive states
+  brand-glow: 'rgba(68,214,44,0.4)' # the Chroma RGB glow halo
+  on-brand: '#000000'
+  cta-buy: '#44d62c'             # green "Buy Now" primary
+  cta-buy-hover: '#5fe849'
+  cta-secondary: 'transparent'   # ghost outline secondary
+  link-default: '#44d62c'
+  link-visited: '#44d62c'
+  link-hover: '#ffffff'
+  border: '#262626'              # 1px charcoal hairline
+  border-soft: '#1a1a1a'         # softer divider
+  border-strong: '#44d62c'       # focused input border, selected
+  scrim: 'rgba(0,0,0,0.85)'      # modal backdrop
+  shadow-card: 'rgba(0,0,0,0.6)'
+  shadow-elev: 'rgba(0,0,0,0.8)'
+  shadow-glow: 'rgba(68,214,44,0.3)' # the snake-green glow
+  chroma-red: '#ff0000'          # Chroma spectrum
+  chroma-orange: '#ff8800'
+  chroma-yellow: '#ffee00'
+  chroma-cyan: '#00ffff'
+  chroma-blue: '#0099ff'
+  chroma-purple: '#aa00ff'
+  chroma-pink: '#ff0088'
+  rgb-gradient: 'linear-gradient(90deg, #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088)'
+  badge-new: '#44d62c'           # "NEW" badge fill
+  badge-pre-order: '#44d62c'     # "PRE-ORDER" green
+  badge-out-of-stock: '#7a7a7a'  # muted out-of-stock
+  badge-exclusive: '#ffaa00'     # amber Razer Insider exclusive
+  price: '#ffffff'               # default price
+  price-strikethrough: '#7a7a7a' # strikethrough original
+  price-discount: '#44d62c'      # discounted price in green
+  rating-star: '#44d62c'         # star ratings in brand green
+  success: '#44d62c'             # success uses brand green
+  warning: '#ffaa00'
+  danger: '#ff3030'
+  info: '#44d62c'
+
+typography:
+  display:
+    family: '"Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [300, 400, 500, 700, 900]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [300, 400, 500, 700]
+  condensed:
+    family: '"Roboto Condensed", "Arial Narrow", sans-serif'
+    weights: [400, 700]
+  mono:
+    family: '"Roboto Mono", "Consolas", monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 900, lineHeight: 1.0,  tracking: '-0.02em', family: display, transform: uppercase, notes: 'Homepage hero "FOR GAMERS. BY GAMERS." headline' }
+    display-xl:      { size: 56, weight: 900, lineHeight: 1.05, tracking: '-0.015em', family: display, transform: uppercase, notes: 'Product launch hero, category page H1' }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.1,  tracking: '0',       family: display, transform: uppercase, notes: 'Section banner, "EXPLORE THE LINEUP"' }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.15, tracking: '0',       family: display, notes: 'Product detail page title' }
+    display-sm:      { size: 24, weight: 700, lineHeight: 1.2,  tracking: '0',       family: display, notes: 'Card title, modal heading' }
+    section-head:    { size: 14, weight: 700, lineHeight: 1.2,  tracking: '0.15em',  family: display, transform: uppercase, notes: 'Section bands "GAMING LAPTOPS", "PERIPHERALS"' }
+    sub-section:     { size: 18, weight: 500, lineHeight: 1.3,  tracking: '0',       family: display, notes: 'Sub-headings within product page' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Hero supporting copy, large body' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Default body, descriptions' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Sidebar copy, spec list' }
+    body-xs:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Caption, footer, legal' }
+    nav-link:        { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'Top nav: SHOP · GAMERS CLUB · COMMUNITY' }
+    sub-nav-link:    { size: 12, weight: 400, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Sub-nav category labels' }
+    button-cta:      { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'BUY NOW, ADD TO CART' }
+    button-md:       { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Add to wishlist, secondary' }
+    badge:           { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.15em',  family: display, transform: uppercase, notes: '"NEW", "PRE-ORDER", "EXCLUSIVE"' }
+    price:           { size: 18, weight: 500, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'], notes: 'Product price' }
+    spec-label:      { size: 11, weight: 700, lineHeight: 1.2,  tracking: '0.2em',   family: display, transform: uppercase, notes: 'Spec table label "DPI", "POLLING RATE"' }
+    spec-value:      { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0',       family: mono, notes: 'Spec value "20,000 DPI"' }
+    code:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',       family: mono, notes: 'Driver release notes, dev surface' }
+
+radius:
+  none: 0          # full-bleed product images, hero bands
+  micro: 1
+  sm: 2            # buttons, badges
+  md: 4            # cards, inputs
+  lg: 8            # featured product card, modal
+  xl: 12           # rare large container
+  pill: 9999       # pills, profile avatars
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440    # full Razer marketing page width
+  prose-width: 720
+  header-height: 64
+  main-nav-height: 64
+  sub-nav-height: 48
+  product-card: '300x420'
+  hero-banner: '1920x800'
+  feature-strip: '1440x600'
+
+components:
+  button-primary:
+    bg: '#44d62c'
+    color: '#000000'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: 'none'
+    hover-bg: '#5fe849'
+    active-bg: '#2db516'
+    use: '"BUY NOW" / "ADD TO CART" — Razer''s primary green CTA. Black text on neon green, uppercase tracked label, glows on hover with Chroma halo.'
+  button-primary-hover:
+    bg: '#5fe849'
+    color: '#000000'
+    box-shadow: '0 0 24px rgba(68,214,44,0.5)'
+    use: 'Hover state — brightens green and adds a Chroma snake-green glow halo.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#ffffff'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: '1px solid #ffffff'
+    hover-bg: '#ffffff'
+    hover-color: '#000000'
+    use: 'Ghost outline secondary — "LEARN MORE" / "VIEW DETAILS". White outline on black, fills white on hover.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#44d62c'
+    radius: 0
+    padding: '12px 0'
+    font: button-md
+    border-bottom: '1px solid #44d62c'
+    use: 'Inline text-link with underline — "SEE ALL PRODUCTS →". Razer''s secondary inline action.'
+  button-icon:
+    bg: 'transparent'
+    color: '#ffffff'
+    radius: 9999
+    width: 40
+    height: 40
+    hover-bg: '#1a1a1a'
+    use: 'Icon-only button — wishlist heart, share, close-modal. Round 40px target.'
+  product-card:
+    bg: '#0d0d0d'
+    color: '#ffffff'
+    radius: 4
+    padding: '24px'
+    border: '1px solid transparent'
+    hover-border: '1px solid #44d62c'
+    hover-shadow: '0 0 24px rgba(68,214,44,0.3)'
+    width: 300
+    use: 'Standard product card — black floor, product hero image at top (16:9 crop), title 18/700 white, sub-title 14/400 muted, price row, "BUY NOW" CTA. Hover lights a green snake-green border with glow.'
+  product-card-featured:
+    bg: '#0d0d0d'
+    color: '#ffffff'
+    radius: 8
+    padding: '32px'
+    border: '1px solid #44d62c'
+    box-shadow: '0 0 32px rgba(68,214,44,0.25)'
+    use: 'Featured product card — already lit with the snake-green border + glow. Used on "New Releases" carousel.'
+  hero-card:
+    bg: 'linear-gradient(135deg, #000000 0%, #0d0d0d 100%)'
+    color: '#ffffff'
+    radius: 0
+    padding: '64px 48px'
+    use: 'Full-bleed product hero — gradient near-black floor with the product image floating right and headline text left. Used on launch pages and the homepage.'
+  spec-card:
+    bg: '#111111'
+    color: '#ffffff'
+    radius: 4
+    padding: '32px 24px'
+    border: '1px solid #262626'
+    use: 'Specification highlight card — large numeric spec value 32/700 in green, label 11/700 uppercase tracked white, supporting copy 14/400 muted. Used in feature strips like "20,000 DPI · 8000 Hz POLLING".'
+  badge-new:
+    bg: '#44d62c'
+    color: '#000000'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"NEW" green pill anchored top-left of recently launched product cards.'
+  badge-pre-order:
+    bg: 'transparent'
+    color: '#44d62c'
+    radius: 2
+    padding: '4px 10px'
+    border: '1px solid #44d62c'
+    font: badge
+    use: '"PRE-ORDER" outline-only green badge.'
+  badge-exclusive:
+    bg: '#ffaa00'
+    color: '#000000'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"RAZER INSIDER EXCLUSIVE" amber badge for member-only drops.'
+  text-input:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 4
+    height: 48
+    padding: '12px 16px'
+    border: '1px solid #262626'
+    focus-border: '1px solid #44d62c'
+    font: body-md
+    use: 'Form input — charcoal floor, white text, focus lights a 1px snake-green border + matching glow.'
+  search-bar:
+    bg: '#0d0d0d'
+    color: '#ffffff'
+    radius: 4
+    height: 44
+    padding: '12px 16px 12px 44px'
+    border: '1px solid #262626'
+    use: 'Top-bar search — magnifier icon left, charcoal floor, expands on focus to overlay full-width.'
+  primary-nav:
+    bg: '#000000'
+    color: '#ffffff'
+    height: 64
+    border-bottom: '1px solid #1a1a1a'
+    use: 'Top nav — Razer triple-snake mark anchored left, "SHOP · GAMERS CLUB · COMMUNITY · SUPPORT" labels in 13/500 uppercase 0.1em tracking, account/cart utilities flush right.'
+  sub-nav:
+    bg: '#0d0d0d'
+    color: '#b3b3b3'
+    height: 48
+    use: 'Category sub-nav — "Mice · Keyboards · Headsets · Laptops · Chairs · Streaming · Apparel" in 12/400 uppercase 0.05em tracking.'
+  modal-backdrop:
+    bg: 'rgba(0,0,0,0.85)'
+    use: 'Modal scrim — near-opaque black for product quick-view dialogs.'
+  modal-surface:
+    bg: '#0d0d0d'
+    color: '#ffffff'
+    radius: 8
+    border: '1px solid #1a1a1a'
+    box-shadow: '0 32px 64px rgba(0,0,0,0.8)'
+    use: 'Modal floor — dark canvas-on-canvas with subtle hairline.'
+  rgb-strip:
+    bg: 'linear-gradient(90deg, #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088)'
+    height: 4
+    use: 'Decorative Chroma RGB strip — used as a section divider on Chroma feature pages and footer accents. Razer''s most distinctive decorative element.'
+  toast:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 4
+    padding: '16px 20px'
+    border-left: '4px solid #44d62c'
+    box-shadow: '0 8px 24px rgba(0,0,0,0.6)'
+    use: 'Success toast — dark floor with brand-green accent strip.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-snake: 'cubic-bezier(0.65, 0, 0.35, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  card-hover: 'product card lifts -2px Y + glows 0 0 24px rgba(68,214,44,0.3) + 1px snake-green border fades in over 240ms'
+  cta-press: 'button gradient deepens + 2px scale-down on :active over 120ms'
+  rgb-shimmer: 'Chroma RGB strip on hero pages cycles 4s linear infinite (suppressed under reduced-motion)'
+  carousel-slide: 'product carousel slides 400ms ease-emphasized with subtle momentum'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — RGB shimmer freezes mid-spectrum, card lift suppressed; brand-green border on hover remains as a non-animated state.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.4) 0 2px 8px'
+  card: 'rgba(0,0,0,0.6) 0 8px 24px'
+  elevated: 'rgba(0,0,0,0.8) 0 24px 48px'
+  modal: 'rgba(0,0,0,0.8) 0 32px 64px'
+  glow-soft: '0 0 16px rgba(68,214,44,0.25)'
+  glow-strong: '0 0 32px rgba(68,214,44,0.5)'
+  ring: '0 0 0 2px #44d62c'
+
+accessibility:
+  contrast-text-on-bg: 21.0         # #ffffff on #000000 — AAA
+  contrast-soft-on-bg: 9.4          # #b3b3b3 on #000000 — AAA
+  contrast-link-on-bg: 9.5          # #44d62c on #000000 — AAA
+  contrast-cta-text: 8.9            # #000000 on #44d62c — AAA
+  contrast-faint-on-bg: 4.7         # #7a7a7a on #000000 — AA at body sizes
+  focus-ring: '2px solid #44d62c with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44              # buttons hit AAA on Razer.com
+  keyboard-nav: 'Tab traverses logo → primary nav → search → utilities → main content → footer; Esc closes modals; Enter activates; arrow keys cycle product carousels.'
+
+dark-mode: only   # Razer is dark-only — there is no light variant offered across web, app, or Synapse.
+
+lineage:
+  summary: |
+    Razer''s visual lineage runs through enthusiast PC peripheral marketing of the 2000s, military / tactical equipment trade dress, and gaming-bar / esports-arena LED aesthetic. Razer Green (`#44d62c`) has been the brand''s signature LED hue since the 2005 Boomslang relaunch; the Chroma RGB lighting language formalised in 2014 made backlit RGB the brand''s primary expressive vocabulary. Headlines run Roboto Black 900 on jet-black canvas — the page reads like a backlit gaming peripheral. The brand position: hardware is the hero, the LED is the brand, the page steps out of the way.
+  influences:
+    - name: Razer Boomslang (1999)
+      role: The original green-on-black peripheral marketing — the brand''s founding visual signature.
+      url: https://www.razer.com/about-razer
+    - name: Logitech G
+      role: Competitive PC-gaming peripheral aesthetic Razer pushed further into gamer-aggression.
+      url: https://www.logitechg.com
+    - name: Roboto (Google)
+      role: Roboto Black 900 adopted for headline manifesto voice in 2019.
+      url: https://fonts.google.com/specimen/Roboto
+    - name: NVIDIA GeForce
+      role: Competing PC-gaming dark trade dress with neon green accent — Razer pushed further.
+      url: https://www.nvidia.com/en-us/geforce/
+    - name: Esports arena LED lighting
+      role: The Chroma RGB language formalised in 2014 mirrors LAN-event lighting design.
+      url: https://www2.razer.com/chroma
+---
+
+## 1. Visual Theme & Atmosphere
+
+Razer is the loudest hardware brand in PC gaming and the page proves it on the first scroll. The canvas is **jet black** (`#000000`) — not a softened slate, not a warm charcoal, but the same deep black you see when a Razer keyboard is unplugged. Against that black, a single colour does almost all the visual work: **Razer Green** (`#44d62c`), the radioactive snake-green that has been the brand's signature LED hue since the 2005 Boomslang relaunch. It glows on every primary CTA, traces the corners of every focused card, lights every link, and flashes across the Chroma RGB strip that decorates feature pages.
+
+The voice is gamer-aggressive. Headlines run **Roboto Black 900** at 56–72px, uppercase, with negative tracking — "FOR GAMERS. BY GAMERS." reads as a manifesto stamped onto the page. Product photography is shot on black seamless: every keyboard, every mouse, every laptop floats against the same canvas the page uses, so the product seems to be *in* the page rather than *on* it. RGB lighting bleeds out of the hero hardware shots in long exposures — a trail of Chroma colour that says "this thing lights up."
+
+There is zero softening. No glassmorphism. No friendly serifs. No light mode. No pastel surfaces. Cards are `#0d0d0d` rectangles with hairline `#262626` borders that flip to `#44d62c` on hover with a green glow halo. The page reads like a backlit gaming peripheral pretending to be a website. When Razer wants to break the dark — which is rarely — it deploys the full Chroma RGB gradient (red → orange → yellow → green → cyan → blue → purple → pink) as a 4px-tall divider strip. That gradient is the brand's only flourish.
+
+Spec-density is deliberate. A mouse product page lays out "20,000 DPI · 8000 Hz · 0.2 ms response" in 32/700 numerical glyphs over `#111111` cards with monospaced supporting text. The aesthetic is engineering credibility wearing gamer street clothes — Razer wants you to feel that the marketing is one tab away from the firmware notes.
+
+Razer rejects the things its competitors lean on. No founder portraits, no friendly bullet points, no soft watercolour feature illustrations. The brand position is clear: the hardware is the hero, the LED is the brand, the page steps out of the way.
+
+**Key Characteristics:**
+- Jet-black `#000000` canvas across every page — there is no light mode
+- Razer Green `#44d62c` snake-green is the universal accent — link, CTA, focus, badge, glow halo
+- Chroma RGB gradient (8-stop spectrum) as the only decorative flourish — used as section divider strips
+- Roboto Black 900 uppercase tracked headlines at 56–72px — manifesto voice
+- Triple-headed-snake brand mark anchored top-left on every page
+- 1px hairline `#262626` borders on cards that flip to brand-green on hover with a glow halo
+- Spec-card density: 32/700 numerical specs in monospace, paired with uppercase tracked spec labels
+- Black-on-black product photography — hardware floats against the same canvas the page uses
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#000000`): the page floor on every product, marketing, and store page — the most recognisable single colour on Razer.com
+- **Bg Deep** (`#0d0d0d`): the near-black header / footer band, also the default product card floor
+- **Card Surface** (`#111111`): elevated panels, spec cards
+- **Surface Soft** (`#1a1a1a`): raised popover, hovered card lift, input fill
+- **Surface Strong** (`#262626`): selected sidebar, deeply hovered card border
+- **Surface Elevated** (`#1f1f1f`): elevated panels, sub-nav band
+- **Product Band** (`#080808`): full-bleed darker band beneath major hero sections
+- **Surface Input** (`#1a1a1a`): form input fill — charcoal-on-black
+
+### Brand
+- **Razer Green** (`#44d62c`): the universal link, brand accent, focused border, primary CTA fill, glow halo source
+- **Razer Green Hover** (`#5fe849`): brightened on hover for CTAs and links
+- **Razer Green Active** (`#2db516`): pressed brand
+- **Razer Green Deep** (`#1f8a0f`): inactive state, deeper gradient stop
+- **Brand Glow** (`rgba(68,214,44,0.4)`): the Chroma halo applied on card-hover, focus, and CTA hover
+- **Snake Black** (`#000000`): the wordmark and triple-headed-snake mark are always rendered in pure black on white surfaces or pure white on dark — no gradient version exists
+
+### Accent (Chroma RGB Spectrum)
+- **Chroma Red** (`#ff0000`): leftmost stop of the RGB strip
+- **Chroma Orange** (`#ff8800`)
+- **Chroma Yellow** (`#ffee00`)
+- **Chroma Green** (`#44d62c`): the brand colour also serves as the green stop in the spectrum
+- **Chroma Cyan** (`#00ffff`)
+- **Chroma Blue** (`#0099ff`)
+- **Chroma Purple** (`#aa00ff`)
+- **Chroma Pink** (`#ff0088`): rightmost stop
+- These eight stops form the RGB gradient strip — Razer's only decorative gradient. Used at 4px height as section dividers on Chroma feature pages.
+
+### Interactive
+- **Link** (`#44d62c`): same hex as brand — Razer doesn't differentiate link from accent
+- **Link Hover** (`#ffffff`): hover flips to white on dark surfaces
+- **Link Visited** (`#44d62c`): unchanged — Razer doesn't mark visited
+- **Disabled** (`#4a4a4a`): muted slate
+- **Selected** (`#44d62c`): selected radio / checkbox / tab fill
+
+### Neutral Scale
+- **Text** (`#ffffff`) — primary body, pure white on jet black
+- **Text Strong** (`#ffffff`) — display headlines, button labels
+- **Text Soft** (`#b3b3b3`) — secondary metadata, sub-copy
+- **Text Faint** (`#7a7a7a`) — tertiary captions, legal disclaimers
+- **Text Disabled** (`#4a4a4a`) — disabled labels
+- **Border** (`#262626`) — 1px charcoal hairline on cards
+- **Border Soft** (`#1a1a1a`) — softer divider on lighter surfaces
+- **Border Strong** (`#44d62c`) — focused input, hovered card
+
+### Surface & Borders
+The depth ladder is intentionally narrow: `#000000` → `#0d0d0d` → `#111111` → `#1a1a1a` → `#1f1f1f` → `#262626`. Six near-blacks, all within roughly 15% lightness. The brand position: stay dark, let the brand-green and the product photography carry the contrast.
+
+### Shadow Colors
+Two shadow systems coexist. **Neutral shadows** for ambient depth: `rgba(0,0,0,0.6)` 0 8px 24px on cards, `rgba(0,0,0,0.8)` 0 32px 64px on modals. **Brand-green glows** for interactive states: `0 0 16px rgba(68,214,44,0.25)` for soft glow, `0 0 32px rgba(68,214,44,0.5)` for the strong glow on featured cards and CTA hover. The green glow is what tells the eye "this surface is alive."
+
+### Semantic
+- **Success** (`#44d62c`): brand green doubles as success
+- **Warning** (`#ffaa00`): amber, also used for "Razer Insider Exclusive" badges
+- **Danger** (`#ff3030`): error message text and out-of-stock urgency
+- **Info** (`#44d62c`): brand green again — Razer collapses info into the brand
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Roboto`, the open-source humanist sans Google released in 2011 and refined through 2015. Razer adopted Roboto for marketing pages (the older Razer.com used Helvetica Neue) because Roboto Black 900 carries an industrial, near-condensed silhouette at large sizes that reads as machine-precise without losing readability at 14px body. Falls back to `"Helvetica Neue", Arial, sans-serif`. Weights: 300 (light), 400 (regular), 500 (medium), 700 (bold), 900 (black).
+
+**Condensed**: `Roboto Condensed` for narrow contexts — spec labels in tight grid columns, where the standard width of Roboto would force breaks. Weights 400 / 700.
+
+**Mono**: `Roboto Mono`, used for spec values ("20,000 DPI", "8000 Hz"), driver release notes, and any technical detail that benefits from tabular alignment. Weights 400 / 500.
+
+**OpenType features**: `kern` and `liga` enabled by default. `tnum` enabled on price text and spec values. No stylistic sets.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Roboto | 72 | 900 | 1.0 | -0.02em | uppercase | "FOR GAMERS. BY GAMERS." homepage manifesto |
+| display-xl | Roboto | 56 | 900 | 1.05 | -0.015em | uppercase | Product launch hero, category H1 |
+| display-lg | Roboto | 40 | 700 | 1.1 | 0 | uppercase | Section banner "EXPLORE THE LINEUP" |
+| display-md | Roboto | 32 | 700 | 1.15 | 0 | — | Product detail page title (sentence-case) |
+| display-sm | Roboto | 24 | 700 | 1.2 | 0 | — | Card title, modal heading |
+| section-head | Roboto | 14 | 700 | 1.2 | 0.15em | uppercase | "GAMING LAPTOPS", "PERIPHERALS" |
+| sub-section | Roboto | 18 | 500 | 1.3 | 0 | — | Sub-headings within product page |
+| body-lg | Roboto | 18 | 400 | 1.6 | 0 | — | Hero supporting copy |
+| body-md | Roboto | 16 | 400 | 1.6 | 0 | — | Default body, descriptions |
+| body-sm | Roboto | 14 | 400 | 1.5 | 0 | — | Sidebar copy, spec list |
+| body-xs | Roboto | 12 | 400 | 1.4 | 0 | — | Caption, footer, legal |
+| nav-link | Roboto | 13 | 500 | 1.0 | 0.1em | uppercase | "SHOP · GAMERS CLUB · COMMUNITY" |
+| sub-nav-link | Roboto | 12 | 400 | 1.0 | 0.05em | uppercase | Category sub-nav labels |
+| button-cta | Roboto | 14 | 700 | 1.0 | 0.1em | uppercase | "BUY NOW", "ADD TO CART" |
+| button-md | Roboto | 13 | 500 | 1.0 | 0.05em | uppercase | "ADD TO WISHLIST", secondary |
+| badge | Roboto | 11 | 700 | 1.0 | 0.15em | uppercase | "NEW", "PRE-ORDER", "EXCLUSIVE" |
+| price | Roboto | 18 | 500 | 1.0 | 0 | tnum | Product price |
+| spec-label | Roboto | 11 | 700 | 1.2 | 0.2em | uppercase | "DPI", "POLLING RATE" |
+| spec-value | Roboto Mono | 14 | 400 | 1.4 | 0 | tnum | "20,000 DPI" |
+| code | Roboto Mono | 13 | 400 | 1.5 | 0 | — | Driver release notes |
+
+### Principles
+
+- **Black 900 with negative tracking is the manifesto voice.** Razer reaches for Roboto Black at 56–72px with `-0.015em` to `-0.02em` tracking on every hero. The negative tracking compresses the headline into a stamp.
+- **Uppercase tracking ladder.** Display-hero at -0.02em compressed; nav at 0.1em; section-head at 0.15em; spec-label at 0.2em; badge at 0.15em. The wider the spacing, the smaller the type — Razer uses tracking inversely with size to keep small text legible and large text dense.
+- **Mono is for specs only.** Roboto Mono never appears in body or display — only in spec values, driver notes, and inline code. The mono signals "engineering."
+- **Body in pure white, not slate.** Unlike Steam's slate-blue body, Razer commits to `#ffffff` for body text. The brand position: maximum contrast, gamer-readable, no eye-fatigue concession.
+- **Sentence-case for product detail H1, uppercase for section heads.** Product names (e.g. "Razer DeathAdder V3 Pro") render sentence-case at 32/700; section labels above carousels render uppercase tracked at 14/700.
+- **Tabular numerals on every spec and price.** `tnum` ensures DPI and Hz values align in spec tables.
+- **Razer 9000 is the older proprietary type.** Some legacy pages still serve "Razer 9000" or "Universe Sans"; Roboto is the modern default.
+- **Roboto Condensed for narrow contexts only.** Spec table columns under 120px wide use Roboto Condensed 700 to avoid line breaks.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — the Razer Green "BUY NOW" / "ADD TO CART" CTA. Solid `#44d62c` fill, **black** label in 14/700 uppercase 0.1em tracking, 14×32px padding, 2px radius. Hover brightens to `#5fe849` and adds a `0 0 24px rgba(68,214,44,0.5)` Chroma glow halo. Active deepens to `#2db516`. The single most-prominent CTA on Razer.com.
+
+**`button-secondary`** — ghost outline: transparent fill, white label in 14/700 uppercase, 1px white border, 14×32px padding. Hover inverts to white fill with black label.
+
+**`button-tertiary`** — inline text-link with bottom border: `#44d62c` text in 13/500 uppercase tracked, 1px `#44d62c` underline, "→" arrow inline. Used as "SEE ALL PRODUCTS →" anchors.
+
+**`button-icon`** — round 40×40 icon-only target. Used for wishlist heart, share, modal-close. Hover lights `#1a1a1a` floor.
+
+### Cards
+
+**`product-card`** — the standard 300×420 product tile. `#0d0d0d` floor, 4px radius, 1px transparent border, 24px padding. Stack: 16:9 product hero image, "NEW" badge anchored top-left if applicable, title in 18/700 white sentence-case, sub-title in 14/400 muted, price row, "BUY NOW" green CTA. Hover lights a 1px `#44d62c` border + `0 0 24px rgba(68,214,44,0.3)` glow halo. The card-hover treatment is Razer's most recognisable interactive moment.
+
+**`product-card-featured`** — same dimensions, already lit with the green border + glow at rest. Used on "New Releases" carousel and homepage featured rail.
+
+**`hero-card`** — full-bleed product hero with gradient `#000000 → #0d0d0d` floor, 64×48px padding, headline left and product photography right. Used on launch pages and the homepage rotating hero.
+
+**`spec-card`** — 32/700 numerical spec value in `#44d62c`, 11/700 uppercase tracked spec label in white, 14/400 muted supporting copy. `#111111` floor, 1px `#262626` border, 32×24px padding, 4px radius. Stacked in feature strips like "20,000 DPI · 8000 Hz POLLING · 0.2 ms RESPONSE".
+
+### Badges
+
+**`badge-new`** — solid `#44d62c` green pill with black label "NEW" in 11/700 uppercase 0.15em tracking, 4×10px padding, 2px radius. Anchored top-left of recently launched cards.
+
+**`badge-pre-order`** — outline-only: transparent fill, 1px `#44d62c` border, `#44d62c` "PRE-ORDER" label.
+
+**`badge-exclusive`** — `#ffaa00` amber fill, black label "RAZER INSIDER EXCLUSIVE" — member-only drops.
+
+**`badge-out-of-stock`** — `#7a7a7a` muted grey, "SOLD OUT" label.
+
+### Inputs / Forms
+
+**`text-input`** — `#1a1a1a` charcoal floor, white text, 1px `#262626` border, 4px radius, 48px height, 12×16px padding. Focus lights a 1px `#44d62c` border with no glow (the colour change is the focus signal). Razer's minimalist input.
+
+**`search-bar`** — top-bar search field: `#0d0d0d` near-black floor, white text, 1px `#262626` border, magnifier icon left at 12px inset. Width ~280px on the masthead; expands to overlay full-width on focus.
+
+### Navigation
+
+**`primary-nav`** — top nav with `#000000` floor, 64px tall, 1px `#1a1a1a` bottom border. Razer triple-snake mark anchored left in white. "SHOP · GAMERS CLUB · COMMUNITY · SUPPORT" labels in 13/500 uppercase 0.1em tracking. Cart icon, account dropdown, search trigger flush right. Hover lights brand-green underline.
+
+**`sub-nav`** — 48px tall band: `#0d0d0d` floor, "Mice · Keyboards · Headsets · Laptops · Chairs · Streaming · Apparel" in 12/400 uppercase 0.05em tracking. Active category gets a `#44d62c` 2px bottom underline.
+
+**`mega-menu`** — full-width drop-down triggered by primary nav hover. `#0d0d0d` floor, multi-column layout: category column left, sub-category centre, featured product preview card right. Closes on mouse-leave with 200ms delay.
+
+### Modals & Overlays
+
+**`modal-backdrop`** — `rgba(0,0,0,0.85)` near-opaque scrim.
+
+**`modal-surface`** — `#0d0d0d` floor, 8px radius, 1px `#1a1a1a` border, `0 32px 64px rgba(0,0,0,0.8)` deep drop shadow. Centred at 600×auto on desktop.
+
+**`toast`** — `#1a1a1a` floor, 4px `#44d62c` left border, white text 14/400, 16×20px padding, 4px radius. Used for "Added to Cart" confirmations.
+
+### Decorative
+
+**`rgb-strip`** — the Chroma RGB gradient strip at 4px height: `linear-gradient(90deg, #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088)`. Used as a section divider on Chroma feature pages, footer accent, and product launch announcements. Razer's only decorative element.
+
+**`triple-snake-mark`** — the brand's three-headed-snake logomark, rendered in white at 32×32 on the primary nav and in pure black on white surfaces. Never gradient.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **8px** with 4px sub-steps for tight inline gaps
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section gap (vertical): **80–128px** between major bands on marketing pages — Razer breathes more than Steam, less than Apple
+- Card internal padding: **24–32px** for product cards, **32–48px** for spec cards
+- Gutters: **16–24px** between product cards in grid views
+
+### Grid & Container
+
+- Max content width: **1440px** on marketing pages with 80–120px outer gutters at wide viewports
+- Product grid: 3–4 columns at 1280–1440px, collapses to 2 at 960px, 1 at 600px
+- Hero band: full-bleed background with content centred at 1280px
+- Spec strip: full-bleed band with 4-column spec card row centred at 1280px
+
+### Whitespace Philosophy
+
+Razer runs **structured-dense**. Marketing hero pages breathe at 80–128px between bands; product detail pages tighten to 48–64px between bands; product grid pages tighten further to 24–48px between rows. The hierarchy is intentional: hero pages let the photography breathe, listing pages prioritise density.
+
+Inside cards, padding is generous (24–32px) to let product photography dominate.
+
+### Section Cadence
+
+The page alternates **black canvas bands** (`#000000`) with **darker product bands** (`#080808`) and occasional **spec card bands** (`#0d0d0d` cards on `#000000` canvas). The 4px Chroma RGB gradient strip appears between major sections on Chroma feature pages — it's the only visual divider Razer uses; otherwise sections rely on padding alone.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Hero banners, RGB strips, full-bleed product photography |
+| Micro | 1px | Inset surfaces — rare |
+| Small | 2px | Buttons, badges, inline pills, tabs |
+| Medium | 4px | Cards, inputs, search bar, toast |
+| Large | 8px | Featured product card, modal surface |
+| XL | 12px | Rare large container, video player |
+| Pill | 9999px | Profile avatars, icon buttons |
+
+The radius vocabulary is overwhelmingly **2px (buttons) or 4px (cards)** — Razer is sharp-edged. The brand position: gaming peripherals have hard precise corners, the page should match.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Default for body, hero photography, most surfaces |
+| 1 — Soft glow | `0 0 16px rgba(68,214,44,0.25)` | Hovered link icon, focused interactive |
+| 2 — Card | `rgba(0,0,0,0.6) 0 8px 24px` | Product card on hover (paired with green border) |
+| 3 — Strong glow | `0 0 32px rgba(68,214,44,0.5)` | Featured product card at rest, CTA hover |
+| 4 — Modal | `rgba(0,0,0,0.8) 0 32px 64px` | Centred dialogs, mega-menu drop-down |
+| 5 — Scrim | `rgba(0,0,0,0.85)` | Modal backdrop |
+
+### Shadow Philosophy
+
+Razer's depth language has two voices. **Neutral shadows** (deep black, multi-layer) for atmospheric depth on modals and elevated cards — this is the conventional vocabulary every dark-mode site uses. **Brand-green glows** for *interactive* depth — when a card or button becomes active, the snake-green halo lights it up. The glow reads as "this surface has Chroma RGB inside it." That single semantic move — equating depth with brand-green light — is what differentiates Razer's elevation from any other dark-mode brand.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover, focus, color transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, carousel slide, hero image swap
+- **Snake**: `cubic-bezier(0.65, 0, 0.35, 1)` — symmetric S-curve used for the Chroma RGB shimmer animation
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Button gradient deepen, link colour swap, tab switch |
+| Standard | 240ms | Card hover lift + glow + green border fade |
+| Slow | 400ms | Carousel slide, modal enter, hero image swap |
+
+### Per-Component Recipes
+
+- **Product card hover**: card translates -2px Y + 1px snake-green border fades in + `0 0 24px rgba(68,214,44,0.3)` glow halo over 240ms. The synchronised lift + border + glow is the brand's signature interactive moment.
+- **CTA hover**: green fill brightens from `#44d62c` → `#5fe849` + `0 0 24px rgba(68,214,44,0.5)` glow halo. Active state deepens to `#2db516` + 2px scale-down over 120ms.
+- **Link hover**: text colour transitions from `#44d62c` → `#ffffff` over 120ms — no underline.
+- **Spec card hover**: spec value glows green for 240ms then fades.
+- **Carousel slide**: 400ms emphasized ease with momentum-physics on swipe gestures.
+- **Modal enter**: scrim fades 0 → 0.85 over 200ms, dialog scales 0.96 → 1.0 + opacity 0 → 1 over 240ms.
+- **RGB shimmer**: on Chroma feature pages, the 4px RGB strip cycles its 8-stop gradient horizontally on a 4-second linear loop. Suppressed under reduced-motion.
+
+### Page Transitions
+
+Hard navigation between pages — no soft transition. Razer prioritises fast paint over choreography. Hover and within-page state changes carry the motion vocabulary.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. RGB shimmer freezes mid-spectrum (a static rainbow strip). Card hover lift suppresses to colour-only (border fades, no Y translate). Carousel slide degrades to opacity crossfade. Glow halos remain — they're a state, not a motion.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #ffffff text on #000000 canvas | 21.0 | AAA |
+| #b3b3b3 muted on #000000 | 9.4 | AAA |
+| #44d62c link on #000000 | 9.5 | AAA |
+| #000000 on #44d62c CTA | 8.9 | AAA |
+| #7a7a7a faint on #000000 | 4.7 | AA at body sizes |
+| #ffffff on #1a1a1a card | 17.6 | AAA |
+| #44d62c on #0d0d0d card | 9.0 | AAA |
+
+Razer's contrast story is exceptional. White-on-black canvas hits AAA at 21.0; brand-green-on-black hits AAA at 9.5; black-on-brand-green CTA hits AAA at 8.9. The dark-only commitment makes near-AAA the default.
+
+### Focus Indicators
+
+Focus ring is **2px solid `#44d62c` with 2px outset offset** on buttons, links, and interactive cards. On inputs, focus replaces the 1px charcoal border with a 1px `#44d62c` border (no glow). The brand-green ring serves both as focus indicator and brand reinforcement.
+
+### ARIA Patterns
+
+- **Search bar**: `role="search"`, input `aria-label="Search Razer"`
+- **Product card**: entire tile wrapped in `<a>` with verbose `aria-label` — "Razer DeathAdder V3 Pro, $159.99, 5 stars from 1,247 reviews"
+- **Add to Wishlist heart**: `aria-pressed` + label "Add to wishlist" / "Remove from wishlist"
+- **Mega-menu**: `role="navigation"` with `aria-expanded` on the trigger
+- **RGB strip**: decorative — `aria-hidden="true"`
+- **Spec card**: pairs `<dt>` for label and `<dd>` for value
+
+### Keyboard Navigation
+
+- Tab traverses: logo → primary nav → search → utilities → main content → footer
+- Inside product grid: arrow keys cycle horizontally and vertically through cards
+- Esc closes modals, mega-menu, and search overlay
+- Enter activates buttons and submits forms
+- Mega-menu opens on focus + Enter or hover; closes on Esc or focus-leave
+
+### Screen Reader Hints
+
+Verbose `aria-label` on icon-only buttons. Product cards include the price and rating in the `aria-label` so screen readers announce them in context. Decorative RGB strips are `aria-hidden`. Razer Insider Exclusive badges include "members-only" in the announce.
+
+### Reduced Motion
+
+RGB shimmer freezes; carousel slide degrades to opacity crossfade; card hover lift suppresses to colour-only.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Top nav collapses to logo + hamburger; product grid stacks 1-up; hero text scales 72→40 |
+| Tablet | 600–960px | Product grid 2-up; sub-nav becomes horizontal scroll; hero stays 2-column |
+| Desktop | 960–1280px | Default — 3-up product grid with mega-menu nav |
+| Wide | 1280px+ | 4-up product grid, content cap at 1440 |
+
+### Touch Targets
+
+- CTA buttons: 48px height — comfortably above WCAG AAA 44px minimum
+- Icon buttons: 40px tap target with 4px hit-area inset
+- Product card: entire 300×420 card is the tap target
+- Carousel paddle: 48×48 — exceeds AAA
+
+### Collapsing Strategy
+
+- Top nav: utilities (account, cart, search) collapse first; primary nav becomes a hamburger drawer
+- Sub-nav: horizontal scroll with edge fade
+- Product grid: 4 → 3 → 2 → 1
+- Spec strip: 4-column → 2-column → 1-column stack
+- Hero: 2-column (text + product) → stacked (text on top, product below)
+- Section padding: 128px desktop → 80px tablet → 48px mobile
+
+### Image Behavior
+
+Product photography is delivered at multiple aspect crops: 16:9 for cards, 1:1 for square tiles, 21:9 for hero banners. Razer uses `<picture>` with `srcset` to serve resolution-appropriate WebP/AVIF. Decorative product trails (RGB long-exposure renders) are pre-rendered video loops on hero pages, fall back to still images on slow networks.
+
+### Container Queries
+
+Used in product card media query when stacked in narrow rails (under 250px) — title size collapses 18→16, sub-title hides, price row simplifies.
+
+## 11. Content & Voice
+
+### Tone
+
+Aggressive, technical, gamer-credibility-first. Razer's voice is **the brand talking like a co-conspirator** — "FOR GAMERS. BY GAMERS." is the manifesto, not a slogan. Headlines lead with bold claims ("THE FASTEST GAMING MOUSE EVER MADE", "OUTSMART. OUTPLAY."), never aspirational tech-marketing copy.
+
+The brand never apologises for being loud. Where Apple says "An incredible camera that just works," Razer says "20,000 DPI. 8000 Hz polling. The ratio between you and the win has been recalculated."
+
+### Microcopy Patterns
+
+- **Button verbs**: "BUY NOW", "ADD TO CART", "PRE-ORDER", "LEARN MORE", "VIEW SPECS", "SHOP NOW" — all uppercase tracked, action-imperative
+- **Error message recipe**: terse + actionable — "Sorry, this item is sold out. Sign up to be notified when it returns."
+- **Success confirmations**: punchy — "Added. Locked in."
+- **Field labels**: short uppercase — "EMAIL", "PASSWORD", "SHIPPING ADDRESS"
+- **Stock urgency**: deployed sparingly — "ONLY 3 LEFT" in `#ff3030` red
+
+### Empty States
+
+Empty cart: "Your cart is empty. Choose your weapon." — combat metaphor consistent with the gamer voice.
+
+Empty wishlist: "No wishlist yet. Save the gear you're plotting for next."
+
+Empty search: "No results for [query]. Try a different model number or category."
+
+### CTA Verb Conventions
+
+- Primary: **"BUY NOW"** (product detail), **"ADD TO CART"** (product card), **"PRE-ORDER NOW"** (unreleased), **"SHOP NOW"** (category)
+- Save: **"ADD TO WISHLIST"** — the universal save verb
+- Tertiary: **"LEARN MORE"**, **"VIEW SPECS"**, **"SEE THE LINEUP"**, **"WATCH FILM"**
+- Membership: **"JOIN RAZER INSIDER"**, **"GET EXCLUSIVE ACCESS"**
+- Avoided: "Get started", "Sign up free", "Discover" — Razer refuses tech-marketing softness
+
+## 12. Dark Mode & Theming
+
+**Dark-only.** Razer is dark-only across web, mobile app, Synapse desktop client, and the Razer Cortex game launcher. There is no light mode anywhere in the brand. The position: gaming sessions happen in low-light rooms with backlit hardware, the brand should match.
+
+The deepest surface is `#000000` (canvas, modal scrim). The lightest active surface is `#262626` (selected sidebar, deeply hovered card border). The whole system lives within roughly 15% lightness range — extremely narrow even by dark-mode standards. The brand-green `#44d62c` provides nearly all the chromatic contrast; secondary surfaces vary by 1–3% lightness and rely on hairline borders for separation.
+
+The single chromatic accent (Razer Green) and the eight-stop Chroma RGB strip are the only saturated colours in the system. Everything else is black-to-charcoal-to-white. The brand position: discipline through restriction.
+
+## 13. Lineage & Influences
+
+Razer's visual lineage runs through three traditions: **enthusiast PC peripheral marketing of the 2000s** (Razer's 1999 Boomslang launch and the 2005 Diamondback relaunch borrowed from gaming hardware brands like Logitech G, but Razer pushed the green-on-black further than any peer); **military / tactical equipment trade dress** (jet-black canvas, sharp edges, mono spec callouts — the page reads like a Glock product sheet); and **gaming-bar / esports-arena LED aesthetic** (the Chroma RGB lighting language formalised in 2014 made backlit RGB the brand's primary expressive vocabulary, and the marketing site mirrors that LED palette).
+
+The current site solidified around 2019 with the rollout of Roboto Black as the headline face and the green-glow card hover treatment. Subsequent updates have refined the Chroma RGB strip placement and the spec-card density but have not changed the colour or typographic foundations. The brand position is stability — Razer has looked roughly the same since the 2010s.
+
+What Razer rejects: light mode, friendly serifs, glassmorphism, soft watercolour illustration, founder portraits, full-width landscape photography (Razer reserves photography for product hero shots), bouncy easing curves, sentence-case section heads, and any chrome that would compete with the snake-green CTA. The brand position: **the hardware is the hero, the LED is the brand**.
+
+**Influences:**
+- Razer's 1999 Boomslang launch — the original green-on-black peripheral marketing
+- Logitech G's competitive PC-gaming peripheral aesthetic — Razer pushed the gamer trade dress further
+- Military / tactical hardware trade dress — sharp edges, mono spec callouts
+- Esports arena LED lighting — the Chroma RGB language formalised in 2014
+- Roboto (Google) — Razer adopted Roboto Black for headline manifesto voice in 2019
+- NVIDIA GeForce — competing PC-gaming dark trade dress with neon green accent
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the page on `#000000` jet-black canvas — never charcoal, never slate
+- Use Razer Green (`#44d62c`) for every primary CTA, every link, every focus border, every brand accent
+- Render BUY NOW buttons as solid `#44d62c` with **black** label in 14/700 uppercase 0.1em tracking
+- Add the brand-green glow halo on card hover, CTA hover, and focused interactive
+- Use Roboto Black 900 with negative tracking for hero headlines at 56–72px uppercase
+- Stack section heads at 14/700 uppercase 0.15em tracking — they read as labels, not invitations
+- Render spec values in Roboto Mono with the brand-green glow on hover
+- Use the Chroma RGB gradient strip (8 stops, 4px height) as a section divider on Chroma feature pages
+- Photograph product hardware on black seamless so it floats against the page canvas
+- Use 2px-radius buttons and 4px-radius cards — Razer is sharp-edged
+- Render body in pure white `#ffffff`, not slate-blue
+
+**Don't**
+- Don't introduce a light mode — Razer is dark-only across every surface
+- Don't replace the brand green with another accent (no blue, no red, no purple) — `#44d62c` is canonical
+- Don't soften card corners past 4px — Razer's geometry is sharp
+- Don't use sentence-case section heads — they're uppercase tracked labels
+- Don't add glassmorphism, frosted backgrounds, or noise textures — Razer is solid black
+- Don't photograph hardware on white seamless — every product sits on black
+- Don't pair the brand green with another saturated accent in the same module — green carries the brand alone
+- Don't add bouncy easing — every transition is linear or cubic-bezier standard
+- Don't pad sections at 16px on marketing pages — Razer breathes at 80–128px
+- Don't use serifs anywhere — Razer is Roboto-only
+- Don't write tech-marketing copy ("Discover the difference") — Razer's voice is "OUTSMART. OUTPLAY."
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #000000
+Bg Deep:          #0d0d0d
+Card:             #111111
+Razer Green:      #44d62c
+Razer Green Hover:#5fe849
+Brand Glow:       rgba(68,214,44,0.4)
+Text:             #ffffff
+Text Soft:        #b3b3b3
+Border:           #262626
+Border Strong:    #44d62c
+Chroma Spectrum:  #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088
+```
+
+### Example Component Prompts
+
+- "Create a Razer BUY NOW button: solid `#44d62c` neon green fill, black label 'BUY NOW' in Roboto 14/700 uppercase 0.1em tracking, 14×32px padding, 2px radius. On hover, fill brightens to `#5fe849` and adds a `0 0 24px rgba(68,214,44,0.5)` Chroma glow halo. On active, fill deepens to `#2db516` and scales 0.98."
+- "Build a Razer product card: 300×420 with `#0d0d0d` near-black floor, 4px radius, 1px transparent border. Stack inside: 16:9 product hero on black seamless, 'NEW' green badge top-left if applicable, product title in Roboto 18/700 white sentence-case, sub-title 14/400 `#b3b3b3`, price row, BUY NOW green CTA. On hover, fade in 1px `#44d62c` border + `0 0 24px rgba(68,214,44,0.3)` glow halo + translate -2px Y over 240ms."
+- "Design a Razer hero headline: Roboto Black 900 at 72px / 1.0 line-height / -0.02em tracking, uppercase, white on `#000000`. Two-line composition like 'FOR GAMERS. / BY GAMERS.' with the period as a tight visual stamp. Below it a 18/400 white supporting paragraph at 480px max-width."
+- "Build a Razer spec strip: 4-column grid on `#000000` canvas, each cell `#111111` floor, 4px radius, 1px `#262626` border, 32×24px padding. Stack: 32/700 numerical spec value in `#44d62c` brand green Roboto Mono, 11/700 uppercase 0.2em tracking white spec label, 14/400 muted supporting copy. Examples: '20,000 DPI', '8000 Hz POLLING', '0.2 ms RESPONSE', '90H BATTERY'."
+- "Create a Razer Chroma RGB section divider: 4px-tall full-bleed strip with horizontal gradient `#ff0000 → #ff8800 → #ffee00 → #44d62c → #00ffff → #0099ff → #aa00ff → #ff0088`, animating left-to-right on a 4-second linear loop. Suppressed under prefers-reduced-motion."
+- "Design a Razer top nav: 64px-tall bar with `#000000` floor, 1px `#1a1a1a` bottom border. Razer triple-snake mark anchored left in white at 32px. Nav items 'SHOP · GAMERS CLUB · COMMUNITY · SUPPORT' centred in Roboto 13/500 uppercase 0.1em tracking white. Search icon, account dropdown, cart count flush right. Hover lights a 2px `#44d62c` underline beneath the active item."
+
+### Iteration Guide
+
+1. **Start with the black.** If your canvas isn't `#000000` jet-black, it isn't Razer. Lock the canvas first.
+2. **Razer Green is the only accent.** `#44d62c` for every CTA, link, focus, badge, glow source. No second saturated colour except the Chroma RGB spectrum.
+3. **Roboto Black 900 with negative tracking is the manifesto voice.** Hero headlines at 56–72px uppercase with -0.015em to -0.02em tracking. If your headline is sentence-case medium-weight, it isn't Razer.
+4. **Card hover lights a green border + glow halo.** This is the brand's signature interactive moment — never replace with shadow-only or border-only.
+5. **Black-on-green CTAs.** Primary buttons render `#000000` text on `#44d62c` fill, not white-on-green.
+6. **Spec values in mono.** Roboto Mono for every DPI / Hz / ms / mAh value. Spec labels in Roboto uppercase tracked.
+7. **Body in pure white.** Razer commits to `#ffffff` for body — no slate-blue softening.
+8. **The Chroma RGB strip is the only decorative gradient.** Use it sparingly — section divider on Chroma pages, footer accent, launch announcement only.

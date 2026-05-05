@@ -1,0 +1,900 @@
+---
+name: PropelAuth
+tagline: White canvas with SF Pro Rounded display 60/900 + deep-navy ink — B2B multi-tenant auth with Apple-tinted polish.
+author: webdesignhot
+source_url: https://propelauth.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [light, auth, b2b, multi-tenant, sans, rounded, friendly, organizations]
+preview_swatch: ['#ffffff', '#151531', '#5d5cf5']
+related: [stripe, supabase, vercel]
+description: 'PropelAuth''s marketing site is the canonical B2B-multi-tenant auth canvas — a white ground (`#ffffff`) anchored on body slate (`#343a40`) with hero display in **SF Pro Rounded** at 60/900 carrying near-zero tracking. The brand colour is **deep-navy `#151531`** for headings — a confident dark indigo that carries the B2B-platform gravitas without reaching for corporate-blue cliché. Display flips into white on darker bands where deep-blue cards (`#252550`) anchor the brand-emphasized "Organizations, Roles, RBAC" feature blocks. The SF Pro Rounded display weight at 900 (Heavy) is the most distinctive type move — it gives the page an Apple-product-marketing softness that distinguishes PropelAuth from Inter-default peers like WorkOS, Clerk, and Stytch. Body runs in **Inter** at 16/400. Where competitors plant their flag on auth-as-utility, PropelAuth''s positioning is explicitly "B2B multi-tenant from day one" — the entire page architecture (organizations dashboards, role hierarchies, SAML SSO, audit logs) is designed for B2B SaaS founders building multi-tenant products. The result is the only auth platform that successfully combines Apple-marketing-polished display typography with B2B-multi-tenant-platform feature density.'
+
+colors:
+  bg: '#ffffff'                  # white canvas
+  bg-soft: '#f8f9fa'             # softest off-white for alt sections
+  bg-section: '#f1f3f5'          # section ground tier
+  bg-violet-tint: '#f3f3ff'      # softest violet-tinted section
+  bg-deep-navy: '#151531'        # deep-navy mood-zone (h1 colour)
+  bg-deep-card: '#252550'        # deep-navy card on dark band
+  bg-deepest: '#0a0a1f'          # deepest near-black footer
+  surface: '#ffffff'
+  surface-soft: '#f8f9fa'
+  surface-strong: '#f1f3f5'      # hovered card surface
+  surface-violet: '#eeeefe'      # violet-tinted card
+  surface-deep-navy: '#151531'   # deep-navy card surface
+  surface-deeper: '#252550'      # deep-blue card on dark band
+  text: '#343a40'                # primary body — slate (rgb(52,58,64))
+  text-strong: '#151531'         # heading deep-navy (rgb(21,21,49))
+  text-display: '#151531'        # h1/h2 colour
+  text-muted: '#6c757d'          # secondary metadata
+  text-soft: '#868e96'           # caption
+  text-faint: '#adb5bd'          # disabled
+  text-on-dark: '#ffffff'        # white on dark sections
+  text-on-violet: '#151531'      # ink on violet card surface
+  brand: '#5d5cf5'               # PropelAuth indigo-violet — accent CTA / active state
+  brand-deep: '#4747e0'          # darker pressed
+  brand-light: '#7c7bf7'         # hover brightening
+  brand-soft: '#eeeefe'          # softest violet surface
+  brand-pale: '#dadafe'          # paler violet
+  navy-cta: '#151531'            # primary CTA fill (deep-navy)
+  navy-cta-hover: '#1f1f40'      # hover brightens
+  navy-cta-active: '#0a0a1f'     # pressed deepest
+  on-brand: '#ffffff'            # white on violet CTA
+  on-navy-cta: '#ffffff'         # white on deep-navy CTA
+  on-dark: '#ffffff'
+  on-light: '#151531'
+  border: '#dee2e6'              # default 1px hairline
+  border-soft: '#e9ecef'         # editorial divider
+  border-strong: '#ced4da'       # stronger hairline
+  border-input: '#ced4da'        # form input default
+  border-violet: '#5d5cf5'       # focus ring
+  border-on-dark: 'rgba(255,255,255,0.10)' # dark-section hairline
+  scrim: 'rgba(21,21,49,0.48)'   # modal backdrop (deep-navy)
+  shadow-card: 'rgba(21,21,49,0.04)'
+  shadow-elev: 'rgba(21,21,49,0.08)'
+  shadow-modal: 'rgba(21,21,49,0.16)'
+  success: '#0f8a4d'             # success-green
+  success-bg: '#d3f9d8'
+  warning: '#d97706'             # warning-amber
+  warning-bg: '#fff5e6'
+  danger: '#dc2626'              # error-red
+  danger-bg: '#ffe3e3'
+  info: '#5d5cf5'                # info violet (uses brand)
+  organization-tag-bg: '#eeeefe' # multi-tenant org-tag background
+  organization-tag-text: '#5d5cf5' # multi-tenant org-tag text
+  role-admin: '#dc2626'          # role indicators (multi-tenant signature)
+  role-member: '#0f8a4d'
+  role-viewer: '#5d5cf5'
+
+typography:
+  display:
+    family: '"SF Pro Rounded", "SF Pro Display", "SN Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif'
+    weights: [600, 700, 900]
+    opentype-features: ['ss01']
+  display-alt:
+    family: '"SN Pro", "SF Pro Rounded", -apple-system, sans-serif'
+    weights: [500, 600, 700]
+  body:
+    family: 'Inter, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+    weights: [400, 500, 600]
+  mono:
+    family: '"JetBrains Mono", "SF Mono", "Fira Code", Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    hero-display:    { size: 80, weight: 900, lineHeight: 1.0,  tracking: '0',       family: display, opentype: ['ss01'] }
+    h1:              { size: 60, weight: 900, lineHeight: 1.0,  tracking: '0',       family: display, opentype: ['ss01'] }
+    h2:              { size: 40, weight: 900, lineHeight: 1.25, tracking: '0',       family: display }
+    h3:              { size: 28, weight: 700, lineHeight: 1.30, tracking: '-0.005em', family: display }
+    h4:              { size: 22, weight: 700, lineHeight: 1.35, tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.40, tracking: '0',       family: display }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.50, tracking: '0.08em',  family: body, transform: uppercase }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.60, tracking: '0',       family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    label:           { size: 13, weight: 500, lineHeight: 1.40, tracking: '0',       family: body }
+    button-label:    { size: 15, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body }
+    nav-link:        { size: 15, weight: 500, lineHeight: 1.20, tracking: '0',       family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.40, tracking: '0',       family: body }
+    micro:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0',       family: body }
+    code-inline:     { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',       family: mono }
+    code-block:      { size: 13, weight: 400, lineHeight: 1.55, tracking: '0',       family: mono }
+    org-tag:         { size: 12, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body }
+    role-badge:      { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.04em',  family: body, transform: uppercase }
+    quote:           { size: 22, weight: 400, lineHeight: 1.40, tracking: '-0.005em', family: display, italic: true }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8           # default button — observed
+  xl: 12
+  card: 16
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 72
+  hero-padding-y: 128
+
+components:
+  button-primary:
+    bg: '#151531'
+    color: '#ffffff'
+    radius: 8
+    padding: '10px 20px'
+    height: 44
+    font: button-label
+    use: 'Primary CTA — deep-navy fill. "Get started", "Book a demo", "Sign up free".'
+  button-violet:
+    bg: '#5d5cf5'
+    color: '#ffffff'
+    radius: 8
+    padding: '10px 20px'
+    height: 44
+    use: 'Brand-emphasized CTA — indigo-violet fill. Used for "Try free" and feature-emphasized.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#151531'
+    border: '1px solid #dee2e6'
+    radius: 8
+    padding: '10px 20px'
+    height: 44
+    use: 'Outlined ghost — secondary CTA on light section.'
+  button-ghost-dark:
+    bg: 'transparent'
+    color: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.20)'
+    radius: 8
+    padding: '10px 20px'
+    height: 44
+    use: 'Ghost CTA on dark band.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#5d5cf5'
+    use: 'Inline link — indigo-violet text. Hover underlines.'
+  card-feature:
+    bg: '#ffffff'
+    color: '#343a40'
+    radius: 16
+    padding: '32px'
+    border: '1px solid #dee2e6'
+    use: 'Feature card — hairline border, generous internal padding.'
+  card-violet:
+    bg: '#eeeefe'
+    color: '#151531'
+    radius: 16
+    padding: '32px'
+    use: 'Violet-tinted feature card — used for the brand-emphasized organization features.'
+  card-deep-navy:
+    bg: '#151531'
+    color: '#ffffff'
+    radius: 16
+    padding: '32px'
+    use: 'Dark feature card — used in the brand mood-zone band for "Built for B2B" features.'
+  card-deep-blue:
+    bg: '#252550'
+    color: '#ffffff'
+    radius: 16
+    padding: '32px'
+    use: 'Deep-blue card on dark band — slightly lighter than deep-navy for tier separation.'
+  card-pricing:
+    bg: '#ffffff'
+    color: '#343a40'
+    radius: 16
+    padding: '32px'
+    border: '1px solid #dee2e6'
+    use: 'Pricing tier — recommended tier highlights with 2px violet border.'
+  organization-card:
+    bg: '#ffffff'
+    color: '#343a40'
+    radius: 12
+    padding: '20px'
+    border: '1px solid #dee2e6'
+    use: 'Organization tile in the multi-tenant dashboard preview — show org name, member count, role badge.'
+  input:
+    bg: '#ffffff'
+    color: '#151531'
+    border: '1px solid #ced4da'
+    focus: '0 0 0 2px #5d5cf5'
+    radius: 8
+    height: 44
+    padding: '12px 14px'
+    placeholder: '#868e96'
+    use: 'Form input — slim 8px radius, violet focus ring.'
+  navbar-top:
+    bg: 'rgba(255,255,255,0.92) backdrop-blur(8px)'
+    color: '#151531'
+    height: 72
+    border-bottom: '1px solid #dee2e6'
+    use: 'Frosted-white navbar with deep-navy text.'
+  code-block:
+    bg: '#151531'
+    color: '#ffffff'
+    radius: 12
+    padding: '20px 24px'
+    use: 'JetBrains Mono code block on deep-navy ground — violet keywords, light syntax.'
+  pill-eyebrow-violet:
+    bg: '#eeeefe'
+    color: '#5d5cf5'
+    radius: 9999
+    padding: '4px 10px'
+    use: 'Violet eyebrow pill — soft violet ground, brand text.'
+  organization-tag:
+    bg: '#eeeefe'
+    color: '#5d5cf5'
+    radius: 4
+    padding: '2px 6px'
+    use: '"Acme Inc." organization tag — multi-tenant signature.'
+  role-badge-admin:
+    bg: '#ffe3e3'
+    color: '#dc2626'
+    radius: 4
+    padding: '2px 6px'
+    use: '"ADMIN" role badge — red for admin permissions.'
+  role-badge-member:
+    bg: '#d3f9d8'
+    color: '#0f8a4d'
+    radius: 4
+    padding: '2px 6px'
+    use: '"MEMBER" role badge — green for standard members.'
+  role-badge-viewer:
+    bg: '#eeeefe'
+    color: '#5d5cf5'
+    radius: 4
+    padding: '2px 6px'
+    use: '"VIEWER" role badge — violet for read-only viewers.'
+  modal:
+    bg: '#ffffff'
+    color: '#343a40'
+    radius: 16
+    padding: '32px'
+    border: '1px solid #dee2e6'
+    shadow: 'rgba(21,21,49,0.16) 0 24px 48px'
+    use: 'Centred dialog over deep-navy scrim.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 320
+  cta-hover: 'deep-navy brightens 151531 → 1f1f40 over 150ms; violet brightens 5d5cf5 → 7c7bf7'
+  card-hover: 'border deepens slightly + 1px translateY(-1) over 240ms; subtle 4% navy-tinted shadow appears'
+  hero-reveal: 'sections fade-up from translateY(16px)/opacity 0 → 0/1 over 320ms emphasized'
+  org-switcher: 'organization-tile slides smoothly with 320ms emphasized ease when user switches orgs (multi-tenant signature)'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translateY suppressed; transitions remain opacity-only.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'none — most cards are hairline-bordered only'
+  card: 'rgba(21,21,49,0.04) 0 4px 12px'
+  elevated: 'rgba(21,21,49,0.08) 0 16px 32px'
+  modal: 'rgba(21,21,49,0.16) 0 24px 48px'
+  ring-violet: '0 0 0 2px #5d5cf5'
+  ring-navy: '0 0 0 2px #151531'
+
+accessibility:
+  contrast-text-on-bg: 11.7        # #343a40 on #ffffff — AAA
+  contrast-display-on-bg: 17.0     # #151531 on #ffffff — AAA
+  contrast-on-navy-cta: 17.0       # #ffffff on #151531 — AAA
+  contrast-on-violet-cta: 4.6      # #ffffff on #5d5cf5 — AA at body sizes
+  contrast-violet-on-bg: 4.6       # #5d5cf5 on #ffffff — AA at body sizes
+  contrast-muted-on-bg: 5.5        # #6c757d on #ffffff — AA
+  focus-ring: '2px solid #5d5cf5 + 2px outline-offset (indigo-violet ring)'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves logo → product → docs → pricing → customers → log in → CTA; arrow keys in mega-menu; org-switcher uses combobox pattern.'
+
+dark-mode: optional   # Marketing canvas is light-only by default; deep-navy mood-zone bands for brand-emphasized features; full dark theme available for `<PropelAuth />` UI components
+
+lineage:
+  summary: |
+    PropelAuth's marketing site is the canonical B2B-multi-tenant auth
+    canvas — a white ground anchored on body slate (`#343a40`) with hero
+    display in SF Pro Rounded at 60/900 (Heavy weight). The two-colour
+    brand system — deep-navy (`#151531`) for gravitas paired with
+    indigo-violet (`#5d5cf5`) for emphasis — is the move that distinguishes
+    PropelAuth from single-brand-colour peers. Display in SF Pro Rounded
+    is the typographic signature: Heavy weight at large display sizes
+    gives the page an Apple-product-marketing softness that is unique
+    in the auth space, while body Inter handles the modern dev-tool
+    foundation. The role-badge system (Admin red, Member green, Viewer
+    violet) extends the chromatic discipline into the multi-tenant feature
+    surface area. The signature illustration is the live organization
+    dashboard preview — showing PropelAuth's actual multi-tenant UI with
+    org switcher, role hierarchies, invitations, SSO, and audit logs.
+  influences:
+    - name: Apple Product Marketing
+      role: SF Pro Rounded at Heavy weight (900) is Apple's signature display move post-2017.
+      url: https://apple.com
+    - name: Stripe
+      role: Confidence-via-restraint chromatic discipline and hairline-bordered cards.
+      url: https://stripe.com
+    - name: Auth0
+      role: Predecessor in identity-platform aesthetic — PropelAuth differentiates with B2B-multi-tenant focus.
+      url: https://auth0.com
+    - name: Vercel
+      role: Frosted-glass navbar, restraint discipline, modern dev-tool foundation.
+      url: https://vercel.com
+    - name: WorkOS
+      role: B2B-enterprise-ready positioning — PropelAuth differentiates with the multi-tenant + role-badge focus.
+      url: https://workos.com
+---
+
+## 1. Visual Theme & Atmosphere
+
+PropelAuth's marketing site is the canonical **B2B-multi-tenant auth canvas** — a white ground (`#ffffff`) anchored on body slate (`#343a40`) with hero display in **SF Pro Rounded** at 60/900 — a Heavy weight that immediately signals "Apple-marketing polished" while the underlying brand colour deep-navy (`#151531`) signals "B2B-platform serious". This combination — Apple-rounded display + deep-navy ink — is the most distinctive type-and-colour pairing in the auth space. The page reads as a B2B-multi-tenant platform built by founders who care about polish: confident, considered, slightly playful in the type, completely rigorous in the feature set.
+
+The chromatic system is **white + deep-navy + indigo-violet**. The canvas is pure `#ffffff`. Body text runs in `#343a40` (slate, slightly warmer than gray). Display headlines and the primary CTA fill use **`#151531` deep-navy** — a confident dark indigo that has slight purple undertones, reading as enterprise without enterprise-blue cliché. The accent colour is **`#5d5cf5` indigo-violet** — used for the brand mark, focus rings, eyebrow pills, role-viewer badges, and brand-emphasized "Try free" CTAs. Where most B2B-identity sites use a single brand colour, PropelAuth maintains a **two-colour brand system**: deep-navy carries the gravitas, violet carries the brand emphasis. The two work as a duet rather than competing.
+
+Type runs **SF Pro Rounded** for display and **Inter** for body. SF Pro Rounded is Apple's rounded variant of SF Pro Display — used here at weight 900 (Heavy) for hero copy and h1, weight 700 for h3/h4, and 600 for h5. The 900 weight is the typographic signature: it's heavier than any conventional B2B-identity display weight (most run 500–700), and it gives the page a distinctly Apple-marketing-polished feel that distinguishes PropelAuth from Inter-default peers like WorkOS, Clerk, and Stytch. Body type is Inter at 16/400. Code blocks use JetBrains Mono.
+
+Shape language is **8–16px radii** with a sweet-spot at 8px for buttons and 16px for feature cards. Buttons round at **8px** (more rounded than Stripe's 6px or WorkOS's 2px, less than Linear's 12px). Inputs at 8px. Cards at 16px. Organization tiles in the multi-tenant dashboard preview round at 12px. The radius scale reads as friendly-modern — softer than enterprise, sharper than consumer.
+
+The signature visual element is the **multi-tenant organization dashboard preview** — a screenshot or live mockup of PropelAuth's actual organization-management UI, showing org switcher, role hierarchies (Admin / Member / Viewer), invitations, and SSO management. This is PropelAuth's brand-defining feature: the marketing page literally shows the multi-tenant interface that competitors don't ship out-of-the-box. Where Clerk shows the live `<SignIn />` component, PropelAuth shows the `<OrganizationDashboard />` — a deeper, more B2B-specific demo.
+
+**Key Characteristics:**
+- White canvas (`#ffffff`) with light slate alt sections (`#f8f9fa`, `#f1f3f5`)
+- Hero display in **SF Pro Rounded 60/900** (Heavy) — the typographic signature
+- Body in Inter 16/400 — modern dev-tool foundation
+- Deep-navy `#151531` for headings and primary CTA — Apple-rounded but B2B-serious
+- Indigo-violet `#5d5cf5` for brand emphasis — focus ring, eyebrow pills, accent CTA
+- Two-colour brand system: deep-navy + indigo-violet duet
+- Multi-tenant organization dashboard preview as the signature illustration
+- Role-badge system: Admin (red), Member (green), Viewer (violet) — multi-tenant signature
+- 8px button radius, 16px card radius — friendly-modern proportions
+- Frosted-white navbar with backdrop-blur(8px)
+- Code blocks on deep-navy `#151531` ground (matches brand CTA)
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **Canvas** (`#ffffff`) — pure-white default
+- **Soft White** (`#f8f9fa`) — softest off-white for alt sections
+- **Section Light** (`#f1f3f5`) — section ground tier
+- **Body Slate** (`#343a40`) — primary body text, warm slate
+- **Heading Deep-Navy** (`#151531`) — display headings, primary CTA fill
+- **Strong Ink** (`#0a0a1f`) — deepest near-black for emphasis
+- **Muted** (`#6c757d`) — secondary metadata
+- **Soft** (`#868e96`) — caption, placeholder
+- **Faint** (`#adb5bd`) — disabled
+
+### Brand & Dark
+
+- **Deep Navy** (`#151531`) — signature brand colour for headings, primary CTA, dark sections
+- **Navy Hover** (`#1f1f40`) — hover brightening
+- **Navy Active** (`#0a0a1f`) — pressed/active state
+- **Deep Card** (`#252550`) — slightly lighter deep-blue for dark-band cards
+- **Deepest** (`#0a0a1f`) — deepest near-black footer
+
+### Accent
+
+- **PropelAuth Violet** (`#5d5cf5`) — indigo-violet, the secondary brand colour for accent CTAs, eyebrow pills, focus rings, brand mark
+- **Violet Light** (`#7c7bf7`) — hover brightening
+- **Violet Deep** (`#4747e0`) — pressed
+- **Violet Soft** (`#eeeefe`) — softest violet surface
+- **Violet Pale** (`#dadafe`) — paler violet for hover surfaces
+- **Violet Tint** (`#f3f3ff`) — softest violet section tint
+
+### Multi-Tenant Specific
+
+- **Organization Tag BG** (`#eeeefe`) — soft violet ground for org chips
+- **Organization Tag Text** (`#5d5cf5`) — violet text for org names
+- **Role Admin** (`#dc2626`) — red for admin role badge
+- **Role Member** (`#0f8a4d`) — green for standard members
+- **Role Viewer** (`#5d5cf5`) — violet for read-only viewers
+- **Role Admin BG** (`#ffe3e3`) — soft red surface
+- **Role Member BG** (`#d3f9d8`) — soft green surface
+- **Role Viewer BG** (`#eeeefe`) — soft violet surface
+
+### Interactive
+
+- **Link** (`#5d5cf5`) — indigo-violet
+- **Link Hover** (`#7c7bf7`) — brightens
+- **Selected** (`#5d5cf5`) — 2px violet border on selected pricing tier, focused inputs
+- **Disabled** (`#adb5bd`) — faint slate text on `#f1f3f5` surface
+
+### Neutral Scale
+
+- **Strong Ink** (`#0a0a1f`)
+- **Heading Navy** (`#151531`)
+- **Body Slate** (`#343a40`)
+- **Muted** (`#6c757d`)
+- **Soft** (`#868e96`)
+- **Faint** (`#adb5bd`)
+- **Border Strong** (`#ced4da`)
+- **Border Default** (`#dee2e6`)
+- **Border Soft** (`#e9ecef`)
+- **Section Light** (`#f1f3f5`)
+- **Soft White** (`#f8f9fa`)
+- **Canvas** (`#ffffff`)
+
+### Surface & Borders
+
+- **White** (`#ffffff`) — default
+- **Soft White** (`#f8f9fa`) — alt section
+- **Section Light** (`#f1f3f5`) — section ground
+- **Violet Tint** (`#f3f3ff`) — softest violet section
+- **Violet Card** (`#eeeefe`) — accent card
+- **Deep Navy Card** (`#151531`) — dark feature card
+- **Deep Blue Card** (`#252550`) — slightly lighter dark card
+- **Deepest** (`#0a0a1f`) — footer
+- **Border** (`#dee2e6`)
+- **Border Soft** (`#e9ecef`)
+- **Border Strong** (`#ced4da`)
+- **Border Input** (`#ced4da`)
+- **Border Violet** (`#5d5cf5`) — focus ring
+- **Border Dark** (`rgba(255,255,255,0.10)`) — dark-section hairline
+
+### Shadow Colors
+
+PropelAuth's shadows are **deep-navy tinted** (`rgba(21,21,49,...)`) at low opacity. This ties shadows to the brand colour and gives the page a subtle indigo undertone in elevated surfaces.
+
+- `rgba(21,21,49,0.04) 0 4px 12px` — card hover
+- `rgba(21,21,49,0.08) 0 16px 32px` — elevated
+- `rgba(21,21,49,0.16) 0 24px 48px` — modal
+- `0 0 0 2px #5d5cf5` — violet focus ring
+- `0 0 0 2px #151531` — alt focus ring on dark surfaces
+
+### Semantic
+
+- **Success Green** (`#0f8a4d`) — on `#d3f9d8` surface
+- **Warning Amber** (`#d97706`) — on `#fff5e6` surface
+- **Danger Red** (`#dc2626`) — on `#ffe3e3` surface (also used as Admin role)
+- **Info Violet** (`#5d5cf5`) — uses brand colour
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `SF Pro Rounded` (Apple, 2017) with `SF Pro Display` as the standard fallback and `SN Pro` as the licensed alternative. SF Pro Rounded is Apple's rounded variant — its terminals soften slightly, giving the type a friendly-Apple-product feel. PropelAuth runs SF Pro Rounded at weight **900 (Heavy)** for hero and h1 — the most distinctive typographic move. h3–h5 step down to 700 (Bold) and 600 (Semibold).
+
+**Body**: `Inter` with the system stack as fallback. Inter handles all body, button, label, and caption sizes at 400, 500, 600.
+
+**Mono**: `JetBrains Mono`, fallback `SF Mono`, `Fira Code`. Used for code blocks.
+
+**OpenType features**: `ss01` enabled on display SF Pro Rounded for the alternate-`a` form (which is the rounded variant's most distinctive glyph).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| hero-display | SF Pro Rounded | 80 | 900 | 1.0 | 0 | ss01 | Hero — Heavy weight is the signature |
+| h1 | SF Pro Rounded | 60 | 900 | 1.0 | 0 | ss01 | Page title — observed 60/60 |
+| h2 | SF Pro Rounded | 40 | 900 | 1.25 | 0 | — | Section opener |
+| h3 | SF Pro Rounded | 28 | 700 | 1.30 | -0.005em | — | Sub-section — Bold |
+| h4 | SF Pro Rounded | 22 | 700 | 1.35 | -0.005em | — | Feature card title |
+| h5 | SF Pro Rounded | 18 | 600 | 1.40 | 0 | — | Sub-feature — Semibold |
+| eyebrow | Inter | 12 | 600 | 1.50 | 0.08em uppercase | — | "MULTI-TENANT", "ENTERPRISE READY" |
+| body-lg | Inter | 18 | 400 | 1.60 | 0 | — | Hero sub-copy |
+| body-md | Inter | 16 | 400 | 1.50 | 0 | — | Default body |
+| body-sm | Inter | 14 | 400 | 1.50 | 0 | — | Secondary |
+| label | Inter | 13 | 500 | 1.40 | 0 | — | Form labels |
+| button-label | Inter | 15 | 600 | 1.0 | 0 | — | CTA text — note 15/600 |
+| nav-link | Inter | 15 | 500 | 1.20 | 0 | — | Top nav |
+| caption | Inter | 13 | 400 | 1.40 | 0 | — | Captions |
+| micro | Inter | 12 | 400 | 1.40 | 0 | — | Footer legal |
+| code-inline | JetBrains Mono | 14 | 400 | 1.50 | 0 | — | Inline `<code>` |
+| code-block | JetBrains Mono | 13 | 400 | 1.55 | 0 | — | Code panel |
+| org-tag | Inter | 12 | 600 | 1.0 | 0 | — | "Acme Inc." organization chip |
+| role-badge | Inter | 11 | 700 | 1.0 | 0.04em uppercase | — | "ADMIN", "MEMBER", "VIEWER" |
+| quote | SF Pro Rounded | 22 | 400 | 1.40 | -0.005em | italic | Pull quote |
+
+### Principles
+
+- **SF Pro Rounded 900 is the typographic signature.** Heavy weight at large display sizes. Substitute `SN Pro` (similar rounded sans) or fall back to Inter Black at the same metrics. The Apple-product polish is what distinguishes PropelAuth.
+- **Two typefaces, two registers.** SF Pro Rounded handles display (display polish), Inter handles body (dev-tool foundation). The split is the brand voice.
+- **Display weight steps: 900 → 700 → 600.** Hero/h1/h2 at 900, h3/h4 at 700, h5 at 600. Bold-as-display is the discipline.
+- **Near-zero tracking on display.** Most B2B-identity sites use negative tracking; PropelAuth's SF Pro Rounded already reads tight at 900, so tracking stays at 0.
+- **Body Inter at 16/400.** Modern dev-tool foundation. No surprises.
+- **Eyebrows in body Inter, not display.** 12/600 uppercase Inter — the multi-tenant signature.
+- **Role badges at 11/700 uppercase 0.04em tracking.** Tighter and bolder than eyebrows because they communicate critical permission state.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — primary CTA. Deep-navy `#151531` fill, white text, 15/600 Inter, **8px radius**, 10×20px padding, 44px height. Hover brightens to `#1f1f40`. Used for "Get started", "Book a demo", "Sign up free".
+
+**`button-violet`** — brand-emphasized CTA. Indigo-violet `#5d5cf5` fill, white text, same dimensions. Used for "Try free" and feature-emphasized CTAs.
+
+**`button-secondary`** — outlined ghost. White fill, deep-navy text, 1px `#dee2e6` border, 8px radius, same dimensions.
+
+**`button-ghost-dark`** — outlined ghost on dark. Transparent fill, white text, 1px `rgba(255,255,255,0.20)` border. 8px radius.
+
+**`button-text-link`** — plain inline link. Indigo-violet text. Hover underlines.
+
+### Cards
+
+**`card-feature`** — feature card. White surface, 16px radius, 1px `#dee2e6` hairline border, 32px internal padding. Stack: optional violet icon, h4 title in SF Pro Rounded 22/700 deep-navy, body description in Inter 16/400 slate, optional inline link in violet.
+
+**`card-violet`** — violet-tinted feature card. `#eeeefe` ground, 16px radius, no border, 32px padding, deep-navy text. Used for the brand-emphasized "Organizations, Roles, RBAC" feature blocks.
+
+**`card-deep-navy`** — dark feature card. `#151531` ground, 16px radius, 32px padding, white text. Used in the brand mood-zone band for "Built for B2B" features.
+
+**`card-deep-blue`** — slightly lighter deep-blue. `#252550` ground, used for tier separation within a dark band.
+
+**`card-pricing`** — pricing tier. White surface, 16px radius, 1px hairline, 32px padding. Recommended tier highlights with 2px `#5d5cf5` violet border.
+
+**`organization-card`** — organization tile in the multi-tenant dashboard preview. White surface, 12px radius, 1px hairline, 20px padding. Shows org name, member count, current role badge, and switch-to-org action.
+
+### Badges, Tags, Pills
+
+**`pill-eyebrow-violet`** — soft violet `#eeeefe` ground, brand `#5d5cf5` text, 9999px radius, 4×10px padding, 12/600 Inter uppercase. "MULTI-TENANT", "B2B READY", "ENTERPRISE".
+
+**`organization-tag`** — organization name chip. Soft violet `#eeeefe` ground, violet `#5d5cf5` text, **4px radius** (not pill — slimmer to read as data tag), 2×6px padding, 12/600 Inter. "Acme Inc.", "Globex Corp.", "Initech".
+
+**`role-badge-admin`** — admin role badge. Soft red `#ffe3e3` ground, red `#dc2626` text, 4px radius, 2×6px padding, 11/700 Inter uppercase 0.04em tracking. "ADMIN".
+
+**`role-badge-member`** — member role. Soft green `#d3f9d8` ground, green `#0f8a4d` text. Same dimensions. "MEMBER".
+
+**`role-badge-viewer`** — viewer role. Soft violet `#eeeefe` ground, violet `#5d5cf5` text. Same dimensions. "VIEWER".
+
+**`pill-status`** — semantic status. Same recipe as role badges but at 4px radius for non-permission statuses.
+
+### Inputs / Forms
+
+**`input`** — text input. White surface, 1px `#ced4da` border, 8px radius, 44px height, 12×14px padding. Placeholder `#868e96`. On focus: 2px `#5d5cf5` violet ring with 2px outline-offset.
+
+**`textarea`** — same as input with auto-grow.
+
+**`select-dropdown`** — same as input with chevron-down icon.
+
+**`checkbox`** — 16×16px, 4px radius, 1px hairline. On checked: violet fill, white check.
+
+**`radio`** — 16×16px circle, 1px hairline. On selected: violet fill, white dot.
+
+**`org-switcher`** — combobox dropdown listing user's organizations. White surface, 8px radius, 1px hairline, 240px wide. Each row: org name in 14/600 Inter, member count + role badge in 12/400 muted, current selection has a violet check.
+
+### Navigation
+
+**`navbar-top`** — top nav. `rgba(255,255,255,0.92)` ground with `backdrop-blur(8px)`, 1px `#dee2e6` bottom border, 72px height. PropelAuth wordmark flush left (Heavy SF Pro Rounded "PropelAuth" + small violet plus-mark). Nav links "Product", "Docs", "Pricing", "Customers" in Inter 15/500 deep-navy centre. "Log in" text + primary deep-navy CTA flush right.
+
+**`mega-menu`** — opens from product nav. White surface, 12px radius, 1px hairline, 24px padding. Multi-column nav with eyebrow group titles and 14/500 link rows.
+
+**`footer`** — `#0a0a1f` deepest ground, 5-column link list at desktop, eyebrow group titles in 12/600 uppercase white, link rows in 14/400 muted, social row at the bottom.
+
+**`breadcrumb`** — muted slate with `›` separators, 13/400 Inter.
+
+### Tooltips, Toasts, Modals
+
+**`tooltip`** — `#151531` deep-navy ground, 6px radius, 8×10px padding, 12/400 white text.
+
+**`toast`** — bottom-right corner. White surface, 12px radius, 1px hairline, 16×20px padding, 14/400 ink text.
+
+**`modal`** — centred dialog over `rgba(21,21,49,0.48)` deep-navy scrim. White surface, 16px radius, 1px hairline border, 32px padding, navy-tinted modal shadow.
+
+### Code Block
+
+**`code-block`** — `#151531` deep-navy ground (matches brand CTA), 12px radius, 20×24px padding. JetBrains Mono 13/400. Violet keywords (`#7c7bf7`), light-cyan strings, white default text.
+
+### Decorative
+
+**`organization-dashboard-preview`** — the signature illustration. A live or screenshot mockup of PropelAuth's organization-management UI. Shows: org switcher (combobox), member list with role badges (Admin red, Member green, Viewer violet), invitations table, SSO configuration card, audit log timeline. Rendered as a single large card on the marketing page with subtle navy-tinted shadow.
+
+**`role-hierarchy-diagram`** — line-art SVG of role hierarchies showing Admin > Member > Viewer relationships. Used in the "Roles & Permissions" feature section.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128 · 160`
+- Hero padding (vertical): **128px** at desktop
+- Section padding: **96–128px** between major sections
+- Card internal padding: **32px** for feature cards
+- Gutter: **24px** between feature cards in 2-column
+
+### Grid & Container
+
+- Max content width: **1200px** centred
+- Hero: full-width with copy capped at 720px prose
+- Feature grid: 2-column at desktop with 24px gutter
+- Pricing: 3-column tier comparison cards with recommended tier violet-bordered
+- Organization dashboard preview: full-width single card
+
+### Whitespace Philosophy
+
+PropelAuth gives sections **modern dev-tool breath** — 96–128px between bands. The hero band is 128px tall. The organization dashboard preview takes a full editorial section to itself, generously padded.
+
+### Section Cadence
+
+The page alternates **white canvas → soft white → white → violet-tinted → white → deep-navy mood-zone → deepest footer**. The deep-navy mood-zone (`#151531`) appears 1–2 times per page for the brand-emphasized "Built for B2B" features. The deepest band (`#0a0a1f`) is the footer.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Dense table corners |
+| Small | 4px | Organization tags, role badges |
+| Default | 6px | Tooltips |
+| Standard | 8px | Buttons, inputs, dropdowns |
+| Comfortable | 12px | Code blocks, mega-menu, organization cards |
+| Card | 16px | Feature cards, modals, pricing |
+| Pill | 9999px | Eyebrow pills, status pills |
+
+The 8px button radius is the friendly-modern default. Organization tags and role badges use **4px** (slim rectangle) to read as "data tag" rather than "button". This split is intentional.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body sections |
+| 1 — Hairline | `1px #dee2e6` border | Cards at rest |
+| 2 — Hover | `rgba(21,21,49,0.04) 0 4px 12px` | Hovered cards, mega-menu |
+| 3 — Elevated | `rgba(21,21,49,0.08) 0 16px 32px` | Mega-menu, sticky bars |
+| 4 — Modal | `rgba(21,21,49,0.16) 0 24px 48px` | Centred dialog |
+| 5 — Focus | `0 0 0 2px #5d5cf5` ring | Focused inputs and buttons |
+
+### Shadow Philosophy
+
+PropelAuth's shadows are **deep-navy tinted** (`rgba(21,21,49,...)`). The brand colour as the shadow source ties the elevated surfaces tonally to the page. Most cards have no shadow at rest — depth is the hairline border.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, mega-menu
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 150ms | Hover colour swap, focus ring fade-in |
+| Standard | 240ms | Card hover, mega-menu open |
+| Slow | 320ms | Modal enter, hero reveal, org-switcher transition |
+
+### Per-Component Recipes
+
+- **CTA hover (primary)**: deep-navy brightens `#151531` → `#1f1f40` over 150ms.
+- **CTA hover (violet)**: violet brightens `#5d5cf5` → `#7c7bf7` over 150ms.
+- **Card hover**: 1px translateY(-1) + navy-tinted 4% shadow over 240ms; border deepens slightly.
+- **Hero reveal**: sections fade-up from `translateY(16px)/opacity 0` → `0/1` over 320ms emphasized.
+- **Org-switcher transition**: when user switches organizations, the dashboard preview slides smoothly with 320ms emphasized — multi-tenant signature motion.
+- **Mega-menu open**: 240ms fade + 4px slide-down.
+- **Modal enter**: scrim fades 240ms; dialog from `translateY(8px)/opacity(0)` → `0/1` over 320ms emphasized.
+
+### Page Transitions
+
+Page-to-page navigation uses no transition — hard navigation.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. Hero reveal, card hover translateY, and org-switcher transition suppress (opacity-only).
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #343a40 body on #ffffff | 11.7 | AAA |
+| #151531 heading on #ffffff | 17.0 | AAA |
+| #ffffff on #151531 deep-navy CTA | 17.0 | AAA |
+| #ffffff on #5d5cf5 violet CTA | 4.6 | AA at body sizes |
+| #5d5cf5 link on #ffffff | 4.6 | AA at body sizes |
+| #6c757d muted on #ffffff | 5.5 | AA |
+| #dc2626 admin role on #ffe3e3 | 4.7 | AA |
+| #0f8a4d member role on #d3f9d8 | 4.6 | AA |
+
+### Focus Indicators
+
+Focus ring is **2px solid `#5d5cf5` (indigo-violet) with 2px outline-offset**. The violet doubles as brand affordance and accessibility indicator.
+
+### ARIA Patterns
+
+- **Top nav**: `role="navigation"`, `aria-label="Primary"`. Mega-menu uses `role="menu"`.
+- **Pricing tier cards**: `<h3>` heading, recommended tier `aria-current="recommended"`.
+- **Org-switcher**: `role="combobox"` with `role="listbox"` and `role="option"`. `aria-expanded` and `aria-activedescendant`.
+- **Role badges**: visible text + screen reader announces "Admin role", "Member role", "Viewer role" via `aria-label`.
+- **Modal**: `role="dialog"`, `aria-modal="true"`, focus trap, Esc closes.
+- **Code blocks**: `role="region"`, `aria-label="Code example"`. Copy button `aria-live="polite"`.
+
+### Keyboard Navigation
+
+- Tab: logo → product → docs → pricing → customers → log in → primary CTA
+- Org-switcher: Enter opens, arrow keys navigate, Enter selects, Esc closes
+- Mega-menu: arrow keys navigate, Esc closes
+- Modal: focus trap, Tab cycles
+- Skip-to-main visible on first Tab
+
+### Screen Reader Hints
+
+- Organization tags announce "Organization: Acme Inc."
+- Role badges announce role name and permission level
+- Org-switcher announces "Switch organization" and current selection
+
+### Reduced Motion
+
+Hero reveal, card hover translateY, org-switcher transition suppress. Modal slide degrades to fade.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Nav collapses to hamburger; hero copy 36px; feature grid 1-up |
+| Tablet | 640–1024px | Nav reveals product + log in; feature grid 2-up; org dashboard preview narrows |
+| Desktop | 1024–1280px | Full mega-menu; container caps at 1200px |
+| Wide | 1280–1440px | Container stays 1200px |
+
+### Touch Targets
+
+- Primary CTAs: 44px height — meets AA
+- Nav links: 36×16px tap target at desktop, 44×20 on mobile
+- Form inputs: 44px height
+- Org-switcher rows: 40px height
+
+### Collapsing Strategy
+
+- Nav: product / docs / customers collapse to hamburger at <1024px
+- Hero: 60px → 48px → 36px down breakpoints
+- Feature grid: 3-up → 2-up → 1-up
+- Pricing: 3-column → 1-column
+- Organization dashboard preview: scales down with container queries
+
+### Image Behavior
+
+Organization dashboard preview is a high-fidelity SVG/PNG mockup with retina sources. Customer logos use SVG.
+
+### Container Queries
+
+Used in the organization dashboard preview: when card width drops below ~640px, the side-rail collapses and tabs stack.
+
+## 11. Content & Voice
+
+### Tone
+
+Confident, considered, technically rigorous, B2B-focused. PropelAuth's voice positions auth as **the multi-tenant infrastructure your B2B SaaS needs from day one** — assumes the reader is a founder or senior engineer at an early- to mid-stage B2B SaaS company. Headlines lead with multi-tenant capability ("Authentication for B2B products", "Built for multi-tenant from day one"). The voice acknowledges the gap most auth products leave: "auth is hard, multi-tenant auth is harder, we ship both".
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started", "Book a demo", "Sign up free", "Try free", "Read the docs"
+- **Eyebrow labels**: 12/600 uppercase Inter — "MULTI-TENANT", "B2B READY", "ENTERPRISE"
+- **Error message recipe**: precise + actionable — "We couldn't add this user to the organization. Verify their email address or check your seat allowance."
+- **Success confirmations**: B2B-specific — "Invitation sent. [Name] will receive an email to join [Organization]."
+- **Field labels**: short and exact — "Organization name", "Domain", "Default role"
+- **Doc links**: lead with verb — "Read the multi-tenant guide", "View role hierarchy docs"
+
+### Empty States
+
+- Empty organizations: "No organizations yet. Create your first organization to get started with multi-tenant auth."
+- Empty members: "No members in this organization. Invite users by email or share a sign-up link."
+- Empty roles: "No custom roles yet. Use the default Admin/Member/Viewer or define your own."
+
+### CTA Verb Conventions
+
+- Primary: "Get started", "Sign up free", "Book a demo"
+- Secondary: "Read the docs", "Try free", "View pricing"
+- Tertiary: "Learn more →", "View changelog"
+- Avoided: "Click here", "Submit", "Buy now"
+
+## 12. Dark Mode & Theming
+
+**Light-only on the marketing canvas with deep-navy mood-zone bands.** The deep-navy `#151531` appears in 1–2 brand-emphasized sections per page (typically the "Built for B2B" feature band). The deepest near-black `#0a0a1f` is the footer. No full dark theme on marketing.
+
+### Dark Mood-Zone Treatment
+
+```yaml
+bg-dark: '#151531'
+bg-deeper: '#252550'
+bg-deepest: '#0a0a1f'
+text-on-dark: '#ffffff'
+text-muted-on-dark: '#adb5bd'
+border-on-dark: 'rgba(255,255,255,0.10)'
+brand-on-dark: '#7c7bf7'        # violet brightens slightly on dark
+button-primary-on-dark: '#ffffff'  # inverse — white CTA on dark
+button-primary-text-on-dark: '#151531'
+```
+
+### Component Theming
+
+The PropelAuth-branded components ship with both light and dark themes for embedding in customer apps:
+
+```yaml
+component-light:
+  bg: '#ffffff'
+  text: '#343a40'
+  brand: '#5d5cf5'
+component-dark:
+  bg: '#151531'
+  text: '#ffffff'
+  brand: '#7c7bf7'
+```
+
+## 13. Lineage & Influences
+
+PropelAuth's visual lineage runs through three traditions: **Apple-product-marketing polish** (SF Pro Rounded at Heavy weight is Apple's signature display move — used on Apple's product marketing pages from 2017 onwards); **B2B-multi-tenant-platform aesthetic** (the organization dashboard preview, the role-badge system, the SAML SSO callouts — all moves borrowed from enterprise B2B SaaS canon); and **modern dev-tool foundation** (Inter body, hairline cards, JetBrains Mono code blocks).
+
+The **two-colour brand system** (deep-navy + indigo-violet) is the move that distinguishes PropelAuth. Most auth platforms commit to a single brand colour; PropelAuth's duet — navy for gravitas, violet for emphasis — works because the two operate at different luminance levels and serve different purposes. The role-badge system (Admin red, Member green, Viewer violet) extends this two-colour discipline into the feature surface area.
+
+What PropelAuth rejects: **dark canvases as primary** (light-first with deep-navy mood-zones), **single-colour brand minimalism** (the duet is more expressive), **enterprise blue-trust cliché** (deep-navy with purple undertones), and **photographic product screenshots** (high-fidelity organization dashboard mockups instead).
+
+**Influences:**
+- Apple Product Marketing — SF Pro Rounded at Heavy weight, [apple.com](https://apple.com)
+- Stripe — confidence-via-restraint, hairline cards, [stripe.com](https://stripe.com)
+- Auth0 — predecessor in identity-platform aesthetic; PropelAuth differentiates with B2B-multi-tenant focus, [auth0.com](https://auth0.com)
+- Vercel — frosted-glass navbar, restraint discipline, [vercel.com](https://vercel.com)
+- WorkOS — B2B-enterprise-ready positioning, [workos.com](https://workos.com)
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the canvas on white (`#ffffff`) with light slate alt sections (`#f8f9fa`, `#f1f3f5`)
+- Run hero display in **SF Pro Rounded 60/900** (Heavy) — the typographic signature
+- Use deep-navy `#151531` for headings, h1, and primary CTA fill
+- Use indigo-violet `#5d5cf5` for brand emphasis — focus rings, eyebrow pills, accent CTA
+- Maintain the two-colour brand system: deep-navy (gravitas) + indigo-violet (emphasis)
+- Build the role-badge system: Admin red, Member green, Viewer violet — multi-tenant signature
+- Use 8px button radius, 16px card radius — friendly-modern proportions
+- Render the organization dashboard preview as the signature illustration
+- Use Inter for all body, button, label, caption — modern dev-tool foundation
+- Render code blocks on deep-navy `#151531` ground — matches brand CTA
+
+**Don't**
+- Don't substitute Inter for display — SF Pro Rounded 900 is the typographic discipline
+- Don't run SF Pro Rounded below weight 700 for display — Heavy is the signature
+- Don't introduce a third brand colour — the navy + violet duet is the discipline
+- Don't make role badges into pills — 4px slim rectangle reads as data tag
+- Don't tighten section padding below 96px — modern dev-tool breath
+- Don't use button radius below 6px — 8px is the friendly-modern default
+- Don't add atmospheric multi-layer shadows — navy-tinted hairline + 4% hover is the depth strategy
+- Don't show photographic product screenshots — high-fidelity mockups of the organization dashboard instead
+- Don't use serif type — SF Pro Rounded + Inter is the system
+- Don't soften the multi-tenant voice — "organizations", "roles", "RBAC", "SAML SSO" are the brand vocabulary
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Soft White:       #f8f9fa
+Section:          #f1f3f5
+Body Slate:       #343a40
+Heading Navy:     #151531
+Deep Card:        #252550
+Brand Violet:     #5d5cf5
+Brand Light:      #7c7bf7
+Violet Soft:      #eeeefe
+Border:           #dee2e6
+Border Input:     #ced4da
+Muted:            #6c757d
+Role Admin:       #dc2626 / bg #ffe3e3
+Role Member:      #0f8a4d / bg #d3f9d8
+Role Viewer:      #5d5cf5 / bg #eeeefe
+```
+
+### Example Component Prompts
+
+- "Create a PropelAuth-style hero section: white canvas, 128px vertical padding. Hero copy in **SF Pro Rounded 60/900** (Heavy weight) with near-zero tracking, deep-navy ink (`#151531`). Eyebrow above in 12/600 uppercase Inter with 0.08em tracking, soft violet `#eeeefe` pill ground, brand `#5d5cf5` text. Sub-copy in Inter 18/400 body slate (`#343a40`). Primary CTA: deep-navy (`#151531`) fill, white text, 15/600 Inter, 8px radius, 10×20px padding, 44px height. Secondary outlined ghost: white fill, 1px `#dee2e6` border, deep-navy text."
+- "Build a PropelAuth organization card: white surface, 12px radius, 1px `#dee2e6` hairline, 20px padding. Stack: organization avatar (32×32) + name in SF Pro Rounded 18/700 deep-navy, member count in Inter 13/400 muted, role badge (Admin red `#dc2626`/`#ffe3e3` / Member green `#0f8a4d`/`#d3f9d8` / Viewer violet `#5d5cf5`/`#eeeefe`) — 11/700 uppercase Inter, 4px radius, 2×6px padding. Switch-to-org chevron icon flush right."
+- "Design a PropelAuth feature card with violet-tinted ground: `#eeeefe` ground, 16px radius, no border, 32px padding. Stack: violet icon (24×24, `#5d5cf5` stroke), h4 title in SF Pro Rounded 22/700 deep-navy with `-0.005em` tracking, body in Inter 16/400 deep-navy `#151531`, optional 'Read the docs →' link in violet."
+- "Create a PropelAuth pricing tier card: white surface, 16px radius, 32px padding. Default cards have 1px `#dee2e6` border; the recommended tier highlights with 2px `#5d5cf5` violet border. Stack: tier name in 12/600 uppercase, price in SF Pro Rounded 56/900 with `tnum` deep-navy, '/month' caption in 14/400 muted, feature checklist with violet checks, primary deep-navy CTA at the bottom."
+- "Build a PropelAuth navbar: 72px tall, `rgba(255,255,255,0.92)` ground with `backdrop-blur(8px)`, 1px `#dee2e6` bottom border. Wordmark flush left — 'PropelAuth' in SF Pro Rounded Heavy with a small violet plus-mark beside. Nav links 'Product', 'Docs', 'Pricing', 'Customers' in Inter 15/500 deep-navy centre. 'Log in' text + primary deep-navy CTA flush right."
+- "Design a PropelAuth deep-navy mood-zone band: `#151531` ground, 96–128px vertical padding, white text. Eyebrow 'BUILT FOR B2B' in 12/600 uppercase soft violet `#7c7bf7`. Headline in SF Pro Rounded 40/900 white. Body in Inter 18/400 muted slate-300. Cards on `#252550` deep-blue ground (slightly lighter than mood-zone) with 16px radius, 32px padding. Primary CTA inverts: white fill, deep-navy text."
+
+### Iteration Guide
+
+1. **SF Pro Rounded 900 is the typographic signature.** This is the most distinctive PropelAuth move. Substitute Inter Black at the same metrics if SF Pro Rounded isn't available.
+2. **Two-colour brand: navy + violet.** Deep-navy `#151531` for gravitas (headings, primary CTA, dark sections). Indigo-violet `#5d5cf5` for emphasis (focus, eyebrow pills, accent CTA). Don't merge them into a single colour.
+3. **Role-badge system is non-negotiable.** Admin red, Member green, Viewer violet. Communicate role at every multi-tenant moment.
+4. **8px button radius / 16px card radius.** Friendly-modern proportions.
+5. **Body in Inter, display in SF Pro Rounded.** Two typefaces, two registers — don't unify.
+6. **Organization dashboard preview as hero.** The signature illustration is the multi-tenant UI itself.
+7. **Deep-navy mood-zones for B2B emphasis.** 1–2 per page max — used for "Built for B2B" feature bands.
+8. **Code blocks on deep-navy ground.** Matches brand CTA — ties code presentation to brand.

@@ -1,0 +1,650 @@
+---
+name: Supreme
+tagline: Box-logo red, Courier monospace, skate-deadpan minimalism — the most influential streetwear store on the web.
+author: webdesignhot
+source_url: https://supreme.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [fashion, marketplace]
+tags: [light, fashion, streetwear, monospace, minimal, brutalist, e-commerce, deadpan, skate]
+preview_swatch: ['#ffffff', '#cc0000', '#000000']
+related: [nike, are-na, stripe]
+description: 'Supreme''s storefront is the most influential streetwear store on the web — a deadpan three-colour stack of paper white (`#ffffff`), pure black (`#000000`), and the unmistakable box-logo red (`#cc0000`). Type runs **Courier New monospace** at a single 13px size for nearly every element on the page — product names, prices, drop schedules, navigation. The famous box-logo wordmark uses Futura Heavy Oblique italic, but the website itself runs Courier — a deliberate refusal to design that has become the most-imitated streetwear-website aesthetic of the last two decades. CTAs are `0px` radius rectangles. Cards are floating thumbnails with single-line labels. There is no hero, no marketing copy, no call-to-action above the fold beyond the next drop date in TYO time. The aesthetic is deliberate non-design — a New York skate-deadpan flatness where the brand''s scarcity and James Jebbia''s editorial discipline carry every interaction. The result is the canonical anti-design e-commerce site, copied by hundreds of streetwear brands and never quite matched.'
+
+colors:
+  bg: '#ffffff'                    # paper white canvas
+  bg-page: '#ffffff'
+  surface: '#ffffff'
+  surface-soft: '#ffffff'           # Supreme uses no soft surfaces — same white everywhere
+  surface-strong: '#f5f5f5'         # the lone alt surface — used on cart-empty state only
+  brand: '#cc0000'                  # box-logo red — the wordmark, drop banner, sale flag
+  brand-hover: '#a30000'            # darker red on hover
+  brand-active: '#820000'           # pressed deepest red
+  brand-pale: '#ffe5e5'             # rare softened tint — used inside Supreme account error banners only
+  text: '#000000'                   # primary ink — pure black
+  text-strong: '#000000'            # heading ink at maximum punch (same)
+  text-muted: '#666666'              # secondary metadata — light grey by Courier standards
+  text-soft: '#999999'              # caption text, faint stamps
+  text-on-red: '#ffffff'             # white on box-logo red banner
+  text-on-black: '#ffffff'           # white on black bands (mostly drop hero)
+  link: '#0000cc'                    # default classic-web blue link — Supreme uses unstyled defaults intentionally
+  link-visited: '#551a8b'            # browser-default purple visited
+  link-hover: '#0000cc'              # link hover stays blue, underline always on
+  border: '#000000'                  # default 1px hairline — pure black
+  border-soft: '#cccccc'             # rare softer divider
+  border-strong: '#000000'           # focus state hairline — same pure black
+  border-input: '#000000'            # form input default outline (always black)
+  outline-focus: '#000000'           # focus outline pure black
+  scrim: 'rgba(0,0,0,0.7)'           # modal backdrop (rare — Supreme uses modals sparingly)
+  shadow-card: 'transparent'         # no shadows
+  shadow-modal: 'transparent'        # no shadows
+  success: '#008000'                  # in-stock green — classic web-1 green
+  warning: '#cc6600'                  # advisory amber — used on shipping cutoffs
+  warning-soft: '#fff4e5'
+  danger: '#cc0000'                   # validation error reuses box-logo red
+  info: '#0000cc'                     # info banner — same blue as default links
+  rating-fill: '#000000'              # not applicable — Supreme has no ratings
+  drop-red: '#cc0000'                 # the drop banner stripe
+  sold-out-text: '#666666'            # the famous "sold out" grey label
+  weekly-rotate-bg: '#000000'         # the black band that announces the next drop
+  weekly-rotate-text: '#ffffff'       # white type on the drop band
+
+typography:
+  display:
+    family: '"Courier New", Courier, monospace'
+    weights: [400, 700]
+    opentype-features: ['tnum']
+  body:
+    family: '"Courier New", Courier, monospace'
+    weights: [400, 700]
+  mono:
+    family: '"Courier New", Courier, monospace'
+    weights: [400, 700]
+  box-logo:
+    family: '"Futura Std", "Futura Heavy", Futura, sans-serif'
+    weights: [900]
+    style: 'italic'
+    note: 'Used exclusively for the box-logo wordmark — never on the website chrome itself.'
+  scale:
+    box-logo:        { size: 60, weight: 900, lineHeight: 1.0,  tracking: '-0.5px',   family: 'Futura Heavy Oblique', transform: italic, color: '#ffffff', bg: '#cc0000', note: 'The wordmark only — never used as type on the page.' }
+    page-title:      { size: 13, weight: 700, lineHeight: 1.2,  tracking: '0',        family: mono }
+    section-head:    { size: 13, weight: 700, lineHeight: 1.2,  tracking: '0',        family: mono }
+    sub-section:     { size: 13, weight: 400, lineHeight: 1.2,  tracking: '0',        family: mono }
+    product-title:   { size: 13, weight: 400, lineHeight: 1.25, tracking: '0',        family: mono }
+    product-title-md: { size: 13, weight: 400, lineHeight: 1.25, tracking: '0',        family: mono }
+    body-md:         { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',        family: mono }
+    body-sm:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',        family: mono }
+    caption:         { size: 11, weight: 400, lineHeight: 1.4,  tracking: '0',        family: mono }
+    micro:           { size: 10, weight: 400, lineHeight: 1.4,  tracking: '0',        family: mono }
+    price-display:   { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono, opentype: ['tnum'] }
+    price-product:   { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono, opentype: ['tnum'] }
+    button-cta:      { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono }
+    nav-link:        { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono }
+    drop-clock:      { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono, opentype: ['tnum'], color: '#ffffff', bg: '#000000' }
+    sold-out-stamp:  { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono, color: '#666666', transform: lowercase }
+    order-line:      { size: 13, weight: 400, lineHeight: 1.0,  tracking: '0',        family: mono, opentype: ['tnum'] }
+
+radius:
+  micro: 0
+  sm: 0
+  md: 0
+  lg: 0
+  xl: 0
+  pill: 0    # Supreme uses 0px radius universally — no pill, no rounded corners anywhere
+
+spacing:
+  base: 4
+  scale: [4, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]
+
+layout:
+  page-width: 1024
+  prose-width: 600
+  header-height: 32
+  masthead-height: 32
+
+components:
+  button-cta:
+    bg: 'transparent'
+    color: '#000000'
+    radius: 0
+    padding: '4px 8px'
+    height: 24
+    font: button-cta
+    border: '1px solid #000000'
+    use: 'Add to cart, Continue, Submit — every action. Sharp-cornered, hairline-bordered, monospace 13/400. The CTA does not shout — it simply names the action.'
+  button-cta-hover:
+    bg: '#000000'
+    color: '#ffffff'
+    use: 'Hover state — bg fills black with white text. The only state-change in the system.'
+  button-cta-on-red:
+    bg: 'transparent'
+    color: '#ffffff'
+    border: '1px solid #ffffff'
+    use: 'Inverse on red drop band — flips to white outline.'
+  text-input:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    height: 24
+    padding: '2px 6px'
+    border: '1px solid #000000'
+    focus: '1px solid #000000 (focus ring is browser-default)'
+    use: 'Form input — sharp-cornered 1px black hairline, monospace 13/400 inside. The focus ring is the unstyled browser default — Supreme intentionally uses default focus.'
+  product-card:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    padding: 0
+    border: 'none'
+    width: 144
+    use: 'Listing tile — floating thumbnail at fixed ~144×144px with a single-line product label below in mono 13/400. No card surface, no shadow, no border. The thumbnail sits directly on the page.'
+  product-card-image:
+    aspect: '1/1'
+    bg: '#ffffff'
+    fit: 'contain'
+    use: 'Product photography is shot on white seamless and rendered with `object-fit: contain` — the image floats on the page background.'
+  product-card-label:
+    font: product-title
+    color: '#000000'
+    use: 'Single line, mono 13/400, no truncation styling — the line wraps if too long.'
+  product-card-price:
+    font: price-product
+    color: '#000000'
+    use: 'Price below the title — same line height, same weight, same colour. The price does not differentiate.'
+  sold-out-stamp:
+    bg: 'transparent'
+    color: '#666666'
+    font: sold-out-stamp
+    use: 'Lowercase "sold out" stamp in light grey — replaces the price line when the item is unavailable.'
+  drop-banner:
+    bg: '#cc0000'
+    color: '#ffffff'
+    padding: '4px 8px'
+    use: 'Red strip at the top of the page announcing "new" or "preview" — the single most chromatic moment.'
+  drop-clock-band:
+    bg: '#000000'
+    color: '#ffffff'
+    height: 32
+    padding: '8px 16px'
+    use: 'Black band beneath the drop banner — shows next drop date in TYO time, mono 13/400 white text on black.'
+  cart-link:
+    bg: 'transparent'
+    color: '#000000'
+    use: 'Right-aligned masthead link "view cart →" with mono 13/400. The only persistent CTA in the masthead.'
+  newsletter-input:
+    bg: '#ffffff'
+    color: '#000000'
+    border: '1px solid #000000'
+    radius: 0
+    height: 24
+    use: 'Footer email signup — sharp-cornered 1px hairline plus an adjacent "submit" button at the same height.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 0
+  duration-standard: 0
+  duration-slow: 0
+  cta-press: 'no transition — bg flips instantly from transparent to black on :hover'
+  card-hover: 'no transition — Supreme does not animate product cards'
+  drop-clock: 'TYO countdown updates once per second via `setInterval` — the only motion on the page'
+  page-transition: 'hard navigation, no transition'
+  reduced-motion: 'all transitions are already at 0ms — Supreme is the calm-motion baseline.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+
+shadows:
+  ambient: 'none — Supreme never uses shadows'
+  hover-card: 'none'
+  modal: 'none'
+  ring: 'browser default 1px outline (intentional)'
+
+accessibility:
+  contrast-text-on-bg: 21.0          # #000000 on #ffffff — AAA
+  contrast-text-on-red: 5.9          # #ffffff on #cc0000 — AA
+  contrast-link-on-bg: 8.6           # #0000cc on #ffffff — AAA
+  contrast-muted-on-bg: 5.7          # #666666 on #ffffff — AA
+  contrast-sold-out-on-bg: 5.7        # #666666 on #ffffff — AA — Supreme intentionally keeps "sold out" muted
+  focus-ring: 'browser default — Supreme does not override the user-agent focus outline'
+  reduced-motion-honored: true
+  touch-target-min: 24                # below WCAG AA recommendation — Supreme runs intentionally small
+  keyboard-nav: 'Tab moves through nav links → product grid (left-to-right, row-by-row) → footer; Shift+Tab reverses. No skip-link.'
+
+dark-mode: null   # Supreme is light-only. No dark variant offered. The product photography depends on the white seamless ground.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Supreme's storefront is the canonical anti-design e-commerce site — a deadpan three-colour stack of paper white (`#ffffff`), pure black (`#000000`), and the unmistakable box-logo red (`#cc0000`) — and a deliberate refusal to design that has become the most-imitated streetwear-website aesthetic of the last two decades. There is no hero band. There is no marketing copy. There is no above-the-fold call-to-action beyond the next drop date in TYO time. The page reads like a 2003 plaintext archive crossed with a New York skate zine — and it has, with minor revisions, looked exactly the same since James Jebbia's team launched it in the mid-2000s.
+
+Type runs **Courier New monospace** at a single 13px size for nearly every element on the page — product names, prices, drop schedules, cart line items, navigation links, the cart total, the contact-us page, the privacy policy. The famous box-logo wordmark uses Futura Heavy Oblique italic on a red rectangle, but **that mark never appears as type on the website itself**. The site uses Courier; the wordmark uses Futura. The two coexist without overlap — the wordmark sits as an asset (an SVG / image), and the chrome runs in plain monospace. The discipline is what makes the site read as deliberate and not lazy.
+
+The chromatic identity is white-black-red — and that is the entire palette. There are no gradients, no soft surfaces, no warm neutrals. The default link colour is the unstyled browser-default `#0000cc` blue with the unstyled `#551a8b` purple visited state — Supreme uses these intentionally as a refusal to skin the page. The discipline reads as an editorial choice: Supreme will not pretend to be more designed than it is.
+
+Shape language is fully sharp-cornered. CTAs render at `0px` radius, 24px tall (intentionally below the WCAG-AA touch-target recommendation — Supreme is a desktop-first site for users who already know how to navigate it), with 1px pure-black hairline borders and monospace 13/400 labels. Cards are not cards — they are floating thumbnails at fixed ~144×144px with a single-line product label below. No surface, no shadow, no border, no padding. The thumbnail sits directly on the page background.
+
+Photography is shot on white seamless and rendered with `object-fit: contain` so the image floats on the white page background — a Supreme garment laid out flat as a documentary record, never styled, never lifestyle. The product imagery is the design — but its design is the refusal to art-direct. The page is engineered to feel like browsing a printed product catalogue from 1998: tight monospace, floating product photos, no shouting.
+
+**Key Characteristics:**
+- Three-colour palette: paper white (`#ffffff`) + pure black (`#000000`) + box-logo red (`#cc0000`)
+- Courier New monospace at a single 13px size — every element on the page
+- Box-logo wordmark uses Futura Heavy Oblique italic but is **never used as type on the site chrome**
+- Product cards are floating thumbnails (~144×144px) with no surface, no shadow, no border, no padding
+- Sharp-cornered everything — `0px` radius universally, no pills, no soft corners
+- Default unstyled blue link (`#0000cc`) and purple visited (`#551a8b`) — intentional refusal to skin
+- Drop clock in TYO time anchors the page — black band updates every second via `setInterval`
+- "sold out" stamp in lowercase grey replaces the price when an item is unavailable
+- Browser-default focus outlines — Supreme does not override the user-agent
+- Approximately one update per Thursday at 11am NYC — the entire site is a weekly drop calendar made manifest
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): default page floor, every product thumbnail's background, every form surface — paper white, no warmth
+- **Ink** (`#000000`): primary text colour — pure black, monospace 13/400
+- **Box-Logo Red** (`#cc0000`): the wordmark, drop banner, sale flag, validation error — Supreme's brand colour
+
+### Brand
+- **Box-Logo Red** (`#cc0000`): the wordmark, drop banner, sale flag — when red appears, it carries weight
+- **Brand Hover** (`#a30000`): darker red on hover (rare)
+- **Brand Active** (`#820000`): pressed deepest red
+- **Brand Pale** (`#ffe5e5`): rare softened tint — used inside Supreme account error banners only
+
+### Accent
+- **Drop Red** (`#cc0000`): same hex as box-logo red — used on the top-of-page drop strip
+- **Drop Black Band** (`#000000`): the black band beneath the drop strip that holds the next-drop countdown clock
+- **Sold-Out Grey** (`#666666`): the famous lowercase "sold out" stamp colour
+
+### Interactive
+- **Link** (`#0000cc`): default browser-blue link colour — Supreme uses unstyled defaults
+- **Visited** (`#551a8b`): browser-default purple visited
+- **Link Hover** (`#0000cc`): link hover stays blue, underline always on
+- **Selected** (`#000000`): selected radio / checkbox fill
+- **Disabled** (`#999999`): disabled text and outline grey
+
+### Neutral Scale
+- **Ink** (`#000000`) — primary text and heading
+- **Muted** (`#666666`) — sold-out stamp, secondary metadata, "Made in USA" footer line
+- **Soft** (`#999999`) — caption text, faint stamps
+- **Border** (`#000000`) — default 1px hairline (always pure black on form chrome)
+- **Border Soft** (`#cccccc`) — rare softer divider on policy pages
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — default — Supreme uses no surface variation
+- **Surface Strong** (`#f5f5f5`) — the lone alt surface — used on cart-empty state only
+
+### Shadow Colors
+Supreme uses no shadows. Anywhere. The brand position: depth is a design choice, and Supreme refuses design choices that don't serve scarcity. There are no hover-card shadows, no modal shadows, no atmospheric layers.
+
+### Semantic
+- **Success Green** (`#008000`): "in stock" — classic web-1 green, never bright lime
+- **Warning Amber** (`#cc6600`): advisory amber — used on shipping cutoffs
+- **Danger Red** (`#cc0000`): validation error reuses box-logo red — the colour is overloaded intentionally
+- **Info Blue** (`#0000cc`): info banner — same blue as default links
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `"Courier New", Courier, monospace`. Fallback: system mono. Courier is the default mono on every desktop OS, so the site renders with no webfont request — page-load is instant. The site uses Courier because it is the most-available, most-anonymous monospace on the web.
+
+**Box-logo**: Futura Heavy Oblique italic (`"Futura Std", "Futura Heavy", Futura`). Used **exclusively** on the box-logo wordmark — never as type on the page. The wordmark sits as an SVG / image asset, and the chrome runs entirely in Courier. The two coexist without overlap.
+
+**OpenType features**: `tnum` is enabled implicitly (Courier's monospace nature is already tabular). No other features are used.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| box-logo | Futura Heavy Oblique | 60 | 900 | 1.0 | -0.5px | italic | The wordmark image — never used as page type |
+| page-title | Courier | 13 | 700 | 1.2 | 0 | — | "spring/summer 2026" page heading |
+| section-head | Courier | 13 | 700 | 1.2 | 0 | — | Category headings — "tops", "accessories" |
+| sub-section | Courier | 13 | 400 | 1.2 | 0 | — | Sub-section heads on category pages |
+| product-title | Courier | 13 | 400 | 1.25 | 0 | — | Product name on grid tile |
+| product-title-md | Courier | 13 | 400 | 1.25 | 0 | — | Product name on PDP — same size, no scaling |
+| body-md | Courier | 13 | 400 | 1.4 | 0 | — | Default body — descriptions, policy pages |
+| body-sm | Courier | 12 | 400 | 1.4 | 0 | — | Footer micro-text |
+| caption | Courier | 11 | 400 | 1.4 | 0 | — | Disclaimers |
+| micro | Courier | 10 | 400 | 1.4 | 0 | — | Privacy policy footnotes |
+| price-display | Courier | 13 | 400 | 1.0 | 0 | tnum | PDP main price — same size as everything |
+| price-product | Courier | 13 | 400 | 1.0 | 0 | tnum | Grid tile price |
+| button-cta | Courier | 13 | 400 | 1.0 | 0 | — | CTA labels — same size, regular weight |
+| nav-link | Courier | 13 | 400 | 1.0 | 0 | — | Masthead category labels |
+| drop-clock | Courier | 13 | 400 | 1.0 | 0 | tnum | TYO countdown clock |
+| sold-out-stamp | Courier | 13 | 400 | 1.0 | 0 | — | Lowercase "sold out" stamp in `#666666` |
+| order-line | Courier | 13 | 400 | 1.0 | 0 | tnum | Cart line items, order summary |
+
+### Principles
+
+- **Single 13px size, single Courier face, single 400 weight.** Supreme rejects type hierarchy — the entire page sits at 13px monospace with regular weight. Section heads gain 700 weight; everything else stays at 400.
+- **Box-logo lives as image, not type.** The Futura Heavy Oblique wordmark is rendered as SVG / image. The site chrome never typesets in Futura.
+- **Tabular by default.** Courier is monospace, so every digit, every column, every price aligns automatically without `tnum`.
+- **No display alternative.** Supreme has no display family, no hero typography, no marketing scale.
+- **No tracking.** Letter-spacing is always `0`. Courier's natural rhythm is the design.
+- **No transformations.** Supreme uses sentence-case naturally — never uppercase shouting on chrome (the box-logo's uppercase is locked into the asset).
+- **The closest open-source substitute is `"IBM Plex Mono"`.** Adjust by ~0% letter-spacing — it is intentionally close to Courier's metrics. Or just stick with Courier — it's free.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-cta`** — transparent fill, 1px pure-black (`#000000`) hairline, ink text in monospace 13/400, `0px` radius, 4×8px padding, 24px height. The most common CTA: "add to cart", "continue", "submit", "view cart →". On hover the bg fills pure black with white text. There are no other state changes — no transition, no animation, no shadow. The CTA simply names the action.
+
+**`button-cta-on-red`** — when the CTA appears inside a red drop band, it flips to a 1px white outline with white text. Same `0px` radius, same 24px height.
+
+**`text-link`** — plain unstyled `<a>` element. Default browser-blue (`#0000cc`), default browser-purple visited (`#551a8b`), always underlined. Supreme uses the user-agent default link styling intentionally — overriding it would tip the page toward "designed."
+
+### Cards
+
+**`product-card`** — listing tile. White surface (matches page background), `0px` radius, no padding, no border, no shadow. Width fixed at ~144px. Stack: square thumbnail with `aspect-ratio: 1/1` and `object-fit: contain` so the photographed garment floats against the white page background, single-line product label below in mono 13/400, price below in mono 13/400 (or "sold out" in muted grey if unavailable). The card does not lift, does not animate, does not shadow. It is a thumbnail with two lines of mono text.
+
+**`pdp-detail`** — product detail page. Single-column with the image at the top and the metadata stack below: product name in mono 13/400, description in mono 13/400 with line breaks, size dropdown (HTML-default `<select>`), "add to cart" CTA, shipping note in 13/400 muted. There is no buy-box — the entire PDP is a single text column.
+
+**`hero-band`** — Supreme has no hero band on the homepage. The masthead, drop banner, and product grid sit immediately atop the page.
+
+### Drop Banner & Drop Clock
+
+**`drop-banner`** — red strip at the very top of the page, full-width, 32px tall, box-logo red (`#cc0000`) fill, white type "new" or "preview" in mono 13/400. The single most chromatic moment on the page. Tapping this navigates to the latest week's drop.
+
+**`drop-clock-band`** — black band beneath the drop banner, full-width, 32px tall, pure black fill, white type. Format: `mm/dd/yyyy hh:mm[am|pm] TYO` — Supreme runs its drop calendar in Tokyo time. Updates every second via `setInterval` — the only motion on the page.
+
+### Inputs / Forms
+
+**`text-input`** — white surface, 1px pure-black hairline, `0px` radius, 24px height, 2×6px padding. Mono 13/400 inside. The focus ring is the unstyled browser default — Supreme intentionally does not override `:focus`. The form fields read like a 1998 HTML form on purpose.
+
+**`select`** — HTML-default `<select>` element. No custom dropdown chrome. Supreme uses the user-agent select on every form — size selectors, country dropdowns, payment menus.
+
+**`newsletter-input`** — footer email signup. Same 24px sharp-cornered hairline input + adjacent "submit" CTA at the same height. Inline horizontal layout.
+
+### Navigation
+
+**`masthead`** — full-width white bar, 32px tall, no border, no shadow. The Supreme box-logo wordmark sits flush left at ~120px wide. Inline horizontal nav links to the right of the wordmark in mono 13/400 — "shop", "news", "shop policies", "support". "view cart →" link flush right.
+
+**`category-nav`** — sub-nav of category labels: "tops/sweaters", "shirts", "jackets", "pants", "shorts", "hats", "bags", "accessories", "skate", "view all". Inline mono 13/400 links separated by `·` characters or by line breaks. No surface, no border.
+
+### Sold-Out Stamp
+
+**`sold-out-stamp`** — lowercase "sold out" in mono 13/400 with `color: #666666`. Replaces the price line in the product card stack. The lowercase is the signature — Supreme has been using lowercase "sold out" since the early 2000s.
+
+### Modals & Toasts
+
+**`modal`** — Supreme uses modals very rarely (mostly for cart-add confirmations). When they do appear: white surface, 1px pure-black hairline, no shadow, 24px padding, `0px` radius. Centred over a 70%-opacity ink scrim.
+
+**`toast`** — not used. Supreme communicates state via inline page reloads, not toasts.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 10 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96`
+- Section padding (vertical): **16–32px** between sections — Supreme runs tight, not airy
+- Card internal padding: **0** — the thumbnail floats on the page background with no card surface around it
+- Gutters: **8–12px** between thumbnail tiles — denser than every mainstream e-commerce peer
+- Page padding: **16px** left/right on desktop and mobile both
+
+### Grid & Container
+
+- Max content width: **1024px** centred
+- Homepage / category page: **6 thumbnails per row** at desktop, with 8–12px gutters; tiles drop to 5, 4, 3, 2 at narrower widths
+- PDP: single-column, ~600px max width centred — image sits at top, metadata stacks beneath
+- Footer: 3-column inline link list with mono 13/400 labels and `·` separators
+
+### Whitespace Philosophy
+
+Supreme runs tight, not airy. Section padding is 16–32px (compared to Etsy's 96–128px). Thumbnail gutters are 8–12px (compared to Adidas's 16px). The page is engineered to feel dense and zine-like — Supreme's editorial position is **scarcity as content**, and tight spacing concentrates the limited inventory into a single dense field of view.
+
+### Section Cadence
+
+There is no section cadence. The page is a single field: drop-banner → drop-clock → masthead → category-nav → product grid → footer. No alternation between bands, no editorial breaks, no light-vs-dark cadence. Supreme is one continuous field.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Sharp | 0px | Everything — buttons, inputs, modals, banners |
+
+Supreme uses `0px` radius universally. There is no pill, no soft corner, no compound radius, no exception. The discipline is the brand. Even the box-logo wordmark — which lives as an image asset — is a sharp red rectangle with sharp white type.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Everything (~100% of surfaces) |
+| 1 — Modal | no shadow, 1px hairline border | Rare modal dialogs |
+| 2 — Scrim | `rgba(0,0,0,0.7)` | Modal backdrop only |
+
+### Shadow Philosophy
+
+Supreme uses no shadows. Anywhere. The brand position: depth is a designed effect, and Supreme refuses designed effects that don't directly serve drop scarcity. There are no atmospheric layers, no brand-tinted glows, no Stripe-style multi-layer compositions. When elevation is needed (the rare modal), Supreme uses a 1px hairline border instead of a shadow — the dialog is differentiated by its outline, not by its lift.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: not used — Supreme has no transitions
+- **Emphasized**: not used
+- **No easing curves are configured anywhere in the system.**
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 0ms | All hover state changes are instant |
+| Standard | 0ms | All page transitions are hard navigations |
+| Slow | 0ms | Nothing animates over time |
+
+### Per-Component Recipes
+
+- **CTA hover**: bg flips instantly from transparent to black with white text. No transition.
+- **Card hover**: no animation, no lift, no shadow change. Supreme does not animate product cards.
+- **Drop clock**: TYO countdown updates once per second via `setInterval` — the only motion on the page. Format: `mm/dd/yyyy hh:mma TYO`.
+- **Page navigation**: hard navigation, no transition. Click → new HTML document.
+
+### Page Transitions
+
+Hard navigation only. No client-side routing, no view transitions, no page-load fade.
+
+### Reduced Motion
+
+All transitions are already at 0ms. The `prefers-reduced-motion` media query has no effect on Supreme because there is nothing to reduce. Supreme is the calm-motion baseline — it sets the lower bound for what e-commerce motion can be.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| `#000000` ink on `#ffffff` canvas | 21.0 | AAA |
+| `#ffffff` on `#cc0000` box-logo red | 5.9 | AA |
+| `#0000cc` link on `#ffffff` | 8.6 | AAA |
+| `#666666` muted on `#ffffff` | 5.7 | AA |
+| `#666666` sold-out stamp on `#ffffff` | 5.7 | AA |
+| `#ffffff` on `#000000` drop-clock band | 21.0 | AAA |
+
+### Focus Indicators
+
+Supreme uses **the unstyled browser-default focus outline**. Most user-agents render this as a 2px dotted/solid blue ring. Supreme does not override `:focus` or `:focus-visible`. The brand position: native focus is good enough, and overriding it would tip the page toward "designed."
+
+### ARIA Patterns
+
+Supreme uses minimal ARIA. The site mostly relies on semantic HTML — `<a>` for links, `<button>` for buttons, `<select>` for dropdowns, `<input type="text">` for inputs. There is no `role="combobox"`, no custom `role="menu"`, no `role="dialog"`. The page is engineered to work with screen readers via plain semantic markup.
+
+- **Search**: not present on most pages — Supreme does not have a global site search.
+- **Product card**: entire tile wrapped in `<a>` with the `aria-label` matching the product name + price.
+- **Sold-out stamp**: has `aria-label="Sold out"`.
+- **Drop-clock band**: has `aria-live="polite"` so screen readers can read the countdown updates.
+
+### Keyboard Navigation
+
+- Masthead: Tab moves logo → nav links → cart link
+- Category page: Tab through tiles in document order (left-to-right, row-by-row)
+- PDP: Tab through size select → add to cart → cart link
+- No skip-link (the page is short enough to not need one)
+
+### Screen Reader Hints
+
+Verbose `aria-label` is rare — Supreme prefers plain text content. The sold-out stamp announces as "sold out" because it is rendered as visible text, not as a pseudo-element.
+
+### Reduced Motion
+
+All transitions are at 0ms — there is nothing to reduce.
+
+### Touch Targets
+
+Supreme runs intentionally below the WCAG-AA touch-target recommendation (24px instead of 44px). The brand position: the site is desktop-first, and the audience is users who already know how to navigate it. On mobile, the small targets are imperfect but acceptable to the brand's editorial discipline.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Product grid 2-up; nav becomes a stacked column; drop banner stays at the top |
+| Tablet | 600–768px | Product grid 4-up |
+| Desktop | 768–1024px | Product grid 5–6-up |
+| Wide | 1024–1280px | Content caps at 1024px; product grid 6-up |
+
+### Touch Targets
+
+- Primary CTAs: 24px height — below WCAG AA, intentional
+- Search bar: not present on most pages
+- Cart link: ~24×80px — meets target only on desktop pointer
+- Product tile: entire 144×180px tile is tappable
+
+### Collapsing Strategy
+
+- Masthead: nav links wrap to a second row at <600px
+- Drop banner / clock band: stay full-width at all sizes
+- Product grid: 6 → 5 → 4 → 3 → 2; gutters compress from 12px → 8px
+- PDP: single-column at all sizes (already single-column)
+
+### Image Behavior
+
+Product thumbnails use `aspect-ratio: 1/1` with `object-fit: contain` against the white page background. Supreme commits to white-seamless studio photography across the storefront — no lifestyle shots, no models, no environmental contexts. The garment floats on the page.
+
+### Container Queries
+
+Not used — Supreme is engineered with viewport-width breakpoints only.
+
+## 11. Content & Voice
+
+### Tone
+
+Deadpan, factual, lowercase. Supreme's voice is "the New York skate-shop clerk who hands you the t-shirt without small talk" — every line names the product, names the price, names the drop time. Headlines lead with date and category ("spring/summer 2026 preview", "new") rather than emotion. The brand consistently positions Supreme as **the drop made manifest** — what's available this week, what's sold out, what's coming Thursday.
+
+### Microcopy Patterns
+
+- **Button verbs**: "add to cart", "continue", "submit", "view cart →" — all lowercase, all sentence-case (well, lowercase), direct, outcome-named
+- **Error message recipe**: brief + factual — "card declined. try a different one."
+- **Success confirmations**: "added to cart" — three words, sentence case, no exclamation
+- **Field labels**: short and lowercase — "email", "card number", "zip"
+- **Stock urgency**: not used — Supreme's stock is binary (available / sold out). There is no "only 2 left" countdown, no FOMO copy. Scarcity is structural, not communicated.
+
+### Empty States
+
+Empty cart: "your cart is empty. continue shopping →" — sentence case, no exclamation, single CTA.
+
+Empty search: not applicable — Supreme has no global site search.
+
+### CTA Verb Conventions
+
+- Primary: **"add to cart"** (default), **"continue"**, **"submit"**
+- Save: not used — Supreme has no wishlist, no favorites, no saved-for-later
+- Tertiary: **"view cart →"**, **"shop policies"**, **"support"**
+- Avoided: "Buy now", "Get it", "Click here", "Submit" (capital-S), "Add to bag" (Supreme uses "cart")
+- Always lowercase. Always sentence-case (which here means lowercase). Capitalised CTAs read off-brand.
+
+## 12. Dark Mode & Theming
+
+**Light-only.** Supreme is light-only on the public web. There is no dark mode toggle, no system-preference inversion, no `colors-dark:` map. The brand position: the product photography depends on the white seamless ground, and inverting the page would lose the floating-thumbnail aesthetic that distinguishes Supreme from every other streetwear brand. Even on systems that prefer dark mode, Supreme renders white-on-black inverted-into-white-page mode — the user-agent does not get to override the canvas.
+
+The lone "darker surface" inside the page is the **drop-clock band** (`#000000` with white text), which is more "inverse strip" than dark mode.
+
+## 13. Lineage & Influences
+
+Supreme's visual lineage runs through three traditions: **New York skate-shop interior design** (the founder James Jebbia opened the first Supreme store on Lafayette Street in 1994 — the in-store aesthetic, white walls, fluorescent lights, hardwood floors with skate decks lined up in a single row, became the chromatic and spatial template for the website); **Barbara Kruger's red-bordered photographic prints** (the box-logo is a direct visual quote of Kruger's 1980s text-on-image work — Futura Heavy Oblique italic on a red ground — and Kruger eventually sued Supreme for the appropriation, settling out of court); and **late-1990s plaintext HTML web design** (the unstyled `<a>` tags, the Courier monospace, the `0px` radius, the lack of any hover transition, all directly descend from the early-web aesthetic of GeoCities, Suck.com, and the early 1996–1999 plain-HTML web).
+
+The site has not meaningfully evolved since the mid-2000s. James Jebbia and the in-house team have specifically resisted redesigning the storefront — when VF Corporation acquired Supreme in 2020 there was internal pressure to modernize, and Jebbia reportedly insisted the site stay exactly as it is. The discipline is the brand: the storefront's refusal to update is itself an editorial position.
+
+What Supreme rejects: gradients, soft surfaces, warm neutrals, atmospheric shadows, hero bands, marketing copy, lifestyle photography, hover animations, expressive display typefaces, dark mode, search bars, wishlists, recommendations, "you might also like", reviews, product ratings, social-proof counts, urgency timers, FOMO copy, and basically every UX pattern that mainstream e-commerce takes for granted. The brand position is **scarcity as content** — the site simply lists what is available this week, and the user does the rest.
+
+**Influences:**
+- New York skate-shop retail / Lafayette Street (1994) — interior design template
+- Barbara Kruger / *Untitled (Your body is a battleground)* (1989) — box-logo direct visual quote
+- Late-1990s plaintext HTML web (GeoCities, Suck.com) — Courier + `0px` radius + unstyled links
+- Futura Heavy Oblique (Paul Renner, 1927) — box-logo wordmark
+- A.P.C. — minimalist French streetwear typographic discipline, [apc.fr](https://apc.fr)
+- Are.na — minimalist functional anti-design e-commerce, [are.na](https://are.na)
+- Jordan Crandall / Étoy — early-web art-collective aesthetic
+- James Jebbia — founder, in-house creative director
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the brand on three colours: paper white (`#ffffff`) + pure black (`#000000`) + box-logo red (`#cc0000`)
+- Run Courier New monospace at a single 13px size for nearly every element
+- Reserve Futura Heavy Oblique italic for the box-logo wordmark only — never as page type
+- Use `0px` radius universally — no pills, no soft corners, no compound radii
+- Render product cards as floating thumbnails with no surface, no shadow, no border
+- Shoot product photography on white seamless and use `object-fit: contain` so the garment floats on the page
+- Use the unstyled browser-default `:focus` outline — do not override
+- Use the unstyled browser-default `<a>` link styling — `#0000cc` blue, `#551a8b` visited
+- Anchor the page with a red drop banner + black drop-clock band updating every second in TYO time
+- Use lowercase "sold out" stamp in `#666666` to replace the price line
+- Use lowercase sentence-case on every CTA — "add to cart", "continue", "submit"
+
+**Don't**
+- Don't introduce gradients, soft surfaces, or warm neutrals
+- Don't add hover animations to product cards — Supreme does not animate
+- Don't add atmospheric shadows or multi-layer elevation
+- Don't introduce a hero band, marketing copy, or above-the-fold CTA beyond the drop clock
+- Don't introduce a search bar, wishlist, or "you might also like" pattern
+- Don't use uppercase CTAs — "ADD TO CART" reads off-brand
+- Don't differentiate the price typography — same 13px mono 400 as everything else
+- Don't use lifestyle photography — Supreme commits to white-seamless flat-lay
+- Don't override the user-agent focus ring or link colours
+- Don't add a dark mode — Supreme is light-only by editorial position
+- Don't add transitions of any duration — Supreme is the calm-motion baseline
+- Don't use exclamation marks — the voice is deadpan
+- Don't use Futura on the page chrome — Futura is for the box-logo only
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:          #ffffff
+Ink:             #000000
+Box-Logo Red:    #cc0000
+Brand Hover:     #a30000
+Link Blue:       #0000cc
+Visited Purple:  #551a8b
+Muted:           #666666
+Sold-Out Grey:   #666666
+Drop-Clock BG:   #000000
+Drop-Clock TXT:  #ffffff
+```
+
+### Example Component Prompts
+
+- "Create a Supreme-style 'add to cart' button: 24px tall, transparent fill, 1px pure-black (`#000000`) hairline border, `0px` radius, 4×8px padding, with the label 'add to cart' in Courier New 13/400 lowercase. On hover the bg fills pure black with white text. No transition, no animation. The CTA simply names the action."
+- "Build a Supreme product card: floating thumbnail at 144×144px with no surface, no shadow, no border, no padding. Stack: square thumbnail with `aspect-ratio: 1/1` and `object-fit: contain` so the photographed garment floats on the white page background, single-line product label below in Courier 13/400 black, price below in Courier 13/400 black. If sold out, replace the price line with lowercase 'sold out' in `#666666`."
+- "Create a Supreme drop clock band: full-width, 32px tall, pure black (`#000000`) fill, white text in Courier 13/400 with format `mm/dd/yyyy hh:mma TYO`. Updates once per second via `setInterval`. This is the only motion on the page."
+- "Build a Supreme drop banner: full-width 32px tall red strip in box-logo red (`#cc0000`), white text 'new' or 'preview' in Courier 13/400 lowercase, padding 4×8px. Tapping navigates to the latest week's drop."
+- "Design a Supreme PDP: single-column, ~600px max width centred. Image sits at the top with `aspect-ratio: 1/1` and `object-fit: contain` against the white page background. Below: product name in Courier 13/400, description in Courier 13/400 with line breaks, HTML-default `<select>` for size, 'add to cart' CTA (24px, transparent fill, 1px black hairline, hover fills black/white), shipping note in Courier 13/400 muted `#666666`. No buy-box, no recommended products, no reviews."
+- "Build a Supreme masthead: full-width white bar 32px tall, no border. Box-logo wordmark sits flush left at ~120px wide (Futura Heavy Oblique italic on red rectangle — render as image asset). Inline horizontal nav links to the right of the wordmark in Courier 13/400 lowercase — 'shop', 'news', 'shop policies', 'support'. 'view cart →' link flush right in Courier 13/400."
+
+### Iteration Guide
+
+1. **Start with white + black + red.** If your page has gradients, soft surfaces, or warm neutrals, it isn't Supreme. Three colours, no exceptions.
+2. **Single Courier monospace at 13px.** Resist the urge to add hierarchy. The lack of hierarchy is the signature.
+3. **Box-logo lives as image, never as page type.** Futura Heavy Oblique italic on a red rectangle, rendered as an SVG asset. Never typeset Futura on the chrome.
+4. **`0px` radius universally.** Sharp corners on every surface. The pill chip belongs to Adidas; sharp corners belong to Supreme.
+5. **Product cards are floating thumbnails.** No surface, no shadow, no border. The thumbnail sits directly on the page background.
+6. **White-seamless flat-lay photography.** Garment shot on white seamless, rendered with `object-fit: contain`, floating on the white page.
+7. **Use unstyled browser defaults for links and focus.** The `#0000cc` blue link, the `#551a8b` purple visited, the dotted browser focus ring — Supreme uses these intentionally. Overriding them is over-design.
+8. **No animations, no transitions.** The drop clock's once-per-second update is the only motion. Everything else is static.

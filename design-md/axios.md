@@ -1,0 +1,777 @@
+---
+name: Axios
+tagline: Smart-brevity in chromatic form — blocky white canvas, Tiempos-flavored Atiza serif, signature `Why it matters:` time-bars and bullet-first prose.
+author: webdesignhot
+source_url: https://www.axios.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, serif, sans, structured, news, light, smart-brevity, bullets]
+preview_swatch: ['#ffffff', '#0044a5', '#333335']
+related: [theatlantic, ft, theguardian]
+description: 'Axios was founded in 2017 by Jim VandeHei, Mike Allen, and Roy Schwartz (the founders of Politico) on a single editorial premise: **Smart Brevity** — short newsletters and articles structured as bullet lists with branded "section labels" ("Why it matters:", "The big picture:", "What''s next:") that signal information hierarchy at a glance. The web product ports that editorial system to chromatic and typographic form: Atiza serif (a Tiempos cousin) handles all editorial body and headlines; NB International Pro sans (Klim/Sowersby) carries chrome and the smart-brevity section labels; the signature Axios blue (`#0044a5`) marks links, CTAs, and hover states; and the **TIME-BARS** — bold horizontal rules with section labels like "Why it matters:" — punctuate every article. Density is high but rhythmic — bullet-first prose breaks dense reporting into scannable chunks, making the page feel both substantive and fast. Where Bloomberg runs terminal-orange and the FT runs salmon-pink, Axios runs **smart-brevity-blocky** — white canvas, blue-accent, time-bar punctuation, and a typographic system that mirrors the editorial system that built the brand.'
+
+colors:
+  bg: '#ffffff'                  # the canonical Axios white
+  bg-section: '#ffffff'
+  bg-section-newsletter: '#fafafa' # newsletter-archive section ground
+  bg-dark: '#1a1a1a'              # paywall, footer
+  bg-darkest: '#000000'
+  surface: '#ffffff'
+  surface-soft: '#f5f5f5'
+  surface-strong: '#e8e8e8'
+  surface-quote: '#f0f4fb'         # blue-tinted pull-quote surface
+  surface-blue-tint: '#e6eef9'      # selected nav, brand-tinted backgrounds
+  text: '#333335'                 # observed body color rgb(51, 51, 53)
+  text-strong: '#000000'
+  text-muted: '#666668'
+  text-soft: '#888889'
+  text-faint: '#aaaab0'
+  text-on-blue: '#ffffff'
+  text-on-dark: '#ffffff'
+  brand: '#0044a5'                 # the Axios signature blue
+  brand-hover: '#003a8c'
+  brand-active: '#002e72'
+  brand-soft: '#cfdaef'             # tint surface
+  brand-deep: '#001f4d'             # darkest blue
+  brand-secondary: '#d6062b'        # Axios red — used for breaking and live indicators
+  link: '#0044a5'                  # blue as inline link color
+  link-hover: '#003a8c'
+  link-visited: '#666668'
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  border: '#e0e0e0'                # default hairline
+  border-soft: '#f0f0f0'
+  border-strong: '#999999'
+  border-rule: '#000000'             # black section rule
+  border-blue: '#0044a5'
+  shadow-card: 'rgba(0,0,0,0.06)'
+  shadow-elev: 'rgba(0,0,0,0.1)'
+  shadow-modal: 'rgba(0,0,0,0.3)'
+  scrim: 'rgba(0,0,0,0.6)'
+  success: '#2a8a4f'
+  success-soft: '#dff0e7'
+  warning: '#cc7a00'
+  warning-soft: '#fde9cc'
+  danger: '#d6062b'
+  danger-soft: '#fbd6dc'
+  info: '#0044a5'
+  info-soft: '#cfdaef'
+  time-bar: '#000000'                # the signature section-label rule color
+  time-bar-bg: '#f5f5f5'              # subtle backdrop for "Why it matters:" zone
+  newsletter-banner: '#0044a5'        # the morning-newsletter banner blue
+
+typography:
+  display:
+    family: '"Atiza", "Tiempos Headline", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['liga', 'kern']
+  body:
+    family: '"Atiza", "Tiempos Text", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 700]
+  ui:
+    family: '"NB International Pro", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  sans-emphasis:
+    family: '"NB International Pro", sans-serif'
+    weights: [600, 700]
+  mono:
+    family: '"NB International Pro Mono", Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    masthead-wordmark:   { size: 28, weight: 700, lineHeight: 1.0,  tracking: '-0.01em', family: ui, opentype: ['liga'] }
+    headline-mega:       { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    headline-jumbo:      { size: 42, weight: 600, lineHeight: 1.08, tracking: '-0.015em', family: display }
+    headline-xl:         { size: 32, weight: 600, lineHeight: 1.13, tracking: '-0.005em', family: display }
+    headline-lg:         { size: 26, weight: 600, lineHeight: 1.18, tracking: '0',         family: display }
+    headline-md:         { size: 22, weight: 600, lineHeight: 1.22, tracking: '0',         family: display }
+    headline-sm:         { size: 18, weight: 600, lineHeight: 1.25, tracking: '0',         family: display }
+    deck:                { size: 18, weight: 400, lineHeight: 1.4,  tracking: '0',         family: body }
+    body-md:             { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',         family: body }
+    body-sm:             { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    bullet:              { size: 17, weight: 400, lineHeight: 1.6,  tracking: '0',         family: body }
+    pull-quote:          { size: 28, weight: 500, lineHeight: 1.3,  tracking: '0',         family: display }
+    section-label:       { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.04em',    family: sans-emphasis, transform: uppercase }
+    time-bar-label:      { size: 13, weight: 700, lineHeight: 1.0,  tracking: '0.06em',    family: sans-emphasis, transform: uppercase }
+    why-it-matters:      { size: 16, weight: 700, lineHeight: 1.3,  tracking: '0',         family: sans-emphasis, transform: none }
+    byline:              { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0',         family: ui }
+    dateline:            { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.02em',    family: ui }
+    nav-link:            { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0.06em',    family: ui, transform: uppercase }
+    button-label:        { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0.04em',    family: ui }
+    caption:             { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',         family: ui }
+    photo-credit:        { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.04em',    family: ui, transform: uppercase }
+    micro-meta:          { size: 11, weight: 500, lineHeight: 1.2,  tracking: '0.04em',    family: ui, transform: uppercase }
+    estimated-read:      { size: 12, weight: 600, lineHeight: 1.2,  tracking: '0.02em',    family: ui }
+    code-micro:          { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',         family: mono }
+
+radius:
+  micro: 0
+  sm: 2
+  md: 4
+  lg: 6
+  pill: 9999
+  none: 0
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120]
+
+layout:
+  page-width: 1200
+  prose-width: 660
+  feature-width: 980
+  header-height: 64
+  time-bar-rule-weight: 4
+  section-rule-weight: 1
+  hairline-weight: 1
+
+components:
+  time-bar:
+    bg: 'transparent'
+    color: '#000000'
+    border: 'top 4px solid #000000'
+    padding: '20px 0 12px'
+    use: 'The signature Axios horizontal rule — 4px solid black, with section-label like "Why it matters:" in NB International Pro 13/700 uppercase tracked 0.06em. Punctuates every article between paragraphs.'
+  why-it-matters-block:
+    bg: '#f5f5f5'
+    color: '#000000'
+    padding: '24px 32px'
+    use: '"Why it matters:" section block — gray-tinted backdrop with bold uppercase label and 16/700 sans summary. The smart-brevity signature.'
+  bullet-list:
+    bg: 'transparent'
+    color: '#333335'
+    use: 'Bullet-first prose — Atiza body 17/400 with 24px hanging indent and bold blue square bullet markers in #0044a5.'
+  button-primary:
+    bg: '#0044a5'
+    color: '#ffffff'
+    radius: 4
+    padding: '14px 24px'
+    height: 44
+    font: button-label
+    use: 'Subscribe, Sign in — primary CTA. Blue fill with white text.'
+  button-primary-hover:
+    bg: '#003a8c'
+    color: '#ffffff'
+    use: 'Pointer-down on blue CTAs.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#0044a5'
+    border: '1px solid #0044a5'
+    radius: 4
+    padding: '14px 24px'
+    height: 44
+    use: 'Already a subscriber, secondary actions.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#0044a5'
+    use: 'Inline body links — blue text with subtle underline on hover.'
+  card-headline:
+    bg: '#ffffff'
+    color: '#333335'
+    radius: 0
+    border: 'top 1px solid #e0e0e0'
+    use: 'Default river card. Atiza 22/600 headline, Atiza 16/400 deck, NB International Pro 13/600 byline, "5 MIN READ" estimated-read meta in uppercase 11/500.'
+  card-photo:
+    bg: '#ffffff'
+    color: '#333335'
+    radius: 0
+    use: 'Photo card with image-above + headline below; 16:9 aspect ratio.'
+  card-newsletter:
+    bg: '#0044a5'
+    color: '#ffffff'
+    radius: 6
+    padding: '32px'
+    use: 'Newsletter signup card — blue ground with white headline ("Sign up for Axios AM") and white email input.'
+  pull-quote:
+    bg: '#f0f4fb'
+    color: '#000000'
+    border: 'left 4px solid #0044a5'
+    padding: '24px 32px'
+    use: 'Blue-tinted pull-quote surface with 4px Axios blue left bar. Atiza 28/500.'
+  text-input:
+    bg: '#ffffff'
+    color: '#333335'
+    radius: 4
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #999999'
+    focus: 'border thickens to 2px Axios blue'
+    use: 'Email entry, search input.'
+  paywall-cta:
+    bg: '#0044a5'
+    color: '#ffffff'
+    padding: '40px 32px'
+    use: 'Axios Pro paywall — blue ground with white Atiza headline, white-outline Subscribe button.'
+  nav-section-link:
+    color: '#000000'
+    font: nav-link
+    padding: '14px 12px'
+    use: 'Section nav (Politics, Business, Tech, World, Health, Science, Sports). Hover: blue underline grows from below.'
+  edition-selector:
+    bg: 'transparent'
+    color: '#000000'
+    use: 'Top-right edition picker (Axios Local cities + Axios national).'
+  newsletter-cta-banner:
+    bg: '#0044a5'
+    color: '#ffffff'
+    padding: '16px 24px'
+    use: '"Get smarter, faster" — top sticky banner promoting newsletter signup. Dismissible.'
+  estimated-read-pill:
+    bg: '#e6eef9'
+    color: '#0044a5'
+    radius: 12
+    padding: '4px 10px'
+    font: estimated-read
+    use: '"5 min read" pill — blue-tinted backdrop with blue text. Marks reading-time on every story.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  card-hover: 'image scales 1.0 → 1.02; headline color shifts to blue over 200ms; subtle 1px blue underline grows under headline'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transforms suppressed, transitions become instant color sets, newsletter-banner pulse suppressed.'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.04) 0 1px 2px'
+  standard: 'rgba(0,0,0,0.06) 0 2px 6px'
+  elevated: 'rgba(0,0,0,0.1) 0 8px 20px'
+  deep: 'rgba(0,0,0,0.3) 0 16px 40px'
+  ring: '0 0 0 2px #0044a5'
+
+accessibility:
+  contrast-text-on-bg: 12.0                # #333335 on #ffffff — AAA at body sizes
+  contrast-text-on-blue: 9.5                # #ffffff on #0044a5 — AAA
+  contrast-link-on-bg: 9.5                  # #0044a5 on #ffffff — AAA
+  contrast-text-on-dark: 13.5               # #ffffff on #1a1a1a — AAA
+  contrast-muted-on-bg: 7.5                 # #666668 on #ffffff — AAA body
+  focus-ring: '2px solid #0044a5 (Axios blue) + 2px outline-offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves Axios wordmark → primary nav → utility (Subscribe, Sign in, Search). Skip-link first.'
+
+dark-mode: optional
+colors-dark:
+  bg: '#0d0d0d'
+  surface: '#1a1a1a'
+  surface-soft: '#262626'
+  surface-strong: '#333333'
+  text: '#ffffff'
+  text-strong: '#ffffff'
+  text-muted: '#b3b3b3'
+  text-soft: '#8a8a8a'
+  brand: '#5b8fdb'                 # blue lifts for AA on dark
+  link: '#5b8fdb'
+  border: '#333333'
+  border-rule: '#5b8fdb'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Axios was founded in 2017 by Jim VandeHei, Mike Allen, and Roy Schwartz (the founders of Politico) on a single editorial premise: **Smart Brevity** — short newsletters and articles structured as bullet lists with branded "section labels" ("Why it matters:", "The big picture:", "What's next:", "Yes, but:", "Catch up quick:") that signal information hierarchy at a glance. The premise reshaped political and business news in the late 2010s and made Axios one of the fastest-growing news brands of the past decade.
+
+The visual system on axios.com ports that editorial system to chromatic and typographic form. **Atiza** — a Tiempos cousin (the Storm/Klim humanist serif lineage) — handles all editorial body and headlines, giving the page a serious-broadsheet feel that contrasts with the brand's reputation for short bites. **NB International Pro** (Klim/Sowersby) carries chrome and the smart-brevity section labels. The signature **Axios blue** (`#0044a5`) marks links, CTAs, and hover states; and the **TIME-BARS** — bold 4px horizontal rules with section labels like "Why it matters:" — punctuate every article. The combination is paradoxical: a serif-serious aesthetic married to a bullet-first prose system that breaks the broadsheet convention.
+
+Density is high but rhythmic. Where the FT and Reuters fill columns with continuous prose, Axios breaks dense reporting into bullet-first chunks. Each article opens with a 1–2 sentence Atiza standfirst, then a "Why it matters:" block (gray-tinted backdrop, bold uppercase label, sans 16/700 summary), then bullet lists with hanging indents and bold blue square markers. The TIME-BARS and section labels turn the page into a structured outline — the reader can scan for "What's next:" or "By the numbers:" without reading sequentially. This is the single most-identifying decision in the Axios visual system.
+
+The chromatic system is **white + blue + black**, with red (`#d6062b`) reserved for breaking and live indicators. Pure white canvas. Axios blue (`#0044a5`) for primary action and accents. Black `#000` for the time-bar rules and bullet markers. Section navigation, byline meta, photo credits, and the time-bar labels all run in NB International Pro uppercase with tracked letter-spacing — a sans-emphasis vocabulary that contrasts with the Atiza serif body.
+
+Newsletter is the brand's center of gravity. Axios AM (the morning newsletter) ships every weekday morning with the same TIME-BAR / section-label / bullet structure as the web product. The web header carries a sticky "Get smarter, faster" newsletter banner in Axios blue at the top of every page — newsletter-first marketing. Estimated-read pills mark every story with reading time ("4 min read") in the uppercase NB International Pro tracked-meta vocabulary.
+
+**Key Characteristics:**
+- **TIME-BARS** — 4px black horizontal rule with section labels ("Why it matters:", "The big picture:", "What's next:") in uppercase NB International Pro 13/700 tracked 0.06em
+- **Smart-brevity bullet structure** — every article breaks into bullet-first prose with bold blue square markers
+- **Atiza serif** for editorial body — Tiempos cousin (Storm/Klim humanist serif lineage)
+- **NB International Pro sans** for chrome and section labels — Klim/Sowersby
+- **Axios blue (`#0044a5`)** for primary action, links, focus rings, newsletter banners
+- **Why it matters: blocks** — gray-tinted backdrop with uppercase label and bold sans 16/700 summary
+- **Estimated-read pills** — "5 min read" in blue-tinted backdrop, the smart-brevity signature meta
+- White canvas with rhythmic density — bullet-first prose breaks dense reporting into scannable chunks
+- Newsletter-first marketing — sticky "Get smarter, faster" banner in blue
+- Square broadsheet aesthetic — 0px on cards, 4px on buttons and inputs
+- Body color `#333335` — observed on axios.com, slightly warm
+- Axios Local sub-brand for city editions
+- "Catch up quick:" / "Yes, but:" / "By the numbers:" — branded section vocabulary
+
+## 2. Color Palette & Roles
+
+### Primary
+- **White Canvas** (`#ffffff`): editorial reading ground, broadsheet weight
+- **Axios Blue** (`#0044a5`): the brand action color. Primary CTA fill, inline link, hover underline, focus ring, newsletter banner, estimated-read pill.
+- **Body Black** (`#333335`): primary text — observed on axios.com, slightly warm
+
+### Brand & Sub-Brand
+- **Brand Blue** (`#0044a5`)
+- **Blue Hover** (`#003a8c`)
+- **Blue Active** (`#002e72`)
+- **Blue Soft** (`#cfdaef`) — selected nav background, badge tint
+- **Blue Deep** (`#001f4d`) — heaviest blue
+- **Brand Red** (`#d6062b`) — breaking news, live indicator (rare use)
+- **Newsletter Banner** (`#0044a5`) — same as brand
+- **Axios Pro** (`#0044a5`) — Pro tier marker
+- **Axios Local** (`#0044a5`) — city editions share the same blue
+
+### Accent
+- **Editorial Link Blue** (`#0044a5`) — inline body links
+- **Link Hover** (`#003a8c`)
+- **Link Visited** (`#666668`) — visited dims
+
+### Interactive
+- **Default Link** (`#0044a5` text + underline-on-hover)
+- **Active CTA** (blue fill on white text)
+- **Disabled** (`#aaaab0` text, `#e8e8e8` fill)
+- **Selected** (blue-soft chip with blue text)
+
+### Neutral Scale
+- **Body** (`#333335`) — observed on axios.com (rgb 51, 51, 53)
+- **Strong Black** (`#000000`) — TIME-BAR rules, max-contrast headlines
+- **Muted** (`#666668`) — bylines, datelines
+- **Soft** (`#888889`) — captions, photo credits
+- **Faint** (`#aaaab0`) — disabled
+- **Hairline** (`#e0e0e0`) — universal 1px rule
+
+### Surface & Borders
+- **White Canvas** (`#ffffff`)
+- **Surface Soft** (`#f5f5f5`) — Why it matters: block backdrop, time-bar zone tint
+- **Surface Strong** (`#e8e8e8`) — disabled fill
+- **Surface Quote** (`#f0f4fb`) — blue-tinted pull-quote surface
+- **Surface Blue Tint** (`#e6eef9`) — selected nav, brand-tinted backgrounds
+- **Hairline** (`#e0e0e0`)
+- **Border Strong** (`#999999`) — form input border
+- **Border Rule** (`#000000`) — TIME-BAR rules, section break
+
+### Shadow Colors
+Shadows are **neutral black-tinted**, kept light. Axios favors flat broadsheet over elevated UI:
+- `rgba(0,0,0,0.04) 0 1px 2px` — minimal ambient
+- `rgba(0,0,0,0.06) 0 2px 6px` — dropdown
+- `rgba(0,0,0,0.1) 0 8px 20px` — overlay
+- `rgba(0,0,0,0.3) 0 16px 40px` — modal
+
+### Semantic
+- **Success** (`#2a8a4f` on `#dff0e7`) — confirmation messages
+- **Warning** (`#cc7a00` on `#fde9cc`) — amber for advisory
+- **Danger / Breaking** (`#d6062b` on `#fbd6dc`) — breaking news, form errors
+- **Info** (`#0044a5` on `#cfdaef`) — info shares brand blue
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display & Body**: `Atiza` — a Tiempos cousin in the Storm Type Foundry / Klim Type Foundry humanist serif lineage. Atiza handles all editorial typography on axios.com — both headlines and body. The single-serif discipline is unusual in news design (most peers split display and body into separate serif families); Axios uses one face for both roles. Available in 400, 500, 600, 700. Fallback: `"Tiempos Headline", Georgia, "Times New Roman", serif`.
+
+**UI**: `NB International Pro` — Klim Type Foundry's NB International, used for navigation, button labels, bylines, section labels, and the smart-brevity branded labels ("Why it matters:", "The big picture:"). Available in 400, 500, 600, 700. Fallback: `"Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**Sans Emphasis**: `NB International Pro` at weight 700 — used for the TIME-BAR labels and the "Why it matters:" summary text. The sans-emphasis runs in uppercase tracked 0.04em–0.06em, contrasting with the Atiza serif body.
+
+**Mono**: `NB International Pro Mono` — used rarely on code blocks. Fallback: `Menlo, Consolas, monospace`.
+
+**OpenType features**: Atiza uses standard ligatures and tightly-tuned kerning at display sizes. NB International Pro is used in tracked-uppercase mode for all section labels, button labels, and meta.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| masthead-wordmark | NB International Pro | 28 | 700 | 1.0 | -0.01em | liga | "axios" wordmark |
+| headline-mega | Atiza | 56 | 700 | 1.05 | -0.02em | — | Cover-class headline |
+| headline-jumbo | Atiza | 42 | 600 | 1.08 | -0.015em | — | Top-of-fold lead |
+| headline-xl | Atiza | 32 | 600 | 1.13 | -0.005em | — | Above-fold secondary |
+| headline-lg | Atiza | 26 | 600 | 1.18 | 0 | — | River lead |
+| headline-md | Atiza | 22 | 600 | 1.22 | 0 | — | River sub |
+| headline-sm | Atiza | 18 | 600 | 1.25 | 0 | — | Compact module |
+| deck | Atiza | 18 | 400 | 1.4 | 0 | — | Standfirst — serif, weight 400 |
+| body-md | Atiza | 18 | 400 | 1.6 | 0 | — | Default running text |
+| body-sm | Atiza | 16 | 400 | 1.55 | 0 | — | Compact card body |
+| bullet | Atiza | 17 | 400 | 1.6 | 0 | — | Bullet-first prose with hanging indent |
+| pull-quote | Atiza | 28 | 500 | 1.3 | 0 | — | Pull-quote with blue left bar |
+| section-label | NB International Pro | 14 | 700 | 1.0 | 0.04em | uppercase | "POLITICS" / "BUSINESS" |
+| time-bar-label | NB International Pro | 13 | 700 | 1.0 | 0.06em | uppercase | "WHY IT MATTERS:" / "THE BIG PICTURE:" |
+| why-it-matters | NB International Pro | 16 | 700 | 1.3 | 0 | — | "Why it matters:" summary text |
+| byline | NB International Pro | 13 | 600 | 1.3 | 0 | — | "Sara Fischer" |
+| dateline | NB International Pro | 12 | 500 | 1.3 | 0.02em | — | "Nov 5, 2024" |
+| nav-link | NB International Pro | 13 | 600 | 1.0 | 0.06em | uppercase | "Politics" / "Business" |
+| button-label | NB International Pro | 14 | 600 | 1.0 | 0.04em | — | "Subscribe" / "Sign in" |
+| caption | NB International Pro | 13 | 400 | 1.4 | 0 | — | Photo / chart caption |
+| photo-credit | NB International Pro | 11 | 500 | 1.3 | 0.04em | uppercase | "PHOTO: GETTY" |
+| micro-meta | NB International Pro | 11 | 500 | 1.2 | 0.04em | uppercase | "PRO" / "EXCLUSIVE" |
+| estimated-read | NB International Pro | 12 | 600 | 1.2 | 0.02em | — | "5 min read" pill |
+| code-micro | NB International Pro Mono | 12 | 400 | 1.4 | 0 | — | Code blocks (rare) |
+
+### Principles
+
+- **Single-serif discipline (Atiza for both display and body).** Most peers split display and body into different faces; Axios uses Atiza for everything editorial. The discipline ports the brand's "one voice" editorial system into typographic form.
+- **Sans for TIME-BAR labels and section labels (NB International Pro tracked uppercase).** The serif/sans contrast between body Atiza and chrome NB International Pro is identifying — bullet-first prose punctuated by sans-emphasis labels.
+- **TIME-BARS are the most-identifying typographic gesture.** 4px black horizontal rule + uppercase NB International Pro 13/700 tracked 0.06em label ("WHY IT MATTERS:" / "THE BIG PICTURE:") + then content. Every article uses them.
+- **Body line-height 1.6 — generous.** The bullet-first prose calls for breathing room.
+- **Headlines lean weight 600–700.** Axios runs heavier display weights than the FT or Reuters — the smart-brevity brand calls for confident headlines.
+- **Negative tracking on display sizes.** -0.005em → -0.02em on headlines.
+- **Tracked uppercase for chrome and labels.** 0.02em–0.06em on bylines, datelines, button labels, nav links, section labels.
+- **Estimated-read pill is the smart-brevity signature meta.** "5 min read" in blue-tinted pill — every story carries one.
+
+## 4. Component Stylings
+
+### TIME-BARS (the signature)
+
+**`time-bar`** — A 4px solid black horizontal rule (`#000000`) sitting above a section label in NB International Pro 13/700 uppercase tracked 0.06em ("WHY IT MATTERS:", "THE BIG PICTURE:", "WHAT'S NEXT:", "YES, BUT:", "CATCH UP QUICK:", "BY THE NUMBERS:"). The TIME-BAR sits between paragraphs and punctuates every article. Padding: 20px 0 12px. The most-identifying typographic gesture in the Axios system.
+
+**`why-it-matters-block`** — Gray-tinted backdrop (`#f5f5f5`) with the TIME-BAR above and bold uppercase label "WHY IT MATTERS:" + 16/700 sans summary text. Padding: 24×32px. Used at the top of every article as the smart-brevity capsule summary.
+
+**`bullet-list`** — Bullet-first prose. Atiza body 17/400 with 24px hanging indent and bold blue square markers (`#0044a5`). Each bullet typically opens with a bolded NB International Pro phrase ("**The big picture:** ...") that signals the bullet's role.
+
+### Buttons
+
+**`button-primary`** — Blue fill (`#0044a5`), white text in NB International Pro 14/600 (sentence case, NOT uppercase — Axios diverges from broadsheet uppercase CTA convention), 4px radius, 14×24px padding, 44px height. Press: darkens to `#003a8c`.
+
+**`button-secondary`** — Transparent fill, blue text, 1px blue border, 4px radius. "Already a subscriber? Sign in" over white.
+
+**`button-text-link`** — Plain blue text (`#0044a5`), no surface, no border. Subtle underline grows on hover.
+
+### Cards
+
+**`card-headline`** — White surface, 0px radius, top 1px hairline (`#e0e0e0`), no shadow. Atiza 22/600 headline, Atiza 16/400 deck, NB International Pro 13/600 byline, "5 MIN READ" estimated-read pill in blue-tinted backdrop.
+
+**`card-photo`** — Image-above + headline below, 16:9 aspect ratio.
+
+**`card-newsletter`** — **Blue ground** (`#0044a5`) with white headline ("Sign up for Axios AM"), white email input, 6px radius (the only non-zero card radius). The blue card is the brand's most-frequently-deployed marketing primitive.
+
+### Pull-Quote
+
+**`pull-quote`** — Blue-tinted backdrop (`#f0f4fb`) with **4px Axios blue left bar** (`#0044a5`). Atiza 28/500, no italic. The blue bar marks the pull-out without italic.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px `#999999` border, 4px radius, 44px height, 12×14px padding. Focus: border thickens to 2px Axios blue.
+
+**`paywall-cta`** — **Blue ground** (`#0044a5`) with white Atiza headline, white-outline Subscribe button. Used for Axios Pro tier promotion.
+
+### Navigation
+
+**`top-nav`** — White surface, 64px height, with the "axios" wordmark in NB International Pro 28/700 (lowercase, the brand's signature wordmark style). Section nav (Politics, Business, Tech, World, Health, Science, Sports, Pro, Local) horizontally arranged.
+
+**`section-nav`** — Horizontal NB International Pro 13/600 uppercase tracked links separated by ample whitespace. Hover: blue underline grows from below over 200ms.
+
+**`newsletter-cta-banner`** — Sticky top banner: "Get smarter, faster" in white NB International Pro 14/700 on Axios blue (`#0044a5`) ground. 16×24px padding. Dismissible with X.
+
+### Decorative
+
+**`time-bar`** (see above) — the signature.
+
+**`hairline-rule`** — 1px `#e0e0e0` gray rule between river stories.
+
+**`estimated-read-pill`** — Blue-tinted pill (`#e6eef9`) with blue text (`#0044a5`), 12px radius, 4×10px padding, NB International Pro 12/600 "5 min read".
+
+**`live-indicator`** — Red dot (`#d6062b`) + "LIVE" label in red NB International Pro 11/700 uppercase. Used on live blogs.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120`
+- Section padding: 64px between page bands; 32px on mobile
+- TIME-BAR vertical rhythm: 20px above rule, 12px below rule, then content
+- Why it matters: block: 24px×32px internal padding, 32px above and below
+
+### Grid & Container
+
+- Max content width: **1200px** centered on 12-column grid
+- Reading column: **660px** (slightly wider than peers — bullet hanging indents need horizontal room)
+- Feature container: **980px** for hero + sidebar pairings
+- Footer: 5-column link list
+
+### Whitespace Philosophy
+
+Axios runs **rhythmic density** — the page is dense (many headlines, dense reporting) but punctuated by TIME-BARS, Why it matters: blocks, and bullet-first structure that gives readers visual handholds. The whitespace is calibrated to the bullet rhythm — generous between sections, tight within bullets. The result is a page that feels both substantive and fast.
+
+### Section Cadence
+
+- Politics / Business / Tech / World / Health / Science / Sports: white canvas with hairline-separated cards
+- Axios Pro (premium tier): white canvas with blue-tinted card accents, "PRO" badges
+- Axios Local (city editions): white canvas with city-name in masthead, same chromatic system as national
+- Newsletter archive: warm-cream-near-white backdrop with each newsletter rendered as a TIME-BAR-structured page
+- Live blogs: white canvas with red live indicator
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Cards, photos, sections, alerts, paywall, TIME-BARS — broadsheet aesthetic |
+| Small | 2px | Tight chrome (rare) |
+| Standard | 4px | Buttons, text inputs |
+| Comfortable | 6px | Newsletter card (the only rounded card) |
+| Pill | 9999px | Estimated-read pill, save-article chip — when shape is round |
+
+Axios sits in the **square broadsheet** camp with selective concessions to ergonomics. Buttons and inputs at 4px (between Bloomberg's 0px and the pill-CTA brands). Newsletter cards get 6px because they're marketing primitives, not editorial surfaces. Estimated-read pills are 12px (rounded but rectangular). Cards, photos, and editorial surfaces stay 0px.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Article body, hero, section bands |
+| 1 — Hairline | 1px `#e0e0e0` rule | River cards, table rows |
+| 2 — TIME-BAR | 4px black rule | The signature section punctuation |
+| 3 — Section Rule | 1px `#000000` rule | Section break |
+| 4 — Why it matters block | gray-tinted backdrop | Smart-brevity capsule summary |
+| 5 — Brand Card | blue ground (`#0044a5`) | Newsletter cards, paywall, CTAs |
+| 6 — Dropdown | `rgba(0,0,0,0.06) 0 2px 6px` | Account menu |
+| 7 — Modal | `rgba(0,0,0,0.3) 0 16px 40px` | Paywall modal |
+
+### Shadow Philosophy
+
+Axios's depth is **typographic, not elevational**. The TIME-BAR (4px black rule) is the most-load-bearing depth signal — it punctuates the page and creates rhythm. The Why it matters: block creates a tinted-backdrop depth signal. The brand-blue card (newsletter, paywall) creates chromatic depth. Shadows are reserved for chrome (dropdowns, modals) and stay neutral.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)`
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Color swaps, hairline thickening |
+| Standard | 200ms | Card hover, link underline grow, nav transitions |
+| Slow | 320ms | Modal enter, paywall reveal, newsletter banner appearance |
+
+### Per-Component Recipes
+
+- **Card hover**: image scales 1.0 → 1.02; headline color shifts to Axios blue (`#0044a5`) over 200ms; subtle 1px blue underline grows under the headline.
+- **Section-nav link hover**: blue underline grows from below over 200ms standard; active section gets persistent 2px blue underline.
+- **Newsletter-banner appearance**: slides down from top over 320ms emphasized on first page load; persists until dismissed.
+- **Paywall modal enter**: scrim fades 0 → 0.6 black alpha over 200ms; modal translates 16px to 0 + opacity 0 → 1 over 320ms emphasized.
+- **TIME-BAR appearance**: when an article expands inline (live-blog updates), the TIME-BAR fades in over 200ms with a subtle 4px-rule-grow from left to right.
+- **Estimated-read pill hover**: tint deepens from `#e6eef9` to `#cfdaef` over 100ms.
+- **Live indicator**: red dot pulses 1.0 → 1.4 → 1.0 over 1000ms; suppressed when reduced motion is honored.
+
+### Page Transitions
+
+200ms cross-fade. Newsletter banner persists across page transitions for marketing continuity.
+
+### Reduced Motion
+
+Live-indicator pulse suppressed; newsletter-banner appears without slide-down (just fade); card hovers degrade to color-only; transforms suppressed; TIME-BAR rule-grow → instant draw.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #333335 body on #ffffff | 12.0 | AAA |
+| #ffffff on #0044a5 (CTA) | 9.5 | AAA |
+| #0044a5 on #ffffff (link) | 9.5 | AAA |
+| #ffffff on #1a1a1a (dark) | 13.5 | AAA |
+| #666668 muted on #ffffff | 7.5 | AAA |
+| #000000 TIME-BAR rule on #ffffff | 21.0 | AAA |
+| #d6062b breaking on #ffffff | 5.5 | AA body |
+| #2a8a4f success on #ffffff | 4.5 | AA body |
+
+### Focus Indicators
+
+Focus ring: `2px solid #0044a5` (Axios blue) with 2px outline-offset. Blue pairs cleanly with white ground.
+
+### ARIA Patterns
+
+- **Newsletter banner**: `role="banner"`, dismiss button `aria-label="Dismiss newsletter signup"`
+- **TIME-BAR sections**: rendered as `<section>` with `<h2>` for the section label so screen readers announce "Why it matters" as a section heading
+- **Why it matters: block**: `role="region"` with `aria-label="Why it matters"`
+- **Bullet list**: native `<ul>` / `<li>` semantics
+- **Paywall modal**: `role="dialog"`, `aria-modal="true"`, focus trapped, Esc closes
+- **Live blog**: `role="feed"`, new entries `aria-live="polite"`
+- **Estimated-read pill**: `aria-label="5 minute read"`
+
+### Keyboard Navigation
+
+- Top banner: Tab → newsletter signup → dismiss
+- Top nav: Tab moves wordmark → section nav → Subscribe → Sign in → Search
+- Article body: Tab traverses links in reading order (TIME-BAR sections preserve linear reading)
+- Skip-link first
+
+### Screen Reader Hints
+
+- TIME-BAR section labels announce as section headings
+- Estimated-read pill announces as "5 minute read"
+- Newsletter banner announces as "Banner: Get smarter, faster — sign up for Axios AM"
+- Live blog entries announce with timestamp ("3 minutes ago")
+
+### Reduced Motion
+
+Live-indicator pulse suppressed; newsletter-banner appears without slide-down; card hovers → color-only; TIME-BAR rule-grow → instant draw.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top banner stays sticky; masthead becomes hamburger + wordmark + Subscribe; section nav into hamburger; river cards 1-up; TIME-BARS adjust to 12px above / 8px below; bullet hanging indent reduces to 16px |
+| Tablet | 640–1024px | Section nav as horizontal scroller; river cards 2-up |
+| Desktop | 1024–1440px | Full section nav; river cards 3-up; sidebar appears on article pages with newsletter signup card |
+| Wide | >1440px | Content caps at 1200px |
+
+### Touch Targets
+
+- Primary CTAs: 44×44px
+- Section nav: 44px tap area
+- Newsletter banner dismiss: 32×32px
+- Estimated-read pill: 32×32px touch area
+
+### Collapsing Strategy
+
+- Newsletter banner stays sticky at all breakpoints
+- Section nav becomes scroller, then hamburger
+- Subscribe stays visible at all breakpoints
+- River cards drop column count: 4 → 3 → 2 → 1
+- Sidebar collapses below article body on tablet
+- TIME-BAR rules hold their 4px weight at all breakpoints (the rule is brand-load-bearing)
+
+### Image Behavior
+
+- River-card images: `aspect-ratio: 16/9` desktop, `4/3` mobile
+- Hero images: full-bleed up to 980px
+- Photo credits in uppercase NB International Pro 11/500 always present beneath images
+
+### Container Queries
+
+Newsletter signup card uses container queries to switch between full-width banner and right-rail card layouts.
+
+## 11. Content & Voice
+
+### Tone
+
+Direct, scannable, smart-brevity-precise. Axios's voice is calibrated for time-pressed professional readers — sentences are short, structures are bullet-first, and headlines lead with the news + the take ("US imposes new sanctions on Russian oil — and oil prices barely moved"). The brand's editorial system is the visual system; bullet structure with branded section labels is both editorial method and visual signature.
+
+### Microcopy Patterns
+
+- **Smart-brevity branded labels**: "Why it matters:" / "The big picture:" / "What's next:" / "Yes, but:" / "Catch up quick:" / "By the numbers:" / "Reality check:" / "Of note:" — uppercase NB International Pro 13/700 tracked 0.06em
+- **Subscribe verbs**: "Subscribe to Pro", "Sign up for AM", "Continue", "Sign in"
+- **Newsletter messages**: "Get smarter, faster" — the brand tagline
+- **Date format**: "Nov 5, 2024" — short US convention
+- **Section labels in NB International Pro uppercase**: "POLITICS", "BUSINESS", "TECH"
+- **Estimated-read pill**: "5 min read" — every story carries one
+- **Bullet-first prose**: each bullet opens with a bold sans phrase ("**The big picture:** ...") then continues in serif body
+- **Photo credit**: "PHOTO: GETTY" or "PHOTO: REUTERS"
+- **Breaking**: red dot + "BREAKING" label
+
+### CTA Verb Conventions
+
+- Primary: **"Subscribe to Pro"**, **"Sign up for AM"**, **"Sign in"**, **"Continue"**, **"Read"**
+- Secondary: **"Save"**, **"Share"**, **"Listen"**
+- Tertiary: **"More on this story"**, **"Catch up quick"**, **"View all"**
+- Avoided: "Click here", "Submit", "Buy now", "Learn more"
+
+### Empty States
+
+- Saved articles: "Your saved articles will appear here. Subscribe to Axios Pro for unlimited saving."
+- Search no results: "No stories match your search. Try different keywords or check our sections."
+- Newsletter archive: "No newsletters in this archive yet — subscribe to Axios AM to receive them in your inbox."
+- Bookmark empty: "Bookmarks help you save stories for later. Sign in to use them."
+
+## 12. Dark Mode & Theming
+
+Axios supports a **system-level dark mode**. The token swap lifts the blue for AA on dark:
+
+- `bg`: `#0d0d0d` — near-black canvas
+- `surface`: `#1a1a1a`
+- `surface-soft`: `#262626`
+- `text`: `#ffffff` — body inverts to pure white
+- `text-strong`: `#ffffff`
+- `text-muted`: `#b3b3b3`
+- `text-soft`: `#8a8a8a`
+- `brand`: `#5b8fdb` — blue lifts for AA on dark
+- `link`: `#5b8fdb`
+- `border`: `#333333`
+- `border-rule`: `#5b8fdb` — section rules invert from black to lifted-blue
+
+The TIME-BAR rules in dark mode become `#5b8fdb` (lifted blue) instead of pure black — the chromatic flip preserves the rhythmic punctuation in dark mode while keeping AA contrast.
+
+## 13. Lineage & Influences
+
+Axios's visual lineage is **the smart-brevity editorial system**. Jim VandeHei, Mike Allen, and Roy Schwartz founded Axios in 2017 after leaving Politico, with a thesis that political and business news could be reformatted as bullet-first prose with branded section labels. The thesis became a Harvard Business School case study (2022) and a book ("Smart Brevity," 2022). The web product ports the editorial system to typographic and chromatic form: TIME-BARS, "Why it matters:" blocks, bullet-first prose, estimated-read pills.
+
+The **Atiza** typeface is in the Tiempos / Storm Type Foundry humanist serif lineage. Tiempos itself was designed by Kris Sowersby (Klim) — the same designer who drew Reuters's Knowledge and the FT's Financier. The Atiza/Tiempos cousin relationship places Axios in the modern news-typography ecosystem alongside the FT and Reuters, but with a single-serif discipline (one face for both display and body) that's distinct.
+
+**NB International Pro** (Klim/Sowersby) carries chrome and section labels — it's the same typeface family used by countless modern publications and design systems. The serif/sans contrast between Atiza body and NB International Pro labels is identifying.
+
+What Axios rejects: continuous-prose articles (every article is bullet-first), italic decks (Axios uses sans 700 emphasis instead), rounded card corners on editorial (newsletter cards get 6px), the salmon-pink-broadsheet of the FT, the terminal-orange of Bloomberg, the pure-broadsheet-roman of NYT/WaPo. Axios's editorial-system-as-visual-system is what makes it distinctive — the visual decisions all trace back to the bullet-first thesis.
+
+**Influences:**
+- VandeHei / Allen / Schwartz (2017) — founding thesis: smart brevity
+- "Smart Brevity" (book, 2022) — codified the editorial system
+- Klim Type Foundry — NB International Pro and the Tiempos lineage that Atiza descends from — [klim.co.nz](https://klim.co.nz)
+- Politico — earlier shop where the founders refined the bullet-first newsletter format
+- AP / Reuters — wire-service typography that Axios both inherits from and reformats
+
+## 14. Do's and Don'ts
+
+**Do**
+- Use **TIME-BARS** (4px black horizontal rule + uppercase NB International Pro 13/700 tracked 0.06em label) to punctuate every article between paragraphs
+- Use the smart-brevity branded labels: "Why it matters:", "The big picture:", "What's next:", "Yes, but:", "Catch up quick:", "By the numbers:", "Reality check:"
+- Open every article with a "Why it matters:" block — gray-tinted backdrop (`#f5f5f5`) with bold uppercase label and 16/700 sans summary
+- Structure prose as bullet-first with bold blue square markers (`#0044a5`) and 24px hanging indent
+- Use Atiza serif for editorial body and headlines — single-serif discipline
+- Use NB International Pro for chrome, navigation, section labels, estimated-read pills
+- Use Axios blue (`#0044a5`) for primary CTAs, links, focus rings, newsletter banners
+- Mark every story with an estimated-read pill ("5 min read") in blue-tinted backdrop
+- Run a sticky "Get smarter, faster" newsletter banner in Axios blue at the top of pages
+- Use newsletter cards with blue ground (`#0044a5`) and 6px radius for marketing CTAs
+- Use sentence-case button labels ("Subscribe", "Sign in") — Axios diverges from broadsheet uppercase convention
+
+**Don't**
+- Don't write continuous prose articles — Axios is bullet-first, always
+- Don't drop the TIME-BARS — every article uses them; without them the page loses its identity
+- Don't use a different typeface for headlines vs body — Atiza handles both, single-serif discipline
+- Don't use italic decks or pull-quotes — Axios uses sans 700 emphasis instead
+- Don't push display weight to 800+ — restraint at 600–700 is brand voice
+- Don't apply heavy shadows to article cards — depth comes from TIME-BARS and tinted blocks, not elevation
+- Don't use orange or red as a primary brand color — Axios blue is the brand
+- Don't drop the "Why it matters:" block at the top of articles — it's the smart-brevity capsule summary
+- Don't use uppercase button labels — Axios diverges to sentence case
+- Don't use rounded card corners on editorial surfaces — broadsheet aesthetic for cards (newsletter cards excepted at 6px)
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Axios-Blue:        #0044a5  (brand, links, CTAs, focus ring, newsletter banner)
+Blue-Hover:        #003a8c
+White-Canvas:      #ffffff
+Body:              #333335  (observed on axios.com)
+Time-Bar-Black:    #000000  (the 4px rule)
+Why-It-Matters-BG: #f5f5f5  (gray-tinted block backdrop)
+Hairline:          #e0e0e0
+Brand-Red:         #d6062b  (breaking news only)
+Newsletter-Banner: #0044a5  (same as brand)
+```
+
+### Example Component Prompts
+
+- "Create an Axios article opening on white (#ffffff): section label in NB International Pro 14/700 uppercase tracked 0.04em ('POLITICS') in black; headline in Atiza 42/600 #333335 with -0.015em tracking; Atiza 18/400 deck; NB International Pro 13/600 byline ('Sara Fischer') with 'NOV 5, 2024' dateline; '5 min read' pill in blue-tinted (#e6eef9) backdrop with blue (#0044a5) text. Below: a **'Why it matters:' block** — gray-tinted (#f5f5f5) backdrop, 24×32px padding, with **TIME-BAR** (4px solid #000000 rule) above and uppercase 'WHY IT MATTERS:' label in NB International Pro 13/700 tracked 0.06em, then bold sans 16/700 summary text."
+- "Build an Axios bullet-first prose section: 4px black TIME-BAR rule, uppercase NB International Pro 13/700 'THE BIG PICTURE:' label, then bullet list with bold blue (#0044a5) square markers, 24px hanging indent, Atiza 17/400 body. Each bullet opens with a bold NB International Pro phrase ('**Reality check:** ...') in sentence case followed by Atiza serif continuation."
+- "Design an Axios newsletter signup card: blue ground (#0044a5) with 6px radius, 32px padding. White Atiza headline 'Sign up for Axios AM' at 26/600. White email input with white-outline 'Sign up' button. The card is the brand's most-frequently-deployed marketing primitive."
+- "Create an Axios primary CTA: Axios blue fill (#0044a5) with white text in NB International Pro 14/600 **sentence case** ('Subscribe' — NOT uppercase, Axios diverges from broadsheet convention), 4px radius, 14×24px padding, 44px height. Hover: darkens to #003a8c."
+- "Build the 'Get smarter, faster' newsletter banner: sticky top banner, Axios blue (#0044a5) ground full-width, white text in NB International Pro 14/700 'Get smarter, faster — Sign up for Axios AM →', dismiss X icon top-right (32×32px). Slides down from top over 320ms emphasized on first page load."
+- "Design an Axios pull-quote: blue-tinted backdrop (#f0f4fb) with **4px Axios blue (#0044a5) left bar**, 24×32px padding. Atiza 28/500 (no italic, sans-emphasis style is for labels only). The blue bar marks the pull-out without italic — Axios sans-emphasis discipline."
+
+### Iteration Guide
+
+1. **TIME-BARS are mandatory.** Every article uses 4px black horizontal rules with uppercase NB International Pro 13/700 tracked 0.06em section labels ("WHY IT MATTERS:", "THE BIG PICTURE:", "WHAT'S NEXT:"). Without TIME-BARS the page loses its identity.
+2. **Bullet-first prose, never continuous.** Articles are bullet lists with bold blue square markers and hanging indents — not blocks of running text. Each bullet opens with a bolded sans phrase signaling the bullet's role.
+3. **Atiza for editorial, NB International Pro for chrome.** Single-serif discipline (Atiza handles both display and body); single-sans for labels and chrome.
+4. **Smart-brevity branded labels are part of the system.** "Why it matters:", "The big picture:", "What's next:", "Yes, but:", "Catch up quick:" — these are typography, not just copy. They mark structure.
+5. **Estimated-read pill on every story.** "5 min read" in blue-tinted (#e6eef9) backdrop with blue (#0044a5) text — the smart-brevity meta signature.
+6. **Sentence-case button labels.** Axios diverges from broadsheet uppercase CTA convention — buttons read "Subscribe", "Sign in", "Continue".
+7. **Newsletter cards are brand-blue grounds.** Use `#0044a5` ground with white text and 6px radius for marketing CTAs (the only place radius creeps above 4).
+8. **Body color #333335.** Slightly warm — observed on axios.com. Don't use pure black for body.

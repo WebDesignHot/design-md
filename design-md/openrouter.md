@@ -1,0 +1,680 @@
+---
+name: OpenRouter
+tagline: Pure-black canvas with custom display typography and pragmatic mono — LLM-router infrastructure dressed as a terminal billing dashboard.
+author: webdesignhot
+source_url: https://openrouter.ai
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [ai, dev-tools]
+tags: [dark, black, mono, sans, terminal, pragmatic]
+preview_swatch: ['#000000', '#ffffff', '#9ca3af']
+related: [anthropic, openai, mistral]
+description: 'OpenRouter''s marketing surface reads like a terminal billing dashboard for LLM access — a pure-black `#000000` canvas, a custom display sans handling display headlines, and a pragmatic mono carrying the dense statistical rows (provider lists, model names, token counts, prices) that ARE the brand''s marketing chrome. There is no decorative palette, no gradient halo, no consumer-friendly motion. Models, providers, and per-token costs are listed in monospace tables; the brand''s value proposition is communicated through the dense data itself rather than through illustration. Where competitors chase a single brand voltage color, OpenRouter commits to grayscale-only pragmatism — a developer router brand that trusts data density to do the marketing work.'
+
+colors:
+  bg: '#000000'                  # canvas — pure black
+  bg-deep: '#000000'              # same as bg — no separation needed
+  surface-soft: '#0a0a0a'         # very-soft band tint
+  surface: '#111111'              # default content card
+  surface-elevated: '#1a1a1a'     # nested cards inside dark cards
+  surface-row-alt: '#080808'      # alternating row stripe inside data tables
+  text: '#ffffff'                 # primary headlines + strong type
+  text-body: '#d4d4d4'            # default running-text
+  text-strong: '#ededed'          # emphasised paragraphs
+  text-muted: '#9ca3af'           # captions, breadcrumbs, table secondary cells
+  text-faint: '#6b7280'           # tertiary fine-print
+  text-mono-data: '#ededed'       # data values in mono table cells
+  brand: '#ffffff'                # the brand IS white — no colored brand voltage
+  brand-active: '#d4d4d4'         # white-darker on press
+  brand-disabled: '#525252'       # disabled state
+  on-brand: '#000000'             # black text on white CTAs
+  on-dark: '#ffffff'
+  link: '#9ca3af'                 # links are gray-underlined, not colored
+  link-hover: '#ffffff'           # hover lightens to white
+  border: '#1f1f1f'               # 1px hairline on cards
+  border-strong: '#2a2a2a'        # heavier divider on input underlines, table rows
+  border-soft: '#0f0f0f'          # subtle separator
+  border-table: '#1a1a1a'         # 1px hairline between data table rows
+  shadow-color: 'rgba(0,0,0,0)'   # OpenRouter uses no drop shadows
+  accent-emerald: '#22c55e'       # rare success indicator (model "online")
+  accent-rose: '#ef4444'          # rare error indicator (model "down")
+  accent-amber: '#fbbf24'         # rare highlight on featured model
+  accent-blue: '#3b82f6'          # rare info / link in dense data tables
+  success: '#22c55e'
+  warning: '#fbbf24'
+  danger: '#ef4444'
+  info: '#3b82f6'
+  code-keyword: '#ededed'
+  code-string: '#9ca3af'
+  code-comment: '#6b7280'
+  table-stripe-odd: '#000000'
+  table-stripe-even: '#080808'
+
+typography:
+  display:
+    family: '"OR Display", "Inter Display", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600, 700]
+    notes: 'Custom display sans-serif fallback chain — OpenRouter ships its own light display weight'
+  body:
+    family: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, SF Mono, Menlo, Monaco, Consolas, monospace'
+    weights: [400, 500, 600]
+    notes: 'Mono carries 60% of the marketing chrome — model names, provider names, token counts, prices'
+  scale:
+    display-xl:        { size: 80, weight: 500, lineHeight: 1.0,  tracking: '-3px',    family: display, notes: 'Light display weight at huge size — anti-bold-headline' }
+    display-lg:        { size: 56, weight: 500, lineHeight: 1.05, tracking: '-2px',    family: display }
+    display-md:        { size: 40, weight: 500, lineHeight: 1.10, tracking: '-1.5px',  family: display }
+    display-sm:        { size: 30, weight: 500, lineHeight: 1.20, tracking: '-0.8px',  family: display }
+    title-lg:          { size: 24, weight: 600, lineHeight: 1.30, tracking: '-0.3px',  family: body }
+    title-md:          { size: 18, weight: 600, lineHeight: 1.40, tracking: 0,         family: body }
+    title-sm:          { size: 14, weight: 600, lineHeight: 1.40, tracking: 0,         family: body }
+    body-lg:           { size: 17, weight: 400, lineHeight: 1.55, tracking: 0,         family: body }
+    body-md:           { size: 15, weight: 400, lineHeight: 1.55, tracking: 0,         family: body }
+    body-sm:           { size: 13, weight: 400, lineHeight: 1.55, tracking: 0,         family: body }
+    caption:           { size: 12, weight: 500, lineHeight: 1.40, tracking: 0,         family: body }
+    caption-uppercase: { size: 11, weight: 500, lineHeight: 1.40, tracking: '0.8px',   family: body, transform: uppercase }
+    mono-data:         { size: 13, weight: 400, lineHeight: 1.50, tracking: 0,         family: mono, notes: 'Model names, provider names, token counts in tables' }
+    mono-price:        { size: 14, weight: 500, lineHeight: 1.40, tracking: 0,         family: mono, notes: 'Per-token prices in tables, always tabular' }
+    mono-stat:         { size: 36, weight: 500, lineHeight: 1.0,  tracking: '-0.8px',  family: mono, notes: 'Stat callout numbers — token counts, request counts' }
+    code-md:           { size: 13, weight: 400, lineHeight: 1.55, tracking: 0,         family: mono }
+    code-sm:           { size: 12, weight: 400, lineHeight: 1.50, tracking: 0,         family: mono }
+    button:            { size: 13, weight: 600, lineHeight: 1.0,  tracking: 0,         family: body }
+    nav-link:          { size: 13, weight: 500, lineHeight: 1.40, tracking: 0,         family: body }
+
+radius:
+  micro: 2
+  xs: 4
+  sm: 6
+  md: 8
+  lg: 10
+  xl: 12
+  pill: 9999
+
+spacing:
+  base: 4
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 80
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 80, 96]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 56
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: md
+    padding: '10px 18px'
+    height: 36
+    use: 'every primary CTA — white button on black canvas'
+  button-secondary:
+    backgroundColor: surface
+    textColor: on-dark
+    rounded: md
+    padding: '10px 18px'
+    height: 36
+    border: '1px solid #2a2a2a'
+    use: 'paired secondary action'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: on-dark
+    rounded: md
+    padding: '8px 14px'
+    use: 'tertiary actions, nav inline links'
+  button-text-link:
+    backgroundColor: transparent
+    textColor: text-muted
+    use: 'inline link CTAs — gray with underline'
+  card-feature:
+    backgroundColor: surface
+    textColor: on-dark
+    rounded: lg
+    padding: 24
+    border: '1px solid #1f1f1f'
+    use: 'standard feature card'
+  card-model-row:
+    backgroundColor: transparent
+    textColor: on-dark
+    rounded: 0
+    padding: '12px 16px'
+    border-bottom: '1px solid #1a1a1a'
+    use: 'single model row in the dense provider data table'
+  card-provider-tile:
+    backgroundColor: surface
+    textColor: on-dark
+    rounded: md
+    padding: 16
+    border: '1px solid #1f1f1f'
+    use: 'small provider logo + name tile in provider grid'
+  card-code-window:
+    backgroundColor: surface-soft
+    textColor: on-dark
+    rounded: lg
+    padding: 20
+    border: '1px solid #1f1f1f'
+    use: 'embeds API request snippets — Python, curl, Node'
+  card-pricing-tier:
+    backgroundColor: surface
+    rounded: lg
+    padding: 24
+    border: '1px solid #1f1f1f'
+  card-pricing-tier-featured:
+    backgroundColor: surface
+    rounded: lg
+    padding: 24
+    border: '1px solid #ededed'
+    use: 'featured tier marked by white hairline border'
+  badge-pill:
+    backgroundColor: surface
+    textColor: on-dark
+    rounded: pill
+    padding: '3px 10px'
+    border: '1px solid #2a2a2a'
+  badge-mono:
+    backgroundColor: surface-soft
+    textColor: text-muted
+    rounded: sm
+    padding: '2px 6px'
+    family: mono
+    use: 'inline labels — version numbers, latency tags, status pills'
+  text-input:
+    backgroundColor: surface-soft
+    textColor: on-dark
+    rounded: md
+    padding: '8px 12px'
+    height: 36
+    border: '1px solid #2a2a2a'
+  cta-band:
+    backgroundColor: surface
+    textColor: on-dark
+    rounded: lg
+    padding: 48
+    border: '1px solid #1f1f1f'
+    use: 'pre-footer "Start routing" CTA band'
+  top-nav:
+    backgroundColor: bg
+    textColor: on-dark
+    height: 56
+    border-bottom: '1px solid #1f1f1f'
+  data-table:
+    backgroundColor: bg
+    textColor: on-dark
+    use: 'dense model/provider price table — the brand''s primary marketing artifact'
+    row-padding: '10px 12px'
+    header-padding: '12px 12px'
+    row-stripe-odd: 'transparent'
+    row-stripe-even: '#080808'
+    cell-font: mono
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  reduced-motion: 'respects prefers-reduced-motion: reduce — opacity-only transitions, no transforms'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: 'none — system runs flat'
+  standard: 'none — depth comes from surface tone, not shadow'
+  elevated: 'none'
+  deep: 'none'
+  ring: '0 0 0 2px #ffffff'
+
+accessibility:
+  contrast-text-on-bg: 21.0              # AAA — #ffffff on #000000 (max possible)
+  contrast-text-on-brand: 21.0           # AAA — #000000 on #ffffff
+  contrast-body-on-bg: 13.6              # AAA — #d4d4d4 on #000000
+  contrast-muted-on-bg: 6.4              # AA — #9ca3af on #000000
+  focus-ring: '2px solid #ffffff with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'this IS the marketing surface — OpenRouter ships only a dark theme; the brand has no light-mode marketing variant'
+
+lineage:
+  summary: |
+    OpenRouter's marketing surface descends from the **terminal-and-tabular**
+    lineage — Bloomberg terminals, Hacker News, Linux htop, the
+    aesthetics of pragmatic developer tools that show data first and
+    decoration last. The pure-black canvas with mono-rendered data
+    tables IS the brand: a router for LLM access has to communicate
+    "we list every provider, every model, every price, every token
+    count" — and the brand commits to making that data the marketing
+    chrome. Where competitors chase a single brand voltage color,
+    OpenRouter strips color out entirely. The white-on-black contrast
+    is the brand voltage; the mono data tables are the brand
+    illustration. The custom display sans (rendered as light weight 500
+    at huge sizes) signals "this is a brand, not just a CLI"; the mono
+    tables signal "this is a tool that takes data seriously." The
+    aesthetic is Hacker News meets Bloomberg meets Linear-dark — a
+    pragmatic developer-router register that distinguishes OpenRouter
+    from every consumer-AI brand.
+  influences:
+    - name: Hacker News
+      role: Pragmatic-developer aesthetic — text density over decoration, mono everywhere data appears.
+      url: https://news.ycombinator.com
+    - name: Bloomberg Terminal
+      role: Dense tabular data as primary chrome; the tradition of "the data IS the UI."
+      url: https://www.bloomberg.com/professional/products/bloomberg-terminal/
+    - name: Linear
+      role: Dark-monolithic marketing rhythm with restrained chromatic discipline.
+      url: https://linear.app
+    - name: JetBrains Mono / IBM Plex Mono
+      role: The credibility-via-mono-typeface signal that ships every modern developer tool.
+      url: https://www.jetbrains.com/lp/mono/
+---
+
+## 1. Visual Theme & Atmosphere
+
+OpenRouter's marketing surface reads like a terminal billing dashboard for LLM access — a pure-black `#000000` canvas carrying confident white sans-serif type, with a pragmatic mono carrying the dense statistical rows (provider names, model identifiers, token counts, per-token prices) that ARE the brand's primary marketing chrome. There is no decorative palette, no gradient halo, no brand-voltage accent color. The contrast is binary: white on black, with grayscale gradations for hierarchy.
+
+The defining typographic move is the **custom display sans at light weight (500) and huge size (80px)**. OpenRouter rejects the bold-700-headline convention; its hero h1 runs at weight 500 with `-3px` tracking — the type reads ethereal, almost whispered, distinguishing the brand from every loud-marketing dev tool. The light-display-at-huge-size move is borrowed from Stripe's signature, but OpenRouter pushes it harder by going lighter (500 vs Stripe's 300, but at much larger sizes that compensate).
+
+The defining visual artifact is the **dense data table**. OpenRouter lists every provider it routes to, every model available, every per-token price, every latency benchmark — laid out in a JetBrains Mono-rendered table with alternating `#080808` row stripes on the `#000000` canvas. This data table IS the marketing. Where Pinecone shows vector-grids and LangChain shows architecture diagrams, OpenRouter shows the actual provider/model/price catalog. The brand value proposition is communicated through the data density itself.
+
+The page rhythm is monolithic black canvas top to bottom. There are no light bands; OpenRouter ships only a dark theme. Section padding stays at 80px (slightly tighter than the 96px standard, befitting the data-dense aesthetic); card padding stays at 24px for feature cards and 20px for code-window cards. The whitespace is terminal-tight rather than marketing-soft.
+
+**Key Characteristics:**
+- Pure black `#000000` canvas with white type. Marketing is dark-only — no light-mode variant exists.
+- No brand voltage color. The brand IS white-on-black; grayscale carries all hierarchy.
+- Custom display sans at light weight 500 (anti-bold-headline) — display-xl runs 80px / 500 / -3px tracking.
+- JetBrains Mono carries 60% of the marketing chrome — model names, provider names, token counts, prices.
+- Dense data tables (provider × model × price) as the brand's signature visual artifact.
+- 1px `#1f1f1f` hairline borders; alternating `#080808` row stripes in tables.
+- 8px radius on CTAs, 10px on cards (slightly tighter than the 12px standard).
+- 80px section rhythm (tighter than the 96px standard).
+- No drop shadows. The system is utterly flat.
+- White button (`#ffffff` background, `#000000` text) is the primary CTA.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#000000`): Pure black — runs every page top to bottom. The blackest possible black; no warming tint.
+- **Text** (`#ffffff`): Pure white — all headline and primary type. The whitest possible white.
+- **Brand / Primary CTA** (`#ffffff`): The brand IS white. There is no colored brand voltage.
+
+### Brand & Dark
+- **Brand** (`#ffffff`): Reserved for primary CTAs (white button on black canvas), focus rings, featured-tier hairline borders.
+- **Brand Active** (`#d4d4d4`): Press / hover-darker variant — slight gray on press.
+- **Brand Disabled** (`#525252`): Disabled state.
+- **On-Brand** (`#000000`): Pure black text on white CTAs.
+
+### Accent
+OpenRouter intentionally has **no marketing accent palette**. The accent slots below exist only for in-product status indicators inside dense data tables — never for marketing chrome.
+- **Accent Emerald** (`#22c55e`): "Online" / "available" model status indicators inside provider tables (rendered as a small dot, 6×6px).
+- **Accent Rose** (`#ef4444`): "Down" / "rate-limited" model status indicators (small dot).
+- **Accent Amber** (`#fbbf24`): Rare highlight on featured / new model in tables (small dot).
+- **Accent Blue** (`#3b82f6`): Rare info-link color used in dense docs tables only.
+
+### Interactive
+- **Link** (`#9ca3af`): Inline body links default to gray with underline — NOT colored. The grayscale link is part of the brand pragmatism.
+- **Link Hover** (`#ffffff`): Hover lightens link to pure white.
+- **Selected** (`rgba(255, 255, 255, 0.10)`): Selected text background — white tint at 10% over canvas.
+- **Disabled** (`#525252`): Disabled labels and tertiary text.
+
+### Neutral Scale
+- **Text** (`#ffffff`): Headlines, primary type — pure white.
+- **Text Strong** (`#ededed`): Emphasised paragraphs.
+- **Text Body** (`#d4d4d4`): Default running-text — slightly off-white for editorial comfort.
+- **Text Muted** (`#9ca3af`): Captions, breadcrumbs, table secondary cells.
+- **Text Faint** (`#6b7280`): Tertiary fine-print.
+- **Text Mono Data** (`#ededed`): Data values inside mono table cells — slightly softer than pure white.
+
+### Surface & Borders
+- **Surface Soft** (`#0a0a0a`): Section divider tints — barely visible against canvas.
+- **Surface** (`#111111`): Default content card.
+- **Surface Elevated** (`#1a1a1a`): Nested cards inside larger dark cards.
+- **Surface Row Alt** (`#080808`): Alternating row stripe inside data tables.
+- **Border** (`#1f1f1f`): 1px hairline on cards, the divider that's felt more than seen.
+- **Border Strong** (`#2a2a2a`): Heavier divider on input underlines, dropdown rows.
+- **Border Soft** (`#0f0f0f`): Subtle separator.
+- **Border Table** (`#1a1a1a`): 1px hairline between data table rows.
+
+### Shadow Colors
+OpenRouter runs flat. The system has no drop shadows — every depth signal comes from surface tone.
+- **Shadow Color** (`rgba(0, 0, 0, 0)`): No shadow ever applied. The token exists for spec completeness only.
+
+### Semantic
+- **Success** (`#22c55e`): Confirmation toasts, "active" model badges (small dot).
+- **Warning** (`#fbbf24`): Caution states.
+- **Danger** (`#ef4444`): Destructive actions, validation errors.
+- **Info** (`#3b82f6`): Informational notices in dense docs.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display**: Custom `"OR Display"` with `"Inter Display"` and Inter as fallback chain. The custom display sans-serif is OpenRouter's signature — used at light weight 500 at huge sizes for the anti-bold-headline aesthetic.
+- **Body**: `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`. Inter handles body, navigation, buttons.
+- **Mono**: `JetBrains Mono, IBM Plex Mono, ui-monospace, SF Mono, Menlo, monospace`. Mono carries 60% of the marketing chrome — model names, provider names, token counts, prices, code blocks. This is the brand's unusual move: mono is not just for code, it's for data.
+- **No serif**: The single-display + single-body + single-mono approach is the discipline.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-xl | OR Display | 80 | 500 | 1.0 | -3px | — | Homepage h1 — anti-bold light-weight signature |
+| display-lg | OR Display | 56 | 500 | 1.05 | -2px | — | Section heads on top of major bands |
+| display-md | OR Display | 40 | 500 | 1.10 | -1.5px | — | Sub-section heads, CTA-band headlines |
+| display-sm | OR Display | 30 | 500 | 1.20 | -0.8px | — | Card titles, pricing tier prices |
+| title-lg | Inter | 24 | 600 | 1.30 | -0.3px | — | Pricing plan names, larger feature titles |
+| title-md | Inter | 18 | 600 | 1.40 | 0 | — | Card titles, intro paragraphs |
+| title-sm | Inter | 14 | 600 | 1.40 | 0 | — | Small card titles, list labels, table headers |
+| body-lg | Inter | 17 | 400 | 1.55 | 0 | — | Hero subhead |
+| body-md | Inter | 15 | 400 | 1.55 | 0 | — | Default running-text |
+| body-sm | Inter | 13 | 400 | 1.55 | 0 | — | Footer body, fine-print |
+| caption | Inter | 12 | 500 | 1.40 | 0 | — | Badge labels, captions |
+| caption-uppercase | Inter | 11 | 500 | 1.40 | 0.8px | — | Section labels, eyebrows (lighter tracking than typical) |
+| mono-data | JetBrains Mono | 13 | 400 | 1.50 | 0 | — | Model names, provider names, token counts in data tables |
+| mono-price | JetBrains Mono | 14 | 500 | 1.40 | 0 | — | Per-token prices in tables — always tabular alignment |
+| mono-stat | JetBrains Mono | 36 | 500 | 1.0 | -0.8px | — | Stat callouts ("16M+", "99.9%") — mono, not display |
+| code-md | JetBrains Mono | 13 | 400 | 1.55 | 0 | — | Code blocks (Python, curl, Node) |
+| code-sm | JetBrains Mono | 12 | 400 | 1.50 | 0 | — | Inline code |
+| button | Inter | 13 | 600 | 1.00 | 0 | — | Standard button labels (smaller than typical 14px) |
+| nav-link | Inter | 13 | 500 | 1.40 | 0 | — | Top-nav menu items |
+
+### Principles
+- **Display weight stays at 500** — the anti-bold-headline signature. OpenRouter never bolds display type; the lightness IS the voice.
+- **Negative tracking is essential** for display sizes. -3px at 80px gives the headline its compressed, engineered feel.
+- **Mono carries the data, not just the code.** Model names ("anthropic/claude-3.5-sonnet"), provider names, prices ($0.003/1k tokens), token counts — all rendered in mono. This is the brand's most distinctive move.
+- **Stat callouts use mono, not display.** When OpenRouter wants to show a big number (16M+ tokens routed), it uses 36px mono at weight 500 — not a 56px display headline. The mono signals "this is a measured value, not marketing prose."
+- **Body and labels stay at 400 / 500 / 600.** Inter at 600 is the heaviest body weight.
+- **Caption-uppercase tracking is lighter (0.8px) than typical (1.5px).** OpenRouter's eyebrows feel more pragmatic and less ceremonial.
+- **No italics.** The system uses weight, size, and color (gray vs white) for emphasis.
+- **No serif anywhere.** The brand commits to sans + mono only.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**`button-primary`** — The signature white CTA. Background `#ffffff`, text `#000000`, Inter 13px / 600, padding 10px × 18px, height 36px, radius 8px. Hover: `#d4d4d4` over 100ms; no transform, no shadow change. The white-on-black contrast is the brand voltage.
+
+**`button-secondary`** — Dark surface card button. Background `#111111`, text `#ffffff`, 1px solid `#2a2a2a` border, same padding/radius as primary. Hover: surface lightens to `#1a1a1a`.
+
+**`button-ghost`** — Transparent text-only CTA. No background, text `#ffffff`, padding 8px × 14px. Used for tertiary actions and inline link CTAs.
+
+**`button-text-link`** — Pure text link in `#9ca3af` (gray, NOT colored) with underline. Hover lightens to `#ffffff`. This grayscale link is part of the brand's pragmatism.
+
+### Cards
+
+**`card-feature`** — Standard dark feature card. Background `#111111`, text `#ffffff`, radius 10px, padding 24px, 1px solid `#1f1f1f` border.
+
+**`card-model-row`** — Single row in the dense provider/model data table. Transparent background (or `#080808` for alternating stripe), padding 12px × 16px, 1px bottom border `#1a1a1a`. Cells use `mono-data` typography for model names and `mono-price` for prices.
+
+**`card-provider-tile`** — Small provider logo + name tile in the provider grid. Background `#111111`, radius 8px, padding 16px, 1px solid `#1f1f1f` border. Each tile shows a 24×24px provider logo + provider name in Inter 14px / 600.
+
+**`card-code-window`** — Dark card showing a code snippet (Python, curl, Node). Background `#0a0a0a`, code in JetBrains Mono with grayscale syntax highlighting (keywords stay white, strings gray, comments gray-faint), radius 10px, padding 20px, 1px solid `#1f1f1f` border. Top-left language tab indicator.
+
+**`card-pricing-tier`** — Standard pricing tier card. Background `#111111`, radius 10px, padding 24px, 1px solid `#1f1f1f` border.
+
+**`card-pricing-tier-featured`** — Featured tier marked by 1px solid `#ededed` (off-white) hairline border, replacing the standard `#1f1f1f`. The white border alone is the featured signal — no blue/green/yellow accent.
+
+### Badges & Pills
+
+**`badge-pill`** — Small dark pill label. Background `#111111`, text `#ffffff`, caption typography, radius 9999, padding 3px × 10px, 1px solid `#2a2a2a` border.
+
+**`badge-mono`** — Inline mono label for version numbers, latency tags, status pills. Background `#0a0a0a`, text `#9ca3af`, JetBrains Mono 12px, radius 6px, padding 2px × 6px. Used everywhere a small data-flavored tag appears.
+
+### Inputs / Forms
+
+**`text-input`** — Dark text input. Background `#0a0a0a`, text `#ffffff`, radius 8px, padding 8px × 12px, height 36px, 1px solid `#2a2a2a` border.
+
+**`text-input-focused`** — 2px solid `#ffffff` ring with 2px offset. The white focus ring on black canvas is unmistakable.
+
+### Navigation
+
+**`top-nav`** — Black nav bar pinned to top, 56px tall (slightly tighter than the typical 64px). Background `#000000`, 1px solid `#1f1f1f` bottom border. Logo + "OpenRouter" wordmark left, primary horizontal menu (Models, Providers, Activity, Docs, Pricing) center, right-side: "Sign in" + white `button-primary` ("Sign up").
+
+### Decorative
+
+**`data-table`** — The brand's primary marketing chrome. Pure black `#000000` canvas, 12px × 12px header padding (top row), 10px × 12px row padding for data rows. Alternating row stripes: odd rows transparent, even rows `#080808`. Cells use `mono-data` typography. Column headers use Inter 12px / 600 / uppercase / `#9ca3af`. Tables list provider × model × context-length × input-price × output-price. This is what visitors come to see.
+
+**`stat-callout`** — Inline mono stat numbers ("16M+ tokens routed", "300+ models", "50+ providers"). `mono-stat` typography (36px / 500 / -0.8px). Text white. Used flat, never inside a card with a colored background.
+
+**`cta-band`** — Pre-footer "Start routing" CTA band. `#111111` surface, 10px radius, 48px padding, 1px solid `#1f1f1f` border. Carries h2 in display-md white, body subhead in `#d4d4d4`, primary white CTA + secondary dark-surface CTA.
+
+**`provider-logo-grid`** — Grid of provider logos (Anthropic, OpenAI, Mistral, Together, Groq, Fireworks, etc.) in a 6×N tile grid. Each tile is a `card-provider-tile`. The grid IS the marketing — "we route to all of these."
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `xxs:4 · xs:8 · sm:12 · md:16 · lg:24 · xl:32 · xxl:48 · section:80`. Note: section padding is **80px** (tighter than the typical 96px) to match the data-dense aesthetic. Card padding is 24px for feature cards, 20px for code-window cards, 16px for provider tiles, 12px for table rows.
+
+### Grid & Container
+Max content width is 1280px centered. Editorial body uses a 12-column grid; hero often uses an 8/4 split (h1 + subhead left, mono stat callouts or code-window right). Feature card grids run 3-up at desktop. Provider grids run 6-up at desktop, 4-up at tablet, 2-up at mobile. Pricing grids run 3-up at desktop. Data tables span the full content width.
+
+### Whitespace Philosophy
+OpenRouter uses dense, terminal-tight whitespace appropriate for a data-router brand. The page never breathes the way a consumer site breathes; it breathes the way Hacker News breathes — text and data first, decoration last. Section breaks are 80px (vs the 96px standard); table rows are 36px tall (mono cells dense but legible).
+
+### Section Cadence
+Every page follows the same rhythm: black hero band → mono stat callout strip → provider-logo grid → data table (the marketing centerpiece) → code-window card → feature card grid → pricing → pre-footer CTA band → black footer. The data table appears once or twice per page, always given full width.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Reserved |
+| XS | xs | 4px | Badge accents, inline status dots |
+| Standard | sm | 6px | Mono badge labels, inline status pills |
+| Comfortable | md | 8px | Standard CTA buttons, text inputs |
+| Large | lg | 10px | Content cards, code-window cards, pricing tiers (slightly tighter than 12px standard) |
+| Featured | xl | 12px | Hero shells (rare) |
+| Pill | pill | 9999px | Badges, avatars |
+
+Note: OpenRouter uses **10px** for cards rather than the more common 12px — slightly tighter, signaling "this is a tool, not a marketing card."
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Body sections, top nav, hero text, data table cells |
+| 1 — Soft hairline | 1px `#1f1f1f` border | Standard feature cards, pricing tiers, code-window cards |
+| 2 — Surface | `#111111` background, no shadow | Feature cards, provider tiles |
+| 3 — Elevated | `#1a1a1a` background | Nested cards, hover states |
+| 4 — Featured | 1px solid `#ededed` border | Featured pricing tier — white hairline as the featured signal |
+| 5 — Modal | `#111111` + 1px `#2a2a2a` + backdrop dim 80% | Dialogs, dropdowns |
+
+### Shadow Philosophy
+OpenRouter uses **no drop shadows**. Depth comes entirely from contrast between the pure-black canvas and `#111111` surface card — a barely-lighter-than-canvas tone that produces a subtle "terminal panel" effect. The white-on-black contrast does most of the elevation work; tonal stacking does the rest. The system runs flat on purpose: shadows would soften the brand's pragmatic-developer-tool register.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for transitions.
+- **Emphasized ease**: `cubic-bezier(0.2, 0, 0, 1)` — used on CTA hover and modal entrances.
+
+### Duration Buckets
+- **Fast (100ms)**: Color and opacity transitions — slightly faster than typical 120ms, befitting the snappy terminal feel.
+- **Standard (180ms)**: Card hover state changes, dropdown opens.
+- **Slow (280ms)**: Modal entrance, page-section reveals on scroll.
+
+### Per-Component Micro-States
+- **Button hover**: White CTAs darken from `#ffffff` → `#d4d4d4` over 100ms; no transform.
+- **Card hover**: Feature cards do not lift. Border color shifts from `#1f1f1f` → `#2a2a2a` over 180ms.
+- **Data-table row hover**: Background lightens to `#0a0a0a` (transparent rows) or `#0f0f0f` (striped rows) over 100ms; no other change.
+- **Code-window hover**: No state change.
+- **Link hover**: Color shifts from `#9ca3af` → `#ffffff` over 100ms; underline stays 1px.
+- **Input focus**: 2px white ring expands from 0 → 2px over 100ms.
+- **Provider-tile hover**: Border lightens; provider logo opacity goes from 0.85 → 1.0 over 100ms.
+
+### Page Transitions
+OpenRouter uses standard browser navigation. Section-on-scroll reveals are a 280ms fade-in (no Y offset — pure opacity) gated by `IntersectionObserver`. The data table fades in row-by-row with 20ms stagger between rows when scrolled into view — the only "playful" moment in the system, suggesting "data populating in real time."
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, all transitions reduced to opacity-only at 80ms. Data-table row stagger is skipped — all rows render simultaneously.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#ffffff` on `#000000` = **21.0** — AAA at every size (maximum possible contrast).
+- **On-brand on brand**: `#000000` on `#ffffff` = **21.0** — AAA. The white CTA + black text is the strongest contrast pair.
+- **Body on bg**: `#d4d4d4` on `#000000` = **13.6** — AAA at every size.
+- **Muted on bg**: `#9ca3af` on `#000000` = **6.4** — AA at body sizes; do not use below 13px.
+- **Faint on bg**: `#6b7280` on `#000000` = **3.7** — barely AA at large only; use sparingly.
+
+### Focus Indicators
+Every focusable element shows a 2px solid `#ffffff` ring with 2px offset. The white ring is unmistakable on the pure-black canvas.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; icon-only carry `aria-label`.
+- **Code blocks**: `<pre><code>` with `aria-label="curl example"`.
+- **Data tables**: Use `<table>` with proper `<thead>` / `<tbody>` / `<th scope="col">` markup. Each row's model name has `<th scope="row">` so screen readers can navigate rows by header cell.
+- **Provider grid**: Each tile is a link with `aria-label="View Anthropic models"`.
+- **Navigation**: `<nav aria-label="Primary">`.
+- **Dialog**: `role="dialog"` + `aria-labelledby`.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link to `<main>`. Data tables are fully keyboard navigable (arrow keys move between cells when table receives focus). Modal traps focus + Escape closes.
+
+### Screen Reader Hints
+Mono data values use the actual value text (e.g. "$0.003 per 1k tokens") so screen readers read it correctly. Status dots use `aria-label="Online"` or `aria-label="Down"`. Provider logos are accompanied by alt text.
+
+### Reduced Motion Handling
+Honored — data-table row stagger animation is skipped; all rows render at once. All transforms removed.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Hamburger nav; hero h1 80→36px; data tables horizontal-scroll; provider grid 2-up; pricing 1-up |
+| Tablet | 640–1024px | Top nav tightens; feature cards 2-up; provider grid 4-up; hero h1 56px |
+| Desktop | 1024–1440px | Full top-nav; 3-up feature cards; 6-up provider grid; data tables full-width; hero h1 80px |
+| Wide | > 1440px | Same as desktop with more breathing room; max content 1280px |
+
+### Touch Targets
+- Primary CTA at minimum 36 × 36px (slightly tighter than 40 — the brand's compressed button height).
+- Data-table row cells expand vertical hit area to 36px on touch devices.
+- Text input height is 36px.
+
+### Collapsing Strategy
+Top nav collapses to hamburger at < 768px. Hero 8/4 grid collapses to single-column on mobile with mono stat callouts stacking below the headline. Data tables retain font-size; horizontal scroll on mobile rather than wrapping. Provider grid reduces to 2 columns on mobile.
+
+### Image Behavior
+Code blocks stay at fixed font-size; horizontal scroll on mobile rather than wrapping. Provider logos retain native widths (typically 24×24px); grid wraps. Data tables use `overflow-x: auto` — never wrap mono cells.
+
+## 11. Content & Voice
+
+### Tone
+**Pragmatic, data-first, slightly sardonic.** OpenRouter writes for developers who want a billing dashboard for LLM access — not a "platform," not an "ecosystem," just a router with transparent pricing. The tone is closer to Hacker News than to corporate-AI. There's no "imagine if…" framing, no "AI for everyone" language. Headlines state the function ("One API for all LLMs"); body copy lists the providers, models, and prices.
+
+### Microcopy Patterns
+- **CTA verbs**: "Sign up", "View models", "Read docs", "Start routing", "Get API key". Never "Get started today" or "Sign up free" — both read as too consumer.
+- **Section labels**: Uppercase eyebrow (11px / 500 / 0.8px tracking — lighter than typical) — "MODELS", "PROVIDERS", "ACTIVITY", "PRICING".
+- **Stat numbers**: Mono, with units — "16M+ tokens routed/min", "300+ models", "50+ providers", "$0.003 / 1k tokens".
+- **Feature copy**: Function-first ("One API for 300+ models", "Zero markup pricing", "Automatic fallbacks").
+- **Model identifiers**: Always rendered in mono — `anthropic/claude-3.5-sonnet`, `meta/llama-3.1-405b`, `openai/gpt-4o`. Slash-separated provider/model is the brand's data model rendered in copy.
+
+### Empty States
+Activity dashboard empty state: "No requests yet — generate your first API key to start routing" with white text-link to API keys. Single line, no whimsy.
+
+### Error Messages
+**Pattern**: `<icon-x in #ef4444> + "What went wrong" + "What to try next"`. Example: "Provider rate-limited — request automatically routed to anthropic/claude-3.5-sonnet via fallback." The error itself reinforces the brand value (automatic fallbacks).
+
+### Success Confirmations
+Single-line toast in `text` colour over `surface` background with a `success` (#22c55e) accent dot at the left (NOT a stripe — just a small dot to maintain the data-table aesthetic). Auto-dismiss after 4s. "API key generated — copy now (will not be shown again)." Pragmatic, never apologetic, never celebratory.
+
+## 12. Dark Mode & Theming
+
+OpenRouter is **dark-only**. The marketing site has no light mode toggle and ships no light variant of any component. The pure-black canvas is the brand's natural state — switching to white would erase the terminal-billing-dashboard aesthetic that makes the grayscale + mono-data-table approach work.
+
+The in-product dashboard (out of scope for this spec) supports a light theme for users who request it; tokens map to a `#ffffff` canvas, `#000000` text, same grayscale ramp. But the marketing surface stays pure black.
+
+## 13. Lineage & Influences
+
+OpenRouter's marketing aesthetic descends from the **terminal-and-tabular** lineage — Hacker News, Bloomberg Terminal, Linux htop, the aesthetics of pragmatic developer tools that show data first and decoration last. The pure-black canvas with mono-rendered data tables IS the brand: a router for LLM access has to communicate "we list every provider, every model, every price, every token count" — and the brand commits to making that data the marketing chrome.
+
+Where competitors chase a single brand voltage color (Stripe purple, Anthropic cream, LangChain blue), OpenRouter strips color out entirely. The white-on-black contrast is the brand voltage; the mono data tables are the brand illustration. The custom display sans (rendered as light weight 500 at huge sizes) signals "this is a brand, not just a CLI"; the mono tables signal "this is a tool that takes data seriously."
+
+The **mono-as-data-not-just-code** move is OpenRouter's most distinctive contribution. Most dev brands use mono only for code blocks; OpenRouter uses mono for model names, provider names, prices, latencies — anywhere data appears. This treats the data catalog as the brand's primary content. The light-display-headline at huge size is borrowed from Stripe's Söhne 300 discipline, but pushed lighter (500 at 80px vs 300 at 56px); the dark-monolithic page rhythm tracks Linear and Vercel-dark; the data-table-as-marketing-chrome borrows from Bloomberg and Hacker News.
+
+- **Hacker News** — Pragmatic-developer aesthetic; text density over decoration; mono everywhere data appears. https://news.ycombinator.com
+- **Bloomberg Terminal** — Dense tabular data as primary chrome; the "data IS the UI" tradition. https://www.bloomberg.com/professional/products/bloomberg-terminal/
+- **Linear** — Dark-monolithic marketing rhythm with restrained chromatic discipline. https://linear.app
+- **Stripe** — Light-weight display headline at huge size. https://stripe.com
+- **JetBrains Mono / IBM Plex Mono** — The credibility-via-mono-typeface signal. https://www.jetbrains.com/lp/mono/
+
+## 14. Do's and Don'ts
+
+### Do
+- Anchor every page on the pure-black `#000000` canvas. The white-on-black IS the brand.
+- Use mono everywhere data appears — model names, provider names, prices, token counts, latencies. Mono is not just for code.
+- Use the custom display sans at light weight 500 at huge sizes (80px / 56px / 40px) with `-3px` to `-1.5px` tracking — anti-bold-headline is the brand's typographic signature.
+- Show the actual provider × model × price catalog as a dense data table. The data IS the marketing.
+- Use white CTAs (`#ffffff` background, `#000000` text) as the primary button — never colored.
+- Use grayscale links (`#9ca3af` with underline, hover-lightens to `#ffffff`) — NOT colored links.
+- Anchor every band with 80px vertical rhythm (tighter than the 96px standard).
+- Use mono stat callouts (36px / 500 mono) instead of display headlines for measured values like "16M+ tokens routed".
+- Use 1px white hairline border to mark the featured pricing tier.
+- Run alternating `#080808` row stripes inside data tables for legibility.
+
+### Don't
+- Don't introduce a brand voltage color. OpenRouter is grayscale-only; status dots are the only colored elements and they're 6×6px.
+- Don't bold display weight beyond 500. Light is the brand's signature; bolding makes it generic.
+- Don't replace data tables with abstract illustrations. The catalog IS the marketing.
+- Don't use rounded-pill buttons for primary CTAs. Standard radius is 8px.
+- Don't add drop shadows. The system is utterly flat.
+- Don't use cyan/blue/purple links. Links are gray with underline; hover-lighten to white.
+- Don't switch to a light marketing band mid-page. OpenRouter is pure black, top to bottom.
+- Don't use 12px card radius. The brand uses 10px — slightly tighter, signaling "tool not marketing card."
+- Don't use consumer-marketing CTA verbs like "Get started today!" or "Try free!" — use "Sign up", "View models", "Get API key".
+- Don't render model identifiers in sans. `anthropic/claude-3.5-sonnet` is always mono.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:     #000000 (pure black)
+Surface:         #111111 (engineering panel)
+Surface Soft:    #0a0a0a (very-soft band)
+Surface Row Alt: #080808 (alternating data table stripe)
+Border:          #1f1f1f (1px hairline)
+Border Strong:   #2a2a2a (input/dropdown divider)
+Text:            #ffffff (pure white headlines)
+Text Body:       #d4d4d4 (running-text, slightly off-white)
+Text Muted:      #9ca3af (captions, table secondary cells, gray links)
+Brand:           #ffffff (the brand IS white)
+On-Brand:        #000000 (black text on white CTAs)
+```
+
+### Example Component Prompts
+
+1. "Create an OpenRouter hero band on `#000000` canvas, with a custom display sans 80px / 500 / -3px tracking white headline ('One API for 300+ LLMs'), 17px / 400 `#d4d4d4` subhead ('Routes to every major model with transparent pricing — zero markup'), and a white `#ffffff` primary CTA with black text ('Sign up') paired with a dark-surface secondary CTA with white border ('View models'). Right side: a 36px / 500 mono stat ('16M+ tokens routed/min') with '/min' subtitle in `#9ca3af`."
+
+2. "Design a dense data table on `#000000` canvas. 5 columns: Model (mono), Provider (Inter sans), Context (mono right-aligned), Input price (mono right-aligned), Output price (mono right-aligned). Header row uses Inter 12px / 600 / uppercase / `#9ca3af`. Body rows use 13px JetBrains Mono `#ededed` for model name, 13px Inter `#d4d4d4` for provider, with 1px `#1a1a1a` row dividers and `#080808` alternating row stripes."
+
+3. "Build a 6-column provider-logo tile grid on `#000000`. Each tile: `#111111` background, 8px radius, 16px padding, 1px solid `#1f1f1f` border, 24×24px provider logo + provider name in Inter 14px / 600 / white. Tiles for Anthropic, OpenAI, Mistral, Together, Groq, Fireworks."
+
+4. "Compose a mono-stat callout strip with three numbers ('16M+', '300+', '50+') in JetBrains Mono 36px / 500 / -0.8px / white, each with a `#9ca3af` 11px / 500 uppercase 0.8px-tracking label below ('TOKENS ROUTED/MIN', 'MODELS', 'PROVIDERS'). 80px vertical padding."
+
+5. "Create a code-window card showing a curl request snippet. `#0a0a0a` background, 10px radius, 20px padding, 1px solid `#1f1f1f` border. Code in JetBrains Mono 13px with grayscale syntax highlighting (keywords stay white, strings `#9ca3af`, comments `#6b7280`). Top-left tab indicator 'curl'."
+
+6. "Compose a pricing grid with 3 tiers on `#000000`. Two standard `#111111` cards (10px radius, 24px padding, 1px solid `#1f1f1f` border) and one featured tier marked with a 1px solid `#ededed` (off-white) border replacing the standard `#1f1f1f`. The white border is the only featured signal — no color, no badge."
+
+### Iteration Guide
+1. Start with the pure-black canvas. Every page lives on `#000000` — the contrast is the brand voltage.
+2. Use mono wherever data appears. If you find yourself rendering a model name, provider, price, or latency in sans, switch to JetBrains Mono.
+3. Keep display headlines at the custom display sans, weight 500, with aggressive negative tracking. If you bold the headline, you've broken the brand.
+4. Use white CTAs (white background, black text). Never colored.
+5. When in doubt about emphasis, scale the type up before adding weight. Light + huge is the brand's signature.
+6. Cards are containers, not "elevations." No shadows. Use 1px `#1f1f1f` borders.
+7. Data tables are the brand's primary marketing chrome — give them full width, alternating row stripes, mono cells.
+8. Stat callouts use mono (36px / 500), not display sans. The mono signals "measured value."
+9. Links are gray-with-underline. Colored links break the brand's grayscale discipline.

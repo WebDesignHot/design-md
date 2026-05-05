@@ -1,0 +1,762 @@
+---
+name: Hugging Face
+tagline: AI community canvas — deep blue-black ground, Source Sans Pro headlines, pill auth + 8px tile cards.
+author: webdesignhot
+source_url: https://huggingface.co
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [ai, dev-tools]
+tags: [dark, sans, dense, playful, warm]
+preview_swatch: ['#0b0f19', '#ffd21e', '#f7f8f8']
+related: [anthropic, github, vercel]
+description: 'Hugging Face dresses a serious ML hub in a community wrapper — a near-navy `#0b0f19` canvas, Source Sans Pro headlines that read like documentation, and emoji-yellow accents that punch through the gravity. Cards are 8px-radius tiles; primary auth is a pill. The site is deliberately dense, more terminal than splash page. Where Anthropic dresses AI in editorial silence and OpenAI dresses it in research-paper restraint, Hugging Face dresses it in the visual culture of an open-source forum: dense lists of model cards, tag chips, leaderboards, and the huggy-face emoji `#ffd21e` punctuating organisation badges.'
+
+colors:
+  # Primary
+  bg: '#0b0f19'                  # page canvas, Tailwind slate-950 family
+  bg-alt: '#0d1424'              # slightly cooler near-navy alternate
+  surface: '#191919'             # primary CTA fill (sign-up pill) and inset
+  surface-soft: 'rgba(255, 255, 255, 0.04)' # 4% white card surface
+  surface-strong: 'rgba(255, 255, 255, 0.08)' # 8% white emphasised
+  surface-paper: '#ffffff'       # white surface for support/docs pages
+  surface-cream: '#f7f8f8'       # near-white alternate paper surface
+  text: '#e5e7eb'                # body copy on dark
+  text-strong: '#ffffff'         # pure white for primary headlines
+  text-medium: '#d1d5db'         # secondary text
+  text-soft: '#9ca3af'           # captions, metadata, dataset tags
+  text-muted: '#6b7280'          # quiet labels
+  text-faint: '#4b5563'          # disabled
+  text-paper: '#0b0f19'          # navy on light paper
+  text-paper-soft: '#4b5563'     # muted on light paper
+  # Brand
+  brand: '#ffd21e'               # emoji-yellow accent for badges and the logo
+  brand-deep: '#fbbf24'          # pressed yellow
+  brand-warm: '#ff9d0b'          # warmer secondary for org avatars and warnings
+  brand-soft: 'rgba(255, 210, 30, 0.15)' # yellow wash for hover/selected
+  on-brand: '#0b0f19'            # navy label on yellow
+  # Secondary accents
+  accent-green: '#1a8917'        # Spaces "Start reading" green CTA in featured contexts
+  accent-pink: '#ff8fbd'         # rare pink accent for Spaces tags
+  accent-blue: '#3b82f6'         # secondary blue for links / info
+  # Interactive
+  link: '#3b82f6'                # links use blue on dark
+  link-hover: '#60a5fa'          # lighter blue on hover
+  link-paper: '#1a56db'          # links on light paper pages
+  selected-bg: 'rgba(255, 210, 30, 0.12)' # yellow wash selected state
+  disabled: '#4b5563'
+  # Borders
+  border: 'rgba(255, 255, 255, 0.10)'    # 10% white translucent hairline
+  border-strong: 'rgba(255, 255, 255, 0.18)' # emphasised rule
+  border-subtle: 'rgba(255, 255, 255, 0.05)' # quietest division
+  border-paper: '#e5e7eb'                 # 1px gray-200 on light surfaces
+  border-yellow: 'rgba(255, 210, 30, 0.40)' # brand-tinted ring
+  # Semantic
+  success-bg: 'rgba(26, 137, 23, 0.15)'
+  success-text: '#86efac'
+  warning-bg: 'rgba(255, 157, 11, 0.15)'
+  warning-text: '#fcd34d'
+  danger-bg: 'rgba(239, 68, 68, 0.15)'
+  danger-text: '#fca5a5'
+  info-bg: 'rgba(59, 130, 246, 0.15)'
+  info-text: '#93c5fd'
+
+typography:
+  display:
+    family: '"Source Sans Pro", "Source Sans 3", ui-sans-serif, system-ui, sans-serif'
+    weights: [400, 600, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Source Sans Pro", "Source Sans 3", ui-sans-serif, system-ui, sans-serif'
+    weights: [400, 600]
+    opentype-features: ['kern']
+  mono:
+    family: 'ui-monospace, "SF Mono", Menlo, Consolas, monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-hero:    { size: 72, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, opentype: 'kern liga' }
+    display:         { size: 60, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, note: 'observed homepage hero — README-heading register' }
+    h1:              { size: 48, weight: 700, lineHeight: 1.05, tracking: '0',       family: display }
+    h2:              { size: 36, weight: 700, lineHeight: 1.1,  tracking: '0',       family: display }
+    h3:              { size: 24, weight: 600, lineHeight: 1.2,  tracking: '0',       family: display }
+    h4:              { size: 20, weight: 600, lineHeight: 1.3,  tracking: '0',       family: display }
+    h5:              { size: 16, weight: 600, lineHeight: 1.4,  tracking: '0',       family: display }
+    eyebrow:         { size: 11, weight: 500, lineHeight: 1.4,  tracking: '0.06em',  family: mono, transform: uppercase }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5,  family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,  family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.4,  family: mono, opentype: 'tnum' }
+    label:           { size: 11, weight: 500, lineHeight: 1.3,  family: mono }
+    code:            { size: 13, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero' }
+    code-micro:      { size: 11, weight: 400, lineHeight: 1.4,  family: mono }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  xl: 12
+  card: 8
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 48, 64, 96]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  site-gutter: 'clamp(16px, 4vw, 24px)'
+  header-height: 64
+  grid-columns: 12
+  card-grid: '3-4 column tile grids; 16px gutters; ~16px internal card padding'
+  section-rhythm: '48-80px'
+
+components:
+  button-primary:
+    background: '#191919'
+    text: '#ffffff'
+    padding: '10px 24px'
+    radius: 9999
+    border: 'none'
+    font: 'Source Sans Pro 600 / 14px'
+    hover-bg: '#000000'
+    active-bg: '#000000'
+    use: 'Primary CTA — near-black pill, "Sign up" or "Get started".'
+  button-secondary:
+    background: 'transparent'
+    text: '#e5e7eb'
+    padding: '10px 24px'
+    radius: 9999
+    border: '1px solid rgba(255, 255, 255, 0.18)'
+    font: 'Source Sans Pro 600 / 14px'
+    hover-bg: 'rgba(255, 255, 255, 0.05)'
+    use: 'Outline pill twin — "Log in".'
+  button-yellow:
+    background: '#ffd21e'
+    text: '#0b0f19'
+    padding: '10px 20px'
+    radius: 9999
+    font: 'Source Sans Pro 600 / 14px'
+    hover-bg: '#fbbf24'
+    use: 'Brand-yellow pill for special CTAs (Pro upgrade, Spaces "Start").'
+  button-ghost:
+    background: 'transparent'
+    text: '#e5e7eb'
+    padding: '6px 12px'
+    radius: 6
+    font: 'Source Sans Pro 600 / 14px'
+    hover-bg: 'rgba(255, 255, 255, 0.05)'
+    use: 'Quiet utility — nav links, footer.'
+  button-green-spaces:
+    background: '#1a8917'
+    text: '#ffffff'
+    padding: '8px 16px'
+    radius: 8
+    font: 'Source Sans Pro 600 / 14px'
+    hover-bg: '#15721c'
+    use: 'Spaces "Start reading"-style green CTA in featured contexts.'
+  card:
+    background: 'rgba(255, 255, 255, 0.04)'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 8
+    padding: '16px'
+    use: 'Model / Dataset / Spaces tile — 4% white surface, 10% white hairline.'
+  card-model-tile:
+    background: 'rgba(255, 255, 255, 0.04)'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 8
+    padding: '16px'
+    use: 'Hugging Face''s signature primitive — org avatar + model name + chip rail.'
+  input:
+    background: 'rgba(255, 255, 255, 0.06)'
+    border: '1px solid rgba(255, 255, 255, 0.18)'
+    radius: 6
+    padding: '8px 12px'
+    font: 'Source Sans Pro 400 / 14px'
+    placeholder-color: '#9ca3af'
+    focus-ring: '0 0 0 2px #ffd21e'
+    use: 'Form fields, search.'
+  badge-tag:
+    background: 'rgba(255, 255, 255, 0.06)'
+    text: '#9ca3af'
+    padding: '2px 10px'
+    radius: 9999
+    font: 'Source Sans Pro 500 / 12px'
+    use: 'Task / dataset tag — neutral pill.'
+  badge-yellow:
+    background: 'rgba(255, 210, 30, 0.15)'
+    text: '#ffd21e'
+    padding: '2px 10px'
+    radius: 9999
+    font: 'Source Sans Pro 500 / 12px'
+    use: 'Org-pro / featured pill — yellow wash for emphasis.'
+  badge-org-avatar:
+    background: '#ff9d0b'
+    text: '#0b0f19'
+    padding: '0'
+    radius: 6
+    size: '24px square'
+    font: 'Source Sans Pro 700 / 12px'
+    use: 'Org avatar with first letter — orange-yellow square fill.'
+  nav-link:
+    background: 'transparent'
+    text: '#e5e7eb'
+    padding: '6px 12px'
+    font: 'Source Sans Pro 600 / 14px'
+    hover-text: '#ffffff'
+    active-bg: 'rgba(255, 255, 255, 0.05)'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-snap: 'cubic-bezier(0.5, 0, 0.5, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  duration-page: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions become opacity-only, durations halve.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.10) 0 1px 2px'
+  standard: 'rgba(0, 0, 0, 0.15) 0 4px 4px'
+  elevated: 'rgba(0, 0, 0, 0.20) 0 8px 16px -4px'
+  modal: 'rgba(0, 0, 0, 0.30) 0 16px 32px -8px'
+  ring: '0 0 0 2px #ffd21e'
+  ring-soft: '0 0 0 3px rgba(255, 210, 30, 0.30)'
+  note: 'Shadows reserved for dropdowns, modals, and rare hover lifts. Cards rest flat with translucent borders.'
+
+accessibility:
+  contrast-text-on-bg: 13.5        # #e5e7eb on #0b0f19 — AAA at all sizes
+  contrast-text-strong-on-bg: 18.0 # #ffffff on #0b0f19 — AAA
+  contrast-text-soft-on-bg: 5.6    # #9ca3af on #0b0f19 — AA at body sizes
+  contrast-text-on-yellow: 13.0    # #0b0f19 on #ffd21e — AAA
+  contrast-link-on-bg: 5.0         # #3b82f6 on #0b0f19 — AA at body sizes
+  contrast-text-paper: 17.5        # #0b0f19 on #ffffff — AAA
+  focus-ring: '2px solid #ffd21e with 2px offset on dark; 2px solid #1a56db on light'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order: skip-link → masthead → search → main grid → footer; Cmd+K opens command palette.'
+  prose-line-length: 'capped at 720px on text pages; tile-grid pages bleed to 1280.'
+
+dark-mode: optional                 # Hugging Face is dark-first; light mode exists for docs and support pages.
+colors-dark: same as colors          # primary surface is already dark.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Hugging Face's homepage is closer to a forum than a sales page. The canvas is a deep `#0b0f19` near-navy — almost the Tailwind `slate-950` default — and the dominant content shape is a tile grid of model cards, dataset cards, and Spaces. There is no oversized hero. The H1 reads "The AI community building the future." in 60–72px Source Sans Pro at weight 700 — bold but unstyled, more like a section heading than a brand statement. The page reads as a busy ML hub, not a marketing funnel.
+
+What makes it distinctive vs. nearby alternatives: while Anthropic dresses AI in editorial silence and OpenAI dresses it in research-paper restraint, Hugging Face dresses it in the **ergonomics of an open-source forum**. Dense card grids, tag chips, organisation badges, leaderboards, and the huggy-face emoji `#ffd21e` punctuating everything — the visual culture is GitHub-meets-arXiv-meets-academic-Discord, not Stripe-meets-Linear. The yellow `#ffd21e` is the brand's only chromatic punctuation, and it lands on tag pills, organisation badges, and the logo wordmark — never on full backgrounds.
+
+The atmospheric vocabulary: **community-forum, slate-950-canvas, README-heading, emoji-yellow-punctuation, dense-tile-grid, GitHub-meets-arXiv, browseable-not-pitched, Tailwind-default, model-card-as-primitive, single-family-Source-Sans, README-rendered-in-browser.** Cards are 8px-radius tiles with translucent 4% white surfaces; the primary CTA is a `9999` pill in near-black. Section rhythm sits at 48–80px between major content rails — tighter than any other AI brand on this list, because density is the point.
+
+The typographic system is a single-family discipline: **Source Sans Pro** (Adobe's open-source sans, the font of the original GitHub README) carries display, body, chips, and footer copy. Weight 700 for headlines without any custom-weight tuning. There's no serif/sans split, no display/text axis — just one family for everything. The H1 is a clean 60px / 60px (zero line-height padding above the cap-height) — closer to a page heading than a marketing display. The single-family choice signals "the site is documentation, not a brochure."
+
+**Key Characteristics**
+- Deep navy `#0b0f19` canvas — Tailwind `slate-950` family
+- Source Sans Pro single-family across display, body, captions
+- Hero at 60–72px / 700 — README-heading register, not marketing display
+- Emoji-yellow `#ffd21e` accent — punctuation only, never as fill background
+- Card tiles at 8px radius with translucent 4% white surface
+- Primary auth as a near-black `9999` pill — community-forum register
+- Dense 3–4 column tile grids on a 1280px container
+- Section rhythm 48–80px — tighter than any other AI brand
+- Translucent borders (10% white) — chrome refuses solid hairlines
+- Mono labels for code-context metadata; no custom mono licensed
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** `#0b0f19` — page canvas; Tailwind `slate-950` family with a faint blue tint.
+- **text** `#e5e7eb` — body copy on dark; `gray-200` for slightly cool reading temperature.
+- **bg-alt** `#0d1424` — slightly cooler near-navy alternate for footer / inset zones.
+- **brand-cta-bg** `#191919` — primary CTA fill (near-black, not navy).
+
+### Brand & Accent
+
+- **brand** `#ffd21e` — huggy-face emoji yellow. Used on tag pills, org badges, the logo wordmark — never as a full background.
+- **brand-deep** `#fbbf24` — pressed yellow.
+- **brand-warm** `#ff9d0b` — warmer secondary for organisation avatars and warning chips.
+- **brand-soft** `rgba(255, 210, 30, 0.15)` — yellow wash for selected and hovered states.
+- **accent-green** `#1a8917` — Spaces "Start reading"-style green CTA in featured contexts.
+- **accent-pink** `#ff8fbd` — rare pink accent for Spaces category tags.
+- **accent-blue** `#3b82f6` — secondary blue used for inline links and info.
+
+### Interactive
+
+- **link** `#3b82f6` — links use blue on dark for AA contrast.
+- **link-hover** `#60a5fa` — lighter blue on hover.
+- **link-paper** `#1a56db` — links on light docs pages.
+- **selected-bg** `rgba(255, 210, 30, 0.12)` — yellow wash for selected nav state.
+- **disabled** `#4b5563` — gray-600 disabled chrome.
+
+### Neutral Scale
+
+- **white** `#ffffff` — primary headlines, button labels.
+- **gray-200** `#e5e7eb` — body copy on dark.
+- **gray-300** `#d1d5db` — secondary text.
+- **gray-400** `#9ca3af` — captions, metadata, dataset tags.
+- **gray-500** `#6b7280` — quiet labels.
+- **gray-600** `#4b5563` — disabled, footer microcopy.
+- **slate-950** `#0b0f19` — page canvas.
+- **near-black** `#191919` — primary CTA fill.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#0b0f19` deep navy.
+- **surface-1 (panel)** — `#0d1424` near-navy alt.
+- **surface-2 (card)** — `rgba(255, 255, 255, 0.04)` — *4% white translucent fill*.
+- **surface-3 (raised)** — `rgba(255, 255, 255, 0.08)` — 8% white emphasised.
+- **surface-paper** — `#ffffff` (docs / support pages).
+- **surface-cream** — `#f7f8f8` (alternate light paper).
+- **border** `rgba(255, 255, 255, 0.10)` — 10% translucent hairline (default rule on dark).
+- **border-strong** `rgba(255, 255, 255, 0.18)` — emphasised on inputs.
+- **border-subtle** `rgba(255, 255, 255, 0.05)` — quietest division.
+- **border-paper** `#e5e7eb` — 1px gray-200 on light surfaces.
+
+### Shadow Colors
+
+Hugging Face's shadows are **rare and reserved for dropdowns / modals**. There are no drop shadows on cards — translucent 10% white borders carry separation on the deep canvas. Tonal stacking does the elevation work: `bg #0b0f19` → `surface-soft rgba(255, 255, 255, 0.04)` for tiles → `1px rgba(255, 255, 255, 0.10)` borders for separation. The only drop shadow on the page is on dropdowns (`drop-shadow-lg` at `0 4px 4px rgba(0, 0, 0, 0.15)`).
+
+### Semantic
+
+- **success** — bg `rgba(26, 137, 23, 0.15)`, text `#86efac`. Borrows the Spaces green.
+- **warning** — bg `rgba(255, 157, 11, 0.15)`, text `#fcd34d`. Borrows brand-warm.
+- **danger** — bg `rgba(239, 68, 68, 0.15)`, text `#fca5a5`.
+- **info** — bg `rgba(59, 130, 246, 0.15)`, text `#93c5fd`.
+
+Note: Hugging Face uses Tailwind 300-step text colours for semantic on dark to maintain AA contrast. Saturated 500s would compete with the yellow brand accent.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: `"Source Sans Pro", "Source Sans 3", ui-sans-serif, system-ui, sans-serif` — Adobe's open-source sans that predates Inter by half a decade. The font of the original GitHub README, of academic preprints rendered in browsers, of the early-2010s open-source web.
+- **Mono**: `ui-monospace, "SF Mono", Menlo, Consolas, monospace` — system mono fallback; *no custom mono licensed*. Code samples render in whatever the user's OS provides — a credibility move opposite to Linear's licensed Berkeley Mono: "we don't pay to dress code because the code itself is the credential."
+- **OpenType features**: `kern` and `liga` enabled across display/body. `tnum` (tabular figures) and `zero` (slashed zero) enabled in mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | Source Sans Pro | 72px | 700 | 1.0 | 0 | kern liga | Reserved for major launches |
+| Display | Source Sans Pro | 60px | 700 | 1.0 | 0 | kern liga | Homepage hero — *README-heading register* |
+| H1 | Source Sans Pro | 48px | 700 | 1.05 | 0 | liga | Page title |
+| H2 | Source Sans Pro | 36px | 700 | 1.1 | 0 | liga | Major section |
+| H3 | Source Sans Pro | 24px | 600 | 1.2 | 0 | — | Sub-section |
+| H4 | Source Sans Pro | 20px | 600 | 1.3 | 0 | — | Card heading |
+| H5 | Source Sans Pro | 16px | 600 | 1.4 | 0 | — | Inline emphasis |
+| Eyebrow | system mono | 11px | 500 | 1.4 | 0.06em | uppercase | Section pre-label |
+| Body Large | Source Sans Pro | 18px | 400 | 1.55 | 0 | — | Lede paragraph |
+| Body | Source Sans Pro | 16px | 400 | 1.5 | 0 | — | Default body |
+| Body Small | Source Sans Pro | 14px | 400 | 1.5 | 0 | — | Compact UI body |
+| Caption | Source Sans Pro | 13px | 400 | 1.4 | 0 | — | Image captions, helper |
+| Caption Tabular | system mono | 13px | 500 | 1.4 | 0 | tnum | Stats — model size, downloads |
+| Label | system mono | 11px | 500 | 1.3 | 0 | — | UI labels, code metadata |
+| Code | system mono | 13px | 400 | 1.55 | 0 | tnum zero | Inline + block |
+| Code Micro | system mono | 11px | 400 | 1.4 | 0 | — | Footnote, version |
+
+### Principles
+
+- **Single-family discipline.** Source Sans Pro carries display, body, captions, footer — everything except code/labels (system mono).
+- **No negative tracking.** Source Sans Pro at 60–72px sits at `tracking: 0` — the README-heading register requires the type to read as documentation, not as a designed display.
+- **Hero weight 700 without custom-weight tuning.** No variable axis, no custom cut — just Source Sans Pro at 700.
+- **No custom mono licensed.** Code samples render in whatever the OS provides (`SF Mono` on macOS, `Consolas` on Windows). The credibility statement: "the code is the credential, not the typeface."
+- **Body 16/24.** Standard ML-engineer body — not editorial 18/28, not dashboard 13/20.
+- **Eyebrow uses mono + 0.06em + uppercase.** The mono signals "code surface" even when the type is a section label.
+- **No italics in chrome.** Italics belong to citations in research papers and arXiv links.
+- **OpenType: standard `kern` and `liga` only** — no stylistic alternates, no `ss01`. The brand stays close to Source Sans Pro's defaults.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Near-Black Pill)**
+- Background: `#191919`. Text: `#ffffff`, Source Sans Pro 600 / 14px.
+- Padding: `10px 24px`. Radius: `9999` (full pill). No border.
+- Hover: bg → `#000000` over 100ms.
+- Active: bg → `#000000`.
+- Focus: 2px yellow ring with 2px offset.
+- Use: Primary CTA — *Sign up, Get started.*
+
+**Secondary (Outline Pill)**
+- Background: transparent. Text: `#e5e7eb`, Source Sans Pro 600 / 14px.
+- Border: `1px solid rgba(255, 255, 255, 0.18)`. Radius: `9999`.
+- Hover: bg → `rgba(255, 255, 255, 0.05)`.
+- Use: Twin to primary — *Log in.*
+
+**Yellow Pill (Brand Accent)**
+- Background: `#ffd21e`. Text: `#0b0f19`, Source Sans Pro 600 / 14px.
+- Padding: `10px 20px`. Radius: `9999`.
+- Hover: bg → `#fbbf24`.
+- Use: Brand-yellow pill for special CTAs (Pro upgrade, "Featured" Spaces).
+
+**Ghost (Quiet)**
+- Background: transparent. Text: `#e5e7eb`, Source Sans Pro 600 / 14px.
+- Padding: `6px 12px`. Radius: `6px`.
+- Hover: bg → `rgba(255, 255, 255, 0.05)`.
+- Use: Nav links, footer.
+
+**Spaces Green CTA**
+- Background: `#1a8917`. Text: `#ffffff`, Source Sans Pro 600 / 14px.
+- Padding: `8px 16px`. Radius: `8px`.
+- Hover: bg → `#15721c`.
+- Use: Spaces "Start reading"-style green CTA in featured contexts.
+
+### Cards
+
+**Model / Dataset / Spaces Tile** (the signature primitive)
+- Background: `rgba(255, 255, 255, 0.04)`. Border: `1px solid rgba(255, 255, 255, 0.10)`. Radius: `8px`. Padding: `16px`.
+- Contents: org avatar (24px square in `#ff9d0b`) + model/dataset name in sentence case + single-line description + horizontal rail of metadata chips (downloads, likes, license, task tag).
+- Hover: border → `rgba(255, 255, 255, 0.18)`; bg → `rgba(255, 255, 255, 0.06)`.
+- Use: Hugging Face's defining content primitive.
+
+**Inset Card**
+- Background: `rgba(255, 255, 255, 0.06)`. Border: none. Radius: `8px`. Padding: `12px`.
+- Use: Quiet info zone, dataset metadata block.
+
+### Badges, Tags, Pills
+
+**Tag Chip** — bg `rgba(255, 255, 255, 0.06)`, text `#9ca3af`, Source Sans Pro 500 / 12px, padding `2px 10px`, radius `9999`. Hover deepens bg to `rgba(255, 255, 255, 0.10)`.
+
+**Yellow Pill** — bg `rgba(255, 210, 30, 0.15)`, text `#ffd21e`, radius `9999`. "Pro", "Featured", "New" badges.
+
+**Organisation Avatar** — `#ff9d0b` orange-yellow square fill at 24×24, 6px radius, white first-letter glyph in Source Sans Pro 700 / 12px. The signature org-identity primitive.
+
+**Eyebrow Label** — no chrome, just type. system mono 500 / 11px / uppercase / 0.06em tracking, colour `#9ca3af`.
+
+### Inputs / Forms
+
+**Text Input**
+- Background: `rgba(255, 255, 255, 0.06)`. Border: `1px solid rgba(255, 255, 255, 0.18)`. Radius: `6px`. Padding: `8px 12px`.
+- Font: Source Sans Pro 400 / 14px. Placeholder: `#9ca3af`.
+- Focus: `0 0 0 2px #ffd21e` ring, border → `#ffd21e`.
+- Error: border → `#ef4444`, helper red below.
+
+**Search Input** — same as text input with a 14px icon-left search glyph in `#9ca3af`. The masthead search is wide (`flex-grow`) and triggers Cmd+K command palette.
+
+### Navigation
+
+- Header height `64px`. Background `#0b0f19` (sticky on scroll, no border, slight 4% white inset shadow on scroll).
+- Logo: Hugging Face wordmark with the yellow `#ffd21e` huggy-face emoji glyph as the dot of the `i`.
+- Nav links: Source Sans Pro 600 / 14px, colour `#e5e7eb`, padding `6px 12px`. Hover: text → `#ffffff`.
+- Right-side: search input (flex-grow), ghost "Log in", primary near-black pill "Sign up".
+- Mobile (<640px): hamburger collapses to a full-screen sheet; links stack at 18px / 600.
+
+### Optional Components
+
+**Dropdown Menu** — bg `#191919`, border `rgba(255, 255, 255, 0.10)`, radius `8px`, shadow `0 4px 4px rgba(0, 0, 0, 0.15)` (`drop-shadow-lg`). Items: Source Sans Pro 400 / 14px, hover bg `rgba(255, 255, 255, 0.05)`.
+
+**Tooltip** — bg `#191919`, text `#e5e7eb`, radius `4px`, padding `6px 10px`, font `12px / 500`.
+
+**Toast** — bg `#191919`, border `rgba(255, 255, 255, 0.10)`, radius `8px`, padding `12px 16px`.
+
+**Modal** — bg `#191919`, radius `12px`, shadow `rgba(0, 0, 0, 0.30) 0 16px 32px -8px`, max-width `560px`. Backdrop: 60% black.
+
+**Code Block** — bg `rgba(255, 255, 255, 0.04)`, border `1px solid rgba(255, 255, 255, 0.10)`, radius `8px`, padding `12px 16px`. system mono 13px / 400 with `tnum zero` features.
+
+**Spaces Card** — same shape as model card but with a screenshot preview inset; `accent-green #1a8917` "Start reading" pill replaces the chip rail.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96 — *no 128/160 step* (Hugging Face is dense; the upper bound is 96).
+- **Density observation**: Hugging Face is *dense by design*. Tile grids pack at 16px gutters; chrome at 12–16px; section rhythm at 48–80px. The ML engineer audience wants browseability over breathing room.
+
+### Grid & Container
+
+- **Page max width**: `1280px`.
+- **Site gutter**: `clamp(16px, 4vw, 24px)`.
+- **Grid**: 12 columns with 16px gutters.
+- **Tile grids**: 3-up at desktop, 4-up at wide; collapse to 2 at tablet, 1 at mobile.
+- **Hero treatment**: 60–72px H1 sits flush left in a normal section, no centred whitespace. The first model tile starts ~80px below it.
+
+### Whitespace Philosophy
+
+The whitespace philosophy is **forum-density**. Tile grids, multi-column rails, and chip rows are the homepage shape; oversized hero whitespace breaks the community-forum tone. Section gutters at 48–80px (tighter than every other brand on this list); intra-section at 12–24px.
+
+### Section Cadence
+
+- Header (deep navy) → Hero with H1 (deep navy, no banner, just the heading) → Featured Spaces grid (deep navy, 3-up cards) → Featured Models grid (deep navy, 3–4-up cards) → Featured Datasets grid → Footer (deep navy, slightly cooler).
+- The whole site stays in dark territory; cream/white surfaces appear only on docs at `huggingface.co/docs`.
+- Section breaks: 48–80px vertical space + occasional H2 heading at 36px / 700 to label the rail.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Decorative dividers (rare) |
+| Standard (sm) | 4px | Compact chips, mono badges |
+| Comfortable (md) | 6px | Org avatars, ghost button |
+| Relaxed (lg) | 8px | Cards, tiles, inputs, dropdowns — *Hugging Face's dominant shape* |
+| Featured (xl) | 12px | Modals |
+| Pill | 9999px | Auth buttons, status chips, tag pills |
+
+Hugging Face's signature radius is **8px on cards** and **`9999` pill on auth buttons and status chips**. Two scales: `8px` for cards and tiles, full pill for buttons and chips. There are no sharp `0px` corners except on the page bezel itself.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default page surface, hero, body sections |
+| 1 | Translucent surface — `rgba(255, 255, 255, 0.04)` | Cards, tiles |
+| 2 | None — translucent border carries separation | (Cards do NOT lift) |
+| 3 | `rgba(0, 0, 0, 0.15) 0 4px 4px` | Dropdowns — `drop-shadow-lg` |
+| 4 | `rgba(0, 0, 0, 0.20) 0 8px 16px -4px` | Popovers |
+| 5 | `rgba(0, 0, 0, 0.30) 0 16px 32px -8px` | Modals |
+
+### Shadow Philosophy
+
+Hugging Face's depth is **tonal stacking with translucent surfaces**. Cards rest flat with 4% white surface fill and 10% white borders — no shadows. The discipline reinforces the community-forum register: the page reads like GitHub or arXiv, not like a polished SaaS product. The only drop shadows appear on dropdowns and modals, where elevation is required for click-outside affordance.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **`ease-standard`**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material default.
+- **`ease-emphasized`**: `cubic-bezier(0.2, 0, 0, 1)` — modal enter, command palette reveal.
+- **`ease-snap`**: `cubic-bezier(0.5, 0, 0.5, 1)` — symmetrical snap; tab transitions.
+
+### Duration Buckets
+
+- **Fast (100ms)** — colour transitions, focus rings, link hovers.
+- **Standard (180ms)** — button hover, card hover, dropdown reveal.
+- **Slow (280ms)** — modal enter/exit, command palette open.
+- **Page (360ms)** — route transitions.
+
+### Per-Component Micro-States
+
+- **Button hover (primary)**: bg `#191919` → `#000000` over 100ms.
+- **Card hover (model tile)**: border `rgba(255, 255, 255, 0.10)` → `rgba(255, 255, 255, 0.18)` + bg `rgba(255, 255, 255, 0.04)` → `rgba(255, 255, 255, 0.06)` over 180ms; no shadow change.
+- **Link hover**: colour `#3b82f6` → `#60a5fa` over 100ms; underline thickens.
+- **Input focus**: 2px yellow ring fades in over 100ms; border → yellow.
+- **Tag chip hover**: bg deepens from 6% to 10% white.
+- **Org avatar hover**: subtle scale 1.05× over 180ms.
+- **Like button toggle**: empty → yellow filled with 1.2× scale "boop" over 200ms.
+
+### Page Transitions
+
+Tile grids fade in via `IntersectionObserver` at 80% viewport, 280ms duration with subtle 8px translate-up. Between routes, masthead persists; body cross-fades over 360ms.
+
+### Reduced Motion
+
+Honoured globally. All transforms collapse to opacity; durations halve; tile-scale hover disabled.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#e5e7eb` text on `#0b0f19` bg**: 13.5:1 — AAA at all sizes.
+- **`#ffffff` text on `#0b0f19` bg**: 18.0:1 — AAA.
+- **`#9ca3af` text on `#0b0f19` bg**: 5.6:1 — AA at body sizes.
+- **`#6b7280` text on `#0b0f19` bg**: 3.6:1 — fails AA body; only used at large or 14px+ bold sizes.
+- **`#0b0f19` text on `#ffd21e` brand**: 13.0:1 — AAA.
+- **`#3b82f6` text on `#0b0f19` bg**: 5.0:1 — AA at body sizes (links).
+- **`#0b0f19` text on `#ffffff` paper**: 17.5:1 — AAA (light docs pages).
+
+### Focus Indicators
+
+- Default ring on dark: `0 0 0 2px #ffd21e` with 2px offset — *yellow ring against dark canvas is highly visible*.
+- Soft ring: `0 0 0 3px rgba(255, 210, 30, 0.30)`.
+- Ring on light pages: `0 0 0 2px #1a56db`.
+- All interactive surfaces show a visible focus state.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link and Cmd+K shortcut announcement.
+- **Search**: `<form role="search" aria-label="Search Hugging Face">` with `aria-label` on input.
+- **Tile grid**: `role="list"` parent, `role="listitem"` per card.
+- **Org avatar**: `aria-label="<org name>"`.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap.
+- **Live regions**: `aria-live="polite"` for "Liked" or "Followed" toasts.
+- **Command palette**: `role="combobox" aria-expanded aria-controls`, results list with `role="listbox"`.
+
+### Keyboard Navigation
+
+- Tab order: skip-link → masthead → search → main grid → footer.
+- `Cmd/Ctrl+K` opens the command palette / search focus.
+- `Esc` closes dropdowns, modals, command palette.
+- Arrow keys navigate within tile grids; Enter activates a tile.
+
+### Screen Reader Hints
+
+- Org avatars: `aria-label` matches the org name.
+- Tag chips: `aria-label="Tag: <name>"`.
+- Decorative emoji glyphs: `aria-hidden="true"` if purely decorative; semantic if they carry meaning (e.g., `🤗` in the wordmark has `aria-label="Hugging Face"`).
+- Icon-only buttons: `aria-label`.
+
+### Reduced Motion
+
+Honoured globally. All transforms collapse to opacity; durations halve.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single-column; hamburger nav |
+| Tablet | 640–1024px | 2-column tile grid |
+| Desktop | 1024–1280px | 3-column tile grid; full nav |
+| Wide | 1280–1536px | 4-column tile grid |
+| Ultra | > 1536px | Page locks at 1280px; gutters expand |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px.
+- Buttons: 40px minimum height on mobile (10px vertical padding).
+- Tile cards: full card is the tap target.
+- Tag chips: 28px effective tap area (extended around the visual chip).
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 60–72px holds at desktop; 48px at tablet; 36px at mobile.
+- **Tile grid**: 4-up → 3-up → 2-up → 1-up across sizes.
+- **Section spacing**: 80px → 64px → 48px across sizes.
+
+### Image Behavior
+
+- Org avatars at 1x/2x via `srcset`.
+- Spaces preview screenshots use `srcset`, lazy-load below fold.
+- `aspect-ratio` locked on cards.
+
+### Container Queries
+
+Used inside model tiles to switch chip-rail layout (single line vs. wrap) when card width crosses 280px.
+
+## 11. Content & Voice
+
+### Tone
+
+**Community-friendly, technically credible, deliberately casual.** Hugging Face writes like a maintainer in a GitHub README — full sentences, occasional emoji, no marketing exuberance, no exclamation marks. Headlines describe the community ("The AI community building the future"); subheads explain. The voice positions Hugging Face as an open-source hub, not a SaaS product.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Sign up," "Log in," "Follow," "Star," "Download," "Run." Sometimes uses lowercase ("get started") for casual register.
+- **Error messages**: "Couldn't load. Try refreshing or [contact support]."
+- **Success confirmations**: "Followed." "Saved to your collections." Brief.
+- **Loading states**: "Loading…" with subtle spinner.
+- **Empty states**: model-card-style cards with `--no models match--` text in `#9ca3af`.
+
+### Empty States
+
+- *"No models match your filters. Clear filters to see all."*
+- *"You haven't liked any models yet. Browse popular models →"*
+- Never uses "Oops!" — empty is normal in a forum.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Sign up," "Get started"
+- Secondary: "Browse models," "Read the docs," "View pricing"
+- Footer: "GitHub," "Discord," "Forum," "Status"
+
+The voice is **community-maintainer warmth** — closer to the README of a popular open-source project than to a SaaS register. Casual emoji punctuation (`🤗`, `🔥`, `⭐`) is welcome on org pages and Spaces but absent on the marketing chrome.
+
+## 12. Dark Mode & Theming
+
+**Dark-first; light mode exists for docs at `huggingface.co/docs` and a subset of legal/support pages.** The marketing surface, the model hub, the dataset hub, and Spaces all render on the deep-navy `#0b0f19` canvas — that's the brand's defining choice.
+
+The light-mode tokens (used at `/docs`, `/learn`, `/legal`) flip the palette: `bg: #ffffff`, `surface: #f7f8f8`, `text: #0b0f19`, `text-muted: #4b5563`, `border: #e5e7eb`. The yellow stays at `#ffd21e` (slightly darker `#fbbf24` for AA contrast on white). Links use `#1a56db` blue. The light variant is utilitarian and matches the hub's GitHub-README register.
+
+The single rule: **the model hub stays dark**. Browseability is the brand asset; the deep-navy canvas with yellow punctuation is the visual signature.
+
+## 13. Lineage & Influences
+
+Where GitHub frames code with chrome and Anthropic frames AI with silence, Hugging Face frames ML with the **visual culture of an open-source forum**: dense lists of model cards, tag chips, leaderboards, and emoji. The deep `#0b0f19` ground borrows from the same Tailwind `slate-950` family that powers Vercel and the rest of dev-tooling Twitter, but it lands warmer here because of the yellow `#ffd21e` huggy-face emoji color that punctuates everything — badges, the logo, the Spaces accents.
+
+Source Sans Pro is a deliberate non-choice: it's not "Linear's custom Inter" or "Anthropic's Tiempos" — it's the font the original GitHub README rendered in. The site is dense by design (4-column tile grids on a 1280px container, no oversized hero type, near-zero whitespace between sections) because the audience — ML engineers — wants the same browsing experience as GitHub or arXiv, not a SaaS landing page.
+
+What it inherits: GitHub's forum-style dense card grids, tag chips, and community-first ergonomics; Tailwind's `slate-950` ground + neutral text ramp; arXiv's researcher-density aesthetic with multi-column lists over hero marketing; Adobe's open-source Source Sans Pro typography. What it borrows from contemporaries: Vercel's deep-navy chrome; Linear's pill-button auth pattern. What it rejects: oversized marketing heroes, custom display typefaces, gradient accents, the "AI-startup-with-purple-mesh" register.
+
+**Named influences:**
+
+- **GitHub** — forum-style dense card grids; tag chips; community-first ergonomics. *https://github.com*
+- **Tailwind slate palette** — deep slate-950 ground + neutral text ramp comes straight from framework defaults. *https://tailwindcss.com*
+- **arXiv** — researcher-density aesthetic; multi-column lists over hero marketing. *https://arxiv.org*
+- **Source Sans Pro (Adobe, open-source)** — the README-heading typographic register. *https://fonts.google.com/specimen/Source+Sans+Pro*
+- **Discord** — community emoji punctuation conventions; casual register.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** treat yellow `#ffd21e` as a punctuation accent on badges, org avatars, and the logo — never as a full background.
+- **Do** lean into density. Tile grids, multi-column rails, and chip rows are the homepage shape; oversized hero whitespace breaks the community-forum tone.
+- **Do** keep one font family across display, body, and labels. Hugging Face uses Source Sans Pro everywhere — no display/text split.
+- **Do** keep card radius at 8px and auth-button radius at `9999` pill — the two scales are the brand.
+- **Do** use translucent 4% white surfaces for cards with 10% white borders — never solid hex fills.
+- **Do** drop section rhythm to 48–80px — tighter than any other AI brand because density is the point.
+- **Do** lead with the H1 flush left in a normal section — no centred hero, no banner.
+- **Do** use orange-yellow `#ff9d0b` for organisation avatars and warning chips.
+- **Do** ship docs/light pages in white `#ffffff` with `border #e5e7eb` — the GitHub-README register.
+- **Do** show the search input in the masthead — community search is core.
+
+### Don't
+
+- **Don't** invent a custom mono. Falling back to system mono is itself the brand statement: the code carries weight, the typography doesn't need to.
+- **Don't** add drop shadows to cards. Translucent borders and a 4% white surface fill carry separation on the deep canvas.
+- **Don't** soften the H1 with a marketing tagline gradient. Hugging Face's H1 is plain Source Sans 700 — closer to a README heading than a brand banner.
+- **Don't** use the yellow as a full background; it's punctuation only.
+- **Don't** push display headlines above 72px — the brand stays in README-heading territory.
+- **Don't** introduce a custom display typeface — Source Sans Pro everywhere is the discipline.
+- **Don't** render the marketing/model-hub surface in light mode — the deep navy is the brand.
+- **Don't** apologise in microcopy — empty states are normal.
+- **Don't** add tracking adjustments to the headline; `tracking: 0` is the README register.
+- **Don't** use editorial whitespace at 96–160px section rhythm — the density is the brand.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #0b0f19
+bg-alt: #0d1424
+surface: rgba(255, 255, 255, 0.04)
+text: #e5e7eb
+text-strong: #ffffff
+text-soft: #9ca3af
+brand: #ffd21e
+brand-warm: #ff9d0b
+accent-green: #1a8917
+border: rgba(255, 255, 255, 0.10)
+border-strong: rgba(255, 255, 255, 0.18)
+```
+
+### Example Component Prompts
+
+1. **"Create a Hugging Face hero — `#0b0f19` near-navy canvas, 60px H1 'The AI community building the future.' in Source Sans Pro weight **700** with `tracking: 0` and white text. Below the H1, a 16px Source Sans Pro body in `#e5e7eb` describing the platform. No centred whitespace, no banner — the H1 sits flush left in a normal section. First model tile starts ~80px below."**
+
+2. **"Design a Hugging Face model tile — `rgba(255, 255, 255, 0.04)` 4% white surface, `1px solid rgba(255, 255, 255, 0.10)` border, **8px radius**, 16px padding. Inside: 24px square org avatar with orange-yellow `#ff9d0b` fill and white first-letter glyph, model name in Source Sans Pro 600 / 16px in white, single-line description in `#9ca3af` 14px, horizontal chip rail with downloads/likes/license/task tags as 12px Source Sans Pro 500 pills with `rgba(255, 255, 255, 0.06)` fill. Hover deepens border to 18% white."**
+
+3. **"Build a Hugging Face primary auth pill — `#191919` near-black background, white text in Source Sans Pro 600 / 14px, **9999 radius** (full pill), 10px×24px padding, no border, no shadow. Hover deepens to absolute `#000000`. Focus picks up `0 0 0 2px #ffd21e` ring with 2px offset."**
+
+4. **"Compose a Hugging Face nav — 64px header, `#0b0f19` background, wordmark with yellow `#ffd21e` huggy-face emoji glyph as the dot of the `i`. Wide search input (flex-grow) in the centre with `rgba(255, 255, 255, 0.06)` fill and `1px rgba(255, 255, 255, 0.18)` border at 6px radius. Right-side: ghost 'Log in' + primary near-black 'Sign up' pill button."**
+
+5. **"Render a Hugging Face yellow status pill — `rgba(255, 210, 30, 0.15)` yellow wash background, `#ffd21e` yellow text, **9999 radius**, 2px×10px padding, Source Sans Pro 500 / 12px. Use for 'Pro', 'Featured', 'New' badges on org pages and Spaces."**
+
+6. **"Create a Hugging Face Spaces card — same shape as model tile (`rgba(255, 255, 255, 0.04)` fill, 8px radius, 1px 10% white border) but with a screenshot preview inset, then below: title in Source Sans Pro 600, description in 14px `#9ca3af`, and a `#1a8917` Spaces-green 'Start reading' pill button at 8px radius."**
+
+### Iteration Guide
+
+1. **Drop the canvas to `#0b0f19`.** If the bg is pure black or generic dark grey, the brand is missing the slate-950 register.
+2. **Use Source Sans Pro everywhere.** Replace any custom display face with Source Sans Pro at weight 700 — the README-heading register is the brand.
+3. **Set hero tracking to 0.** No negative tracking; the H1 reads as documentation.
+4. **Pack tiles densely.** If the page has wide gutters and centred whitespace, you've over-styled. Tile grids at 16px gutters are the homepage shape.
+5. **Pill the auth.** Primary "Sign up" should be a `9999` radius pill, not a square button.
+6. **Drop card radius to 8px.** If cards are at 12–20px, you're in Suno/Krea territory; Hugging Face's cards are tight 8px tiles.
+7. **Use translucent surfaces.** Replace solid card fills with `rgba(255, 255, 255, 0.04)` and 10% white borders.
+8. **Punctuate with yellow.** Add `#ffd21e` as accent on org avatars, the logo, and "featured" badges — never as a full background.
+9. **Calm the verbs.** Replace "Sign up free!" with "Sign up"; replace "Get started today!" with "Get started." Casual, not breathless.

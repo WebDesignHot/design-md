@@ -1,0 +1,725 @@
+---
+name: Headspace
+tagline: Signature `#ffac1d` orange + custom round display + meditation-friendly playful warmth.
+author: webdesignhot
+source_url: https://www.headspace.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media, saas]
+tags: [light, wellness, sans, playful, illustrative, warm, meditation, friendly]
+preview_swatch: ['#fdf2e1', '#ffac1d', '#1c1c1d']
+related: [calm, peloton, spotify]
+description: 'Headspace''s storefront is the canonical meditation-friendly playful canvas — a warm cream ground (`#fdf2e1`) anchored on near-black ink (`#1c1c1d`) and accented by the unmistakable **Headspace orange** (`#ffac1d`) that carries the wordmark, every primary CTA, the smiley-face mascot, and key illustrative warmth. Type runs **HS Apercu** (custom Apercu cut, soft round terminals) at modest 500–700 weights for hero display (40–64px), with body in Apercu 16/400 at generous 1.6 leading. Cards round at 16–24px (significantly more relaxed than fitness peers — Headspace consciously rejects utility-grade chrome for soft consumer-app warmth), CTAs are 9999px full pills, and the entire surface is engineered to evoke calm playfulness — pastel character illustrations, breathing-circle animations, lo-fi pastel palette, and a wordmark whose smiley-face dot reads as the brand''s permanent emotional signature.'
+
+colors:
+  bg: '#fdf2e1'                  # warm cream canvas — Headspace's signature ground
+  bg-strong: '#fae5c4'            # alt warm-cream band
+  bg-soft: '#fff8ec'              # softest cream variant
+  bg-page-light: '#ffffff'        # pure white inside cards
+  surface: '#ffffff'              # card surface — pure white on cream
+  surface-cream: '#fff8ec'        # alt card surface
+  surface-elev: '#ffffff'
+  surface-soft: '#fae5c4'         # disabled fields
+  brand: '#ffac1d'                # Headspace orange — wordmark, primary CTA, smiley
+  brand-hover: '#e89610'          # deeper orange on hover
+  brand-active: '#c87d04'         # pressed state
+  brand-pale: '#ffe5b3'           # disabled CTA tint, soft accent surface
+  brand-deep: '#7d4f00'           # editorial deep orange
+  brand-soft: '#fff3dc'           # cream-orange surface for soft tints
+  text: '#1c1c1d'                 # primary near-black ink — slightly warm
+  text-strong: '#0e0e10'          # heading punch
+  text-muted: '#535253'           # secondary metadata
+  text-soft: '#7e7d7e'             # caption text
+  text-faint: '#9c9b9c'            # disabled, microcopy
+  text-on-brand: '#1c1c1d'         # ink on orange CTA — high contrast
+  text-on-dark: '#fdf2e1'          # cream on dark band
+  link: '#1c1c1d'                  # default ink link
+  link-hover: '#ffac1d'           # link hover flips to brand orange
+  border: '#1c1c1d'                # default 1px hairline — full-strength ink
+  border-soft: '#e8d9bb'           # cream-toned subtle dividers
+  border-strong: '#c8b88f'         # heavier cream border
+  border-input: '#1c1c1d'          # form input outline (full-strength ink)
+  pastel-coral: '#ff8a78'          # character illustration coral
+  pastel-mint: '#9cd6b0'           # character illustration mint
+  pastel-lavender: '#c5b4e3'       # character illustration lavender
+  pastel-sky: '#a8d4f0'            # character illustration sky-blue
+  pastel-rose: '#fcc9d8'           # pinkish-rose illustration accent
+  pastel-yolk: '#ffd66e'           # yolk-yellow accent
+  bg-dark: '#1c1c1d'               # dark feature band (rare, used on "Headspace Health" pages)
+  scrim: 'rgba(28,28,29,0.5)'      # modal backdrop — ink-tinted
+  shadow-card: 'rgba(28,28,29,0.08)'
+  shadow-elev: 'rgba(28,28,29,0.16)'
+  success: '#42a55a'               # forest green for success states (off-palette to read clear)
+  warning: '#e89610'               # warning matches brand-hover orange
+  danger: '#d63a3a'                # validation error red
+  info: '#3a82d6'                  # info blue (rare)
+
+typography:
+  display:
+    family: '"HS Apercu", "Apercu", "HS Slant", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01']
+  body:
+    family: '"HS Apercu", "Apercu", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: '"HS Apercu", "Inter", monospace'
+    weights: [500]
+  scale:
+    hero-display:    { size: 64, weight: 700, lineHeight: 1.04, tracking: '-1.5px',   family: display, opentype: ['ss01'] }
+    hero-display-md: { size: 48, weight: 700, lineHeight: 1.08, tracking: '-1px',     family: display, opentype: ['ss01'] }
+    page-title:      { size: 36, weight: 700, lineHeight: 1.1,  tracking: '-0.75px',  family: display, opentype: ['ss01'] }
+    section-head:    { size: 28, weight: 600, lineHeight: 1.2,  tracking: '-0.5px',   family: display, opentype: ['ss01'] }
+    sub-section:     { size: 22, weight: 600, lineHeight: 1.25, tracking: '-0.25px',  family: display }
+    feature-title:   { size: 18, weight: 600, lineHeight: 1.33, tracking: '-0.1px',   family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 500, lineHeight: 1.5,  tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    micro:           { size: 11, weight: 600, lineHeight: 1.27, tracking: '0.04em',   family: body, transform: 'uppercase' }
+    pull-quote:      { size: 28, weight: 600, lineHeight: 1.3,  tracking: '-0.5px',   family: display }
+    button-cta:      { size: 16, weight: 600, lineHeight: 1.0,  tracking: '0',        family: body }
+    button-cta-large: { size: 18, weight: 600, lineHeight: 1.0,  tracking: '0',        family: body }
+    nav-link:        { size: 15, weight: 500, lineHeight: 1.0,  tracking: '0',        family: body }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.0,  tracking: '0.08em',   family: body, transform: 'uppercase' }
+    price-display:   { size: 32, weight: 700, lineHeight: 1.0,  tracking: '-0.5px',   family: body }
+    duration-tag:    { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',        family: body }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 16        # cards default — significantly softer than fitness peers
+  lg: 24        # featured cards, modals
+  xl: 32        # hero promo bands
+  pill: 9999    # CTAs, search bar, character avatars
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1200
+  prose-width: 680
+  header-height: 80
+  masthead-height: 80
+
+components:
+  button-cta:
+    bg: '#ffac1d'
+    color: '#1c1c1d'
+    radius: 9999
+    padding: '14px 28px'
+    height: 48
+    font: button-cta
+    use: 'Try For Free, Start Now, Sign Up — every primary action.'
+  button-cta-hover:
+    bg: '#e89610'
+    color: '#1c1c1d'
+    use: 'Hover state — deeper orange.'
+  button-cta-large:
+    bg: '#ffac1d'
+    color: '#1c1c1d'
+    radius: 9999
+    padding: '18px 32px'
+    height: 56
+    font: button-cta-large
+    use: 'Hero CTAs — slightly larger 56px height for prominence.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#1c1c1d'
+    border: '2px solid #1c1c1d'
+    radius: 9999
+    padding: '12px 26px'
+    height: 48
+    use: 'Learn More, See Plans — outline ink-on-cream.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#1c1c1d'
+    use: 'Inline ink links — underline on hover, sometimes flips to orange.'
+  meditation-card:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 24
+    padding: '0'
+    border: 'none'
+    use: 'Meditation/sleep tile — full-bleed pastel illustration top, title + duration + new-tag in 16px padding bottom.'
+  feature-card:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 24
+    padding: '32px'
+    use: 'Editorial feature tile with character illustration, 22/600 title, 16/400 body, optional inline link.'
+  pricing-card:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 24
+    padding: '32px'
+    border: '1px solid #e8d9bb'
+    use: 'Membership pricing card — tier name in 22/600, price in 32/700, feature list, orange pill CTA.'
+  hero-illustration-band:
+    bg: '#fdf2e1'
+    color: '#1c1c1d'
+    use: 'Full-bleed cream band with hand-illustrated character (Headspace mascot family — Goofy, Carl, etc), hero headline 64/700 ink, orange pill CTA pinned beneath.'
+  breathing-circle:
+    bg: '#ffac1d'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Animated circle that breathes (scale 1.0 → 1.2 → 1.0 over 4s) — used on meditation features, "Take a deep breath" callouts.'
+  search-bar:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 9999
+    height: 48
+    border: '1px solid #1c1c1d'
+    focus-ring: '2px solid #ffac1d'
+    use: 'Pill search bar — full ink hairline, brand-orange focus.'
+  text-input:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 16
+    height: 48
+    padding: '14px 16px'
+    border: '1px solid #1c1c1d'
+    focus: '2px solid #ffac1d'
+    use: 'Form input — soft 16px radius, full-ink hairline, brand-orange focus ring.'
+  duration-tag:
+    bg: 'transparent'
+    color: '#1c1c1d'
+    radius: 9999
+    padding: '4px 10px'
+    border: '1px solid #1c1c1d'
+    use: 'Meditation duration pill — "10 MIN", "5 MIN" in 13/500.'
+  new-tag:
+    bg: '#ffac1d'
+    color: '#1c1c1d'
+    radius: 9999
+    padding: '2px 8px'
+    use: 'NEW pill on freshly-released meditations — orange fill, ink text.'
+  testimonial-card:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 24
+    padding: '32px'
+    use: 'Pull-quote testimonial card with character illustration, oversized 28/600 quote, name + role beneath.'
+  modal:
+    bg: '#ffffff'
+    color: '#1c1c1d'
+    radius: 24
+    padding: '40px'
+    use: 'Centered dialog over 50% ink scrim.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)'   # springy bounce for character interactions
+  ease-breathing: 'cubic-bezier(0.65, 0, 0.35, 1)'   # breath-rhythm calm curve
+  duration-fast: 200
+  duration-standard: 320
+  duration-slow: 480
+  duration-breathing: 4000
+  cta-press: 'CTA bg deepens ffac1d → c87d04 + scale 1.0 → 0.97 over 200ms on :active'
+  card-hover: 'card translateY(-4px) + shadow softens over 320ms'
+  illustration-hover: 'character illustration scales 1.0 → 1.05 + bounces with ease-bounce over 480ms on hover'
+  breathing-circle: 'orange circle scales 1.0 → 1.2 → 1.0 with ease-breathing over 4000ms infinite — paused on prefers-reduced-motion'
+  page-fade: 'cream ground fades opacity 0 → 1 + body translateY(8px → 0) over 320ms on page enter'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — illustration-hover bounce, breathing-circle, page-fade suppress to opacity-only.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(28,28,29,0.04) 0 1px 3px'
+  hover-card: 'rgba(28,28,29,0.08) 0 8px 24px'
+  modal: 'rgba(28,28,29,0.16) 0 16px 48px'
+  ring: '0 0 0 2px #ffac1d'
+
+accessibility:
+  contrast-text-on-bg: 14.6          # #1c1c1d on #fdf2e1 — AAA
+  contrast-text-on-brand: 9.0        # #1c1c1d on #ffac1d — AAA
+  contrast-muted-on-bg: 5.6          # #535253 on #fdf2e1 — AA
+  contrast-link-hover: 2.6           # #ffac1d on #fdf2e1 — fails AA — link hover compensated by underline + bold weight
+  focus-ring: '2px solid #ffac1d + 2px outline offset (brand-orange ring)'
+  reduced-motion-honored: true
+  touch-target-min: 48
+  keyboard-nav: 'Tab moves masthead → search → category nav → meditation grid → footer; arrow keys inside category mega-menu.'
+
+dark-mode: 'optional'   # Headspace web is light-only on the marketing surface. Dark-mode appears on app night-mode and on rare "Headspace Health" enterprise bands.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Headspace's storefront is the canonical meditation-friendly playful canvas — a **warm cream** ground (`#fdf2e1`) anchored on near-black ink (`#1c1c1d`) and accented by the unmistakable **Headspace orange** (`#ffac1d`) that does the entire chromatic work of the brand. The cream is critical: it's not white, not eggshell, not ivory — it's a warm sandstone-cream specifically tuned to feel like the interior of a Scandinavian meditation studio. Every page sits on this cream; the only places where the canvas inverts to dark are rare Headspace Health enterprise bands.
+
+The chromatic identity is **ink on cream with an orange voltage**. The orange (`#ffac1d`) is a specific marigold — warmer than Strava's traffic-cone, brighter than Oura's champagne, more saturated than Etsy's burnt-orange. It carries the wordmark, every primary CTA, the iconic smiley-face dot in the wordmark, the breathing-circle animation, link-hover, focus ring, and the "NEW" tags. Beyond the orange, Headspace deploys a **lo-fi pastel palette** for character illustrations: pastel coral, mint, lavender, sky-blue, rose, yolk-yellow. These pastels are the brand's playful chromatic vocabulary, scoped strictly to illustration — never used as CTA fills, never used as borders, never used as decoration outside character-illustrated moments.
+
+Type runs **HS Apercu** (a custom Apercu cut by Colophon Foundry, with soft round terminals on key letterforms — particularly the lowercase "a", "g", and "y") at modest 500–700 weights for hero display (40–64px). The hero "Be kind to your mind" runs HS Apercu 64/700 with `-1.5px` tracking. Where Calm uses Aktiv Grotesk's clean geometric precision, Headspace uses Apercu's warmer, softer humanist proportions — the difference between a Scandinavian functionalist and a friendly children's-book illustrator.
+
+The **wordmark with the smiley-face dot** is the brand's permanent emotional signature. The lowercase "headspace" wordmark replaces the dot of the "i" in "headspace" (and in earlier versions, the dot of the "i" in "headspace") with a tiny orange smiley face — a visual joke that has carried through every redesign. The smiley is the brand's persistent reminder: this is a serious meditation product designed by people who refuse to take themselves too seriously.
+
+Shape language is fully-pill for CTAs (9999px) and **significantly soft** for cards (16–24px radius). Headspace consciously rejects utility-grade rectangles — its cards round at 24px while WHOOP's round at 8px. The 24px card radius signals soft consumer-app warmth, the opposite of athlete-equipment chrome. Buttons are 48–56px tall pills, search bars are pills, even form inputs round at 16px (much softer than typical 4–8px form chrome). The shape system is the brand's "we are gentle" shorthand.
+
+Character illustrations are **the design**. Every page features hand-drawn character illustrations from the Headspace mascot family (Goofy, Carl, the Smiling Mind family of pastel beings) — characters with simple round bodies, expressive faces, and pastel colour palettes. The illustrations are credited to Andy Puddicombe's collaboration with illustrator Chris Phillips and the in-house Headspace design studio. The characters have a permanent place in the brand's heart — they're not decorative, they're foundational.
+
+**Key Characteristics:**
+- Warm cream canvas (`#fdf2e1`) — Scandinavian meditation studio interior, never pure white
+- Single brand voltage: marigold orange (`#ffac1d`) — wordmark, every CTA, smiley dot, breathing circle, focus ring
+- Lo-fi pastel illustration palette: coral, mint, lavender, sky-blue, rose, yolk — strictly scoped to character illustrations
+- HS Apercu (custom Apercu cut, soft round terminals) at 500–700 weights — humanist warmth over geometric precision
+- Wordmark smiley-face dot — the brand's permanent emotional signature
+- 24px card radius — significantly softer than fitness peers (Headspace consciously rejects athlete-equipment chrome)
+- 9999px full-pill CTAs at 48–56px height with ink text on orange — high-contrast playful
+- Hand-drawn character illustrations as foundational design — never decorative
+- Breathing-circle orange animations on meditation features — 4000ms breath-rhythm scale loop
+- Generous 64–96px vertical section padding with 1.6 body line-height — calm magazine breath
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Cream** (`#fdf2e1`): default canvas — warm sandstone, the brand's signature ground
+- **Cream Strong** (`#fae5c4`): alt warm-cream band, slightly deeper
+- **Cream Soft** (`#fff8ec`): softest cream variant for secondary surfaces
+- **White** (`#ffffff`): card surface — pure white inside cards atop cream
+- **Ink** (`#1c1c1d`): primary text — slightly warm near-black
+- **Heading Ink** (`#0e0e10`): hero display copy at maximum punch
+
+### Brand
+- **Headspace Orange** (`#ffac1d`): wordmark, primary CTA, smiley dot, breathing circle, link hover, focus ring, NEW tags, illustrative orange — the single brand voltage
+- **Brand Hover** (`#e89610`): deeper orange on hover
+- **Brand Active** (`#c87d04`): pressed state
+- **Brand Pale** (`#ffe5b3`): disabled CTA tint, soft accent surface
+- **Brand Deep** (`#7d4f00`): editorial deep orange
+- **Brand Soft** (`#fff3dc`): cream-orange tinted surface
+
+### Pastel Illustration Palette
+Strictly scoped to character illustrations — never CTA fills, never decorations.
+
+- **Pastel Coral** (`#ff8a78`): character illustration coral
+- **Pastel Mint** (`#9cd6b0`): character illustration mint
+- **Pastel Lavender** (`#c5b4e3`): character illustration lavender
+- **Pastel Sky** (`#a8d4f0`): character illustration sky-blue
+- **Pastel Rose** (`#fcc9d8`): pinkish-rose illustration accent
+- **Pastel Yolk** (`#ffd66e`): yolk-yellow accent
+
+### Interactive
+- **Link** (`#1c1c1d`): default ink link, distinguished by underline
+- **Link Hover** (`#ffac1d`): hover flips ink to brand orange — note this contrast (2.6:1) fails AA on cream, compensated by underline + bold weight + larger context
+- **Visited** (`#553e8c`): purple visited-link state
+- **Disabled** (`#9c9b9c`): disabled text and outline
+- **Selected** (`#ffac1d`): selected radio / checkbox / tab fill
+- **Focus** (`#ffac1d`): 2px brand-orange ring with 2px offset
+
+### Neutral Scale
+- **Ink** (`#1c1c1d`) — primary text
+- **Ink Heading** (`#0e0e10`) — hero display
+- **Muted** (`#535253`) — secondary metadata, body sub-copy
+- **Soft** (`#7e7d7e`) — caption, faint counts
+- **Faint** (`#9c9b9c`) — disabled, microcopy
+- **Border** (`#1c1c1d`) — default 1px hairline (full-strength ink — Headspace's signature confident hairline)
+- **Border Soft** (`#e8d9bb`) — cream-toned subtle dividers
+- **Border Strong** (`#c8b88f`) — heavier cream border for emphasis
+- **Border Input** (`#1c1c1d`) — full-strength ink form-input outline (more confident than typical grey)
+
+### Surface & Borders
+- **Cream** (`#fdf2e1`) — default canvas
+- **White** (`#ffffff`) — card surfaces atop cream
+- **Cream Strong** (`#fae5c4`) — alt band
+- **Cream Soft** (`#fff8ec`) — softest variant
+- **Brand Soft** (`#fff3dc`) — cream-orange surface
+- **Dark** (`#1c1c1d`) — rare dark band (Headspace Health, enterprise pages)
+
+### Shadow Colors
+Headspace stays mostly flat. Hover shadows are single-layer ink-tinted at 4–16% opacity.
+
+- `rgba(28,28,29,0.04) 0 1px 3px` — ambient
+- `rgba(28,28,29,0.08) 0 8px 24px` — hover card
+- `rgba(28,28,29,0.16) 0 16px 48px` — modal drop
+
+### Semantic
+- **Success Green** (`#42a55a`): "Streak +1", "Session complete" — forest green to read clearly off the warm palette
+- **Warning Orange** (`#e89610`): doubles as brand-hover — Headspace deliberately aligns warning with brand
+- **Danger Red** (`#d63a3a`): validation error red, distinct from brand orange
+- **Info Blue** (`#3a82d6`): informational banners — used sparingly because blue feels off-brand
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `HS Apercu` (Headspace's custom Apercu cut). Fallback chain: `"Apercu", "HS Slant", "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif`. HS Apercu is based on the Apercu typeface by Colophon Foundry (released 2010), with Headspace's customisation focusing on softer round terminals on the lowercase "a", "g", and "y". The customisation gives the brand its slightly softer, friendlier voice compared to standard Apercu.
+
+**Fallback**: when HS Apercu isn't available, **Inter** is the closest open-source substitute with a `+0.01em` letter-spacing adjustment.
+
+**Mono**: not a distinct family.
+
+**OpenType features**: `ss01` enabled on display headlines (alternate `a` and `g` forms).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| hero-display | HS Apercu | 64 | 700 | 1.04 | -1.5px | ss01 | "Be kind to your mind" |
+| hero-display-md | HS Apercu | 48 | 700 | 1.08 | -1px | ss01 | Sub-hero on category pages |
+| page-title | HS Apercu | 36 | 700 | 1.1 | -0.75px | ss01 | "Meditation", "Sleep" page H1 |
+| section-head | HS Apercu | 28 | 600 | 1.2 | -0.5px | ss01 | "Today's pick", "Featured collections" |
+| sub-section | HS Apercu | 22 | 600 | 1.25 | -0.25px | — | Sub-section heads |
+| feature-title | HS Apercu | 18 | 600 | 1.33 | -0.1px | — | Card title |
+| body-md | HS Apercu | 16 | 400 | 1.6 | 0 | — | Default body — generous leading for calm reading rhythm |
+| body-lg | HS Apercu | 18 | 400 | 1.6 | 0 | — | Lead paragraphs |
+| body-sm | HS Apercu | 14 | 500 | 1.5 | 0 | — | Secondary metadata |
+| caption | HS Apercu | 13 | 500 | 1.4 | 0 | — | Footer micro-text |
+| micro | HS Apercu | 11 | 600 | 1.27 | 0.04em | uppercase | Section eyebrows — "FEATURED" |
+| pull-quote | HS Apercu | 28 | 600 | 1.3 | -0.5px | — | Testimonial quote |
+| button-cta | HS Apercu | 16 | 600 | 1.0 | 0 | — | "Try For Free", "Start Now" |
+| button-cta-large | HS Apercu | 18 | 600 | 1.0 | 0 | — | Hero CTAs |
+| nav-link | HS Apercu | 15 | 500 | 1.0 | 0 | — | Masthead — "Meditation", "Sleep", "Mindful eating" |
+| eyebrow | HS Apercu | 12 | 600 | 1.0 | 0.08em | uppercase | "FOR FAMILIES", "FOR WORK" |
+| price-display | HS Apercu | 32 | 700 | 1.0 | -0.5px | — | "$12.99/mo" pricing |
+| duration-tag | HS Apercu | 13 | 500 | 1.0 | 0 | — | "10 MIN", "5 MIN" duration pills |
+
+### Principles
+
+- **HS Apercu's soft round terminals.** The custom Apercu cut's lowercase `a` and `g` are the brand's typographic signature. Without HS Apercu (using vanilla Apercu or Inter), the page reads as similar but distinctly less warm.
+- **Modest weight at display.** Hero 700, never 800+. The headlines are confident but not aggressive.
+- **Generous body leading at 1.6.** Where most sites set body at 1.5 line-height, Headspace goes to 1.6 — the extra breath sets a calm reading rhythm.
+- **Mixed-case button labels.** "Try For Free", "Start Now" — sentence-case, never uppercase. Even the CTAs maintain the soft conversational voice.
+- **Sparing uppercase eyebrows.** Eyebrows use uppercase 12/600 with `+0.08em` tracking — Headspace's only uppercase chrome moment.
+- **Negative tracking on display.** Hero 64/700/-1.5px. The negative tracking compresses the headlines into confident type-blocks.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-cta`** — Headspace-orange (`#ffac1d`) fill, **ink** text in 16/600 sentence-case, **9999px full-pill** radius, 14×28px padding, 48px height. The most common CTA: "Try For Free", "Start Now", "Sign Up". Hover deepens to `#e89610`. Active to `#c87d04` with press scale 1.0 → 0.97.
+
+**`button-cta-large`** — same as button-cta but at 56px height, 18px text, 18×32px padding. Used for hero CTAs.
+
+**`button-secondary`** — transparent fill, 2px ink outline, ink text in 16/600 sentence-case. Same 9999px pill, same 48px height. Used for "Learn More", "See Plans".
+
+**`button-tertiary-text`** — plain ink text, no surface. Underline on hover. Sometimes flips to brand orange.
+
+### Cards
+
+**`meditation-card`** — meditation/sleep tile. White surface, 24px radius, no internal padding around the illustration, 16px padding for metadata. Stack: full-bleed pastel character illustration with rounded corners following the card radius, title in 18/600 ink ("10 minutes of calm"), duration tag pill ("10 MIN") + optional NEW tag, instructor name in 14/500 muted.
+
+**`feature-card`** — editorial feature tile. White surface, 24px radius, 32px padding. Stack: hand-drawn character illustration top-left, title in 22/600 ink, body in 16/400, optional "Learn more →" link.
+
+**`pricing-card`** — membership pricing card. White surface, 24px radius, 32px padding, 1px `#e8d9bb` cream border. Tier name in 22/600, price in 32/700, feature checklist with orange checkmarks, orange pill CTA pinned at the bottom.
+
+**`hero-illustration-band`** — full-bleed cream band with hand-illustrated character. Hero headline 64/700 ink, sub-copy 18/400 muted, primary orange pill CTA + secondary outline pill CTA. Character illustration anchored centre or split-side.
+
+**`testimonial-card`** — pull-quote testimonial. White surface, 24px radius, 32px padding. Decorated by a pastel illustration. Pull quote in 28/600 ink. Name + role in 13/500 muted.
+
+**`breathing-circle`** — orange circle that breathes. 200px diameter at default, scales 1.0 → 1.2 → 1.0 over 4000ms with breathing-rhythm easing. Used on meditation features and "Take a deep breath" callouts.
+
+### Badges, Tags, Pills
+
+**`duration-tag`** — meditation duration pill. Transparent fill, 1px ink outline, ink text in 13/500 — "10 MIN", "5 MIN". 9999px pill, 4×10px padding.
+
+**`new-tag`** — orange pill (9999px) with "NEW" in 13/500 ink. 2×8px padding. The NEW tag's pill geometry matches the CTAs.
+
+**`eyebrow`** — uppercase 12/600 ink with `+0.08em` tracking. No surface — just text above section heads.
+
+### Inputs / Forms
+
+**`text-input`** — white surface, **1px full-strength ink outline** (Headspace's confident hairline choice), 16px radius (softer than utility 8px), 48px height, 14×16px padding, ink text in 16/400. On focus the border thickens to 2px brand orange.
+
+**`search-bar`** — pill (9999px) search bar. White fill, 1px ink hairline, 48px height, magnifier icon flush left in ink, brand-orange focus ring on `:focus-visible`.
+
+### Navigation
+
+**`masthead`** — full-width cream bar (matches canvas) with no bottom border, 80px height. Wordmark flush left in orange (the lowercase "headspace" with the smiley-face dot). Nav links centred in 15/500 ink. Account / Sign In / Try Free pill CTA flush right.
+
+**`mega-menu-flyout`** — opens from category dropdown; white surface, 24px radius, 1px `#e8d9bb` hairline, hover shadow.
+
+### Modals & Toasts
+
+**`modal`** — centred dialog over a 50%-opacity ink scrim. White surface, 24px radius, 40px padding, modal shadow.
+
+**`toast`** — bottom-centre. White fill, 16px radius, 1px `#e8d9bb` hairline, ink text, brand-orange icon for celebration toasts.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section padding (vertical): **64–96px** between major bands
+- Card internal padding: **16–32px** for content cards; **0** around card illustrations (illustrations bleed to the rounded corners)
+- Gutters: **24–32px** between cards in grid view
+
+### Grid & Container
+
+- Max content width: **1200px** centred
+- Homepage: full-bleed hero-illustration band → 4-up meditation-card grid → 3-up feature-card grid → testimonial band → pricing 3-up
+- Meditation library: 4-column grid at desktop with 24px gutters
+- App download band: 2-column 50/50 split with phone mockup left
+
+### Whitespace Philosophy
+
+Headspace gives editorial bands generous breath (64–96px vertical) but card density is moderate. The discipline mirrors meditation app onboarding flows — open editorial → friendly card grid → testimonial → pricing. The breath supports the soft warm voice; tight density would feel rushed and disrupt the calm rhythm.
+
+### Section Cadence
+
+Pages alternate between **cream bands** (`#fdf2e1` default), **slightly-deeper cream bands** (`#fae5c4` for emphasis), and rare **dark bands** (`#1c1c1d` for Headspace Health enterprise content). The cream-on-cream rhythm creates subtle variation without breaking the calm.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4px | Dense table corners, tiny tags |
+| Small | 8px | Inline pills, small components |
+| Form | 16px | Form inputs, smaller cards (softer than typical 8px form chrome) |
+| Card | 24px | Default cards — meditation, feature, pricing, testimonial, modal |
+| Hero | 32px | Hero promo bands |
+| Pill | 9999px | CTAs, search bar, character avatars, NEW tags, duration tags |
+
+The 24px card radius is Headspace's signature shape decision. It's significantly softer than fitness peers (WHOOP at 8px, Peloton at 12px) and signals soft consumer-app warmth — the polar opposite of athlete-equipment chrome.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, masthead, footer (~80% of surfaces) |
+| 1 — Ambient | `rgba(28,28,29,0.04) 0 1px 3px` | Default cards |
+| 2 — Hover | `rgba(28,28,29,0.08) 0 8px 24px` | Card hover, dropdowns |
+| 3 — Modal | `rgba(28,28,29,0.16) 0 16px 48px` | Centred dialogs |
+| 4 — Scrim | `rgba(28,28,29,0.5)` | Modal backdrop |
+
+### Shadow Philosophy
+
+Headspace stays mostly flat. Depth comes from the cream-vs-white surface contrast (cards float as white islands on cream) and the hand-illustrated character compositions. Hover shadows are single-layer ink-tinted at low opacity. The brand position: warmth comes from cream surfaces and character illustrations, not from atmospheric multi-layer shadow stacks.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry
+- **Bounce**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — character illustration interactions
+- **Breathing**: `cubic-bezier(0.65, 0, 0.35, 1)` — breath-rhythm calm curve for breathing-circle
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 200ms | Hover colour swap, focus ring |
+| Standard | 320ms | Card hover lift, modal enter |
+| Slow | 480ms | Character illustration bounce |
+| Breathing | 4000ms | Breathing-circle scale loop (4-second inhale-exhale rhythm) |
+
+### Per-Component Recipes
+
+- **CTA hover**: bg `#ffac1d` → `#e89610` over 200ms.
+- **CTA press**: bg → `#c87d04` + scale 1.0 → 0.97 over 200ms on `:active`.
+- **Card hover**: card translateY(-4px) + shadow softens over 320ms — gentle lift.
+- **Illustration hover**: character scales 1.0 → 1.05 + bounces with ease-bounce over 480ms — playful interaction.
+- **Breathing circle**: orange circle scales 1.0 → 1.2 → 1.0 with ease-breathing over 4000ms infinite — the brand's signature meditative loop.
+- **Page enter**: cream ground fades opacity 0 → 1 + body translateY(8px → 0) over 320ms.
+- **Modal enter**: scrim fades over 200ms, dialog scales from 0.96 → 1.0 + opacity over 320ms emphasized.
+
+### Page Transitions
+
+Page-to-page navigation uses no transition — links fire hard navigation. Breathing-circle animations continue across page changes if the same component re-mounts.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. Illustration bounce, breathing-circle, page-fade, and card hover-lift all suppress to opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #1c1c1d ink on #fdf2e1 cream | 14.6 | AAA |
+| #1c1c1d on #ffac1d orange CTA | 9.0 | AAA |
+| #535253 muted on #fdf2e1 | 5.6 | AA |
+| #ffac1d link hover on #fdf2e1 | 2.6 | Fails AA — compensated by underline + bold weight |
+| #ffffff on #1c1c1d dark band | 16.5 | AAA |
+| #1c1c1d on #ffffff card | 16.5 | AAA |
+
+Black-on-orange CTA at 9.0 — AAA. Like Oura's gold-CTA and WHOOP's lime-CTA, Headspace inverts to ink-on-orange because white-on-orange would fail AA.
+
+The link-hover pair (orange-on-cream at 2.6) fails AA — Headspace compensates with underline + bold weight + adjacent context. This is a known accessibility trade-off the brand accepts; ARIA labels mark hover states and the underline guarantees affordance recognition.
+
+### Focus Indicators
+
+Focus ring is **2px solid `#ffac1d`** with 2px outline-offset. The cream canvas gives the orange ring sufficient contrast. All interactive elements receive the focus ring on `:focus-visible`.
+
+### ARIA Patterns
+
+- **Meditation card**: entire card is `<a>` with verbose `aria-label` — "10 minutes of calm meditation, 10 minutes, with Andy Puddicombe."
+- **Breathing circle**: `aria-label="Breathing exercise visualization"` and `aria-hidden` on inhale/exhale text labels (assistive tech reads the accompanying instructions).
+- **Duration tag**: `aria-label="10 minutes"`.
+- **Mega-menu**: `role="menu"` with arrow keys, Escape closes.
+- **Wordmark smiley**: `aria-hidden="true"` so the screen reader reads only "Headspace" without describing the smiley.
+
+### Keyboard Navigation
+
+- Masthead: Tab moves wordmark → nav → account → CTA
+- Meditation grid: Tab through tiles in document order
+- Modal: Tab is trapped; Esc closes
+- Mega-menu: arrow keys navigate
+
+### Screen Reader Hints
+
+Verbose `aria-label` on icon-only buttons. Decorative character illustrations are `aria-hidden="true"` — meditation cards, feature cards include the character description in adjacent text.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only. Illustration bounce, breathing-circle, and page-fade suppress.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Masthead collapses to wordmark + Try Free pill + hamburger; meditation grid 2-up; pricing stacks |
+| Tablet | 640–1024px | Full masthead nav (collapsed mega-menu); meditation grid 3-up |
+| Desktop | 1024–1200px | Full nav with mega-menu; meditation grid 4-up |
+| Wide | 1200–1440px | Content caps at 1200px |
+
+### Touch Targets
+
+- Primary CTAs: 48px (regular) / 56px (large) height — meets AAA
+- Search bar: 48×48
+- Meditation tile: entire 280×320 tile is tappable
+
+### Collapsing Strategy
+
+- Masthead: nav hides first; only wordmark + Try Free + hamburger remain at <640px
+- Meditation grid: 4 → 3 → 2; gutters compress 32px → 24px → 16px
+- Hero typography: 64px → 48px → 36px display compression
+- Pricing 3-up: stacks to 1-up at <1024px
+
+### Image Behavior
+
+Character illustrations use `aspect-ratio: 1/1` or `4/5` with `object-fit: contain` — never `cover` (the illustrations are foreground subjects, not background imagery).
+
+### Container Queries
+
+Used in meditation card: when narrows below ~240px, the duration tag wraps to a second line.
+
+## 11. Content & Voice
+
+### Tone
+
+Warm, friendly, gently encouraging. Headspace's voice is "the friend who introduces you to meditation without ever making it weird" — second-person ("Be kind to your mind"), conversational ("Try a session today — even if you've got just 3 minutes"), and gently optimistic. The brand consistently positions Headspace as **meditation made approachable** — never austere, never spiritual-with-a-capital-S.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Try For Free", "Start Now", "Sign Up", "Begin" — sentence-case, gentle
+- **Error message recipe**: warm + reassuring — "Hmm, that didn't work. Take a deep breath and try again."
+- **Success confirmations**: encouraging — "Nice work — you've completed today's session. Streak: 7 days."
+- **Empty states**: inviting — "Your meditations will appear here once you start one."
+- **App copy**: light + warm — "Drop into a moment of calm with a quick session."
+
+### Empty States
+
+Empty meditations history: "Your sessions will appear here once you start one. Try the 'Basics' course to begin →"
+
+Empty favorites: "Tap the heart on any meditation to save it for later."
+
+Empty progress: "After a few days of meditating, you'll see your patterns here."
+
+### CTA Verb Conventions
+
+- Primary: **Try For Free**, **Start Now**, **Sign Up**, **Begin**, **Start Today**
+- Secondary: **Learn More**, **See Plans**, **Watch Trailer**
+- Tertiary: "View all collections", "See more sessions"
+- Avoided: "Submit", "Click here", "Buy" (Headspace prefers gentle invitation verbs)
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Headspace's marketing site is light-only — the cream canvas IS the brand. The Headspace mobile app supports system dark mode (deep ink surface, cream text, orange unchanged), but the web storefront stays cream-and-orange.
+
+**Rare dark bands** appear on Headspace Health enterprise pages (`#1c1c1d` ground with cream text) — these signal "operational/B2B page", not brand experience.
+
+The brand position: warmth comes from cream surfaces and character illustrations, both of which depend on a light canvas. Inverting the page to dark would lose the meditation-studio warmth that distinguishes Headspace from clinical mindfulness apps.
+
+## 13. Lineage & Influences
+
+Headspace's visual lineage runs through three traditions: **children's-book illustration warmth** (the hand-drawn pastel character family designed by Headspace co-founder Andy Puddicombe with illustrator Chris Phillips, borrowing from picture-book traditions like Eric Carle, Oliver Jeffers, and the Pixar early-2000s pastel palette), **Scandinavian functionalist design with warmth** (the cream canvas, the sandstone palette, the 24px softly-rounded card geometry), and **lo-fi indie-comic illustration aesthetics** (the simple round bodies, the expressive faces, the celebration of imperfection).
+
+The 2010 founding aesthetic was much more austere. The 2017 onwards rebrand introduced the cream-and-orange palette, the HS Apercu typography, and the foundational character illustration system. The 2021 onwards refresh refined the breathing-circle as a brand-defining motion element.
+
+What Headspace rejects: clinical-white canvas, multi-colour brand systems, sharp utility-rectangle chrome (24px cards only), uppercase aggressive typography, pure-black ink (slightly-warm `#1c1c1d` only), and athletic performance vocabulary. The brand position is **gentle approachability** — Headspace wants meditation to feel like the friendliest possible introduction, not like spiritual gatekeeping.
+
+**Influences:**
+- Eric Carle / Oliver Jeffers — children's book illustration warmth
+- Pixar — pastel character palette
+- Apercu typeface (Colophon Foundry) — soft humanist sans, [colophon-foundry.org](https://www.colophon-foundry.org)
+- Calm — adjacent meditation app (different chromatic position)
+- Pinterest / Instagram pastel design movement — pastel palette discipline
+- Slack — humanist friendly tech-brand voice lineage, [slack.com](https://slack.com)
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor on the warm cream canvas (`#fdf2e1`) — Scandinavian meditation studio interior
+- Use the single brand orange (`#ffac1d`) for wordmark, every CTA, smiley dot, breathing circle, focus ring
+- Run HS Apercu (or Apercu / Inter as fallback) at 500–700 weights with negative tracking on display
+- Use 24px card radius — significantly softer than fitness peers
+- Use full-pill (9999px) CTAs at 48–56px height with sentence-case ink-on-orange text
+- Render hand-drawn character illustrations as foundational design — never decorative
+- Apply pastel illustration palette (coral/mint/lavender/sky/rose/yolk) ONLY to character illustrations
+- Use 1.6 body line-height — generous breath sets calm reading rhythm
+- Add the breathing-circle (4000ms scale loop) on meditation features
+- Use full-strength ink (`#1c1c1d`) for borders and form-input outlines — confident hairlines
+- Keep button labels sentence-case ("Try For Free", "Start Now") — gentle voice
+
+**Don't**
+- Don't use pure white as primary canvas — cream warmth is the brand
+- Don't introduce a second brand colour — orange is the only true brand fill
+- Don't use the pastel palette for CTAs, borders, or chrome — strictly illustration-scoped
+- Don't run cards at 8–12px utility radius — 24px is signature
+- Don't use uppercase on CTAs or headlines (eyebrows are the only uppercase exception)
+- Don't use atmospheric multi-layer shadows — single-layer at 4–16% opacity
+- Don't use spiritual-gatekeeping language — gentle approachability is the voice
+- Don't render character illustrations with photographic realism — hand-drawn pastel only
+- Don't compress body line-height below 1.6 — calm rhythm depends on the breath
+- Don't use pure black (`#000000`) for ink — `#1c1c1d` slightly-warm near-black only
+- Don't pill the entire page (mixing pill cards + pill buttons) — cards round at 24px, only CTAs go full-pill
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Cream Canvas:    #fdf2e1
+Cream Strong:    #fae5c4
+White (cards):   #ffffff
+Ink:             #1c1c1d
+Orange:          #ffac1d
+Orange Hover:    #e89610
+Orange Active:   #c87d04
+Muted:           #535253
+Border:          #1c1c1d
+Pastel Coral:    #ff8a78
+Pastel Mint:     #9cd6b0
+Pastel Lavender: #c5b4e3
+Pastel Sky:      #a8d4f0
+Pastel Yolk:     #ffd66e
+```
+
+### Example Component Prompts
+
+- "Create a Headspace-style Try For Free CTA: 48px-tall **full-pill** button (9999px radius) with brand orange `#ffac1d` fill and **ink** text in HS Apercu (or Apercu / Inter fallback) 16/600 sentence-case ('Try For Free'), 14×28px padding. Hover deepens to `#e89610`. Active to `#c87d04` with press scale 1.0 → 0.97. Ink-on-orange passes AAA at 9.0 contrast — never use white text."
+- "Build a Headspace meditation card: white surface (`#ffffff`), **24px** radius (significantly softer than fitness peers), no internal padding around the illustration, 16px padding for metadata. Stack: full-bleed hand-drawn pastel character illustration with rounded corners following the card radius (use `aspect-ratio: 4/3`, `object-fit: cover`), title in HS Apercu 18/600 ink ('10 minutes of calm'), then horizontal row with duration-tag pill ('10 MIN' in 13/500 ink with 1px ink hairline 9999px outline) + optional NEW tag (orange pill, 13/500 ink), instructor name in 14/500 muted (`#535253`)."
+- "Design a Headspace breathing-circle component: 200px diameter circle in brand orange (`#ffac1d`), 9999px radius, centred on cream ground. Animate scale 1.0 → 1.2 → 1.0 with `cubic-bezier(0.65, 0, 0.35, 1)` ease over 4000ms infinite. White text 'Inhale' / 'Exhale' fades in/out in sync with the scale. Pause animation on `prefers-reduced-motion: reduce` and keep the circle at neutral scale."
+- "Create a Headspace hero illustration band: full-bleed cream (`#fdf2e1`) ground, 96px vertical padding. Hand-drawn pastel character illustration anchored centre-right (e.g., character meditating with closed eyes, soft pastel coral and mint colours). Hero headline anchored left in HS Apercu 64/700 ink with `-1.5px` tracking and `ss01` enabled — 'Be kind to your mind'. Sub-copy beneath in HS Apercu 18/400 muted (`#535253`) at 1.6 line-height. Primary orange pill CTA 'Try For Free' (9999px, 56px height, HS Apercu 18/600 ink text) + secondary 2px ink-outline pill CTA 'Learn More'."
+- "Build a Headspace pricing card: white surface (`#ffffff`), 24px radius, 32px padding, 1px `#e8d9bb` cream border. Stack: tier name in HS Apercu 22/600 ink ('Headspace Plus'), price in HS Apercu 32/700 ink ('$12.99/mo'), 5-row feature checklist with orange (`#ffac1d`) checkmark icons + 16/400 ink feature text, primary orange pill CTA 'Start Free Trial' pinned at the bottom (9999px, 48px height)."
+- "Design a Headspace search bar: pill (9999px radius), white surface, 1px **full-strength ink** (`#1c1c1d`) hairline (Headspace's signature confident border choice — not muted grey), 48px height, 14×16px padding. Magnifier icon flush left in ink. Placeholder 'Search meditations' in HS Apercu 16/400 muted (`#7e7d7e`). On focus, the border thickens to 2px brand orange (`#ffac1d`) over 200ms."
+
+### Iteration Guide
+
+1. **Start with cream and ink.** If your canvas is white or grey, it isn't Headspace. `#fdf2e1` warm cream is the meditation-studio interior.
+2. **One brand voltage: marigold orange.** `#ffac1d` for everything brand. The pastel palette stays scoped strictly to character illustrations.
+3. **HS Apercu (or Apercu / Inter fallback) at 500–700.** Hero 64/700/-1.5px. Body 16/400 at 1.6 line-height.
+4. **24px card radius — soft consumer-app, not athlete-equipment.** This is the brand's most signature shape decision.
+5. **Full-pill CTAs (9999px) at 48–56px height.** Sentence-case ink text on orange. Never uppercase.
+6. **Hand-drawn character illustrations are foundational.** The Headspace mascot family carries the brand's emotional warmth.
+7. **Generous breath: 1.6 body line-height + 64–96px section padding.** Calm rhythm depends on the breath.
+8. **Breathing-circle at 4000ms scale loop.** The brand's signature meditative motion.

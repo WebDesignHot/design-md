@@ -1,0 +1,703 @@
+---
+name: Sonos
+tagline: Pure black canvas, Inter typography, and audio-system minimalism — speakers presented as gallery objects.
+author: webdesignhot
+source_url: https://www.sonos.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media, marketplace]
+tags: [dark, minimal, sans, photography, premium, monochrome, audio]
+preview_swatch: ['#000000', '#ffffff', '#cccccc']
+related: [apple, tesla, bose]
+description: 'Sonos''s site is a black-canvas gallery for connected audio. The page ground is pure `#000000`, product imagery floats inside generous whitespace, and Inter at weight 500 carries every headline with quietly negative tracking that reads as engineered restraint. There are no decorative gradients, no patterns, no chromatic accents — only the speaker silhouettes themselves provide colour, photographed against neutral grounds and lit like sculpture. Where Apple uses white as a luxury signal, Sonos uses black: the monochrome dark canvas treats every speaker as the lit object in a museum vitrine, and the white CTA pill becomes the only point of contrast on the page. Typography unifies marketing pages and the in-app S2 controller; lowercase calm reigns; one CTA per viewport.'
+
+colors:
+  bg: '#000000'                    # Sonos Black — page canvas, hero, footer
+  bg-elev: '#0a0a0a'               # Elevated dark surface — modal backdrops
+  bg-alt: '#111111'                # Alternate dark band — feature stripe bg
+  bg-light: '#ffffff'              # Inverted bands — white surface for content rows
+  bg-cream: '#f5f1ec'              # Warm-cream secondary surface — lifestyle bands
+  surface: '#1a1a1a'               # Card / panel background on dark
+  surface-hover: '#262626'         # Card hover state
+  surface-light: '#fafafa'         # Light-mode panel surface
+  text: '#ffffff'                  # Primary on dark — body and headings
+  text-strong: '#ffffff'           # Display headlines — pure white
+  text-muted: '#cccccc'            # Subtle on dark — meta, captions
+  text-soft: '#999999'             # Faintest text — disclaimers
+  text-inverse: '#000000'          # Body on light surfaces
+  text-inverse-muted: '#666666'    # Muted on light surface
+  brand: '#ffffff'                 # Sonos uses white as brand on black
+  brand-on-light: '#000000'        # Black brand wordmark on light surfaces
+  brand-hover: '#e5e5e5'           # White button hover state
+  brand-active: '#cccccc'          # Pressed state
+  on-brand: '#000000'              # Black text on white CTA
+  border: '#333333'                # Default divider on dark
+  border-soft: '#1f1f1f'           # Faintest dark hairline
+  border-strong: '#4d4d4d'         # Stronger delineation on dark
+  border-on-light: '#e5e5e5'       # Hairline on light surfaces
+  border-on-light-strong: '#cccccc'
+  ring: '#ffffff'                  # Focus ring on dark
+  ring-on-light: '#000000'         # Focus ring on light surfaces
+  link: '#ffffff'                  # Underline-on-hover white links
+  link-hover: '#cccccc'
+  cta-secondary: 'transparent'     # Ghost button bg
+  cta-secondary-border: '#ffffff'
+  product-shadow: 'rgba(0,0,0,0.4)'   # Floating speaker shadow on dark grounds
+  product-shadow-light: 'rgba(0,0,0,0.08)'  # Same on light bands
+  success: '#4ade80'               # Sparingly used — confirmation toasts
+  warning: '#facc15'               # Inferred — rarely surfaces
+  danger: '#ef4444'                # Form-error fallback inside trade-up flow
+  info: '#ffffff'                  # No info-blue — defaults to brand white
+  audio-glow: 'rgba(255,255,255,0.05)'  # Subtle radial glow behind hero speakers
+  trade-up-amber: '#d4a574'        # Sparingly used — Sonos Trade Up promotion
+  app-tile-purple: '#4c3b8a'       # In-app artwork accent — appears in feature shots
+
+typography:
+  display:
+    family: '"Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01', 'cv11']
+  body:
+    family: '"Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500]
+    opentype-features: []
+  mono:
+    family: '"SF Mono", Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 80, weight: 500, lineHeight: 1.05, tracking: '-0.02em', family: display, notes: 'Massive product name on hero — "Era 300", "Arc Ultra"' }
+    display-large:   { size: 64, weight: 500, lineHeight: 1.08, tracking: '-0.018em', family: display, notes: 'Section opener — "Sound for every space"' }
+    display-medium:  { size: 48, weight: 500, lineHeight: 1.10, tracking: '-0.015em', family: display }
+    display-small:   { size: 36, weight: 500, lineHeight: 1.15, tracking: '-0.012em', family: display, notes: 'Feature card titles' }
+    title-large:     { size: 28, weight: 500, lineHeight: 1.2,  tracking: '-0.01em',  family: display, notes: 'Product comparison row titles' }
+    title-medium:    { size: 22, weight: 500, lineHeight: 1.25, tracking: '-0.005em', family: body, notes: 'Card titles, modal headers' }
+    title-small:     { size: 18, weight: 500, lineHeight: 1.3,  tracking: 'normal',   family: body }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, tracking: 'normal',   family: body, notes: 'Hero subhead lede' }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  tracking: 'normal',   family: body, notes: 'Default paragraph' }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.45, tracking: 'normal',   family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,  tracking: 'normal',   family: body, notes: 'Photo credits, fine print' }
+    micro:           { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.06em',   family: body, notes: 'Eyebrow labels above headlines — "NEW", "PREMIUM SOUND"' }
+    nav-item:        { size: 14, weight: 500, lineHeight: 1.2,  tracking: 'normal',   family: body }
+    button:          { size: 16, weight: 500, lineHeight: 1.0,  tracking: 'normal',   family: body, notes: 'Primary CTA label' }
+    wordmark:        { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: display, notes: 'SONOS wordmark, slight wide-spacing' }
+    tabular:         { size: 14, weight: 500, lineHeight: 1.4,  tracking: 'normal',   family: body, opentype: 'tnum', notes: 'Pricing tables — $499' }
+    code:            { size: 14, weight: 400, lineHeight: 1.5,  tracking: 'normal',   family: mono }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.4,  tracking: 'normal',   family: mono }
+
+radius:
+  flat: 0
+  micro: 2
+  sm: 4
+  md: 6                            # Cards on lifestyle bands
+  card: 8                          # Product comparison cards
+  lg: 12
+  xl: 16                           # Feature-band rounded panels
+  pill: 9999                       # CTA buttons — full pill
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 72
+  hero-height: '90vh — never fully 100vh; leaves a sliver of next section visible'
+
+components:
+  button-primary:
+    bg: '#ffffff'
+    text: '#000000'
+    padding: '14px 28px'
+    radius: 9999
+    border: 'none'
+    font: 'Inter 16/500'
+    transition: 'background-color 200ms ease-out, transform 200ms ease-out'
+    hover-bg: '#e5e5e5'
+    use: 'Buy / Shop / Get Started — primary action on dark hero'
+  button-secondary:
+    bg: 'transparent'
+    text: '#ffffff'
+    padding: '14px 28px'
+    radius: 9999
+    border: '1px solid #ffffff'
+    font: 'Inter 16/500'
+    transition: 'background-color 200ms, color 200ms'
+    hover-bg: 'rgba(255,255,255,0.1)'
+    use: 'Learn More — sits beside primary'
+  button-tertiary:
+    bg: 'transparent'
+    text: '#ffffff'
+    padding: '0'
+    radius: 0
+    border: 'none'
+    font: 'Inter 16/500 with bottom underline'
+    use: 'Inline link CTA — "Compare speakers ↗"'
+  button-on-light:
+    bg: '#000000'
+    text: '#ffffff'
+    padding: '14px 28px'
+    radius: 9999
+    border: 'none'
+    font: 'Inter 16/500'
+    use: 'Inverse — primary on white feature band'
+  card-product:
+    bg: '#1a1a1a'
+    text: '#ffffff'
+    padding: '32px 24px'
+    radius: 8
+    border: '1px solid #333333'
+    hover: 'border-color brightens to #4d4d4d, slight image-zoom 1.03'
+    notes: 'Product comparison card — image top, name + price + buy stacked'
+  card-lifestyle:
+    bg: 'full-bleed photograph'
+    radius: 0
+    overflow: hidden
+    aspect: '3:2 or 16:9'
+    text-overlay: 'White headline bottom-left with 80px padding'
+    notes: 'No gradient overlay — relies on photo composition'
+  badge-new:
+    bg: '#ffffff'
+    text: '#000000'
+    padding: '4px 10px'
+    radius: 9999
+    font: 'Inter 11/500 uppercase 0.06em tracking'
+    use: 'NEW chip on product card'
+  input:
+    bg: 'transparent'
+    text: '#ffffff'
+    placeholder: '#999999'
+    padding: '14px 16px'
+    radius: 4
+    border: '1px solid #4d4d4d'
+    focus-border: '#ffffff'
+    font: 'Inter 16/400'
+  input-on-light:
+    bg: '#ffffff'
+    text: '#000000'
+    border: '1px solid #cccccc'
+    focus-border: '#000000'
+  navigation:
+    align: 'SONOS wordmark left, 4 nav items centred, search + cart + sign-in icons right'
+    height: 72
+    bg: '#000000'
+    border-bottom: '1px solid #1f1f1f (only when scrolled past hero)'
+    text: '#ffffff'
+    transition: 'opacity 200ms on link hover'
+  mega-menu:
+    bg: '#000000'
+    border-top: '1px solid #1f1f1f'
+    columns: 'category list left + featured product card right'
+    padding: '48px 64px'
+  footer:
+    bg: '#000000'
+    text: '#cccccc'
+    columns: 5
+    padding: '80px 64px 48px'
+    bottom-rule: '1px solid #1f1f1f'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-product-float: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  duration-hero: 800
+  reduced-motion: 'respects prefers-reduced-motion: reduce — parallax product floats become static, scroll-triggered fades collapse to instant, only opacity transitions retained.'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  none: 'none'
+  product-float: 'rgba(0,0,0,0.4) 0 40px 80px -20px'
+  product-float-light: 'rgba(0,0,0,0.08) 0 20px 40px -10px'
+  card: 'none — borders carry separation on dark; light-band cards use rgba(0,0,0,0.04) 0 2px 8px'
+  modal: 'rgba(0,0,0,0.6) 0 0 0 9999px (overlay)'
+  ring: '0 0 0 2px #ffffff'
+
+accessibility:
+  contrast-text-on-bg: 21.0           # #ffffff on #000000 — perfect AAA
+  contrast-muted-on-bg: 10.4          # #cccccc on #000000 — AAA
+  contrast-soft-on-bg: 5.92           # #999999 on #000000 — AA Large
+  contrast-text-on-brand: 21.0        # #000000 on #ffffff
+  focus-ring: '2px solid #ffffff with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: 'native — Sonos.com is dark-first by design. Light-mode inversion exists for editorial / press / support pages where long-form reading benefits from light bg.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Sonos's website opens onto pure black. There are no gradients, no decorative patterns, no chromatic flourishes — only `#000000` and the silhouette of a speaker, photographed against a neutral ground and lit like a sculpture in a museum vitrine. The first scroll reveals one product, one name set in Inter at 80px, one short subhead, one white pill button. That single-CTA discipline — borrowed directly from Apple's late-2000s product pages but rendered in inverse — is what gives every page its gallery-like silence.
+
+The mood is engineered restraint. Sonos is selling premium connected audio, and the design refuses to oversell. There are no swooshes implying sound waves, no abstract audio visualisations, no glowing equaliser bars. Instead, a single Era 300 floats centred on the hero, casting a soft `rgba(0,0,0,0.4)` shadow onto the black ground — and that gentle floating effect is the only flourish the page allows itself. The product is the design.
+
+Typography unifies the experience. Inter at weight 500 — never 600, never 700 except in the wordmark — carries every headline with quietly negative tracking that reads as engineered rather than designed. Body copy drops to weight 400 at 16/24, leaving generous breathing room. The voice is confident and short: "Sound for every space." "Listen better." "Built to last." The page never raises its voice because the product photography already commands the screen.
+
+Lifestyle bands occasionally invert: a warm-cream `#f5f1ec` band breaks the dark canvas to show a Sonos Roam outdoors or an Arc on a living-room shelf, and the contrast against the dark spine makes those moments feel cinematic. Every section is a deliberate composition; the whole site reads as a print catalogue more than a landing page.
+
+**Key Characteristics:**
+- Dark-first canvas — pure `#000000` ground unifies every product page
+- Inter typography at weight 500 with `-0.02em` tracking on display
+- White pill CTA — the singular bright element on every viewport
+- Product photography on neutral ground, lit like sculpture
+- Soft floating shadow beneath each speaker — the only decorative effect
+- Cream `#f5f1ec` lifestyle bands break the dark spine for emotional moments
+- One CTA per viewport — refuses competing actions in a single screen
+- 80px hero typography — restrained even at maximum scale
+- Lowercase calm in copy; the SONOS wordmark is the only uppercase element
+- 9999px pill buttons — softer than Apple's 4px micro radius, more modern than rectangular
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Sonos Black** (`#000000`): The page canvas. Hero, navigation, footer all sit on pure black — there is no off-black or near-black variant; absolute black is the brand.
+- **Pure White** (`#ffffff`): All primary type, the wordmark, and the singular CTA button. White is the brand colour on dark.
+
+### Brand & Dark
+- **Sonos Black** is both background and brand colour — when Sonos appears on light surfaces (press kits, support PDFs), the wordmark is `#000000` against white. The duality is deliberate: black on white, white on black, never colour.
+- **Carbon Layer** (`#0a0a0a`): Marginally elevated dark surface used for modal backdrops and slightly raised panels.
+- **Slate Band** (`#111111`): Alternate dark band stripe — separates feature rows when both sit on dark grounds.
+
+### Accent
+- Sonos refuses chromatic accents on the marketing surface. There is no signature blue, red, or green. The only "accents" are:
+- **Cream** (`#f5f1ec`): Warm secondary surface for lifestyle bands — feels paper-like, used to soften long-form pages.
+- **Trade-Up Amber** (`#d4a574`): Reserved for the Sonos Trade Up promotional band — a single warm chromatic break.
+- **App Tile Purple** (`#4c3b8a`): Appears only inside Sonos S2 app screenshots — never on chrome.
+
+### Interactive
+- **Link** (`#ffffff`): Underlined on hover with a 1px white rule. Links inherit the brand colour.
+- **Link Hover** (`#cccccc`): Slight desaturation on hover.
+- **Hover** (`#e5e5e5`): The white CTA darkens to a soft off-white on pointer enter.
+- **Active** (`#cccccc`): Pressed state.
+- **Disabled** (`#666666` on dark; `#999999` on light): Greyed text, never coloured.
+- **Focus**: 2px solid white outline with 2px offset — visible against any dark surface.
+
+### Neutral Scale
+- **Pure White** `#ffffff` — primary text, wordmark
+- **Off-White** `#fafafa` — light-mode panel surface
+- **Cream** `#f5f1ec` — warm lifestyle ground
+- **Soft Grey** `#e5e5e5` — light-mode hairline, white-button hover
+- **Mid Grey** `#cccccc` — muted text on dark, hairline on light
+- **Pewter** `#999999` — soft text on dark, placeholder on light
+- **Steel** `#666666` — muted text on light surfaces
+- **Charcoal** `#4d4d4d` — strong dark border
+- **Graphite** `#333333` — default dark border
+- **Slate Band** `#1f1f1f` — faintest dark hairline
+- **Carbon Layer** `#0a0a0a` — elevated dark surface
+- **Sonos Black** `#000000` — canvas
+
+### Surface & Borders
+- **bg** `#000000` — the universal page ground.
+- **surface** `#1a1a1a` — product card and panel surface; sits one shade above bg.
+- **surface-hover** `#262626` — card hover state.
+- **border** `#333333` — default divider on dark grounds.
+- **border-soft** `#1f1f1f` — faintest hairline, almost invisible.
+- **border-strong** `#4d4d4d` — used inside form fields and around focused states.
+
+### Shadow Colors
+- **product-float** `rgba(0,0,0,0.4) 0 40px 80px -20px` — the soft drop shadow beneath every floating speaker on dark grounds.
+- **product-float-light** `rgba(0,0,0,0.08) 0 20px 40px -10px` — same shadow on light bands.
+- **modal-overlay** `rgba(0,0,0,0.6)` — covers the full viewport behind dialogs.
+
+### Semantic
+- Sonos almost entirely avoids semantic colour. No success-green or warning-yellow appears in marketing surfaces. The S2 app uses subtle chips (`#4ade80` for connected, `#ef4444` for disconnected) but these are application chrome, not site chrome. Form-validation errors fall back to neutral red `#ef4444` only inside the trade-up flow.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: `"Inter"` with the standard system fallback chain (`-apple-system`, `BlinkMacSystemFont`, `Helvetica Neue`, `Arial`). Inter ships in weights 400, 500, 600, 700; Sonos restricts itself to 400 and 500 across the entire marketing site, leaving 700 only for the SONOS wordmark.
+- **Mono companion**: `"SF Mono"` / `Menlo` — appears in developer-facing pages (Sonos developer portal) and inside product technical-specifications tables.
+- **OpenType features**: `ss01` (alternate single-storey 'a') and `cv11` (curved single-storey 'l') are enabled subtly to soften Inter's mechanical character at display sizes. Tabular numbers (`tnum`) are enabled inside pricing tables only.
+- **No italics**: zero italic variants observed across the marketing surface.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Hero | Inter | 80 | 500 | 1.05 | -0.02em | ss01 cv11 | Era 300, Arc Ultra |
+| Display Large | Inter | 64 | 500 | 1.08 | -0.018em | ss01 cv11 | Section opener |
+| Display Medium | Inter | 48 | 500 | 1.10 | -0.015em | ss01 cv11 | Sub-section |
+| Display Small | Inter | 36 | 500 | 1.15 | -0.012em | — | Feature card titles |
+| Title Large | Inter | 28 | 500 | 1.2 | -0.01em | — | Comparison row titles |
+| Title Medium | Inter | 22 | 500 | 1.25 | -0.005em | — | Card titles |
+| Title Small | Inter | 18 | 500 | 1.3 | normal | — | Modal headers |
+| Body Large | Inter | 18 | 400 | 1.55 | normal | — | Hero lede subhead |
+| Body | Inter | 16 | 400 | 1.5 | normal | — | Default paragraph |
+| Body Small | Inter | 14 | 400 | 1.45 | normal | — | Card descriptions |
+| Caption | Inter | 13 | 400 | 1.4 | normal | — | Photo credits |
+| Micro Eyebrow | Inter | 11 | 500 | 1.3 | 0.06em | — | NEW / PREMIUM SOUND |
+| Nav Item | Inter | 14 | 500 | 1.2 | normal | — | Speakers, Systems, Music, Support |
+| Button Label | Inter | 16 | 500 | 1.0 | normal | — | Buy / Learn More |
+| Wordmark | Inter | 16 | 700 | 1.0 | 0.02em | — | SONOS — slight wide-spaced |
+| Tabular | Inter | 14 | 500 | 1.4 | normal | tnum | Pricing — $499, $799 |
+| Code | SF Mono | 14 | 400 | 1.5 | normal | — | Developer pages |
+| Code Micro | SF Mono | 12 | 400 | 1.4 | normal | — | Inline tokens |
+
+### Principles
+- **Inter as a system signal**: Sonos chose Inter — the open-source typographic backbone of the modern product-design web — to signal that the brand belongs to the same lineage as Linear, Vercel, and Notion. The choice says "we are not a 1980s audio company".
+- **Negative tracking on display sizes**: `-0.02em` at 80px (`-1.6px`), tightening as size decreases. Body type sits at `normal` tracking. The contrast between tight display and relaxed body is deliberate.
+- **Two weights only**: 400 for body, 500 for headings and UI. The wordmark's 700 is the only heavy weight permitted, and it appears exactly once per page.
+- **OpenType discipline**: ss01 and cv11 are toggled on for display sizes to soften Inter's geometry — without those alternates Inter's lowercase 'a' reads too mechanical at 80px. The tweak is subtle but consistent.
+- **No transforms**: lowercase calm everywhere except the SONOS wordmark and eyebrow micros. Sonos refuses uppercase headings outright.
+- **Tabular figures inside prices**: pricing rows use `font-feature-settings: 'tnum'` so digits align — a tiny detail that signals seriousness about a comparison table.
+- **No italics, no underlines except on hover**: Sonos avoids decorative type entirely.
+
+## 4. Component Stylings
+
+### Buttons
+
+All buttons use a **9999px pill radius** — fully rounded ends. This is a deliberate departure from Apple's 4px squircles and Tesla's 4px micro-rounded; the pill reads as more modern, more app-native, and pairs naturally with the dark canvas.
+
+**Primary (white pill)** — the singular CTA:
+- Background `#ffffff`, text `#000000`, font Inter 16/500
+- Padding `14px 28px`, border-radius `9999px`, no border
+- Transition `background-color 200ms ease-out, transform 200ms ease-out`
+- Hover: background lightens slightly to `#e5e5e5`; subtle `transform: translateY(-1px)` (≤1px)
+- Active: returns to default with `transform: translateY(0)`
+- Use case: Buy, Shop, Get Started, Add to Cart
+
+**Secondary (ghost outline)**:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`
+- Same padding and radius as primary
+- Hover: background `rgba(255,255,255,0.1)`
+- Use case: Learn More, Compare, Watch Video — sits beside primary
+
+**Tertiary (inline arrow link)**:
+- No background, no padding (inherits flow)
+- Text `#ffffff` with bottom 1px underline
+- Suffixed with `↗` for external, `→` for internal
+- Hover: underline strengthens, `↗` translates +2px x and -2px y
+- Use case: "Explore the Sonos app ↗", "View all speakers →"
+
+**Inverse (black on light)**:
+- Background `#000000`, text `#ffffff`, otherwise identical
+- Used inside cream lifestyle bands and on light landing pages
+
+### Cards
+
+**Product Card** — comparison grid:
+- Background `#1a1a1a`, text `#ffffff`
+- Padding `32px 24px`, border-radius `8px`, border `1px solid #333333`
+- Layout: product image top (aspect 1:1, transparent PNG), product name (Inter 22/500), single-line description, price row, primary CTA
+- Hover: border brightens to `#4d4d4d`; product image scales `1.03` over 300ms
+- No drop shadow — depth from border only
+
+**Lifestyle Card** — full-bleed photo:
+- Background: full-bleed product-in-context photograph
+- Border-radius: 0 (full-bleed) or 16px when contained
+- Aspect ratio: 3:2 or 16:9 depending on placement
+- Text overlay: white headline bottom-left, 80px padding from edges
+- No gradient overlay — composition controls contrast
+- Hover: subtle 1.02 scale on image, headline gains underline-grow
+
+**Music-Service Tile**:
+- Background: service brand colour (Spotify green, Apple Music red, etc.)
+- Square aspect, border-radius 12px
+- Service logo centred, white name beneath
+- Sonos's exception to the no-colour rule — these tiles are "branded chips" carrying the partner identity
+
+### Badges, Tags, Pills
+
+**NEW chip**:
+- Background `#ffffff`, text `#000000`
+- Padding `4px 10px`, radius `9999px`
+- Font Inter 11/500 uppercase with `0.06em` tracking
+- Use: appears top-right on newly-launched product cards
+
+**PREMIUM SOUND eyebrow**:
+- Inline text label, no background
+- Text `#cccccc` Inter 11/500 uppercase 0.06em tracking
+- Use: sits above hero headlines as category indicator
+
+### Inputs & Forms
+
+**Dark Input**:
+- Background transparent, text `#ffffff`, placeholder `#999999`
+- Padding `14px 16px`, border-radius `4px`
+- Border `1px solid #4d4d4d`
+- Focus: border `#ffffff`, focus-ring `0 0 0 2px #ffffff`
+- Font Inter 16/400
+
+**Light Input** (account forms, support):
+- Background `#ffffff`, text `#000000`, placeholder `#666666`
+- Border `1px solid #cccccc`, focus `#000000`
+- Otherwise identical
+
+### Navigation
+
+- Layout: SONOS wordmark left (Inter 16/700, 0.02em tracking) | 4 nav items centred | search + cart + sign-in icons right
+- Height 72px, background `#000000`
+- No bottom border at hero; on scroll past hero, gains `1px solid #1f1f1f`
+- Mega-menu opens on hover/click: full-width black panel, 1px top border, 48×64 padding
+- Mobile: hamburger drawer, slides from right with backdrop blur
+
+### Footer
+
+- Background `#000000`, text `#cccccc`
+- 5 columns of links + social icons row + region selector
+- Padding `80px 64px 48px`, bottom rule `1px solid #1f1f1f`
+- Wordmark sits bottom-left, region selector bottom-right
+
+## 5. Layout Principles
+
+### Spacing System
+- Base unit **8px**. Scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160.
+- Section padding: typically `120px` top/bottom on desktop, `64px` on mobile.
+- Card grid gap: `24px` mobile, `32px` desktop.
+- Hero internal padding: `80–96px` from viewport edges to content.
+
+### Grid & Container
+- Max content width `1440px`; the page itself is full-bleed but content centres at `1280–1440`.
+- Hero uses a 2-column layout on desktop: copy + CTA left (~40%), product photography right (~60%). Mobile stacks photo above copy.
+- Comparison grid: 3-up on desktop, 2-up on tablet, 1-up on mobile.
+- Lifestyle bands break the grid entirely — full-viewport-width photographs.
+
+### Whitespace Philosophy
+Whitespace on Sonos is generosity rather than emptiness. The dark canvas plus generous vertical padding (`120px` between sections) gives every product its own breathing room. There are never two products in a single viewport on the marketing site — each speaker earns its own scroll.
+
+### Section Cadence
+- Black hero → black product showcase → cream lifestyle band → black comparison → black footer.
+- The cream `#f5f1ec` lifestyle band is the only relief from black, and it appears exactly once per page (sometimes twice for long pages). It always shows product-in-context photography.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Flat | 0 | Full-bleed photographs, lifestyle bands |
+| Micro | 2px | Decorative borders, inline tags |
+| Standard | 4px | Form inputs |
+| Comfortable | 6px | Lifestyle card with rounded corners |
+| Card | 8px | Product comparison cards |
+| Large | 12px | Music-service tiles |
+| Featured | 16px | Feature-band rounded panels |
+| Pill | 9999px | All CTA buttons, NEW chips |
+
+The 9999px pill on every CTA is the brand's shape signature. It sets Sonos apart from Apple's 4px buttons, Tesla's 4px micro-radius, and Linear's 6px squares. Combined with white-on-black, the pill button is unmistakably Sonos.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (Flat) | No shadow, border `#333333` only | Default for cards on dark |
+| 1 (Float) | `rgba(0,0,0,0.4) 0 40px 80px -20px` | Speaker hero — soft drop shadow |
+| 2 (Float Light) | `rgba(0,0,0,0.08) 0 20px 40px -10px` | Same on cream/light bands |
+| 3 (Card-Light) | `rgba(0,0,0,0.04) 0 2px 8px` | Cards on light bands |
+| 4 (Modal Overlay) | `rgba(0,0,0,0.6)` | Full-viewport modal backdrop |
+| 5 (Focus Ring) | `0 0 0 2px #ffffff` with 2px offset | Keyboard focus |
+
+### Shadow Philosophy
+Sonos's shadow philosophy is product-first. The only shadow that earns its keep is the **product-float** — a long, soft, low-opacity drop beneath each speaker that makes the product appear to hover above the canvas. That hover effect echoes the brand's wireless-audio identity: untethered, suspended, present without obvious support. Cards rely on borders for separation; everything else is flat. There are no decorative inner glows, no soft inner shadows, no hover-lift on UI elements.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — used for colour and opacity transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — used for hero entrances and page-level fades
+- **Product float**: `cubic-bezier(0.16, 1, 0.3, 1)` — used for the gentle parallax that lifts the hero speaker on scroll
+
+### Duration
+- **Fast** 150ms — micro-interactions (button hover bg)
+- **Standard** 250ms — most state changes
+- **Slow** 400ms — card hover scale, image zoom
+- **Hero** 800ms — initial reveal, parallax float
+
+### Per-Component Recipes
+- **Button hover**: bg shifts from `#ffffff` → `#e5e5e5` over 200ms; very subtle `translateY(-1px)` lift (skipped under reduced-motion).
+- **Card hover**: border lightens `#333333` → `#4d4d4d` over 250ms; image inside scales `1.03` over 300ms.
+- **Link hover**: underline-grow from 0 → 100% width over 250ms.
+- **Hero parallax**: speaker translates `+40px` to `0` as it scrolls into view, fades from 0 to 1 over 800ms with the product-float ease.
+- **Mega-menu open**: panel fades in 200ms; nav items inside stagger by 30ms each.
+
+### Page Transitions
+- Fade-only transitions between routes (no slide). New page fades in over 400ms after old fades out over 200ms.
+- Below-fold sections lazy-load as they cross the viewport edge — fade in from `opacity: 0` over 600ms.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` collapses all parallax, scroll-triggered transforms, and hover lifts to zero. Image scale on card hover is removed. Only opacity transitions remain. Hero photography becomes static.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **White on Black** — `#ffffff` / `#000000` = **21:1** — perfect AAA at all sizes
+- **Mid Grey on Black** — `#cccccc` / `#000000` = **10.4:1** — AAA all sizes
+- **Pewter on Black** — `#999999` / `#000000` = **5.92:1** — AA Normal, AAA Large
+- **Black on White CTA** — `#000000` / `#ffffff` = **21:1** — perfect AAA
+- **Steel on White** — `#666666` / `#ffffff` = **5.74:1** — AA Normal
+- **Cream label** `#000000` on `#f5f1ec` = **18.6:1** — AAA all sizes
+
+### Focus Indicators
+- Default focus is a **2px solid white outline** with a 2px offset (visible on dark) and a **2px solid black outline** on light surfaces.
+- All interactive elements use `:focus-visible` so keyboard focus is visible without polluting mouse-click states.
+- No focus indicator is ever removed via `outline: none` without replacement.
+
+### ARIA & Patterns
+- Mega-menu uses `aria-expanded` on triggers and `role="menu"` on the panel
+- Product comparison cards use `role="article"` with `aria-labelledby` pointing at the product name
+- Modals trap focus, use `role="dialog"` `aria-modal="true"` and label via `aria-labelledby`
+- The cart drawer uses `role="region" aria-label="Shopping cart"` with live updates announced via `aria-live="polite"`
+
+### Keyboard Nav
+- Tab order follows visual flow: wordmark → nav items → icons → hero CTA pair → page content → footer
+- Esc closes mega-menu, modal, cart drawer
+- Arrow keys traverse mega-menu items horizontally
+- Enter/Space activate all CTAs
+
+### Screen Reader Hints
+- SONOS wordmark uses `aria-label="Sonos home"` on the home link
+- Product images carry rich `alt` text describing the speaker model and finish ("Era 300 in matte black")
+- Decorative shadow elements use `aria-hidden="true"`
+- Pricing announces with currency: `aria-label="$499 US dollars"`
+
+### Reduced Motion
+Honoured at the CSS level — see §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Single column; hamburger nav; hero text 40px; CTAs stack full-width; cards 1-up |
+| Tablet | 640–1024px | 2-up product grid; nav collapses to icons + hamburger; hero text 56px |
+| Desktop | 1024–1440px | Full horizontal nav; 3-up product grid; hero text 72px |
+| Wide | >1440px | Hero text 80px; max content width 1440 with side gutters |
+
+### Touch Targets
+- Primary CTA min height 48px on mobile (above WCAG 44×44)
+- Nav items 44px hit area despite 14px text
+- Cart and account icons 44×44 touch target
+- Card hover translates to tap-only on mobile — no hover scale
+
+### Collapsing Strategy
+- **Nav** horizontal mega-menu → mobile drawer with accordion sections
+- **Hero** 2-column → stacked column (photo above copy)
+- **Comparison grid** 3 → 2 → 1
+- **Footer** 5-column → 2-column → accordion
+- **Lifestyle bands** maintain full-bleed at every breakpoint
+
+### Image Behavior
+- Product PNGs (transparent, 2× density) scale proportionally with viewport
+- Lifestyle photographs use `object-fit: cover` to maintain composition
+- `srcset` serves 1×, 2×, 3× densities for retina
+
+### Container Queries
+Used inside the comparison grid: cards reflow internally based on container width rather than viewport, allowing the grid to embed inside narrower contexts.
+
+## 11. Content & Voice
+
+### Tone
+**Quiet authority.** Sonos writes like a high-end audio company that doesn't need to convince you. Sentences are short, declarative, sensory. Headlines are typically 2–5 words: "Sound for every space." "Listen better." "Built for the room."
+
+### Microcopy Patterns
+- **Primary CTA**: "Shop", "Buy", "Add to Cart", "Get Started"
+- **Secondary CTA**: "Learn more", "Compare", "Watch video"
+- **Eyebrow labels**: "NEW", "PREMIUM SOUND", "LIMITED EDITION"
+- **Pricing prefix**: bare number with currency symbol — "$499", never "Starting at $499"
+- **Form errors**: short and direct — "Enter your email address."
+- **Success messages**: "You're in. Welcome to Sonos." — second-person, past-tense framing
+
+### CTA Verb Conventions
+- **Shop** (not "Buy") — discovery emphasis on home page
+- **Buy** (not "Purchase") — conversion-focused on product pages
+- **Listen** — used uniquely for the music-services flow
+- **Set up** — the onboarding verb (not "Get started")
+- **Compare** — for multi-product flows
+- **Discover** — long-form editorial verb
+
+### Empty States
+The Sonos site has very few empty states because it's mostly product showcase. The cart empty state reads: "Your cart is empty. Start shopping." with a primary CTA. The account-orders empty state reads: "No orders yet. Once you order, we'll show them here." Honest, dry, no exclamation marks.
+
+## 12. Dark Mode & Theming
+
+Sonos.com is **dark-first by design**. The marketing site treats `#000000` as canonical; light mode is the alternate.
+
+A **light variant** exists for editorial content (press kit pages, support documentation, long-form blog posts). The token swap:
+- `bg #000000 → #ffffff`
+- `text #ffffff → #000000`
+- `text-muted #cccccc → #666666`
+- `surface #1a1a1a → #fafafa`
+- `border #333333 → #e5e5e5`
+- `brand stays #ffffff → flips to #000000` (CTA inverts)
+- `product-float shadow opacity drops 0.4 → 0.08`
+- `bg-cream #f5f1ec` survives both modes — appears in both light and dark contexts as warm relief
+
+The Sonos S2 controller app honours device-level dark/light preferences. The web defaults to dark to match the brand's premium-audio gallery aesthetic.
+
+## 13. Lineage & Influences
+
+Sonos's web design lineage runs through three streams: **Apple's 2010s product-page idiom** (single-CTA hero, photography-as-design, gallery-like spacing) inverted to dark canvas; **Bauhaus / Swiss minimalism** (radical reduction, type as system); and **high-end consumer-electronics catalogues** (B&O, Bang & Olufsen specifically) that treat the speaker as sculpture. Where Apple uses white as a luxury signal, Sonos uses black — a direct response to the lineage of premium audio brands like Bowers & Wilkins and McIntosh that have long used dark surfaces to elevate equipment as objet d'art.
+
+What Sonos rejects defines it: it rejects sound-wave decoration, equaliser-bar flourishes, abstract audio metaphors. It rejects the busy product-grid of consumer-electronics retailers (Best Buy, Crutchfield). It rejects the bright accent-colour conventions of streaming brands (Spotify green, Apple Music red). The site reads less like a hardware company and more like a contemporary art gallery whose collection happens to be speakers.
+
+- **Apple** — full-bleed product hero, single-CTA discipline, photography-first — https://www.apple.com
+- **Bang & Olufsen** — speakers-as-sculpture lineage — https://www.bang-olufsen.com
+- **Bowers & Wilkins** — dark-canvas premium audio — https://www.bowerswilkins.com
+- **Inter (Rasmus Andersson)** — open-source typographic backbone of Sonos's typography — https://rsms.me/inter
+- **Bauhaus / Swiss design** — radical-subtraction lineage — https://en.wikipedia.org/wiki/Swiss_Style_(design)
+
+## 14. Do's and Don'ts
+
+### Do
+- Anchor every page on pure `#000000` — black is the brand canvas, not a styling choice
+- Use the white pill CTA as the singular bright point in any viewport
+- Photograph products with soft floor shadow against neutral grounds — speakers should appear to hover
+- Set Inter at weight 500 with `-0.02em` tracking on display sizes
+- Keep one CTA per viewport — never compete with secondary actions
+- Use the cream `#f5f1ec` band sparingly as relief from the dark spine
+- Maintain 9999px pill radius on all CTAs — the shape is brand-defining
+- Use `tnum` (tabular figures) inside pricing tables so digits align
+- Treat lowercase as default — uppercase only inside the SONOS wordmark and eyebrow micros
+- Keep transitions soft — 200–400ms with cubic-bezier easings, never spring or bounce
+- Layer warm-cream lifestyle bands between cold dark product showcases — emotional rhythm matters
+
+### Don't
+- Use chromatic accents (no signature blue, red, green) — Sonos is monochrome plus product
+- Add gradients to type, buttons, or backgrounds — Sonos refuses gradient ornament
+- Apply equaliser bars, sound-wave decorations, or audio-visualisation graphics — too literal, too dated
+- Use 4px or square buttons — the pill radius is the shape signature
+- Stack two products in a single viewport on the marketing site — one speaker, one scroll
+- Use Inter weight 600 or 700 outside the wordmark — keeps the page restrained
+- Override the white CTA with a coloured background — even partner-brand colours
+- Add inner glows or soft inner shadows to UI elements — depth is product-photographic only
+- Use uppercase in headlines — lowercase calm is non-negotiable
+- Dilute the photography with overlay gradients — composition controls contrast
+- Mix the cream `#f5f1ec` band with chromatic photography — cream pairs with neutral tones only
+- Reduce the product-float shadow below `0 40px 80px -20px` — it's the only effect Sonos allows itself
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Background: Sonos Black `#000000`
+- Primary text: Pure White `#ffffff`
+- Muted text: Mid Grey `#cccccc`
+- Soft text: Pewter `#999999`
+- Card surface: Slate `#1a1a1a`
+- Default border: Graphite `#333333`
+- Strong border: Charcoal `#4d4d4d`
+- Cream lifestyle band: Cream `#f5f1ec`
+- Primary CTA: Pure White `#ffffff` background with `#000000` text
+
+### Example Component Prompts
+- "Create a hero section with pure black `#000000` background, a transparent-PNG product image of a smart speaker floating centre-right with `rgba(0,0,0,0.4) 0 40px 80px -20px` drop shadow, and a left column with eyebrow label 'NEW' (Inter 11/500, 0.06em tracking, white), an 80px Inter 500 headline 'Era 300', a 18px subhead, and a primary white pill button (`#ffffff` bg, `#000000` text, 9999px radius, 14px 28px padding) labelled 'Buy'."
+- "Design a 3-up product comparison grid on `#000000` background with cards using `#1a1a1a` surface, `1px solid #333333` border, 8px border-radius, 32px padding — each card holds a square product image, 22px Inter 500 product name, 14px description, $499 price (Inter 14/500 with tnum), and a white pill primary CTA."
+- "Build a navigation bar with `SONOS` wordmark left in Inter 16/700 with 0.02em tracking, four 14/500 nav items (Speakers, Systems, Music, Support) centred, and search + cart + sign-in icons right — all on `#000000` background, 72px height, no border at hero, gains `1px solid #1f1f1f` bottom on scroll."
+- "Create a cream lifestyle band — `#f5f1ec` background — with a full-bleed photograph of a Sonos Roam outdoors on the right and a 64px Inter 500 headline left, body copy 16/24, and a black pill CTA `#000000` bg `#ffffff` text labelled 'Take it outside'."
+- "Design a music-service tile grid: 6 squares per row, each 12px border-radius, full-bleed in service brand colour (Spotify green, Apple Music red, Tidal black, Amazon Music navy), service logo centred white. This is the only place chromatic colour appears on Sonos."
+- "Add a focus ring on a primary CTA: 2px solid white outline with 2px offset, only visible on `:focus-visible` — keep mouse clicks ring-free."
+
+### Iteration Guide
+1. Check that the page ground is `#000000` exactly — anything else (`#0a0a0a`, `#111`) breaks the brand.
+2. Confirm Inter is loaded at weight 500 with `-0.02em` letter-spacing on display sizes — without negative tracking the headlines read as body-bold instead of headline-grade.
+3. Verify there is exactly **one** primary white CTA per viewport — no competing actions.
+4. Check that product imagery has a soft floor shadow at `rgba(0,0,0,0.4) 0 40px 80px -20px` — the floating effect is brand-defining.
+5. Refuse chromatic accents on chrome — if you find yourself reaching for a brand blue or accent green, revert to white-on-black.
+6. Test the cream `#f5f1ec` band integration — it should appear once or twice per page as relief, never as the dominant ground.
+7. Confirm pill buttons at `9999px` radius — anything less rounds Sonos toward Apple's idiom.
+8. Validate that hover states are colour-only with subtle `translateY(-1px)` — no scale, no glow.

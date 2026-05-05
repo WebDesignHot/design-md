@@ -1,0 +1,716 @@
+---
+name: Strava
+tagline: Signature `#fc4c02` orange + Inter on white — endurance-athlete data-driven storefront with map-overlay heritage.
+author: webdesignhot
+source_url: https://www.strava.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media, marketplace]
+tags: [light, fitness, sans, athletic, data-driven, photographic, map-overlay, endurance]
+preview_swatch: ['#ffffff', '#fc4c02', '#242428']
+related: [nike, soundcloud, spotify]
+description: 'Strava''s storefront is the canonical endurance-athlete data canvas — a clean white ground (`#ffffff`) with deep ink (`#242428`) type and the unmistakable **Strava orange** (`#fc4c02`) carrying every primary CTA, the wordmark, the kudos thumb, the segment leader-crown, and the focus ring. Type runs **Inter** at 600–700 weights for hero display (40–64px) with tight negative tracking, plus **Strava Sans Rounded** appearing on the wordmark only — and the entire surface is engineered to evoke an athlete''s ride feed: full-bleed map screenshots overlaid with GPS routes, tabular numerals on every distance/pace/elevation metric, kudos-orange thumb fills, and segment leaderboards laid out like Tour de France stage results.'
+
+colors:
+  bg: '#ffffff'                  # default canvas
+  bg-strong: '#f7f7fa'           # subtle off-white feed band
+  bg-soft: '#fafafa'             # alternate row
+  surface: '#ffffff'
+  surface-soft: '#f7f7fa'        # disabled fields, alt row
+  surface-strong: '#eeeeee'      # divider band
+  surface-elev: '#ffffff'        # card surface (matches bg with shadow)
+  brand: '#fc4c02'               # Strava orange — wordmark, primary CTA, kudos thumb
+  brand-hover: '#e04401'         # darker orange on hover
+  brand-active: '#c33b00'        # pressed state
+  brand-pale: '#fde6d9'          # disabled CTA tint
+  brand-deep: '#7d2600'          # deepest orange for editorial accents
+  brand-soft: '#fff1ea'          # soft orange tint for promo banners
+  text: '#242428'                # primary ink — deep cool-warm near-black
+  text-strong: '#0e0e10'         # heading ink at maximum punch
+  text-muted: '#6d6d78'          # secondary metadata
+  text-soft: '#9a9aa3'           # caption text, faint counts
+  text-on-orange: '#ffffff'      # white on orange CTA
+  link: '#242428'                # default ink link
+  link-hover: '#fc4c02'          # link hover flips to brand orange
+  border: '#dfdfe4'              # default 1px hairline
+  border-soft: '#eeeeef'         # editorial dividers
+  border-strong: '#c8c8d0'       # focus state hairline
+  border-input: '#9a9aa3'        # form input outline
+  kudos-orange: '#fc4c02'        # kudos thumb fill matches brand
+  segment-crown-gold: '#fdb515'  # KOM/QOM crown
+  pr-record: '#fc4c02'           # personal-record orange
+  achievement-gold: '#fdb515'    # gold trophy
+  achievement-silver: '#c0c0c0'
+  achievement-bronze: '#cd7f32'
+  map-route: '#fc4c02'           # GPS route line on map overlay
+  map-route-shadow: 'rgba(0,0,0,0.4)'
+  scrim: 'rgba(36,36,40,0.6)'    # modal backdrop with brand-tinted ink
+  shadow-card: 'rgba(0,0,0,0.08)'
+  shadow-elev: 'rgba(0,0,0,0.16)'
+  success: '#1cb350'             # PR-set, completed-goal green
+  warning: '#fdb515'             # advisory amber-gold
+  warning-soft: '#fff7e6'
+  danger: '#d22d2d'              # validation error red
+  info: '#1e6dd8'                # info-blue (rare)
+
+typography:
+  display:
+    family: '"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+    opentype-features: ['ss01', 'tnum', 'cv11']
+  body:
+    family: '"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  rounded:
+    family: '"Strava Sans Rounded", "Inter", sans-serif'
+    weights: [700]
+  mono:
+    family: '"Inter", "SF Mono", Menlo, Monaco, monospace'
+    weights: [400, 500, 700]
+  scale:
+    hero-display:    { size: 64, weight: 700, lineHeight: 1.0,  tracking: '-1.5px',   family: display, opentype: ['ss01'] }
+    hero-display-md: { size: 48, weight: 700, lineHeight: 1.04, tracking: '-1px',     family: display, opentype: ['ss01'] }
+    page-title:      { size: 36, weight: 700, lineHeight: 1.1,  tracking: '-0.75px',  family: display, opentype: ['ss01'] }
+    section-head:    { size: 28, weight: 700, lineHeight: 1.15, tracking: '-0.5px',   family: display, opentype: ['ss01'] }
+    sub-section:     { size: 22, weight: 700, lineHeight: 1.2,  tracking: '-0.25px',  family: display }
+    activity-title:  { size: 18, weight: 600, lineHeight: 1.33, tracking: '0',        family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.38, tracking: '0',        family: body }
+    micro:           { size: 11, weight: 600, lineHeight: 1.27, tracking: '0.04em',   family: body, transform: 'uppercase' }
+    metric-display:  { size: 32, weight: 700, lineHeight: 1.0,  tracking: '-0.5px',   family: body, opentype: ['tnum'] }
+    metric-display-lg: { size: 48, weight: 800, lineHeight: 1.0,  tracking: '-1px',   family: body, opentype: ['tnum'] }
+    metric-label:    { size: 11, weight: 600, lineHeight: 1.0,  tracking: '0.08em',   family: body, transform: 'uppercase' }
+    button-cta:      { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.04em',   family: body, transform: 'uppercase' }
+    nav-link:        { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    segment-rank:    { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0',        family: body, opentype: ['tnum'] }
+    pace-tabular:    { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0',        family: body, opentype: ['tnum'] }
+    wordmark:        { size: 32, weight: 700, lineHeight: 1.0,  tracking: '0',        family: rounded }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8        # buttons, CTAs, inputs
+  lg: 12       # cards
+  xl: 16
+  pill: 9999   # avatars, tags, kudos thumb pill
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+  feed-card-width: 600
+
+components:
+  button-cta:
+    bg: '#fc4c02'
+    color: '#ffffff'
+    radius: 8
+    padding: '12px 28px'
+    height: 44
+    font: button-cta
+    use: 'Sign Up Free, Try Strava, Subscribe — every primary action.'
+  button-cta-hover:
+    bg: '#e04401'
+    color: '#ffffff'
+    use: 'Hover state — deeper orange.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#242428'
+    border: '2px solid #242428'
+    radius: 8
+    padding: '10px 26px'
+    height: 44
+    use: 'Log In, View Plans, Learn More — outline ink-on-white.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#fc4c02'
+    use: 'Inline brand-orange links — bold underline on hover.'
+  button-kudos:
+    bg: 'transparent'
+    color: '#6d6d78'
+    radius: 9999
+    padding: '8px 16px'
+    border: '1px solid #dfdfe4'
+    height: 36
+    use: 'Kudos thumb button — fills brand orange when given, white thumb on orange.'
+  button-comment:
+    bg: 'transparent'
+    color: '#6d6d78'
+    radius: 9999
+    padding: '8px 16px'
+    height: 36
+    use: 'Speech bubble icon button — sits beside kudos thumb.'
+  activity-card:
+    bg: '#ffffff'
+    color: '#242428'
+    radius: 12
+    padding: '20px'
+    border: '1px solid #dfdfe4'
+    use: 'Feed activity tile — athlete avatar + name, activity title, map overlay, metric strip (distance/pace/elevation), kudos + comment row.'
+  metric-strip:
+    bg: 'transparent'
+    color: '#242428'
+    use: '3-up metric grid: large 32/700 tabular value + 11/600 uppercase label — Distance · Pace · Elevation.'
+  map-overlay:
+    bg: '#f7f7fa'
+    color: '#242428'
+    radius: 8
+    use: 'Static GPS map screenshot with brand-orange route line, optional start/finish pins, 16:9 aspect.'
+  segment-row:
+    bg: '#ffffff'
+    color: '#242428'
+    radius: 0
+    padding: '12px 16px'
+    use: 'Segment leaderboard row — rank in 16/700 tabular, avatar, athlete name, time tabular, optional KOM/QOM crown.'
+  kudos-pill:
+    bg: '#fc4c02'
+    color: '#ffffff'
+    radius: 9999
+    padding: '6px 14px'
+    use: 'Active kudos state — orange fill + white thumb icon.'
+  achievement-trophy:
+    color-gold: '#fdb515'
+    color-silver: '#c0c0c0'
+    color-bronze: '#cd7f32'
+    use: 'Trophy icon for top-3 segment ranks; KOM/QOM crown gold.'
+  text-input:
+    bg: '#ffffff'
+    color: '#242428'
+    radius: 8
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #9a9aa3'
+    focus: '2px solid #fc4c02'
+    use: 'Form input — slim utility radius, brand-orange focus ring.'
+  hero-promo:
+    bg: '#fff1ea'
+    color: '#242428'
+    radius: 16
+    padding: '48px 64px'
+    use: 'Soft-orange tinted promo band with display 48/700 ink headline + brand-orange CTA.'
+  segment-leaderboard-card:
+    bg: '#ffffff'
+    color: '#242428'
+    radius: 12
+    padding: '20px'
+    border: '1px solid #dfdfe4'
+    use: 'Segment leaderboard card with header (segment name + distance/grade), KOM/QOM crown row at top, ordered list of segment rows beneath.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-energetic: 'cubic-bezier(0.34, 1.56, 0.64, 1)'   # springy kudos burst
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 320
+  duration-kudos: 400
+  cta-press: 'CTA bg deepens fc4c02 → c33b00 over 150ms on :active'
+  card-hover: 'card shadow intensifies + border darkens dfdfe4 → c8c8d0 over 240ms'
+  kudos-burst: 'thumb rotates -15deg → 0deg + scale 1.0 → 1.3 → 1.0 + orange ripple over 400ms when given'
+  map-route-draw: 'GPS route line draws path-length 0 → 100% over 1200ms on activity card mount'
+  pr-celebration: 'PR badge fades + scales 0 → 1.0 + brief orange glow over 400ms'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — kudos-burst, map-route-draw, PR-celebration suppress to instant; colour transitions remain.'
+
+breakpoints:
+  mobile: 600
+  tablet: 1024
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.04) 0 1px 3px'
+  hover-card: 'rgba(0,0,0,0.08) 0 4px 16px'
+  modal: 'rgba(0,0,0,0.16) 0 8px 32px'
+  brand-glow: '0 0 16px rgba(252,76,2,0.25)'  # subtle orange halo on PR/achievement moments
+  ring: '0 0 0 2px #fc4c02'
+
+accessibility:
+  contrast-text-on-bg: 14.7          # #242428 on #ffffff — AAA
+  contrast-text-on-cta: 4.6          # #ffffff on #fc4c02 — AA at body sizes
+  contrast-muted-on-bg: 6.1          # #6d6d78 on #ffffff — AA
+  contrast-link-hover: 4.6           # #fc4c02 on #ffffff — AA at body sizes
+  focus-ring: '2px solid #fc4c02 + 2px outline offset (brand-orange ring)'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves masthead → search → feed cards → kudos/comment row → footer; arrow keys inside segment leaderboard.'
+
+dark-mode: 'optional'   # Strava ships dark-mode in mobile apps; the marketing/web feed is light-first. Token swap available below.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Strava's storefront is the canonical endurance-athlete data canvas — a clean white ground (`#ffffff`) with deep ink (`#242428`) type and the unmistakable **Strava orange** (`#fc4c02`) carrying every brand voltage. The white canvas is bright and slightly cool — `#ffffff` rather than the warm-cream of Etsy or the off-white of Notion. Strava wants the page to feel like fresh GPS data on a screen, not paper.
+
+The orange is **the most identifiable single colour in fitness software**. `#fc4c02` is a hot-saturated red-orange — closer to traffic-cone safety-orange than to commercial coral. It carries the wordmark, every primary CTA, the kudos thumb fill (the iconic single-tap social interaction), the GPS route line on every map overlay, the segment KOM/QOM crown halo, the personal-record celebration, and the focus ring. There is no secondary brand colour.
+
+Type runs **Inter** at 600–700 weights for hero display (40–64px) with tight negative tracking. The wordmark itself uses **Strava Sans Rounded** (a custom rounded display variant that gives the wordmark its slightly bouncy "S" character). Body text runs Inter 16/400 at 1.5 leading. Tabular numerals (`tnum`) render on every metric — distance, pace, elevation, time, segment rank — because the entire interface is essentially a sport-data dashboard.
+
+Shape language is utility-rectangular for chrome (8px radius for CTAs, inputs, and feed cards) and pill for social interactions (9999px on kudos thumb buttons, athlete avatars, segment crown rings). The kudos thumb is the brand's single most important interactive element — a thumb-up icon inside a pill that fills with brand orange when given. The animation on kudos-give (scale + rotate + orange ripple over 400ms) is the brand's most celebrated micro-interaction.
+
+The **map overlay** is the design's most unique component. Every activity card on the feed renders a static GPS map screenshot (Mapbox / OpenStreetMap base) with a **brand-orange route line** drawn over it. The route line uses a slight black drop-shadow (`rgba(0,0,0,0.4)`) so it reads against any map terrain — green forest, grey city street, blue water. This map-with-orange-route is Strava's most recognisable visual at any thumbnail size — it's the brand's "brown UPS truck" of fitness software.
+
+**Key Characteristics:**
+- White canvas (`#ffffff`) with deep ink (`#242428`) type — fresh-GPS-screen aesthetic, never warm-paper
+- Single brand colour: hot `#fc4c02` traffic-cone orange for wordmark, every CTA, kudos thumb, map route, focus ring
+- Inter at 600–700 weights with tight negative tracking — hero 64/700/-1.5px, metric 32/700/tnum
+- Wordmark uses custom **Strava Sans Rounded** — the only display-family variation, bouncy S character
+- 8px rectangular CTAs at 44px height — utility chrome, not pill
+- Kudos thumb pill (9999px) is the brand's signature social atom — orange fill + white thumb when given
+- Map overlay with brand-orange GPS route + black drop-shadow on every activity card — the brand's "brown UPS truck"
+- Tabular numerals (`tnum`) on every distance, pace, elevation, segment time, leaderboard rank
+- KOM/QOM gold crowns (`#fdb515`) for King-of-the-Mountain / Queen-of-the-Mountain segment leaders
+- Generous 64–96px vertical section padding on marketing pages; tight feed-card density at 600px column
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): default page floor, every feed card surface
+- **Off-White Band** (`#f7f7fa`): subtle band ground beneath the feed
+- **Ink** (`#242428`): primary text colour — deep cool-warm near-black with a slight blue undertone
+- **Heading Ink** (`#0e0e10`): hero display copy, maximum chromatic punch
+
+### Brand
+- **Strava Orange** (`#fc4c02`): wordmark, every primary CTA, kudos thumb fill, map-route line, KOM/QOM halo, focus ring, link hover — the single brand colour
+- **Brand Hover** (`#e04401`): deeper orange on hover
+- **Brand Active** (`#c33b00`): pressed state
+- **Brand Pale** (`#fde6d9`): disabled CTA tint
+- **Brand Deep** (`#7d2600`): editorial accent
+- **Brand Soft** (`#fff1ea`): soft orange tint for promo banners and tag surfaces
+
+### Accent
+- **Achievement Gold** (`#fdb515`): KOM/QOM crown, gold trophy, top-1 segment leader
+- **Silver** (`#c0c0c0`): top-2 segment trophy
+- **Bronze** (`#cd7f32`): top-3 segment trophy
+- **Map-Route Shadow** (`rgba(0,0,0,0.4)`): drop-shadow on the orange GPS route line for legibility against terrain
+
+### Interactive
+- **Link** (`#242428`): default inline link with underline
+- **Link Hover** (`#fc4c02`): hover flips ink to brand orange
+- **Kudos** (`#fc4c02`): active kudos thumb state
+- **Visited** (`#7d2600`): muted visited state
+- **Disabled** (`#9a9aa3`): disabled text and outline
+- **Focus** (`#fc4c02`): 2px brand-orange ring with 2px offset
+
+### Neutral Scale
+- **Ink** (`#242428`) — primary text
+- **Heading** (`#0e0e10`) — hero display
+- **Muted** (`#6d6d78`) — secondary metadata, "Cycling on Saturday Morning"
+- **Soft** (`#9a9aa3`) — caption, faint counts, timestamps
+- **Disabled** (`#9a9aa3`) — disabled state text
+- **Border** (`#dfdfe4`) — default 1px hairline
+- **Border Soft** (`#eeeeef`) — editorial dividers
+- **Border Strong** (`#c8c8d0`) — focus state hairline
+- **Border Input** (`#9a9aa3`) — form-input outline
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — default
+- **Soft** (`#f7f7fa`) — feed band ground, alternate row
+- **Strong** (`#eeeeee`) — divider band
+- **Brand Soft** (`#fff1ea`) — promo banner tint
+- **Map Base** (`#f7f7fa`) — map overlay placeholder before tile load
+
+### Shadow Colors
+Strava uses subtle neutral shadows on cards and the **brand-orange glow** on PR/achievement moments.
+
+- `rgba(0,0,0,0.04) 0 1px 3px` — ambient card lift
+- `rgba(0,0,0,0.08) 0 4px 16px` — hover card
+- `rgba(0,0,0,0.16) 0 8px 32px` — modal drop
+- `0 0 16px rgba(252,76,2,0.25)` — brand-orange glow on PR badges, achievement celebrations
+
+### Semantic
+- **Success Green** (`#1cb350`): "PR Set", "Goal Completed"
+- **Warning Gold** (`#fdb515`): advisory banners, also doubles as achievement crown
+- **Danger Red** (`#d22d2d`): validation errors — distinct from brand orange
+- **Info Blue** (`#1e6dd8`): informational banners — used sparingly because blue feels off-brand against the orange voltage
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Inter`. Fallback: `"Helvetica Neue", Helvetica, Arial, sans-serif`. Inter carries 95% of the type across the entire scale — body, metrics, headlines, CTAs, segment rows.
+
+**Wordmark**: `Strava Sans Rounded` — a custom rounded display variant used **only on the wordmark and select hero accents**. The rounded S terminals give the wordmark its bouncy athletic character. This face is never used for body or chrome.
+
+**Mono**: not a distinct family; tabular numerals via Inter `tnum`.
+
+**OpenType features**: `tnum` is enabled on every numeric display — distance, pace, elevation, time, segment rank, leaderboard time. `ss01` on display headlines.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| hero-display | Inter | 64 | 700 | 1.0 | -1.5px | ss01 | "The home for athletes" |
+| hero-display-md | Inter | 48 | 700 | 1.04 | -1px | ss01 | Sub-hero on category pages |
+| page-title | Inter | 36 | 700 | 1.1 | -0.75px | ss01 | "Subscriptions", "Routes" page H1 |
+| section-head | Inter | 28 | 700 | 1.15 | -0.5px | ss01 | "Top features", "Why Strava" |
+| sub-section | Inter | 22 | 700 | 1.2 | -0.25px | — | Sub-section heads |
+| activity-title | Inter | 18 | 600 | 1.33 | 0 | — | Feed card activity title — "Saturday Morning Ride" |
+| body-md | Inter | 16 | 400 | 1.5 | 0 | — | Default body |
+| body-sm | Inter | 14 | 400 | 1.43 | 0 | — | Secondary metadata |
+| caption | Inter | 13 | 500 | 1.38 | 0 | — | Activity time, weather conditions |
+| micro | Inter | 11 | 600 | 1.27 | 0.04em | uppercase | "FOLLOWING", "DISCOVER" |
+| metric-display | Inter | 32 | 700 | 1.0 | -0.5px | tnum | Activity card metric strip — "32.4 km" |
+| metric-display-lg | Inter | 48 | 800 | 1.0 | -1px | tnum | Hero stats — "1,247 athletes" |
+| metric-label | Inter | 11 | 600 | 1.0 | 0.08em | uppercase | "DISTANCE", "PACE", "ELEVATION" |
+| button-cta | Inter | 14 | 700 | 1.0 | 0.04em | uppercase | "SIGN UP FREE", "TRY STRAVA" |
+| nav-link | Inter | 14 | 600 | 1.0 | 0.02em | — | Masthead — "Features", "Pricing", "Blog" |
+| segment-rank | Inter | 16 | 700 | 1.0 | 0 | tnum | Segment leaderboard rank cell |
+| pace-tabular | Inter | 14 | 600 | 1.0 | 0 | tnum | "5:42 /km" pace display |
+| wordmark | Strava Sans Rounded | 32 | 700 | 1.0 | 0 | — | "STRAVA" wordmark — bouncy S |
+
+### Principles
+
+- **Inter as the workhorse, Strava Sans Rounded as the signature.** Inter handles 95% of the page. The custom rounded face appears only on the wordmark — the rounded S terminals are the brand's typographic signature.
+- **`tnum` on every metric.** Distance, pace, elevation, time, segment rank — every digit aligns vertically because the interface is essentially a sport-data dashboard.
+- **Negative tracking on display.** Hero 64/700/-1.5px. Sub-hero 48/700/-1px. Page title 36/700/-0.75px.
+- **Uppercase chrome with positive tracking.** Nav links, CTAs, metric labels, and section micros render uppercase with `+0.02–0.08em` tracking — broadcast-graphic discipline borrowed from sport-television.
+- **Two-weight body simplicity.** Body 400 (regular) and 500 (caption emphasis); 600–700 reserved for chrome and metrics.
+- **Hero metric weight (800).** When Strava wants to celebrate a number ("1,247 athletes have ridden this segment"), the metric jumps to 800 weight at 48px — louder than a headline, because the number IS the headline.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-cta`** — brand-orange (`#fc4c02`) fill, white text in 14/700 uppercase, 8px radius, 12×28px padding, 44px height. The most common CTA: "SIGN UP FREE", "TRY STRAVA", "SUBSCRIBE", "JOIN CLUB". Hover deepens to `#e04401`.
+
+**`button-secondary`** — transparent fill, 2px ink (`#242428`) outline, ink text in 14/700 uppercase. Same 8px radius, same 44px height. Used for "LOG IN", "VIEW PLANS", "LEARN MORE".
+
+**`button-tertiary-text`** — plain brand-orange (`#fc4c02`) text, no surface. Bold underline on hover.
+
+**`button-kudos`** — pill (9999px) icon button with thumb-up glyph, 36px height, 8×16px padding, transparent fill, 1px `#dfdfe4` border, muted thumb icon. When given: fills brand-orange, thumb flips white, runs the **kudos-burst animation** (rotate -15→0deg + scale 1.0 → 1.3 → 1.0 + orange ripple over 400ms).
+
+**`button-comment`** — pill icon button with speech-bubble glyph, sits beside the kudos button on every activity card.
+
+### Cards
+
+**`activity-card`** — feed activity tile. 600px column width on desktop, white surface, 12px radius, 1px `#dfdfe4` border, 20px padding. Stack: athlete avatar (40px pill) + athlete name link (16/600 ink) + activity timestamp (13/500 muted) + activity-type icon, activity-title in 18/600 ink ("Saturday Morning Ride"), optional 1-line description in 14/400 muted, **map overlay** (16:9 with brand-orange GPS route), 3-up metric strip (Distance · Pace · Elevation), social row (kudos pill + comment pill + share), comments preview.
+
+**`segment-leaderboard-card`** — 12px radius white card, 1px hairline, 20px padding. Header: segment name + distance/grade in micro uppercase. KOM/QOM crown row at the top (gold ring around top-1 athlete avatar). Ordered list of segment rows beneath in tabular `pace-tabular`.
+
+**`metric-tile`** — workout metric panel for activity detail page. White surface, 12px radius, 20px padding, 1px hairline. Large value in 32/700 tabular, label beneath in 11/600 uppercase. Optional sparkline beneath.
+
+**`hero-promo`** — soft-orange (`#fff1ea`) ground with display 48/700 ink headline + brand-orange CTA pinned bottom-left. 16px radius.
+
+### Badges, Tags, Pills
+
+**`activity-type-tag`** — small icon pill (16×16) in the top-left of every activity card. Cycling, Run, Hike, Swim — each with its own glyph in muted ink.
+
+**`pr-badge`** — orange pill (4px radius, 4×8px padding) with "PR" in 11/700 uppercase white. Appears on metric tiles when a personal record is set. Adds the brand-glow halo.
+
+**`kom-crown`** — gold (`#fdb515`) crown glyph + "KOM" / "QOM" text in 11/700 uppercase. Appears on segment leader rows.
+
+**`achievement-trophy`** — gold/silver/bronze trophy icon for segment top-3 ranks.
+
+### Inputs / Forms
+
+**`text-input`** — white surface, 1px `#9a9aa3` hairline, 8px radius, 44px height, 12×14px padding. Stacked label above in 11/600 uppercase muted. On focus the border thickens to 2px brand-orange.
+
+**`search-bar`** — feed/segment search. White, 8px radius, 44px height, 1px `#dfdfe4` hairline, magnifier icon flush left in muted ink, brand-orange focus ring on `:focus-visible`.
+
+### Navigation
+
+**`masthead`** — full-width white bar with a thin 1px `#dfdfe4` bottom border, 64px height. Wordmark flush left in **Strava Sans Rounded** in brand-orange. Nav links centred in 14/600 ink. Search icon + Account avatar + brand-orange CTA flush right.
+
+**`feed-rail`** — left rail on the activity feed (desktop only): athlete profile summary, weekly distance metric tile, monthly goal progress bar in brand orange.
+
+**`right-rail`** — right rail on activity feed: "Suggested Athletes" cards, "Trending Routes" thumbnails.
+
+### Map Overlay
+
+**`map-overlay`** — 16:9 static GPS map screenshot (Mapbox base) with a **brand-orange route line** drawn over it using SVG `path` with a slight black drop-shadow (`rgba(0,0,0,0.4)`) for legibility against any terrain. Start/finish pins as small orange circles. On activity-detail expansion, the map becomes interactive with pan/zoom.
+
+### Modals & Toasts
+
+**`modal`** — centred dialog over a 60%-opacity ink-tinted scrim. White surface, 16px radius, modal shadow.
+
+**`toast`** — bottom-centre. White fill, 8px radius, 1px hairline, ink text, brand-orange icon for kudos toasts.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section padding (vertical): **64–96px** between major bands on marketing pages
+- Activity card padding: **20px** internal, **16px** between cards in the feed
+- Gutters: **24px** between feed columns and right-rail; **16px** between feed cards stacked
+
+### Grid & Container
+
+- Max content width on marketing: **1200px** centred
+- Feed view: **600px** activity column centred, with optional 240px left rail (athlete profile) and 320px right rail (suggestions/routes) — total 1200px at 1280px+ viewport
+- Activity detail: full-width map at top (16:9 to 21:9), tabbed content beneath, comment thread
+
+### Whitespace Philosophy
+
+Strava balances **marketing-page breath** (96px section padding on the homepage) with **feed-density** (16px between activity cards). The discipline mirrors social-feed apps — the marketing breath sells the app, the feed density delivers the data athletes actually use. Inside each activity card, the metric strip uses 20px padding to give the tabular numerals breath.
+
+### Section Cadence
+
+Marketing pages alternate between **white bands** (default) and **soft-orange bands** (`#fff1ea` — promo CTAs, "Try Strava Free" sections). The orange tint is rare — Strava holds back to keep the brand orange voltage on CTAs and kudos thumbs.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Dense table corners |
+| Small | 4px | PR badges, dense tags |
+| Default | 8px | CTAs, buttons, inputs, search bar |
+| Card | 12px | Activity cards, segment cards, metric tiles |
+| Featured | 16px | Modals, hero promo bands |
+| Pill | 9999px | Avatars, kudos pill, comment pill, KOM crown ring |
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, masthead, footer |
+| 1 — Ambient | `rgba(0,0,0,0.04) 0 1px 3px` | Default activity cards |
+| 2 — Hover | `rgba(0,0,0,0.08) 0 4px 16px` | Card hover, dropdown |
+| 3 — Modal | `rgba(0,0,0,0.16) 0 8px 32px` | Centred dialogs |
+| 4 — Brand Glow | `0 0 16px rgba(252,76,2,0.25)` | PR badges, achievement celebrations |
+| 5 — Scrim | `rgba(36,36,40,0.6)` | Modal backdrop with brand-tinted ink |
+
+### Shadow Philosophy
+
+Strava uses **subtle neutral shadows** on cards and the **brand-orange glow** for PR/achievement moments. The shadow strategy is closer to Notion than Stripe — flat-feeling, hairline-bordered cards with a 4–16px shadow that lifts only on hover. The brand-glow halo is reserved for celebration moments (PR set, KOM achieved) — appearing for ~600ms then fading.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry
+- **Energetic**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — kudos burst
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 150ms | Hover colour swap, focus ring |
+| Standard | 240ms | Card hover lift, modal enter |
+| Slow | 320ms | Page transitions |
+| Kudos | 400ms | Kudos thumb burst animation |
+| Map Draw | 1200ms | GPS route line draw on activity card mount |
+
+### Per-Component Recipes
+
+- **CTA hover**: bg `#fc4c02` → `#e04401` over 150ms.
+- **CTA press**: deepens to `#c33b00` for 150ms on `:active`.
+- **Activity card hover**: shadow intensifies + border darkens `#dfdfe4` → `#c8c8d0` over 240ms.
+- **Kudos burst**: thumb rotates `-15deg → 0deg` + scales `1.0 → 1.3 → 1.0` + an orange ripple expands radially over 400ms when given. The thumb-pill background flips from transparent to brand-orange.
+- **Map route draw**: SVG path `stroke-dasharray` animates from 0% to 100% length over 1200ms on activity card mount — the GPS route appears to draw itself.
+- **PR celebration**: PR badge fades from 0 → 1 + scales 0.8 → 1.0 + brief orange glow halo (peaks at 0.25 opacity) over 400ms.
+- **Modal enter**: scrim fades in over 200ms, dialog translates from `translateY(8px) opacity(0)` to `0/1` over 240ms emphasized.
+
+### Page Transitions
+
+Marketing pages use no transition. The activity feed lazy-loads infinite scroll with a brief skeleton placeholder.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. Kudos-burst becomes an instant fill swap. Map route draws instantly. PR celebration becomes opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #242428 ink on #ffffff canvas | 14.7 | AAA |
+| #ffffff on #fc4c02 CTA | 4.6 | AA at body sizes |
+| #6d6d78 muted on #ffffff | 6.1 | AA |
+| #fc4c02 link hover on #ffffff | 4.6 | AA at body sizes |
+| #fc4c02 kudos thumb on white pill | 4.6 | AA at body sizes |
+| #fdb515 KOM-gold on white | 1.6 | Decorative-only — accompanied by text |
+
+The white-on-brand-orange CTA pair sits at 4.6 — AA at body sizes. Strava uses 14/700 uppercase button text, comfortably above the AA threshold.
+
+### Focus Indicators
+
+Focus ring is **2px solid `#fc4c02`** with 2px outline-offset. Buttons, inputs, and the kudos thumb gain the brand-orange ring on `:focus-visible`.
+
+### ARIA Patterns
+
+- **Kudos thumb**: `aria-pressed` to communicate state. Label: "Give kudos" (default) → "Kudos given" (active).
+- **Activity card**: entire card wrapped with verbose `aria-label` — "Saturday Morning Ride by Lance Armstrong, 32.4 kilometres at 5:42 per km, 248 metres elevation gain. 47 kudos. Tap to open."
+- **Segment leaderboard**: `role="table"` with rank as `role="rowheader"`. KOM/QOM labelled as "Segment leader".
+- **PR badge**: `aria-label="Personal record set"` so screen readers announce the achievement.
+- **Map overlay**: `aria-label="GPS route map of activity"` with optional alternative text describing the route distance and key terrain.
+
+### Keyboard Navigation
+
+- Masthead: Tab moves wordmark → nav → search → account → CTA
+- Feed: Tab through activity cards in document order; kudos and comment buttons are individual tab stops within each card
+- Segment leaderboard: arrow keys move through ranks
+- Modal: Tab is trapped inside; Esc closes
+
+### Screen Reader Hints
+
+The kudos thumb has verbose `aria-label`. The map overlay always has an alternative text describing the route summary so screen reader users get the GPS data verbally.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only or instant. Kudos-burst, map-route-draw, and PR celebration suppress.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Masthead collapses to wordmark + hamburger; feed full-width; rails hide |
+| Tablet | 600–1024px | Masthead with collapsed nav; feed full-width; right-rail hides |
+| Desktop | 1024–1200px | Three-column feed (left rail + activity column + right rail) |
+| Wide | 1200–1440px | Content caps at 1200px; right-rail expanded |
+
+### Touch Targets
+
+- Primary CTAs: 44px height — meets AA minimum
+- Kudos / comment pills: 36px height with generous 8×16px padding
+- Activity card: entire card is tappable with a separate kudos button hit-target
+- Search bar: 44×44px
+
+### Collapsing Strategy
+
+- Masthead: utilities hide first; only wordmark + cart + hamburger remain at <600px
+- Feed: 3-column → 1-column at <1024px
+- Activity card metric strip: 3-up → 2-up at <320px
+
+### Image Behavior
+
+Map overlay: SVG route line scales with the container, but the underlying tile-set retains its aspect ratio. Activity-detail page upgrades the map to interactive Mapbox with pan/zoom.
+
+### Container Queries
+
+Used in the activity card: when the column narrows below ~480px, the metric strip collapses from 3-up to 2-up, and the map overlay reduces from 16:9 to 4:3.
+
+## 11. Content & Voice
+
+### Tone
+
+Athletic, encouraging, data-confident. Strava's voice is "the friend who tracks every run and shares the data" — second-person achievements ("You crushed it"), specific numbers (not "great job", but "you set a personal record on the Boulder climb segment"), and a celebration of effort over outcome. The brand consistently positions Strava as **the social network where the data IS the social interaction**.
+
+### Microcopy Patterns
+
+- **Button verbs**: "SIGN UP FREE", "TRY STRAVA", "SUBSCRIBE", "JOIN CLUB", "GIVE KUDOS" — uppercase, outcome-named
+- **Error message recipe**: data-aware — "Couldn't sync your activity. Check your connection and try again."
+- **Success confirmations**: specific — "PR set on Sunset Climb. 4 seconds faster than your previous best."
+- **Feed copy**: "Lance gave kudos to your ride", "You're now 1st on Boulder Climb segment"
+- **Achievement urgency**: "You're 0.4 km from your weekly goal"
+
+### Empty States
+
+Empty feed: "Follow some athletes to see their activities here. Discover athletes →"
+
+Empty segments: "No segments matched. Try a broader search or explore segments by location."
+
+Empty kudos: "Be the first to give kudos."
+
+### CTA Verb Conventions
+
+- Primary: **SIGN UP FREE**, **TRY STRAVA**, **SUBSCRIBE**, **JOIN CLUB**
+- Social: **GIVE KUDOS**, **COMMENT**, **SHARE**
+- Tertiary: "View segment", "See all activities", "Edit privacy"
+- Avoided: "Submit", "Click here", "Buy now" (Strava prefers "Subscribe" or "Try free")
+
+## 12. Dark Mode & Theming
+
+**Optional — light-first on web.** Strava's web feed is light-first; the iOS / Android apps support full dark mode. Light-mode swap when dark mode active:
+
+- `bg`: `#ffffff` → `#0e0e10`
+- `surface`: `#ffffff` → `#19191c`
+- `text`: `#242428` → `#f1f1f4`
+- `text-muted`: `#6d6d78` → `#9a9aa3`
+- `border`: `#dfdfe4` → `#2f2f33`
+- `brand`: `#fc4c02` → `#fc4c02` (unchanged — orange voltage holds across modes)
+- `link-hover`: `#fc4c02` → `#fc4c02`
+
+Map overlay in dark mode swaps to a dark-tile basemap; the brand-orange GPS route line stays unchanged. The brand position: orange is the constant, the canvas inverts.
+
+## 13. Lineage & Influences
+
+Strava's visual lineage runs through three traditions: **broadcast Tour de France stage results** (segment leaderboards, KOM/QOM crowns, tabular pace and elevation — borrowed directly from cycling's stage-race telemetry), **Mapbox / OpenStreetMap cartographic aesthetic** (the orange-route-on-grey-tile is borrowed from cycling-route community sites and elevated into the brand's most signature visual), and **early social-network kudos-as-gesture design** (the single-tap kudos thumb borrowed from Facebook's like button, but recoloured to brand orange and given a celebratory burst animation).
+
+The pre-2017 Strava aesthetic was a darker, denser interface. The 2017 refresh moved to white canvas + brand-orange, adopted Inter, and introduced the rounded-S wordmark. The 2020 onwards introduction of route-planning and segment-leaderboard expansion pushed the map-overlay into the brand's most distinctive visual.
+
+What Strava rejects: pill CTAs (utility 8px rectangles only), multi-colour brand systems, ornate display typefaces, soft photographic backgrounds (data-led layouts only), and gamification visuals beyond the kudos/PR/segment-rank trio.
+
+**Influences:**
+- Tour de France stage telemetry — segment leaderboard, tabular pace
+- Mapbox / OpenStreetMap — map-overlay cartography, [mapbox.com](https://www.mapbox.com)
+- Inter typeface (Rasmus Andersson) — workhorse sans, [rsms.me/inter](https://rsms.me/inter)
+- Garmin Connect — early activity-detail interface lineage, [connect.garmin.com](https://connect.garmin.com)
+- Nike Run Club — single-brand-voltage athletic discipline, [nike.com](https://www.nike.com)
+- Facebook — single-tap social atom (kudos/like), [facebook.com](https://www.facebook.com)
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor on the white canvas (`#ffffff`) — fresh-GPS-screen aesthetic
+- Use a single brand orange (`#fc4c02`) for wordmark, every CTA, kudos thumb, map route, focus ring
+- Use **Strava Sans Rounded** ONLY on the wordmark — the bouncy S is the brand's typographic stamp
+- Run Inter at 600–700 weights with negative tracking on display
+- Render every metric (distance, pace, elevation, time, rank) with `tnum` tabular numerals
+- Use uppercase 14/700 for CTAs with `+0.04em` tracking
+- Keep CTAs at 8px radius (rectangular) — utility chrome, not pill
+- Pill the kudos thumb (9999px) — the social atom is round, the chrome is square
+- Render the map overlay with brand-orange GPS route + `rgba(0,0,0,0.4)` drop-shadow on every activity card
+- Add the brand-glow halo (`0 0 16px rgba(252,76,2,0.25)`) on PR badges and achievement celebrations
+- Use gold (`#fdb515`) crowns for KOM/QOM segment leaders — never silver or bronze for the top spot
+
+**Don't**
+- Don't introduce a second brand colour — orange is the only true brand fill
+- Don't use **Strava Sans Rounded** for body or chrome — Inter only
+- Don't use yellow or any non-orange voltage for the kudos thumb — `#fc4c02` always
+- Don't pill the CTAs — Strava signals utility chrome with 8px rectangles
+- Don't render the map route in red, blue, or any non-orange colour — orange is the brand's "brown UPS truck"
+- Don't skip the black drop-shadow on the map route line — without it the orange disappears against forest terrain
+- Don't add multi-layer atmospheric shadows on cards — Strava stays subtle-flat
+- Don't use cool greys for ink — `#242428` has a slight blue undertone that distinguishes it from pure black
+- Don't say "Submit" or "Click here" — every CTA names the outcome ("Sign Up Free", "Try Strava")
+- Don't compress section padding below 64px on marketing pages — the breath sells
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:        #ffffff
+Off-White:     #f7f7fa
+Ink:           #242428
+Strava Orange: #fc4c02
+Brand Hover:   #e04401
+Brand Active:  #c33b00
+Muted:         #6d6d78
+Border:        #dfdfe4
+Border Strong: #c8c8d0
+KOM Gold:      #fdb515
+Map Route:     #fc4c02
+Map Shadow:    rgba(0,0,0,0.4)
+Brand Glow:    rgba(252,76,2,0.25)
+```
+
+### Example Component Prompts
+
+- "Create a Strava-style Sign Up CTA: 44px-tall rectangular button (8px radius — NOT pill) with brand-orange `#fc4c02` fill, white text in Inter 14/700 uppercase with `+0.04em` tracking, 12×28px padding. Hover deepens to `#e04401`. Active to `#c33b00`."
+- "Build a Strava activity card: 600px column width, white surface, 12px radius, 1px `#dfdfe4` border, 20px padding. Stack: athlete avatar (40px pill) + name link (16/600 ink) + timestamp (13/500 muted) + activity-type icon, activity-title in Inter 18/600 ink ('Saturday Morning Ride'), 1-line description in 14/400 muted, **map overlay** (16:9 ratio) with a static GPS map and a brand-orange (`#fc4c02`) SVG route line over the top with `filter: drop-shadow(0 0 4px rgba(0,0,0,0.4))`, 3-up metric strip (Distance · Pace · Elevation) with values in 32/700 tabular and labels in 11/600 uppercase, social row beneath with kudos pill + comment pill."
+- "Design a Strava kudos button: pill (9999px) icon button with thumb-up glyph, 36px height, 8×16px padding, transparent fill, 1px `#dfdfe4` border, muted thumb. When given: fills brand-orange `#fc4c02`, thumb flips white, runs the kudos-burst animation: thumb rotates -15deg → 0deg + scale 1.0 → 1.3 → 1.0 + an orange ripple expands radially over 400ms with `cubic-bezier(0.34, 1.56, 0.64, 1)` energetic easing."
+- "Create a Strava segment leaderboard card: 12px radius white card, 1px `#dfdfe4` border, 20px padding. Header row: segment name in 18/600 ink + distance/grade in 11/600 uppercase muted (`#6d6d78`). KOM crown row at top — gold (`#fdb515`) crown glyph + 'KOM' in 11/700 uppercase, then segment leader avatar with gold ring + name + best time in 14/600 tabular. Subsequent rows: rank cell in 16/700 tabular, avatar (32px pill), athlete name in 14/500 ink, time in 14/600 tabular flush right."
+- "Build a Strava metric strip for an activity card: 3-column grid, no surface, no border, equal width. Each cell: large value in Inter 32/700 tabular ('32.4 km'), label beneath in Inter 11/600 uppercase muted (`#6d6d78`) with `+0.08em` tracking ('DISTANCE'). 3 cells: Distance · Pace · Elevation."
+- "Design a Strava hero banner: white canvas, 96px vertical padding. Display headline in Inter 64/700 ink with `-1.5px` tracking and `ss01` enabled — 'The home for athletes'. Sub-copy in 18/400 muted (`#6d6d78`). Brand-orange rectangular CTA 'TRY STRAVA' (8px radius, 44px height, Inter 14/700 uppercase) + secondary 2px ink-outline rectangular CTA 'LOG IN'."
+
+### Iteration Guide
+
+1. **Start with the white canvas.** If your background is warm-cream or dark, it isn't Strava. `#ffffff` is fresh-GPS-screen.
+2. **One brand colour: `#fc4c02` traffic-cone orange.** No secondary. Wordmark, every CTA, kudos thumb, map route, focus ring — the discipline is the brand.
+3. **Inter at 600–700 with negative tracking.** Hero 64/700/-1.5px. Metric 32/700/tnum. Body 16/400.
+4. **`tnum` on every metric.** Distance, pace, elevation, time, rank. The interface is a sport-data dashboard.
+5. **Map overlay with orange route + black drop-shadow.** This is the brand's "brown UPS truck" — the orange disappears without the shadow.
+6. **Kudos thumb as the brand's signature social atom.** Pill 9999px, brand-orange fill, white thumb when given, 400ms burst animation.
+7. **Uppercase 14/700 CTAs with `+0.04em` tracking.** Sport-broadcast-graphic discipline.
+8. **Subtle shadows + brand-glow on celebrations.** PR badges and KOM achievements get the orange halo (`0 0 16px rgba(252,76,2,0.25)`); cards stay subtle-flat.

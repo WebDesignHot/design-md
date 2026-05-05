@@ -1,0 +1,548 @@
+---
+name: Polygon
+tagline: Deep purple `#8247e5` voltage, soft surface ladder, and Inter at enterprise calm — Ethereum L2 as institutional infrastructure.
+author: webdesignhot
+source_url: https://polygon.technology
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [fintech, marketplace]
+tags: [light, enterprise, infrastructure, web3, layer2, ethereum, purple, dual-mode]
+preview_swatch: ['#ffffff', '#8247e5', '#1a1233']
+related: [ethereum-org, base-org, optimism-io]
+description: 'Polygon reads like an enterprise infrastructure brand that quietly happens to settle on Ethereum. The base canvas alternates white `#ffffff` and a deep-purple dark hero `#1a1233` (signature Polygon gradient violet), with the brand voltage **deep purple** `#8247e5` carrying primary CTAs, links, and signature glyphs. Type runs **Inter** for body and a custom Polygon Display (DM Sans-style geometric sans) at large display sizes. Layout commits to the institutional-fintech register: 1200px max-width, 96px section padding, generous 24px card gutters, soft shadows on cards, and gradient hero washes that subtly transition the dark hero from `#1a1233` to `#8247e5`. Where ethereum.org reaches for community-warm illustration, Polygon reaches for enterprise-credible chrome — partner logos, transaction-throughput statistics, "trusted by" institutional moments. The brand''s clearest editorial choice: the gradient-mark hero illustration uses the Polygon hexagon glyph rendered in 3D with soft purple gradient — repeated as a watermark on every product page. The hexagon-mesh background (faint, sometimes animated) is the system''s persistent visual signature.'
+
+colors:
+  bg: '#ffffff'                # canvas — pure white default
+  bg-soft: '#f5f3fa'           # surface-soft — warm-purple-tinted band
+  bg-strong: '#ebe6f4'         # surface-strong — secondary feature band
+  bg-dark: '#1a1233'           # surface-dark — full-bleed hero, deep purple
+  bg-dark-elev: '#241844'      # surface-dark-elevated — cards inside dark heroes
+  bg-dark-deep: '#0e0820'      # surface-dark-deepest — gradient end
+  surface-card: '#ffffff'
+  surface-card-soft: '#f5f3fa'
+  text: '#0e0820'              # ink — deep-purple-tinted near-black
+  text-body: '#3a2f5a'         # body — purple-tinted dark grey
+  text-muted: '#6b5d8a'        # captions
+  text-subtle: '#9c92b5'       # disabled
+  text-on-dark: '#ffffff'      # white on dark hero
+  text-on-dark-soft: '#a89cc7'
+  brand: '#8247e5'             # Polygon Purple — primary
+  brand-hover: '#6a35c4'       # primary-hover
+  brand-active: '#522aa3'      # pressed
+  brand-light: '#a875ee'       # lighter purple — gradient stop, hover-bright variant
+  brand-soft: '#8247e51a'      # 10% purple tint
+  brand-glow: 'rgba(130,71,229,0.40)'
+  on-brand: '#ffffff'
+  accent-violet: '#5a3eff'     # secondary violet — connector accent
+  accent-cyan: '#16c4d6'       # rare accent — used on developer-tooling cards
+  accent-pink: '#e74694'       # rare accent — used on creator/community
+  border: '#e0d8ed'            # warm-purple hairline
+  border-soft: '#ebe6f4'
+  border-strong: '#c9bcdd'     # focused border
+  semantic-up: '#22c55e'
+  semantic-up-soft: '#22c55e1a'
+  semantic-down: '#ef4444'
+  semantic-warning: '#f59e0b'
+  semantic-info: '#8247e5'
+  gradient-hero: 'linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)'
+  gradient-card: 'linear-gradient(135deg, rgba(130,71,229,0.10) 0%, rgba(130,71,229,0.02) 100%)'
+  focus-ring: 'rgba(130,71,229,0.40)'
+  scrim: 'rgba(14,8,32,0.60)'
+  link: '#8247e5'
+  link-hover: '#6a35c4'
+
+typography:
+  display:
+    family: '"Polygon Display", "DM Sans", Inter, -apple-system, system-ui, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01']
+  body:
+    family: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-mega:   { size: 80, weight: 600, lineHeight: 1.00, tracking: '-2px',   family: display }
+    display-xl:     { size: 64, weight: 600, lineHeight: 1.05, tracking: '-1.6px', family: display }
+    display-lg:     { size: 48, weight: 600, lineHeight: 1.10, tracking: '-1.2px', family: display }
+    display-md:     { size: 36, weight: 600, lineHeight: 1.15, tracking: '-0.8px', family: display }
+    display-sm:     { size: 28, weight: 600, lineHeight: 1.20, tracking: '-0.4px', family: display }
+    title-lg:       { size: 24, weight: 600, lineHeight: 1.25, tracking: '-0.2px', family: body }
+    title-md:       { size: 20, weight: 600, lineHeight: 1.30, tracking: '0',      family: body }
+    title-sm:       { size: 16, weight: 600, lineHeight: 1.30, tracking: '0',      family: body }
+    body-lg:        { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',      family: body }
+    body-md:        { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',      family: body }
+    body-sm:        { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',      family: body }
+    caption:        { size: 13, weight: 400, lineHeight: 1.40, tracking: '0',      family: body }
+    caption-strong: { size: 12, weight: 600, lineHeight: 1.40, tracking: '0.4px',  family: body }
+    label-eyebrow:  { size: 11, weight: 700, lineHeight: 1.30, tracking: '1.2px',  family: body, transform: uppercase }
+    pull-quote:     { size: 28, weight: 500, lineHeight: 1.40, tracking: '-0.4px', family: display }
+    metric-display: { size: 56, weight: 700, lineHeight: 1.00, tracking: '-1.5px', family: display, opentype: 'tnum' }
+    metric-row:     { size: 18, weight: 500, lineHeight: 1.30, tracking: '0',      family: mono, opentype: 'tnum, zero' }
+    button:         { size: 15, weight: 600, lineHeight: 1.20, tracking: '0',      family: body }
+    nav-link:       { size: 14, weight: 500, lineHeight: 1.30, tracking: '0',      family: body }
+    address-mono:   { size: 12, weight: 400, lineHeight: 1.30, tracking: '0',      family: mono, opentype: 'tnum, zero' }
+    code-micro:     { size: 13, weight: 400, lineHeight: 1.50, tracking: '0',      family: mono }
+
+radius:
+  none: 0
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  card: 16
+  xl: 24
+  pill: 999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: { xxs: 4, xs: 8, sm: 12, base: 16, md: 20, lg: 24, xl: 32, xxl: 48, section: 96 }
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 80
+  grid-gutter: 24
+
+components:
+  button-primary:        { bg: brand, text: on-brand, padding: '14px 28px', height: 48, radius: pill, font: button }
+  button-primary-lg:     { bg: brand, text: on-brand, padding: '18px 36px', height: 56, radius: pill, font: button }
+  button-primary-gradient: { bg: 'gradient-hero', text: on-brand, padding: '14px 28px', height: 48, radius: pill, font: button }
+  button-secondary:      { bg: bg-soft, text: text, padding: '14px 28px', height: 48, radius: pill, border: '1px solid border' }
+  button-ghost:          { bg: transparent, text: text, padding: '14px 28px', height: 48, radius: pill, border: '1.5px solid text' }
+  button-ghost-on-dark:  { bg: transparent, text: on-brand, padding: '14px 28px', height: 48, radius: pill, border: '1.5px solid on-brand' }
+  hero-band-light:       { bg: bg, padding: 'section 0', font: display-mega }
+  hero-band-dark:        { bg: 'gradient-hero', text: on-brand, padding: 'section 0' }
+  feature-card:          { bg: bg-soft, border: '1px solid border', radius: card, padding: lg }
+  feature-card-gradient: { bg: 'gradient-card', border: '1px solid border', radius: card, padding: lg }
+  product-card-dark:     { bg: bg-dark-elev, border: '1px solid rgba(255,255,255,0.10)', radius: card, padding: lg }
+  metric-card:           { bg: bg-soft, radius: lg, padding: 'lg xl' }
+  partner-logo-strip:    { bg: bg, height: 80, padding: '24px 0' }
+  badge-pill:            { bg: brand-soft, text: brand, radius: pill, padding: '4px 12px' }
+  badge-new:             { bg: bg-soft, text: brand, border: '1px solid border', radius: pill, padding: '4px 12px' }
+  input-text:            { bg: bg, border: '1px solid border', radius: md, padding: '14px 16px', height: 48 }
+  input-search:          { bg: bg-soft, border: '1px solid border', radius: pill, padding: '12px 20px', height: 44 }
+  top-nav:               { bg: bg, border: '1px solid border-soft', height: 80, font: nav-link }
+  top-nav-on-dark:       { bg: 'rgba(26,18,51,0.80)', text: on-brand, height: 80, backdrop-filter: 'blur(12px)' }
+  side-rail-docs:        { bg: bg-soft, border: '1px solid border', radius: lg, padding: lg, width: 260 }
+  modal:                 { bg: bg, border: '1px solid border', radius: xl, padding: xl }
+  toast-success:         { bg: bg, border: '1px solid semantic-up', radius: md, padding: 'sm base' }
+  toast-error:           { bg: bg, border: '1px solid semantic-down', radius: md, padding: 'sm base' }
+  footer-dark:           { bg: bg-dark, text: on-brand, padding: '80px 0' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 160
+  duration-standard: 280
+  duration-slow: 440
+  reduced-motion: 'respects prefers-reduced-motion: reduce — gradient hero animations freeze, hexagon-mesh stops drifting; hover lifts collapse to opacity-only'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(14,8,32,0.04) 0 1px 2px'
+  standard: 'rgba(14,8,32,0.06) 0 8px 20px'
+  elevated: 'rgba(14,8,32,0.10) 0 20px 40px -8px'
+  card-hover: 'rgba(14,8,32,0.12) 0 24px 48px -16px, rgba(130,71,229,0.10) 0 0 0 1px'
+  modal: 'rgba(14,8,32,0.20) 0 40px 80px -8px'
+  ring: '0 0 0 4px rgba(130,71,229,0.40)'
+  none: 'none'
+
+accessibility:
+  contrast-text-on-bg: 18.2
+  contrast-text-on-brand: 4.7
+  contrast-body-on-bg: 11.4
+  focus-ring: '4px solid rgba(130,71,229,0.40)'
+  reduced-motion-honored: true
+
+dark-mode: dual
+---
+
+## 1. Visual Theme & Atmosphere
+
+Polygon reads like an enterprise infrastructure brand that quietly happens to settle on Ethereum. The base canvas alternates **white** `#ffffff` and a **deep purple gradient hero** (`#1a1233` → `#2d1c5c` → `#8247e5`), and the system pairs a single primary voltage — **Polygon Purple** `#8247e5` — with a soft warm-purple-tinted neutral ramp. Every page rhythm follows the same template: white editorial section → soft `#f5f3fa` warm-cream-purple band → full-bleed dark gradient hero → metric strip → partner-logo carousel → dark gradient footer. The cadence is institutional-fintech — partner logos, transaction-throughput numbers (the 56px metric-display "1B+ transactions" stat is the visual centrepiece of every product page), enterprise testimonials.
+
+The signature visual asset is the **Polygon hexagon glyph** — the brand's geometric mark rendered in 3D with soft purple gradient. It appears as a watermark on every dark hero, as the favicon, and (faintly, sometimes animated) as a tessellated hexagon-mesh background overlay on dark surfaces. The mesh drifts slowly (-2deg rotation over 60 seconds) when reduced-motion is off; freezes when on. This persistent visual signature is what distinguishes Polygon's dark hero from Coinbase's plain `#0a0b0d` or Linear's plain near-black.
+
+Type carries the calm-enterprise register. Display sizes (28px and above) run a **custom Polygon Display** — a DM Sans-style geometric sans set at weight 600 (not 700 — Polygon avoids fintech-bombastic) with -2px tracking on the 80px display-mega. Body switches to **Inter** at 16–18px (display-mega heroes get 18px body sub-text for editorial breath). The display weight of 600 is the boldest decision in the type system: against an industry committed to weight-700 display, Polygon stays at 600 to read as "considered" rather than "shouty" — a discipline borrowed from Stripe.
+
+Layout commits to the institutional-fintech register: 1200px max-width, 96px section padding, generous 24px card gutters, soft shadows on cards (low opacity, neutral-tinted), and gradient hero washes that subtly transition the dark hero from `#1a1233` deep purple to `#8247e5` brand purple at 135deg. Card-hover effects use the brand-tinted 1px edge ring on the soft drop shadow — same lit-edge approach as OpenSea, but on light surfaces with brand-purple instead of brand-blue.
+
+The brand's enterprise-credibility move shows up on the metric strip — a horizontal band of 4 numbers ("1B+ transactions", "$5B+ TVL", "37,000+ apps", "5x lower fees") rendered in 56px display-mega weight 700 with `tnum` enabled, paired with a 13px caption underneath. This metric strip appears in some form on every marketing page.
+
+**Key Characteristics:**
+- White canvas with deep-purple gradient hero punctuation
+- Single voltage: Polygon Purple `#8247e5` for primary actions
+- Polygon Display weight 600 (not 700) — institutional calm, not fintech-bombastic
+- Persistent hexagon-mesh background overlay on dark surfaces
+- Gradient hero `linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)`
+- Pill-shaped CTAs at 999px radius — enterprise-friendly
+- 16px card radius with 24px gutters — generous gallery breathing
+- 80px tall top nav (taller than typical) — accommodates dropdown mega-menus
+- Metric strip with 56px display-mega numerical centrepiece
+- Section padding 96px — institutional editorial rhythm
+- 4-colour secondary palette (cyan, pink) used sparingly on developer/community surfaces
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): Pure white default page floor.
+- **Surface Soft** (`#f5f3fa`): Warm-purple-tinted neutral band.
+- **Surface Strong** (`#ebe6f4`): Secondary feature band.
+- **Surface Dark** (`#1a1233`): Deep purple gradient start — full-bleed hero ground.
+- **Surface Dark Deep** (`#0e0820`): Gradient end / footer ground.
+- **Ink** (`#0e0820`): Primary headlines — deep-purple-tinted near-black, never pure black.
+- **Brand** (`#8247e5`): Polygon Purple — primary actions, links, signature glyph.
+
+### Brand & Dark
+- **Polygon Purple** (`#8247e5`): The singular voltage. Primary CTA, primary link, brand glyph.
+- **Brand Hover** (`#6a35c4`): Pressed/hover.
+- **Brand Active** (`#522aa3`): Pressed on click.
+- **Brand Light** (`#a875ee`): Lighter purple — gradient stop, hover-brighter variant on dark surfaces.
+- **Brand Soft** (`#8247e51a`): 10% purple tint — selected filter, badge bg.
+- **Surface Dark Elevated** (`#241844`): Cards inside dark heroes.
+
+### Accent
+- **Violet** (`#5a3eff`): Secondary blue-violet, used on connector/integration accents (rare).
+- **Cyan** (`#16c4d6`): Used on developer-tooling cards (Polygon zkEVM, AggLayer technical deep-dives). Bright, pairs well with purple.
+- **Pink** (`#e74694`): Used on creator/community surfaces (Polygon Studios, partnerships). Even rarer.
+
+These accents are surface-vertical, not system-wide. The default palette is purple-only.
+
+### Interactive
+- **Link** = Brand `#8247e5`, no underline default, underline on hover
+- **Hover** — primary CTA → `#6a35c4`; cards lift + brand-tinted edge ring
+- **Active / Pressed** — Brand Active `#522aa3`
+- **Disabled** — `#9c92b5` text, `#f5f3fa` bg, `cursor: not-allowed`
+- **Selected** — `#8247e51a` brand-soft bg with `#8247e5` text and 1px purple border
+
+### Neutral Scale
+`#ffffff` (Canvas) → `#f5f3fa` (Soft) → `#ebe6f4` (Strong) → `#e0d8ed` (Border) → `#c9bcdd` (Border Strong) → `#9c92b5` (Subtle) → `#6b5d8a` (Muted) → `#3a2f5a` (Body) → `#0e0820` (Ink). Note the entire light scale carries a faint warm-purple tint — the system rejects neutral grey in favour of purple-warmth, signalling continuity with the brand voltage.
+
+### Surface & Borders
+- **Surface Card** (`#ffffff`): Default white cards.
+- **Surface Card Soft** (`#f5f3fa`): Soft-card variant for feature blocks.
+- **Border** (`#e0d8ed`): Default 1px hairline — warm-purple-tinted.
+- **Border Soft** (`#ebe6f4`): Softer divider.
+- **Border Strong** (`#c9bcdd`): Focused border.
+
+### Shadow Colors
+Polygon uses **deep-purple-tinted shadows** (`rgba(14,8,32,0.04–0.20)`) — the ink colour drives the shadow base, giving cards a slightly purple shadow tint that harmonises with the warm-purple neutral ramp. The signature card-hover shadow combines the deep drop with a 1px brand-purple edge ring (`rgba(130,71,229,0.10) 0 0 0 1px`) — same lit-edge approach as OpenSea/Magic Eden, on Polygon's purple register.
+
+### Semantic
+- **Up** (`#22c55e`): Saturated green — used on transaction-success indicators
+- **Down** (`#ef4444`): Saturated red — error states
+- **Warning** (`#f59e0b`): Amber — gas-fee warnings, deprecation notices
+- **Info** = Brand `#8247e5`
+
+### Gradient Tokens
+- **Hero Gradient**: `linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)` — used on full-bleed dark heroes
+- **Card Gradient**: `linear-gradient(135deg, rgba(130,71,229,0.10) 0%, rgba(130,71,229,0.02) 100%)` — used on feature-card-gradient variant for highlighted product cards
+
+## 3. Typography Rules
+
+### Font Family
+- **Display** — `Polygon Display`, fallback `"DM Sans", Inter, -apple-system, system-ui, sans-serif`. A geometric sans with slightly rounded terminals (in the DM Sans / Söhne Mono lineage).
+- **Body** — `Inter`, fallback `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`.
+- **Mono** — `JetBrains Mono`, fallback `"IBM Plex Mono", ui-monospace, monospace`.
+- **OpenType** — Polygon Display `ss01` enables alternate "g" (single-storey) for stylistic accents. Inter and JetBrains Mono use defaults plus `tnum`/`zero`.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|-----:|-------:|------------:|---------------:|-------------|-------|
+| display-mega   | Polygon Display | 80 | 600 | 1.00 | -2px   | default | Marketing hero |
+| display-xl     | Polygon Display | 64 | 600 | 1.05 | -1.6px | default | Section heros |
+| display-lg     | Polygon Display | 48 | 600 | 1.10 | -1.2px | default | Page titles |
+| display-md     | Polygon Display | 36 | 600 | 1.15 | -0.8px | default | Sub-section titles |
+| display-sm     | Polygon Display | 28 | 600 | 1.20 | -0.4px | default | Small section heads |
+| title-lg       | Inter | 24 | 600 | 1.25 | -0.2px | default | Card titles |
+| title-md       | Inter | 20 | 600 | 1.30 | 0      | default | Modal headers |
+| title-sm       | Inter | 16 | 600 | 1.30 | 0      | default | Inline emphasis |
+| body-lg        | Inter | 18 | 400 | 1.55 | 0      | default | Hero sub-copy |
+| body-md        | Inter | 16 | 400 | 1.55 | 0      | default | Default running text |
+| body-sm        | Inter | 14 | 400 | 1.50 | 0      | default | Secondary body |
+| caption        | Inter | 13 | 400 | 1.40 | 0      | default | Metric labels |
+| caption-strong | Inter | 12 | 600 | 1.40 | 0.4px  | default | Eyebrow tags |
+| label-eyebrow  | Inter | 11 | 700 | 1.30 | 1.2px  | default | UPPERCASE |
+| pull-quote     | Polygon Display | 28 | 500 | 1.40 | -0.4px | default | Editorial accent |
+| metric-display | Polygon Display | 56 | 700 | 1.00 | -1.5px | tnum | Metric strip — "1B+ transactions" |
+| metric-row     | JetBrains Mono | 18 | 500 | 1.30 | 0      | tnum, zero | Tabular metric data |
+| button         | Inter | 15 | 600 | 1.20 | 0      | default | All CTAs |
+| nav-link       | Inter | 14 | 500 | 1.30 | 0      | default | Top nav |
+| address-mono   | JetBrains Mono | 12 | 400 | 1.30 | 0      | tnum, zero | Wallet truncation |
+| code-micro     | JetBrains Mono | 13 | 400 | 1.50 | 0      | default | Inline code, RPC URLs |
+
+### Principles
+- **Display weight 600, not 700** — the calm-enterprise display weight signals "considered" rather than "shouty"; matches Coinbase Display weight 400 in spirit (one step lighter than fintech industry default)
+- **Metric-display escapes to weight 700** — the only place the display family bolds further, and only on the institutional-trust numerical centrepiece
+- **Inter for body, mono for tabular data** — same discipline as Coinbase
+- **`tnum` enabled on metric-display** — "1B+ transactions" lock at column-aligned tabular widths
+- **Negative tracking on every display size** — geometric sans tightens at large sizes
+- **Substitutes**: Polygon Display closest open licensable equivalents: DM Sans (regular weight 600), Söhne Halbfett, Pangram Sans Medium. For body, Inter. JetBrains Mono direct.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Primary CTA. `#8247e5` purple bg, white text, 14 × 28 padding, 48px height, 999px pill. Hover → `#6a35c4`. Used for "Start building", "Book a call".
+
+**`button-primary-lg`** — Marketing CTA. 18 × 36 padding, 56px height. Used at the top of marketing pages.
+
+**`button-primary-gradient`** — Gradient variant of primary. The gradient hero gradient as button bg — used rarely on signature "Get started" moments.
+
+**`button-secondary`** — Soft variant. `#f5f3fa` bg, ink text, 1px `#e0d8ed` border, 999px pill. Used for "Learn more", "Read docs".
+
+**`button-ghost`** — Outline variant. Transparent bg, ink text, 1.5px black border, 999px pill.
+
+**`button-ghost-on-dark`** — Outline variant for dark heroes. Transparent bg, white text, 1.5px white border. Used on the dark gradient hero alongside primary purple.
+
+### Cards
+
+**`feature-card`** — Default feature card. `#f5f3fa` warm-purple bg, 1px `#e0d8ed` border, 16px radius, 24px padding. Holds icon + title + body + "Learn more" link. Hover: lift 4px with brand-tinted 1px edge ring.
+
+**`feature-card-gradient`** — Highlighted variant. Card-gradient bg (faint purple radial), same border + radius. Used for the "headline product" card in a 4-up grid.
+
+**`product-card-dark`** — Card on dark hero. `#241844` deep-purple-elevated bg, 1px `rgba(255,255,255,0.10)` border, 16px radius, 24px padding. Used on dark-hero feature cards (e.g., "AggLayer", "zkEVM", "PoS").
+
+**`metric-card`** — Metric strip cell. `#f5f3fa` bg, 16px radius, 24 × 32 padding. Centred 56px metric-display weight 700 number, 13px caption-strong below.
+
+**`partner-logo-strip`** — Horizontal partner-logo carousel. `#ffffff` bg, 80px tall, 24px padding, logos in muted grey at 40% opacity (lifts to 100% on hover).
+
+### Badges / Tags / Pills
+
+**`badge-pill`** — Brand pill. Brand-soft `#8247e51a` bg, `#8247e5` text, 999px radius, 4 × 12 padding, caption-strong type.
+
+**`badge-new`** — "New" indicator. White bg, brand text, 1px `#e0d8ed` border, 999px pill.
+
+**`badge-trending`** — `rgba(34,197,94,0.10)` green-soft bg, `#22c55e` text, 999px pill.
+
+### Inputs / Forms
+
+**`input-text`** — White bg, 1px `#e0d8ed` border, 12px radius, 14 × 16 padding, 48px height. Focus → 4px `rgba(130,71,229,0.40)` ring, border tightens to `#8247e5`.
+
+**`input-search`** — `#f5f3fa` soft bg, 999px pill radius, 12 × 20 padding, 44px height (perfect pill).
+
+### Navigation
+
+**`top-nav`** — 80px tall (taller than typical to accommodate the mega-menu trigger area), white bg, 1px `#ebe6f4` bottom hairline. Polygon hexagon glyph + wordmark left, primary nav (Solutions, Build, Network, Developers, Community, Resources) — each opens a mega-menu dropdown. Right cluster: search-icon, "Sign in", primary purple "Get started" CTA.
+
+**`top-nav-on-dark`** — On dark hero pages, the nav becomes a sticky frosted bar — `rgba(26,18,51,0.80)` bg with `backdrop-filter: blur(12px)`. White text. Polygon's only sanctioned use of glassmorphism, and only on the nav.
+
+**`side-rail-docs`** — Documentation sidebar. 260px wide, `#f5f3fa` bg, 1px border, 16px radius, 24px padding. Section headers in label-eyebrow uppercase, link list below.
+
+### Modals & Overlays
+
+**`modal`** — White bg, 1px `#e0d8ed` border, 24px radius, 32px padding. Modal scrim is `rgba(14,8,32,0.60)` deep-purple-tinted at 60%.
+
+**`toast-success`** — White bg, 1px `#22c55e` border-left, 12px radius. Auto-dismiss 4s.
+
+**`toast-error`** — White bg, 1px `#ef4444` border-left, manual dismiss.
+
+### Decorative
+
+**`hexagon-mesh`** — Persistent background overlay on dark hero surfaces. Tessellated 2D hexagon pattern at 4% white opacity, 60-second slow drift (-2deg rotation). Reduced-motion freezes the drift. The mesh is the system's persistent visual signature.
+
+**`gradient-hero-anim`** — Optional: the gradient hero subtly shifts hue along the 135deg axis over 12 seconds. Disabled under reduced-motion.
+
+**`footer-dark`** — Dark gradient footer. `#1a1233` bg (sometimes the full hero gradient), white text, 80px vertical padding. Multi-column link list, partner logos, social icons.
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit**: 4px.
+- **Tokens**: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 96.
+- **Section padding (vertical)**: 96px on marketing — institutional editorial rhythm.
+- **Card internal padding**: 24px on feature cards, 32px on metric cards.
+- **Gutters**: 24px between feature cards, 16px between dense developer-doc cards.
+
+### Grid & Container
+- **Max content width**: 1200px on every page.
+- **Marketing grid**: 12-column with 24px gutters.
+- **Feature card grid**: 3-up or 4-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Metric strip**: 4-up horizontal at desktop, 2 × 2 at mobile.
+
+### Whitespace Philosophy
+**Institutional editorial breath.** Polygon willingly trades density for clarity. The 96px section padding matches Coinbase/Stripe/Magic Eden marketing. Card gutters at 24px allow each feature to read as a separate beat.
+
+### Section Cadence
+White hero (or dark gradient hero) → metric strip (`#f5f3fa`) → 3-up feature cards (white) → partner-logo strip (white) → soft `#f5f3fa` band with editorial pull-quote → developer CTA card (gradient) → dark gradient footer. The cadence alternates light editorial and dark gradient punctuation, with the metric strip and partner logos reinforcing institutional credibility.
+
+## 6. Shapes & Radius
+
+- **None** 0 — gradient hero edges, full-bleed bands
+- **xs** 4 — micro chips
+- **sm** 8 — small interior elements
+- **md** 12 — inputs, dropdowns
+- **card** 16 — feature cards (the signature radius)
+- **lg** 16 — metric cards, side-rail docs
+- **xl** 24 — modals, large overlays
+- **pill** 999 — every CTA, every badge — enterprise-friendly
+- **full** 9999 — circular avatars, hexagon-mark fills
+
+The 16px card radius and 999px pill CTA combination places Polygon in the same shape register as Stripe/Notion — softer than OpenSea (10/8) and Coinbase (12/100), harder than Magic Eden (16/999).
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 Flat | No shadow, surface contrast only | Body sections, hero bands |
+| 1 Card | `#f5f3fa` warm bg or `#ffffff` + 1px border | Feature cards, metric cards |
+| 2 Hover | `translateY(-4px)` + brand-tinted 1px edge ring | Feature card hover |
+| 3 Floating | `rgba(14,8,32,0.06) 0 8px 20px` | Dropdowns, mega-menus |
+| 4 Card-hover lit | `rgba(14,8,32,0.12) 0 24px 48px -16px, rgba(130,71,229,0.10) 0 0 0 1px` | Feature card on hover (signature) |
+| 5 Modal | `rgba(14,8,32,0.20) 0 40px 80px -8px` + scrim `rgba(14,8,32,0.60)` | Modal dialogs |
+| Focus ring | `0 0 0 4px rgba(130,71,229,0.40)` | All keyboard focus |
+
+**Shadow Philosophy**: Deep-purple-tinted shadow-base harmonises with the warm-purple neutral ramp. The 1px brand-purple edge ring on card-hover is the system's only brand-tinted shadow, and it's calibrated 1 percentage point lighter than OpenSea/Magic Eden equivalents to read as "subtle institutional polish" rather than "marketplace shimmer."
+
+## 8. Interaction & Motion
+
+- **Easing standard** — `cubic-bezier(0.4, 0, 0.2, 1)` for hover, dropdown, modal fade
+- **Easing emphasized** — `cubic-bezier(0.2, 0, 0, 1)` for card lifts and gradient drift
+- **Durations** — fast 160ms (hover), standard 280ms (card lift, modal fade), slow 440ms (gradient hue shift)
+- **Hover** — primary CTA darkens to `#6a35c4` over 160ms; feature cards lift 4px with the brand-tinted edge ring; nav-link colour darkens to brand
+- **Card lift** — `translateY(-4px)` on hover, returns on leave
+- **Hexagon mesh drift** — slow -2deg rotation over 60 seconds, infinite. Reduced-motion freezes
+- **Gradient hero hue shift** — subtle 12-second cycle along 135deg axis. Reduced-motion freezes
+- **Metric counter-up** — when metric-display enters viewport, the number animates 0 → final over 1500ms with eased-out interpolation. `tnum` keeps it column-aligned during the count
+- **Page transition** — 280ms cross-fade
+- **Reduced motion** — all gradient and mesh animations freeze; hover lifts collapse to opacity-only; metric counter-up jumps directly to final value
+
+## 9. Accessibility & A11y
+
+- **Contrast**: Ink `#0e0820` on white = 18.2:1 (AAA). Body `#3a2f5a` on canvas = 11.4:1 (AAA). White on Purple `#8247e5` = 4.7:1 (AA at body, AA-Large at display). Up green / down red on white pass AA.
+- **Focus indicator**: 4px solid `rgba(130,71,229,0.40)` ring on every interactive element. Border tightens to `#8247e5` on focused inputs. The 4px ring is louder than typical (3px) — Polygon goes generous on focus visibility for accessibility-first positioning.
+- **ARIA patterns**: Mega-menu uses `role="menu"` with `aria-expanded`. Metric-display counter-up has `aria-live="polite"` so screen readers announce the final value. Modal dialogs use `role="dialog"` with focus trap.
+- **Keyboard nav**: Top nav supports left/right arrow between primary tabs; Down arrow opens mega-menu; Tab moves through menu items. Skip-to-content link in document head.
+- **Screen reader hints**: Hexagon-mesh and gradient-hue animations carry `aria-hidden="true"`. Partner logos carry `alt="{Partner name}"`. Brand glyph is `aria-label="Polygon"`.
+- **Reduced motion**: Honoured — see §8.
+
+## 10. Responsive Behavior
+
+| Breakpoint | Width | Key Changes |
+|------------|------:|-------------|
+| Mobile     | < 640  | Top nav → hamburger; hero display-mega 80 → 44px; feature cards 1-up; metric strip 2 × 2; partner-logo strip becomes scrolling carousel |
+| Tablet     | 640–1024 | Nav condensed (search-icon collapses, mega-menus stay); feature cards 2-up; metric strip 2 × 2 or 4-up |
+| Desktop    | 1024–1280 | Full nav with mega-menu; feature cards 3-up; metric strip 4-up |
+| Wide       | > 1280 | Feature cards 3-up or 4-up; container 1200px max — Polygon caps narrow even on 4K |
+
+**Touch Targets**: Primary CTAs render at minimum 48 × 48px on mobile. Nav menu items expand to 56px tap targets. Mega-menu items get 48px row height on mobile.
+
+**Collapsing Strategy**: Top nav → hamburger sheet; mega-menus become accordion sub-sections inside the sheet. Side-rail-docs → top-of-page accordion on mobile.
+
+**Image Behavior**: Hexagon-mesh overlay scales proportionally. Hero illustrations crop to centre on mobile. Partner logos lazy-loaded.
+
+## 11. Content & Voice
+
+- **Tone** — confident-institutional, technically precise but approachable. "It's not our first trillion" — the brand voice can be playful, but always grounded in technical credibility (the trillion refers to transaction volume, sourced from on-chain data).
+- **Microcopy** — verbs are infrastructure-action: "Start building", "Book a call", "Read the docs", "Explore the network", "Become a validator". Avoids consumer crypto-bro slang.
+- **CTA verbs** — "Start building" (developer-side primary), "Book a call" (enterprise-side primary), "Read docs" (educational), "Explore" (network-side), "Get started" (universal entry).
+- **Empty states** — short and supportive. "No transactions yet — start building to see them here" with a "Read docs" link below.
+- **Error messages** — clear and remediable. "RPC error — check your endpoint and retry" with the raw error in mono code below for developers.
+- **Number formatting** — always `tnum`, locale-aware separators, abbreviated units on metric strip ("1B+ transactions", "$5B+ TVL"). Full precision in code-micro for developer surfaces (RPC results, raw transaction data).
+- **Address formatting** — `0x1234…abcd` (4 + 4) JetBrains Mono with click-to-copy.
+- **Enterprise voice** — "Trusted by Stripe, Reddit, Disney, Starbucks, Robinhood" — partner logos are the brand's clearest editorial commitment. The language reinforces "institutional infrastructure" without sliding into "we're not for retail."
+
+## 12. Dark Mode & Theming
+
+Polygon is **dual-theme by design**. The white-canvas marketing surface alternates with deep-purple gradient heroes throughout the page; this is a within-page mode-flip rather than a user-toggleable theme.
+
+A user-toggleable dark-mode for the **product app** (Polygon Bridge, Wallet) exists and uses:
+- `bg-dark` `#0e0820` (canvas)
+- `bg-dark-elev-1` `#241844` (card bg)
+- `bg-dark-elev-2` `#2d1c5c` (hover bg)
+- `text-on-dark` `#ffffff` (text)
+- `text-on-dark-soft` `#a89cc7` (muted)
+- `border-on-dark` `rgba(255,255,255,0.10)` (hairline at 10%)
+- Brand purple `#8247e5` stays constant; lightens to `#a875ee` for hover on dark
+- Hexagon mesh persists at 4% white opacity
+
+The shared tokens (Polygon Purple, semantic up/down, hexagon glyph) thread through both modes unchanged. Marketing pages and product surfaces share the same dark gradient hero pattern, just with different ratios of light-to-dark across the page.
+
+## 13. Lineage & Influences
+
+Polygon's design language inherits from **enterprise-fintech** (Stripe, Plaid, Square Cash) and **infrastructure platforms** (Cloudflare, Vercel, AWS) more than from crypto-native peers. The white canvas, purple-tinted neutral ramp, gradient hero punctuation, partner-logo strips, and metric-display numerical centrepieces are all enterprise-marketing references. The choice of Polygon Display at weight 600 (versus the fintech industry's 700-weight default) signals "considered" — same discipline as Coinbase Display weight 400 and Stripe's restraint.
+
+What it borrows: gradient hero washes from Cloudflare and Vercel marketing; partner-logo strip pattern from Stripe; metric-display centrepiece from Stripe ("21.6% YoY GMV") and Linear ("Reset the standard"); 1px brand-tinted edge ring on hover from OpenSea/Magic Eden. The hexagon glyph and tessellated mesh background are Polygon's clearest original contributions to the visual lineage — no other major web3 brand has shipped a persistent geometric watermark at this rigor.
+
+What it rejects: dark canvas defaults (rejected as too crypto-native — Polygon positions as enterprise infrastructure first); 0px corner radius (rejected as too brutalist); single-blue brand discipline (purple is the deliberate deviation from the entire fintech-default-blue convention — Coinbase, Stripe, Plaid, Robinhood all use blue; Polygon's purple stakes a distinct register).
+
+The shift from Polygon V1 (2017–2020 — Matic Network branding, blue-and-purple gradient, more crypto-native) to the current single-purple enterprise register (2021–present) was a deliberate rebrand to lean into the "Web3 infrastructure for institutions" framing rather than the early "Ethereum scaling solution for crypto users" register.
+
+Influences:
+- **Stripe** — Single-brand-colour discipline, 96px section padding, partner-logo strip, metric centrepiece. https://stripe.com
+- **Vercel** — Gradient hero punctuation, dark-on-light editorial cadence, geometric sans display. https://vercel.com
+- **Cloudflare** — Enterprise-credibility tone, partner trust signals, blue-purple gradient. https://www.cloudflare.com
+- **Linear** — Editorial dark hero with mesh overlay (Linear uses dot-grid; Polygon uses hexagon-mesh). https://linear.app
+- **DM Sans (Google Fonts)** — Closest open licensable equivalent to Polygon Display. https://fonts.google.com/specimen/DM+Sans
+- **Polygon hexagon glyph** — Original brand mark; the tessellated 3D rendering is the clearest visual signature in the L2 ecosystem.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep the canvas at pure `#ffffff` — Polygon's whiteness is the institutional-credibility floor
+- Use the deep-purple gradient `linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)` on dark heroes — never plain `#000`
+- Use Polygon Display at weight 600 — institutional calm, not fintech-bombastic 700
+- The metric-display escapes to weight 700 and uses `tnum` — it's the only place the display family bolds further
+- Pill CTAs at 999px radius — enterprise-friendly
+- 16px card radius with 24px gutters
+- Hexagon-mesh background overlay on every dark hero — it's the brand's persistent visual signature
+- The 4px focus ring is mandatory — Polygon goes louder on focus visibility for accessibility-first positioning
+- Use the warm-purple neutral ramp (`#f5f3fa`, `#e0d8ed`) — never cool/neutral grey
+- Use partner-logo strips and metric-display numerical centrepieces to reinforce institutional credibility
+
+### Don't
+- Don't use plain near-black `#000` or `#0a0b0d` for dark heroes — the gradient hero is mandatory
+- Don't bolden Polygon Display past 600 (except metric-display which goes 700)
+- Don't use neutral grey (Apple-style cool grey, Notion-style warm grey-cream) — purple-warm is the brand neutral
+- Don't 0px radius or rectangle CTAs — pills are mandatory
+- Don't disable hexagon-mesh or gradient animations for performance — only disable under reduced-motion
+- Don't use blue (`#0052ff` / `#2081e2` / `#0a66c2`) — purple is the brand's anti-blue stake
+- Don't add green or pink as primary brand voltages — they're surface-vertical accents only
+- Don't show metric-display counters without `tnum` — column alignment matters even when counting up
+- Don't hide partner logos — institutional trust is editorial not optional
+- Don't use the brand-tinted edge ring on every card — only feature-card and product-card-dark hover
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Brand: Polygon Purple `#8247e5`
+- Brand pressed: `#6a35c4`
+- Canvas: `#ffffff`
+- Surface soft: `#f5f3fa`
+- Surface dark: `#1a1233`
+- Surface dark elev: `#241844`
+- Text ink: `#0e0820`
+- Body: `#3a2f5a`
+- Muted: `#6b5d8a`
+- Border: `#e0d8ed`
+- Hero gradient: `linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)`
+
+### Example Component Prompts
+- "Create a Polygon hero band: deep-purple gradient `linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)` background, hexagon-mesh overlay at 4% white opacity slow-drifting, 80px Polygon Display weight 600 headline 'The internet's value layer' with -2px tracking in `#ffffff`, body-lg 18px Inter sub in `#a89cc7`, primary purple CTA `#8247e5` 999px pill 14 × 28 padding 'Start building' in white text weight 600, ghost-on-dark CTA 'Read docs' with 1.5px white border."
+- "Design a metric strip: full-width `#f5f3fa` warm-purple band, 96px vertical padding. 4-up grid with 24px gutters. Each cell: 56px Polygon Display weight 700 number with `tnum` (e.g., '1B+'), 13px caption-strong `#6b5d8a` 'Transactions' below. On viewport-enter, animate 0 → final over 1500ms with eased-out interpolation."
+- "Build a feature-card grid: 3-up on desktop with 24px gutters. Each card: `#f5f3fa` bg, 1px `#e0d8ed` border, 16px radius, 24px padding. 32px purple icon top, title-md 20/600 in `#0e0820`, body-md `#3a2f5a`, 'Learn more →' link in `#8247e5`. Hover: translateY(-4px) with `rgba(14,8,32,0.12) 0 24px 48px -16px, rgba(130,71,229,0.10) 0 0 0 1px` shadow."
+- "Render a dark-hero feature card: `#241844` deep-purple-elevated bg, 1px `rgba(255,255,255,0.10)` border, 16px radius, 24px padding. White headline title-lg, `#a89cc7` body-md, 'Explore →' link in brand-light `#a875ee`. Hover: bg shifts to `#2d1c5c`."
+- "Compose a partner-logo strip: 80px tall white band, 24px vertical padding. Logos in muted grey at 40% opacity, scrolling carousel on mobile / static centred row on desktop. On hover: lift opacity to 100% and apply faint brand-purple drop-shadow."
+
+### Iteration Guide
+1. Start with `#ffffff` canvas — Polygon's whiteness is the institutional-credibility floor
+2. Polygon Display at weight 600 (not 700) — the calm-enterprise register
+3. The deep-purple gradient hero is mandatory — never plain `#000`. The 135deg three-stop gradient is the signature
+4. Pill CTAs at 999px radius — enterprise-friendly
+5. The hexagon-mesh background overlay on dark heroes is the brand's persistent signature — preserve it (and freeze under reduced-motion)
+6. Use the warm-purple neutral ramp — `#f5f3fa`, `#ebe6f4`, `#e0d8ed`. Cool grey reads Apple/Linear, not Polygon
+7. The 4px focus ring is the system's accessibility-first commitment — keep it 4px not 3px
+8. `tnum` on metric-display numbers — column alignment matters even when counting up
+9. Partner-logo strips and metric-display centrepieces reinforce institutional credibility — use them on every product page
+10. Card-hover edge ring at `rgba(130,71,229,0.10) 0 0 0 1px` — the brand-tinted depth gesture

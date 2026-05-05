@@ -1,0 +1,636 @@
+---
+name: HashiCorp
+tagline: Black canvas hosting a per-product color portfolio — Terraform purple, Vault yellow, Consul red, Waypoint cyan — multi-product identity made literal.
+author: webdesignhot
+source_url: https://hashicorp.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, infrastructure]
+tags: [dark, multi-color, enterprise, sans, dense, technical]
+preview_swatch: ['#000000', '#7b42bc', '#ffd02f']
+related: [vercel, fly-io, datadog]
+description: 'HashiCorp''s marketing canvas is a near-black ground that serves a multi-product portfolio without ever feeling generic. The dominant surface is pure black layered with charcoal cards and 1px translucent gray hairlines; the chrome is monochrome — white pill-rounded buttons, white type, gray secondary type — but the system is held together by a palette of per-product accent colors that signal which HashiCorp tool a given section belongs to: Terraform purple, Vault yellow, Consul red, Waypoint cyan, Vagrant blue, Nomad green, Boundary coral. Display type is hashicorpSans at weights 600/700 with tight 1.17–1.21 line-heights paired with body-relaxed 1.50–1.71 — the proportional gap is the brand''s voice.'
+
+colors:
+  bg: '#000000'                  # canvas — pure black
+  surface: '#15181e'              # surface-1: charcoal one step above canvas
+  surface-elevated: '#1f232b'     # surface-2: featured pricing, hover chrome
+  surface-strong: '#3b3d45'       # surface-3: chips, badges, sub-nav
+  surface-inverse: '#ffffff'      # used as button-primary surface only
+  text: '#ffffff'                 # ink — primary type on dark
+  text-body: '#b2b6bd'            # ink-muted — body, secondary text
+  text-muted: '#656a76'           # ink-subtle — captions, timestamps
+  text-inverse: '#000000'         # text on white surfaces
+  brand: '#000000'                # the system primary — canvas itself
+  on-brand: '#ffffff'             # white type on black canvas
+  link: '#2b89ff'                 # accent-blue — hyperlinks
+  link-visited: '#a737ff'         # visited state
+  border: '#3b3d45'               # default 1px hairline
+  border-soft: '#252830'          # subtler dividers
+  border-strong: '#3b3d45'        # emphasised borders
+  shadow-color: 'rgba(0,0,0,0.6)' # rare drop shadow under floating nav
+  shadow-glow-purple: 'rgba(123,66,188,0.2)' # ambient glow on Terraform sections
+  product-terraform: '#7b42bc'    # Terraform purple
+  product-terraform-bright: '#911ced'
+  product-vault: '#ffcf25'        # Vault yellow
+  product-consul: '#e62b1e'       # Consul red
+  product-waypoint: '#14c6cb'     # Waypoint cyan
+  product-waypoint-deep: '#12b6bb'
+  product-vagrant: '#1868f2'      # Vagrant blue
+  product-nomad: '#00ca8e'        # Nomad green
+  product-boundary: '#f24c53'     # Boundary coral
+  amber-100: '#fbeabf'
+  amber-200: '#bb5a00'
+  blue-deep: '#101a59'
+  success: '#00ca8e'              # = nomad green
+  warning: '#ffcf25'              # = vault yellow
+  danger: '#e62b1e'               # = consul red
+  info: '#2b89ff'
+
+typography:
+  display:
+    family: 'hashicorpSans, "Inter", -apple-system, "Segoe UI", sans-serif'
+    weights: [500, 600, 700]
+    opentype-features: "'ss01', 'cv11'"
+  body:
+    family: 'hashicorpSans, "Inter", -apple-system, "Segoe UI", sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: '"JetBrains Mono", ui-monospace, SF Mono, Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-xl:        { size: 80, weight: 700, lineHeight: 1.17, tracking: '-2.5px',  family: display }
+    display-lg:        { size: 56, weight: 700, lineHeight: 1.18, tracking: '-1.6px',  family: display }
+    display-md:        { size: 40, weight: 600, lineHeight: 1.19, tracking: '-1.0px',  family: display }
+    headline:          { size: 28, weight: 600, lineHeight: 1.21, tracking: '-0.6px',  family: display }
+    card-title:        { size: 22, weight: 600, lineHeight: 1.18, tracking: '-0.4px',  family: display }
+    subhead:           { size: 20, weight: 600, lineHeight: 1.35, tracking: '-0.2px',  family: body }
+    body-lg:           { size: 18, weight: 500, lineHeight: 1.69, tracking: 0,         family: body }
+    body:              { size: 16, weight: 500, lineHeight: 1.50, tracking: 0,         family: body }
+    body-sm:           { size: 14, weight: 500, lineHeight: 1.71, tracking: 0,         family: body }
+    caption:           { size: 13, weight: 500, lineHeight: 1.38, tracking: '0.2px',   family: body }
+    button:            { size: 14, weight: 600, lineHeight: 1.29, tracking: 0,         family: body }
+    eyebrow:           { size: 12, weight: 600, lineHeight: 1.23, tracking: '0.6px',   family: body, transform: uppercase }
+    code-md:           { size: 14, weight: 400, lineHeight: 1.55, tracking: 0,         family: mono }
+    code-sm:           { size: 12, weight: 400, lineHeight: 1.50, tracking: 0,         family: mono }
+
+radius:
+  micro: 2
+  xs: 4
+  sm: 6
+  md: 8
+  lg: 12
+  xl: 16
+  xxl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  hair: 1
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 96
+  scale: [1, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 768
+  header-height: 64
+
+components:
+  button-primary:
+    backgroundColor: surface-inverse
+    textColor: text-inverse
+    rounded: md
+    padding: '10px 18px'
+    use: 'every primary CTA — white pill on black canvas'
+  button-secondary:
+    backgroundColor: surface-elevated
+    textColor: text
+    rounded: md
+    padding: '10px 18px'
+    use: 'secondary action paired with primary'
+  button-tertiary:
+    backgroundColor: bg
+    textColor: text
+    border: '1px solid border'
+    rounded: md
+    padding: '10px 18px'
+    use: 'tertiary CTA with hairline border'
+  button-product-terraform:
+    backgroundColor: product-terraform
+    textColor: text
+    rounded: md
+    padding: '10px 18px'
+    use: 'product-specific CTA on Terraform surfaces'
+  button-product-vault:
+    backgroundColor: product-vault
+    textColor: text-inverse
+    rounded: md
+    padding: '10px 18px'
+    use: 'product-specific CTA on Vault surfaces'
+  button-product-waypoint:
+    backgroundColor: product-waypoint
+    textColor: text-inverse
+    rounded: md
+    padding: '10px 18px'
+    use: 'product-specific CTA on Waypoint surfaces'
+  card-product:
+    backgroundColor: surface
+    textColor: text
+    rounded: lg
+    padding: 24
+    use: 'default product info card'
+  card-product-terraform:
+    backgroundColor: product-terraform
+    textColor: text
+    rounded: lg
+    padding: 24
+    use: 'Terraform identity surface'
+  card-product-vault:
+    backgroundColor: product-vault
+    textColor: text-inverse
+    rounded: lg
+    padding: 24
+    use: 'Vault identity surface'
+  card-product-waypoint:
+    backgroundColor: product-waypoint
+    textColor: text-inverse
+    rounded: lg
+    padding: 24
+    use: 'Waypoint identity surface'
+  card-feature:
+    backgroundColor: surface
+    rounded: lg
+    padding: 24
+    use: 'standard 3-up feature grid card'
+  card-pricing:
+    backgroundColor: surface
+    rounded: lg
+    padding: 32
+    use: 'standard pricing tier card'
+  card-pricing-featured:
+    backgroundColor: surface-elevated
+    rounded: lg
+    padding: 32
+    use: 'featured pricing tier — surface step up signals featured'
+  card-resource:
+    backgroundColor: surface
+    rounded: lg
+    padding: 16
+    use: 'small resource tile (PDF, video, doc link)'
+  text-input:
+    backgroundColor: surface
+    textColor: text
+    rounded: md
+    padding: '10px 14px'
+  badge-pill:
+    backgroundColor: surface
+    textColor: text-body
+    rounded: pill
+    padding: '4px 10px'
+  cta-banner:
+    backgroundColor: surface
+    textColor: text
+    rounded: xxl
+    padding: 48
+    use: 'pre-footer CTA band with 24px radius'
+  top-nav:
+    backgroundColor: bg
+    textColor: text
+    height: 64
+  footer:
+    backgroundColor: bg
+    textColor: text-body
+    padding: '64px 32px'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — opacity-only transitions, product card color shifts disabled'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'none — surface stepping does the depth work'
+  standard: '1px solid rgba(178,182,189,0.1) — translucent gray hairline'
+  elevated: '0 6px 16px rgba(0,0,0,0.4) — used only on floating nav and dropdown'
+  deep: '0 24px 48px rgba(0,0,0,0.6) — modals only'
+  ring: '0 0 0 2px #2b89ff'
+
+accessibility:
+  contrast-text-on-bg: 21.0                # AAA — pure white on pure black
+  contrast-body-on-bg: 8.4                 # AAA — #b2b6bd on #000000
+  contrast-text-on-vault: 14.6             # AAA — black text on yellow Vault
+  contrast-text-on-terraform: 5.1          # AA — white text on purple Terraform
+  contrast-text-on-waypoint: 8.7           # AAA — black text on cyan Waypoint
+  contrast-muted-on-bg: 4.7                # AA — #656a76 on #000000
+  focus-ring: '2px solid #2b89ff with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'this IS the dark mode — HashiCorp ships no light marketing surface; per-product colors stay consistent across themes'
+---
+
+## 1. Visual Theme & Atmosphere
+
+HashiCorp's marketing canvas is a near-black ground that serves a multi-product portfolio without ever feeling generic. The dominant surface is `#000000` (pure black) layered with `#15181e` charcoal cards and 1px translucent gray hairlines (`rgba(178,182,189,0.1)`). The chrome is monochrome — white pill-rounded buttons, white type, gray secondary type — but the system is held together by a **palette of per-product accent colors** that signal which HashiCorp tool a given section belongs to: Terraform purple (`#7b42bc`), Vault yellow (`#ffcf25`), Consul red (`#e62b1e`), Waypoint cyan (`#14c6cb`), Vagrant blue (`#1868f2`), Nomad green (`#00ca8e`), Boundary coral (`#f24c53`).
+
+Display type is **hashicorpSans** (custom; Inter is the substitute) at weights 600/700 with tight line-heights (1.17–1.21); body type is the same family at 500 weight with deliberately relaxed line-heights (1.50–1.71). The contrast feels editorial, not enterprise-templated. CTAs use small `md` 8px corners rather than pills, which keeps the system reading as developer-facing rather than consumer-y.
+
+The signature device is the **product-card family** — each HashiCorp product gets its own colored card variant on the home and infrastructure pages, lifting Terraform into a violet ground, Vault into yellow, Waypoint into cyan. These aren't decorative gradients — they're identity surfaces. A reader scrolling the page can tell which product a section is about from the corner of their eye, without reading the headline.
+
+Where Vercel collapses to a single accent and ClickHouse leans on one yellow, HashiCorp's challenge is the opposite: how to wear seven product colors without looking like a children's hospital. The system solves it by holding the chrome (canvas, type, buttons) in pure monochrome and letting product color appear only inside dedicated product-card surfaces — never on buttons globally, never on body type, never on hairlines.
+
+**Key Characteristics:**
+- Black-canvas marketing system: `#000000` is the surface for hero, body, pricing, comparison tables, and footer alike.
+- **Per-product color identity**: seven products, seven color tokens, each with its own button + card variant.
+- Display headlines run hashicorpSans 600/700 with line-height 1.17–1.21 (tight); body runs the same family at 500 with 1.50–1.71 (relaxed) — the proportional gap is the brand's voice.
+- CTA shape is 8px — not a pill — keeping the system reading as developer-tool rather than consumer-app.
+- White pill primary button (`#ffffff` on `#000000`) is the universal CTA across all non-product surfaces.
+- Charcoal surface lift (canvas → surface-1 → surface-2) instead of shadow-driven elevation.
+- 1px translucent gray hairlines (`rgba(178,182,189,0.1)`) define cards and dividers — borders are felt more than seen.
+- Eyebrow typography (12–13px, 600 weight, 0.6px positive tracking, uppercase) marks every section as a category label.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#000000`): The system primary surface. Canvas, footer, comparison tables, hero — all pure black.
+- **Text** (`#ffffff`): Inverse text on black; canvas of `button-primary`.
+- **Brand** (`#000000`): The brand IS the black canvas. There is no chromatic brand color — products carry that role.
+
+### Brand & Dark
+- **Surface Inverse** (`#ffffff`): Pure white, used as the surface of `button-primary` only.
+- **Bg Deep**: There is no deeper black — `#000000` is the floor.
+
+### Accent — Per-Product Palette
+This is the brand's defining feature. Each product gets one accent token:
+- **Terraform Purple** (`#7b42bc`): Infrastructure-as-code provisioning. The flagship purple.
+- **Terraform Bright** (`#911ced`): Brighter purple for Terraform Cloud surfaces.
+- **Vault Yellow** (`#ffcf25`): Secrets management. The most attention-grabbing product color.
+- **Consul Red** (`#e62b1e`): Service mesh. Reserved exclusively for Consul.
+- **Waypoint Cyan** (`#14c6cb`): Application delivery. Soft cyan with high luminosity.
+- **Waypoint Deep** (`#12b6bb`): Press / hover variant for Waypoint CTAs.
+- **Vagrant Blue** (`#1868f2`): Development environments. The most "default" of the product blues.
+- **Nomad Green** (`#00ca8e`): Workload orchestration. Doubles as the system's success color.
+- **Boundary Coral** (`#f24c53`): Privileged access management. Doubles as the system's danger color when used in chrome.
+
+### Interactive
+- **Link** (`#2b89ff`): Hyperlinks across the marketing surface. Brighter than any product blue.
+- **Link Visited** (`#a737ff`): Visited-link state — purple to distinguish from action.
+- **Selected** (`rgba(43,137,255,0.2)`): Selected text background.
+- **Disabled** (`#656a76`): Disabled labels, tertiary text.
+
+### Neutral Scale
+- **Text** (`#ffffff`): Headlines, primary type.
+- **Text Body** (`#b2b6bd`): Default running-text, ink-muted — the "soft white" that carries body copy.
+- **Text Muted** (`#656a76`): Captions, timestamps, secondary metadata.
+- **Surface Strong** (`#3b3d45`): Chip backgrounds, sub-nav fills.
+
+### Surface & Borders
+- **Surface** (`#15181e`): Charcoal one step above canvas — feature cards, pricing cards, resource tiles.
+- **Surface Elevated** (`#1f232b`): Two steps above — featured pricing card, secondary buttons, hovered product chrome.
+- **Surface Strong** (`#3b3d45`): Three steps above — chips, badges, sub-nav backgrounds.
+- **Border** (`#3b3d45`): 1px borders on cards and dividers.
+- **Border Soft** (`#252830`): Subtler dividers — comparison-table rows.
+- **Border Strong** (`#3b3d45`): Same value as `border` — used semantically when emphasis is required.
+
+### Shadow Colors
+- **Shadow Color** (`rgba(0,0,0,0.6)`): Rare drop shadow on floating nav and dropdowns.
+- **Shadow Glow Purple** (`rgba(123,66,188,0.2)`): Ambient glow on Terraform-themed hero sections — the only product color used as ambient light.
+
+### Semantic
+HashiCorp reuses product colors for semantic tokens — a deliberate choice that ties brand identity to UI feedback:
+- **Success** (`#00ca8e`): Same as Nomad green.
+- **Warning** (`#ffcf25`): Same as Vault yellow.
+- **Danger** (`#e62b1e`): Same as Consul red.
+- **Info** (`#2b89ff`): Same as accent-blue / link.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `hashicorpSans, Inter, -apple-system, "Segoe UI", sans-serif`. hashicorpSans is custom; Inter at the same weight grades is the open-source substitute.
+- **Mono**: `"JetBrains Mono", ui-monospace, SF Mono, Menlo, monospace`. Code blocks, CLI snippets, configuration examples.
+- **OpenType features**: `'ss01'` for the disambiguated I/l, `'cv11'` for the alternative single-storey 'a' on display.
+- **No serif**: Deliberately. The single-family discipline carries the brand.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-xl | hashicorpSans | 80 | 700 | 1.17 | -2.5px | ss01 | Homepage hero h1 |
+| display-lg | hashicorpSans | 56 | 700 | 1.18 | -1.6px | — | Section heads |
+| display-md | hashicorpSans | 40 | 600 | 1.19 | -1.0px | — | Sub-section heads |
+| headline | hashicorpSans | 28 | 600 | 1.21 | -0.6px | — | Module titles |
+| card-title | hashicorpSans | 22 | 600 | 1.18 | -0.4px | — | Card headlines |
+| subhead | hashicorpSans | 20 | 600 | 1.35 | -0.2px | — | Sub-section markers |
+| body-lg | hashicorpSans | 18 | 500 | 1.69 | 0 | — | Lead paragraphs |
+| body | hashicorpSans | 16 | 500 | 1.50 | 0 | — | Default body |
+| body-sm | hashicorpSans | 14 | 500 | 1.71 | 0 | — | Small body, footnotes |
+| caption | hashicorpSans | 13 | 500 | 1.38 | 0.2px | — | Captions |
+| button | hashicorpSans | 14 | 600 | 1.29 | 0 | — | CTA labels |
+| eyebrow | hashicorpSans | 12 | 600 | 1.23 | 0.6px | — | Section eyebrows, uppercase |
+| code-md | JetBrains Mono | 14 | 400 | 1.55 | 0 | — | Code blocks |
+| code-sm | JetBrains Mono | 12 | 400 | 1.50 | 0 | — | Inline code |
+
+### Principles
+- **Tight headings, relaxed body**: Display line-heights run 1.17–1.21 (very tight); body runs 1.50–1.71 (very relaxed). The proportional gap is the brand's voice — editorial gravity above, comfortable reading below.
+- **Display weights are 600 or 700**, never 500 for headlines. Hierarchy is built on size + weight, with weight stepping down only as size steps down.
+- **Body weight is 500**, not 400. The slight extra weight gives body type more presence on the dark canvas where 400 would feel washed.
+- **Eyebrow tracking is positive (+0.6px)** while display tracking is negative (-2.5px to -0.2px). The opposing tracking signals different functions: eyebrow as label, display as voice.
+- **Negative tracking scales with size**: -2.5px at 80px (-3.1%), -0.2px at 20px (-1%). Subtle but consistent.
+- **Mono everywhere code appears.** No system-font fallback for code surfaces.
+
+## 4. Component Stylings
+
+### Buttons (5+ variants)
+
+**`button-primary`** — White pill primary. Background `#ffffff`, text `#000000`, type 14px / 600, padding 10px × 18px, radius 8px. Used as the universal CTA across non-product surfaces.
+
+**`button-secondary`** — Surface-elevated secondary. Background `#1f232b`, text `#ffffff`, same shape as primary.
+
+**`button-tertiary`** — Transparent with 1px solid `#3b3d45` border. Used as outline CTA when inside a colored product surface.
+
+**`button-product-terraform`** — Terraform-themed CTA. Background `#7b42bc`, white text. Used only on Terraform-product pages.
+
+**`button-product-vault`** — Vault-themed CTA. Background `#ffcf25`, BLACK text. The yellow + black is high-contrast and signals Vault's caution-color identity.
+
+**`button-product-waypoint`** — Waypoint-themed CTA. Background `#14c6cb`, BLACK text. Cyan is light enough that black-text is required for AA contrast.
+
+### Cards
+
+**`card-product`** — Default product info card. Background `#15181e`, white text, radius 12px, padding 24px.
+
+**`card-product-terraform`** — Terraform identity card. Background `#7b42bc`, white text, same shape as card-product.
+
+**`card-product-vault`** — Vault identity card. Background `#ffcf25`, BLACK text, same shape.
+
+**`card-product-waypoint`** — Waypoint identity card. Background `#14c6cb`, BLACK text, same shape.
+
+**`card-feature`** — Standard 3-up feature grid card. Background `#15181e`, radius 12px, padding 24px. Used outside product-themed sections.
+
+**`card-pricing`** — Standard pricing tier card. Background `#15181e`, radius 12px, padding 32px.
+
+**`card-pricing-featured`** — Featured tier. Background steps up to `#1f232b` — the surface step alone signals "featured", no border or badge required.
+
+**`card-resource`** — Small resource tile (PDF, video, doc link). Background `#15181e`, radius 12px, padding 16px.
+
+### Badges & Pills
+
+**`badge-pill`** — Background `#15181e`, text `#b2b6bd`, caption typography, radius 9999, padding 4px × 10px.
+
+**Product pill**: Same shape as badge-pill but with product color as background and text adjusted for contrast.
+
+### Inputs / Forms
+
+**`text-input`** — Background `#15181e`, white text, radius 8px, padding 10px × 14px. Focus state: 2px solid `#2b89ff` ring with 2px offset.
+
+### Navigation
+
+**`top-nav`** — Default nav bar. Background `#000000`, text `#ffffff`, height 64px. Logo + wordmark left, primary horizontal menu (Products, Solutions, Resources, Customers, Pricing) center, "Sign In" + `button-primary` ("Try HCP") right.
+
+### Decorative
+
+**`cta-banner`** — Pre-footer CTA band. Background `#15181e`, text `#ffffff`, radius 24px (the largest in the system), padding 48px. Carries an h2 in subhead typography and a `button-primary` cluster.
+
+**`comparison-row`** — Pricing comparison table row. Background `#000000`, text `#b2b6bd`, body-sm typography. Border-bottom 1px `#252830` per row.
+
+**`footer`** — Background `#000000`, text `#b2b6bd`, caption typography. 4–5 column link list at desktop. Padding 64px × 32px.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `hair:1 · xxs:4 · xs:8 · sm:12 · md:16 · lg:24 · xl:32 · xxl:48 · section:96`. Section padding is 96px between major bands. Card internal padding ranges 16–32px depending on card density. The 1px hair token exists explicitly for hairline dividers — a HashiCorp-specific design decision.
+
+### Grid & Container
+Max content width is 1280px centered. Editorial body uses a 12-column grid. Hero often uses a 6/6 split (h1 left, product-card grid right). Feature grids run 3-up at desktop, 2-up at tablet, 1-up at mobile. Pricing grids run 3–4 up at desktop. Footer uses a 4–5 column layout.
+
+### Whitespace Philosophy
+HashiCorp uses dense whitespace appropriate for an enterprise developer-tooling brand. Relaxed body line-heights (1.50–1.71) compensate for the tight section padding (96px) — the page reads like a well-typeset technical manual rather than a marketing brochure. The 1px hair spacing for dividers is the key nuance: hairlines are felt more than seen, keeping the page calm.
+
+### Section Cadence
+Page rhythm: hero (canvas + product-card grid) → product-themed band (Terraform purple, Vault yellow, etc.) → feature grid (canvas + feature cards) → pricing grid → comparison table → CTA banner → footer. Product-themed bands appear sequentially; the eye learns to expect "section about Terraform = purple is coming."
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Reserved — never used in components |
+| XS | xs | 4px | Small inline tags, code-block accents |
+| Standard | sm | 6px | Compact rows |
+| Comfortable | md | 8px | CTA buttons, text inputs — the default for actionables |
+| Large | lg | 12px | Content cards, product cards, pricing tiers, resource tiles |
+| Featured | xl | 16px | Larger feature shells |
+| Featured-XL | xxl | 24px | Pre-footer CTA banner — the largest radius in the system |
+| Pill | pill | 9999px | Badges only |
+
+The radius scale is hierarchical: 8px CTAs, 12px cards, 24px CTA banner. The 24px on cta-banner is intentional — it signals "this is the most important card on the page."
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat (canvas) | `#000000`, no border | Body bands, comparison tables, hero |
+| 1 — Card | `#15181e`, no shadow | Default content, feature, pricing, resource cards |
+| 2 — Card elevated | `#1f232b`, no shadow | Featured pricing card, secondary buttons, hovered chrome |
+| 3 — Card strong | `#3b3d45`, no shadow | Chips, badges, sub-nav backgrounds |
+| 4 — Floating nav | Surface + 1px border + `0 6px 16px rgba(0,0,0,0.4)` | Sticky nav on scroll, dropdown menus |
+| 5 — Modal | Surface + 1px border + `0 24px 48px rgba(0,0,0,0.6)` | Dialogs |
+
+### Shadow Philosophy
+HashiCorp's depth system is **brightness-step elevation** with a deliberate 4-tier surface scale (`#000` → `#15181e` → `#1f232b` → `#3b3d45`). Drop shadows live only at the chrome layer (floating nav, dropdowns, modals) — content cards never shadow. The 1px translucent gray hairline (`rgba(178,182,189,0.1)`) does the cardinality work that shadows would do in a lighter system.
+
+The Terraform purple ambient glow (`rgba(123,66,188,0.2)`) is the one decorative shadow — used on Terraform-themed hero sections to add atmospheric depth behind the product-card grid. Other product surfaces do not get glow treatment; the glow is reserved for the flagship product.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for all transitions.
+- **Emphasized ease**: `cubic-bezier(0.2, 0, 0, 1)` — used on product-card color transitions, modal entrances.
+
+### Duration Buckets
+- **Fast (120ms)**: Color transitions on hover, focus ring expansion.
+- **Standard (200ms)**: Card hover lifts (none — only border shifts), button press feedback, dropdown opens.
+- **Slow (320ms)**: Modal entrance, page-section reveals on scroll, product-card color reveals.
+
+### Per-Component Micro-States
+- **Button hover (primary)**: Background brightens from `#ffffff` to a 95% opacity layer (subtle); no transform.
+- **Button hover (product)**: Background shifts to bright variant (e.g. Terraform `#7b42bc` → `#911ced`) over 120ms.
+- **Button press**: 1px translate-down via `transform: translateY(1px)` over 80ms.
+- **Card hover**: Border shifts from `#3b3d45` → `#656a76` over 200ms. No transform, no shadow.
+- **Product-card hover**: Subtle 1.02x scale on the colored card over 320ms with emphasized ease.
+- **Link hover**: Underline thickens from 1px → 2px over 120ms; color stays blue.
+- **Input focus**: 2px blue ring expands from 0 → 2px over 120ms.
+
+### Page Transitions
+Standard browser navigation. Section-on-scroll reveals are a 320ms fade-in-up (12px offset). Product-card grids reveal sequentially with 80ms stagger across the 4–7 product cards.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, transitions reduced to opacity-only at 100ms, product-card stagger reveals are skipped, ambient glow on Terraform sections becomes a static gradient.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#ffffff` on `#000000` = **21.0** — AAA, the maximum possible.
+- **Body on bg**: `#b2b6bd` on `#000000` = **8.4** — AAA at body sizes.
+- **Muted on bg**: `#656a76` on `#000000` = **4.7** — AA at body sizes; do not use below 14px.
+- **Text on Vault yellow**: `#000000` on `#ffcf25` = **14.6** — AAA.
+- **Text on Waypoint cyan**: `#000000` on `#14c6cb` = **8.7** — AAA.
+- **Text on Terraform purple**: `#ffffff` on `#7b42bc` = **5.1** — AA at body sizes.
+- **Text on Consul red**: `#ffffff` on `#e62b1e` = **4.6** — AA at body sizes; verify per-context.
+
+### Focus Indicators
+Every focusable element shows a 2px solid `#2b89ff` ring (the accent-blue link color) with 2px offset. The ring color is consistent across product surfaces — even on a Terraform purple card, the focus ring is blue, not purple. This guarantees recognition.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; product CTAs include `aria-label="Get Terraform Cloud"` for clarity.
+- **Product cards**: Wrapped in `<article aria-labelledby="terraform-card-title">` so screen readers announce the product.
+- **Comparison table**: Native `<table>` with `<th scope="col">` and `<th scope="row">` for axes.
+- **Navigation**: `<nav aria-label="Primary">` for top nav; product mega-menu uses `aria-expanded`.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link at top of every page. Mega-menu opens on focus + arrow keys; Escape closes. Pricing comparison table rows are keyboard-navigable.
+
+### Screen Reader Hints
+Product-color cards include the product name as their `aria-labelledby` target. Eyebrow labels are announced (not hidden) so the screen reader gets the section context. The ambient glow is `aria-hidden="true"`.
+
+### Reduced Motion Handling
+All transforms and stagger reveals removed. Product-card scale-on-hover becomes a border-color shift. Ambient glow on Terraform stays static.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Hero h1 80→40px; product-card grid 1-up; nav hamburger; comparison table horizontal scroll |
+| Tablet | 640–1024px | Hero h1 56px; product cards 2-up; pricing 2-up |
+| Desktop | 1024–1280px | Full hero h1 80px; 3-up product cards; 4-up pricing |
+| Wide | > 1280px | Content caps at 1280px; max product card width 320px |
+
+### Touch Targets
+- Primary CTA at minimum 40px height via 10px vertical padding + 14px line-height + button padding.
+- All product CTAs at same dimensions.
+- Comparison table cells 48px min height for tap.
+
+### Collapsing Strategy
+Top nav collapses to hamburger at < 768px. Product-card grid: 7-up → 4-up → 2-up → 1-up across breakpoints. Comparison table switches to horizontal scroll on mobile (preserves column structure rather than stacking). Pricing tiers: 4-up → 2-up → 1-up. Hero 6/6 split collapses to single-column.
+
+### Image Behavior
+Product diagrams stay at fixed aspect ratio; container scales. Code blocks horizontal-scroll on mobile. Customer logos in monochrome strip wrap on mobile.
+
+## 11. Content & Voice
+
+### Tone
+**Enterprise-technical, calm, multi-product fluent.** HashiCorp writes for platform engineers, devops leads, and infrastructure architects. There is no startup energy, no "imagine if" framing. Headlines describe operational outcomes ("Provision, secure, and manage your cloud at scale"); body copy supports with concrete capabilities and integration lists.
+
+### Microcopy Patterns
+- **CTA verbs**: "Try HCP", "Get Terraform Cloud", "View documentation", "Talk to sales", "Contact us". Always specific to the product or surface.
+- **Section labels**: 12px uppercase eyebrow at 0.6px tracking — "PROVISIONING", "SECRETS", "ORCHESTRATION", "ENTERPRISE", "PRICING".
+- **Product taglines**: One short benefit statement per product — "Provision infrastructure as code" (Terraform), "Manage secrets and protect sensitive data" (Vault).
+
+### Empty States
+HashiCorp marketing rarely surfaces empty states. Where they appear (filtered resource library, search inside docs), the recipe is: a single line in `text-muted` ("No resources match your filter") plus a clear filter-reset link in `link` blue.
+
+### Error Messages
+**Pattern**: declarative, action-oriented, references the product name. "Terraform Cloud authentication failed — check your API token in HCP" not "Oops, something went wrong." Errors carry an icon-x in `#e62b1e` and a code snippet for resolution.
+
+### Success Confirmations
+Single-line toast in white text over `#15181e` surface with a `success` (#00ca8e) accent stripe at the left. Auto-dismiss after 4s. "Workspace created" not "Yay!".
+
+## 12. Dark Mode & Theming
+
+HashiCorp is **dark-only** at the marketing surface. The black canvas is the brand's defining ground; per-product colors are calibrated against pure black for maximum contrast and identity recognition.
+
+In-product surfaces (HCP cloud platform, Terraform Cloud, Vault UI) support light themes for users who request them — product colors remain consistent across themes (Terraform stays purple, Vault stays yellow), but canvas, surface, and text invert to a `#fafafa` / `#000000` light scale.
+
+## 13. Lineage & Influences
+
+HashiCorp's marketing aesthetic descends from the **enterprise-developer publication tradition** — closer to AWS re:Invent printed materials and JetBrains' product-multi-color identity than to startup landing pages. The per-product color portfolio borrows directly from JetBrains' approach: each tool gets its own logo color (IntelliJ purple, WebStorm cyan, GoLand teal) and that color signals identity throughout the product surface. HashiCorp ports this to a marketing context.
+
+The black canvas + relaxed body line-heights tracks Stripe Docs' editorial discipline; the white-pill primary CTA on black is borrowed from Vercel's minimalist marketing aesthetic. The 24px radius on the pre-footer CTA banner is HashiCorp's own — most peers stay at 12–16px maximum.
+
+- **JetBrains** — Per-product color identity, monochrome chrome with chromatic accents. https://www.jetbrains.com
+- **Vercel** — White-pill primary CTA on dark canvas. https://vercel.com
+- **Stripe Docs** — Relaxed body line-heights, editorial gravity in technical writing. https://stripe.com/docs
+- **AWS re:Invent** — Enterprise multi-product portfolio presentation. https://reinvent.awsevents.com
+- **Inter (Rasmus Andersson)** — The geometric humanist sans that substitutes for hashicorpSans. https://rsms.me/inter/
+
+## 14. Do's and Don'ts
+
+### Do
+- Anchor every page on `#000000` canvas. The pure black is the brand.
+- Reserve product colors (Terraform purple, Vault yellow, etc.) for product-themed cards and product-CTAs only — never apply them to chrome (nav, body, footer).
+- Use the white-pill `button-primary` as the universal CTA outside product-themed sections.
+- Keep display line-heights tight (1.17–1.21) and body line-heights relaxed (1.50–1.71). The proportional gap is the brand's voice.
+- Use 12px uppercase eyebrow labels (0.6px tracking) at the top of every major band.
+- Use 8px radius on CTAs, 12px on cards, 24px only on the pre-footer CTA banner.
+- Preserve product color identity even in dark surfaces — Terraform always purple, Vault always yellow.
+- Use 1px translucent gray hairlines (`rgba(178,182,189,0.1)`) for card edges — felt, not seen.
+
+### Don't
+- Don't use product colors on chrome (top nav, footer, body type, generic buttons). Product color = product identity surface only.
+- Don't introduce a fourth or fifth elevation tier. The 4-tier surface scale (`#000` → `#15181e` → `#1f232b` → `#3b3d45`) is the system.
+- Don't use drop shadows on content cards. Shadows live only on floating nav, dropdowns, and modals.
+- Don't drop body weight to 400. The 500 weight is what gives body type presence on the dark canvas.
+- Don't use pill-shaped CTAs. 8px radius is the rule; pills are for badges only.
+- Don't soften the negative tracking on display headlines. The -1.6px to -2.5px is what gives HashiCorp its precise voice.
+- Don't apply ambient glows to non-Terraform sections. The glow is reserved for the flagship product.
+- Don't translate semantic colors away from product colors. Success = Nomad green, Warning = Vault yellow, Danger = Consul red — the alignment is intentional.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:        #000000 (pure black)
+Surface:            #15181e (default card)
+Surface Elev:       #1f232b (featured / hover)
+Border:             #3b3d45 (hairline)
+Text:               #ffffff (headlines, ink)
+Text Body:          #b2b6bd (running-text)
+Text Muted:         #656a76 (captions)
+Button Primary:     #ffffff bg + #000000 text (white pill)
+Link:               #2b89ff (accent-blue)
+Terraform:          #7b42bc (purple)
+Vault:              #ffcf25 (yellow — black text on it)
+Consul:             #e62b1e (red)
+Waypoint:           #14c6cb (cyan — black text on it)
+Vagrant:            #1868f2 (blue)
+Nomad:              #00ca8e (green / success)
+Boundary:           #f24c53 (coral / danger)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#000000` with hashicorpSans 80px / 700 / -2.5px tracking white headline ('The infrastructure cloud'), 18px / 500 / 1.69 line-height `#b2b6bd` lead paragraph, and a `button-primary` (white pill) + `button-tertiary` (transparent + hairline border) CTA cluster. Right side: a 6-up product-card grid showing Terraform purple, Vault yellow, Consul red, Waypoint cyan, Vagrant blue, Nomad green cards."
+
+2. "Build a Terraform-themed product band: full-width with a Terraform purple `#7b42bc` card grid (3 cards), white text in 22px / 600 / -0.4px tracking. Behind the band, a soft purple ambient glow."
+
+3. "Design a pricing comparison: 3 tiers in a row (Free / Standard / Plus). Standard is the standard `#15181e` card; Plus is the featured tier — same shape but background steps up to `#1f232b`. Each card 12px radius, 32px padding."
+
+4. "Compose a CTA banner: `#15181e` background, 24px radius, 48px padding, centered hashicorpSans 28px / 600 white headline ('Get started with HashiCorp Cloud Platform'), and a white-pill `button-primary` ('Try HCP free')."
+
+5. "Create a top nav: 64px tall `#000000` bar with HashiCorp logo + wordmark left, mega-menu trigger labels in 14px / 500 / 1.71 white center, 'Sign In' text link + white-pill 'Try HCP' right."
+
+6. "Design a feature card grid (3-up): each card `#15181e` background, 12px radius, 24px padding, with a 12px caption-eyebrow ('PROVISIONING' / 'SECURITY' / 'NETWORKING') in `#b2b6bd` uppercase, a 22px / 600 white card-title, and 16px / 500 / 1.50 `#b2b6bd` body."
+
+### Iteration Guide
+1. Start with pure black canvas. Every page is `#000000` — that decision frames everything else.
+2. Identify which HashiCorp product the section is about. If it's Terraform-themed, use Terraform purple cards; if generic, use `#15181e` charcoal cards.
+3. Keep all chrome (nav, footer, body, buttons) in monochrome. Product color appears only inside product-card surfaces.
+4. Display headlines: hashicorpSans 600/700, line-height 1.17–1.21, negative tracking. Body: same family at 500, line-height 1.50–1.71. The proportional gap is the brand voice.
+5. CTAs are 8px-radius white pills (`button-primary`) or product-color (`button-product-*`). Never full pills.
+6. Use the 1px hair-thin translucent border for card edges. Cards don't shadow.
+7. Eyebrow labels (12px uppercase / 0.6px tracking) precede every major section. The eyebrow signals "this is a category."

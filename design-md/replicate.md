@@ -1,0 +1,752 @@
+---
+name: Replicate
+tagline: AI-API marketing — light page chrome, dark hero canvas, rb-Freigeist Neue display, JetBrains Mono code, sharp 0px corners.
+author: webdesignhot
+source_url: https://replicate.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [ai, dev-tools, saas]
+tags: [light, dark, mono, sans, dense, structured, brutalist]
+preview_swatch: ['#ffffff', '#202020', '#fcfcfc']
+related: [vercel, anthropic, github]
+description: 'Replicate splits its marketing into two layers — a bright `#ffffff` page chrome and a near-black `#202020` hero canvas where rb-Freigeist Neue runs at 72px / weight 700. The system uses zero corner radius (sharp rectangles), basier-square sans for body, and JetBrains Mono for the omnipresent code samples that double as the product demo. Every section shows the literal `replicate.run("...")` API call rendered inline. Where every other AI/API site rounds to 6–12px, Replicate refuses — the brutalist 0px geometry says "this is the API, rendered." The two-canvas light/dark rhythm creates an immediate "before/after" beat: light is your code, dark is the model running.'
+
+colors:
+  # Primary
+  bg: '#ffffff'                  # bright page chrome canvas
+  bg-dark: '#202020'             # near-black hero canvas — the second ground
+  bg-alt: '#fdfdfd'              # near-white alternate panel
+  surface: '#fcfcfc'             # off-white code-block surface (used inside dark hero)
+  surface-light: '#f5f5f5'       # neutral-100 inset panel
+  surface-dark-soft: '#2a2a2a'   # raised panel within dark canvas
+  surface-dark-strong: '#333333' # emphasised panel within dark canvas
+  text: '#202020'                # primary copy on light
+  text-strong: '#000000'         # rare absolute black for ultra-emphasis
+  text-medium: '#404040'         # secondary copy on light
+  text-soft: '#646464'           # supporting copy, metadata
+  text-muted: '#8a8a8a'          # captions, faint UI
+  text-faint: '#b3b3b3'          # disabled, footer microcopy
+  text-on-dark: '#fcfcfc'        # near-pure white for text on dark canvas
+  text-on-dark-soft: '#a3a3a3'   # muted on dark
+  # Brand
+  brand: '#202020'               # the brand colour is the dark canvas itself
+  brand-deep: '#000000'          # absolute black for active/pressed states
+  on-brand: '#fcfcfc'            # near-pure white label on the dark canvas
+  # Interactive
+  link: '#202020'                # links are dark on light, distinguished by underline
+  link-hover: '#000000'          # absolute-black link hover
+  link-on-dark: '#fcfcfc'        # links on dark canvas stay near-white
+  selected-bg: '#f5f5f5'         # selected state (rare on chrome)
+  disabled: '#b3b3b3'
+  # Borders
+  border: '#e9e9e9'              # neutral light grey hairline (1px solid)
+  border-strong: '#cccccc'       # emphasised divider
+  border-subtle: '#f0f0f0'       # quietest division
+  border-dark: 'rgba(255, 255, 255, 0.10)' # 10% white hairline within dark canvas
+  border-dark-strong: 'rgba(255, 255, 255, 0.18)' # emphasised on dark
+  # Semantic
+  success-bg: '#e7f5ec'
+  success-text: '#1f6b3e'
+  warning-bg: '#fef6e4'
+  warning-text: '#7a5a14'
+  danger-bg: '#fbebec'
+  danger-text: '#9a2c34'
+  info-bg: '#eef2f7'
+  info-text: '#1f4a7a'
+
+typography:
+  display:
+    family: '"rb-freigeist-neue", ui-sans-serif, system-ui, sans-serif'
+    weights: [400, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"basier-square", ui-sans-serif, system-ui, sans-serif'
+    weights: [400, 500]
+    opentype-features: ['kern', 'liga']
+  mono:
+    family: '"jetbrains-mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero', 'calt']
+  scale:
+    display-hero:    { size: 96, weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: 'kern liga' }
+    display:         { size: 72, weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, note: 'observed hero — the brand signature' }
+    h1:              { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    h2:              { size: 48, weight: 400, lineHeight: 1.1,  tracking: '0',        family: display, note: 'h2 deliberately at 400 — weight contrast vs. hero 700' }
+    h3:              { size: 32, weight: 400, lineHeight: 1.2,  tracking: '0',        family: display }
+    h4:              { size: 24, weight: 500, lineHeight: 1.3,  tracking: '0',        family: body }
+    h5:              { size: 18, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    eyebrow:         { size: 11, weight: 500, lineHeight: 1.4,  tracking: '0.08em',   family: mono, transform: uppercase }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5,  family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,  family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.4,  family: mono, opentype: 'tnum' }
+    label:           { size: 11, weight: 500, lineHeight: 1.3,  family: mono }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero calt' }
+    code-block:      { size: 14, weight: 400, lineHeight: 1.6,  family: mono, opentype: 'tnum zero calt' }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.4,  family: mono }
+
+radius:
+  none: 0
+  micro: 0
+  sm: 0
+  md: 0
+  lg: 0
+  card: 0
+  pill: 9999
+  note: 'Replicate uses 0px on every surface — buttons, cards, code blocks, image containers. Pill (9999) reserved for rare nav badges.'
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 48, 64, 96, 128]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  site-gutter: 'clamp(20px, 5vw, 48px)'
+  header-height: 64
+  grid-columns: 12
+  hero-pattern: 'two-canvas light/dark alternation; code-block-as-marketing-content'
+  section-rhythm: '64-128px'
+
+components:
+  button-primary:
+    background: '#202020'
+    text: '#fcfcfc'
+    padding: '8px 16px'
+    radius: 0
+    border: 'none'
+    font: 'basier-square 500 / 14px'
+    hover-bg: '#000000'
+    active-bg: '#000000'
+    use: 'Primary CTA — dark on light, sharp 0px corners.'
+  button-primary-on-dark:
+    background: '#ffffff'
+    text: '#202020'
+    padding: '8px 16px'
+    radius: 0
+    border: 'none'
+    font: 'basier-square 500 / 14px'
+    hover-bg: '#fcfcfc'
+    use: 'Inverted primary on the dark hero canvas — white fill, dark text.'
+  button-secondary:
+    background: 'transparent'
+    text: '#202020'
+    padding: '8px 16px'
+    radius: 0
+    border: '1px solid #202020'
+    font: 'basier-square 500 / 14px'
+    hover-bg: 'rgba(32, 32, 32, 0.05)'
+    use: 'Outline twin — 1px dark border, sharp corners.'
+  button-ghost:
+    background: 'transparent'
+    text: '#202020'
+    padding: '6px 10px'
+    radius: 0
+    font: 'basier-square 500 / 14px'
+    hover-bg: '#f5f5f5'
+    use: 'Quiet utility — nav links, footer.'
+  card:
+    background: '#ffffff'
+    border: '1px solid #e9e9e9'
+    radius: 0
+    padding: '20px'
+    use: 'Content card — sharp rectangle, neutral grey hairline.'
+  card-on-dark:
+    background: '#2a2a2a'
+    border: 'none'
+    radius: 0
+    padding: '20px'
+    use: 'Card on the dark canvas — slightly raised tone, no border.'
+  card-model-tile:
+    background: '#fcfcfc'
+    border: '1px solid #e9e9e9'
+    radius: 0
+    padding: '0'
+    aspect-ratio: 'square'
+    use: 'Model gallery tile — 1:1 thumbnail, no rounding, no shadow.'
+  input:
+    background: '#ffffff'
+    border: '1px solid #e9e9e9'
+    radius: 0
+    padding: '8px 12px'
+    font: 'basier-square 400 / 14px'
+    placeholder-color: '#8a8a8a'
+    focus-ring: '0 0 0 2px #202020'
+    use: 'Form fields — sharp rectangle, dark focus ring.'
+  code-block:
+    background: '#fcfcfc'
+    border: '1px solid #e9e9e9'
+    radius: 0
+    padding: '16px 20px'
+    font: 'jetbrains-mono 400 / 14px / 1.6 line-height'
+    use: 'API call samples on the light canvas — sharp rectangle.'
+  code-block-on-dark:
+    background: '#fcfcfc'
+    border: 'none'
+    radius: 0
+    padding: '16px 20px'
+    font: 'jetbrains-mono 400 / 14px / 1.6 line-height'
+    use: 'Code-window-on-dark-IDE — off-white block on the dark hero canvas.'
+  badge-pill:
+    background: '#202020'
+    text: '#fcfcfc'
+    padding: '2px 8px'
+    radius: 9999
+    font: 'jetbrains-mono 500 / 11px / uppercase'
+    use: '"NEW" or version pill in nav — the rare exception to 0px rule.'
+  nav-link:
+    background: 'transparent'
+    text: '#202020'
+    padding: '6px 10px'
+    font: 'basier-square 500 / 14px'
+    hover-text: '#000000'
+    active-bg: 'transparent'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-snap: 'cubic-bezier(0.5, 0, 0.5, 1)'
+  duration-fast: 80
+  duration-standard: 160
+  duration-slow: 240
+  duration-page: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions become opacity-only, durations halve, code-block typing animations stop.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'none'
+  standard: 'none'
+  elevated: 'none'
+  modal: 'rgba(0, 0, 0, 0.20) 0 8px 24px'
+  ring: '0 0 0 2px #202020'
+  ring-on-dark: '0 0 0 2px #fcfcfc'
+  note: 'Replicate uses no shadows on cards or buttons. The two-canvas light/dark rhythm handles all elevation work. Modals are the only exception.'
+
+accessibility:
+  contrast-text-on-bg: 16.0        # #202020 on #ffffff — AAA at all sizes
+  contrast-text-soft-on-bg: 5.5    # #646464 on #ffffff — AA at body sizes
+  contrast-text-muted-on-bg: 3.7   # #8a8a8a on #ffffff — fails AA body; only used at 18px+ or 14px bold
+  contrast-text-on-dark: 15.5      # #fcfcfc on #202020 — AAA
+  contrast-text-on-dark-soft: 5.7  # #a3a3a3 on #202020 — AA at body sizes
+  contrast-link-on-bg: 16.0        # #202020 on #ffffff — AAA
+  focus-ring: '2px solid #202020 with 2px offset on light; 2px solid #fcfcfc on dark'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order matches visual flow; light/dark canvas transitions preserve focus state.'
+  prose-line-length: 'capped at 720px on text pages.'
+
+dark-mode: optional                 # Replicate lives in the two-canvas light/dark rhythm; both grounds are equal citizens of the brand.
+colors-dark: 'see bg-dark, surface-dark-soft, text-on-dark above — the dark canvas IS the brand''s second voice, not an alternate theme.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Replicate is an "AI-with-an-API" company whose marketing site treats the API itself as the demo. The site is built around a **two-canvas rhythm**: a bright `#ffffff` page chrome (header, nav, the "Imagine what you can build" footer) and a near-black `#202020` hero canvas where rb-Freigeist Neue runs at 72px / weight 700 with `-0.025em` tracking. The hero itself, "Run AI with an API," is literally that — the marketing copy and the sample code share the same visual surface, with `replicate.run("black-forest-labs/flux-…")` rendered in JetBrains Mono inline.
+
+What makes this design distinctive vs. nearby alternatives: the **zero-radius corners**. Every other AI/API site rounds to 6–12px. Replicate refuses — every button, badge, card, code-block, and section divider is a sharp 0px rectangle. The brutalist geometry says "this is the bare API, rendered." Combined with the two-canvas light/dark rhythm, the site reads as documentation that happens to sell something. The page never lets you forget you're looking at a developer surface.
+
+The atmospheric vocabulary: **two-canvas, light-chrome-dark-hero, code-as-marketing, brutalist-zero-radius, rb-Freigeist-display, basier-square-body, JetBrains-Mono-everywhere, documentation-as-pitch, Hoffmann-tools, mid-century-modern-tail.** Section rhythm runs 64–128px between major blocks, with the canvas alternation providing additional cadence. Light sections feel "your code" and dark sections feel "the model running" — a before/after rhythm that mirrors the API call → result pattern.
+
+The typographic system is a **three-family pairing**: rb-Freigeist Neue (a Hoffmann tools geometric grotesque with mid-century DNA) for display, basier-square (an Atipo Foundry soft-square sans) for body, and JetBrains Mono (the open-source mono used pervasively for the code samples that *are* the product). The mono isn't a fallback or an afterthought; it's the demo. Every section includes a code sample, and the API-call format `replicate.run(...)` is the visual signature of the brand.
+
+**Key Characteristics**
+- Two-canvas light/dark alternation — `#ffffff` chrome, `#202020` hero
+- **Zero corner radius on every surface** — buttons, cards, code blocks, dividers
+- rb-Freigeist Neue display at 72px / weight 700 with `-0.025em` tracking
+- basier-square sans for body — soft-square sans, 16px / 1.5 line-height
+- JetBrains Mono pervasive — code samples ARE the product demo
+- 1px solid `#e9e9e9` hairlines on light; 10% white on dark
+- No shadows on resting surfaces; only modals/popovers carry elevation
+- Code blocks span the same width as prose — never indented as sidebar
+- Section dividers: 1px solid borders on light; spacing alone on dark
+- The brand colour is the dark canvas itself (`#202020`)
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** `#ffffff` — bright page chrome canvas; the lighter of the two grounds.
+- **bg-dark** `#202020` — near-black hero canvas; the brand's second ground.
+- **text** `#202020` — primary copy on light. The *same value as the brand surface* — Replicate uses the dark colour as both ink and ground.
+- **text-on-dark** `#fcfcfc` — near-pure white text on the dark canvas.
+
+### Brand & Accent
+
+- **brand** `#202020` — the brand colour is the dark canvas itself, not a separate accent.
+- **brand-deep** `#000000` — absolute black for active/pressed states.
+- **on-brand** `#fcfcfc` — near-white (slightly off-white) label on the dark canvas; chosen over pure `#ffffff` for slightly warmer, less harsh contrast.
+
+There is **no chromatic accent** in the palette. The brand is the high-contrast monochrome itself — bg/dark inversion is the visual signature, not a colour.
+
+### Interactive
+
+- **link** `#202020` — links are dark on light, distinguished by underline.
+- **link-hover** `#000000` — hover deepens to absolute black.
+- **link-on-dark** `#fcfcfc` — links on dark stay near-white, distinguished by underline.
+- **selected-bg** `#f5f5f5` — selected state on light (rare).
+- **disabled** `#b3b3b3` — neutral disabled.
+
+### Neutral Scale
+
+- **near-black** `#202020` — primary text and hero canvas.
+- **slate** `#404040` — secondary text on light.
+- **soft** `#646464` — supporting copy, metadata.
+- **muted** `#8a8a8a` — captions, faint UI.
+- **faint** `#b3b3b3` — disabled, footer microcopy.
+- **near-white** `#fcfcfc` — text on dark, code-block surface.
+- **paper** `#fdfdfd` — alternate near-white ground.
+- **inset** `#f5f5f5` — quiet inset panel.
+- **hairline** `#e9e9e9` — 1px border default on light.
+
+### Surface & Borders
+
+- **surface-light-0 (page)** — `#ffffff`.
+- **surface-light-1 (panel)** — `#fdfdfd` near-white alt.
+- **surface-light-2 (inset)** — `#f5f5f5`.
+- **surface-light-code** — `#fcfcfc` off-white code-block.
+- **surface-dark-0 (hero)** — `#202020` near-black.
+- **surface-dark-1 (panel)** — `#2a2a2a` slightly raised.
+- **surface-dark-2 (emphasised)** — `#333333`.
+- **border (light)** `#e9e9e9` — 1px solid hairline.
+- **border-strong (light)** `#cccccc` — emphasised divider.
+- **border-subtle (light)** `#f0f0f0` — quietest division.
+- **border (dark)** `rgba(255, 255, 255, 0.10)` — 10% white on dark.
+- **border-strong (dark)** `rgba(255, 255, 255, 0.18)`.
+
+### Shadow Colors
+
+Replicate uses **no shadows on cards or buttons**. The two-canvas pattern handles all elevation work — dark sections are visually "on top of" light, even when both are the same z-index. The exception: modals carry a single `rgba(0, 0, 0, 0.20) 0 8px 24px` shadow on light surfaces. The brutalist refusal of shadow is part of the brand signal.
+
+### Semantic
+
+- **success** — bg `#e7f5ec`, text `#1f6b3e`. Reserved for build-success.
+- **warning** — bg `#fef6e4`, text `#7a5a14`. API limits, deprecation notices.
+- **danger** — bg `#fbebec`, text `#9a2c34`. Validation, request errors.
+- **info** — bg `#eef2f7`, text `#1f4a7a`. Documentation callouts.
+
+Note: semantic colours are visually quiet on the marketing surface; they appear primarily in the dashboard / API console rather than on the marketing chrome.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display**: `"rb-freigeist-neue", ui-sans-serif, system-ui, sans-serif` — a geometric grotesque by Hoffmann tools with distinctly mid-century-modern tail shapes (short descenders, generous counters, slightly square `o`). Used at hero scale 72px / 700.
+- **Body**: `"basier-square", ui-sans-serif, system-ui, sans-serif` — Atipo Foundry's soft-square sans. The squareness echoes Freigeist's geometric voice without competing for attention.
+- **Mono**: `"jetbrains-mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace` — JetBrains' open-source mono, used pervasively for code, labels, eyebrows, and tabular figures.
+- **OpenType features**: `kern` and `liga` enabled across display/body. `tnum` (tabular figures), `zero` (slashed zero), and `calt` (contextual alternates for ligatures like `=>`, `->`) enabled in mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | rb-Freigeist Neue | 96px | 700 | 1.0 | -0.025em | kern liga | Reserved for major launches |
+| Display | rb-Freigeist Neue | 72px | 700 | 1.0 | -0.025em | kern liga | Hero — *the brand signature* |
+| H1 | rb-Freigeist Neue | 56px | 700 | 1.05 | -0.02em | liga | Page title |
+| H2 | rb-Freigeist Neue | 48px | 400 | 1.1 | normal | liga | *Section heading at 400 — deliberate weight contrast vs. hero 700* |
+| H3 | rb-Freigeist Neue | 32px | 400 | 1.2 | normal | — | Sub-section |
+| H4 | basier-square | 24px | 500 | 1.3 | normal | — | Card heading |
+| H5 | basier-square | 18px | 500 | 1.4 | normal | — | Inline emphasis |
+| Eyebrow | JetBrains Mono | 11px | 500 | 1.4 | 0.08em | uppercase | Section pre-label — *mono signals dev surface* |
+| Body Large | basier-square | 18px | 400 | 1.55 | normal | — | Lede paragraph |
+| Body | basier-square | 16px | 400 | 1.5 | normal | — | Default body |
+| Body Small | basier-square | 14px | 400 | 1.5 | normal | — | Compact UI body |
+| Caption | basier-square | 13px | 400 | 1.4 | normal | — | Image captions |
+| Caption Tabular | JetBrains Mono | 13px | 500 | 1.4 | normal | tnum | Stats, request counts |
+| Label | JetBrains Mono | 11px | 500 | 1.3 | normal | — | UI labels — *mono is brand-defining* |
+| Code Inline | JetBrains Mono | 14px | 400 | 1.55 | normal | tnum zero calt | Inline code with ligatures |
+| Code Block | JetBrains Mono | 14px | 400 | 1.6 | normal | tnum zero calt | Code-block samples — the product demo |
+| Code Micro | JetBrains Mono | 12px | 400 | 1.4 | normal | — | Footnote, version |
+
+### Principles
+
+- **Hero weight 700 is the monumental beat.** rb-Freigeist Neue at 72px / 700 / -0.025em creates the brutalist hero. Section H2s drop to weight 400 — a deliberate weight contrast that makes hero sizes feel monumental.
+- **basier-square for body and UI labels above 12px.** The soft-square sans pairs with Freigeist's geometric voice without competing.
+- **JetBrains Mono is non-negotiable for code AND for ui labels at 11–12px.** The pervasive mono is the product demo.
+- **Three-family discipline.** Freigeist for display only; basier-square for body / UI; JetBrains Mono for code, labels, eyebrows, tabular figures.
+- **Negative tracking only at display.** -0.025em at 72px+, -0.02em at 56px, normal at 48px and below.
+- **Body 16/24.** Standard developer-tool body — not editorial 20px, not dashboard 13px.
+- **Eyebrow uses mono + 0.08em tracking + uppercase.** Wider tracking than most brands; signals "API surface."
+- **Code-block typography matches body width.** Code blocks span the same column as prose, never indented or sidebar — the API call is content, not annotation.
+- **OpenType: `calt` in mono enables ligatures** (`=>`, `->`, `===`, `!==`) — a subtle dev-tool signal.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Dark)**
+- Background: `#202020`. Text: `#fcfcfc`, basier-square 500 / 14px.
+- Padding: `8px 16px`. Radius: `0`. No border.
+- Hover: bg → `#000000` over 80ms.
+- Active: bg → `#000000` (instant).
+- Focus: 2px dark ring with 2px offset.
+- Use: Primary CTA on light canvas — *Sign up, Get started, Run model.*
+
+**Primary on Dark (Inverted)**
+- Background: `#ffffff`. Text: `#202020`, basier-square 500 / 14px.
+- Padding: `8px 16px`. Radius: `0`. No border.
+- Hover: bg → `#fcfcfc`.
+- Use: Primary CTA on the dark hero canvas.
+
+**Secondary (Outline)**
+- Background: transparent. Text: `#202020`, basier-square 500 / 14px.
+- Border: `1px solid #202020`. Radius: `0`.
+- Hover: bg → `rgba(32, 32, 32, 0.05)`.
+- Use: Twin to primary — *Read docs, View pricing.*
+
+**Ghost (Quiet)**
+- Background: transparent. Text: `#202020`, basier-square 500 / 14px.
+- Padding: `6px 10px`. Radius: `0`.
+- Hover: bg → `#f5f5f5`.
+- Use: Nav links, footer.
+
+### Cards
+
+**Editorial Card (Light)**
+- Background: `#ffffff`. Border: `1px solid #e9e9e9`. Radius: `0`. Padding: `20px`.
+- Shadow: none.
+- Hover: border → `#cccccc`; no shadow change.
+- Use: Capability tile, model card, blog index entry.
+
+**Card on Dark Canvas**
+- Background: `#2a2a2a`. Border: none. Radius: `0`. Padding: `20px`.
+- Use: Quiet card on the dark hero / scale section.
+
+**Model Tile**
+- Background: `#fcfcfc`. Border: `1px solid #e9e9e9`. Radius: `0`. Aspect: 1:1.
+- No spacing between tiles when used in a tight gallery grid.
+- Use: Model gallery — sharp rectangles in a tight grid, no rounding, no shadow.
+
+### Badges, Tags, Pills
+
+**Mono Badge** — bg `#202020`, text `#fcfcfc`, JetBrains Mono 500 / 11px / uppercase, padding `2px 8px`, radius `9999`. *The rare exception to the 0px rule.*
+
+**Eyebrow Label** — no chrome, just type. JetBrains Mono 500 / 11px / uppercase / 0.08em tracking, colour `#646464`.
+
+**Status Tag (light)** — bg `#f5f5f5`, text `#202020`, radius `0`, padding `2px 8px`, JetBrains Mono 500 / 11px.
+
+### Inputs / Forms
+
+**Text Input**
+- Background: `#ffffff`. Border: `1px solid #e9e9e9`. Radius: `0`. Padding: `8px 12px`.
+- Font: basier-square 400 / 14px. Placeholder: `#8a8a8a`.
+- Focus: `0 0 0 2px #202020` ring, border → `#202020`.
+- Error: border → `#9a2c34`, helper red below.
+
+**Code Input** (rare on marketing) — JetBrains Mono 14px in a sharp `0px` container.
+
+### Navigation
+
+- Header height `64px`. Background `#ffffff` (transparent over dark hero with white text).
+- Logo: Replicate wordmark in basier-square 600, near-black `#202020`.
+- Nav links: basier-square 500 / 14px, colour `#202020`, padding `6px 10px`. Hover: text → `#000000`.
+- Right-side: ghost "Docs", ghost "Pricing", primary dark "Sign in" button.
+- On dark hero: nav inverts — text becomes `#fcfcfc`, primary button inverts to white-on-dark.
+- Mobile (<640px): hamburger collapses to a full-screen sheet.
+
+### Optional Components
+
+**Code Block (Marketing-Inline)**
+- On light: bg `#fcfcfc`, border `1px solid #e9e9e9`, radius `0`, padding `16px 20px`.
+- On dark: bg `#fcfcfc` (off-white block on dark canvas — *the code-window-on-dark-IDE feel*), no border.
+- JetBrains Mono 14px / 400 / 1.6 line-height with ligatures.
+- Copy button: top-right, JetBrains Mono 11px / 500 / uppercase "COPY" label.
+
+**Tooltip** — bg `#202020`, text `#fcfcfc`, radius `0`, padding `6px 10px`, font `JetBrains Mono 500 / 12px`.
+
+**Toast** — bg `#202020`, text `#fcfcfc`, radius `0`, padding `12px 16px`, no shadow.
+
+**Modal** — bg `#ffffff`, radius `0`, shadow `rgba(0, 0, 0, 0.20) 0 8px 24px`, max-width `560px`. Backdrop: 60% black. *The single component that uses elevation shadow.*
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 4, 8, 12, 16, 20, 24, 32, 48, 64, 96, 128 — developer-tool standard.
+- **Density observation**: Replicate is *medium-dense*. The hero packs at 64–96px section rhythm; documentation surfaces at 24–48px. Code blocks fill the prose column at full width.
+
+### Grid & Container
+
+- **Page max width**: `1200px` — narrower than typical marketing, wider than docs.
+- **Site gutter**: `clamp(20px, 5vw, 48px)`.
+- **Grid**: 12 columns with 24px gutters.
+- **Hero treatment**: full-width dark canvas, 72px headline left-aligned in a 720px column, code block beneath at the same width.
+- **Code blocks span the same width as prose**, never indented or sidebar-positioned — they stand inline as primary content.
+
+### Whitespace Philosophy
+
+The whitespace philosophy is **documentation-grade**. Section gutters at 64–128px (the upper bound used at hero/scale transitions); intra-section at 16–32px. The page reads as a long-scroll documentation page that happens to sell — closer to GitHub README density than to SaaS marketing.
+
+### Section Cadence
+
+- Light hero (rare) → **Dark hero `#202020`** with rb-Freigeist 72px + code sample → Light feature ladder → **Dark "Scale on Replicate"** band → Light model gallery → Light footer.
+- The two-canvas alternation is the brand's primary cadence device. Light sections feel "your code"; dark sections feel "the model running."
+- Dividers on light: `1px solid #e9e9e9`. On dark: spacing alone (no rule needed).
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| All | 0px | Buttons, cards, code blocks, image containers, footer columns, inputs, modals — *every surface* |
+| Pill | 9999px | Rare nav badges ("NEW", version pills) — the single exception |
+
+Replicate's signature is **zero radius on every surface**. The geometric refusal is the visual signature — every rectangle is a 0px-cornered sharp rectangle. The exception is decorative pill badges in the navigation, which use `9999px` for "new" labels and version tags. Where Vercel softens to 6px and Stripe rounds to 8px, Replicate refuses.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default — every resting surface |
+| 1 | Two-canvas pattern (`#202020` next to `#ffffff`) | Section-level elevation handled by canvas inversion |
+| 2 | None | (Cards do NOT lift) |
+| 3 | None | (Hover does NOT add shadow — borders deepen instead) |
+| 4 | None | (Dropdowns use sharp rectangles with 1px borders) |
+| 5 | `rgba(0, 0, 0, 0.20) 0 8px 24px` | Modals only — the single elevation use |
+
+### Shadow Philosophy
+
+Replicate's depth is **handled by the two-canvas alternation, not by cast shadows**. Dark sections are visually "on top of" light sections, even when both are the same z-index — the brutalist refusal of shadow is part of the brand signal. When elevation is required (modals, popovers), the shadow is neutral, low-opacity, and minimal. Cards rest flat with 1px hairlines. The discipline says: this is a developer surface, not an interactive marketing brochure.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **`ease-standard`**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material default.
+- **`ease-emphasized`**: `cubic-bezier(0.2, 0, 0, 1)` — modal enter, code-block reveal.
+- **`ease-snap`**: `cubic-bezier(0.5, 0, 0.5, 1)` — symmetrical snap; canvas transitions on scroll-snap pages.
+
+### Duration Buckets
+
+- **Fast (80ms)** — colour transitions, focus rings, link hovers — *snappy, dev-tool register.*
+- **Standard (160ms)** — button hover, dropdown reveal.
+- **Slow (240ms)** — modal enter/exit, code-block expansion.
+- **Page (320ms)** — route transitions, scroll-linked reveals.
+
+### Per-Component Micro-States
+
+- **Button hover (primary)**: bg `#202020` → `#000000` over 80ms.
+- **Card hover**: border `#e9e9e9` → `#cccccc` over 160ms; no shadow change, no transform.
+- **Link hover**: colour `#202020` → `#000000` over 80ms; underline offset reduces.
+- **Input focus**: 2px dark ring fades in over 80ms.
+- **Code-block hover**: copy button fades in at top-right over 160ms.
+- **Canvas-transition on scroll**: hero canvas reveals via opacity + slight 12px translate-up on enter (320ms).
+
+### Page Transitions
+
+Code samples within sections animate in via `IntersectionObserver` at 80% viewport, 240ms duration with subtle 8px translate-up. Between routes, masthead persists; body cross-fades over 320ms.
+
+### Reduced Motion
+
+Honoured globally. All transforms collapse to opacity; durations halve; code-block typing animations stop; scroll-linked reveals snap to final state.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#202020` text on `#ffffff` bg**: 16.0:1 — AAA at all sizes.
+- **`#404040` text on `#ffffff` bg**: 10.4:1 — AAA.
+- **`#646464` text on `#ffffff` bg**: 5.5:1 — AA at body sizes.
+- **`#8a8a8a` text on `#ffffff` bg**: 3.7:1 — fails AA body; only used at large sizes (≥18px or ≥14px bold).
+- **`#fcfcfc` text on `#202020` bg**: 15.5:1 — AAA.
+- **`#a3a3a3` text on `#202020` bg**: 5.7:1 — AA at body sizes.
+- **`#fcfcfc` text on `#000000` brand-deep**: 16.7:1 — AAA.
+
+### Focus Indicators
+
+- Default ring on light: `0 0 0 2px #202020` with 2px offset.
+- Ring on dark: `0 0 0 2px #fcfcfc` with 2px offset.
+- All interactive surfaces show a visible focus state.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link.
+- **Code blocks**: `role="region" aria-label="Code sample"`; copy button has `aria-label="Copy code"` with confirmation `aria-live="polite"`.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap.
+- **Live regions**: `aria-live="polite"` for "copied" toast.
+
+### Keyboard Navigation
+
+- Tab order: skip-link → nav → main code block → CTA → next section → footer.
+- `Cmd/Ctrl+C` copies focused code block.
+- `Esc` closes dropdowns, modals.
+- All buttons, links, inputs reachable via Tab.
+
+### Screen Reader Hints
+
+- Code blocks: announce language via `lang="python"` or similar attribute and aria-label.
+- Decorative dividers: `aria-hidden="true"`.
+- Icon-only buttons: `aria-label`.
+
+### Reduced Motion
+
+Honoured globally. Code-block typing animations stop; scroll-linked reveals snap; durations halve.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single-column; full-width code blocks; hamburger nav |
+| Tablet | 640–1024px | 2-column model grid; condensed masthead |
+| Desktop | 1024–1200px | 3-column model grid; full nav |
+| Wide | 1200–1440px | 4-column model grid |
+| Ultra | > 1440px | Page locks at 1200px; gutters expand |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px.
+- Buttons: 40px minimum height on mobile.
+- Code-block copy button: 44×44 effective tap area.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 72px → 56px → 40px headline across desktop/tablet/mobile.
+- **Code block**: full-width across all breakpoints — never reflows to narrow column.
+- **Model gallery**: 4-up → 3-up → 2-up → 1-up across sizes.
+- **Section spacing**: 128px → 96px → 64px across sizes.
+
+### Image Behavior
+
+- Model thumbnails use `srcset` with 1x/2x/3x.
+- `aspect-ratio: 1 / 1` locked.
+- Lazy-loading on below-fold; eager on hero.
+
+### Container Queries
+
+Used inside model tiles to switch caption layout when card width crosses 240px.
+
+## 11. Content & Voice
+
+### Tone
+
+**Documentation-grade, developer-confident, terse.** Replicate writes like API docs — full sentences, no marketing exuberance, no exclamation marks. Headlines describe capabilities ("Run AI with an API"); subheads give the literal API call. The voice positions Replicate as a serious developer surface; no "AI revolution" rhetoric.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Sign up," "Get started," "Run model," "View on GitHub," "Read docs." Never "Get started for free!" never "Start your AI journey."
+- **Error messages**: "Couldn't run the model. Check your API key, or [contact support]."
+- **Success confirmations**: "Copied." "Model running." Brief, terse.
+- **Loading states**: "Running…" with terminal-style ellipsis.
+
+### Empty States
+
+- *"No models yet. [Browse the gallery] or [run your first model]."*
+- *"No results."*
+- Never uses "Oops!" — empty is normal.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Sign up," "Get started," "Run a model"
+- Secondary: "Read the docs," "Browse models," "View pricing"
+- Footer: "Docs," "Pricing," "Status," "Discord"
+
+The voice is **invitational with developer terseness** — closer to GitHub's interface copy than to a SaaS marketing register.
+
+## 12. Dark Mode & Theming
+
+**Dark is not a "mode" — it's the brand's second voice.** Replicate doesn't ship a dark-mode toggle; instead, the marketing surface alternates between two equal canvases — light (`#ffffff`) and dark (`#202020`) — that share the page rhythm. Light sections are "your code"; dark sections are "the model running." Both grounds are first-class citizens of the brand.
+
+The product surfaces (dashboard, API console at `replicate.com/account`) ship a separate dark mode that follows `prefers-color-scheme` — but the marketing site itself stays in the light-chrome / dark-hero alternation regardless of user preference.
+
+### Two-Canvas Rule
+
+- Light canvas: `bg #ffffff`, `text #202020`, `border #e9e9e9`, code-block bg `#fcfcfc`.
+- Dark canvas: `bg #202020`, `text #fcfcfc`, `border rgba(255, 255, 255, 0.10)`, code-block bg `#fcfcfc` (off-white inside dark — *code-window-on-dark-IDE*).
+
+The single rule: **never blend the two canvases**. Sections are either fully light or fully dark; transitions happen at section boundaries, not within a section.
+
+## 13. Lineage & Influences
+
+Replicate's design DNA is **brutalist documentation** — the API call as marketing content, zero corner radius as visual signature, two-canvas alternation as section cadence, JetBrains Mono as omnipresent surface. Where Vercel softens to 6px radius and reaches for OKLCH greys, Replicate refuses both: every corner is sharp, every grey is a flat hex value, and every section shows the literal `replicate.run("...")` API call rendered inline.
+
+The typographic system is a **three-family pairing**: rb-Freigeist Neue (Hoffmann tools' geometric grotesque with mid-century-modern DNA — short descenders, generous counters, slightly square `o`) for display; basier-square (Atipo Foundry's soft-square sans) for body and UI; JetBrains Mono (the open-source mono used pervasively across the page for the code samples that *are* the product) for code, labels, eyebrows, and tabular figures.
+
+What it inherits: GitHub's documentation-density layout, Apple's high-contrast monochrome reduction, Bauhaus brutalist geometry (90-degree corners, no decoration, function-led layout), JetBrains' developer-tool register. What it borrows from contemporaries: Vercel's deep-black hero treatment; Anthropic's section-cadence rhythm. What it rejects: rounded corners (every other AI/API site rounds to 6–12px), brand colour accent (Replicate's "brand" is the dark canvas itself), drop shadows (the two-canvas pattern handles all elevation).
+
+**Named influences:**
+
+- **rb-Freigeist Neue (Hoffmann tools)** — geometric grotesque display family with mid-century DNA. *https://www.hoffmann.tools/freigeist*
+- **basier-square (Atipo Foundry)** — soft-square sans for body and UI. *https://atipofoundry.com/fonts/basier*
+- **JetBrains Mono (open-source)** — code samples that ARE the product demo. *https://www.jetbrains.com/lp/mono/*
+- **GitHub** — documentation-density layout; mono-everywhere convention. *https://github.com*
+- **Bauhaus / Brutalism** — zero-radius, function-led, no-decoration discipline.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** keep all radii at `0px` — the brutalist geometry is the most recognizable signature the system has.
+- **Do** alternate light `#ffffff` and dark `#202020` canvases for section rhythm. The two-canvas pattern is the visual hook.
+- **Do** lead every product section with a JetBrains Mono code sample. The API call format `replicate.run(...)` is the demo.
+- **Do** drop H2 to weight 400 for deliberate weight contrast vs. the hero 700 — the contrast makes the hero feel monumental.
+- **Do** use 1px solid `#e9e9e9` hairlines on light; 10% white on dark.
+- **Do** use JetBrains Mono with `calt` (contextual alternates) enabled so ligatures (`=>`, `->`, `===`) render correctly.
+- **Do** keep code blocks at the same width as prose — code is content, not annotation.
+- **Do** use no shadows on resting surfaces — depth is the two-canvas alternation.
+- **Do** use mono labels (JetBrains Mono 11px / 500 / uppercase / 0.08em) for eyebrows, tags, version pills.
+- **Do** use near-white `#fcfcfc` (not pure `#ffffff`) for text on dark — slightly warmer, less harsh.
+
+### Don't
+
+- **Don't** introduce rounded corners for "softness." The point of Replicate's geometry is that the API is sharp and direct.
+- **Don't** drop the rb-Freigeist hero weight from 700. The hero monumentality only works at the heaviest weight.
+- **Don't** add brand colour accents. Replicate's palette is literally three values: bg, surface, ink. Color noise breaks the documentation-as-marketing voice.
+- **Don't** add drop shadows to cards or buttons — only modals carry elevation.
+- **Don't** mix the canvases within a section — sections are fully light or fully dark.
+- **Don't** indent code blocks as sidebar — the API call is content, fully columned.
+- **Don't** use a non-mono font for code — JetBrains Mono is non-negotiable.
+- **Don't** soften with editorial whitespace — Replicate is dense by design.
+- **Don't** drop body weight below 400; basier-square loses character.
+- **Don't** apologise in microcopy — empty states are normal.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #ffffff
+bg-dark: #202020
+surface: #fcfcfc
+surface-light: #f5f5f5
+text: #202020
+text-soft: #646464
+text-on-dark: #fcfcfc
+brand: #202020
+border: #e9e9e9
+border-strong: #cccccc
+border-dark: rgba(255, 255, 255, 0.10)
+```
+
+### Example Component Prompts
+
+1. **"Create a Replicate-style dark hero — full-bleed `#202020` canvas, 72px headline 'Run AI with an API' in rb-Freigeist Neue weight **700** with `-0.025em` tracking and near-white `#fcfcfc` text. Below the headline, a JetBrains Mono code block at 14px / 1.6 line-height showing `replicate.run('black-forest-labs/flux-schnell', input={...})` in an off-white `#fcfcfc` block at **0px radius** with no border. Single primary white button at 0px radius below."**
+
+2. **"Design a Replicate model tile — 1:1 aspect, **0px radius**, `#fcfcfc` background, `1px solid #e9e9e9` border. No shadow at any state. Hover deepens border to `#cccccc`. Title in basier-square 500 / 16px below the thumbnail; mono caption at 11px / uppercase for the model namespace."**
+
+3. **"Build a Replicate code block — `#fcfcfc` background, `1px solid #e9e9e9` border on light (no border on dark canvas), **0px radius**, 16px×20px padding, JetBrains Mono 14px / 400 / 1.6 line-height with `tnum`, `zero`, and `calt` features. Copy button top-right with mono 'COPY' label at 11px / uppercase / 0.08em tracking."**
+
+4. **"Compose a Replicate nav — 64px header, `#ffffff` background (transparent over dark hero), wordmark hard-left in basier-square 600 / `#202020`. Link list basier-square 500 / 14px in `#202020` with `#000000` hover. Right-side: ghost 'Docs', ghost 'Pricing', primary dark 'Sign in' button at **0px radius**."**
+
+5. **"Render a Replicate two-canvas section — light section above with `#ffffff` bg, basier-square 16px body in `#202020`. Dark section below with `#202020` bg, rb-Freigeist 48px h2 in weight **400** (deliberate weight contrast against hero 700), text in `#fcfcfc`. No transition fade — the canvas inversion is instant. 96px vertical padding on each section."**
+
+6. **"Create a Replicate primary button — `#202020` background, `#fcfcfc` text in basier-square 500 / 14px, **0px radius**, 8px×16px padding, no border, no shadow. Hover deepens bg to absolute `#000000` over 80ms. Focus picks up `0 0 0 2px #202020` ring with 2px offset."**
+
+### Iteration Guide
+
+1. **Strip every radius to `0px`.** If anything is rounded, the brand collapses. Sharp rectangles are the entry ticket.
+2. **Set the hero to 72px / weight 700.** rb-Freigeist Neue at this scale is the brand's monumental beat.
+3. **Drop H2 to weight 400.** The contrast against the 700 hero is what makes the hero feel monumental — same family, lighter weight on subsections.
+4. **Show the API call inline.** Every section should include a `replicate.run(...)` JetBrains Mono code sample. The code IS the marketing.
+5. **Alternate light and dark canvases.** If the page is all-light or all-dark, you've lost the brand's primary cadence device.
+6. **Drop all shadows.** Cards rest flat with 1px hairlines. Only modals carry elevation.
+7. **Use mono labels.** Replace sans 12px badges with JetBrains Mono 11px uppercase — the dev-tool register is brand-defining.
+8. **Calm the verbs.** Replace "Sign up free!" with "Sign up"; replace "Get started today!" with "Get started." No exclamation marks.

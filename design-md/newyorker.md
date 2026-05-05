@@ -1,0 +1,812 @@
+---
+name: The New Yorker
+tagline: 'Adobe Caslon Pro + Irvin headline cap — a century of editorial gravitas in cream paper, ink black, and signature cartoon line.'
+author: webdesignhot
+source_url: https://www.newyorker.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, serif, classic, magazine, prestige, cartoon, literary, restrained]
+preview_swatch: ['#ffffff', '#000000', '#0879bf']
+related: [nytimes, theeconomist, ft]
+description: 'The New Yorker is the most aesthetically conservative — and therefore most aesthetically distinctive — magazine UI on the open web. The canvas is bone white `#ffffff` with ink-black `#000000` body text set in TNY Adobe Caslon Pro at 21px (an unusually large body size that reads as 19th-century broadsheet rather than 21st-century web). Headlines run in **Irvin Heading Pro** — Rea Irvin''s 1925 hand-drawn alphabet originally cut for the masthead and the "Goings On About Town" department, now a full digital cut with its narrow geometric caps that immediately read as New Yorker even before the eye registers a word. The brand''s only chromatic voltage is link-blue `#0879bf` (a near-Pantone 285 cyan) used for hyperlink underlines and the subscribe button; everything else is monochrome. Departments are labelled in IrvinText 12px upper-and-lower with a hairline rule, content lives on a 12-column grid that defaults to 8.5/12 prose with serif drop-caps and Charles Addams cartoons inset, and the page rhythm is broadsheet-spacious with `21px / 1.4` line height for readers who arrive expecting a 9,000-word New Yorker piece. There are no rounded corners except the 9999px-pill subscribe pill, no shadows on body content, and no decoration that wasn''t in print since Harold Ross. This is luxury-by-restraint, the closest the web has to a printed magazine that opens slowly.'
+
+colors:
+  bg: '#ffffff'                          # bone-white canvas — page paper
+  bg-cream: '#fdfaf2'                     # rare warm tint on archive / longform sub-pages
+  surface: '#ffffff'                       # default surface
+  surface-soft: '#f7f7f7'                  # alt-row tint, ad slot edge
+  surface-strong: '#ebebeb'                # input fill rest
+  surface-bone: '#fafafa'                  # near-white separator band
+  surface-overlay: 'rgba(255,255,255,0.97)' # translucent header on scroll
+  text: '#000000'                          # ink — the canonical New Yorker black
+  text-strong: '#000000'
+  text-body: '#000000'                      # body is *also* pure black — TNY does not use #333
+  text-muted: '#5d5d5d'                     # captions, byline supplements
+  text-soft: '#797979'                       # timestamp, source, "Read more"
+  text-inverse: '#ffffff'                    # on dark masthead band
+  text-faint: '#a8a8a8'                       # fold-mark, copyright
+  brand: '#0879bf'                            # the link / subscribe blue (rgb(8,121,191))
+  brand-hover: '#065d92'                      # darkened link hover
+  brand-active: '#04476f'
+  brand-deep: '#013254'                        # rarely used, gradient terminus
+  brand-cyan: '#0879bf'                        # alias — the only visible brand colour
+  on-brand: '#ffffff'
+  accent-red: '#cc0000'                         # alert / "EXCLUSIVE" / "PAYWALL" ribbon (rare)
+  accent-cream: '#fdfaf2'                       # signed-letter cream block
+  accent-cartoon-line: '#000000'                # the literal Addams ink — it is *just* black
+  border: '#e5e5e5'                              # default hairline (1px)
+  border-strong: '#000000'                       # bold rule under section labels — pure black 2px
+  border-subtle: '#f1f1f1'                       # subtle alt-band divider
+  border-rule: '#000000'                         # 1px black rule above masthead caps
+  shadow-card: 'rgba(0,0,0,0.08)'                # rare — only on subscribe modal
+  scrim-modal: 'rgba(0,0,0,0.7)'                  # paywall modal scrim
+  success: '#1a7f3c'                              # "Saved" toast
+  warning: '#a8650b'
+  danger: '#cc0000'
+  info: '#0879bf'
+  paywall-band: '#000000'                          # subscribe-now black band
+  caricature-ink: '#000000'                        # single-colour cartoon ink
+  pull-quote-rule: '#000000'                       # 2px rule above pull quote
+  bullet-square: '#000000'                          # square-bullet glyph for list
+
+typography:
+  display:
+    family: 'IrvinHeadingPro, "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400]
+    opentype-features: ['liga', 'kern']
+    notes: 'Rea Irvin 1925 hand-cut letterform — single weight, the entire identity of the brand.'
+  display-secondary:
+    family: 'IrvinText, IrvinHeadingPro, Georgia, "Times New Roman", Times, serif'
+    weights: [400, 700]
+    notes: 'Department labels, department headings — text-grade companion to Irvin display.'
+  body:
+    family: 'TNYAdobeCaslonPro, "Times New Roman", Times, serif'
+    weights: [400, 700]
+    opentype-features: ['liga', 'onum', 'kern']
+    notes: 'Adobe Caslon Pro custom-cut for The New Yorker — onum (oldstyle figures) on by default.'
+  sans:
+    family: 'Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    notes: 'Sans only for navigation, button, and meta — never body or headline.'
+  mono:
+    family: '"Courier New", Courier, monospace'
+    weights: [400]
+  scale:
+    masthead-cover:    { size: 96, weight: 400, lineHeight: 1.0,  tracking: '0.01em', family: display, transform: none, notes: 'Cover masthead "The New Yorker" — Irvin hand-drawn caps' }
+    cover-headline:    { size: 64, weight: 400, lineHeight: 1.05, tracking: '0',      family: display, notes: 'Cover-feature lockup' }
+    feature-hed:       { size: 48, weight: 400, lineHeight: 1.1,  tracking: '0',      family: display }
+    spotlight-hed:     { size: 36, weight: 400, lineHeight: 1.15, tracking: '0',      family: display, notes: 'IrvinHeadingPro 36px / 400 — homepage feature' }
+    article-hed:       { size: 32, weight: 700, lineHeight: 1.2,  tracking: '0',      family: body, notes: 'TNYAdobeCaslonPro Bold for article-page headline' }
+    section-title:     { size: 28, weight: 400, lineHeight: 1.2,  tracking: '0',      family: display, notes: 'Smart-container hed — Irvin' }
+    department-eyebrow: { size: 12, weight: 400, lineHeight: 1.0, tracking: '0.06em', family: display-secondary, transform: uppercase, notes: '"GOINGS ON" / "TALK OF THE TOWN" / "FICTION" department label, IrvinText caps' }
+    deck:              { size: 21, weight: 400, lineHeight: 1.3,  tracking: '0',      family: body, notes: 'Sub-headline / standfirst — Caslon italic permitted' }
+    body-prose:        { size: 21, weight: 400, lineHeight: 1.4,  tracking: '0',      family: body, notes: 'Article body — *21px* not 16, the TNY signature reading size' }
+    body-list:         { size: 19, weight: 400, lineHeight: 1.45, tracking: '0',      family: body, notes: 'Homepage card body' }
+    body-sm:           { size: 17, weight: 400, lineHeight: 1.4,  tracking: '0',      family: body }
+    pull-quote:        { size: 32, weight: 400, lineHeight: 1.25, tracking: '0',      family: body, italic: true, notes: 'Caslon italic, set above and below 2px black rules' }
+    drop-cap:          { size: 84, weight: 400, lineHeight: 1.0,  tracking: '0',      family: body, notes: '4-line drop-cap on first paragraph of major features' }
+    byline:            { size: 14, weight: 400, lineHeight: 1.3,  tracking: '0',      family: display-secondary, notes: 'IrvinText — "By Rachel Aviv" italic' }
+    timestamp:         { size: 13, weight: 400, lineHeight: 1.3,  tracking: '0',      family: display-secondary, opentype: ['onum'] }
+    nav-link:          { size: 12, weight: 500, lineHeight: 1.0,  tracking: '0.04em', family: sans, transform: uppercase, notes: 'Graphik 12 / 500 — small-caps nav' }
+    cta-button:        { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.04em', family: sans, transform: uppercase }
+    caption:           { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',      family: body, italic: true, notes: 'Caption Caslon italic' }
+    cartoon-caption:   { size: 17, weight: 400, lineHeight: 1.35, tracking: '0',      family: body, italic: true, notes: 'Below-cartoon caption — italic Caslon' }
+    legal:             { size: 11, weight: 400, lineHeight: 1.4,  tracking: '0',      family: sans }
+
+radius:
+  micro: 0
+  sm: 0           # NYer has effectively no rounded corners
+  md: 0
+  lg: 0
+  xl: 0
+  pill: 9999     # ONLY on subscribe pill + audio player chrome
+  notes: 'Sharpest brand on the open web — every element is a hard rectangle except the pill.'
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 720          # the article's measure — ~33em at 21px Caslon
+  prose-narrow: 600
+  content-max: 1200
+  header-height: 64
+  rule-weight: 1            # default hairline 1px
+  rule-strong: 2             # section divider
+  column-gutter: 32
+  cartoon-inset: 'figure floats right at 320px width with 24px margin-left'
+
+components:
+  button-subscribe:
+    bg: '#0879bf'
+    color: '#ffffff'
+    radius: 9999
+    padding: '10px 20px'
+    font: cta-button
+    use: 'The signature blue pill — only rounded corner in the entire UI. "SUBSCRIBE NOW" or "GET 12 WEEKS".'
+  button-subscribe-hover:
+    bg: '#065d92'
+    color: '#ffffff'
+    use: 'Darken to brand-hover, no transform.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#000000'
+    border: '1px solid #000000'
+    radius: 0
+    padding: '10px 20px'
+    use: 'Sign in, Save, Share — black-on-white outline, hard-rect.'
+  button-ghost:
+    bg: 'transparent'
+    color: '#000000'
+    border: 'none'
+    use: 'Bookmark, dismiss — text-only with underline on hover.'
+  button-paywall:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 0
+    padding: '12px 24px'
+    use: '"GET ACCESS" inside paywall band — inverts canvas, no rounding.'
+  card-feature:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    border: 'none'
+    padding: 0
+    use: 'Homepage feature card — image + 36px Irvin hed + 21px Caslon dek + byline. No card chrome whatsoever.'
+  card-list-item:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    border-bottom: '1px solid #e5e5e5'
+    padding: '24px 0'
+    use: 'Goings-On entry — flush-left list with 1px hairline below.'
+  card-cartoon:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    use: 'Single-panel cartoon with italic Caslon caption — no border, sits flush in column.'
+  card-issue-cover:
+    bg: '#ffffff'
+    radius: 0
+    border: '1px solid #e5e5e5'
+    use: 'Magazine-issue cover thumbnail with date — strict rectangular crop.'
+  badge-department:
+    bg: 'transparent'
+    color: '#000000'
+    border-bottom: '2px solid #000000'
+    radius: 0
+    padding: '4px 0'
+    font: department-eyebrow
+    use: '"GOINGS ON" / "TALK OF THE TOWN" — IrvinText 12 caps over 2px black rule.'
+  badge-paywall:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 0
+    padding: '2px 6px'
+    font: legal
+    use: '"FOR SUBSCRIBERS" white-on-black 11px tag.'
+  badge-fiction:
+    bg: 'transparent'
+    color: '#000000'
+    border: '1px solid #000000'
+    radius: 0
+    padding: '2px 6px'
+    use: '"FICTION" outlined eyebrow on story features.'
+  pull-quote:
+    bg: 'transparent'
+    color: '#000000'
+    border-top: '2px solid #000000'
+    border-bottom: '2px solid #000000'
+    padding: '24px 0'
+    italic: true
+    font: pull-quote
+    use: '32px / 400 italic Caslon between two 2px black rules — the signature article ornament.'
+  drop-cap:
+    bg: 'transparent'
+    color: '#000000'
+    font: drop-cap
+    use: 'First letter of feature article — 4-line drop, Caslon, no colour, no tilt.'
+  hairline-divider:
+    bg: '#000000'
+    height: 1
+    use: 'Default 1px black rule between list items, after eyebrows.'
+  rule-strong:
+    bg: '#000000'
+    height: 2
+    use: 'Section divider — 2px black rule under masthead and around pull quotes.'
+  audio-player:
+    bg: '#ffffff'
+    color: '#000000'
+    border: '1px solid #e5e5e5'
+    radius: 9999
+    padding: '8px 16px'
+    use: '"Listen to article" pill at top of feature.'
+  paywall-modal:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 0
+    border: '1px solid #000000'
+    padding: '48px'
+    use: 'Subscribe modal — full-bleed at < 720, edge-to-edge band at > 720.'
+  cartoon-caption:
+    bg: 'transparent'
+    color: '#000000'
+    italic: true
+    font: cartoon-caption
+    use: '"Throw enough at the wall and something will stick — including, eventually, the wall."'
+  newsletter-signup:
+    bg: '#fdfaf2'
+    color: '#000000'
+    border: '1px solid #000000'
+    radius: 0
+    padding: '32px'
+    use: 'Cream block — only place a non-white background appears in body.'
+  cover-strip:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 0
+    height: 48
+    use: 'Top-of-issue masthead band — IrvinHeadingPro 24/400 caps.'
+  byline:
+    bg: 'transparent'
+    color: '#000000'
+    italic: true
+    font: byline
+    use: '"By Rachel Aviv" italic IrvinText, no colour.'
+  timestamp:
+    bg: 'transparent'
+    color: '#797979'
+    font: timestamp
+    use: '"July 22, 2024" oldstyle figures via onum.'
+  nav-bar:
+    bg: '#ffffff'
+    color: '#000000'
+    border-bottom: '1px solid #000000'
+    height: 64
+    use: 'White nav with 1px black hairline beneath, Graphik caps links.'
+  nav-bar-stuck:
+    bg: 'rgba(255,255,255,0.97)'
+    color: '#000000'
+    border-bottom: '1px solid #000000'
+    backdrop-filter: 'blur(6px)'
+    use: 'Translucent on scroll — subtle vellum effect.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-editorial: 'cubic-bezier(0.25, 0.1, 0.25, 1)'    # gentle, print-feeling
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — link underline animations become instant, scroll-fade headers become instant solid.'
+
+breakpoints:
+  mobile: 600
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  hairline: '0 1px 0 #000000'                              # the default — a black 1px line, not a shadow
+  modal: '0 12px 32px rgba(0,0,0,0.08)'                    # paywall modal only
+  ring: '0 0 0 2px #0879bf'                                # focus ring brand-blue
+  cartoon: 'none'
+
+accessibility:
+  contrast-text-on-bg: 21.0                              # black on white — perfect AAA
+  contrast-text-on-brand: 4.7                             # white on brand-blue — AA
+  contrast-muted-on-bg: 7.7                                # #5d5d5d on white — AAA at body
+  focus-ring: '2px solid #0879bf with 2px offset'
+  reduced-motion-honored: true
+  text-resize: 'fully responsive — 21px body scales to 24px at user-pref large'
+  semantic-html: 'article, figure, figcaption, aside, nav, cite — used canonically; The New Yorker is a model of HTML5 semantics'
+  alt-text: 'cartoons receive both alt-text and a transcribed italic caption'
+
+dark-mode: null      # Light-only — TNY does not ship a dark variant; the page is paper.
+---
+
+## 1. Visual Theme & Atmosphere
+
+The New Yorker is the most aesthetically conservative — and therefore most aesthetically distinctive — magazine UI on the open web. The canvas is bone-white `#ffffff` with ink-black `#000000` body text. There is no near-black `#222`, no warm-grey `#333`, no off-white `#fafafa` paper-tint anywhere body content lives. The page is *paper*, the type is *ink*, and the discipline is to defend that contrast against every web convention that would soften it.
+
+Body text runs at **21px** — an unusually large reading size that signals 19th-century broadsheet rather than 21st-century web. Set in TNYAdobeCaslonPro, a custom Adobe Caslon cut commissioned by Condé Nast specifically for The New Yorker, with old-style figures (`onum`) on by default. Line-height is `1.4`, measure is `~33em` (720px), and the column reads slowly — which is exactly what an editor of a 9,000-word piece wants.
+
+Headlines run in **IrvinHeadingPro** — Rea Irvin's 1925 hand-drawn alphabet originally cut for the masthead and the "Goings On About Town" department, now a full digital cut of narrow geometric caps that immediately read as New Yorker even before the eye registers a word. There is no second display weight; Irvin ships in a single hand-cut weight, and the entire identity is built on the assumption that one weight is sufficient when the letterform is right.
+
+The brand's only chromatic voltage is link-blue `#0879bf` — a near-Pantone 285 cyan used for hyperlink underlines and the subscribe pill. Everything else is monochrome. There are no rounded corners except the 9999px-pill subscribe pill (the brand's only concession to web aesthetics), no shadows on body content, and no decoration that wasn't in print since Harold Ross's 1925 prospectus.
+
+Departments are labelled `department-eyebrow` style: IrvinText 12px upper-and-uppercase with `0.06em` letter-spacing and a 2px black rule beneath. "GOINGS ON ABOUT TOWN", "TALK OF THE TOWN", "FICTION", "POEMS", "ANNALS OF MEDICINE" — these are fixed editorial slots with century-old typographic conventions, ported faithfully to the screen. The department label *is* the brand, even more than the masthead.
+
+Cartoons are inset right at 320px with a 24px gutter. They render as black-line ink art — single-colour, no shading except cross-hatching, with italic Caslon captions below. The Charles Addams / Roz Chast / Bruce Eric Kaplan tradition is rendered as inline `figure` elements with `figcaption` set in 17px Caslon italic. Cartoons are not decorative — they are the editorial voice extended into image, and they receive the same typographic dignity as a paragraph.
+
+The page rhythm is broadsheet-spacious. Section gaps run 64–96px. Pull quotes are anchored between two 2px black rules (a TNY signature) at 32px Caslon italic. Drop-caps are 4-line, monochrome, no flourish. The ad slots are demarcated with grey 1px borders and `ADVERTISEMENT` 11px Graphik caps — never integrated, always set apart, the way a serious magazine treats a paid placement.
+
+Motion is editorial — gentle 200ms transitions, no parallax, no spring. Hover on a feature card just brightens the link colour; there is no scale, no shadow, no ornament. The page does not perform. It reads.
+
+**Key Characteristics:**
+- Bone-white `#ffffff` canvas, ink-black `#000000` body (no off-grey concessions).
+- Body 21px Caslon — an editorial reading size, not a web body size.
+- IrvinHeadingPro single-weight hand-drawn caps for all display.
+- IrvinText department-eyebrow caps with 2px black underrule.
+- Link/subscribe blue `#0879bf` — the only chromatic voltage.
+- Zero radius except 9999px pill on subscribe button.
+- Pull-quotes between two 2px black rules in 32px Caslon italic.
+- 4-line monochrome drop-cap on feature openers.
+- Cartoon inset right at 320px with italic Caslon caption.
+- Old-style figures (`onum`) on for body and metadata.
+- 1px black hairlines as default divider — never grey.
+- No dark mode — the brand is paper.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Page White** (`#ffffff`): The canvas — the literal printed page.
+- **Ink Black** (`#000000`): Body, headline, rule, badge — the canonical TNY black.
+- **Link Blue** (`#0879bf`): Subscribe pill, hyperlink, focus ring — the only brand colour.
+
+### Brand & Dark
+- **Brand Hover** (`#065d92`): Darkened blue on link / pill hover.
+- **Brand Active** (`#04476f`): Press state.
+- **Brand Deep** (`#013254`): Rare gradient terminus.
+- **Paywall Black** (`#000000`): "Get Access" pill on paywall band — inverts the canvas.
+
+### Accent
+- **Cream** (`#fdfaf2`): Newsletter signup block, archive longform sub-pages — the only non-white body background.
+- **Alert Red** (`#cc0000`): "EXCLUSIVE" or paywall-warning ribbon — used sparingly, almost never in editorial body.
+
+### Interactive
+- **Default Link** (`#0879bf`): Hyperlinks throughout body and nav.
+- **Visited Link** (`#5d2a8e`): Browser-native purple tint preserved for editorial transparency.
+- **Hover Link** (`#065d92`): Darken-on-hover, also adds underline if not already underlined.
+- **Outline Button** (`1px solid #000` on transparent): Save, Share, Sign In.
+
+### Neutral Scale
+- **Body Black** (`#000000`): The principal ink.
+- **Caption Grey** (`#5d5d5d`): Caption supplement, secondary metadata.
+- **Soft Grey** (`#797979`): Timestamp, source line, "read more".
+- **Faint Grey** (`#a8a8a8`): Fold-mark, copyright, very-tertiary metadata.
+
+The brand specifically **rejects** the web convention of `#333` body text. Body is *true black* on the assumption that the screen is a page.
+
+### Surface & Borders
+- **Surface Soft** (`#f7f7f7`): Alt-row tint, ad slot edge.
+- **Surface Strong** (`#ebebeb`): Input fill at rest.
+- **Surface Bone** (`#fafafa`): Near-white separator band.
+- **Border Default** (`#e5e5e5`): Hairline 1px.
+- **Border Strong** (`#000000` 2px): Pull quote and section divider.
+- **Border Subtle** (`#f1f1f1`): Alt-band divider.
+
+### Shadow Colors
+- **None** is the default. The New Yorker uses *rules* (1px and 2px black lines), not shadows.
+- **Modal Shadow** (`rgba(0,0,0,0.08)`): Used only on the paywall modal — the subtlest possible.
+- **Cartoon Shadow** (none): Cartoons sit flush; no paper-edge shadow under figures.
+
+### Semantic
+- **Success** (`#1a7f3c`): Saved-to-list toast.
+- **Warning** (`#a8650b`): Subscription-expiring banner.
+- **Danger** (`#cc0000`): Paywall lockout, error state.
+- **Info** (`#0879bf`): Matches brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display**: `IrvinHeadingPro` — Rea Irvin's 1925 hand-cut letterform, single weight (400), the brand's primary headline face. There is no other display.
+- **Display Secondary**: `IrvinText` — text-grade companion to Irvin display, used at 12–14px for department eyebrows and bylines.
+- **Body**: `TNYAdobeCaslonPro` — custom Adobe Caslon Pro cut, weights 400 / 700, with `onum` (oldstyle figures) on by default and `liga` ligatures live.
+- **Sans**: `Graphik` (Commercial Type) — used only for navigation, button labels, legal — never body, never headline.
+- **Mono**: `Courier New` — used in code blocks within technology coverage; rare.
+- **Fallback chain**: Helvetica Neue → Helvetica → Arial → sans-serif for sans; Times New Roman → Times → serif for body.
+- **OpenType Features**: `liga` and `kern` always on; `onum` (oldstyle figures) on for body and metadata; standard ligatures only — no stylistic alternates because Irvin and Caslon ship in single canonical cuts.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Masthead Cover | IrvinHeadingPro | 96px | 400 | 1.0 | 0.01em | liga, kern | "The New Yorker" — Rea Irvin caps |
+| Cover Headline | IrvinHeadingPro | 64px | 400 | 1.05 | 0 | liga | Issue cover-feature lockup |
+| Feature Hed | IrvinHeadingPro | 48px | 400 | 1.1 | 0 | liga | Section feature |
+| Spotlight Hed | IrvinHeadingPro | 36px | 400 | 1.15 | 0 | liga | Homepage feature |
+| Article Hed | TNYAdobeCaslonPro | 32px | 700 | 1.2 | 0 | liga, onum | Article page — Caslon Bold (rare bold use) |
+| Section Title | IrvinHeadingPro | 28px | 400 | 1.2 | 0 | liga | Smart-container hed |
+| Department Eyebrow | IrvinText | 12px | 400 | 1.0 | 0.06em | -- | Uppercase: GOINGS ON, TALK OF THE TOWN |
+| Deck (Standfirst) | TNYAdobeCaslonPro | 21px | 400 | 1.3 | 0 | liga, onum | Caslon italic permitted |
+| Body Prose | TNYAdobeCaslonPro | 21px | 400 | 1.4 | 0 | liga, onum | The signature 21px reading size |
+| Body List | TNYAdobeCaslonPro | 19px | 400 | 1.45 | 0 | liga | Homepage card body |
+| Body SM | TNYAdobeCaslonPro | 17px | 400 | 1.4 | 0 | liga | Footer, archive |
+| Pull Quote | TNYAdobeCaslonPro | 32px | 400 italic | 1.25 | 0 | liga | Between two 2px black rules |
+| Drop Cap | TNYAdobeCaslonPro | 84px | 400 | 1.0 | 0 | liga | 4-line drop on feature opener |
+| Byline | IrvinText italic | 14px | 400 | 1.3 | 0 | -- | "By Rachel Aviv" |
+| Timestamp | IrvinText | 13px | 400 | 1.3 | 0 | onum | Oldstyle figures |
+| Nav Link | Graphik | 12px | 500 | 1.0 | 0.04em | -- | Uppercase Graphik |
+| CTA Button | Graphik | 13px | 500 | 1.0 | 0.04em | -- | Uppercase, "SUBSCRIBE NOW" |
+| Caption | TNYAdobeCaslonPro italic | 13px | 400 | 1.4 | 0 | liga | Italic Caslon |
+| Cartoon Caption | TNYAdobeCaslonPro italic | 17px | 400 | 1.35 | 0 | liga | Below-cartoon italic |
+| Legal | Graphik | 11px | 400 | 1.4 | 0 | -- | Footer copyright |
+
+### Principles
+- **Body is 21px, not 16.** The New Yorker rejects the web body default. 21px Caslon at 1.4 line-height is the brand's reading commitment — readers arrive expecting a 9,000-word piece, and the type cooperates.
+- **Single Irvin weight.** IrvinHeadingPro ships in one hand-drawn weight; the brand resists multi-weight display systems. The letterform itself carries the entire identity.
+- **Caslon Bold only for article hed.** The article-page H1 is one of the few bold-Caslon uses; otherwise body Caslon is regular weight, with bolding via `<strong>` only inside list items.
+- **Italic is editorial.** Italic Caslon appears in deck, caption, cartoon caption, byline, pull quote — italics carry voice in TNY in a way that bold cannot.
+- **Old-style figures everywhere.** `onum` is on for body, metadata, timestamps — the proper text-grade figures, never lining caps.
+- **Sans only for chrome.** Graphik handles nav, button, legal — never body, never headline. Sans is the wrapper, serif is the content.
+- **Department-eyebrow caps in IrvinText.** IrvinText 12 / 0.06em / uppercase with 2px black underrule is the canonical "department" treatment — the most distinctive editorial label on the open web.
+- **No stylistic alternates.** The brand resists `ss01`/`ss02` typographic gymnastics — the cuts ship correct.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Subscribe Pill (Primary)**
+- Background: `#0879bf`. Color: `#ffffff`. Radius: `9999px`. Padding: `10px 20px`. Font: Graphik 13 / 500 uppercase / 0.04em.
+- Hover: `#065d92`, 200ms ease-editorial. No transform.
+- Active: `#04476f`.
+- Use: "SUBSCRIBE NOW", "GET 12 WEEKS" — the brand's only rounded element. Anchored top-right of nav and inline within paywall.
+
+**Outline Secondary**
+- Background: `transparent`. Color: `#000000`. Border: `1px solid #000000`. Radius: `0`. Padding: `10px 20px`.
+- Hover: `bg: #f7f7f7`, no transform.
+- Use: "Sign In", "Save", "Share" — black-on-white outline, hard rectangle.
+
+**Ghost / Text**
+- Background: `transparent`. Color: `#000000`. No border.
+- Hover: Adds 1px underline.
+- Use: "Bookmark", "Dismiss", inline list actions.
+
+**Paywall Black Pill**
+- Background: `#000000`. Color: `#ffffff`. Radius: `0`. Padding: `12px 24px`.
+- Use: "GET ACCESS" inside paywall band — inverts the canvas.
+
+### Cards
+
+**Feature Card (Homepage)**
+- Background: `#ffffff`. Color: `#000000`. Radius: `0`. Border: none. Padding: 0.
+- Image (16:9 or 4:5) → IrvinHeadingPro 36 / 400 hed → TNYAdobeCaslon 21 / 400 dek → italic IrvinText byline.
+- Hover: Hed underlines in `#0879bf`. No scale, no shadow.
+
+**List Item Card (Goings-On)**
+- Background: `#ffffff`. Border-bottom: `1px solid #e5e5e5`. Padding: `24px 0`.
+- IrvinText eyebrow (department) + 24px Caslon hed + 19px Caslon dek.
+
+**Issue Cover Card**
+- Background: `#ffffff`. Border: `1px solid #e5e5e5`. Radius: 0.
+- Magazine cover thumb (cropped to 4:5) + IrvinText 13 caps date below.
+
+**Cartoon Card**
+- Background: `#ffffff`. Radius: 0. No border.
+- Single-panel ink cartoon + 17px Caslon italic caption.
+
+### Pull Quote (Signature Ornament)
+
+```
+─────────────────────────────────────────  (2px black rule)
+"Most lives are not the lives of dramatic accomplishment;
+ they are the lives most thoroughly studied by their owners."
+─────────────────────────────────────────  (2px black rule)
+```
+
+- Background: `transparent`. Color: `#000000`. Border-top + border-bottom: `2px solid #000000`. Padding: `24px 0`. Font: 32px Caslon italic / 1.25 / 400.
+- Use: Anchored mid-article between two black rules — the most recognizable typographic ornament in the brand.
+
+### Drop Cap
+
+- 4-line drop-cap on feature article first paragraph. 84px Caslon Regular, no colour, no italic, no flourish. The simplest possible drop-cap, made distinctive by the surrounding 21px Caslon column it caps.
+
+### Badges, Tags
+
+**Department Eyebrow**
+- Background: `transparent`. Color: `#000000`. Border-bottom: `2px solid #000000`. Radius: 0. Padding: `4px 0`. Font: IrvinText 12 / 400 uppercase / 0.06em.
+- Use: "GOINGS ON ABOUT TOWN", "TALK OF THE TOWN", "FICTION", "POEMS", "ANNALS OF MEDICINE", "PROFILES", "OUR LOCAL CORRESPONDENTS", "PERSONAL HISTORY".
+
+**For Subscribers**
+- Background: `#000000`. Color: `#ffffff`. Radius: 0. Padding: `2px 6px`. Font: 11px Graphik 500 uppercase.
+
+**Fiction Outline**
+- Background: `transparent`. Color: `#000000`. Border: `1px solid #000000`. Radius: 0.
+- Use: "FICTION" outlined eyebrow on story features.
+
+### Inputs
+
+**Text Input**
+- Background: `#ffffff`. Color: `#000000`. Border: `1px solid #000000` (entire perimeter, hard-rect). Radius: 0. Padding: `12px 16px`. Height: 44px.
+- Focus: Border thickens to `2px solid #0879bf`.
+- Error: Border `2px solid #cc0000` + 13px Caslon italic error text.
+- Use: Newsletter signup, sign-in fields. Distinctively rectangular vs the web's universal rounded input.
+
+### Navigation
+
+**Top Nav**
+- Background: `#ffffff`. Border-bottom: `1px solid #000000`. Height: 64px.
+- Logo: IrvinHeadingPro "The New Yorker" wordmark left, 24px height, black.
+- Links: Graphik 12 / 500 uppercase / 0.04em — News, Culture, Books, Business, Humor, Magazine, Crossword, Video, Podcasts.
+- Subscribe pill anchored right.
+
+**Stuck Nav (post-scroll)**
+- Background: `rgba(255,255,255,0.97)`. Backdrop-filter: `blur(6px)`. Border-bottom: `1px solid #000000`. Height: compresses to 52px.
+
+### Newsletter Signup (Cream Block)
+
+- Background: `#fdfaf2` (the only non-white body bg). Border: `1px solid #000000`. Radius: 0. Padding: 32px.
+- IrvinHeadingPro hed + 21px Caslon dek + black-bordered input + black-pill submit.
+- Use: Mid-article and footer placement — the cream is the brand's rare warm-tint signal that "this is something to opt into".
+
+### Cover Strip (Issue Header)
+
+- Background: `#000000`. Color: `#ffffff`. Radius: 0. Height: 48px.
+- IrvinHeadingPro 24 / 400 caps "THE NEW YORKER · JULY 22, 2024" with `tnum`-aligned dates.
+
+### Paywall Modal
+
+- Background: `#ffffff`. Color: `#000000`. Radius: 0. Border: `1px solid #000000`. Padding: 48px.
+- Headline: 32 Irvin caps + 21px Caslon dek + black pill subscribe + outline secondary "Sign In".
+
+### Audio Player ("Listen to article")
+
+- Background: `#ffffff`. Border: `1px solid #e5e5e5`. Radius: `9999px`. Padding: `8px 16px`.
+- The only other rounded element in the system besides the subscribe pill.
+
+## 5. Layout Principles
+
+### Spacing System
+- Base: 4px. Scale: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 120 / 160.
+- Section gap: 64–96px between major modules.
+- Article paragraph margin-bottom: 24px (1.14em at 21px body).
+
+### Grid & Container
+- Page width: 1440px. Content max: 1200px.
+- Article prose-width: **720px** (the editorial measure). This is non-negotiable — wider lines break Caslon's reading comfort.
+- Homepage: 12-column grid, feature spans 8/12 with 4/12 cartoon/photo inset right.
+- Issue archive: 3 covers per row at desktop, 2 at tablet, 1 at mobile.
+
+### Whitespace Philosophy
+The page rhythm is broadsheet-spacious. Section gaps are larger than the web norm (64–96px). The article prose column is 720px and *anchored* — never full-bleed. The brand's whitespace philosophy is "give the reader room to read" — line-length is bounded, paragraph-spacing is generous, and chrome is suppressed.
+
+### Section Cadence
+- Cover strip (black band)
+- Issue feature (image + Irvin hed + Caslon dek)
+- Departments (Talk of the Town → Goings On → Fiction → Poems → Annals…)
+- Issue cover archive (4-up grid)
+- Newsletter cream block
+- Footer (Graphik caps + legal)
+
+The brand resists the bottomless infinite-feed pattern — pages have ends.
+
+## 6. Shapes & Radius Scale
+
+- **Hard Rectangle** (`0px`): Default for buttons, cards, badges, inputs, modals — every element except the subscribe pill.
+- **Pill** (`9999px`): Subscribe button + audio player only.
+
+This is the sharpest brand on the open web. The radius scale is *binary* — 0 or pill. There is no `4px button` middle ground because the visual identity demands the hard rectangle.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | Flat | Default — body, card, list item |
+| 1 | 1px `#e5e5e5` border or hairline | List dividers, ad slot perimeters |
+| 2 | 2px `#000000` rule | Pull-quote frame, section divider |
+| 3 | `0 12px 32px rgba(0,0,0,0.08)` shadow | Paywall modal (subtlest possible) |
+| 4 | `rgba(0,0,0,0.7)` backdrop scrim | Modal overlay |
+| 5 | -- | TNY does not use higher elevation |
+
+### Shadow Philosophy
+The New Yorker rejects the web's drop-shadow convention. *Rules* — 1px and 2px black lines — replace shadows entirely. The pull-quote rule is the brand's signature "elevation": two 2px black lines bounding a 32px Caslon italic block. This is print thinking applied to web — divisions are typographic, not lighting-based. The single shadow that does appear (paywall modal) is the subtlest possible at `rgba(0,0,0,0.08)`.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — link colour, button hover.
+- **Out**: `cubic-bezier(0, 0, 0.2, 1)` — modal entry.
+- **Editorial**: `cubic-bezier(0.25, 0.1, 0.25, 1)` — gentle, print-feeling — the TNY default for everything.
+
+### Duration Buckets
+- **Fast**: 120ms — hairline underline grow.
+- **Standard**: 200ms — link colour shift, button hover, pill darken.
+- **Slow**: 320ms — modal entry, scroll-stuck nav blur.
+
+### Per-Component Recipes
+- **Subscribe pill hover**: bg `#0879bf → #065d92`, 200ms ease-editorial. No transform, no shadow.
+- **Link hover**: colour `#0879bf → #065d92`; underline thickness 1px → 2px over 120ms.
+- **Feature card hover**: hed text colour `#000 → #0879bf`. No scale, no shadow.
+- **Nav stuck**: 320ms transition into translucent + blur(6px) at scrollY > 80px.
+- **Paywall modal in**: 320ms ease-out, opacity 0 → 1 + scale 0.99 → 1.0.
+- **Drop-cap initial**: no animation — it's print, it doesn't perform.
+
+### Page Transitions
+The New Yorker uses native page navigation — no SPA cross-fade, no transition library. Articles open as full document loads, with a brief 120ms opacity-in once interactive. This is intentional: the brand resists app-like motion in favour of document-like delivery.
+
+### Reduced Motion
+- Link colour shift → instant.
+- Nav stuck blur → instant solid.
+- Paywall modal scale → instant opacity-only.
+- All other transitions → instant. The brand's motion footprint is so light that reduced-motion mode is barely distinguishable from default.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- Black `#000` on white `#fff`: **21.0:1** — perfect AAA, the maximum possible contrast.
+- Caption grey `#5d5d5d` on white: **7.7:1** — AAA at body size, AA at small.
+- Soft `#797979` on white: **5.0:1** — AA at body.
+- White on link blue `#0879bf`: **4.7:1** — AA at body.
+- Link blue `#0879bf` on white: **4.7:1** — AA at body, AA at large.
+- Black on cream `#fdfaf2`: **20.0:1** — AAA.
+
+### Focus Indicators
+- 2px solid `#0879bf` ring with 2px offset on all interactive elements. Brand-blue against bone-white reads cleanly without competing with the editorial ink.
+
+### ARIA Patterns
+- `<article>` for every story; `<aside>` for cartoon and pull-quote.
+- `<figure>` + `<figcaption>` for cartoons and inline images.
+- `<nav aria-label="Section">` for top nav and footer nav.
+- `<header role="banner">` for masthead band.
+- Paywall modal: `role="dialog" aria-modal="true"`, focus trapped, ESC closes, focus returns to trigger.
+- Subscribe form: standard `<label>` + `<input>` with `aria-describedby` for inline error.
+- Audio player: native HTML `<audio>` element with `aria-label="Listen to article"`.
+
+### Keyboard Navigation
+- Tab order follows reading order — masthead → nav → article → footer.
+- Arrow keys do not bind anywhere; standard browser behaviour preserved.
+- Esc dismisses paywall modal.
+- Enter on subscribe pill triggers Stripe-hosted checkout.
+
+### Screen Reader Hints
+- Cartoons: `alt` attribute carries a verbal description; the italic Caslon caption is read separately as `figcaption`.
+- Department eyebrows: spoken as the literal label ("Goings on about town"), no hidden context.
+- Pull-quotes: marked `<blockquote cite="...">` with author attribution in `<cite>`.
+- Bylines: "By Rachel Aviv" rendered visibly; no aria-label override.
+
+### Reduced Motion
+Honoured per §8. Motion footprint is intentionally so minimal that the reduced-motion experience is barely distinct from default — which is itself an accessibility win.
+
+### Reading Mode Compatibility
+The New Yorker is one of the most reader-mode-friendly sites on the web because the semantic HTML is canonical and the prose-width is already bounded. Safari Reader, Firefox Reader View, and Pocket all extract perfectly.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Token | Min | Use |
+|-------|-----|-----|
+| mobile | 0px | Single-column, prose 100% with 16px gutter, subscribe pill in nav |
+| tablet | 600px | Article prose 600px, 2-up cover archive |
+| desktop | 1024px | 720px prose with cartoon inset right |
+| wide | 1280px | Full 12-col grid, 720 prose + 320 cartoon |
+
+### Touch Targets
+- 44×44 minimum (iOS HIG standard) on all interactive controls.
+- Subscribe pill 36px tall but 44px hit-target via padding.
+
+### Collapsing Strategy
+- Top nav → hamburger at < 1024px.
+- Cartoon inset → drops below paragraph at < 1024px (becomes inline block).
+- 12-col grid → 8-col → 4-col.
+- Department-eyebrow rule width matches column at all sizes.
+
+### Image Behavior
+- Articles use `srcset` with 1x / 2x / 3x density.
+- Cartoons render at 2x by default (line art demands sharp).
+- Issue covers use `loading="lazy"` for archive grid.
+
+### Container Queries
+- Newsletter cream block uses CQ to switch from horizontal-row layout (>720) to vertical stack (<720).
+
+## 11. Content & Voice
+
+### Tone
+The New Yorker voice is **editorial-formal-literary**. Where Vox is direct-explanatory and Atlantic is essayistic-personal, TNY is *literary-magisterial* — long sentences, clauses nested, vocabulary high but not ostentatious. Acquisition copy reads like a 1950s circulation card: "The best writing on culture, politics, fiction, and ideas — since 1925." Product copy is precise and sparse.
+
+### Microcopy Patterns
+- **Primary CTA**: "Subscribe Now", "Get 12 Weeks for $1", "Continue Reading".
+- **Secondary**: "Sign In", "Save Story", "Listen to Article".
+- **Acquisition headline**: "The pleasure of arriving at a sentence." or "Where the world's best writing lives."
+- **Empty list (Saved)**: "Stories you save will appear here. They'll be ready when you are."
+- **Error**: "Something went wrong. Please try again." (formal-direct, no apology-ladder, no humor).
+- **Paywall lockout**: "You've read your free articles for the month. Subscribe to continue reading The New Yorker."
+- **Newsletter confirmation**: "Thank you. Look for our newsletter in your inbox."
+
+### Empty States
+- Saved-stories empty: 21px Caslon body + small "Browse stories" link in `#0879bf`.
+- Search no-results: "No results for [query]. Try a different search."
+- Comments-closed: brief italic Caslon notice.
+
+### CTA Verb Conventions
+- "Subscribe" (not "Sign Up", not "Join"). The brand uses "Subscribe" because it sells a *magazine subscription*, not a service plan.
+- "Read" (not "Continue", not "More"). "Read more" is the canonical link verb.
+- "Listen to article" (not "Audio version"). The audio is editorial-grade.
+- "Save" (not "Bookmark", not "Add to list"). Distinctively short.
+- "Sign In" (not "Log In"). Slightly older usage, deliberate.
+
+## 12. Dark Mode & Theming
+
+**Light-only — no dark variant offered.**
+
+The New Yorker does not ship a dark mode. The brand identity is *paper* — bone white `#ffffff` with ink black `#000000` body — and a dark inversion would defeat the editorial premise. This is one of the rare prestige media properties that explicitly resists the dark-mode convention because the conceit ("you are reading a magazine on a page") cannot be inverted without becoming a different brand.
+
+A hypothetical dark theme would invert the canvas to `#0a0a0a` and the ink to `#f7f7f7`, but this is not implemented and is unlikely to ship — the brand has been committed to the printed-page metaphor since 1925, and the website is the print metaphor extended to the screen.
+
+The iOS / Android native apps follow the same logic — light-only, paper-on-screen, regardless of system theme.
+
+## 13. Lineage & Influences
+
+The New Yorker inherits from three streams.
+
+**The 1925 Harold Ross prospectus and Rea Irvin masthead.** Every design token — IrvinHeadingPro, the Eustace Tilley dandy, the department headings, the cartoon-with-italic-caption pattern, the cream paper warmth — descends directly from Ross and Irvin's founding visual identity. The website is faithful to the print original to a degree unmatched in any other century-old magazine's web product.
+
+**Adobe Caslon and the broadsheet tradition.** The Caslon body face traces back to William Caslon's 1722 cuts — TNY's commission of a custom Adobe Caslon Pro is the literal continuation of 18th-century English book typography on the screen. The 21px reading body, the 720px measure, the old-style figures, the italic deck — these are 19th-century broadsheet conventions ported to HTML.
+
+**Cartoon as editorial instrument.** Charles Addams, James Thurber, Saul Steinberg, Roz Chast, Bruce Eric Kaplan — the cartoon-with-italic-caption-below pattern is unique to The New Yorker among magazines, and its web treatment (figure / figcaption / italic Caslon) is a faithful translation. The cartoon is voice extended to image.
+
+What The New Yorker rejects: the BuzzFeed listicle, the homepage card-density of a content marketplace, the dark-mode default, the hover-scale tile, the rounded-corner everything, the friendly-direct sans-serif body. The brand is *literary-magisterial-restrained*.
+
+**Influences:**
+- **Rea Irvin's 1925 hand-drawn alphabet** — IrvinHeadingPro, IrvinText. The visual identity. https://www.newyorker.com/about
+- **William Caslon (1722) and Adobe Caslon Pro custom cut** — TNYAdobeCaslonPro body face.
+- **Eustace Tilley (Rea Irvin, 1925)** — the dandy mascot still on annual covers.
+- **Charles Addams, Roz Chast, Bruce Eric Kaplan** — single-panel-with-italic-caption tradition.
+- **Condé Nast print broadsheet conventions** — drop-cap, pull-quote-between-rules, department eyebrow.
+- **Graphik (Commercial Type, Christian Schwartz, 2009)** — sans for chrome.
+
+## 14. Do's and Don'ts
+
+**Do:**
+- Use bone-white `#ffffff` canvas with ink-black `#000000` body — no concession to off-white or off-black.
+- Set body at 21px Caslon (TNYAdobeCaslonPro) with 1.4 line-height — the reading commitment.
+- Use IrvinHeadingPro for all display — single weight, hand-cut, no substitute.
+- Use IrvinText 12 caps with 2px black underrule for department eyebrows ("GOINGS ON ABOUT TOWN").
+- Reserve `#0879bf` for hyperlinks, subscribe pill, and focus rings — the only chromatic voltage.
+- Use 0px radius on every element except the subscribe pill (9999px) and audio player.
+- Frame pull-quotes with two 2px black rules and 32px Caslon italic.
+- Use 4-line monochrome drop-caps on feature openers — Caslon Regular, no flourish.
+- Render cartoons as black-line ink with italic Caslon captions below.
+- Use `onum` (oldstyle figures) on for body and metadata.
+- Bound article prose to 720px measure — never full-bleed.
+- Use `<article>`, `<figure>`, `<figcaption>`, `<aside>`, `<cite>` semantically.
+- Use 1px black hairlines as dividers (not grey, not shadow).
+
+**Don't:**
+- Don't soften body to `#222` or `#333` — body is true black.
+- Don't render Caslon at 16–18px — that's web-default body, not TNY body.
+- Don't substitute IrvinHeadingPro with a generic display sans — the hand-cut letterform is the brand.
+- Don't add bg-tint to body content (cream `#fdfaf2` is allowed only on newsletter signup and archive).
+- Don't round corners on cards, buttons, or inputs — the hard rectangle is the brand.
+- Don't add drop-shadows to cards — use 1px hairlines instead.
+- Don't ship a dark mode — TNY is paper.
+- Don't auto-play video on hover, scroll-trigger animations, or parallax — print-feeling motion only.
+- Don't use multi-weight sans (Graphik 700/800) for headlines — Irvin handles display.
+- Don't use lining figures — `onum` always.
+- Don't crowd the homepage with 12 cards above the fold — 4–6 features max.
+- Don't use the link-blue `#0879bf` as a fill on cards or section bg — link colour only.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Canvas: `#ffffff`
+- Body Ink: `#000000`
+- Link / Subscribe Blue: `#0879bf`
+- Caption Grey: `#5d5d5d`
+- Soft Grey: `#797979`
+- Border Hairline: `#e5e5e5`
+- Border Strong: `#000000`
+- Cream (Newsletter): `#fdfaf2`
+- Paywall Black: `#000000`
+
+### Example Component Prompts
+1. "Create a New Yorker feature card — `#ffffff` background, no border, no radius. Image (16:9) on top, IrvinHeadingPro 36 / 400 headline below in `#000`, TNYAdobeCaslonPro 21 / 400 deck with `1.4` line-height, italic IrvinText 14 byline. On hover, headline turns `#0879bf` with no transform."
+2. "Design a New Yorker pull-quote block — 32px TNYAdobeCaslonPro italic / 400 / 1.25 in `#000` on `#ffffff`, framed by two 2px black rules above and below with 24px padding. No background tint, no quotation marks."
+3. "Build a New Yorker department eyebrow — IrvinText 12 / 400 / uppercase / 0.06em letter-spacing in `#000`, with a 2px black `#000000` underrule the width of the column. Text reads 'GOINGS ON ABOUT TOWN'."
+4. "Render a New Yorker subscribe pill — `#0879bf` background, `#ffffff` text, 9999px radius, 10px 20px padding, Graphik 13 / 500 / uppercase / 0.04em. Hover darkens to `#065d92` over 200ms `cubic-bezier(0.25, 0.1, 0.25, 1)` ease-editorial. No transform, no shadow."
+5. "Create a New Yorker article prose column — TNYAdobeCaslonPro 21px / 400 / 1.4 line-height with `onum` oldstyle figures on, bounded to 720px measure on `#ffffff`. First paragraph opens with 4-line drop-cap (84px Caslon Regular, `#000`, no italic, no flourish)."
+6. "Render a New Yorker top nav — `#ffffff` background with 1px solid `#000000` bottom border, 64px height. IrvinHeadingPro 'The New Yorker' wordmark left at 24px height in `#000`. Center: Graphik 12 / 500 / uppercase / 0.04em links (News, Culture, Books, Business, Humor, Magazine). Right: blue `#0879bf` 9999px subscribe pill."
+
+### Iteration Guide
+1. **Black, not near-black.** If body reads as `#222` or `#333`, push to true `#000`. The New Yorker uses pure ink.
+2. **21px, not 16.** Body Caslon must be 21px with 1.4 line-height — the reading commitment is the brand.
+3. **Sharpen everything.** If buttons or cards have radius `> 0`, set to 0 — only subscribe pill and audio player are rounded.
+4. **Replace shadows with rules.** If a card has `box-shadow`, remove it and add a 1px `#e5e5e5` border or hairline divider instead.
+5. **Caps for department eyebrows.** Department labels must be IrvinText uppercase with 0.06em tracking and 2px black underrule.
+6. **Italic for voice.** Caption, deck, byline, pull quote, cartoon caption — all italic Caslon. Italics carry voice; bold is rare.
+7. **Frame pull-quotes.** A pull quote without 2px rules above and below is not a New Yorker pull quote — frame it.
+8. **One blue, one place.** `#0879bf` only on hyperlink, subscribe pill, and focus ring — never on card surface, never on body bg.

@@ -1,0 +1,715 @@
+---
+name: Corsair
+tagline: Yellow `#ffff00` lightning on black with Roboto — RGB-everything peripherals and PC components.
+author: webdesignhot
+source_url: https://www.corsair.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace, media]
+tags: [dark, gaming, hardware, peripherals, rgb, components, yellow, bold]
+preview_swatch: ['#000000', '#ffff00', '#ffffff']
+related: [razer, steelseries, msi]
+description: 'Corsair is the RGB-everything PC peripherals and components brand — keyboards, mice, headsets, RAM kits, power supplies, water-cooling loops, prebuilt gaming PCs all unified by the **Corsair lightning bolt** mark and a signature **electric yellow** (`#ffff00`) accent on jet-black canvas. The yellow is pure-saturated, almost-warning-tape vivid, and it carries every CTA, every focus border, every brand badge — distinct from Razer''s neon green and MSI''s pure red. Type runs Roboto throughout (the same humanist sans Razer adopted), but Corsair leans heavier on monospace for spec callouts because its product family runs deeper into component-level technical buyers (RAM timings, fan PWM curves, PSU efficiency ratings). The brand voice is "build YOUR setup" — Corsair customers are PC-DIY enthusiasts assembling rigs from parts. Where Razer markets to gamers, Corsair markets to PC-DIY builders who happen to game.'
+
+colors:
+  bg: '#000000'                  # canvas — jet black
+  bg-deep: '#0a0a0a'             # near-black header / footer
+  bg-darkest: '#000000'          # modal scrim
+  surface: '#111111'             # default card
+  surface-soft: '#1a1a1a'        # raised popover
+  surface-strong: '#262626'      # hovered card
+  surface-elevated: '#1f1f1f'    # elevated panel
+  surface-product-band: '#0a0a0a' # full-bleed product band
+  surface-input: '#1a1a1a'       # form input fill
+  text: '#ffffff'                # primary body
+  text-strong: '#ffffff'         # display headlines
+  text-soft: '#b3b3b3'           # secondary metadata
+  text-faint: '#7a7a7a'          # tertiary captions
+  text-disabled: '#4a4a4a'
+  text-link: '#ffff00'           # link yellow
+  brand: '#ffff00'               # Corsair Yellow — pure electric yellow
+  brand-bright: '#ffff66'        # brighter on hover
+  brand-deep: '#cccc00'          # deeper yellow
+  brand-darkest: '#999900'       # darkest yellow
+  brand-glow: 'rgba(255,255,0,0.4)' # yellow glow halo
+  brand-gradient: 'linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)' # Corsair yellow gradient
+  on-brand: '#000000'            # text on yellow is black (high contrast)
+  cta-primary: '#ffff00'         # yellow CTA
+  cta-primary-hover: '#ffff66'
+  link-default: '#ffff00'
+  link-visited: '#ffff00'
+  link-hover: '#ffffff'
+  border: '#262626'              # 1px charcoal hairline
+  border-soft: '#1a1a1a'         # softer divider
+  border-strong: '#ffff00'       # focused input border
+  scrim: 'rgba(0,0,0,0.85)'
+  shadow-card: 'rgba(0,0,0,0.6)'
+  shadow-elev: 'rgba(0,0,0,0.8)'
+  shadow-corsair-glow: 'rgba(255,255,0,0.4)' # yellow glow halo
+  rgb-spectrum: 'linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #0066ff, #aa00ff, #ff0088)' # iCUE RGB spectrum
+  badge-new: '#ffff00'
+  badge-pre-order: 'transparent'
+  badge-icue: '#0066ff'           # iCUE compatibility badge
+  badge-cl-hydro: '#00bfff'       # Hydro X Series cooling badge
+  badge-out-of-stock: '#7a7a7a'
+  price: '#ffffff'
+  price-discount: '#ffff00'
+  rating-star: '#ffff00'         # ratings in brand yellow (instead of amber)
+  success: '#00cc66'
+  warning: '#ff8800'
+  danger: '#ff3030'
+  info: '#0066ff'
+
+typography:
+  display:
+    family: '"Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700, 900]
+    opentype-features: ['kern', 'liga']
+  condensed:
+    family: '"Roboto Condensed", "Arial Narrow", sans-serif'
+    weights: [400, 700]
+  body:
+    family: '"Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [300, 400, 500, 700]
+  mono:
+    family: '"Roboto Mono", "Consolas", monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 900, lineHeight: 1.0,  tracking: '-0.02em', family: display, transform: uppercase, notes: 'Hero "BUILD YOUR SETUP"' }
+    display-xl:      { size: 56, weight: 900, lineHeight: 1.05, tracking: '-0.015em', family: display, transform: uppercase, notes: 'Product launch hero' }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.1,  tracking: '-0.01em', family: display, transform: uppercase, notes: 'Section banner' }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.15, tracking: '0',       family: display, notes: 'Product detail H1 (sentence-case)' }
+    display-sm:      { size: 24, weight: 700, lineHeight: 1.2,  tracking: '0',       family: display, notes: 'Card title' }
+    section-head:    { size: 14, weight: 700, lineHeight: 1.2,  tracking: '0.15em',  family: display, transform: uppercase, notes: 'Section bands' }
+    sub-section:     { size: 18, weight: 500, lineHeight: 1.3,  tracking: '0',       family: display, notes: 'Sub-heading' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Hero supporting copy' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Default body' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Sidebar copy, spec' }
+    body-xs:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Caption, footer' }
+    nav-link:        { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'Top nav: GAMING · STREAMING · PC COMPONENTS' }
+    sub-nav-link:    { size: 12, weight: 400, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Sub-nav' }
+    button-cta:      { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'BUY NOW, ADD TO CART' }
+    button-md:       { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'COMPARE, WISHLIST' }
+    badge:           { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.15em',  family: display, transform: uppercase, notes: '"NEW", "iCUE", "CL36"' }
+    price:           { size: 22, weight: 700, lineHeight: 1.0,  tracking: '-0.005em', family: display, opentype: ['tnum'], notes: 'Product price' }
+    spec-label:      { size: 11, weight: 700, lineHeight: 1.2,  tracking: '0.2em',   family: display, transform: uppercase, notes: 'Spec table label' }
+    spec-value:      { size: 16, weight: 500, lineHeight: 1.4,  tracking: '0',       family: mono, notes: 'Spec value' }
+    timing:          { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0',       family: mono, opentype: ['tnum'], notes: 'RAM timing "CL36-39-39-76"' }
+    code:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',       family: mono, notes: 'iCUE config, dev surface' }
+
+radius:
+  none: 0
+  micro: 1
+  sm: 2            # buttons, badges
+  md: 4            # cards, inputs
+  lg: 8            # featured product card, modal
+  pill: 9999       # rare
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 64
+  main-nav-height: 64
+  sub-nav-height: 48
+  product-card: '320x460'
+  hero-banner: '1920x800'
+
+components:
+  button-primary:
+    bg: '#ffff00'
+    color: '#000000'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: 'none'
+    hover-bg: '#ffff66'
+    hover-shadow: '0 0 24px rgba(255,255,0,0.5)'
+    use: '"BUY NOW" / "ADD TO CART" — Corsair Yellow CTA. **Black** uppercase 0.1em tracked label on yellow rectangle. Hover brightens + yellow glow halo.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#ffffff'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: '1px solid #ffffff'
+    hover-bg: '#ffffff'
+    hover-color: '#000000'
+    use: 'Ghost outline secondary on dark. Inverts on hover.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#ffff00'
+    radius: 0
+    padding: '12px 0'
+    font: button-md
+    border-bottom: '1px solid #ffff00'
+    use: 'Inline text-link with yellow underline.'
+  product-card:
+    bg: '#111111'
+    color: '#ffffff'
+    radius: 4
+    padding: '24px'
+    border: '1px solid #262626'
+    hover-border: '1px solid #ffff00'
+    hover-shadow: '0 0 24px rgba(255,255,0,0.3)'
+    width: 320
+    use: 'Standard product card on dark — `#111111` floor, charcoal hairline. Stack: product hero with optional iCUE RGB lighting bleed, "NEW" yellow badge, "iCUE" compatibility badge, product name in Roboto 22/700 sentence-case, mono spec strip with RAM timings or fan curves, "BUY NOW" yellow CTA. Hover lights yellow border + glow.'
+  product-card-flagship:
+    bg: 'linear-gradient(135deg, #111111 0%, #1a1a1a 100%)'
+    color: '#ffffff'
+    radius: 8
+    padding: '32px'
+    border: '1px solid #ffff00'
+    box-shadow: '0 0 32px rgba(255,255,0,0.25)'
+    use: 'Flagship product card — already lit with yellow border + glow at rest.'
+  hero-card:
+    bg: 'linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)'
+    color: '#000000'
+    radius: 0
+    padding: '64px 48px'
+    use: 'Full-bleed yellow gradient hero — rare; used only on biggest product launches. Black headline on yellow ground.'
+  hero-card-dark:
+    bg: 'linear-gradient(135deg, #000000 0%, #0a0a0a 100%)'
+    color: '#ffffff'
+    radius: 0
+    padding: '64px 48px'
+    use: 'Default dark hero — near-black gradient, white headline, hardware photography right with iCUE RGB lighting bleed.'
+  spec-card:
+    bg: '#111111'
+    color: '#ffffff'
+    radius: 4
+    padding: '32px 24px'
+    border: '1px solid #262626'
+    use: 'Spec highlight card — large 32/700 spec value in `#ffff00` yellow Roboto Mono, 11/700 uppercase 0.2em tracked label, 14/400 muted supporting copy.'
+  ram-timing-card:
+    bg: '#111111'
+    color: '#ffffff'
+    radius: 4
+    padding: '20px'
+    border: '1px solid #262626'
+    use: 'RAM-specific spec card — CL36-39-39-76 timings in mono with voltage / capacity / heatspreader colour callouts. The RAM-product-page distinguishes Corsair from peripheral-only competitors.'
+  badge-icue:
+    bg: '#0066ff'
+    color: '#ffffff'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"iCUE" blue badge — Corsair''s ecosystem-compatibility marker. Anchored top-left of every iCUE-compatible product.'
+  badge-new:
+    bg: '#ffff00'
+    color: '#000000'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"NEW" yellow rectangle with black label.'
+  badge-hydro-x:
+    bg: '#00bfff'
+    color: '#000000'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"HYDRO X SERIES" cyan badge — water-cooling product line.'
+  text-input:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 4
+    height: 48
+    padding: '12px 16px'
+    border: '1px solid #262626'
+    focus-border: '1px solid #ffff00'
+    font: body-md
+    use: 'Form input on dark — charcoal floor, focus lights yellow border.'
+  primary-nav:
+    bg: '#000000'
+    color: '#ffffff'
+    height: 64
+    border-bottom: '1px solid #1a1a1a'
+    use: 'Top nav — Corsair lightning-bolt logomark anchored left in white, "GAMING · STREAMING · PC COMPONENTS · CONSOLE · MOBILE · ELGATO" labels in 13/500 uppercase 0.1em tracking.'
+  corsair-bolt:
+    use: 'Corsair lightning-bolt logomark — angular zigzag bolt. Rendered in `#ffff00` yellow on dark or pure black on yellow. The brand''s most-recognised mark.'
+  rgb-strip:
+    bg: 'linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #0066ff, #aa00ff, #ff0088)'
+    height: 4
+    use: 'iCUE RGB spectrum strip — used as section divider on iCUE / lighting feature pages. 8-stop gradient like Razer''s, with yellow as the brand-anchor stop.'
+  modal-surface:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 8
+    border: '1px solid #262626'
+    box-shadow: '0 32px 64px rgba(0,0,0,0.8)'
+    use: 'Modal floor on dark.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  card-hover: 'product card lights `#ffff00` yellow border + `0 0 24px rgba(255,255,0,0.3)` glow halo over 240ms'
+  cta-press: 'button gradient deepens + 2px scale-down on :active over 120ms'
+  rgb-shimmer: 'iCUE RGB strip on hero pages cycles 4s linear infinite (suppressed under reduced-motion)'
+  carousel-slide: '400ms ease-emphasized'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — RGB shimmer freezes; card glow remains static; transitions become opacity-only.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.4) 0 2px 8px'
+  card: 'rgba(0,0,0,0.6) 0 8px 24px'
+  elevated: 'rgba(0,0,0,0.8) 0 24px 48px'
+  modal: 'rgba(0,0,0,0.85) 0 32px 64px'
+  corsair-glow-soft: '0 0 16px rgba(255,255,0,0.25)'
+  corsair-glow-strong: '0 0 32px rgba(255,255,0,0.5)'
+  ring: '0 0 0 2px #ffff00'
+
+accessibility:
+  contrast-text-on-bg: 21.0         # #ffffff on #000000 — AAA
+  contrast-soft-on-bg: 9.4          # #b3b3b3 on #000000 — AAA
+  contrast-link-on-bg: 19.6         # #ffff00 on #000000 — AAA (yellow on black is the highest-contrast accent in any gaming brand)
+  contrast-cta-text: 19.6           # #000000 on #ffff00 — AAA
+  contrast-faint-on-bg: 4.7         # #7a7a7a on #000000 — AA
+  focus-ring: '2px solid #ffff00 with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab traverses logo → primary nav → search → utilities → main → footer; Esc closes; Enter activates.'
+
+dark-mode: only   # Corsair is dark-only across web, iCUE desktop software. No light variant offered.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Corsair is the RGB-everything PC peripherals and components brand — keyboards, mice, headsets, RAM kits, power supplies, water-cooling loops, prebuilt gaming PCs, and now ELGATO streaming gear, all unified by the **Corsair lightning bolt** mark and a signature **electric yellow** (`#ffff00`) accent on jet-black canvas. The yellow is pure-saturated, almost warning-tape vivid, and it has carried the brand since the 1994 founding when Corsair was a memory module maker (Corsair Microsystems) before pivoting to gaming peripherals around 2008.
+
+The yellow is what distinguishes Corsair on the gaming hardware aisle. Where Razer has neon green `#44d62c`, MSI has pure red `#ff0000`, ASUS ROG has cinematic-deep red `#cd0000`, SteelSeries has esports orange `#ff6900` — Corsair has electric yellow `#ffff00`. The choice is the highest-contrast accent in the gaming hardware category: yellow-on-black hits **AAA at 19.6** vs the typical AA 4.5 ratios competitors achieve. Black text on yellow CTAs hits AAA at 19.6 — the highest WCAG contrast of any major gaming brand's primary CTA.
+
+Type runs **Roboto** throughout (the same humanist sans Razer adopted), but Corsair leans heavier on **monospace** for spec callouts. The product family runs deeper into component-level technical buyers: RAM customers care about CL36-39-39-76 timings, fan customers care about PWM curves, PSU customers care about 80 Plus Platinum efficiency ratings. The spec cards on Corsair product pages routinely list 18–24 mono spec values per product — the densest of any gaming hardware brand.
+
+The **iCUE** ecosystem badge is the brand's other signature. Corsair sells RGB-everything: keyboards with per-key RGB, mice with 16.8M-colour scroll wheels, RAM with RGB heat spreaders, fans with RGB blades, water-cooling loops with RGB coolant, monitors with RGB rear lighting. The iCUE software unifies all of it — and the marketing site stamps a `#0066ff` blue "iCUE" badge on every compatible product (which is to say, nearly every product). The 8-stop RGB spectrum strip appears as a 4px section divider on iCUE feature pages.
+
+Sub-product-lines carry distinct sub-aesthetics within the same chrome system:
+- **Gaming Peripherals** (keyboards / mice / headsets): canonical yellow + black + iCUE
+- **PC Components** (RAM / fans / PSUs / cases): same canonical with denser spec cards
+- **Hydro X Series** (custom water cooling): adds `#00bfff` cyan for the cooling sub-brand
+- **Elgato** (streaming gear acquired 2018): operates with its own light + blue treatment but wraps under Corsair's parent navigation
+
+The interaction language is **PC-DIY enthusiast**. Hardware photography emphasises modular components: a keyboard shot with detached cable, a tower PC with side panel removed, RAM kits in pairs of 4 sticks. The brand position: "build YOUR setup" — Corsair customers are PC-DIY builders who happen to game, not gamers who happen to need PCs.
+
+**Key Characteristics:**
+- Pure jet-black `#000000` canvas with `#262626` charcoal hairline borders
+- Corsair Yellow `#ffff00` — pure electric yellow, highest-contrast accent in gaming hardware (AAA 19.6 on black)
+- Black-on-yellow primary CTAs (instead of white-on-saturated like Razer/MSI/ASUS)
+- Corsair lightning-bolt logomark — angular zigzag bolt, brand's signature mark
+- Roboto Black 900 uppercase tracked headlines with negative tracking
+- iCUE blue `#0066ff` ecosystem badge stamped on every compatible product (most of catalogue)
+- Heavy monospace spec deployment — 18–24 mono spec values per product page
+- RAM timing callouts in mono (CL36-39-39-76) — Corsair's component-level technical marketing
+- 8-stop iCUE RGB spectrum strip with yellow as brand-anchor stop
+- Yellow glow halos on hovered cards: `0 0 24px rgba(255,255,0,0.3)`
+- 2–4px-radius sharp rectangular cards
+- Hydro X Series cyan `#00bfff` sub-brand for water cooling
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#000000`): pure jet-black gaming page floor
+- **Bg Deep** (`#0a0a0a`): near-black header / footer band
+- **Card Surface** (`#111111`): default card on dark
+- **Surface Soft** (`#1a1a1a`): raised popover, hovered card lift, input fill
+- **Surface Strong** (`#262626`): selected sidebar, deeply hovered border
+- **Surface Elevated** (`#1f1f1f`): elevated panel
+- **Product Band** (`#0a0a0a`): full-bleed darker band
+
+### Brand
+- **Corsair Yellow** (`#ffff00`): pure electric yellow — every CTA, every focused border, every brand badge
+- **Corsair Yellow Bright** (`#ffff66`): hovered yellow on CTAs
+- **Corsair Yellow Deep** (`#cccc00`): deeper yellow for gradient stops
+- **Corsair Yellow Darkest** (`#999900`): darkest yellow — gradient end
+- **Corsair Yellow Glow** (`rgba(255,255,0,0.4)`): glow halo
+- **Corsair Gradient** (`linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)`): three-stop yellow gradient on rare flagship hero bands
+
+### Sub-Brand Accents
+- **iCUE Blue** (`#0066ff`): the iCUE ecosystem-compatibility badge — anchored on every iCUE-compatible product
+- **Hydro X Cyan** (`#00bfff`): the water-cooling sub-brand accent
+- **Elgato Blue** (`#0099ff`): the streaming sub-brand (acquired 2018) — lighter blue
+
+### Interactive
+- **Link** (`#ffff00`): same as brand yellow
+- **Link Hover** (`#ffffff`): hover flips to white on dark
+- **Link Visited** (`#ffff00`): unchanged
+- **Disabled** (`#4a4a4a`)
+- **Selected** (`#ffff00`)
+
+### Neutral Scale
+- **Text** (`#ffffff`) — primary body, pure white on jet-black
+- **Text Strong** (`#ffffff`) — display headlines
+- **Text Soft** (`#b3b3b3`) — secondary metadata
+- **Text Faint** (`#7a7a7a`) — tertiary captions
+- **Text Disabled** (`#4a4a4a`) — disabled labels
+- **Border** (`#262626`) — 1px charcoal hairline
+- **Border Soft** (`#1a1a1a`) — softer divider
+- **Border Strong** (`#ffff00`) — focused / hovered card border
+
+### Surface & Borders
+Corsair's depth ladder runs `#000000` → `#0a0a0a` → `#111111` → `#1a1a1a` → `#1f1f1f` → `#262626` — six near-blacks within 15% lightness, identical structure to Razer/MSI. The brand position: stay maximum-dark, let yellow and hardware photography carry contrast.
+
+### Shadow Colors
+**Neutral shadows + Corsair-yellow glows.** The yellow glow halo `0 0 24px rgba(255,255,0,0.3)` is unmistakable — yellow is rarely used as a glow source in dark-mode UIs, so the Corsair card-hover treatment is instantly recognisable.
+
+### Semantic
+- **Success** (`#00cc66`): green
+- **Warning** (`#ff8800`): orange (warning differentiates from brand yellow)
+- **Danger** (`#ff3030`): red
+- **Info** (`#0066ff`): iCUE blue
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display & Body**: `Roboto` — Google's humanist sans, the same face Razer uses. Falls back to `"Helvetica Neue", Arial, sans-serif`. Weights: 400 / 500 / 700 / 900.
+
+**Condensed**: `Roboto Condensed` for narrow contexts, RAM timing callouts.
+
+**Mono**: `Roboto Mono` — heavily deployed for spec values, RAM timings, fan curves, PSU efficiency ratings. Corsair's monospace is more visible than competitors' because component-level spec callouts are core to the brand position.
+
+**OpenType features**: `kern`, `liga`. `tnum` enabled on price, spec values, and RAM timings.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Roboto | 80 | 900 | 1.0 | -0.02em | uppercase | "BUILD YOUR SETUP" |
+| display-xl | Roboto | 56 | 900 | 1.05 | -0.015em | uppercase | Product launch hero |
+| display-lg | Roboto | 40 | 700 | 1.1 | -0.01em | uppercase | Section banner |
+| display-md | Roboto | 32 | 700 | 1.15 | 0 | — | Product detail H1 (sentence-case) |
+| display-sm | Roboto | 24 | 700 | 1.2 | 0 | — | Card title |
+| section-head | Roboto | 14 | 700 | 1.2 | 0.15em | uppercase | Section bands |
+| sub-section | Roboto | 18 | 500 | 1.3 | 0 | — | Sub-heading |
+| body-lg | Roboto | 18 | 400 | 1.6 | 0 | — | Hero supporting copy |
+| body-md | Roboto | 16 | 400 | 1.6 | 0 | — | Default body |
+| body-sm | Roboto | 14 | 400 | 1.5 | 0 | — | Sidebar copy |
+| body-xs | Roboto | 12 | 400 | 1.4 | 0 | — | Caption |
+| nav-link | Roboto | 13 | 500 | 1.0 | 0.1em | uppercase | "GAMING · STREAMING" |
+| sub-nav-link | Roboto | 12 | 400 | 1.0 | 0.05em | uppercase | Sub-nav |
+| button-cta | Roboto | 14 | 700 | 1.0 | 0.1em | uppercase | "BUY NOW" |
+| button-md | Roboto | 13 | 500 | 1.0 | 0.05em | uppercase | "COMPARE" |
+| badge | Roboto | 11 | 700 | 1.0 | 0.15em | uppercase | "NEW", "iCUE" |
+| price | Roboto | 22 | 700 | 1.0 | -0.005em | tnum | Product price |
+| spec-label | Roboto | 11 | 700 | 1.2 | 0.2em | uppercase | "DPI", "POLLING" |
+| spec-value | Roboto Mono | 16 | 500 | 1.4 | 0 | — | "26,000 DPI" |
+| timing | Roboto Mono | 14 | 500 | 1.4 | 0 | tnum | "CL36-39-39-76" |
+| code | Roboto Mono | 13 | 400 | 1.5 | 0 | — | iCUE config |
+
+### Principles
+
+- **Roboto Black 900 with negative tracking is the manifesto voice.** Hero at 80/900 with `-0.02em` tracking compresses the headline. Same playbook as Razer.
+- **Heavy monospace deployment for spec callouts.** Corsair leans on Roboto Mono more than any other gaming brand because component-level technical buyers expect spec precision. RAM timings render mono with `tnum` for column alignment.
+- **Black-on-yellow CTA labels.** Where Razer/MSI/ASUS render white-on-saturated, Corsair renders **black-on-yellow** — the highest-contrast CTA in gaming hardware (AAA 19.6).
+- **Section heads at 0.15em uppercase tracking.** Wider than HP (0.05em) and ASUS (0.2em) — middle ground.
+- **Spec labels at 0.2em uppercase tracking.** The widest tracking in the type system reads as engineering-spec metadata.
+- **Body in pure white on dark.** No softening.
+- **Open-source typography stack.** Roboto / Roboto Condensed / Roboto Mono are all free Google Fonts.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Corsair Yellow rectangle: `#ffff00` solid fill, **black** label in 14/700 uppercase 0.1em tracking, 14×32px padding, 2px radius. Hover brightens to `#ffff66` and adds `0 0 24px rgba(255,255,0,0.5)` yellow glow halo. The black-on-yellow contrast is canonical Corsair.
+
+**`button-secondary`** — ghost outline: transparent fill, white label in 14/700 uppercase, 1px white border. Hover inverts.
+
+**`button-tertiary`** — inline link with yellow underline: `#ffff00` text + 1px `#ffff00` bottom border.
+
+### Cards
+
+**`product-card`** — `#111111` floor, 1px `#262626` charcoal border, 4px radius, 24px padding. Stack: product hero with optional iCUE RGB lighting bleed, "NEW" yellow badge top-left, "iCUE" blue compatibility badge top-right, product name in Roboto 22/700 sentence-case, mono spec strip with key callouts (DPI / polling / RGB zones for mice; CL timing / capacity / heatspreader for RAM; fan PWM range / dB / RGB zones for fans), price row, "BUY NOW" yellow CTA. Hover lights `#ffff00` yellow border + `0 0 24px rgba(255,255,0,0.3)` glow halo.
+
+**`product-card-flagship`** — already lit at rest with yellow border + glow.
+
+**`hero-card`** — full-bleed yellow gradient (rare flagship use only), with **black** headline on yellow ground.
+
+**`hero-card-dark`** — default dark hero, `#000000 → #0a0a0a` gradient, white headline, hardware photography right with iCUE RGB lighting bleed.
+
+**`spec-card`** — `#111111` floor, 1px `#262626` border, 4px radius, 32×24px padding. Stack: 32/700 spec value in `#ffff00` yellow Roboto Mono, 11/700 uppercase 0.2em tracked label, 14/400 muted supporting copy.
+
+**`ram-timing-card`** — RAM-specific: CL36-39-39-76 timings in mono with voltage / capacity / heatspreader colour callouts. Distinguishes Corsair from peripheral-only competitors.
+
+### Badges
+
+**`badge-icue`** — `#0066ff` blue rectangle, "iCUE" white label. Anchored top-left of every iCUE-compatible product. Corsair's ecosystem-compatibility marker.
+
+**`badge-new`** — `#ffff00` yellow rectangle, **black** "NEW" label.
+
+**`badge-hydro-x`** — `#00bfff` cyan, **black** "HYDRO X SERIES" label — water-cooling sub-brand.
+
+### Inputs / Forms
+
+**`text-input`** — `#1a1a1a` charcoal floor, white text, 1px `#262626` border, 4px radius, 48px height. Focus lights 1px `#ffff00` yellow border.
+
+### Navigation
+
+**`primary-nav`** — 64px tall on `#000000` with 1px `#1a1a1a` bottom border. Corsair lightning-bolt logomark anchored left in white. "GAMING · STREAMING · PC COMPONENTS · CONSOLE · MOBILE · ELGATO" labels in 13/500 uppercase 0.1em tracking white.
+
+### Decorative
+
+**`corsair-bolt`** — angular zigzag lightning bolt logomark. The brand's most-recognised mark.
+
+**`rgb-strip`** — 8-stop iCUE RGB spectrum strip used as section divider on iCUE / lighting feature pages. Yellow appears as the brand-anchor third stop.
+
+## 5. Layout Principles
+
+### Spacing System
+- Base: **8px**, scale `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section gap: **80–128px** marketing
+- Card padding: **24–32px**
+- Gutters: **16–24px**
+
+### Grid & Container
+- Max content width: **1440px**
+- Product grid: 4 → 3 → 2 → 1
+- Hero: full-bleed gradient with content centred at 1280px
+
+### Whitespace Philosophy
+
+Corsair runs **dense-DIY**. Marketing pages breathe at 80–128px between bands; product detail pages tighten to fit 18–24 specs per page.
+
+### Section Cadence
+
+Pages alternate `#000000` canvas with `#0a0a0a` darker product bands and yellow gradient hero bands. RGB spectrum strips appear between sections on iCUE pages.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Hero bands, full-bleed photography |
+| Micro | 1px | Inset surfaces |
+| Small | 2px | Buttons, badges |
+| Medium | 4px | Cards, inputs |
+| Large | 8px | Modal, flagship card |
+| Pill | 9999px | Rare — Corsair is sharp-edged |
+
+Corsair is **sharp-rectangular** like Razer/ASUS. 2px buttons, 4px cards.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Default |
+| 1 — Soft glow | `0 0 16px rgba(255,255,0,0.25)` | Hovered link, focused interactive |
+| 2 — Card | `rgba(0,0,0,0.6) 0 8px 24px` | Card on hover |
+| 3 — Strong glow | `0 0 32px rgba(255,255,0,0.5)` | Flagship card, CTA hover |
+| 4 — Modal | `rgba(0,0,0,0.8) 0 32px 64px` | Modal surface |
+| 5 — Scrim | `rgba(0,0,0,0.85)` | Modal backdrop |
+
+### Shadow Philosophy
+
+**Neutral shadows + Corsair-yellow glows.** The yellow glow halo is the brand's most-recognisable depth treatment.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Button colour swap |
+| Standard | 240ms | Card hover + glow |
+| Slow | 400ms | Carousel, modal enter |
+
+### Per-Component Recipes
+
+- **Card hover**: yellow border fades + glow halo over 240ms.
+- **CTA hover**: yellow brightens + glow halo over 120ms.
+- **RGB shimmer**: 8-stop iCUE strip cycles 4s linear loop. Suppressed reduced-motion.
+- **Carousel slide**: 400ms emphasized.
+
+### Reduced Motion
+
+RGB shimmer freezes; card glow remains static; transitions become opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #ffffff text on #000000 | 21.0 | AAA |
+| #b3b3b3 muted on #000000 | 9.4 | AAA |
+| #ffff00 link on #000000 | 19.6 | AAA |
+| #000000 on #ffff00 CTA | 19.6 | AAA |
+| #7a7a7a faint on #000000 | 4.7 | AA |
+
+Corsair's accessibility story is exceptional. **Both** brand-on-canvas and CTA-text-on-brand hit AAA at 19.6 — the highest WCAG contrast of any gaming hardware brand. The yellow choice was not aesthetic-only; it's mathematically the most legible.
+
+### Focus Indicators
+
+2px solid `#ffff00` yellow ring with 2px outset offset.
+
+### ARIA Patterns
+
+- Search: `role="search"`
+- Product card: full `<a>` with `aria-label` containing title, price, key spec
+- iCUE badge: included in announce — "iCUE compatible"
+- Mega-menu: `role="navigation"` with `aria-expanded`
+
+### Keyboard Navigation
+
+- Tab traverses logo → primary nav → search → utilities → main → footer
+- Esc closes; Enter activates
+- Arrow keys cycle product carousels
+
+### Reduced Motion
+
+RGB shimmer freezes; card glow remains static.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Nav collapses; product grid 1-up; spec stacking simplified |
+| Tablet | 600–960px | 2-up grid |
+| Desktop | 960–1280px | 3-up grid |
+| Wide | 1280px+ | 4-up grid, 1440 cap |
+
+### Touch Targets
+- CTAs: 44–48px
+- Card: full tile
+
+### Collapsing Strategy
+
+- Nav: utilities collapse; primary becomes hamburger
+- Product grid: 4 → 3 → 2 → 1
+- Spec cards: 4-cell → 2-cell stacked
+- Hero: 2-column → stacked
+- Section padding: 128px → 80px → 48px
+
+### Image Behavior
+
+`<picture>` with WebP/AVIF. Hero photography uses video loops with iCUE RGB lighting bleed.
+
+## 11. Content & Voice
+
+### Tone
+
+PC-DIY-enthusiast pragmatic. Corsair's voice is **the builder talking to other builders** — confident-technical, never aspirational, always component-level. Headlines lead with builder language: "BUILD YOUR SETUP.", "COOL YOUR RIG.", "POWER YOUR BUILD."
+
+### Microcopy Patterns
+
+- **Buttons**: "BUY NOW", "ADD TO CART", "PRE-ORDER", "VIEW SPECS", "COMPARE" — uppercase tracked
+- **Errors**: terse-technical "iCUE compatibility check failed. Please update your iCUE software."
+- **Success**: punchy "Added to cart. Continue your build."
+- **Stock urgency**: "ONLY 3 LEFT" in red
+
+### Empty States
+
+Empty cart: "Your build is empty. Choose your components."
+
+Empty wishlist: "No saved gear. Save items to compare for your next build."
+
+Empty search: "No matches for [query]. Try a model name or spec."
+
+### CTA Verb Conventions
+
+- Primary: **"BUY NOW"**, **"ADD TO CART"**, **"PRE-ORDER"**, **"BUILD YOUR PC"**
+- Secondary: **"VIEW SPECS"**, **"COMPARE"**, **"WATCH FILM"**
+- Build-DIY: **"CONFIGURE YOUR LOOP"** (water cooling), **"BUILD YOUR PRE-BUILT"** (Vengeance prebuilts)
+
+## 12. Dark Mode & Theming
+
+**Dark-only.** Corsair is dark-only across web, the iCUE desktop software, and product packaging. The brand position: PC-DIY building happens in low-light rooms with RGB-illuminated rigs, the brand should match.
+
+The deepest surface is `#000000`; the lightest active surface is `#262626`. The whole system lives within roughly 15% lightness range — narrowest among gaming hardware brands.
+
+## 13. Lineage & Influences
+
+Corsair's visual lineage runs through three traditions: **PC component memory module heritage** (Corsair founded 1994 as Corsair Microsystems, originally a memory module manufacturer; the spec-density and RAM-timing callouts predate the gaming brand identity by 14 years); **PC-DIY enthusiast trade dress** (the audience is component-level technical buyers — overclockers, RAM timing tuners, fan PWM enthusiasts — and the marketing serves them with mono spec cards and iCUE ecosystem callouts); and **safety / warning aesthetic** (the pure-saturated yellow `#ffff00` borrows from warning-tape and safety-helmet trade dress — the colour was chosen to maximise contrast and signal "high voltage, high performance").
+
+The current site solidified around 2018 with the rollout of Roboto Black 900 hero treatment and the standardised black-on-yellow CTA. Subsequent updates have refined the iCUE ecosystem badge and the Hydro X cyan sub-brand but have not changed the foundations.
+
+What Corsair rejects: light mode, soft pastel illustration, friendly serifs, sentence-case display on hero, abstract decorative gradients beyond the iCUE RGB strip, gamer-aspiration voice (Corsair speaks builder-pragmatism). The brand position: **PC-DIY component performance — RGB-everything, spec-everything, build-everything**.
+
+**Influences:**
+- Corsair Microsystems founding (1994) — PC memory module heritage
+- Razer competitive trade dress — neon green parallel
+- Logitech G competitive trade dress — RGB peripherals adjacency
+- Bebas Neue / Roboto Black — open-source heavy display
+- Safety / construction trade dress — pure-saturated yellow on black
+- Elgato (acquired 2018) — streaming gear sub-brand
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the page on `#000000` pure jet-black canvas with `#262626` charcoal hairline borders
+- Use Corsair Yellow `#ffff00` for every CTA, focused border, brand badge
+- Render BUY NOW CTAs as solid `#ffff00` with **black** label (highest-contrast CTA in gaming hardware, AAA 19.6)
+- Display the Corsair lightning-bolt logomark anchored top-left
+- Stamp the iCUE blue `#0066ff` ecosystem-compatibility badge on every iCUE-compatible product
+- Use Roboto Black 900 with `-0.02em` tracking for hero headlines uppercase at 56–80px
+- Show 18–24 mono spec values per product page for RAM, fans, PSUs, water-cooling
+- Render RAM timings in mono with `tnum` for column alignment (CL36-39-39-76)
+- Apply yellow glow halos `0 0 24px rgba(255,255,0,0.3)` on hovered cards and CTAs
+- Use 2–4px-radius sharp rectangular cards
+- Use the 8-stop iCUE RGB spectrum strip as section divider on lighting feature pages with yellow as third anchor stop
+- Switch to Hydro X cyan `#00bfff` only on water-cooling sub-brand pages
+
+**Don't**
+- Don't introduce a light mode — Corsair is dark-only
+- Don't render CTA text in white on yellow — black-on-yellow is canonical (AAA contrast)
+- Don't substitute a softer yellow — Corsair Yellow is pure `#ffff00`, not `#ffd700` (TUF gold) or amber
+- Don't soften card corners past 8px on featured or 4px on default
+- Don't use sentence-case display on hero — uppercase is canonical
+- Don't write tech-aspiration copy — Corsair's voice is "BUILD YOUR SETUP", not "Discover gaming"
+- Don't pair Corsair Yellow with another saturated colour in the same module — yellow carries the brand alone (except iCUE blue badge)
+- Don't pad sections at 16px on marketing — Corsair breathes at 80–128px
+- Don't use serifs — Roboto / Roboto Condensed / Roboto Mono only
+- Don't omit the iCUE badge on compatible products — ecosystem-compatibility is core to the brand
+- Don't render section heads in 0.05em tracking (HP idiom) — Corsair uses 0.15em wider
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #000000
+Bg Deep:          #0a0a0a
+Card:             #111111
+Corsair Yellow:   #ffff00
+Yellow Bright:    #ffff66
+Yellow Deep:      #cccc00
+Corsair Gradient: linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)
+Yellow Glow:      rgba(255,255,0,0.4)
+iCUE Blue:        #0066ff
+Hydro X Cyan:     #00bfff
+Text:             #ffffff
+Text Soft:        #b3b3b3
+Border:           #262626
+```
+
+### Example Component Prompts
+
+- "Create a Corsair BUY NOW button: solid `#ffff00` pure-yellow rectangle, **black** label 'BUY NOW' in Roboto 14/700 uppercase 0.1em tracking, 14×32px padding, 2px radius. On hover, fill brightens to `#ffff66` and adds `0 0 24px rgba(255,255,0,0.5)` yellow glow halo. On active, fill deepens to `#cccc00` and scales 0.98."
+- "Build a Corsair product card: 320×460 with `#111111` near-black floor, 1px `#262626` charcoal border, 4px radius, 24px padding. Stack inside: product hero with iCUE RGB lighting bleed (rendered as soft RGB gradient ambient light), `#ffff00` yellow 'NEW' badge top-left in Roboto 11/700 uppercase 0.15em tracking with **black** label, `#0066ff` blue 'iCUE' badge top-right in white label, product name in Roboto 22/700 dark sentence-case, mono spec strip 'CL36-39-39-76 · 32GB · DDR5-6400 · RGB' in Roboto Mono `#b3b3b3`, `#ffffff` price 22/700, 'BUY NOW' yellow CTA. Hover lights `#ffff00` yellow border + `0 0 24px rgba(255,255,0,0.3)` glow halo over 240ms."
+- "Design a Corsair RAM timing card: `#111111` near-black floor, 1px `#262626` border, 4px radius, 20px padding. Title 'TIMINGS' in Roboto 11/700 uppercase 0.2em tracking white. Mono value 'CL36-39-39-76' in Roboto Mono 18/500 `#ffff00` yellow with `tnum`. Below: voltage row '1.40V', capacity '32GB (2x16GB)', heatspreader colour swatch. Used on Vengeance / Dominator RAM product pages."
+- "Build a Corsair iCUE RGB spectrum strip: 4px-tall full-bleed gradient `linear-gradient(90deg, #ff0000 0%, #ff8800 12%, #ffff00 25%, #00ff00 37%, #00ffff 50%, #0066ff 62%, #aa00ff 75%, #ff0088 87%, #ff0000 100%)`, animating left-to-right on a 4-second linear loop. Yellow appears as the third stop and brand-anchor. Used as section divider on iCUE / lighting feature pages."
+- "Create a Corsair spec card: `#111111` near-black floor, 1px `#262626` border, 4px radius, 32×24px padding. Stack: large 32/700 spec value in `#ffff00` Corsair yellow Roboto Mono (e.g. '26,000 DPI'), 11/700 uppercase 0.2em tracked spec label in white (e.g. 'OPTICAL SENSOR'), 14/400 muted supporting copy. Used in feature strips like 'DPI · POLLING RATE · BATTERY · RGB ZONES'."
+- "Design a Corsair top nav: 64px-tall `#000000` floor with 1px `#1a1a1a` bottom border. Corsair lightning-bolt logomark anchored left in white at 32px. Sub-brand labels 'GAMING · STREAMING · PC COMPONENTS · CONSOLE · MOBILE · ELGATO' centred in Roboto 13/500 uppercase 0.1em tracking white. Search trigger, account icon, cart count flush right. Hover lights `#ffff00` yellow 2px underline beneath active sub-brand."
+
+### Iteration Guide
+
+1. **Start with pure jet-black `#000000`.** Same canvas as Razer/MSI. Lock first.
+2. **Corsair Yellow `#ffff00` is the only brand colour.** Pure electric — not amber, not gold, not TUF yellow. Don't substitute.
+3. **Black-on-yellow CTAs are canonical.** Highest-contrast in gaming hardware (AAA 19.6). Don't render white-on-yellow — that fails contrast.
+4. **iCUE blue badge stamps every compatible product.** The ecosystem-compatibility marker is core to the brand position. Don't omit.
+5. **Heavy monospace deployment for spec cards.** Corsair customers are component-level technical buyers; serve them with mono RAM timings, fan curves, PSU ratings.
+6. **Roboto Black 900 with `-0.02em` tracking is the manifesto voice.** Hero at 56–80px uppercase compressed.
+7. **Yellow glow halos on hovered cards.** `0 0 24px rgba(255,255,0,0.3)` — Razer's playbook in yellow.
+8. **Sharp rectangles everywhere.** 2px buttons, 4px cards. No pills on gaming pages.

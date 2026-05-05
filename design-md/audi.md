@@ -1,0 +1,720 @@
+---
+name: Audi
+tagline: Vorsprung durch Technik on near-black — Audi Type sans, four-rings precision, and a near-monochrome canvas with `#bb0a30` reserved for sport.
+author: webdesignhot
+source_url: https://www.audi.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [automotive, marketing]
+tags: [dark, premium, sans, monochrome, german, configurator, technical, photography]
+preview_swatch: ['#000000', '#ffffff', '#bb0a30']
+related: [bmw, porsche, mercedes-benz]
+description: 'Audi.com is the technical-luxury German face — four-rings precision, near-monochrome discipline, and a deep commitment to the Vorsprung durch Technik tradition. The canvas oscillates between **pure white** (`#ffffff`) for showroom and configurator surfaces and **pure black** (`#000000`) for hero / RS performance / e-tron reveals. Type runs **Audi Type** — a bespoke 2009 family by Marc Wrigley — at weight 400 body / 700 display, with the brand''s characteristic technical sans proportions. The four-rings logomark anchors every page; the only saturated brand colour is **Audi Red** (`#bb0a30`) reserved for RS / Sport content. The signature visual move: **black hero band + four-rings + RS-red eyebrow + studio-light photography** — engineering, distilled.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f2f2f2'              # surface alternation
+  bg-card: '#ffffff'
+  bg-strong: '#e6e6e6'             # divider band
+  bg-dark: '#000000'               # pure-black hero band — RS / e-tron / hero
+  bg-dark-elev: '#1a1a1a'          # elevated panel on dark
+  bg-dark-card: '#262626'          # cards on dark
+  surface: '#ffffff'
+  surface-soft: '#f2f2f2'
+  surface-card: '#ffffff'
+  surface-table: '#fafafa'         # spec table band
+  text: '#333333'                  # body
+  text-strong: '#000000'           # body-strong, equivalent to ink
+  text-ink: '#000000'              # ink — primary headings (true black)
+  text-muted: '#666666'             # muted
+  text-faint: '#999999'             # disabled
+  brand: '#000000'                 # Audi black — primary brand colour
+  brand-on-light: '#000000'         # primary CTA on light
+  brand-deep: '#000000'             # same — black-and-white discipline
+  brand-disabled: '#cccccc'         # disabled
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  on-dark-soft: '#bcbcbc'
+  on-dark-faint: '#808080'
+  accent-red: '#bb0a30'            # Audi Red — RS / Sport / Performance
+  accent-red-deep: '#8d0623'        # pressed
+  accent-progress-blue: '#0062c0'   # progress / link blue (very limited use)
+  border: '#d6d6d6'                # hairline
+  border-strong: '#a6a6a6'         # input border
+  border-soft: '#e6e6e6'            # subtle dividers
+  border-on-dark: 'rgba(255,255,255,0.16)'
+  border-on-dark-strong: 'rgba(255,255,255,0.32)'
+  link: '#000000'
+  link-hover: '#bb0a30'
+  ring: '#000000'
+  shadow-soft: 'rgba(0,0,0,0.06)'
+  shadow-elev: 'rgba(0,0,0,0.14)'
+  shadow-deep: 'rgba(0,0,0,0.36)'
+  success: '#1f8b46'
+  warning: '#f0a020'
+  danger: '#bb0a30'
+  info: '#0062c0'
+
+typography:
+  display:
+    family: '"AudiType", "Audi Type", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700, 900]
+    opentype-features: ['kern', 'liga', 'tnum']
+  body:
+    family: '"AudiType", "Audi Type", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['kern', 'liga', 'tnum']
+  mono:
+    family: 'SF Mono, Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:      { size: 80, weight: 700, lineHeight: 1.04, tracking: '-0.012em', family: display, notes: 'Homepage hero — RS e-tron GT name' }
+    display-xl:        { size: 64, weight: 700, lineHeight: 1.06, tracking: '-0.008em', family: display }
+    display-lg:        { size: 48, weight: 700, lineHeight: 1.10, tracking: '-0.005em', family: display, notes: 'Section opener' }
+    display-md:        { size: 36, weight: 700, lineHeight: 1.14, tracking: '0', family: display }
+    display-sm:        { size: 28, weight: 700, lineHeight: 1.20, tracking: '0', family: display }
+    title-lg:          { size: 22, weight: 700, lineHeight: 1.30, tracking: '0', family: display }
+    title-md:          { size: 18, weight: 700, lineHeight: 1.40, tracking: '0', family: display }
+    title-sm:          { size: 16, weight: 700, lineHeight: 1.40, tracking: '0', family: display }
+    body-lg:           { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'Lead paragraph' }
+    body-md:           { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'Default paragraph' }
+    body-sm:           { size: 14, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    caption:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.04em', family: body }
+    label-uppercase:   { size: 12, weight: 700, lineHeight: 1.30, tracking: '0.14em', family: display, notes: 'Section eyebrow — uppercase, very wide tracking' }
+    button:            { size: 14, weight: 700, lineHeight: 1.00, tracking: '0.04em', family: display }
+    nav-link:          { size: 14, weight: 400, lineHeight: 1.40, tracking: '0.02em', family: body }
+    spec-number:       { size: 64, weight: 700, lineHeight: 1.00, tracking: '-0.01em', family: display, notes: 'Tech-spec hero numbers (range, 0-100, kW)' }
+    micro:             { size: 11, weight: 400, lineHeight: 1.40, tracking: '0.05em', family: body }
+    code:              { size: 13, weight: 400, lineHeight: 1.50, tracking: '0', family: mono }
+
+radius:
+  none: 0
+  xs: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  pill: 9999
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 760
+  header-height: 72
+  hero-height: 96vh
+
+components:
+  button-primary:
+    bg: '#000000'
+    text: '#ffffff'
+    padding: '14px 32px'
+    radius: 0
+    font: 'AudiType 14/700 uppercase 0.04em tracking'
+    transition: 'background 0.2s ease'
+    hover: 'rgba(0,0,0,0.86)'
+  button-ghost:
+    bg: 'transparent'
+    text: '#000000'
+    padding: '14px 32px'
+    radius: 0
+    border: '1px solid #000000'
+    font: 'AudiType 14/700 uppercase'
+  button-on-dark:
+    bg: '#ffffff'
+    text: '#000000'
+    padding: '14px 32px'
+    radius: 0
+  button-on-dark-ghost:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    padding: '14px 32px'
+    radius: 0
+  button-text-link:
+    bg: 'transparent'
+    text: '#000000'
+    font: 'AudiType 14/700 with arrow → and underline-on-hover'
+  card-vehicle:
+    bg: '#ffffff'
+    radius: 0
+    padding: '32px 24px'
+    border: 'none'
+    image-position: 'top, full-width 16:9 PNG render on transparent ground'
+    title: '22/700 AudiType'
+    cta: '"Configure" → 14/700 uppercase #000000'
+  card-feature:
+    bg: '#f2f2f2'
+    border: 'none'
+    padding: '32px'
+    radius: 0
+  hero-band-dark:
+    bg: '#000000'
+    text: '#ffffff'
+    notes: 'Used for RS / e-tron / hero — pure black is doctrinal'
+  config-tile:
+    bg: '#ffffff'
+    border: '1px solid #d6d6d6'
+    radius: 0
+    padding: '16px 20px'
+    selected-border: '2px solid #000000'
+  badge:
+    bg: 'transparent'
+    text: '#000000'
+    border: '1px solid #000000'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.14em'
+    radius: 0
+  badge-rs:
+    bg: '#bb0a30'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.14em'
+    radius: 0
+  badge-electric:
+    bg: '#000000'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.14em'
+    radius: 0
+  spec-cell:
+    bg: 'transparent'
+    text: '#000000'
+    typography: '64/700 spec-number'
+    label: '12/700 uppercase 0.14em'
+    notes: 'Tech-spec showcase — range, 0-100, max kW, max speed'
+  navigation:
+    bg: '#ffffff'
+    height: 72
+    border-bottom: '1px solid #d6d6d6'
+    nav-link: '14/400 #000000'
+    logo: 'Four rings — 80×24, monochrome black on white or white on black'
+  input:
+    bg: '#ffffff'
+    border: '1px solid #a6a6a6'
+    radius: 0
+    padding: '12px 16px'
+    font: 'AudiType 16/400'
+    focus-border: '#000000'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.32, 0, 0.16, 1)'
+  duration-fast: 150
+  duration-standard: 280
+  duration-slow: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — hero parallax disables, video autoplay pauses, only opacity transitions remain.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+  ultra: 1920
+
+shadows:
+  flat: 'none'
+  card: 'rgba(0,0,0,0.06) 0 2px 6px'
+  elevated: 'rgba(0,0,0,0.14) 0 8px 28px'
+  modal: 'rgba(0,0,0,0.36) 0 24px 64px'
+  ring: '0 0 0 2px #000000'
+
+accessibility:
+  contrast-text-on-bg: 21.0          # #000000 on #ffffff — AAA max
+  contrast-body-on-bg: 11.0          # #333333 on #ffffff — AAA
+  contrast-text-on-brand: 21.0       # #ffffff on #000000 — AAA max
+  contrast-on-dark-bg: 21.0          # #ffffff on #000000 — AAA max
+  contrast-rs-red-on-white: 6.6      # #bb0a30 on #ffffff — AA Normal, AAA Large
+  focus-ring: '2px solid #000000 with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: 'partial — Audi extensively uses pure-black hero bands (#000000) within otherwise light pages, the most aggressive of the German automotive trio (vs. BMW navy, Mercedes neutral). Full dark-mode variant offered on myAudi customer portal and MMI in-vehicle UI.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Audi.com is the technical-luxury German face — four-rings precision, near-monochrome discipline, and a deep commitment to the **Vorsprung durch Technik** tradition. The page opens onto either a pure-white canvas or a pure-black hero band, with the four-rings logo anchored top-left of a thin nav, and an immediate full-bleed photograph of an A4, A6 e-tron, Q5, or RS e-tron GT in studio-controlled light. Where BMW photography reads as dawn-grey environmental, where Ford reads as noon-clarity workmanlike, where Chevrolet reads as golden-hour cinematic, **Audi photography reads as engineering studio** — controlled, precise, slightly clinical, often shot against pure-black backdrops with rim lighting catching every body line.
+
+The colour mood is **near-monochrome black-and-white precision**. Audi's voltage is `#000000` — pure black — used as both the primary CTA fill and the dominant hero band ground. White is the showroom canvas. The only saturated chromatic accent is **Audi Red** (`#bb0a30`) reserved exclusively for **RS** (Renn Sport) content — RS6, RS e-tron GT, RS Q8 — and never used decoratively. This is the most aggressively disciplined chromatic system in mainstream automotive: where BMW commits to corporate blue, where Ford commits to cobalt blue, **Audi commits to nothing chromatic at all** outside the RS context. The discipline reads as engineering confidence.
+
+Typography is **Audi Type** — a bespoke 2009 family by Marc Wrigley designed specifically for the Audi brand. Display sets at weight 700 with negative tracking on hero sizes; body sits at 400. The family is tighter than Helvetica, with slightly more upright character widths and crisp terminals — drawn for precision rather than warmth. Headlines like "Vorsprung durch Technik", "RS e-tron GT", or "Q4 e-tron" land at 64–80px with `-0.008em` to `-0.012em` tracking — very tight, very confident, very precise. The brand uses uppercase for section eyebrows at 12/700 with a remarkably wide **0.14em tracking** — the widest tracking in mainstream automotive — descended from German technical-manual typography.
+
+The signature visual move is the **black hero band + four-rings + RS-red eyebrow + studio-light photography** triplet. Every RS launch, every e-tron reveal, anchors itself with a pure-black ground, the four-rings reversed to white, an `#bb0a30` red eyebrow, and a studio-controlled photograph of the vehicle with rim lighting tracing its silhouette. CTAs are sharp 0-radius rectangles — the same Bauhaus discipline as BMW and Chevrolet — but Audi's are pure-black on white or pure-white on black, never a chromatic blue. The rectangle geometry is the brand's quiet engineering signature.
+
+Motion is **technical, not playful**. A controlled parallax on hero photography, video autoplay-with-audio-off on RS pages, slow 480ms cross-fades on hero image transitions, fade-in-on-scroll. The brand uses motion to communicate German-engineering precision and high-speed control — never tech-industry futurism, never American truck swagger.
+
+**Key Characteristics:**
+- White canvas (`#ffffff`) with pure-black (`#000000`) hero bands — the most aggressive light/dark oscillation in automotive
+- **No chromatic primary CTA** — Audi's primary is pure black, never blue, never red
+- Audi Red (`#bb0a30`) reserved exclusively for RS / Sport / Performance content — never decorative
+- Audi Type sans family (bespoke 2009 by Marc Wrigley), two-weight discipline (400 body, 700 display)
+- **Sharp 0-radius CTAs** — Bauhaus-disciplined, monochrome
+- Full-bleed studio-light photography, often against pure-black with rim lighting
+- Uppercase section eyebrows at 12/700/**0.14em** tracking — widest in automotive, German-technical tradition
+- Spec numbers rendered at 64/700 in dedicated cells — the brand's number-display gesture (range, 0-100, kW, top speed)
+- The four-rings is the only logomark — never substituted with "Audi" wordmark
+- Generous 96–128px section padding, 12-column grid, 1440 max-width
+- "Configure" as the configurator entry verb — the German automotive standard
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Pure Black** (`#000000`): The primary brand colour. CTA fill, hero band, four-rings on white. Audi commits to true black — not navy, not near-black.
+- **Pure White** (`#ffffff`): Page canvas, card surface, four-rings on black, default ground.
+
+### Brand & Dark
+- **Surface Dark** (`#000000`): Pure-black hero band for RS / e-tron / hero contexts.
+- **Surface Dark Elevated** (`#1a1a1a`): One step lighter for cards on dark.
+- **Surface Dark Card** (`#262626`): Cards on dark backgrounds.
+- **Four Rings**: Always pure-black on white or pure-white on black — never coloured, never gradient.
+
+### Accent (RS / Sport)
+- **Audi Red** (`#bb0a30`): RS Renn Sport voltage (rgb 187, 10, 48). Used only on RS content, RS badges, RS section eyebrows, performance hero accents. Never decorative.
+- **Audi Red Deep** (`#8d0623`): Pressed/active state for RS CTAs.
+
+### Interactive
+- **Link** `#000000` — body-text inline links (underline on hover only)
+- **Link Hover** `#bb0a30` — RS contexts only, otherwise stays black with underline grow
+- **Disabled** `#cccccc` — neutral grey
+- **Focus** — 2px `#000000` outline with 2px offset (or 2px white on dark backgrounds)
+
+### Neutral Scale
+- **Ink** `#000000` — primary headings (pure black, no compromise)
+- **Body** `#333333` — paragraph default
+- **Muted** `#666666` — captions, metadata
+- **Faint** `#999999` — disabled labels
+- **Hairline Strong** `#a6a6a6` — input borders
+- **Hairline** `#d6d6d6` — divider
+- **Hairline Soft** `#e6e6e6` — subtle dividers
+- **Surface Strong** `#e6e6e6` — divider band
+- **Surface Soft** `#f2f2f2` — section alternation
+- **Canvas** `#ffffff`
+
+### Surface & Borders
+- Light surface tiers cascade `#ffffff` → `#fafafa` → `#f2f2f2` → `#e6e6e6`
+- Dark tiers cascade `#000000` → `#1a1a1a` → `#262626`
+- Borders are always 1px solid; sharp corners.
+- Cards use background contrast + 1px hairlines, with optional shadows on hover.
+
+### Shadow Colors
+Audi uses **neutral black** at low opacity:
+- **Card** `rgba(0,0,0,0.06) 0 2px 6px`
+- **Elevated** `rgba(0,0,0,0.14) 0 8px 28px`
+- **Modal** `rgba(0,0,0,0.36) 0 24px 64px`
+
+The brand prefers **brightness-step elevation** (white → light-grey → dark-grey → black) over drop-shadow. Shadows are subtle when present.
+
+### Semantic
+- **Success** `#1f8b46` — confirmation
+- **Warning** `#f0a020` — limited stock indicator
+- **Danger** `#bb0a30` — error (also Audi Red, the cross-overlap acceptable)
+- **Info** `#0062c0` — informational, very limited use (myAudi only)
+
+## 3. Typography Rules
+
+### Font Family
+- **Display & Body**: `"AudiType"` — bespoke 2009 family by Marc Wrigley, replacing earlier Audi Sans. Weights 300, 400, 500, 700, 900. Latin, Cyrillic, Greek, Arabic siblings exist.
+- **Audi Type lineage**: a humanist sans tighter than Helvetica, with crisp terminals, slightly upright proportions, drawn for precision technical use as well as display.
+- **Fallback chain**: `"Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`
+- **Mono**: SF Mono / Menlo — used only on developer-facing surfaces (rare)
+- **OpenType features**: kern, liga, tnum (tabular numerals — important for spec cells where range / 0-100 / kW need to align).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT | Notes |
+|------|------|------|--------|-------------|----------------|----|-------|
+| Display Hero | Display | 80 | 700 | 1.04 | -0.012em | kern, liga, tnum | Homepage hero — model name |
+| Display XL | Display | 64 | 700 | 1.06 | -0.008em | kern, liga, tnum | Subsidiary hero |
+| Display LG | Display | 48 | 700 | 1.10 | -0.005em | kern, liga, tnum | Section opener |
+| Display MD | Display | 36 | 700 | 1.14 | 0 | kern, liga | Sub-section |
+| Display SM | Display | 28 | 700 | 1.20 | 0 | kern, liga | Card header |
+| Title LG | Display | 22 | 700 | 1.30 | 0 | kern, liga | Module title |
+| Title MD | Display | 18 | 700 | 1.40 | 0 | kern, liga | List item title |
+| Title SM | Display | 16 | 700 | 1.40 | 0 | kern, liga | Compact label |
+| Body LG | Body | 18 | 400 | 1.55 | 0 | kern, liga | Lead paragraph |
+| Body MD | Body | 16 | 400 | 1.55 | 0 | kern, liga | Default paragraph |
+| Body SM | Body | 14 | 400 | 1.55 | 0 | kern, liga | Secondary copy |
+| Caption | Body | 12 | 400 | 1.40 | 0.04em | kern, liga | Image captions |
+| Label Uppercase | Display | 12 | 700 | 1.30 | **0.14em** | kern, liga | Section eyebrow — UPPERCASE |
+| Button | Display | 14 | 700 | 1.00 | 0.04em | kern, liga | CTA label — UPPERCASE |
+| Nav Link | Body | 14 | 400 | 1.40 | 0.02em | kern, liga | Top-level nav |
+| Spec Number | Display | 64 | 700 | 1.00 | -0.01em | kern, liga, tnum | Tech-spec cell hero number |
+| Micro | Body | 11 | 400 | 1.40 | 0.05em | kern, liga | Footer fine print |
+| Code | Mono | 13 | 400 | 1.50 | 0 | — | Developer docs only |
+
+### Principles
+- **Audi Type's tight precision** is the brand's typographic DNA — drawn for technical legibility at small sizes and confident display at hero sizes.
+- **Two-weight discipline: 400 body, 700 display.** No 500 or 600 paragraphs; the contrast is the brand's voice.
+- **Aggressive negative tracking on display.** -0.005em to -0.012em — tighter than BMW's zero-tracking discipline, signaling precision over restraint.
+- **0.14em uppercase eyebrow tracking** — the widest in mainstream automotive, descended from German technical-manual typography.
+- **Tabular numerals (`tnum`) on spec cells** — range, 0-100, max kW, max speed — must align vertically across columns.
+- **No italic in display or body.** Italic appears only in press-release datelines and citation footnotes.
+- **Spec numbers as hero gesture**: the 64/700 spec cell, often shown standalone or in 4-up grids, is one of the brand's signature typographic moves.
+- **One family discipline**: Audi Type handles everything. Even spec callouts and captions resist falling back to system sans.
+
+## 4. Component Stylings
+
+### Buttons
+Audi CTAs are **sharp 0-radius rectangles** in **pure black** — engineering precision distilled. The brand does not chromatically signal action — the colour discipline says "we are confident enough that black is enough."
+
+**Primary CTA** — the pure-black rectangle:
+- Background `#000000`, text `#ffffff`, font 14/700 uppercase, `0.04em` tracking
+- Padding `14px 32px`, radius `0`, no border
+- Transition `background 0.2s ease`
+- Hover background `rgba(0,0,0,0.86)` — a subtle lift, not a colour shift
+- Disabled background `#cccccc`, text `#999999`
+- Use case: Configure, Find a Dealer, Test Drive, Build Your Audi
+
+**Ghost (Light)** — secondary on light surfaces:
+- Background transparent, text `#000000`, border `1px solid #000000`
+- Same padding/typography as primary, 0 radius
+- Hover: bg `#000000`, text `#ffffff` (full inversion)
+
+**On-Dark Primary** — primary on black hero band:
+- Background `#ffffff`, text `#000000` (full inversion)
+- Same padding/typography
+
+**On-Dark Ghost** — secondary on black:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`
+- Hover: bg `#ffffff`, text `#000000`
+
+**Text Link with Arrow** — inline action:
+- Text `#000000`, font 14/700 with arrow glyph `→`
+- No underline at rest; hover triggers a 2px underline that grows from left
+- Use case: "Discover", "Explore", "Read More"
+
+### Cards
+
+**Vehicle Card** — the showroom workhorse:
+- Background `#ffffff`, no border, no shadow, radius 0
+- Padding `32px 24px`
+- Top: 16:9 transparent-PNG model render
+- Below image: optional RS/e-tron badge, model name in 22/700, MSRP starting line, "Configure" arrow link
+- Hover: subtle background lift to `#fafafa`, no scale, no translate
+
+**Feature Card** — for technology callouts (quattro, e-tron technology):
+- Background `#f2f2f2`, no border, radius 0
+- Padding `32px`
+- Used in 3-up grids on technology pages
+
+**Hero Band Card** (dark):
+- Sits inside a `#000000` band
+- Background `#262626`, text white, border `1px solid rgba(255,255,255,0.16)`
+- Padding `48px`, radius 0
+
+### Spec Cell — The Audi Signature
+A dedicated component for tech specs that has become a brand-recognition gesture:
+- Transparent background, padding `24px 0`
+- Number value: 64/700 AudiType with tnum tabular numerals, tracking -0.01em
+- Unit suffix in 22/700 inline (e.g., "**495** km", "**3.3** s")
+- Label below: 12/700 uppercase 0.14em tracked, colour `#666666`
+- Used in 4-up rows (range / 0-100 / max power / top speed) on every model detail page
+- On dark background: number `#ffffff`, label `#bcbcbc`
+
+### Configurator Tile
+- Background `#ffffff`, border `1px solid #d6d6d6`, radius 0, padding `16px 20px`
+- Selected: border `2px solid #000000` with subtle inner glow
+- Used for trim/colour/wheel/package selection
+- Mobile: tiles collapse into accordion below 768px
+
+### Badges
+
+**Standard Badge**:
+- Background transparent, border `1px solid #000000`, text `#000000`
+- Font 11/700 uppercase `0.14em`
+- Padding `4px 12px`, radius 0
+
+**RS Badge** — for RS / Sport / Performance:
+- Background `#bb0a30`, text `#ffffff`
+- Same typography & geometry
+
+**Electric Badge** — for e-tron models:
+- Background `#000000`, text `#ffffff`
+
+### Inputs
+- Background `#ffffff`, border `1px solid #a6a6a6`, radius 0
+- Padding `12px 16px`, font 16/400
+- Focus border `#000000`, no shadow, 2px ring offset
+- Floating label pattern: label inside on rest, animates to top on focus/value
+- Error: border `#bb0a30`, helper text `#bb0a30` 13/400 below
+
+### Navigation
+- White background, 72px height, 1px bottom border `#d6d6d6`
+- Four-rings 80×24 at far left — monochrome black on white
+- Primary nav links (Models / e-mobility / RS / Pre-owned / myAudi) 14/400 with `0.02em` tracking, `#000000`
+- Hover: text stays `#000000`, but reveals a 2px underline that grows from left (200ms)
+- Mega-menu opens on hover: full-width white panel, 5-column model grid (A / Q / e-tron / RS / Lifestyle)
+- Sticky on scroll with subtle shadow
+
+### Tooltips & Toasts
+- Tooltip: `#000000` background, white text 12/400, padding `8px 12px`, radius 0
+- Toast: `#000000` background, white text, fixed bottom-right, slide-in 300ms
+
+### Modal
+- Overlay `rgba(0,0,0,0.6)`
+- Dialog `#ffffff`, radius 0, padding `48px`, max-width 720
+- Close icon top-right, no border on dialog itself
+
+### Tabs (Specs Pages)
+- Underline tabs, 14/400, `#666666` inactive, `#000000` active with 2px bottom border
+
+## 5. Layout Principles
+
+### Spacing System
+- Base **8px**. Scale 4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160.
+- Section padding 96–128px on desktop, 64–96px on tablet, 48–64px on mobile.
+- Card gap 24–32px in grids.
+- Button padding `14px 32px`.
+
+### Grid & Container
+- 12-column grid, 1440px max content width, 24px gutters
+- Hero is full-bleed (100vw, 96vh — taller than BMW)
+- Vehicle card grid is 4-up at desktop, 2-up tablet, 1-up mobile
+- Spec cell rows 4-up at desktop, 2-up tablet, 1-up mobile
+- Press-release prose width 760px
+
+### Whitespace Philosophy
+Audi uses whitespace as **engineering whitespace** — every section is a chapter, every chapter has air around it, every air-pocket signals deliberate restraint. Sections breathe at 96–128px so the photograph and the spec cells dominate. The brand commits to **technical pacing** — closer to a German engineering catalogue than a magazine.
+
+### Section Cadence
+- The brand rhythm is **white → black → white → light-grey → black → footer**
+- Hero (often black) → vehicle grid (white) → spec-cell row (black or white) → feature row (light-grey) → CTA band (black) → footer (black)
+- Black bands are more frequent than BMW's navy bands — Audi commits harder to the dark/light oscillation.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0 | **Buttons, cards, inputs, modals, badges — Audi's default** |
+| Micro | 2 | Form-error indicator |
+| Standard | 4 | Tooltip — rare |
+| Comfortable | 8 | Image-card overlay — limited use |
+| Relaxed | 12 | Photo-card variant on lifestyle pages |
+| Featured | 16 | Hero-curve image vignette — rare |
+| Pill | 9999 | Avatar, dot indicator only |
+
+The **0-radius default** is doctrinal — the sharp rectangle is the brand's geometric signature, shared with BMW and Chevrolet but more aggressively monochrome. Going larger feels like a different brand (Mercedes' soft modernism).
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | Flat | Default state for cards, inputs, buttons |
+| 1 | `rgba(0,0,0,0.06) 0 2px 6px` | Sticky nav on scroll, light card hover |
+| 2 | `rgba(0,0,0,0.14) 0 8px 28px` | Vehicle card hover, mega-menu overlay |
+| 3 | `rgba(0,0,0,0.36) 0 24px 64px` | Modal dialogs |
+| 4 | Frost — `rgba(255,255,255,0.92)` + blur 16px | Image-overlay info panel on hero |
+| 5 | Inner glow — `inset 0 0 0 2px #000000` | Selected configurator tile |
+
+### Shadow Philosophy
+Audi prefers **brightness-step elevation** (the white → black tonal cascade) over drop-shadow. When shadow appears, it is neutral black at low opacity — never tinted. The depth grammar is: white surface, light-grey alternating band, dark-grey card-on-dark, pure-black band. Photography and rim-lighting carry the visual depth — not CSS shadow stacks.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style for most transitions
+- **Audi Emphasized**: `cubic-bezier(0.32, 0, 0.16, 1)` — slightly more controlled entry, used on hero cross-fades and section reveals
+- **Spring/bounce**: never. Audi refuses overshoot — the brand voice is engineering-controlled.
+
+### Duration
+- **Fast** 150ms — colour transitions on hover
+- **Standard** 280ms — opacity fades, mega-menu reveal, underline grow
+- **Slow** 480ms — hero parallax, image cross-fades, section reveal
+
+### Per-Component Recipes
+- **Primary button hover**: `background 0.2s ease`. No lift, no scale, just subtle opacity shift.
+- **Vehicle card hover**: subtle background tint to `#fafafa` 280ms. No translate, no scale.
+- **Mega-menu reveal**: opacity + 8px translateY 280ms emphasized ease
+- **Hero parallax**: image scrolls at 0.65× speed of viewport; disabled on prefers-reduced-motion
+- **Configurator tile select**: border weight + colour transition 200ms standard ease
+- **Nav-link underline grow**: `transform: scaleX` on a 2px pseudo-element, origin left, 280ms emphasized
+- **Spec number count-up**: on first scroll into view, numbers count from 0 to value over 1.2s — disabled on reduced motion
+
+### Page Transitions
+Hard cuts on route change. Configurator step transitions use opacity + slight horizontal slide 280ms.
+
+### Reduced Motion
+Honoured at the CSS level: parallax disables; spec-number count-up disables; video autoplay pauses; carousel auto-advance pauses; opacity-only transitions remain.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Ink on White** — `#000000` / `#ffffff` = **21.0:1** — AAA max
+- **Body on White** — `#333333` / `#ffffff` = **11.0:1** — AAA
+- **Muted on White** — `#666666` / `#ffffff` = **5.6:1** — AA Normal
+- **White on Pure Black** — `#ffffff` / `#000000` = **21.0:1** — AAA max
+- **Audi Red on White** — `#bb0a30` / `#ffffff` = **6.6:1** — AA Normal, AAA Large
+- **Disabled** — `#999999` / `#ffffff` = **2.8:1** — fails AA Normal, used only for disabled
+
+Audi's monochrome discipline yields the highest contrast ratios in mainstream automotive — the brand earns AAA across body, display, and CTA pairings.
+
+### Focus Indicators
+- 2px solid `#000000` outline with 2px offset on every interactive element on light surfaces
+- On dark bands, focus uses 2px solid white with 2px offset
+- `:focus-visible` only — not on mouse click
+
+### ARIA & Patterns
+- Mega-menu uses `aria-haspopup="menu"` and `aria-expanded`
+- Configurator step uses `role="tablist"` with `aria-selected`
+- Modal dialogs trap focus, label via `aria-labelledby`, dismiss on Esc
+- Spec cells use `role="figure"` with `aria-label` describing both number and unit
+- Inventory filter uses `role="region"` with `aria-label="Filter inventory"`
+
+### Keyboard Nav
+- Tab order: four-rings → primary nav → utility (account, locator) → main content → CTA
+- Configurator: arrow keys move between trim tiles; Space selects
+- Carousel: arrow keys move slides
+
+### Screen Reader Hints
+- Four-rings uses `aria-label="Audi homepage"`
+- Model names announced as full ("Audi RS e-tron GT performance") not abbreviated
+- Spec numbers announced as full units: "Four hundred ninety-five kilometres of WLTP-est. range"
+- Spec tables use proper `<th scope="col">` and `<th scope="row">` semantics
+
+### Reduced Motion
+Honoured (see §8).
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600 | Single column; hamburger nav; hero text 32px; CTA stacks; vehicle cards 1-up; spec cells 1-up |
+| Tablet | 600–1024 | 2-column vehicle grid; hero 48px; spec cells 2-up |
+| Desktop | 1024–1440 | 4-column vehicle grid; full mega-menu; hero 64–80px; spec cells 4-up |
+| Wide | 1440–1920 | Content centred at 1440 max-width |
+| Ultra | >1920 | Hero photography scales to fill; max-width preserved |
+
+### Touch Targets
+- Buttons 48×48 minimum
+- Nav links 44px tap area
+- Configurator tiles 64×64 minimum
+
+### Collapsing Strategy
+- Nav: horizontal → hamburger drawer at <1024
+- Vehicle grid: 4 → 2 → 1
+- Spec cells: 4 → 2 → 1 with vertical stacking
+- Spec tables: horizontal scroll on mobile rather than stacking
+- Hero CTA pair: side-by-side → stacked at <600
+
+### Image Behavior
+- Hero images responsive across breakpoints, fill viewport
+- `object-fit: cover` on hero, `object-fit: contain` on transparent-PNG renders
+- Studio-shot photography preferred over environmental at every breakpoint
+
+### Container Queries
+Used selectively on the configurator panel.
+
+## 11. Content & Voice
+
+### Tone
+**Engineered, precise, German-formal-to-the-point-of-clinical.** Audi writes like a German engineering team that happens to be writing for a luxury market. Sentences are technical and confident, often parametric: "495 km of WLTP-estimated range. 0–100 in 3.3 seconds. 475 kW peak power." The voice does not sell — it specs.
+
+### Microcopy Patterns
+- **Primary CTA**: "Configure", "Find a Dealer", "Test Drive", "Build Your Audi"
+- **Secondary**: "Discover", "Explore Specs", "Compare Models"
+- **Form error**: "Please enter a valid postcode."
+- **Empty state**: "No vehicles match your filters."
+- **Confirmation**: "Your configuration has been saved to myAudi."
+
+### CTA Verb Conventions
+- **Configure** — the order-flow entry verb (German automotive standard)
+- **Discover** — exploration verb on technology pages
+- **Explore** — for specs, e-tron technology
+- **Find** — for dealer / charging-station locator
+- **Request** — for quote, brochure, test-drive
+
+### Empty States
+On the configurator, an unselected option shows the base value with a quiet "Select" prompt. No illustrations.
+
+### Headline Voice
+Headlines lean on **engineering claims** or the heritage tagline: "Vorsprung durch Technik", "RS e-tron GT", "Future is an attitude". Sub-heads use **specced statements**: "Up to 495 km WLTP-est. range", "0–100 in 3.3 s".
+
+## 12. Dark Mode & Theming
+
+Audi.com is **partial-dark**: pure-black hero bands (`#000000`) appear extensively within otherwise light pages — more aggressively than BMW's navy bands or Mercedes' neutral approach. The full **myAudi customer portal** offers a complete dark-mode variant, and **MMI** (the in-vehicle infotainment) runs dark by default with the same token bundle inverted.
+
+If implementing a full dark variant of this token bundle:
+- Swap `bg #ffffff → #000000`
+- Swap `bg-soft #f2f2f2 → #1a1a1a`
+- Swap `text-ink #000000 → #ffffff`
+- Swap `text #333333 → #d6d6d6`
+- CTA inverts: `#000000` becomes `#ffffff` with text `#000000`
+- Borders shift to `rgba(255,255,255,0.16)`
+- Card surface becomes `#262626`
+- Audi Red `#bb0a30` stays — works on both grounds
+
+## 13. Lineage & Influences
+
+Audi.com inherits from three traditions: **Bauhaus and the Ulm School of Design** (Otl Aicher, Max Bill — sharp 0-radius geometry, monochrome discipline, grid clarity), **German technical-manual typography** (the wide-tracked uppercase eyebrows, the spec-cell number-display tradition), and **Audi's own 1971 corporate design system** by Otl Aicher. Audi Type (Marc Wrigley, 2009) is the typographic descendant of Aicher's original Audi Sans, modernized for digital but retaining the upright humanist proportions.
+
+What Audi rejects: it rejects all of BMW's navy commitment (Audi commits to true black), Mercedes' soft-modernist roundedness (12px+ radii, gradients), Porsche's dramatic-gradient thunder (Audi refuses gradient ornament), Ford's American-pill geometry (Audi's rectangle is doctrinal), and Tesla's no-CTA minimalism (Audi commits to clear primary CTAs). The brand's discipline is **monochrome confidence**: black, white, and Audi Red — nothing more.
+
+- **Otl Aicher / Audi 1971 corporate design** — the foundational Audi visual system — https://en.wikipedia.org/wiki/Otl_Aicher
+- **Hochschule für Gestaltung Ulm (Ulm School)** — German design school, Bauhaus successor — https://en.wikipedia.org/wiki/Ulm_School_of_Design
+- **Marc Wrigley / Audi Type 2009** — bespoke corporate sans family
+- **Bauhaus** — geometric corner discipline, monochrome restraint
+- **Audi four-rings, 1932** — the merger logomark — https://www.audi.com/
+
+## 14. Do's and Don'ts
+
+### Do
+- Use pure black `#000000` for primary CTAs — never substitute with chromatic blue or red
+- Reserve Audi Red `#bb0a30` exclusively for RS / Sport / Performance content
+- Set body type at weight 400 — Audi Type's body weight
+- Set display type at weight 700 — the brand's monumental weight
+- Open every section with a 12/700 uppercase eyebrow at **0.14em** tracking — wider than peers
+- Use **sharp 0-radius rectangles** for all CTAs and cards
+- Commit to the white-and-black oscillation — black hero bands are doctrinal, not optional
+- Use the spec-cell pattern (64/700 number + 12/700 0.14em label) for technical specs
+- Use tabular numerals (`tnum`) on spec cells so columns align
+- Render the four-rings monochrome — black on white or white on black
+- Use studio-light photography with rim-lighting tracing body lines
+
+### Don't
+- Use chromatic CTAs — Audi's primary is black, never blue, never red, never gold
+- Use Audi Red `#bb0a30` outside RS / Sport / Performance content — the red is sacred
+- Use weight 300 for body — drifts into Mercedes territory
+- Add border-radius to buttons or cards — the rectangle is doctrinal
+- Use environmental "noon clarity" Ford-style photography — Audi photography is studio-controlled
+- Apply shadow tints — Audi shadows are neutral black, never blue or warm
+- Use uppercase headlines — uppercase is reserved for 12px eyebrows and 14px CTAs
+- Mix Audi Red with the progress blue `#0062c0` in the same module
+- Use environmental dawn-grey BMW-style light — Audi prefers studio rim-lighting
+- Substitute the four-rings with an "Audi" wordmark — the rings are the only logomark
+- Use "Build & Price" — Audi's verb is "Configure"
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA: Pure Black `#000000`
+- Background: White `#ffffff` or Pure Black `#000000` (depending on section)
+- Heading text on light: `#000000`
+- Body text on light: `#333333`
+- Muted text: `#666666`
+- Heading text on dark: `#ffffff`
+- Body text on dark: `#bcbcbc`
+- Hairline border: `#d6d6d6`
+- Audi Red (RS only): `#bb0a30`
+
+### Example Component Prompts
+- "Create an Audi hero section with full-bleed RS e-tron GT photography on a `#000000` ground (16:9, studio-light with rim lighting on body lines), an 80px AudiType 700 model name in white on bottom-left, a 12px uppercase 0.14em-tracked eyebrow ('RS PERFORMANCE') above it in `#bb0a30`, and a primary white-on-black 'Configure' button + ghost 'Find a Dealer' button — both 14/700 uppercase, 0-radius."
+- "Design a 4-up vehicle card grid where each card sits on `#ffffff` (no border, no shadow), holds a 16:9 transparent-PNG vehicle render at top, then an outline e-tron badge, a 22/700 model name, a starting price line, and a 14/700 'Configure →' arrow link in `#000000`. Hover lifts background to `#fafafa`."
+- "Build a spec-cell 4-up row: each cell shows a 64/700 AudiType number with tabular numerals (`tnum`) and `-0.01em` tracking, plus a 12/700 uppercase 0.14em-tracked label below in `#666666`. Example: '**495** km — WLTP RANGE' / '**3.3** s — 0–100' / '**475** kW — MAX POWER' / '**245** km/h — TOP SPEED'."
+- "Create a configurator step with a 4-up tile grid; each tile is white with a 1px `#d6d6d6` border at 0 radius, 16×20 padding. Selected state: border 2px `#000000` with subtle inner glow."
+- "Design an Audi uppercase eyebrow component: 12px AudiType 700, letter-spacing **0.14em** (very wide), color `#000000` (or `#bb0a30` for RS contexts), sits above every section headline with 16px bottom margin."
+- "Make a sticky white nav with the four-rings (80×24, monochrome black) at far left, five 14/400 nav links centre (Models / e-mobility / RS / Pre-owned / myAudi), three utility icons right, 72px height, 1px bottom border `#d6d6d6`. Nav link hover reveals 2px underline that grows from left over 280ms."
+
+### Iteration Guide
+1. Verify the monochrome CTA — if a primary button is chromatic blue or red, the brand reads as BMW or Ferrari, not Audi.
+2. Check that Audi Red `#bb0a30` only appears inside RS / Sport / Performance contexts.
+3. Confirm uppercase eyebrow tracking is **0.14em** — the widest in automotive, German-technical tradition.
+4. Ensure spec cells use 64/700 AudiType with tabular numerals — the brand's signature gesture.
+5. Photography should be **studio-controlled** with rim-lighting — environmental dawn-grey or noon-clarity reads as a different brand.
+6. Hold the 0-radius rectangle for buttons and cards — pill rounding reads as Ford, soft 12px reads as Mercedes.
+7. Use "Configure" as the configurator verb — German automotive standard.
+8. The black hero band is doctrinal — Audi commits to pure black harder than any peer; if your hero is white, you are showing a configurator surface, not a hero.

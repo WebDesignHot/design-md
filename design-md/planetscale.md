@@ -1,0 +1,854 @@
+---
+name: PlanetScale
+tagline: 'Pure-black canvas, blood-red accent, mono-set numerals — a database brand styled like a financial terminal.'
+author: webdesignhot
+source_url: https://planetscale.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [dark, mono, dense, structured, brutalist, cool]
+preview_swatch: ['#111111', '#c11027', '#22a652']
+related: [vercel, supabase, linear]
+description: 'PlanetScale runs an unapologetic near-black canvas (`#111111`) with a single blood-red accent (`#c11027`) for action and a database-green (`#22a652`) for status. The page reads like a Bloomberg terminal recast as marketing — dense, mono-leaning, numeric. The amber `#f5a623` flags warnings or hot rows; the red is reserved for the primary CTA, never for errors.'
+
+colors:
+  # Primary
+  bg: '#111111'                  # near-black canvas (Tailwind zinc-950 class)
+  bg-deep: '#000000'             # pure black for hero panels
+  bg-elev-1: '#1a1a1a'           # card surface
+  bg-elev-2: '#222222'            # secondary panel
+  bg-elev-3: '#2a2a2a'            # popover surface
+  surface: '#1a1a1a'              # card surface
+  surface-alt: '#222222'          # secondary panel
+  surface-elevated: '#2a2a2a'     # popover, dropdown
+
+  # Brand & Dark
+  brand: '#c11027'                # blood-red primary action
+  brand-hover: '#e0142f'          # hover (brighter)
+  brand-pressed: '#a00d22'        # pressed (darker)
+  brand-deep: '#7d091a'           # deepest red — icons, emphasized text
+  brand-glow: '#c1102733'         # 20% red wash
+  on-brand: '#ffffff'             # white on red
+
+  # Accent
+  accent-green: '#22a652'         # database OK green
+  accent-green-hover: '#2bc060'   # hover green
+  accent-green-deep: '#188440'    # deeper green
+  accent-amber: '#f5a623'         # warning / hot row amber
+  accent-amber-hover: '#ffba3d'   # hover amber
+  accent-soft: '#c1102714'        # 8% red wash
+
+  # Interactive
+  link: '#7ab2ff'                 # cool blue link (rare on the page)
+  link-hover: '#a3c8ff'           # link hover
+  link-visited: '#5d96e0'         # visited
+  selected: '#c1102726'           # 15% red selection
+  disabled: '#3a3a3a'             # disabled bg
+  disabled-text: '#666666'        # disabled text
+
+  # Neutral Scale
+  text: '#ffffff'                 # primary copy
+  text-heading: '#ffffff'         # headlines
+  text-muted: '#a0a0a0'           # secondary
+  text-soft: '#6a6a6a'            # tertiary
+  text-faint: '#4a4a4a'           # quaternary
+  text-disabled: '#666666'        # disabled
+
+  # Surface & Borders
+  border: '#ffffff1a'             # 10% white hairline
+  border-soft: '#ffffff0d'        # 5% white
+  border-strong: '#ffffff33'      # 20% emphasized
+  border-brand: '#c1102766'       # 40% red on focus
+
+  # Shadow
+  shadow-ambient: 'rgba(0,0,0,0.4)'      # low ambient
+  shadow-standard: 'rgba(0,0,0,0.6)'     # standard
+  shadow-elevated: 'rgba(0,0,0,0.75)'    # popover
+  shadow-glow: 'rgba(193,16,39,0.35)'    # red focus glow
+
+  # Semantic
+  success: '#22a652'              # database OK green
+  success-bg: '#0f3a1f'           # success surface
+  warning: '#f5a623'              # amber warning
+  warning-bg: '#3a2710'           # warning surface
+  danger: '#ff4d4d'               # bright red (distinct from brand-red)
+  danger-bg: '#3a1818'            # danger surface
+  info: '#7ab2ff'                 # info blue
+  info-bg: '#1a2030'              # info surface
+
+typography:
+  display:
+    family: '"PlanetScale Sans", Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [500, 600, 700]
+    opentype-features: ['ss01', 'tnum', 'cv11']
+  body:
+    family: '"PlanetScale Sans", Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: ['ss01']
+  mono:
+    family: '"PlanetScale Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace'
+    weights: [400, 500, 600]
+    opentype-features: ['zero', 'tnum', 'ss01']
+  scale:
+    display-hero:   { size: 88, weight: 600, lineHeight: 1.0,  tracking: '-0.035em', family: display, opentype: 'ss01' }
+    display-large:  { size: 72, weight: 600, lineHeight: 1.0,  tracking: '-0.03em',  family: display, opentype: 'ss01' }
+    h1:             { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    h2:             { size: 40, weight: 600, lineHeight: 1.1,  tracking: '-0.02em',  family: display }
+    h3:             { size: 24, weight: 500, lineHeight: 1.3,  tracking: '-0.01em',  family: display }
+    h4:             { size: 18, weight: 500, lineHeight: 1.35, tracking: '-0.005em', family: display }
+    body-large:     { size: 17, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    body:           { size: 15, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    body-small:     { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',         family: body }
+    label-mono:     { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.04em',    family: mono, opentype: 'zero, tnum' }
+    button:         { size: 14, weight: 500, lineHeight: 1.0,  tracking: '0',         family: body }
+    button-small:   { size: 12, weight: 500, lineHeight: 1.0,  tracking: '0',         family: body }
+    link:           { size: 15, weight: 500, lineHeight: 1.5,  tracking: '0',         family: body }
+    metric:         { size: 32, weight: 500, lineHeight: 1.05, tracking: '-0.01em',   family: mono, opentype: 'zero, tnum' }
+    metric-large:   { size: 48, weight: 500, lineHeight: 1.0,  tracking: '-0.015em',  family: mono, opentype: 'zero, tnum' }
+    caption:        { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',         family: body }
+    caption-small:  { size: 12, weight: 400, lineHeight: 1.35, tracking: '0',         family: body }
+    micro:          { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.06em',    family: body }
+    code-body:      { size: 13, weight: 400, lineHeight: 1.55, tracking: '0',         family: mono, opentype: 'zero' }
+    code-bold:      { size: 13, weight: 600, lineHeight: 1.55, tracking: '0',         family: mono, opentype: 'zero' }
+    code-label:     { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.05em',    family: mono, opentype: 'zero, tnum' }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6           # button — tight
+  lg: 8           # card — tight
+  xl: 12          # hero shell
+  featured: 16    # signature panels
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section-sm: 64
+  section: 96
+  section-lg: 128
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 56
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  reduced-motion: 'respects prefers-reduced-motion: reduce — number-counter animations disabled, page transitions reduce to opacity, status-dot pulses removed.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0,0,0,0.4) 0 1px 2px'
+  standard: 'rgba(0,0,0,0.6) 0 8px 16px -4px'
+  elevated: 'rgba(0,0,0,0.75) 0 18px 36px -12px'
+  deep: 'rgba(0,0,0,0.85) 0 30px 60px -16px'
+  ring: '0 0 0 2px #c11027'
+  glow: '0 0 16px rgba(193,16,39,0.4)'
+
+accessibility:
+  contrast-text-on-bg: 19.6         # AAA — white on #111111
+  contrast-text-on-brand: 5.6       # AA at body sizes — white on #c11027
+  contrast-muted-on-bg: 7.2         # AAA — #a0a0a0 on #111
+  contrast-success-on-bg: 6.4       # AA — green on #111
+  contrast-warning-on-bg: 9.8       # AAA — amber on #111
+  focus-ring: '2px solid #c11027, offset 2px'
+  reduced-motion-honored: true
+  keyboard-nav: 'standard tab order; red focus ring on all interactive controls'
+
+components:
+  button-primary:
+    bg: '#c11027'
+    text: '#ffffff'
+    padding: '8px 14px'
+    radius: 6
+    font: 'button (14/500)'
+    border: 'none'
+    hover: 'bg → #e0142f'
+    active: 'bg → #a00d22'
+    use: 'primary CTA — Sign up, Try Postgres'
+  button-ghost:
+    bg: 'transparent'
+    text: '#ffffff'
+    padding: '8px 14px'
+    radius: 6
+    font: 'button (14/500)'
+    border: '1px solid rgba(255,255,255,0.15)'
+    hover: 'border → rgba(255,255,255,0.3); bg → rgba(255,255,255,0.04)'
+    use: 'secondary action'
+  button-danger:
+    bg: 'transparent'
+    text: '#ff4d4d'
+    padding: '8px 14px'
+    radius: 6
+    border: '1px solid rgba(255,77,77,0.4)'
+    hover: 'bg → rgba(255,77,77,0.08)'
+    use: 'destructive — Drop branch, Delete database'
+  card:
+    bg: '#1a1a1a'
+    text: '#ffffff'
+    padding: '20px'
+    radius: 8
+    border: '1px solid rgba(255,255,255,0.1)'
+    shadow: 'rgba(0,0,0,0.4) 0 1px 2px'
+    use: 'feature card, pricing tier, query metric'
+  card-elevated:
+    bg: '#222222'
+    text: '#ffffff'
+    padding: '24px'
+    radius: 8
+    border: 'none'
+    shadow: standard
+    use: 'recommended pricing tier, callout'
+  input:
+    bg: '#000000'
+    text: '#ffffff'
+    placeholder: '#666666'
+    padding: '8px 12px'
+    radius: 6
+    border: '1px solid rgba(255,255,255,0.15)'
+    focus: 'border → #c11027; ring 2px solid rgba(193,16,39,0.3)'
+    use: 'text input, query field'
+  badge:
+    bg: '#1a1a1a'
+    text: '#a0a0a0'
+    padding: '2px 8px'
+    radius: 4
+    font: 'micro (11/500 mono)'
+    use: 'tag, status pill, region label'
+  badge-status:
+    bg: 'transparent'
+    text: '#22a652'
+    padding: '2px 8px'
+    radius: 4
+    border: '1px solid rgba(34,166,82,0.3)'
+    use: 'database OK, healthy, online'
+  nav-link:
+    bg: 'transparent'
+    text: '#a0a0a0'
+    padding: '6px 10px'
+    font: 'body-small (13/500)'
+    hover: 'text → #ffffff'
+    active: 'text → #ffffff; underline 1px'
+    use: 'top nav'
+
+lineage:
+  summary: |
+    PlanetScale's 2024 rebrand pulled the entire surface toward terminal-
+    aesthetic territory. The canvas is `#111111` — not Vercel's pure
+    black, not Linear's graphite, but a deliberate "Tailwind zinc-950"
+    near-black that matches database CLI output. The blood-red brand
+    (`#c11027`) is the most striking choice: red is normally an error
+    or warning colour in dev tooling; PlanetScale ownership-flips it
+    into the primary action. Pairing it with the database-green
+    `#22a652` (the literal MySQL "OK" green) and the amber `#f5a623`
+    (warning) gives the marketing the same chromatic vocabulary as a
+    SQL terminal output. Mono numerals are everywhere — query latency,
+    branch counts, row counts — typeset in PlanetScale Mono so metrics
+    align column-wise. Buttons are 6px, cards 8px — tighter than the
+    Vercel/Linear PaaS norm, reinforcing the dense-tooling feel. The
+    overall lineage is "Bloomberg terminal styled as marketing" rather
+    than "marketing site with a dark mode."
+  influences:
+    - name: 'Bloomberg / financial terminals'
+      role: 'Mono numerals, dense status colours, near-black canvas — the underlying aesthetic frame.'
+      url: https://www.bloomberg.com
+    - name: 'Linear'
+      role: 'Single-confident-accent on near-black, tight 6–8px radii, restrained shadow vocabulary.'
+      url: https://linear.app
+    - name: 'MySQL terminal output'
+      role: 'Red-amber-green chromatic vocabulary borrowed from query-execution status colours.'
+      url: https://www.mysql.com
+    - name: 'Vercel'
+      role: 'Near-black canvas with a single confident accent — PlanetScale rotates the accent from white to red.'
+      url: https://vercel.com
+
+dark-mode: native    # PlanetScale ships dark-only — terminal aesthetic depends on the near-black canvas
+---
+
+## 1. Visual Theme & Atmosphere
+
+PlanetScale's home page reads like a database administrator's terminal
+that learned typography. The canvas is `#111111`, the headlines are
+mono-adjacent, and the numerals — query latency, region counts,
+branch counts — are typeset in PlanetScale Mono so they align like
+financial figures. The first impression is **Bloomberg terminal as
+marketing site** — not a marketing site with a dark mode toggle, but
+a brand that took the terminal aesthetic seriously enough to make it
+the substrate of every page.
+
+The blood-red brand colour (`#c11027`) is the page's most striking
+choice. Red, in developer tooling, almost always means error.
+PlanetScale inverts that — red is the action, the call to deploy, the
+highlight on "Postgres is here." Green and amber retain their
+conventional status meanings, which makes the red feel intentional
+rather than alarmist. The whole chromatic system is a deliberate echo
+of MySQL's terminal output: red for emphasis, green for OK, amber for
+hot rows.
+
+The mono numeral discipline is the most distinctive typographic move
+in the brand. Latency figures, branch counts, region pricing, query
+times — every number is typeset in PlanetScale Mono with `tnum`
+tabular numerals enabled, so columns of numerics align perfectly. This
+is brand-as-utility: the type does what it says it does.
+
+The mood is **dense, technical, slightly austere**. There's no halo
+gradient, no chromatic flourish, no decorative animation. PlanetScale's
+brand is what happens when you take infrastructure marketing seriously
+enough to make the marketing reflect the product's actual aesthetic.
+
+**Key Characteristics**
+
+- Near-black canvas `#111111` (Tailwind zinc-950) with pure black `#000000` panels for emphasis
+- Blood-red brand `#c11027` for primary action — ownership-flipped from "error" to "action"
+- Database-green `#22a652` and amber `#f5a623` retain conventional MySQL status semantics
+- PlanetScale Sans + PlanetScale Mono — custom families with `ss01` alternate g, `tnum`, `zero`
+- Mono numerals everywhere on metrics — tabular alignment is the brand
+- Tight 6px buttons + 8px cards (denser than 8/12 PaaS norm)
+- 88px display-hero with -0.035em tracking
+- Pure-black shadows at varying alpha, never tinted
+- Status pills set in mono with conventional red/amber/green colour-coding
+- Dense feature blocks rather than spacious creative-tool layouts
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **Background** (`#111111`): Tailwind zinc-950 near-black, the canvas of choice for terminal-aesthetic brands
+- **Background Deep** (`#000000`): pure black for hero panels and full-bleed transitions
+- **Primary Text** (`#ffffff`): full white
+- **Primary CTA Fill** (`#c11027`): blood-red
+
+### Brand & Dark
+
+- **Brand Red** (`#c11027`): blood-red primary action — the brand's ownership-flip move
+- **Brand Hover** (`#e0142f`): brightened on hover
+- **Brand Pressed** (`#a00d22`): pressed/active
+- **Brand Deep** (`#7d091a`): deepest red for icon strokes
+- **Brand Glow** (`#c1102733`): 20% red wash for hover backgrounds
+- **On-Brand Text** (`#ffffff`): white on red, 5.6:1 contrast (AA)
+
+### Accent
+
+- **Database Green** (`#22a652`): MySQL OK green — status, healthy
+- **Accent Green Hover** (`#2bc060`): hover state
+- **Accent Green Deep** (`#188440`): deeper green for emphasized success
+- **Amber** (`#f5a623`): warning, hot row, attention
+- **Amber Hover** (`#ffba3d`): hover amber
+
+### Interactive
+
+- **Link** (`#7ab2ff`): cool blue (rare — used in documentation only)
+- **Link Hover** (`#a3c8ff`)
+- **Link Visited** (`#5d96e0`)
+- **Selected** (`#c1102726`): 15% red selection
+- **Disabled** (`#3a3a3a`)
+- **Disabled Text** (`#666666`)
+
+### Neutral Scale
+
+- **Text Heading** (`#ffffff`): full white
+- **Text Body** (`#ffffff`): full white
+- **Text Muted** (`#a0a0a0`): secondary copy, captions
+- **Text Soft** (`#6a6a6a`): tertiary
+- **Text Faint** (`#4a4a4a`): quaternary
+- **Text Disabled** (`#666666`)
+
+### Surface & Borders
+
+- **Surface** (`#1a1a1a`): card surface, one tonal step above canvas
+- **Surface Alt** (`#222222`): secondary panel
+- **Surface Elevated** (`#2a2a2a`): popover, dropdown
+- **Border** (`#ffffff1a`): 10% white hairline
+- **Border Soft** (`#ffffff0d`): 5% white
+- **Border Strong** (`#ffffff33`): 20% emphasized
+- **Border Brand** (`#c1102766`): 40% red on focus
+
+### Shadow Colors
+
+Shadows are pure-black at varying alpha — never tinted with brand red. The exception is the focus glow (red wash):
+
+- **Ambient** (`rgba(0,0,0,0.4)`): low resting
+- **Standard** (`rgba(0,0,0,0.6)`): card hover
+- **Elevated** (`rgba(0,0,0,0.75)`): popover
+- **Deep** (`rgba(0,0,0,0.85)`): modal
+- **Glow** (`rgba(193,16,39,0.4)`): red focus glow only
+
+### Semantic
+
+- **Success** (`#22a652`): database OK green — same as accent
+- **Success Bg** (`#0f3a1f`): dark green surface
+- **Warning** (`#f5a623`): amber — same as accent
+- **Warning Bg** (`#3a2710`): dark amber surface
+- **Danger** (`#ff4d4d`): bright red, deliberately distinct from brand-red `#c11027` so error states don't conflict with brand
+- **Danger Bg** (`#3a1818`)
+- **Info** (`#7ab2ff`): cool blue
+- **Info Bg** (`#1a2030`)
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: PlanetScale Sans (custom Inter-class), Inter fallback
+- **Mono**: PlanetScale Mono (custom JetBrains-class), JetBrains Mono fallback
+- **OpenType**: `ss01` (alternate single-storey g), `cv11`, `tnum` enabled across display; `tnum` and `zero` (slashed zero) on mono throughout
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | display | 88 | 600 | 1.0 | -0.035em | ss01 | hero only |
+| display-large | display | 72 | 600 | 1.0 | -0.03em | ss01 | section opener |
+| h1 | display | 56 | 600 | 1.05 | -0.025em | ss01 | page title |
+| h2 | display | 40 | 600 | 1.1 | -0.02em | — | feature heading |
+| h3 | display | 24 | 500 | 1.3 | -0.01em | — | sub-feature |
+| h4 | display | 18 | 500 | 1.35 | -0.005em | — | card title |
+| body-large | body | 17 | 400 | 1.5 | 0 | — | hero supporting |
+| body | body | 15 | 400 | 1.5 | 0 | — | default — slightly tighter than 16 |
+| body-small | body | 13 | 400 | 1.45 | 0 | — | dense tables |
+| label-mono | mono | 12 | 500 | 1.3 | 0.04em | zero, tnum | eyebrow, label |
+| button | body | 14 | 500 | 1.0 | 0 | — | primary/ghost |
+| button-small | body | 12 | 500 | 1.0 | 0 | — | dense controls |
+| link | body | 15 | 500 | 1.5 | 0 | — | inline link |
+| metric | mono | 32 | 500 | 1.05 | -0.01em | zero, tnum | mid-tier metric callout |
+| metric-large | mono | 48 | 500 | 1.0 | -0.015em | zero, tnum | hero stat |
+| caption | body | 13 | 400 | 1.4 | 0 | — | footnote |
+| caption-small | body | 12 | 400 | 1.35 | 0 | — | metadata |
+| micro | body | 11 | 500 | 1.3 | 0.06em | — | badge |
+| code-body | mono | 13 | 400 | 1.55 | 0 | zero | code blocks |
+| code-bold | mono | 13 | 600 | 1.55 | 0 | zero | emphasized id |
+| code-label | mono | 11 | 500 | 1.3 | 0.05em | zero, tnum | branch/region label |
+
+### Principles
+
+- **Mono numerals are non-negotiable**: every numeric metric (latency, row counts, branches, regions) typeset in PlanetScale Mono with `tnum`
+- **Body 15px, not 16px**: PlanetScale's default body is one step smaller than typical SaaS — supports the dense-tooling feel
+- **Two-mode OpenType discipline**: `tnum` always-on inside metric blocks; proportional figures elsewhere
+- **Slashed zero on mono**: `zero` enabled to disambiguate `0` from `O` in identifiers, branches, hex
+- **Weight ladder**: 600 for display, 500 for buttons/labels/metric, 400 for body — matches the calm-but-confident terminal voice
+- **Tight tracking**: -0.025em to -0.035em on display; aggressive compression for the dense-marketing feel
+- **`ss01` continuity**: alternate g feature shared between display, body, and mono — keeps the type chromatically consistent
+- **Metric scale is parallel**: 32px and 48px metric tiers sit alongside the body scale, set in mono — they're the brand's hero copy
+
+## 4. Component Stylings
+
+### Buttons
+
+**button-primary** — Blood-red
+- Background: `#c11027`
+- Text: `#ffffff` at 14/500
+- Padding: 8px 14px
+- Radius: 6
+- Border: none
+- Hover: bg → `#e0142f`
+- Active: bg → `#a00d22`
+- Focus: 2px solid `#c11027` ring, 2px offset
+- Use: primary CTA — "Sign up", "Try PlanetScale"
+
+**button-ghost** — Outlined
+- Background: transparent
+- Text: `#ffffff` at 14/500
+- Padding: 8px 14px
+- Radius: 6
+- Border: 1px solid rgba(255,255,255,0.15)
+- Hover: border → rgba(255,255,255,0.3), bg → rgba(255,255,255,0.04)
+- Use: secondary action — "Documentation", "Sign in"
+
+**button-danger** — Destructive
+- Background: transparent
+- Text: `#ff4d4d` at 14/500
+- Padding: 8px 14px
+- Radius: 6
+- Border: 1px solid rgba(255,77,77,0.4)
+- Hover: bg → rgba(255,77,77,0.08)
+- Use: "Drop branch", "Delete database"
+
+**button-link** — Bare
+- Background: transparent
+- Text: `#7ab2ff` at 14/500
+- Padding: 0
+- Hover: underline grows from 0 → 1px
+
+### Cards
+
+**card-default**
+- Background: `#1a1a1a`
+- Padding: 20px
+- Radius: 8 (tight)
+- Border: 1px solid rgba(255,255,255,0.1)
+- Shadow: ambient
+- Hover: shadow → standard, border → rgba(255,255,255,0.15)
+- Use: feature card, pricing tier, query metric
+
+**card-elevated** — Recommended tier
+- Background: `#222222`
+- Padding: 24px
+- Radius: 8
+- Border: none
+- Shadow: standard
+- Use: recommended pricing tier, hero callout
+
+### Badges / Tags / Pills
+
+**badge-tag** — Default
+- Background: `#1a1a1a`
+- Text: `#a0a0a0` at 11/500 micro mono
+- Padding: 2px 8px
+- Radius: 4
+- Use: tag, version, region label
+
+**badge-status-success** — Database OK
+- Background: transparent
+- Text: `#22a652`
+- Padding: 2px 8px
+- Radius: 4
+- Border: 1px solid rgba(34,166,82,0.3)
+- Use: "OK", "Healthy", "Online"
+
+**badge-status-warning** — Hot row
+- Background: transparent
+- Text: `#f5a623`
+- Padding: 2px 8px
+- Radius: 4
+- Border: 1px solid rgba(245,166,35,0.3)
+- Use: "Warning", "Hot", "Slow"
+
+**badge-status-danger** — Error
+- Background: transparent
+- Text: `#ff4d4d`
+- Padding: 2px 8px
+- Radius: 4
+- Border: 1px solid rgba(255,77,77,0.4)
+- Use: "Failed", "Down", "Error"
+
+### Inputs / Forms
+
+**input-text**
+- Background: `#000000`
+- Text: `#ffffff` at 15/400
+- Placeholder: `#666666`
+- Padding: 8px 12px
+- Radius: 6
+- Border: 1px solid rgba(255,255,255,0.15)
+- Focus: border → `#c11027`, ring 2px solid rgba(193,16,39,0.3)
+
+### Navigation
+
+**nav-link**
+- Background: transparent
+- Text: `#a0a0a0` at 13/500
+- Padding: 6px 10px
+- Hover: text → `#ffffff`
+- Active: text → `#ffffff` + 1px underline
+
+### Decorative
+
+**status-dot** — Database state indicator
+- 6px circle in the relevant status colour (`#22a652` / `#f5a623` / `#ff4d4d`)
+- Optional 0 0 8px [colour at 0.4] glow on live state
+- Use: next to region/branch labels, deployment cards
+
+**metric-block** — Query latency callout
+- Set in mono with metric-large (48/500) for the figure
+- Caption-small below in body, `#a0a0a0`
+- No padding — sits inline with surrounding copy
+
+**code-block**
+- Background: `#000000`
+- Text: `#ffffff` at code-body (13/400 PlanetScale Mono)
+- Padding: 16px 20px
+- Radius: 6
+- Border: 1px solid rgba(255,255,255,0.08)
+- Inline backticks render in `#22a652` accent green
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px
+- **Scale**: 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128
+- **Density observation**: PlanetScale's grid is **dense** — feature blocks at 16–24px gaps, sections at 64–96px. Less whitespace than Render/Vercel; closer to a financial dashboard
+
+### Grid & Container
+
+- **Page width**: 1280px max
+- **Prose width**: 720px (documentation, marketing body)
+- **Hero treatment**: full-bleed black, content constrained to 1024px
+- **Feature grid**: 4-col at desktop, 2-col at tablet, 1-col at mobile
+
+### Whitespace Philosophy
+
+- Whitespace is **functional**, not decorative — only where it improves scan-ability
+- Section gaps are tight by SaaS standards (64–96px) reflecting the dense-tooling positioning
+- Cards sit close together to support comparison-grid layouts
+
+### Section Cadence
+
+- Black canvas → near-black surface card grid → black hero callout → pricing-tier grid → footer
+- Sections rarely shift colour; tonal layering (`#000` → `#111` → `#1a1a1a` → `#222`) provides break
+- The brand red never anchors a section background — stays foreground for action
+
+## 6. Shapes & Radius Scale
+
+| Tier | Px | Use |
+|------|----|----|
+| Micro | 2 | inline pills, tight chips |
+| Standard | 4 | small badges, status pills |
+| Comfortable | 6 | buttons, inputs |
+| Relaxed | 8 | cards |
+| Featured | 12 | hero shells |
+| Large | 16 | signature illustrative panels |
+| Pill | 9999 | rare — most pills are 4px instead |
+
+The 4px status pill (instead of 9999 pill) is a brand signature — pulls the controls toward terminal-tag feel rather than soft SaaS-pill aesthetic.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|----|
+| 0 | flat | hero copy on canvas |
+| 1 | 1px translucent hairline | inline cards, code blocks |
+| 2 | 1px hairline + ambient shadow | feature cards |
+| 3 | standard shadow | hover state |
+| 4 | elevated shadow | popover, dropdown |
+| 5 | deep shadow | modal, command palette |
+
+**Shadow Philosophy**: shadows are pure black at varying alpha — never tinted with the brand red. The intensity ladder (0.4 → 0.6 → 0.75 → 0.85) keeps depth subtle; PlanetScale's depth is more often tonal (canvas vs surface) than elevation-shadow. The only chromatic shadow is the red focus glow, reserved for interactive controls.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal enter, page transition
+- **Decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — tooltip enter
+
+### Durations
+
+- **Fast** (100ms): hover state — fast for terminal-tooling feel
+- **Standard** (180ms): card lift, button press — slightly faster than typical
+- **Slow** (280ms): modal enter, page transition
+
+### Per-Component Recipes
+
+- **Button hover**: bg colour transitions over 100ms; no scale (terminal aesthetic doesn't lift)
+- **Card hover**: border opacity 0.1 → 0.15, shadow ambient → standard, over 180ms
+- **Status dot pulse**: live state — opacity 0.7 → 1.0 over 1.2s ease-in-out infinite
+- **Number counter animation**: hero metrics tween from 0 to value over 1.5s on first scroll-into-view (disabled with reduced-motion)
+- **Link hover**: underline grows from 0 → 1px over 100ms
+
+### Page Transitions
+
+- Default: opacity-only fade over 280ms — no translate, no scale (terminal aesthetic stays planar)
+
+### Reduced Motion
+
+When `prefers-reduced-motion: reduce` is set:
+
+- Number counter animations disabled (display final value immediately)
+- Status dot pulse animation disabled
+- All transitions reduce to opacity
+- Link underline appears instantly
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **White text on `#111111` bg**: 19.6:1 (AAA)
+- **White on `#1a1a1a` surface**: 17.0:1 (AAA)
+- **Muted `#a0a0a0` on `#111`**: 7.2:1 (AAA)
+- **White on `#c11027` brand**: 5.6:1 (AA at body sizes; bold display recommended)
+- **Green `#22a652` on `#111`**: 6.4:1 (AA)
+- **Amber `#f5a623` on `#111`**: 9.8:1 (AAA)
+- **Soft `#6a6a6a` on `#111`**: 3.6:1 (AA Large only — never for body)
+
+### Focus Indicators
+
+- Default: 2px solid `#c11027` ring, 2px offset
+- Inputs: focus border → `#c11027` + ring 2px solid rgba(193,16,39,0.3)
+- Always visible
+
+### ARIA Patterns
+
+- **Combobox**: standard listbox pattern with role="combobox", aria-expanded
+- **Dialog**: aria-labelledby + aria-describedby; trap focus; ESC to close
+- **Status badges**: aria-label spelling status (e.g., "Status: OK") — never relies on colour alone
+- **Region pills**: aria-label spelling region
+
+### Keyboard Navigation
+
+- Tab order follows visual order; skip-link at page top
+- Enter/Space activates buttons
+- Cmd/Ctrl+K opens command palette
+- Escape closes modals, popovers
+- Arrow keys navigate within tab groups
+
+### Screen Reader Hints
+
+- Status indicators always paired with text (red/green/amber dot + status word)
+- Mono code uses `<code>` semantic
+- Pricing tier "RECOMMENDED" badges include aria-label
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` honored throughout — see §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Min Width | Use |
+|------|-----------|----|
+| Mobile | — | default |
+| Tablet | 640 | 2-col grids |
+| Desktop | 1024 | 3-col grids |
+| Wide | 1280 | 4-col grids, max page |
+| Ultra | 1536 | wide hero |
+
+### Touch Targets
+
+- Minimum 44×44px for primary controls
+- 4px-radius status pills expand hit-area to 32×24px
+
+### Collapsing Strategy
+
+- **Nav**: collapses to hamburger ≤ 768px
+- **Feature grid**: 4-col → 3-col @ 1280 → 2-col @ 1024 → 1-col @ 640
+- **Hero**: display-hero (88px) reduces to 48px @ 640
+- **Metric blocks**: 48px metric-large reduces to 32px @ 640
+- **Code blocks**: scroll horizontally on overflow; never wrap
+
+### Image Behavior
+
+- All UI imagery is SVG/screenshot-based, render crisp
+- Region maps respond fluidly
+- Icons lock at 14–16px
+
+## 11. Content & Voice
+
+### Tone
+
+Direct, confident, slightly austere. PlanetScale writes like a senior database engineer documenting their work — no marketing fluff, full sentences, technical precision. Microcopy is action-led; documentation is reference-grade. Occasionally wry, never funny-for-funny's-sake.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Sign up", "Try free", "Connect", "Branch", "Deploy" — single or two-word maximum
+- **Error message recipe**: `[noun] [failed verb]: [specific reason]` — e.g., "Branch creation failed: insufficient permissions"
+- **Success confirmations**: `[noun] [verb-past]` — "Database created", "Branch deployed", "Migration applied"
+- **Empty states**: technical and direct — "No branches yet. [CTA: Create your first branch]"
+
+### CTA Verb Conventions
+
+- Top-level: "Sign up free" (not "Start trial")
+- Product: "Try PlanetScale", "Try Postgres" (verb-led)
+- Documentation: "Read the docs"
+- Sales: "Talk to sales"
+- Pricing: "Get started" or "Contact us"
+
+## 12. Dark Mode & Theming
+
+PlanetScale is **dark-only**. There is no light-mode variant — the terminal aesthetic depends on the near-black canvas. Light-flipping the brand would collapse the chromatic story (red/amber/green status colours lose their meaning, mono numerals lose their density).
+
+The dashboard product runs the same chromatic palette as the marketing site; both are dark-only. Documentation occasionally renders in a light theme as a code-readability accommodation — but the brand identity remains dark-canvas-with-red-action.
+
+If a light variant were ever needed: invert canvas to `#fafafa`, body text to `#111`, brand red stays `#c11027` (works on both), but the status green would deepen to `#0a8754` and amber to `#cc7400` for AA contrast on light. The result would not be PlanetScale-feeling — but it would be accessible.
+
+## 13. Lineage & Influences
+
+PlanetScale's 2024 rebrand pulled the entire surface toward terminal-aesthetic territory. The canvas is `#111111` — not Vercel's pure black, not Linear's graphite, but a deliberate "Tailwind zinc-950" near-black that matches database CLI output. The blood-red brand (`#c11027`) is the most striking choice: red is normally an error or warning colour in dev tooling; PlanetScale ownership-flips it into the primary action.
+
+Pairing the red with the database-green `#22a652` (the literal MySQL "OK" green) and the amber `#f5a623` (warning) gives the marketing the same chromatic vocabulary as a SQL terminal output. Mono numerals are everywhere — query latency, branch counts, row counts — typeset in PlanetScale Mono so metrics align column-wise. Buttons are 6px, cards 8px — tighter than the Vercel/Linear PaaS norm, reinforcing the dense-tooling feel.
+
+- **Bloomberg / financial terminals** — https://www.bloomberg.com — mono numerals, dense status colours
+- **Linear** — https://linear.app — single-confident-accent on near-black, restrained shadows
+- **MySQL terminal output** — https://www.mysql.com — red/amber/green chromatic vocabulary
+- **Vercel** — https://vercel.com — near-black canvas with single accent (PlanetScale rotates accent from white to red)
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** reserve `#c11027` for primary action — using it for errors collapses the chromatic story
+- **Do** typeset all numerics (latency, row counts, branches) in PlanetScale Mono with `tnum` for tabular alignment
+- **Do** use the green/amber/red status trio with the same semantics as MySQL output — that vocabulary is the brand
+- **Do** keep canvas at `#111111` — Tailwind zinc-950, not pure black, not graphite
+- **Do** use 6px button radius and 8px card radius — denser than typical PaaS
+- **Do** set body at 15px (not 16px) for the dense-tooling feel
+- **Do** use `zero` slashed-zero on mono throughout
+- **Do** pair status colour-coding with text labels for accessibility
+- **Do** honor `prefers-reduced-motion` — disable counter animations and pulses
+- **Do** keep shadows pure-black; only the focus glow is brand-tinted
+
+### Don't
+
+- **Don't** soften the canvas above `#111111`; lifting toward graphite reads as Linear
+- **Don't** mix brand-red `#c11027` with pink, coral, or magenta — saturation and exact hue are deliberate
+- **Don't** use brand-red for error states — error uses `#ff4d4d` deliberately distinct
+- **Don't** apply heavy drop shadows; depth is tonal layering + minimal pure-black shadow
+- **Don't** soften the geometry — 6/8/12 radii, not 8/12/16
+- **Don't** use proportional figures on metrics — `tnum` is non-negotiable
+- **Don't** flip to light mode; PlanetScale's terminal aesthetic depends on the near-black canvas
+- **Don't** introduce decorative gradients or chromatic halos — PlanetScale is flat-on-flat
+- **Don't** use 9999 pill radius for status — 4px terminal-tag radius is the brand
+- **Don't** set body in mono — mono is for metrics, code, identifiers, status labels
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #111111
+bg-deep: #000000
+surface: #1a1a1a
+text: #ffffff
+text-muted: #a0a0a0
+brand: #c11027
+brand-hover: #e0142f
+accent-green: #22a652
+accent-amber: #f5a623
+border: rgba(255,255,255,0.1)
+on-brand: #ffffff
+```
+
+### Example Component Prompts
+
+1. "Create a hero section: near-black `#111111` background, an 88px display-hero in white at 600 weight with -0.035em tracking and `ss01` alternate g enabled, body-large 17px subhead in `#a0a0a0`. Add a primary blood-red button (`#c11027` fill, white text, 6px radius, 8px 14px padding, 14/500 button text) saying 'Sign up free' and a ghost button 'Read the docs.'"
+
+2. "Design a 4-card metrics grid: each card `#1a1a1a` bg, 20px padding, 8px radius, 1px rgba(255,255,255,0.1) border. Each card shows a 48px PlanetScale Mono metric with `tnum` and `zero` features (e.g., '5.2ms', '99.99%', '180+'), a 13px label in `#a0a0a0` below. Numbers are tabular, column-aligned across cards."
+
+3. "Build a status-pill row: 4 inline pills with 4px radius, 2px 8px padding, 11px PlanetScale Mono with 0.06em tracking. Pills: 'OK' (green border + green text on transparent), 'WARN' (amber border + amber), 'FAILED' (#ff4d4d border + text), 'BETA' (white border + text). Add aria-label spelling each status."
+
+4. "Create a code block: pure-black `#000000` background, 13px PlanetScale Mono `#ffffff` body text with `zero` feature, 16px 20px padding, 6px radius, 1px rgba(255,255,255,0.08) border. Inline backticks within prose render in `#22a652` database green."
+
+5. "Design a pricing-tier grid: 3 cards on `#111` canvas. Default tiers use card-default styling; recommended (middle) tier uses card-elevated (`#222222` bg, no border, standard shadow). Recommended badge: 'POPULAR' in 11px PlanetScale Mono at 500 with 0.06em tracking, on `#c11027` red 4px-radius pill. CTAs: red primary on recommended, ghost on the others."
+
+6. "Build a database branch indicator: 6px green `#22a652` status dot with `0 0 8px rgba(34,166,82,0.4)` glow, paired with branch name in 13px PlanetScale Mono, region in 11px mono `#a0a0a0` after a `/` separator. Add aria-label 'Branch online: main / iad'."
+
+### Iteration Guide
+
+1. **Start with the canvas** — `#111111` (zinc-950), not `#000` and not `#1a1a1a`. The exact hex matters
+2. **Confirm the red is `#c11027`** — not Tailwind red-600, not crimson, not coral. The blood-red specificity is the brand
+3. **Mono everywhere metric** — every number wears mono with `tnum` and `zero`; verify tabular alignment
+4. **Tight radii** — 6px buttons, 8px cards, 4px status pills; if you're at 8/12, you're at Vercel, not PlanetScale
+5. **No chromatic shadows** — pure black at varying alpha; only the focus ring uses red
+6. **Status semantics match MySQL** — red/amber/green carry their conventional meanings
+7. **Body 15px, not 16** — one step smaller for the dense feel
+8. **`ss01` continuity** — alternate g feature shared across display, body, mono — verify in headings

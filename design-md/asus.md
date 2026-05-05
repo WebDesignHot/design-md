@@ -1,0 +1,768 @@
+---
+name: ASUS
+tagline: Republic of Gamers red `#cd0000` on black with bold sans — Taiwan engineering meets esports brutalism.
+author: webdesignhot
+source_url: https://www.asus.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace, media]
+tags: [dark, gaming, hardware, asia, taiwan, rog, esports, bold, technical]
+preview_swatch: ['#0a0a0a', '#cd0000', '#ffffff']
+related: [steam, msi, nvidia]
+description: 'ASUS is Taiwan''s flagship PC engineering brand, anchored by the **Republic of Gamers (ROG)** sub-brand whose red-on-black trade dress has defined gaming hardware aesthetics in Asia since 2006. The marketing site reflects the dual nature: a near-black `#0a0a0a` canvas hosts the ROG and TUF gaming categories with **ROG Red** (`#cd0000`) carrying every CTA and accent, while ZenBook/ProArt/ExpertBook use a parallel light treatment. The overall posture is **engineering brutalism**: angular polygonal hero treatments, custom Cyberpunk-style display type, technical spec densities that make Razer look spare, and the unmistakable ROG cybernetic-eye logomark stamped on every gaming product. Where Razer says "FOR GAMERS. BY GAMERS.", ASUS ROG says "JOIN THE REPUBLIC."'
+
+colors:
+  bg: '#0a0a0a'                  # gaming canvas — near-black
+  bg-pure: '#000000'              # darkest surface, modal backdrop
+  bg-deep: '#1a1a1a'              # header / footer band
+  bg-zenbook: '#ffffff'           # ZenBook / ProArt / ExpertBook light canvas
+  bg-zenbook-soft: '#f5f5f5'      # ZenBook alternating band
+  surface: '#141414'              # default card on dark
+  surface-soft: '#1f1f1f'         # raised card / popover floor
+  surface-strong: '#2a2a2a'       # hovered card, selected
+  surface-elevated: '#1a1a1a'     # elevated panel
+  surface-product-band: '#000000' # full-bleed product band
+  surface-input: '#1f1f1f'        # form input fill
+  text: '#ffffff'                 # primary body on dark
+  text-strong: '#ffffff'          # display headlines
+  text-soft: '#a8a8a8'            # secondary metadata
+  text-faint: '#6e6e6e'           # tertiary captions
+  text-disabled: '#4a4a4a'
+  text-on-light: '#0a0a0a'        # text on ZenBook surfaces
+  text-link: '#cd0000'            # link red on dark
+  brand-rog: '#cd0000'            # ROG Red — the Republic of Gamers signature
+  brand-rog-bright: '#ff1a1a'     # brighter ROG red on hover
+  brand-rog-deep: '#8b0000'       # deeper ROG red for gradient floor
+  brand-rog-glow: 'rgba(205,0,0,0.5)' # ROG red glow halo
+  brand-rog-gradient: 'linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)' # ROG signature gradient
+  brand-tuf-yellow: '#ffd700'     # TUF Gaming sub-sub-brand yellow
+  brand-tuf-deep: '#b8860b'       # TUF deep gold
+  brand-asus-blue: '#003a78'      # ASUS corporate dark blue
+  brand-asus-blue-bright: '#0073e6' # ASUS corporate accent on light
+  brand-zenbook: '#3b3a36'        # ZenBook gunmetal sand
+  brand-proart: '#1a1a1a'         # ProArt creator dark
+  brand-rog-strix: '#ff1a1a'
+  on-brand: '#ffffff'
+  cta-primary: '#cd0000'          # ROG Red CTA on dark
+  cta-primary-hover: '#ff1a1a'
+  cta-zenbook: '#0a0a0a'          # ZenBook dark CTA on light
+  link-default: '#cd0000'
+  link-visited: '#cd0000'
+  link-hover: '#ffffff'
+  border: '#2a2a2a'               # 1px charcoal hairline on dark
+  border-soft: '#1a1a1a'          # softer divider
+  border-strong: '#cd0000'        # focused input border on dark
+  border-zenbook: '#e0e0e0'       # ZenBook light surface border
+  scrim: 'rgba(0,0,0,0.85)'
+  shadow-card: 'rgba(0,0,0,0.6)'
+  shadow-elev: 'rgba(0,0,0,0.8)'
+  shadow-rog-glow: 'rgba(205,0,0,0.4)' # ROG glow halo
+  badge-new: '#cd0000'
+  badge-rog: '#cd0000'
+  badge-tuf: '#ffd700'
+  badge-pre-order: '#ff1a1a'
+  badge-out-of-stock: '#6e6e6e'
+  price: '#ffffff'
+  price-discount: '#cd0000'
+  rating-star: '#ffd700'
+  success: '#00b050'
+  warning: '#ffd700'
+  danger: '#cd0000'
+  info: '#0073e6'
+
+typography:
+  display:
+    family: '"Saira", "Rajdhani", "Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700, 900]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Roboto", "Helvetica Neue", Arial, sans-serif'
+    weights: [300, 400, 500, 700]
+  rog-display:
+    family: '"Cyberpunk", "Saira Stencil One", "Saira", monospace'
+    weights: [700]
+    notes: 'Custom angular display for ROG product names'
+  mono:
+    family: '"Roboto Mono", "Consolas", monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 900, lineHeight: 1.0,  tracking: '-0.025em', family: display, transform: uppercase, notes: 'ROG hero "JOIN THE REPUBLIC"' }
+    display-xl:      { size: 56, weight: 900, lineHeight: 1.05, tracking: '-0.02em', family: display, transform: uppercase, notes: 'Product launch hero' }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.1,  tracking: '-0.01em', family: display, transform: uppercase, notes: 'Section banner' }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.15, tracking: '0',       family: display, notes: 'Product detail H1 (sentence-case for ZenBook, uppercase for ROG)' }
+    display-sm:      { size: 24, weight: 700, lineHeight: 1.2,  tracking: '0',       family: display, notes: 'Card title' }
+    rog-display:     { size: 56, weight: 700, lineHeight: 1.0,  tracking: '0.05em',  family: rog-display, transform: uppercase, notes: 'ROG product names "STRIX SCAR 18"' }
+    section-head:    { size: 14, weight: 700, lineHeight: 1.2,  tracking: '0.2em',   family: display, transform: uppercase, notes: 'Section bands "GAMING LAPTOPS"' }
+    sub-section:     { size: 18, weight: 500, lineHeight: 1.3,  tracking: '0',       family: display, notes: 'Sub-heading within product' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Hero supporting copy' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',       family: body, notes: 'Default body' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Sidebar copy, spec list' }
+    body-xs:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Caption, footer' }
+    nav-link:        { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'Top nav: ROG · TUF · ZENBOOK · PROART' }
+    sub-nav-link:    { size: 12, weight: 400, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Sub-nav category labels' }
+    button-cta:      { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.15em',  family: display, transform: uppercase, notes: 'BUY NOW, ADD TO CART' }
+    button-md:       { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'Compare, Wishlist' }
+    badge:           { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.2em',   family: display, transform: uppercase, notes: '"NEW", "ROG", "TUF"' }
+    price:           { size: 22, weight: 700, lineHeight: 1.0,  tracking: '-0.01em', family: display, opentype: ['tnum'], notes: 'Product price' }
+    spec-label:      { size: 11, weight: 700, lineHeight: 1.2,  tracking: '0.15em',  family: display, transform: uppercase, notes: 'Spec table label' }
+    spec-value:      { size: 16, weight: 500, lineHeight: 1.4,  tracking: '0',       family: mono, notes: 'Spec value' }
+    code:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',       family: mono, notes: 'BIOS, dev surface' }
+
+radius:
+  none: 0
+  micro: 1
+  sm: 2            # buttons, badges
+  md: 4            # cards, inputs
+  lg: 8            # featured product card, modal
+  pill: 9999       # pill buttons
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 64
+  main-nav-height: 64
+  sub-nav-height: 48
+  product-card: '320x460'
+  hero-banner: '1920x800'
+
+components:
+  button-primary:
+    bg: '#cd0000'
+    color: '#ffffff'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: 'none'
+    hover-bg: '#ff1a1a'
+    hover-shadow: '0 0 24px rgba(205,0,0,0.5)'
+    use: '"BUY NOW" / "ADD TO CART" — ROG Red CTA. White label uppercase 0.15em tracked on red rectangle. Hover brightens + glow halo.'
+  button-primary-zenbook:
+    bg: '#0a0a0a'
+    color: '#ffffff'
+    radius: 9999
+    padding: '14px 32px'
+    font: button-cta
+    use: 'ZenBook / ProArt CTA — dark pill on light canvas. Different posture from ROG dark mode.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#ffffff'
+    radius: 2
+    padding: '14px 32px'
+    font: button-cta
+    border: '1px solid #ffffff'
+    hover-bg: '#ffffff'
+    hover-color: '#0a0a0a'
+    use: 'Ghost outline secondary on dark — "LEARN MORE". Inverts on hover.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#cd0000'
+    radius: 0
+    padding: '12px 0'
+    font: button-md
+    border-bottom: '1px solid #cd0000'
+    use: 'Inline text-link with red underline.'
+  product-card-rog:
+    bg: '#141414'
+    color: '#ffffff'
+    radius: 4
+    padding: '24px'
+    border: '1px solid #2a2a2a'
+    hover-border: '1px solid #cd0000'
+    hover-shadow: '0 0 24px rgba(205,0,0,0.3)'
+    width: 320
+    use: 'ROG product card on dark canvas — `#141414` floor with charcoal hairline. Stack: angular product hero with polygonal cut-out, ROG cybernetic-eye logo overlay, `#cd0000` "ROG" badge, product name in Cyberpunk display 24/700 uppercase, spec strip, "BUY NOW" red CTA. Hover lights red border + glow.'
+  product-card-zenbook:
+    bg: '#ffffff'
+    color: '#0a0a0a'
+    radius: 4
+    padding: '24px'
+    border: '1px solid #e0e0e0'
+    hover-shadow: '0 8px 24px rgba(0,0,0,0.08)'
+    width: 320
+    use: 'ZenBook / ProArt product card on light canvas — clean white floor with light grey hairline. Different posture from ROG dark cards.'
+  hero-card-rog:
+    bg: 'linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)'
+    color: '#ffffff'
+    radius: 0
+    padding: '64px 48px'
+    use: 'ROG full-bleed hero — three-stop red gradient with angular polygonal cut-outs, white headline in Cyberpunk display, hardware photography right with motion-blur trails.'
+  hero-card-zenbook:
+    bg: 'linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)'
+    color: '#0a0a0a'
+    radius: 0
+    padding: '64px 48px'
+    use: 'ZenBook hero — soft warm-grey gradient with hardware photography on white. Sophisticated-clean posture.'
+  spec-card:
+    bg: '#141414'
+    color: '#ffffff'
+    radius: 4
+    padding: '32px 24px'
+    border: '1px solid #2a2a2a'
+    use: 'Spec highlight card — large 32/700 spec value in `#cd0000` red, 11/700 uppercase 0.15em tracked label, supporting copy.'
+  badge-rog:
+    bg: '#cd0000'
+    color: '#ffffff'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"ROG" red badge — Republic of Gamers identity stamp.'
+  badge-tuf:
+    bg: '#ffd700'
+    color: '#0a0a0a'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"TUF" yellow badge — TUF Gaming sub-sub-brand.'
+  badge-new:
+    bg: '#cd0000'
+    color: '#ffffff'
+    radius: 2
+    padding: '4px 10px'
+    font: badge
+    use: '"NEW" red pill on ROG cards.'
+  text-input:
+    bg: '#1f1f1f'
+    color: '#ffffff'
+    radius: 4
+    height: 48
+    padding: '12px 16px'
+    border: '1px solid #2a2a2a'
+    focus-border: '1px solid #cd0000'
+    font: body-md
+    use: 'Form input — charcoal floor on dark, focus lights red border.'
+  primary-nav:
+    bg: '#0a0a0a'
+    color: '#ffffff'
+    height: 64
+    border-bottom: '1px solid #1a1a1a'
+    use: 'Top nav on dark — ASUS wordmark anchored left, "ROG · TUF · ZENBOOK · PROART · EXPERTBOOK · COMPONENTS · ACCESSORIES" labels in 13/500 uppercase 0.1em tracking.'
+  rog-eye:
+    use: 'ROG cybernetic-eye logomark — the iconic angular triangular eye stamped on every ROG product page. Rendered in red on dark or white on light. The brand''s most-recognised mark.'
+  modal-surface:
+    bg: '#0a0a0a'
+    color: '#ffffff'
+    radius: 8
+    border: '1px solid #2a2a2a'
+    box-shadow: '0 32px 64px rgba(0,0,0,0.8)'
+    use: 'Modal floor on dark.'
+  polygonal-divider:
+    use: 'Angular polygonal divider — diagonal cut shapes used between sections on ROG pages. The geometric brutalism that distinguishes ASUS from Razer''s clean rectangles.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-cyber: 'cubic-bezier(0.65, 0, 0.35, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  card-hover: 'ROG card lights `#cd0000` border + `0 0 24px rgba(205,0,0,0.3)` red glow halo over 240ms'
+  cta-press: 'button gradient deepens + 2px scale-down on :active over 120ms'
+  rog-glow-pulse: 'ROG cybernetic-eye logomark pulses red glow on hero pages 2s linear infinite (suppressed under reduced-motion)'
+  carousel-slide: 'product carousel slides 400ms ease-emphasized'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — ROG eye pulse freezes; card glow remains static; transitions become opacity-only.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.4) 0 2px 8px'
+  card: 'rgba(0,0,0,0.6) 0 8px 24px'
+  elevated: 'rgba(0,0,0,0.8) 0 24px 48px'
+  modal: 'rgba(0,0,0,0.85) 0 32px 64px'
+  rog-glow-soft: '0 0 16px rgba(205,0,0,0.25)'
+  rog-glow-strong: '0 0 32px rgba(205,0,0,0.5)'
+  ring: '0 0 0 2px #cd0000'
+
+accessibility:
+  contrast-text-on-bg: 19.5         # #ffffff on #0a0a0a — AAA
+  contrast-soft-on-bg: 8.4          # #a8a8a8 on #0a0a0a — AAA
+  contrast-link-on-bg: 4.4          # #cd0000 on #0a0a0a — AA
+  contrast-cta-text: 4.6            # #ffffff on #cd0000 — AA
+  contrast-faint-on-bg: 4.5         # #6e6e6e on #0a0a0a — AA
+  focus-ring: '2px solid #cd0000 with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab traverses logo → primary nav → search → utilities → main → footer; Esc closes; Enter activates.'
+
+dark-mode: split   # ASUS runs split-mode: ROG/TUF gaming pages are dark-default with red accent; ZenBook/ProArt/ExpertBook are light-default with neutral accent.
+
+lineage:
+  summary: |
+    ASUS''s visual lineage runs through Taiwan PC engineering brand identity (founded 1989 in Taipei, named for Pegasus, engineering-credibility-first culture), gamer brutalism (the 2006 launch of Republic of Gamers introduced angular polygonal trade dress that defined Asian gaming hardware aesthetics for two decades), and Japanese product design (ZenBook''s warm-grey "sand" colourway borrowing from Sony / Panasonic / Lexus consumer-electronics restraint). The current site solidified around 2018 with Saira Black 900 in ROG headlines and standardised `#cd0000` red. Brand position: engineering brutalism on gaming, sophisticated restraint on consumer-creator.
+  influences:
+    - name: ASUS founding (1989)
+      role: Taipei PC engineering culture — Pegasus mythology, engineering-credibility-first identity.
+      url: https://www.asus.com/about-asus/
+    - name: Republic of Gamers launch (2006)
+      role: Angular polygonal gamer trade dress that defined Asian gaming hardware aesthetics.
+      url: https://rog.asus.com
+    - name: Razer
+      role: Competitive gaming trade dress — neon green parallel that ASUS countered with red.
+      url: https://www.razer.com
+    - name: Sony / Panasonic
+      role: Japanese consumer-electronics restraint influence on ZenBook warm-grey sub-brand.
+      url: https://www.sony.com
+    - name: Saira (Omnibus-Type)
+      role: Open-source semi-condensed display sans used for ROG/TUF headlines.
+      url: https://fonts.google.com/specimen/Saira
+    - name: Cyberpunk video-game aesthetic
+      role: Angular stencil-cut display type for ROG product names ("STRIX SCAR 18").
+      url: https://www.cyberpunk.net
+---
+
+## 1. Visual Theme & Atmosphere
+
+ASUS is Taiwan's flagship PC engineering brand — founded in 1989 in Taipei, named for Pegasus, and now the #5 global PC vendor with the most-decorated motherboard, GPU, and gaming laptop portfolio in the industry. The marketing site reflects the dual nature of the brand: a **Republic of Gamers (ROG)** sub-brand whose red-on-black trade dress has defined gaming hardware aesthetics in Asia since 2006, and a parallel **ZenBook / ProArt / ExpertBook** consumer-creator-business system that operates in a near-monochrome light treatment.
+
+The ROG canvas is **near-black** (`#0a0a0a`) — slightly warmer than pure `#000000`. Against it, **ROG Red** (`#cd0000`) carries every CTA, every focused border, every brand badge. The red is intentionally darker and more cinematic than Razer's neon green — more "blood-red sports car" than "radioactive LED." On hover, the red brightens to `#ff1a1a` and adds a glow halo `0 0 24px rgba(205,0,0,0.3)` — Razer's playbook deployed in red instead of green.
+
+The brand's typographic voice is **engineering brutalism**. Headlines run **Saira Bold 900** at 56–80px uppercase with negative tracking `-0.025em`. ROG product names — STRIX SCAR 18, ZEPHYRUS G16, FLOW X13 — render in a custom **Cyberpunk-style angular display face** at 56/700 uppercase 0.05em tracking, the corners chiselled like a fighter jet decal. Body type is Roboto, the same humanist-pragmatic sans Dell uses, but ASUS deploys it in white on near-black with no softening.
+
+Visual language is **angular polygonal**. Hero treatments use diagonal cut-outs (45° and 60° angles) that slice across hardware photography. Spec callouts deploy chevron arrows and triangle dividers. The ROG cybernetic-eye logomark — the brand's most-recognisable mark — is itself a triangular angular eye, stamped on every product page. Where Razer is clean rectangles, ASUS is brutalist diagonals.
+
+Photography is dramatic. ROG laptops are shot at low-angle with motion-blur trails of red light streaking past — a video-game cinematic shot translated to product photography. ZenBook and ProArt switch to studio-clean white seamless with subtle pastel shadows (Logitech-adjacent), maintaining the dual-mode discipline.
+
+Spec density is heavy: GPU model · CPU · RAM · Display refresh rate · NVMe storage · battery · cooling solution. ROG product pages routinely list 12–18 specs in stacked cards before the user reaches the buy CTA. The brand position: ASUS customers are component-level technical buyers (motherboard enthusiasts, GPU comparisons, BIOS-tuning gamers) — the marketing serves that audience first, mainstream consumers second.
+
+Sub-brands carry distinct trade dress within the same chrome system:
+- **ROG** (Republic of Gamers): dark + red with cybernetic-eye logomark
+- **TUF Gaming**: dark + `#ffd700` yellow + military-tactical sub-aesthetic
+- **ZenBook**: light + warm grey + sand-coloured hardware photography
+- **ProArt**: light + neutral charcoal + creator-professional restraint
+- **ExpertBook**: light + ASUS corporate blue + business pragmatism
+
+**Key Characteristics:**
+- ROG canvas: near-black `#0a0a0a` with `#2a2a2a` charcoal hairline borders
+- ROG Red `#cd0000` is the gaming brand colour — darker and more cinematic than Razer's neon green
+- Cybernetic-eye ROG logomark — angular triangular eye stamped on every gaming product
+- Saira Bold 900 uppercase tracked headlines + custom Cyberpunk-style ROG product name display
+- Angular polygonal hero treatments with 45° and 60° diagonal cut-outs
+- TUF Gaming sub-sub-brand uses `#ffd700` yellow for military-tactical pivot
+- ZenBook / ProArt / ExpertBook flip to light canvas with neutral chrome — split-mode brand
+- 2–4px-radius cards on ROG, 4px on ZenBook — sharp-edged across both modes
+- Spec density: 12–18 specs per ROG product page
+- Glow halos `0 0 24px rgba(205,0,0,0.3)` on hovered ROG cards (Razer-style red instead of green)
+
+## 2. Color Palette & Roles
+
+### Primary
+- **ROG Canvas** (`#0a0a0a`): the gaming page floor — slightly warmer than pure black
+- **Bg Pure** (`#000000`): darkest surface, modal scrim, hero photography seamless
+- **Bg Deep** (`#1a1a1a`): header/footer band
+- **ZenBook Canvas** (`#ffffff`): the consumer/creator/business page floor
+- **ZenBook Soft** (`#f5f5f5`): alternating band on ZenBook
+- **Card Surface** (`#141414`): default card on dark
+- **Card Light** (`#ffffff`): default card on ZenBook
+- **Surface Soft** (`#1f1f1f`): raised popover, hovered card lift
+- **Surface Strong** (`#2a2a2a`): selected sidebar, deeply hovered border
+
+### Brand
+- **ROG Red** (`#cd0000`): the Republic of Gamers signature — every gaming CTA, focused border, brand badge
+- **ROG Red Bright** (`#ff1a1a`): hovered ROG red + glow halo source
+- **ROG Red Deep** (`#8b0000`): deeper red for gradient floor
+- **ROG Red Glow** (`rgba(205,0,0,0.5)`): glow halo
+- **ROG Gradient** (`linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)`): three-stop signature gradient on flagship ROG hero bands
+- **TUF Yellow** (`#ffd700`): TUF Gaming sub-sub-brand accent
+- **TUF Deep** (`#b8860b`): TUF deeper gold for hover states
+- **ASUS Corporate Blue** (`#003a78`): the parent ASUS brand colour (rarely used outside corporate communications and ExpertBook)
+- **ASUS Corporate Blue Bright** (`#0073e6`): brighter corporate accent on ExpertBook business pages
+- **ZenBook Sand** (`#3b3a36`): the warm gunmetal-grey of ZenBook hardware
+- **ProArt Charcoal** (`#1a1a1a`): the creator-professional accent
+
+### Interactive
+- **Link** (`#cd0000`) on dark — same as ROG brand
+- **Link Hover** (`#ffffff`): hover flips to white on dark
+- **Link Visited** (`#cd0000`): unchanged
+- **Disabled** (`#4a4a4a`)
+- **Selected** (`#cd0000`)
+
+### Neutral Scale (Dark Theme)
+- **Text** (`#ffffff`) — primary body on dark
+- **Text Strong** (`#ffffff`) — display headlines
+- **Text Soft** (`#a8a8a8`) — secondary metadata
+- **Text Faint** (`#6e6e6e`) — tertiary captions
+- **Text Disabled** (`#4a4a4a`)
+- **Border** (`#2a2a2a`) — 1px charcoal hairline on dark
+- **Border Soft** (`#1a1a1a`) — softer divider
+- **Border Strong** (`#cd0000`) — focused / hovered
+
+### Neutral Scale (Light Theme — ZenBook)
+- **Text** (`#0a0a0a`) — primary body on light
+- **Text Soft** (`#5a5a5a`) — secondary metadata
+- **Border** (`#e0e0e0`) — light surface hairline
+
+### Surface & Borders
+ROG depth ladder: `#000000` → `#0a0a0a` → `#141414` → `#1a1a1a` → `#1f1f1f` → `#2a2a2a`. Six near-blacks within 17% lightness. ZenBook depth ladder: `#ffffff` → `#f5f5f5` → `#e0e0e0`. Three near-whites. The split-mode discipline lets each sub-brand commit fully to its tonality.
+
+### Shadow Colors
+**Neutral shadows on dark** (`rgba(0,0,0, *)`) for ambient depth on cards and modals. **ROG-red glows** for interactive states — `0 0 16px rgba(205,0,0,0.25)` soft, `0 0 32px rgba(205,0,0,0.5)` strong. The red glow is what tells the eye "this surface is alive, this is gaming hardware."
+
+### Semantic
+- **Success** (`#00b050`): green
+- **Warning** (`#ffd700`): TUF yellow doubles as warning
+- **Danger** (`#cd0000`): ROG red doubles as danger
+- **Info** (`#0073e6`): ASUS corporate blue
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `Saira` — the open-source semi-condensed sans by Omnibus-Type, used for ROG and TUF headlines. Falls back to `Rajdhani` (similar geometric sans), then `Roboto`, then `"Helvetica Neue", Arial, sans-serif`. Saira's slightly condensed silhouette gives ASUS a more cinematic display profile than Razer's wider Roboto Black. Weights: 400 / 500 / 700 / 900.
+
+**ROG Display**: a custom Cyberpunk-style angular face (sometimes `Saira Stencil One` as fallback) used for ROG product names — "STRIX SCAR 18", "ZEPHYRUS G16". The face is angular, chiselled, with stencil-cut counters. Used at 56/700 uppercase 0.05em tracking only on ROG.
+
+**Body**: `Roboto` — the same humanist sans Dell uses. The choice is pragmatic and ships universally.
+
+**Mono**: `Roboto Mono` for spec values, BIOS surfaces, technical documentation.
+
+**OpenType features**: `kern`, `liga`. `tnum` on price and spec values.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Saira | 80 | 900 | 1.0 | -0.025em | uppercase | "JOIN THE REPUBLIC" |
+| display-xl | Saira | 56 | 900 | 1.05 | -0.02em | uppercase | Product launch hero |
+| display-lg | Saira | 40 | 700 | 1.1 | -0.01em | uppercase | Section banner |
+| display-md | Saira | 32 | 700 | 1.15 | 0 | — | Product detail H1 |
+| display-sm | Saira | 24 | 700 | 1.2 | 0 | — | Card title |
+| rog-display | Cyberpunk/Saira Stencil | 56 | 700 | 1.0 | 0.05em | uppercase | ROG product names "STRIX SCAR 18" |
+| section-head | Saira | 14 | 700 | 1.2 | 0.2em | uppercase | "GAMING LAPTOPS" |
+| sub-section | Saira | 18 | 500 | 1.3 | 0 | — | Sub-heading |
+| body-lg | Roboto | 18 | 400 | 1.6 | 0 | — | Hero supporting copy |
+| body-md | Roboto | 16 | 400 | 1.6 | 0 | — | Default body |
+| body-sm | Roboto | 14 | 400 | 1.5 | 0 | — | Sidebar copy |
+| body-xs | Roboto | 12 | 400 | 1.4 | 0 | — | Caption, footer |
+| nav-link | Saira | 13 | 500 | 1.0 | 0.1em | uppercase | "ROG · TUF · ZENBOOK" |
+| sub-nav-link | Saira | 12 | 400 | 1.0 | 0.05em | uppercase | Sub-nav |
+| button-cta | Saira | 14 | 700 | 1.0 | 0.15em | uppercase | "BUY NOW" |
+| button-md | Saira | 13 | 500 | 1.0 | 0.1em | uppercase | "COMPARE" |
+| badge | Saira | 11 | 700 | 1.0 | 0.2em | uppercase | "ROG", "TUF", "NEW" |
+| price | Saira | 22 | 700 | 1.0 | -0.01em | tnum | Product price |
+| spec-label | Saira | 11 | 700 | 1.2 | 0.15em | uppercase | "GPU", "CPU" |
+| spec-value | Roboto Mono | 16 | 500 | 1.4 | 0 | — | "RTX 4080" |
+| code | Roboto Mono | 13 | 400 | 1.5 | 0 | — | BIOS surface |
+
+### Principles
+
+- **Saira Black 900 uppercase with negative tracking is the gaming voice.** ROG hero at 80/900 with `-0.025em` tracking compresses the headline into a stamp.
+- **Custom Cyberpunk-style ROG product names.** The angular stencil-cut display face is used only for ROG product names — "STRIX SCAR 18", "ZEPHYRUS G16", "FLOW X13" — never for body or hero text. This is the brand's most distinctive type signature.
+- **Uppercase tracking ladder is wider than Razer.** Display-hero at -0.025em compressed; nav at 0.1em; section-head at 0.2em; spec-label at 0.15em; badge at 0.2em. The wider 0.2em on section-head (vs Razer's 0.15em) reads as more brutalist.
+- **ROG uppercase, ZenBook sentence-case.** Sub-brand discipline: ROG product names render uppercase in custom display; ZenBook product names render sentence-case Saira 700.
+- **Spec values in mono.** Roboto Mono for every GPU / CPU / Hz / GB value.
+- **Body in pure white on dark.** No softening — gaming aesthetic doesn't apologise.
+- **Open-source typography stack.** Saira, Roboto, and Roboto Mono are all free Google Fonts — ASUS uses zero proprietary faces, mirroring the Taiwan-engineering value posture.
+- **Custom display face for ROG only.** The Cyberpunk-style face appears nowhere outside ROG product naming.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — ROG Red rectangle: `#cd0000` solid fill, white label in 14/700 uppercase 0.15em tracking, 14×32px padding, 2px radius. Hover brightens to `#ff1a1a` and adds `0 0 24px rgba(205,0,0,0.5)` red glow halo. The 2px-radius rectangle is canonical ASUS — sharp-edged like Razer.
+
+**`button-primary-zenbook`** — ZenBook dark pill: `#0a0a0a` solid fill on white canvas, white label, 9999 radius. The pill geometry differentiates ZenBook from ROG.
+
+**`button-secondary`** — ghost outline on dark: transparent fill, white label and 1px white border. Hover inverts to white fill with dark label.
+
+**`button-tertiary`** — inline link with red underline: `#cd0000` text, 1px `#cd0000` underline.
+
+### Cards
+
+**`product-card-rog`** — ROG card on dark: `#141414` floor with 1px `#2a2a2a` charcoal hairline, 4px radius, 24px padding. Stack: angular product hero with polygonal cut-out shape (diagonal corners), ROG cybernetic-eye logo overlay, `#cd0000` "ROG" badge, product name in Cyberpunk display 24/700 uppercase, spec strip with mono values, "BUY NOW" red CTA. Hover lights `#cd0000` red border + `0 0 24px rgba(205,0,0,0.3)` glow halo.
+
+**`product-card-zenbook`** — ZenBook card on light: white floor with 1px `#e0e0e0` hairline, 4px radius. Different posture from ROG.
+
+**`hero-card-rog`** — full-bleed three-stop red gradient with angular polygonal cut-outs, 64×48px padding, headline in Cyberpunk display, hardware photography right with motion-blur red light trails.
+
+**`hero-card-zenbook`** — soft warm-grey gradient hero with hardware photography on white. Sophisticated-clean.
+
+**`spec-card`** — `#141414` floor, 1px `#2a2a2a` border, 32×24px padding, 4px radius. Stack: 32/700 spec value in `#cd0000` red Roboto Mono, 11/700 uppercase 0.15em tracked label, 14/400 supporting copy.
+
+### Badges
+
+**`badge-rog`** — `#cd0000` red rectangle, white "ROG" label in 11/700 uppercase 0.2em tracking — Republic of Gamers identity stamp.
+
+**`badge-tuf`** — `#ffd700` yellow rectangle, dark "TUF" label.
+
+**`badge-new`** — `#cd0000` red, "NEW" label.
+
+### Inputs / Forms
+
+**`text-input`** — `#1f1f1f` charcoal floor on dark, white text, 1px `#2a2a2a` border, 4px radius, 48px height. Focus lights 1px `#cd0000` red border.
+
+### Navigation
+
+**`primary-nav`** — 64px tall on `#0a0a0a` with 1px `#1a1a1a` bottom border. ASUS wordmark anchored left in white. Sub-brand labels "ROG · TUF · ZENBOOK · PROART · EXPERTBOOK · COMPONENTS · ACCESSORIES" centred in Saira 13/500 uppercase 0.1em tracking. Hover lights red underline beneath active sub-brand.
+
+### Decorative
+
+**`rog-eye`** — the iconic ROG cybernetic-eye logomark, an angular triangular eye with three internal slits. Stamped on every ROG product page hero, often pulsing red glow on hover. The brand's most-recognisable mark.
+
+**`polygonal-divider`** — angular polygonal section dividers used between bands on ROG pages. Diagonal 45° and 60° cuts sliced across full-bleed hero treatments.
+
+## 5. Layout Principles
+
+### Spacing System
+- Base unit: **8px** with 4px sub-steps
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section gap: **80–128px** marketing, **48–64px** product list
+- Card padding: **24–32px**
+- Gutters: **16–24px**
+
+### Grid & Container
+- Max content width: **1440px**
+- Product grid: 4 → 3 → 2 → 1
+- ROG hero: full-bleed gradient with angular cuts
+
+### Whitespace Philosophy
+
+ASUS runs **dense-brutalist** on ROG and **breathing-clean** on ZenBook. The split lets each sub-brand commit to its rhythm.
+
+### Section Cadence
+
+ROG pages alternate `#0a0a0a` canvas with `#000000` darker product bands and gradient hero bands. Polygonal dividers slash diagonally between sections. ZenBook pages alternate white with soft warm-grey.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Hero bands, polygonal cuts, full-bleed photography |
+| Micro | 1px | Inset surfaces |
+| Small | 2px | Buttons, badges |
+| Medium | 4px | Cards, inputs |
+| Large | 8px | Modal surface, featured card |
+| Pill | 9999px | ZenBook CTAs only |
+
+ROG is **sharp-rectangular** (2–4px). ZenBook softens slightly to pill CTAs. The discipline: gaming = angular, consumer-creator = rounded.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Default body, hero photography |
+| 1 — Soft glow | `0 0 16px rgba(205,0,0,0.25)` | Hovered link, focused interactive |
+| 2 — Card | `rgba(0,0,0,0.6) 0 8px 24px` | Card on hover (paired with red border) |
+| 3 — Strong glow | `0 0 32px rgba(205,0,0,0.5)` | Featured ROG card, CTA hover |
+| 4 — Modal | `rgba(0,0,0,0.8) 0 32px 64px` | Centred dialogs |
+| 5 — Scrim | `rgba(0,0,0,0.85)` | Modal backdrop |
+
+### Shadow Philosophy
+
+**Neutral shadows + ROG-red glows.** Same dual-vocabulary as Razer but in red instead of green. Glow tells the eye "this is alive, this is gaming."
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Cyber**: `cubic-bezier(0.65, 0, 0.35, 1)` — symmetric S-curve for ROG eye glow pulse
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Button colour swap |
+| Standard | 240ms | Card hover + glow |
+| Slow | 400ms | Carousel, modal enter |
+
+### Per-Component Recipes
+
+- **ROG card hover**: red border fades + glow halo over 240ms.
+- **CTA hover**: red brightens + glow halo `0 0 24px rgba(205,0,0,0.5)` over 120ms.
+- **ROG eye pulse**: 2s linear loop on hero pages. Suppressed reduced-motion.
+- **Carousel slide**: 400ms emphasized.
+- **Modal enter**: scrim fades + dialog scales 0.96 → 1.0 + opacity 0 → 1 over 240ms.
+
+### Reduced Motion
+
+ROG eye pulse freezes; card glow remains static; transitions become opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #ffffff text on #0a0a0a canvas | 19.5 | AAA |
+| #a8a8a8 muted on #0a0a0a | 8.4 | AAA |
+| #cd0000 link on #0a0a0a | 4.4 | AA |
+| #ffffff on #cd0000 CTA | 4.6 | AA |
+| #6e6e6e faint on #0a0a0a | 4.5 | AA |
+| #0a0a0a on #ffd700 TUF badge | 13.5 | AAA |
+
+ROG-red on near-black sits at 4.4 — borderline AA. ASUS compensates by using 14/700 button labels (heavier than 14/500) for all primary CTAs on red.
+
+### Focus Indicators
+
+2px solid `#cd0000` red ring with 2px outset offset on dark.
+
+### ARIA Patterns
+
+- Search: `role="search"`
+- Product card: full `<a>` with `aria-label` containing title, price, key spec
+- ROG eye: decorative `aria-hidden="true"`
+- Mega-menu: `role="navigation"` with `aria-expanded`
+- Sub-brand toggle: `role="tablist"`
+
+### Keyboard Navigation
+
+- Tab traverses logo → primary nav → search → utilities → main → footer
+- Esc closes; Enter activates
+- Arrow keys cycle product carousel and sub-brand tabs
+
+### Reduced Motion
+
+ROG eye pulse freezes; glow halos become static; card hover degrades to colour-only border change.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Nav collapses; product grid 1-up; ROG eye scales down |
+| Tablet | 600–960px | 2-up grid |
+| Desktop | 960–1280px | 3-up grid |
+| Wide | 1280px+ | 4-up grid, 1440 cap |
+
+### Touch Targets
+- CTAs: 44–48px height
+- Card: full tile
+
+### Collapsing Strategy
+
+- Nav: utilities collapse; sub-brand labels become hamburger drawer
+- Product grid: 4 → 3 → 2 → 1
+- Spec strip: 4-cell → 2-cell stacked
+- Hero: 2-column → stacked
+- Section padding: 128px → 80px → 48px
+
+### Image Behavior
+
+`<picture>` with WebP/AVIF. ROG product photography uses video loops on hero (red light trails) with still fallback.
+
+## 11. Content & Voice
+
+### Tone
+
+ROG is **gamer-aggressive-cinematic** — "JOIN THE REPUBLIC", "FORGED FOR VICTORY", "POWER UNLEASHED". ZenBook is **sophisticated-engineered** — "Crafted to inspire", "Designed for creators". TUF is **military-tactical** — "Built tough. Tested rugged."
+
+### Microcopy Patterns
+
+- **ROG buttons**: "BUY NOW", "ADD TO CART", "PRE-ORDER", "JOIN ROG", "VIEW SPECS" — uppercase tracked
+- **ZenBook buttons**: "Buy Now", "Add to Cart", "Configure" — sentence-case
+- **Errors**: terse-technical "Configuration unavailable. Try a different model or contact support."
+- **Success**: punchy on ROG "Locked in." / warm on ZenBook "Added to cart."
+- **Stock urgency**: "ONLY 3 LEFT" in red on ROG
+
+### Empty States
+
+ROG empty cart: "Your war chest is empty. Choose your weapon."
+
+ZenBook empty cart: "Your cart is empty. Browse our laptops and accessories."
+
+### CTA Verb Conventions
+
+- ROG primary: **"BUY NOW"**, **"ADD TO CART"**, **"PRE-ORDER"**
+- ZenBook primary: **"Buy Now"**, **"Add to Cart"**, **"Configure"**
+- Tertiary: **"VIEW SPECS"** / **"View Specs"**, **"COMPARE"** / **"Compare"**
+
+## 12. Dark Mode & Theming
+
+**Split-mode brand.** ASUS runs dual canonical modes:
+- **ROG / TUF** = dark-default (`#0a0a0a` canvas with red/yellow accents)
+- **ZenBook / ProArt / ExpertBook** = light-default (`#ffffff` canvas with neutral/blue accents)
+
+There is no toggle — each sub-brand commits to its mode permanently. The Synapse-equivalent ASUS Armoury Crate desktop software runs dark across all sub-brands.
+
+## 13. Lineage & Influences
+
+ASUS's visual lineage runs through three traditions: **Taiwan PC engineering brand identity** (ASUS founded in 1989, the "Pegasus" mythology — "ASUS" is the last four letters of Pegasus — and the engineering-credibility-first culture of Taipei's PC component industry); **gamer brutalism** (the 2006 launch of Republic of Gamers introduced the angular polygonal trade dress that defined Asian gaming hardware aesthetics for the next two decades — chiselled corners, red-on-black, military-cinematic photography); and **Japanese product design** (ZenBook's warm-grey "sand" colourway and the careful split-mode discipline borrow from Sony / Panasonic / Lexus consumer-electronics restraint).
+
+The current site solidified around 2018 with the rollout of Saira Black 900 in ROG headlines and the standardised `#cd0000` red. Subsequent updates have refined the polygonal hero treatments and the split-mode rollout but have not changed the colour or typographic foundations.
+
+What ASUS rejects: a single global mode (the split-mode discipline is canonical), neon brights on consumer products, soft pastel illustration, friendly serifs, light mode on ROG, sentence-case display on ROG. The brand position: **engineering brutalism on gaming, sophisticated restraint on consumer-creator**.
+
+**Influences:**
+- ASUS founding (1989) — Taiwan PC engineering culture
+- Republic of Gamers launch (2006) — angular polygonal gamer trade dress
+- Razer competitive trade dress — neon green parallel that ASUS countered with red
+- Sony / Panasonic Japanese product design — ZenBook warm-grey restraint
+- Saira (Omnibus-Type) — open-source semi-condensed display sans
+- TUF military / tactical equipment trade dress — yellow + dark + utility aesthetic
+- Cyberpunk video-game aesthetic — angular stencil-cut display type for ROG product names
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor ROG pages on `#0a0a0a` near-black canvas with `#2a2a2a` charcoal hairline borders
+- Anchor ZenBook / ProArt / ExpertBook pages on `#ffffff` paper-white canvas
+- Use ROG Red `#cd0000` for every gaming CTA, focused border, and brand badge
+- Stamp the ROG cybernetic-eye logomark on every ROG product page
+- Use Saira Black 900 with `-0.025em` tracking for ROG hero headlines uppercase
+- Use the custom Cyberpunk-style angular display face for ROG product names ("STRIX SCAR 18")
+- Use angular polygonal hero treatments with 45° / 60° diagonal cut-outs on ROG
+- Apply the ROG-red glow halo `0 0 24px rgba(205,0,0,0.3)` on hovered ROG cards and CTAs
+- Use 2–4px-radius sharp rectangular cards on ROG; 4px-radius cards on ZenBook with pill CTAs
+- Show 12–18 specs per ROG product page in stacked spec cards with mono values
+- Switch to TUF Yellow `#ffd700` only on TUF Gaming sub-sub-brand pages
+- Render ROG product names uppercase, ZenBook product names sentence-case
+
+**Don't**
+- Don't introduce a single global mode — the split-mode dual-canvas discipline is canonical
+- Don't use ROG Red on ZenBook / ProArt / ExpertBook — sub-brand colour discipline matters
+- Don't soften card corners past 8px on featured or 4px on default — ASUS is sharp-rectangular
+- Don't write tech-marketing copy on ROG — voice is "JOIN THE REPUBLIC", not "Discover gaming"
+- Don't use sentence-case display on ROG — uppercase is canonical
+- Don't replace Saira Black 900 with a wider / thinner display face — the cinematic compression matters
+- Don't use the Cyberpunk angular display face outside ROG product names
+- Don't pad ROG sections at 16px — gaming pages breathe at 80–128px
+- Don't use serifs anywhere — Saira / Roboto / Roboto Mono only
+- Don't introduce light mode on ROG — gaming is dark-canonical
+- Don't use yellow on non-TUF pages — TUF Yellow is sub-sub-brand discipline
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+ROG Canvas:       #0a0a0a
+Bg Pure:          #000000
+ZenBook Canvas:   #ffffff
+ROG Red:          #cd0000
+ROG Red Bright:   #ff1a1a
+ROG Red Deep:     #8b0000
+ROG Gradient:     linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)
+ROG Glow:         rgba(205,0,0,0.5)
+TUF Yellow:       #ffd700
+ASUS Corp Blue:   #003a78
+Text on Dark:     #ffffff
+Text on Light:    #0a0a0a
+Border on Dark:   #2a2a2a
+Border on Light:  #e0e0e0
+```
+
+### Example Component Prompts
+
+- "Create an ASUS ROG BUY NOW button: solid `#cd0000` red rectangle, white label 'BUY NOW' in Saira 14/700 uppercase 0.15em tracking, 14×32px padding, 2px radius. On hover, fill brightens to `#ff1a1a` and adds `0 0 24px rgba(205,0,0,0.5)` red glow halo. On active, fill deepens to `#8b0000` and scales 0.98."
+- "Build an ASUS ROG product card: 320×460 with `#141414` near-black floor, 1px `#2a2a2a` charcoal border, 4px radius, 24px padding. Stack inside: angular polygonal product hero with diagonal corner cut-outs, ROG cybernetic-eye logomark overlay top-right, `#cd0000` red 'ROG' badge top-left in Saira 11/700 uppercase 0.2em tracking, product name in Cyberpunk-style angular display 24/700 uppercase tracked (e.g. 'STRIX SCAR 18'), spec strip with mono values 'RTX 4090 · i9-14900HX · 32GB · 240Hz', `#ffffff` price 22/700 with `tnum`, 'BUY NOW' red CTA. On hover, light `#cd0000` red border + `0 0 24px rgba(205,0,0,0.3)` glow halo over 240ms."
+- "Design an ASUS ROG hero band: full-bleed three-stop red gradient `linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)`, no border-radius, 64×48px padding, with angular polygonal cut-outs (45° and 60° diagonal cuts) sliced across the band. Headline in Saira Black 900 at 80px / 1.0 line-height / -0.025em tracking, white, uppercase (e.g. 'JOIN THE REPUBLIC'). ROG cybernetic-eye logomark stamped centre or right with red glow pulse. Hardware photography right with motion-blur red light trails."
+- "Build an ASUS ZenBook hero band: soft warm-grey gradient `linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%)`, 64×48px padding. Headline in Saira 700 at 56px / 1.05 line-height / -0.02em tracking, `#0a0a0a` near-black, sentence-case (e.g. 'Crafted to inspire'). Hardware photography on white seamless with subtle pastel shadow. Different posture from ROG dark mode."
+- "Create an ASUS spec card: `#141414` near-black floor, 1px `#2a2a2a` border, 4px radius, 32×24px padding. Stack: large 32/700 spec value in `#cd0000` ROG red Roboto Mono (e.g. 'RTX 4090'), 11/700 uppercase 0.15em tracked spec label in white (e.g. 'GRAPHICS'), 14/400 muted supporting copy. Used in feature strips like 'GPU · CPU · RAM · DISPLAY · STORAGE · COOLING'."
+- "Design an ASUS top nav: 64px-tall `#0a0a0a` floor with 1px `#1a1a1a` bottom border. ASUS wordmark anchored left in white at 24px height. Sub-brand labels 'ROG · TUF · ZENBOOK · PROART · EXPERTBOOK · COMPONENTS · ACCESSORIES' centred in Saira 13/500 uppercase 0.1em tracking white. Search trigger, account icon, cart count flush right. Hover lights `#cd0000` red 2px underline beneath active sub-brand."
+
+### Iteration Guide
+
+1. **Decide ROG or ZenBook first.** ASUS is split-mode — gaming is dark + red, consumer-creator is light + neutral. Don't blend.
+2. **ROG Red `#cd0000` is the gaming brand.** Slightly darker and more cinematic than Razer's neon green. Don't substitute another red.
+3. **Saira Black 900 with `-0.025em` tracking is the gamer voice.** Hero at 56–80px uppercase. Cinematic compression.
+4. **Custom Cyberpunk angular display for ROG product names only.** "STRIX SCAR 18" renders chiselled, never in body Saira.
+5. **Angular polygonal hero treatments on ROG.** 45° and 60° diagonal cut-outs slice across hero photography. Razer is rectangular; ASUS is brutalist.
+6. **ROG cybernetic-eye logomark is the brand mark.** Stamped on every ROG product page hero, often pulsing red glow.
+7. **Red glow halo on hovered ROG cards.** `0 0 24px rgba(205,0,0,0.3)` — Razer's playbook in red instead of green.
+8. **Sub-brand discipline.** ROG = uppercase + custom display. ZenBook = sentence-case + Saira 700. TUF = uppercase + yellow accent. Don't mix.

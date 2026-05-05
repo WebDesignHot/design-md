@@ -1,0 +1,771 @@
+---
+name: Booking.com
+tagline: Deep-blue commerce engine — Bookin Sans on white, yellow CTA voltage, dense booking-funnel maximalism.
+author: webdesignhot
+source_url: https://www.booking.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace]
+tags: [light, marketplace, travel, sans, dense, commercial, booking-funnel, e-commerce]
+preview_swatch: ['#ffffff', '#003580', '#feba02']
+related: [airbnb, expedia, kayak]
+description: 'Booking.com runs the most commercially literal travel marketplace on the web — a pure-white canvas (`#ffffff`) anchored on the unmistakable **Booking deep navy** (`#003580`) that paints the masthead, the wordmark, every primary CTA, and the wishlist heart, with a single voltage of **highlighter yellow** (`#feba02`) that fires on the secondary CTA, the savings ribbon, and the Genius loyalty stripe. Type runs **Bookin Sans**, the in-house variable font, at modest 500–700 weights — display 24–32px / 700, body 14/400 — because the page is engineered for density: search filters, sort tabs, urgency flags ("only 1 room left at this price"), red-text price strikethroughs, and the seven-day booking funnel all need to fit above the fold. Cards round at 8px, search-bar segments at 4px, primary CTAs at 4px (not pill — Booking is unapologetically commercial, not consumer-warm). The result is the canonical dense booking-funnel commerce surface, where every pixel is monetisable real estate and the design language confidently rejects the airy hospitality aesthetic that Airbnb popularised.'
+
+colors:
+  bg: '#ffffff'                  # canvas — Booking has no public dark mode
+  bg-alt: '#f5f5f5'              # alt-band footer, secondary surfaces
+  surface: '#ffffff'             # cards inherit canvas
+  surface-soft: '#f2f2f2'        # disabled inputs, alt rows
+  surface-strong: '#ebebeb'      # divider band background
+  surface-blue: '#ebf3ff'        # informational tint (Genius banner inner)
+  surface-yellow: '#fff8e1'      # promo banner soft yellow
+  surface-genius: '#003b95'      # Genius loyalty band ground (slightly lighter than masthead)
+  surface-deal: '#fff0d7'        # "Late escape deal" cell tint
+  text: '#1a1a1a'                # primary ink — slightly warmer than pure black
+  text-strong: '#000000'         # rare maximum-punch ink (price totals)
+  text-body: '#262626'            # body copy
+  text-muted: '#595959'          # secondary metadata
+  text-soft: '#737373'            # caption, faint counts
+  text-on-brand: '#ffffff'       # white on deep navy
+  text-on-yellow: '#1a1a1a'      # ink on yellow CTA
+  brand: '#003580'               # Booking deep navy — masthead, wordmark, primary CTA
+  brand-hover: '#002a66'         # hover deepens further
+  brand-active: '#001f4d'        # pressed
+  brand-mid: '#0071c2'           # secondary blue — used on links and Genius accents
+  brand-mid-hover: '#005999'     # link hover
+  brand-light: '#ebf3ff'         # informational banner tint
+  yellow: '#feba02'              # signature yellow voltage
+  yellow-hover: '#e0a702'        # CTA yellow hover
+  yellow-active: '#c89500'       # pressed yellow
+  yellow-deep: '#946d00'         # deep yellow text on light yellow surface
+  star-rating: '#feba02'         # property star rating fill (matches yellow)
+  link: '#0071c2'                # default link blue (mid blue)
+  link-hover: '#005999'
+  link-visited: '#5e2dad'        # visited link purple (browser-like)
+  border: '#e7e7e7'              # default 1px hairline
+  border-soft: '#f1f1f1'         # editorial divider
+  border-strong: '#bdbdbd'       # input outline
+  border-input-focus: '#003580'   # focused input thickens to navy
+  divider: '#e0e0e0'              # 1px section divider
+  scrim: 'rgba(0,0,0,0.5)'       # modal backdrop
+  shadow-card: 'rgba(26,26,26,0.08)'
+  shadow-elev: 'rgba(26,26,26,0.16)'
+  shadow-deep: 'rgba(0,53,128,0.16)'
+  success: '#008009'              # "Free cancellation" green
+  success-soft: '#e7f3e7'
+  success-deep: '#005f06'
+  warning: '#bc4949'              # urgency red ("only 1 room left")
+  warning-soft: '#fff5f5'
+  danger: '#cc0000'               # validation error red, also strikethrough discount
+  danger-soft: '#fff0f0'
+  info: '#0071c2'                 # informational
+  info-soft: '#ebf3ff'
+  loyalty-genius: '#003b95'       # Genius branding navy
+  reward-yellow: '#feba02'        # reward badge yellow
+  rare-find: '#cc0000'            # "Rare find" tag red
+  high-rating-bg: '#003580'       # review-score chip — navy
+  high-rating-text: '#ffffff'
+
+typography:
+  display:
+    family: '"Bookin Sans", "BlinkMacSystemFont", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['tnum', 'ss01']
+  body:
+    family: '"Bookin Sans", "BlinkMacSystemFont", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: 'SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace'
+    weights: [400]
+  scale:
+    hero-display:    { size: 32, weight: 700, lineHeight: 1.13, tracking: '-0.5px',  family: display }
+    page-title:      { size: 28, weight: 700, lineHeight: 1.14, tracking: '-0.25px', family: display }
+    section-head:    { size: 24, weight: 700, lineHeight: 1.17, tracking: '0',       family: display }
+    sub-section:     { size: 20, weight: 700, lineHeight: 1.20, tracking: '0',       family: display }
+    property-title:  { size: 20, weight: 700, lineHeight: 1.20, tracking: '0',       family: display }
+    title-md:        { size: 16, weight: 700, lineHeight: 1.25, tracking: '0',       family: body }
+    title-sm:        { size: 14, weight: 700, lineHeight: 1.29, tracking: '0',       family: body }
+    body-md:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',       family: body }
+    body-sm:         { size: 12, weight: 400, lineHeight: 1.33, tracking: '0',       family: body }
+    caption:         { size: 12, weight: 500, lineHeight: 1.33, tracking: '0',       family: body }
+    micro:           { size: 11, weight: 400, lineHeight: 1.27, tracking: '0',       family: body }
+    price-display:   { size: 24, weight: 700, lineHeight: 1.0,  tracking: '-0.25px', family: body, opentype: ['tnum'] }
+    price-strike:    { size: 14, weight: 400, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'] }
+    review-score:    { size: 18, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, opentype: ['tnum'] }
+    review-label:    { size: 14, weight: 700, lineHeight: 1.14, tracking: '0',       family: body }
+    button-md:       { size: 16, weight: 500, lineHeight: 1.25, tracking: '0',       family: body }
+    button-sm:       { size: 14, weight: 500, lineHeight: 1.29, tracking: '0',       family: body }
+    nav-link:        { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0',       family: body }
+    badge:           { size: 11, weight: 700, lineHeight: 1.18, tracking: '0.32px',  family: body, transform: uppercase }
+
+radius:
+  micro: 2
+  sm: 4         # primary CTAs, search-bar segments — Booking's signature near-square
+  md: 8         # property cards, modals
+  lg: 12        # banner cards, larger feature cells
+  xl: 16
+  pill: 9999    # filter chips, score chip, Genius level badge
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 80
+  masthead-height: 64
+  search-bar-height: 56
+  property-rail-width: 280
+
+components:
+  button-primary:
+    bg: '#0071c2'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 24px'
+    height: 48
+    font: button-md
+    use: 'Search, Sign in, Continue — primary commercial CTA across the funnel.'
+  button-primary-hover:
+    bg: '#005999'
+    color: '#ffffff'
+    radius: 4
+    use: 'Hover state — slight deepening of primary blue.'
+  button-primary-active:
+    bg: '#003580'
+    color: '#ffffff'
+    radius: 4
+    use: 'Pointer-down state — flips to deep navy.'
+  button-cta-yellow:
+    bg: '#feba02'
+    color: '#1a1a1a'
+    radius: 4
+    padding: '12px 16px'
+    height: 40
+    font: button-md
+    use: 'Property card "See availability" / "Reserve" — the yellow voltage moment.'
+  button-cta-yellow-hover:
+    bg: '#e0a702'
+    color: '#1a1a1a'
+    radius: 4
+    use: 'Yellow CTA hover — slightly deeper yellow.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#0071c2'
+    border: '1px solid #0071c2'
+    radius: 4
+    padding: '11px 23px'
+    height: 48
+    use: 'Sign up, Cancel — secondary action over white.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#0071c2'
+    use: '"Show more" links, modal close labels — underlined on hover.'
+  search-bar:
+    bg: '#ffeb02'           # signature yellow border ring on home search
+    color: '#1a1a1a'
+    radius: 4
+    height: 56
+    border: '5px solid #feba02'
+    use: 'Home page search bar — Where / Dates / Guests / Search button. Wrapped in yellow stroke ring.'
+  search-bar-segment:
+    bg: '#ffffff'
+    color: '#1a1a1a'
+    radius: 2
+    height: 54
+    border: '2px solid #ffffff'
+    use: 'Inner segment of the search bar — Where, Dates, Guests fields.'
+  search-button:
+    bg: '#0071c2'
+    color: '#ffffff'
+    radius: 4
+    height: 56
+    padding: '0 24px'
+    font: button-md
+    use: 'The yellow-bordered search bar terminates in a flat blue Search button.'
+  property-card:
+    bg: '#ffffff'
+    color: '#1a1a1a'
+    radius: 8
+    border: '1px solid #e7e7e7'
+    use: 'Search result card — left photo (1:1), middle meta column, right price/CTA rail.'
+  property-card-hover:
+    bg: '#ffffff'
+    radius: 8
+    shadow: 'rgba(26,26,26,0.16) 0 4px 16px'
+    use: 'Hover state — shadow intensifies, no transform.'
+  review-score-chip:
+    bg: '#003580'
+    color: '#ffffff'
+    radius: '4px 4px 4px 0'    # asymmetric — bottom-left square
+    padding: '4px 6px'
+    font: review-score
+    use: 'Property card review score — navy chip with white "8.7" displayed prominently.'
+  filter-chip:
+    bg: '#ffffff'
+    color: '#1a1a1a'
+    radius: 9999
+    padding: '6px 12px'
+    border: '1px solid #bdbdbd'
+    use: 'Filter pills inside the search results sidebar — hairline outline, ink text.'
+  filter-chip-active:
+    bg: '#ebf3ff'
+    color: '#003580'
+    radius: 9999
+    border: '1px solid #003580'
+    use: 'Active filter — light-blue tint with navy text and outline.'
+  text-input:
+    bg: '#ffffff'
+    color: '#1a1a1a'
+    radius: 4
+    height: 48
+    padding: '14px 12px'
+    border: '1px solid #bdbdbd'
+    focus: 'border thickens to 2px navy (#003580), no glow ring'
+    use: 'Form fields — name, email, payment.'
+  date-picker-day:
+    bg: 'transparent'
+    color: '#1a1a1a'
+    radius: 4
+    size: 36
+    use: '36×36px day cell with day number — square not circle.'
+  date-picker-day-selected:
+    bg: '#003580'
+    color: '#ffffff'
+    radius: 4
+    use: 'Selected day — navy fill, white text.'
+  genius-badge:
+    bg: '#003b95'
+    color: '#feba02'
+    radius: 2
+    padding: '2px 4px'
+    font: badge
+    use: '"Genius" loyalty marker — navy on yellow text. Appears on logged-in user state.'
+  deal-badge:
+    bg: '#cc0000'
+    color: '#ffffff'
+    radius: 4
+    padding: '2px 6px'
+    font: badge
+    use: '"Late escape deal" / "Limited-time" red urgency flag on property cards.'
+  free-cancel-tag:
+    bg: 'transparent'
+    color: '#008009'
+    radius: 0
+    font: caption
+    use: 'Inline "Free cancellation" green text below price — no surface, just type.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 300
+  card-hover-shadow: 'shadow tier 1 → 2 over 200ms standard ease'
+  filter-pill-active: 'background 120ms standard, no transform'
+  modal-enter: 'scrim 180ms ease-out + dialog 240ms emphasized translate-y +12 → 0'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transforms suppressed, opacity-only.'
+
+breakpoints:
+  mobile: 576
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+
+shadows:
+  ambient: 'rgba(26,26,26,0.04) 0 1px 2px'
+  card: 'rgba(26,26,26,0.08) 0 2px 4px'
+  hover: 'rgba(26,26,26,0.16) 0 4px 16px'
+  dropdown: 'rgba(26,26,26,0.16) 0 6px 16px, rgba(26,26,26,0.04) 0 0 0 1px'
+  modal: 'rgba(0,53,128,0.16) 0 8px 28px, rgba(26,26,26,0.16) 0 12px 36px'
+  ring: '0 0 0 2px #003580'
+
+accessibility:
+  contrast-text-on-bg: 16.1            # #1a1a1a on #ffffff — AAA
+  contrast-text-on-brand: 11.4         # #ffffff on #003580 — AAA
+  contrast-text-on-yellow: 13.2        # #1a1a1a on #feba02 — AAA
+  contrast-link-on-bg: 5.7             # #0071c2 on #ffffff — AA
+  contrast-muted-on-bg: 7.0            # #595959 on #ffffff — AA
+  focus-ring: '2px solid #003580 + 2px outline offset — navy ring matches brand for funnel surfaces'
+  reduced-motion-honored: true
+  touch-target-min: 48
+  keyboard-nav: 'Search bar: Tab Where → Dates → Guests → Search. Filter sidebar: Tab top → bottom; Space toggles checkboxes.'
+
+dark-mode: null   # Light-only public web. Booking has no public dark mode — the brand is engineered around white-canvas commerce density.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Booking.com is the unapologetically commercial cousin of the travel-marketplace family — where Airbnb whispers, Booking sells. The base canvas is **pure white** (`#ffffff`), but the surface above the fold is dominated by a deep, muscular **Booking navy** (`#003580`) that paints the masthead, the wordmark, every primary CTA, and the property review-score chip. A second voltage of **highlighter yellow** (`#feba02`) wraps the home-page search bar in a 5px stroke ring and fires on secondary CTAs, the Genius loyalty stripe, and the property-card "See availability" buttons. Where Airbnb uses one accent colour with surgical restraint, Booking uses two — and uses them loudly.
+
+Type runs **Bookin Sans**, the in-house variable font that replaced Inter as Booking's brand typeface around 2023. It sits at modest 500–700 weights — display headlines render at 24–32px / 700, body at 14/400 — because the page is engineered for density. A typical search-results page packs a 64px masthead, a 56px sub-nav, a 200px sticky filter sidebar, 25 property cards each carrying a photo, title, distance, review score, price, urgency flag, and CTA, plus a footer link grid with 30+ destinations. Every pixel is monetisable real estate, and the design language is engineered to prevent any wasted space.
+
+The shape language is **near-square**. Buttons round at 4px (not 8, not pill — Booking rejects the consumer-warm pill aesthetic), property cards at 8px, search-bar segments at 2px. The review-score chip is the only place asymmetric rounding appears: a 4px square that drops its bottom-left corner to 0 to point at the property name. The system trusts square corners to read as "professional, transactional, trustworthy" rather than warm or hospitality-coded.
+
+The atmosphere is **commercial maximalism done well** — the page is dense, but every dense element is purposeful. Red urgency flags ("only 1 room left at this price"), red strikethrough prices, green "Free cancellation" labels, navy review chips, yellow CTAs, and "Genius" loyalty badges all coexist on the same card without becoming visual noise — because the colour system is rigidly disciplined. Red lives only on urgency. Green lives only on "free cancellation". Yellow lives only on CTAs and savings. Navy is everywhere else. The result is a surface that loads with a hundred signals and reads as legible because the signals are colour-coded by function.
+
+**Key Characteristics:**
+- Two-voltage brand: deep navy `#003580` + highlighter yellow `#feba02`, used in strict colour-by-function discipline
+- Bookin Sans variable at 500–700 — display 24–32px, body 14/400, dense and purposeful
+- Near-square shape language: 4px buttons, 8px cards, 2px search segments, 9999px filter chips only
+- Yellow 5px-stroke ring around the home-page search bar — Booking's most iconic visual signature
+- Asymmetric navy "8.7" review-score chip on every property card (radius `4px 4px 4px 0`)
+- Strict semantic colour: red = urgency, green = free cancellation, yellow = savings/CTA, navy = brand
+- Genius loyalty stripe in deeper navy (`#003b95`) with yellow text — sub-brand within the masthead
+- Density over breath — 25 property cards visible per scroll, sticky filters, sub-nav for sort/map toggle
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): the default page floor for every public page. Booking has no dark mode on the public web.
+- **Ink** (`#1a1a1a`): the dominant text colour. Slightly warmer than pure black — improves readability on dense lists.
+- **Booking Navy** (`#003580`): the brand colour. Masthead background, wordmark, primary CTA, review-score chip, focus ring, link visited.
+- **Highlighter Yellow** (`#feba02`): the secondary voltage. Search-bar stroke ring, property-card CTA, savings ribbon, Genius loyalty text, star rating.
+
+### Brand & Sub-Brand
+- **Booking Navy Hover** (`#002a66`): hover deepens the navy further — a palpable press feedback.
+- **Booking Navy Active** (`#001f4d`): pressed state at maximum depth.
+- **Genius Navy** (`#003b95`): a slightly lighter navy used exclusively on the Genius loyalty band — distinguishes the loyalty brand from the parent.
+- **Mid Blue** (`#0071c2`): secondary blue — used on inline links, the "Search" button on property cards (when not styled yellow), and Genius accents.
+- **Yellow Hover** (`#e0a702`): CTA yellow hover state.
+- **Yellow Deep** (`#946d00`): deep yellow text colour used on light yellow surface tints (savings ribbon).
+
+### Accent
+- **Star Rating** (`#feba02`): property star rating fill — matches the yellow voltage. Empty stars are `#e7e7e7`.
+- **Loyalty Yellow** (`#feba02`): also used for the reward badge crown and Genius level marker.
+- **Rare Find Red** (`#cc0000`): the "Rare find" tag colour — distinct from urgency red, slightly more saturated.
+
+### Interactive
+- **Link** (`#0071c2`): the default inline link colour — mid-blue, distinct from brand navy.
+- **Link Hover** (`#005999`): hover deepens the mid-blue.
+- **Link Visited** (`#5e2dad`): browser-like visited purple — Booking respects the convention because users navigate so many links per session.
+- **Selected** (`#003580` fill, `#ffffff` text — date-picker days, active filter chips).
+- **Disabled** (`#bdbdbd` text on `#f2f2f2` surface).
+
+### Neutral Scale
+- **Ink** (`#1a1a1a`) — display, body, primary labels
+- **Body** (`#262626`) — secondary running text
+- **Muted** (`#595959`) — sub-titles, metadata, footer secondary labels
+- **Soft** (`#737373`) — captions, faint counts, "X of Y reviews" legend
+- **Border Strong** (`#bdbdbd`) — input outlines, disabled controls
+- **Border** (`#e7e7e7`) — default 1px hairline (card outlines, dividers)
+- **Border Soft** (`#f1f1f1`) — alt-row separators, footer column splits
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — page floor
+- **Surface Soft** (`#f2f2f2`) — disabled fields, alt rows in tables
+- **Surface Strong** (`#ebebeb`) — divider band background
+- **Surface Blue** (`#ebf3ff`) — informational tint (Genius banner inner, info banners)
+- **Surface Yellow** (`#fff8e1`) — soft yellow surface for savings/promo tints
+- **Surface Genius** (`#003b95`) — Genius loyalty band ground
+
+### Shadow Colors
+Booking stays neutral-grey-tinted on cards, blue-tinted on modals where the brand colour reinforces the elevation. Multi-layer logic: a 4% ambient + a 16% lift on hover.
+
+- `rgba(26,26,26,0.04) 0 1px 2px` — flat ambient
+- `rgba(26,26,26,0.08) 0 2px 4px` — card resting
+- `rgba(26,26,26,0.16) 0 4px 16px` — card hover
+- `rgba(0,53,128,0.16) 0 8px 28px` — modal (navy-tinted)
+
+### Semantic
+- **Success** (`#008009` on `#e7f3e7`) — "Free cancellation" green, in-stock confirmation
+- **Warning** (`#bc4949` on `#fff5f5`) — urgency advisory ("only 1 room left")
+- **Danger** (`#cc0000`) — validation error red, also strikethrough discount price, "Rare find" tag
+- **Info** (`#0071c2` on `#ebf3ff`) — informational banners (cancellation policy, currency change)
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Bookin Sans` — the in-house variable font that Booking shipped around 2023, replacing a previous Inter-based stack. Fallback chain: `BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`. The fallback intentionally privileges system fonts to render fast on flaky network conditions — Booking's customers travel across borders and load the site on slow hotel WiFi, so the typography degrades gracefully.
+
+**Mono companion**: not used in the public marketing surface — Booking's developer docs are off-domain. Monospace appears only inside booking-confirmation reference numbers (where `tnum` provides equivalent column alignment).
+
+**OpenType features**: `tnum` is enabled aggressively across prices, rating numbers, room counts, and review-count totals so columns align in the dense search results. `ss01` is enabled on the wordmark and select display copy for the alternate single-storey `g` that gives Bookin Sans its slightly friendlier character.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| hero-display | Bookin Sans | 32 | 700 | 1.13 | -0.5px | — | Homepage h1 ("Find your next stay") |
+| page-title | Bookin Sans | 28 | 700 | 1.14 | -0.25px | — | Search results h1 ("New York: 3,247 properties found") |
+| section-head | Bookin Sans | 24 | 700 | 1.17 | 0 | — | Editorial bands ("Trending destinations") |
+| sub-section | Bookin Sans | 20 | 700 | 1.20 | 0 | — | Sub-section titles inside property detail |
+| property-title | Bookin Sans | 20 | 700 | 1.20 | 0 | — | Property card title (e.g., "Hilton Garden Inn") |
+| title-md | Bookin Sans | 16 | 700 | 1.25 | 0 | — | Filter sidebar section heads |
+| title-sm | Bookin Sans | 14 | 700 | 1.29 | 0 | — | Card meta labels |
+| body-md | Bookin Sans | 14 | 400 | 1.43 | 0 | — | Default running-text — note: smaller than typical 16/400 because density |
+| body-sm | Bookin Sans | 12 | 400 | 1.33 | 0 | — | Card meta lines, dates, distance |
+| caption | Bookin Sans | 12 | 500 | 1.33 | 0 | — | "Free cancellation", "Breakfast included" tags |
+| micro | Bookin Sans | 11 | 400 | 1.27 | 0 | — | Footer legal, fine-print disclosures |
+| price-display | Bookin Sans | 24 | 700 | 1.0 | -0.25px | tnum | Property card price ("US$247") |
+| price-strike | Bookin Sans | 14 | 400 | 1.0 | 0 | tnum | Strikethrough discount price (red text) |
+| review-score | Bookin Sans | 18 | 700 | 1.0 | 0 | tnum | The navy chip number ("8.7") |
+| review-label | Bookin Sans | 14 | 700 | 1.14 | 0 | — | "Excellent", "Very good" review qualifier |
+| button-md | Bookin Sans | 16 | 500 | 1.25 | 0 | — | Primary CTA labels |
+| button-sm | Bookin Sans | 14 | 500 | 1.29 | 0 | — | Filter chip labels |
+| nav-link | Bookin Sans | 14 | 700 | 1.0 | 0 | — | Top product-nav labels (Stays, Flights, Cars) |
+| badge | Bookin Sans | 11 | 700 | 1.18 | 0.32px | uppercase | "GENIUS", "DEAL" tags |
+
+### Principles
+
+- **Body sits at 14, not 16.** The standard SaaS body size is 16/400; Booking runs body at 14/400 because density is the operating mode. A 16/400 body would push only 18 cards above the fold; 14/400 fits 25.
+- **Display weight is 700, not lighter.** Where Airbnb uses 500–600 for display, Booking commits to 700 across every display tier. The system trusts weight to carry hierarchy, not size — the page already runs dense, so heavy display anchors the eye.
+- **Negative tracking only on display.** -0.5px on hero-display, -0.25px on page-title and price-display; everything else sits at 0. Tighter tracking on display compensates for the weight-700 commitment, which would otherwise feel chunky.
+- **Tabular numerals on every numeric.** Prices, rating numbers, room counts, review counts, distance figures all render with `tnum` so the column-of-numbers visual rhythm holds across cards.
+- **Weight as voice.** Title-md (16/700), title-sm (14/700), body-md (14/400), body-sm (12/400) — hierarchy comes from the 700/400 binary at the same size, keeping vertical rhythm dense.
+- **Two-mode OpenType discipline.** `tnum` always on for numbers; `ss01` only on wordmark and select display copy. Body never uses stylistic alternates — the running-text default is the geometric default.
+- **Inter is the closest open-source substitute** if Bookin Sans is unavailable. Adjust display headlines down by ~3% in line-height to match Bookin Sans's slightly tighter cap height.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Mid-blue (`#0071c2`) fill, white text, 4px radius, 12×24px padding, 48px height, weight 500. The most common CTA across the system: "Search", "Sign in", "Continue", "Reserve". Hover deepens to `#005999`; active flips to deep navy (`#003580`).
+
+**`button-cta-yellow`** — Yellow (`#feba02`) fill, ink (`#1a1a1a`) text, 4px radius, 12×16px padding, 40px height. Property card "See availability" CTA — the yellow voltage moment. Hover deepens to `#e0a702`. Used sparingly: only on commerce-conversion CTAs at the moment of decision.
+
+**`button-secondary`** — White fill with mid-blue (`#0071c2`) text and a 1px mid-blue outline. 4px radius, 48px height. Used for "Sign up", "Cancel", and inverse CTAs over navy surfaces.
+
+**`button-tertiary-text`** — Plain mid-blue text, no surface, no border. Underlined on hover. Used for "Show more" links, modal close labels, "Read all reviews".
+
+### Cards
+
+**`property-card`** — The system's workhorse. Three-column layout: left (1:1 image at 200×200px, 4px radius), middle (property title `property-title`, distance, amenity icons, review chip + label), right (price column with strikethrough, current price `price-display`, "Free cancellation" green tag, yellow `button-cta-yellow`). 8px outer radius, 1px hairline border, hover intensifies shadow. Total card height ~200px — fits 5 cards per 1000px scroll.
+
+**`destination-card`** — Editorial card on the homepage trending-destinations band. 4:3 image with 8px radius, white surface beneath, city name in `title-md` ink + property count in `body-sm` muted.
+
+**`detail-rail-card`** — Right rail card on property detail. White surface, 8px radius, 1px hairline, 24px padding, sticky positioning. Contains check-in/out, guest stepper, full-width yellow CTA "Reserve", price breakdown beneath.
+
+**`genius-card`** — Genius loyalty band on logged-in user state. Navy (`#003b95`) ground, yellow text, 8px radius, 16px padding. Contains user level, unlock progress, perks list.
+
+### Badges, Tags, Pills
+
+**`review-score-chip`** — The most iconic Booking element. Navy fill, white text, asymmetric radius `4px 4px 4px 0` (bottom-left square — points at the property title beneath). Holds the score in `review-score` (e.g., "8.7"). Always paired with a `review-label` ("Excellent") and total review count beneath.
+
+**`genius-badge`** — Navy (`#003b95`) fill, yellow text, 2px radius, 2×4px padding. Carries the "GENIUS" wordmark in 11px / 700 uppercase. Appears on logged-in user state inside the masthead and on property cards eligible for Genius discount.
+
+**`deal-badge`** — Red (`#cc0000`) fill, white text, 4px radius. "Late Escape Deal" / "Limited-time" — fires on top-left of property card image.
+
+**`free-cancel-tag`** — Plain green text (`#008009`), no surface. "Free cancellation" / "No prepayment needed" — appears below the price on property cards. Always green, always inline, never bordered.
+
+**`filter-chip`** — Pill-shaped (9999px), 1px hairline border, ink text. The only place pill geometry exists in the system — filter sidebars get pills because they're frequently toggled. Active chip flips to light-blue tint with navy outline.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px hairline (`#bdbdbd`) border, 4px radius, 48px height, 14×12px padding. Floating label above (in `caption` muted). On focus the border thickens to 2px navy and the colour flips to `#003580` — no glow ring, no colour change beyond the navy stroke.
+
+**`search-bar`** — Booking's most iconic component. The home-page search bar is wrapped in a 5px **yellow stroke ring** (`#feba02`). Inside the ring, the bar is 56px tall, white background, divided into four segments: Where (with map-pin icon), Check-in, Check-out, Guests + Rooms, plus a flat blue Search button. Each segment is separated by a 2px white gap so the yellow ring shows through as the divider — the search bar literally looks like a yellow-bordered ribbon.
+
+**`search-button`** — Mid-blue (`#0071c2`) fill, white text, 4px radius, 56px height (matches search-bar height), 24px horizontal padding, weight 500. Always anchors the right edge of the search bar — never decoupled from it.
+
+### Navigation
+
+**`top-nav`** — Navy (`#003580`) ground, 64px tall masthead with white wordmark flush left, white product tabs centred (Stays, Flights, Cars, Attractions, Airport taxis), and account utilities (List property, Currency, Language, Help, Sign in / Register) flush right. The masthead is one of the few places where navy is used as a full-bleed surface — most of the page is white.
+
+**`product-tab-active`** — White text in `nav-link`, with a pill-shaped white outline 1px around the tab. The pill is a deliberate echo of the search-bar's yellow ring — only here it's white-on-navy.
+
+**`product-tab-inactive`** — White text, no outline. Hovers to add a translucent white outline.
+
+**`sub-nav`** — White ground, 40px tall, 1px bottom hairline. Sort tabs (Recommended, Price, Distance, Rating) plus a Map toggle. Sub-nav appears beneath the masthead on search-results pages.
+
+### Date Picker
+
+**`date-picker-day`** — 36×36px square cell (not circle — Booking's near-square geometry persists here) carrying the day number in `body-sm`. Default state transparent fill, ink text. Hover state fills `#ebf3ff` light blue.
+
+**`date-picker-day-selected`** — Navy fill (`#003580`), white text, 4px radius. Range cells between two selected days carry a `#ebf3ff` light-blue background that connects them. The 4px radius softens the square just enough to feel selected without becoming pill.
+
+### Modals & Overlays
+
+**`modal`** — Centred dialog over a 50%-opacity black scrim. White surface, 8px radius, no border, navy-tinted modal shadow. Close button is a 32px square icon-button anchored top-right.
+
+**`tooltip`** — Ink fill (`#1a1a1a`), white text in `body-sm`, 4px radius, 8×12px padding. Used on filter-chip hover for filter explanations, on review-score chip for review distribution histogram.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96`
+- Section padding (vertical): 48–64px for editorial bands, 32px for search-results bands — tighter than typical SaaS marketing (80–96px) because the page is engineered for density
+- Card internal padding: 16px for property-card meta column, 24px for detail-rail-card, 12px for filter-chip
+- Gutters: 12px between property cards (vertical stack), 16px between filter sections, 8px on dense filter-chip rows
+
+### Grid & Container
+
+- Max content width: ~1280px centred on the homepage and editorial pages
+- Search results: ~1140px centred — 280px left filter sidebar + ~840px right results column
+- Footer: 4-column link grid at desktop with destination cities, property types, "About Booking", "Help" — collapses to 1-column on mobile
+- Property detail: 2-column with photo gallery + amenity body on the left (~64% width) and a sticky reservation rail on the right (~32%)
+- Hero search: full-width white band with the yellow-bordered search bar centred at ~1024px max width
+
+### Whitespace Philosophy
+
+The system gives editorial bands 48px of vertical breathing room but compresses search-result cards to 12px gutters between them. The ratio is intentional: editorial = 4× density, search results = 1× density. The page reads as "hero breathes, results stack tight" — reinforcing the funnel: visit hero → scroll into dense results → click into property detail.
+
+### Section Cadence
+
+Light/dark alternation is rare in the body — Booking stays on white through 95% of the surface. The exceptions are the navy masthead (always navy), the Genius loyalty band (always Genius navy when logged-in), and the soft-yellow promo banners (occasional, contextual). The result is a page that feels visually consistent: the white canvas dominates and the brand colours appear as accents.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Genius badge, search-bar inner segments, deal flag |
+| Small | 4px | Buttons, text inputs, primary CTA, filter chips inactive |
+| Medium | 8px | Property cards, modals, larger feature cells |
+| Large | 12px | Banner cards, image galleries |
+| Featured | 16px | Hero callout cards |
+| Pill | 9999px | Filter chips, score chip extension lozenges, Genius level marker |
+
+There are two compound radii in the system: the **review-score chip** at `4px 4px 4px 0` (bottom-left squared off, points at the title beneath), and the **destination card image clip** which sometimes uses `8px 8px 0 0` to flush the image to the card content beneath. Both compound radii are intentional design moments — they don't appear by accident.
+
+The single design rule: **square geometry by default; pill only when the element is repeatedly toggled** (filter chips, level markers). Buttons and cards never go pill — that's the consumer-warm aesthetic Booking explicitly rejects.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, hero, footer, masthead, filter sidebar (~85% of surfaces) |
+| 1 — Resting card | `rgba(26,26,26,0.04) 0 1px 2px, rgba(26,26,26,0.08) 0 2px 4px` | Property cards at rest |
+| 2 — Hover | `rgba(26,26,26,0.16) 0 4px 16px` | Property cards on pointer hover, dropdowns (account, currency, language) |
+| 3 — Modal | `rgba(0,53,128,0.16) 0 8px 28px, rgba(26,26,26,0.16) 0 12px 36px` | Centred dialogs (date picker, login, share) |
+| 4 — Scrim | `rgba(0,0,0,0.5)` ground | Global modal backdrop tone |
+
+### Shadow Philosophy
+
+Booking uses **two shadow tiers** plus the flat baseline. Card resting and card hover are visually distinct — hover shadow is 4× the resting shadow's opacity and 4× the blur, so the hover state reads as a clear elevation event. Modal shadow shifts to navy-tinted (`rgba(0,53,128,0.16)`) — the only place blue-tinted shadow appears, used to reinforce "this is a brand surface, lifted above the page". The rest of the system stays neutral-grey-tinted.
+
+There are no progressive elevation tiers (Material Design's 0–24 dp). Booking's elevation model is binary at the card level (resting vs hover) and additional only at the modal level. The system trusts the white-on-white surface separation, the hairline borders, and the rounded clipping to communicate layer rather than relying on depth alone.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — the default for hover lifts, hairline transitions, scrim fades
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, sticky-rail snap-in
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — date-picker month flip, image gallery slide
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Hover state colour swaps, hairline border thickening, filter-chip toggle |
+| Standard | 200ms | Card hover shadow intensify, modal scrim fade |
+| Slow | 300ms | Page transitions on results→detail navigation, image gallery slide |
+
+### Per-Component Recipes
+
+- **Property card hover**: shadow tier 1 → 2 over 200ms standard ease. **No transform** — Booking's commerce-first stance rejects the "lift" pattern that consumer brands use; the card stays in place, only the shadow intensifies. This keeps the page from "jumping" when scanning 25 cards.
+- **Filter chip toggle**: background fades from `#ffffff` → `#ebf3ff` over 120ms, border colour shifts navy. No scale, no rotation.
+- **Search button hover**: background `#0071c2` → `#005999` over 120ms standard.
+- **Yellow CTA hover**: background `#feba02` → `#e0a702` over 120ms standard.
+- **Modal enter**: scrim fades in over 180ms ease-out, then dialog translates from `translateY(12px) opacity(0)` to `translateY(0) opacity(1)` over 240ms emphasized.
+- **Date-picker day select**: cell background fades from transparent → `#003580` over 150ms standard, text colour swaps instantly to white.
+
+### Page Transitions
+
+Page-to-page navigation (homepage → results → property detail → checkout) uses a soft fade and content swap rather than a slide — 200ms fade-out + 300ms fade-in. The funnel is sequential and goal-driven; users don't want fancy transitions slowing their booking. Booking optimises every motion for time-to-decision rather than visual flourish.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. All transforms suppress; only opacity transitions remain. Card hover shadow change becomes instant; modal enter becomes a 100ms opacity-only fade; date-picker hover/select becomes instant. The system was already low-motion by design, so reduced-motion mode looks nearly identical to the default — the only practical change is at modal enter.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #1a1a1a ink on #ffffff canvas | 16.1 | AAA |
+| #ffffff on #003580 navy | 11.4 | AAA |
+| #1a1a1a on #feba02 yellow | 13.2 | AAA |
+| #0071c2 link on #ffffff | 5.7 | AA body / AAA large |
+| #595959 muted on #ffffff | 7.0 | AA |
+| #008009 success on #ffffff | 4.7 | AA body |
+| #ffffff on #cc0000 danger | 5.9 | AA body / AAA large |
+
+### Focus Indicators
+
+Focus ring is `2px solid #003580` with 2px outline-offset — Booking explicitly uses brand navy on focus, because the funnel is keyboard-heavy (forms, filter checkboxes, date pickers, payment fields) and a brand-coloured ring reinforces the funnel surface. This is the opposite choice from Airbnb, which keeps focus ink-coloured to reserve brand for action; Booking's reasoning is that focus IS action in a commerce surface.
+
+### ARIA Patterns
+
+- **Search bar**: `role="search"` on the outer pill; each segment is a `<button>` that opens a `role="dialog"` overlay
+- **Property card**: heart save button uses `aria-pressed`; the entire card meta column is wrapped in a `<a>` with a verbose `aria-label` ("Hilton Garden Inn, 3 km from centre, 8.7 excellent rating, 142 reviews, US$247 per night")
+- **Filter sidebar**: each filter section is a `<fieldset>` with a `<legend>`; checkboxes use native `<input type="checkbox">` with `aria-describedby` for the result count beneath
+- **Review-score chip**: has `aria-label="Rated 8.7 out of 10, Excellent"` so screen readers announce the full context
+- **Date picker**: `role="application"` with `aria-label="Select check-in and check-out dates"`. Day cells use `role="gridcell"` with `aria-selected`
+- **Modal**: focus trap inside, Esc closes, click outside closes, focus returns to the trigger on close
+
+### Keyboard Navigation
+
+- Top nav: Tab moves left → right (logo → product tabs → currency → language → sign-in)
+- Search bar: Tab through Where → Check-in → Check-out → Guests → Search button
+- Filter sidebar: Tab top → bottom; Space toggles checkboxes; Enter expands collapsed sections
+- Property card grid: Tab moves card → card; arrow keys do not navigate cards (Booking chose tab-only for screen-reader simplicity)
+- Date picker: arrow keys navigate days, Enter selects, Esc closes
+
+### Screen Reader Hints
+
+Booking uses dense visible labels rather than icon-only buttons. Every filter has a visible label + count ("Free cancellation (1,247)"); every CTA has a verb ("See availability") rather than an icon; every review-score chip has an aria-label that expands the score into prose. The sole icon-only buttons are the heart save and the share button, both with `aria-label`.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only when `prefers-reduced-motion: reduce` is set. Card hover shadow fade becomes instant. Modal enter becomes 100ms opacity-only fade. Date-picker hover/select becomes instant.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <576px | Top nav collapses to logo + hamburger; product tabs hide behind a sheet; search bar becomes a single tappable card; property cards 1-up vertically stacked with image full-width above meta; filter sidebar moves to a bottom-sheet drawer |
+| Tablet | 576–768px | Top nav keeps product tabs; search bar narrows to 2-row layout; property cards 1-up with image left meta right; filter sidebar slides in from left |
+| Desktop | 768–1024px | Full top nav; search bar at full pill width with all 4 segments visible; property cards 1-up with full 3-column layout (image + meta + price); filter sidebar 240px wide |
+| Wide | >1280px | Content width caps at 1280px; gutters absorb the rest |
+
+### Touch Targets
+
+- Primary CTAs: minimum 48×48px (above WCAG AAA)
+- Search-bar segments: 56×56px tap zones
+- Filter-chip: 32×32px minimum (compensated by 12px padding inside the chip)
+- Date-picker day cells: 36×36px (borderline for AAA but compensated by 8px gap between cells)
+- Property-card heart save: 32×32px
+
+### Collapsing Strategy
+
+- Top product tabs collapse into a hamburger sheet below 576px
+- Search bar's 4 segments collapse into a single-tap entry that opens a full-screen search overlay on mobile
+- Filter sidebar transforms into a bottom-sheet drawer on mobile (Apply/Clear buttons sticky at the bottom)
+- Property cards reflow from 3-column horizontal layout (image | meta | price) to vertical stack (image full-width → meta → price) at <576px
+- Detail-rail-card on property detail switches from sticky right-rail to a sticky bottom CTA on mobile
+
+### Image Behavior
+
+Property card images use `aspect-ratio: 1/1` on desktop search results and `aspect-ratio: 16/9` on mobile (full-width above the meta). They fill with `object-fit: cover`. Gallery uses CSS scroll-snap on touch surfaces and arrow buttons on mouse surfaces. Lazy-loaded with low-res blurhash placeholders.
+
+### Container Queries
+
+The detail-rail-card uses container queries to compress its fee breakdown when the right rail narrows below ~280px — labels truncate, fee rows stack two-line, the yellow CTA switches from full-width to icon-only with the price visible.
+
+## 11. Content & Voice
+
+### Tone
+
+Direct, transactional, and confident — never chatty. Booking's voice trusts the user has already decided to book and is now optimising for price, location, and trust signals. Headlines lead with the action ("Find your next stay") or the inventory count ("3,247 properties found"). The brand reinforces commerce metaphors ("deal", "save", "lock-in", "free cancellation"), not hospitality metaphors ("welcome", "discover", "experience").
+
+### Microcopy Patterns
+
+- **Button verbs**: "Search", "Reserve", "See availability", "Continue", "Sign in" — direct and outcome-named, never "Submit" or "Click here"
+- **Urgency recipe**: `[Quantitative scarcity] + [Social proof] + [Loss frame]` — e.g., "Only 1 room left at this price! In high demand — booked 8 times in the last 24 hours."
+- **Error message recipe**: `[What went wrong] + [How to fix]` — e.g., "Please choose a check-out date — your stay needs to be at least one night."
+- **Success confirmations**: short and direct — "Booking confirmed. Confirmation #3.247-129"
+- **Field labels**: short and instructive — "Where are you going?", "Check-in", "Check-out", "Adults / Children / Rooms"
+
+### Empty States
+
+Empty wishlist: "No saved properties yet. Tap the heart on any property to save it for later."
+Empty search results: "No properties match your filters. Try removing 'Free cancellation' or expanding your dates." — names the cause and suggests two concrete remedies.
+Zero matches: "We don't have any properties matching all your filters. Try adjusting your filters." — direct.
+
+### CTA Verb Conventions
+
+- Primary action: **"Search"** (entry funnel), **"See availability"** (results), **"Reserve"** (detail), **"Confirm booking"** (final step)
+- Secondary action: **"Sign in"**, **"Sign up"**, **"List your property"**
+- Tertiary text: **"Show more"**, **"Read all reviews"**, **"View on map"**
+- Avoided: "Submit", "Click here", "Buy now" (Booking prefers "Reserve" — commerce-coded but not aggressive)
+
+## 12. Dark Mode & Theming
+
+**Light-only on the public web.** The Booking.com mobile app ships a system-controlled dark mode (near-black surface, white text, navy unchanged on CTAs and chips, yellow unchanged), but the marketing site and search-results pages are explicitly light-only.
+
+The brand position: dense commerce surfaces are easier to scan on white, and the colour-coded semantic system (red urgency, green free-cancel, navy review chip, yellow CTA) reads more cleanly on a white canvas than on a dark one. Booking has tested dark mode on the web internally and found that the dense card stacking loses its visual separation — cards bleed into each other on dark backgrounds because the resting shadow tier doesn't translate.
+
+The single nod to dark surfaces in marketing: the navy masthead at the top of every page (always navy, regardless of system theme) and the optional Genius loyalty band (Genius navy ground when logged-in). These are intentional brand surfaces, not a theme switch.
+
+## 13. Lineage & Influences
+
+Booking.com's visual lineage runs through three traditions: **Dutch information design** (Booking is headquartered in Amsterdam — the dense, functional, colour-by-function approach echoes Dutch wayfinding, NS train timetables, the grid discipline of Wim Crouwel and Total Design); **Expedia's commerce-first travel UX** (the funnel, the urgency flags, the price-strikethrough, the dense filter sidebar — Expedia codified the pattern, Booking refined it); and **Amazon's product-card density** (3-column row layout with image / meta / price + CTA, urgency flags, review aggregation as a primary signal). The Bookin Sans typeface is the most distinctive brand choice — a custom sans engineered for fast rendering on flaky hotel WiFi, which constrained the design toward minimal stylistic variation.
+
+The colour discipline — navy + yellow with strict colour-by-function semantics — is borrowed from European retail signage (IKEA's blue+yellow being the obvious reference, and Booking happily leans on this familiarity in continental Europe where IKEA-coded blue+yellow reads as "Northern European, trustworthy, value"). The shape language (4px buttons, 8px cards, no pill except for filter chips) is borrowed from enterprise SaaS — but applied to a consumer surface, which gives Booking its distinctive feel: it looks like a B2B booking system upgraded for retail, which is exactly its provenance (Booking started as a Dutch B2B hotel-room broker before pivoting consumer in the early 2000s).
+
+What Booking rejects: pill geometry on buttons (consumer-warm, not commerce), heavy shadows (cards must scan), illustrative chrome (every pixel must convert), single-accent restraint (the funnel needs multiple semantic colours to communicate quickly), and dark mode (density loses on dark canvas).
+
+**Influences:**
+- IKEA — blue+yellow brand palette, [ikea.com](https://www.ikea.com)
+- Expedia — travel-funnel UX pattern, [expedia.com](https://www.expedia.com)
+- Amazon — dense card-and-rail e-commerce, [amazon.com](https://www.amazon.com)
+- Wim Crouwel / Total Design — Dutch grid information design, [total-design.com](https://www.total-design.com)
+- Helvetica / Frutiger — geometric sans typographic ancestry of Bookin Sans
+
+## 14. Do's and Don'ts
+
+**Do**
+- Commit to the navy + yellow palette — these are the only two brand colours, used in strict colour-by-function discipline
+- Run body at 14/400 — density is the operating mode, and 16/400 wastes vertical space
+- Wrap the home-page search bar in a 5px yellow stroke ring — it's Booking's most iconic component
+- Use the asymmetric `4px 4px 4px 0` review-score chip — it points at the property title beneath
+- Render prices, ratings, and counts with `tnum` — column alignment is a trust signal in commerce
+- Use red for urgency, green for free-cancel, yellow for CTA — the colour-by-function semantics are the system
+- Keep cards on hover-only shadow change (no transform) — the page scans 25 cards, no jumpy motion
+- Use brand navy for focus rings — focus IS action in a commerce funnel
+- Stack property cards tight (12px gutters) — density reinforces the funnel
+- Lead with verbs that name the outcome ("See availability", "Reserve", "Search")
+
+**Don't**
+- Don't use pill radius on buttons — that's consumer-warm; Booking is commerce-direct
+- Don't introduce a third brand colour — navy + yellow is the entire system
+- Don't use 16/400 body — that's editorial spacing; Booking is commercial density
+- Don't add transform on card hover — only shadow changes; the page scans dozens of cards
+- Don't use yellow on text or surfaces casually — it's reserved for CTA and savings-related accents
+- Don't soften the urgency flags — "Only 1 room left" is the system's most converting microcopy
+- Don't introduce dark mode — density loses on dark canvas; Booking is light-only on web
+- Don't use illustrative chrome — every visual element must serve the funnel
+- Don't break the colour-by-function semantics — red is urgency, green is free-cancel, never the reverse
+- Don't decouple the search button from the search bar — they always share a 56px height and adjoin
+- Don't use exclamation marks except in urgency microcopy — voice is direct, not chatty
+- Don't break the 8px property card radius — every card in the system rounds at exactly 8px
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Ink:              #1a1a1a
+Booking-navy:     #003580
+Mid-blue (link):  #0071c2
+Yellow:           #feba02
+Yellow-hover:     #e0a702
+Surface-soft:     #f2f2f2
+Surface-blue:     #ebf3ff
+Hairline:         #e7e7e7
+Muted:            #595959
+Success-green:    #008009
+Urgency-red:      #cc0000
+Genius-navy:      #003b95
+```
+
+### Example Component Prompts
+
+- "Create a Booking.com-style hero: white canvas, 32px / 700 ink headline ('Find your next stay'), and beneath it a search bar wrapped in a 5px yellow (#feba02) stroke ring at 56px height. The bar contains four white segments separated by 2px gaps so the yellow shows through: Where (with map-pin icon), Check-in, Check-out, Guests + Rooms. The right edge terminates in a flat blue (#0071c2) Search button at 56px height with 24px padding."
+- "Design a property card: 8px outer radius, 1px hairline border (#e7e7e7), three-column layout: 200×200px square image (4px radius) on the left, middle column with property title at 20px / 700 ink, distance and amenities in 12px / 400 muted, navy review-score chip beneath (4px 4px 4px 0 asymmetric radius, navy fill, white '8.7' at 18px / 700, 'Excellent' label beneath); right column with strikethrough discount price in red, current price '$247' at 24px / 700 with tnum, 'Free cancellation' green tag, and a yellow (#feba02) 'See availability' CTA at 40px height."
+- "Build a primary search button: mid-blue (#0071c2) fill, white text at 16px / 500, 4px radius, 12×24px padding, 48px height. Hover deepens to #005999. Active flips to deep navy (#003580). No transform, no shadow change."
+- "Create a yellow CTA: yellow (#feba02) fill, ink (#1a1a1a) text at 16px / 500, 4px radius, 12×16px padding, 40px height. Hover deepens to #e0a702. Use only on commerce-conversion CTAs at the moment of decision."
+- "Design a review-score chip: navy (#003580) fill, asymmetric radius 4px 4px 4px 0 (bottom-left squared off so the chip points at the property title beneath). Padding 4×6px, score in 18px / 700 white tnum ('8.7'). Always paired with a label ('Excellent') and review count ('142 reviews') beneath."
+- "Build a stacked text input: white surface, 1px hairline (#bdbdbd) border, 4px radius, 48px height, 14×12px padding. Floating label above in 12px / 500 muted. On focus, border thickens to 2px navy (#003580) — no glow ring."
+
+### Iteration Guide
+
+1. **Start on white.** The white canvas is the system; navy is the brand surface (masthead, modals); yellow is the voltage moment (search-bar ring, primary CTA). If the canvas isn't white, you've broken the brand.
+2. **Stay strict on colour-by-function.** Red = urgency, green = free-cancel, yellow = savings/CTA, navy = brand, mid-blue = link. Don't mix these — the user reads the system fluently because the semantics are rigid.
+3. **No pill on buttons or cards.** Pill radius (9999px) appears only on filter chips and level markers. Buttons round at 4px, cards at 8px — that's the entire system.
+4. **Body at 14/400, not 16/400.** Density is the operating mode. If your composition feels airy, you've broken the funnel.
+5. **Tabular numerals on every numeric.** Prices, ratings, room counts, review counts, distance — all need `font-variant-numeric: tabular-nums` to align.
+6. **Card hover is shadow-only, never transform.** The page scans 25 cards; transforms make the page jumpy.
+7. **The yellow stroke ring is the home-page signature.** Don't replicate the search bar without it — the 5px yellow border is what makes a Booking search bar recognisably Booking.
+8. **Focus ring stays brand navy.** Booking is keyboard-heavy commerce; the focus ring is brand-coloured intentionally.

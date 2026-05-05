@@ -1,0 +1,725 @@
+---
+name: Sunsama
+tagline: Thoughtful daily planning in warm cream and ink — Inter at modest weights over a paper-cream canvas with sage and rose accents and a calm, unhurried voice.
+author: webdesignhot
+source_url: https://sunsama.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas, productivity]
+tags: [light, warm, cream, sans, calm, mindful, daily-planning]
+preview_swatch: ['#f8f4ec', '#e07a5f', '#1a1a1c']
+related: [notion, things-app, fantastical]
+description: 'Sunsama''s marketing surface reads like a thoughtful daily-planning journal that decided to ship as software. The canvas is a warm paper-cream `#f8f4ec` — significantly warmer than Notion''s, leaning toward dawn light — and the type is Inter at modest mid-weights set in deliberately slow rhythm. Brand voltage comes from a hand-picked earth palette: `#e07a5f` terracotta for primary moments, `#81b29a` sage for calm-confirm states, `#f2cc8f` ochre for warmth, `#3d405b` dusk-blue for accents, all anchored against the cream canvas and an ink `#1a1a1c` for type. Demo cards carry product UI fragments (a daily ritual list, a time-box weekly plan, a shutdown reflection prompt) framed inside generous 64–80px padding. The voice is calm, unhurried, almost meditative — headlines describe practice and rhythm, not productivity gains. Section padding is **128px**, not 96px — Sunsama gives every band more breathing room than its peers.'
+
+colors:
+  bg: '#f8f4ec'                  # paper-cream canvas — warmer than Notion
+  bg-soft: '#f4eee0'             # softer dawn surface
+  bg-elev: '#fdfaf2'             # near-white elevated surface
+  bg-strong: '#ebe2ce'           # deeper cream pre-footer band
+  bg-dark: '#1a1a1c'             # warm-ink near-black for mid-page band
+  bg-dark-elev: '#252426'        # dark popover surface
+  surface: '#f4eee0'
+  text: '#1a1a1c'                # warm ink
+  text-body: '#3a3737'           # slightly warm running-text
+  text-muted: '#6b6560'          # captions, footer links — warm gray
+  text-faint: '#9a948c'          # placeholder, disabled
+  brand: '#e07a5f'               # terracotta — primary brand voltage
+  brand-hover: '#cd6a51'         # press / hover
+  brand-active: '#b85b44'        # active / focused
+  brand-soft: '#fadbd0'          # rose pastel surface
+  brand-deep: '#a04d39'          # deep terracotta accent
+  on-brand: '#fdfaf2'            # cream-tinted white (never #fff)
+  on-dark: '#f8f4ec'             # canvas-cream over dark
+  sage: '#81b29a'                # second accent — calm-confirm, success
+  sage-soft: '#dceadf'
+  sage-deep: '#5d8a72'
+  ochre: '#f2cc8f'               # third accent — warmth, milestone
+  ochre-soft: '#fce8c5'
+  dusk: '#3d405b'                # fourth accent — quiet titles, link-hover
+  dusk-soft: '#dcdde8'
+  link: '#3d405b'                # link blue (dusk-blue, not bright)
+  link-hover: '#2c2f47'
+  pastel-rose: '#fadbd0'         # demo card — daily ritual / morning planning
+  pastel-sage: '#dceadf'         # demo card — shutdown / reflection
+  pastel-ochre: '#fce8c5'        # demo card — weekly review / milestone
+  pastel-dusk: '#dcdde8'         # demo card — calendar / focus block
+  pastel-cream: '#f4eee0'        # demo card — neutral framing
+  border: '#dccfb6'              # warm hairline against cream
+  border-strong: '#bba98a'       # stronger card border
+  border-soft: '#ebe2ce'         # softer divider
+  shadow-tint: 'rgba(40, 25, 12, 0.06)'    # warm earth-tinted shadow
+  shadow-deep: 'rgba(40, 25, 12, 0.18)'
+  info: '#3d405b'                # dusk-blue info
+  success: '#5d8a72'              # sage-deep
+  success-soft: '#dceadf'
+  warning: '#c69022'
+  warning-soft: '#fce8c5'
+  danger: '#c25450'
+  danger-soft: '#fadbd0'
+  selection: 'rgba(224, 122, 95, 0.18)'
+  ring: 'rgba(224, 122, 95, 0.45)'
+
+typography:
+  display:
+    family: '"Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: 'ss01 — Inter character mark'
+  body:
+    family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500]
+    opentype-features: 'tnum inside time displays'
+  serif:
+    family: '"Tiempos Text", "Lyon Text", Georgia, "Times New Roman", serif'
+    weights: [400, 500]
+  mono:
+    family: '"JetBrains Mono", "SF Mono", Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 64, weight: 500, lineHeight: 1.08, tracking: '-0.018em', family: display, opentype: 'ss01', notes: 'mega hero — single anchor only, gentler than Linear/Motion' }
+    display-xl:      { size: 52, weight: 500, lineHeight: 1.10, tracking: '-0.016em', family: display, opentype: 'ss01', notes: 'homepage hero h1' }
+    display-lg:      { size: 40, weight: 500, lineHeight: 1.14, tracking: '-0.014em', family: display, opentype: 'ss01', notes: 'feature section h2' }
+    display-md:      { size: 32, weight: 500, lineHeight: 1.20, tracking: '-0.01em',  family: display, opentype: 'ss01', notes: 'pricing-page section heads' }
+    quote-serif:     { size: 28, weight: 400, lineHeight: 1.40, tracking: 0,           family: serif, notes: 'pull-quote in Tiempos Text — testimonial / philosophical accent' }
+    title-lg:        { size: 24, weight: 500, lineHeight: 1.30, tracking: 0,           family: display }
+    title-md:        { size: 20, weight: 500, lineHeight: 1.35, tracking: 0,           family: display }
+    title-sm:        { size: 17, weight: 500, lineHeight: 1.40, tracking: 0,           family: body }
+    label-md:        { size: 16, weight: 500, lineHeight: 1.45, tracking: 0,           family: body }
+    button:          { size: 15, weight: 500, lineHeight: 1.20, tracking: 0,           family: body }
+    body-lg:         { size: 19, weight: 400, lineHeight: 1.65, tracking: 0,           family: body, notes: 'editorial body — generous line-height for paper feel' }
+    body-md:         { size: 17, weight: 400, lineHeight: 1.65, tracking: 0,           family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.55, tracking: 0,           family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.40, tracking: '0.06em',    family: body, notes: 'gentle uppercase eyebrow' }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.30, tracking: 0,           family: body, opentype: 'tnum' }
+    legal:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.01em',    family: body }
+    code-md:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 0,           family: mono }
+
+radius:
+  micro: 2
+  sm: 6
+  md: 12
+  lg: 18
+  xl: 24
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128, 160]
+
+layout:
+  page-width: 1160
+  prose-width: 680
+  header-height: 72
+  card-padding-default: 40
+  card-padding-large: 64
+  section-padding: 128
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: lg
+    padding: '14px 24px'
+    use: 'primary CTA — Start free trial / Get Sunsama — terracotta anchor'
+  button-primary-hover:
+    backgroundColor: brand-hover
+    textColor: on-brand
+    use: 'pointer hover'
+  button-secondary:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '14px 24px'
+    border: '1px solid border-strong'
+    use: 'Watch demo / Sign in / less-committed pair'
+  button-tertiary:
+    backgroundColor: transparent
+    textColor: dusk
+    rounded: lg
+    padding: '12px 16px'
+    use: 'inline link-style button'
+  button-on-dark:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: '14px 24px'
+    use: 'cream CTA over dark mid-page band'
+  button-icon:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: full
+    size: 40
+    border: '1px solid border'
+    use: 'carousel arrows, share'
+  card-default:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: lg
+    padding: 40
+    border: '1px solid border'
+    use: 'default content card on cream canvas'
+  card-elevated:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: lg
+    padding: 40
+    border: '1px solid border-soft'
+    shadow: standard
+    use: 'pricing tier, integration card'
+  card-pastel-rose:
+    backgroundColor: pastel-rose
+    textColor: text
+    rounded: xl
+    padding: 64
+    use: 'daily ritual / morning planning demo card'
+  card-pastel-sage:
+    backgroundColor: pastel-sage
+    textColor: text
+    rounded: xl
+    padding: 64
+    use: 'shutdown / reflection demo card'
+  card-pastel-ochre:
+    backgroundColor: pastel-ochre
+    textColor: text
+    rounded: xl
+    padding: 64
+    use: 'weekly review / milestone demo card'
+  card-pastel-dusk:
+    backgroundColor: pastel-dusk
+    textColor: text
+    rounded: xl
+    padding: 64
+    use: 'calendar / focus block demo card'
+  hero-card-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: xl
+    padding: 80
+    use: 'mid-page dark CTA — section reset, used sparingly'
+  quote-card:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: 48
+    border: '1px solid border-soft'
+    use: 'testimonial card with serif pull-quote in Tiempos Text 28px / 400'
+  badge-tag:
+    backgroundColor: bg-soft
+    textColor: text-muted
+    rounded: pill
+    padding: '4px 12px'
+    fontSize: 12
+    use: 'category / status pill'
+  badge-status-confirmed:
+    backgroundColor: sage-soft
+    textColor: sage-deep
+    rounded: pill
+    padding: '4px 12px'
+    fontSize: 12
+    use: 'planned / confirmed status'
+  text-input:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: md
+    padding: '12px 16px'
+    height: 48
+    border: '1px solid border-strong'
+    fontFamily: body
+    use: 'email signup, ritual prompt input'
+  text-input-focus:
+    border: '1px solid brand'
+    shadow: '0 0 0 3px rgba(224,122,95,0.20)'
+    use: 'focus state — terracotta ring'
+  top-nav:
+    backgroundColor: 'rgba(248,244,236,0.85)'
+    textColor: text
+    height: 72
+    use: 'sticky cream-tinted bar with backdrop-blur — Sunsama wordmark left'
+  footer:
+    backgroundColor: bg-strong
+    textColor: text-muted
+    padding: 128
+    use: 'deep-cream pre-footer carrying multi-column link list and small wordmark'
+  toast:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: md
+    padding: '12px 16px'
+    shadow: deep
+  ritual-checklist-item:
+    backgroundColor: bg-elev
+    textColor: text
+    rounded: md
+    padding: '14px 18px'
+    border: '1px solid border-soft'
+    use: 'Sunsama ritual list item — round checkbox left, label right, time-estimate right-aligned'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  ease-spring: 'cubic-bezier(0.5, 1.4, 0.5, 1)'
+  duration-instant: 100
+  duration-fast: 180
+  duration-standard: 280
+  duration-slow: 460
+  duration-page: 560
+  reduced-motion: 'respects prefers-reduced-motion: reduce — unhurried even at default; reduced state removes all transforms and reduces transitions to opacity-only at 100ms'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 2px rgba(40,25,12,0.05)'
+  standard: '0 8px 24px rgba(40,25,12,0.08)'
+  elevated: '0 18px 48px rgba(40,25,12,0.12), 0 4px 8px rgba(40,25,12,0.05)'
+  deep: '0 30px 64px rgba(40,25,12,0.18), 0 8px 16px rgba(40,25,12,0.08)'
+  ring: '0 0 0 3px rgba(224,122,95,0.45)'
+
+accessibility:
+  contrast-text-on-bg: 14.6                # AAA — #1a1a1c on #f8f4ec
+  contrast-body-on-bg: 9.4                 # AAA — #3a3737 on #f8f4ec
+  contrast-muted-on-bg: 4.6                # AA — #6b6560 on #f8f4ec at body
+  contrast-on-brand: 4.5                   # AA — cream on #e07a5f at body sizes; AAA at display
+  contrast-on-dark: 14.4                   # AAA — #f8f4ec on #1a1a1c
+  contrast-link-on-bg: 7.6                 # AAA — #3d405b on #f8f4ec
+  focus-ring: '3px solid rgba(224,122,95,0.45) with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav-honored: true
+
+dark-mode: 'optional — Sunsama''s in-product UI offers a dark theme with warm-ink canvas (#1a1a1c), terracotta brand preserved, and tonal earth pastels desaturated. Marketing surface is light-only.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Sunsama's marketing surface reads like a thoughtful daily-planning journal that decided to ship as software. The canvas is a paper-cream `#f8f4ec` — significantly warmer than Notion's, leaning toward dawn light — and the type is Inter at modest mid-weights set in deliberately slow rhythm. Body line-height is unusually generous (1.65 at 17px) — the page reads paper-like, designed for long scroll without urgency.
+
+Brand voltage comes from a **hand-picked earth palette**: `#e07a5f` terracotta for primary moments, `#81b29a` sage for calm-confirm states, `#f2cc8f` ochre for warmth, `#3d405b` dusk-blue for accents. The four colors borrow directly from a Pacific-Northwest natural-pigment palette — terracotta-pottery, sage-leaf, sun-faded ochre, twilight dusk. Used together they feel like a curated Anthropologie color story, not a tech-brand accent kit.
+
+Demo cards carry product UI fragments — a daily ritual list, a time-box weekly plan, a shutdown reflection prompt, a focus-block calendar view — framed inside generous 64–80px internal padding. The pastel surfaces (rose, sage, ochre, dusk) carry distinct semantic weight: rose for daily ritual, sage for shutdown reflection, ochre for weekly review, dusk for focus block.
+
+The voice is calm, unhurried, almost meditative — Sunsama writes about practice and rhythm, not productivity gains. Headlines say "Plan your day with intention" not "Boost your output." Section padding is **128px**, not the 96px Linear/Notion convention — Sunsama gives every band more breathing room than its peers. The result is a productivity tool that feels closer to a meditation app than a calendar app, without losing the workflow-software credibility.
+
+**Key Characteristics:**
+- Canvas is **warm cream** `#f8f4ec` — the warmest in the productivity-tool space.
+- Four-color earth voltage: terracotta + sage + ochre + dusk-blue. No bright accents.
+- Display weight stays at **500** — never bold. Sunsama's confidence is gentle.
+- Body line-height is **1.65** (not 1.5) — paper-book reading rhythm.
+- Section padding is **128px** — more whitespace than Linear/Notion.
+- Tiempos Text serif appears in pull-quotes — editorial accent, not headline.
+- Card radius scale is gentler: 24px (xl) for pastel surfaces, 18px for primary CTAs, 12px for content cards.
+- Pastel surface meaning is fixed: rose=ritual, sage=shutdown, ochre=review, dusk=focus.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#f8f4ec`): Warm paper-cream — the warmest in the productivity space. The off-tint is decisively warm, not cool.
+- **Text / Ink** (`#1a1a1c`): Warm ink for display + body emphasis.
+- **Brand / Terracotta** (`#e07a5f`): Primary CTA, brand wordmark accent, ritual-card voltage.
+
+### Brand & Dark
+- **Brand Hover** (`#cd6a51`): Press state.
+- **Brand Active** (`#b85b44`): Focused.
+- **Brand Soft** (`#fadbd0`): Rose pastel surface for daily ritual moments.
+- **Brand Deep** (`#a04d39`): Layered terracotta-on-rose compositions.
+- **Bg Dark** (`#1a1a1c`): Warm-ink near-black for the single mid-page CTA band.
+- **On-Dark** (`#f8f4ec`): Canvas-cream over dark — never pure white.
+
+### Accent — Earth Palette
+- **Sage** (`#81b29a`): Calm-confirm states, shutdown / reflection moments, success.
+- **Sage Soft** (`#dceadf`): Pastel sage card surface.
+- **Sage Deep** (`#5d8a72`): Sage text-on-sage compositions.
+- **Ochre** (`#f2cc8f`): Warmth, milestone, weekly review accents.
+- **Ochre Soft** (`#fce8c5`): Pastel ochre card surface.
+- **Dusk** (`#3d405b`): Quiet titles, link color, focus-block accents — twilight blue.
+- **Dusk Soft** (`#dcdde8`): Pastel dusk card surface.
+
+### Pastel Card Surfaces (semantic-fixed)
+- **Pastel Rose** (`#fadbd0`): Daily ritual / morning planning demo.
+- **Pastel Sage** (`#dceadf`): Shutdown / reflection demo.
+- **Pastel Ochre** (`#fce8c5`): Weekly review / milestone demo.
+- **Pastel Dusk** (`#dcdde8`): Calendar / focus block demo.
+- **Pastel Cream** (`#f4eee0`): Neutral demo framing — when no semantic carries.
+
+### Interactive
+- **Link** (`#3d405b`): Inline body links — dusk-blue, decidedly not bright. No underline by default.
+- **Link Hover** (`#2c2f47`): Pressed state.
+- **Selection** (`rgba(224, 122, 95, 0.18)`): Terracotta selection.
+- **Disabled**: `text-faint` (`#9a948c`) for type, `border-soft` (`#ebe2ce`) for outlines.
+
+### Neutral Scale
+- **Ink** (`#1a1a1c`): Warm near-black for display + emphasis.
+- **Text Body** (`#3a3737`): Slightly warm running-text.
+- **Text Muted** (`#6b6560`): Warm-gray captions, footer links.
+- **Text Faint** (`#9a948c`): Placeholder, disabled.
+- **Bg Strong** (`#ebe2ce`): Deeper cream pre-footer.
+- **Bg Soft** (`#f4eee0`): Default soft surface.
+- **Bg Elev** (`#fdfaf2`): Near-white elevated card surface (still warm-tinted).
+
+### Surface & Borders
+- **Bg** (`#f8f4ec`): Canvas.
+- **Bg Soft** (`#f4eee0`): Default card.
+- **Bg Elev** (`#fdfaf2`): Elevated cards (pricing, integration).
+- **Border** (`#dccfb6`): Default 1px hairline — warm cream-tinted.
+- **Border Strong** (`#bba98a`): Stronger card border.
+- **Border Soft** (`#ebe2ce`): Softest divider.
+
+### Shadow Colors
+All shadows use earth-tinted ink `rgba(40, 25, 12, …)` — warmer than Height's, with a faint amber cast that reads as candlelight rather than office-fluorescent. Focus ring is terracotta at 45% — the brand voltage scaled to ring intensity.
+
+### Semantic
+- **Info** (`#3d405b`): Dusk-blue info badges and quiet alerts.
+- **Success** (`#5d8a72`) on `#dceadf` sage-soft: confirmation states.
+- **Warning** (`#c69022`) on `#fce8c5` ochre-soft: caution.
+- **Danger** (`#c25450`) on `#fadbd0` rose-soft: destructive actions.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Inter Display"` for display sizes (≥ 28px); `"Inter"` for body and UI.
+- **Serif**: `"Tiempos Text"` (with Lyon Text and Georgia fallbacks) for pull-quotes and editorial accents only.
+- **Mono**: `"JetBrains Mono"` (with `SF Mono` fallback) — rare, for code snippets and time displays.
+- **Fallback chain**: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`.
+- **OpenType features**: `ss01` (single-storey g) for Inter character; `tnum` inside time displays.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter Display | 64 | 500 | 1.08 | -0.018em | ss01 | Mega hero — single anchor |
+| display-xl | Inter Display | 52 | 500 | 1.10 | -0.016em | ss01 | Homepage hero h1 |
+| display-lg | Inter Display | 40 | 500 | 1.14 | -0.014em | ss01 | Feature section h2 |
+| display-md | Inter Display | 32 | 500 | 1.20 | -0.01em | ss01 | Pricing section heads |
+| quote-serif | Tiempos Text | 28 | 400 | 1.40 | 0 | — | Pull-quote accent — testimonial / philosophical |
+| title-lg | Inter Display | 24 | 500 | 1.30 | 0 | — | Section titles |
+| title-md | Inter Display | 20 | 500 | 1.35 | 0 | — | Card titles |
+| title-sm | Inter | 17 | 500 | 1.40 | 0 | — | Small card titles |
+| label-md | Inter | 16 | 500 | 1.45 | 0 | — | List labels |
+| button | Inter | 15 | 500 | 1.20 | 0 | — | CTA labels |
+| body-lg | Inter | 19 | 400 | 1.65 | 0 | — | Editorial body — generous line-height |
+| body-md | Inter | 17 | 400 | 1.65 | 0 | — | Default running-text |
+| body-sm | Inter | 14 | 400 | 1.55 | 0 | — | Caption support |
+| caption | Inter | 13 | 500 | 1.40 | 0.06em | — | Gentle uppercase eyebrow |
+| caption-tabular | Inter | 13 | 500 | 1.30 | 0 | tnum | Time / metric chips |
+| legal | Inter | 12 | 400 | 1.40 | 0.01em | — | Footer legal |
+| code-md | JetBrains Mono | 14 | 400 | 1.50 | 0 | — | Code snippets (rare) |
+
+### Principles
+- **Display weight is locked at 500.** Never 600 or 700. Sunsama's confidence is gentle.
+- **Body line-height is 1.65, not 1.5.** This is the typographic signature: paper-book rhythm at long-scroll length.
+- **Tiempos Text serif appears only for pull-quotes.** Editorial accent, never a headline. The serif:sans pairing borrows from print magazines.
+- **Eyebrow tracking is unusually wide** (0.06em) — gentle uppercase, slightly more spaced than peers, signaling unhurried voice.
+- **Body type runs at 17px** as the default running-text size — slightly larger than the 16px tech convention, contributing to the paper-book feel.
+- **No Inter `cv` features applied.** Sunsama uses Inter in its default form (with only `ss01` for the single-storey g). The brand reads as "thoughtful default" rather than "designer's custom cut."
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**`button-primary`** — Background `#e07a5f` terracotta, text `#fdfaf2` cream-tinted white, type 15px / 500 Inter, padding 14 × 24px, radius 18px. "Start free trial" / "Get Sunsama". One per viewport. Hover lightens via 4% white overlay; active darkens to `#cd6a51`. Focus shows a 3px terracotta ring at 45% alpha with 2px offset.
+
+**`button-secondary`** — Cream-on-cream pair. Background `#f8f4ec` (matches canvas), text `#1a1a1c`, 1px border `#bba98a`. The "Watch demo" / "Sign in" pair next to primary.
+
+**`button-tertiary`** — Inline link-style. Transparent background, dusk-blue text `#3d405b`, padding 12 × 16px, radius 18px.
+
+**`button-on-dark`** — Cream-on-dark variant. Background `#f8f4ec`, text `#1a1a1c`. Used over the dark mid-page band.
+
+**`button-icon`** — 40 × 40px circular. Bg-elev surface, 1px hairline, ink icon. Carousel arrows, share.
+
+### Cards
+
+**`card-default`** — Bg-elev `#fdfaf2` near-white, 18px radius, 40px padding, 1px border `#dccfb6`. Default content card on cream canvas — slightly elevated tone differentiates from canvas.
+
+**`card-elevated`** — Same shape, with standard shadow and softer border. Pricing tiers, integration cards.
+
+**`card-pastel-rose`** — Daily ritual / morning planning demo. Background `#fadbd0`, 24px radius, 64px padding. Frames a ritual checklist UI.
+
+**`card-pastel-sage`** — Shutdown / reflection demo. Background `#dceadf`, same shape. Frames a shutdown prompt UI.
+
+**`card-pastel-ochre`** — Weekly review / milestone demo. Background `#fce8c5`, same shape. Frames a weekly review UI.
+
+**`card-pastel-dusk`** — Calendar / focus block demo. Background `#dcdde8`, same shape. Frames a focus-block calendar UI with dusk-blue time-blocks.
+
+**`hero-card-dark`** — Single mid-page dark CTA band. Background `#1a1a1c`, text `#f8f4ec` cream-tinted, 24px radius, 80px padding. Used sparingly — Sunsama prefers cream-on-cream contrast over dark inversions.
+
+**`quote-card`** — Testimonial card. Bg, 18px radius, 48px padding, 1px soft border. Carries a Tiempos Text 28px / 400 pull-quote with attribution beneath in caption type.
+
+**`ritual-checklist-item`** — A signature component. Each item is a horizontal cream row inside a 12px-radius bg-elev container with 1px soft border. Round checkbox left, label center, time-estimate right-aligned in `tnum` caption-tabular. Carries the Sunsama-specific UX vocabulary into marketing demos.
+
+### Badges & Pills
+- **`badge-tag`** — Default category pill. Bg-soft, muted text, rounded pill, 4 × 12px, 12px font.
+- **`badge-status-confirmed`** — "Planned" / "Done" status. Sage-soft background, sage-deep text.
+
+### Inputs / Forms
+
+**`text-input`** — Bg-elev `#fdfaf2`, 12px radius, 12 × 16px padding, 48px height, 1px `#bba98a` border. Inter 17px / 400 — the body default.
+
+**`text-input-focus`** — Border recolors to terracotta `#e07a5f`; 3px terracotta ring at 20% alpha appears.
+
+**`text-input-error`** — Border `#c25450`, helper text `#c25450`.
+
+### Navigation
+
+**`top-nav`** — 72px-tall sticky bar (taller than peers — Sunsama uses generous nav height). `rgba(248,244,236,0.85)` cream-tinted backdrop with 16px blur. Sunsama wordmark left in ink, with a small terracotta sun-glyph icon. Horizontal menu (Product, Pricing, Resources, Customers) center. Right cluster carries "Sign in" text link, "Start free trial" `button-primary`. Stays cream on every page.
+
+**`footer`** — Deep-cream `bg-strong`, 128px padding, multi-column link list, small wordmark.
+
+### Toasts & Modals
+
+**`toast`** — Warm-ink dark, cream text, 12px radius, deep shadow. "Day planned" / "Ritual completed" / "Shutdown logged". Auto-dismiss 3s.
+
+**Modal** — Bg-elev white, 24px radius, 64px padding, deep shadow. Backdrop overlay 70% alpha cream-tinted.
+
+### Decorative
+
+**Sun-glyph wordmark accent** — A small terracotta sun-circle icon placed left of the Sunsama wordmark in the top nav and footer. The glyph is a flat circle, 12px diameter, brand color, no rays — a quiet symbol of the brand's morning-rhythm metaphor.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Scale: `4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96 · 128 · 160`. Section padding **128px** between bands — Sunsama's signature whitespace generosity. Card padding 40px (default), 64px (pastel), 80px (dark hero). Top nav is 72px tall (vs 64px elsewhere) — same generosity rule.
+
+### Grid & Container
+- **Max content width**: 1160px centered (slightly tighter than Linear's 1200) — paper-page proportion.
+- **Prose width**: 680px for hero copy and editorial body.
+- **Pastel-card grid**: 2-up at desktop with semantic pairing (rose+sage, ochre+dusk). 1-up on mobile.
+- **Pricing tier grid**: 3-up at desktop, 1-up at mobile.
+
+### Whitespace Philosophy
+Whitespace is the dominant atmospheric tool, used more generously than peers. Hero sits in 128px+ of cream above and below the headline. Card internal padding is generous (40–80px). The page reads paper-like and unhurried — the explicit anti-thesis of the dense-info-density landing page.
+
+### Section Cadence
+Cream hero → rose pastel ritual demo → cream caption-band → sage shutdown demo → cream feature grid → ochre weekly-review demo → dark mid-page band (sparingly) → dusk focus-block demo → cream pricing → deep-cream pre-footer → footer. The canvas resets between every pastel; the dark band is rare.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Cookie / legal CTAs |
+| Standard | sm | 6px | Inputs (rare — most inputs use md), small chips |
+| Comfortable | md | 12px | Default content cards, ritual-checklist-item, table cells |
+| Relaxed | lg | 18px | Primary CTAs, secondary buttons, default cards |
+| Featured | xl | 24px | Pastel surface cards, dark hero, modals |
+| Pill | pill | 9999px | Badges, status pills |
+| Full | full | 9999px / 50% | Avatars, icon buttons, sun-glyph wordmark |
+
+Sunsama's radius scale runs slightly larger than peers — 18px primary buttons (vs 14px elsewhere) and 24px pastel cards (vs 20px) — contributing to the softer, paper-rounded feel.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow | Canvas, pastel cards, top nav, footer |
+| 1 — Hairline | 1px `#dccfb6` border | Default cards, inputs, secondary buttons |
+| 2 — Ambient | `0 1px 2px rgba(40,25,12,0.05)` | Resting cards |
+| 3 — Standard | `0 8px 24px rgba(40,25,12,0.08)` | Card hover, sticky nav at scroll |
+| 4 — Elevated | `0 18px 48px rgba(40,25,12,0.12), 0 4px 8px rgba(40,25,12,0.05)` | Pricing tiers, integration cards |
+| 5 — Deep | `0 30px 64px rgba(40,25,12,0.18), 0 8px 16px rgba(40,25,12,0.08)` | Modals, command palette |
+
+### Shadow Philosophy
+All shadows are earth-tinted (`rgba(40, 25, 12, …)`) — warmer than Height's warm-ink. The amber cast reads as candlelight, deepening the unhurried atmosphere. Pastel cards stay flat — they carry depth through color and generous padding alone. Modals stack two shadows for compound depth.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard** `cubic-bezier(0.4, 0, 0.2, 1)` — color, opacity.
+- **Emphasized** `cubic-bezier(0.16, 1, 0.3, 1)` — pastel reveals, modal entrance.
+- **Spring** `cubic-bezier(0.5, 1.4, 0.5, 1)` — gentle bounce on ritual-checklist completion.
+
+### Duration Buckets
+- **Instant (100ms)**: Color hover, cursor changes — slightly slower than peers (Sunsama's unhurried baseline).
+- **Fast (180ms)**: Button hover, focus ring, input border recolor.
+- **Standard (280ms)**: Card hover, dropdown, tab switch — slower than the 220ms convention.
+- **Slow (460ms)**: Pastel card scroll reveal, modal entrance — Sunsama gives reveals more time to land.
+- **Page (560ms)**: Inter-page transition.
+
+### Per-Component Micro-States
+- **Button hover (primary)**: 4% white overlay; no transform; 180ms.
+- **Card hover (default)**: Border darkens `#dccfb6` → `#bba98a`; ambient → standard shadow; 180ms.
+- **Card hover (pastel)**: 4px translate-y lift + standard shadow; 280ms emphasized.
+- **Ritual checkbox check**: Scale 1.0 → 1.15 → 1.0 spring bounce (460ms); checkbox fill animates from canvas to terracotta.
+- **Link hover**: Underline grows 0 → 1px under the text; 180ms.
+- **Input focus**: Border recolors `#bba98a` → `#e07a5f`; 3px terracotta ring expands 0 → 3px at 20% alpha; 180ms.
+
+### Page Transitions
+Default fade. Inter-page route is 560ms emphasized fade-in with 16px translate-y — slower than peers, contributing to the unhurried voice. Section-on-scroll reveals are 460ms with 24px offset, gated by `IntersectionObserver`. Pastel cards stagger left-to-right at 120ms increments.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: all transforms removed, transitions reduced to opacity-only at 100ms, ritual-checklist bounce becomes instant fill, pastel scroll reveals fade in without offset.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#1a1a1c` on `#f8f4ec` = **14.6** — AAA at every size.
+- **Body on bg**: `#3a3737` on `#f8f4ec` = **9.4** — AAA.
+- **Muted on bg**: `#6b6560` on `#f8f4ec` = **4.6** — AA at body sizes.
+- **On-brand**: `#fdfaf2` on `#e07a5f` = **4.5** — AA at body sizes; AAA at display.
+- **On-dark**: `#f8f4ec` on `#1a1a1c` = **14.4** — AAA.
+- **Link on bg**: `#3d405b` on `#f8f4ec` = **7.6** — AAA.
+- **Pastel rose text**: `#1a1a1c` on `#fadbd0` = **13.2** — AAA.
+- **Sage deep on sage soft**: `#5d8a72` on `#dceadf` = **3.8** — AA at large sizes only; reserve for headings inside sage cards.
+
+### Focus Indicators
+3px solid terracotta at 45% alpha with 2px offset on every focusable element. The terracotta-purple-tinted ring reads as branded but never aggressive.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>` elements; `aria-label` only when icon-only.
+- **Ritual checklist (interactive demo)**: `role="list"` + `role="listitem"` with each checkbox as a native `<input type="checkbox">`. Aria-label carries time-estimate.
+- **Tabs (feature cards)**: ARIA `role="tablist"` + `role="tab"` with `aria-selected`.
+- **Dialog (modals, signup)**: `role="dialog"` with `aria-modal="true"` and focus trap.
+- **Live region (ritual completion)**: `aria-live="polite"` announces "Morning ritual complete — 4 of 4 done".
+- **Navigation**: `<nav aria-label="Primary">` for top nav; mobile drawer uses `aria-expanded`.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link at top of every page jumps to `<main>`. Mobile nav sheet traps focus; Escape closes. Ritual checklist items toggle on Space; arrow keys navigate up/down.
+
+### Screen Reader Hints
+Pastel-card screenshots use descriptive `alt` text ("Sunsama daily ritual checklist with morning planning, breakfast, and intention-setting"). The sun-glyph wordmark icon has `aria-hidden="true"` since the wordmark text carries the brand identity. Decorative gradient halos use `aria-hidden="true"`.
+
+### Reduced Motion Handling
+All transforms removed. Ritual checkbox bounce becomes instant fill. Pastel scroll reveals fade in without offset.
+
+## 10. Responsive Behavior
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Single-column body; nav collapses to hamburger; pastel grid 1-up; hero h1 scales to 36px / 500; section padding reduces to 80px |
+| Tablet | 640–1024px | 2-up pastel grid (with semantic pairing — rose+sage, ochre+dusk); nav stays horizontal; hero at 44px |
+| Desktop | 1024–1200px | 2-up pastel grid; full nav with all menu items; hero at 52px |
+| Wide | > 1200px | Same as desktop with more outer breathing room; max content width caps at 1160px |
+
+### Touch Targets
+- `button-primary` renders at 48 × 48px minimum (14 vertical padding + 20px line-height).
+- `button-icon` is 40 × 40px (under WCAG 44 — used inside dense desktop UI clusters).
+- `text-input` height is 48px throughout — comfortable touch target.
+- `ritual-checklist-item` checkboxes are 24 × 24px with 12px padding around — full row is 48px tall.
+
+### Collapsing Strategy
+- Top nav collapses to hamburger at < 640px; full-screen sheet menu.
+- Pastel grids reduce columns rather than scaling cards down.
+- Pricing comparison table converts to horizontally-scrollable swipe at < 1024px.
+- Hero subhead width caps at 680px; never spans full content width.
+
+### Image Behavior
+- Pastel-card UI screenshots crop to fit container.
+- Hero illustrations bleed full-width on mobile.
+- Customer logo strip wraps to 2 rows at tablet, 3 at mobile.
+
+### Container Queries
+Pricing tier cards use `@container (min-width: 360px)` to switch from stacked-vertical to inline-row pricing layout.
+
+## 11. Content & Voice
+
+### Tone
+**Calm, unhurried, almost meditative.** Sunsama writes about practice and rhythm, not productivity gains. Headlines say "Plan your day with intention" not "Boost your output." Body copy is paragraph-shaped — not bullet-listy. The voice borrows from mindfulness apps (Headspace, Calm) but anchors back to workflow software credibility.
+
+### Microcopy Patterns
+- **CTA verbs**: "Start free trial", "Plan your day", "Try Sunsama free", "Watch the philosophy". Never "Boost productivity" or "Crush your goals".
+- **Section eyebrows**: 13px / 500 / 0.06em uppercase — "DAILY RITUAL", "WEEKLY REVIEW", "SHUTDOWN".
+- **Demo card titles**: One-line capability — "Plan tomorrow tonight" not "Optimize your tomorrow".
+- **Wordmark accent**: Small terracotta sun-glyph beside the wordmark — quiet, never animated.
+
+### Empty States
+"Nothing planned yet — start with a single intention." Single line muted text plus a terracotta CTA link.
+
+### Error Messages
+Short, gentle, action-oriented. "Couldn't connect to Google Calendar — let's try again" not "Oops!" — the voice stays calm even on error. Errors carry an icon-x in `#c25450` and a soft inline guidance.
+
+### Success Confirmations
+Toast: "Day planned" / "Ritual complete" / "Week reflected". Cream-tinted text on warm-ink dark, 12px radius, deep shadow, auto-dismiss 4s (slightly longer than peers — give the user time to feel the moment).
+
+### CTA verb conventions
+The brand prefers reflective present-imperative: "Plan your day", "Reflect on the week", "Set your intention". Productivity-pragmatic verbs ("Schedule", "Block time") appear secondarily. Sunsama avoids "Optimize", "Boost", "Crush", "Hack" — the verb-set is decisively non-aggressive.
+
+## 12. Dark Mode & Theming
+
+Sunsama's in-product UI offers a dark variant — canvas inverts to warm-ink `#1a1a1c`, terracotta brand preserved (with slightly lifted saturation), pastel surfaces become low-saturation tonal earth-darks. The marketing surface is **light-only** — the cream canvas is core to the brand's morning-light metaphor, and inverting it would break the unhurried voice.
+
+In-page dark contrast on marketing is achieved through the single `hero-card-dark` (`#1a1a1c`) band per page, used sparingly. Sunsama prefers cream-on-cream tonal contrast over dark-band inversion — a notable difference from Linear and Motion.
+
+## 13. Lineage & Influences
+
+Sunsama descends from the **mindfulness-app marketing tradition** — Headspace, Calm, Things 3 — and the **editorial-publication tradition** — NYT Magazine, The Atlantic, Notion. The earth palette (terracotta + sage + ochre + dusk) is borrowed from Pacific-Northwest natural-pigment color stories — a decisive rejection of the bright accent palettes used by contemporary productivity tools (Linear's blue, Notion's blue, Motion's green). The 128px section padding and 1.65 body line-height come from book-design discipline (Tiempos Text and Lyon Text both originate from Klim Type Foundry, who design for editorial publications).
+
+The pastel surface card system traces back to Stripe and Airtable, but Sunsama's pastels are deliberately desaturated — the rose, sage, ochre, and dusk all sit at 35–45% saturation, never the high-saturation pastels of Height or Motion. This is the brand's tonal commitment: warmth without brightness.
+
+- **Things 3** — Calm, intention-driven daily planning; gentle voice. https://culturedcode.com/things
+- **Notion** — Warm-cream canvas, editorial publication metaphor. https://notion.so
+- **Calm / Headspace** — Mindfulness voice, non-aggressive verb set.
+- **Klim Type Foundry** — Tiempos Text serif and the editorial pull-quote tradition.
+- **Inter Display** (Rasmus Andersson) — Mid-weight (500) discipline.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep the canvas at warm cream `#f8f4ec` — the warmest in the productivity space. Tinting cooler kills the morning-light metaphor.
+- Use `button-primary` with terracotta `#e07a5f` for the single brand-voltage CTA per viewport.
+- Match pastel surface to feature: rose=ritual, sage=shutdown, ochre=review, dusk=focus.
+- Anchor every band at **128px** vertical padding — generosity is the brand.
+- Set body line-height at **1.65** — paper-book rhythm.
+- Use Tiempos Text serif only for pull-quotes — editorial accent, never headline.
+- Trust whitespace as the hero atmosphere — no atmospheric gradient.
+- Use the sun-glyph icon beside the wordmark in nav and footer — a quiet brand mark.
+- Keep display weight at 500 — gentle confidence.
+- Use earth-tinted shadows (`rgba(40, 25, 12, …)`) — candlelight, not office-fluorescent.
+
+### Don't
+- Don't use pure white `#ffffff` for the canvas. Cream `#f8f4ec` is the brand's warmth.
+- Don't bold display type beyond 500. Going bolder breaks the unhurried voice.
+- Don't reach for bright accent colors. The earth palette is the discipline.
+- Don't use cool greys for borders. Sunsama's hairlines are warm cream-tinted (`#dccfb6`).
+- Don't pair pastel-rose and pastel-ochre adjacent — both warm-orange-leaning. Pair rose with sage or dusk; ochre with sage or dusk.
+- Don't repeat the same pastel surface in two consecutive cards.
+- Don't use aggressive verbs ("Boost", "Crush", "Optimize", "Hack"). The verb set is decisively reflective.
+- Don't use pure black shadow. Earth-tinted is the rule.
+- Don't shorten section padding below 128px on desktop. Whitespace is the brand.
+- Don't add visual ornament to the sun-glyph icon (no rays, no rotation animation). The flat circle is the gesture.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:           #f8f4ec  (warm paper-cream)
+Text / Ink:            #1a1a1c  (warm near-black)
+Body:                  #3a3737  (warm running-text)
+Muted:                 #6b6560  (warm gray)
+Brand / Terracotta:    #e07a5f  (primary CTA + voltage)
+Brand Soft / Rose:     #fadbd0
+Sage:                  #81b29a  (confirm + ritual-shutdown accent)
+Sage Soft:             #dceadf
+Ochre:                 #f2cc8f  (warmth + weekly-review accent)
+Ochre Soft:            #fce8c5
+Dusk:                  #3d405b  (link + focus-block accent)
+Dusk Soft:             #dcdde8
+Bg Dark:               #1a1a1c  (single mid-page CTA, sparingly)
+On-Dark:               #f8f4ec  (canvas-cream over dark)
+Hairline:              #dccfb6  (warm cream-tinted)
+On-Brand:              #fdfaf2  (cream-tinted white on terracotta CTAs)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#f8f4ec` warm cream canvas with Inter Display 52px / 500 / line-height 1.10 / -0.016em tracking headline ('Plan your day with intention'), 19px / 400 `#3a3737` subhead at 1.65 line-height. Primary CTA in `#e07a5f` terracotta (cream-tinted white text, 15px / 500 Inter, 18px radius, 14 × 24px padding). Secondary CTA cream with 1px `#bba98a` border. **128px** vertical padding."
+
+2. "Build a 2-up pastel duet: rose `#fadbd0` left card framing a daily ritual checklist UI; sage `#dceadf` right card framing a shutdown reflection prompt UI. Each card 24px radius, 64px padding. Title in Inter Display 24px / 500. Body in 17px / 400 / 1.65 line-height."
+
+3. "Compose a ritual-checklist demo: 4–5 horizontal `bg-elev #fdfaf2` rows, each 12px radius, 1px soft border, 14 × 18px padding. Each row carries a 24px round checkbox left, ritual label center in Inter 16px / 500, time-estimate right-aligned in 13px / 500 with `tnum` ('15 min', '30 min'). Hover lifts shadow ambient → standard."
+
+4. "Design a quote-card with Tiempos Text serif: bg-elev surface, 18px radius, 48px padding, 1px soft border. Pull-quote in Tiempos Text 28px / 400 / 1.40 line-height, italic optional. Attribution beneath in caption-tabular 13px / 500 / 0.06em uppercase tracking — 'Sarah K., Engineer at Stripe'."
+
+5. "Build a pricing tier card: bg-elev `#fdfaf2`, 18px radius, 40px padding, 1px border `#dccfb6`, ambient shadow. Plan name in Inter Display 20px / 500, price in 32px / 500 / -0.01em, feature checklist in 17px / 400 with terracotta check icons. Primary CTA at bottom — terracotta button, 14 × 24px padding, 18px radius."
+
+6. "Design a top nav: 72px-tall sticky bar (taller than peers), `rgba(248,244,236,0.85)` cream-tinted backdrop with 16px backdrop-blur. Sunsama wordmark left in ink, with a small 12px-diameter terracotta sun-glyph circle to its left. Horizontal menu (Product / Pricing / Resources / Customers) center in 15px / 500 ink. Right cluster: 'Sign in' text link, 'Start free trial' primary terracotta CTA. Stays cream on every page."
+
+### Iteration Guide
+1. Start with warm cream `#f8f4ec`. Pure white reads as productivity-tool-template; cream is Sunsama's morning-light metaphor.
+2. Place one `button-primary` per viewport. Terracotta is the voltage.
+3. Match pastel surface to feature semantically. Rose = ritual / morning. Sage = shutdown / reflection. Ochre = review / weekly. Dusk = focus / calendar.
+4. Anchor every band at 128px vertical padding. Whitespace is the brand.
+5. Body type at 17px / 400 with **1.65 line-height**. Paper-book rhythm — not the 1.5 tech-marketing convention.
+6. Display weight is 500. Going to 600 breaks the unhurried voice.
+7. Earth shadow tint (`rgba(40, 25, 12, …)`). Pure black reads as office, not candlelight.
+8. The verb set is reflective: Plan, Reflect, Set, Block. Avoid Boost, Crush, Optimize, Hack.

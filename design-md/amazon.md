@@ -1,0 +1,708 @@
+---
+name: Amazon
+tagline: Smile-orange CTA, Amazon Ember sans, dense product grids — the canonical everything-store interface.
+author: webdesignhot
+source_url: https://www.amazon.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace]
+tags: [light, marketplace, dense, sans, utilitarian, retail, e-commerce]
+preview_swatch: ['#ffffff', '#ff9900', '#131921']
+related: [stripe, shopify, airbnb]
+description: 'Amazon''s storefront is the canonical "everything store" — a near-clinical white canvas (`#ffffff`) crowded with product tiles, anchored on a deep-navy chrome (`#131921` masthead, `#232f3e` sub-nav), and accented by the unmistakable smile-orange CTA (`#ff9900`). Type runs Amazon Ember, a custom Plex-adjacent sans, at modest weights with utilitarian sizing — function over flourish. Every interactive surface is rounded a humble 4–8px, every CTA wears the orange→yellow gradient (`#ffd814` → `#ffa41c`) with a 1px `#fcd200` outline. The result is unfashionable, unapologetic, and ruthlessly optimised: a UI that has prioritised conversion over aesthetic for two decades and shows it.'
+
+colors:
+  bg: '#ffffff'                  # default canvas
+  bg-page: '#eaeded'             # page floor (between content cards on category pages)
+  surface: '#ffffff'             # product tiles, panels
+  surface-soft: '#f7f8f8'        # search bar segments, sub-bands
+  surface-strong: '#f0f2f2'      # disabled fields, table-row stripe
+  surface-yellow: '#fef8e8'      # subscribe-and-save info banners
+  masthead: '#131921'            # top global navigation bar — squid-ink navy
+  masthead-sub: '#232f3e'        # secondary sub-nav band
+  masthead-hover: '#37475a'      # hover state on masthead nav links
+  text: '#0f1111'                # primary product copy ink
+  text-strong: '#0f1111'         # heading ink (effectively black)
+  text-link: '#007185'           # signature teal link colour — Amazon-specific
+  text-link-hover: '#c45500'     # link hover (rust-orange)
+  text-muted: '#565959'          # secondary metadata, breadcrumbs
+  text-soft: '#6f7373'           # caption text, faint counts
+  text-on-dark: '#ffffff'        # masthead text
+  text-on-dark-muted: '#cccccc'  # masthead sub-labels
+  brand: '#ff9900'               # Amazon Orange — the smile colour, accent only
+  brand-cta-top: '#ffd814'       # CTA button gradient top (yellow)
+  brand-cta-bottom: '#ffa41c'    # CTA button gradient bottom (orange)
+  brand-cta-border: '#fcd200'    # 1px CTA hairline
+  brand-cta-hover: '#f7ca00'     # CTA hover gradient base
+  buy-now: '#ffa41c'             # solid Buy Now (orange-only, no gradient)
+  buy-now-hover: '#fa8900'       # Buy Now hover
+  border: '#d5d9d9'              # default 1px hairline
+  border-strong: '#888c8c'       # focus state hairline
+  border-soft: '#e7e7e7'         # editorial dividers
+  border-input: '#a6a6a6'        # form input outline
+  prime-blue: '#00a8e1'          # Prime checkmark / badge accent
+  prime-deep: '#146eb4'          # legacy Prime logo blue
+  rating-orange: '#ffa41c'       # star rating fill (matches Buy Now)
+  rating-empty: '#d5d9d9'        # empty star
+  price: '#0f1111'               # whole-dollar price ink
+  price-deal: '#cc0c39'          # red strikethrough deal price
+  savings: '#cc0c39'             # red savings badge
+  warehouse-deal: '#007600'      # green "in stock" / Add badge
+  in-stock: '#007600'            # in-stock confirmation green
+  shipping-soon: '#b12704'       # urgency red ("Only 3 left")
+  scrim: 'rgba(15,17,17,0.7)'    # modal backdrop
+  shadow-card: 'rgba(0,0,0,0.05)'
+  shadow-elev: 'rgba(0,0,0,0.15)'
+  success: '#007600'
+  warning: '#b66719'             # advisory banner
+  warning-soft: '#fff3e0'
+  danger: '#b12704'              # validation error red
+  info: '#007185'
+
+typography:
+  display:
+    family: '"Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['tnum']
+  body:
+    family: '"Amazon Ember", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500]
+  mono:
+    family: 'Menlo, Monaco, Consolas, "Courier New", monospace'
+    weights: [400]
+  scale:
+    deal-display:    { size: 56, weight: 700, lineHeight: 1.0,  tracking: '-1px',     family: display, opentype: ['tnum'] }
+    page-title:      { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.5px',   family: display }
+    section-head:    { size: 21, weight: 700, lineHeight: 1.25, tracking: '0',        family: display }
+    product-title:   { size: 18, weight: 400, lineHeight: 1.33, tracking: '0',        family: body }
+    product-title-md: { size: 16, weight: 400, lineHeight: 1.43, tracking: '0',        family: body }
+    body-md:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',        family: body }
+    body-sm:         { size: 13, weight: 400, lineHeight: 1.38, tracking: '0',        family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.33, tracking: '0',        family: body }
+    micro:           { size: 11, weight: 400, lineHeight: 1.27, tracking: '0',        family: body }
+    price-whole:     { size: 28, weight: 500, lineHeight: 1.0,  tracking: '0',        family: display, opentype: ['tnum'] }
+    price-symbol:    { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',        family: display, opentype: ['tnum'] }
+    price-fraction:  { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',        family: display, opentype: ['tnum'] }
+    rating-count:    { size: 14, weight: 400, lineHeight: 1.0,  tracking: '0',        family: body, opentype: ['tnum'] }
+    button-cta:      { size: 13, weight: 400, lineHeight: 1.23, tracking: '0',        family: body }
+    nav-link:        { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0',        family: body }
+    nav-tagline:     { size: 11, weight: 400, lineHeight: 1.0,  tracking: '0',        family: body }
+    badge:           { size: 12, weight: 700, lineHeight: 1.0,  tracking: '0',        family: body, transform: uppercase }
+
+radius:
+  micro: 2
+  sm: 4        # default tile rounding
+  md: 7        # default CTA radius (Amazon's quirky 7px)
+  lg: 8        # cards, panels
+  xl: 16       # featured promo cards
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [2, 4, 6, 8, 10, 12, 14, 18, 22, 28, 36, 48, 64]
+
+layout:
+  page-width: 1500
+  prose-width: 760
+  header-height: 60
+  masthead-height: 60
+  sub-nav-height: 39
+  product-grid-min-tile: 240
+
+components:
+  button-cta:
+    bg: 'linear-gradient(#ffd814, #ffa41c)'
+    color: '#0f1111'
+    border: '1px solid #fcd200'
+    radius: 7
+    padding: '6px 10px'
+    height: 29
+    font: button-cta
+    use: 'Add to Cart — the canonical Amazon yellow gradient pill.'
+  button-buy-now:
+    bg: '#ffa41c'
+    color: '#0f1111'
+    border: '1px solid #ff8f00'
+    radius: 7
+    padding: '6px 10px'
+    height: 29
+    use: 'Buy Now — solid orange variant, sits beneath Add to Cart.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#0f1111'
+    border: '1px solid #d5d9d9'
+    radius: 7
+    padding: '6px 10px'
+    use: 'See more, Compare, ancillary actions.'
+  button-prime-cta:
+    bg: '#a4ddee'
+    color: '#0f1111'
+    border: '1px solid #00a8e1'
+    radius: 7
+    use: '"Get Prime" / "Try Prime" — Prime-blue affordance.'
+  button-link:
+    bg: 'transparent'
+    color: '#007185'
+    use: 'Inline body links — teal text that turns rust-orange on hover.'
+  product-card:
+    bg: '#ffffff'
+    color: '#0f1111'
+    radius: 8
+    padding: '12px'
+    border: '1px solid transparent'
+    use: 'Search-result and grid product tile. Image, title, rating, price, CTA stack.'
+  deal-card:
+    bg: '#ffffff'
+    color: '#0f1111'
+    radius: 8
+    padding: '14px'
+    border: '1px solid #cc0c39'
+    use: 'Today''s Deals card — red corner ribbon + strikethrough price.'
+  search-bar:
+    bg: '#ffffff'
+    color: '#0f1111'
+    radius: 4
+    height: 40
+    border: '2px solid transparent'
+    focus-border: '#febd69'
+    use: 'Masthead global search — dropdown category select on the left, magnifier on right.'
+  search-button:
+    bg: '#febd69'
+    color: '#0f1111'
+    radius: '0 4px 4px 0'
+    width: 45
+    height: 40
+    use: 'Right-edge orange tab inside the search bar — magnifier icon.'
+  text-input:
+    bg: '#ffffff'
+    color: '#0f1111'
+    radius: 3
+    height: 32
+    padding: '4px 7px'
+    border: '1px solid #a6a6a6'
+    focus: '2px solid #007185 + 1px box-shadow tint'
+    use: 'Form input — slim, utilitarian, no flourish.'
+  star-rating:
+    color-fill: '#ffa41c'
+    color-empty: '#d5d9d9'
+    use: 'Five-star rating glyph row — orange fill, grey unfilled, rendered as icon font.'
+  prime-badge:
+    bg: 'transparent'
+    color: '#00a8e1'
+    use: 'Prime checkmark + "FREE delivery" caption beneath product price.'
+  deal-badge:
+    bg: '#cc0c39'
+    color: '#ffffff'
+    radius: 2
+    padding: '2px 6px'
+    use: '"Deal of the Day" / percentage-off ribbon in saturated red.'
+  bestseller-badge:
+    bg: '#ff9900'
+    color: '#ffffff'
+    radius: 2
+    padding: '2px 6px'
+    use: '"#1 Best Seller" small orange tag — category-anchored.'
+  breadcrumb:
+    color: '#565959'
+    separator: '›'
+    use: 'Sub-nav category breadcrumb beneath the main nav band.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  cta-press: 'CTA gradient flips bottom-up on :active for 100ms — the only visible button feedback'
+  product-image-zoom: 'hover triggers magnifier on PDP, 200ms fade-in'
+  flyout-mega-menu: 'Department flyout opens 200ms ease-out, closes 100ms'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — gradient flips become instant, magnifier disabled.'
+
+breakpoints:
+  mobile: 600
+  tablet: 1000
+  desktop: 1200
+  wide: 1500
+
+shadows:
+  ambient: 'none — Amazon stays flat by default'
+  hover-card: 'rgba(0,0,0,0.15) 0 2px 5px 0'
+  modal: 'rgba(0,0,0,0.3) 0 4px 16px'
+  ring: '0 0 0 3px #c8f3fa'
+
+accessibility:
+  contrast-text-on-bg: 19.0          # #0f1111 on #ffffff — AAA
+  contrast-text-on-cta: 13.5         # #0f1111 on #ffd814 — AAA
+  contrast-link-on-bg: 4.7           # #007185 on #ffffff — AA
+  contrast-muted-on-bg: 6.7          # #565959 on #ffffff — AAA
+  focus-ring: '3px solid #c8f3fa (light cyan tint) + 1px #007185 underline on links'
+  reduced-motion-honored: true
+  touch-target-min: 36
+  keyboard-nav: 'Tab through masthead → search → main content → footer; arrow keys inside flyout mega-menu and grid carousel.'
+
+dark-mode: null   # No public-web dark mode. The Amazon Shopping mobile app has dark mode; storefront does not.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Amazon's storefront is the canonical "everything store" interface — a near-clinical white canvas (`#ffffff`) crowded with product tiles, anchored on a deep squid-ink navy chrome (`#131921` for the masthead, `#232f3e` for the sub-nav band), and accented by the unmistakable smile-orange (`#ff9900`) reserved for high-value affordances. The page hums with information density: dozens of product tiles per scroll, breadcrumb trails, ratings, prices, "FREE delivery by Tuesday" lines, Prime checkmarks, and red-orange deal ribbons all competing for attention.
+
+Type runs **Amazon Ember**, a humanist sans Amazon commissioned in 2014 (Joe Leonard / Dalton Maag) that sits stylistically near IBM Plex and Source Sans — open apertures, a slightly squared geometry, and a working-text neutrality that disappears into the page. Headlines run modest 21–28px at 700; product titles render at 14–18px regular; nothing shouts. Hierarchy emerges from layout density, not type weight.
+
+The chromatic identity is split. The **brand orange** (`#ff9900`, the smile arrow on the wordmark) almost never appears as a flat fill in product UI — it's reserved for the wordmark, "Best Seller" ribbons, and star-rating glyphs. The **CTA system** uses a distinctive **yellow→orange gradient** (`#ffd814` top, `#ffa41c` bottom) with a 1px `#fcd200` border — Amazon's "Add to Cart" button, the most-clicked button on the internet, has retained this gradient for over 15 years and refuses to flatten. Beneath it, **Buy Now** sits in solid orange (`#ffa41c`).
+
+Links are the second signature: a teal (`#007185`) that becomes rust-orange (`#c45500`) on hover. This colour pair is unmistakably Amazon — no competitor uses it, and changing it on a third-party site reads as a counterfeit storefront. Prime gets its own blue (`#00a8e1`), used only for Prime-coded affordances (Prime checkmark, Prime delivery banner, Try Prime CTA).
+
+Shape language is humble: 4–7px radius across the board, with the CTA's quirky **7px** (not 8) being a long-standing oddity. Cards and tiles round at 8px. There are no pills, no fully-rounded buttons in the storefront; every clickable surface lands somewhere in the 2–8px band. Shadows are flat by default — emphasis comes from the navy masthead, the orange CTA, and the product image, not from elevation.
+
+**Key Characteristics:**
+- Smile-orange `#ff9900` reserved for wordmark, Best Seller ribbons, and star ratings — never as page background
+- Yellow→orange CTA gradient (`#ffd814` → `#ffa41c`) on every Add to Cart, with a 1px `#fcd200` border
+- Squid-ink navy chrome (`#131921` masthead, `#232f3e` sub-nav) with white text and `#37475a` hover
+- Teal links (`#007185`) that flip to rust-orange (`#c45500`) on hover — Amazon-only colour pairing
+- Prime blue (`#00a8e1`) reserved exclusively for Prime affordances and the membership funnel
+- Amazon Ember at 14px regular for body, 21–28px at 700 for display — utilitarian, never showy
+- Product tiles densely packed: 4–6 per row at desktop, no negative space between sections
+- Star ratings render in `#ffa41c` orange on `#d5d9d9` empty — never yellow, never gold
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): default page floor, every product tile, every form surface
+- **Page Floor** (`#eaeded`): the soft grey backing on category pages, between content cards
+- **Ink** (`#0f1111`): primary text colour — slightly off-black with a green undertone, calmer than `#000`
+- **Orange** (`#ff9900`): the smile colour, the brand wordmark, used scarcely as a fill — appears on Best Seller ribbons, the wordmark itself, and star ratings
+
+### Brand & Dark
+- **Masthead Navy** (`#131921`): the global top bar, navigation rail, footer ground — the "squid ink" backdrop that anchors every page
+- **Masthead Sub-nav** (`#232f3e`): the second-tier navigation band beneath the masthead, slightly lighter
+- **Masthead Hover** (`#37475a`): hover state on masthead links, a breath lighter than the sub-nav
+- **Footer Deep** (`#232f3e`): footer column ground, matches sub-nav
+
+### CTA Yellow/Orange System
+- **CTA Yellow** (`#ffd814`): top of the Add to Cart gradient
+- **CTA Orange** (`#ffa41c`): bottom of the Add to Cart gradient, also Buy Now solid fill
+- **CTA Border** (`#fcd200`): 1px hairline around every CTA button — the gradient's signature outline
+- **CTA Hover** (`#f7ca00`): the gradient slides to a slightly darker base on hover
+- **Buy Now Hover** (`#fa8900`): Buy Now solid hover state
+
+### Accent
+- **Link Teal** (`#007185`): inline body links and product titles — the most distinctive colour in Amazon UI
+- **Link Hover Rust** (`#c45500`): link hover state — flips from cool teal to warm rust
+- **Prime Blue** (`#00a8e1`): Prime checkmark, "Try Prime" CTA, Prime delivery affordances — never used outside the Prime funnel
+- **Prime Deep** (`#146eb4`): the legacy Prime logo blue, still appears on certain Prime branding
+
+### Interactive
+- **Link** (`#007185`) — body inline links, product titles
+- **Link Hover** (`#c45500`) — hovered link
+- **Visited Link** (`#552b76`) — purple visited state on certain category pages
+- **Disabled** (`#a6a6a6`) — disabled CTA text and outline
+- **Focus Tint** (`#c8f3fa`) — 3px cyan focus ring on focusable elements
+
+### Neutral Scale
+- **Ink** (`#0f1111`) — primary text
+- **Heading** (`#0f1111`) — same ink, bolder weight
+- **Muted** (`#565959`) — breadcrumbs, secondary metadata
+- **Soft** (`#6f7373`) — captions, faint counts
+- **Disabled** (`#a6a6a6`) — disabled text
+- **Border** (`#d5d9d9`) — default 1px hairline
+- **Border Soft** (`#e7e7e7`) — editorial dividers
+- **Border Strong** (`#888c8c`) — focus state hairline
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — default surface
+- **Soft** (`#f7f8f8`) — search-bar segments, sub-bands
+- **Strong** (`#f0f2f2`) — disabled fields, alternating table rows
+- **Yellow Surface** (`#fef8e8`) — Subscribe-and-Save info banners
+
+### Shadow Colors
+Amazon stays flat by default — most surfaces have **no shadow at all**. The exceptions are mega-menu flyouts and modals, where a subtle `rgba(0,0,0,0.15) 0 2px 5px` lift appears.
+
+### Semantic
+- **Success Green** (`#007600`): "In Stock" labels, "Order placed" confirmations
+- **Deal Red** (`#cc0c39`): strikethrough deal price, percentage-off badges, savings indicators
+- **Urgency Red** (`#b12704`): "Only 3 left in stock" warnings, validation errors
+- **Warning Tan** (`#b66719`): advisory banners (price changes, restock pending)
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Amazon Ember`. Fallback chain: `"Helvetica Neue", Helvetica, Arial, sans-serif`. Amazon Ember is a humanist sans commissioned in 2014 from Joe Leonard / Dalton Maag — open apertures, slightly squared terminals, an aesthetic neighbour to IBM Plex and Source Sans Pro.
+
+**Mono companion**: not part of the storefront brand system. Code samples appear only in AWS / developer docs, where IBM Plex Mono and Source Code Pro carry separate identities.
+
+**OpenType features**: `tnum` is enabled on price displays, rating counts, and shipping countdown timers so column alignment stays clean across multi-tile grids.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| deal-display | Ember | 56 | 700 | 1.0 | -1px | tnum | Today's Deals page hero — rare, only on dedicated deal pages |
+| page-title | Ember | 28 | 700 | 1.25 | -0.5px | — | Category page headlines, PDP product name on smaller tiles |
+| section-head | Ember | 21 | 700 | 1.25 | 0 | — | "Customers also bought", "Frequently bought together" |
+| product-title | Ember | 18 | 400 | 1.33 | 0 | — | PDP main product title — large but regular weight |
+| product-title-md | Ember | 16 | 400 | 1.43 | 0 | — | Product card titles in grid view |
+| body-md | Ember | 14 | 400 | 1.43 | 0 | — | Default body — descriptions, reviews, Q&A |
+| body-sm | Ember | 13 | 400 | 1.38 | 0 | — | Secondary metadata, "Sold by Amazon", caption text |
+| caption | Ember | 12 | 400 | 1.33 | 0 | — | Footer micro-text, sub-tier categories |
+| micro | Ember | 11 | 400 | 1.27 | 0 | — | Footer legal, copyright, smallest labels |
+| price-whole | Ember | 28 | 500 | 1.0 | 0 | tnum | Whole-dollar price ("$24") — the dominant tile element |
+| price-symbol | Ember | 13 | 500 | 1.0 | 0 | tnum | Superscript "$" anchored top-left of the whole price |
+| price-fraction | Ember | 13 | 500 | 1.0 | 0 | tnum | Superscript "99" anchored top-right of the whole price |
+| rating-count | Ember | 14 | 400 | 1.0 | 0 | tnum | "(12,847)" review count beside the star row |
+| button-cta | Ember | 13 | 400 | 1.23 | 0 | — | Add to Cart label — small, never bold |
+| nav-link | Ember | 14 | 700 | 1.0 | 0 | — | Masthead category links ("Today's Deals", "Customer Service") |
+| nav-tagline | Ember | 11 | 400 | 1.0 | 0 | — | Masthead "Hello, sign in" / "Account & Lists" tagline above category links |
+| badge | Ember | 12 | 700 | 1.0 | 0 | uppercase | "DEAL", "BEST SELLER", "PRIME" badges |
+
+### Principles
+
+- **Function first.** Amazon Ember is engineered to disappear at 14px. There is no display/body distinction in the family — the same font carries every size. Hierarchy comes from weight and size, never from family change.
+- **The price construction is the typographic moment.** Whole-dollar prices are rendered as a 3-piece glyph: a small `$` superscript top-left, a 28px whole-dollar in the middle, and a small `99` superscript top-right. This is the page's most distinctive type composition.
+- **Tabular numerals everywhere money lives.** Prices, ratings, review counts, shipping countdowns all enable `tnum` so right-edge alignment holds across grids.
+- **Body sits at 14px / 400.** That's smaller than typical SaaS body (16/400) — Amazon prioritises information density.
+- **Headlines never exceed 28px** in regular product flow. Deal-display 56px is the only larger size, and it appears only on dedicated deal pages.
+- **No italic, no display family.** Amazon Ember has italics, but they never appear in the storefront. The brand reads as anti-flourish.
+- **Helvetica Neue is the closest substitute** if Ember is unavailable — but it will run slightly tighter; bump line-height by ~5%.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-cta`** — the canonical Add to Cart. Yellow→orange gradient (`#ffd814` top, `#ffa41c` bottom), 1px `#fcd200` border, 7px radius (Amazon's quirky 7, not 8), 6×10px padding, 29px height, ink text in `button-cta` (13px / 400). On hover the gradient base darkens to `#f7ca00`. On `:active` the gradient flips bottom-up for 100ms — the only visible feedback, and it is unmistakable.
+
+**`button-buy-now`** — solid orange (`#ffa41c`) with `#ff8f00` border, same 7px radius and 29px height. Sits beneath the Add to Cart on every PDP. Hover darkens to `#fa8900`.
+
+**`button-secondary`** — white fill, 1px `#d5d9d9` hairline, 7px radius, ink text. Used for See more, Compare, See all reviews.
+
+**`button-prime-cta`** — Prime-blue (`#00a8e1`) outline on a soft `#a4ddee` fill. Reserved for the Prime funnel: "Try Prime", "Get Prime", "Watch on Prime Video".
+
+**`button-link`** — no surface, no border, just teal text (`#007185`) that flips to rust (`#c45500`) on hover. The most-used "button" on Amazon — every product title is technically a `button-link` to the PDP.
+
+### Cards
+
+**`product-card`** — the search-result tile. White surface, 8px radius, 12px padding. Stack: thumbnail (1:1 aspect), product title (`product-title-md`), star row + review count, price construction, "FREE delivery by Tue, May 5" Prime line, optional "Add to Cart" CTA at the bottom. Hover pushes the card up with a `rgba(0,0,0,0.15) 0 2px 5px` shadow.
+
+**`deal-card`** — Today's Deals tile. White surface with a 1px `#cc0c39` red border, 8px radius. Top-left corner ribbon shows percentage off ("-43%") in white-on-red. Strikethrough `text-line-through` original price in `text-muted`, current deal price in `price` red.
+
+**`recommendation-tile`** — square thumbnail with a single-line title beneath. No CTA, no rating row — used in "Customers who bought this also bought" carousels.
+
+**`pdp-buy-box`** — sticky right-rail card on PDP. White, 8px radius, 1px hairline border, 14px padding. Stack: large price construction at top, "FREE delivery" Prime line, "In Stock" green text, quantity selector, Add to Cart, Buy Now, Add to Wishlist, "Ships from / Sold by" small print.
+
+### Badges, Tags, Pills
+
+**`bestseller-badge`** — orange (`#ff9900`) fill, white uppercase text, 2px radius, 2×6px padding. Anchors top-left of qualifying tiles.
+
+**`deal-badge`** — saturated red (`#cc0c39`) fill, white uppercase text, 2px radius. "DEAL" or "-43%" in `badge` (12px / 700 uppercase).
+
+**`prime-badge`** — Prime checkmark glyph in `prime-blue` followed by "Prime" wordmark — never gets a surface, sits inline with the delivery date line.
+
+**`amazon-choice-badge`** — small dark-navy pill ("Amazon's Choice") with white text in `caption`, 2px radius. Anchored top-left of the recommended tile.
+
+### Inputs / Forms
+
+**`text-input`** — white surface, 1px `#a6a6a6` hairline, 3px radius (slimmer than the CTA's 7), 32px height, 4×7px padding. On focus the border thickens to 2px `#007185` teal with a soft cyan glow.
+
+**`search-bar`** — masthead global search. White fill, 4px radius, 40px height. Composed of three segments: a left dropdown ("All Departments"), a centre text input, and a right `search-button` (orange `#febd69` fill, 45px wide, magnifier icon). On focus the entire bar gains a 2px `#febd69` outer border ring.
+
+**`select`** — same look as `text-input` but with a dropdown chevron on the right edge.
+
+### Navigation
+
+**`masthead`** — full-width navy (`#131921`) bar, 60px height. Wordmark flush left, location selector, search bar centred, account / orders / cart flush right. Every label uses `nav-link` (14/700) with a `nav-tagline` (11/400) above it.
+
+**`sub-nav`** — slightly lighter navy (`#232f3e`), 39px height, holds department links: "Today's Deals", "Registry", "Customer Service", "Gift Cards". Hover state: `#37475a`.
+
+**`mega-menu-flyout`** — opens from "All" department dropdown; white surface, 8px radius, 1px hairline border, hover-card shadow. Two-column nav of category trees.
+
+**`breadcrumb`** — `text-muted` (`#565959`) with `›` separators, 13px / 400.
+
+### Star Rating
+
+**`star-rating`** — 5-icon row, fill `#ffa41c` for filled stars, `#d5d9d9` for empty. Half-stars rendered with a clipped half-fill. Followed by a teal-link review count: "(12,847)".
+
+### Modals & Toasts
+
+**`modal`** — centred dialog over a 70%-opacity ink scrim. White surface, 8px radius, 1px hairline border, modal shadow. Close X anchored top-right.
+
+**`toast`** — bottom-centre stacked notifications. White fill, 8px radius, 1px hairline, ink text, 18×24px padding. Used for "Item added to cart" confirmations.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 6 · 8 · 10 · 12 · 14 · 18 · 22 · 28 · 36 · 48 · 64`
+- Section padding (vertical): **22–28px** between major bands — tighter than typical SaaS marketing because density is the brand
+- Card internal padding: **12px** for product tiles; **14px** for PDP buy box; **6×10px** for CTA buttons
+- Gutters: **14px** between product tiles in grid view; **18px** between major page bands; **6px** between adjacent buttons in the buy-box stack
+
+### Grid & Container
+
+- Max content width: **1500px** centred (Amazon runs wider than typical SaaS — the page caps at 1500 to fit dense product grids)
+- Homepage: 6-column tile grid at desktop, collapsing to 2-column at mobile
+- Search results: **4–6 column** grid depending on viewport, 240px minimum tile width
+- PDP: 2-column with image gallery left (~55%), buy box and product details right (~45%); spec table runs full width below
+- Footer: 4-column link list at desktop, collapsing to 2-column at tablet
+
+### Whitespace Philosophy
+
+Amazon does not believe in negative space. Every pixel of the masthead is informationally dense; product grids run edge-to-edge; sections stack without explicit visual breaks. The lone breathing room is the **white surface between the navy chrome and the first content row** — a single 22–28px band that signals the transition from chrome to content. Otherwise the page is engineered for **scannability over rest**: a customer scanning 30 tiles in 5 seconds is the design target.
+
+### Section Cadence
+
+There is no light/dark alternation. The chrome (masthead, sub-nav, footer) is always navy; the content body is always white or `#eaeded` page floor. The only "dark band" inside the body is the footer, which uses the same `#232f3e` ground as the sub-nav.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Badges, ribbons, dense table corners |
+| Small | 3–4px | Form inputs, search bar, masthead pill |
+| CTA | **7px** | Add to Cart, Buy Now — Amazon's quirky 7 (not 8) |
+| Card | 8px | Product tiles, modals, dropdowns, mega-menu |
+| Featured | 16px | Promo banners on category pages, gift card hero tiles |
+| Pill | 9999px | Rare — used only on the avatar in the account dropdown |
+
+The **7px CTA radius** is one of Amazon's longest-standing UI quirks. Every other Amazon surface uses a multiple of 4 (4, 8, 16); the CTA alone breaks the system. There is no public explanation, but it has been preserved across multiple redesigns — likely because changing it would invalidate decades of conversion-rate testing.
+
+There are no compound radii in mainline UI. Every interactive element rounds uniformly on all four corners.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, masthead, footer, all editorial bands (~95% of surfaces) |
+| 1 — Hover Card | `rgba(0,0,0,0.15) 0 2px 5px 0` | Product tiles on hover, mega-menu flyouts, dropdowns |
+| 2 — Modal | `rgba(0,0,0,0.3) 0 4px 16px` | Centred dialogs (sign in, address book, payment) |
+| 3 — Scrim | `rgba(15,17,17,0.7)` | Modal backdrop |
+
+### Shadow Philosophy
+
+Amazon stays flat. The only shadow that appears in the storefront chrome is the hover-card lift on product tiles — and even that is a single-layer drop, not the multi-layer composition Stripe or Linear use. Depth in Amazon UI comes from **the navy chrome contrast** (squid-ink masthead against white content) and **the orange CTA** (the brightest fill on the page, always the eye-anchor). Elevation is engineered to be invisible.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover transitions, mega-menu slide
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, toast appearance
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | CTA gradient flip on `:active`, hover colour swap on links |
+| Standard | 200ms | Mega-menu open, product tile hover lift, search-bar focus glow |
+| Slow | 300ms | Modal entry, image zoom transition, page transitions |
+
+### Per-Component Recipes
+
+- **CTA press feedback**: on `:active` the yellow→orange gradient flips bottom-up for 100ms — the only visible button feedback. Releasing snaps back instantly.
+- **Product image zoom**: hovering the PDP main image triggers a 200ms fade-in of a 2× magnifier panel beside the gallery — clicked images open lightbox at full resolution.
+- **Mega-menu flyout**: the "All" department dropdown opens with a 200ms ease-out slide-down from the masthead; closes with a 100ms fade.
+- **Search-bar focus**: the 2px outer border ring (`#febd69`) fades in over 200ms when the input gains focus.
+- **Add-to-cart toast**: bottom-right toast slides in from `translateY(20px)` to `0` over 300ms emphasized.
+- **Link hover**: text colour transitions from teal (`#007185`) to rust (`#c45500`) over 100ms — no underline change.
+
+### Page Transitions
+
+Page-to-page navigation uses no transition — links fire a hard navigation. Amazon prioritises perceived speed and skeleton-loader rendering over polished transitions. The exception is the cart-add toast and the lightbox image gallery, which use the durations above.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. The CTA gradient flip becomes an instant background swap. The image-zoom magnifier disables (clicking still opens lightbox). Modal and toast transitions degrade to opacity-only fades.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #0f1111 ink on #ffffff canvas | 19.0 | AAA |
+| #0f1111 ink on #ffd814 CTA top | 13.5 | AAA |
+| #0f1111 on #ffa41c CTA bottom | 7.4 | AAA |
+| #007185 link on #ffffff | 4.7 | AA |
+| #c45500 link hover on #ffffff | 4.6 | AA |
+| #565959 muted on #ffffff | 6.7 | AAA |
+| #ffffff on #131921 masthead | 17.4 | AAA |
+| #ffffff on #cc0c39 deal red | 5.4 | AA |
+
+### Focus Indicators
+
+Focus ring is a **3px solid `#c8f3fa`** (light cyan tint) with a 1px `#007185` underline on links. Buttons and inputs gain the cyan glow ring; links gain a 1-pixel offset underline. The system avoids brand orange on focus — orange is reserved for action emphasis only.
+
+### ARIA Patterns
+
+- **Search bar**: outer container is `role="search"`. The category dropdown is a `<select>` with `aria-label="Search in"`. The input is a standard text input with `aria-label="Search Amazon"`.
+- **Product card**: the entire tile is wrapped in an `<a>` with a verbose `aria-label` ("Acme Pencil 2-pack, 4.7 stars, 12,847 reviews, $9.99, FREE delivery by Tuesday May 5").
+- **Star rating**: rendered as text-equivalent (`aria-label="4.7 out of 5 stars"`) with the visual icon row hidden from screen readers.
+- **Mega-menu flyout**: `role="menu"` with `role="menuitem"` per link; arrow keys navigate within, Escape closes.
+- **Add to Cart toast**: `role="status"` with `aria-live="polite"` to announce "Added to cart" without stealing focus.
+
+### Keyboard Navigation
+
+- Masthead: Tab moves logo → location → search input → search button → account → orders → cart
+- Search results: Tab through tiles in document order; arrow keys do not navigate the grid (Amazon uses tab-only)
+- PDP: Tab through gallery thumbnails → main image → variant selector → quantity → Add to Cart → Buy Now → wishlist
+- Mega-menu: arrow keys navigate categories; Esc closes
+
+### Screen Reader Hints
+
+Amazon prefers verbose `aria-label` to icon-only buttons. The cart icon has `aria-label="Cart, 2 items"`. The wishlist heart on a tile has `aria-label="Add Acme Pencil to Wishlist"`. The star-rating row uses a hidden text equivalent rather than relying on the visual glyph.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only when `prefers-reduced-motion: reduce` is set. CTA gradient flip becomes instant; product hover lift disables; modal/toast slide-ins become fades.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Masthead collapses to logo + hamburger + cart; search bar moves to its own row beneath the masthead; product grid 2-up; PDP buy-box stacks beneath gallery |
+| Tablet | 600–1000px | Masthead keeps location and account; sub-nav scrolls horizontally; product grid 3-up |
+| Desktop | 1000–1200px | Full masthead and sub-nav; product grid 4-up; PDP 2-column |
+| Wide | >1200px | Content caps at 1500px; product grid 5–6 up; PDP gallery widens |
+
+### Touch Targets
+
+- Primary CTA (Add to Cart): 29px height — borderline for AAA, compensated by 6px vertical padding inside a 41px tappable region
+- Secondary CTA (Buy Now): 29px height, same as primary
+- Search button: 45×40px — comfortable for AA
+- Product tile: entire 240×320px tile is tappable; the title is the canonical link target
+
+### Collapsing Strategy
+
+- Masthead: location selector and category dropdown hide first; account and orders next; only logo + cart + hamburger remain at <600px
+- Search bar: jumps from inline (centre of masthead) to its own row below the masthead at <1000px
+- Product grid: column count drops cleanly; row gutters compress from 18px → 12px → 8px
+- PDP: 2-column splits to single-column stack at <1000px; buy-box becomes a sticky bottom bar at mobile
+
+### Image Behavior
+
+Product thumbnails use `aspect-ratio: 1/1` with `object-fit: contain` (Amazon prefers `contain` for product photography on white backgrounds — `cover` would crop product silhouettes). PDP main gallery supports zoom-on-hover and lightbox click. Lazy-loading is aggressive — tiles load in viewport waves.
+
+### Container Queries
+
+Not formally used. Amazon's grid logic is driven by media queries on the body width, not container queries on the grid itself.
+
+## 11. Content & Voice
+
+### Tone
+
+Plainspoken, transactional, and slightly impersonal. Amazon's voice is engineered for clarity at scale — millions of product listings written by sellers, normalized into a consistent template. There is no "we" or "you"; the page describes products, not a relationship. Marketing copy on category pages leans toward aspirational ("Find your next read") but never effusive.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Add to Cart", "Buy Now", "Proceed to Checkout", "Place your order" — every CTA names the outcome, never "Submit" or "Continue"
+- **Error message recipe**: `[What went wrong] + [How to fix]` — e.g., "Enter a valid card number — it should be 13–19 digits."
+- **Success confirmations**: short and outcome-named — "Added to Cart", "Order placed", "Subscribed"
+- **Field labels**: short and direct — "Card number", "Shipping address", "ZIP code"
+- **Stock urgency**: "Only 3 left in stock — order soon" — names the count, suggests the action
+
+### Empty States
+
+Empty cart: "Your Amazon Cart is empty. Shop today's deals." Always action-oriented — names the next destination.
+
+Empty wishlist: "Your Wish List is empty. Add items as you shop, and we'll save them here for later."
+
+Empty search: "No results for [query]. Try checking your spelling or use more general terms." — names the cause and gives two remedies.
+
+### CTA Verb Conventions
+
+- Primary action: **"Add to Cart"** (default), **"Buy Now"** (one-click checkout)
+- Membership: **"Try Prime"** (free trial), **"Get Prime"** (paid signup)
+- Save action: **"Add to Wish List"** (never "Save" alone — Amazon disambiguates by naming the destination)
+- Tertiary: **"See more"** (truncated description), **"Compare"** (multi-product), **"See all reviews"**
+- Avoided: "Submit", "Click here", "Buy" alone (always "Buy Now")
+
+## 12. Dark Mode & Theming
+
+**Light-only on the public web.** Amazon's storefront — homepage, search, category, PDP, cart, checkout — is explicitly light-only. The Amazon Shopping mobile app ships a system-controlled dark mode (near-black surface, white text, orange CTA unchanged), but the web storefront is white-only. The brand position: the masthead navy (`#131921`) provides enough chromatic contrast that the body never needs to invert; product photography is colour-graded for white backgrounds; and inverting the page would require re-shooting the entire product catalogue.
+
+The lone "dark surface" inside the page is the **footer** (`#232f3e`), which always renders dark regardless of system preference.
+
+## 13. Lineage & Influences
+
+Amazon's visual lineage runs through three traditions: **catalog retailing** (Sears, JCPenney mail-order catalogs — dense product grids, ratings, prices, deal call-outs); **early-2000s e-commerce** (Yahoo Shopping, eBay's first-generation grid view — utility over aesthetic); and **AWS console design discipline** (the navy chrome and 7px CTA share DNA with the AWS Management Console's chrome). The squid-ink navy + orange CTA pair predates current trends by 20+ years; Amazon committed to it in the early 2000s and refuses to deviate.
+
+The Amazon Ember typeface, commissioned in 2014, was Amazon's only major brand-typography update in two decades. Ember sits in the same humanist-sans tradition as IBM Plex, Source Sans, and Inter — but with subtly squared terminals that read as engineered rather than literary.
+
+What Amazon rejects: pill-shaped buttons, large negative space, chromatic gradients on body content, dark mode, font-pairing (one font, all sizes), and animation that delays the click. The brand position is **anti-fashion**: Amazon UI looks dated to designers because it has been ruthlessly A/B tested for conversion, and conversion does not care about trends.
+
+**Influences:**
+- Sears / JCPenney catalogs — dense product grid lineage
+- Yahoo Shopping (early 2000s) — masthead + sub-nav + tile grid pattern
+- IBM Plex / Source Sans — humanist sans tradition for Amazon Ember, [github.com/IBM/plex](https://github.com/IBM/plex)
+- AWS Management Console — chrome and CTA discipline lineage, [aws.amazon.com](https://aws.amazon.com)
+- Walmart.com (peer) — direct everyday-low-prices competitor with similar density discipline
+
+## 14. Do's and Don'ts
+
+**Do**
+- Reserve the smile-orange (`#ff9900`) for the wordmark, Best Seller ribbons, and star ratings — never as a page background
+- Use the yellow→orange CTA gradient (`#ffd814` → `#ffa41c`) with the 1px `#fcd200` border on every Add to Cart
+- Anchor pages on the squid-ink masthead (`#131921`) with white text and `#37475a` hover
+- Render links in teal (`#007185`) that flips to rust (`#c45500`) on hover — the Amazon-only colour pairing
+- Reserve Prime blue (`#00a8e1`) exclusively for Prime affordances and the membership funnel
+- Use Amazon Ember at modest sizes — 14/400 body, 21–28/700 display
+- Render the price as a 3-piece glyph: superscript `$`, large whole-dollar, superscript `99`
+- Enable tabular numerals (`tnum`) on every price, rating count, and shipping countdown
+- Pack product tiles densely — 4–6 per row, 14–18px gutters, no negative space
+- Render star ratings in `#ffa41c` orange, never yellow or gold
+
+**Don't**
+- Don't use the smile-orange as a flat fill behind body content — it belongs to the wordmark
+- Don't change the CTA radius from 7px — it is the most A/B-tested radius in e-commerce history
+- Don't use the brand orange and CTA orange interchangeably — `#ff9900` is the wordmark, `#ffa41c` is Buy Now
+- Don't overload Prime blue onto non-Prime affordances
+- Don't use exclamation marks in microcopy — the voice is plainspoken and transactional
+- Don't say "Submit" or "Click here" — every CTA names the outcome (Add to Cart, Buy Now, Place your order)
+- Don't add heavy shadows — Amazon stays flat; the single hover-card tier is the entire elevation system
+- Don't use pill-shaped buttons — every CTA rounds 4–8px
+- Don't add animation that delays the click — every interaction must feel instant
+- Don't use yellow or gold for star ratings — orange `#ffa41c` always
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:        #ffffff
+Page Floor:    #eaeded
+Ink:           #0f1111
+Masthead:      #131921
+Sub-nav:       #232f3e
+Smile Orange:  #ff9900
+CTA Yellow:    #ffd814
+CTA Orange:    #ffa41c
+CTA Border:    #fcd200
+Link Teal:     #007185
+Link Hover:    #c45500
+Prime Blue:    #00a8e1
+Deal Red:      #cc0c39
+Border:        #d5d9d9
+Muted:         #565959
+```
+
+### Example Component Prompts
+
+- "Create an Amazon-style Add to Cart button: a 29px-tall pill (7px radius) with a vertical gradient from `#ffd814` top to `#ffa41c` bottom, 1px `#fcd200` border, ink text (`#0f1111`) at 13px / 400. On `:active` flip the gradient bottom-up for 100ms."
+- "Build a masthead: full-width `#131921` navy bar, 60px tall. Wordmark flush left (Ember Bold). Then a location selector with a small white pin icon. Centre: a search bar (40px tall, 4px radius, white fill) with a category dropdown on the left and a `#febd69` orange magnifier button on the right (45px wide). Flush right: 'Hello, sign in / Account & Lists' (11/400 + 14/700 stack), 'Returns & Orders', and a cart icon with a count badge."
+- "Design a product card: white surface, 8px radius, 12px padding. Stack: 1:1 product thumbnail (object-fit: contain on white), 14/400 product title in teal `#007185`, star row (`#ffa41c` filled, `#d5d9d9` empty) + review count in teal, then a price construction with a small `$` superscript, a 28/500 whole-dollar number, and a small `99` superscript. Beneath: 'FREE delivery by Tue, May 5' with a Prime checkmark in `#00a8e1`. CTA at the bottom (Add to Cart in the yellow→orange gradient)."
+- "Build a PDP buy-box: white surface, 8px radius, 1px `#d5d9d9` border, 14px padding. Top: large price construction. Then 'In Stock' in green (`#007600`), a quantity stepper, full-width Add to Cart (yellow→orange gradient), full-width Buy Now (solid `#ffa41c`), an outline 'Add to Wish List' button, and a small-print 'Ships from Amazon / Sold by Amazon' line."
+- "Render a deal card: white surface with a 1px `#cc0c39` red border, 8px radius, 12px padding. Top-left corner ribbon: '-43%' in white on `#cc0c39`. Strikethrough original price in `#565959`, current deal price in `#cc0c39` red. Standard product card stack beneath."
+- "Design a star rating: 5 stars in a row, fill `#ffa41c` for filled, `#d5d9d9` for empty. Half-star uses a clipped 50% fill. To the right of the row, a teal `#007185` review count in 14/400 with `tnum`: '(12,847)'."
+
+### Iteration Guide
+
+1. **Start with the masthead.** If the squid-ink navy `#131921` and orange search button (`#febd69`) are present, the page reads as Amazon at a glance.
+2. **Get the CTA right.** The yellow→orange gradient (`#ffd814` → `#ffa41c`) with 1px `#fcd200` border is non-negotiable. Solid yellow looks like McDonald's; solid orange looks like Home Depot. The gradient is the brand.
+3. **Density over breath.** If your composition feels open and spacious, you've added too much padding. Tighten to 12–14px gutters and 22–28px section padding.
+4. **Teal links, rust hover.** `#007185` to `#c45500` is the Amazon-only colour pairing. Any other link colour breaks the brand.
+5. **Body at 14/400.** Resist the urge to push to 16/400 — Amazon is engineered for information density at smaller sizes.
+6. **Three-piece price construction.** A flat 28px price with `.99` inline reads as a generic e-commerce template. The superscript `$` and superscript `99` flanking a giant whole-dollar are the typographic signature.
+7. **Tabular numerals always.** Prices, ratings, review counts, shipping countdowns all need `tnum`.
+8. **Stay flat.** Multi-layer shadows read as Stripe; rounded pills read as Airbnb. Amazon is single-layer hover lift, 7–8px corners, navy chrome, orange CTA.

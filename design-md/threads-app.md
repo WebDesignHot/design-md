@@ -1,0 +1,692 @@
+---
+name: Threads
+tagline: Instagram-adjacent text-first social — pure-black canvas, system-sans clarity, and a quiet brand restraint built from the @ glyph alone.
+author: webdesignhot
+source_url: https://www.threads.net
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [social, media]
+tags: [dark, sans, clean, spacious, cool, mono-accent]
+preview_swatch: ['#000000', '#ffffff', '#fe0169']
+related: [meta, character-ai, bluesky]
+description: 'Threads launched July 2023 as Meta''s text-first answer to Twitter, pairing Instagram''s authentication and identity layer with a deliberately quiet, type-led visual identity. The canvas runs pure `#000000` (or pure `#ffffff` in light mode), the wordmark is a single rotated "@" glyph, and the system runs Instagram Sans (a custom Inter cut) at conversational sizes. There is no brand color — the only chromatic accent is the rose-magenta `#fe0169` heart on liked posts, borrowed directly from Instagram''s love icon. The page rhythm is feed-as-stream: vertical post cards, generous whitespace, no card chrome, with the @ glyph and a thin profile-thread connector line carrying all the visual identity.'
+
+colors:
+  bg: '#000000'                  # pure black canvas — default theme
+  bg-light: '#ffffff'            # light-mode flip
+  bg-soft: '#101010'             # very-soft secondary background
+  bg-deep: '#000000'              # same as bg — Threads stays absolute
+  surface: '#181818'              # post card surface (subtle lift)
+  surface-hover: '#1f1f1f'        # hover lift
+  surface-elevated: '#252525'     # nested cards, modals
+  surface-soft: '#0a0a0a'         # near-black dividers
+  text: '#ffffff'                 # primary text on black
+  text-strong: '#ffffff'          # display headings — pure white
+  text-body: '#f5f5f5'            # body running-text — slight softness
+  text-muted: 'rgba(243,245,247,0.5)' # metadata, "·8h"
+  text-soft: 'rgba(243,245,247,0.4)'   # secondary captions
+  text-faint: 'rgba(243,245,247,0.3)'  # tertiary fine-print
+  text-on-light: '#000000'        # text on light mode
+  text-on-light-muted: 'rgba(0,0,0,0.5)' # muted on light
+  text-on-brand: '#ffffff'        # text on action elements
+  primary-action: '#ffffff'       # primary CTA fill — white pill on black
+  primary-action-hover: '#e0e0e0' # hover state
+  secondary-action: '#000000'     # text on white CTA
+  brand: '#ffffff'                # there is no brand color — the wordmark is white
+  link: 'rgba(243,245,247,0.5)'   # link color is the muted text color
+  link-hover: '#ffffff'
+  border: 'rgba(243,245,247,0.15)' # 1px translucent hairline on cards
+  border-strong: 'rgba(243,245,247,0.3)' # heavier divider
+  border-subtle: 'rgba(243,245,247,0.08)' # near-invisible
+  on-brand: '#000000'             # black text on white CTA
+  on-bg: '#ffffff'
+  shadow-color: 'rgba(0,0,0,0.4)'
+  reply-icon: 'rgba(243,245,247,0.5)' # default
+  reply-active: '#ffffff'         # active reply
+  repost-icon: 'rgba(243,245,247,0.5)' # default
+  repost-active: '#22c55e'        # green when reposted
+  like-icon: 'rgba(243,245,247,0.5)' # default
+  like-active: '#fe0169'          # rose-magenta — borrowed from Instagram
+  share-icon: 'rgba(243,245,247,0.5)' # default
+  thread-line: 'rgba(243,245,247,0.2)' # vertical thread connector
+  follow-button-bg: '#ffffff'     # follow CTA
+  followed-button-bg: 'transparent' # outlined after follow
+  verified-blue: '#1da1f2'        # Meta verified — borrows from Twitter blue
+  notification-dot: '#fe0169'     # unread indicator — same as like-active
+  success: '#22c55e'              # repost green
+  warning: '#fab421'              # caution gold
+  danger: '#fe0169'               # destructive rose
+  info: '#1da1f2'                 # info blue
+
+typography:
+  display:
+    family: '"Instagram Sans", "InstagramSans", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+    opentype-features: "'cv11', 'ss01'"
+  body:
+    family: '"Instagram Sans", "InstagramSans", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"SF Mono", ui-monospace, Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 56, weight: 700, lineHeight: 1.05, tracking: '-1px',   family: display, notes: 'marketing landing h1' }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.10, tracking: '-0.8px', family: display }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.15, tracking: '-0.5px', family: display }
+    display-sm:      { size: 24, weight: 600, lineHeight: 1.20, tracking: '-0.3px', family: display }
+    title-lg:        { size: 20, weight: 700, lineHeight: 1.30, tracking: 0,        family: display, notes: 'modal heads, profile names' }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.30, tracking: 0,        family: display }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.40, tracking: 0,        family: body }
+    username:        { size: 15, weight: 600, lineHeight: 1.30, tracking: 0,        family: body, notes: 'username on post' }
+    body-md:         { size: 15, weight: 400, lineHeight: 1.40, tracking: 0,        family: body, notes: 'thread body — the default reading register' }
+    body-sm:         { size: 13, weight: 400, lineHeight: 1.40, tracking: 0,        family: body }
+    metadata:        { size: 13, weight: 400, lineHeight: 1.30, tracking: 0,        family: body, notes: '"·8h" timestamp, "12 replies"' }
+    label:           { size: 12, weight: 600, lineHeight: 1.30, tracking: '0.3px',  family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.30, tracking: 0,        family: body }
+    code-md:         { size: 13, weight: 400, lineHeight: 1.55, tracking: 0,        family: mono }
+    button:          { size: 14, weight: 600, lineHeight: 1.0,  tracking: 0,        family: body }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.4,  tracking: 0,        family: body }
+    counter:         { size: 13, weight: 400, lineHeight: 1.0,  tracking: 0,        family: body, notes: 'engagement counters' }
+
+radius:
+  micro: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 18
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]
+
+layout:
+  page-width: 1264
+  feed-width: 640
+  side-rail-width: 76
+  header-height: 60
+
+components:
+  button-primary:
+    backgroundColor: primary-action
+    textColor: secondary-action
+    rounded: md
+    padding: '10px 24px'
+    height: 40
+    fontWeight: 600
+    use: 'Sign Up, Follow — white pill on black'
+  button-secondary:
+    backgroundColor: transparent
+    textColor: text
+    border: '1px solid border-strong'
+    rounded: md
+    padding: '10px 24px'
+    height: 40
+    use: 'Following state, secondary action — outlined'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: text-muted
+    rounded: md
+    padding: '8px 16px'
+    use: 'Cancel, inline link CTAs'
+  button-icon:
+    backgroundColor: transparent
+    textColor: text-muted
+    rounded: pill
+    size: 36
+    use: 'engagement icons (reply, repost, like, share)'
+  card-thread:
+    backgroundColor: bg
+    borderBottom: '1px solid border'
+    padding: '16px'
+    use: 'standard timeline thread card — no card chrome'
+  card-thread-detail:
+    backgroundColor: bg
+    border: '1px solid border'
+    rounded: lg
+    padding: 16
+    use: 'standalone thread on detail page'
+  card-profile-mini:
+    backgroundColor: surface
+    rounded: lg
+    padding: 16
+    use: 'profile preview card'
+  card-suggestion:
+    backgroundColor: surface
+    rounded: lg
+    padding: 16
+    use: 'who-to-follow suggestion'
+  badge-pill:
+    backgroundColor: surface
+    textColor: text
+    rounded: pill
+    padding: '4px 10px'
+  badge-verified:
+    backgroundColor: verified-blue
+    iconColor: on-brand
+    rounded: pill
+    size: 16
+    use: 'Meta verified checkmark'
+  badge-followed:
+    backgroundColor: transparent
+    textColor: text-muted
+    border: '1px solid border'
+    rounded: pill
+    padding: '2px 8px'
+    use: 'Following state badge'
+  text-input:
+    backgroundColor: bg
+    textColor: text
+    border: '1px solid border'
+    rounded: md
+    padding: '12px 16px'
+    height: 48
+  search-bar:
+    backgroundColor: surface
+    textColor: text
+    border: 'none'
+    rounded: md
+    padding: '10px 16px'
+    use: 'search input'
+  textarea-compose:
+    backgroundColor: bg
+    textColor: text
+    fontSize: 15
+    use: 'thread composer — chromeless'
+  top-nav:
+    backgroundColor: 'rgba(0,0,0,0.7) backdrop-blur'
+    textColor: text
+    height: 60
+  side-rail:
+    backgroundColor: bg
+    width: 76
+    use: 'icon-only navigation column on desktop'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  reduced-motion: 'respects prefers-reduced-motion: reduce — heart-burst skipped, thread-line drawing skipped, transitions to opacity-only'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1024
+  wide: 1264
+
+shadows:
+  ambient: 'rgba(0,0,0,0.2) 0 2px 8px'
+  standard: 'rgba(0,0,0,0.3) 0 4px 16px'
+  elevated: 'rgba(0,0,0,0.4) 0 12px 32px'
+  deep: 'rgba(0,0,0,0.5) 0 24px 48px'
+  ring: '0 0 0 2px #ffffff'
+
+accessibility:
+  contrast-text-on-bg: 21.0              # AAA — pure white on pure black
+  contrast-body-on-bg: 18.5              # AAA — #f5f5f5 on #000000
+  contrast-muted-on-bg: 9.5              # AAA — 50% white on black
+  contrast-text-on-cta: 21.0             # AAA — black on white CTA
+  focus-ring: '2px solid #ffffff with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'dual — Default (light), Lights Out (dark); follows system preference by default'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Threads is the most chromatically-restrained text-first social platform on the modern web. Launched in July 2023 by Meta as a counter-Twitter, the app's visual identity is built on **a single rotated "@" glyph and the absence of brand color**. The canvas runs pure `#000000` (Lights Out) or pure `#ffffff` (Default), with white type and a single quiet rose-magenta heart icon (`#fe0169`) on liked posts — and that's the entire chromatic system. There is no brand voltage, no accent palette, no signature gradient. The brand IS the absence of brand.
+
+The defining gesture is the **thread connector line** — a 2px vertical hairline drawn at `rgba(243,245,247,0.2)` that visually links a parent post to its replies, running through the avatar column on the left of every reply card. The line draws attention not to itself but to the threading relationship: posts feel like leaves on a continuous vine. Combined with the @ wordmark (rotated 60°, white on black, no logotype), this gives the platform its bottom-up identity: brand grammar emerges from the structure of conversation itself, not from imposed chrome.
+
+The page rhythm is **feed-as-vertical-stream**. Each thread is a card with no border, no shadow, no surface lift — just 16px padding, a 36px circular avatar at top-left, white username + grey timestamp, and the thread body in 15px / 400 / 1.4 Instagram Sans. Below the body sits the engagement row (reply, repost, like, share — four icons, all `rgba(243,245,247,0.5)` muted by default, 36px hit area each). A 1px `rgba(243,245,247,0.15)` bottom-border divides one thread from the next. The minimalism feels intentional rather than empty — the goal is "let the content carry the page."
+
+Type voice runs **Instagram Sans**, a Meta-commissioned custom Inter-derived family that ships across Instagram and Threads. Display sizes hit 56px / 700 / -1px tracking on marketing pages; thread body sits at 15px / 400 / 1.4. The single-family discipline mirrors Twitter/X but the chromatic philosophy is even stricter — Threads has no equivalent to X's legacy `#1d9bf0` blue. The only persistent color is the like-active rose-magenta `#fe0169` (borrowed unchanged from Instagram's heart icon).
+
+The wordmark — a stylized "@" set in a high-contrast italic display weight, often rotated 60° or rendered as a connected initial in marketing — is the platform's only branded glyph. In product, the @ appears alone (no logotype, no tagline) at the top of every screen, white-on-black, scaled to 32px. The minimalism extends to the favicon and app icon: just the @ on a black background, no gradient, no bevel.
+
+**Key Characteristics:**
+- Pure `#000000` (Lights Out) or pure `#ffffff` (Default) canvas — no warmed greys.
+- Single-glyph wordmark (rotated @) — most stripped-down branding in the social category.
+- No brand color. The only persistent accent is `#fe0169` rose-magenta on liked posts.
+- Thread connector line — 2px vertical `rgba(243,245,247,0.2)` linking parent to reply through avatar column.
+- Instagram Sans across every register; no serif anywhere.
+- 15px / 400 / 1.4 line-height for thread body — slightly looser than X (1.3), tighter than Bluesky (1.5).
+- Engagement row of 4 icons (reply, repost, like, share) under every thread.
+- Like-burst animation: rose-magenta heart, scale 1.0 → 1.4 → 1.0, 240ms spring-bounce.
+- Avatars 36px in feed (vs X's 40px), 24px in compact contexts.
+- Generous 16px card padding, 32–48px section padding — more whitespace than X, less than Bluesky.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Lights Out** (`#000000`): Pure black — default canvas in dark mode.
+- **Bg / Default** (`#ffffff`): Pure white — light mode canvas.
+- **Text** (`#ffffff` dark / `#000000` light): Pure black or white, the maximum-contrast pair.
+- **Brand** (`#ffffff` dark / `#000000` light): The brand IS the canvas-inverted color. The @ wordmark, the primary CTAs, and the heading-grade text all share this single hue.
+
+### Brand & Dark
+Threads has **no traditional brand color**. The "brand" is monochromatic — white on black or black on white — and the only accent is the like-active rose-magenta.
+- **Like Active** (`#fe0169`): Rose-magenta heart on liked posts. Borrowed unchanged from Instagram's love icon. The single saturated color on the platform.
+- **Notification Dot** (`#fe0169`): Same hue as like-active. Marks unread notifications.
+- **Repost Active** (`#22c55e`): Subtle green when a thread has been reposted.
+
+### Accent (Engagement icons)
+Each engagement action has its own activation color, chromatically distinct:
+- **Reply Active** (`#ffffff`): Reply icon brightens to full white on hover (no chromatic shift).
+- **Repost Active** (`#22c55e`): Subtle green fill on the repost icon when active.
+- **Like Active** (`#fe0169`): Heart fills rose-magenta when liked.
+- **Share Icon** (`rgba(243,245,247,0.5)`): Share has no active state — it's transient.
+
+### Verified
+- **Verified Blue** (`#1da1f2`): Meta-verified accounts. Borrowed from Twitter's legacy blue — Meta uses this hue across Instagram, Facebook, and Threads for consistency.
+
+### Interactive
+- **Link** (`rgba(243,245,247,0.5)`): Inline body links default to muted text color, with underline. Hover lifts to full white.
+- **Link Hover** (`#ffffff`): Underlined full-white on hover.
+- **Selected** (`rgba(255,255,255,0.2)`): Selected text background — soft white tint.
+- **Focus Ring** (`#ffffff`): 2px solid white ring on every focusable element. The ring contrast (white-on-black or black-on-white) follows canvas mode.
+
+### Neutral Scale (Lights Out)
+- **Text Strong** (`#ffffff`): Display headings, primary CTAs.
+- **Text** (`#ffffff`): Default text on dark.
+- **Text Body** (`#f5f5f5`): Body running-text — slight softness.
+- **Text Muted** (`rgba(243,245,247,0.5)`): Metadata, "·8h", reply counts.
+- **Text Soft** (`rgba(243,245,247,0.4)`): Secondary captions.
+- **Text Faint** (`rgba(243,245,247,0.3)`): Ultra-fine annotations.
+
+### Surface & Borders (Lights Out)
+- **Surface** (`#181818`): Suggested-follow card surface, search bar background, modal surface.
+- **Surface Hover** (`#1f1f1f`): Hover state on surface cards.
+- **Surface Elevated** (`#252525`): Modal and dialog surface.
+- **Surface Soft** (`#0a0a0a`): Near-black dividers, subtle band tints.
+- **Border** (`rgba(243,245,247,0.15)`): 1px translucent hairline — divides every thread.
+- **Border Strong** (`rgba(243,245,247,0.3)`): Heavier divider on focused inputs, button outlines.
+- **Border Subtle** (`rgba(243,245,247,0.08)`): Near-invisible separator inside dense lists.
+- **Thread Line** (`rgba(243,245,247,0.2)`): The 2px vertical connector through avatar columns.
+
+### Shadow Colors
+- **Shadow Standard** (`rgba(0,0,0,0.3)`): Default modal shadow.
+- **Shadow Elevated** (`rgba(0,0,0,0.4)`): Elevated dialog shadow.
+- **Shadow Deep** (`rgba(0,0,0,0.5)`): Lightbox / overlay shadow.
+
+### Semantic
+- **Success** (`#22c55e`): Same hue as repost-active.
+- **Warning** (`#fab421`): Gold — caution states.
+- **Danger** (`#fe0169`): Same hue as like-active — destructive actions, error toasts.
+- **Info** (`#1da1f2`): Same as verified-blue — informational notices.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Instagram Sans", "InstagramSans", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`. Instagram Sans is Meta's custom Inter-derived family that ships across Instagram and Threads. SF Pro Display fallback on Apple devices ensures native rendering quality.
+- **Mono**: `"SF Mono", ui-monospace, Menlo, Consolas, monospace`. Mono is rare; reserved for technical references inside threads.
+- **OpenType features**: `'cv11'` for the disambiguated I/l/1 in metadata, `'ss01'` for the alternate single-storey 'a' on display sizes.
+- **No serif**: Threads uses zero serif type. The single-family discipline is the typographic philosophy.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Instagram Sans | 56 | 700 | 1.05 | -1px | ss01 | Marketing landing h1 |
+| display-lg | Instagram Sans | 40 | 700 | 1.10 | -0.8px | — | Section heads on marketing |
+| display-md | Instagram Sans | 32 | 700 | 1.15 | -0.5px | — | Sub-section heads |
+| display-sm | Instagram Sans | 24 | 600 | 1.20 | -0.3px | — | Card titles, modal heads |
+| title-lg | Instagram Sans | 20 | 700 | 1.30 | 0 | — | Profile names, modal heads |
+| title-md | Instagram Sans | 18 | 600 | 1.30 | 0 | — | Section heads |
+| title-sm | Instagram Sans | 16 | 600 | 1.40 | 0 | — | Small section heads |
+| username | Instagram Sans | 15 | 600 | 1.30 | 0 | — | Username on thread — same size as body but bold |
+| body-md | Instagram Sans | 15 | 400 | 1.40 | 0 | — | Thread body — the default reading register |
+| body-sm | Instagram Sans | 13 | 400 | 1.40 | 0 | — | Secondary body, side panels |
+| metadata | Instagram Sans | 13 | 400 | 1.30 | 0 | — | "·8h" timestamp, "12 replies" — muted |
+| label | Instagram Sans | 12 | 600 | 1.30 | 0.3px | — | Pill labels |
+| caption | Instagram Sans | 13 | 500 | 1.30 | 0 | — | Tooltip text, fine annotations |
+| code-md | SF Mono | 13 | 400 | 1.55 | 0 | — | Inline code spans |
+| button | Instagram Sans | 14 | 600 | 1.0 | 0 | — | CTA pill labels |
+| nav-link | Instagram Sans | 14 | 500 | 1.4 | 0 | — | Top-nav menu items |
+| counter | Instagram Sans | 13 | 400 | 1.0 | 0 | — | Engagement counter |
+
+### Principles
+- **Single family across every register.** Instagram Sans handles display, body, navigation, captions.
+- **Display weights stay at 600–700.** No 800 or 900. The brand voice is conversational, not assertive.
+- **Body sits at 15px / 400 / 1.4.** Slightly looser than X (1.3), tighter than Bluesky (1.5). The middle ground.
+- **Username at 15/600.** Same size as body but bold — preserves visual rhythm where username and body sit on the same line.
+- **No italic for emphasis.** Italic reserved for the @ wordmark.
+- **Negative tracking essential at display.** Without `-0.5` to `-1px` tracking, Instagram Sans at 700 reads too wide.
+- **Mono only for technical references.** Don't use SF Mono as decoration.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**`button-primary`** — White-on-black pill. Background `#ffffff`, text `#000000`, Instagram Sans 14px / 600, padding 10px × 24px, height 40px, radius 12px. Used on Sign Up, Follow, primary marketing CTAs. Hover background to `#e0e0e0` over 100ms.
+
+**`button-secondary`** — Outlined pill. Background transparent, text `#ffffff`, 1px `rgba(243,245,247,0.3)` border, same shape and padding. Used as Follow → Following state transition; also for secondary marketing CTAs.
+
+**`button-ghost`** — Tertiary text-only. Transparent background, text `rgba(243,245,247,0.5)` muted, no border, padding 8px × 16px, radius 12px. Used for "Cancel" and inline link CTAs.
+
+**`button-icon`** — Engagement icon. Transparent background, icon `rgba(243,245,247,0.5)` muted, 36×36 hit area, pill shape. Each icon has its specific active color (white reply / green repost / rose-magenta like / no share-active).
+
+### Cards
+
+**`card-thread`** — Standard timeline thread. Background `#000000` (sits on canvas), 1px `rgba(243,245,247,0.15)` bottom-border, 16px padding, no radius. 36px circular avatar at top-left. Username + timestamp row + thread body + engagement row. The lack of card chrome is the platform's signature.
+
+**`card-thread-detail`** — Standalone thread on detail page. Background `#000000`, 1px `rgba(243,245,247,0.15)` border, 18px radius (lg), 16px padding. Used when a thread is the focal content of its page.
+
+**`card-profile-mini`** — Profile preview card on hover. Background `#181818`, 12px radius, 16px padding, `rgba(0,0,0,0.4)` shadow. Avatar + name + bio + follow button.
+
+**`card-suggestion`** — Who-to-follow suggestion. Background `#181818`, 12px radius, 16px padding. Profile row with Follow CTA on right.
+
+**`card-thread-with-replies`** — Parent thread + nested replies. The thread connector line draws through the avatar column from parent to first reply, then through subsequent replies. Each reply indents 0px (the avatar column does the indent visually).
+
+### Badges & Pills
+
+**`badge-verified`** — Meta verified checkmark. Inline `#1da1f2` blue circle (16px) with white checkmark, positioned right of the username.
+
+**`badge-pill`** — Small dark pill. Background `#181818`, text `#ffffff`, 12px / 600, pill, padding 4px × 10px.
+
+**`badge-followed`** — "Following" state pill. Transparent background, text `rgba(243,245,247,0.5)` muted, 1px `rgba(243,245,247,0.15)` border, 12px / 600, pill, padding 2px × 8px.
+
+**`badge-new`** — Notification "new" indicator. 8px circular `#fe0169` dot, no text — the unread signal.
+
+### Inputs / Forms
+
+**`text-input`** — Standard input. Background `#000000`, text `#ffffff`, 1px `rgba(243,245,247,0.15)` border, 12px radius, 12px × 16px padding, height 48px. Placeholder `rgba(243,245,247,0.4)`.
+
+**`text-input-focused`** — Border thickens to 2px solid `#ffffff`. No background change.
+
+**`textarea-compose`** — Thread composer. No border, no background, no radius. Multi-line textarea with placeholder "What's new?" in 15px / 400 muted. Character counter ring appears at 280 of 500 characters (Threads' max length).
+
+**`search-bar`** — Search input. Background `#181818`, no border, 12px radius, 10px × 16px padding. Search icon left.
+
+### Navigation
+
+**`top-nav`** — Sticky header. 60px tall, background `rgba(0,0,0,0.7)` with `backdrop-filter: blur(12px)`, no border. Center: rotated @ wordmark in white. Right cluster (mobile): notification icon, profile avatar.
+
+**`side-rail`** — Desktop icon-only navigation column, 76px wide, background `#000000`. Top: rotated @ wordmark. Below: vertical icon stack (Home / Search / Compose / Activity / Profile). Active icon shows a 4px white dot below.
+
+**`bottom-nav-mobile`** — Mobile bottom nav, 5 icons: Home / Search / Compose (centered, larger) / Activity / Profile.
+
+**`tab-bar`** — Horizontal tabs on profile pages (Threads / Replies / Reposts). Active tab: 2px solid white bottom border, weight 600. Inactive: text muted, weight 500.
+
+### Decorative
+
+**`thread-connector-line`** — 2px vertical line drawn at `rgba(243,245,247,0.2)` through the avatar column of nested replies. Connects parent thread to first reply at top; continues through subsequent replies. Animates in with a 320ms vertical scale transition when expanding a thread.
+
+**`heart-burst`** — Heart icon animation on tap. Outline heart fills `#fe0169` rose-magenta, scales 1.0 → 1.4 → 1.0 over 240ms with spring-bounce, plus 4–6 small magenta particles fading outward over 360ms.
+
+**`profile-avatar`** — Circular avatar (36px in feed, 24px in compact, 96px on profile). On hover (desktop), opens `card-profile-mini` after 600ms delay.
+
+**`character-counter-ring`** — Circular progress ring around the Post button when composing. 0–280 chars: invisible. 280–450: white ring grows. 450–500: ring shifts to gold. 500+: ring shifts to red and Post disables.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96`. Threads is **moderately spacious** — looser than X (12px tweet padding) but tighter than Bluesky (24px post padding). Thread cards have 16px padding; section padding (between bands on marketing pages) at 64–96px.
+
+### Grid & Container
+Max content width is 1264px. The product surface is single-column-centric: 76px left side rail (icon-only nav) + 640px center feed + optional 312px right rail (suggested follows, search trends). The 640px center column never expands beyond that — type optimal-line-length is the constraint.
+
+### Whitespace Philosophy
+Threads prizes **conversational breathing room** over information density. Each thread card has more vertical space than a tweet (16px padding vs 12px) because the platform expects threads to be longer-form than tweets. The whitespace philosophy is "let each thought stand on its own" — no compression, no chrome bleeding.
+
+### Section Cadence
+Marketing pages alternate dark feature bands and accent product showcases. Product pages run as uninterrupted feed: thread → divider → thread → divider, with the thread connector line linking replies into vines. There are no decorative breaks.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Inline tag chips |
+| XS | xs | 4px | Badge accents |
+| Standard | sm | 8px | Tooltip cards |
+| Comfortable | md | 12px | Buttons, inputs, search bar — the default actionable radius |
+| Large | lg | 18px | Cards (modal, detailed thread) |
+| Featured | xl | 24px | Floating panels, drawer shells |
+| Pill | pill | 9999px | Profile avatars (always circular), badges, character-counter ring |
+
+Threads' signature radius is **12px on buttons** (looser than X's full pill, sharper than Bluesky's 16px). The 12px radius is the contemporary middle ground — friendly enough to read as conversational, structured enough to read as platform.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Body sections, top nav, thread feed |
+| 1 — Hairline | 1px `rgba(243,245,247,0.15)` border or bottom-border | Thread dividers, card outlines |
+| 2 — Surface | `#181818` background, no shadow | Suggested-follow cards, search bar, modal surface |
+| 3 — Elevated | `#1f1f1f` background or `rgba(0,0,0,0.3) 0 4px 16px` shadow | Hover states, profile-preview popovers |
+| 4 — Modal | `#252525` + `rgba(0,0,0,0.4) 0 12px 32px` + backdrop dim | Compose modal, settings dialog |
+| 5 — Lightbox | Same as modal + ESC focus trap | Image lightbox, video fullscreen |
+
+### Shadow Philosophy
+Threads uses **hairline borders for elevation, not drop shadows** — the same philosophy as X. The 1px translucent hairline is the platform's most-used elevation tool. Drop shadows are reserved for modal and dialog layers. The thread connector line provides an additional non-shadow elevation signal — vertical hairlines that link related content without lifting it.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hovers, opens, transitions.
+- **Emphasized ease (spring-bounce)**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — heart-burst, follow-button confirmation, success animations.
+
+### Duration Buckets
+- **Fast (100ms)**: Color and opacity shifts on hover, button press feedback.
+- **Standard (200ms)**: Card hover, dropdown open, modal entrance.
+- **Slow (300ms)**: Page section reveals, thread expand, heart-burst sequence.
+
+### Per-Component Micro-States
+- **Button hover**: White CTA pill darkens to `#e0e0e0` over 100ms; engagement icons brighten or shift to active color.
+- **Button press**: Scale 1.0 → 0.96 → 1.0 over 200ms with spring-bounce.
+- **Heart-burst**: Outline heart fills `#fe0169` rose-magenta, scales 1.0 → 1.4 → 1.0 over 240ms with spring-bounce, 4–6 magenta particles fading outward over 360ms. The single most-tapped animation on the platform.
+- **Repost confirmation**: Outline repost icon fills `#22c55e` green, briefly pulses scale 1.0 → 1.1 → 1.0 over 200ms.
+- **Follow button**: Fills white background → secondary outline transition over 240ms with emphasized ease, with checkmark icon briefly appearing.
+- **Thread expand**: When expanding nested replies, the thread connector line draws in vertical scale transition (0 → 1) over 320ms, replies fade-up sequentially with 50ms stagger.
+- **Profile-avatar hover**: After 600ms desktop hover, profile-mini card fades in with 200ms scale 0.95 → 1.0 transition.
+- **Input focus**: 2px solid white ring expands from 0 → 2px over 100ms.
+
+### Page Transitions
+Threads uses standard browser navigation. Section-on-scroll reveals are 300ms fade-in (no translate). Thread detail page on mobile slides in from right over 200ms; instant on desktop. Compose modal opens with 200ms scale 0.95 → 1.0 transition.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` honored: heart-burst skipped (instant fill, no scale or particles), thread connector line draws instantly (no vertical scale), follow-button overshoot replaced with instant state change, page-section reveals reduced to instant fade.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#ffffff` on `#000000` = **21.0** — AAA at every size.
+- **Body on bg**: `#f5f5f5` on `#000000` = **18.5** — AAA.
+- **Muted on bg**: `rgba(243,245,247,0.5)` on `#000000` ≈ **9.5** — AAA.
+- **On-CTA on CTA**: `#000000` on `#ffffff` = **21.0** — AAA. The maximum-contrast button pair.
+- **Body on surface**: `#ffffff` on `#181818` = **17.5** — AAA.
+
+### Focus Indicators
+Every focusable element shows a 2px solid `#ffffff` (or `#000000` in light mode) ring with 2px offset. The white-on-black focus is the platform's universal focus signal — distinct from the muted text color so focus is unmistakable.
+
+### ARIA Patterns
+- **Thread card**: Wrapped in `<article aria-labelledby="thread-author thread-content">`; engagement actions use `<button aria-label="Like">` etc.
+- **Heart button**: `aria-pressed="true|false"`, `aria-label="Like" / "Unlike"`. Counter announced via `aria-live="polite"`.
+- **Compose modal**: `role="dialog"` with `aria-labelledby` referencing the title; ESC closes; focus trapped.
+- **Verified badge**: `aria-label="Meta verified"` on the SVG.
+- **Tab bar (profile)**: `<nav role="tablist">` with each tab `<button role="tab" aria-selected="true|false">`.
+- **Side rail**: `<nav aria-label="Primary">`; current page marked `aria-current="page"`.
+
+### Keyboard Navigation
+Tab order: skip-link → side rail → main feed → right rail (if visible). Skip-link at top jumps to `<main>`. Arrow Up / Arrow Down navigates between threads in feed. Space toggles play/pause on video threads. Modal traps focus; ESC closes.
+
+### Screen Reader Hints
+Thread connector line is decorative and uses `aria-hidden="true"`. Engagement counters use long-form labels ("237 likes" not "237"). Verified badge announces "Meta verified account" rather than just "Verified."
+
+### Reduced Motion Handling
+Honored via `@media (prefers-reduced-motion: reduce)` — heart-burst reduced to instant fill, thread connector line draws instantly, follow-button overshoot replaced with instant state change, all hover scale animations removed.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 480px | Bottom nav appears; side rail hidden; full-width feed; @ wordmark in top center |
+| Tablet | 480–768px | Side rail collapses to icon-only column at 76px; right rail hidden |
+| Desktop | 768–1264px | Full layout; side rail at 76px, feed at 640px center, right rail visible |
+| Wide | > 1264px | Same as desktop with more breathing room; max content 1264px |
+
+### Touch Targets
+- Engagement icons: 36 × 36px hit area (visually 24px icon centered).
+- Primary CTA pill: 40 × 40px minimum (10px × 24px padding).
+- Profile avatars: 36 × 36px in feed, 24 × 24px in compact contexts, 96px on profile pages.
+- Bottom-nav icons (mobile): 56 × 56px each.
+
+### Collapsing Strategy
+At < 1024px right rail hides (search trends, who-to-follow move into the side rail or top nav). At < 768px side rail collapses to icon-only column. At < 480px both rails hide and bottom-nav appears. Compose moves from inline to FAB on mobile.
+
+### Image Behavior
+Image attachments inside threads use 12px radius and full-bleed within the thread content region. Multi-image threads use a 2x2 or horizontal-scroll carousel. Profile avatars are circular (radius 9999) at all sizes.
+
+## 11. Content & Voice
+
+### Tone
+**Conversational, present-tense, slightly informal.** Threads writes as if it's a friend casually starting a thread. Marketing copy ("Say more.") is minimal and inviting. Product copy ("What's new?") is open-ended. The voice rejects the corporate-warmth of legacy social media and the algorithmic-confidence of X — Threads occupies a casual middle register.
+
+### Microcopy Patterns
+- **CTA verbs**: "Sign up", "Follow", "Post", "Reply", "Repost". Short and direct.
+- **Compose placeholder**: "What's new?" — open-ended, never prescriptive.
+- **Empty timeline**: "Welcome to Threads! Follow some accounts to see posts in your feed."
+- **Engagement counters**: Abbreviated ("1.2K", "47") — full numbers only in screen-reader labels.
+- **Follow button states**: "Follow" / "Following" — never "Subscribe" or "Unfollow."
+
+### Empty States
+- **Empty feed**: "Looks pretty quiet here. Follow some accounts to see what's new."
+- **Empty notifications**: "When you get likes, replies, or follows, you'll see them here."
+- **Empty replies**: "Be the first to reply to this thread."
+- **Empty profile (own)**: "Share your first thread! Tap the compose icon below to start."
+
+### Error Messages
+**Pattern**: Single-line toast ("Something went wrong. Try again.") with retry CTA. Never apologetic. Network failures preserve the draft. Character limit (500) enforces silently with the counter ring.
+
+### Success Confirmations
+Single-line toast: "Posted to your profile" or "Reply posted." Auto-dismisses after 3s. Like / repost / follow confirmations are silent — visual feedback is the confirmation.
+
+### CTA Verb Conventions
+"Post" not "Tweet" / "Repost" not "Retweet" / "Reply" not "Comment" / "Follow" not "Subscribe" / "Like" not "Heart" or "Favorite." Threads imports Twitter's vocabulary but Meta-flavors it with "Post" and "Repost."
+
+## 12. Dark Mode & Theming
+
+Threads ships **two themes** — Default (light, white canvas) and Lights Out (dark, black canvas). The system follows OS preference by default; users can override in settings. Approximately 60% of Threads users are on Lights Out, making dark the de-facto identity.
+
+```yaml
+colors-light:                     # Default mode
+  bg: '#ffffff'                  # white canvas
+  bg-soft: '#f5f5f5'             # secondary background
+  surface: '#fafafa'             # card surface (subtle lift)
+  surface-hover: '#efefef'
+  surface-elevated: '#ffffff'
+  surface-soft: '#fafafa'
+  text: '#000000'                # pure black text
+  text-strong: '#000000'
+  text-body: '#0a0a0a'
+  text-muted: 'rgba(0,0,0,0.5)'
+  text-soft: 'rgba(0,0,0,0.4)'
+  text-faint: 'rgba(0,0,0,0.3)'
+  primary-action: '#000000'       # black-on-white CTA — inverse
+  primary-action-hover: '#1f1f1f'
+  secondary-action: '#ffffff'
+  link: 'rgba(0,0,0,0.5)'
+  link-hover: '#000000'
+  border: 'rgba(0,0,0,0.15)'
+  border-strong: 'rgba(0,0,0,0.3)'
+  border-subtle: 'rgba(0,0,0,0.08)'
+  thread-line: 'rgba(0,0,0,0.2)'
+  on-brand: '#ffffff'
+  like-active: '#fe0169'         # rose unchanged
+  repost-active: '#22c55e'       # green unchanged
+  verified-blue: '#1da1f2'       # blue unchanged
+```
+
+**Defining decisions**:
+- The like-active rose-magenta `#fe0169` is unchanged across modes — borrowed from Instagram and preserved as the platform's only persistent saturated color.
+- Primary CTA inverts: white-on-black in dark, black-on-white in light. The CTA always carries the highest possible contrast against canvas.
+- Verified blue and repost green stay constant — saturated enough to work on both canvases.
+
+## 13. Lineage & Influences
+
+Threads' visual lineage descends from **Instagram's chromatic discipline + Twitter's text-first feed structure + post-Bauhaus typographic minimalism**. The platform is explicitly designed as Meta's text-first counter-Twitter, inheriting Instagram's authentication layer (every Threads account is bound to an Instagram account) and Instagram's color philosophy (the rose-magenta heart icon, the verified-blue, the chromatic restraint elsewhere). The text-feed structure borrows from Twitter — single column, vertical chronology, engagement row under each post — but inverts Twitter's chromatic identity (legacy blue) to a strict black-and-white discipline.
+
+The @ wordmark, set in heavy italic and rotated, is a typographic gesture rather than a logotype — closer to Yoshida Tomoaki's '@studio' brand identity work or Karl Gerstner's 1960s wordmark experiments than to traditional social-media branding. The thread connector line is borrowed from forum software (vBulletin, phpBB) where indented replies historically used vertical lines or borders to indicate parentage; Threads modernizes that convention with a translucent hairline that runs through the avatar column.
+
+The chromatic restraint — no brand color, no gradient, no signature accent except the borrowed rose heart — is the platform's most distinctive design decision. Where Instagram embraces the sunset gradient and TikTok embraces neon, Threads embraces nothing. The brand IS the absence.
+
+- **Instagram (Meta)** — Rose-magenta heart, verified-blue, Instagram Sans typography. https://instagram.com
+- **Twitter (legacy)** — The text-feed structure, engagement row pattern. (now redirects to x.com)
+- **Karl Gerstner / Bauhaus typography** — Heavy italic letterglyph as wordmark. (no URL)
+- **vBulletin / phpBB forums** — Thread connector line / nested reply structure. (no URL)
+- **Bauhaus / Swiss Style** — Monochromatic + single-accent discipline. (no URL)
+
+## 14. Do's and Don'ts
+
+### Do
+- Anchor every page on pure black (`#000000`) Lights Out or pure white (`#ffffff`) Default. No warmed greys.
+- Use the rotated @ wordmark — no logotype, no tagline. The single glyph is the brand.
+- Use Instagram Sans for everything. The single-family discipline preserves the brand voice.
+- Run thread body at 15px / 400 / 1.4 line-height.
+- Use the thread connector line (2px translucent hairline) through the avatar column on nested replies.
+- Reserve `#fe0169` rose-magenta for the like-active heart. Nowhere else on the platform.
+- Use circular profile avatars at 36px in feed, 24px compact, 96px on profile pages.
+- Use 12px radius on buttons (`button-primary` and `button-secondary`).
+- Use 16px padding on thread cards. Generous but not excessive.
+- Honor the heart-burst spring-bounce animation. It's the platform's only "playful" moment.
+
+### Don't
+- Don't introduce a brand color. Threads is monochromatic + the rose-magenta heart only.
+- Don't replace the @ wordmark with a logotype. The single glyph is the identity.
+- Don't gradient-fade or tint the rose-magenta. It's flat, full strength, only on the like-active state.
+- Don't pad thread cards beyond 16px. Density preserves conversation rhythm.
+- Don't add drop shadows to thread cards. The hairline divider is the elevation.
+- Don't bold thread body for emphasis. Body stays at 400; emphasis comes from username (600) or italics.
+- Don't use serif type anywhere.
+- Don't soften the like rose-magenta in light mode. The color is unchanged across themes.
+- Don't replace circular avatars with rounded squares. Circle is non-negotiable.
+- Don't break the thread-connector line into a colored or branded element. It stays at 20% opacity.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Lights Out: #000000 (pure black — default dark mode)
+Bg / Default:    #ffffff (pure white — light mode)
+Surface:         #181818 (suggested-follow card on dark)
+Border:          rgba(243,245,247,0.15) (1px hairline)
+Thread Line:     rgba(243,245,247,0.2) (2px vertical connector)
+Text:            #ffffff (primary white on dark)
+Text Body:       #f5f5f5 (slight softness)
+Text Muted:      rgba(243,245,247,0.5) (metadata)
+Like Active:     #fe0169 (rose-magenta — borrowed from Instagram)
+Repost Active:   #22c55e (subtle green)
+Verified Blue:   #1da1f2 (Meta verified)
+Primary CTA:     #ffffff (white pill on black)
+On-CTA:          #000000 (black text on white pill)
+```
+
+### Example Component Prompts
+
+1. "Create a Threads-style thread card: `#000000` background, no border or radius, 1px `rgba(243,245,247,0.15)` bottom-divider, 16px padding. 36px circular avatar at top-left. Username in Instagram Sans 15/600 white + Meta verified blue checkmark + '·8h' timestamp in 13/400 muted. Thread body in 15/400/1.4 `#f5f5f5`. Engagement row at bottom: reply / repost / like / share icons (24px), all `rgba(243,245,247,0.5)` muted by default."
+
+2. "Design a primary Sign Up button: white pill, background `#ffffff`, text `#000000` in Instagram Sans 14/600, padding 10px × 24px, height 40px, radius 12px. Hover background to `#e0e0e0` over 100ms."
+
+3. "Build a thread with 3 nested replies. Parent thread sits at top (full width). Each reply card uses 36px avatar at left, with a 2px vertical `rgba(243,245,247,0.2)` line drawn through the avatar column connecting parent to child."
+
+4. "Compose a heart-burst animation: outline heart icon (`rgba(243,245,247,0.5)` default) fills `#fe0169` rose-magenta, scales 1.0 → 1.4 → 1.0 over 240ms with spring-bounce ease, with 4–6 small magenta particles fading outward over 360ms."
+
+5. "Create a side rail for desktop: 76px wide, `#000000` background. Top: rotated @ wordmark in white. Below: vertical icon stack (Home / Search / Compose / Activity / Profile). Active icon shows a 4px white dot below the icon."
+
+6. "Design a compose modal: `#252525` background, 18px radius, 16px padding, `rgba(0,0,0,0.4)` shadow. Multi-line textarea with no border, no background, placeholder 'What's new?' in Instagram Sans 15/400 muted. Bottom row: media-attach icons left, character counter ring + Post button right. Post button is white pill (`#ffffff` bg, `#000000` text)."
+
+### Iteration Guide
+1. Start with pure black (`#000000`) or pure white (`#ffffff`) canvas. The maximum-contrast choice is foundational.
+2. Use the @ wordmark, never a logotype. If you find yourself wanting to add "Threads" text, you're drifting off-brand.
+3. Reserve rose-magenta (`#fe0169`) exclusively for the like-active heart. Don't use it as a brand accent or CTA color.
+4. Type voice runs Instagram Sans across every register. If you fall back to system sans, the platform character is lost.
+5. Use the thread connector line (2px `rgba(243,245,247,0.2)`) through avatar columns to link nested replies. The line is the platform's most distinctive structural element.
+6. Body sits at 15/400/1.4. Tighter (1.3) drifts toward X; looser (1.5) drifts toward Bluesky.
+7. Buttons at 12px radius. Sharper (full pill) drifts toward X; looser (16px) drifts toward consumer marketing.
+8. Trust the chromatic absence. Threads is meant to feel quiet — adding a brand color breaks the mood.

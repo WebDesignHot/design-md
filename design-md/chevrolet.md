@@ -1,0 +1,696 @@
+---
+name: Chevrolet
+tagline: Gold-cross American classic — Louis sans on white with a `#cd9834` bowtie, a `#003876` corporate blue, and Camaro/Corvette red drama in reserve.
+author: webdesignhot
+source_url: https://www.chevrolet.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [automotive, marketing]
+tags: [light, american, classic, sans, blue, gold, configurator, photography]
+preview_swatch: ['#ffffff', '#cd9834', '#1a1a1a']
+related: [ford, tesla, bmw]
+description: 'Chevrolet.com is the American classic — the bowtie since 1913, gold-on-white, with the deep blue (`#003876`) of corporate trust and a single hot red (`#dc1f2c`) reserved for Corvette and Camaro performance moments. The page canvas is bright white, type runs **Louis** (Chevy''s bespoke sans by GM Brand) at weight 400 body / 700 display, and the wordmark is the gold-edged bowtie with white inset script. The signature visual move: the **bowtie + blue Build & Price + Silverado-or-Corvette photography** triplet that has anchored Chevrolet marketing through every truck launch since the Bel Air era.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f4f4f4'              # surface alternation
+  bg-card: '#ffffff'
+  bg-strong: '#e8e8e8'             # divider band
+  bg-dark: '#1a1a1a'               # near-black hero band — Corvette / Camaro launches
+  bg-dark-elev: '#262626'          # elevated panel
+  bg-deep: '#000000'               # deep — Corvette stage shots
+  bg-blue-deep: '#003876'           # corporate blue band
+  surface: '#ffffff'
+  surface-soft: '#f4f4f4'
+  surface-card: '#ffffff'
+  surface-table: '#fafafa'         # spec table band
+  text: '#333333'                  # body
+  text-strong: '#1a1a1a'           # body-strong
+  text-ink: '#1a1a1a'              # ink — primary headings
+  text-muted: '#666666'             # muted
+  text-faint: '#999999'             # disabled
+  brand: '#cd9834'                 # Chevrolet Gold (bowtie surround)
+  brand-deep: '#003876'             # Corporate Blue — primary CTA
+  brand-deep-hover: '#002b5e'      # pressed
+  brand-disabled: '#cccccc'         # disabled
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  on-dark-soft: '#bcbcbc'
+  accent-red: '#dc1f2c'            # Corvette / Camaro red — performance only
+  accent-red-deep: '#a8161f'        # pressed accent
+  accent-yellow: '#f4d35e'          # heritage yellow — Bel Air, vintage stories
+  border: '#d6d6d6'                # hairline
+  border-strong: '#a6a6a6'         # input border
+  border-soft: '#e6e6e6'            # subtle dividers
+  border-on-dark: 'rgba(255,255,255,0.16)'
+  link: '#003876'
+  link-hover: '#002b5e'
+  ring: '#003876'
+  shadow-soft: 'rgba(0,0,0,0.06)'
+  shadow-elev: 'rgba(0,0,0,0.12)'
+  shadow-deep: 'rgba(0,0,0,0.32)'
+  success: '#1f8b46'
+  warning: '#f0a020'
+  danger: '#dc1f2c'
+  info: '#003876'
+
+typography:
+  display:
+    family: '"Louis", "Louis Global 1", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700, 900]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Louis", "Louis Global 1", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['kern', 'liga']
+  mono:
+    family: 'SF Mono, Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:      { size: 72, weight: 700, lineHeight: 1.04, tracking: '-0.01em', family: display, notes: 'Homepage hero — Silverado / Corvette name' }
+    display-xl:        { size: 56, weight: 700, lineHeight: 1.08, tracking: '-0.005em', family: display }
+    display-lg:        { size: 40, weight: 700, lineHeight: 1.12, tracking: '0', family: display, notes: 'Section opener' }
+    display-md:        { size: 32, weight: 700, lineHeight: 1.16, tracking: '0', family: display }
+    display-sm:        { size: 24, weight: 700, lineHeight: 1.25, tracking: '0', family: display }
+    title-lg:          { size: 20, weight: 700, lineHeight: 1.30, tracking: '0', family: display }
+    title-md:          { size: 18, weight: 700, lineHeight: 1.40, tracking: '0', family: display }
+    title-sm:          { size: 16, weight: 700, lineHeight: 1.40, tracking: '0', family: display }
+    body-lg:           { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'Lead paragraph' }
+    body-md:           { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'Default paragraph' }
+    body-sm:           { size: 14, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    caption:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.04em', family: body }
+    label-uppercase:   { size: 13, weight: 700, lineHeight: 1.30, tracking: '0.12em', family: display, notes: 'Section eyebrow — uppercase' }
+    button:            { size: 14, weight: 700, lineHeight: 1.00, tracking: '0.06em', family: display }
+    nav-link:          { size: 14, weight: 500, lineHeight: 1.40, tracking: '0.02em', family: body }
+    micro:             { size: 11, weight: 400, lineHeight: 1.40, tracking: '0.05em', family: body }
+    code:              { size: 13, weight: 400, lineHeight: 1.50, tracking: '0', family: mono }
+
+radius:
+  none: 0
+  xs: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  pill: 9999
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 760
+  header-height: 72
+  hero-height: 88vh
+
+components:
+  button-primary:
+    bg: '#003876'
+    text: '#ffffff'
+    padding: '14px 32px'
+    radius: 0
+    font: 'Louis 14/700 uppercase 0.06em tracking'
+    transition: 'background 0.2s ease'
+    hover: '#002b5e'
+  button-ghost:
+    bg: 'transparent'
+    text: '#1a1a1a'
+    padding: '14px 32px'
+    radius: 0
+    border: '1px solid #1a1a1a'
+    font: 'Louis 14/700 uppercase'
+  button-on-dark:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    padding: '14px 32px'
+    radius: 0
+  button-text-link:
+    bg: 'transparent'
+    text: '#003876'
+    font: 'Louis 14/700 uppercase with arrow ›'
+  card-vehicle:
+    bg: '#ffffff'
+    radius: 0
+    padding: '24px'
+    border: '1px solid #d6d6d6'
+    image-position: 'top, full-width 16:9 PNG render'
+    title: '24/700 Louis'
+    cta: '"Build & Price" → 14/700 uppercase #003876'
+  card-feature:
+    bg: '#f4f4f4'
+    border: 'none'
+    padding: '32px'
+    radius: 0
+  hero-band-dark:
+    bg: '#1a1a1a'
+    text: '#ffffff'
+    notes: 'Used for Corvette, Camaro, Silverado HD launches, performance stories'
+  hero-band-blue:
+    bg: '#003876'
+    text: '#ffffff'
+    notes: 'Used for corporate moments, EV reveals'
+  config-tile:
+    bg: '#ffffff'
+    border: '1px solid #d6d6d6'
+    radius: 0
+    padding: '16px 20px'
+    selected-border: '2px solid #003876'
+  badge:
+    bg: '#1a1a1a'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.12em'
+    radius: 0
+  badge-corvette:
+    bg: '#dc1f2c'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.12em'
+    radius: 0
+  badge-electric:
+    bg: '#003876'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.12em'
+    radius: 0
+  navigation:
+    bg: '#ffffff'
+    height: 72
+    border-bottom: '1px solid #d6d6d6'
+    nav-link: '14/500 #1a1a1a'
+    logo: 'Chevrolet bowtie — 56×24, gold-edged with white inset script'
+  input:
+    bg: '#ffffff'
+    border: '1px solid #a6a6a6'
+    radius: 0
+    padding: '12px 16px'
+    font: 'Louis 16/400'
+    focus-border: '#003876'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — hero parallax disables, video autoplay pauses, only opacity transitions remain.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+  ultra: 1920
+
+shadows:
+  flat: 'none'
+  card: 'rgba(0,0,0,0.06) 0 2px 6px'
+  elevated: 'rgba(0,0,0,0.12) 0 8px 24px'
+  modal: 'rgba(0,0,0,0.32) 0 24px 64px'
+  ring: '0 0 0 2px #003876'
+
+accessibility:
+  contrast-text-on-bg: 16.9          # #1a1a1a on #ffffff — AAA
+  contrast-body-on-bg: 11.0          # #333333 on #ffffff — AAA
+  contrast-text-on-brand-deep: 11.4  # #ffffff on #003876 — AAA
+  contrast-on-dark-bg: 16.5          # #ffffff on #1a1a1a — AAA
+  focus-ring: '2px solid #003876 with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: 'partial — Chevrolet uses near-black hero bands (#1a1a1a) for Corvette/Camaro/performance contexts within otherwise light pages. Full dark variant not shipped on Chevrolet.com. myChevrolet app and in-vehicle Infotainment 3 run dark by default.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Chevrolet.com is the American classic — the gold-edged bowtie that has appeared on every Chevrolet since 1913, anchoring a marketing surface that reads as **Bel Air era confidence updated for the digital age**. The page opens onto a bright white canvas with the bowtie pinned at the top-left of a thin white nav, and an immediate full-bleed photograph of a Silverado, Corvette, Tahoe, or Equinox EV in dramatic environmental light. Where Ford photography reads as noon-clarity workmanlike, Chevrolet photography reads as **golden-hour cinematic** — there is more theater here, more drama, more intentional staging.
+
+The colour mood is **gold-cross + corporate blue**. Chevrolet's voltage is split across two roles: **Gold** (`#cd9834`) lives on the bowtie alone — never used for CTAs, never used for accents, sacred to the wordmark — and **Corporate Blue** (`#003876`) carries every primary CTA, every selected state, every link. The split is deliberate: the gold belongs to the heritage logo, the blue belongs to the action layer. Surrounding both, a near-monochrome neutral system in cool whites (`#ffffff` / `#f4f4f4` / `#e8e8e8`) provides the ground. The dark band (`#1a1a1a`, near-black) is reserved for **Corvette, Camaro, and Silverado HD launches** — performance moments where the brand wants stage-light drama.
+
+Typography is **Louis** — Chevrolet's bespoke sans by GM Brand (an evolution of Akzidenz-Grotesk-leaning humanist sans). Display sets at weight 700 with negative tracking on hero sizes; body sits at 400. The result is **classic-American legible** — Louis reads as the typographic descendant of mid-century American magazine display, with hooks slightly more humanist than pure-Helvetica brands. Headlines like "Find New Roads", "Silverado EV", or "Corvette Z06" land at 56–72px with `-0.005em` to `-0.01em` tracking — confident and broad-shouldered, never delicate.
+
+The signature visual move is the **bowtie + blue CTA + Silverado-or-Corvette photography** triplet. Every campaign — Silverado, Corvette, Equinox EV, Trailblazer — anchors itself with the bowtie top-left, a `#003876` Build & Price CTA, and a full-bleed photograph of the vehicle in golden-hour light. Unlike Ford's pill-radius CTAs, **Chevrolet uses sharp 0-radius rectangles** — a Bauhaus-influenced choice that gives the brand a slightly more premium, slightly more European feel than its mainstream-American positioning would suggest. The corner geometry is the brand's quiet statement: classic American trust, but with confident geometric discipline.
+
+Motion is restrained but cinematic: a slow parallax on hero photography, video autoplay-with-audio-off on Corvette/Camaro pages, fade-in-on-scroll for content blocks. The brand uses motion to communicate **muscle and capability**, never tech-industry futurism.
+
+**Key Characteristics:**
+- White canvas (`#ffffff`) with cool-grey neutrals and near-black (`#1a1a1a`) hero bands for Corvette/Camaro/HD launches
+- **Gold** (`#cd9834`) reserved for the bowtie alone — never CTA, never accent
+- **Corporate Blue** (`#003876`) as the singular primary action voltage
+- **Sharp 0-radius CTAs** — Bauhaus-disciplined, distinguishing from Ford's pill geometry
+- Louis sans family, two-weight discipline (400 body, 700 display)
+- Full-bleed truck/Corvette/SUV photography in golden-hour cinematic light
+- Uppercase section eyebrows at 13/700/0.12em — wide tracking, magazine-display tradition
+- The bowtie is the only logomark — never substituted with "Chevrolet" wordmark
+- Generous 96–128px section padding, 12-column grid, 1440 max-width
+- Corvette red (`#dc1f2c`) reserved for Corvette/Camaro/performance — never decorative
+- Build & Price flow as the primary conversion verb — same as Ford, distinct from "Configure"
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Chevrolet Gold** (`#cd9834`): The bowtie surround — gold-cross identity since 1913 (rgb 205, 152, 52). Mid-saturation warm gold. **Never used outside the bowtie itself** — not on CTAs, not on accents, not decoratively.
+- **Corporate Blue** (`#003876`): Deep brand blue (rgb 0, 56, 118). Primary CTA, selected state, link. Slightly deeper than Ford Blue.
+- **Pure White** (`#ffffff`): Page canvas, card surface, default ground.
+
+### Brand & Dark
+- **Surface Dark** (`#1a1a1a`): Near-black hero band for Corvette, Camaro, Silverado HD launches.
+- **Surface Dark Elevated** (`#262626`): Cards, panels on the dark band.
+- **Pure Black** (`#000000`): Reserved for Corvette stage-shot backgrounds.
+- **Blue Hero Band** (`#003876`): Corporate moments, EV reveal pages.
+
+### Accent
+- **Corvette Red** (`#dc1f2c`): Reserved for Corvette content, Camaro SS variants, ZL1, Z06, ZR1 — performance-only red. Never decorative.
+- **Heritage Yellow** (`#f4d35e`): Bel Air storytelling, Camaro heritage pages — never on current marketing.
+- **Bowtie Gold** (`#cd9834`): The wordmark colour. Never deployed outside the bowtie.
+
+### Interactive
+- **Link** `#003876` — body-text inline links
+- **Link Hover** `#002b5e` — deepens
+- **Disabled** `#cccccc` — neutral grey
+- **Focus** — 2px `#003876` outline with 2px offset
+
+### Neutral Scale
+- **Ink** `#1a1a1a` — primary headings, body emphasis
+- **Body** `#333333` — paragraph default
+- **Muted** `#666666` — captions, metadata
+- **Faint** `#999999` — disabled labels
+- **Hairline Strong** `#a6a6a6` — input borders
+- **Hairline** `#d6d6d6` — divider
+- **Hairline Soft** `#e6e6e6` — subtle dividers
+- **Surface Strong** `#e8e8e8` — divider band
+- **Surface Soft** `#f4f4f4` — section alternation
+- **Canvas** `#ffffff`
+
+### Surface & Borders
+- Light surface tiers cascade `#ffffff` → `#fafafa` → `#f4f4f4` → `#e8e8e8`
+- Dark tiers cascade `#1a1a1a` → `#262626` → `#000000` (deepest)
+- Borders are always 1px solid; sharp corners.
+- Cards use background contrast + 1px hairlines, with optional shadows on hover.
+
+### Shadow Colors
+Chevrolet uses **neutral black** at low opacity:
+- **Card** `rgba(0,0,0,0.06) 0 2px 6px`
+- **Elevated** `rgba(0,0,0,0.12) 0 8px 24px`
+- **Modal** `rgba(0,0,0,0.32) 0 24px 64px`
+
+Pure-black shadows (no chromatic tint) feel more classical-American than the navy-tinted shadows of Ford — this is a brand that trusts neutral depth.
+
+### Semantic
+- **Success** `#1f8b46` — confirmation
+- **Warning** `#f0a020` — limited offer, near-cutoff
+- **Danger** `#dc1f2c` — error (also Corvette red)
+- **Info** `#003876` — informational
+
+## 3. Typography Rules
+
+### Font Family
+- **Display & Body**: `"Louis"` — bespoke GM Brand sans (also called Louis Global 1). Fallback: `"Helvetica Neue", Arial, sans-serif`. Weights 300, 400, 500, 700, 900.
+- **Louis lineage**: a humanist sans with slightly higher x-height than Helvetica, more open apertures on `c`, `e`, `s`. Designed to read confidently at hero sizes and remain legible at 14px body.
+- **Fallback chain**: `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`
+- **Mono**: SF Mono / Menlo — used only on developer-facing pages (rare for Chevrolet)
+- **OpenType features**: kern, liga (default ligatures only).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT | Notes |
+|------|------|------|--------|-------------|----------------|----|-------|
+| Display Hero | Display | 72 | 700 | 1.04 | -0.01em | kern, liga | Homepage hero — model name |
+| Display XL | Display | 56 | 700 | 1.08 | -0.005em | kern, liga | Subsidiary hero |
+| Display LG | Display | 40 | 700 | 1.12 | 0 | kern, liga | Section opener |
+| Display MD | Display | 32 | 700 | 1.16 | 0 | kern, liga | Sub-section |
+| Display SM | Display | 24 | 700 | 1.25 | 0 | kern, liga | Card header |
+| Title LG | Display | 20 | 700 | 1.30 | 0 | kern, liga | Module title |
+| Title MD | Display | 18 | 700 | 1.40 | 0 | kern, liga | List item title |
+| Title SM | Display | 16 | 700 | 1.40 | 0 | kern, liga | Compact label |
+| Body LG | Body | 18 | 400 | 1.55 | 0 | kern, liga | Lead paragraph |
+| Body MD | Body | 16 | 400 | 1.55 | 0 | kern, liga | Default paragraph |
+| Body SM | Body | 14 | 400 | 1.55 | 0 | kern, liga | Secondary copy |
+| Caption | Body | 12 | 400 | 1.40 | 0.04em | kern, liga | Image captions |
+| Label Uppercase | Display | 13 | 700 | 1.30 | 0.12em | kern, liga | Section eyebrow — UPPERCASE |
+| Button | Display | 14 | 700 | 1.00 | 0.06em | kern, liga | CTA label — UPPERCASE |
+| Nav Link | Body | 14 | 500 | 1.40 | 0.02em | kern, liga | Top-level nav |
+| Micro | Body | 11 | 400 | 1.40 | 0.05em | kern, liga | Footer fine print |
+| Code | Mono | 13 | 400 | 1.50 | 0 | — | Developer docs only |
+
+### Principles
+- **Louis humanist proportions** are the brand's typographic DNA — slightly more open than Helvetica, slightly more confident than Arial.
+- **Two-weight workhorse: 400 body, 700 display.** Weights 300 and 900 reserved for special heritage campaigns.
+- **Negative tracking on display sizes.** -0.005em to -0.01em on hero copy gives the headline a confident broad-shouldered feel.
+- **Uppercase section eyebrows** with 0.12em tracking — wider than Ford's 0.10em, descended from American magazine display tradition.
+- **CTA labels in uppercase**, 0.06em tracking — classical-American signage.
+- **Body never tracks.** Paragraph copy sits at 0 tracking.
+- **No italic in display.** Italic appears only inside press-release datelines.
+- **Louis vs. Helvetica**: prefer Louis everywhere; Helvetica is acceptable system fallback only.
+
+## 4. Component Stylings
+
+### Buttons
+Chevrolet CTAs are **sharp 0-radius rectangles** — a deliberate Bauhaus-disciplined choice that reads as classical-confident. The rectangle distinguishes Chevrolet from Ford's pill-friendly geometry and gives the brand a slightly more European-premium edge than its mainstream-American positioning would suggest.
+
+**Primary CTA** — the corporate-blue rectangle:
+- Background `#003876`, text `#ffffff`, font 14/700 uppercase, `0.06em` tracking
+- Padding `14px 32px`, radius `0`, no border
+- Transition `background 0.2s ease`
+- Hover background `#002b5e`
+- Disabled background `#cccccc`, text `#999999`
+- Use case: Build & Price, Find a Dealer, View Inventory, Schedule Test Drive
+
+**Ghost (Light)** — secondary on light surfaces:
+- Background transparent, text `#1a1a1a`, border `1px solid #1a1a1a`
+- Same padding/typography as primary, 0 radius
+- Hover: text `#003876`, border `#003876`, slight bg tint `#f4f4f4`
+
+**On-Dark Ghost** — secondary on near-black hero band:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`
+- Hover: background `rgba(255,255,255,0.1)`
+
+**Text Link with Chevron** — inline action:
+- Text `#003876`, font 14/700 uppercase with arrow glyph `›`
+- No underline at rest; hover adds underline + colour deepens
+- Use case: "Learn More", "View Inventory", "Explore Specs"
+
+### Cards
+
+**Vehicle Card** — the showroom workhorse:
+- Background `#ffffff`, border `1px solid #d6d6d6`, radius 0
+- Padding `24px`
+- Top: 16:9 transparent-PNG model render
+- Below image: trim badge (RST / Z71 / High Country / Z06), model name in 24/700, starting MSRP, Build & Price CTA
+- Hover: card lifts 2px with `rgba(0,0,0,0.06) 0 8px 24px` shadow
+
+**Feature Card** — for technology callouts (Super Cruise, Magnetic Ride Control):
+- Background `#f4f4f4`, no border, radius 0
+- Padding `32px`
+- Used in 3-up grids on technology pages
+
+**Hero Band Card** (dark):
+- Sits inside a `#1a1a1a` band
+- Background `#262626`, text white, border `1px solid rgba(255,255,255,0.16)`
+- Padding `48px`, radius 0
+
+**Hero Band Card** (blue):
+- Sits inside a `#003876` band
+- Background `rgba(255,255,255,0.06)`, text white
+- Padding `48px`, radius 0
+
+### Configurator Tile
+- Background `#ffffff`, border `1px solid #d6d6d6`, radius 0, padding `16px 20px`
+- Selected: border `2px solid #003876` with subtle inner glow
+- Used for trim/colour/wheel/package selection
+- Mobile: tiles collapse into accordion below 768px
+
+### Badges
+
+**Standard Badge** (filled):
+- Background `#1a1a1a`, text `#ffffff`
+- Font 11/700 uppercase `0.12em`
+- Padding `4px 12px`, radius 0
+
+**Corvette / Performance Badge**:
+- Background `#dc1f2c`, text `#ffffff`
+- Same typography & geometry
+
+**Electric Badge** — for EV models:
+- Background `#003876`, text `#ffffff`
+
+### Inputs
+- Background `#ffffff`, border `1px solid #a6a6a6`, radius 0
+- Padding `12px 16px`, font 16/400
+- Focus border `#003876`, no shadow, 2px ring offset
+- Floating label pattern: label inside on rest, animates to top on focus/value
+- Error: border `#dc1f2c`, helper text `#dc1f2c` 13/400 below
+
+### Navigation
+- White background, 72px height, 1px bottom border `#d6d6d6`
+- Bowtie 56×24 at far left — gold-edged with white inset script
+- Primary nav links (Vehicles / Electric / Performance / Shop / Owners) 14/500 with `0.02em` tracking, `#1a1a1a`
+- Hover: text `#003876`, no background change
+- Mega-menu opens on hover: full-width white panel, 5-column model grid (Cars / SUVs / Trucks / Vans / Performance)
+- Sticky on scroll with subtle shadow
+
+### Tooltips & Toasts
+- Tooltip: `#1a1a1a` background, white text 12/400, padding `8px 12px`, radius 0
+- Toast: `#1a1a1a` background, white text, fixed bottom-right, slide-in 300ms
+
+### Modal
+- Overlay `rgba(0,0,0,0.6)`
+- Dialog `#ffffff`, radius 0, padding `48px`, max-width 720
+- Close icon top-right, no border on dialog itself
+
+### Tabs (Specs Pages)
+- Underline tabs, 14/500, `#666666` inactive, `#003876` active with 2px bottom border
+
+## 5. Layout Principles
+
+### Spacing System
+- Base **8px**. Scale 4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160.
+- Section padding 96–128px on desktop, 64–96px on tablet, 48–64px on mobile.
+- Card gap 24–32px in grids.
+- Button padding `14px 32px` — wide horizontal padding gives the rectangle classical-American weight.
+
+### Grid & Container
+- 12-column grid, 1440px max content width, 24px gutters
+- Hero is full-bleed (100vw, 88vh)
+- Vehicle card grid is 4-up at desktop, 2-up tablet, 1-up mobile
+- Press-release prose width 760px
+
+### Whitespace Philosophy
+Chevrolet uses whitespace as **stage whitespace** — the spacing serves the hero photograph as if it were a stage actor, with section pacing reading like the breath between scenes of a film. Sections breathe at 96–128px so the photograph dominates, and the surrounding copy reads as supporting voiceover. The brand commits to **cinematic pacing** rather than European editorial density.
+
+### Section Cadence
+- The brand rhythm is **white → grey-soft → white → near-black → white → blue → footer**
+- Hero (white or near-black) → vehicle grid (white) → feature row (grey-soft) → spec table (white) → CTA band (near-black or blue) → footer
+- Every dark band carries a single hero photograph and a CTA pair (primary blue + ghost-on-dark)
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0 | **Buttons, cards, inputs, modals — Chevrolet's default** |
+| Micro | 2 | Form-error indicator |
+| Standard | 4 | Tooltip — rare |
+| Comfortable | 8 | Image-card overlay — limited use |
+| Relaxed | 12 | Photo-card variant on lifestyle pages |
+| Featured | 16 | Hero-curve image vignette — rare |
+| Pill | 9999 | Avatar, dot indicator only |
+
+The **0-radius default** is doctrinal — it differentiates Chevrolet from Ford's American-pill geometry and aligns with German Bauhaus discipline despite the brand's mainstream-American positioning.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | Flat | Default state for cards, inputs, buttons |
+| 1 | `rgba(0,0,0,0.06) 0 2px 6px` | Sticky nav on scroll, light card hover |
+| 2 | `rgba(0,0,0,0.12) 0 8px 24px` | Vehicle card hover, mega-menu overlay |
+| 3 | `rgba(0,0,0,0.32) 0 24px 64px` | Modal dialogs |
+| 4 | Frost — `rgba(255,255,255,0.92)` + blur 12px | Image-overlay info panel on hero |
+| 5 | Inner glow — `inset 0 0 0 2px #003876` | Selected configurator tile |
+
+### Shadow Philosophy
+Chevrolet uses **neutral black** shadows — no chromatic tint, no blue undertone. The pure-black tonal layering reads as classical-American. Cards lift on hover; flat-default-with-hover-lift is the brand's grammar.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style for most transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — slower entry, used on hero parallax and Corvette/Camaro reveal sections
+- **Spring/bounce**: never. Chevrolet refuses overshoot.
+
+### Duration
+- **Fast** 150ms — colour transitions on hover
+- **Standard** 250ms — opacity fades, mega-menu reveal
+- **Slow** 400ms — hero parallax, video poster fades
+
+### Per-Component Recipes
+- **Primary button hover**: `background 0.2s ease`. No lift, no scale.
+- **Vehicle card hover**: card lifts 2px translateY + shadow intensify 250ms
+- **Mega-menu reveal**: opacity + 8px translateY 250ms emphasized ease
+- **Hero parallax**: image scrolls at 0.7× speed of viewport; disabled on prefers-reduced-motion
+- **Configurator tile select**: border weight + colour transition 200ms
+- **Text link underline grow**: scaleX on a 2px pseudo-element, origin left, 200ms
+
+### Page Transitions
+Hard cuts on route change. Configurator step transitions use opacity 250ms.
+
+### Reduced Motion
+Honoured at the CSS level: parallax disables; video autoplay pauses; carousel auto-advance pauses; opacity-only transitions remain. Configurator step animations collapse to 0ms.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Ink on White** — `#1a1a1a` / `#ffffff` = **16.9:1** — AAA all sizes
+- **Body on White** — `#333333` / `#ffffff` = **11.0:1** — AAA
+- **Muted on White** — `#666666` / `#ffffff` = **5.6:1** — AA Normal
+- **White on Corporate Blue** — `#ffffff` / `#003876` = **11.4:1** — AAA
+- **White on Dark Surface** — `#ffffff` / `#1a1a1a` = **16.5:1** — AAA
+- **Corvette Red on White** — `#dc1f2c` / `#ffffff` = **4.8:1** — AA Normal
+- **Disabled** — `#999999` / `#ffffff` = **2.8:1** — fails AA Normal, used only for disabled states
+
+### Focus Indicators
+- 2px solid `#003876` outline with 2px offset on every interactive element
+- On dark bands, focus uses 2px solid white with 2px offset
+- `:focus-visible` only — not on mouse click
+
+### ARIA & Patterns
+- Mega-menu uses `aria-haspopup="menu"` and `aria-expanded`
+- Configurator step uses `role="tablist"` with `aria-selected`
+- Modal dialogs trap focus, label via `aria-labelledby`, dismiss on Esc
+- Inventory filter uses `role="region"` with `aria-label="Filter inventory"`
+
+### Keyboard Nav
+- Tab order: bowtie → primary nav → utility (account, locator) → main content → CTA
+- Configurator: arrow keys move between trim tiles; Space selects
+- Carousel: arrow keys move slides; Home/End jump to first/last
+
+### Screen Reader Hints
+- Bowtie uses `aria-label="Chevrolet homepage"`
+- Model names announced as full ("Chevrolet Silverado EV RST") not abbreviated
+- MSRP includes currency
+- Spec tables use proper `<th scope="col">` and `<th scope="row">` semantics
+
+### Reduced Motion
+Honoured (see §8).
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600 | Single column; hamburger nav; hero text 32px; CTA stacks; vehicle cards 1-up |
+| Tablet | 600–1024 | 2-column vehicle grid; hero 48px; nav stays horizontal but condensed |
+| Desktop | 1024–1440 | 4-column vehicle grid; full mega-menu; hero 56–72px |
+| Wide | 1440–1920 | Content centred at 1440 max-width |
+| Ultra | >1920 | Hero photography scales to fill; max-width preserved |
+
+### Touch Targets
+- Buttons 48×48 minimum
+- Nav links 44px tap area
+- Configurator tiles 64×64 minimum
+
+### Collapsing Strategy
+- Nav: horizontal → hamburger drawer at <1024
+- Vehicle grid: 4 → 2 → 1
+- Spec tables: horizontal scroll on mobile
+- Hero CTA pair: side-by-side → stacked at <600
+
+### Image Behavior
+- Hero images responsive across breakpoints, fill viewport
+- `object-fit: cover` on hero, `object-fit: contain` on transparent-PNG renders
+- Lazy-load below the fold
+
+### Container Queries
+Used selectively on configurator panel.
+
+## 11. Content & Voice
+
+### Tone
+**Classical, confident, broad-shouldered American.** Chevrolet writes with the cadence of a 1960s television voiceover updated for digital — declarative, plainspoken, occasionally lyrical: "Find New Roads." "Made for life's open road." "Like a rock." The voice carries heritage without being nostalgic.
+
+### Microcopy Patterns
+- **Primary CTA**: "Build & Price", "Find a Dealer", "Schedule Test Drive", "View Inventory"
+- **Secondary**: "Compare Models", "Explore Specs", "Learn More"
+- **Form error**: "Please enter a valid ZIP code."
+- **Empty state**: "No matches found near you. Expand your search radius."
+- **Confirmation**: "Your build has been saved."
+
+### CTA Verb Conventions
+- **Build & Price** — the configurator entry verb
+- **Find a Dealer** — locator verb
+- **Schedule** — for test drive, service appointment
+- **Shop** — for inventory browsing
+- **Explore** — for specs, features
+
+### Empty States
+On the configurator, an unselected option shows the base trim with a quiet "Customize" prompt. Inventory empty states suggest expanding ZIP radius.
+
+### Headline Voice
+Headlines lean on **slogan-grade phrases**: "Find New Roads", "Like a Rock" (legacy), "Made for the Bold". Sub-heads use **plainspoken capability claims**: "Up to 13,300 lbs of max towing", "Up to 450 miles of GM-est. range".
+
+## 12. Dark Mode & Theming
+
+Chevrolet.com is **partial-dark**: near-black hero bands (`#1a1a1a`) appear within otherwise light pages for Corvette, Camaro, and Silverado HD launch contexts. The site does not ship a full page-level dark variant. **myChevrolet** (the mobile app) and **Infotainment 3** (in-vehicle) run dark by default with the same token bundle inverted.
+
+If implementing a dark variant:
+- Swap `bg #ffffff → #1a1a1a`
+- Swap `bg-soft #f4f4f4 → #262626`
+- Swap `text-ink #1a1a1a → #ffffff`
+- Swap `text #333333 → #d6d6d6`
+- Brand stays `#003876` but consider `#0a4a96` for legibility on dark
+- Borders shift to `rgba(255,255,255,0.16)`
+- Card surface becomes `#262626`
+
+## 13. Lineage & Influences
+
+Chevrolet.com inherits from three traditions: **American magazine display typography** of the 1950s–60s (broad-shouldered headlines, wide-tracked uppercase eyebrows), **Bauhaus geometric discipline** (sharp 0-radius rectangles, grid clarity) translated into mainstream-American form, and **golden-hour cinematic photography** (Madison Avenue / Saatchi car-campaign tradition). Louis (the GM bespoke sans) is the typographic descendant of Akzidenz-Grotesk-leaning humanist sans, drawn for confident American display rather than European-precision body.
+
+What Chevrolet rejects: it rejects the soft-modernist roundedness of Mercedes (12px+ radii), the editorial-luxury pretense of Ferrari (cinematic dark canvas, scarce CTAs), and Tesla's monochrome-plus-one minimalism (no logos, refusal of CTAs). It also distinguishes itself from sister-brand Ford by rejecting the pill-radius CTA: where Ford reads as friendly-American-mainstream, Chevrolet reads as **classical-American-confident**.
+
+- **GM Brand / Louis sans family** — bespoke GM corporate sans — https://www.gm.com/
+- **Akzidenz-Grotesk lineage** — humanist sans tradition (broadly influential)
+- **American magazine display typography** — 1950s–60s broad-shoulder tradition
+- **Bauhaus / Ulm school** — geometric corner discipline — https://en.wikipedia.org/wiki/Hochschule_für_Gestaltung_Ulm
+- **Chevrolet bowtie wordmark, 1913** — heritage logomark — https://www.chevrolet.com/
+
+## 14. Do's and Don'ts
+
+### Do
+- Use Corporate Blue `#003876` for every primary CTA — never substitute
+- Reserve Gold `#cd9834` for the bowtie alone — never CTA, never accent
+- Set body type at weight 400 — Louis at 400 is the brand's voice
+- Set display type at weight 700 — the monumental weight
+- Open every section with a 13/700 uppercase eyebrow at 0.12em tracking
+- Use **sharp 0-radius rectangles** for all CTAs and cards — the brand's geometric signature
+- Reserve the near-black band (`#1a1a1a`) for Corvette, Camaro, Silverado HD launches
+- Trust Corvette red `#dc1f2c` only inside Corvette/Camaro/performance content
+- Use full-bleed cinematic photography in golden-hour environmental light
+- Render the bowtie with gold edge + white inset script — never monochrome black
+- Use "Build & Price" as the configurator entry verb
+
+### Don't
+- Use pill-radius CTAs — Chevrolet's geometry is sharp 0-radius (this is the Ford-vs-Chevy distinction)
+- Use Gold `#cd9834` outside the bowtie itself — not on CTAs, not on accents, ever
+- Use weight 300 for body — Louis at 300 reads as European-luxury, not Chevrolet
+- Apply Corvette red `#dc1f2c` outside Corvette/Camaro/performance content — the red is sacred
+- Substitute the bowtie with a "Chevrolet" wordmark — the bowtie is the only logomark
+- Use uppercase headlines — uppercase is reserved for 13px eyebrows and 14px CTAs
+- Apply chromatic-tinted shadows — Chevrolet uses neutral black shadows
+- Use italic in body or display — italic is press-release dateline only
+- Mix Heritage Yellow `#f4d35e` with Corvette Red `#dc1f2c` outside heritage storytelling
+- Use studio-isolated photography — Chevrolet photography is environmental and golden-hour
+- Use "Configure" — the configurator entry verb is "Build & Price"
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA: Corporate Blue `#003876`
+- Background: White `#ffffff`
+- Heading text: Ink `#1a1a1a`
+- Body text: `#333333`
+- Muted text: `#666666`
+- Dark surface: Near-black `#1a1a1a`
+- Bowtie gold (logo only): `#cd9834`
+- Hairline border: `#d6d6d6`
+- Corvette red (Performance only): `#dc1f2c`
+
+### Example Component Prompts
+- "Create a Chevrolet hero section with full-bleed Silverado EV photography in golden-hour light (16:9), a 72px Louis 700 model name on the bottom-left, a 13px uppercase eyebrow ('THE ALL-NEW SILVERADO EV') above it tracked at 0.12em in `#003876`, and a primary `#003876` 0-radius rectangle 'Build & Price' button + ghost 'Find a Dealer' button."
+- "Design a 4-up vehicle card grid where each card sits on `#ffffff` with a 1px `#d6d6d6` border at 0 radius, holds a 16:9 transparent-PNG vehicle render at top, then a black-filled trim badge (RST / Z71), a 24/700 model name, a starting MSRP, and a 14/700 uppercase blue 'Build & Price ›' link."
+- "Build a near-black Corvette launch band: background `#1a1a1a`, white 56/700 headline ('Corvette Z06. Track-Bred Power.'), 18/400 body lead in `#bcbcbc`, white-bordered 0-radius ghost CTA. 96px vertical padding."
+- "Create a configurator step with a 4-up tile grid; each tile is white with a 1px `#d6d6d6` border at 0 radius, 16×20 padding. Selected state: border 2px `#003876` with subtle inner glow."
+- "Design a Chevrolet uppercase eyebrow component: 13px Louis 700, letter-spacing 0.12em, color `#003876`, sits above every section headline with 16px bottom margin."
+- "Make a sticky white nav with the gold-edged bowtie (56×24) at far left, five 14/500 nav links centre (Vehicles / Electric / Performance / Shop / Owners), three utility icons right, 72px height, 1px bottom border `#d6d6d6`."
+
+### Iteration Guide
+1. Verify the 0-radius rectangle CTA — if a button is pill-rounded, the brand reads as Ford, not Chevrolet.
+2. Check that gold `#cd9834` only appears inside the bowtie — using gold on a CTA misreads the brand.
+3. Confirm the corporate blue `#003876` is on every primary CTA, link, and selected state.
+4. Ensure section eyebrows are uppercase 13/700 at 0.12em — wider than Ford's tracking, magazine-display tradition.
+5. Hold Corvette red `#dc1f2c` for Corvette/Camaro/performance content only.
+6. Photography should be **golden-hour cinematic** — environmental, dramatic, intentional staging.
+7. Use "Build & Price" as the configurator verb — same as Ford, distinct from German "Configure".
+8. The bowtie must always have its gold edge — monochrome black bowtie reads as a different brand.

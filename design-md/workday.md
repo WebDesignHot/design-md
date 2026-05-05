@@ -1,0 +1,775 @@
+---
+name: Workday
+tagline: HR-warm professional in tangerine — Adelle Sans humanist curves, signature `#f37721` orange, and a calm white people-first canvas.
+author: webdesignhot
+source_url: https://www.workday.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [saas]
+tags: [light, enterprise, sans, orange, b2b, hr, warm, human-centered, finance]
+preview_swatch: ['#ffffff', '#f37721', '#1a1a1a']
+related: [salesforce, sap, ibm]
+description: 'Workday''s web is HR-and-finance enterprise software dressed in a signature tangerine `#f37721` — a deliberately warm orange chosen because Workday sells to humans (HR, Finance, Talent), not to admins. The canvas is a clean white (`#ffffff`) with charcoal ink (`#1a1a1a`) for text; the brand orange carries every primary CTA and the wordmark moment. Headings run **Adelle Sans Workday Heavy** at confident weight, body sits at 16/1.5 in Adelle Sans Regular, and the system reaches for humanist warmth over corporate severity — every card has a soft `8px` radius, every button a `4px` rectangle, and the photography is overwhelmingly **people in conversation**. Where SAP commits to cobalt-cool precision, Workday commits to warm-orange humanism: same enterprise scale, opposite emotional register.'
+
+colors:
+  bg: '#ffffff'                     # primary white canvas
+  bg-soft: '#f7f5f2'                # warm-cream alternating section
+  bg-section: '#f0ece6'             # warmer cream for feature bands
+  bg-feature: '#1a1a1a'             # near-black charcoal feature band
+  bg-warm-feature: '#3d2914'        # deep-cocoa warm dark band (rare)
+  bg-footer: '#1a1a1a'              # near-black footer
+  bg-info: '#fef4ec'                # pale-orange info wash
+  surface: '#ffffff'                # default card surface
+  surface-soft: '#faf8f5'           # cream card surface
+  surface-elev: '#ffffff'           # elevated card on cream sections
+  brand: '#f37721'                  # Workday Tangerine — primary CTA, wordmark
+  brand-hover: '#d65f0e'            # darker hover state
+  brand-active: '#a64909'           # pressed state
+  brand-soft: '#fef4ec'             # softest tangerine wash
+  brand-tint: '#fde0c4'             # mid tangerine tint for hover surfaces
+  brand-deep: '#a64909'             # deep burnt-orange for emphasis text
+  charcoal: '#1a1a1a'               # near-black for text and feature
+  ink: '#262626'                    # secondary text-strong
+  text: '#1a1a1a'                   # primary text on white
+  text-strong: '#000000'            # extreme heading weight only
+  text-soft: '#5a5a5a'              # secondary metadata
+  text-faint: '#8c8c8c'             # placeholder, caption
+  text-on-dark: '#ffffff'
+  text-on-dark-soft: 'rgba(255,255,255,0.78)'
+  on-brand: '#ffffff'
+  border: '#dcd9d4'                 # warm-gray hairline (slightly cream-tinted)
+  border-soft: '#ebe7e0'            # softer cream divider
+  border-strong: '#a8a39b'          # form-input emphasized border
+  link: '#0066b2'                   # link blue (rare — Workday uses orange CTAs over linked text)
+  link-hover: '#004a85'
+  success: '#3aa15a'                # confirmation green
+  success-soft: '#e7f4ec'
+  warning: '#d97706'                # cautious orange-amber (distinct from brand)
+  warning-soft: '#fff5e6'
+  danger: '#c63030'                 # error red
+  danger-soft: '#fbeaea'
+  info: '#0066b2'                   # informational blue
+  info-soft: '#e6f0f8'
+  scrim: 'rgba(26,26,26,0.55)'
+  shadow-card: 'rgba(26,26,26,0.08)'
+  shadow-elev: 'rgba(26,26,26,0.14)'
+  shadow-deep: 'rgba(0,0,0,0.20)'
+  shadow-warm: 'rgba(243,119,33,0.18)' # tangerine-tinted glow on brand hover
+
+typography:
+  display:
+    family: '"Adelle Sans Workday", "Adelle Sans", Helvetica, Arial, sans-serif'
+    weights: [300, 400, 500, 700, 900]
+    opentype-features: ['kern', 'liga', 'tnum on numeric']
+  body:
+    family: '"Adelle Sans Workday", "Adelle Sans", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  serif:
+    family: '"Adelle", Georgia, serif'
+    weights: [400, 700]
+  mono:
+    family: '"JetBrains Mono", Menlo, Consolas, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 900, lineHeight: 1.0, tracking: '-0.025em', family: display, notes: 'Adelle Sans Workday Heavy on flagship hero' }
+    display-large:   { size: 60, weight: 900, lineHeight: 1.05, tracking: '-0.02em', family: display, notes: 'industry/solution page hero' }
+    h1:              { size: 44, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    h2:              { size: 36, weight: 700, lineHeight: 1.2, tracking: '-0.01em', family: display }
+    h3:              { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.005em', family: display }
+    h4:              { size: 22, weight: 700, lineHeight: 1.3, tracking: '0', family: display }
+    h5:              { size: 18, weight: 700, lineHeight: 1.4, tracking: '0', family: display }
+    body-large:      { size: 20, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'hero intro paragraph' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'default body' }
+    body-strong:     { size: 16, weight: 700, lineHeight: 1.55, tracking: '0', family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5, tracking: '0', family: body }
+    label:           { size: 14, weight: 700, lineHeight: 1.4, tracking: '0', family: body }
+    eyebrow:         { size: 13, weight: 700, lineHeight: 1.3, tracking: '0.1em', family: body, transform: uppercase, notes: 'category eyebrow over hero — wide tracking' }
+    button:          { size: 14, weight: 700, lineHeight: 1.2, tracking: '0', family: body }
+    quote:           { size: 28, weight: 400, lineHeight: 1.4, tracking: '-0.005em', family: serif, notes: 'Adelle serif pull-quote on customer stories' }
+    caption:         { size: 12, weight: 400, lineHeight: 1.4, tracking: '0', family: body }
+    legal:           { size: 11, weight: 400, lineHeight: 1.45, tracking: '0', family: body }
+    code:            { size: 14, weight: 400, lineHeight: 1.5, tracking: '0', family: mono }
+    tabular:         { size: 14, weight: 500, lineHeight: 1.4, tracking: '0', family: body, opentype: 'tnum' }
+
+radius:
+  micro: 2
+  sm: 4                              # buttons, inputs
+  md: 8                              # cards, badges
+  lg: 12                             # featured cards, modals
+  xl: 16                             # hero feature card
+  pill: 9999                         # status pills, language pills
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 80
+  sub-nav-height: 56
+  outer-gutter-mobile: 20
+  outer-gutter-tablet: 32
+  outer-gutter-desktop: 48
+  hero-content-proportion: 0.55
+  hero-image-proportion: 0.45
+
+components:
+  button-primary:
+    bg: '#f37721'
+    color: '#ffffff'
+    border: '1px solid #f37721'
+    radius: 4
+    padding: '14px 28px'
+    font: button
+    use: 'Primary CTA — "Get started", "Talk to us", "Watch demo".'
+  button-primary-dark:
+    bg: '#f37721'
+    color: '#ffffff'
+    border: '1px solid #f37721'
+    radius: 4
+    padding: '14px 28px'
+    use: 'Primary CTA on dark feature band — orange stays consistent across light/dark surfaces.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#1a1a1a'
+    border: '2px solid #1a1a1a'
+    radius: 4
+    padding: '13px 27px'
+    use: 'Secondary outlined — "Learn more", "See how it works".'
+  button-secondary-dark:
+    bg: 'transparent'
+    color: '#ffffff'
+    border: '2px solid #ffffff'
+    radius: 4
+    padding: '13px 27px'
+    use: 'Outlined CTA on charcoal feature band, paired with orange-filled primary.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#a64909'
+    border: 'none'
+    padding: '14px 12px'
+    icon: 'arrow-right after label'
+    use: 'Inline CTA — "Read the report ›", "Find your industry ›".'
+  button-ghost:
+    bg: '#fef4ec'
+    color: '#a64909'
+    border: 'none'
+    radius: 4
+    padding: '14px 28px'
+    use: 'Soft-tangerine ghost button on tangerine-soft surfaces.'
+  card-content:
+    bg: '#ffffff'
+    radius: 8
+    border: '1px solid #ebe7e0'
+    padding: '32px'
+    shadow: '0 2px 8px rgba(26,26,26,0.06)'
+    hover-shadow: '0 8px 24px rgba(26,26,26,0.12)'
+    use: 'Default content card — feature card, industry tile, customer story.'
+  card-feature:
+    bg: '#faf8f5'
+    radius: 16
+    border: 'none'
+    padding: '48px'
+    use: 'Hero feature card on cream section — larger radius, no border, soft cream surface.'
+  card-customer-story:
+    bg: '#ffffff'
+    radius: 12
+    border: '1px solid #ebe7e0'
+    padding: '40px'
+    overlay-portrait: 'top-right person photo'
+    use: 'Customer-story card — pull-quote in Adelle serif + customer name + role + portrait.'
+  card-stats:
+    bg: '#ffffff'
+    radius: 8
+    border: '1px solid #ebe7e0'
+    padding: '40px 32px'
+    metric-size: 64
+    metric-color: '#f37721'
+    use: '"3.2x faster" stat card — tangerine numeral over charcoal label.'
+  badge-info:
+    bg: '#fef4ec'
+    color: '#a64909'
+    radius: 4
+    padding: '6px 12px'
+    font: { size: 12, weight: 700 }
+    use: '"Featured", "AI-powered", "New" — categorical pill.'
+  badge-success:
+    bg: '#e7f4ec'
+    color: '#1f6b35'
+    radius: 4
+    padding: '6px 12px'
+    use: '"Available now" — confirmation pill.'
+  input-text:
+    bg: '#ffffff'
+    border: '2px solid #dcd9d4'
+    radius: 4
+    padding: '14px 16px'
+    focus-border: '2px solid #f37721'
+    label-position: 'above input — left-aligned 14/700 charcoal'
+    use: 'Default text input — contact form, search.'
+  input-search:
+    bg: '#f7f5f2'
+    border: '2px solid #dcd9d4'
+    radius: 4
+    padding: '12px 16px 12px 44px'
+    icon: 'search 18px left-padded'
+    use: 'Top-bar global search.'
+  global-nav:
+    bg: '#ffffff'
+    height: 80
+    border-bottom: '1px solid #ebe7e0'
+    sticky: true
+    items: 'wordmark + Why Workday / Solutions / Industries / Customers / Insights + utility (Search/Sign in/Contact sales)'
+    use: 'Fixed top bar — generous 80px height, hairline-only at rest.'
+  mega-menu:
+    bg: '#ffffff'
+    radius: '0 0 12px 12px'
+    shadow: '0 16px 40px rgba(26,26,26,0.10)'
+    columns: 3
+    use: 'Solutions hover panel — 3-column grid + featured story banner right.'
+  feature-band:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    padding: '120px 0'
+    use: 'Full-width charcoal strip — 50/50 split copy left + people-photography right.'
+  customer-story-band:
+    bg: '#f0ece6'
+    color: '#1a1a1a'
+    padding: '96px 0'
+    use: 'Cream feature band with serif pull-quote — customer-voice moment.'
+  footer:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    padding: '80px 0 32px'
+    columns: 5
+    legal-bar: 'separated by 1px white-10% hairline'
+    use: 'Charcoal footer with 5-column site index + tangerine wordmark + legal strip.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 360
+  duration-page: 500
+  hover-lift: 'card hover: shadow rises from 0 2px 8px → 0 8px 24px rgba(26,26,26,0.12) over 240ms ease-standard, with 2px translateY lift'
+  cta-press: 'transform: translateY(1px) + 100ms color shift to brand-hover'
+  link-underline: 'underline grows from 0 → 100% over 240ms ease-standard on hover'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translateY lifts degrade to opacity 0.95 → 1 dim only; underline-grow disabled; image-fade-in disabled.'
+
+breakpoints:
+  mobile: 600
+  tablet: 900
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  none: 'none'
+  card: '0 2px 8px rgba(26,26,26,0.06)'
+  card-hover: '0 8px 24px rgba(26,26,26,0.12)'
+  elevated: '0 12px 32px rgba(26,26,26,0.14)'
+  modal: '0 24px 56px rgba(26,26,26,0.20), 0 6px 12px rgba(0,0,0,0.10)'
+  ring: '0 0 0 3px rgba(243,119,33,0.40)'
+  warm-glow: '0 6px 20px rgba(243,119,33,0.25)'
+
+accessibility:
+  contrast-text-on-bg: 16.0                 # charcoal on white — AAA
+  contrast-text-on-brand: 3.5               # white on tangerine — AA at large text only
+  contrast-text-on-brand-deep: 7.2          # white on deep burnt-orange — AAA
+  contrast-text-on-charcoal: 17.5           # white on charcoal — AAA
+  contrast-soft-on-bg: 7.2                  # text-soft on white — AA
+  focus-ring: '3px solid rgba(243,119,33,0.40) with 2px offset — tangerine glow ring'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab order — skip-link → wordmark → primary nav (Why Workday/Solutions/Industries/Customers/Insights) → utility (Search/Sign in/Contact sales) → main → footer.'
+  aria-patterns: 'Mega-menu uses aria-haspopup + aria-expanded; carousel uses aria-roledescription="carousel"; tabs use roving tabindex; pull-quote citations use <cite> element + role="quote".'
+
+dark-mode: null   # Workday marketing is light-only. Charcoal feature bands are content-driven (single emphatic moment per page), not theme-driven. The product surface uses Workday Canvas Design System with light/dark theme tokens, but the public marketing site does not.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Workday's web is **HR-and-finance enterprise software with a deliberately warm, human-centered face**. The tangerine `#f37721` is not a "tech orange" (the saturated electric orange of Stripe Climate or HBO Max) — it's softer, more terracotta-adjacent, the color of an autumn afternoon rather than a notification badge. That choice is core to Workday's positioning: the company sells to humans (HR managers, finance teams, talent leaders), not to system administrators, and the brand orange is calibrated to feel like warm Pacific-Northwest sunlight, not a hostile alert color. Photography across the site reinforces this: nearly every hero image is **people in conversation** — small groups, candid moments, multiple ethnicities, soft natural light. Where SAP shows products and dashboards, Workday shows faces.
+
+The canvas is a clean white (`#ffffff`) with charcoal ink (`#1a1a1a`) for text. The brand orange carries every primary CTA, the wordmark, and a single accent moment per page. Cream surfaces (`#f7f5f2`, `#f0ece6`, `#faf8f5`) appear as alternating section bands — not pure neutral grays, but warm-tinted creams that align tonally with the orange and the photography. The chromatic discipline is tight: charcoal text + cream surfaces + tangerine action + a single near-black feature band per page. Status colors (success green, warning amber, danger red, info blue) appear only in semantic contexts — never as decorative accents.
+
+Typography carries enormous brand weight. Workday commissioned a custom cut of **Adelle Sans** (originally TypeTogether's slab-rooted sans-serif) called **Adelle Sans Workday**, which adds weight options (Heavy 900, Black) and tightens optical spacing for screen rendering. The face has **humanist warmth** — single-story 'a', open 'g', friendly 'e' counters — that prevents the system from reading as cold-corporate. **Adelle Sans Workday Heavy 900** carries every hero headline at tight `-0.025em` tracking; body sits in Adelle Sans Regular 400 at 16/1.55 with generous line-height. Customer-story pages occasionally swap to **Adelle** (the slab-serif companion) for pull-quotes — the only typeface deviation in the system, used to give human voices their own visual register.
+
+Surfaces breathe through soft elevation. Cards take an `8px` radius (a step softer than SAP's `6px`) with a default shadow of `0 2px 8px rgba(26,26,26,0.06)` — present, but whisper-quiet. Hover lifts the card 2px with shadow rising to `0 8px 24px rgba(26,26,26,0.12)`. Buttons remain crisp `4px` rectangles — the same enterprise discipline as SAP — but the orange fill softens the corporate severity. Feature bands are charcoal `#1a1a1a` (near-black with a slight warm tint), reserved for one emphatic moment per page; cream feature bands carry the customer-story serif pull-quote. The whole system feels like clean enterprise chrome with humanist warmth — disciplined, calibrated, and never antiseptic.
+
+The page rhythm runs **white ground → cream `#f7f5f2` zone → charcoal feature band → cream `#f0ece6` customer-story band → white ground**. The two-cream-tier rhythm gives the page more textural variation than a single shaded zone would; the charcoal band provides the brand's emotional anchor (typically a "Workday for [industry]" hero) and the cream band carries the customer-voice moment.
+
+**Key Characteristics:**
+- Signature tangerine `#f37721` calibrated as a humanist warm orange — never electric, never neon
+- Photography overwhelmingly **people in conversation** — never product screenshots-only
+- Charcoal `#1a1a1a` for text and feature bands — not pure black, slightly warm-tinted
+- Cream surface tiers (`#f7f5f2` / `#f0ece6` / `#faf8f5`) instead of cool grays — temperature-coherent with orange
+- Custom **Adelle Sans Workday** typeface — humanist warmth at enterprise scale
+- Adelle (slab-serif companion) reserved for customer-story pull-quotes only
+- 4px-radius rectangle buttons (enterprise discipline) softened by warm orange fill
+- 8px-radius soft cards with whisper-quiet default shadow + 2px hover lift
+- Tangerine glow focus ring (`3px solid rgba(243,119,33,0.40)`) — warm and visible
+- Two-cream feature-band rhythm (warm `#f7f5f2` neutral + warm `#f0ece6` story-band) plus single charcoal anchor
+- Header at 80px (taller than SAP's 72) — generous breathing room
+
+## 2. Color Palette & Roles
+
+### Primary
+- **White** (`#ffffff`): The default page canvas. Pure white, never tinted — the cream warmth comes from section-band overlays, not from the base canvas.
+- **Charcoal** (`#1a1a1a`): Primary text on white, also the dark feature-band ground. Reads as a "warm near-black" — slightly cocoa-tinted compared to true `#000000`, which keeps the brand emotionally consistent with the orange.
+- **Tangerine** (`#f37721`): The signature brand action color. Used on filled CTAs, the wordmark, stat-callout numerals, and one accent moment per page. Never paired with a competing accent hue.
+
+### Brand & Dark
+- **Charcoal** (`#1a1a1a`): Feature band, footer, dark surface ground.
+- **Brand Hover** (`#d65f0e`): Tangerine darkened ~15% for hover/active states on filled CTAs.
+- **Brand Active** (`#a64909`): Pressed state — deep burnt-orange.
+- **Brand Deep** (`#a64909`): Used for emphasis text — eyebrow links, tertiary CTAs, callout numerals at small sizes where AAA contrast is required on white.
+
+### Accent
+There is no second accent color. Cream surfaces (`#f7f5f2`, `#f0ece6`, `#faf8f5`) function as quiet temperature-coherent backgrounds rather than accents. The system explicitly avoids a second saturated hue.
+
+### Interactive
+- **Link** (`#0066b2`): Inline link blue — used sparingly. Most "links" on Workday's site are styled as orange tertiary CTAs with a chevron, not as blue underlined text. Blue links appear primarily in long-form Insights articles.
+- **Link Hover** (`#004a85`): Darker blue + underline-grow.
+- **Tertiary CTA**: `#a64909` brand-deep + chevron + underline-on-hover.
+- **Disabled**: text `#8c8c8c` + bg `#ebe7e0` (cream-gray rather than pure gray).
+
+### Neutral Scale
+- **Text** (`#1a1a1a`): Primary body — charcoal, slightly warm.
+- **Text Strong** (`#000000`): Reserved for extreme heading weight only — display-hero on hero bands.
+- **Ink** (`#262626`): Secondary text-strong — h2/h3 on white.
+- **Text Soft** (`#5a5a5a`): Secondary metadata, captions, label-secondary.
+- **Text Faint** (`#8c8c8c`): Placeholder, timestamp, hint text.
+- **Border** (`#dcd9d4`): Default hairline — slightly cream-tinted (warm gray, not cool gray).
+- **Border Soft** (`#ebe7e0`): Lightest cream divider.
+- **Border Strong** (`#a8a39b`): Form-input emphasized border.
+
+### Surface & Borders
+- **Surface** (`#ffffff`): Default card surface.
+- **Surface Soft** (`#faf8f5`): Cream card surface — used on cards inside cream feature bands.
+- **Cream Section** (`#f7f5f2`): Warm-cream alternating section.
+- **Cream Story Band** (`#f0ece6`): Slightly deeper cream for customer-story bands.
+- **Cocoa Band** (`#3d2914`): Rare deep-cocoa warm-dark band — used on industry-vertical pages where the standard charcoal would clash with brand photography.
+
+### Shadow Colors
+Workday shadows are **charcoal-tinted, not pure black**. Every elevation layer uses `rgba(26,26,26, alpha)` for the primary shadow, which keeps depth feeling warm-coherent with the brand. The brand-orange focus ring uses `rgba(243,119,33, 0.40)` — a tangerine glow that signals warmth even in interaction states.
+- **Card Default** `rgba(26,26,26,0.06)` — 8px Y2 spread
+- **Card Hover** `rgba(26,26,26,0.12)` — 24px Y8 spread
+- **Elevated** `rgba(26,26,26,0.14)` — 32px Y12 spread
+- **Modal** `rgba(26,26,26,0.20)` + `rgba(0,0,0,0.10)` — two-layer warm + neutral
+- **Warm Glow** `rgba(243,119,33,0.25)` — tangerine-tinted hover glow on brand surfaces
+- **Focus Ring** `rgba(243,119,33,0.40)` — 3px tangerine ring
+
+### Semantic
+Workday follows a 5-stop semantic palette with calibrated warmth — even the success green and danger red are tuned to feel slightly warm, harmonious with the tangerine.
+- **Success Green** (`#3aa15a`) on `#e7f4ec` — confirmation
+- **Warning Amber** (`#d97706`) on `#fff5e6` — caution (deliberately distinct from brand tangerine)
+- **Danger Red** (`#c63030`) on `#fbeaea` — error
+- **Info Blue** (`#0066b2`) on `#e6f0f8` — informational
+- **Brand Tangerine** is reserved for action (CTAs), not for status — never doubles as a "warning" color despite the warm hue.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary**: `"Adelle Sans Workday", "Adelle Sans", Helvetica, Arial, sans-serif` — Workday's commissioned cut from TypeTogether's Adelle Sans family, with Heavy 900 and Black added for hero use.
+- **Serif Companion**: `"Adelle", Georgia, serif` — the slab-serif sister of Adelle Sans, used exclusively for customer-story pull-quotes.
+- **Mono**: `"JetBrains Mono", Menlo, Consolas, monospace` — for code in docs and technical specs (rare on the marketing site).
+- **Open-source substitute**: Adelle Sans is licensed (TypeTogether). Reasonable substitutes: **Source Sans 3** (humanist proportions, free), **Inter** (slightly cooler but widely supported), **Public Sans** (USWDS, similarly humanist). For the Adelle slab pull-quote, use **Adelle's free-tier samples**, **Roboto Slab**, or fall back to Georgia.
+- **OpenType features**: `kern` and `liga` always on; `tnum` (tabular numerals) on by default for financial / pricing contexts; no special stylistic sets active at root.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Adelle Sans Workday | 80 | 900 | 1.0 | -0.025em | kern | Flagship homepage hero — Heavy weight |
+| display-large | Adelle Sans Workday | 60 | 900 | 1.05 | -0.02em | kern | Industry / solution page hero |
+| h1 | Adelle Sans Workday | 44 | 700 | 1.15 | -0.015em | kern | Article-level heading |
+| h2 | Adelle Sans Workday | 36 | 700 | 1.2 | -0.01em | kern | Major section heading |
+| h3 | Adelle Sans Workday | 28 | 700 | 1.25 | -0.005em | kern | Subsection heading |
+| h4 | Adelle Sans Workday | 22 | 700 | 1.3 | 0 | kern | Card title |
+| h5 | Adelle Sans Workday | 18 | 700 | 1.4 | 0 | kern | Minor heading |
+| body-large | Adelle Sans Workday | 20 | 400 | 1.55 | 0 | kern, liga | Hero intro paragraph |
+| body-md | Adelle Sans Workday | 16 | 400 | 1.55 | 0 | kern, liga | Default body |
+| body-strong | Adelle Sans Workday | 16 | 700 | 1.55 | 0 | kern, liga | Emphasized body |
+| body-sm | Adelle Sans Workday | 14 | 400 | 1.5 | 0 | kern, liga | Metadata, captions |
+| label | Adelle Sans Workday | 14 | 700 | 1.4 | 0 | kern | Form labels, table headers |
+| eyebrow | Adelle Sans Workday | 13 | 700 | 1.3 | 0.1em | kern, uppercase | Category eyebrow over hero — wide tracking |
+| button | Adelle Sans Workday | 14 | 700 | 1.2 | 0 | kern | All CTA labels |
+| quote | Adelle | 28 | 400 | 1.4 | -0.005em | kern, liga | Customer-story pull-quote (slab serif) |
+| caption | Adelle Sans Workday | 12 | 400 | 1.4 | 0 | kern, liga | Captions, footnotes |
+| legal | Adelle Sans Workday | 11 | 400 | 1.45 | 0 | kern | Legal fine print |
+| code | JetBrains Mono | 14 | 400 | 1.5 | 0 | none | Inline code in docs |
+| tabular | Adelle Sans Workday | 14 | 500 | 1.4 | 0 | tnum | Pricing tables, financial rows |
+
+### Principles
+
+- **Heavy weight (900) is reserved for display-hero only.** Below 60px, the system steps down to Bold 700. The 900 weight is the brand's "shout" register — used sparingly to preserve impact.
+- **Tight negative tracking on display sizes** — hero runs `-0.025em`, easing toward `0em` at body sizes. Never tracks looser than `0em` except for uppercase eyebrows (`+0.1em`).
+- **Adelle Sans Workday is monolithic for sans use.** The system uses one typeface across product, marketing, and docs — a rare consistency at enterprise scale.
+- **Adelle (slab serif) is reserved for pull-quotes only.** Never use the slab serif for headlines, body, or CTAs. Its single permitted role is customer-voice typography.
+- **Body line-height is 1.55** — slightly more generous than SAP's 1.5, giving body text a breathable, humanist feel.
+- **Headings on white use charcoal `#1a1a1a`, not black.** Pure black reads cold against the warm-cream surface tiers.
+- **Eyebrow uppercase + 0.1em tracking** is the strongest typographic signal of brand identity — used as an opening voice over hero headlines.
+- **Tabular numerals for pricing.** Financial / pricing rows must opt into `font-variant-numeric: tabular-nums` for column alignment — Workday's finance heritage demands it.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary` — "Get started"**
+- Background `#f37721`, text `#ffffff`, border `1px solid #f37721`, radius `4`, padding `14px 28px`, font 14/700. Hover: `bg #d65f0e` + shadow `0 6px 20px rgba(243,119,33,0.25)`. Active: `translateY(1px)` + `bg #a64909`. Transition: `all 240ms ease-standard`.
+
+**`button-primary-dark` — "Talk to us" (on charcoal band)**
+- Same orange fill — Workday's tangerine carries across light and dark surfaces consistently. The orange + charcoal combo is one of the brand's signature visual moments.
+
+**`button-secondary` — "Learn more"**
+- Background transparent, text `#1a1a1a`, border `2px solid #1a1a1a` (thicker than SAP's 1px to match Workday's heavier visual weight). Same radius/padding/active. Hover: `bg #1a1a1a` + text `#ffffff` (full inversion).
+
+**`button-secondary-dark` — "See how it works" (on charcoal band)**
+- Background transparent, text `#ffffff`, border `2px solid #ffffff`. Hover: `bg #ffffff` + text `#1a1a1a` (inversion).
+
+**`button-tertiary` — Inline CTA**
+- Background transparent, text `#a64909` (deep burnt-orange for AAA contrast), no border, padding `14px 12px`. Trailing chevron `›`. Hover: underline grows + chevron translates `4px` right.
+
+**`button-ghost` — Soft Surface CTA**
+- Background `#fef4ec` (tangerine-soft), text `#a64909`, no border, radius `4`. Used as a CTA on tangerine-soft surfaces where the filled-orange would overwhelm.
+
+### Cards
+
+**`card-content` — Default Content Card**
+- Background `#ffffff`, radius `8`, border `1px solid #ebe7e0`, padding `32px`. Default shadow: `0 2px 8px rgba(26,26,26,0.06)`. Hover: `translateY(-2px)` + shadow `0 8px 24px rgba(26,26,26,0.12)` over 240ms.
+
+**`card-feature` — Hero Feature Card**
+- Background `#faf8f5`, radius `16`, border `none`, padding `48px`. Larger radius and cream surface signal "featured" without using a colored border. Often paired with full-width photography on one half.
+
+**`card-customer-story` — Customer Story Card**
+- Background `#ffffff`, radius `12`, border `1px solid #ebe7e0`, padding `40px`. Layout: Adelle slab-serif pull-quote at 28/400 on the left, customer portrait + name + role + company on the right. Often nested inside the cream `#f0ece6` story band.
+
+**`card-stats` — Stat Callout**
+- Background `#ffffff`, radius `8`, border `1px solid #ebe7e0`, padding `40px 32px`. Metric size `64`, color `#f37721`, family Adelle Sans Workday Heavy 900. Below: 16/700 charcoal label. Three-up grid: "3.2x faster / 99.99% uptime / 11K customers".
+
+### Badges & Pills
+
+**`badge-info` — "AI-powered"**
+- Background `#fef4ec`, color `#a64909`, radius `4`, padding `6px 12px`, font 12/700. Uppercase letter-spacing `0.05em`.
+
+**`badge-success` — "Available now"**
+- Background `#e7f4ec`, color `#1f6b35`, radius `4`, padding `6px 12px`.
+
+**`badge-warning` — "Beta"**
+- Background `#fff5e6`, color `#a05500`, radius `4`, padding `6px 12px`. Distinct amber from brand tangerine.
+
+**`pill-status` — "Customer since 2015"**
+- Background `#f7f5f2`, color `#1a1a1a`, radius `9999`, padding `6px 14px`. Categorical chip on customer-story cards.
+
+### Inputs
+
+**`input-text` — Default Text Input**
+- Background `#ffffff`, border `2px solid #dcd9d4` (thick warm-gray border), radius `4`, padding `14px 16px`. Focus border: `2px solid #f37721` + 3px tangerine glow ring. Label sits above input, left-aligned, 14/700 charcoal.
+
+**`input-search` — Top-bar Global Search**
+- Background `#f7f5f2` (cream), border `2px solid #dcd9d4`, radius `4`, padding `12px 16px 12px 44px`. Search icon 18px, left-padded.
+
+**`textarea` — Multi-line Input**
+- Same shell as input-text, padding `16px`. Resize: `vertical` only.
+
+**`select` — Dropdown**
+- Same shell as input-text + chevron-down icon right-padded `40px`. Open: chevron rotates 180° over 200ms.
+
+### Navigation
+
+**`global-nav` — Fixed Top Bar**
+- Background `#ffffff`, height `80` (generous), border-bottom `1px solid #ebe7e0`, sticky on scroll. Items: Workday tangerine wordmark left, primary nav (Why Workday / Solutions / Industries / Customers / Insights) center, utility (Search / Sign in / Contact sales) right. The "Contact sales" CTA is a filled-tangerine button — primary CTA always visible in the nav.
+
+**`mega-menu` — Solutions Hover Panel**
+- Background `#ffffff`, radius `0 0 12px 12px`, shadow `0 16px 40px rgba(26,26,26,0.10)`, 3-column grid + featured customer story banner right (with portrait + quote excerpt).
+
+**`sub-nav` — Sticky Section Nav**
+- Below global nav on long industry/solution pages. Height `56`, background `#ffffff`, border-bottom `1px solid #ebe7e0`. Items: in-page anchors with active-link `3px solid #f37721` underline.
+
+**`feature-band` — Charcoal Splash**
+- Background `#1a1a1a`, color `#ffffff`, padding `120px 0` (deeper than SAP's 96px — Workday emphasizes breathing room). 50/50 split: copy left + people-photography right.
+
+**`customer-story-band` — Cream Story Splash**
+- Background `#f0ece6`, color `#1a1a1a`, padding `96px 0`. Centered serif pull-quote at 28/400 in Adelle slab + customer portrait + role + company below. The cream surface keeps the customer-voice moment warm and editorial.
+
+**`footer` — Charcoal Footer**
+- Background `#1a1a1a`, color `#ffffff`, padding `80px 0 32px`. 5 columns: Why Workday / Solutions / Industries / Customers / Resources. Tangerine wordmark anchors top-left. Legal strip below with `1px solid rgba(255,255,255,0.10)` separator.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit: 4px. Scale: `4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128`. Components use 16/24/32/40; sections use 80/96/120. Workday is **slightly more generous than SAP** in section spacing (120px feature-band padding vs SAP's 96px) — the warm humanism is partly delivered through breathing room.
+
+### Grid & Container
+Max page width: `1280px` with `48px` outer gutters on desktop, `32px` on tablet, `20px` on mobile (slightly more generous than SAP). Hero sections break the container width and use `100vw` backgrounds with `1280px` inner content. Industry/solution feature grids run 3-up on desktop, 2-up on tablet, 1-up on mobile.
+
+### Whitespace Philosophy
+Workday is **breathing-room maximalist** within enterprise constraints. Body line-height sits at 1.55; section padding at 80–120px; card padding at 32–48px. The system trades density for emotional warmth — long-scroll pages with generous whitespace, photography-heavy heroes, and editorial-paced copy.
+
+### Section Cadence
+Page rhythm runs **white ground → cream `#f7f5f2` zone → charcoal feature band → cream `#f0ece6` customer-story band → white ground**. The two-cream-tier rhythm gives the page more textural variation than a single shaded zone would. Charcoal bands appear once per page (the brand's emotional anchor), cream story bands appear once per page (the customer-voice moment).
+
+## 6. Shapes & Radius Scale
+
+- **Micro 2px** — internal divider chips, inline tag accents
+- **Standard 4px** — buttons, inputs, primary chips, badges
+- **Card 8px** — content cards, customer-story tiles, stat callouts
+- **Modal 12px** — dialogs, customer-story cards
+- **Featured 16px** — hero feature card, industry tile
+- **Pill 9999px** — status pills, language pills
+
+Compound radii: mega-menu uses `0 0 12px 12px` (top-flat, bottom-rounded) to anchor under the global nav. Customer-story cards inside the cream story band use `12px` to harmonize with the cream surface.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | `box-shadow: 0 2px 8px rgba(26,26,26,0.06)`, hairline `1px solid #ebe7e0` | Default cards — whisper-quiet shadow + cream hairline |
+| 1 | `0 8px 24px rgba(26,26,26,0.12)` + 2px translateY lift | Card hover — visible depth gain |
+| 2 | `0 12px 32px rgba(26,26,26,0.14)` | Elevated card, dropdown panel, popover |
+| 3 | `0 16px 40px rgba(26,26,26,0.10)` | Mega-menu hover panel — wide spread, lower alpha |
+| 4 | `0 24px 56px rgba(26,26,26,0.20), 0 6px 12px rgba(0,0,0,0.10)` | Modal dialog, full-screen overlay |
+| 5 | scrim `rgba(26,26,26,0.55)` + Level 4 shadow | Scrim-backed modal |
+
+### Shadow Philosophy
+
+Workday shadows are **warm-charcoal-tinted, not pure black**. Every elevation layer uses `rgba(26,26,26, alpha)` — slightly cooler than the brand orange but warm enough to feel coherent. Cards have a *visible-but-quiet* default shadow (unlike SAP's hairline-only default), reflecting Workday's humanist "soft elevation" preference. The hover state adds both a 2px translateY lift and a shadow intensification — a more emphatic interaction signal than SAP's shadow-only shift.
+
+The brand-orange focus ring (`3px solid rgba(243,119,33,0.40)`) is the system's signature interaction signal — it appears on every focusable element and reads as warm-and-confident rather than sharp-and-clinical.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- `ease-standard: cubic-bezier(0.4, 0, 0.2, 1)` — universal default
+- `ease-emphasized: cubic-bezier(0.2, 0, 0, 1)` — entry animations, modal open
+- `ease-decelerate: cubic-bezier(0, 0, 0.2, 1)` — outgoing animations
+
+### Duration Buckets
+- `duration-fast: 120ms` — chevron rotations, focus rings, badge color shifts
+- `duration-standard: 240ms` — button hovers, card hover lifts (slightly slower than SAP's 200ms)
+- `duration-slow: 360ms` — mega-menu open, image fade-ins
+- `duration-page: 500ms` — full-page transitions on Insights articles
+
+### Per-Component Micro-States
+- **Button hover**: bg shifts to brand-hover (`#d65f0e`) + warm-glow shadow `0 6px 20px rgba(243,119,33,0.25)` over 240ms. Active: `translateY(1px)` press dip + bg → `#a64909`.
+- **Card hover**: `translateY(-2px)` lift + shadow rises from `0 2px 8px → 0 8px 24px rgba(26,26,26,0.12)` over 240ms. The translateY signals interactivity more emphatically than SAP's shadow-only.
+- **Link hover**: underline grows from `0 → 100%` width over 240ms. Tertiary CTA chevron translates `4px` right on hover.
+- **Mega-menu open**: opacity `0 → 1` + translateY `-12px → 0` over 360ms ease-emphasized. 200ms hover-intent delay.
+- **Modal open**: scrim fades `0 → 0.55` over 360ms; modal scales `0.94 → 1` + opacity `0 → 1` over 500ms ease-emphasized.
+- **Image fade-in**: `opacity 0 → 1` + `filter blur(12px) → blur(0)` over 700ms on intersection-observer trigger.
+- **Eyebrow type-in animation**: hero eyebrow fades in at 80ms delay before headline (a small "stage curtain" reveal); disabled under reduced-motion.
+
+### Page Transitions
+Workday does not use SPA-style page transitions on the marketing surface — every page is a full document load. Insights articles use a subtle `opacity 0 → 1` over 500ms on initial paint to mask the FOUT.
+
+### Reduced Motion Strategy
+Respects `prefers-reduced-motion: reduce`:
+- All translateY lifts degrade to `opacity 0.95 → 1` dim only
+- Underline-grow disabled — links go straight to underlined state
+- Image fade-ins disabled
+- Modal scale-in disabled — modal appears at scale-1 with opacity fade only
+- Eyebrow type-in disabled
+- Chevron translation preserved (spatial cue, not decoration)
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (WCAG)
+- Text `#1a1a1a` on bg `#ffffff` — **16.0:1 (AAA)**
+- Text `#1a1a1a` on bg `#f7f5f2` cream — **15.0:1 (AAA)**
+- Text-soft `#5a5a5a` on bg `#ffffff` — **7.2:1 (AA)**
+- White `#ffffff` on tangerine `#f37721` — **3.5:1 (AA at large text only)** — tangerine fills are used for buttons (large-size text); never used for body links.
+- White `#ffffff` on brand-deep `#a64909` — **7.2:1 (AAA)** — used for tertiary CTA text and hover-state buttons where AAA is needed.
+- White `#ffffff` on charcoal `#1a1a1a` — **17.5:1 (AAA)**
+- Brand `#f37721` on bg `#ffffff` — **3.5:1 (AA at large text)** — acceptable for h1/h2 stat callouts; never body text. Body emphasis uses `#a64909` (brand-deep) for AAA contrast.
+
+### Focus Indicators
+Universal: `3px solid rgba(243,119,33,0.40)` ring with `2px` offset — a tangerine *glow* ring (not a hard ring). On dark feature bands, the ring switches to `3px solid rgba(255,255,255,0.40)` for visibility against charcoal. Buttons add the glow ring + 1px outer offset; inputs use a solid 2px tangerine border replacement.
+
+### ARIA Patterns
+- Mega-menu: `aria-haspopup="menu"` + `aria-expanded` toggled on hover/focus
+- Customer-story carousel: `aria-roledescription="carousel"` + slide counter `aria-live="polite"`
+- Solution tabs: roving `tabindex` (one tabbable tab, arrow-key navigation)
+- Pull-quote: `<blockquote>` + `<cite>` for customer name; `role="quote"` on the visible text
+- Skip-link: visible on keyboard focus, hidden on mouse
+
+### Keyboard Navigation
+Tab order: skip-link → wordmark → primary nav (Why Workday / Solutions / Industries / Customers / Insights) → utility (Search / Sign in / Contact sales CTA) → main content → footer columns → legal strip. Esc closes mega-menu, modal, search overlay. Enter activates buttons and links; Space activates buttons.
+
+### Screen Reader Hints
+- All icons paired with visible text get `aria-hidden="true"`; standalone icons get `aria-label`
+- Stat-callout numerals use `aria-label="3.2 times faster"` rather than relying on `3.2x` visual shorthand
+- Customer photography uses `alt="[name], [role] at [company]"` — always names the person
+- Decorative cream backgrounds use empty `alt=""`
+
+### Reduced Motion
+Honored — see §8 for full degradation matrix.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Min Width | Notes |
+|------|-----------|-------|
+| mobile | 0 | Default mobile-first stack |
+| tablet | 600 | 2-column feature grids, 64px header |
+| desktop | 900 | 3-column feature grids, mega-menu activates |
+| wide | 1200 | 80px header, max content rendering |
+| ultra | 1440 | Larger gutter spacing, hero breaks 100vw |
+
+### Touch Targets
+Minimum 44×44px for all interactive elements. Buttons stretch from 40px-tall (button-sm) to 52px-tall (button-large) — slightly taller than SAP's button heights to emphasize approachability.
+
+### Collapsing Strategy
+- **Global nav**: collapses to hamburger menu below 900px. Solutions / Industries become accordion sections inside the slide-in panel.
+- **Sub-nav**: collapses to a horizontal-scroll chip strip below 600px.
+- **Mega-menu**: replaced by a tap-expand accordion on touch devices.
+- **Feature bands**: 50/50 split collapses to stacked (copy-above-image) below 900px. Image always above copy on mobile (people-photography first).
+- **Customer-story card**: pull-quote and portrait stack on mobile, portrait above quote.
+- **Stat grid**: 3-up grid → 2-up at 600 → 1-up below.
+- **Footer**: 5-column → 2-column → accordion below 600px.
+
+### Image Behavior
+- Hero images: `aspect-ratio: 16/9` desktop, `4/3` tablet, `4/5` mobile (vertical-tilted on phones)
+- Customer portraits: `aspect-ratio: 1/1`, `object-fit: cover`, `border-radius: 50%` for round portraits inside cards
+- All images load with native `loading="lazy"` (except hero); `srcset` for `1x / 2x / 3x`
+- Image fade-in via intersection observer
+
+### Container Queries
+Used on the **stat-callout** card to switch numeral size from `64` → `48` when nested inside a 4-column instead of 3-column grid.
+
+## 11. Content & Voice
+
+### Tone
+Workday's voice is **warm-confident-professional** — emotionally available enough for an HR leader to relate to, formal enough to credibly close an enterprise deal. The brand internal style guide names "human-first language" as the core rule: lead with the person, not the system.
+
+### Microcopy Patterns
+
+**Button verbs:**
+- Primary CTAs: "Get started", "Talk to us", "Watch demo", "Read the report", "See it in action"
+- Secondary CTAs: "Learn more", "Explore solutions", "See how it works", "View pricing"
+- Tertiary CTAs: "Read the customer story ›", "Find your industry ›", "See benefits ›"
+
+**Error message recipe:** `[What went wrong, in plain language] + [What to do]` — e.g., "We couldn't sign you in. Try checking your email and password, or reset your password."
+
+**Success confirmation:** Warm and definitive — "You're signed up. We've sent a confirmation to your email." Brief, never effusive.
+
+### Empty States
+Workday empty states are **warm but informational**. A search-no-results says "No results for 'xyz'. Try fewer keywords or browse by industry." — never illustrated mascot or playful exclamation.
+
+### CTA Verb Conventions
+- "Talk to us" — the dominant primary CTA. Workday is enterprise-sales-led; they prefer human conversation over self-serve flows.
+- "Watch demo" — for product walkthrough modals
+- "Read the report" — for thought-leadership content (Workday Insights)
+- "See it in action" — for product-tour landing pages
+- "Get started" — used sparingly; reserved for self-serve products
+- "Find your industry" — Workday's signature explore-by-vertical pattern
+
+### Voice Anchors
+- Use second person ("you can"). Use first-person plural occasionally ("we'll show you") to emphasize relationship.
+- Lead with the customer outcome and the **person affected** — "Help your finance team close 3x faster" not "Workday Financial Management automation".
+- Avoid superlatives. Lead with specific, named customers ("Netflix uses Workday for...").
+- Industry-specific pages use the customer's vocabulary, not Workday's. (e.g., the Healthcare page says "physician burnout", not "FTE optimization".)
+- Reference real customers by name in pull-quotes — Salesforce, Netflix, Amazon, Adobe are all on the customer-story page.
+
+## 12. Dark Mode & Theming
+
+**Light-only — no dark variant offered on the marketing site.**
+
+Charcoal feature bands are content-driven (single emphatic moment per page), not theme-driven. The Workday product surface uses **Workday Canvas Design System** with light/dark theme tokens for the application UI, but the public marketing site explicitly does not ship a dark mode toggle.
+
+Reasoning: Workday's brand emotional register is built on **warm cream surfaces + tangerine accents + people photography in natural light**. A pure dark mode would invert the cream tones to cooler grays and lose the warmth that defines the brand. The charcoal feature band already carries the dark-moment emotional anchor that dark-mode users typically seek, while preserving the cream-warm rhythm of the rest of the page.
+
+## 13. Lineage & Influences
+
+Workday's design language inherits from the **humanist enterprise tradition** — a lineage that runs from Apple's pre-iOS-7 OS X (warm gradients, photographic materials) through Slack's early friendly-but-professional aesthetic to today's Notion / Asana / Lattice "warm-SaaS" cluster. The signature tangerine echoes Slack's playful purple-orange duo and HubSpot's signature orange, but Workday holds it tighter and more saturated — closer to a terracotta sunset than a pure brand orange.
+
+The custom **Adelle Sans Workday** typeface is the system's signature move. TypeTogether's Adelle Sans is a humanist sans with slab-serif lineage (the Adelle slab is its sibling); Workday's commissioned cut adds Heavy 900 for hero use and tightens optical spacing. The choice reflects the brand's strategic positioning: Workday sells to *humans* in HR and Finance, and a humanist typeface (single-story 'a', open 'g', friendly 'e') signals "warm-but-professional" in a way that geometric sans (Inter, Helvetica Now, Geist) cannot.
+
+What Workday rejects: cool-blue corporate (the SAP / Salesforce direction), pastel illustration heroes (the Notion / Linear direction), gradient-as-brand (the Stripe / Linear direction). The brand surface is photography-led — overwhelmingly people in conversation, never product screenshots-only.
+
+**Named influences:**
+- **Slack (early years)** — friendly-but-professional brand voice, warm accent on neutral canvas
+- **HubSpot** — saturated brand orange as primary action color
+- **Asana** — humanist enterprise warmth, people-led photography
+- **Apple OS X (pre-flat era)** — warm photographic materials, soft elevation discipline
+- **TypeTogether (Adelle family)** — humanist slab-rooted sans-serif typography
+
+## 14. Do's and Don'ts
+
+**Do**
+- Lead with people-photography in heroes — small groups in conversation, candid moments, soft natural light. Workday is a "humans of HR and Finance" brand.
+- Use the signature tangerine `#f37721` for primary CTAs and the wordmark; never substitute a different orange or red.
+- Keep cream surfaces (`#f7f5f2`, `#f0ece6`, `#faf8f5`) instead of cool grays — temperature-coherent with the brand orange.
+- Use Adelle Sans Workday Heavy 900 for hero display; step down to Bold 700 below 60px.
+- Reserve the slab-serif Adelle for customer-story pull-quotes only — never use it for headlines or body.
+- Apply the tangerine glow focus ring (`3px solid rgba(243,119,33,0.40)`) to all focusable elements.
+- Use translateY(-2px) hover lifts on cards alongside shadow intensification — both signals together.
+- Keep the eyebrow uppercase + `0.1em` tracking pattern over hero headlines; this is a brand signature.
+- Reference real customers by name in pull-quotes (Netflix, Amazon, Salesforce, Adobe).
+- Honor `prefers-reduced-motion` — degrade transforms to opacity dim, disable underline-grow.
+
+**Don't**
+- Don't introduce a second saturated accent color — the system is monolithically tangerine on cream.
+- Don't use cool grays for surfaces — they break the temperature coherence with orange.
+- Don't pure-black headings — always charcoal `#1a1a1a` (text) or `#262626` (ink).
+- Don't pill-shape primary CTAs — Workday buttons are crisp 4px rectangles. Pills are reserved for status chips.
+- Don't use product-screenshot-only heroes — Workday's brand surface is people-led.
+- Don't use a gradient brand background — solid tangerine or solid charcoal only.
+- Don't introduce illustrated mascots — the brand surface is photography-only.
+- Don't use Adelle slab for headings or body — its single permitted role is customer-voice pull-quotes.
+- Don't use the brand tangerine as a "warning" color — semantic warning is `#d97706` amber, distinct from brand orange.
+- Don't overuse the charcoal feature band — once per page maximum (the brand's emotional anchor moment).
+- Don't drop body line-height below 1.55 — humanist breathing room is non-negotiable.
+- Don't substitute Adelle Sans Workday with a geometric sans (Inter, Geist, Manrope) — geometric reads cool-corporate, breaking the brand voice.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+bg: #ffffff
+bg-cream: #f7f5f2
+text: #1a1a1a
+text-soft: #5a5a5a
+brand: #f37721
+brand-deep: #a64909
+charcoal-band: #1a1a1a
+border: #ebe7e0
+success: #3aa15a
+danger: #c63030
+```
+
+### Example Component Prompts
+
+1. *"Create a hero section in the Workday design system: white canvas, eyebrow "WORKDAY FOR FINANCE" in 13/700 uppercase with 0.1em tracking and tangerine `#f37721` color, display headline at 80px in Adelle Sans Workday Heavy 900 with -0.025em tracking and charcoal `#1a1a1a` color, body intro at 20/1.55, and a primary CTA "Talk to us" filled in `#f37721` with a secondary outlined "Watch demo" beside it. Right side: photograph of three colleagues laughing in a sunlit office."*
+
+2. *"Design a customer-story card in the Workday style: white card, 12px radius, 1px border `#ebe7e0`, 40px padding. Left half: pull-quote in Adelle slab-serif at 28/400 charcoal, with a `<cite>` for customer name in 14/700 below. Right half: round customer portrait at 120px diameter + name + role + company in 14/400 text-soft."*
+
+3. *"Build a charcoal feature band in Workday style: full-width `#1a1a1a` background, 120px vertical padding, 50/50 split with white headline (44/700) + body copy on the left and people-photography on the right. Include a primary CTA in tangerine `#f37721` filled (orange stays consistent on dark) plus a white-outlined secondary."*
+
+4. *"Render a stat-callout grid in Workday style: 3-up grid of cards, each white background with 8px radius and 1px hairline border. Each card: tangerine `#f37721` numeral at 64px in Adelle Sans Workday Heavy 900 (e.g. "3.2x"), charcoal label below at 16/700 ("faster financial close"). Hover: 2px translateY lift + shadow intensify."*
+
+5. *"Create a cream customer-story band in Workday style: full-width `#f0ece6` cream background, 96px vertical padding, centered content. Show a centered serif pull-quote in Adelle at 32/400 ("Workday lets us close the books in days, not weeks."), then a round customer portrait below at 80px, then customer name in 16/700 charcoal, then role + company in 14/400 text-soft."*
+
+6. *"Design a 5-column footer in Workday style: charcoal `#1a1a1a` background, white text, 80px top padding, 32px bottom. Tangerine wordmark anchors top-left at 32px height. Five columns: Why Workday / Solutions / Industries / Customers / Resources. Legal strip below separated by `1px solid rgba(255,255,255,0.10)` hairline."*
+
+### Iteration Guide
+
+1. **Start with the photography.** If your hero shows a product screenshot or a UI mockup, you're already off-brand. Replace with a candid photo of people in conversation under natural light.
+
+2. **Switch to Adelle Sans Workday (or Source Sans 3 substitute).** A geometric sans like Inter or Geist will break the humanist warmth — Workday's typeface is the load-bearing element.
+
+3. **Audit your shadows.** SAP-style hairline-only shadows read too clinical for Workday. Add a whisper-quiet `0 2px 8px rgba(26,26,26,0.06)` default + 2px translateY lift on hover.
+
+4. **Replace gray surfaces with cream.** Every `#f5f5f5` or `#f7f7f7` should become `#f7f5f2` or `#faf8f5` — warm-cream tones that align with the orange.
+
+5. **Soften the eyebrow.** Workday eyebrows are uppercase `0.1em` tracked tangerine — wider tracked than typical eyebrows, with the brand orange as the color signal.
+
+6. **Add the tangerine glow focus ring.** Every focusable element should show `3px solid rgba(243,119,33,0.40)` on focus — never just a hard ring color.
+
+7. **Use Adelle slab for one quote moment.** If your design includes a customer-story moment, switch the pull-quote to Adelle slab-serif at 28/400 — the slab signals "human voice" inside the warm-sans system.
+
+8. **Keep CTAs to "Talk to us" and "Watch demo".** Workday is enterprise-sales-led — replace "Sign up free" with "Talk to us" or "Get started" depending on whether the product has self-serve.

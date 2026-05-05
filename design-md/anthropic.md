@@ -1,0 +1,717 @@
+---
+name: Anthropic
+tagline: Editorial broadsheet for AI safety — cream canvas, Anthropic Serif body, terracotta clay accent, magazine geometry.
+author: webdesignhot
+source_url: https://anthropic.com
+spec: design.md/v1.5
+quality: curated
+featured: true
+categories: [ai, dev-tools]
+tags: [light, editorial, serif, sans, warm, organic, spacious]
+preview_swatch: ['#faf9f5', '#cc785c', '#141413']
+related: [claude-ai, openai, perplexity]
+description: 'Anthropic''s marketing site reads like a literary periodical — cream `#faf9f5` ground, custom Anthropic Sans + Anthropic Serif (yes, body in serif), warm earth-toned swatch system, generous editorial whitespace. The most editorial AI brand on the internet — sets body in serif at 20px / 1.4 line-height, headlines at 64–96px / 700 weight, and reserves the signature clay `#cc785c` for accent only. Where every other AI lab reaches for purple gradients or chrome-on-black, Anthropic ships kraft-manilla-fig-heather-cactus-olive — a 10-color earth palette treating the marketing site as a continuous editorial publication. New Yorker meets MIT Technology Review meets a research lab.'
+
+colors:
+  # Primary
+  bg: '#faf9f5'                          # --swatch--ivory-light — defining cream canvas
+  bg-secondary: '#f0eee6'                # --swatch--ivory-medium — elevated panel
+  bg-secondary-hover: '#e8e6dc'          # --swatch--ivory-dark — hover ground
+  surface: '#ffffff'                     # white card lift
+  text: '#141413'                        # --swatch--slate-dark — never pure black
+  text-strong: '#000000'                 # rare absolute-black for editorial hero
+  text-medium: '#3d3d3a'                 # --swatch--slate-medium
+  text-soft: '#5e5d59'                   # --swatch--slate-light — secondary copy
+  text-faint: '#87867f'                  # --swatch--slate-faint — captions, eyebrows
+  text-muted: '#b0aea5'                  # --swatch--slate-muted — disabled, footer
+  brand: '#cc785c'                       # --swatch--clay — signature terracotta accent
+  brand-warm: '#d97757'                  # --swatch--clay-bright — brighter clay variant
+  brand-deep: '#a04a2c'                  # pressed-state clay
+  on-brand: '#faf9f5'                    # cream label on clay swatches
+  # Earth-tone swatch palette (the 10-color editorial system)
+  swatch-clay: '#d97757'
+  swatch-kraft: '#d4a27f'
+  swatch-manilla: '#ebdbbc'
+  swatch-oat: '#e3dacc'
+  swatch-coral: '#ebcece'
+  swatch-fig: '#c46686'
+  swatch-heather: '#cbcadb'
+  swatch-cactus: '#bcd1ca'
+  swatch-olive: '#788c5d'
+  swatch-sky: '#6a9bcc'
+  # Interactive
+  link: '#141413'                        # links are slate-dark with underline
+  link-hover: '#cc785c'                  # clay on hover only
+  selected-bg: '#f0eee6'
+  disabled: '#b0aea5'
+  # Borders
+  border: 'rgba(20, 20, 19, 0.10)'       # default hairline
+  border-strong: 'rgba(20, 20, 19, 0.20)' # emphasized rule
+  border-subtle: 'rgba(20, 20, 19, 0.05)' # quietest division
+  border-clay: 'rgba(204, 120, 92, 0.30)' # brand-tinted hairline
+  # Semantic
+  success-bg: '#bcd1ca'                  # cactus tint
+  success-text: '#3d5a47'
+  warning-bg: '#ebdbbc'                  # manilla tint
+  warning-text: '#7a5e1f'
+  danger-bg: '#ebcece'                   # coral tint
+  danger-text: '#8a3a3a'
+  info-bg: '#cbcadb'                     # heather tint
+  info-text: '#3a3a6a'
+
+typography:
+  display:
+    family: '"Anthropic Sans", "StyreneA", Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01', 'liga', 'kern']
+  serif:
+    family: '"Anthropic Serif", "Tiempos", "Copernicus", Georgia, serif'
+    weights: [400, 500, 600]
+    opentype-features: ['liga', 'onum', 'kern']
+  body:
+    family: '"Anthropic Serif", "Tiempos", Georgia, serif'
+    weights: [400, 500]
+    note: 'body uses SERIF — the most editorial choice in AI branding'
+  mono:
+    family: '"Anthropic Mono", "Söhne Mono", ui-monospace, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-hero:    { size: 96, weight: 700, lineHeight: 1.05, tracking: '-0.02em', family: display, opentype: 'ss01' }
+    display:         { size: 80, weight: 700, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    h1:              { size: 64, weight: 700, lineHeight: 1.1,  tracking: '-0.015em', family: display }
+    h2:              { size: 48, weight: 600, lineHeight: 1.15, tracking: '-0.01em', family: display }
+    h3:              { size: 32, weight: 600, lineHeight: 1.25, tracking: 'normal', family: display }
+    h4:              { size: 24, weight: 600, lineHeight: 1.3,  family: display }
+    h5:              { size: 20, weight: 600, lineHeight: 1.4,  family: display }
+    eyebrow:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0.04em', family: display, transform: uppercase }
+    body-large:      { size: 24, weight: 400, lineHeight: 1.4,  family: serif }
+    body:            { size: 20, weight: 400, lineHeight: 1.4,  family: serif, opentype: 'onum' }
+    body-small:      { size: 18, weight: 400, lineHeight: 1.5,  family: serif }
+    caption:         { size: 14, weight: 400, lineHeight: 1.4,  family: display }
+    caption-tabular: { size: 14, weight: 500, lineHeight: 1.4,  family: mono, opentype: 'tnum' }
+    label:           { size: 13, weight: 500, lineHeight: 1.3,  family: display }
+    code:            { size: 15, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero' }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.4,  family: mono }
+    quote-pull:      { size: 32, weight: 500, lineHeight: 1.3,  family: serif, style: italic }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 48, 64, 80, 96, 128, 160]
+
+layout:
+  page-width: 1432
+  prose-width: 720
+  site-gutter: 'clamp(32px, 6vw, 80px)'
+  header-height: 68
+  grid-columns: 12
+  section-rhythm: '88-160px'
+
+components:
+  button-primary:
+    background: '#141413'
+    text: '#faf9f5'
+    padding: '12px 24px'
+    radius: 8
+    border: '1px solid #141413'
+    font: 'Anthropic Sans 500 / 16px'
+    hover-bg: '#3d3d3a'
+    active-bg: '#000000'
+    use: 'Primary action — slate-dark on cream, inverts the canvas exactly'
+  button-secondary:
+    background: 'transparent'
+    text: '#141413'
+    padding: '12px 24px'
+    radius: 8
+    border: '1px solid #141413'
+    font: 'Anthropic Sans 500'
+    hover-bg: 'rgba(20, 20, 19, 0.05)'
+    use: 'Outlined twin — same shape, no fill'
+  button-tertiary:
+    background: 'transparent'
+    text: '#141413'
+    padding: '12px 24px'
+    radius: 8
+    border: '1px solid rgba(20, 20, 19, 0.10)'
+    font: 'Anthropic Sans 500'
+    hover-bg: 'rgba(20, 20, 19, 0.04)'
+    use: 'Quiet third action — gentlest hairline'
+  button-clay:
+    background: '#cc785c'
+    text: '#faf9f5'
+    padding: '12px 24px'
+    radius: 8
+    font: 'Anthropic Sans 500'
+    hover-bg: '#d97757'
+    use: 'Rare clay CTA — reserved for hero brand moments'
+  card:
+    background: '#ffffff'
+    border: '1px solid rgba(20, 20, 19, 0.10)'
+    radius: 16
+    padding: '32px'
+    use: 'Editorial pull-quote box — white panel on cream, generous interior'
+  card-swatch:
+    background: 'var(--swatch)'
+    border: 'none'
+    radius: 16
+    padding: '40px 32px'
+    use: 'Earth-tone illustration card — kraft, manilla, fig as a fill'
+  input:
+    background: '#ffffff'
+    border: '1px solid rgba(20, 20, 19, 0.20)'
+    radius: 8
+    padding: '12px 16px'
+    font: 'Anthropic Sans 400 / 16px'
+    placeholder-color: '#87867f'
+    focus-ring: '0 0 0 2px #cc785c'
+    use: 'Form fields, search'
+  badge-eyebrow:
+    background: 'transparent'
+    text: '#5e5d59'
+    padding: '0'
+    radius: 0
+    font: 'Anthropic Sans 500 / 13px / uppercase / 0.04em tracking'
+    use: 'Section eyebrow — no chrome, just type'
+  badge-clay:
+    background: 'rgba(204, 120, 92, 0.12)'
+    text: '#a04a2c'
+    padding: '4px 10px'
+    radius: 4
+    font: 'Anthropic Sans 500 / 13px'
+    use: 'Subtle status pill on white card'
+  nav-link:
+    background: 'transparent'
+    text: '#141413'
+    padding: '8px 12px'
+    font: 'Anthropic Sans 500 / 15px'
+    hover-text: '#cc785c'
+    active-underline: '1px solid #141413'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-editorial: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-fast: 120
+  duration-standard: 220
+  duration-slow: 360
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions become opacity-only, durations halved'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1432
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(20, 20, 19, 0.04) 0 1px 3px'
+  standard: 'rgba(20, 20, 19, 0.06) 0 4px 12px'
+  elevated: 'rgba(20, 20, 19, 0.08) 0 12px 32px -8px, rgba(20, 20, 19, 0.04) 0 4px 8px'
+  warm: 'rgba(204, 120, 92, 0.18) 0 16px 40px -16px'
+  ring: '0 0 0 2px #cc785c'
+
+accessibility:
+  contrast-text-on-bg: 14.6              # #141413 on #faf9f5 — AAA at body sizes
+  contrast-text-on-brand: 4.7            # #faf9f5 on #cc785c — AA at body sizes
+  contrast-text-soft-on-bg: 7.1          # #5e5d59 on #faf9f5 — AAA
+  focus-ring: '2px solid #cc785c with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive surface; tab order matches visual'
+  prose-line-length: 'capped at 720px (~70 characters) for editorial readability'
+
+dark-mode: null                          # marketing surface is light-only; product UI handles its own theming
+---
+
+## 1. Visual Theme & Atmosphere
+
+Anthropic's marketing site is the antithesis of "AI startup with a purple gradient." Open the homepage and you land on cream `#faf9f5` — a paper-warm canvas that feels closer to a literary quarterly than a tech product page. The first headline holds at 64–96px in **Anthropic Sans**, set at weight 700 with negative tracking; the body that follows it is set in **Anthropic Serif** at 20px / 1.4 line-height. Reading body copy in serif is the brand's defining typographic move and the single decision that pulls Anthropic out of the AI-startup register and into the New-Yorker register.
+
+The palette extends the editorial conceit. Where Linear runs near-black canvas + Inter Variable, where OpenAI runs pure white + OpenAI Sans, where Stripe runs cool-white + light Söhne — Anthropic ships **cream + serif body + earth tones**. The full swatch system runs ten named hues (clay, kraft, manilla, oat, coral, fig, heather, cactus, olive, sky), all desaturated and warm, all treated as first-class design tokens rather than illustration accidents. Marketing graphics use these swatches the way a magazine spot-illustrates a feature — kraft becomes a column background, fig pull-quotes a stat, cactus stamps a callout. The page reads like *MIT Technology Review* rather than a SaaS landing.
+
+The signature accent is **clay `#cc785c`** — a terracotta that sits between rust, persimmon, and fired pottery. Anthropic uses it sparingly and almost always as punctuation: a wordmark stroke, an underline on a citation, a single small CTA on a hero. Primary call-to-action buttons invert the canvas — slate-dark `#141413` on cream — so that the page never accidentally lets the clay accent collapse into chrome. The discipline keeps the cream-and-clay pairing recognisable from a thumbnail.
+
+Atmospheric vocabulary that captures the feeling: *cream-paper, broadsheet-narrow, earth-tone, considered, magazine-quiet, hand-set, MIT-Tech-Review, pull-quote-page, columned-prose, sans-headline-serif-body, terracotta-restrained.* Every surface lands as if it were laid out by an editor rather than a product designer.
+
+**Key Characteristics**
+- Cream `#faf9f5` canvas — never pure white, always paper-warm
+- Body copy set in **serif** — the AI-industry rarity that defines the brand
+- Custom Anthropic type trio (Sans, Serif, Mono) — proprietary identity
+- Clay `#cc785c` accent reserved for punctuation, never fill
+- 10-color earth-tone swatch system (kraft, manilla, fig, heather, cactus…)
+- 720px prose width even on 1432px page — broadsheet-narrow reading column
+- 88–160px section gutters — magazine-paced rhythm
+- Slate-dark `#141413` text, never pure black — warmer ink
+- Editorial illustrations as decorative, not infographic
+- Restraint as a brand asset — what Anthropic *doesn't* show is the loudest signal
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** `#faf9f5` — the cream ivory-light canvas; defining backdrop, never substituted for `#ffffff`.
+- **text** `#141413` — slate-dark; warmer than `#000` so type doesn't fight the cream.
+- **bg-secondary** `#f0eee6` — ivory-medium for elevated panels and lifted sections.
+- **brand-cta-bg** `#141413` — primary CTA inverts the canvas exactly (slate on cream).
+- **on-cta** `#faf9f5` — cream-tinted label on slate; never pure white.
+
+### Brand & Accent
+
+- **brand** `#cc785c` — clay terracotta, the signature. Citations, underlines, brand mark.
+- **brand-warm** `#d97757` — brighter clay swatch, used in illustrations.
+- **brand-deep** `#a04a2c` — pressed/active state.
+- **swatch-fig** `#c46686` — accent stamp for special features.
+- **swatch-heather** `#cbcadb` — info-callout fill.
+- **swatch-cactus** `#bcd1ca` — success / nature-of-care register.
+- **swatch-olive** `#788c5d` — masculine-warm fill, rare.
+
+### Earth Tone Swatch System (the 10-color editorial palette)
+
+- **clay** `#d97757`, **kraft** `#d4a27f`, **manilla** `#ebdbbc`, **oat** `#e3dacc`, **coral** `#ebcece`, **fig** `#c46686`, **heather** `#cbcadb`, **cactus** `#bcd1ca`, **olive** `#788c5d`, **sky** `#6a9bcc`. Treat these as first-class tokens — `var(--swatch--kraft)`, not `#d4a27f`. Editorial graphics, illustration fills, and section grounds reach for them; the 10 tones are the brand.
+
+### Interactive
+
+- **link** `#141413` — slate-dark, underlined; serif italic when in body copy.
+- **link-hover** `#cc785c` — clay on hover; the only interactive moment that introduces colour.
+- **selected-bg** `#f0eee6` — selected nav state, elevated panel.
+- **disabled** `#b0aea5` — slate-muted; disabled control text.
+
+### Neutral Scale
+
+- **slate-dark** `#141413` — primary text and high-emphasis labels.
+- **slate-medium** `#3d3d3a` — secondary heading colour, body emphasis.
+- **slate-light** `#5e5d59` — supporting copy, captions.
+- **slate-faint** `#87867f` — eyebrows, helper text.
+- **slate-muted** `#b0aea5` — disabled, footer microcopy.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#faf9f5` cream.
+- **surface-1 (panel)** — `#f0eee6` ivory-medium.
+- **surface-2 (card)** — `#ffffff` white card lift.
+- **border** `rgba(20, 20, 19, 0.10)` — default hairline.
+- **border-strong** `rgba(20, 20, 19, 0.20)` — outlined buttons, dividers under hero.
+- **border-subtle** `rgba(20, 20, 19, 0.05)` — quietest separation.
+
+### Shadow Colors
+
+Anthropic shadows are warm-tinted and minimal. Cards lift off cream by **value contrast alone** (white-on-cream); explicit shadows appear only on overlays and modal layers, and they're tinted with low-opacity slate (`rgba(20,20,19,0.06)` rather than neutral grey). The brand never uses cool blue-tinted shadows — that would crack the warm temperature of the page.
+
+### Semantic
+
+- **success** — bg `#bcd1ca` (cactus), text `#3d5a47`, border `rgba(120, 140, 93, 0.30)`.
+- **warning** — bg `#ebdbbc` (manilla), text `#7a5e1f`, border `rgba(212, 162, 127, 0.40)`.
+- **danger** — bg `#ebcece` (coral), text `#8a3a3a`, border `rgba(196, 102, 134, 0.30)`.
+- **info** — bg `#cbcadb` (heather), text `#3a3a6a`, border `rgba(106, 155, 204, 0.30)`.
+
+Note the unusual-but-distinctive choice: semantic colours come *from* the editorial palette, not from a separate Material/Tailwind ladder. Success isn't green-500; it's cactus.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & UI**: `"Anthropic Sans", Arial, sans-serif` — geometric humanist sans, custom-cut. Closer in proportions to Inter than to Geist; slightly more relaxed terminals than the SF-tech default.
+- **Body & Editorial**: `"Anthropic Serif", "Tiempos", Georgia, serif` — custom transitional serif used at weight 400/500. **This is the brand's signature.**
+- **Mono**: `"Anthropic Mono", "Söhne Mono", ui-monospace, monospace` — for code, data, tabular numerals.
+- **OpenType features**: `ss01` for stylistic alternate `a` in Sans display sizes; `liga` and `kern` always on; `tnum` and `zero` enabled in mono (tabular figures, slashed zero).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | Anthropic Sans | 96px | 700 | 1.05 | -0.02em | ss01 liga | Homepage hero ceiling |
+| Display | Anthropic Sans | 80px | 700 | 1.05 | -0.02em | ss01 | Section intro at scale |
+| H1 | Anthropic Sans | 64px | 700 | 1.10 | -0.015em | liga | Page title |
+| H2 | Anthropic Sans | 48px | 600 | 1.15 | -0.01em | liga | Major section |
+| H3 | Anthropic Sans | 32px | 600 | 1.25 | normal | — | Sub-section |
+| H4 | Anthropic Sans | 24px | 600 | 1.30 | normal | — | Card heading |
+| H5 | Anthropic Sans | 20px | 600 | 1.40 | normal | — | Inline emphasis |
+| Eyebrow | Anthropic Sans | 13px | 500 | 1.40 | 0.04em | uppercase | Section pre-label |
+| Body Large | Anthropic Serif | 24px | 400 | 1.40 | normal | onum | Lede paragraph |
+| Body | Anthropic Serif | 20px | 400 | 1.40 | normal | onum | Default magazine body |
+| Body Small | Anthropic Serif | 18px | 400 | 1.50 | normal | onum | Captions, sidebars |
+| Caption | Anthropic Sans | 14px | 400 | 1.40 | normal | — | Image captions |
+| Caption Tabular | Anthropic Mono | 14px | 500 | 1.40 | normal | tnum | Stats, data labels |
+| Label | Anthropic Sans | 13px | 500 | 1.30 | normal | — | UI labels |
+| Pull Quote | Anthropic Serif | 32px | 500 | 1.30 | normal | italic | Editorial pull-quote |
+| Code | Anthropic Mono | 15px | 400 | 1.55 | normal | tnum zero | Inline + block |
+| Code Micro | Anthropic Mono | 12px | 400 | 1.40 | normal | — | Footnote refs |
+
+### Principles
+
+- **Serif body is non-negotiable.** Anthropic Serif at 20px / 1.4 line-height is the visual signature; switching body to sans collapses the brand into the AI-startup register.
+- **Sans for chrome, serif for content.** Nav, buttons, labels, eyebrows, UI = Anthropic Sans. Headlines, body copy, pull-quotes = Anthropic Serif.
+- **Weight 700 only for display.** Headlines hit 700; subheads 600; body 400. The brand never asks weight to do shouting work.
+- **Negative tracking scales with size.** -0.02em at 80–96px, -0.015em at 64px, -0.01em at 48px, normal at 24px and below. The compression mirrors broadsheet masthead typography.
+- **Body width capped at 720px** even when the page is 1432px wide — magazine reading column.
+- **OpenType discipline**: `onum` (old-style figures) in serif body so numbers sit visually with letters; `tnum` (tabular figures) in mono for data alignment; `ss01` for the alternate single-storey `a` in Sans display.
+- **Italics in body, never in display.** The Serif italic carries quoted titles, gentle emphasis, and pull-quotes; the Sans display never italicises.
+- **Print-grade defaults.** 20px body, 1.4 line-height, 720px column — these are *magazine* metrics, not blog metrics.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Slate)**
+- Background: `#141413` slate-dark.
+- Text: `#faf9f5` cream-tinted, Anthropic Sans 500 / 16px.
+- Padding: `12px 24px`. Radius: `8px`. Border: `1px solid #141413`.
+- Hover: bg → `#3d3d3a`; transition `200ms ease-standard`.
+- Active: bg → `#000000` (rare absolute-black for the pressed beat).
+- Use: Primary CTA — *Get started, Read the paper, Talk to sales.*
+
+**Secondary (Outlined)**
+- Background: transparent. Text: `#141413`. Border: `1px solid #141413`.
+- Same padding, radius, font as primary.
+- Hover: bg → `rgba(20,20,19,0.05)`.
+- Use: Twin to primary — *Read more, Watch demo.*
+
+**Tertiary (Quiet)**
+- Background: transparent. Text: `#141413`. Border: `1px solid rgba(20,20,19,0.10)`.
+- Hover: bg → `rgba(20,20,19,0.04)`.
+- Use: Quietest third action — footer links, repeated CTAs.
+
+**Clay (Brand Punctuation)**
+- Background: `#cc785c`. Text: `#faf9f5`. No border.
+- Same shape (8px radius, 12×24 padding).
+- Hover: bg → `#d97757`. Active: `#a04a2c`.
+- Use: Reserved for one moment per page — wordmark stamp, hero accent CTA. Never the default primary.
+
+### Cards
+
+**Editorial Card**
+- Background: `#ffffff`. Border: `1px solid rgba(20,20,19,0.10)`. Radius: `16px`. Padding: `32px`.
+- Shadow: none — value-contrast alone separates white card from cream page.
+- Hover: border → `rgba(20,20,19,0.20)`; transition `200ms`.
+- Use: Pull-quote box, capability tile, research index entry.
+
+**Swatch Card (Earth-tone)**
+- Background: any `--swatch--*` token (kraft, manilla, fig…). Border: none. Radius: `16px`. Padding: `40px 32px`.
+- Use: Editorial illustration card — kraft as warm-paper, fig as feminine accent, cactus as success register.
+
+### Badges, Tags, Pills
+
+**Eyebrow Label** — no chrome, just type. Anthropic Sans 500 / 13px / uppercase / 0.04em tracking, colour `#5e5d59`. Sits above section headlines.
+
+**Clay Tag** — bg `rgba(204, 120, 92, 0.12)`, text `#a04a2c`, radius `4px`, padding `4px 10px`. Subtle clay-tinted pill on white cards.
+
+**Earth-tone Status** — bg from semantic palette (cactus / manilla / coral / heather), radius `4px`, padding `4px 10px`.
+
+### Inputs / Forms
+
+- Background: `#ffffff`. Border: `1px solid rgba(20,20,19,0.20)`. Radius: `8px`. Padding: `12px 16px`.
+- Font: Anthropic Sans 400 / 16px. Placeholder: `#87867f`.
+- Focus: `0 0 0 2px #cc785c` ring, border → `#141413`.
+- Error: border → `#8a3a3a`, ring → `rgba(196, 102, 134, 0.30)`.
+- Helper: caption 14px slate-faint below.
+
+### Navigation
+
+- Header height `68px`. Background `#faf9f5` cream (transparent on hero).
+- Logo: Anthropic wordmark, slate-dark.
+- Nav links: Anthropic Sans 500 / 15px, colour `#141413`, padding `8px 12px`. Hover → `#cc785c` clay; active gets `1px` underline.
+- Right-side CTA pair: tertiary "Log in" + primary slate "Try Claude".
+- Mobile: full-screen sheet, links stack at 24px / 500 / serif italic for headings.
+
+### Optional Components
+
+**Pull Quote** — Anthropic Serif 32px / 500 / italic, slate-medium, with a clay vertical rule on the left edge.
+
+**Footnote** — Anthropic Sans 13px / 400, slate-faint; sits on a thin border-subtle rule.
+
+**Code Block** — Anthropic Mono 15px, bg `#f0eee6`, radius `8px`, padding `16px 20px`, border `rgba(20,20,19,0.10)`. Inline code: same font, bg `rgba(20,20,19,0.06)`, padding `2px 6px`, radius `4px`.
+
+**Tooltip** — bg `#141413`, text `#faf9f5`, radius `4px`, padding `8px 12px`, font `13px / 500`.
+
+**Modal** — bg `#ffffff`, radius `16px`, shadow `rgba(20,20,19,0.08) 0 12px 32px -8px`, max-width `560px`. Cream backdrop overlay at 70% opacity.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 4, 8, 16, 24, 32, 48, 64, 80, 96, 128, 160 — Fibonacci-adjacent.
+- **Density observation**: Anthropic is *under-dense* by tech-page standards. Headlines float in 96–128px of margin; body paragraphs sit on 24px line gaps.
+
+### Grid & Container
+
+- **Page max width**: `1432px` — a deliberate odd number that reads as "broadsheet" rather than the standard 1280/1200/1440.
+- **Site gutter**: `clamp(32px, 6vw, 80px)` — generous on desktop, accommodating on mobile.
+- **Grid**: 12 columns with 24px gutters. Hero blocks span full width; capability rails span 8 columns; sidebars span 4.
+- **Hero treatment**: full-bleed cream, 96px headline, body confined to a 720px column anchored left of centre.
+
+### Whitespace Philosophy
+
+The whitespace *is* the brand asset. Anthropic deliberately under-fills pages so headlines have room to breathe. The visual density is closer to a printed magazine spread than to a SaaS landing — and that's the point. Section gutters run **88–160px** between major editorial blocks; minor blocks sit on 64–80px gaps; intra-section spacing uses 24–48px.
+
+### Section Cadence
+
+- Hero (cream) → Capability Rail (white card grid on cream) → Editorial Essay (cream, 720px column) → Swatch Block (full-bleed earth-tone) → Footer (ivory-medium).
+- The earth-tone swatch block — a full-bleed kraft, manilla, or heather panel — appears once or twice per page as a chromatic punctuation mark.
+- Cream-on-cream sections separated by 1px slate-faint hairlines or by spacing alone.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Slim chip corners, decorative dividers |
+| Standard (sm) | 4px | Compact chips, status pills, inline tags |
+| Comfortable (md) | 8px | Buttons, inputs, dropdowns — the dominant `--radius--main` |
+| Relaxed (lg) | 12px | Modals, code blocks, callouts |
+| Featured (xl) | 16px | Cards, swatch tiles, editorial pull-boxes |
+| Pill | 9999px | Used sparingly — rare status pills only |
+
+Anthropic's signature radius is **8px** on buttons and **16px** on cards. There are no zero-radius surfaces except editorial section dividers (1px hairlines). Compound radii are rare; the system reads as a flat ladder rather than a per-corner asymmetry.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default page surface, hero, body sections |
+| 1 | Value-contrast (white card on cream) | Editorial cards, capability tiles |
+| 2 | `rgba(20,20,19,0.04) 0 1px 3px` | Sticky nav, dropdowns |
+| 3 | `rgba(20,20,19,0.06) 0 4px 12px` | Hover-lifted cards |
+| 4 | `rgba(20,20,19,0.08) 0 12px 32px -8px` | Overlay menus, popovers |
+| 5 | `rgba(20,20,19,0.08) 0 24px 64px -16px` | Modals, dialogs |
+
+### Shadow Philosophy
+
+Anthropic's depth is **warm-tinted and minimal**. Cards lift off cream by *value contrast alone* — white on cream provides separation without explicit shadow. When shadows do appear (modals, popovers), they're tinted with low-opacity slate-dark (`rgba(20,20,19,0.04)` to `0.08`), never neutral grey, and never blue-tinted. The brand reads as paper, not interface — the same reason heavy drop-shadows would feel wrong: paper doesn't drop-shadow against paper.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- `ease-standard`: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, color transitions.
+- `ease-emphasized`: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; used on modal enter, hero reveal.
+- `ease-editorial`: `cubic-bezier(0.32, 0.72, 0, 1)` — slow-out, fast-settle; used on page transitions and editorial reveals.
+
+### Duration Buckets
+
+- **Fast (120ms)** — colour transitions, focus rings, link hovers.
+- **Standard (220ms)** — button hover, card hover, dropdown reveal.
+- **Slow (360ms)** — modal enter/exit, page section fade-in.
+- **Page (480ms)** — route transitions, hero reveal sequences.
+
+### Per-Component Micro-States
+
+- **Button hover**: bg colour shift only — no lift, no scale. `transition: background-color 220ms ease-standard`.
+- **Card hover**: border deepens from `rgba(20,20,19,0.10)` to `rgba(20,20,19,0.20)`; no shadow change.
+- **Link hover**: colour `#141413` → `#cc785c` over 120ms; underline thickens 1px → 2px.
+- **Input focus**: 2px clay ring fades in over 120ms; border darkens.
+- **Nav link active**: 1px slate underline animates in left-to-right over 220ms.
+
+### Page Transitions
+
+Editorial reveal: hero text fades in over 480ms with 24px translate-up; below-fold sections use `IntersectionObserver` to fade in at 80% viewport, 360ms duration, no translate.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)` — all transitions become opacity-only, durations halved. Translate animations are disabled entirely; scroll-linked reveals snap to final state.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#141413` text on `#faf9f5` bg**: 14.6:1 — AAA at all sizes.
+- **`#5e5d59` text on `#faf9f5` bg**: 7.1:1 — AAA at body sizes.
+- **`#87867f` text on `#faf9f5` bg**: 4.4:1 — AA at large sizes only (≥18px or ≥14px bold).
+- **`#faf9f5` text on `#141413` button**: 14.6:1 — AAA.
+- **`#faf9f5` text on `#cc785c` clay**: 4.7:1 — AA at body sizes; safe for buttons.
+- **`#a04a2c` text on `rgba(204,120,92,0.12)` tag bg**: 6.8:1 effective — AAA.
+
+### Focus Indicators
+
+- Default focus ring: `0 0 0 2px #cc785c` with 2px offset on cream pages.
+- On dark surfaces (rare): `0 0 0 2px #faf9f5`.
+- All interactive surfaces must have a visible focus state — no `outline: none` without a replacement.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link to main content.
+- **Disclosure**: `<button aria-expanded aria-controls>` for collapsible sections.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Combobox** (rare on marketing): `role="combobox" aria-expanded aria-autocomplete="list"`.
+- **Live regions**: `aria-live="polite"` for form validation messages.
+
+### Keyboard Navigation
+
+- Tab order matches visual flow: skip-link → nav → hero CTA → main content → footer.
+- All buttons, links, inputs reachable via Tab; modals trap focus inside until dismissed.
+- `Esc` closes modals and dropdowns.
+- Arrow keys navigate within tab groups and listboxes.
+
+### Screen Reader Hints
+
+- Decorative swatches have `aria-hidden="true"`.
+- Icon-only buttons have `aria-label`.
+- Image-led capability cards include `<figcaption>` for editorial context.
+
+### Reduced Motion
+
+Honoured via the global media query. All translate/scale animations become opacity-only; durations halve.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single column, full-bleed sections |
+| Tablet | 640–1024px | 2-column rails, narrower gutters |
+| Desktop | 1024–1280px | Full 12-col grid, 720px prose |
+| Wide | 1280–1432px | Site max width hits |
+| Ultra | > 1432px | Page locks to 1432, gutters expand |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px (WCAG AAA).
+- Buttons: 48px minimum height on mobile (12px vertical padding × 2 + line-height).
+- Nav link tap area: 44×44px even when visual padding is smaller.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 96px headline → 64px → 48px across desktop/tablet/mobile.
+- **Capability grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Body width**: 720px → fluid 90vw at mobile.
+- **Section spacing**: 160px → 96px → 64px across sizes.
+
+### Image Behavior
+
+- Editorial illustrations use `srcset` with 1x/2x/3x for crisp swatch fills.
+- Hero imagery uses `aspect-ratio` to prevent layout shift.
+- Lazy-loading on below-fold images; eager on hero.
+
+### Container Queries
+
+Used inside capability cards to switch layout when card width crosses 320px (icon-left vs. icon-top).
+
+## 11. Content & Voice
+
+### Tone
+
+**Considered, literary, calm.** Anthropic writes the way an essayist writes — full sentences, measured cadence, no marketing exclamation marks. Headlines pose questions or state truths plainly; subheads explain rather than sell. The brand sounds like a researcher who has thought longer than you have.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started," "Read the paper," "Talk to sales," "Try Claude," "Read more." Never "Sign up now!" never "Get started for free →".
+- **Error messages**: "We couldn't reach the API. Try again, or [contact support]." Specific, actionable, no shame.
+- **Success confirmations**: "Saved." "Thanks — we'll be in touch." Brief, calm.
+- **Loading states**: "Thinking…" or "Generating…" — Claude-aware language even on marketing.
+
+### Empty States
+
+What they say: explain the empty state and offer the next step. *"No conversations yet. Start a new chat to see them here."*
+What they don't say: "Oops!", "Whoops!", any apologetic exclamation. Empty states are normal, not failures.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Try Claude," "Talk to Claude," "Get started"
+- Secondary: "Read the paper," "Read the announcement," "Watch the keynote"
+- Footer: "Read our research," "Browse the docs," "View pricing"
+
+The brand never uses "Sign up free!" or "Get started today!" — the tone is invitational, never urgent. Anthropic doesn't trade in scarcity.
+
+## 12. Dark Mode & Theming
+
+**Light-only — no dark variant offered on the marketing surface.** The cream-paper canvas is the brand's defining choice; a dark mode would require re-keying the entire palette and would collapse the editorial-magazine register that distinguishes Anthropic from every other AI lab.
+
+The product UI (Claude.ai chat) handles its own theming separately and ships a dark variant; that variant is documented in the **claude-ai** entry, not here. The marketing site at `anthropic.com` is intentionally light-only across all viewports and times of day.
+
+If a downstream surface ever needs a dark companion, the rule would be: keep the *clay* accent at full saturation, swap cream for `#1a1a18` (warm slate-deep), and lift cards to `#252522` — but this is not currently shipped.
+
+## 13. Lineage & Influences
+
+Anthropic's design DNA is **literary periodical** rather than tech product. The cream paper-canvas, serif body, narrow column, and earth-tone illustration palette quote *The New Yorker*, *MIT Technology Review*, and *The Atlantic*'s long-form essays directly. Where contemporary AI labs reach for purple gradients (early OpenAI), butter-yellow brutalism (Mistral), or pure-white minimalism (current OpenAI), Anthropic reaches for the visual language of edited prose.
+
+What it inherits: Bauhaus discipline (tight type ladder, restricted palette, function-led layout), Swiss editorial geometry (12-column grid, generous whitespace), and broadsheet typographic conventions (negative tracking on headlines, old-style figures in body, italics for citation). What it borrows from contemporaries: Notion's off-white-paper register, Stripe's hairline-border restraint, Linear's tonal stacking — but recast in cream and serif rather than white and sans. What it rejects: gradient meshes, neon accents, hero animations, "AI tech" iconography, the Bay Area startup register.
+
+**Named influences:**
+
+- **The New Yorker** — editorial calm, serif body, generous gutters, narrow text columns. *https://www.newyorker.com*
+- **MIT Technology Review** — research-magazine geometry; serif-led credibility. *https://www.technologyreview.com*
+- **The Atlantic** — long-form essay layout; eyebrow + body + pull-quote rhythm. *https://www.theatlantic.com*
+- **Anthropic in-house type team** — Anthropic Sans + Serif + Mono proprietary trio.
+- **Tiempos / Klim Type Foundry** — DNA reference for the Anthropic Serif weight ladder.
+- **Stripe** — hairline-border restraint, cool confidence in monochrome.
+- **Notion** — cousin in the off-white + custom-sans editorial lineage. *https://www.notion.com*
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** ship body copy in **serif** at 20px / 1.4 line-height — the most distinctive type move in the AI sector.
+- **Do** use the clay accent `#cc785c` sparingly — punctuation, not fill. Reserve for one beat per page.
+- **Do** invert the canvas for primary CTAs — slate-dark `#141413` on cream gives maximum value contrast.
+- **Do** treat the swatch palette (kraft, manilla, fig, heather, cactus, olive…) as **first-class design tokens**.
+- **Do** cap reading width at ~720px even on 1432px pages — broadsheet column.
+- **Do** use slate-dark `#141413` instead of pure black — warmer, paper-friendly ink.
+- **Do** lean on whitespace at 88–160px section gutters — the magazine-pace cadence.
+- **Do** prefer value contrast (white-on-cream) over drop shadows for elevation.
+- **Do** italicise quoted titles and gentle emphasis in serif body — print convention.
+- **Do** use eyebrow labels (13px / 500 / uppercase / 0.04em) above section headings — section-as-essay.
+
+### Don't
+
+- **Don't** swap serif body for sans without changing the entire system. Sans body collapses the editorial register.
+- **Don't** use pure black `#000000` for text. Slate-dark `#141413` is warmer and matches the cream canvas.
+- **Don't** apply heavy or cool-toned shadows. Anthropic's depth is warm-tinted and minimal.
+- **Don't** introduce purple, electric blue, neon green, or AI-tech-cliché colours. The earth-tone palette is non-negotiable.
+- **Don't** use clay `#cc785c` as a primary CTA fill. Slate-dark inversion is the primary; clay is accent.
+- **Don't** stack gradients, mesh backgrounds, or hero animations. Anthropic ships flat editorial layout.
+- **Don't** crowd the page. Empty space is a brand asset.
+- **Don't** break the 720px reading column at body sizes — even on ultra-wide displays.
+- **Don't** ship marketing copy with exclamation marks. The tone is considered, never breathless.
+- **Don't** mix tech-startup verbs ("Get started for free!", "Sign up now!") with the brand voice.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #faf9f5
+bg-secondary: #f0eee6
+text: #141413
+text-soft: #5e5d59
+brand-clay: #cc785c
+swatch-kraft: #d4a27f
+swatch-manilla: #ebdbbc
+swatch-fig: #c46686
+swatch-heather: #cbcadb
+swatch-cactus: #bcd1ca
+border: rgba(20,20,19,0.10)
+```
+
+### Example Component Prompts
+
+1. **"Create a hero in Anthropic style — cream `#faf9f5` canvas, 96px headline in Anthropic Sans 700 with -0.02em tracking, 24px lede in Anthropic Serif 400 / italic permitted, single primary CTA in slate `#141413` on cream at 8px radius, no gradient, no animation. Reading column capped at 720px."**
+
+2. **"Design a capability card — white `#ffffff` background, 16px radius, 1px `rgba(20,20,19,0.10)` border, 32px interior padding, 24px Anthropic Sans 600 heading, 18px Anthropic Serif 400 body, no shadow, hover deepens border to 0.20 opacity."**
+
+3. **"Build a pull-quote block — Anthropic Serif 32px / 500 / italic, slate-medium `#3d3d3a` text, 4px clay `#cc785c` left rule, 64px top/bottom margin, no quotation glyphs, 90% opacity."**
+
+4. **"Compose an earth-tone callout — full-bleed `--swatch--manilla` `#ebdbbc` background, 64px vertical padding, 48px Anthropic Sans 600 heading in slate-dark, 20px Serif body in slate-medium, single tertiary CTA with hairline border."**
+
+5. **"Render a footnote block — 13px Anthropic Sans 400, slate-faint `#87867f` text, 1px `rgba(20,20,19,0.05)` top border, sits 24px below body content, numbered with old-style figures."**
+
+6. **"Create the primary nav — 68px header height, cream background, Anthropic wordmark left-aligned, links 15px / 500 in slate-dark with clay-on-hover, right-aligned tertiary 'Log in' + primary slate 'Try Claude' pair."**
+
+### Iteration Guide
+
+1. **Start with cream, not white.** If the bg is `#ffffff`, you've already lost the brand. Cream `#faf9f5` is the entry ticket.
+2. **Switch body to serif.** If the body is sans, change it to Anthropic Serif (or Tiempos / Source Serif fallback) at 20px / 1.4 line-height.
+3. **Strip the gradient.** Any mesh, conic, or radial gradient is wrong — replace with flat cream or a swatch fill.
+4. **Cap the column.** 720px reading width even when the page is 1432px.
+5. **Reach for an earth tone, not blue.** If you need decoration, use kraft / manilla / fig / heather / cactus / olive — not blue or purple.
+6. **Reserve clay for one beat.** Clay `#cc785c` should appear once per viewport, never as a primary button fill.
+7. **Drop the shadows.** Replace box-shadows with value-contrast (white card on cream).
+8. **Calm the verbs.** Replace "Sign up now!" with "Get started"; replace "Learn more →" with "Read more". The voice is invitational, never urgent.

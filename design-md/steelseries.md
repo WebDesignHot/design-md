@@ -1,0 +1,744 @@
+---
+name: SteelSeries
+tagline: Esports orange `#ff6900` on near-black with Inter — Danish precision peripherals for competitive play.
+author: webdesignhot
+source_url: https://steelseries.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace, media]
+tags: [dark, gaming, hardware, peripherals, esports, denmark, orange, precision]
+preview_swatch: ['#0a0a0a', '#ff6900', '#ffffff']
+related: [razer, corsair, logitech]
+description: 'SteelSeries is the Danish-engineered competitive-gaming peripherals brand — founded in Copenhagen in 2001 around the singular obsession of esports performance. The marketing site reflects the discipline: a near-black `#0a0a0a` canvas anchored by **SteelSeries Orange** (`#ff6900`) — the warm-saturated burnt orange that has carried the brand since the 2010 rebrand, distinct from Razer''s neon green, MSI''s pure red, and Corsair''s electric yellow. Type runs **Inter** (the open-source UI sans), reflecting SteelSeries'' more design-system-conscious, more Scandinavian-restrained posture vs the heavy-metal aesthetics of its competitors. The brand voice is "made for the win" — every product page leads with esports-pro endorsements, lab-tested latency numbers, and tournament-grade durability claims. Where Razer markets gamer-aspiration and Corsair markets PC-DIY-builder, SteelSeries markets to the competitive player who measures their gear in milliseconds.'
+
+colors:
+  bg: '#0a0a0a'                  # canvas — near-black (warmer than Razer's pure black)
+  bg-pure: '#000000'              # darkest surface, modal backdrop
+  bg-deep: '#141414'              # near-black header / footer
+  surface: '#1a1a1a'              # default card surface
+  surface-soft: '#222222'         # raised popover, hovered card
+  surface-strong: '#2e2e2e'       # selected sidebar
+  surface-elevated: '#1f1f1f'     # elevated panel
+  surface-product-band: '#141414' # full-bleed product band
+  surface-input: '#222222'        # form input fill
+  text: '#ffffff'                 # primary body
+  text-strong: '#ffffff'          # display headlines
+  text-soft: '#a8a8a8'            # secondary metadata
+  text-faint: '#6e6e6e'           # tertiary captions
+  text-disabled: '#4a4a4a'
+  text-link: '#ff6900'            # link orange
+  brand: '#ff6900'                # SteelSeries Orange — burnt esports orange
+  brand-bright: '#ff8533'         # brighter on hover
+  brand-deep: '#cc5500'           # deeper orange
+  brand-darkest: '#993f00'        # darkest orange
+  brand-glow: 'rgba(255,105,0,0.4)' # orange glow halo
+  brand-gradient: 'linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)' # SteelSeries gradient
+  on-brand: '#ffffff'             # text on orange — white (slightly lower contrast than black-on-yellow)
+  cta-primary: '#ff6900'          # orange CTA
+  cta-primary-hover: '#ff8533'
+  link-default: '#ff6900'
+  link-visited: '#ff6900'
+  link-hover: '#ffffff'
+  border: '#2e2e2e'               # 1px charcoal hairline
+  border-soft: '#222222'          # softer divider
+  border-strong: '#ff6900'        # focused input
+  scrim: 'rgba(0,0,0,0.85)'
+  shadow-card: 'rgba(0,0,0,0.6)'
+  shadow-elev: 'rgba(0,0,0,0.8)'
+  shadow-steelseries-glow: 'rgba(255,105,0,0.4)' # orange glow halo
+  badge-new: '#ff6900'
+  badge-pro-series: 'transparent'
+  badge-prime: '#ff6900'
+  badge-arctis: '#ff6900'
+  badge-out-of-stock: '#6e6e6e'
+  price: '#ffffff'
+  price-discount: '#ff6900'
+  rating-star: '#ff6900'          # ratings in brand orange
+  success: '#00cc66'
+  warning: '#ffaa00'
+  danger: '#ff3030'
+  info: '#0099ff'
+
+typography:
+  display:
+    family: '"Inter", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 600, 700, 900]
+    opentype-features: ['kern', 'liga', 'cv02', 'cv03', 'cv04', 'cv11']
+  body:
+    family: '"Inter", "Helvetica Neue", Arial, sans-serif'
+    weights: [300, 400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "Roboto Mono", "Consolas", monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 900, lineHeight: 1.0,  tracking: '-0.025em', family: display, transform: uppercase, notes: 'Hero "MADE FOR THE WIN"' }
+    display-xl:      { size: 56, weight: 900, lineHeight: 1.05, tracking: '-0.02em', family: display, transform: uppercase, notes: 'Product launch hero' }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.1,  tracking: '-0.015em', family: display, transform: uppercase, notes: 'Section banner' }
+    display-md:      { size: 32, weight: 700, lineHeight: 1.15, tracking: '-0.01em', family: display, notes: 'Product detail H1' }
+    display-sm:      { size: 24, weight: 600, lineHeight: 1.2,  tracking: '-0.005em', family: display, notes: 'Card title' }
+    section-head:    { size: 13, weight: 700, lineHeight: 1.2,  tracking: '0.15em',  family: display, transform: uppercase, notes: 'Section bands "PRO SERIES"' }
+    sub-section:     { size: 18, weight: 500, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Sub-heading' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',       family: body, notes: 'Hero supporting copy' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',       family: body, notes: 'Default body' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Sidebar copy, spec' }
+    body-xs:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Caption' }
+    nav-link:        { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'Top nav: HEADSETS · MICE · KEYBOARDS' }
+    sub-nav-link:    { size: 12, weight: 400, lineHeight: 1.0,  tracking: '0.025em', family: display, transform: uppercase, notes: 'Sub-nav' }
+    button-cta:      { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.05em',  family: display, transform: uppercase, notes: 'BUY NOW, ADD TO CART' }
+    button-md:       { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0.025em', family: display, transform: uppercase, notes: 'COMPARE, WISHLIST' }
+    badge:           { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.15em',  family: display, transform: uppercase, notes: '"PRO SERIES", "PRIME", "ARCTIS NOVA"' }
+    price:           { size: 22, weight: 700, lineHeight: 1.0,  tracking: '-0.01em', family: display, opentype: ['tnum', 'cv11'], notes: 'Product price' }
+    spec-label:      { size: 11, weight: 600, lineHeight: 1.2,  tracking: '0.1em',   family: display, transform: uppercase, notes: 'Spec table label' }
+    spec-value:      { size: 16, weight: 500, lineHeight: 1.4,  tracking: '0',       family: mono, opentype: ['tnum'], notes: 'Spec value' }
+    pro-quote:       { size: 20, weight: 500, lineHeight: 1.4,  tracking: '-0.005em', family: display, notes: 'Esports pro testimonial quote' }
+    code:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',       family: mono, notes: 'GG (SteelSeries software) config, dev surface' }
+
+radius:
+  none: 0
+  micro: 2
+  sm: 4            # buttons, badges (slightly softer than Razer/MSI)
+  md: 8            # cards, inputs (softer than Razer's 4px)
+  lg: 12           # featured product card, modal
+  xl: 16           # hero card
+  pill: 9999       # rare
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 64
+  main-nav-height: 64
+  sub-nav-height: 48
+  product-card: '320x460'
+  hero-banner: '1920x800'
+
+components:
+  button-primary:
+    bg: '#ff6900'
+    color: '#ffffff'
+    radius: 4
+    padding: '14px 32px'
+    font: button-cta
+    border: 'none'
+    hover-bg: '#ff8533'
+    hover-shadow: '0 0 24px rgba(255,105,0,0.5)'
+    use: '"BUY NOW" / "ADD TO CART" — SteelSeries Orange CTA. White uppercase 0.05em tracked label on orange rectangle. Hover brightens + orange glow halo.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#ffffff'
+    radius: 4
+    padding: '14px 32px'
+    font: button-cta
+    border: '1px solid #ffffff'
+    hover-bg: '#ffffff'
+    hover-color: '#0a0a0a'
+    use: 'Ghost outline secondary. Inverts on hover.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#ff6900'
+    radius: 0
+    padding: '12px 0'
+    font: button-md
+    use: 'Inline text-link with orange text + arrow "→". No underline (cleaner than Razer/MSI).'
+  product-card:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 8
+    padding: '24px'
+    border: '1px solid #2e2e2e'
+    hover-border: '1px solid #ff6900'
+    hover-shadow: '0 0 24px rgba(255,105,0,0.3)'
+    width: 320
+    use: 'Standard product card on dark — `#1a1a1a` floor, charcoal hairline, 8px radius (slightly softer than Razer''s 4px). Stack: product hero on dark seamless, "PRO SERIES" or "ARCTIS NOVA" badge, product name in Inter 22/700 sentence-case, esports-pro endorsement quote (1-line in 14/500 muted italic), mono spec strip, "BUY NOW" orange CTA. Hover lights orange border + glow.'
+  product-card-pro:
+    bg: 'linear-gradient(135deg, #1a1a1a 0%, #222222 100%)'
+    color: '#ffffff'
+    radius: 12
+    padding: '32px'
+    border: '1px solid #ff6900'
+    box-shadow: '0 0 32px rgba(255,105,0,0.25)'
+    use: 'Pro Series flagship card — already lit with orange border + glow. Used for tournament-grade flagship products (Aerox 9, Arctis Nova Pro, Apex Pro).'
+  hero-card:
+    bg: 'linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)'
+    color: '#ffffff'
+    radius: 16
+    padding: '64px 48px'
+    use: 'Full-bleed orange gradient hero — three-stop diagonal, white headline, hardware photography right. Used on flagship product launches.'
+  hero-card-dark:
+    bg: 'linear-gradient(135deg, #0a0a0a 0%, #141414 100%)'
+    color: '#ffffff'
+    radius: 0
+    padding: '64px 48px'
+    use: 'Default dark hero — near-black gradient, white headline, hardware photography right with esports-pro lifestyle photography.'
+  spec-card:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 8
+    padding: '32px 24px'
+    border: '1px solid #2e2e2e'
+    use: 'Spec highlight card — large 32/700 spec value in `#ff6900` orange JetBrains Mono, 11/600 uppercase 0.1em tracked label, 14/400 supporting copy.'
+  pro-endorsement:
+    bg: '#1a1a1a'
+    color: '#ffffff'
+    radius: 8
+    padding: '24px'
+    border-left: '4px solid #ff6900'
+    use: 'Esports-pro endorsement card — pro headshot left, quote in Inter 20/500 italic, attribution "— [Pro Name], [Team]" in 14/500 orange. SteelSeries'' canonical social-proof element.'
+  badge-pro-series:
+    bg: 'transparent'
+    color: '#ff6900'
+    radius: 4
+    padding: '4px 10px'
+    border: '1px solid #ff6900'
+    font: badge
+    use: '"PRO SERIES" outline badge — tournament-grade product line marker.'
+  badge-prime:
+    bg: '#ff6900'
+    color: '#ffffff'
+    radius: 4
+    padding: '4px 10px'
+    font: badge
+    use: '"PRIME" solid orange — older Prime mouse line.'
+  badge-arctis:
+    bg: '#ff6900'
+    color: '#ffffff'
+    radius: 4
+    padding: '4px 10px'
+    font: badge
+    use: '"ARCTIS NOVA PRO" — flagship headset line.'
+  badge-new:
+    bg: '#ff6900'
+    color: '#ffffff'
+    radius: 4
+    padding: '4px 10px'
+    font: badge
+    use: '"NEW" orange pill.'
+  text-input:
+    bg: '#222222'
+    color: '#ffffff'
+    radius: 8
+    height: 48
+    padding: '12px 16px'
+    border: '1px solid #2e2e2e'
+    focus-border: '1px solid #ff6900'
+    focus-shadow: '0 0 0 3px rgba(255,105,0,0.15)'
+    font: body-md
+    use: 'Form input on dark — charcoal floor, focus lights orange border + soft glow ring.'
+  search-bar:
+    bg: '#222222'
+    color: '#ffffff'
+    radius: 9999
+    height: 44
+    padding: '12px 16px 12px 44px'
+    border: '1px solid #2e2e2e'
+    use: 'Search bar — pill-shaped charcoal floor with magnifier icon left. SteelSeries uses pill search (softer than Razer''s rectangular).'
+  primary-nav:
+    bg: '#0a0a0a'
+    color: '#ffffff'
+    height: 64
+    border-bottom: '1px solid #222222'
+    use: 'Top nav — SteelSeries shield logomark anchored left in white, "HEADSETS · MICE · KEYBOARDS · MOUSEPADS · CONTROLLERS · SPACES" labels in 13/500 uppercase 0.05em tracking.'
+  steelseries-shield:
+    use: 'SteelSeries shield logomark — angular shield with stylised "S" inside. Rendered in white on dark or `#ff6900` orange on light. The brand''s most-recognised mark.'
+  modal-surface:
+    bg: '#0a0a0a'
+    color: '#ffffff'
+    radius: 12
+    border: '1px solid #2e2e2e'
+    box-shadow: '0 32px 64px rgba(0,0,0,0.8)'
+    use: 'Modal floor on dark.'
+  toast:
+    bg: '#222222'
+    color: '#ffffff'
+    radius: 8
+    padding: '16px 20px'
+    border-left: '4px solid #ff6900'
+    box-shadow: '0 8px 24px rgba(0,0,0,0.6)'
+    use: 'Toast — dark floor with brand-orange accent strip.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-precise: 'cubic-bezier(0.5, 0, 0, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  card-hover: 'product card lights `#ff6900` orange border + `0 0 24px rgba(255,105,0,0.3)` glow halo over 240ms'
+  cta-press: 'button gradient deepens + 2px scale-down on :active over 120ms'
+  carousel-slide: '400ms ease-emphasized'
+  pro-card-flip: 'esports pro endorsement card flips on hover to reveal pro''s gear loadout (3D rotation 600ms ease-precise)'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — pro card flip becomes opacity crossfade; card glow remains static.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0,0,0,0.4) 0 2px 8px'
+  card: 'rgba(0,0,0,0.6) 0 8px 24px'
+  elevated: 'rgba(0,0,0,0.8) 0 24px 48px'
+  modal: 'rgba(0,0,0,0.85) 0 32px 64px'
+  steelseries-glow-soft: '0 0 16px rgba(255,105,0,0.25)'
+  steelseries-glow-strong: '0 0 32px rgba(255,105,0,0.5)'
+  ring: '0 0 0 3px rgba(255,105,0,0.15)'
+
+accessibility:
+  contrast-text-on-bg: 19.5         # #ffffff on #0a0a0a — AAA
+  contrast-soft-on-bg: 8.4          # #a8a8a8 on #0a0a0a — AAA
+  contrast-link-on-bg: 5.6          # #ff6900 on #0a0a0a — AA
+  contrast-cta-text: 4.5            # #ffffff on #ff6900 — AA at body sizes
+  contrast-faint-on-bg: 4.5         # #6e6e6e on #0a0a0a — AA
+  focus-ring: '3px rgba(255,105,0,0.15) outset glow + 1px solid #ff6900 border'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab traverses logo → primary nav → search → utilities → main → footer; Esc closes; Enter activates.'
+
+dark-mode: only   # SteelSeries is dark-only across web and GG (SteelSeries Engine) desktop software.
+---
+
+## 1. Visual Theme & Atmosphere
+
+SteelSeries is the Danish-engineered competitive-gaming peripherals brand — founded in Copenhagen in 2001 around the singular obsession of esports performance. The marketing site reflects the discipline: a near-black `#0a0a0a` canvas (slightly warmer and softer than Razer's pure `#000000`) anchored by **SteelSeries Orange** (`#ff6900`) — the warm-saturated burnt orange that has carried the brand since the 2010 rebrand.
+
+The orange is distinct in the gaming hardware category. Razer has neon green `#44d62c`, MSI has pure red `#ff0000`, ASUS ROG has cinematic-deep red `#cd0000`, Corsair has electric yellow `#ffff00`, Logitech G has consumer-blue. SteelSeries owns the **burnt-orange / esports-orange** territory — warmer than Razer's cool green, more sophisticated than MSI's primary red, more design-conscious than Corsair's warning yellow. The colour was chosen to read as warm-precision: orange is the colour of safety vests, of hazard signage, of high-visibility competitive gear.
+
+Type runs **Inter** — Rasmus Andersson's open-source UI sans, designed in 2017 specifically for digital interfaces. The choice signals SteelSeries' more design-system-conscious posture vs the heavy-metal aesthetics of competitors. Inter at 900 (Black) renders headlines with a slightly more refined silhouette than Roboto Black — Inter's lowercase counters are tighter, letterforms more geometric. Headlines run at 56–72px uppercase with `-0.025em` negative tracking, paired with 16/400 Inter body in pure white.
+
+The brand's voice is **made for the win**. Every product page leads with **esports-pro endorsements**: a pro headshot, a quote about the gear, and the attribution "— [Pro Name], [Team]". SteelSeries has sponsored more esports teams across more games (CS:GO, Dota 2, League of Legends, Fortnite, Valorant) than any peripherals brand, and the marketing site uses those endorsements as primary social proof. Lab-tested latency numbers, tournament-grade durability claims, and pro-loadout disclosures appear throughout.
+
+Photography mixes **studio hardware shots** with **esports-arena lifestyle photography** — pros wearing Arctis Nova Pro headsets at LAN events, pros with Aerox 9 mice on tournament desks, pros at LCS / IEM / Fortnite Worlds stages. The mix signals "this isn't theoretical performance — these gear choices win tournaments."
+
+The interaction language is **Scandinavian-restrained gaming**. Cards are 8px-radius (softer than Razer/MSI/ASUS at 4px, harder than Logitech at 12px) — a middle ground that reads as design-system-conscious rather than full-gamer-aggression or full-consumer-soft. Search bars are pill-shaped (different from Razer's rectangular). The orange glow halo on hovered cards `0 0 24px rgba(255,105,0,0.3)` deploys the same playbook as Razer/MSI/ASUS but in the warm orange.
+
+Sub-product-lines carry distinct sub-aesthetics within the same chrome system:
+- **Pro Series** (Aerox, Apex, Arctis Nova Pro): tournament-grade flagship with orange-border glow at rest
+- **Prime** (mid-tier): canonical orange + black
+- **Arctis Nova** (audio): white-and-gold colourways for headsets, but UI stays orange
+
+**Key Characteristics:**
+- Near-black `#0a0a0a` canvas (slightly warmer than Razer's pure `#000000`) with `#2e2e2e` charcoal hairline borders
+- SteelSeries Orange `#ff6900` — warm-saturated burnt esports orange, distinct from green/red/yellow/blue competitors
+- Inter open-source UI sans (Rasmus Andersson) — more design-system-conscious than Roboto/Saira
+- Esports-pro endorsement cards with pro headshot, quote, team attribution
+- Lab-tested latency / spec callouts in JetBrains Mono — tournament-grade precision claims
+- 8px-radius cards (softer than Razer/MSI 4px, harder than Logitech 12px) — middle-ground geometry
+- Pill-shaped search bar (different from Razer/MSI rectangular)
+- Orange glow halos on hovered cards: `0 0 24px rgba(255,105,0,0.3)`
+- SteelSeries shield logomark — angular shield with stylised "S" inside
+- Multi-tier badges: PRO SERIES outline orange, PRIME solid orange, ARCTIS NOVA PRO solid orange
+- Esports-arena lifestyle photography mixed with studio hardware shots
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#0a0a0a`): near-black gaming page floor — slightly warmer than pure black
+- **Bg Pure** (`#000000`): darkest surface, modal scrim
+- **Bg Deep** (`#141414`): header / footer band
+- **Card Surface** (`#1a1a1a`): default card on dark
+- **Surface Soft** (`#222222`): raised popover, hovered card lift, input fill
+- **Surface Strong** (`#2e2e2e`): selected sidebar, deeply hovered border
+- **Surface Elevated** (`#1f1f1f`): elevated panel
+- **Product Band** (`#141414`): full-bleed darker band
+
+### Brand
+- **SteelSeries Orange** (`#ff6900`): burnt esports orange — every CTA, every focused border, every brand badge
+- **SteelSeries Orange Bright** (`#ff8533`): hovered orange on CTAs
+- **SteelSeries Orange Deep** (`#cc5500`): deeper orange for gradient stops
+- **SteelSeries Orange Darkest** (`#993f00`): darkest orange — gradient end
+- **SteelSeries Orange Glow** (`rgba(255,105,0,0.4)`): glow halo
+- **SteelSeries Gradient** (`linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)`): three-stop orange gradient on flagship hero bands
+
+### Interactive
+- **Link** (`#ff6900`): same as brand
+- **Link Hover** (`#ffffff`): hover flips to white on dark
+- **Link Visited** (`#ff6900`): unchanged
+- **Disabled** (`#4a4a4a`)
+- **Selected** (`#ff6900`)
+
+### Neutral Scale
+- **Text** (`#ffffff`) — primary body, pure white on near-black
+- **Text Strong** (`#ffffff`) — display headlines
+- **Text Soft** (`#a8a8a8`) — secondary metadata
+- **Text Faint** (`#6e6e6e`) — tertiary captions
+- **Text Disabled** (`#4a4a4a`) — disabled labels
+- **Border** (`#2e2e2e`) — 1px charcoal hairline
+- **Border Soft** (`#222222`) — softer divider
+- **Border Strong** (`#ff6900`) — focused / hovered card border
+
+### Surface & Borders
+SteelSeries' depth ladder runs `#000000` → `#0a0a0a` → `#141414` → `#1a1a1a` → `#1f1f1f` → `#222222` → `#2e2e2e` — seven near-blacks within 18% lightness, slightly more granular than Razer/MSI's six tiers. The wider ladder reflects SteelSeries' more design-system-conscious approach.
+
+### Shadow Colors
+**Neutral shadows + SteelSeries-orange glows.** Same dual-vocabulary as Razer/MSI/ASUS but in warm orange. The `rgba(255,105,0,0.3)` halo reads as warm-precision rather than aggressive-neon.
+
+### Semantic
+- **Success** (`#00cc66`): green
+- **Warning** (`#ffaa00`): amber
+- **Danger** (`#ff3030`): red
+- **Info** (`#0099ff`): blue
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display & Body**: `Inter` — Rasmus Andersson's open-source UI sans, designed 2017 for digital interfaces. Falls back to `"Helvetica Neue", Arial, sans-serif`. Inter's tighter lowercase counters and more geometric letterforms read as more design-system-conscious than Roboto. Weights: 300 / 400 / 500 / 600 / 700 / 900 (Black).
+
+**Mono**: `JetBrains Mono` — JetBrains' open-source monospace designed 2020 for code editors. Falls back to `Roboto Mono`, `Consolas`. JetBrains Mono's slightly heavier strokes give SteelSeries spec values more presence than Roboto Mono.
+
+**OpenType features**: `kern`, `liga` enabled. `tnum` on price and spec values. Inter character variants `cv02` (lowercase l with serif), `cv03` (lowercase i with serif), `cv04` (lowercase r with curl), `cv11` (lowercase a single-storey) optionally enabled for stylistic refinement.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Inter | 72 | 900 | 1.0 | -0.025em | uppercase | "MADE FOR THE WIN" |
+| display-xl | Inter | 56 | 900 | 1.05 | -0.02em | uppercase | Product launch hero |
+| display-lg | Inter | 40 | 700 | 1.1 | -0.015em | uppercase | Section banner |
+| display-md | Inter | 32 | 700 | 1.15 | -0.01em | — | Product detail H1 |
+| display-sm | Inter | 24 | 600 | 1.2 | -0.005em | — | Card title |
+| section-head | Inter | 13 | 700 | 1.2 | 0.15em | uppercase | "PRO SERIES" |
+| sub-section | Inter | 18 | 500 | 1.4 | 0 | — | Sub-heading |
+| body-lg | Inter | 18 | 400 | 1.55 | 0 | — | Hero supporting copy |
+| body-md | Inter | 16 | 400 | 1.55 | 0 | — | Default body |
+| body-sm | Inter | 14 | 400 | 1.5 | 0 | — | Sidebar copy |
+| body-xs | Inter | 12 | 400 | 1.4 | 0 | — | Caption |
+| nav-link | Inter | 13 | 500 | 1.0 | 0.05em | uppercase | "HEADSETS · MICE" |
+| sub-nav-link | Inter | 12 | 400 | 1.0 | 0.025em | uppercase | Sub-nav |
+| button-cta | Inter | 14 | 700 | 1.0 | 0.05em | uppercase | "BUY NOW" |
+| button-md | Inter | 13 | 500 | 1.0 | 0.025em | uppercase | "COMPARE" |
+| badge | Inter | 11 | 700 | 1.0 | 0.15em | uppercase | "PRO SERIES", "PRIME" |
+| price | Inter | 22 | 700 | 1.0 | -0.01em | tnum | Product price |
+| spec-label | Inter | 11 | 600 | 1.2 | 0.1em | uppercase | "DPI", "POLLING RATE" |
+| spec-value | JetBrains Mono | 16 | 500 | 1.4 | 0 | tnum | "18,000 DPI" |
+| pro-quote | Inter | 20 | 500 | 1.4 | -0.005em | — | Esports pro testimonial |
+| code | JetBrains Mono | 13 | 400 | 1.5 | 0 | — | GG software config |
+
+### Principles
+
+- **Inter Black 900 with -0.025em tracking is the manifesto voice.** Hero at 72/900 uppercase compressed reads as more refined than Roboto Black 900 — Inter's geometric letterforms give a more contemporary digital-native silhouette.
+- **Tighter uppercase tracking ladder than competitors.** Display hero at -0.025em compressed; nav at 0.05em; button-cta at 0.05em; section-head at 0.15em; spec-label at 0.1em; badge at 0.15em. The narrower 0.05em on nav and button-cta (vs Razer's 0.1em, MSI's 0.15em) reads as more design-system-conscious.
+- **JetBrains Mono for spec values.** The slightly heavier strokes vs Roboto Mono give spec callouts more presence — appropriate for tournament-grade precision claims.
+- **Pro endorsement quotes in Inter 20/500 italic.** A specific type role for esports-pro testimonials — Inter italic at medium weight reads as conversational-credible.
+- **Sentence-case for product detail H1, uppercase for hero / section.** Standard discipline.
+- **Body in pure white on near-black.** No softening — gaming aesthetic doesn't apologise.
+- **Open-source typography stack.** Inter and JetBrains Mono are both free — SteelSeries uses zero proprietary faces.
+- **Inter character variants are encouraged.** `cv02 / cv03 / cv04 / cv11` optionally activated for refined letterforms (single-storey 'a', curled 'r', etc).
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — SteelSeries Orange rectangle: `#ff6900` solid fill, white label in 14/700 uppercase 0.05em tracking, 14×32px padding, 4px radius. Hover brightens to `#ff8533` and adds `0 0 24px rgba(255,105,0,0.5)` orange glow halo.
+
+**`button-secondary`** — ghost outline: transparent fill, white label in 14/700 uppercase, 1px white border. Hover inverts to white fill with black label.
+
+**`button-tertiary`** — inline link with arrow (no underline): `#ff6900` text + "→". Cleaner than Razer/MSI which add underlines.
+
+### Cards
+
+**`product-card`** — `#1a1a1a` floor, 1px `#2e2e2e` charcoal border, 8px radius (softer than Razer/MSI 4px), 24px padding. Stack: product hero on dark seamless, "PRO SERIES" outline or "ARCTIS NOVA PRO" solid badge, product name in Inter 22/700 sentence-case, esports-pro endorsement quote (1-line in 14/500 italic muted, "— Pro Name, Team"), JetBrains Mono spec strip, "BUY NOW" orange CTA. Hover lights `#ff6900` orange border + `0 0 24px rgba(255,105,0,0.3)` glow halo.
+
+**`product-card-pro`** — Pro Series flagship card: 12px radius, 32px padding, already lit with orange border + glow at rest. Used for tournament-grade flagship products (Aerox 9, Arctis Nova Pro, Apex Pro).
+
+**`hero-card`** — full-bleed three-stop orange gradient `linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)`, 16px radius (when contained), 64×48px padding.
+
+**`hero-card-dark`** — default dark hero, `#0a0a0a → #141414` gradient, white headline, esports-arena lifestyle photography or hardware shot right.
+
+**`spec-card`** — `#1a1a1a` floor, 1px `#2e2e2e` border, 8px radius, 32×24px padding. Stack: 32/700 spec value in `#ff6900` JetBrains Mono, 11/600 uppercase 0.1em tracked label, 14/400 supporting copy.
+
+**`pro-endorsement`** — esports-pro endorsement card: `#1a1a1a` floor, 8px radius, 24px padding, 4px `#ff6900` orange left-border accent. Pro headshot left at 80×80, quote in Inter 20/500 italic, attribution "— [Pro Name], [Team]" in 14/500 orange. SteelSeries' canonical social-proof element.
+
+### Badges
+
+**`badge-pro-series`** — outline-only: transparent fill, 1px `#ff6900` border, `#ff6900` "PRO SERIES" text in 11/700 uppercase 0.15em tracking. Tournament-grade marker.
+
+**`badge-prime`** — solid `#ff6900` fill, white "PRIME" label.
+
+**`badge-arctis`** — solid `#ff6900` fill, white "ARCTIS NOVA PRO" label.
+
+**`badge-new`** — solid `#ff6900` fill, white "NEW" label.
+
+### Inputs / Forms
+
+**`text-input`** — `#222222` charcoal floor, white text, 1px `#2e2e2e` border, 8px radius, 48px height. Focus lights 1px `#ff6900` orange border + 3px `rgba(255,105,0,0.15)` outset glow.
+
+**`search-bar`** — pill-shaped `#222222` floor, magnifier icon left at 12px inset, 9999 radius (different from Razer/MSI rectangular), 44px height.
+
+### Navigation
+
+**`primary-nav`** — 64px tall on `#0a0a0a` with 1px `#222222` bottom border. SteelSeries shield logomark anchored left in white. "HEADSETS · MICE · KEYBOARDS · MOUSEPADS · CONTROLLERS · SPACES" labels in Inter 13/500 uppercase 0.05em tracking white. Hover lights `#ff6900` orange 2px underline beneath active sub-brand.
+
+### Decorative
+
+**`steelseries-shield`** — angular shield logomark with stylised "S" inside. Rendered in white on dark, `#ff6900` orange on light. The brand's most-recognised mark.
+
+## 5. Layout Principles
+
+### Spacing System
+- Base: **8px**, scale `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section gap: **80–128px** marketing
+- Card padding: **24–32px**
+- Gutters: **20–24px**
+
+### Grid & Container
+- Max content width: **1440px**
+- Product grid: 4 → 3 → 2 → 1
+- Hero: full-bleed with content centred at 1280px
+
+### Whitespace Philosophy
+
+SteelSeries runs **structured-precision**. Marketing pages breathe at 80–128px between bands; product detail pages tighten to 48–64px. The rhythm is more disciplined than Razer/MSI — closer to Logitech's air-and-product approach but in dark mode.
+
+### Section Cadence
+
+Pages alternate `#0a0a0a` canvas with `#000000` darker product bands and orange gradient hero bands. Pro endorsement cards appear in dedicated bands between feature sections.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Hero bands, full-bleed photography |
+| Micro | 2px | Inset surfaces |
+| Small | 4px | Buttons, badges |
+| Medium | 8px | Cards, inputs |
+| Large | 12px | Featured product card, modal |
+| XL | 16px | Hero card |
+| Pill | 9999px | Search bar |
+
+SteelSeries lives in the **middle ground** — softer than Razer/MSI/ASUS at 4px, harder than Logitech at 12px. The 8px-radius cards and pill search bar signal design-system-conscious rather than full-gamer-aggression.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Default for body, hero photography |
+| 1 — Soft glow | `0 0 16px rgba(255,105,0,0.25)` | Hovered link, focused interactive |
+| 2 — Card | `rgba(0,0,0,0.6) 0 8px 24px` | Card on hover (paired with orange border) |
+| 3 — Strong glow | `0 0 32px rgba(255,105,0,0.5)` | Pro Series flagship, CTA hover |
+| 4 — Modal | `rgba(0,0,0,0.8) 0 32px 64px` | Centred dialogs |
+| 5 — Scrim | `rgba(0,0,0,0.85)` | Modal backdrop |
+
+### Shadow Philosophy
+
+**Neutral shadows + SteelSeries-orange glows.** The orange glow `rgba(255,105,0,0.3)` reads as warm-precision rather than aggressive-neon.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Precise**: `cubic-bezier(0.5, 0, 0, 1)` — symmetric for the pro card flip
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 120ms | Button colour swap |
+| Standard | 240ms | Card hover + glow |
+| Slow | 400ms | Carousel slide |
+| Pro flip | 600ms | Esports pro endorsement card 3D flip |
+
+### Per-Component Recipes
+
+- **Card hover**: orange border fades + glow halo over 240ms.
+- **CTA hover**: orange brightens + glow halo over 120ms.
+- **Pro endorsement card flip**: 3D rotation 600ms ease-precise on hover reveals pro's gear loadout (mouse + keyboard + headset combo).
+- **Carousel slide**: 400ms emphasized.
+- **Modal enter**: scrim fades + dialog scales 0.96 → 1.0 + opacity 0 → 1 over 240ms.
+
+### Reduced Motion
+
+Pro card flip becomes opacity crossfade (no 3D rotation); card glow remains static; transitions become opacity-only.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #ffffff text on #0a0a0a | 19.5 | AAA |
+| #a8a8a8 muted on #0a0a0a | 8.4 | AAA |
+| #ff6900 link on #0a0a0a | 5.6 | AA |
+| #ffffff on #ff6900 CTA | 4.5 | AA at body sizes |
+| #6e6e6e faint on #0a0a0a | 4.5 | AA |
+
+White-on-orange CTA at 4.5 — borderline AA. SteelSeries compensates with 14/700 button labels and uppercase tracking.
+
+### Focus Indicators
+
+3px `rgba(255,105,0,0.15)` outset glow + 1px solid `#ff6900` border on inputs. Buttons get an outset 3px orange glow ring.
+
+### ARIA Patterns
+
+- Search: `role="search"`, input `aria-label="Search SteelSeries"`
+- Product card: full `<a>` with `aria-label` containing title, price, key spec, pro endorsement
+- Pro endorsement: `<blockquote>` with `<cite>` for attribution
+- Pro card flip: `aria-expanded` on the trigger, both faces accessible to screen readers
+
+### Keyboard Navigation
+
+- Tab traverses logo → primary nav → search → utilities → main → footer
+- Esc closes; Enter activates
+- Pro card flip activates on Enter / Space; Esc reverts
+
+### Reduced Motion
+
+Pro card flip becomes opacity crossfade; card glow remains static.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Nav collapses; product grid 1-up; pro endorsement stacks below product card |
+| Tablet | 600–960px | 2-up grid |
+| Desktop | 960–1280px | 3-up grid |
+| Wide | 1280px+ | 4-up grid, 1440 cap |
+
+### Touch Targets
+- CTAs: 44–48px
+- Search bar: 44px
+- Card: full tile
+
+### Collapsing Strategy
+
+- Nav: utilities collapse; primary becomes hamburger
+- Product grid: 4 → 3 → 2 → 1
+- Pro endorsement: side-by-side → stacked
+- Hero: 2-column → stacked
+- Section padding: 128px → 80px → 48px
+
+### Image Behavior
+
+`<picture>` with WebP/AVIF. Esports-arena lifestyle photography uses art-direction `<source media>` queries for mobile crops.
+
+### Container Queries
+
+Used in product card pro endorsement — when card narrows below 280px, pro headshot collapses to text-only attribution.
+
+## 11. Content & Voice
+
+### Tone
+
+Esports-precision Scandinavian. SteelSeries' voice is **the engineering brief from a Copenhagen R&D lab** — confident, technical, performance-focused. Headlines lead with capability + outcome: "MADE FOR THE WIN.", "BUILT FOR THE CLUTCH.", "ENGINEERED IN COPENHAGEN."
+
+### Microcopy Patterns
+
+- **Buttons**: "BUY NOW", "ADD TO CART", "PRE-ORDER", "VIEW SPECS", "WATCH PRO" — uppercase tracked
+- **Errors**: terse-precise "Sorry, this item is currently unavailable. Sign up below to be notified when it returns."
+- **Success**: punchy "Added. Equipped for the win."
+- **Stock urgency**: "ONLY 5 LEFT" in red
+
+### Empty States
+
+Empty cart: "Your loadout is empty. Choose your weapons."
+
+Empty wishlist: "No saved gear. Save items to compare for your tournament loadout."
+
+Empty search: "No matches for [query]. Try a model name or category."
+
+### CTA Verb Conventions
+
+- Primary: **"BUY NOW"**, **"ADD TO CART"**, **"PRE-ORDER"**, **"BUILD MY LOADOUT"**
+- Pro: **"WATCH PRO LOADOUT"**, **"SEE THE PROS"**, **"JOIN THE WIN"**
+- Tertiary: **"VIEW SPECS"**, **"COMPARE"**, **"WATCH FILM"**
+
+## 12. Dark Mode & Theming
+
+**Dark-only.** SteelSeries is dark-only across web and the GG (SteelSeries Engine) desktop software. No light variant exists. The brand position: competitive gaming happens in low-light tournament arenas, the brand should match.
+
+The deepest surface is `#000000`; the lightest active surface is `#2e2e2e`. The whole system lives within roughly 18% lightness range — slightly more granular than Razer/MSI's 15% range, reflecting SteelSeries' more design-system-conscious tonal layering.
+
+## 13. Lineage & Influences
+
+SteelSeries' visual lineage runs through three traditions: **Danish design pedagogy** (founded 2001 in Copenhagen as Soft Trading, rebranded to SteelSeries in 2007 — the Scandinavian design heritage gives the brand a more restrained typographic and chromatic posture vs the heavy-metal aesthetics of Asian gaming brands); **competitive esports trade dress** (SteelSeries has sponsored more esports teams than any peripherals brand — Astralis, Cloud9, FaZe Clan, Fnatic — and the marketing site uses pro endorsements as primary social proof, a signature differentiator); and **tournament-grade industrial design** (the Aerox / Apex / Arctis Nova Pro product photography emphasises tournament durability, lab-tested latency, and pro-grade materials — the trade dress of high-performance sports equipment).
+
+The current site solidified around 2018 with the rollout of Inter Black 900 hero treatment and the standardised `#ff6900` orange. Subsequent updates have refined the pro endorsement card flip and the Arctis Nova Pro launch but have not changed the foundations.
+
+What SteelSeries rejects: light mode, soft pastel illustration, friendly serifs, sentence-case display on hero, gamer-aggression-only voice (SteelSeries balances aggression with Scandinavian restraint), and any chrome that obscures the esports-pro endorsements. The brand position: **esports precision — Danish-engineered, pro-tested, made for the win**.
+
+**Influences:**
+- SteelSeries founding (2001) — Danish / Copenhagen design heritage
+- Razer competitive trade dress — neon green parallel that SteelSeries countered with warm orange
+- Inter (Rasmus Andersson) — open-source UI sans designed for digital interfaces
+- JetBrains Mono — open-source monospace
+- Esports team sponsorships (Astralis / Cloud9 / FaZe / Fnatic) — pro endorsement lineage
+- Logitech G — competing peripherals brand with parallel consumer-tech aesthetic
+- High-performance sports equipment trade dress — durability, lab-tested, pro-grade
+- BANG & OLUFSEN / Bose — Scandinavian / consumer-audio restraint adjacencies
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the page on `#0a0a0a` near-black canvas (slightly warmer than Razer's pure `#000000`)
+- Use SteelSeries Orange `#ff6900` for every CTA, focused border, brand badge
+- Display the SteelSeries shield logomark anchored top-left in white
+- Use Inter Black 900 with `-0.025em` tracking for hero headlines uppercase at 56–72px
+- Use Inter throughout — open-source UI sans signals design-system-conscious posture
+- Use JetBrains Mono for spec values — slightly heavier strokes than Roboto Mono
+- Show esports-pro endorsement cards with pro headshot, quote, team attribution
+- Apply orange glow halos `0 0 24px rgba(255,105,0,0.3)` on hovered cards and CTAs
+- Use 8px-radius cards (middle ground — softer than Razer/MSI 4px, harder than Logitech 12px)
+- Use pill-shaped search bar (different from Razer/MSI rectangular)
+- Render section heads at 13/700 uppercase 0.15em tracking
+- Use lab-tested latency / DPI / polling spec callouts in mono
+- Use the pro endorsement card 3D flip on hover to reveal pro's gear loadout
+- Mix esports-arena lifestyle photography with studio hardware shots
+
+**Don't**
+- Don't introduce a light mode — SteelSeries is dark-only
+- Don't substitute another orange — SteelSeries Orange is `#ff6900` warm-burnt, not amber, not safety-yellow
+- Don't soften card corners past 12px — SteelSeries lives in the 8px middle ground
+- Don't write Razer-aggressive copy ("OUTSMART. OUTPLAY.") — SteelSeries is more disciplined
+- Don't use sentence-case display on hero — uppercase canonical
+- Don't omit the esports-pro endorsement on flagship products — pro social proof is core to the brand
+- Don't use serifs anywhere — Inter / JetBrains Mono only
+- Don't pad sections at 16px — SteelSeries breathes at 80–128px
+- Don't replace Inter with Roboto — Inter's geometric letterforms are part of the design-system-conscious posture
+- Don't render CTA labels in black on orange — white-on-orange is canonical
+- Don't add 9999-radius pill CTAs (other than search) — buttons are 4px rectangles
+- Don't mix multiple saturated accents — orange carries the brand alone
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:            #0a0a0a
+Bg Pure:           #000000
+Bg Deep:           #141414
+Card:              #1a1a1a
+SteelSeries Orange:#ff6900
+Orange Bright:     #ff8533
+Orange Deep:       #cc5500
+SS Gradient:       linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)
+Orange Glow:       rgba(255,105,0,0.4)
+Text:              #ffffff
+Text Soft:         #a8a8a8
+Border:            #2e2e2e
+Border Strong:     #ff6900
+```
+
+### Example Component Prompts
+
+- "Create a SteelSeries BUY NOW button: solid `#ff6900` burnt-orange rectangle, white label 'BUY NOW' in Inter 14/700 uppercase 0.05em tracking, 14×32px padding, 4px radius. On hover, fill brightens to `#ff8533` and adds `0 0 24px rgba(255,105,0,0.5)` orange glow halo. On active, fill deepens to `#cc5500` and scales 0.98."
+- "Build a SteelSeries product card: 320×460 with `#1a1a1a` near-black floor, 1px `#2e2e2e` charcoal border, 8px radius (middle-ground softer than Razer 4px), 24px padding. Stack inside: product hero on dark seamless, 'PRO SERIES' outline orange badge or 'ARCTIS NOVA PRO' solid orange badge top-left in Inter 11/700 uppercase 0.15em tracking, product name in Inter 22/700 white sentence-case (e.g. 'Arctis Nova Pro Wireless'), 1-line esports-pro endorsement quote 'Best comms I''ve ever had — device.fm, Astralis' in 14/500 italic `#a8a8a8`, JetBrains Mono spec strip '40h BATTERY · 360Hz · -120dB ANC' in `#a8a8a8`, `#ffffff` price 22/700, 'BUY NOW' orange CTA. Hover lights `#ff6900` orange border + `0 0 24px rgba(255,105,0,0.3)` glow halo over 240ms."
+- "Design a SteelSeries esports pro endorsement card: `#1a1a1a` near-black floor, 8px radius, 24px padding, 4px `#ff6900` orange left-border accent. Pro headshot 80×80 left in circle crop, quote in Inter 20/500 italic white (e.g. 'I''ve been using SteelSeries since I was 14. Made for the clutch.'), attribution '— device, Astralis' in 14/500 `#ff6900` orange. On hover, 3D-flip rotates 600ms ease-precise to reveal pro''s full gear loadout (mouse + keyboard + headset combo)."
+- "Build a SteelSeries spec card: `#1a1a1a` near-black floor, 1px `#2e2e2e` border, 8px radius, 32×24px padding. Stack: large 32/700 spec value in `#ff6900` orange JetBrains Mono (e.g. '18,000 DPI'), 11/600 uppercase 0.1em tracked spec label in white (e.g. 'TRUEMOVE AIR SENSOR'), 14/400 muted supporting copy. Used in feature strips like 'DPI · POLLING · LIFTOFF · TRACKING'."
+- "Design a SteelSeries hero band: full-bleed three-stop orange gradient `linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)`, 16px radius if contained, 64×48px padding. Headline in Inter Black 900 at 72px / 1.0 line-height / -0.025em tracking, white, uppercase (e.g. 'MADE FOR THE WIN'). Below it body-lg 18/400 white. Hardware photography right with esports-arena lifestyle context."
+- "Design a SteelSeries top nav: 64px-tall `#0a0a0a` floor with 1px `#222222` bottom border. SteelSeries shield logomark anchored left in white at 32px. Sub-brand labels 'HEADSETS · MICE · KEYBOARDS · MOUSEPADS · CONTROLLERS · SPACES' centred in Inter 13/500 uppercase 0.05em tracking white. Pill-shaped search bar (different from competitors), account icon, cart count flush right. Hover lights `#ff6900` 2px orange underline beneath active nav item."
+
+### Iteration Guide
+
+1. **Start with `#0a0a0a` warm-near-black.** Slightly warmer than Razer's pure `#000000`. Lock first.
+2. **SteelSeries Orange `#ff6900` is the brand colour.** Warm-burnt esports-orange — not amber, not safety-yellow, not Corsair electric `#ffff00`. Don't substitute.
+3. **Inter open-source UI sans is canonical.** Designed for digital interfaces. Don't substitute Roboto — Inter's geometric letterforms matter.
+4. **JetBrains Mono for spec values.** Heavier strokes than Roboto Mono — appropriate for tournament-grade precision.
+5. **Esports-pro endorsement cards are signature.** Pro headshot + quote + team attribution. Core to the brand position.
+6. **Inter Black 900 with -0.025em tracking is the manifesto voice.** Hero at 56–72px uppercase compressed.
+7. **8px-radius cards in the middle ground.** Softer than Razer/MSI/ASUS 4px, harder than Logitech 12px. Design-system-conscious.
+8. **Orange glow halo on hovered cards.** `0 0 24px rgba(255,105,0,0.3)` — Razer's playbook in warm orange.

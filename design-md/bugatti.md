@@ -1,0 +1,759 @@
+---
+name: Bugatti
+tagline: French-engineered austerity — pure black canvas, three Bugatti typefaces, and full-bleed photography as the only voltage.
+author: webdesignhot
+source_url: https://www.bugatti.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [automotive, marketing]
+tags: [luxury, dark, sans, serif, monospace, photography, minimal]
+preview_swatch: ['#000000', '#ffffff', '#c3d9f3']
+related: [ferrari, lamborghini, tesla]
+description: 'Bugatti''s marketing surface is the most austere interface in luxury automotive: a pure black `#000000` canvas holding white uppercase letterspaced display type and full-bleed automotive photography. The system has no accent color, no surface card decoration, no shadows, no gradients, no chrome — only photography, typography, and the brand wordmark. Every other luxury auto site in this category (BMW M, Aston Martin, Lamborghini) uses some form of accent color or signature element; Bugatti uses nothing. The empty space, the photograph, and the precisely-tracked Bugatti Display headline ARE the brand. The system runs three custom Bugatti typefaces — Bugatti Display (uppercase headlines, the BUGATTI wordmark), Bugatti Text Regular (a serif body face for paragraphs), and Bugatti Monospace (button labels, navigation, captions). The split is unbreakable: never use Bugatti Text in a button, never use Bugatti Monospace in a paragraph. Display sizes use weight 400 — never bold. Visual emphasis comes from size, tracking and case, not weight. Letter-spacing on the wordmark is 6px; on display headlines 2-4px. Tight tracking is a brand violation.'
+
+colors:
+  bg: '#000000'                  # canvas — pure black, the system has no light mode
+  bg-deep: '#000000'             # same as bg — Bugatti does not have a separate footer ground
+  surface-soft: '#0d0d0d'        # barely-different-from-black, spec table rows
+  surface: '#141414'             # surface-card — career callout, newsroom article container
+  surface-elevated: '#1f1f1f'    # one step further from black for nested cards
+  text: '#ffffff'                # ink / on-dark — all headline + primary text
+  text-strong: '#e6e6e6'         # body-strong — emphasized body / lead paragraph
+  text-body: '#cccccc'           # body — default running-text, slightly cooler than pure white
+  text-muted: '#999999'          # footer links, dates, captions, secondary metadata
+  text-muted-soft: '#666666'     # very-secondary text (legal disclaimer, copyright)
+  brand: '#ffffff'               # primary — white type and white CTA outlines
+  on-brand: '#000000'            # black text on white (rare — buttons are transparent + outline)
+  on-dark: '#ffffff'             # default text on dark canvas
+  on-photo: '#ffffff'            # text overlaid on cinema photography
+  border: '#262626'              # hairline — visible but quiet, table rows, card outlines
+  border-strong: '#3a3a3a'       # heavier divider — input field underlines
+  ring: '#ffffff'                # focus ring — 2px white at 2px offset
+  link: '#c3d9f3'                # the only non-monochrome color — desaturated ice-blue
+  link-underline: '#c3d9f3'      # always underlined by default
+  warning: '#d4a017'             # technical-warning callouts (rare)
+  success: '#5fa657'             # order confirmation (rare)
+  danger: '#cc3333'              # form errors — inferred fallback
+  info: '#c3d9f3'                # info callouts — same as link
+
+typography:
+  display:
+    family: '"Bugatti Display", Saira, "Saira Condensed", -apple-system, sans-serif'
+    weights: [400]
+    opentype-features: ['ss01']
+  body:
+    family: '"Bugatti Text Regular", "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif'
+    weights: [400]
+    opentype-features: []
+  mono:
+    family: '"Bugatti Monospace", "JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", "Cascadia Mono", monospace'
+    weights: [400]
+    opentype-features: []
+  scale:
+    display-xl:    { size: 64, weight: 400, lineHeight: 1.10, tracking: '4px',   family: display, notes: 'Hero h1 — uppercase, widest tracking on hero' }
+    display-lg:    { size: 48, weight: 400, lineHeight: 1.15, tracking: '3px',   family: display, notes: 'Section heads — uppercase' }
+    display-md:    { size: 32, weight: 400, lineHeight: 1.20, tracking: '2px',   family: display, notes: 'Sub-section heads, model names — uppercase' }
+    display-sm:    { size: 24, weight: 400, lineHeight: 1.30, tracking: '1.5px', family: display, notes: 'Card titles — uppercase' }
+    wordmark:      { size: 14, weight: 400, lineHeight: 1.00, tracking: '6px',   family: display, notes: 'BUGATTI brand wordmark in nav — widest tracking in system' }
+    title-md:      { size: 20, weight: 400, lineHeight: 1.30, tracking: '1px',   family: display, notes: 'Career listing titles, intro paragraphs' }
+    title-sm:      { size: 16, weight: 400, lineHeight: 1.30, tracking: '1.5px', family: display, notes: 'Mid-tier headlines, callout cards' }
+    body:          { size: 16, weight: 400, lineHeight: 1.50, tracking: 'normal', family: body,   notes: 'Default body — Bugatti Text Regular (serif), sentence case, no tracking' }
+    body-sm:       { size: 14, weight: 400, lineHeight: 1.50, tracking: 'normal', family: body,   notes: 'Footer body, fine-print legal' }
+    body-lead:     { size: 18, weight: 400, lineHeight: 1.55, tracking: 'normal', family: body,   notes: 'Lead paragraphs, intro copy' }
+    button:        { size: 14, weight: 400, lineHeight: 1.00, tracking: '2.5px', family: mono,    notes: 'All button labels — Bugatti Monospace, uppercase' }
+    nav-link:      { size: 12, weight: 400, lineHeight: 1.40, tracking: '2px',   family: mono,    notes: 'Top-nav menu items (MENU, STORE) — uppercase' }
+    caption:       { size: 11, weight: 400, lineHeight: 1.40, tracking: '2px',   family: mono,    notes: 'Photo captions, metadata — uppercase' }
+    spec-value:    { size: 32, weight: 400, lineHeight: 1.10, tracking: '2px',   family: display, notes: 'Engine spec values — Bugatti Display uppercase' }
+    spec-label:    { size: 11, weight: 400, lineHeight: 1.40, tracking: '2px',   family: mono,    notes: 'Spec labels below values — Bugatti Monospace uppercase' }
+    code:          { size: 13, weight: 400, lineHeight: 1.50, tracking: 'normal', family: mono }
+    code-micro:    { size: 11, weight: 400, lineHeight: 1.40, tracking: 'normal', family: mono }
+
+radius:
+  none: 0          # All cards, photo containers, inputs, spec cells — dominant radius
+  pill: 9999       # All buttons (the only rounded element type)
+  full: 9999       # Circular icon buttons — same value, semantic distinction
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 24, 40, 64, 80, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 680
+  header-height: 56
+  hero-height: 100vh
+  section-padding: 120
+
+components:
+  top-nav:
+    bg: 'transparent'
+    text: '#ffffff'
+    height: 56
+    layout: 'MENU left, centered BUGATTI wordmark, STORE + bag icon right'
+    border: 'none'
+    shadow: 'none'
+    overlay-on-hero: true
+    notes: 'Floats above hero photo with no fill, no border'
+  wordmark-display:
+    bg: 'transparent'
+    text: '#ffffff'
+    font: 'Bugatti Display 14/400 6px tracking uppercase'
+    centered: true
+    notes: 'BUGATTI brand wordmark — widest tracking in the system'
+  button-primary:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    radius: 9999
+    padding: '14px 32px'
+    height: 44
+    font: 'Bugatti Monospace 14/400 2.5px uppercase'
+    transition: 'background-color 250ms ease, color 250ms ease'
+    use: 'All primary CTAs — the transparent pill IS the brand button'
+  button-primary-hover:
+    bg: '#ffffff'
+    text: '#000000'
+    notes: 'Hover state — fills white, text inverts to black'
+  button-icon:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    radius: 9999
+    size: 40
+    notes: 'Carousel arrows, share, language switcher — outline-only circle'
+  text-link:
+    bg: 'transparent'
+    text: '#c3d9f3'
+    decoration: 'underline'
+    font: 'inherits Bugatti Text Regular body-md'
+    notes: 'Inline body links — the only non-monochrome color in the system'
+  hero-photo-band:
+    bg: '#000000'
+    text: '#ffffff'
+    photo: 'full-bleed cinematic, 100vh, edge-to-edge'
+    headline: 'Bugatti Display 64/400 4px uppercase, centered'
+    sub-headline: 'Bugatti Monospace 11/400 2px uppercase below headline'
+    cta: 'single button-primary further down'
+    padding: '96px to 200px depending on photo height'
+  career-callout-card:
+    bg: '#141414'
+    text: '#ffffff'
+    radius: 0
+    padding: 16
+    width: 320
+    position: 'right-aligned floating over hero photo (desktop only)'
+    notes: 'Recruiting callout — thumbnail + body + caption-uppercase link'
+  model-photo-card:
+    bg: '#000000'
+    text: '#ffffff'
+    radius: 0
+    layout: '16:9 or 21:9 hero shot top + model name (display-md) + caption + DISCOVER text-link'
+  newsroom-article-card:
+    bg: '#000000'
+    text: '#ffffff'
+    border: '1px solid #262626'
+    radius: 0
+    padding: 24
+    layout: '16:9 thumbnail + date-pill + title-md headline + body excerpt'
+  career-listing-row:
+    bg: 'transparent'
+    text: '#ffffff'
+    border-bottom: '1px solid #262626'
+    padding: '24px 0'
+    layout: 'job title (Bugatti Display 20px) left, location + department (caption-uppercase) right, chevron arrow far right'
+  text-input:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: 'none top/left/right'
+    border-bottom: '1px solid #3a3a3a'
+    radius: 0
+    padding: '12px 0'
+    height: 44
+    font: 'Bugatti Text Regular 16/400'
+    placeholder-color: '#999999'
+    notes: 'Underline-only input field; focus thickens bottom border to white'
+  spec-cell:
+    bg: 'transparent'
+    text: '#ffffff'
+    layout: 'value top (title-md 20/400 1px tracking) + label below (caption-uppercase 11/400 2px tracking)'
+    padding: '24px 0'
+    border: 'hairline divider 1px #262626 between cells (not card-internal)'
+  caption-overlay:
+    bg: 'transparent'
+    text: '#ffffff'
+    font: 'Bugatti Monospace 11/400 2px uppercase'
+    notes: 'Photo-overlay caption (e.g. "HONORING THE OEYRON AND ITS VISIONARY CREATOR")'
+  date-pill:
+    bg: 'transparent'
+    text: '#999999'
+    font: 'Bugatti Monospace 11/400 2px uppercase'
+    notes: 'No background, no border — the type IS the pill'
+  category-tag:
+    bg: 'transparent'
+    text: '#999999'
+    font: 'Bugatti Monospace 11/400 2px uppercase'
+    notes: 'Same treatment as date-pill — type-only label'
+  cta-band-photo:
+    bg: '#000000'
+    photo: 'full-bleed photography of Bugatti car at speed'
+    text: '#ffffff'
+    typography: 'display-md 32/400 2px uppercase centered'
+    cta: 'single button-primary below'
+    padding: 80
+    notes: 'Pre-footer Discover Bugatti band'
+  footer:
+    bg: '#000000'
+    text: '#999999'
+    columns: 4
+    padding: 64
+    layout: 'Bugatti / Models / Heritage / Connect link columns + copyright + centered wordmark at bottom'
+
+lineage:
+  summary: 'Bugatti''s digital surface inherits from European luxury-watchmaking marketing (Patek Philippe, A. Lange & Söhne) and French haute-couture editorial (Hermès, Dior). The all-monochrome + photography discipline echoes A. Lange''s minimal-canvas catalogues. The trinity of three custom typefaces (Display + serif Text + Monospace) is rare in any web context outside premium publishing — it signals literary, considered, slow-reading content. The transparent pill button is unique to Bugatti among luxury automotive — every other brand in the category fills or outlines-with-text-shift; Bugatti uses transparent + outline only.'
+  influences:
+    - name: 'A. Lange & Söhne'
+      role: 'minimal canvas, photography-only depth, monospace metadata'
+      url: https://www.alange-soehne.com
+    - name: 'Patek Philippe'
+      role: 'heritage-luxury restraint, serif body type for editorial copy'
+      url: https://www.patek.com
+    - name: 'Hermès'
+      role: 'French haute-couture pacing, single-canvas discipline'
+      url: https://www.hermes.com
+    - name: 'Apple Aperture-era product pages'
+      role: 'full-bleed photography, restrained chrome'
+    - name: 'Wallpaper* magazine'
+      role: 'editorial pacing, photo-first hero, slow-reading prose'
+    - name: 'Massimo Vignelli''''s monochrome typographic work'
+      role: 'single-family discipline'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-cinema: 'cubic-bezier(0.65, 0, 0.35, 1)'
+  duration-fast: 200
+  duration-standard: 300
+  duration-slow: 600
+  duration-cinema: 1200
+  hero-photo-fade: 'first-paint fade-in 1200ms cinema-eased'
+  carousel-crossfade: '8000ms hold + 800ms cinema-eased crossfade between hero photos'
+  button-fill-on-hover: 'background-color + color transition 250ms ease'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — hero fade-in skipped (photo renders immediately); carousel auto-advance disabled; button-fill becomes instant; all scroll-triggered transforms collapse to opacity-only.'
+
+breakpoints:
+  mobile: 768
+  tablet: 1024
+  desktop: 1440
+  wide: 1920
+
+shadows:
+  flat: 'none'
+  hairline: '1px solid #262626 — used as soft separator, never as glow'
+  ring: '0 0 0 2px #ffffff'
+  notes: 'Bugatti uses no shadows, no glassmorphism, no gradients. Depth comes entirely from photography (lighting, lens, subject framing) and from the contrast between black canvas and minimally-elevated #141414 surface-card.'
+
+accessibility:
+  contrast-text-on-bg: 21.0              # #ffffff on #000000 — AAA at all sizes (perfect)
+  contrast-body-on-bg: 16.1              # #cccccc on #000000 — AAA
+  contrast-muted-on-bg: 8.7              # #999999 on #000000 — AAA at body sizes
+  contrast-text-on-link: 13.7            # #c3d9f3 on #000000 — AAA
+  focus-ring: '2px solid #ffffff at 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44                   # button-primary at 44px exactly meets WCAG AAA
+
+dark-mode: 'native — Bugatti is dark-only. The system has no light mode, no toggle, no inverted variant. Every page on every breakpoint renders against #000000. The only non-monochrome color is the #c3d9f3 inline link, which is itself a desaturated ice-blue that reads as part of the monochrome family.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Bugatti's marketing surface is the most austere interface in luxury automotive: a pure black canvas holding white uppercase letterspaced display type and full-bleed automotive photography. The system has no accent color, no surface card decoration, no shadows, no gradients, no chrome — only photography, typography, and the brand wordmark. Every other luxury auto site in this category (BMW M, Aston Martin, Lamborghini, Rolls-Royce) uses some form of accent color or signature element; Bugatti uses nothing. The empty space, the photograph, and the precisely-tracked Bugatti Display headline ARE the brand.
+
+The page opens onto pure black `#000000`. Not near-black, not warm-black, not dark-grey — true `#000000`. Onto it, a single full-bleed photograph fills the viewport: a Tourbillon hyperdetail at the Molsheim atelier, an aerial shot of a Bugatti F.K.P. Hommage on the Reims circuit, a side-profile Mistral against an Alpine pass at dusk. The headline floats above the photo's centerline in Bugatti Display at 64px with 4px letter-spacing — wide-tracked, weight 400 (never bold), uppercase. Below it, a single 11px Bugatti Monospace caption in 2px tracking provides context. Further down, a single transparent-with-white-outline pill button. That is the entire hero.
+
+The system runs **three custom Bugatti typefaces** as a rigid trinity: **Bugatti Display** (uppercase headlines, the "BUGATTI" wordmark, model name plates — the default for any visual emphasis), **Bugatti Text Regular** (a serif text face used exclusively for running body copy, lead paragraphs, model descriptions — standard sentence-case, no letter-spacing), and **Bugatti Monospace** (button labels, navigation, captions, dates, monospace-precision contexts — always uppercase with 2-2.5px tracking). The split is functional and absolute. Bugatti Display in a button breaks the "machined precision" voice; Bugatti Monospace in a paragraph breaks the "engineered elegance" voice; Bugatti Text in a button is unthinkable.
+
+Display sizes use weight 400 — never bold. Visual emphasis comes from **size, tracking and case**, not weight. Letter-spacing on the wordmark is 6px; on display headlines 2-4px; on uppercase labels 2-2.5px. Tight tracking is a brand violation. The wide spacing creates the "engineered precision" feel that no other luxury maker matches. Section rhythm is generous — `120px` between major bands, longer than most marketing sites, because Bugatti's pages are mostly photography with minimal text density.
+
+**Key Characteristics:**
+- Pure black canvas `#000000` with white type — the system has no light mode
+- Three custom Bugatti typefaces: **Display** (uppercase headlines + wordmark), **Text Regular** (body serif), **Monospace** (buttons, captions, nav)
+- All display headlines are UPPERCASE with wide letter-spacing (2-4px); body copy stays sentence-case at standard tracking
+- No accent color. The only non-monochrome color anywhere is `#c3d9f3` — a desaturated ice-blue used on inline anchor links
+- Buttons are pill-shaped with **transparent background** and a 1px white outline — Bugatti is the only luxury-auto brand whose primary CTA is fully transparent
+- Photography is the only depth element. No drop shadows, no gradients, no card surfaces beyond `#141414` surface-card
+- Section rhythm `120px` — generous because Bugatti's pages are mostly photography with minimal text density
+- Serif body type (Bugatti Text Regular) sets the brand apart from the all-sans luxury crowd
+- Weight 400 everywhere — bold is not a documented role in the system
+- Transparent underline-only inputs — no background fill, no border outline, only a 1px hairline beneath
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Brand White** (`#ffffff`): The single brand color. White type and white CTA outlines on the black canvas.
+- **Canvas Black** (`#000000`): The default page floor across every surface. Pure black, the system has no warmth-shifted alternative.
+- **Surface Card** (`#141414`): The single elevated card surface — used for the career-callout card, the newsroom article container, occasional content cards. Even card surfaces stay nearly-black; there is no contrast jump.
+
+### Brand & Dark
+- **Surface Soft** (`#0d0d0d`): A barely-different-from-black tone used for spec table rows and dense data sections.
+- **Surface Elevated** (`#1f1f1f`): One step further from black, used for nested cards on rare dense pages.
+- **Hairline** (`#262626`): The 1px divider tone. Visible but quiet. Used on table rows, between body sections, around card outlines.
+- **Hairline Strong** (`#3a3a3a`): A heavier divider used on the underside of input fields (input fields have no border — only an underline hairline).
+
+### Accent
+- **Link Ice-Blue** (`#c3d9f3`): The only non-monochrome color in the entire system. A desaturated ice-blue used on inline anchor links and rarely on focus states. Bugatti's brand discipline is so tight that this single token is essentially the entire chromatic vocabulary outside black-and-white.
+- No additional accent colors. There is no brand-blue, no brand-red, no brand-gold. Adding one would break the contract.
+
+### Interactive
+- **Link** (`#c3d9f3`): Inline body links inside paragraphs. Always underlined by default.
+- **Link Hover**: Underline thickens or color brightens slightly toward `#e0ecf9`. The shift is so subtle it almost feels imagined.
+- **Button Outline**: `#ffffff` 1px solid — the brand's button signature.
+- **Button Hover Fill**: `#ffffff` background with `#000000` text — full inversion on hover.
+- **Disabled**: `#666666` muted-soft.
+- **Focus**: 2px solid `#ffffff` ring at 2px offset.
+
+### Neutral Scale
+- **Ink White** `#ffffff` — display, headings, primary text on dark canvas
+- **Body Strong** `#e6e6e6` — emphasized body / lead paragraph
+- **Body Default** `#cccccc` — running-text color (slightly cooler than pure white)
+- **Muted** `#999999` — footer links, dates, captions, secondary metadata
+- **Muted Soft** `#666666` — second-tier muted for very-secondary text (legal disclaimer, copyright line)
+- **Hairline Strong** `#3a3a3a` — input underlines
+- **Hairline** `#262626` — divider hairlines
+- **Surface Elevated** `#1f1f1f` — nested card background
+- **Surface Card** `#141414` — primary card surface
+- **Surface Soft** `#0d0d0d` — dense data sections
+
+### Surface & Borders
+- **bg** is `#000000` pure black — no warm tint, no cool tint.
+- **surface-card** is `#141414` — barely-different-from-black; cards do not pop forward.
+- **border** is `#262626` — visible but quiet hairline.
+- **border-strong** `#3a3a3a` — used only on the underside of input fields (since input fields have no full border).
+
+### Shadow Colors
+- Bugatti uses **no shadows whatsoever**. No drop-shadow, no glassmorphism, no glow, no inset highlight. Depth comes entirely from photography (lighting, lens, subject framing) and from the contrast between black canvas and minimally-elevated `#141414` surface-card.
+
+### Semantic
+- **Warning** (`#d4a017`): Reserved for technical-warning callouts (specifications, recall notices). Almost never appears on marketing surfaces.
+- **Success** (`#5fa657`): Order confirmation states — rare on marketing pages.
+- **Danger** (`#cc3333`): Form errors — inferred fallback.
+- **Info** (`#c3d9f3`): Same as link — info callouts use the link ice-blue.
+
+## 3. Typography Rules
+
+### Font Family
+The system runs **three custom Bugatti typefaces** as a rigid trinity:
+
+1. **Bugatti Display** — All display headlines (h1, h2, h3), the "BUGATTI" wordmark, model name plates. Uppercase, wide-tracked. The default for any visual emphasis. Fallback: `Saira Condensed, -apple-system, sans-serif`.
+2. **Bugatti Text Regular** — A serif text face used exclusively for running body copy, lead paragraphs, model descriptions. Standard sentence-case, no letter-spacing. Fallback: `Cormorant Garamond, EB Garamond, Garamond, serif`.
+3. **Bugatti Monospace** — Button labels, navigation, captions, dates, monospace-precision contexts. Always uppercase with 2-2.5px tracking. Fallback: `JetBrains Mono, IBM Plex Mono, ui-monospace, monospace`.
+
+The split is functional and absolute. **Bugatti Display in a button breaks the "machined precision" voice; Bugatti Monospace in a paragraph breaks the "engineered elegance" voice; Bugatti Text in a button is unthinkable.**
+
+The serif Bugatti Text Regular sets the brand apart from the all-sans luxury crowd (BMW, Aston Martin, Lamborghini all use sans-serif body type). Bugatti's serif body voice signals literary, considered, slow-reading prose — which is the brand's editorial philosophy.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display XL | Bugatti Display | 64 | 400 | 1.10 | 4px | — | Hero h1 — uppercase, wide-tracked |
+| Display Lg | Bugatti Display | 48 | 400 | 1.15 | 3px | — | Section heads — uppercase |
+| Display Md | Bugatti Display | 32 | 400 | 1.20 | 2px | — | Sub-section heads, model names |
+| Display Sm | Bugatti Display | 24 | 400 | 1.30 | 1.5px | — | Card titles |
+| Wordmark | Bugatti Display | 14 | 400 | 1.00 | 6px | — | BUGATTI brand wordmark — widest tracking |
+| Title Md | Bugatti Display | 20 | 400 | 1.30 | 1px | — | Career listing titles |
+| Title Sm | Bugatti Display | 16 | 400 | 1.30 | 1.5px | — | Mid-tier headlines |
+| Body | Bugatti Text Regular | 16 | 400 | 1.50 | 0 | — | Default body — serif, sentence case |
+| Body Sm | Bugatti Text Regular | 14 | 400 | 1.50 | 0 | — | Footer body, fine print |
+| Body Lead | Bugatti Text Regular | 18 | 400 | 1.55 | 0 | — | Lead paragraphs, intro copy |
+| Button | Bugatti Monospace | 14 | 400 | 1.00 | 2.5px | — | All button labels — uppercase, 2.5px tracking |
+| Nav Link | Bugatti Monospace | 12 | 400 | 1.40 | 2px | — | Top-nav menu items (MENU, STORE) — uppercase |
+| Caption | Bugatti Monospace | 11 | 400 | 1.40 | 2px | — | Photo captions, metadata — uppercase |
+| Spec Value | Bugatti Display | 32 | 400 | 1.10 | 2px | — | Engine spec values — uppercase |
+| Spec Label | Bugatti Monospace | 11 | 400 | 1.40 | 2px | — | Spec labels below values |
+| Code | Bugatti Monospace | 13 | 400 | 1.50 | 0 | — | Developer surfaces |
+| Code Micro | Bugatti Monospace | 11 | 400 | 1.40 | 0 | — | Inline tokens |
+
+### Principles
+- **The system NEVER uses bold weight.** Every Bugatti typeface is set at weight 400 (regular). Visual emphasis comes from:
+  1. **Size** — 64px hero vs 16px body is a 4× hierarchy
+  2. **Letter-spacing** — 6px wordmark vs 0px body
+  3. **Case** — Uppercase display vs sentence-case body
+  4. **Family contrast** — Display vs Text Regular vs Monospace
+- Going to weight 700 anywhere would break the "modest engineering" feel and make Bugatti read like a generic luxury template.
+- **Uppercase + wide tracking** on display creates the "engineered precision" voice. Tight tracking is a brand violation.
+- **Serif body type** — Bugatti Text Regular's serif body signals literary, slow-reading prose. The all-sans luxury crowd (BMW, Lamborghini, Aston Martin) loses this dimension.
+- **Trinity discipline** — never mix the families. Display in headlines, Text in body, Monospace in labels. The split is the brand voice.
+- **No italics** in any of the three families' usages on the marketing surface.
+- **Bugatti Display, Text Regular, Monospace are licensed.** Substitutes documented above; the substitution preserves the three-family split, which is more important than exact typeface match.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary** — the signature CTA. Bugatti is the only luxury-auto brand whose primary CTA is fully transparent.
+- Background **transparent**, text `#ffffff` (white), 1px white outline
+- Border-radius `9999` (pill)
+- Padding `14px 32px`, height `44px`
+- Font `Bugatti Monospace 14/400 2.5px tracking uppercase`
+- Hover: background fills `#ffffff`, text inverts to `#000000` (full inversion)
+- Transition `background-color 250ms ease, color 250ms ease`
+- Use case: every primary action — "DISCOVER", "CONFIGURE", "EXPLORE"
+
+**Icon Button** — circular icon buttons (carousel arrows, share, language switcher):
+- 40 × 40px, transparent background, white outline 1px, border-radius `9999` (full)
+- Same outline-only treatment as the primary button
+
+**Text Link** — inline body links:
+- Color `#c3d9f3` (the only non-monochrome in the system), underlined by default
+- Type inherits `Bugatti Text Regular 16/400` (serif)
+- Hover: underline thickens slightly; color brightens toward `#e0ecf9`
+
+### Cards & Containers
+
+**Hero Photo Band** — full-width black band with full-bleed automotive photography:
+- Background `#000000` underneath; the photograph fills the viewport edge-to-edge
+- Headline in `Bugatti Display 64/400 4px tracking` sits center-aligned over the photo near the top
+- Often paired with a small Bugatti Monospace caption (`11/400 2px tracking uppercase`) below the headline
+- Single `button-primary` further down
+- Vertical padding `96px` to `200px` depending on photo height
+
+**Career Callout Card** — small right-aligned card that floats over the hero photo on the homepage with a recruiting prompt ("Are you ready for a new adventure?"):
+- Background `#141414`, border-radius `0`, padding `16px`, width `320px`
+- Carries a small thumbnail at top, body line in `Bugatti Text Regular 14/400`, and a `caption-uppercase` link ("EXPLORE OUR OPPORTUNITIES")
+- Desktop-only — hides at < 768px
+
+**Model Photo Card** — used in model showcases:
+- Background `#000000` (no card surface — just photo on black)
+- Border-radius `0`
+- Top: 16:9 or 21:9 hero shot of the model
+- Below: model name in `Bugatti Display 32/400 2px tracking`, short specs line in `Bugatti Monospace 11/400 2px tracking`, a text-link "DISCOVER"
+
+**Newsroom Article Card** — used on the newsroom page:
+- Background `#000000` with hairline border `1px solid #262626`
+- Border-radius `0`, padding `24px`
+- Carries a 16:9 thumbnail, a `date-pill` ("12. NOVEMBER 2025"), a `title-md` headline (Bugatti Display 20/400 1px tracking), and a body excerpt in `Bugatti Text Regular 16/400` (serif)
+
+**Career Listing Row** — each row of the careers page job listing:
+- Transparent background, padding `24px` vertical
+- Hairline divider `1px solid #262626` between rows
+- Job title in `Bugatti Display 20/400 1px tracking` at left
+- Location + department in `Bugatti Monospace 11/400 2px uppercase` at right
+- Chevron arrow (→) at far right
+
+**Spec Cell** — vehicle technical-spec display on model-detail pages:
+- Transparent background with hairline dividers between cells
+- Each spec shows a value in `Bugatti Display 20/400 1px tracking` at top and a label in `Bugatti Monospace 11/400 2px uppercase` below
+- Padding `24px 0` vertical
+
+### Inputs & Forms
+
+**Text Input** — standard text input on dark canvas:
+- Background **transparent**, text `#ffffff`
+- 1px `border-strong` (`#3a3a3a`) bottom border ONLY (no top, left, right border)
+- Padding `12px 0`, height `44px`, border-radius `0`
+- Font `Bugatti Text Regular 16/400`
+- Placeholder color `#999999`
+- Focus: thickens the bottom border to `#ffffff` (no outline ring on inputs — the underline IS the focus indicator)
+
+### Tags & Captions
+
+**Caption Overlay** — photo-overlay caption (e.g. "HONORING THE OEYRON AND ITS VISIONARY CREATOR"):
+- Centered or left-aligned over photography
+- `Bugatti Monospace 11/400 2px tracking uppercase white`
+
+**Date Pill + Category Tag** — both render as transparent inline labels:
+- No background fill, no border
+- `Bugatti Monospace 11/400 2px tracking uppercase`, color `#999999`
+- The "tag" is the type itself
+
+### Navigation
+
+**Top Nav** — 56px-tall transparent nav bar overlaid on the hero photo:
+- No fill, no border
+- Layout: "MENU" at left, centered `wordmark-display` ("BUGATTI" in 14/400 6px tracking), and "STORE" at right with a small bag icon
+- All labels in `Bugatti Monospace 12/400 2px uppercase`
+- Sticky at top, floats over content
+
+**Wordmark Display** — the "BUGATTI" wordmark itself:
+- Bugatti Display at 14/400 6px tracking
+- Centered in the nav bar at every breakpoint
+- The widest tracking in the entire system
+
+### CTA / Footer
+
+**CTA Band Photo** — pre-footer "Discover Bugatti" band:
+- Background `#000000` underneath full-bleed photography of a Bugatti car at speed
+- Centered headline in `Bugatti Display 32/400 2px tracking uppercase`
+- Single `button-primary` below
+- Vertical padding `80px`
+
+**Footer** — black footer that closes every page:
+- Background `#000000`, text `#999999`
+- 4-column link list at desktop covering Bugatti / Models / Heritage / Connect
+- Vertical padding `64px`
+- Bottom row carries the copyright line in `Bugatti Text Regular 14/400` (serif)
+- The wordmark sits center-aligned at the very bottom
+- The footer never inverts
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit:** 4px.
+- **Tokens:** `xxs` 4 / `xs` 8 / `sm` 12 / `md` 16 / `lg` 24 / `xl` 40 / `xxl` 64 / `section` 120.
+- **Section padding:** `section` (120px) — longer than most marketing sites because Bugatti's bands are mostly photography with minimal text. The empty space frames the cars.
+- **Card internal padding:** `lg` (24px) for newsroom and content cards; `md` (16px) for the career callout card; `xxl` (64px) inside hero photo bands.
+- **Gutters:** `xl` (40px) between cards in 2-up grids — wider than typical because Bugatti's grids are sparse.
+
+### Grid & Container
+- **Max content width:** ~1280px centered. Hero photo bands bleed full-width with no max.
+- **Editorial body:** Single 12-column grid; photo bands are full-bleed.
+- **Newsroom layout:** 2-up article grid at desktop, 1-up at tablet+mobile.
+- **Career listings:** Single column with 80px row spacing.
+
+### Whitespace Philosophy
+Bugatti uses whitespace more aggressively than any luxury-auto competitor. The homepage hero is mostly photography + huge whitespace + a single sentence + a single button. The empty black space below the photograph is intentional — it lets the car breathe. Compressing the whitespace to "fit more content" breaks the brand's fundamental contract: that less is more.
+
+### Section Cadence
+Hero-photo-band → empty space → next-photo-band → optional career-callout → newsroom-grid → CTA-band-photo → footer. The rhythm is photograph-empty-photograph-empty. Light bands do not exist; the canvas stays black throughout.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|------|-------|-------|-----|
+| None | `none` | 0 | All cards, photo containers, inputs, spec cells — dominant radius |
+| Pill | `pill` | 9999 | All buttons (the only rounded element type) |
+| Full | `full` | 9999 | Circular icon buttons — same value, semantic distinction |
+
+The radius hierarchy is **binary**: rectangular for everything except buttons, which are pills. No 4px, no 8px, no 12px in between — those would feel "designed" rather than "engineered."
+
+### Photography Geometry
+Hero photography fills full-width with no rounding. Photo cards inside grids retain `0px` corners, edge-to-edge images. Model detail shots use 16:9 or wider cinema-aspect ratios. Newsroom thumbnails use 16:9 with 0px corners. There are no avatars or rounded photo crops anywhere on the marketing site.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (Flat) | No shadow, no border | Body, top nav, footer, photo bands |
+| 1 (Hairline) | 1px `#262626` border | Section dividers, table rows |
+| 2 (Card surface) | `#141414` background — no shadow | Career callout, newsroom article container |
+| 3 (Surface elevated) | `#1f1f1f` background — no shadow | Nested cards on rare dense pages |
+| 4 (Photographic) | Full-bleed photography with edge-to-edge crop | Hero bands, model showcases — depth via subject + lens, not chrome |
+
+### Shadow Philosophy
+The system uses no shadows, no glassmorphism, no gradients. **Depth comes entirely from photography (lighting, lens, subject framing) and from the contrast between black canvas and minimally-elevated `#141414` surface-card.** Adding a drop shadow would imply a chrome layer above the photograph; the brand chooses the photograph.
+
+### Decorative Depth
+- **None.** Bugatti is the only luxury-auto brand without a single decorative element on its marketing site outside the wordmark itself. There is no stripe, no badge, no heritage emblem, no geometric pattern. The cars are the brand voltage; chrome backs off entirely.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — material-style ease for button states
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — entrance animations, photo fade-ins
+- **Cinema**: `cubic-bezier(0.65, 0, 0.35, 1)` — slow swing for hero crossfades, 1200ms first-paint fade
+
+### Duration Buckets
+- **Fast** (200ms): button outline color shifts, link color brighten
+- **Standard** (300ms): button background-fill on hover, modal fade
+- **Slow** (600ms): card opacity transitions, scroll-triggered reveals
+- **Cinema** (1200ms): hero photo first-paint fade-in, carousel crossfade
+
+### Per-Component Micro-States
+- **Button Primary** — hover: background-color transitions from `transparent` to `#ffffff`, text-color from `#ffffff` to `#000000`, simultaneously over 250ms ease. No scale, no lift, no shadow change.
+- **Icon Button** — hover: identical background-fill inversion as primary button.
+- **Text Link** — hover: color brightens from `#c3d9f3` toward `#e0ecf9`; underline remains constant. 200ms.
+- **Card** — hover: no transform, no shadow change. The cards do not respond visually to hover.
+- **Hero Carousel** — auto-advances every 8 seconds with an 800ms cinema-eased crossfade. Keyboard left/right and on-screen icon-buttons advance manually.
+- **Hero First-Paint** — photograph fades from opacity 0 to 1 over 1200ms cinema-eased on initial render.
+
+### Page Transitions
+Page-to-page transitions are minimal: a 300ms cross-fade. Internal scroll-into-view does NOT trigger transforms — content simply appears. This is intentional — the system rejects scroll-driven choreography that consumer-tech sites use.
+
+### Reduced Motion Strategy
+Respects `prefers-reduced-motion: reduce`. Under reduced motion:
+- Hero first-paint fade is skipped (photo renders immediately)
+- Carousel auto-advance is disabled — manual nav only via icon-buttons
+- Button background-fill becomes instant (no transition)
+- All scroll-triggered transforms collapse to opacity-only (where any existed)
+- Text-link color transitions remain (color is not motion-coded)
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (WCAG)
+- **Text on Canvas**: `#ffffff` on `#000000` = 21.0:1 — AAA at all sizes (perfect contrast)
+- **Body on Canvas**: `#cccccc` on `#000000` = 16.1:1 — AAA at all sizes
+- **Muted on Canvas**: `#999999` on `#000000` = 8.7:1 — AAA at body sizes
+- **Muted Soft on Canvas**: `#666666` on `#000000` = 5.0:1 — AA at body sizes
+- **Link on Canvas**: `#c3d9f3` on `#000000` = 13.7:1 — AAA
+- **Text on Surface Card**: `#ffffff` on `#141414` = 18.4:1 — AAA
+
+### Focus Indicators
+- **Ring color**: `#ffffff` (pure white)
+- **Ring style**: `2px solid` at `2px` offset from the element's outer edge
+- On `button-primary`, the focus ring renders OUTSIDE the pill border so the brand outline geometry is preserved
+- On `text-input`, the underline-only field thickens its bottom border to white as the focus indicator (no separate ring)
+- Focus-visible only: ring appears only on keyboard focus, not mouse-click focus
+
+### ARIA Patterns
+- **Combobox** (model search, language switcher): `role="combobox"` with `aria-expanded`, `aria-controls`. Listbox uses `role="listbox"`.
+- **Dialog** (inquiry forms, dealer contact): `role="dialog"` with `aria-modal="true"`, focus trap on open, focus restore on close.
+- **Carousel** (hero): `role="region"` with `aria-roledescription="carousel"`. Each slide is `role="group"` with `aria-roledescription="slide"`. Icon buttons carry `aria-label="Previous slide"` / `aria-label="Next slide"`.
+- **Tabs** (model trim selector if present): `role="tablist"` with `aria-selected` on active.
+
+### Keyboard Nav Order
+Tab order: skip-to-content → MENU label → centered BUGATTI wordmark (home link) → STORE label → hero CTA → editorial body content top-to-bottom → footer columns left-to-right. Carousel icon buttons appear only when the carousel has focus.
+
+### Screen Reader Hints
+- The "BUGATTI" wordmark carries `aria-label="Bugatti home"`.
+- Decorative photography uses `aria-hidden="true"` so SR users don't hear "Image: hero photograph" before every section.
+- Photo captions wrap in `<figcaption>` inside `<figure>` for semantic correctness.
+- Date pills inside newsroom cards are SR-readable as "Published November 12, 2025" rather than the visible compressed format.
+
+### Reduced Motion Handling
+`@media (prefers-reduced-motion: reduce)` overrides the hero fade-in and carousel auto-advance. Documented in §8 above.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | < 768px | Hamburger nav; hero h1 64→32px; career callout card hides; photo bands stay full-bleed; footer 4 cols → 1 |
+| Tablet | 768–1024px | Top nav stays minimal (MENU + wordmark + STORE); 2-up newsroom grid; career rows full-width |
+| Desktop | 1024–1440px | Full minimal top-nav; 2-up newsroom grid; spec tables 4-up |
+| Wide | > 1440px | Same as desktop with more breathing room; max content 1280px |
+
+### Touch Targets
+- `button-primary` renders at minimum 44 × 44px (matches WCAG AAA exactly).
+- `button-icon` is exactly 40 × 40px — slightly under WCAG AAA for icon-only contexts; padding around the button raises effective tap area.
+- `text-input` height is 44px.
+- Career listing rows have 24px vertical padding; effective tap area meets 44px+ with surrounding spacing.
+
+### Collapsing Strategy
+- Top nav stays minimal at all breakpoints (MENU + wordmark + STORE). On mobile, the labels hide behind a hamburger but the wordmark stays centered.
+- Hero photography stays full-bleed at every breakpoint. Photo crops adjust — wider crops at desktop, vertical crops on mobile.
+- The career callout card on the homepage hides at < 768px (it's a desktop-only floating element).
+- 2-up newsroom grid collapses to 1-up at < 768px.
+- Spec cells reflow from 4-up to 2-up to 1-up; values stay at the same display size regardless of column count.
+
+### Image Behavior
+- Hero photography crops responsively — wider crops at desktop, vertical crops on mobile. Bugatti cars are always shown in motion or at-angle (never flat profiles).
+- Newsroom thumbnails retain 16:9 ratio and 0px corners.
+- All photography uses `loading="lazy"` except the homepage hero (eager).
+
+### Container Queries
+Used selectively on the configurator pages where the spec panel needs to reflow based on its container width.
+
+## 11. Content & Voice
+
+### Tone
+**Literary, considered, slow-reading.** The brand voice reads like the editorial columns of a French art magazine — measured, allusive, never declarative. Sentences are long on heritage pages and shorter on configurator pages. French phrases appear in proper nouns (Molsheim, Atelier, Pur Sang). The voice never sells; it states facts and offers context.
+
+### Microcopy Patterns
+- **Buttons**: terse uppercase verbs in Bugatti Monospace 2.5px tracking. "DISCOVER", "EXPLORE", "CONFIGURE", "REQUEST INFORMATION".
+- **Error message recipe**: `[Brief acknowledgement.] [Path forward.]` — e.g. "We were unable to process your request. Please try again." Restrained.
+- **Success confirmations**: declarative serifs. "Your inquiry has been received." "Your appointment is confirmed."
+- **Form labels**: capitalized noun phrases in `Bugatti Display 14/400 1px uppercase`. "Email", "Phone", "Preferred Atelier".
+
+### Empty States
+- **No results**: "No models match your inquiry." Followed by a path forward (link to full lineup).
+- **Saved empty**: "Your saved configurations will appear here once you begin."
+
+### CTA Verb Conventions
+- **DISCOVER** — the dominant primary verb
+- **EXPLORE** — secondary editorial verb
+- **CONFIGURE** — for configurator entry
+- **REQUEST INFORMATION** — for ownership inquiries (not "Get in touch" — too transactional)
+- **ARRANGE A VISIT** — for atelier visits (not "Book a tour")
+- **CONTINUE READING** — for long-form newsroom articles (not "Read More")
+
+The vocabulary leans literary. Bugatti does not use "Sign Up", "Get Started", or "Learn More" — those are SaaS verbs.
+
+## 12. Dark Mode & Theming
+
+Bugatti is **dark-only**. The system has no light mode, no toggle, no inverted variant. Every page on every breakpoint renders against `#000000`. The footer never inverts. Editorial bands never invert. Configurator surfaces never invert.
+
+The only non-monochrome color in the entire system is `#c3d9f3` — a desaturated ice-blue used on inline anchor links. Even that color reads as part of the monochrome family rather than as a chromatic accent.
+
+If a future Bugatti light mode were needed (it is not currently planned), the token swap would be:
+- `bg`: `#000000` → `#ffffff`
+- `text`: `#ffffff` → `#000000`
+- `text-body`: `#cccccc` → `#3a3a3a`
+- `text-muted`: `#999999` → `#666666`
+- `surface-card`: `#141414` → `#f5f5f5`
+- `border`: `#262626` → `#e6e6e6`
+- `link`: `#c3d9f3` → `#3a5b8a` (deeper ice-blue for AA contrast on white)
+- `button-primary`: outline shifts from white to black; hover-fill inverts
+
+But the brand position is firmly: **Bugatti is dark-only, by design.**
+
+## 13. Lineage & Influences
+
+Bugatti's digital surface inherits from European luxury-watchmaking marketing (Patek Philippe, A. Lange & Söhne) and French haute-couture editorial (Hermès, Dior, Le Monde luxe sections). The all-monochrome + photography discipline echoes A. Lange's minimal-canvas catalogues. The trinity of three custom typefaces (Display + serif Text + Monospace) is rare in any web context outside premium publishing — it signals literary, considered, slow-reading content that the brand actively curates.
+
+The transparent pill button is unique to Bugatti among luxury automotive — every other brand in the category fills or outlines-with-text-shift. Bugatti uses transparent + outline only, then fills white on hover to invert the geometry. The 6px wordmark tracking is the widest in the system and one of the widest tracking values used by any contemporary luxury brand.
+
+What it rejects: every form of decorative chrome. Spec-sheet density, color-coded section themes, hover-scale animations, gradient overlays, accent-color systems, light-mode toggles, soft consumer-tech radii.
+
+**Named influences:**
+- A. Lange & Söhne (https://www.alange-soehne.com) — minimal canvas, photography-only depth, monospace metadata
+- Patek Philippe (https://www.patek.com) — heritage-luxury restraint, serif body type for editorial copy
+- Hermès (https://www.hermes.com) — French haute-couture pacing, single-canvas discipline
+- Wallpaper* magazine (https://www.wallpaper.com) — editorial pacing, photo-first hero, slow-reading prose
+- Massimo Vignelli's monochrome typographic work — single-family discipline, sharp geometric vocabulary
+
+## 14. Do's and Don'ts
+
+### Do
+- Anchor every page with full-bleed automotive photography. The cars are the brand voltage; chrome backs off entirely.
+- Keep all display headlines in UPPERCASE Bugatti Display with 2-4px letter-spacing. The wordmark gets 6px.
+- Use Bugatti Display for headlines, Bugatti Text Regular (serif!) for body, Bugatti Monospace for buttons + captions + nav. The trinity is unbreakable.
+- Keep `button-primary` transparent with a 1px white outline. The transparent pill IS the brand button.
+- Use weight 400 everywhere. Bold breaks the brand voice — the system has no bold weight role.
+- Use `120px` between major editorial bands. The whitespace is part of the brand.
+- Reserve `#c3d9f3` for inline anchor links only. It's the system's only non-monochrome color.
+- Set every card and photo container at 0px sharp corners; only buttons are pill-shaped.
+
+### Don't
+- Don't introduce any accent color outside `#c3d9f3`. Bugatti's brand discipline is total monochrome + photography. Adding a brand-blue or brand-red breaks the contract.
+- Don't bold any type. The system has no bold weight — every typeface stays at 400.
+- Don't fill primary buttons. Transparent + outline only. A solid white button reads as off-brand at rest; the fill happens only on hover.
+- Don't compress whitespace between sections. The 120px rhythm is part of the editorial pacing.
+- Don't use rounded corners outside buttons. Cards, photos, inputs all stay at 0px. Rounded cards read as consumer-tech, not luxury-engineered.
+- Don't tighten letter-spacing on display headlines. 2-4px tracking on Bugatti Display is non-negotiable.
+- Don't use Bugatti Display in a button (use Bugatti Monospace) or Bugatti Monospace in a paragraph (use Bugatti Text Regular). The trinity split is the brand voice.
+- Don't add hover-scale or hover-shadow. Buttons fill on hover; everything else holds still.
+- Don't add a light mode. The brand is dark-only by design.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA outline: `#ffffff` (Brand White)
+- Background: `#000000` (Canvas Black, pure)
+- Surface card: `#141414` (Surface Card)
+- Heading text: `#ffffff` (Brand White)
+- Body text: `#cccccc` (Body Default — slightly cooler than pure white)
+- Muted: `#999999` (Muted)
+- Hairline: `#262626` (Hairline)
+- Link: `#c3d9f3` (Link Ice-Blue — only non-monochrome)
+- Focus ring: `#ffffff` 2px at 2px offset
+- Button hover fill: `#ffffff` background with `#000000` text
+
+### Example Component Prompts
+- "Create a hero band with a pure black `#000000` canvas, a full-bleed cinematic photograph of a Bugatti Tourbillon at the Molsheim atelier filling the viewport at 100vh, the headline 'TOURBILLON' centered over the photograph in Bugatti Display 64px weight 400 with 4px letter-spacing uppercase white, a small caption beneath in Bugatti Monospace 11px 2px tracking uppercase reading 'A NEW ERA OF HYPERSPORT', and a single transparent pill button further down with text 'DISCOVER' in Bugatti Monospace 14/400 2.5px uppercase white, 1px white border, 14×32 padding, 44px tall."
+- "Design a newsroom article card on `#000000` background with a 16:9 thumbnail at top, a date label '12. NOVEMBER 2025' in Bugatti Monospace 11/400 2px uppercase color `#999999`, a headline in Bugatti Display 20/400 1px tracking uppercase white, a body excerpt in Bugatti Text Regular 16/400 (serif!) sentence-case white, a 1px `#262626` hairline border around the card, 0px sharp corners, 24px padding."
+- "Build a top nav: 56px tall, transparent background, 'MENU' label at left in Bugatti Monospace 12/400 2px uppercase white, the centered 'BUGATTI' wordmark in Bugatti Display 14/400 with 6px letter-spacing uppercase white, 'STORE' + bag-icon at right in same Monospace style. No border, no shadow, sticky."
+- "Create a transparent pill button: 1px solid white border, 9999 border-radius, transparent background by default with white text in Bugatti Monospace 14/400 2.5px uppercase, 14×32 padding, 44px tall. On hover, fill the background with white and invert the text to `#000000` over 250ms."
+- "Design a text input: transparent background, no border on top/left/right, only a 1px solid `#3a3a3a` underline at the bottom, white text in Bugatti Text Regular 16/400, placeholder in `#999999`. On focus, thicken the underline to white. No outline ring on the input itself."
+- "Build a spec table: each cell is transparent background with the engine spec value at top in Bugatti Display 20/400 1px tracking uppercase white, a label below in Bugatti Monospace 11/400 2px uppercase color `#999999`, separated from siblings by a 1px `#262626` hairline divider. 24px vertical padding."
+
+### Iteration Guide
+1. Focus on ONE component at a time. Reference its YAML key (`hero-photo-band`, `career-callout-card`).
+2. New components default to `0` border-radius. Only `button-primary` and `button-icon` use pill / full radius.
+3. Use color tokens (`brand`, `text`, `surface`) — never inline hex on multiple components.
+4. Never document hover. Default and Active/Pressed states only — except for the button background-fill inversion which is the brand's signature interaction.
+5. Display headlines stay UPPERCASE Bugatti Display 400 with 2-4px tracking. Body stays sentence-case Bugatti Text Regular (serif). Button labels stay Bugatti Monospace 2.5px tracking. The trinity does not blur.
+6. When in doubt about emphasis: bigger photography before bigger type.
+7. The wordmark always gets 6px tracking. No exceptions.
+8. There is no light mode. Every surface stays black.

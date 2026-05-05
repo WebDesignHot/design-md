@@ -1,0 +1,206 @@
+# DESIGN.md/v1.5 — webdesignhot extension
+
+A strict superset of Google Labs' DESIGN.md/v1 + VoltAgent/awesome-design-md's prose depth, with **four new sections** they don't cover and our existing **machine-readable YAML frontmatter** preserved.
+
+This is the spec for what every entry on www.webdesignhot.com/design-md should look like.
+
+## Why a v1.5
+
+Google's v1 spec is *just* the YAML token bundle and free-form prose. VoltAgent ships dense numbered sections + per-component spec depth + agent-prompt guides — but no machine-readable frontmatter, no motion spec, no a11y spec. Our v1.5 takes the union of both, then adds:
+
+- **§8 Interaction & Motion** — easing curves, durations, hover micro-states, page transitions, reduced-motion
+- **§9 Accessibility & A11y** — contrast pairs, focus indicators, ARIA patterns, keyboard nav
+- **§11 Content & Voice** — tone, microcopy, error patterns, CTA verb conventions
+- **§12 Dark Mode & Theming** — full token swap when the brand ships one
+
+Net: **15 sections**, ~600–900 lines per entry.
+
+## YAML frontmatter (machine-readable)
+
+All v1 fields preserved + four additions.
+
+```yaml
+---
+# v1 base (mandatory)
+name: Brand
+tagline: One-line essence — 80 chars max
+author: webdesignhot
+source_url: https://example.com
+spec: design.md/v1.5      # bumped from v1
+quality: curated
+featured: false
+categories: [...]
+tags: [...]
+preview_swatch: ['#bg', '#brand', '#text']
+related: [3 sibling slugs]
+description: 'Long-form pitch in single-quoted YAML. Internal apostrophes doubled — like this: ''it''s''.'
+
+# Token bundle
+colors:
+  bg: '#...'
+  surface: '#...'
+  text: '#...'
+  brand: '#...'
+  border: '#...'
+  on-brand: '#...'
+  # Plus brand-specific roles, with source CSS var as inline comment when known
+  brand-shadow: 'rgba(50,50,93,0.25)'   # --hds-color-shadow-md
+
+typography:
+  display: { family, weights, opentype-features }
+  body:    { family, weights }
+  mono:    { family, weights }
+  scale:
+    display-hero:  { size, weight, lineHeight, tracking, family, opentype }
+    # ...19 rows, see §3 Typography Rules
+
+radius: { micro, sm, md, lg, xl, pill }
+spacing: { base, scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 48, 64, 96] }
+layout: { page-width, prose-width, header-height }
+components: { button-primary, button-ghost, card, input, ... }
+lineage: { summary, influences: [...] }
+
+# v1.5 additions
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions to opacity-only'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(23,23,23,0.06) 0 3px 6px'
+  standard: 'rgba(23,23,23,0.08) 0 15px 35px'
+  elevated: 'rgba(50,50,93,0.25) 0 30px 45px -30px, rgba(0,0,0,0.1) 0 18px 36px -18px'
+  deep: 'rgba(3,3,39,0.25) 0 14px 21px -14px, rgba(0,0,0,0.1) 0 8px 17px -8px'
+  ring: '0 0 0 2px #533afd'
+
+accessibility:
+  contrast-text-on-bg: 14.8                # AAA at body sizes
+  contrast-text-on-brand: 4.6              # AA at body sizes
+  focus-ring: '2px solid #brand'
+  reduced-motion-honored: true
+
+dark-mode: optional        # `null` if brand has no dark variant; otherwise duplicate `colors:` map under `colors-dark:`
+---
+```
+
+## Markdown body (15 numbered sections)
+
+The body MUST be numbered headings so AI agents can navigate by section index.
+
+### 1. Visual Theme & Atmosphere
+
+3–5 paragraphs of atmospheric prose. Set the mood. Use sensory metaphors (financial-broadsheet, twilight sky, paper-cream). End with a bullet list of **Key Characteristics** — 6–10 short hooks.
+
+### 2. Color Palette & Roles
+
+Subsections, in order:
+
+- **Primary** — page bg, primary text, primary CTA
+- **Brand & Dark** — wordmark color, dark-section ground, brand-deep
+- **Accent** — secondary action, gradient stops, decorative
+- **Interactive** — link, hover, active, selected, disabled
+- **Neutral Scale** — full grayscale ramp (heading/label/body/caption/faint)
+- **Surface & Borders** — bg-elev tiers, border default + strong + subtle
+- **Shadow Colors** — multi-layer, blue-tinted-vs-neutral
+- **Semantic** — success, warning, danger, info (colored bg + colored text + colored border)
+
+Each color: `**Role Name** (hex) [→ source CSS var if known]: one-line use`. Annotate when the brand uses an unusual choice (navy-not-black, ink-not-paper).
+
+### 3. Typography Rules
+
+Three subsections:
+
+**Font Family**
+- Primary, fallback chain
+- Mono companion
+- OpenType features (ss01/ss02/tnum/zero/etc) — explicitly when used
+
+**Hierarchy** — table with these columns: Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes. **15–20 rows** covering display-hero through caption-tabular through code-micro.
+
+**Principles** — 5–8 bullets explaining the *why*: weight choice as voice, tracking philosophy, two-mode OpenType discipline, etc.
+
+### 4. Component Stylings
+
+One block per component. Required components: Buttons (≥4 variants), Cards, Badges/Tags/Pills, Inputs/Forms, Navigation. Optional: Selectors, Tabs, Tooltips, Toasts, Modals, Decorative.
+
+Each variant must list: Background, Text, Padding, Radius, Border (if any), Font, Hover/Active states, Use case.
+
+### 5. Layout Principles
+
+- **Spacing System** — base unit + scale + density observations
+- **Grid & Container** — max width, hero treatment, feature grid pattern
+- **Whitespace Philosophy** — section rhythm, density-vs-air balance
+- **Section Cadence** — light/dark alternation, brand-band pattern
+
+### 6. Shapes & Radius Scale
+
+Numeric scale with tier names (Micro 1–2px, Standard 4px, Comfortable 6px, Relaxed 8px, Large 12px, Featured 16px+, Pill 9999px). Note compound radii (e.g. `0 0 6px 6px`).
+
+### 7. Depth & Elevation
+
+Table: Level | Treatment | Use. Levels 0 (flat) → 5 (modal). Plus a **Shadow Philosophy** paragraph explaining brand-tinted vs neutral, multi-layer logic.
+
+### 8. Interaction & Motion ✨
+
+Easing curves (with cubic-bezier values), duration buckets (fast/standard/slow), per-component micro-state recipes (button hover lift, card hover shadow intensify, link hover underline grow), page-transition behavior, **reduced-motion strategy**.
+
+### 9. Accessibility & A11y ✨
+
+- Contrast pairs computed (text/bg, text/brand, label/surface) with WCAG level
+- Focus indicators (ring color + offset)
+- ARIA pattern recommendations (combobox, listbox, dialog conventions)
+- Keyboard nav order
+- Screen reader hints (aria-label vs visible text trade-offs)
+- Reduced motion handling
+
+### 10. Responsive Behavior
+
+Breakpoints table + Touch Targets + Collapsing Strategy (per component) + Image Behavior + Container Queries (when used).
+
+### 11. Content & Voice ✨
+
+- **Tone** — formal/playful/neutral/technical anchored in 1–2 sentences
+- **Microcopy patterns** — button verbs, error message recipe, success confirmations
+- **Empty states** — what they say, what they don't
+- **CTA verb conventions** — "Get started" vs "Sign up" vs "Start free trial" — the brand's actual verbs
+
+### 12. Dark Mode & Theming ✨
+
+If the brand has a dark mode: full token swap (colors-dark map with same keys as colors). If they don't: explicitly note "Light-only — no dark variant offered."
+
+### 13. Lineage & Influences
+
+What this brand inherits from (visual lineage: Bauhaus, Swiss grid, broadsheet). What contemporaries it borrows from. What it rejects. 1–2 paragraphs + bullet list of named influences with URLs.
+
+### 14. Do's and Don'ts
+
+8–12 do's, 8–12 don'ts. Specific, actionable.
+
+### 15. Agent Prompt Guide
+
+Three subsections:
+
+**Quick Color Reference** — flat list `Role: hex` for the 8–12 most important roles
+**Example Component Prompts** — 4–6 ready-to-paste strings starting with "Create a hero…", "Design a card…", etc.
+**Iteration Guide** — 5–8 numbered tips for refining toward this brand's flavor
+
+## Validation
+
+Run `design-md lint <file>` for required fields + section presence. CI lints all entries on PR.
+
+## Compatibility
+
+v1.5 frontmatter is a strict superset of v1 — every v1-compliant tool can ignore the new fields. Body sections 1–15 supersede v1's free-form prose; tools that expect free-form prose still work.
+
+## Migration
+
+Existing v1 entries → v1.5: Phase 2e enriches in-place. CLI gains `design-md upgrade <file>` in v0.2 to scaffold the missing v1.5 sections from observed tokens.

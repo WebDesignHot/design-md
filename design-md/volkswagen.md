@@ -1,0 +1,721 @@
+---
+name: Volkswagen
+tagline: People's-car blue — the deep `#001e50` corporate hue, custom VW Sans, and a friendly-German marketing surface that sells everyday mobility with confidence.
+author: webdesignhot
+source_url: https://www.volkswagen.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [automotive, marketing]
+tags: [light, friendly, sans, blue, german, peoples-car, configurator, photography]
+preview_swatch: ['#ffffff', '#001e50', '#00b0f0']
+related: [audi, bmw, ford]
+description: 'Volkswagen.com is the friendly-German face of the people''s car — distinct from Audi''s monochrome luxury and BMW''s corporate-blue formality. The canvas is bright white, the brand voltage is a **deep cobalt-navy** (`#001e50`) that has anchored VW marketing since the post-war era, and a brighter electric-cyan accent (`#00b0f0`) carries the ID. EV sub-brand. Type runs **VW Head** (display) and **VW Text** (body) — bespoke 2019 family by MetaDesign / VW — paired with friendly soft-modernist 8–12px radii on cards. The signature visual move: **circular VW roundel + cobalt-navy CTA + happy-family environmental photography** — Golf, Tiguan, ID.4, ID.Buzz — the universal-mobility mood the brand has owned for seven decades.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f4f5f7'              # surface alternation
+  bg-card: '#ffffff'
+  bg-strong: '#e8eaee'             # divider band
+  bg-dark: '#001e50'               # cobalt-navy hero band — primary brand
+  bg-dark-elev: '#0a2e6a'          # elevated panel
+  bg-deep: '#000914'               # deep — footer / press releases
+  bg-id: '#00b0f0'                 # electric cyan — ID. EV sub-brand band
+  surface: '#ffffff'
+  surface-soft: '#f4f5f7'
+  surface-card: '#ffffff'
+  surface-table: '#fafbfc'         # spec table band
+  text: '#3c3c3c'                  # body
+  text-strong: '#1a1a1a'           # body-strong
+  text-ink: '#001e50'              # ink — primary headings (signature navy)
+  text-muted: '#6a7280'             # muted
+  text-faint: '#9aa3ad'             # disabled
+  brand: '#001e50'                 # VW Cobalt Navy — primary CTA, roundel
+  brand-hover: '#000f2c'            # primary-active — pressed
+  brand-deep: '#000914'             # deepest navy — footer
+  brand-disabled: '#cdd5df'        # disabled
+  brand-id: '#00b0f0'               # ID. electric cyan — EV sub-brand
+  brand-id-deep: '#0090d0'          # ID. pressed
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  on-dark-soft: '#bcc6d2'
+  on-id: '#001e50'                  # navy text on cyan
+  accent-r-line-red: '#cb2026'      # R-line / GTI accent — performance only
+  accent-gti-red: '#cb2026'         # GTI signature red
+  border: '#dde1e6'                # hairline
+  border-strong: '#b6bdc7'         # input border
+  border-soft: '#eceef1'            # subtle dividers
+  border-on-dark: 'rgba(255,255,255,0.18)'
+  link: '#001e50'
+  link-hover: '#0040a0'
+  ring: '#001e50'
+  shadow-soft: 'rgba(0,30,80,0.06)'
+  shadow-elev: 'rgba(0,30,80,0.12)'
+  shadow-deep: 'rgba(0,9,20,0.32)'
+  success: '#1f8b46'
+  warning: '#f0a020'
+  danger: '#cb2026'
+  info: '#00b0f0'
+
+typography:
+  display:
+    family: '"VW Head", "Volkswagen Head", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 600, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"VW Text", "Volkswagen Text", "Helvetica Neue", Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['kern', 'liga']
+  mono:
+    family: 'SF Mono, Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:      { size: 72, weight: 700, lineHeight: 1.06, tracking: '-0.01em', family: display, notes: 'Homepage hero — Golf / ID. model name' }
+    display-xl:        { size: 56, weight: 700, lineHeight: 1.10, tracking: '-0.005em', family: display }
+    display-lg:        { size: 42, weight: 700, lineHeight: 1.14, tracking: '0', family: display, notes: 'Section opener' }
+    display-md:        { size: 32, weight: 700, lineHeight: 1.18, tracking: '0', family: display }
+    display-sm:        { size: 24, weight: 700, lineHeight: 1.25, tracking: '0', family: display }
+    title-lg:          { size: 20, weight: 700, lineHeight: 1.30, tracking: '0', family: display }
+    title-md:          { size: 18, weight: 600, lineHeight: 1.40, tracking: '0', family: display }
+    title-sm:          { size: 16, weight: 600, lineHeight: 1.40, tracking: '0', family: display }
+    body-lg:           { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body, notes: 'Lead paragraph' }
+    body-md:           { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    body-sm:           { size: 14, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    caption:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.04em', family: body }
+    label-uppercase:   { size: 13, weight: 700, lineHeight: 1.30, tracking: '0.10em', family: display, notes: 'Section eyebrow — uppercase' }
+    button:            { size: 14, weight: 700, lineHeight: 1.00, tracking: '0.04em', family: display }
+    nav-link:          { size: 14, weight: 500, lineHeight: 1.40, tracking: '0.02em', family: body }
+    micro:             { size: 11, weight: 400, lineHeight: 1.40, tracking: '0.05em', family: body }
+    code:              { size: 13, weight: 400, lineHeight: 1.50, tracking: '0', family: mono }
+
+radius:
+  none: 0
+  xs: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  pill: 9999
+
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 760
+  header-height: 72
+  hero-height: 88vh
+
+components:
+  button-primary:
+    bg: '#001e50'
+    text: '#ffffff'
+    padding: '14px 32px'
+    radius: 9999
+    font: 'VW Head 14/700 uppercase 0.04em tracking'
+    transition: 'background 0.2s ease'
+    hover: '#000f2c'
+  button-ghost:
+    bg: 'transparent'
+    text: '#001e50'
+    padding: '14px 32px'
+    radius: 9999
+    border: '1px solid #001e50'
+    font: 'VW Head 14/700'
+  button-on-dark:
+    bg: '#ffffff'
+    text: '#001e50'
+    padding: '14px 32px'
+    radius: 9999
+  button-on-dark-ghost:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    padding: '14px 32px'
+    radius: 9999
+  button-id:
+    bg: '#00b0f0'
+    text: '#001e50'
+    padding: '14px 32px'
+    radius: 9999
+    font: 'VW Head 14/700'
+  button-text-link:
+    bg: 'transparent'
+    text: '#001e50'
+    font: 'VW Head 14/700 with arrow → and underline'
+  card-vehicle:
+    bg: '#ffffff'
+    radius: 12
+    padding: '24px'
+    border: '1px solid #dde1e6'
+    image-position: 'top, full-width 16:9 PNG render'
+    title: '24/700 VW Head'
+    cta: '"Configure" → 14/700 #001e50'
+  card-feature:
+    bg: '#f4f5f7'
+    border: 'none'
+    padding: '32px'
+    radius: 12
+  hero-band-dark:
+    bg: '#001e50'
+    text: '#ffffff'
+    notes: 'Used for Golf / Tiguan / brand reveals'
+  hero-band-id:
+    bg: '#00b0f0'
+    text: '#001e50'
+    notes: 'Used for ID. EV sub-brand — ID.4, ID.Buzz, ID.7'
+  config-tile:
+    bg: '#ffffff'
+    border: '1px solid #dde1e6'
+    radius: 8
+    padding: '16px 20px'
+    selected-border: '2px solid #001e50'
+  badge:
+    bg: '#e8eaee'
+    text: '#001e50'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.10em'
+    radius: 9999
+  badge-id:
+    bg: '#00b0f0'
+    text: '#001e50'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.10em'
+    radius: 9999
+  badge-gti:
+    bg: '#cb2026'
+    text: '#ffffff'
+    padding: '4px 12px'
+    font: '11/700 uppercase 0.10em'
+    radius: 9999
+  navigation:
+    bg: '#ffffff'
+    height: 72
+    border-bottom: '1px solid #dde1e6'
+    nav-link: '14/500 #001e50'
+    logo: 'VW circular roundel — 48×48, monochrome navy on white or white on navy'
+  input:
+    bg: '#ffffff'
+    border: '1px solid #b6bdc7'
+    radius: 8
+    padding: '12px 16px'
+    font: 'VW Text 16/400'
+    focus-border: '#001e50'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — hero parallax disables, video autoplay pauses, only opacity transitions remain.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+  ultra: 1920
+
+shadows:
+  flat: 'none'
+  card: 'rgba(0,30,80,0.06) 0 2px 6px'
+  elevated: 'rgba(0,30,80,0.12) 0 8px 24px'
+  modal: 'rgba(0,9,20,0.32) 0 24px 64px'
+  ring: '0 0 0 2px #001e50'
+
+accessibility:
+  contrast-text-on-bg: 14.6          # #001e50 on #ffffff — AAA
+  contrast-body-on-bg: 9.7           # #3c3c3c on #ffffff — AAA
+  contrast-text-on-brand: 14.0       # #ffffff on #001e50 — AAA
+  contrast-on-id-bg: 5.4             # #001e50 on #00b0f0 — AA Normal
+  contrast-on-dark-bg: 14.0          # #ffffff on #001e50 — AAA
+  focus-ring: '2px solid #001e50 with 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 44
+
+dark-mode: 'partial — VW uses cobalt-navy hero bands (#001e50) within otherwise light pages; the ID. sub-brand introduces electric-cyan bands (#00b0f0). Full dark variant offered on We Connect customer portal and MIB3 in-vehicle UI.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Volkswagen.com is the friendly-German face of the people's car — the brand that sells **everyday mobility with confidence**. Distinct from Audi's monochrome luxury, distinct from BMW's corporate-blue formality, VW occupies a third register: **welcoming-engineered**. The page opens onto a bright white canvas with the **circular VW roundel** anchored top-left of a thin nav, and an immediate full-bleed photograph of a Golf in city light, a Tiguan on a family road trip, an ID.4 charging at home, or an ID.Buzz parked at a beach with surfboards on the roof. The photography mood is **everyday-aspirational** — universal, friendly, optimistic.
+
+The colour mood is **cobalt-navy and people's-car blue**. VW's signature voltage — the deep `#001e50` cobalt-navy that has anchored the brand since the post-war era — carries every primary CTA, every selected state, every link. Surrounding it, a near-monochrome neutral system in slightly cool whites (`#ffffff` / `#f4f5f7` / `#e8eaee`) provides the ground. The dark band (`#001e50` itself, the brand colour) is reserved for hero photography backdrops and brand-statement moments. A bright **electric cyan** (`#00b0f0`) carries the **ID. EV sub-brand** — the ID.3, ID.4, ID.5, ID.7, ID.Buzz family — and provides the brand's only chromatic-contrasting moment.
+
+Typography is the **VW Head + VW Text duo** — bespoke 2019 by MetaDesign / VW Group. Display sets in VW Head at weight 700 with negative tracking on hero sizes; body sits in VW Text at weight 400. The two-cut family follows the VW Group internal pattern: a tighter display cut for headlines, a looser body cut for paragraph legibility. Headlines like "We make the future real", "ID.7 Tourer", or "Das Auto" land at 56–72px with `-0.005em` to `-0.01em` tracking — confident, friendly, never austere.
+
+The signature visual move is the **circular roundel + cobalt-navy pill CTA + happy-family environmental photography** triplet. Unlike Audi's sharp monochrome rectangle or BMW's right-angle precision, **VW commits to pill-radius CTAs** (9999px) — the friendly geometry that softens the brand from German-engineering severity into people's-car approachability. Cards use 12px radii — soft-modernist, family-friendly, distinctly different from Audi's sharp 0-radius rectangles. The roundel itself is the only logomark — never substituted with "Volkswagen" wordmark, which would feel formal and lose the brand's quick-recognition warmth.
+
+Motion is **friendly-controlled**: a gentle parallax on hero photography, video autoplay-with-audio-off on Golf / ID.Buzz pages, fade-in-on-scroll for content blocks. The brand uses motion to communicate **everyday usability** — not luxury restraint, not American truck swagger, not tech-industry speed.
+
+**Key Characteristics:**
+- White canvas (`#ffffff`) with cobalt-navy (`#001e50`) hero bands and ID. cyan (`#00b0f0`) sub-brand bands
+- VW Cobalt Navy (`#001e50`) — the post-war brand voltage — as the singular primary action
+- ID. Electric Cyan (`#00b0f0`) reserved for the EV sub-brand exclusively
+- VW Head + VW Text bespoke duo, two-weight discipline (400 body, 700 display)
+- **Pill-radius CTAs** (9999px) — friendly-German, distinguishing from Audi/BMW rectangles
+- **Soft 12px card radii** — soft-modernist family-friendly geometry
+- Full-bleed everyday-aspirational photography (city light, family road trips, charging at home)
+- Uppercase section eyebrows at 13/700/0.10em — friendly-German tradition
+- The circular VW roundel is the only logomark — never wordmark
+- Generous 96–128px section padding, 12-column grid
+- GTI/R-line red (`#cb2026`) reserved for performance content only
+- "Configure" as the configurator entry verb — German automotive standard
+
+## 2. Color Palette & Roles
+
+### Primary
+- **VW Cobalt Navy** (`#001e50`): The post-war brand voltage (rgb 0, 30, 80). Deep, slightly-warm navy. Appears on every primary CTA, every selected state, every link, and the roundel itself.
+- **Pure White** (`#ffffff`): Page canvas, card surface, default ground.
+
+### Brand & Dark
+- **Surface Dark** (`#001e50`): The brand's own cobalt-navy used as hero band ground for Golf / Tiguan / brand-statement moments.
+- **Surface Dark Elevated** (`#0a2e6a`): Cards, panels on the navy band.
+- **Deep Navy** (`#000914`): Footer, press-release ground — the deepest the page gets.
+- **VW Roundel**: Always rendered in monochrome navy-on-white or white-on-navy — never coloured, never gradient, never with internal lettering colour shifts.
+
+### Accent (ID. EV Sub-brand)
+- **ID. Electric Cyan** (`#00b0f0`): The ID. EV sub-brand voltage (rgb 0, 176, 240). Bright, optimistic, future-leaning. Used on ID. hero bands, ID. badges, ID. CTA fills (with navy text). Never on combustion-engine model pages.
+- **ID. Cyan Deep** (`#0090d0`): Pressed/active state for ID. CTAs.
+
+### Accent (Performance / R-line / GTI)
+- **GTI Red** (`#cb2026`): The signature GTI red since 1976. Reserved for GTI / R-line / Performance content only. Never decorative.
+
+### Interactive
+- **Link** `#001e50` — body-text inline links
+- **Link Hover** `#0040a0` — slight brightening on hover
+- **Disabled** `#cdd5df` — desaturated grey-blue
+- **Focus** — 2px `#001e50` outline with 2px offset
+
+### Neutral Scale
+- **Ink** `#001e50` — primary headings (cobalt navy, not pure black)
+- **Body Strong** `#1a1a1a` — emphatic body
+- **Body** `#3c3c3c` — paragraph default
+- **Muted** `#6a7280` — captions, metadata
+- **Faint** `#9aa3ad` — disabled labels
+- **Hairline Strong** `#b6bdc7` — input borders
+- **Hairline** `#dde1e6` — divider
+- **Hairline Soft** `#eceef1` — subtle dividers
+- **Surface Strong** `#e8eaee` — divider band
+- **Surface Soft** `#f4f5f7` — section alternation
+- **Canvas** `#ffffff`
+
+### Surface & Borders
+- Light surface tiers cascade `#ffffff` → `#fafbfc` → `#f4f5f7` → `#e8eaee`
+- Dark tiers cascade `#001e50` → `#0a2e6a` → `#000914` (deepest)
+- Borders are always 1px solid; soft 8–12px radii on most surfaces.
+- Cards lean on background contrast + 1px hairlines + soft shadows on hover.
+
+### Shadow Colors
+VW uses **navy-tinted black** at low opacity:
+- **Card** `rgba(0,30,80,0.06) 0 2px 6px`
+- **Elevated** `rgba(0,30,80,0.12) 0 8px 24px`
+- **Modal** `rgba(0,9,20,0.32) 0 24px 64px`
+
+The navy tint matches the brand-blue commitment without overwhelming the photograph.
+
+### Semantic
+- **Success** `#1f8b46` — confirmation, "in stock"
+- **Warning** `#f0a020` — limited offer
+- **Danger** `#cb2026` — error (also GTI red)
+- **Info** `#00b0f0` — informational badges (also ID. cyan)
+
+## 3. Typography Rules
+
+### Font Family
+- **Display**: `"VW Head"` — bespoke MetaDesign 2019 family. Tighter than VW Text, drawn for confident display. Weights 400, 500, 600, 700.
+- **Body**: `"VW Text"` — bespoke companion family for paragraph legibility. Weights 400, 500, 700.
+- **VW family lineage**: an evolution of VW's earlier "Volkswagen Sans" and "Volkswagen Serial", modernized for digital. The two-cut display/text approach mirrors the VW Group internal pattern (Audi Type, BMW Type Next).
+- **Fallback chain**: `"Helvetica Neue", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif`
+- **Mono**: SF Mono / Menlo — used only on developer-facing surfaces
+- **OpenType features**: kern, liga (default ligatures only).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT | Notes |
+|------|------|------|--------|-------------|----------------|----|-------|
+| Display Hero | VW Head | 72 | 700 | 1.06 | -0.01em | kern, liga | Homepage hero — model name |
+| Display XL | VW Head | 56 | 700 | 1.10 | -0.005em | kern, liga | Subsidiary hero |
+| Display LG | VW Head | 42 | 700 | 1.14 | 0 | kern, liga | Section opener |
+| Display MD | VW Head | 32 | 700 | 1.18 | 0 | kern, liga | Sub-section |
+| Display SM | VW Head | 24 | 700 | 1.25 | 0 | kern, liga | Card header |
+| Title LG | VW Head | 20 | 700 | 1.30 | 0 | kern, liga | Module title |
+| Title MD | VW Head | 18 | 600 | 1.40 | 0 | kern, liga | List item title |
+| Title SM | VW Head | 16 | 600 | 1.40 | 0 | kern, liga | Compact label |
+| Body LG | VW Text | 18 | 400 | 1.55 | 0 | kern, liga | Lead paragraph |
+| Body MD | VW Text | 16 | 400 | 1.55 | 0 | kern, liga | Default paragraph |
+| Body SM | VW Text | 14 | 400 | 1.55 | 0 | kern, liga | Secondary copy |
+| Caption | VW Text | 12 | 400 | 1.40 | 0.04em | kern, liga | Image captions |
+| Label Uppercase | VW Head | 13 | 700 | 1.30 | 0.10em | kern, liga | Section eyebrow — UPPERCASE |
+| Button | VW Head | 14 | 700 | 1.00 | 0.04em | kern, liga | CTA label |
+| Nav Link | VW Text | 14 | 500 | 1.40 | 0.02em | kern, liga | Top-level nav |
+| Micro | VW Text | 11 | 400 | 1.40 | 0.05em | kern, liga | Footer fine print |
+| Code | Mono | 13 | 400 | 1.50 | 0 | — | Developer docs only |
+
+### Principles
+- **Two-family discipline**: VW Head for display and titles, VW Text for body and captions. Don't mix.
+- **400 body / 700 display**: weight contrast is the brand's voice.
+- **Negative tracking on display only.** -0.005em to -0.01em on hero copy gives the headline a confident, friendly-bulletin feel.
+- **Uppercase section eyebrows** at 13/700/0.10em — wider than Audi's 0.14em (more friendly), narrower than American magazine display.
+- **CTA labels in mixed case OR uppercase**, depending on context. Marketing CTAs ("Configure", "Find a Dealer") often appear in mixed case Title-style on the live site, occasionally uppercase for emphasis.
+- **Body never tracks.** Paragraph copy sits at 0 tracking.
+- **No italic in display.** Italic appears in press-release datelines and citation footnotes only.
+- **VW Text vs system Helvetica**: prefer VW Text everywhere; system Helvetica is acceptable fallback only.
+
+## 4. Component Stylings
+
+### Buttons
+VW CTAs are **pill-radius** (9999px) — the friendly-German geometry that softens the brand from luxury severity into people's-car approachability. Where Audi's monochrome rectangle reads as engineering, VW's navy pill reads as **welcoming-engineered**.
+
+**Primary CTA** — the cobalt-navy pill:
+- Background `#001e50`, text `#ffffff`, font 14/700, `0.04em` tracking
+- Padding `14px 32px`, radius `9999`, no border
+- Transition `background 0.2s ease`
+- Hover background `#000f2c`
+- Disabled background `#cdd5df`, text `#9aa3ad`
+- Use case: Configure, Find a Dealer, Test Drive, Build Your VW
+
+**Ghost (Light)** — secondary on light surfaces:
+- Background transparent, text `#001e50`, border `1px solid #001e50`
+- Same padding/typography as primary, pill radius
+- Hover: bg `#001e50`, text `#ffffff` (full inversion)
+
+**On-Dark Primary** — primary on cobalt-navy hero band:
+- Background `#ffffff`, text `#001e50` (full inversion)
+- Same padding/typography, pill radius
+
+**On-Dark Ghost** — secondary on cobalt-navy band:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`
+- Hover: bg `rgba(255,255,255,0.1)`
+
+**ID. CTA** — for ID. EV sub-brand contexts:
+- Background `#00b0f0`, text `#001e50`, font 14/700
+- Padding `14px 32px`, radius `9999`
+- Hover: bg `#0090d0`
+- Use case: ID. configurator, ID. Charging Network sign-up
+
+**Text Link with Arrow** — inline action:
+- Text `#001e50`, font 14/700 with arrow glyph `→`
+- Underline on hover; colour deepens slightly
+
+### Cards
+
+**Vehicle Card** — the showroom workhorse:
+- Background `#ffffff`, border `1px solid #dde1e6`, radius **12** (soft)
+- Padding `24px`
+- Top: 16:9 transparent-PNG model render
+- Below image: optional ID./GTI/R-line badge, model name in 24/700, MSRP starting line, "Configure" CTA
+- Hover: card lifts 2px with `rgba(0,30,80,0.06) 0 8px 24px` shadow
+
+**Feature Card** — for technology callouts (DSG, IQ.DRIVE, We Connect):
+- Background `#f4f5f7`, no border, radius 12
+- Padding `32px`
+- Used in 3-up grids on technology pages
+
+**Hero Band Card** (dark navy):
+- Sits inside a `#001e50` band
+- Background `#0a2e6a`, text white, border `1px solid rgba(255,255,255,0.18)`
+- Padding `48px`, radius 12
+
+**Hero Band Card** (ID. cyan):
+- Sits inside a `#00b0f0` band
+- Background `rgba(255,255,255,0.12)`, text `#001e50`
+- Padding `48px`, radius 12
+
+### Configurator Tile
+- Background `#ffffff`, border `1px solid #dde1e6`, radius **8** (slightly less soft than cards)
+- Padding `16px 20px`
+- Selected: border `2px solid #001e50` with subtle inner glow
+
+### Badges
+
+**Standard Badge**:
+- Background `#e8eaee`, text `#001e50`
+- Font 11/700 uppercase `0.10em`
+- Padding `4px 12px`, radius 9999 (pill)
+
+**ID. Badge** — for EV models:
+- Background `#00b0f0`, text `#001e50`
+
+**GTI / R-line Badge** — for performance:
+- Background `#cb2026`, text `#ffffff`
+
+### Inputs
+- Background `#ffffff`, border `1px solid #b6bdc7`, radius **8** (soft, friendlier than Audi's sharp 0)
+- Padding `12px 16px`, font 16/400 VW Text
+- Focus border `#001e50`, no shadow, 2px ring offset
+- Floating label pattern: label inside on rest, animates to top on focus/value
+- Error: border `#cb2026`, helper text `#cb2026` 13/400 below
+
+### Navigation
+- White background, 72px height, 1px bottom border `#dde1e6`
+- VW circular roundel 48×48 at far left — monochrome navy on white
+- Primary nav links (Models / ID. / Sustainability / Shop / Owners) 14/500 with `0.02em` tracking, `#001e50`
+- Hover: text stays `#001e50`, but reveals 2px underline that grows from left
+- Mega-menu opens on hover: full-width white panel, 5-column model grid (Compact / SUV / ID. / Commercial / Performance)
+- Sticky on scroll with subtle navy-tinted shadow
+
+### Tooltips & Toasts
+- Tooltip: `#001e50` background, white text 12/400, padding `8px 12px`, radius 8 (soft)
+- Toast: `#001e50` background, white text, fixed bottom-right, slide-in 300ms
+
+### Modal
+- Overlay `rgba(0,9,20,0.6)`
+- Dialog `#ffffff`, radius 12 (soft), padding `48px`, max-width 720
+- Close icon top-right
+
+### Tabs (Specs Pages)
+- Underline tabs, 14/500, `#6a7280` inactive, `#001e50` active with 2px bottom border
+
+## 5. Layout Principles
+
+### Spacing System
+- Base **8px**. Scale 4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160.
+- Section padding 96–128px on desktop, 64–96px on tablet, 48–64px on mobile.
+- Card gap 24–32px in grids.
+- Button padding `14px 32px`.
+
+### Grid & Container
+- 12-column grid, 1440px max content width, 24px gutters
+- Hero is full-bleed (100vw, 88vh)
+- Vehicle card grid is 4-up at desktop, 2-up tablet, 1-up mobile
+
+### Whitespace Philosophy
+VW uses whitespace as **welcoming whitespace** — the spacing reads as friendly-confident rather than luxury-restrained. Sections breathe at 96–128px so the everyday-aspirational photograph dominates, and surrounding copy reads as supporting voice. The brand commits to **mainstream pacing** — not luxury, not minimalism, but generous everyday clarity.
+
+### Section Cadence
+- The brand rhythm is **white → grey-soft → white → cobalt-navy → cyan (if ID.) → white → footer**
+- Hero (cobalt-navy or white) → vehicle grid (white) → feature row (grey-soft) → spec table (white) → ID. band (cyan, when EV story) → CTA band (cobalt-navy) → footer (deep navy)
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0 | Tables, dividers, image edges |
+| Micro | 2 | Form-error indicator |
+| Standard | 4 | Tooltip — rare |
+| Comfortable | 8 | **Configurator tiles, inputs, small cards** |
+| Relaxed | 12 | **Vehicle cards, feature cards, modals — VW's primary radius** |
+| Featured | 16 | Hero-overlay info panel |
+| Pill | 9999 | **All buttons + badges — VW's signature CTA shape** |
+
+The combination of **pill buttons + 12px soft cards** is VW's distinctive geometry — friendlier than Audi/BMW, slightly more soft-modernist than Ford, but still anchored in German-engineering precision through the cobalt-navy chromatic discipline.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | Flat | Default state for cards, inputs, buttons |
+| 1 | `rgba(0,30,80,0.06) 0 2px 6px` | Sticky nav on scroll, light card hover |
+| 2 | `rgba(0,30,80,0.12) 0 8px 24px` | Vehicle card hover, mega-menu overlay |
+| 3 | `rgba(0,9,20,0.32) 0 24px 64px` | Modal dialogs |
+| 4 | Frost — `rgba(255,255,255,0.92)` + blur 12px | Image-overlay info panel on hero |
+| 5 | Inner glow — `inset 0 0 0 2px #001e50` | Selected configurator tile |
+
+### Shadow Philosophy
+VW uses **navy-tinted black** shadows — a subtle blue undertone matching the brand voltage. The tint communicates chromatic loyalty without overwhelming the photograph. Cards lift on hover; the soft 12px radius + subtle navy shadow combination is the brand's depth grammar.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style for most transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — slower entry for hero parallax and ID. reveal sections
+
+### Duration
+- **Fast** 150ms — colour transitions on hover
+- **Standard** 250ms — opacity fades, mega-menu reveal
+- **Slow** 400ms — hero parallax, video poster fades
+
+### Per-Component Recipes
+- **Primary button hover**: `background 0.2s ease`. No lift, no scale.
+- **Vehicle card hover**: card lifts 2px translateY + shadow intensify 250ms
+- **Mega-menu reveal**: opacity + 8px translateY 250ms emphasized
+- **Hero parallax**: image scrolls at 0.7× speed of viewport; disabled on prefers-reduced-motion
+- **Configurator tile select**: border weight + colour transition 200ms
+- **Nav-link underline grow**: scaleX on a 2px pseudo-element, origin left, 250ms emphasized
+
+### Page Transitions
+Hard cuts on route change. Configurator step transitions use opacity 250ms.
+
+### Reduced Motion
+Honoured at the CSS level: parallax disables; video autoplay pauses; carousel auto-advance pauses; opacity-only transitions remain.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Ink on White** — `#001e50` / `#ffffff` = **14.6:1** — AAA all sizes
+- **Body on White** — `#3c3c3c` / `#ffffff` = **9.7:1** — AAA
+- **Muted on White** — `#6a7280` / `#ffffff` = **4.7:1** — AA Normal
+- **White on Cobalt Navy** — `#ffffff` / `#001e50` = **14.0:1** — AAA
+- **Navy on ID. Cyan** — `#001e50` / `#00b0f0` = **5.4:1** — AA Normal, AAA Large
+- **GTI Red on White** — `#cb2026` / `#ffffff` = **5.7:1** — AA Normal, AAA Large
+- **Disabled** — `#9aa3ad` / `#ffffff` = **2.8:1** — fails AA Normal, used only for disabled
+
+### Focus Indicators
+- 2px solid `#001e50` outline with 2px offset on every interactive element
+- On dark bands, focus uses 2px solid white with 2px offset
+- `:focus-visible` only — not on mouse click
+
+### ARIA & Patterns
+- Mega-menu uses `aria-haspopup="menu"` and `aria-expanded`
+- Configurator step uses `role="tablist"` with `aria-selected`
+- Modal dialogs trap focus, label via `aria-labelledby`, dismiss on Esc
+- ID. sub-brand pages communicate the EV context via `aria-label="ID. electric vehicle range"`
+
+### Keyboard Nav
+- Tab order: roundel → primary nav → utility (account, locator) → main content → CTA
+- Configurator: arrow keys move between trim tiles; Space selects
+- Carousel: arrow keys move slides
+
+### Screen Reader Hints
+- VW roundel uses `aria-label="Volkswagen homepage"`
+- Model names announced as full ("Volkswagen ID.4 Pro S") not abbreviated
+- ID. badge announced as "I-D dot" — phonetic clarity
+- Spec tables use proper `<th scope="col">` and `<th scope="row">` semantics
+
+### Reduced Motion
+Honoured (see §8).
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600 | Single column; hamburger nav; hero text 32px; CTA stacks; vehicle cards 1-up |
+| Tablet | 600–1024 | 2-column vehicle grid; hero 48px; nav stays horizontal but condensed |
+| Desktop | 1024–1440 | 4-column vehicle grid; full mega-menu; hero 56–72px |
+| Wide | 1440–1920 | Content centred at 1440 max-width |
+| Ultra | >1920 | Hero photography scales to fill |
+
+### Touch Targets
+- Buttons 48×48 minimum
+- Nav links 44px tap area
+- Configurator tiles 64×64 minimum
+
+### Collapsing Strategy
+- Nav: horizontal → hamburger drawer at <1024
+- Vehicle grid: 4 → 2 → 1
+- Spec tables: horizontal scroll on mobile
+- Hero CTA pair: side-by-side → stacked at <600
+
+### Image Behavior
+- Hero images responsive across breakpoints, fill viewport
+- `object-fit: cover` on hero, `object-fit: contain` on transparent-PNG renders
+- Lazy-load below the fold
+
+### Container Queries
+Used selectively on configurator panel.
+
+## 11. Content & Voice
+
+### Tone
+**Friendly-German, plainspoken, optimistic.** VW writes like a thoughtful neighbour who happens to be an engineer. Sentences are declarative and welcoming: "We make the future real." "Das Auto." "ID.Buzz. The bus is back." The voice is neither austere (Audi) nor formal (BMW) nor playful — it is **everyday-confident**.
+
+### Microcopy Patterns
+- **Primary CTA**: "Configure", "Find a Dealer", "Test Drive", "Build Your VW"
+- **Secondary**: "Discover", "Explore", "Compare Models"
+- **Form error**: "Please enter a valid postcode."
+- **Empty state**: "No matches found near you. Expand your search radius."
+- **Confirmation**: "Your build has been saved."
+
+### CTA Verb Conventions
+- **Configure** — the order-flow entry verb (German automotive standard)
+- **Discover** — exploration verb on technology / ID. pages
+- **Explore** — for specs, sustainability, We Connect
+- **Find** — for dealer / charging-station locator
+- **Test Drive** — direct booking verb
+
+### Empty States
+On the configurator, an unselected option shows the base trim with a quiet "Select" prompt. Inventory empty states suggest expanding the search radius rather than showing illustrations.
+
+### Headline Voice
+Headlines lean on **brand-promise statements**: "Das Auto" (the historic German tagline, occasionally invoked), "We make the future real", "Mobility for generations". Sub-heads use **plainspoken capability claims**: "Up to 700 km WLTP-est. range", "0–100 in 6.6 s".
+
+## 12. Dark Mode & Theming
+
+Volkswagen.com is **partial-dark**: cobalt-navy hero bands (`#001e50`) appear within otherwise light pages, and the deep-navy footer (`#000914`) anchors every page. The ID. EV sub-brand introduces electric-cyan bands (`#00b0f0`) — a chromatic accent rather than a true dark variant.
+
+The full **We Connect** customer portal offers a complete dark-mode variant, and **MIB3** (the in-vehicle infotainment) runs dark by default with the same token bundle inverted.
+
+If implementing a full dark variant:
+- Swap `bg #ffffff → #001e50`
+- Swap `bg-soft #f4f5f7 → #0a2e6a`
+- Swap `text-ink #001e50 → #ffffff`
+- Swap `text #3c3c3c → #d6dce4`
+- Brand stays `#001e50` but consider `#1a4a8a` for legibility on dark
+- Borders shift to `rgba(255,255,255,0.18)`
+- Card surface becomes `#0a2e6a`
+
+## 13. Lineage & Influences
+
+Volkswagen.com inherits from three traditions: **post-war German people's-car print advertising** (the famous Helmut Krone / Doyle Dane Bernbach 1959–60s VW Beetle ads — "Think small", "Lemon" — that defined modern automotive minimalism), **Bauhaus geometric discipline** softened into people's-car approachability via 12px radii and pill CTAs, and **VW Group internal design system** (shared with Audi, Porsche, Škoda, SEAT) which provides the bespoke font duo and the cobalt-navy chromatic loyalty.
+
+What VW rejects: it rejects Audi's monochrome severity (VW commits to chromatic blue), BMW's corporate-blue formality (VW's blue is deeper, friendlier), Ford's American-pill mainstream (VW pairs pill with German-precision navy), and Mercedes' luxury soft-modernism (VW's softness reads as approachable, not opulent). The brand commits to **everyday confidence**: cobalt navy, friendly geometry, optimistic photography.
+
+- **Helmut Krone / DDB / VW Beetle 1959 campaign** — "Think small" — the foundational VW marketing voice — https://en.wikipedia.org/wiki/Helmut_Krone
+- **Bauhaus** — geometric clarity softened into people's-car approachability
+- **MetaDesign / VW Head + VW Text 2019** — bespoke corporate font duo
+- **VW Group internal design system** — shared with Audi, Porsche
+- **Volkswagen circular roundel** — the heritage logomark — https://www.volkswagen.com/
+
+## 14. Do's and Don'ts
+
+### Do
+- Use VW Cobalt Navy `#001e50` for every primary CTA — never substitute
+- Set body type at weight 400 — VW Text's body weight
+- Set display type at weight 700 — VW Head's monumental weight
+- Open every section with a 13/700 uppercase eyebrow at 0.10em tracking
+- Use **pill-radius (9999) buttons** — the friendly-German signature
+- Use **soft 12px radii** on cards — soft-modernist family-friendly geometry
+- Reserve ID. Electric Cyan `#00b0f0` for the ID. EV sub-brand exclusively
+- Trust GTI Red `#cb2026` only inside GTI / R-line / Performance content
+- Use full-bleed everyday-aspirational photography (city light, family contexts, charging at home)
+- Render the VW roundel in monochrome navy-on-white or white-on-navy — never coloured
+- Use "Configure" as the configurator entry verb — German automotive standard
+
+### Don't
+- Use rectangular CTAs — VW's pill is non-negotiable (this is the Audi-vs-VW distinction)
+- Use sharp 0-radius cards — VW cards are 12px soft, not Audi-sharp
+- Use ID. cyan `#00b0f0` outside the ID. sub-brand — the cyan is sacred
+- Apply GTI red `#cb2026` outside performance contexts
+- Substitute the VW roundel with a "Volkswagen" wordmark — the roundel is the only logomark
+- Use uppercase headlines — uppercase is reserved for 13px eyebrows and 14px CTAs
+- Apply pure-black shadows — VW shadows are navy-tinted
+- Use italic in body or display — italic is press-release dateline only
+- Use studio-isolated photography (Audi-style) — VW photography is environmental and friendly
+- Use "Build & Price" — VW's verb is "Configure"
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA: VW Cobalt Navy `#001e50`
+- Background: White `#ffffff`
+- Heading text: Cobalt Navy `#001e50`
+- Body text: `#3c3c3c`
+- Muted text: `#6a7280`
+- Dark surface: `#001e50`
+- Deep navy footer: `#000914`
+- Hairline border: `#dde1e6`
+- ID. Cyan (EV only): `#00b0f0`
+- GTI Red (Performance only): `#cb2026`
+
+### Example Component Prompts
+- "Create a Volkswagen hero section with full-bleed Golf or ID.Buzz photography in friendly city light (16:9), a 72px VW Head 700 model name on the bottom-left in `#001e50`, a 13px uppercase eyebrow ('THE NEW ID.7 TOURER') above it tracked at 0.10em in `#001e50`, and a primary cobalt-navy pill 'Configure' button + ghost 'Find a Dealer' button — both 14/700 pill-radius 9999."
+- "Design a 4-up vehicle card grid where each card sits on `#ffffff` with a 1px `#dde1e6` border at **12px radius**, holds a 16:9 transparent-PNG vehicle render at top, then optional ID./GTI badge, a 24/700 model name, a starting price line, and a 14/700 'Configure →' link in `#001e50`. Hover lifts card 2px with navy-tinted shadow."
+- "Build an ID. EV sub-brand band: background `#00b0f0`, navy 56/700 headline ('Charged for tomorrow'), 18/400 body lead in `#001e50`, navy-on-white pill CTA. 96px vertical padding."
+- "Create a configurator step with a 4-up tile grid; each tile is white with a 1px `#dde1e6` border at **8px radius**, 16×20 padding. Selected state: border 2px `#001e50` with subtle inner glow."
+- "Design a VW uppercase eyebrow component: 13px VW Head 700, letter-spacing 0.10em, color `#001e50`, sits above every section headline with 16px bottom margin."
+- "Make a sticky white nav with the circular VW roundel (48×48 monochrome navy) at far left, five 14/500 nav links centre (Models / ID. / Sustainability / Shop / Owners), three utility icons right, 72px height, 1px bottom border `#dde1e6`."
+
+### Iteration Guide
+1. Verify the pill-radius CTA — if a button is rectangular, the brand reads as Audi, not VW.
+2. Check the cobalt-navy `#001e50` is on every primary CTA, link, and the roundel — never substitute.
+3. Confirm cards use soft 12px radii — sharp 0-radius cards drift into Audi territory.
+4. Ensure section eyebrows are uppercase 13/700 at 0.10em — friendly-German tradition.
+5. Hold ID. cyan `#00b0f0` for the ID. EV sub-brand only — using cyan on a Golf page misreads the brand.
+6. Hold GTI red `#cb2026` for GTI / R-line / Performance content only.
+7. Photography should be **everyday-aspirational** — city light, family road trips, charging at home — not studio-isolated luxury.
+8. Use "Configure" as the configurator verb — German automotive standard, distinct from Ford's "Build & Price".
+9. The VW roundel must be monochrome — coloured roundels misread the brand.

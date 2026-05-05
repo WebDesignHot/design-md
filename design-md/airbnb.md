@@ -1,0 +1,696 @@
+---
+name: Airbnb
+tagline: Pure-white marketplace canvas with one Rausch coral and Cereal — generous photography, soft pills, modest type.
+author: webdesignhot
+source_url: https://www.airbnb.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace]
+tags: [light, consumer, marketplace, sans, photographic, generous, hospitality]
+preview_swatch: ['#ffffff', '#ff385c', '#222222']
+related: [shopify, stripe, figma]
+description: 'Airbnb runs a pure-white canvas (`#ffffff`) anchored on near-black ink (`#222222`) and a single voltage of Rausch coral (`#ff385c`) that carries every primary CTA, the search-bar orb, and the heart save state. Type is the custom Airbnb Cereal VF held at modest 500–600 weights — display at 22–28px rather than 700+ — because photography and generous whitespace, not typographic muscle, do the visual lifting. Every interactive element is rounded: 8px buttons, ~14px property cards, fully-pill search bars, circular orbs and hearts. There is essentially no hard corner anywhere except the body grid. The result is the canonical generous, hospitality-first consumer marketplace — warm, photo-led, and confidently restrained on color.'
+
+colors:
+  bg: '#ffffff'                  # canvas — Airbnb has no public dark mode
+  surface: '#ffffff'             # cards inherit canvas
+  surface-soft: '#f7f7f7'        # disabled fields, sub-nav hover
+  surface-strong: '#f2f2f2'      # icon-button surface, breadcrumb back-arrow
+  surface-card: '#ffffff'
+  text: '#222222'                # ink — dominant text colour
+  text-strong: '#222222'
+  text-body: '#3f3f3f'           # secondary running-text inside reviews
+  text-muted: '#6a6a6a'          # sub-titles, inactive product-tab labels
+  text-soft: '#929292'           # disabled link text, sparingly used
+  brand: '#ff385c'               # Rausch — the singular voltage
+  brand-active: '#e00b41'        # press / pointer-down variant
+  brand-disabled: '#ffd1da'      # pale Rausch tint on disabled CTAs
+  brand-hover: '#e31c5f'         # observed CTA hover (slightly darker)
+  on-brand: '#ffffff'
+  accent-luxe: '#460479'         # Airbnb Luxe sub-brand purple — sub-domain only
+  accent-plus: '#92174d'         # Airbnb Plus sub-brand magenta — sub-domain only
+  border: '#dddddd'              # default 1px hairline tone
+  border-soft: '#ebebeb'         # editorial body separator
+  border-strong: '#c1c1c1'       # disabled outline buttons, focused inputs
+  link-legal: '#428bff'          # inline links inside legal sub-band only
+  star-rating: '#222222'         # ink — never yellow/gold
+  scrim: 'rgba(0,0,0,0.5)'       # global modal backdrop
+  shadow-card: 'rgba(0,0,0,0.04)'  # base card hover shadow tone
+  shadow-elev: 'rgba(0,0,0,0.1)'   # heavier hover elevation
+  shadow-ring: 'rgba(0,0,0,0.02)'  # 1px hairline ring on hover float
+  success: '#008a05'             # confirmation accent on booking complete
+  success-soft: '#e8f5e9'        # success surface tint
+  warning: '#c13515'             # validation error red (mid-saturation)
+  warning-soft: '#fff8f0'        # advisory banner surface
+  danger: '#c13515'              # form-error red — distinct from Rausch
+  danger-text-hover: '#b32505'   # darkens on link hover
+  info: '#0c5fce'                # informational banner accent
+  info-soft: '#e6f0fa'           # informational banner surface
+  superhost: '#ff5a5f'           # legacy Rausch shade still seen on host badges
+  saved-heart: '#ff385c'         # filled heart save state matches brand
+
+typography:
+  display:
+    family: '"Airbnb Cereal VF", Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01', 'ss02', 'tnum']
+  body:
+    family: '"Airbnb Cereal VF", Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500]
+  mono:
+    family: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    weights: [400]
+  scale:
+    rating-display:  { size: 64, weight: 700, lineHeight: 1.1,  tracking: '-1px',     family: display, opentype: ['tnum'] }
+    display-xl:      { size: 28, weight: 700, lineHeight: 1.43, tracking: '0',        family: display }
+    display-lg:      { size: 22, weight: 500, lineHeight: 1.18, tracking: '-0.44px',  family: display }
+    display-md:      { size: 21, weight: 700, lineHeight: 1.43, tracking: '0',        family: display }
+    display-sm:      { size: 20, weight: 600, lineHeight: 1.20, tracking: '-0.18px',  family: display }
+    title-md:        { size: 16, weight: 600, lineHeight: 1.25, tracking: '0',        family: display }
+    title-sm:        { size: 16, weight: 500, lineHeight: 1.25, tracking: '0',        family: display }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',        family: body }
+    caption:         { size: 14, weight: 500, lineHeight: 1.29, tracking: '0',        family: body }
+    caption-sm:      { size: 13, weight: 400, lineHeight: 1.23, tracking: '0',        family: body }
+    badge:           { size: 11, weight: 600, lineHeight: 1.18, tracking: '0',        family: body }
+    micro-label:     { size: 12, weight: 700, lineHeight: 1.33, tracking: '0',        family: body }
+    uppercase-tag:   { size: 8,  weight: 700, lineHeight: 1.25, tracking: '0.32px',   family: body, transform: uppercase }
+    button-md:       { size: 16, weight: 500, lineHeight: 1.25, tracking: '0',        family: body }
+    button-sm:       { size: 14, weight: 500, lineHeight: 1.29, tracking: '0',        family: body }
+    link:            { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',        family: body }
+    nav-link:        { size: 16, weight: 600, lineHeight: 1.25, tracking: '0',        family: body }
+
+radius:
+  micro: 2
+  sm: 8        # buttons
+  md: 14       # property cards
+  lg: 20
+  xl: 32       # category-strip pills
+  pill: 9999   # search bar, search orb, heart, "NEW" badge
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 80
+  listing-content-width: 1080
+  reservation-rail-width: 372
+
+components:
+  button-primary:
+    bg: '#ff385c'
+    color: '#ffffff'
+    radius: 8
+    padding: '14px 24px'
+    height: 48
+    font: button-md
+    use: 'Reserve, Continue, Search — every primary action.'
+  button-primary-active:
+    bg: '#e00b41'
+    color: '#ffffff'
+    radius: 8
+    use: 'Pointer-down state. No transform, no shadow change.'
+  button-primary-disabled:
+    bg: '#ffd1da'
+    color: '#ffffff'
+    radius: 8
+    use: 'Disabled CTAs.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#222222'
+    border: '1px solid #222222'
+    radius: 8
+    padding: '13px 23px'
+    height: 48
+    use: 'Save, Cancel, inverse CTAs over Rausch surfaces.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#222222'
+    use: '"Show more" links, modal close labels. Underlined on hover.'
+  button-pill-rausch:
+    bg: '#ff385c'
+    color: '#ffffff'
+    radius: 9999
+    padding: '10px 20px'
+    use: 'Featured CTA chips ("Become a host" sub-CTA).'
+  search-bar-pill:
+    bg: '#ffffff'
+    radius: 9999
+    height: 64
+    padding: '14px 24px'
+    border: '1px solid #dddddd'
+    use: 'Signature global search — divided by hairlines into Where/When/Who.'
+  search-orb:
+    bg: '#ff385c'
+    color: '#ffffff'
+    radius: 9999
+    height: 48
+    width: 48
+    use: 'Circular Rausch orb terminating the right edge of the search bar.'
+  icon-button-circle:
+    bg: '#f2f2f2'
+    color: '#222222'
+    radius: 9999
+    height: 32
+    use: 'Heart save, breadcrumb back, listing-toolbar buttons.'
+  icon-button-outline:
+    bg: '#ffffff'
+    color: '#222222'
+    border: '1px solid #dddddd'
+    radius: 9999
+    height: 40
+    use: 'Photo gallery prev/next, share button.'
+  product-tab-active:
+    color: '#222222'
+    underline: '2px solid #222222'
+    use: 'Active Homes/Experiences/Services tab.'
+  product-tab-inactive:
+    color: '#6a6a6a'
+    use: 'Inactive product nav tab.'
+  property-card:
+    bg: '#ffffff'
+    color: '#222222'
+    radius: 14
+    use: 'Photo-first 1:1 image card, swipeable carousel, heart top-right.'
+  guest-favorite-badge:
+    bg: '#ffffff'
+    color: '#222222'
+    radius: 9999
+    padding: '4px 10px'
+    use: 'Floating top-left "Guest favorite" pill on property cards.'
+  new-tag:
+    bg: '#ffffff'
+    color: '#222222'
+    radius: 9999
+    padding: '2px 6px'
+    use: 'Tiny uppercase "NEW" pill anchored top-right of nav icons.'
+  reservation-card:
+    bg: '#ffffff'
+    color: '#222222'
+    radius: 14
+    border: '1px solid #dddddd'
+    padding: '24px'
+    use: 'Sticky right-rail card on listing detail — price, dates, guests, Reserve.'
+  text-input:
+    bg: '#ffffff'
+    color: '#222222'
+    radius: 8
+    height: 56
+    padding: '14px 12px'
+    border: '1px solid #dddddd'
+    focus: 'border thickens to 2px ink, no glow ring'
+    use: 'Stacked-label input with caption above, body placeholder inside.'
+  date-picker-day:
+    bg: 'transparent'
+    color: '#222222'
+    radius: 9999
+    size: 40
+    use: '40px circular cell with day number.'
+  date-picker-day-selected:
+    bg: '#222222'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Selected day. Range cells get #f7f7f7 lozenge connecting them.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 320
+  card-hover-lift: '0px → -2px translate, shadow tier intensifies'
+  search-bar-collapse: '64px → 48px height as the page scrolls past hero'
+  modal-enter: 'scrim 200ms ease-out + dialog 240ms cubic-bezier(0.2,0,0,1) translate-y +8 → 0'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transforms suppressed, fade-only.'
+
+breakpoints:
+  mobile: 744
+  tablet: 1128
+  desktop: 1440
+  wide: 1920
+
+shadows:
+  ambient: 'rgba(0,0,0,0.02) 0 0 0 1px'
+  hover-card: 'rgba(0,0,0,0.02) 0 0 0 1px, rgba(0,0,0,0.04) 0 2px 6px 0, rgba(0,0,0,0.1) 0 4px 8px 0'
+  dropdown: 'rgba(0,0,0,0.08) 0 6px 16px, rgba(0,0,0,0.04) 0 0 0 1px'
+  modal: 'rgba(0,0,0,0.18) 0 8px 28px'
+  ring: '0 0 0 2px #222222'
+
+accessibility:
+  contrast-text-on-bg: 16.0          # #222222 on #ffffff — AAA
+  contrast-text-on-brand: 4.7        # #ffffff on #ff385c — AA at body, AAA at large
+  contrast-muted-on-bg: 5.7          # #6a6a6a on #ffffff — AA
+  focus-ring: '2px solid #222222 + 2px outline offset (no Rausch ring — keeps brand for action only)'
+  reduced-motion-honored: true
+  touch-target-min: 48               # primary CTAs and search orb
+  keyboard-nav: 'Search bar: Tab through Where → When → Who → Search. Date picker arrow-key navigates days.'
+
+dark-mode: null   # Light-only public web. The mobile app has dark surfaces; public marketing does not.
+---
+
+## 1. Visual Theme & Atmosphere
+
+Airbnb is the canonical example of a generous, photography-led consumer marketplace. The base canvas is **pure white** (`#ffffff`) with deep near-black ink (`#222222`) for headlines and body, and a single voltage of **Rausch** coral (`#ff385c`) that carries every primary CTA, the search-button orb, the heart save state, and inline brand links. There is no secondary brand colour in mainline marketing — the **Luxe purple** (`#460479`) and **Plus magenta** (`#92174d`) tokens are sub-brand accents that only appear inside Airbnb Luxe / Plus contexts.
+
+Type runs **Airbnb Cereal VF**, the custom variable font Airbnb licenses, with **Circular** (Lineto's geometric sans, the historic in-house typeface) as the first non-variable fallback and a system stack underneath. Cereal sits at modest weights — display headlines render at 22–28px in weight 500–600, never the heavy 700+ weights that financial or enterprise systems lean on. The hero h1 ("Inspiration for future getaways") is just 28px / 700, which would feel small on a typical SaaS page; here it works because the layout leans on photography (city collage, property cards) for visual weight rather than typographic muscle.
+
+The shape language is **soft**. Buttons are 8px radius, property cards ~14px, the global search bar fully pill-shaped, wishlist hearts and search orbs circles, and category-strip rounded corners run at 32px. There is essentially no hard corner anywhere except the body grid itself — every interactive element is rounded.
+
+Airbnb's surface aesthetic is hospitality made literal: paper-white, warm without being beige, friendly without being playful. The Rausch coral is the only loud moment — used scarcely enough that it functions like a colour-graded highlight rather than a brand stamp, the way a magazine spread might use one accent to draw the eye.
+
+**Key Characteristics:**
+- Single accent: Rausch `#ff385c` carries every primary CTA, the search orb, the saved-heart, the brand wordmark
+- Custom variable type: Airbnb Cereal VF at 500–700 weights (modest by SaaS standards — photography carries hierarchy)
+- Three-product top nav: Homes / Experiences / Services with hand-illustrated 32px icons
+- Pill-shaped global search bar divided into Where/When/Who, terminated by the Rausch orb
+- Property cards are photo-first: 1:1 image with rounded clipping, heart top-right, "Guest favorite" badge top-left
+- One shadow tier — `rgba(0,0,0,0.04) 0 2px 6px, rgba(0,0,0,0.1) 0 4px 8px` — used on hover-floated cards and dropdowns
+- 4px base spacing with section padding at 64px (tighter than typical SaaS — marketplace density wants more cards per scroll)
+- Star ratings render in ink, never yellow — yellow stars feel cheap in travel context
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): the default page floor for every public page. Airbnb has no dark mode on the public web.
+- **Ink** (`#222222`): the dominant text colour. Display headlines, body paragraphs, primary nav links. Never pure black — the slightly softened ink reads warmer.
+- **Rausch** (`#ff385c`): the single brand voltage. Used for primary CTA backgrounds (Reserve, Continue), the search orb, the heart save state, and inline brand links.
+
+### Brand & Sub-Brand
+- **Rausch Active** (`#e00b41`): the press / pointer-down variant — slightly more saturated.
+- **Rausch Disabled** (`#ffd1da`): a pale tint used on disabled CTAs.
+- **Luxe Purple** (`#460479`): sub-brand accent for Airbnb Luxe. Only inside Luxe-branded surfaces.
+- **Plus Magenta** (`#92174d`): sub-brand accent for Airbnb Plus. Same scoping as Luxe.
+- **Superhost Coral** (`#ff5a5f`): a legacy Rausch shade still observed on Superhost host-card badges.
+
+### Accent
+- **Saved Heart** (`#ff385c`): identical to brand — the heart fills with Rausch when toggled. The brand colour does double duty as a save-state signifier.
+- **Legal Link Blue** (`#428bff`): inline links inside legal copy (Privacy, Terms). Only used inside the legal sub-band — never in the marketing body.
+
+### Interactive
+- **Link** (`#222222`): default inline link in body — distinguished by underline only, never colour.
+- **Hover Underline** (`#222222`): underline thickens 1 → 2px on hover; colour does not change.
+- **Selected** (`#222222` fill, `#ffffff` text on date-picker days, category chips).
+- **Disabled** (`#929292` text on disabled links, `#ffd1da` on disabled Rausch CTAs).
+
+### Neutral Scale
+- **Ink** (`#222222`) — display headlines, body
+- **Body** (`#3f3f3f`) — secondary running-text inside long-form review and amenity copy where ink would feel too heavy
+- **Muted** (`#6a6a6a`) — sub-titles inside city-link blocks, inactive product-tab labels, footer category sub-labels, "View all" links
+- **Muted Soft** (`#929292`) — disabled link text, sparingly used
+- **Border Strong** (`#c1c1c1`) — heavier stroke on disabled outline buttons and focused form input outlines
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — page floor
+- **Surface Soft** (`#f7f7f7`) — disabled fields, sub-nav hover backgrounds, the inline search filter band
+- **Surface Strong** (`#f2f2f2`) — circular icon-button surface (breadcrumb back-arrow, listing-toolbar buttons)
+- **Hairline** (`#dddddd`) — default 1px border tone (search bar dividers, table separators, footer column splitters, card borders)
+- **Hairline Soft** (`#ebebeb`) — lighter divider used on long-scrolling editorial body separators
+
+### Shadow Colors
+Airbnb stays neutral-grey-tinted, never blue-tinted. Multi-layer logic: a 1px tint ring + a soft ambient + a heavier elevation lift, all stacked into a single shadow definition.
+
+- `rgba(0,0,0,0.02) 0 0 0 1px` — hairline ring
+- `rgba(0,0,0,0.04) 0 2px 6px 0` — soft ambient
+- `rgba(0,0,0,0.1) 0 4px 8px 0` — elevation lift
+
+### Semantic
+- **Success** (`#008a05` on `#e8f5e9`) — booking confirmations, payment success
+- **Warning** (`#c13515` on `#fff8f0`) — advisory banners about price changes, low availability
+- **Danger** (`#c13515`) — inline form-error red. Distinct from Rausch — slightly darker, more saturated, never used for brand
+- **Info** (`#0c5fce` on `#e6f0fa`) — informational banners about cancellation policies
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Airbnb Cereal VF`. Fallback chain: `Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif`. Circular is the historic in-house typeface still kept as the first non-variable fallback; system stacks back it up.
+
+**Mono companion**: not formally used in the marketing system — code samples appear only inside developer docs (off public marketing).
+
+**OpenType features**: `tnum` is enabled on price displays and rating numbers so column alignment stays clean (`$1,247` and `$987` align right-edge perfectly). `ss01` and `ss02` are enabled on the wordmark and select display copy for the alternate single-storey `a` and softened `g` that give Cereal its friendlier character.
+
+There is no separate display family. The variable font carries the entire scale.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| rating-display | Cereal | 64 | 700 | 1.1 | -1px | tnum | Listing-detail "4.81" — peak typographic moment |
+| display-xl | Cereal | 28 | 700 | 1.43 | 0 | — | Homepage h1 ("Inspiration for future getaways") |
+| display-lg | Cereal | 22 | 500 | 1.18 | -0.44px | — | Listing-detail h1 |
+| display-md | Cereal | 21 | 700 | 1.43 | 0 | — | Section heads ("What this place offers") |
+| display-sm | Cereal | 20 | 600 | 1.20 | -0.18px | — | Sub-section titles ("Things to know") |
+| title-md | Cereal | 16 | 600 | 1.25 | 0 | — | City-link block titles ("Wilmington", "Athens") |
+| title-sm | Cereal | 16 | 500 | 1.25 | 0 | — | Footer column heads (Support, Hosting, Airbnb) |
+| body-md | Cereal | 16 | 400 | 1.5 | 0 | — | Default running-text |
+| body-sm | Cereal | 14 | 400 | 1.43 | 0 | — | Card meta lines, dates, prices, distance text |
+| caption | Cereal | 14 | 500 | 1.29 | 0 | — | Search field segment labels (Where, When, Who) |
+| caption-sm | Cereal | 13 | 400 | 1.23 | 0 | — | Footer legal line |
+| badge | Cereal | 11 | 600 | 1.18 | 0 | — | "Guest favorite" floating badge |
+| micro-label | Cereal | 12 | 700 | 1.33 | 0 | — | Card amenity micro-labels |
+| uppercase-tag | Cereal | 8 | 700 | 1.25 | 0.32px | uppercase | "NEW" badge on product nav tabs |
+| button-md | Cereal | 16 | 500 | 1.25 | 0 | — | Primary CTA labels |
+| button-sm | Cereal | 14 | 500 | 1.29 | 0 | — | Pill button labels (category strip) |
+| link | Cereal | 14 | 400 | 1.43 | 0 | — | Inline body links |
+| nav-link | Cereal | 16 | 600 | 1.25 | 0 | — | Top product-nav labels |
+
+### Principles
+
+- **Modest display weight as voice.** Display sits at 500–600, not 700+. The hero h1 at 28px / 700 is small for a SaaS page; here it works because photography (city collage, property cards) carries visual weight.
+- **One typographically loud moment per page.** The 64px rating display on listing pages is the only place type alone carries hierarchy — rating numbers are a peak trust signal, so they get the loudest treatment.
+- **Tracking is restrained.** Negative tracking is reserved for display-lg (-0.44px) and display-sm (-0.18px); body and caption sit at 0. Positive tracking is used only on the 8px uppercase "NEW" tag (0.32px) where it improves legibility.
+- **Tabular numerals everywhere money lives.** Prices, ratings, fees, totals all render with `tnum` so columns align — important on the reservation card's fee breakdown.
+- **Weight as voice, not size.** Body body-md (16/400) and title-sm (16/500) and title-md (16/600) all sit at the same size — hierarchy comes from weight, not size, keeping vertical rhythm dense.
+- **Inter is the closest open-source substitute** if Cereal is unavailable. Adjust display headlines down by ~2% in line-height to match Cereal's slightly tighter cap height.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Rausch fill, white text, 8px radius, 14×24px padding, 48px height, weight 500. The most common CTA across the system: "Reserve", "Continue", "Search", account-flow primaries.
+
+**`button-primary-active`** — The press state. Background flips to `#e00b41`. No transform, no shadow change.
+
+**`button-primary-disabled`** — Pale Rausch tint (`#ffd1da`) with white text. Cursor not-allowed. No outline.
+
+**`button-secondary`** — White fill with ink text and a 1px ink outline. 8px radius. Used for "Save", "Cancel", and inverse CTAs over Rausch surfaces.
+
+**`button-tertiary-text`** — Plain ink text, no surface, no border. Underlined on hover. Used for "Show more" type links and modal close labels.
+
+**`button-pill-rausch`** — A pill-shaped Rausch CTA used on featured cells (e.g., "Become a host" sub-CTA) — 9999px radius, 10×20px padding, 14px / 500 label.
+
+### Cards
+
+**`property-card`** — Photo-first card. 1:1 image with `rounded-md` (14px) corner clipping, image-carousel dots overlay, "Guest favorite" floating badge top-left, heart icon top-right (default outlined, Rausch-filled when saved). Beneath the image: 4–5 lines of meta — title (`title-md`), distance / dates (`body-sm` muted), price ("$X night") right-aligned.
+
+**`experience-card`** — Taller-aspect 4:5 card for experience listings. Same `rounded-md` clipping, floating "NEW" badge top-left, heart top-right, single-line title beneath.
+
+**`reservation-card`** — Sticky right-rail card on listing detail. White surface, 14px rounding, 1px hairline border, hover-card shadow tier elevation, 24px padding. Contains: nightly price (`display-md` ink), date-range selector, guest stepper, full-width Rausch "Reserve" CTA, fee breakdown beneath.
+
+**`host-card`** — White card with 14px rounding and 24px padding holding host avatar, name, "Superhost" badge, response-rate stat, and a "Contact host" `button-secondary`.
+
+### Badges, Tags, Pills
+
+**`guest-favorite-badge`** — White rounded pill (`pill`) at 11px / 600. Sits over the photo with the system's hover-card shadow tier applied for elevation.
+
+**`new-tag`** — Tiny rounded-pill badge anchored top-right of nav icons, carrying uppercase "NEW" in 8px / 700 with 0.32px tracking.
+
+**`category-chip`** — Used on the homepage category strip. 14px / 500 label with 32px rounded corners and a 1px hairline. Active chip switches to ink fill / white text.
+
+### Inputs / Forms
+
+**`text-input`** — White surface, 1px hairline outline, 8px radius, 56px height, 14×12px padding. Stacked label above (in `caption` muted), placeholder text in `body-md` muted. On focus the border thickens to 2px ink and the colour flips to `#222222` — no glow, no ring.
+
+**`search-bar-pill`** — Signature global search bar. White fill, 9999px radius, 64px height, 1px hairline + 1px shadow border. Internally divided by vertical hairlines into Where / When / Who segments. Each segment holds an uppercase caption label above a placeholder line in `caption`.
+
+**`search-orb`** — Circular Rausch orb terminating the right edge of the search bar. 48×48px, fully rounded, white magnifying-glass icon centred. The hottest single-colour moment on the homepage.
+
+### Navigation
+
+**`top-nav`** — White surface, 80px height, 1px bottom hairline. Wordmark flush left, three product tabs centred, account utilities (host link, language globe, account menu) flush right.
+
+**`product-tab-active`** — Ink label in `nav-link`, 32px hand-illustrated icon, 2px ink underline beneath the icon-label pair.
+
+**`product-tab-inactive`** — Muted label, illustrated icon, no underline. Becomes active on click.
+
+### Date Picker
+
+**`date-picker-day`** — 40×40px circular cell carrying the day number in `body-sm`. Default state transparent fill, ink text.
+
+**`date-picker-day-selected`** — Ink fill, white text, full circle. Range states between two selected days carry a `surface-soft` (#f7f7f7) lozenge background that connects them.
+
+### Modals & Overlays
+
+**`modal`** — Centred dialog over a 50%-opacity black scrim. White surface, 14px radius, no border, modal shadow tier. Close button is a 32px circular icon-button-circle anchored top-left.
+
+**`tooltip`** — Ink fill (#222222), white text in `body-sm`, 4px radius, 8×12px padding. Used sparingly — Airbnb prefers explicit field labels to hover-revealed help.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px** with a 2px micro-step
+- Scale: `2 · 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 80 · 96`
+- Section padding (vertical): 64px for major page bands — tighter than typical SaaS marketing (80–96px) because marketplace pages need higher card density per scroll
+- Card internal padding: 24px for host-card and reservation-card; 16px for property-card meta; 8px for caption / date-row gutters
+- Gutters: 16px between cards in the homepage city grid; 24px inside footer column gutters; 4px on dense category-strip dividers
+
+### Grid & Container
+
+- Max content width: ~1280px centred on the homepage and editorial pages
+- Listing detail caps closer to 1080px to keep photo banner and reservation rail readable
+- Footer: 3-column link list at desktop, collapsing to 1-column on mobile
+- City link grid (homepage footer): 6-column at desktop, each cell housing a city name in `title-md` and a category sub-label in `body-sm` muted
+- Listing detail: 2-column with photo / amenity body on the left (~64% width) and a sticky reservation card (`reservation-card`) on the right (~32%)
+
+### Whitespace Philosophy
+
+The system gives editorial bands 64px of vertical breathing room but compresses card grids — property and city-link cards sit just 16px apart. The contrast is intentional: the page reads as "open hero, dense marketplace below," reinforcing the marketplace nature without overwhelming the visitor at the fold.
+
+### Section Cadence
+
+Light/dark alternation is rare — Airbnb stays on white through 90% of the page. The exceptions are sub-brand sub-pages (Luxe carries deep-purple bands; Plus carries magenta) which only appear inside dedicated sub-domain experiences. The marketing homepage proper is a single uninterrupted white canvas.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Badges, explicit tags inside dense grids |
+| Standard | 8px | Buttons, text inputs, secondary CTAs |
+| Comfortable | 14px | Property cards, experience cards, host cards, reservation card |
+| Relaxed | 20px | Section bands, hero banners |
+| Featured | 32px | Category-strip pill chips |
+| Pill | 9999px | Search bar, search orb, heart save, "NEW" badge, date-picker days, icon-button-circle |
+
+There are no compound radii on Airbnb. Every interactive element is rounded uniformly on all four corners — the system rejects asymmetric rounding entirely. The single design rule: **if it can be tapped, it has rounded corners.**
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, hero, footer, all editorial bands (~95% of surfaces) |
+| 1 — Hover float | `rgba(0,0,0,0.02) 0 0 0 1px, rgba(0,0,0,0.04) 0 2px 6px, rgba(0,0,0,0.1) 0 4px 8px` | Property cards on pointer hover, search bar at rest, dropdowns (account, language, date picker) |
+| 2 — Modal | `rgba(0,0,0,0.18) 0 8px 28px` | Centred dialogs (date picker, login, language) |
+| 3 — Scrim | `rgba(0,0,0,0.5)` ground | Global modal backdrop tone |
+
+### Shadow Philosophy
+
+Airbnb has essentially **one shadow tier** plus the flat baseline. The hover-card shadow stacks three layers: a 2% black 1px ring (the hairline), a 4% ambient at 6px blur, and a 10% lift at 8px blur. There are no progressive elevation tiers — depth comes from photography, white-on-white surface separation, and rounded-corner clipping rather than from layered shadows. The system trusts the image to do the work.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — the default for hover lifts, hairline transitions, scrim fades
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, search-bar collapse on scroll
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — image carousel slide, date-picker month flip
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 150ms | Hover state colour swaps, hairline border thickening |
+| Standard | 240ms | Card lift, modal enter, search-bar collapse |
+| Slow | 320ms | Page transitions on listing→listing navigation, image carousel slide |
+
+### Per-Component Recipes
+
+- **Property card hover**: `transform: translateY(-2px); shadow: hover-card tier; transition: 240ms standard.` Image scales 1.0 → 1.02 inside its rounded clip.
+- **Search bar collapse on scroll**: as the page scrolls past the hero, the 64px tall pill animates to a 48px compact pill, durations chained 240ms emphasized.
+- **Heart save toggle**: outline → Rausch fill with a tiny scale-bounce (1.0 → 1.15 → 1.0) over 300ms. The micro-bounce is the system's only "celebratory" motion.
+- **Date-picker day hover**: cell background fades from transparent → `#f7f7f7` over 150ms. Selected state fade is 240ms.
+- **Modal enter**: scrim fades in over 200ms, then dialog translates from `translateY(8px) opacity(0)` to `translateY(0) opacity(1)` over 240ms emphasized.
+
+### Page Transitions
+
+Page-to-page navigation (homepage → search → listing) uses a soft cross-fade rather than a slide — 300ms over the full page. The white canvas makes this nearly invisible, which is the point: Airbnb wants the photography to be the moment of arrival, not the chrome.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. All `translate` and `scale` transforms suppress; only opacity transitions remain. The heart-save bounce becomes an instant fill swap. Card hover lifts disappear — only the shadow change remains.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #222222 ink on #ffffff canvas | 16.0 | AAA |
+| #ffffff on #ff385c Rausch CTA | 4.7 | AA body / AAA large |
+| #6a6a6a muted on #ffffff | 5.7 | AA |
+| #929292 muted-soft on #ffffff | 3.4 | AA large only — used only on disabled |
+| #222222 on #f7f7f7 surface-soft | 14.6 | AAA |
+
+### Focus Indicators
+
+Focus ring is `2px solid #222222` with 2px outline-offset — explicitly **not** Rausch. Airbnb keeps the brand colour reserved for action and never overloads it onto a focus state. The result: focus stays high-contrast and visible, but the page never shouts brand colour as a side effect of keyboard navigation.
+
+### ARIA Patterns
+
+- **Search bar**: `role="search"` on the outer pill; each segment is a `<button>` that opens a `role="dialog"` overlay (Where opens a destination picker, When opens the date picker, Who opens the guest stepper)
+- **Date picker**: `role="application"` with `aria-label="Pick check-in and check-out dates"`. Day cells use `role="gridcell"` with `aria-selected` for the range
+- **Property card**: heart save button uses `aria-pressed` to communicate save state to screen readers; the entire card is wrapped in a `<a>` with a verbose `aria-label` ("3-bedroom home in Lisbon, $247 per night, 4.94 stars, 142 reviews")
+- **Modal**: focus trap inside, Esc closes, click outside closes, focus returns to the trigger on close
+
+### Keyboard Navigation
+
+- Top nav: Tab moves left → right (logo → product tabs → host link → language globe → account menu)
+- Search bar: Tab through Where → When → Who → Search orb
+- Date picker: arrow keys navigate days, Enter selects, Esc closes
+- Property card grid: Tab moves card → card; arrow keys do not navigate cards (Airbnb chose tab-only for screen-reader simplicity)
+
+### Screen Reader Hints
+
+Airbnb prefers visible text labels to icon-only buttons. The save heart on a property card has `aria-label="Save to wishlist"` and announces `aria-pressed="true"` when saved. The category strip's icon-only chips all carry `aria-label="Cabins"` etc. The search orb uses `aria-label="Search"` — the magnifying-glass alone is not enough.
+
+### Reduced Motion
+
+All transitions degrade to opacity-only when `prefers-reduced-motion: reduce` is set. Card hover lifts, heart-save bounce, and search-bar collapse all skip the transform.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <744px | Top nav collapses to logo + hamburger; product tabs hide behind a sheet; search bar collapses to a single tappable pill; property cards 1-up; reservation card collapses to sticky bottom bar |
+| Tablet | 744–1128px | Top nav keeps product tabs but search bar narrows; property cards 2-up; city grid 2–3 column; reservation card sticky right-rail at narrower width |
+| Desktop | 1128–1440px | Full top nav with three product tabs centred; search bar at full pill width with all 3 segments visible; property cards 4-up; city grid 6-column |
+| Wide | >1440px | Content width caps at 1440px on listing/search; ~1280px on editorial; gutters absorb the rest |
+
+### Touch Targets
+
+- Primary CTAs: minimum 48×48px (above WCAG AAA)
+- Search orb: 48×48px circular — the most-tapped element on the page
+- Heart save: 32×32px circular — borderline for AAA but compensated by 12px padding inside the photo card
+- Date-picker day cells: 40×40px circular
+
+### Collapsing Strategy
+
+- Top product tabs collapse into a hamburger sheet below 744px
+- Search bar's 3 segments collapse into a single-tap entry that opens a full-screen search overlay on mobile
+- Property and city-link grids drop column counts cleanly at each breakpoint — never reflow rows; always reduce columns
+- Reservation card on listing detail switches from sticky right-rail to a sticky bottom bar on mobile, carrying just the "Reserve" CTA + nightly price summary
+
+### Image Behavior
+
+Property card images use `aspect-ratio: 1/1` on homepage grids and `aspect-ratio: 4/5` on experience grids. They fill the rounded clip with `object-fit: cover`. Carousel uses CSS scroll-snap on touch surfaces and arrow buttons on mouse surfaces.
+
+### Container Queries
+
+The reservation card uses container queries to compress its fee breakdown when the right rail narrows below ~340px — labels truncate, fee rows stack two-line.
+
+## 11. Content & Voice
+
+### Tone
+
+Warm, plainspoken, and confident without being chatty. Airbnb's voice trusts the reader — there is no over-explanation, no exclamation marks, no "Let's get started!" cheerleading. Headlines lead with the destination ("Inspiration for future getaways"), not the action ("Find your next stay!"). The brand consistently positions hosting as a craft and travelling as discovery.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Reserve", "Continue", "Search", "Save", "Confirm and pay" — direct and outcome-named, never "Submit" or "Click here"
+- **Error message recipe**: `[What went wrong] + [How to fix]` — e.g., "Choose a check-out date — your stay needs to be at least one night."
+- **Success confirmations**: short and personalized — "Your trip to Lisbon is confirmed" rather than "Booking successful"
+- **Field labels**: full-sentence and instructive — "Where to?" not "Destination"; "Check in" / "Check out" not "Start date" / "End date"
+
+### Empty States
+
+Empty wishlist: "Save your favorites here. Tap the heart on any home, experience, or service to start your wishlist." Always action-oriented — never "Nothing here yet."
+
+Empty search results: "No exact matches. Try changing or removing some of your filters or adjusting your search area." — names the cause and suggests three concrete remedies.
+
+### CTA Verb Conventions
+
+- Primary action: **"Reserve"** (booking flow), **"Continue"** (multi-step flows), **"Confirm and pay"** (final step)
+- Secondary action: **"Save"** (wishlist), **"Show all"** (gallery, reviews)
+- Tertiary text: **"Show more"** (truncated body), **"Edit"** (form fields)
+- Avoided: "Submit", "Click here", "Buy now", "Book now" (Airbnb prefers "Reserve" — gentler, hospitality-coded)
+
+## 12. Dark Mode & Theming
+
+**Light-only on the public web.** The Airbnb mobile app ships a system-controlled dark mode (near-black surface, white text, Rausch unchanged), but the marketing site, search results, and listing detail pages are explicitly light-only. The brand position: hospitality and warmth read better on white; the photography (which is the page) is colour-graded for warm light, and a dark canvas would fight the imagery.
+
+The single nod to dark surfaces in marketing: the footer's optional sub-band on certain campaign pages renders Ink (`#222222`) ground with white text — but this is never page-wide.
+
+## 13. Lineage & Influences
+
+Airbnb's visual lineage runs through three traditions: **Apple's product photography discipline** (white seamless, generous negative space, the product carries the page); **Marriott / boutique hotel marketing** (warm white, restrained colour, hospitality coded); and **Pinterest's photo-grid hierarchy** (1:1 image cards, density without clutter). The Cereal typeface is the most distinctive choice — a custom Circular cut that gives the brand a softer, more rounded sans than Helvetica or San Francisco; Circular by Lineto is a direct geometric-sans descendant of Futura.
+
+The colour discipline — single Rausch coral as the only voltage — is borrowed from Stripe's brand-as-singular-blue strategy, but Airbnb runs warmer, picking a coral instead of a tech-blue. The shape language (everything rounded, everything pill) reflects the touch-first era of mobile design — Airbnb shipped its first mobile-led redesign in 2014 and the rounded geometry has only intensified since.
+
+What Airbnb rejects: heavy shadows, dark surfaces, decorative gradients, multiple brand colours, illustrative chrome. The brand is photographic-realist; whenever an illustration appears (the Bélo wordmark, the product nav icons), it is a single hand-drawn line, never a multi-colour vector.
+
+**Influences:**
+- Apple — product-photography on white seamless, [apple.com](https://apple.com)
+- Stripe — single-brand-colour discipline, [stripe.com](https://stripe.com)
+- Pinterest — photo-grid card hierarchy, [pinterest.com](https://pinterest.com)
+- Lineto / Circular — typeface lineage, [lineto.com](https://lineto.com)
+- Marriott / boutique hotels — hospitality-coded warmth and restraint
+
+## 14. Do's and Don'ts
+
+**Do**
+- Keep the brand palette to a single Rausch coral (`#ff385c`) — one voltage carries every primary action
+- Use Cereal at modest weights (500–600 for display) — the system trusts photography to carry hierarchy
+- Round every interactive element — buttons 8px, cards 14px, search bar fully pill, hearts and orbs circles
+- Lean on photography — full-bleed property images, 1:1 cards, generous gallery treatments
+- Keep the canvas pure white (`#ffffff`) on the public web — there is no dark mode here
+- Render star ratings in ink (`#222222`), never yellow — yellow stars feel cheap in travel context
+- Use tabular numerals on prices, ratings, and fee breakdowns
+- Keep card grid gutters tight (16px) but section padding generous (64px) — open hero, dense marketplace
+- Preserve the 64px rating display as the single typographically loud moment per page
+- Use full sentences for field labels ("Where to?" not "Destination")
+
+**Don't**
+- Don't introduce a second brand colour — Luxe purple and Plus magenta are sub-domain only
+- Don't use Cereal at 700 for body — that weight is reserved for display and the rating moment
+- Don't use square corners on interactive elements — every tappable surface rounds
+- Don't apply heavy shadows — the single hover-card tier is the entire elevation system
+- Don't use yellow or gold for star ratings
+- Don't use exclamation marks in microcopy — the voice is warm but never giddy
+- Don't say "Submit", "Click here", "Book now" — use the brand's verbs (Reserve, Continue, Confirm and pay)
+- Don't let the focus ring be Rausch — it stays ink (`#222222`) so the brand colour is reserved for action
+- Don't fight photography with chrome — illustrations stay one-line, decorative gradients are absent
+- Don't break the photo aspect ratio — 1:1 for homes, 4:5 for experiences
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:      #ffffff
+Ink:         #222222
+Rausch:      #ff385c
+Rausch-active: #e00b41
+Surface-soft: #f7f7f7
+Surface-strong: #f2f2f2
+Hairline:    #dddddd
+Muted:       #6a6a6a
+Body:        #3f3f3f
+Danger:      #c13515
+```
+
+### Example Component Prompts
+
+- "Create an Airbnb-style hero: pure white canvas (#ffffff), 28px / 700 ink headline tucked under a fully pill-shaped white search bar (64px tall, 1px hairline border, 9999px radius). Search bar divided by vertical hairlines into Where / When / Who segments, terminated by a 48×48px circular Rausch (#ff385c) search orb on the right edge."
+- "Design a property card: white canvas, 1:1 image with 14px rounded clipping, image-carousel dot indicators bottom-centre, 'Guest favorite' white pill badge top-left at 11px / 600, heart icon top-right (32×32px circular, outlined; fills with Rausch when saved). Below the image: title at 16px / 600 ink, distance + dates at 14px / 400 muted (#6a6a6a), price '$247 night' right-aligned at 16px / 600."
+- "Build a Reserve button: Rausch (#ff385c) fill, white text at 16px / 500, 8px radius, 14×24px padding, 48px height. Pointer-down state flips to #e00b41."
+- "Create a stacked text input: white surface, 1px hairline (#dddddd) border, 8px radius, 56px height, 14×12px padding. Stacked label above in 14px / 500 muted, placeholder in 16px / 400 muted. On focus, border thickens to 2px ink (#222222) — no glow ring."
+- "Design a date picker day cell: 40×40px transparent circle, day number in 14px / 400 ink. Selected state: ink fill (#222222), white text. Range cells between two selected days carry a #f7f7f7 lozenge background that visually connects them."
+- "Build a sticky reservation card: white surface, 14px radius, 1px hairline border, hover-card shadow tier (rgba(0,0,0,0.04) 0 2px 6px, rgba(0,0,0,0.1) 0 4px 8px), 24px padding. Top row: nightly price at 21px / 700 ink, 'per night' at 14px / 400 muted. Then date-range selector, guest-count stepper, full-width Rausch Reserve CTA, fee breakdown stack beneath in 14px / 400."
+
+### Iteration Guide
+
+1. **Start on white.** Anything other than `#ffffff` reads as a different brand. Backgrounds should match canvas; surface-soft (`#f7f7f7`) is for disabled states only.
+2. **One Rausch moment per fold.** If your composition has two or more Rausch elements visible at once, demote one — the brand colour is meant to draw the eye, not paper the page.
+3. **Round everything tappable.** If it doesn't have rounded corners, it isn't interactive. Hard corners belong only on the body grid itself.
+4. **Cereal at 500–600 for display.** Resist the urge to push display to 700 — modest weight is the brand's signature. The 64px rating display is the only place 700 lives loudly.
+5. **Photography carries hierarchy.** If the page feels weak, add a larger image, not a heavier headline. Type stays restrained; pixels do the work.
+6. **Star ratings in ink.** If you reach for yellow or gold, you've broken the brand. `#222222` always.
+7. **Tabular numerals on prices.** $1,247 and $987 must align right-edge. Enable `font-variant-numeric: tabular-nums`.
+8. **Focus ring stays ink.** The brand Rausch is reserved for action only — never overload it onto focus, hover, or selection states.

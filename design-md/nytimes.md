@@ -1,0 +1,750 @@
+---
+name: The New York Times
+tagline: Cheltenham serif headlines on paper-white, signature breaking-news red, the canonical American broadsheet rendered for the web.
+author: webdesignhot
+source_url: https://www.nytimes.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, serif, dense, structured, news, broadsheet, light]
+preview_swatch: ['#ffffff', '#d0021b', '#121212']
+related: [substack, medium, ghost]
+description: 'The New York Times runs the most recognizable serif system on the English-language web. Headlines are set in NYT Cheltenham — the in-house digitization of Linotype Cheltenham — at sober mid-weights, body copy in NYT Imperial (a custom Imperial cut), and section labels in NYT Franklin (a custom Franklin Gothic). The canvas is paper-white (`#ffffff`); ink is near-black (`#121212`); a singular, signature breaking-news red (`#d0021b`) is reserved for live alerts, the Op-Doc bar, and the masthead branding moments. Section dividers, tabular row strokes, and tiny meta lines run on `#dfdfdf` hairlines. The result is an editorial system that telegraphs trust the moment it loads — calm, dense, and unmistakably a newsroom.'
+
+colors:
+  bg: '#ffffff'                  # paper canvas
+  bg-section: '#f7f7f5'          # warm-gray editorial sub-band (Opinion, Magazine)
+  bg-dark: '#121212'              # nytimes.com dark-mode body
+  surface: '#ffffff'             # cards inherit canvas
+  surface-soft: '#f7f7f7'        # quote pull-out, sidebar block
+  surface-strong: '#ededed'       # disabled fields, inline hairline tile
+  surface-quote: '#fbf6e9'        # paper-cream pull-quote backdrop (signature NYT magazine treatment)
+  text: '#121212'                # near-black ink — main reading body
+  text-strong: '#000000'         # headline ink at top weights
+  text-muted: '#5a5a5a'          # bylines, datelines, photo captions
+  text-soft: '#727272'           # category hairline labels, "Continue reading" links
+  text-faint: '#999999'           # disabled link, section sub-meta
+  brand: '#121212'               # the NYT wordmark itself is ink — not red
+  brand-red: '#d0021b'            # the signature breaking-news / Live red
+  brand-red-hover: '#a8001a'      # pressed/hovered red
+  brand-red-soft: '#ffe5e8'       # alert-bar tint surface
+  link: '#326891'                 # editorial inline link blue (NYT classic muted blue)
+  link-hover: '#1a4972'           # darker on hover
+  link-visited: '#5a5a5a'         # NYT historically dims visited links to muted ink
+  on-brand-red: '#ffffff'
+  on-ink: '#ffffff'
+  border: '#dfdfdf'              # default 1px hairline
+  border-soft: '#ebebeb'          # editorial body separator
+  border-strong: '#9a9a9a'        # form input border, active state
+  border-rule: '#121212'          # section rule (the heavy 1.5px masthead-style)
+  shadow-card: 'rgba(0,0,0,0.04)'
+  shadow-elev: 'rgba(0,0,0,0.08)'
+  shadow-modal: 'rgba(0,0,0,0.18)'
+  scrim: 'rgba(0,0,0,0.5)'
+  success: '#1a7f37'              # subscription-success green
+  success-soft: '#e7f4ec'
+  warning: '#b27c00'              # advisory amber (paywall / save-article warning)
+  warning-soft: '#fbf3e0'
+  danger: '#d0021b'               # form errors echo brand red
+  danger-soft: '#ffe5e8'
+  info: '#326891'                 # informational matches link blue
+  info-soft: '#e7eef5'
+  live-red: '#d0021b'              # tag chip background for live coverage
+  live-pulse: '#ff334b'            # animated pulsing dot inside live tag
+  cooking-orange: '#cc4b00'        # NYT Cooking sub-brand accent (in subdomain only)
+  games-blue: '#6493b0'            # NYT Games sub-brand accent (Connections / Wordle subtone)
+  wirecutter-yellow: '#ffd400'     # Wirecutter sub-brand (subdomain only)
+
+typography:
+  display:
+    family: '"NYT Cheltenham", "Cheltenham", Georgia, "Times New Roman", serif'
+    weights: [200, 300, 400, 500, 700, 900]
+    opentype-features: ['liga', 'kern', 'onum']
+  body:
+    family: '"NYT Imperial", "nyt-imperial", "Imperial", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 700]
+  sans:
+    family: '"NYT Franklin", "nyt-franklin", "Franklin Gothic", Helvetica, Arial, sans-serif'
+    weights: [300, 500, 700]
+  mono:
+    family: '"NYT Karnak Condensed", "Courier New", Menlo, monospace'
+    weights: [400, 700]
+  scale:
+    masthead-wordmark:   { size: 64, weight: 700, lineHeight: 1.0,  tracking: '-0.02em', family: display, opentype: ['liga'] }
+    headline-mega:       { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    headline-jumbo:      { size: 44, weight: 700, lineHeight: 1.07, tracking: '-0.015em', family: display }
+    headline-xl:         { size: 36, weight: 700, lineHeight: 1.1,  tracking: '-0.01em', family: display }
+    headline-lg:         { size: 30, weight: 700, lineHeight: 1.13, tracking: '-0.005em', family: display }
+    headline-md:         { size: 24, weight: 700, lineHeight: 1.18, tracking: '0', family: display }
+    headline-sm:         { size: 20, weight: 700, lineHeight: 1.2,  tracking: '0', family: display }
+    deck-italic:         { size: 18, weight: 300, lineHeight: 1.4,  tracking: '0', family: display, style: italic }
+    body-md:             { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    body-sm:             { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0', family: body }
+    pull-quote:          { size: 28, weight: 400, lineHeight: 1.3,  tracking: '0', family: display, style: italic }
+    byline:              { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.04em', family: sans, transform: uppercase }
+    dateline:            { size: 13, weight: 400, lineHeight: 1.3,  tracking: '0', family: sans }
+    section-label:       { size: 12, weight: 700, lineHeight: 1.0,  tracking: '0.08em', family: sans, transform: uppercase }
+    caption:             { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0', family: body }
+    photo-credit:        { size: 11, weight: 400, lineHeight: 1.3,  tracking: '0.04em', family: sans, transform: uppercase }
+    micro-meta:          { size: 11, weight: 500, lineHeight: 1.2,  tracking: '0.06em', family: sans, transform: uppercase }
+    button-label:        { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.06em', family: sans, transform: uppercase }
+    nav-link:            { size: 13, weight: 700, lineHeight: 1.0,  tracking: '0.05em', family: sans, transform: uppercase }
+    live-badge:          { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.08em', family: sans, transform: uppercase }
+
+radius:
+  micro: 0           # NYT essentially does not round — broadsheet aesthetic
+  sm: 2              # rare, for promo tiles only
+  md: 4              # form inputs, subscribe button corners
+  pill: 9999         # live badge, save-article chip
+  none: 0
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120]
+
+layout:
+  page-width: 1200
+  prose-width: 600        # NYT Reader column — narrow for serif legibility
+  feature-width: 1024
+  header-height: 56       # primary nav strip
+  masthead-rule-weight: 1.5
+  section-rule-weight: 1
+  hairline-weight: 1
+
+components:
+  button-primary:
+    bg: '#121212'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 20px'
+    height: 44
+    font: button-label
+    use: 'Subscribe, Continue, Sign In — every primary CTA on the marketing surface.'
+  button-primary-hover:
+    bg: '#000000'
+    color: '#ffffff'
+    use: 'Pointer-down state on Subscribe / primary CTAs.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #121212'
+    radius: 4
+    padding: '12px 20px'
+    height: 44
+    use: 'Already a subscriber, Cancel, ghost CTAs over white.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#326891'
+    use: 'Inline editorial links — underlined on hover.'
+  button-save-article:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #dfdfdf'
+    radius: 9999
+    padding: '6px 12px'
+    use: 'Save / Read-later chip below headline.'
+  live-badge:
+    bg: '#d0021b'
+    color: '#ffffff'
+    radius: 2
+    padding: '3px 6px'
+    font: live-badge
+    use: 'Red LIVE chip on breaking-news articles. Carries a pulsing white dot.'
+  alert-banner:
+    bg: '#d0021b'
+    color: '#ffffff'
+    padding: '10px 16px'
+    use: 'Top-of-page breaking-news alert (election night, breaking story).'
+  card-headline:
+    bg: '#ffffff'
+    color: '#121212'
+    radius: 0
+    border: 'top 1px solid #dfdfdf'
+    use: 'Default river card — image (16:9) above headline, deck, byline. Hairline-separated, never shadowed.'
+  card-promo-magazine:
+    bg: '#fbf6e9'
+    color: '#121212'
+    radius: 0
+    use: 'Magazine / Sunday-Review promo with paper-cream backdrop, italic deck.'
+  card-opinion:
+    bg: '#f7f7f5'
+    color: '#121212'
+    radius: 0
+    border: 'top 1px solid #121212'
+    use: 'Opinion section card — warm-gray ground, heavy top rule, italic deck under name.'
+  pull-quote:
+    bg: 'transparent'
+    color: '#121212'
+    border: 'top 1px solid #121212; bottom 1px solid #121212'
+    padding: '24px 0'
+    use: 'Cheltenham italic 28px between two heavy ink rules — the canonical NYT pull-quote.'
+  text-input:
+    bg: '#ffffff'
+    color: '#121212'
+    radius: 4
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #9a9a9a'
+    focus: 'border thickens to 2px ink, no glow ring'
+    use: 'Email entry on subscribe wall, search input.'
+  paywall-cta:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #121212'
+    padding: '32px 24px'
+    use: 'Sub-fold paywall meter with primary Subscribe (ink) + secondary Sign In (outline).'
+  nav-section-link:
+    color: '#121212'
+    font: nav-link
+    padding: '14px 12px'
+    use: 'Section nav (U.S., World, Politics, Business, Opinion). Hover underlines from below.'
+  search-icon:
+    bg: 'transparent'
+    color: '#121212'
+    use: '32×32 ink magnifying-glass — never colour, never circle-bgd.'
+  carousel-arrow:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #dfdfdf'
+    radius: 9999
+    height: 36
+    use: 'Photo-essay nav arrows. Round only because the icon is round, not because the system rounds.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  live-dot-pulse: '1.6s ease-in-out infinite — opacity 1 → 0.4 → 1, scale 1 → 1.15 → 1'
+  card-hover: 'image scales 1.0 → 1.02 inside a non-rounded clip; headline gains underline; 200ms standard'
+  alert-banner-enter: 'translateY(-8px → 0) + opacity(0 → 1) over 240ms emphasized'
+  paywall-meter-fill: 'progress bar fills smoothly over 800ms ease-out as articles read accumulate'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — pulsing live dot becomes static, all transforms disabled, opacity-only fades retained.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 0 0 #dfdfdf'                           # NYT prefers ruled hairlines to shadows
+  standard: 'rgba(0,0,0,0.04) 0 2px 4px'                  # rare — only on dropdown menus
+  elevated: 'rgba(0,0,0,0.08) 0 6px 16px'                 # account dropdown, search overlay
+  deep: 'rgba(0,0,0,0.18) 0 12px 32px'                    # paywall modal
+  ring: '0 0 0 2px #326891'                               # focus ring uses the link blue
+
+accessibility:
+  contrast-text-on-bg: 17.4              # #121212 on #ffffff — AAA
+  contrast-text-on-brand-red: 5.4         # #ffffff on #d0021b — AA at body, AAA at large
+  contrast-muted-on-bg: 7.0              # #5a5a5a on #ffffff — AAA
+  contrast-link-on-bg: 8.1                # #326891 on #ffffff — AAA
+  focus-ring: '2px solid #326891 + 2px outline-offset (link blue, never red)'
+  reduced-motion-honored: true
+  touch-target-min: 44                   # primary CTAs and nav targets
+  keyboard-nav: 'Tab moves logo → section nav → utility (Account, Subscribe, Search). Skip-link first.'
+
+dark-mode: optional
+colors-dark:
+  bg: '#121212'
+  bg-section: '#1a1a1a'
+  surface: '#1a1a1a'
+  surface-soft: '#222222'
+  surface-quote: '#1c1a14'
+  text: '#f7f7f7'
+  text-strong: '#ffffff'
+  text-muted: '#a3a3a3'
+  text-soft: '#8a8a8a'
+  brand: '#f7f7f7'
+  brand-red: '#ff334b'                    # red brightens slightly in dark mode for AA
+  link: '#9bbedf'
+  link-hover: '#cce0f0'
+  border: '#333333'
+  border-soft: '#262626'
+  border-rule: '#f7f7f7'
+---
+
+## 1. Visual Theme & Atmosphere
+
+The New York Times' web canvas is the most studied editorial system on the internet, and it tells you what it is the moment a single page loads. The paper-white field (`#ffffff`), the heavy ink masthead in NYT Cheltenham, the section nav rendered in tiny uppercase NYT Franklin, the body set in NYT Imperial, the hairline `#dfdfdf` rule that separates one story-river entry from the next — every choice is a port of broadsheet typography to the screen, calibrated for trust at first glance. There is essentially no color on the page until news demands it: only ink, paper, hairlines, and an occasional muted editorial blue link (`#326891`) that has not changed in two decades.
+
+The signature voltage moment is **breaking-news red** — `#d0021b`, the deep arterial red the Times reserves for the LIVE chip, election-night alert bars, the war-coverage masthead overlay, and the rare top-of-page urgent banner. It is not a brand color in the way Stripe's blue or Airbnb's coral is — it is a *signal* color, used so sparingly that when it appears, your eye snaps to it. The rest of the page stays sober: `#121212` ink, near-black, sometimes pulled down to `#5a5a5a` for bylines and `#727272` for photo captions.
+
+Type does the heavy lifting. Headlines render in NYT Cheltenham — the in-house digital cut of Linotype Cheltenham, originally designed in 1896 — at weights 200 through 900, but on the web the system favors the 700 cut for headlines and a 300/italic cut for decks. The body face is **NYT Imperial**, a custom Imperial revival with a slightly tighter cap height than Georgia and old-style figures by default. Section labels and bylines run **NYT Franklin**, a custom Franklin Gothic, in tiny tracked uppercase — the printed-paper signal that this block is meta, not body. The trio (Cheltenham + Imperial + Franklin) is the New York Times' most distinctive design asset.
+
+Layout is **dense, ruled, and grid-bound**. The story-river uses a 12-column grid, sections are separated by 1.5px ink rules (the printed masthead rule weight), cards never have shadows, corners never round (4px is the upper limit, reserved for buttons and form inputs), and the hairline between stories is the cheapest, most-honest separator in editorial design. The Magazine and Sunday Review break this with paper-cream (`#fbf6e9`) and warm-gray (`#f7f7f5`) sub-bands and italic Cheltenham pull-quotes, but the news front stays on uncolored paper.
+
+**Key Characteristics:**
+- Paper-white canvas (`#ffffff`) with near-black ink (`#121212`) — no greys, no off-whites, no warmth except in Magazine sub-bands
+- Three custom faces: Cheltenham (display), Imperial (body), Franklin (sans labels) — the canonical broadsheet trio
+- Single signal color: breaking-news red (`#d0021b`) reserved for LIVE chips, alert bars, election overlays
+- Hairline `#dfdfdf` rules between stories — never shadows, never panels
+- Tiny tracked uppercase Franklin labels (12px, 0.08em tracking) for section headers and bylines
+- 600px prose column width — the printed-page reading width, ported to screen
+- Italic Cheltenham 28px pull-quote between two heavy ink rules — the most copied editorial moment on the web
+- Editorial link blue (`#326891`) that has not changed since the early 2000s
+- 4px is the largest radius on the system — broadsheet aesthetic rejects rounding
+- Inline play button and audio-narration affordance for every premium feature article
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): the paper field. Every article, the homepage, every section index — all white. Dark mode opts into `#121212` body but the default is uncompromised paper.
+- **Ink** (`#121212`): the dominant text and rule color. Headlines, body, masthead — all ink, never pure black. The slight softening (#121212 vs #000) reads warmer on screen and matches print ink density.
+- **Ink Strong** (`#000000`): only on the masthead wordmark itself and on the heaviest 900 display cuts (election-night Headline-Mega).
+
+### Brand & Sub-Brand
+- **NYT Wordmark Ink** (`#121212`): the Times brand color is *ink*, not red. The masthead has been black-on-white since 1857.
+- **Breaking-News Red** (`#d0021b`): the signal color. LIVE chip, top-of-page election alerts, war-coverage masthead overlay, Op-Doc band on Opinion. Used so sparingly it functions as an alarm.
+- **Red Hover** (`#a8001a`): pressed/hovered state on red CTAs (rare — most CTAs are ink).
+- **Red Soft** (`#ffe5e8`): tint surface on alert-banner backgrounds where the red itself would over-dominate.
+- **Cooking Orange** (`#cc4b00`): NYT Cooking sub-brand accent. Subdomain-only.
+- **Games Blue** (`#6493b0`): NYT Games (Connections / Wordle / Spelling Bee) sub-brand. Subdomain-only.
+- **Wirecutter Yellow** (`#ffd400`): Wirecutter sub-brand. Subdomain-only.
+
+### Accent
+- **Editorial Link Blue** (`#326891`): the canonical NYT inline link color. Used in body running-text, byline links, and the rare CTA where the brand wants warmth instead of ink. AAA on white.
+- **Link Hover** (`#1a4972`): darker, used on `:hover`.
+- **Link Visited** (`#5a5a5a`): historic NYT pattern — visited links dim to muted ink rather than turning purple.
+
+### Interactive
+- **Default Link** (`#326891` text + underline-on-hover): inline body link.
+- **Active CTA** (`#121212` ink fill on Subscribe / Sign In): primary action.
+- **Disabled** (`#999999` text on `#ededed` surface): grayed-out form field.
+- **Selected** (chip with ink fill, white text): saved-article chip in active state.
+
+### Neutral Scale
+- **Ink** (`#121212`) — headlines, body, primary text
+- **Muted** (`#5a5a5a`) — bylines, datelines, photo captions
+- **Soft** (`#727272`) — section meta, "Continue reading" links, footer secondary
+- **Faint** (`#999999`) — disabled link text, tertiary copy
+- **Hairline** (`#dfdfdf`) — the universal rule color: between stories, between table rows, around form inputs
+
+### Surface & Borders
+- **Canvas** (`#ffffff`) — page floor everywhere
+- **Surface Soft** (`#f7f7f7`) — quote pull-out, sidebar block, disabled input fill
+- **Surface Strong** (`#ededed`) — heavy disabled surfaces (rare — Times prefers leaving fields white)
+- **Surface Quote** (`#fbf6e9`) — paper-cream pull-quote backdrop in the Magazine
+- **Section Sub-Band** (`#f7f7f5`) — Opinion / Sunday Review warm-gray ground
+- **Hairline** (`#dfdfdf`) — default 1px rule
+- **Hairline Soft** (`#ebebeb`) — lighter rule on dense river separators
+- **Border Strong** (`#9a9a9a`) — form input border at rest, focused outline
+- **Border Rule** (`#121212`) — the heavy 1.5px section-rule (masthead-style)
+
+### Shadow Colors
+The Times barely uses shadows. The default elevation is a hairline rule, not a shadow. The few places shadows appear (account dropdown, paywall modal, search overlay) use neutral-gray tints:
+- `rgba(0,0,0,0.04) 0 2px 4px` — dropdown ambient
+- `rgba(0,0,0,0.08) 0 6px 16px` — account menu, search overlay
+- `rgba(0,0,0,0.18) 0 12px 32px` — paywall modal lift
+
+There is no blue-tinted shadow, no brand-tinted shadow, no progressive elevation tier system. Depth is *ruled*, not *cast*.
+
+### Semantic
+- **Success** (`#1a7f37` on `#e7f4ec`) — subscribe-success confirmation, account-changed-saved
+- **Warning** (`#b27c00` on `#fbf3e0`) — paywall meter warning ("1 article remaining")
+- **Danger** (`#d0021b` on `#ffe5e8`) — form errors share the brand red — the only place it touches forms
+- **Info** (`#326891` on `#e7eef5`) — informational banners share the link blue
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `NYT Cheltenham` — the in-house digital cut of Linotype Cheltenham, the typeface that has set the New York Times' headlines since 1906. Available in weights 200 (extra-light), 300 (light), 400 (regular), 500 (medium), 700 (bold), and 900 (black). The fallback chain runs `Georgia, "Times New Roman", serif`.
+
+**Body**: `NYT Imperial` — a custom revival of Imperial, the body face the Times adopted in print in 1967. Available in 400, 500, and 700. The fallback chain runs `nyt-imperial, Imperial, Georgia, "Times New Roman", serif`.
+
+**Sans / Labels**: `NYT Franklin` — a custom Franklin Gothic. Used at 11–14px in tracked uppercase for bylines, photo credits, section labels, and nav links. Weights 300, 500, 700. Fallback `nyt-franklin, "Franklin Gothic", Helvetica, Arial, sans-serif`.
+
+**Mono / Decorative**: `NYT Karnak Condensed` — a slab-condensed used in Magazine display moments. Fallback `"Courier New", Menlo, monospace`.
+
+**OpenType features**: Imperial uses **old-style figures (`onum`)** by default in body running-text — the printed-page signal of long-form prose. Cheltenham uses **standard ligatures (`liga`)** and tightly tuned **kerning (`kern`)** at display sizes. Tabular figures (`tnum`) appear only on the markets / data tables, never in editorial.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| masthead-wordmark | Cheltenham | 64 | 700 | 1.0 | -0.02em | liga | The Times logo itself |
+| headline-mega | Cheltenham | 56 | 700 | 1.05 | -0.02em | liga | Election night, war declaration, "TRUMP WINS" cover-class |
+| headline-jumbo | Cheltenham | 44 | 700 | 1.07 | -0.015em | — | Top-of-fold lead story |
+| headline-xl | Cheltenham | 36 | 700 | 1.1 | -0.01em | — | Above-fold secondary headline |
+| headline-lg | Cheltenham | 30 | 700 | 1.13 | -0.005em | — | River lead headline |
+| headline-md | Cheltenham | 24 | 700 | 1.18 | 0 | — | River sub-headline |
+| headline-sm | Cheltenham | 20 | 700 | 1.2 | 0 | — | Compact module headline |
+| deck-italic | Cheltenham (italic) | 18 | 300 | 1.4 | 0 | — | Sub-headline / standfirst |
+| body-md | Imperial | 18 | 400 | 1.55 | 0 | onum | Default running text |
+| body-sm | Imperial | 16 | 400 | 1.5 | 0 | onum | Compact card body, sidebar |
+| pull-quote | Cheltenham (italic) | 28 | 400 | 1.3 | 0 | — | Pull-out between two ink rules |
+| byline | Franklin | 13 | 700 | 1.3 | 0.04em | uppercase | "BY MAGGIE HABERMAN" — uppercase tracked |
+| dateline | Franklin | 13 | 400 | 1.3 | 0 | — | "Nov. 5, 2024, 11:42 a.m. ET" |
+| section-label | Franklin | 12 | 700 | 1.0 | 0.08em | uppercase | "U.S." / "WORLD" / "OPINION" — top-of-card kicker |
+| caption | Imperial | 14 | 400 | 1.4 | 0 | — | Photo / video caption running-text |
+| photo-credit | Franklin | 11 | 400 | 1.3 | 0.04em | uppercase | "Doug Mills/The New York Times" |
+| micro-meta | Franklin | 11 | 500 | 1.2 | 0.06em | uppercase | "5 min read" / "Listen 8:42" |
+| button-label | Franklin | 14 | 700 | 1.0 | 0.06em | uppercase | "SUBSCRIBE" / "SIGN IN" |
+| nav-link | Franklin | 13 | 700 | 1.0 | 0.05em | uppercase | "U.S." / "World" / "Opinion" in section nav |
+| live-badge | Franklin | 11 | 700 | 1.0 | 0.08em | uppercase | "LIVE" red chip |
+
+### Principles
+
+- **Cheltenham at 700 is the headline voice.** The lighter weights (200/300) appear only on decks and italic editorial flourishes. The 900 cut is reserved for cover-class election/war headlines.
+- **Imperial body uses old-style figures (`onum`).** Numerals descend below the baseline ($1**3**.99 has the 3 dropping). This is the Times' signature reading-experience tell — modern figures (tnum/lnum) only appear in markets data.
+- **Franklin tracking is the system's voice for meta.** Anything in tracked-uppercase Franklin is structural metadata: section, byline, credit, button. Body never uses Franklin; meta never uses Cheltenham or Imperial.
+- **Negative tracking on display headlines, zero tracking on body.** The display Cheltenham at 36px+ uses -0.01em → -0.02em; body Imperial at 18px sits at 0. The system rejects positive tracking on serifs.
+- **Italic Cheltenham is the editorial pull-quote.** The 28px italic pull-quote between two heavy ink rules is the single most-copied moment on the web. Substack, Medium, Ghost, Stratechery — all reference it.
+- **Two-mode digit discipline.** Editorial body uses old-style; data tables use tabular lining. Mixing them inside the same article looks broken.
+- **600px reading column.** Body running-text caps at 600px line length — that's the print-broadsheet reading width, ported to screen, and explains why Times articles read more comfortably than typical SaaS marketing pages.
+- **Inter / Source Serif Pro are the closest open-source fallbacks.** Cheltenham → Source Serif Pro at 700 (slightly geometric but reads close at display size); Imperial → Source Serif Pro 400 with old-style figures enabled; Franklin → Inter at 700 with uppercase + tracking applied.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Ink fill (`#121212`), white text, 4px radius, 12×20px padding, 44px height, 14px / 700 Franklin uppercase tracked at 0.06em. The Subscribe CTA is the most repeated instance. Press state darkens to pure `#000000`.
+
+**`button-secondary`** — White fill, ink text, 1px ink border, 4px radius, same dimensions. "Already a subscriber" / "Sign in" CTA.
+
+**`button-text-link`** — Plain blue text (`#326891`), no surface, no border. Underlined on hover. "Continue reading", "More on this topic".
+
+**`button-save-article`** — White fill, ink text, 1px hairline border, 9999px radius (the rare pill on the system), 6×12px padding, 36px height. Holds a bookmark icon + "Save" label in 13px Franklin. Only pill on the editorial surface.
+
+### Live & Alert
+
+**`live-badge`** — Red fill (`#d0021b`), white text, 2px radius, 3×6px padding, 11px / 700 Franklin uppercase. Carries a 4px white pulsing dot to its left (`live-dot-pulse` motion). The most charged element on the system — used only when active reporting is live.
+
+**`alert-banner`** — Full-bleed red bar (`#d0021b`) at top of page, 10px vertical padding, white Franklin 14/700 text + a "Live updates →" link. Used for election night, breaking-news incidents, war coverage.
+
+### Cards
+
+**`card-headline`** — Default river card. White surface, 0px radius, top 1px hairline (`#dfdfdf`) separating from the previous card, no shadow. Layout: 16:9 image above, headline in Cheltenham 24/700, deck in Cheltenham 18/300 italic, byline in Franklin 13/700 uppercase, micro-meta ("5 min read") below.
+
+**`card-promo-magazine`** — Same hairline-separated structure but ground flips to paper-cream (`#fbf6e9`) and the deck italicizes more aggressively. Used in Sunday Magazine promo modules.
+
+**`card-opinion`** — Warm-gray (`#f7f7f5`) ground with a heavy 1.5px ink top rule (the broadsheet column-rule). Italic deck under columnist name. The visual signal: "you are reading commentary, not news."
+
+**`card-newsletter-promo`** — White surface, 1px ink border, 24px padding, 0px radius. Inline subscribe-form box with email input + ink Subscribe button.
+
+### Pull-Quote
+
+**`pull-quote`** — Italic Cheltenham 28px / 1.3 line-height, no background, bracketed by two 1px ink rules above and below at 24px vertical padding. Always centered or full-width — never floated right. The single most-imitated editorial design moment on the web.
+
+### Inputs / Forms
+
+**`text-input`** — White fill, 1px `#9a9a9a` border, 4px radius, 44px height, 12×14px padding. Label sits above the input in Franklin 13/700 uppercase. On focus, border thickens to 2px ink, no glow ring. Error state: border flips to `#d0021b`, error message in Franklin 13/400 ink-red below.
+
+**`paywall-cta`** — White surface, 1px ink border, 0px radius, 32×24px padding. Top: Cheltenham 24/700 headline ("Subscribe to The Times"). Middle: Franklin micro-meta describing the offer ("$1/week for one year"). Bottom: ink Subscribe button + outline "Already a subscriber" button.
+
+### Navigation
+
+**`top-nav`** — White surface, 56px height, 1px bottom hairline. Layout: hamburger left, NYT wordmark center (Cheltenham 700, slight ascender ascender), Subscribe + Account + Search right. On scroll past hero the masthead fixes and shrinks slightly.
+
+**`section-nav`** — Horizontal Franklin 13/700 uppercase links separated by ample whitespace (no dividers). Hover treatment: 2px ink underline grows from below over 200ms.
+
+**`subnav-rule`** — A heavy 1.5px ink rule under the section nav, mirroring the printed broadsheet's masthead-rule.
+
+### Decorative
+
+**`section-rule`** — 1.5px ink rule, full-width, used to separate major page bands (above-fold from middle-fold, etc.). Carries the ruled-broadsheet authority — never a hairline, never a shadow.
+
+**`hairline-rule`** — 1px `#dfdfdf` rule between stories, table rows, sidebar items. The cheapest, most-honest separator.
+
+**`drop-cap`** — On long-form features: first letter of the lead paragraph rendered in Cheltenham 56/700 with a 3-line drop. Inherits the print drop-cap convention.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px** with a 2px micro-step
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120`
+- Section padding (vertical): 64px between page bands; 120px on hero+ section breaks for cover-class features
+- Card internal padding: 16px between image and headline; 8px between headline and deck; 12px between deck and byline
+- Gutters: 24px between river cards on desktop, 16px on tablet, 0 on mobile (cards stack with hairline separators)
+
+### Grid & Container
+
+- Max content width: **1200px** centered, with 12-column grid below
+- Reading column (article body): **600px** — the print-broadsheet width, ported to screen
+- Feature container: **1024px** for above-fold image + headline pairings on enterprise long-form
+- Footer: 4-column link list at desktop, collapsing to 2 then 1 at smaller breakpoints
+- Markets / data: 1200px full-width tabular grid
+
+### Whitespace Philosophy
+
+The Times runs **dense at the river, generous at the article**. The homepage stacks 60+ stories above the fold on desktop with tight 24px gutters and 1px hairlines — high information density. Inside an article, the 600px reading column with 16px line-height and 32px paragraph spacing creates the most relaxed reading experience on a major news site. The contrast is intentional: **the river is a newspaper front page; the article is a printed page**.
+
+### Section Cadence
+
+- News sections (U.S., World, Politics, Business, Tech): pure white, hairline-separated
+- Opinion / Sunday Review: warm-gray (`#f7f7f5`) sub-band with heavy ink top rules per card
+- Magazine: paper-cream (`#fbf6e9`) backdrop, italic Cheltenham pull-quotes, drop-caps on long features
+- Cooking / Games / Wirecutter: subdomain only — different sub-brand color systems
+- Election night / breaking: full-bleed red alert banner above the masthead
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Cards, photos, alerts, section cards, body images, the entire editorial surface — broadsheet aesthetic rejects rounding |
+| Micro | 2px | Live badge, photo-credit chip — barely-rounded only because Franklin labels look better without razor corners |
+| Standard | 4px | Buttons, text inputs — the **largest** rounding on the system |
+| Pill | 9999px | Save-article chip, account dropdown trigger, audio play button — only used when the icon itself is round |
+
+The rejection of rounded corners is one of the New York Times' most identifying choices. SaaS marketing systems lean on 8–14px card rounding for warmth; the Times uses 0px because **paper has no rounded corners**. The single exception is the Save-Article pill, introduced in 2018 as a "modern" affordance — even then, it's only on white-on-hairline.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow, no rule | Article body, section bands, photo lead — most surfaces |
+| 1 — Hairline | 1px `#dfdfdf` rule | River cards, table rows, sidebar items, footer columns |
+| 2 — Section Rule | 1.5px `#121212` rule | Section break, masthead rule, opinion-card top rule |
+| 3 — Dropdown | `rgba(0,0,0,0.04) 0 2px 4px` | Account menu, search input results, share menu |
+| 4 — Overlay | `rgba(0,0,0,0.08) 0 6px 16px` | Search overlay, share modal |
+| 5 — Modal | `rgba(0,0,0,0.18) 0 12px 32px` | Paywall modal, login modal |
+
+### Shadow Philosophy
+
+The Times explicitly rejects shadow-as-elevation for editorial content. **Depth is ruled, not cast.** A river card sits above its predecessor not because it has a shadow but because a 1px `#dfdfdf` hairline separates them. A section ends not with a shadow but with a 1.5px ink rule. Shadows appear only on chrome elements (dropdowns, modals) where the hairline language doesn't read — and even there, the shadows are neutral-gray, never tinted. The result: the page feels printed, not floating; trustworthy, not glossy.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover swaps, hairline transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry, alert-banner enter, search overlay open
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — image carousel slide on photo essays
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Color swaps, hairline thickening |
+| Standard | 200ms | Card hover, link underline grow, dropdown open |
+| Slow | 320ms | Modal enter, alert-banner slide, search overlay |
+| Pulse | 1.6s | Live-dot continuous pulse |
+
+### Per-Component Recipes
+
+- **Card hover (image)**: image scales 1.0 → 1.02 inside its non-rounded clip; 200ms standard. Headline gains a 1px ink underline (grows from 0 to full width over 200ms).
+- **Live-dot pulse**: opacity 1 → 0.4 → 1 with scale 1 → 1.15 → 1, 1.6s ease-in-out infinite. Continuous — telegraphs *active reporting now*.
+- **Alert-banner enter**: translateY(-8px → 0) + opacity(0 → 1) over 240ms emphasized. Persists until dismissed or news lifecycle ends.
+- **Section-nav link hover**: 2px ink underline grows from below 0 → 100% width over 200ms standard.
+- **Account dropdown open**: scale(0.96 → 1.0) + opacity(0 → 1) over 200ms standard, anchored to top-right.
+- **Paywall modal enter**: scrim fades 0 → 0.5 alpha over 200ms; modal translates from `translateY(16px) opacity(0)` to `translateY(0) opacity(1)` over 320ms emphasized.
+- **Search overlay open**: full-page white sheet slides from top, 320ms emphasized; auto-focus on input.
+
+### Page Transitions
+
+Page-to-page (river → article, article → article) uses a fast 200ms cross-fade with no slide. The white canvas means the transition is nearly invisible — by design, since the page chrome should disappear and the headline should be the moment of arrival.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. The live-dot pulse becomes a **static red dot** (no opacity or scale animation). All transforms suppress; only opacity transitions remain. Card hovers degrade to underline-only — no image scale. Alert-banner enters become a hard appearance, no slide.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #121212 ink on #ffffff canvas | 17.4 | AAA |
+| #ffffff on #d0021b breaking-red | 5.4 | AA body / AAA large |
+| #5a5a5a muted on #ffffff | 7.0 | AAA |
+| #326891 link on #ffffff | 8.1 | AAA |
+| #727272 soft on #ffffff | 4.7 | AA body, AAA large |
+| #999999 faint on #ffffff | 2.9 | AA large only — used only on disabled |
+| #121212 on #f7f7f5 opinion-band | 16.8 | AAA |
+| #121212 on #fbf6e9 magazine-cream | 16.4 | AAA |
+
+### Focus Indicators
+
+Focus ring is `2px solid #326891` (the editorial link blue) with 2px outline-offset. Explicitly **not** the breaking-news red — red is reserved for live-content signaling and would create false-alarm noise on every Tab press. The link blue provides AAA contrast on white and matches the visual language of inline links.
+
+### ARIA Patterns
+
+- **Live-coverage articles**: outer container is `role="region"` with `aria-live="polite"` on the live-update body so updates are announced to screen readers. The LIVE chip carries `aria-label="Live coverage in progress"`.
+- **Audio narration**: every premium feature article has a play button at the top with `aria-label="Listen to this article, 8 minutes 42 seconds"`. Player controls follow the WAI-ARIA media player pattern.
+- **Paywall modal**: `role="dialog"`, `aria-modal="true"`, focus trapped, Esc closes, focus returns to the article body on close.
+- **Section nav**: implemented as a single `<nav aria-label="Sections">` with each link as a plain anchor; the active page is marked with `aria-current="page"`.
+- **Save-article chip**: uses `aria-pressed` to communicate save state; on toggle, an off-screen live region announces "Saved to Reading List".
+
+### Keyboard Navigation
+
+- Top nav: Tab moves Hamburger → Wordmark → Subscribe → Account → Search
+- Section nav: Tab traverses sections left-to-right
+- Article body: Tab skips photos by default (they're not focusable); Tab lands on inline links and the Listen / Save chips
+- Skip-link first: "Skip to main content" appears on initial Tab — sends focus past the masthead and section nav directly into the article body
+- Search overlay: opens on Cmd/Ctrl+K, focus auto-traps, Esc closes
+
+### Screen Reader Hints
+
+- Photo credits use `aria-label` to announce as "Photograph by [Name] / [Outlet]" rather than reading the visible "[Name]/The New York Times" raw
+- Live-dot has `aria-hidden="true"` (decorative); the LIVE label carries the announcement
+- "Subscribe" CTA carries `aria-label="Subscribe to The New York Times for $1 per week"` to communicate the offer terms
+- Visited links: visible state dims (#5a5a5a) but `aria-label` does not change — screen readers don't need the visited-vs-unvisited distinction
+
+### Reduced Motion
+
+Live-dot pulse becomes static. All transforms suppress; only opacity remains. Card hovers degrade to underline-only.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Top nav collapses to hamburger + wordmark + Subscribe; section nav hides behind hamburger; river cards stack 1-up; reading column narrows to viewport with 16px gutters; pull-quote keeps italic Cheltenham at 22px |
+| Tablet | 600–1024px | Section nav appears as horizontal scroller; river cards 2-up at 768+; sidebar / right rail still hidden |
+| Desktop | 1024–1440px | Full section nav; river cards 3-up; sidebar appears on article pages |
+| Wide | >1440px | Content caps at 1200px; gutters absorb the rest; markets data tables get a 4-column grid |
+
+### Touch Targets
+
+- Primary CTAs: 44×44px minimum (Subscribe, Sign In)
+- Section nav links: 44px tall touch area with 12×8px text inset
+- Save-article chip: 36×36px — borderline AAA, compensated by 12px padding around the icon
+- Live-update entries: 48px+ tap area for "Read full update" tap
+
+### Collapsing Strategy
+
+- Section nav collapses to a horizontal scroller on tablet, then into the hamburger drawer on mobile
+- Subscribe CTA stays visible in the top-right at all breakpoints — the most important conversion target
+- River cards drop column count cleanly: 4 → 3 → 2 → 1 — never reflow rows, always reduce columns
+- Sidebar / right rail (Most Popular, Top Stories) collapses below the article body on tablet and mobile
+- Paywall modal switches to a full-screen sheet on mobile
+
+### Image Behavior
+
+- River-card images use `aspect-ratio: 16/9` on desktop, `16/9` on tablet, `4/3` on mobile (more vertical = more headline showing)
+- Article hero images run full-bleed up to 1024px width, then center
+- Photo essays use CSS scroll-snap on touch surfaces and arrow buttons on mouse surfaces
+- Lazy-load below the fold; high-priority above-fold image gets `fetchpriority="high"`
+
+### Container Queries
+
+The right-rail sidebar uses container queries to compress when the rail narrows — author headshot drops from 48px to 32px, byline truncates, "X min read" hides in favor of just "X min".
+
+## 11. Content & Voice
+
+### Tone
+
+Authoritative, sober, plainspoken, and precise. The Times' voice trusts the reader's intelligence — there is no hand-holding, no exclamation marks, no "Let's get started!" cheerleading. Headlines lead with the news ("Trump Wins Pennsylvania, Closing In on Presidency"), not the emotional hook. The brand's editorial discipline (the Manual of Style and Usage, in print since 1976) governs every byline, dateline, and caption — no Oxford comma, "Mr." / "Mrs." courtesy titles in body, military ranks spelled out on first reference.
+
+### Microcopy Patterns
+
+- **Subscribe verbs**: "Subscribe", "Subscribe Now", "Continue", "Sign In" — never "Try free", "Get started", "Click here"
+- **Paywall messages**: full-sentence and instructive — "You've reached your monthly limit. Subscribe for $1 per week to continue reading."
+- **Comments / Reader replies**: "Add a comment" not "Leave a reply"; "Recommend" (not "Like")
+- **Error messages**: `[What went wrong] + [Specific remedy]` — "Your password must be at least 12 characters with one number."
+- **Empty state — saved articles**: "Your saved articles will appear here. Tap the bookmark icon on any article to save it."
+- **Section-meta**: "U.S." / "World" / "Politics" / "Business" / "Opinion" — period after "U.S." (style guide), no period after "Opinion"
+
+### CTA Verb Conventions
+
+- Primary action: **"Subscribe"**, **"Continue"**, **"Sign In"**, **"Read the full article"**
+- Secondary action: **"Save"** (article), **"Share"**, **"Recommend"** (comments), **"Listen"** (audio)
+- Tertiary text: **"More on this topic"**, **"Continue reading"**, **"View all updates"**
+- Avoided: "Click here", "Submit", "Buy now", "Try free", "Sign up" (Times prefers "Subscribe" — newspaper-coded, paid-relationship signal)
+
+### Empty States
+
+- Saved Reading List: "Your saved articles will appear here. Tap the bookmark icon on any article."
+- Comments closed: "Comments are closed on this article. The comment period typically remains open for 24 hours after publication."
+- Search no results: "We couldn't find any articles matching that search. Try different terms or browse by section."
+
+## 12. Dark Mode & Theming
+
+The New York Times ships **a true dark mode**, opt-in via account settings (and respecting `prefers-color-scheme: dark` on logged-out sessions in some environments). The full token swap:
+
+- `bg`: `#121212` — near-black canvas
+- `surface`: `#1a1a1a` — card surface
+- `surface-soft`: `#222222` — sidebar block
+- `text`: `#f7f7f7` — primary reading body
+- `text-muted`: `#a3a3a3` — bylines, captions
+- `brand-red`: `#ff334b` — slightly brighter to maintain AA on dark ground
+- `link`: `#9bbedf` — link blue lifted for AA on dark
+- `border`: `#333333` — hairline rules
+- `border-rule`: `#f7f7f7` — section rules invert from ink to paper
+
+Dark mode keeps every typographic choice unchanged — Cheltenham at 700, Imperial body, Franklin labels — only the color system swaps. The signature breaking-news red is brightened to `#ff334b` to stay legible on the dark ground without losing its alarm character. Photographs and infographics retain their colors; only text and chrome flip.
+
+## 13. Lineage & Influences
+
+The New York Times' visual lineage is the **American broadsheet itself** — Cheltenham was adopted as the headline face in 1906, Imperial as the body face in 1967. The web design discipline ports those choices directly: same headline face, same body face, same italic Cheltenham pull-quote, same tracked-uppercase Franklin Gothic for bylines and section labels. The brand is one of the few on the web where the digital language is *more conservative* than the print parent, deliberately.
+
+The web design system has been refined under three notable redesigns: the 2006 redesign (Khoi Vinh, design director — established the article reading column at 575px), the 2014 "Web 2.0" redesign (added the inline play / Save / Recommend chips), and the 2017 "Project Feather" redesign (introduced the modern paywall meter, the LIVE chip, and the dark mode). Each redesign has *removed* color and chrome, not added it.
+
+What the Times rejects: heavy shadows, decorative gradients, illustrative chrome, brand color used decoratively, sans-serif body text, rounded card corners, dark-mode-by-default, animated banners on news content, modal-driven interruption (the paywall is the only modal). What it borrows from: **The Guardian's** ruled-grid hierarchy (with stronger rule weight), **The Economist's** discipline of one signal color (red-vs-Economist-red), and **Apple's** product-photography-first hierarchy on Magazine features.
+
+**Influences:**
+- Cheltenham (1896) — Bertram Goodhue and Ingalls Kimball, the first headline face
+- Imperial (1957) — Edwin Shaar's body face, adopted by the Times in 1967
+- The Guardian — ruled grid and broadsheet web pattern, [theguardian.com](https://www.theguardian.com)
+- The Economist — single-signal-color discipline, [economist.com](https://www.economist.com)
+- Khoi Vinh — design director 2006–2010 — [subtraction.com](https://www.subtraction.com)
+- Project Feather (2017) — internal redesign codename — modern paywall, LIVE chip
+
+## 14. Do's and Don'ts
+
+**Do**
+- Set headlines in NYT Cheltenham 700 with negative tracking (-0.01em → -0.02em at display sizes)
+- Set body in NYT Imperial 18/1.55 with old-style figures (`onum`) enabled
+- Use Franklin Gothic in tiny tracked uppercase (12–14px, 0.04–0.08em tracking) for every meta label
+- Reserve the breaking-news red (`#d0021b`) for LIVE chips, alert banners, and election-night masthead
+- Separate stories with 1px `#dfdfdf` hairlines, never shadows
+- Set the reading column at ~600px line length for body running-text
+- Use the italic Cheltenham 28px pull-quote between two heavy ink rules — the canonical NYT pull-quote
+- Render bylines in Franklin 13/700 uppercase tracked at 0.04em — "BY MAGGIE HABERMAN"
+- Keep the canvas paper-white (`#ffffff`) on light mode; offer true dark mode (`#121212`) opt-in
+- Use the link blue (`#326891`) for inline editorial links — unchanged in 20+ years
+
+**Don't**
+- Don't round card corners — broadsheet aesthetic is square; the largest radius on the system is 4px on buttons
+- Don't use the breaking-news red for body links, hover states, or decorative accents — it's a signal, not a brand color
+- Don't use sans-serif for body running-text — Imperial serif is the editorial voice
+- Don't use lining figures (`lnum`) in editorial body — old-style figures are the printed-page tell
+- Don't use exclamation marks or "Let's" verbs in microcopy — Times voice is sober
+- Don't apply shadows to article cards — depth is ruled, not cast
+- Don't let the focus ring be the breaking-news red — link blue keeps red sacred for live content
+- Don't mix the Cooking orange / Games blue / Wirecutter yellow into the main news surface — sub-brands are subdomain-only
+- Don't use "Submit", "Click here", "Buy now" — the brand verbs are "Subscribe", "Continue", "Sign In", "Read"
+- Don't break the 600px reading column on article bodies — it's the print width and it's load-bearing for legibility
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Ink:              #121212
+Breaking-Red:     #d0021b
+Link-Blue:        #326891
+Muted:            #5a5a5a
+Hairline:         #dfdfdf
+Section-Rule:     #121212 at 1.5px
+Magazine-Cream:   #fbf6e9
+Opinion-Band:     #f7f7f5
+Live-Chip:        #d0021b on #ffffff
+```
+
+### Example Component Prompts
+
+- "Create a New York Times-style article header: white canvas (#ffffff), section label in Franklin Gothic 12/700 uppercase tracked 0.08em colored ink (#121212), 1.5px ink rule below the label, then headline in Cheltenham 44/700 with -0.015em tracking, then italic Cheltenham 18/300 deck, then byline in Franklin 13/700 uppercase tracked 0.04em ('BY MAGGIE HABERMAN'), then dateline in Franklin 13/400. No colors except ink."
+- "Design a NYT pull-quote: italic NYT Cheltenham at 28px / 1.3 line-height, ink (#121212), centered, bracketed above and below by 1px ink rules with 24px vertical padding. No background, no shadow, no quotation marks — just italic serif between two rules."
+- "Build a NYT subscribe CTA: ink (#121212) fill, white text in Franklin Gothic 14/700 uppercase tracked 0.06em ('SUBSCRIBE'), 4px radius, 12×20px padding, 44px height. Pointer-down state darkens to pure #000000."
+- "Create a NYT live-coverage badge: red (#d0021b) fill, white text 'LIVE' in Franklin 11/700 uppercase tracked 0.08em, 2px radius, 3×6px padding. To the left of the label: a 4px white circle pulsing 1.6s opacity 1 → 0.4 → 1 + scale 1 → 1.15 → 1."
+- "Design a NYT river card: white surface, 0px radius, top 1px hairline (#dfdfdf), no shadow. 16:9 image above, then headline in Cheltenham 24/700, then italic Cheltenham 18/300 deck, then Franklin uppercase byline, then '5 min read' meta. Hover: image scales 1.0 → 1.02, headline gains a 1px ink underline grown from 0 to full width over 200ms."
+- "Build a NYT paywall modal: white surface, 1px ink border, 0px radius, 32×24px padding. Headline 'Subscribe to The Times' in Cheltenham 24/700, subhead in Franklin 13/400 ('$1 per week for one year'), full-width ink Subscribe button below, outline 'Already a subscriber? Sign in' button beneath. Behind: 50% black scrim."
+
+### Iteration Guide
+
+1. **Start on paper-white.** Anything other than `#ffffff` reads as a different newspaper. Don't drift into off-white or warm-cream — those are Magazine-only sub-bands.
+2. **Cheltenham 700 for headlines, Imperial 400 for body, Franklin 700 uppercase tracked for meta.** This trio is the brand. Substitute Source Serif Pro + Inter only as a fallback — the trio is load-bearing.
+3. **Old-style figures in body, lining figures in tables.** If `1` reads as the same height as `4`, you've broken the editorial body — turn on `font-variant-numeric: oldstyle-nums`.
+4. **Reserve red for live content.** If two red elements are visible at once outside an election-night context, demote one. Red = signal, not decoration.
+5. **Hairlines, not shadows.** If you reach for a shadow on a content card, use a 1px `#dfdfdf` rule instead. Shadows are for chrome (dropdowns, modals), not editorial.
+6. **600px reading column.** Don't let body running-text exceed 600px line length — it breaks the print-broadsheet legibility model.
+7. **No rounded corners on content surfaces.** Cards, photos, alerts, sections all sit at 0px radius. Buttons and inputs get 4px max. The Save-Article pill is the only exception.
+8. **Tracked-uppercase Franklin is the meta voice.** Bylines, section labels, photo credits, button labels — all Franklin uppercase tracked. Body never uses Franklin; meta never uses Cheltenham or Imperial.

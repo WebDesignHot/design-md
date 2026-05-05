@@ -1,0 +1,717 @@
+---
+name: The Economist
+tagline: Deep cinnabar red `#e3120b`, Milo serif body, Econ Sans labels — the global-affairs weekly rendered with cover-illustration discipline.
+author: webdesignhot
+source_url: https://www.economist.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media]
+tags: [editorial, serif, dense, structured, news, red, weekly, cover-illustration]
+preview_swatch: ['#ffffff', '#e3120b', '#121212']
+related: [substack, ghost, medium]
+description: 'The Economist runs the most disciplined single-color editorial system in major news: a deep cinnabar red `#e3120b` carries the masthead, the section underlines, the unsigned-byline tradition (no journalist gets a name on the page — every piece is "Briefing" or "Leaders"), and the cover-illustration accent on every article. Body sets in Milo Serif by Mike Abbink, headlines in Milo Display, and section labels in Econ Sans. The canvas is paper-white, ink is near-black `#121212`, and the only chromatic moment is the signature red — used for the masthead, "The Economist" wordmark, the underlined section name, and inline link state. Photography is replaced almost entirely by illustrative covers and editorial illustrations rendered by the in-house art team, which is part of why the brand feels so identifiable: a page from The Economist looks like no other publication on the web.'
+
+colors:
+  bg: '#ffffff'                  # paper canvas
+  bg-section: '#f7f7f0'           # warm-off-white sub-band on Briefing/Leaders
+  bg-dark: '#121212'
+  surface: '#ffffff'
+  surface-soft: '#f7f7f0'
+  surface-strong: '#e8e8e1'
+  surface-quote: '#fff5e6'        # cream pull-quote backdrop
+  text: '#121212'                # near-black ink
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#707070'
+  text-faint: '#9a9a9a'
+  brand: '#e3120b'                # The Economist signature cinnabar red — masthead, wordmark
+  brand-hover: '#b80f08'          # hover/pressed red
+  brand-soft: '#fce5e3'           # tint surface on highlights
+  brand-deep: '#9a0e09'           # heaviest red — used on print cover only
+  link: '#e3120b'                 # editorial link is brand red — singular voltage
+  link-hover: '#b80f08'
+  link-visited: '#5a5a5a'         # visited dims to muted ink
+  on-brand: '#ffffff'
+  border: '#cccccc'              # default 1px hairline
+  border-soft: '#e0e0e0'
+  border-strong: '#888888'        # form input border
+  border-rule: '#121212'          # section rule (1px ink)
+  border-rule-red: '#e3120b'      # the brand-red rule beneath the masthead
+  shadow-card: 'rgba(0,0,0,0.04)'
+  shadow-elev: 'rgba(0,0,0,0.08)'
+  shadow-modal: 'rgba(0,0,0,0.18)'
+  scrim: 'rgba(0,0,0,0.5)'
+  success: '#1a7f37'
+  success-soft: '#e3f2e7'
+  warning: '#a06200'
+  warning-soft: '#faf0db'
+  danger: '#e3120b'
+  danger-soft: '#fce5e3'
+  info: '#1a4972'
+  info-soft: '#e3eaf2'
+  podcast-accent: '#1a4972'        # The Economist podcasts (The Intelligence) navy accent
+  espresso-accent: '#5a3000'       # Espresso daily briefing brown
+  briefing-rule: '#e3120b'         # 4px red rule above Briefing/Leaders content
+
+typography:
+  display:
+    family: '"EconMilo Display", "Milo Display", "EconHeadlineSerif", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 700, 800, 900]
+    opentype-features: ['liga', 'kern']
+  body:
+    family: '"EconMilo Serif", "Milo Serif", "Econ Serif", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 700]
+  sans:
+    family: '"EconSans", "Econ Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: 'Menlo, Consolas, "Courier New", monospace'
+    weights: [400]
+  scale:
+    masthead-wordmark:   { size: 60, weight: 900, lineHeight: 1.0,  tracking: '0.01em',  family: display, opentype: ['liga'], style: italic }
+    headline-mega:       { size: 48, weight: 800, lineHeight: 1.07, tracking: '-0.01em', family: display }
+    headline-jumbo:      { size: 38, weight: 800, lineHeight: 1.1,  tracking: '-0.005em', family: display }
+    headline-xl:         { size: 30, weight: 800, lineHeight: 1.15, tracking: '0',         family: display }
+    headline-lg:         { size: 24, weight: 800, lineHeight: 1.2,  tracking: '0',         family: display }
+    headline-md:         { size: 20, weight: 800, lineHeight: 1.22, tracking: '0',         family: display }
+    headline-sm:         { size: 17, weight: 800, lineHeight: 1.25, tracking: '0',         family: display }
+    deck-italic:         { size: 18, weight: 400, lineHeight: 1.4,  tracking: '0',         family: display, style: italic }
+    body-md:             { size: 17, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body-sm:             { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    pull-quote:          { size: 26, weight: 400, lineHeight: 1.3,  tracking: '0',         family: display, style: italic }
+    byline:              { size: 12, weight: 700, lineHeight: 1.3,  tracking: '0.06em',    family: sans, transform: uppercase }
+    dateline:            { size: 12, weight: 400, lineHeight: 1.3,  tracking: '0',         family: sans }
+    section-label:       { size: 13, weight: 700, lineHeight: 1.0,  tracking: '0.04em',    family: sans, color: brand-red }
+    caption:             { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',         family: sans, style: italic }
+    photo-credit:        { size: 11, weight: 400, lineHeight: 1.3,  tracking: '0.04em',    family: sans, transform: uppercase }
+    micro-meta:          { size: 11, weight: 500, lineHeight: 1.2,  tracking: '0.06em',    family: sans, transform: uppercase }
+    button-label:        { size: 13, weight: 700, lineHeight: 1.0,  tracking: '0.06em',    family: sans, transform: uppercase }
+    nav-link:            { size: 12, weight: 700, lineHeight: 1.0,  tracking: '0.06em',    family: sans, transform: uppercase }
+    edition-label:       { size: 11, weight: 700, lineHeight: 1.0,  tracking: '0.12em',    family: sans, transform: uppercase }
+
+radius:
+  micro: 0
+  sm: 2
+  md: 4
+  pill: 9999
+  none: 0
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120]
+
+layout:
+  page-width: 1200
+  prose-width: 600
+  feature-width: 1024
+  header-height: 56
+  masthead-rule-weight: 4         # heavy red rule beneath The Economist masthead
+  section-rule-weight: 1
+  hairline-weight: 1
+
+components:
+  button-primary:
+    bg: '#e3120b'
+    color: '#ffffff'
+    radius: 0
+    padding: '12px 22px'
+    height: 44
+    font: button-label
+    use: 'Subscribe, Continue — primary CTA. Brand-red fill, square corners.'
+  button-primary-hover:
+    bg: '#b80f08'
+    color: '#ffffff'
+    use: 'Pointer-down on red CTAs.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #121212'
+    radius: 0
+    padding: '12px 22px'
+    height: 44
+    use: 'Already a subscriber, secondary actions.'
+  button-text-link:
+    bg: 'transparent'
+    color: '#e3120b'
+    use: 'Inline body links — underlined on hover.'
+  card-headline:
+    bg: '#ffffff'
+    color: '#121212'
+    radius: 0
+    border: 'top 1px solid #cccccc'
+    use: 'Default river card — illustrated cover above (Economist rarely uses photography), Milo Display headline below, italic deck.'
+  card-leaders:
+    bg: '#ffffff'
+    color: '#121212'
+    radius: 0
+    border: 'top 4px solid #e3120b'
+    use: 'Leaders / Briefing card — heavy 4px red top rule signals editorial primacy.'
+  card-section-kicker:
+    bg: '#ffffff'
+    color: '#121212'
+    border-top: '1px solid #cccccc'
+    use: 'Standard section card with kicker label in red.'
+  pull-quote:
+    bg: 'transparent'
+    color: '#121212'
+    border: 'top 1px solid #121212; bottom 1px solid #121212'
+    padding: '24px 0'
+    use: 'Italic Milo Display 26px between two ink rules.'
+  text-input:
+    bg: '#ffffff'
+    color: '#121212'
+    radius: 4
+    height: 44
+    padding: '12px 14px'
+    border: '1px solid #888888'
+    focus: 'border thickens to 2px ink'
+    use: 'Email entry, search input.'
+  paywall-cta:
+    bg: '#e3120b'
+    color: '#ffffff'
+    padding: '32px 24px'
+    use: 'Subscribe modal — full red ground with white headline, "Subscribe" CTA in white-outline button.'
+  nav-section-link:
+    color: '#121212'
+    font: nav-link
+    padding: '14px 12px'
+    use: 'Section nav (The world this week, Leaders, Briefing, etc.). Hover: red underline.'
+  edition-selector:
+    bg: '#ffffff'
+    color: '#121212'
+    border: '1px solid #cccccc'
+    padding: '6px 10px'
+    use: 'Print/digital edition selector — top-right, "WEEKLY EDITION" label.'
+  podcast-card:
+    bg: '#1a4972'
+    color: '#ffffff'
+    radius: 0
+    use: 'The Intelligence / Money Talks podcast cards — navy ground.'
+  daily-briefing-card:
+    bg: '#5a3000'
+    color: '#ffffff'
+    radius: 0
+    use: 'Espresso daily-briefing card — brown ground.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  card-hover: 'illustration scales 1.0 → 1.02; headline gains red underline; 200ms standard'
+  red-underline-grow: 'underline width grows 0 → 100% over 200ms standard'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — transforms suppressed, fade-only.'
+
+breakpoints:
+  mobile: 600
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 0 0 #cccccc'
+  standard: 'rgba(0,0,0,0.04) 0 2px 4px'
+  elevated: 'rgba(0,0,0,0.08) 0 6px 16px'
+  deep: 'rgba(0,0,0,0.18) 0 12px 32px'
+  ring: '0 0 0 2px #e3120b'
+
+accessibility:
+  contrast-text-on-bg: 17.4              # #121212 on #ffffff — AAA
+  contrast-text-on-brand-red: 5.7         # #ffffff on #e3120b — AA body, AAA large
+  contrast-muted-on-bg: 7.0
+  contrast-link-on-bg: 4.7                # #e3120b on #ffffff — AA body
+  focus-ring: '2px solid #e3120b — Economist uses brand red as the focus ring (single-color discipline)'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  keyboard-nav: 'Tab moves logo → section nav → utility (Subscribe, Sign in, Search). Skip-link first.'
+
+dark-mode: optional
+colors-dark:
+  bg: '#121212'
+  bg-section: '#1a1a17'
+  surface: '#121212'
+  surface-soft: '#1a1a1a'
+  surface-quote: '#241c10'
+  text: '#f5f5f0'
+  text-strong: '#ffffff'
+  text-muted: '#bdbdbd'
+  text-soft: '#9a9a9a'
+  brand: '#ff3b34'                       # red brightens for AA on dark
+  link: '#ff3b34'
+  border: '#333333'
+  border-rule: '#f5f5f0'
+---
+
+## 1. Visual Theme & Atmosphere
+
+The Economist's web canvas runs the most chromatically disciplined system in major news design. There is exactly one color: **the deep cinnabar red, `#e3120b`** — the same red that has carried the printed magazine's masthead since 1959, and which the digital site preserves untouched. The masthead "The Economist" is set in italic Milo Display 60/900 in this red, sitting above a 4px red rule that visually anchors the page. Section names are red, hover-underlines on links are red, the kicker rule above Leaders/Briefing is red, the focus ring is red, the Subscribe CTA is red. The Economist commits harder to single-color editorial than any other major newspaper or magazine — and that discipline is its most recognizable brand asset.
+
+The body face is **Milo Serif** by Mike Abbink (Font Bureau, 2009 redesign) — a humanist book serif with subtle slab terminals, designed specifically to read well at the magazine's narrow column widths. Headlines run in **Milo Display**, a heavier display cut at weights 800–900 with negative tracking. Section labels and meta run in **Econ Sans** at tiny sizes with tracked uppercase. The trio is custom and proprietary, replacing Adobe Caslon (the magazine's typeface from the 1990s through 2009).
+
+The Economist's most identifying design choice is its **rejection of bylines**. With a few enumerated exceptions (the editor-in-chief's letters, occasional book reviewers), every article on economist.com is unsigned — the byline space is filled by the section label only ("Briefing", "Leaders", "United States"), set in red 13/700 tracked uppercase. This is part of the magazine's editorial philosophy — every piece speaks for the publication, not a single journalist. The visual consequence: there is no headshot, no name, no "By" label. The page reads as a continuous editorial voice, broken only by section dividers and the occasional reporter's standfirst.
+
+Photography is rare. The Economist relies almost entirely on **illustration** — cover-class illustrated portraits and editorial illustrations rendered by the in-house art team. This is part of why a page from The Economist looks like no other publication: instead of stock photography, you see a purpose-rendered illustration above each article, often reading as a mini cartoon-portrait or political caricature. The illustration aesthetic is part of the brand.
+
+**Key Characteristics:**
+- Paper-white canvas (`#ffffff`) with near-black ink (`#121212`)
+- Single-voltage red (`#e3120b`) carries masthead, links, section labels, focus ring — total chromatic discipline
+- 4px red rule beneath the masthead — print-cover anchor moment
+- Italic Milo Display 60/900 for the wordmark
+- Custom trio: Milo Display (headlines) / Milo Serif (body) / Econ Sans (meta)
+- **Unsigned bylines** — section label replaces journalist credit on most articles
+- Illustration-led, not photography-led — cover-class illustrated portraits over each article
+- 600px reading column — narrowest of the major news brands
+- 0px corners on cards, alerts, sections — broadsheet rejection of rounding
+- Tiny tracked uppercase Econ Sans (11–13px, 0.04–0.12em) for every meta label
+- Italic Milo deck (the standfirst) — distinctive editorial flavor
+- Print + digital edition selector at top-right ("WEEKLY EDITION") — ports the magazine model to web
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): paper field across nearly every page.
+- **Ink** (`#121212`): dominant text. Headlines, body, masthead.
+- **Cinnabar Red** (`#e3120b`): the singular voltage. The wordmark, the masthead rule, section labels, link state, hover underline, focus ring, paywall CTA. Distinctive from the brighter NYT red (`#d0021b`) and Guardian red (`#c70000`) — Economist red is deeper, more orange-shifted, more historic-cinnabar.
+
+### Brand
+- **Brand Red** (`#e3120b`) — masthead, links, section accents
+- **Red Hover** (`#b80f08`) — pressed/hovered state
+- **Red Soft** (`#fce5e3`) — tint surface on highlights
+- **Red Deep** (`#9a0e09`) — heaviest red, used on the print cover only
+
+### Sub-Brand
+- **Espresso Brown** (`#5a3000`) — Espresso daily-briefing card ground
+- **Podcast Navy** (`#1a4972`) — The Intelligence / Money Talks podcast cards
+- **Cover Illustration** — ranges across the spectrum but constrained to muted/historic palette by the in-house art team
+
+### Accent
+- **Editorial Link Red** (`#e3120b`) — inline body links use the brand red itself, distinct from typical blue
+- **Link Hover** (`#b80f08`)
+- **Link Visited** (`#5a5a5a`) — visited dims to muted ink
+
+### Interactive
+- **Default Link** (`#e3120b` text + underline-on-hover) — red itself is the link color, breaking the blue convention
+- **Active CTA** (`#e3120b` red fill on Subscribe / Continue)
+- **Disabled** (`#9a9a9a` text)
+- **Selected** (saved-article chip with red fill)
+
+### Neutral Scale
+- **Ink** (`#121212`) — headlines, body
+- **Muted** (`#5a5a5a`) — datelines, captions
+- **Soft** (`#707070`) — section meta, "Continue reading"
+- **Faint** (`#9a9a9a`) — disabled
+- **Hairline** (`#cccccc`) — universal rule color
+
+### Surface & Borders
+- **Canvas** (`#ffffff`)
+- **Surface Soft** (`#f7f7f0`) — warm-off-white sub-band on Briefing/Leaders for editorial weight
+- **Surface Strong** (`#e8e8e1`) — disabled fill
+- **Surface Quote** (`#fff5e6`) — paper-cream pull-quote backdrop
+- **Hairline** (`#cccccc`) — default 1px rule
+- **Border Strong** (`#888888`) — form input border
+- **Border Rule** (`#121212`) — 1px ink section rule
+- **Border Rule Red** (`#e3120b`) — 4px red masthead rule
+
+### Shadow Colors
+Shadows are reserved for chrome. Editorial cards stay flat:
+- `rgba(0,0,0,0.04) 0 2px 4px` — dropdown
+- `rgba(0,0,0,0.08) 0 6px 16px` — overlay
+- `rgba(0,0,0,0.18) 0 12px 32px` — modal lift
+
+### Semantic
+- **Success** (`#1a7f37` on `#e3f2e7`)
+- **Warning** (`#a06200` on `#faf0db`)
+- **Danger** (`#e3120b` on `#fce5e3`) — form errors share brand red
+- **Info** (`#1a4972` on `#e3eaf2`) — info uses the podcast navy as the only non-red accent
+
+## 3. Typography Rules
+
+### Font Family
+
+**Display**: `Milo Display` — Mike Abbink, Font Bureau, commissioned for The Economist's 2009 redesign. A humanist serif display cut with stronger contrast than Milo Serif and slab-tinged terminals. Available in 400, 500, 700, 800, 900. Fallback: `Georgia, "Times New Roman", serif`.
+
+**Body**: `Milo Serif` — the body cut of the same family, designed for narrow-column legibility. Available in 400, 500, 700.
+
+**Sans**: `Econ Sans` — paired sans for bylines (rare), captions, section labels, button labels, navigation. Used at small sizes with tracked uppercase. Available in 400, 500, 700. Fallback: `"Helvetica Neue", Helvetica, Arial, sans-serif`.
+
+**Mono**: System mono `Menlo, Consolas, "Courier New", monospace` — used only on data tables.
+
+**OpenType features**: Milo Display uses standard ligatures (`liga`) and tightly-tuned kerning (`kern`) at display sizes. Milo Serif body uses `tnum` on data tables and price displays — column alignment matters in a publication with so much economic data.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| masthead-wordmark | Milo Display (italic) | 60 | 900 | 1.0 | 0.01em | liga, kern | "The Economist" — italic 900 in cinnabar red |
+| headline-mega | Milo Display | 48 | 800 | 1.07 | -0.01em | — | Cover-class headline |
+| headline-jumbo | Milo Display | 38 | 800 | 1.1 | -0.005em | — | Top-of-fold lead |
+| headline-xl | Milo Display | 30 | 800 | 1.15 | 0 | — | Above-fold secondary |
+| headline-lg | Milo Display | 24 | 800 | 1.2 | 0 | — | River lead |
+| headline-md | Milo Display | 20 | 800 | 1.22 | 0 | — | River sub |
+| headline-sm | Milo Display | 17 | 800 | 1.25 | 0 | — | Compact module |
+| deck-italic | Milo Display (italic) | 18 | 400 | 1.4 | 0 | — | Standfirst — italic, weight 400 |
+| body-md | Milo Serif | 17 | 400 | 1.55 | 0 | — | Default running text |
+| body-sm | Milo Serif | 16 | 400 | 1.5 | 0 | — | Compact card body |
+| pull-quote | Milo Display (italic) | 26 | 400 | 1.3 | 0 | — | Italic display between two ink rules |
+| byline | Econ Sans | 12 | 700 | 1.3 | 0.06em | uppercase | "BY THE EDITORS" — when used (rare) |
+| dateline | Econ Sans | 12 | 400 | 1.3 | 0 | — | "Nov 5th 2024" (note: ordinal-suffixed date format is Economist style) |
+| section-label | Econ Sans | 13 | 700 | 1.0 | 0.04em | uppercase, color: red | "BRIEFING" / "LEADERS" — colored brand red |
+| caption | Econ Sans (italic) | 13 | 400 | 1.4 | 0 | italic | Photo caption — italicized for editorial flavor |
+| photo-credit | Econ Sans | 11 | 400 | 1.3 | 0.04em | uppercase | "ILLUSTRATION: KAL" or photographer credit |
+| micro-meta | Econ Sans | 11 | 500 | 1.2 | 0.06em | uppercase | "5 min read" / "Listen" |
+| button-label | Econ Sans | 13 | 700 | 1.0 | 0.06em | uppercase | "SUBSCRIBE" / "SIGN IN" |
+| nav-link | Econ Sans | 12 | 700 | 1.0 | 0.06em | uppercase | "WORLD" / "BUSINESS" |
+| edition-label | Econ Sans | 11 | 700 | 1.0 | 0.12em | uppercase | "WEEKLY EDITION" — top-right edition selector |
+
+### Principles
+
+- **Italic 900 wordmark.** Distinct from every other major news brand — the masthead is italic, not roman. The 900-weight italic Milo Display in cinnabar red is the signature.
+- **Display weight 800.** Headlines run heavier than NYT (700) and Guardian (700) — Economist commits to a heavier display weight.
+- **Section labels in brand red.** Most news brands run section labels in ink-tracked uppercase; the Economist colors them in cinnabar red. The label color *is* the section identifier.
+- **Italic deck.** The standfirst (sub-headline) is italic Milo Display 18/400 — adds editorial-magazine flavor distinct from NYT/WaPo's roman decks.
+- **Italic captions.** Photo captions run italic Econ Sans 13/400 — magazine convention preserved.
+- **Ordinal date format.** "Nov 5th 2024" — Economist style guide demands ordinal date suffixes ("5th" not "5"). The dateline is a brand-voice signal as much as a typographic one.
+- **600px reading column** — the narrowest of major news brands. Milo Serif was designed for narrow columns and reads best at this width.
+- **Source Serif Pro / Crimson Pro are the closest open-source fallbacks** — adjusted for slab-terminal Milo flavor. Inter for sans.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Brand-red fill (`#e3120b`), white text, 0px radius (square), 12×22px padding, 44px height, 13px / 700 Econ Sans uppercase tracked 0.06em. Press: darkens to `#b80f08`.
+
+**`button-secondary`** — White fill, ink text, 1px ink border, 0px radius, same dimensions.
+
+**`button-text-link`** — Plain red text (`#e3120b`), no surface, no border. Underlined on hover.
+
+### Cards
+
+**`card-headline`** — White surface, 0px radius, top 1px hairline (`#cccccc`), no shadow. **Illustration above** (Economist rarely uses photography), Milo Display 20/800 headline, italic Milo Display 18/400 deck, red Econ Sans 13/700 uppercase section label (replacing byline), micro-meta below.
+
+**`card-leaders`** / **`card-briefing`** — Same structure but with a **4px brand-red top rule** signaling editorial primacy. Leaders and Briefing are the magazine's flagship sections — the red rule telegraphs "this is the magazine's editorial position".
+
+**`card-finance-economics`** — Standard card, with optional small data-chart inline (the Economist runs a lot of inline mini-charts on Finance & Economics).
+
+### Pull-Quote
+
+**`pull-quote`** — Italic Milo Display 26px / 1.3, between two 1px ink rules at 24px vertical padding. Distinctive flavor: Milo Display italic has subtle slab terminals that give the pull-quote a humanist-sans-serif lean compared to NYT's Cheltenham or WaPo's Postoni.
+
+### Inputs / Forms
+
+**`text-input`** — White fill, 1px `#888888` border, 4px radius, 44px height, 12×14px padding. Focus: border thickens to 2px ink.
+
+**`paywall-cta`** — **Full red ground** (`#e3120b`), 0px radius, 32×24px padding. Headline in white Milo Display 22/800, sub-copy in white Milo Serif 16/400, white-outline "Subscribe" CTA. The Economist paywall is the most chromatically loud paywall in news — full red ground, not white-on-ink.
+
+### Navigation
+
+**`top-nav`** — White surface, 56px height, 1px bottom hairline + a heavy **4px red masthead rule** beneath. Logo "The Economist" (italic Milo Display 60/900 red) center-aligned over its tagline. Menu hamburger left, Subscribe + Sign In + Search right.
+
+**`section-nav`** — Horizontal Econ Sans 12/700 uppercase tracked links. Hover: red underline grows from below.
+
+**`edition-selector`** — Top-right, "WEEKLY EDITION" label in 11/700 tracked 0.12em uppercase, with a small dropdown caret. The print-edition selector is unique to the Economist — ports the magazine's weekly-edition cycle to web navigation.
+
+### Decorative
+
+**`section-rule`** — 1px ink rule.
+
+**`masthead-rule`** — 4px brand-red rule beneath the wordmark. The single most identifying decorative element on the brand.
+
+**`hairline-rule`** — 1px `#cccccc` between river stories.
+
+**`drop-cap`** — On Briefing/Leaders: first letter in Milo Display 56/800 with a 3-line drop.
+
+### Sub-Brand Cards
+
+**`podcast-card`** — Navy ground (`#1a4972`), white headline, white play icon. The Intelligence / Money Talks daily podcast cards.
+
+**`daily-briefing-card`** — Brown ground (`#5a3000`), white text. Espresso daily-briefing card, the morning digest product.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `2 · 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120`
+- Section padding: 64px between page bands
+- Card internal: 16px between illustration and headline; 8px between headline and deck
+
+### Grid & Container
+
+- Max content width: **1200px** centered on 12-column grid
+- Reading column: **600px** — narrowest of the major news brands; Milo Serif is calibrated for this width
+- Feature container: **1024px** for above-fold illustrated leaders
+- Footer: 4-column link list with edition selector
+
+### Whitespace Philosophy
+
+The Economist runs **dense and ruled** — like NYT/WaPo, but with even narrower columns and more illustration density. The river stacks 1px hairline-separated cards; inside an article the 600px reading column delivers the magazine-broadsheet reading experience. The whitespace is generous around section dividers (red rules signal new chapters), tight inside cards.
+
+### Section Cadence
+
+- Leaders / Briefing: white ground with 4px red top rule per card — flagship editorial
+- The world this week: condensed weekly summary with bulleted lists
+- United States / Britain / Europe / Asia / China / Middle East & Africa / Americas: regional sections, white ground with red kicker
+- Finance & Economics / Business / Science & Technology / Culture / Books & Arts / Obituary: standard column treatment
+- Special Reports: longer-form features with magazine-cover-class illustration above
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0px | Cards, illustrations, alerts, sections, paywall — broadsheet aesthetic |
+| Micro | 2px | Photo-credit chip, occasional meta tag |
+| Standard | 4px | Text input only |
+| Pill | 9999px | Save-article chip, audio play button — only when icon is round |
+
+The Economist commits as hard as the Washington Post to **square corners**: buttons, cards, alerts, paywalls all sit at 0px. The single non-zero radius is the text input at 4px. This shape discipline is part of the magazine-on-web translation: a printed magazine has no rounded corners; its digital edition shouldn't either.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Article body, hero, section bands |
+| 1 — Hairline | 1px `#cccccc` rule | River cards, table rows |
+| 2 — Section Rule | 1px `#121212` rule | Section break |
+| 3 — Masthead Rule | 4px `#e3120b` rule | Beneath The Economist wordmark |
+| 4 — Briefing Rule | 4px `#e3120b` rule | Above Leaders/Briefing card top |
+| 5 — Dropdown | `rgba(0,0,0,0.04) 0 2px 4px` | Account menu, edition selector dropdown |
+| 6 — Modal | `rgba(0,0,0,0.18) 0 12px 32px` | Paywall modal |
+
+### Shadow Philosophy
+
+The Economist has the most disciplined depth system in editorial design: **two ruled tiers** (1px and 4px) and **one color tier** (cinnabar red on the masthead and Briefing rules). The 4px red rule appears in exactly two places — beneath the masthead and above Leaders/Briefing cards — and that scarcity is what gives those rules their authority. Shadows appear only on chrome. **Depth is ruled-in-red, not cast-in-gray.**
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)`
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)`
+- **Out-soft**: `cubic-bezier(0.0, 0, 0.2, 1)`
+
+### Durations
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Color swaps |
+| Standard | 200ms | Card hover, link underline grow |
+| Slow | 320ms | Modal enter |
+
+### Per-Component Recipes
+
+- **Card hover**: illustration scales 1.0 → 1.02; headline gains a 1px red underline (grows from 0 to full width over 200ms standard).
+- **Section-nav link hover**: red underline grows from below 0 → 100% width over 200ms standard.
+- **Edition-selector dropdown**: scale(0.96 → 1.0) + opacity(0 → 1) over 200ms standard.
+- **Paywall modal enter**: scrim fades 0 → 0.5 alpha over 200ms; modal translates 16px to 0 + opacity 0 → 1 over 320ms emphasized. The full-red ground commands attention.
+
+### Page Transitions
+
+200ms cross-fade.
+
+### Reduced Motion
+
+Card hovers degrade to underline-only; transforms suppressed; opacity-only fades retained.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #121212 ink on #ffffff canvas | 17.4 | AAA |
+| #ffffff on #e3120b cinnabar-red | 5.7 | AA body / AAA large |
+| #e3120b on #ffffff (link) | 4.7 | AA body |
+| #5a5a5a muted on #ffffff | 7.0 | AAA |
+| #707070 soft on #ffffff | 4.7 | AA body, AAA large |
+| #121212 on #f7f7f0 sub-band | 16.5 | AAA |
+
+### Focus Indicators
+
+Focus ring: `2px solid #e3120b` (the brand red itself) with 2px outline-offset. The Economist commits to single-color discipline so completely that even the focus ring is brand red. This is unusual — most brands keep focus on a separate accent. The Economist accepts that red appears on every Tab press because the red is already the link color, the section accent, the masthead. The page already lives in red; the focus ring fits.
+
+### ARIA Patterns
+
+- **Articles without bylines** (most of them): the section label takes the byline role for screen readers — `aria-label="Section: Briefing"`.
+- **Edition selector**: `role="combobox"`, `aria-haspopup="listbox"`, edition options as `role="option"`.
+- **Paywall modal**: `role="dialog"`, `aria-modal="true"`, focus trapped, Esc closes.
+- **Audio narration**: every premium feature has `aria-label="Listen to this article, X minutes Y seconds"`.
+
+### Keyboard Navigation
+
+- Top nav: Tab moves Hamburger → Wordmark → Subscribe → Sign In → Search → Edition selector
+- Section nav: Tab traverses sections left-to-right
+- Article body: Tab skips illustrations; lands on inline links and Listen / Save chips
+- Skip-link first
+
+### Screen Reader Hints
+
+- Illustrations announce as "Illustration: [Artist Name]" — the Economist credits illustrators, not photographers
+- Editorial cards without bylines announce the section label as the source ("From Briefing")
+- Edition-selector announces "Weekly edition selector — currently viewing the December 7th 2024 edition"
+
+### Reduced Motion
+
+Card hovers degrade to underline-only; transforms suppressed.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Top nav collapses to hamburger + wordmark + Subscribe; section nav into hamburger; river cards 1-up; reading column 16px gutters |
+| Tablet | 600–1024px | Section nav as horizontal scroller; river cards 2-up at 768+ |
+| Desktop | 1024–1440px | Full section nav; river cards 3-up; sidebar appears on article pages |
+| Wide | >1440px | Content caps at 1200px |
+
+### Touch Targets
+
+- Primary CTAs: 44×44px
+- Section nav: 44px tap area
+- Save-article chip: 36×36px
+- Edition selector: 44px tall on mobile
+
+### Collapsing Strategy
+
+- Section nav collapses to scroller, then hamburger
+- Subscribe stays visible at all breakpoints
+- River cards drop column count: 4 → 3 → 2 → 1
+- Sidebar collapses below article body on tablet
+
+### Image Behavior
+
+- Illustration cards: `aspect-ratio: 16/9` desktop, `4/3` mobile
+- Cover-class illustrations: full-bleed up to 1024px
+- The Economist rarely uses photography; when it does, photo treatment matches illustration (same aspect, same captioning)
+
+### Container Queries
+
+The right-rail "Most popular" list compresses to single-line truncate when narrow.
+
+## 11. Content & Voice
+
+### Tone
+
+Authoritative, cosmopolitan, witty, slightly opinionated within the bounds of liberal-economic editorial discipline. The Economist's voice is the most distinctive in news — sentences are short, claims are sharp, and the publication signs nothing. Every piece reads as the magazine speaking, not a journalist; that anonymity gives the prose a particular omniscient confidence.
+
+### Microcopy Patterns
+
+- **Subscribe verbs**: "Subscribe", "Continue", "Sign in" — minimal CTA verbs
+- **Paywall messages**: "You've reached your monthly limit. Subscribe for full access."
+- **Date format**: "Nov 5th 2024" — ordinal suffix is style-guide mandatory
+- **Section labels in red uppercase**: "BRIEFING" / "LEADERS" / "FINANCE & ECONOMICS" / "OBITUARY"
+- **No bylines**: most articles open with the section label, not "By [Author]"
+- **The world this week**: a weekly summary in bullet form, condensed sentences
+
+### CTA Verb Conventions
+
+- Primary: **"Subscribe"**, **"Continue"**, **"Sign in"**, **"Listen"** (podcast)
+- Secondary: **"Save"**, **"Share"**
+- Tertiary: **"Read more"**, **"See all"**
+- Avoided: "Click here", "Submit", "Buy now", "Try free", "Get started"
+
+### Empty States
+
+- Saved articles: "Your saved articles will appear here."
+- Search no results: "No articles match your search. Try different keywords."
+- Comments: The Economist has no public comments — empty by design.
+
+## 12. Dark Mode & Theming
+
+The Economist supports a **system-level dark mode** for digital subscribers:
+
+- `bg`: `#121212` — near-black canvas
+- `surface`: `#121212`
+- `text`: `#f5f5f0` — slightly cream-tinted white (warm against dark)
+- `text-muted`: `#bdbdbd`
+- `brand`: `#ff3b34` — red brightens for AA on dark
+- `link`: `#ff3b34`
+- `border`: `#333333`
+- `border-rule`: `#f5f5f0` — section rules invert ink → cream
+
+Dark mode preserves the Milo trio and the single-voltage red discipline. The cinnabar red brightens to `#ff3b34` to maintain AA. Photographs and illustrations retain their colors; only text and chrome flip.
+
+## 13. Lineage & Influences
+
+The Economist's visual lineage is **18th-19th century British political economy publishing** — the magazine was founded in 1843 by James Wilson to advocate for free trade. The masthead has carried the cinnabar red since 1959 (when the brand identity was systematized), and the digital site preserves that print discipline almost exactly. The 2009 Mike Abbink redesign introduced the Milo type family, replacing Adobe Caslon, and ported the magazine's narrow-column legibility to web.
+
+The most distinctive editorial-design choice — **unsigned bylines** — is unique to the Economist. The magazine's collective authorship convention is part of its editorial identity, and the visual consequence is a design system that must work without journalist headshots, names, or personal-brand decoration. Section labels and dateline alone carry the meta.
+
+The illustration tradition — KAL (Kevin Kallaugher) and the in-house art team rendering political cartoons and editorial illustrations — replaces stock photography. A reader can identify The Economist from a single illustrated portrait without seeing the masthead. This is one of the most cohesive brand-illustration systems in publishing.
+
+What the Economist rejects: bylines (mostly), photography (mostly), color other than red, rounded card corners, decorative gradients, illustrative chrome unrelated to the article, weight-heavy nav UI, paywall-driven interruption beyond a single subscribe modal. What it borrows from: **The Times of London's** masthead authority, **Punch's** editorial illustration tradition, **The Spectator's** unsigned-leaders convention, and modern data-visualization design (the Economist's data team is industry-leading and runs a consistent chart visual system across the publication).
+
+**Influences:**
+- Cinnabar red (1959) — the masthead color systematized that year
+- KAL (Kevin Kallaugher) — political cartoonist since 1978, defines the illustration aesthetic
+- Mike Abbink / Font Bureau — Milo type family, 2009 redesign
+- Adobe Caslon (pre-2009) — the previous body face, replaced for narrow-column legibility
+- The Times of London — masthead authority lineage
+- Punch — editorial illustration tradition
+
+## 14. Do's and Don'ts
+
+**Do**
+- Set the masthead in italic Milo Display 60/900 in cinnabar red (`#e3120b`)
+- Use the 4px red rule beneath the masthead — the single most identifying decoration on the brand
+- Run headlines in Milo Display 800 with negative tracking (-0.005em → -0.01em)
+- Run body in Milo Serif at 17px / 1.55 line-height in a 600px column
+- Use brand red for inline editorial links — single-color discipline
+- Color section labels in cinnabar red (`#e3120b`), not ink — distinct from NYT/WaPo
+- Use unsigned bylines on most articles — let the section label carry the source attribution
+- Lead with illustration, not photography — the Economist's art-team illustrations are part of the brand
+- Use ordinal-suffix date format ("Nov 5th 2024") — it's a style-guide signal
+- Use italic Econ Sans for photo captions — magazine-convention italic
+
+**Don't**
+- Don't introduce a second brand color — the cinnabar red is the only voltage; navy podcast and brown Espresso are sub-brand-only
+- Don't add bylines to news articles — the unsigned tradition is editorial-load-bearing
+- Don't use stock photography — the brand is illustration-led, not photographic
+- Don't round card corners — square corners are part of the magazine-on-web translation
+- Don't apply shadows to article cards — depth is ruled, not cast (4px red, 1px ink, 1px hairline are the only depth tiers)
+- Don't use a generic blue link — the editorial link is brand red
+- Don't use uppercase section labels in ink — section labels are red, tracked 0.04em
+- Don't use cardinal date format ("Nov 5") — ordinal suffix is style-guide mandatory
+- Don't break the 600px reading column — Milo Serif is calibrated for narrow columns
+- Don't use "Click here" or "Submit" — the brand verbs are "Subscribe", "Continue", "Sign in", "Listen"
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Ink:              #121212
+Cinnabar-Red:     #e3120b
+Red-Hover:        #b80f08
+Red-Soft:         #fce5e3
+Muted:            #5a5a5a
+Hairline:         #cccccc
+Section-Rule:     #121212 at 1px
+Masthead-Rule:    #e3120b at 4px
+Briefing-Rule:    #e3120b at 4px
+Sub-Band:         #f7f7f0
+```
+
+### Example Component Prompts
+
+- "Create The Economist masthead: white canvas (#ffffff). Center: 'The Economist' in italic Milo Display 60/900 in cinnabar red (#e3120b), with the 'T' kerned tightly into 'he'. Beneath: a 4px brand-red rule spanning full width. Above and below the masthead: 16px vertical padding."
+- "Design an Economist article header: section label in Econ Sans 13/700 uppercase tracked 0.04em colored brand red (#e3120b) ('BRIEFING' or 'LEADERS'). Below: headline in Milo Display 38/800 ink with -0.005em tracking. Below: italic Milo Display 18/400 standfirst in ink. **No byline** — unsigned. Date in Econ Sans 12/400 ('Nov 5th 2024' — ordinal suffix mandatory)."
+- "Build an Economist Subscribe button: cinnabar red (#e3120b) fill, white text in Econ Sans 13/700 uppercase tracked 0.06em ('SUBSCRIBE'), 0px radius (square), 12×22px padding, 44px height. Press: darkens to #b80f08."
+- "Create an Economist Briefing card: white surface, 0px radius, **4px brand-red top rule (#e3120b)** signaling editorial primacy. Illustration above (16:9, in-house illustrator credit), Milo Display 24/800 headline, italic Milo Display 18/400 deck, red Econ Sans 13/700 uppercase section label (no byline)."
+- "Design The Economist pull-quote: italic Milo Display at 26px / 1.3, ink, between two 1px ink rules at 24px vertical padding. The Milo Display italic has subtle slab terminals — distinct from NYT's Cheltenham."
+- "Build an Economist paywall modal: **full red ground (#e3120b)**, 0px radius, 32×24px padding. Headline 'Subscribe to The Economist' in white Milo Display 22/800. Sub-copy in white Milo Serif 16/400. White-outline 'Subscribe' button. Behind: 50% black scrim. The full-red paywall is unique to the Economist."
+
+### Iteration Guide
+
+1. **Single voltage red.** If a non-red color appears outside the podcast (navy) or Espresso (brown) sub-brands, you've broken the brand. The cinnabar red is the only chromatic moment.
+2. **Italic 900 wordmark.** "The Economist" must be set in italic Milo Display weight 900. Roman is wrong.
+3. **Square corners on every editorial surface.** Cards, alerts, paywall, sections at 0px. Only text inputs round (4px).
+4. **Section labels in red, never ink.** Most news systems use ink-tracked uppercase for sections; the Economist colors them brand red.
+5. **No byline by default.** Unless explicitly named (editor's letters, book reviewers), articles are unsigned. The section label carries the attribution.
+6. **Illustration over photography.** When generating image content, prefer purpose-rendered illustrations to stock photography.
+7. **600px reading column.** Don't widen — Milo Serif is calibrated for this column width.
+8. **Ordinal-suffix date format.** "Nov 5th 2024" not "November 5, 2024" or "Nov 5 2024". The ordinal suffix is part of the brand voice.

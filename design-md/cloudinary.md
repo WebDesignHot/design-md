@@ -1,0 +1,726 @@
+---
+name: Cloudinary
+tagline: Media-API technical infrastructure in confident blue — Inter at modest weights with a deep navy-blue brand and a single chromatic accent for media moments.
+author: webdesignhot
+source_url: https://cloudinary.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [light, blue, sans, technical, media, api, dev-tools]
+preview_swatch: ['#ffffff', '#3448c5', '#0d152e']
+related: [stripe, mux, livekit]
+description: 'Cloudinary''s marketing surface is media-API technical infrastructure dressed in confident navy-blue. The canvas is pure white `#ffffff` with deep navy `#0d152e` mid-page bands, and the type is Inter at modest mid-weights (500–600 for display) sitting in a structured, dev-tool-credible layout. Brand voltage is `#3448c5` Cloudinary blue — a deep saturated blue that anchors primary CTAs, brand wordmark, and feature accents. Where Stripe is single-color discipline and AWS is enterprise-cool, Cloudinary occupies a media-platform middle ground: technical credibility (code blocks, API references, transformation strings) paired with media warmth (photo galleries, video thumbnails, image-transformation demos). The signature design move is the **transformation chip** — a small horizontal pill showing a Cloudinary URL fragment (`f_auto,q_auto,w_800`) as a code-style accent inline with feature copy. Demo cards carry real before/after image transformations, video player UI, and DAM (digital asset management) interfaces. Section rhythm: white hero → image-transformation demo grid → dark navy code-block band → white feature grid → pricing → footer. The voice is technically confident, dev-friendly, and explicitly capability-focused — Cloudinary writes about MIME types, transformation parameters, and CDN edge nodes alongside the marketing copy.'
+
+colors:
+  bg: '#ffffff'                  # pure white canvas
+  bg-soft: '#f5f7fb'             # cool soft surface
+  bg-elev: '#ffffff'             # elevated stays white
+  bg-strong: '#e9ecf3'           # cool pre-footer
+  bg-dark: '#0d152e'             # deep navy mid-page band
+  bg-dark-elev: '#162042'        # elevated dark surface for code blocks
+  surface: '#f5f7fb'
+  text: '#0d152e'                # ink — same as bg-dark, very dark navy
+  text-body: '#2c3354'           # default running-text — soft navy
+  text-muted: '#5a6080'          # captions, footer links
+  text-faint: '#8c91a8'          # placeholder, disabled
+  brand: '#3448c5'               # Cloudinary blue — deep saturated
+  brand-hover: '#2b3da8'         # press / hover
+  brand-active: '#23328e'        # active / focused
+  brand-soft: '#e1e5f7'          # blue pastel surface
+  brand-deep: '#1a266b'          # deep navy-blue accent
+  on-brand: '#ffffff'
+  on-dark: '#ffffff'
+  link: '#3448c5'                # link uses brand blue
+  link-hover: '#2b3da8'
+  # Media accent — Cloudinary's signature chromatic moment
+  accent-coral: '#ff5e58'         # signature coral — used in demo callouts and hero accent
+  accent-coral-soft: '#fde0de'
+  accent-amber: '#f5b324'         # warmth accent — image-quality demos
+  accent-amber-soft: '#fdedc6'
+  accent-mint: '#3fc998'          # video / streaming accent
+  accent-mint-soft: '#d6f3e7'
+  border: '#dbe0eb'              # cool hairline
+  border-strong: '#a8b0c4'       # stronger card border
+  border-soft: '#e9ecf3'         # softer divider
+  shadow-tint: 'rgba(13, 21, 46, 0.06)'
+  shadow-deep: 'rgba(13, 21, 46, 0.18)'
+  code-bg: '#0d152e'             # code block bg — same as dark hero
+  code-text: '#d9e0f5'            # cool-tinted white code text
+  code-keyword: '#7eb6ff'         # blue keyword
+  code-string: '#ffb074'          # warm string
+  code-comment: '#8c91a8'         # muted comment
+  info: '#3448c5'                 # same as brand
+  success: '#3fc998'              # mint
+  warning: '#f5b324'              # amber
+  danger: '#ff5e58'               # coral
+  selection: 'rgba(52, 72, 197, 0.18)'
+  ring: 'rgba(52, 72, 197, 0.45)'
+
+typography:
+  display:
+    family: '"Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: 'ss01, cv11 — Inter character marks'
+  body:
+    family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: 'tnum inside data tables and metric chips'
+  mono:
+    family: '"JetBrains Mono", "SF Mono", "Source Code Pro", Menlo, Consolas, monospace'
+    weights: [400, 500, 600]
+  scale:
+    display-hero:    { size: 76, weight: 600, lineHeight: 1.05, tracking: '-0.022em', family: display, opentype: 'ss01, cv11', notes: 'mega hero — single anchor' }
+    display-xl:      { size: 60, weight: 600, lineHeight: 1.08, tracking: '-0.02em',  family: display, opentype: 'ss01', notes: 'homepage hero h1' }
+    display-lg:      { size: 44, weight: 600, lineHeight: 1.10, tracking: '-0.018em', family: display, opentype: 'ss01', notes: 'feature section h2' }
+    display-md:      { size: 36, weight: 600, lineHeight: 1.16, tracking: '-0.014em', family: display, opentype: 'ss01', notes: 'pricing / docs section heads' }
+    title-lg:        { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.008em', family: display }
+    title-md:        { size: 22, weight: 600, lineHeight: 1.30, tracking: '-0.004em', family: display }
+    title-sm:        { size: 18, weight: 600, lineHeight: 1.40, tracking: 0,           family: body }
+    label-md:        { size: 16, weight: 600, lineHeight: 1.40, tracking: 0,           family: body }
+    button:          { size: 15, weight: 600, lineHeight: 1.20, tracking: 0,           family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: 0,           family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: 0,           family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 0,           family: body }
+    caption:         { size: 13, weight: 600, lineHeight: 1.40, tracking: '0.04em',    family: body, notes: 'uppercase eyebrow' }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.30, tracking: 0,           family: body, opentype: 'tnum' }
+    legal:           { size: 12, weight: 400, lineHeight: 1.40, tracking: '0.01em',    family: body }
+    code-md:         { size: 14, weight: 400, lineHeight: 1.55, tracking: 0,           family: mono, notes: 'code block default — JetBrains Mono' }
+    code-inline:     { size: 14, weight: 500, lineHeight: 1.40, tracking: 0,           family: mono, notes: 'inline code in body — slightly heavier than block' }
+    code-micro:      { size: 12, weight: 500, lineHeight: 1.40, tracking: 0,           family: mono, notes: 'transformation chip — Cloudinary URL fragments' }
+
+radius:
+  micro: 2
+  sm: 6
+  md: 8
+  lg: 12
+  xl: 18
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+  card-padding-default: 32
+  card-padding-large: 48
+  section-padding: 96
+
+components:
+  button-primary:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: md
+    padding: '12px 22px'
+    use: 'primary CTA — Sign up free / Get started — Cloudinary blue anchor'
+  button-primary-hover:
+    backgroundColor: brand-hover
+    textColor: on-brand
+    use: 'pointer hover'
+  button-secondary:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: '12px 22px'
+    border: '1px solid border-strong'
+    use: 'Talk to sales / View docs pair'
+  button-tertiary:
+    backgroundColor: transparent
+    textColor: brand
+    rounded: md
+    padding: '10px 16px'
+    use: 'inline link-style with small chevron'
+  button-on-dark:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: '12px 22px'
+    use: 'white CTA over navy band'
+  button-on-dark-ghost:
+    backgroundColor: transparent
+    textColor: on-dark
+    rounded: md
+    padding: '12px 22px'
+    border: '1px solid rgba(255,255,255,0.3)'
+    use: 'translucent ghost button on navy hero'
+  button-icon:
+    backgroundColor: bg
+    textColor: text
+    rounded: full
+    size: 36
+    border: '1px solid border'
+    use: 'play, share, copy-link affordances'
+  card-default:
+    backgroundColor: bg-soft
+    textColor: text
+    rounded: lg
+    padding: 32
+    use: 'default content card on white canvas'
+  card-elevated:
+    backgroundColor: bg
+    textColor: text
+    rounded: lg
+    padding: 32
+    border: '1px solid border-soft'
+    shadow: standard
+    use: 'pricing tier, integration card'
+  card-feature-coral:
+    backgroundColor: accent-coral-soft
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'feature demo — coral accent (image transformation)'
+  card-feature-amber:
+    backgroundColor: accent-amber-soft
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'feature demo — amber accent (quality optimization)'
+  card-feature-mint:
+    backgroundColor: accent-mint-soft
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'feature demo — mint accent (video / streaming)'
+  card-feature-blue:
+    backgroundColor: brand-soft
+    textColor: text
+    rounded: xl
+    padding: 48
+    use: 'feature demo — brand-blue accent (DAM / asset management)'
+  hero-card-dark:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: xl
+    padding: 64
+    use: 'mid-page navy CTA — section reset, often holds embedded code block'
+  code-block:
+    backgroundColor: code-bg
+    textColor: code-text
+    rounded: md
+    padding: 24
+    fontFamily: mono
+    fontSize: code-md
+    use: 'syntax-highlighted code block — typically 6–12 lines, Node.js or React'
+  transformation-chip:
+    backgroundColor: bg-soft
+    textColor: brand
+    rounded: sm
+    padding: '4px 8px'
+    fontSize: 12
+    fontFamily: mono
+    border: '1px solid border'
+    use: 'inline code-style chip — `f_auto,q_auto,w_800` — Cloudinary URL fragment accents'
+  badge-tag:
+    backgroundColor: bg-soft
+    textColor: text-muted
+    rounded: pill
+    padding: '4px 10px'
+    fontSize: 12
+    use: 'category / status pill'
+  badge-new:
+    backgroundColor: brand-soft
+    textColor: brand-active
+    rounded: pill
+    padding: '4px 10px'
+    fontSize: 12
+    use: '"New" feature pill'
+  text-input:
+    backgroundColor: bg
+    textColor: text
+    rounded: md
+    padding: '12px 14px'
+    height: 44
+    border: '1px solid border-strong'
+    use: 'email signup, in-page demo input'
+  text-input-focus:
+    border: '1px solid brand'
+    shadow: '0 0 0 3px rgba(52,72,197,0.20)'
+  top-nav:
+    backgroundColor: bg
+    textColor: text
+    height: 64
+    use: 'opaque white bar — Cloudinary wordmark left, mega-menu center, Talk to sales + Sign up CTA right'
+  footer:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    padding: 96
+    use: 'navy footer — distinctive against white body, multi-column link list with code-snippet credit'
+  toast:
+    backgroundColor: bg-dark
+    textColor: on-dark
+    rounded: md
+    padding: '12px 16px'
+    shadow: deep
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  ease-spring: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-instant: 80
+  duration-fast: 160
+  duration-standard: 240
+  duration-slow: 380
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transforms removed, transitions reduced to 100ms opacity-only; before/after image-transformation slider falls back to static side-by-side'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: '0 1px 2px rgba(13,21,46,0.05)'
+  standard: '0 6px 18px rgba(13,21,46,0.08)'
+  elevated: '0 14px 36px rgba(13,21,46,0.12), 0 2px 6px rgba(13,21,46,0.06)'
+  deep: '0 24px 56px rgba(13,21,46,0.18), 0 6px 12px rgba(13,21,46,0.08)'
+  ring: '0 0 0 3px rgba(52,72,197,0.45)'
+
+accessibility:
+  contrast-text-on-bg: 17.6                # AAA — #0d152e on #ffffff
+  contrast-body-on-bg: 12.2                # AAA — #2c3354 on #ffffff
+  contrast-muted-on-bg: 6.6                # AA — #5a6080 on #ffffff
+  contrast-on-brand: 7.4                   # AAA — white on #3448c5
+  contrast-on-dark: 16.8                   # AAA — white on #0d152e
+  contrast-link-on-bg: 7.4                 # AAA — #3448c5 on #ffffff
+  contrast-code-text: 11.4                 # AAA — #d9e0f5 on #0d152e
+  focus-ring: '3px solid rgba(52,72,197,0.45) with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav-honored: true
+
+dark-mode: 'optional — Cloudinary''s in-product dashboard ships a dark variant where canvas inverts to navy, brand blue lifts slightly. Marketing surface is light-only with the navy footer and dark hero band providing intra-page contrast.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Cloudinary's marketing surface is media-API technical infrastructure dressed in confident navy-blue. The canvas is pure white `#ffffff` with deep navy `#0d152e` mid-page bands and footer, and the type is Inter at modest mid-weights (500–600 for display) sitting in a structured, dev-tool-credible layout that balances technical reference with marketing warmth.
+
+Brand voltage is `#3448c5` Cloudinary blue — a deep saturated blue that anchors primary CTAs, brand wordmark, and feature accents. Where Stripe is single-color discipline and AWS is enterprise-cool, Cloudinary occupies a media-platform middle ground: technical credibility (code blocks, API references, transformation strings) paired with media warmth (photo galleries, video thumbnails, image-transformation before/after demos).
+
+The signature design move is the **transformation chip** — a small horizontal pill showing a Cloudinary URL fragment (`f_auto,q_auto,w_800`) as a code-style accent inline with feature copy. These chips appear scattered through marketing prose, signaling "this is what the API actually looks like." Combined with multi-line code blocks on dark navy surfaces, the marketing reads as half product page, half developer documentation — which is the brand's distinct positioning.
+
+Demo cards carry real before/after image transformations (a low-quality JPEG transformed to WebP at AVIF), video player UI, and DAM (digital asset management) interfaces. Three accent colors — coral for image transformation moments, amber for quality optimization, mint for video/streaming — appear as pastel surfaces alongside brand-blue, providing visual variety without diluting the blue voltage.
+
+Section rhythm: white hero → image-transformation demo grid → dark navy code-block band → white feature grid → pricing → navy footer. The voice is technically confident, dev-friendly, and explicitly capability-focused — Cloudinary writes about MIME types, transformation parameters, and CDN edge nodes alongside the marketing copy.
+
+**Key Characteristics:**
+- Canvas is pure white `#ffffff` with deep navy `#0d152e` for dark bands and footer.
+- Brand voltage is `#3448c5` Cloudinary blue — deep saturated, dev-tool credible.
+- Display weight is 600 — confident-pragmatic, not aggressive.
+- The transformation chip (`f_auto,q_auto,w_800` style) is the signature visual element.
+- Code blocks appear as full-width dark navy surfaces with syntax highlighting.
+- Three accent colors: coral (transformation), amber (quality), mint (video/streaming).
+- Footer is **navy** — matches the hero card-dark, distinctive against white body.
+- Section padding is 96px between bands.
+- Card radius scale: 18px for feature pastels, 12px for content cards, 8px for primary CTAs and code blocks.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bg / Canvas** (`#ffffff`): Pure white.
+- **Text / Ink** (`#0d152e`): Very dark navy — the same hex as the dark band, signaling intentional unity.
+- **Brand / Cloudinary Blue** (`#3448c5`): Primary CTA, brand wordmark, link color, primary feature accent.
+
+### Brand & Dark
+- **Brand Hover** (`#2b3da8`): Press state.
+- **Brand Active** (`#23328e`): Focused.
+- **Brand Soft** (`#e1e5f7`): Blue pastel surface.
+- **Brand Deep** (`#1a266b`): Deep navy-blue for layered compositions.
+- **Bg Dark** (`#0d152e`): Mid-page band, footer, code block background.
+- **Bg Dark Elev** (`#162042`): Elevated dark surface for inline code blocks within dark sections.
+- **On-Dark** (`#ffffff`): Pure white on dark surfaces.
+
+### Accent — Three-Color Media Palette
+- **Coral** (`#ff5e58` saturated, `#fde0de` soft): Image transformation moments, hero accent dot, danger states.
+- **Amber** (`#f5b324` / `#fdedc6` soft): Quality optimization (auto-quality, format-optimization), warning states.
+- **Mint** (`#3fc998` / `#d6f3e7` soft): Video / streaming features, success states.
+
+The accent palette is deliberately small (three colors) — Cloudinary's discipline mirrors Stripe's single-blue but extends it with three semantic accents that map to media-domain concepts (image, quality, video).
+
+### Code Syntax Palette
+- **Code BG** (`#0d152e`): Same as bg-dark.
+- **Code Text** (`#d9e0f5`): Cool-tinted white default text.
+- **Code Keyword** (`#7eb6ff`): Light blue for `const`, `function`, `return`.
+- **Code String** (`#ffb074`): Warm orange for string literals.
+- **Code Comment** (`#8c91a8`): Muted gray for `//` comments.
+
+### Interactive
+- **Link** (`#3448c5`): Inline body links — same as brand. Underlines on hover.
+- **Link Hover** (`#2b3da8`): Pressed state.
+- **Selection** (`rgba(52, 72, 197, 0.18)`): Brand selection.
+
+### Neutral Scale
+- **Ink** (`#0d152e`): Display + emphasis.
+- **Text Body** (`#2c3354`): Soft navy running-text.
+- **Text Muted** (`#5a6080`): Captions, footer links (lift to white-soft inside navy footer).
+- **Text Faint** (`#8c91a8`): Placeholder, disabled.
+
+### Surface & Borders
+- **Bg** (`#ffffff`): Canvas.
+- **Bg Soft** (`#f5f7fb`): Cool-tinted card surface.
+- **Bg Strong** (`#e9ecf3`): Pre-footer cool band.
+- **Border** (`#dbe0eb`): Default 1px hairline — cool-tinted.
+- **Border Strong** (`#a8b0c4`): Stronger card / input border.
+- **Border Soft** (`#e9ecf3`): Softest divider.
+
+### Shadow Colors
+All shadows use deep-navy-tinted ink `rgba(13, 21, 46, …)` — matches the brand's dark surface. Focus ring is brand at 45%.
+
+### Semantic
+- **Info** (`#3448c5`): Same as brand.
+- **Success** (`#3fc998`): Mint.
+- **Warning** (`#f5b324`): Amber.
+- **Danger** (`#ff5e58`): Coral.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Inter Display"` for display sizes (≥ 28px); `"Inter"` for body and UI.
+- **Mono**: `"JetBrains Mono"` (with `"SF Mono"` and `"Source Code Pro"` fallback) for code blocks, transformation chips, API references.
+- **Fallback chain**: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif`.
+- **OpenType features**: `ss01`, `cv11` for Inter character; `tnum` for tabular figures in metrics and pricing.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter Display | 76 | 600 | 1.05 | -0.022em | ss01, cv11 | Mega hero |
+| display-xl | Inter Display | 60 | 600 | 1.08 | -0.02em | ss01 | Homepage hero h1 |
+| display-lg | Inter Display | 44 | 600 | 1.10 | -0.018em | ss01 | Feature h2 |
+| display-md | Inter Display | 36 | 600 | 1.16 | -0.014em | ss01 | Pricing / docs heads |
+| title-lg | Inter Display | 28 | 600 | 1.25 | -0.008em | — | Section titles |
+| title-md | Inter Display | 22 | 600 | 1.30 | -0.004em | — | Card titles |
+| title-sm | Inter | 18 | 600 | 1.40 | 0 | — | Small card titles |
+| label-md | Inter | 16 | 600 | 1.40 | 0 | — | List labels |
+| button | Inter | 15 | 600 | 1.20 | 0 | — | CTA labels |
+| body-lg | Inter | 18 | 400 | 1.55 | 0 | — | Hero subhead |
+| body-md | Inter | 16 | 400 | 1.55 | 0 | — | Default running-text |
+| body-sm | Inter | 14 | 400 | 1.50 | 0 | — | Caption support |
+| caption | Inter | 13 | 600 | 1.40 | 0.04em | — | Uppercase eyebrow |
+| caption-tabular | Inter | 13 | 500 | 1.30 | 0 | tnum | Metric chips |
+| legal | Inter | 12 | 400 | 1.40 | 0.01em | — | Footer legal |
+| code-md | JetBrains Mono | 14 | 400 | 1.55 | 0 | — | Code block default |
+| code-inline | JetBrains Mono | 14 | 500 | 1.40 | 0 | — | Inline code in body — heavier than block |
+| code-micro | JetBrains Mono | 12 | 500 | 1.40 | 0 | — | Transformation chips |
+
+### Principles
+- **Display weight is 600.** Confident-pragmatic, dev-tool-appropriate.
+- **JetBrains Mono carries all code.** The choice signals dev-tool credibility.
+- **Inline code is weight 500** — heavier than block code (400) so it stands out within body type.
+- **Transformation chips use code-micro (12px / 500).** Smaller than inline code, deliberately compressed.
+- **Negative tracking scales with size.** -0.022em at 76px to 0 at 16px.
+- **Eyebrow tracking is 0.04em.** Subtle uppercase eyebrow voice.
+- **Tabular figures inside data tables and metric chips.**
+
+## 4. Component Stylings
+
+### Buttons (5 variants)
+
+**`button-primary`** — Background `#3448c5` Cloudinary blue, white text, type 15px / 600 Inter, padding 12 × 22px, radius 8px. "Sign up free" / "Get started" / "View docs". Hover lightens via 4% white overlay; active darkens. Focus shows 3px brand ring at 45% alpha.
+
+**`button-secondary`** — White, ink text, 1px border `#a8b0c4`, same shape. "Talk to sales" / "View docs".
+
+**`button-tertiary`** — Inline link-style. Transparent, brand-blue text, 10 × 16px padding, 8px radius. Often paired with a chevron icon.
+
+**`button-on-dark`** — White over navy. White background, ink text.
+
+**`button-on-dark-ghost`** — Translucent ghost on navy. Transparent, white text, 1px white-30%-alpha border.
+
+**`button-icon`** — 36 × 36px circular. White, 1px hairline, ink icon.
+
+### Cards
+
+**`card-default`** — Bg-soft cool surface, 12px radius, 32px padding.
+
+**`card-elevated`** — White, 12px radius, 32px padding, 1px border, standard shadow.
+
+**`card-feature-coral` / `amber` / `mint` / `blue`** — Pastel feature cards. Each uses the corresponding `accent-{name}-soft` background (or `brand-soft` for blue), 18px radius, 48px padding. Surface signals feature semantic.
+
+**`hero-card-dark`** — Mid-page navy CTA. `#0d152e`, white text, 18px radius, 64px padding. Often holds an embedded code block.
+
+**`code-block`** — Full-width dark navy surface, 8px radius, 24px padding. JetBrains Mono 14px / 400, syntax-highlighted. Typically 6–12 lines of Node.js, React, or REST API example.
+
+### Transformation Chip (the signature component)
+
+**`transformation-chip`** — Small inline horizontal pill showing a Cloudinary URL fragment. Background `#f5f7fb` bg-soft, brand-blue text, 6px radius, 4 × 8px padding, JetBrains Mono 12px / 500, 1px border `#dbe0eb`. Example contents: `f_auto,q_auto,w_800`, `e_blur:200`, `c_fill,g_auto`. These chips appear scattered through marketing copy as inline code-style accents — the brand's most recognizable visual element.
+
+### Badges & Pills
+
+- **`badge-tag`** — Default category. Bg-soft, muted text, rounded pill, 4 × 10px, 12px font.
+- **`badge-new`** — "New" feature pill. Brand-soft surface, brand-active text.
+
+### Inputs / Forms
+
+**`text-input`** — White, 8px radius, 12 × 14px padding, 44px height, 1px `#a8b0c4` border. Inter 16px / 400.
+
+**`text-input-focus`** — Border recolors to brand; 3px brand ring at 20% alpha.
+
+### Navigation
+
+**`top-nav`** — 64px-tall opaque white bar (no backdrop-blur — Cloudinary opts for solid for clean visual weight against image-heavy pages below). Wordmark left in brand blue. Mega-menu center (Products, Solutions, Developers, Resources, Pricing) — opens full-width panel on hover with feature thumbnails. Right cluster carries "Talk to sales" text link, "Login" text link, "Sign up free" `button-primary`.
+
+**`footer`** — **Navy `#0d152e` background**. White text, 96px padding, 5–6 column desktop link grid (Products / Solutions / Developers / Company / Legal). Lower legal row at 12px white-50%-alpha. Includes a small JetBrains Mono code-snippet credit at the very bottom.
+
+### Toasts & Modals
+
+**`toast`** — Navy background, white text, 8px radius, deep shadow.
+
+**Modal** — White, 18px radius, 48px padding, deep shadow, navy-tinted backdrop overlay 70% alpha.
+
+### Decorative
+
+**Before/After transformation slider** — A draggable image comparison slider showing original (left) and Cloudinary-transformed (right) images. The handle is a brand-blue circle with horizontal arrows. Hovering pauses the auto-animation; dragging reveals more or less of either side.
+
+**API request/response block pair** — Side-by-side dark navy code blocks: left shows the API request (POST /upload with parameters), right shows the JSON response. Used in developer-focused feature sections.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`. Section padding **96px** between bands. Card padding 32px (default), 48px (feature pastels), 64px (dark hero), 24px (code blocks).
+
+### Grid & Container
+- **Max content width**: 1280px centered.
+- **Feature pastel grid**: 2-up at desktop with semantic pairing (image-coral + video-mint, quality-amber + asset-blue). 1-up at mobile.
+- **Pricing tier grid**: 4-up at desktop (Free, Plus, Advanced, Enterprise), 1-up at mobile.
+- **Code-block + explanation grid**: 2-column at desktop with code on left, explanation on right.
+
+### Whitespace Philosophy
+Whitespace is moderate — 96px section padding, 32–64px card padding. Cloudinary balances dev-tool density (code blocks pack information) with marketing breathing room (hero sections use generous white space).
+
+### Section Cadence
+White hero → 2-up image-transformation feature pair → dark navy code-block band → white feature grid → 3-up media-format demo → mid-page navy CTA → light pricing → navy footer. The navy bands appear 2× per long page (hero card-dark + footer), bracketing the white body.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Cookie / legal CTAs |
+| Standard | sm | 6px | Inputs, transformation chips, small chips |
+| Comfortable | md | 8px | Default cards, primary CTAs, code blocks, secondary CTAs |
+| Relaxed | lg | 12px | Default content cards, elevated cards |
+| Featured | xl | 18px | Pastel feature cards, dark hero, modals |
+| Pill | pill | 9999px | Status pills, badges |
+| Full | full | 9999px / 50% | Avatars, icon buttons |
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow | Canvas, top nav, footer, pastel feature cards |
+| 1 — Hairline | 1px `#dbe0eb` border | Default cards, inputs, transformation chips |
+| 2 — Ambient | `0 1px 2px rgba(13,21,46,0.05)` | Resting cards |
+| 3 — Standard | `0 6px 18px rgba(13,21,46,0.08)` | Card hover, sticky nav at scroll, pricing tiers |
+| 4 — Elevated | `0 14px 36px rgba(13,21,46,0.12), 0 2px 6px rgba(13,21,46,0.06)` | Mega-menu, integration cards |
+| 5 — Deep | `0 24px 56px rgba(13,21,46,0.18), 0 6px 12px rgba(13,21,46,0.08)` | Modals |
+
+### Shadow Philosophy
+Deep navy-tinted shadows match the brand's dark voltage. Pastel cards stay flat. Code blocks have no shadow — they sit flush on the navy band. Modals stack two shadows for compound depth.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard** `cubic-bezier(0.4, 0, 0.2, 1)`.
+- **Emphasized** `cubic-bezier(0.16, 1, 0.3, 1)`.
+- **Spring** `cubic-bezier(0.32, 0.72, 0, 1)` — before/after slider physics.
+
+### Duration Buckets
+- **Instant (80ms)**: Color hover.
+- **Fast (160ms)**: Button hover, focus ring, transformation-chip hover.
+- **Standard (240ms)**: Card hover, dropdown, mega-menu, code-block syntax-highlight tooltip.
+- **Slow (380ms)**: Pastel reveal, modal entrance, before/after slider auto-animation.
+- **Page (480ms)**: Inter-page transition.
+
+### Per-Component Micro-States
+- **Button hover (primary)**: 4% white overlay; no transform; 160ms.
+- **Card hover (pastel)**: 4px translate-y lift + standard shadow; 240ms emphasized.
+- **Transformation chip hover**: Border color shifts `#dbe0eb` → `#3448c5` brand; subtle background tint; 160ms.
+- **Code block token hover**: A small tooltip appears explaining the token (e.g., "f_auto: automatic format selection"); 240ms fade-in.
+- **Before/after slider**: Auto-cycles 0% → 100% → 0% over 6 seconds with easing; pauses on hover; resumes after pointer-leave.
+- **Link hover**: Underline grows 0 → 1px under text; 160ms.
+- **Input focus**: Border recolors → brand; 3px ring expands at 20% alpha; 160ms.
+
+### Page Transitions
+Default fade. Inter-page route is 480ms emphasized fade-in with 12px translate-y. Section reveals are 380ms fade + 16px offset. Pastel feature cards stagger 80ms increments inside a row.
+
+### Reduced Motion
+All transforms removed. Before/after slider falls back to static side-by-side. Code-block tooltips appear instantly without fade.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#0d152e` on `#ffffff` = **17.6** — AAA.
+- **Body on bg**: `#2c3354` on `#ffffff` = **12.2** — AAA.
+- **Muted on bg**: `#5a6080` on `#ffffff` = **6.6** — AA.
+- **On-brand**: white on `#3448c5` = **7.4** — AAA.
+- **On-dark**: white on `#0d152e` = **16.8** — AAA.
+- **Link on bg**: `#3448c5` on `#ffffff` = **7.4** — AAA.
+- **Code text**: `#d9e0f5` on `#0d152e` = **11.4** — AAA.
+- **Code keyword**: `#7eb6ff` on `#0d152e` = **8.0** — AAA.
+- **Code string**: `#ffb074` on `#0d152e` = **8.6** — AAA.
+
+### Focus Indicators
+3px solid brand at 45% alpha with 2px offset on every focusable element.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>`; `aria-label` only for icon-only.
+- **Mega-menu**: `role="menu"` with `role="menuitem"`; `aria-expanded` on trigger.
+- **Code blocks**: `<pre><code>` with `role="code"`; copy-button has `aria-label="Copy code to clipboard"`.
+- **Transformation chips**: `<code>` with optional `<button>` wrapper if interactive.
+- **Before/after slider**: `role="slider"` with `aria-valuemin`, `aria-valuemax`, `aria-valuenow` reflecting drag position. Keyboard support: arrow keys move 5%, Page Up/Down move 25%, Home/End move 0/100%.
+- **Dialog (modals)**: `role="dialog"` with `aria-modal="true"`, focus trap.
+- **Navigation**: `<nav aria-label="Primary">`.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Mega-menu opens on Enter/Space, navigates with arrow keys, closes with Escape. Code-block copy button is a separate focusable target.
+
+### Screen Reader Hints
+Before/after slider announces "Original image, transformed image — slider at 50%". Code blocks announce "Code block, JavaScript, 8 lines". Transformation chips announce "Cloudinary transformation: f auto comma q auto comma w 800". Decorative API request/response chrome uses `aria-hidden="true"` for non-essential lines.
+
+### Reduced Motion Handling
+All transforms removed. Before/after slider becomes static. Pastel reveals fade without offset.
+
+## 10. Responsive Behavior
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Single-column body; nav collapses to hamburger; pastel grid 1-up; hero h1 scales to 36px / 600; code blocks become horizontally scrollable; section padding 64px |
+| Tablet | 640–1024px | 2-up pastel grid; nav stays horizontal but tightens; mega-menu collapses to single column; hero at 48px |
+| Desktop | 1024–1280px | 2-up or 3-up pastel grid; full mega-menu; hero at 60–76px |
+| Wide | > 1280px | Same as desktop with more outer breathing room; max content width 1280px |
+
+### Touch Targets
+- `button-primary` renders at 44 × 44px minimum.
+- `button-icon` is 36 × 36px (under WCAG 44 — used inside dense UI).
+- `text-input` height is 44px throughout.
+
+### Collapsing Strategy
+- Nav collapses to hamburger at < 640px.
+- Mega-menu becomes accordion on tablet.
+- Code blocks become horizontally scrollable on mobile rather than wrapping.
+- Pricing comparison table converts to horizontally-scrollable swipe at < 1024px.
+- Before/after slider preserves its drag interaction at all breakpoints.
+
+### Image Behavior
+- Before/after slider images crop to fit container.
+- Hero illustrations bleed full-width on mobile.
+- Customer logo strip wraps to 2–3 rows at smaller breakpoints.
+
+### Container Queries
+Pricing tier cards use `@container (min-width: 360px)` for vertical-to-inline price display.
+
+## 11. Content & Voice
+
+### Tone
+**Technically confident, dev-friendly, capability-focused.** Cloudinary writes about MIME types, transformation parameters, and CDN edge nodes alongside marketing copy. Headlines combine dev specificity with marketing claims: "Deliver perfect images and videos at any scale" or "Transform any image with a URL parameter". Body copy explains the technical mechanism — auto-format selection, AI-driven cropping, lazy-load — with concrete code examples.
+
+### Microcopy Patterns
+- **CTA verbs**: "Sign up free", "Get started", "View docs", "Talk to sales", "Try it free". Direct, dev-tool-credible.
+- **Section eyebrows**: 13px / 600 / 0.04em uppercase — "DEVELOPERS", "MEDIA OPTIMIZATION", "ASSET MANAGEMENT".
+- **Feature titles**: One-line capability — "Auto-optimize every image for every device" not "Make images magical".
+- **Transformation chip context**: Always inline within a sentence — "Just add `f_auto,q_auto` to your URL and we'll deliver the optimal format."
+
+### Empty States
+"No assets yet — upload your first to get started." Single line muted text plus brand-blue CTA link.
+
+### Error Messages
+Short, technical, action-oriented. "Upload failed: file size exceeds 10MB limit. Try a smaller file or upgrade your plan." Errors carry coral icon-x and inline guidance with a docs link.
+
+### Success Confirmations
+Toast: "Asset uploaded", "Transformation saved", "API key copied". Navy background, white text, 8px radius, deep shadow, auto-dismiss 3s.
+
+### CTA verb conventions
+The brand prefers concrete verbs: "Sign up free", "Get started", "View docs", "Try the API", "See pricing". The free-tier nudge is explicit ("25 GB free, no credit card required") and appears under the CTA in legal type.
+
+## 12. Dark Mode & Theming
+
+Cloudinary's in-product dashboard ships a dark variant where canvas inverts to navy `#0d152e`, brand blue lifts slightly to `#5267e0` for AA contrast, and pastel surfaces become tonal navy variants. The marketing surface is **light-only** with the navy footer and dark hero band providing intra-page contrast.
+
+Code blocks on the marketing surface always use the dark navy theme — even on light pages — because syntax highlighting is more legible and dev-tool-credible on dark.
+
+## 13. Lineage & Influences
+
+Cloudinary descends from the **media-API and dev-tool marketing tradition** — Stripe (single-color discipline), Twilio (code-first credibility), Algolia (dev-doc rigor) — and the **enterprise-credibility tradition** — AWS, Akamai, Fastly. The transformation chip is Cloudinary's signature contribution: a code-style inline element that brings the API's actual syntax into marketing copy, blurring the line between marketing page and developer documentation.
+
+The deep navy `#0d152e` references contemporary dev-tool brand colors (Vercel, GitHub, GitLab) but lands distinctively bluer than Vercel's near-black. JetBrains Mono is the dev-tool font of choice across this peer set; Cloudinary's choice signals alignment with the developer audience.
+
+- **Stripe** — Single-color discipline; pricing-page typographic rigor. https://stripe.com
+- **Twilio** — Code-first dev-tool credibility; transformation-string prominence.
+- **Vercel** — Deep dark surface as primary brand voltage; mono for code.
+- **Algolia** — Dev-doc rigor inside marketing copy.
+- **JetBrains Mono** — The dev-tool mono font of choice.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep canvas pure white `#ffffff` with deep navy `#0d152e` for dark bands and footer.
+- Use brand `#3448c5` Cloudinary blue for the single voltage CTA per viewport.
+- Sprinkle transformation chips through marketing copy — they are the brand's signature.
+- Use code blocks on dark navy surfaces with full syntax highlighting.
+- Anchor every band at 96px vertical padding.
+- Use the three accent colors semantically: coral=image transformation, amber=quality, mint=video.
+- Use JetBrains Mono for all code — block, inline, and chip.
+- Display weight at 600 — confident-pragmatic.
+- The navy footer is signature — don't replace with cream/white.
+- Pair before/after sliders with brand-blue handle circles.
+
+### Don't
+- Don't dilute brand blue. `#3448c5` is the voltage — softening it kills dev-tool credibility.
+- Don't use display weight below 500 or above 700.
+- Don't use cream / off-white canvas. Pure white is the brand's clarity.
+- Don't replace JetBrains Mono with a sans for code. The mono signals dev-tool credibility.
+- Don't add atmospheric gradients to hero. White + navy band + transformation chips is the move.
+- Don't use the three accents (coral, amber, mint) outside their feature semantic.
+- Don't pair coral and amber adjacent — both warm-orange-leaning.
+- Don't use light shadow on code blocks. They sit flush on navy with no shadow.
+- Don't replace the navy footer with white. The footer is part of the brand voltage.
+- Don't use status chips with white text on amber. Amber requires ink text for AA contrast.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:           #ffffff (pure white)
+Text / Ink:            #0d152e (deep navy)
+Body:                  #2c3354
+Muted:                 #5a6080
+Brand / Cloudinary Blue: #3448c5 (primary CTA + voltage + link)
+Brand Soft:            #e1e5f7
+Bg Dark / Navy:        #0d152e (mid-page band + footer + code blocks)
+Accent Coral:          #ff5e58 (soft #fde0de) — image transformation
+Accent Amber:          #f5b324 (soft #fdedc6) — quality optimization
+Accent Mint:           #3fc998 (soft #d6f3e7) — video / streaming
+Code Text:             #d9e0f5 (cool-tinted white)
+Code Keyword:          #7eb6ff (light blue)
+Code String:           #ffb074 (warm orange)
+Hairline:              #dbe0eb (cool tinted)
+Link:                  #3448c5 (same as brand)
+```
+
+### Example Component Prompts
+
+1. "Create a hero band on `#ffffff` canvas with Inter Display 60px / 600 / -0.02em headline ('Deliver perfect images and videos at any scale'), 18px / 400 `#2c3354` subhead at 1.55. Inline transformation chip in the subhead: small pill `f_auto,q_auto,w_800` in JetBrains Mono 12px / 500, brand-blue text on `#f5f7fb` with `#dbe0eb` border. Primary CTA `#3448c5` Cloudinary blue (white, 15px / 600 Inter, 8px radius, 12 × 22px). Secondary CTA white with 1px `#a8b0c4` border."
+
+2. "Build a 2-up media feature pair: coral `#fde0de` left card framing a before/after image transformation slider (low-quality JPEG → AVIF); mint `#d6f3e7` right card framing a video player UI with adaptive bitrate selector. Each card 18px radius, 48px padding. Title in Inter Display 28px / 600 / -0.008em."
+
+3. "Compose a dark navy code block band: full-bleed `#0d152e` background, 96px vertical padding. Embedded code block at 8px radius, 24px padding, JetBrains Mono 14px / 400, syntax-highlighted (keywords in `#7eb6ff`, strings in `#ffb074`). Sample code: 6-line Node.js using `cloudinary.uploader.upload()`. Right-side explanation in 16px / 400 white text at 0.85 opacity."
+
+4. "Design a transformation chip: inline pill, `#f5f7fb` background, `#3448c5` brand-blue text, 6px radius, 4 × 8px padding, JetBrains Mono 12px / 500, 1px `#dbe0eb` border. Sample contents: `f_auto,q_auto,w_800`, `e_blur:200`, `c_fill,g_auto`. Hover: border shifts to brand blue, subtle background tint."
+
+5. "Build a pricing tier card: white surface, 12px radius, 32px padding, 1px border `#e9ecf3`, ambient shadow. Plan name in Inter Display 22px / 600, price in 36px / 600 / -0.014em with `tnum` figures, feature checklist in 16px / 400 with brand-blue check icons. Primary CTA at bottom — Cloudinary blue, 8px radius, 12 × 22px padding."
+
+6. "Design the navy footer: `#0d152e` background, 96px padding. White Cloudinary wordmark left. 5-column link grid (Products / Solutions / Developers / Company / Legal) in Inter 14px / 400 white at 70% alpha. Lower legal row in 12px white-50%-alpha. Tiny JetBrains Mono code-snippet credit at the very bottom: `// Built for developers`."
+
+### Iteration Guide
+1. Start with pure white `#ffffff` canvas. Cream is wrong — Cloudinary's clarity needs white.
+2. Use brand `#3448c5` for primary CTA and link colors. Both share the same hex — discipline.
+3. Sprinkle transformation chips through marketing copy. They are the brand's signature element.
+4. Use code blocks on dark navy. Light-mode code blocks read as documentation, not marketing.
+5. Match accent surface to feature semantic. Coral=image, amber=quality, mint=video.
+6. JetBrains Mono carries all code. Inter is for prose.
+7. Display weight is 600. Going to 700 reads as marketing-template.
+8. The navy footer is signature. Don't replace with cream/white.

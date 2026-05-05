@@ -1,0 +1,545 @@
+---
+name: Optimism
+tagline: Pure-white canvas, signature `#ff0420` red voltage, and Inter at confident L2 register — Ethereum rollup as bold optimistic infrastructure.
+author: webdesignhot
+source_url: https://optimism.io
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [fintech, marketplace]
+tags: [light, infrastructure, web3, layer2, ethereum, red, bold, confident]
+preview_swatch: ['#ffffff', '#ff0420', '#000000']
+related: [ethereum-org, base-org, polygon-tech]
+description: 'Optimism reads like a confident open-source infrastructure brand that decided to wear red instead of blue. The base canvas is **pure white** `#ffffff` with full-bleed dark `#000000` heroes for editorial punctuation — and a single brand voltage **Optimism Red** `#ff0420` carrying every primary action. Where Polygon chose deep purple as its anti-blue stake and Ethereum chose ethereum-blue, Optimism chose **the loudest possible red** — a saturated near-vermillion that signals "we''re not the corporate L2." Type runs **Inter** for body and a custom Optimism Display (Inter Display-style with sharper corners) at large sizes, both deliberately at weight 700 (not the calm-600 Polygon picked) — Optimism wants to read **bold, not calm**. Layout commits to confident infrastructure marketing: 1280px max-width, 96px section padding, partner-logo strips, 56px metric-display centrepieces ("17M transactions/day", "99.99% uptime"), and the signature red sun-glyph (a half-sun radiating beams) as persistent visual signature on dark heroes. The brand''s clearest editorial choice: it commits hard to **the red**. Every CTA is red. Every accent is red. Every dark hero has a red sun-glyph. The single-voltage discipline beats Coinbase''s single-blue and Stripe''s single-purple in saturation — Optimism Red is the loudest accent in the major-L2 set.'
+
+colors:
+  bg: '#ffffff'                # canvas — pure white
+  bg-soft: '#f5f5f5'           # surface-soft — secondary band
+  bg-strong: '#e6e6e6'         # surface-strong
+  bg-dark: '#000000'           # surface-dark — full-bleed hero, footer
+  bg-dark-elev: '#1a1a1a'      # surface-dark-elevated
+  bg-dark-deep: '#0a0a0a'
+  surface-card: '#ffffff'
+  surface-card-soft: '#f5f5f5'
+  text: '#000000'              # ink — pure black
+  text-body: '#1a1a1a'         # body
+  text-muted: '#5a5a5a'        # captions
+  text-subtle: '#8a8a8a'       # disabled
+  text-on-dark: '#ffffff'      # white on dark
+  text-on-dark-soft: '#a8a8a8'
+  brand: '#ff0420'             # Optimism Red — primary
+  brand-hover: '#cc0319'       # primary-hover
+  brand-active: '#a30214'      # pressed
+  brand-soft: '#ff04201a'      # 10% red tint
+  brand-glow: 'rgba(255,4,32,0.40)'
+  on-brand: '#ffffff'          # white-on-red CTAs
+  brand-deep: '#7d020f'        # darker red for gradient stops
+  brand-bright: '#ff3344'      # brighter variant for hover-on-dark
+  border: '#e0e0e0'             # default hairline
+  border-soft: '#ebebeb'
+  border-strong: '#c0c0c0'
+  semantic-up: '#10b981'
+  semantic-down: '#ef4444'
+  semantic-warning: '#f59e0b'
+  semantic-info: '#ff0420'
+  gradient-hero: 'linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #7d020f 100%)'
+  gradient-red: 'linear-gradient(135deg, #ff0420 0%, #cc0319 100%)'
+  focus-ring: 'rgba(255,4,32,0.45)'
+  scrim: 'rgba(0,0,0,0.65)'
+  link: '#ff0420'
+  link-hover: '#cc0319'
+
+typography:
+  display:
+    family: '"Optimism Display", "Inter Display", Inter, -apple-system, system-ui, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+  body:
+    family: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-mega:   { size: 96, weight: 700, lineHeight: 0.96, tracking: '-3px',   family: display }
+    display-xl:     { size: 72, weight: 700, lineHeight: 1.00, tracking: '-2.4px', family: display }
+    display-lg:     { size: 56, weight: 700, lineHeight: 1.05, tracking: '-1.6px', family: display }
+    display-md:     { size: 40, weight: 700, lineHeight: 1.10, tracking: '-1px',   family: display }
+    display-sm:     { size: 32, weight: 700, lineHeight: 1.15, tracking: '-0.6px', family: display }
+    title-lg:       { size: 24, weight: 700, lineHeight: 1.25, tracking: '-0.2px', family: body }
+    title-md:       { size: 20, weight: 700, lineHeight: 1.30, tracking: '0',      family: body }
+    title-sm:       { size: 18, weight: 700, lineHeight: 1.30, tracking: '0',      family: body }
+    body-lg:        { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',      family: body }
+    body-md:        { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',      family: body }
+    body-sm:        { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',      family: body }
+    caption:        { size: 13, weight: 400, lineHeight: 1.40, tracking: '0',      family: body }
+    caption-strong: { size: 12, weight: 600, lineHeight: 1.40, tracking: '0.4px',  family: body }
+    label-eyebrow:  { size: 11, weight: 700, lineHeight: 1.30, tracking: '1.4px',  family: body, transform: uppercase }
+    metric-display: { size: 64, weight: 800, lineHeight: 1.00, tracking: '-2px',   family: display, opentype: 'tnum' }
+    metric-row:     { size: 18, weight: 600, lineHeight: 1.30, tracking: '0',      family: mono, opentype: 'tnum, zero' }
+    button:         { size: 16, weight: 700, lineHeight: 1.20, tracking: '0',      family: body }
+    nav-link:       { size: 15, weight: 600, lineHeight: 1.30, tracking: '0',      family: body }
+    address-mono:   { size: 13, weight: 400, lineHeight: 1.30, tracking: '0',      family: mono, opentype: 'tnum, zero' }
+    code-inline:    { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',      family: mono }
+    code-block:     { size: 14, weight: 400, lineHeight: 1.65, tracking: '0',      family: mono }
+
+radius:
+  none: 0
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  card: 12
+  xl: 24
+  pill: 999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: { xxs: 4, xs: 8, sm: 12, base: 16, md: 20, lg: 24, xl: 32, xxl: 48, section: 96 }
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 80
+  grid-gutter: 24
+
+components:
+  button-primary:        { bg: brand, text: on-brand, padding: '14px 28px', height: 48, radius: md, font: button }
+  button-primary-lg:     { bg: brand, text: on-brand, padding: '18px 36px', height: 56, radius: md, font: button }
+  button-primary-pill:   { bg: brand, text: on-brand, padding: '14px 28px', height: 48, radius: pill, font: button }
+  button-secondary:      { bg: bg-soft, text: text, padding: '14px 28px', height: 48, radius: md, border: '1px solid border' }
+  button-ghost:          { bg: transparent, text: text, padding: '14px 28px', height: 48, radius: md, border: '2px solid text' }
+  button-ghost-on-dark:  { bg: transparent, text: on-brand, padding: '14px 28px', height: 48, radius: md, border: '2px solid on-brand' }
+  hero-band-light:       { bg: bg, padding: 'section 0', font: display-mega }
+  hero-band-dark:        { bg: bg-dark, text: on-brand, padding: 'section 0' }
+  hero-band-gradient:    { bg: 'gradient-hero', text: on-brand, padding: 'section 0' }
+  feature-card:          { bg: surface-card, border: '1px solid border', radius: card, padding: lg }
+  feature-card-dark:     { bg: bg-dark-elev, border: '1px solid rgba(255,255,255,0.10)', radius: card, padding: lg }
+  feature-card-red:      { bg: 'gradient-red', text: on-brand, radius: card, padding: lg }
+  metric-card:           { bg: bg-soft, radius: lg, padding: 'lg xl' }
+  partner-logo-strip:    { bg: bg, height: 80, padding: '24px 0' }
+  badge-pill:            { bg: brand-soft, text: brand, radius: pill, padding: '4px 12px' }
+  badge-new:             { bg: brand, text: on-brand, radius: pill, padding: '4px 12px' }
+  callout-info:          { bg: brand-soft, border-left: '4px solid brand', radius: sm, padding: lg }
+  input-text:            { bg: bg, border: '1px solid border', radius: md, padding: '14px 16px', height: 48 }
+  input-search:          { bg: bg-soft, border: '1px solid border', radius: pill, padding: '12px 20px', height: 44 }
+  top-nav:               { bg: bg, border: '1px solid border-soft', height: 80, font: nav-link }
+  top-nav-on-dark:       { bg: 'rgba(0,0,0,0.85)', text: on-brand, height: 80, backdrop-filter: 'blur(12px)' }
+  side-rail-docs:        { bg: bg, border-right: '1px solid border', padding: lg, width: 260 }
+  modal:                 { bg: bg, border: '1px solid border', radius: xl, padding: xl }
+  toast-success:         { bg: bg, border: '1px solid semantic-up', radius: md, padding: 'sm base' }
+  toast-error:           { bg: bg, border: '1px solid semantic-down', radius: md, padding: 'sm base' }
+  sun-glyph:             { width: 64, height: 32, color: brand }
+  footer-dark:           { bg: bg-dark, text: on-brand, padding: '80px 0' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — sun-glyph beam-rotation freezes, hover lifts collapse to opacity-only'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0,0,0,0.04) 0 1px 3px'
+  standard: 'rgba(0,0,0,0.06) 0 6px 16px'
+  elevated: 'rgba(0,0,0,0.10) 0 20px 40px -8px'
+  card-hover: 'rgba(0,0,0,0.12) 0 24px 48px -16px, rgba(255,4,32,0.08) 0 0 0 1px'
+  modal: 'rgba(0,0,0,0.20) 0 40px 80px -8px'
+  ring: '0 0 0 3px rgba(255,4,32,0.45)'
+  none: 'none'
+
+accessibility:
+  contrast-text-on-bg: 21.0
+  contrast-text-on-brand: 4.7
+  contrast-body-on-bg: 16.6
+  focus-ring: '3px solid rgba(255,4,32,0.45)'
+  reduced-motion-honored: true
+
+dark-mode: dual
+---
+
+## 1. Visual Theme & Atmosphere
+
+Optimism reads like a confident open-source infrastructure brand that decided to wear red instead of blue. The base canvas is **pure white** `#ffffff` (not off-white, not warmed — full clinical white that matches Coinbase's institutional commit), and the brand operates as a single saturated voltage: **Optimism Red** `#ff0420`. The colour is closer to vermillion than crimson — high-saturation, slightly warm-orange-leaning, and louder than every other major L2's brand colour. Where Polygon picked deep purple as its anti-blue stake and Ethereum.org chose ethereum-blue, Optimism stakes out red as a deliberate signal of "we're not the corporate L2."
+
+The page rhythm alternates pure white editorial sections with full-bleed **pure black** `#000000` dark heroes (no navy tint, no warming — total black, the same uncompromising commitment as Blur). On those dark heroes, the brand expresses through the **sun-glyph** — a half-sun mark with radiating beams rendered in `#ff0420` red, often animated to slowly rotate the beam pattern. The sun-glyph is Optimism's persistent visual signature, appearing as the favicon, on every dark hero, and faintly as a wallpaper-pattern on docs pages.
+
+Type carries the brand's confident-bold register. Display sizes (32px and above) run a **custom Optimism Display** — an Inter Display-style geometric sans with sharper corners and slightly tightened bowls — set at weight **700** (not the calm-600 that Polygon and Coinbase pick). The 96px display-mega at weight 700 with -3px hard negative tracking reads as **bold, confident, unapologetic** — the typographic register of "we're moving fast and shipping hard." Body switches to Inter at 16px/1.55 line-height — denser than Ethereum.org's longread 1.70, breezier than the trader-pro 1.30s.
+
+Layout commits to confident infrastructure marketing: 1280px max-width, 96px section padding, partner-logo strips of household-name fintechs (Stripe, Reddit, Coinbase, Worldcoin), prominent metric-display centrepieces ("17M transactions/day", "$0B assets secured", "99.99% uptime", "39 audits to date"), and feature cards arranged in 3-up grids with cyan-on-black contrast. The site reads as "infrastructure for serious workloads" — every section reinforces enterprise-credible volume and reliability without ever softening into apologetic startup register.
+
+The brand's clearest editorial choice is **single-voltage discipline at maximum saturation**. Every CTA is red. Every link is red. Every dark-hero accent is red. Every featured-card highlight is red. Cyan and other accents that often appear in L2 marketing are conspicuously absent. The single-red commitment beats Coinbase's single-blue and Magic Eden's magenta in saturation — Optimism Red is the loudest single-voltage in the major-L2 set, by design.
+
+**Key Characteristics:**
+- Pure white canvas `#ffffff` + pure black `#000000` dark hero punctuation
+- Single voltage: Optimism Red `#ff0420` at maximum saturation
+- Optimism Display weight 700 (not calm-600) — bold-confident register
+- 96px display-mega with -3px hard negative tracking — locked-up confident headlines
+- Signature sun-glyph: half-sun with radiating beams in red, animated slow-rotation
+- 12px card radius, 12px button radius (rectangular CTAs, not pills) — infrastructure tool register
+- 1280px max-width, 96px section padding, partner-logo strips, metric centrepieces
+- Black-and-white surface system with red as the only chromatic system token (besides semantic up/down)
+- Inter at 16px / 1.55 line-height for body — confident reading density
+- Card-hover edge ring at `rgba(255,4,32,0.08)` — the lit-edge brand-tinted gesture, but red
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): Pure white — clinical institutional commit.
+- **Surface Soft** (`#f5f5f5`): Neutral grey band, secondary surface.
+- **Surface Strong** (`#e6e6e6`): Tertiary surface.
+- **Surface Dark** (`#000000`): Full-bleed editorial hero ground; footer.
+- **Surface Dark Elevated** (`#1a1a1a`): Cards inside dark heroes.
+- **Ink** (`#000000`): Pure black for primary text — matches the dark surface in saturation.
+- **Brand** (`#ff0420`): Optimism Red — every primary action.
+
+### Brand & Dark
+- **Optimism Red** (`#ff0420`): The singular voltage. Primary CTA, primary link, sun-glyph, brand accent.
+- **Brand Hover** (`#cc0319`): Pressed/hover.
+- **Brand Active** (`#a30214`): Pressed on click.
+- **Brand Deep** (`#7d020f`): Darker red — gradient stops, dark-hero accent.
+- **Brand Bright** (`#ff3344`): Brighter variant for hover on dark surfaces.
+- **Brand Soft** (`#ff04201a`): 10% red tint — selected, callout-info bg.
+
+### Accent
+**None.** Optimism explicitly rejects accent colours. The chromatic palette is red-only on the system level. Cyan, mint, purple, yellow — all conspicuously absent. The single-voltage discipline is the brand's clearest editorial commitment.
+
+### Interactive
+- **Link** = Brand `#ff0420`, no underline default, underline on hover
+- **Hover** — primary CTA → `#cc0319`; cards lift 4px with brand-tinted edge ring
+- **Active / Pressed** — Brand Active `#a30214`
+- **Disabled** — `#8a8a8a` text, `#f5f5f5` bg, `cursor: not-allowed`
+- **Selected** — `#ff04201a` brand-soft bg with `#ff0420` text and 1px red border-left
+
+### Neutral Scale
+`#ffffff` (Canvas) → `#f5f5f5` (Soft) → `#e6e6e6` (Strong) → `#e0e0e0` (Border) → `#c0c0c0` (Border Strong) → `#8a8a8a` (Subtle) → `#5a5a5a` (Muted) → `#1a1a1a` (Body) → `#000000` (Ink). Pure neutral grey — no warming, no cooling. Total monochromatic discipline.
+
+### Surface & Borders
+- **Surface Card** (`#ffffff`): Default white cards.
+- **Surface Card Soft** (`#f5f5f5`): Soft variant.
+- **Border** (`#e0e0e0`): Default 1px hairline.
+- **Border Soft** (`#ebebeb`): Softer divider.
+- **Border Strong** (`#c0c0c0`): Focused border.
+
+### Shadow Colors
+Optimism uses **neutral near-black shadows** at low opacity for ambient/standard depth, with a 1px red brand-tinted edge ring (`rgba(255,4,32,0.08)`) on card-hover. The signature card-hover gesture combines neutral drop shadow + red lit-edge — the same lit-edge approach as OpenSea/Polygon, on the loudest brand colour in the L2 set.
+
+### Semantic
+- **Up** (`#10b981`): Mint green for transaction-success.
+- **Down** (`#ef4444`): Saturated red for error states (deliberately differs from Brand red — `#ef4444` is a softer red without the brand-orange tint).
+- **Warning** (`#f59e0b`): Amber.
+- **Info** = Brand `#ff0420`.
+
+### Gradient Tokens
+- **Hero Gradient**: `linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #7d020f 100%)` — dark hero variant with red corner-bleed
+- **Red Gradient**: `linear-gradient(135deg, #ff0420 0%, #cc0319 100%)` — used on featured-product cards as bg
+
+## 3. Typography Rules
+
+### Font Family
+- **Display** — `Optimism Display`, fallback `"Inter Display", Inter, -apple-system, system-ui, sans-serif`. A geometric sans display in the Inter Display lineage with slightly sharper corners and tighter bowls.
+- **Body** — `Inter`, fallback `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`.
+- **Mono** — `JetBrains Mono`, fallback `"IBM Plex Mono", ui-monospace, monospace`.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|-----:|-------:|------------:|---------------:|-------------|-------|
+| display-mega   | Optimism Display | 96 | 700 | 0.96 | -3px   | default | Marketing hero — bold confident |
+| display-xl     | Optimism Display | 72 | 700 | 1.00 | -2.4px | default | Section heros |
+| display-lg     | Optimism Display | 56 | 700 | 1.05 | -1.6px | default | Page titles |
+| display-md     | Optimism Display | 40 | 700 | 1.10 | -1px   | default | Sub-section titles |
+| display-sm     | Optimism Display | 32 | 700 | 1.15 | -0.6px | default | Small section heads |
+| title-lg       | Inter | 24 | 700 | 1.25 | -0.2px | default | Card titles |
+| title-md       | Inter | 20 | 700 | 1.30 | 0      | default | Modal headers |
+| title-sm       | Inter | 18 | 700 | 1.30 | 0      | default | Inline emphasis |
+| body-lg        | Inter | 18 | 400 | 1.55 | 0      | default | Hero sub-copy |
+| body-md        | Inter | 16 | 400 | 1.55 | 0      | default | Default running text |
+| body-sm        | Inter | 14 | 400 | 1.50 | 0      | default | Secondary body |
+| caption        | Inter | 13 | 400 | 1.40 | 0      | default | Metric labels |
+| caption-strong | Inter | 12 | 600 | 1.40 | 0.4px  | default | Eyebrow tags |
+| label-eyebrow  | Inter | 11 | 700 | 1.30 | 1.4px  | default | UPPERCASE — louder tracking than peers |
+| metric-display | Optimism Display | 64 | 800 | 1.00 | -2px   | tnum | "17M transactions/day" |
+| metric-row     | JetBrains Mono | 18 | 600 | 1.30 | 0      | tnum, zero | Tabular metric data |
+| button         | Inter | 16 | 700 | 1.20 | 0      | default | All CTAs — weight 700 not 600 |
+| nav-link       | Inter | 15 | 600 | 1.30 | 0      | default | Top nav |
+| address-mono   | JetBrains Mono | 13 | 400 | 1.30 | 0      | tnum, zero | Wallet truncation |
+| code-inline    | JetBrains Mono | 14 | 400 | 1.50 | 0      | default | Inline code |
+| code-block     | JetBrains Mono | 14 | 400 | 1.65 | 0      | default | Code blocks |
+
+### Principles
+- **Display weight 700, not 600** — Optimism deliberately picks the bolder weight; Polygon and Coinbase pick the calmer weight; Optimism wants to read confident, not calm
+- **Display-mega at line-height 0.96** — sub-1.0 leading, headlines bleed slightly into adjacent baseline. Locked-up confident feel
+- **Buttons at weight 700, not 600** — same boldness commitment carries into UI labels
+- **Label-eyebrow tracking 1.4px** — louder than peer eyebrow tracking (typical 1px, Polygon 1.2px); Optimism's eyebrows shout
+- **Metric-display at weight 800** — the only place the system goes past 700, and only on institutional-trust numerical centrepieces
+- **`tnum` on every metric and price** — column alignment matters
+- **Substitutes**: Optimism Display closest open licensable equivalent: Inter Display (Inter's display variant), Söhne Halbfett, Pangram Sans Bold. For body, Inter directly.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — Primary CTA. `#ff0420` red bg, white text, 14 × 28 padding, 48px height, **12px radius**. Weight 700 button text. Hover → `#cc0319`. Used on "Start building", "Learn more". The 12px rectangular radius (vs Polygon's 999px pill) is the infrastructure-tool register — confident but not friendly.
+
+**`button-primary-lg`** — Marketing CTA. 18 × 36 padding, 56px height. Used on hero bands.
+
+**`button-primary-pill`** — Pill variant for marketing-friendly moments. Same red, 999px radius. Used rarely — only on "Get started" CTAs that want softer affordance.
+
+**`button-secondary`** — `#f5f5f5` soft bg, ink text, 1px `#e0e0e0` border, 12px radius. Used for "Read docs", "View case study".
+
+**`button-ghost`** — Outline variant. Transparent bg, ink text, **2px black border** (deliberate thickness), 12px radius.
+
+**`button-ghost-on-dark`** — Outline for dark heroes. Transparent, white text, 2px white border, 12px radius. Pairs with primary red on dark.
+
+### Cards
+
+**`feature-card`** — Default feature card. White bg, 1px `#e0e0e0` border, 12px radius, 24px padding. Title-lg + body-md + "Read more →" link in red. Hover: lifts 4px with red-tinted edge ring (`rgba(255,4,32,0.08) 0 0 0 1px`).
+
+**`feature-card-dark`** — Dark variant on dark heroes. `#1a1a1a` bg, 1px `rgba(255,255,255,0.10)` border, 12px radius, 24px padding. White headline, `#a8a8a8` body, red "Read more →" link.
+
+**`feature-card-red`** — Featured-product card. Red gradient bg, white text, 12px radius, 24px padding. Used for the "headline product" card in 4-up grids — the eye-catcher.
+
+**`metric-card`** — Metric strip cell. `#f5f5f5` bg, 16px radius, 24 × 32 padding. Centred 64px metric-display weight 800 number with `tnum`, 13px caption-strong below. The metric is huge.
+
+**`partner-logo-strip`** — Horizontal partner-logo carousel. White bg, 80px tall, 24px padding. Logos in muted grey at 50% opacity (vs Polygon's 40% — Optimism shows logos louder).
+
+### Badges / Tags / Pills
+
+**`badge-pill`** — Brand pill. `#ff04201a` brand-soft bg, `#ff0420` text, 999px radius, 4 × 12 padding, caption-strong type.
+
+**`badge-new`** — Solid red flat pill. `#ff0420` bg, white text, 999px pill. Used on "New" indicators on partner cards.
+
+### Callouts
+
+**`callout-info`** — Educational callout. Brand-soft bg, 4px solid `#ff0420` left border, 8px radius, 24px padding. Used on docs pages.
+
+### Inputs / Forms
+
+**`input-text`** — White bg, 1px `#e0e0e0` border, 12px radius, 14 × 16 padding, 48px height. Focus → 3px `rgba(255,4,32,0.45)` ring, border tightens to `#ff0420`.
+
+**`input-search`** — `#f5f5f5` bg, 999px pill radius, 12 × 20 padding, 44px height (perfect pill).
+
+### Navigation
+
+**`top-nav`** — 80px tall (matches Polygon), white bg, 1px `#ebebeb` bottom hairline. Sun-glyph + "Optimism" wordmark left. Primary nav (Build, Stack, Network, Resources). Right cluster: search-icon, "Sign in", primary red "Start building" CTA.
+
+**`top-nav-on-dark`** — On dark hero pages, the nav becomes a sticky frosted bar — `rgba(0,0,0,0.85)` bg with `backdrop-filter: blur(12px)`. White text. Sanctioned glassmorphism.
+
+**`side-rail-docs`** — Documentation sidebar. 260px wide, white bg, 1px `#e0e0e0` right border, 24px padding. Section headers in label-eyebrow uppercase 1.4px tracking, link list below. Active link gets brand-soft bg + 4px red left border.
+
+### Modals & Overlays
+
+**`modal`** — White bg, 1px border, 24px radius, 32px padding. Modal scrim is `rgba(0,0,0,0.65)`.
+
+**`toast-success`** — White bg, 1px mint border-left, 8px radius. Auto-dismiss 4s.
+
+**`toast-error`** — White bg, 1px red `#ef4444` border-left (semantic red, not brand red — distinguishes error from brand action).
+
+### Decorative
+
+**`sun-glyph`** — The Optimism brand mark. A half-sun (semicircle bottom) with 8 radiating beams above. Default rendered in `#ff0420` red on white surfaces, or `#ff0420` red on `#000` dark surfaces. On dark heroes, the sun-glyph appears at large scale (96 × 48px or larger) often with a slow infinite beam-rotation animation (4-second full cycle, eased). Reduced-motion freezes the rotation.
+
+**`sun-glyph-pattern`** — Faint wallpaper repetition of the sun-glyph at 6% opacity on dark heroes, providing visual texture similar to Polygon's hexagon-mesh.
+
+**`footer-dark`** — Dark footer that closes every page. `#000` bg, white text, 80px vertical padding. Sun-glyph wordmark left, multi-column link list right (Build, Network, Ecosystem, Community, Resources), social icons.
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit**: 4px.
+- **Tokens**: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 96.
+- **Section padding (vertical)**: 96px on marketing.
+- **Card internal padding**: 24px on feature cards, 32px on metric cards.
+- **Gutters**: 24px between feature cards.
+
+### Grid & Container
+- **Max content width**: 1280px.
+- **Marketing grid**: 12-column with 24px gutters; 3-up or 4-up feature card grids.
+- **Metric strip**: 4-up at desktop, 2 × 2 at mobile.
+- **Reading column**: 720px on docs body prose.
+
+### Whitespace Philosophy
+**Confident infrastructure breath.** Same 96px section padding as Polygon, Coinbase, Stripe — the institutional-marketing default. Card gutters at 24px. Body line-height 1.55 — confident-comfortable, denser than Ethereum.org's longread 1.70 but breezier than trader-pro 1.30s.
+
+### Section Cadence
+White hero (often with red headline accent) → metric strip (`#f5f5f5`) → 3-up feature cards (white) → dark gradient hero with sun-glyph + featured-product card → partner-logo strip → editorial CTA card (red gradient) → dark footer. Strong alternation between white editorial and black dramatic punctuation.
+
+## 6. Shapes & Radius
+
+- **None** 0 — gradient hero edges, full-bleed bands
+- **xs** 4 — micro chips
+- **sm** 8 — small interior elements, callouts
+- **md** 12 — buttons, inputs, cards (the default)
+- **card** 12 — feature cards
+- **lg** 16 — metric cards
+- **xl** 24 — modals, large overlays
+- **pill** 999 — badges, search input, rare button-primary-pill variant
+- **full** 9999 — circular avatars
+
+The 12px button + card radius is Optimism's signature shape decision — softer than Blur (0px), harder than Polygon/Magic Eden (16/999px pill). The rectangular CTAs (vs pill) signal "infrastructure tool" rather than "consumer app" — same register choice as OpenSea (8px), but at 12px Optimism reads slightly softer.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 Flat | No shadow, surface contrast only | Body sections, hero bands |
+| 1 Card | White on white + 1px `#e0e0e0` | Feature cards, panel surfaces |
+| 2 Hover | `translateY(-4px)` + brand-tinted 1px edge ring | Feature card hover |
+| 3 Floating | `rgba(0,0,0,0.06) 0 6px 16px` | Dropdowns, tooltips |
+| 4 Card-hover lit | `rgba(0,0,0,0.12) 0 24px 48px -16px, rgba(255,4,32,0.08) 0 0 0 1px` | Feature card on hover (signature) |
+| 5 Modal | `rgba(0,0,0,0.20) 0 40px 80px -8px` + scrim `rgba(0,0,0,0.65)` | Modal dialogs |
+| Focus ring | `0 0 0 3px rgba(255,4,32,0.45)` | All keyboard focus |
+
+**Shadow Philosophy**: Neutral near-black shadows + brand-red 1px lit-edge ring on card-hover. Same approach as OpenSea/Polygon, on the loudest brand colour in the set. The `rgba(255,4,32,0.08)` opacity is calibrated to read as "subtle red glow" without pushing into "warning state."
+
+## 8. Interaction & Motion
+
+- **Easing standard** — `cubic-bezier(0.4, 0, 0.2, 1)` for hover, dropdown, modal fade
+- **Easing emphasized** — `cubic-bezier(0.2, 0, 0, 1)` for card lifts and gradient drift
+- **Durations** — fast 120ms (hover), standard 240ms (card lift, modal fade), slow 400ms (sun-rotation, gradient hue shift)
+- **Hover** — primary CTA darkens to `#cc0319` over 120ms; feature cards lift 4px with red-tinted edge ring; nav links shift colour to brand
+- **Card lift** — `translateY(-4px)` on hover
+- **Sun-glyph beam rotation** — slow infinite rotation over 4 seconds with ease-in-out. Reduced-motion freezes
+- **Metric counter-up** — when metric-display enters viewport, the number animates 0 → final over 1500ms with eased-out interpolation
+- **Page transition** — 240ms cross-fade
+- **Reduced motion** — sun-rotation freezes; hover lifts collapse to opacity-only; metric counter-up jumps directly to final
+
+## 9. Accessibility & A11y
+
+- **Contrast**: Black `#000` on white = 21:1 (perfect AAA). Body `#1a1a1a` on canvas = 16.6:1 (AAA). White on Red `#ff0420` = 4.7:1 (AA at body). Mint up `#10b981` on white = 3.0 (AA-Large only). Semantic red `#ef4444` on white = 3.8 (AA-Large only — distinguished from brand by being a softer red without orange-tint).
+- **Focus indicator**: 3px solid `rgba(255,4,32,0.45)` ring on every interactive element. Border tightens to `#ff0420` on focused inputs. The 0.45 opacity is slightly louder than Polygon's 0.40 — Optimism goes louder on focus visibility too.
+- **ARIA patterns**: Mega-menu uses `role="menu"` with `aria-expanded`. Sun-glyph beam-rotation has `aria-hidden="true"`. Metric-display counter-up uses `aria-live="polite"`. Modal dialogs use `role="dialog"` with focus trap.
+- **Keyboard nav**: Top nav supports left/right arrow between primary tabs; Down arrow opens mega-menu. Side-rail docs are tab-traversable with active-link `aria-current="page"`.
+- **Screen reader hints**: Sun-glyph is `aria-label="Optimism"`. Partner logos carry `alt="{Partner name}"`. Brand-red focus ring is supplemented with focus outline for non-colour-perceiving users.
+- **Reduced motion**: Honoured — see §8.
+
+## 10. Responsive Behavior
+
+| Breakpoint | Width | Key Changes |
+|------------|------:|-------------|
+| Mobile     | < 640  | Top nav → hamburger; hero display-mega 96 → 48px; feature cards 1-up; metric strip 2 × 2; sun-glyph reduces to 32 × 16px |
+| Tablet     | 640–1024 | Nav condensed; feature cards 2-up; metric strip 4-up |
+| Desktop    | 1024–1280 | Full nav; feature cards 3-up |
+| Wide       | > 1280 | Container 1280px max — Optimism caps narrow |
+
+**Touch Targets**: Primary CTAs render at minimum 48 × 48px on mobile. Nav menu items 56px tap targets.
+
+**Collapsing Strategy**: Top nav → hamburger sheet. Side-rail-docs → top accordion. Sun-glyph scales proportionally.
+
+**Image Behavior**: Sun-glyph SVG scales fluidly. Hero illustrations crop to centre on mobile.
+
+## 11. Content & Voice
+
+- **Tone** — confident, infrastructure-direct, deliberately bold. "Start building." not "Start building today." The voice strips qualifiers; every sentence is shorter than typical fintech-marketing prose.
+- **Microcopy** — verbs are imperative-action: "Start building", "Learn more", "Read docs", "Deploy", "Scale". Avoids consumer-friendly softening.
+- **CTA verbs** — "Start building" (developer-side primary), "Learn more" (educational), "Read docs" (technical), "Get OP" (token), "Scale your app" (enterprise).
+- **Empty states** — minimal. "No deployments yet — start building" with a "Start building" CTA below.
+- **Error messages** — clear and remediable. "RPC error — check your endpoint and retry" with the raw error in mono.
+- **Number formatting** — always `tnum`, locale-aware separators, abbreviated units on metric strip ("17M transactions/day", "$0B assets secured"). The "$0B" is intentional — Optimism's pre-mainnet metric was zero, and they shipped that as a confidence signal.
+- **Address formatting** — `0x1234…abcd` (4 + 4) JetBrains Mono with click-to-copy.
+- **Brand voice prohibition** — no apologetic startup register, no over-friendly community-warm copy. Optimism's voice is closer to AWS or Cloudflare than to Notion or Ethereum.org.
+
+## 12. Dark Mode & Theming
+
+Optimism is **dual-theme by design**. The white-canvas marketing alternates with pure-black `#000` dark hero bands throughout the page; this is a within-page mode-flip rather than a user-toggleable theme.
+
+A user-toggleable dark mode for the **product app** (Optimism Bridge, Snapshot integrations) exists and uses:
+- `bg-dark` `#000000` (canvas — pure black, no warming, no navy tint)
+- `bg-dark-elev-1` `#1a1a1a` (card bg)
+- `bg-dark-elev-2` `#252525` (hover bg)
+- `text-on-dark` `#ffffff` (pure white)
+- `text-on-dark-soft` `#a8a8a8` (muted)
+- `border-on-dark` `rgba(255,255,255,0.10)` (10% white hairline)
+- Brand red `#ff0420` stays constant; brightens to `#ff3344` for hover on dark
+- Sun-glyph stays red on dark, becomes the dominant chromatic anchor
+
+The pure-black canvas is a deliberate Blur-adjacent commitment; Optimism is the only major non-trader-pro L2 that uses true `#000` (versus Polygon's deep-purple gradient or Coinbase's `#0a0b0d`).
+
+## 13. Lineage & Influences
+
+Optimism's design language inherits from **infrastructure-marketing** (Cloudflare, Vercel, AWS, Stripe) and **bold-confident editorial** (Wired's hero treatments, Pangram Pangram type marketing) more than from crypto-native peers. The white canvas, pure-black dark heroes, single-saturated-voltage discipline, partner-logo strips, and metric-display centrepieces are all enterprise-marketing references. The choice of red — at maximum saturation — is a deliberate stake against the L2 ecosystem's blue/purple defaults (Coinbase, Polygon, Base, Ethereum.org all use blue or purple variants).
+
+What it borrows: pure-black dark hero from Stripe and Linear; partner-logo strip from Stripe and Cloudflare; metric-display centrepiece pattern from Stripe; brand-tinted edge-ring on card hover from OpenSea/Polygon. The sun-glyph beam-rotation gesture is original to Optimism — no other major L2 has shipped a persistent animated brand-mark at this scale.
+
+What it explicitly rejects: blue (rejected as the corporate-default; red is the deliberate deviation); pill-CTAs (rejected as too consumer-friendly — the 12px rectangular radius signals "infrastructure tool"); accent-colour palettes (rejected; red-only single-voltage discipline is the brand); softer canvas tints (rejected; `#ffffff` clinical white matches the institutional-credibility commit); navy-tinted dark heroes (rejected; `#000` pure black is the commitment).
+
+The shift from Optimism V1 (2019–2021, more developer-tooling-focused, bluer accents) to the current bold-red infrastructure-marketing register (2022 rebrand led by the Optimism Collective) was deliberate — the team publicly framed the rebrand as "we want to look like serious infrastructure, not crypto."
+
+Influences:
+- **Stripe** — Single-voltage discipline, partner-logo strips, metric centrepieces, dark hero punctuation. https://stripe.com
+- **Cloudflare** — Enterprise-credibility tone, infrastructure-marketing register. https://www.cloudflare.com
+- **Vercel** — Geometric sans display, dark hero pattern, gradient accent. https://vercel.com
+- **Linear** — Pure-black dark surfaces, restrained chromatic palette. https://linear.app
+- **Pangram Pangram** type marketing — Bold display weight, hard negative tracking. https://pangrampangram.com
+- **Inter Display (Inter Display variant)** — Closest open licensable equivalent to Optimism Display. https://rsms.me/inter
+- **Optimism sun-glyph** — Original brand mark; the half-sun-with-beams is the clearest visual signature in the L2 ecosystem alongside Polygon's hexagon.
+
+## 14. Do's and Don'ts
+
+### Do
+- Keep the canvas at pure `#ffffff` — clinical institutional-credibility floor
+- Use Optimism Red `#ff0420` at maximum saturation for primary actions and links — single-voltage discipline
+- Optimism Display at weight 700 — bold-confident register, not the calm-600
+- 96px display-mega with -3px hard negative tracking — locked-up confident headlines
+- 12px rectangular CTA radius — infrastructure tool, not consumer-friendly pill
+- Use pure `#000` for dark heroes — never navy-tinted, never warmed
+- The sun-glyph is the brand's persistent visual signature — preserve it on every dark hero, freeze under reduced-motion
+- The 1.4px label-eyebrow tracking is louder than peers — keep it
+- Buttons at weight 700, not 600 — boldness commitment carries into UI labels
+- Partner-logo strips and metric-display centrepieces reinforce institutional credibility — use them
+- Card-hover edge ring at `rgba(255,4,32,0.08)` — the lit-edge brand-tinted gesture, but red
+
+### Don't
+- Don't use blue (`#0052ff`, `#1c64f2`, `#0a66c2`) — red is the brand's anti-blue stake
+- Don't soften the saturation — `#ff0420` is loud and that's the brand
+- Don't pill-CTAs by default — 12px rectangular is the infrastructure-tool register
+- Don't bolden Optimism Display past 700 (except metric-display which goes 800)
+- Don't use accent colours — cyan, mint, purple, yellow are conspicuously absent
+- Don't navy-tint the dark canvas — pure `#000` is mandatory
+- Don't use weight-600 for buttons — keep them weight 700
+- Don't soften the apologetic startup register — "Start building." not "Start building today!"
+- Don't show metric-display without `tnum` — column alignment matters even when counting up
+- Don't replace the sun-glyph with abstract geometry — the half-sun-with-beams is the brand mark
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Brand: Optimism Red `#ff0420`
+- Brand pressed: `#cc0319`
+- Canvas: `#ffffff`
+- Surface soft: `#f5f5f5`
+- Surface dark: `#000000`
+- Surface dark elev: `#1a1a1a`
+- Text ink: `#000000`
+- Body: `#1a1a1a`
+- Muted: `#5a5a5a`
+- Border: `#e0e0e0`
+- Hero gradient: `linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #7d020f 100%)`
+
+### Example Component Prompts
+- "Create an Optimism hero band: pure black `#000000` background with red sun-glyph (half-sun + 8 radiating beams in `#ff0420`) at upper-right, slow-rotating 4-second cycle. 96px Optimism Display weight 700 headline 'Build the future on Ethereum.' with -3px tracking and 0.96 line-height in `#ffffff`, body-lg 18px Inter sub at 1.55 line-height in `#a8a8a8`, primary red CTA `#ff0420` 12px radius 14 × 28 padding 'Start building' with white text weight 700, ghost-on-dark CTA 'Read docs' with 2px white border."
+- "Design a metric strip: full-width `#f5f5f5` band, 96px vertical padding. 4-up grid with 24px gutters. Each cell: 64px Optimism Display weight 800 number with `tnum` (e.g., '17M'), 13px caption-strong `#5a5a5a` 'Transactions per day' below. On viewport-enter, animate 0 → final over 1500ms eased-out."
+- "Build a feature-card grid: 3-up on desktop with 24px gutters. Each card: white bg, 1px `#e0e0e0` border, 12px radius, 24px padding. 32px red icon top, title-lg 24/700 in `#000`, body-md `#1a1a1a`, 'Read more →' link in `#ff0420`. Hover: translateY(-4px) with `rgba(0,0,0,0.12) 0 24px 48px -16px, rgba(255,4,32,0.08) 0 0 0 1px` shadow."
+- "Render a featured-product card with red gradient: `linear-gradient(135deg, #ff0420 0%, #cc0319 100%)` bg, 12px radius, 32px padding. White headline title-lg 24/700, white body-md, ghost-on-dark CTA with 2px white border 'Learn more' weight 700 white text."
+- "Compose the sun-glyph SVG: a half-sun (180deg semicircle bottom) in `#ff0420` red, with 8 trapezoidal beams radiating outward at 22.5deg intervals from the upper edge of the semicircle. Beam length = 1.4× radius. Beams animate slow infinite rotation around the sun centre (4-second cycle, ease-in-out). Reduced-motion freezes rotation."
+
+### Iteration Guide
+1. Start with pure `#ffffff` canvas — clinical institutional commit, never warmed
+2. Optimism Red `#ff0420` at maximum saturation — single-voltage, no accents
+3. Optimism Display at weight 700 (not calm 600) — bold-confident register
+4. 12px rectangular CTA radius — infrastructure tool, not consumer pill
+5. Pure `#000` for dark heroes — never navy-tinted, never warmed
+6. Sun-glyph (half-sun + 8 beams) on every dark hero — slow-rotating, freeze under reduced-motion
+7. Buttons at weight 700, label-eyebrow tracking 1.4px — boldness commitment carries into UI labels
+8. 96px section padding, 1280px max-width — institutional-marketing default
+9. Card-hover edge ring `rgba(255,4,32,0.08)` — the lit-edge brand-tinted gesture
+10. No accent colours — red is the only chromatic system token besides semantic up/down

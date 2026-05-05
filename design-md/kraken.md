@@ -1,0 +1,456 @@
+---
+name: Kraken
+tagline: Kraken Purple `#7132f5` on white — Kraken-Brand display + Kraken-Product UI for a calmer, less-bombastic crypto exchange.
+author: webdesignhot
+source_url: https://www.kraken.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [fintech]
+tags: [light, structured, dense, cool, purple, professional]
+preview_swatch: ['#ffffff', '#7132f5', '#101114']
+related: [coinbase, binance, stripe]
+description: 'Kraken''s marketing site reads like a quietly-confident professional crypto exchange — neither the trading-floor density of Binance nor the institutional-bank calm of Coinbase. The base canvas is pure white; **Kraken Purple** (`#7132f5`) is the commanding brand colour, threaded through every primary CTA, link, brand glyph, and the wordmark. Type pairs proprietary **Kraken-Brand** (display, weight 700, tight negative tracking) with **Kraken-Product** (UI workhorse, IBM Plex Sans fallback) — the dual-font system gives display lines confidence without losing the readable density Kraken needs for trading dashboards. Cards live with whisper-level shadows (`rgba(0,0,0,0.03) 0 4px 24px`) and 12px radius; buttons stay rounded but never pill. Cool blue-gray neutrals (`#686b82`, `#9497a9`) replace warm grays. Green (`#149e61`) carries positive states sparingly.'
+
+colors:
+  bg: '#ffffff'                  # canvas — pure white default
+  bg-soft: '#fafafa'             # subtle elevation band
+  bg-card: '#ffffff'             # default card surface
+  bg-dark: '#101114'             # rare full-bleed dark hero
+  surface-cool: 'rgba(148,151,169,0.08)'  # secondary button bg, soft tag bg
+  surface-purple-subtle: 'rgba(133,91,251,0.16)'  # purple-subtle button bg
+  text: '#101114'                # near-black primary text
+  text-body: '#33363f'           # secondary running text
+  text-muted: '#9497a9'          # silver-blue secondary text
+  text-mute-strong: '#686b82'    # cool gray primary neutral, borders at 24% opacity
+  text-mute-soft: '#484b5e'      # neutral badge text
+  brand: '#7132f5'               # Kraken Purple — primary brand
+  brand-dark: '#5741d8'          # purple dark — outlined variants, hover
+  brand-deep: '#5b1ecf'          # purple deep — deepest variant
+  brand-subtle: 'rgba(133,91,251,0.16)'  # purple at 16% — subtle bg
+  on-brand: '#ffffff'
+  border: '#dedee5'              # divider borders
+  border-soft: 'rgba(104,107,130,0.24)'  # border at 24% opacity
+  semantic-success: '#149e61'    # green — positive/success
+  semantic-success-dark: '#026b3f'  # green dark — badge text
+  semantic-success-bg: 'rgba(20,158,97,0.16)'  # green at 16% — success badges
+  semantic-error: '#e23b4a'
+  semantic-warning: '#df6500'
+  focus-ring: 'rgba(113,50,245,0.30)'
+
+typography:
+  display:
+    family: 'Kraken-Brand, "IBM Plex Sans", Helvetica, Arial, sans-serif'
+    weights: [400, 600, 700]
+  body:
+    family: 'Kraken-Product, "Helvetica Neue", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", "SF Mono", monospace'
+    weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
+  scale:
+    display-hero:    { size: 48, weight: 700, lineHeight: 1.17, tracking: '-1px',    family: display }
+    section-heading: { size: 36, weight: 700, lineHeight: 1.22, tracking: '-0.5px',  family: display }
+    sub-heading:     { size: 28, weight: 700, lineHeight: 1.29, tracking: '-0.5px',  family: display }
+    feature-title:   { size: 22, weight: 600, lineHeight: 1.20, tracking: '0',       family: body }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.30, tracking: '0',       family: body }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.40, tracking: '0',       family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.50, tracking: '0',       family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.38, tracking: '0',       family: body }
+    body-medium:     { size: 16, weight: 500, lineHeight: 1.38, tracking: '0',       family: body }
+    button:          { size: 16, weight: 600, lineHeight: 1.38, tracking: '0',       family: body }
+    caption:         { size: 14, weight: 400, lineHeight: 1.43, tracking: '0',       family: body }
+    caption-strong:  { size: 14, weight: 700, lineHeight: 1.71, tracking: '0',       family: body }
+    small:           { size: 12, weight: 400, lineHeight: 1.33, tracking: '0',       family: body }
+    small-strong:    { size: 12, weight: 500, lineHeight: 1.33, tracking: '0',       family: body }
+    micro:           { size: 7,  weight: 500, lineHeight: 1.00, tracking: '0.5px',   family: body, transform: uppercase }
+    number-md:       { size: 16, weight: 500, lineHeight: 1.40, tracking: '0',       family: mono, opentype: 'tnum' }
+    number-sm:       { size: 14, weight: 500, lineHeight: 1.40, tracking: '0',       family: mono, opentype: 'tnum' }
+
+radius:
+  micro: 3
+  sm: 6
+  md: 8
+  lg: 10
+  card: 12
+  xl: 16
+  pill: 9999
+  full: 9999
+
+spacing:
+  base: 4
+  scale: { xxs: 2, xs: 4, sm: 8, md: 12, base: 16, lg: 20, xl: 24, xxl: 32, section: 80 }
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+
+components:
+  button-primary:        { bg: brand, text: on-brand, padding: '13px 16px', radius: card, font: button }
+  button-purple-outlined: { bg: bg, text: brand-dark, border: '1px solid brand-dark', padding: '12px 16px', radius: card }
+  button-purple-subtle:  { bg: brand-subtle, text: brand, padding: '8px', radius: card }
+  button-white:          { bg: bg, text: text, radius: lg, shadow: 'rgba(0,0,0,0.03) 0 4px 24px' }
+  button-secondary-gray: { bg: surface-cool, text: text, padding: '13px 16px', radius: card }
+  badge-success:         { bg: semantic-success-bg, text: semantic-success-dark, radius: sm, padding: '4px 8px' }
+  badge-neutral:         { bg: 'rgba(104,107,130,0.12)', text: text-mute-soft, radius: md, padding: '4px 8px' }
+  card-feature:          { bg: bg-card, radius: card, padding: lg, shadow: 'rgba(0,0,0,0.03) 0 4px 24px' }
+  card-stat:             { bg: bg-card, radius: card, padding: xl, shadow: 'rgba(16,24,40,0.04) 0 1px 4px' }
+  card-pricing-tier:     { bg: bg-card, border: '1px solid border', radius: card, padding: xl }
+  input-text:            { bg: bg, border: '1px solid border', radius: md, padding: '12px 16px', height: 44 }
+  top-nav-light:         { bg: bg, text: text, height: 64, font: button }
+  footer-light:          { bg: bg-soft, text: text-mute-strong, padding: '64px 0', font: body }
+  hero-band-dark:        { bg: bg-dark, text: on-brand, padding: section }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 300
+  reduced-motion: 'respects prefers-reduced-motion: reduce — hover lifts collapse to opacity-only'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+  ultra: 1536
+
+shadows:
+  whisper: 'rgba(16,24,40,0.04) 0 1px 4px'
+  subtle: 'rgba(0,0,0,0.03) 0 4px 24px'
+  standard: 'rgba(16,24,40,0.06) 0 8px 24px -8px'
+  ring: '0 0 0 3px rgba(113,50,245,0.30)'
+
+accessibility:
+  contrast-text-on-bg: 18.6
+  contrast-text-on-brand: 5.8
+  contrast-body-on-bg: 11.4
+  focus-ring: '3px solid rgba(113,50,245,0.30)'
+  reduced-motion-honored: true
+
+dark-mode: optional
+---
+
+## 1. Visual Theme & Atmosphere
+
+Kraken's marketing site is a clean, trustworthy crypto exchange that uses purple as its commanding brand colour. The base canvas is **pure white** (`#ffffff`); **Kraken Purple** (`#7132f5`) creates a distinctive professional crypto identity that sits halfway between Coinbase's institutional calm and Binance's trading-floor density. The proprietary **Kraken-Brand** font handles display headings with bold (700) weight and negative tracking, while **Kraken-Product** (with IBM Plex Sans fallback) serves as the UI workhorse.
+
+Where Coinbase commits to weight-400 editorial display, Kraken pushes display to **weight 700 with -1px tracking**. The result is confident without becoming bombastic — Kraken-Brand at 48px / 700 / -1px reads as "this is a professional exchange you can trust with your portfolio," not as fintech-bombast. Body type stays at Kraken-Product 16/400 with a 1.38 line-height (slightly tighter than Coinbase's 1.5) — a density signal aimed at users who scan trading data, not just marketing prose.
+
+Cards float with **whisper-level shadows** (`rgba(0,0,0,0.03) 0 4px 24px` is the most-used elevation). The shadow is so faint it's almost a ghost — depth without distraction. Cards land at **12px radius** for the standard "card" tier. Buttons stay at **12px radius** as well — distinctly rounded but never pill, marking Kraken's refusal to read as a "consumer crypto app" with stadium-shaped controls.
+
+Cool blue-gray neutrals (`#686b82` cool gray, `#9497a9` silver blue) replace the warm grays of Coinbase or Mastercard. The neutral-cool palette pairs with the Kraken Purple to create a single chromatic temperature — everything reads in the cool half of the spectrum. Green (`#149e61`) appears sparingly on positive/success states, used at 16% opacity for badge backgrounds.
+
+**Key Characteristics:**
+- Kraken Purple `#7132f5` as primary brand with darker variants `#5741d8`, `#5b1ecf`
+- Kraken-Brand (display, weight 700, -1px tracking) + Kraken-Product (UI) dual font system
+- Near-black `#101114` text with cool blue-gray neutral scale
+- 12px radius buttons (rounded but distinctly not pill)
+- Subtle whisper-level shadows (`rgba(0,0,0,0.03) 0 4px 24px`)
+- Green accent `#149e61` for positive/success states only
+- White canvas with rare full-bleed dark hero punctuation
+- Cool blue-gray neutrals replace warm grays — single chromatic temperature
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Canvas** (`#ffffff`): Pure white default page floor.
+- **Near Black** (`#101114`): Primary text and headlines.
+- **Brand** (`#7132f5`): Kraken Purple — primary CTAs, brand accent, links.
+
+### Brand & Dark
+- **Kraken Purple** (`#7132f5`): The commanding brand colour. Primary CTAs, links, brand glyphs.
+- **Purple Dark** (`#5741d8`): Button borders on outlined variants, hover state on primary.
+- **Purple Deep** (`#5b1ecf`): Deepest variant — used on rare press states and deep-purple sections.
+- **Purple Subtle** (`rgba(133,91,251,0.16)`): Purple at 16% opacity — subtle button backgrounds and tag tints.
+- **Hero Dark Floor** (`#101114`): Same hex as primary text — used as the rare full-bleed dark hero background.
+
+### Accent
+- Kraken intentionally avoids a secondary brand accent. The purple does all brand work; semantic colours (success green, error red) handle status. There is no warm accent (no orange, no yellow) in the system.
+
+### Interactive
+- **Link** = Brand `#7132f5`, no underline by default
+- **Hover** — primary CTA darkens to `#5741d8`. Outlined buttons gain a `#7132f5` 8% tint background
+- **Active / Pressed** — `#5b1ecf` (deepest purple)
+- **Disabled** — opacity 50% on primary CTA; `#9497a9` text on `rgba(148,151,169,0.08)` background for secondary
+- **Selected** — `rgba(133,91,251,0.16)` background with `#7132f5` text
+
+### Neutral Scale
+`#ffffff` (Canvas) → `#fafafa` (Bg Soft) → `#dedee5` (Border) → `#9497a9` (Silver Blue / Muted) → `#686b82` (Cool Gray) → `#484b5e` (Mute Strong / Neutral Badge text) → `#33363f` (Body) → `#101114` (Near Black / Hero Dark).
+
+### Surface & Borders
+- **Bg Soft** (`#fafafa`): Subtle elevation band between dense feature sections.
+- **Bg Card** (`#ffffff`): Default card surface — separated from the canvas by whisper shadow rather than border.
+- **Border** (`#dedee5`): Default 1px divider for inputs and bordered cards.
+- **Border Soft** (`rgba(104,107,130,0.24)`): Cool gray at 24% opacity — used on table dividers.
+
+### Shadow Colors
+- **Whisper** (`rgba(16,24,40,0.04) 0 1px 4px`): The faintest elevation — single-pixel shadow on stat cards.
+- **Subtle** (`rgba(0,0,0,0.03) 0 4px 24px`): The most-used Kraken elevation — feature cards, white buttons.
+- **Standard** (`rgba(16,24,40,0.06) 0 8px 24px -8px`): Slightly heavier — modal dialogs.
+
+Shadow tones use cool gray (slight blue tint), never brand-tinted.
+
+### Semantic
+- **Success** (`#149e61`): Green for positive states. Used on badge text via 16% opacity background tint (`rgba(20,158,97,0.16)`).
+- **Success Dark** (`#026b3f`): Deep green — badge text colour.
+- **Error** (`#e23b4a`): Red for error states.
+- **Warning** (`#df6500`): Orange for warnings — used very sparingly.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display** — `Kraken-Brand`, fallback `"IBM Plex Sans", Helvetica, Arial, sans-serif`. Headlines and section heads.
+- **UI / Body** — `Kraken-Product`, fallback `"Helvetica Neue", Helvetica, Arial, sans-serif`. Body, buttons, nav, cards.
+- **Mono** — `"JetBrains Mono", "IBM Plex Mono", "SF Mono", monospace` with `tnum` for tabular numerical data.
+- **OpenType** — `tnum` enabled on every numerical surface; `zero` (slashed zero) for trading-pair tickers and order IDs.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|-----:|-------:|------------:|---------------:|-------------|-------|
+| display-hero    | Kraken-Brand   | 48 | 700 | 1.17 | -1px    | default    | Homepage h1 |
+| section-heading | Kraken-Brand   | 36 | 700 | 1.22 | -0.5px  | default    | Section heads |
+| sub-heading     | Kraken-Brand   | 28 | 700 | 1.29 | -0.5px  | default    | Sub-section heads |
+| feature-title   | Kraken-Product | 22 | 600 | 1.20 | 0       | default    | Feature card titles |
+| title-md        | Kraken-Product | 18 | 600 | 1.30 | 0       | default    | Card titles |
+| title-sm        | Kraken-Product | 16 | 600 | 1.40 | 0       | default    | Inline emphasis |
+| body-lg         | Kraken-Product | 18 | 400 | 1.50 | 0       | default    | Hero body, large prose |
+| body            | Kraken-Product | 16 | 400 | 1.38 | 0       | default    | Default running text |
+| body-medium     | Kraken-Product | 16 | 500 | 1.38 | 0       | default    | Inline emphasis |
+| button          | Kraken-Product | 16 | 500–600 | 1.38 | 0   | default    | All CTAs |
+| caption         | Kraken-Product | 14 | 400 | 1.43 | 0       | default    | Captions |
+| caption-strong  | Kraken-Product | 14 | 700 | 1.71 | 0       | default    | Eyebrow labels |
+| small           | Kraken-Product | 12 | 400 | 1.33 | 0       | default    | Footer copy |
+| small-strong    | Kraken-Product | 12 | 500 | 1.33 | 0       | default    | Status meta |
+| micro           | Kraken-Product | 7  | 500 | 1.00 | +0.5px  | uppercase  | Compliance fine print |
+| number-md       | JetBrains Mono | 16 | 500 | 1.40 | 0       | tnum       | Price tickers |
+| number-sm       | JetBrains Mono | 14 | 500 | 1.40 | 0       | tnum       | Inline prices |
+
+### Principles
+- **Display weight 700 with -1px tracking** — confident without bombast. The negative tracking gives display lines the "lock together" density Kraken needs to feel professional
+- **Two-family discipline** — Kraken-Brand only on display sizes (28+); Kraken-Product on everything else. The dual-font split is functional, not decorative
+- **Body line-height 1.38** — slightly tighter than Coinbase's 1.5. A density signal aimed at users who scan trading data
+- **Mono for numbers** — every price ticker, every ledger amount, every order book row. `tnum` keeps columns aligned
+- **Micro at 7px** — the smallest type role exists for compliance disclosures (regulatory required language). Uppercase + tracking compensates for the size
+- **No oversized weights** — Kraken-Brand maxes at 700; there is no 800/900 weight. Restraint at the heaviest end keeps the brand from reading as bombastic
+- **Substitutes**: IBM Plex Sans is the closest open-source substitute for both Kraken-Brand (display) and Kraken-Product (body) — already in the declared fallback chain
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — The signature primary CTA. Background `#7132f5`, white text, 13px × 16px padding, 12px radius, 16/600 Kraken-Product label. Hover → `#5741d8`. Active → `#5b1ecf`. The 12px radius is Kraken's refusal of pill — distinctly rounded, distinctly not stadium.
+
+**`button-purple-outlined`** — Outlined variant. Background `#ffffff`, 1px `#5741d8` border, `#5741d8` text, 12px radius. Used as secondary action paired with primary.
+
+**`button-purple-subtle`** — Subtle filled variant. Background `rgba(133,91,251,0.16)` (purple at 16%), `#7132f5` text, 8px padding, 12px radius. Used for compact inline CTAs in dense lists.
+
+**`button-white`** — Floating white button. Background `#ffffff`, `#101114` text, 10px radius, `rgba(0,0,0,0.03) 0 4px 24px` whisper shadow. Used over imagery or coloured sections where purple would clash.
+
+**`button-secondary-gray`** — Background `rgba(148,151,169,0.08)` (cool gray at 8%), `#101114` text, 12px radius. Tertiary action.
+
+### Cards
+
+**`card-feature`** — Standard feature card. White background, 12px radius, 24px padding, whisper shadow. Holds icon + title + body.
+
+**`card-stat`** — Stat callout card. White background, 12px radius, 32px padding, single-pixel whisper shadow. Big number in mono number-md or display-hero, label below.
+
+**`card-pricing-tier`** — Pricing tier card. White background, 1px `#dedee5` border (no shadow on bordered cards), 12px radius, 32px padding.
+
+**`card-product-mockup`** — Holds a product UI screenshot. White background, 12px radius, no padding (image bleeds to corners).
+
+### Badges
+
+**`badge-success`** — Background `rgba(20,158,97,0.16)`, `#026b3f` text, 6px radius, 4×8 padding. Used for "online" / "verified" status.
+
+**`badge-neutral`** — Background `rgba(104,107,130,0.12)`, `#484b5e` text, 8px radius, 4×8 padding. Used for category tags.
+
+**`badge-purple-subtle`** — Background `rgba(133,91,251,0.16)`, `#7132f5` text, 6px radius. Used for brand tags ("Kraken Pro", "Spot").
+
+### Inputs / Forms
+
+**`input-text`** — Standard text input. White bg, 1px `#dedee5` border, 8px radius, 12px × 16px padding, 44px height. Focus → 3px `rgba(113,50,245,0.30)` ring + border tightens to `#7132f5`.
+
+**`input-amount`** — Trading-pair amount input. Larger 56px height, mono number-md type, currency selector inline.
+
+**`select-trading-pair`** — Combobox for selecting BTC/USD, ETH/USD, etc. White bg, 8px radius, downward chevron right. Opens to a scrollable list of pairs with mono price preview.
+
+### Navigation
+
+**`top-nav-light`** — 64px tall, `#ffffff` background, 1px bottom hairline `#dedee5`. Kraken wordmark left (in `#101114`, not purple), primary nav (Trade, Buy crypto, Earn, NFT, Pro, Learn), right cluster (Sign in, Get started CTA in primary purple).
+
+### Decorative
+
+**`band-stat-callout`** — Numerical proof band on the homepage ("13M+ verified clients"). Background `#fafafa`, 80px vertical padding, 3-up grid of stat numbers in display-hero size, label captions below.
+
+**`hero-band-dark`** — Rare full-bleed dark hero (`#101114`) used at the top of Kraken Pro narrative pages. White text, purple CTA.
+
+**`footer-light`** — Light footer (`#fafafa`) with cool gray text. 6-column link list, 64px vertical padding. Compliance micro-text at the very bottom in 7px caption.
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit**: 4px (with 2px microadjustments allowed for dense controls).
+- **Tokens**: 2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 80.
+- **Section padding (vertical)**: 80px on marketing — slightly tighter than Coinbase's 96 because Kraken pages mix marketing with dense product surfaces.
+- **Card internal padding**: 24px for feature cards; 32px for stat / pricing cards; 16px for compact items.
+
+### Grid & Container
+- **Max content width**: 1280px centred.
+- **Editorial body**: 12-column grid with 24px gutters.
+- **Hero**: text on left 7 cols, product mockup right 5 cols (more text-weighted than Coinbase's 6/6).
+
+### Whitespace Philosophy
+Kraken sits between Binance's density and Coinbase's airiness. 80px section padding, 1.38 body line-height. The whisper shadow on cards lets sections feel layered without the hard contrast of a coloured band.
+
+### Section Cadence
+White → soft-elevation band → white → product mockup section → white → dark CTA hero → light footer. The dark hero appears once per page max, used to anchor the final "Get started" gesture.
+
+## 6. Shapes & Radius
+
+- **Micro** 3px — almost no use; reserved for very small inline pills
+- **Small** 6px — badges, success pills
+- **Standard** 8px — inputs, neutral badges, white floating buttons
+- **Comfortable** 10px — secondary white buttons
+- **Card** 12px — every card, every primary button — Kraken's signature radius
+- **xl** 16px — hero shells, large product cards
+- **Pill** 9999px — only avatars and coin icons, never CTAs
+
+The 12px "card" tier is Kraken's distinctive choice — it appears on cards AND buttons, unifying the visual rhythm. Where Coinbase's pill CTA contrasts with rectangular cards, Kraken keeps a single radius family across both, signalling "considered design system" rather than playful decoration.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 Flat | No shadow | Body text, hero copy, nav |
+| 1 Hairline | 1px `#dedee5` | Bordered pricing-tier cards, table dividers |
+| 2 Whisper shadow | `rgba(16,24,40,0.04) 0 1px 4px` | Stat cards, micro-elevation |
+| 3 Subtle shadow | `rgba(0,0,0,0.03) 0 4px 24px` | Feature cards, white floating buttons — the most-used elevation |
+| 4 Standard shadow | `rgba(16,24,40,0.06) 0 8px 24px -8px` | Modal dialogs, dropdowns |
+| 5 Focus ring | `0 0 0 3px rgba(113,50,245,0.30)` | All keyboard focus |
+
+**Shadow Philosophy**: Whisper-level. Kraken cards float so faintly that the shadow is almost imperceptible — depth without distraction. The cool-tinted shadow base (slight blue) matches the cool-neutral palette. Brand-tinted purple shadows are absent — Kraken uses the brand for action, not for atmospheric tinting.
+
+## 8. Interaction & Motion
+
+- **Easing standard** — `cubic-bezier(0.4, 0, 0.2, 1)` for hover transitions
+- **Easing emphasized** — `cubic-bezier(0.2, 0, 0, 1)` for chart redraws and price-update flashes
+- **Durations** — fast 120ms, standard 200ms, slow 300ms
+- **Hover** — primary CTA darkens to `#5741d8`. Outlined buttons gain a `rgba(113,50,245,0.08)` tint. Cards lift via shadow intensify (whisper → subtle)
+- **Price flash** — gain → 400ms `rgba(20,158,97,0.10)` background fade; loss → `rgba(226,59,74,0.10)`
+- **Modal entry** — fade + 8px upward slide at 200ms emphasized easing
+- **Reduced motion** — `prefers-reduced-motion: reduce` collapses transitions to opacity-only; price flashes pulse once with no fade
+
+## 9. Accessibility & A11y
+
+- **Contrast**: Near-black `#101114` on white = 18.6:1 (AAA). White on Kraken Purple `#7132f5` = 5.8:1 (AA). Body `#33363f` on white = 11.4:1 (AAA). Silver blue `#9497a9` on white = 3.6:1 — only used on captions, never body
+- **Focus indicator**: 3px solid `rgba(113,50,245,0.30)` ring on every interactive element. Border tightens to `#7132f5` on inputs
+- **ARIA patterns**: Trading pair selectors use combobox pattern. Order book uses `role="grid"` with column headers. Modals use `role="dialog"` with focus trap
+- **Keyboard nav**: Top nav left/right arrow navigation. Pair selector supports Up/Down + Enter selection. Skip-to-content link in document head
+- **Screen reader hints**: Coin icons `aria-hidden`; symbol + name carry the label. Compliance micro-text (7px) is announced fully — never visually hidden
+- **Reduced motion**: Honoured
+
+## 10. Responsive Behavior
+
+| Breakpoint | Width | Key Changes |
+|------------|------:|-------------|
+| Mobile     | < 640  | Top nav → hamburger; display-hero 48 → 32px; product mockups stack below text; CTA pairs stack vertically full-width |
+| Tablet     | 640–768 | Top nav condenses, secondary menu items behind "More"; mockups 50% width |
+| Desktop    | 768–1024 | Hero 7/5 split; feature grids 2-up |
+| Wide       | 1024–1280 | Full layout; feature grids 3-up; mockups full-fidelity |
+| Ultra      | > 1280 | Container caps at 1280; outer breathing room expands |
+
+**Touch Targets**: Primary CTAs 44 × 44px minimum. Trading-pair selector taps anywhere on the row. Compliance micro-text (7px) is non-interactive; never used as a tap target.
+
+**Collapsing Strategy**: Top nav → hamburger sheet at mobile. Product mockups stack below text on mobile. Pricing tier cards collapse to single column with the recommended tier ordered first. Footer columns stack with collapsible accordion.
+
+**Image Behavior**: Product mockups are responsive PNG/SVG. Coin icons fixed 24/32px at all breakpoints.
+
+## 11. Content & Voice
+
+- **Tone** — professional, slightly more crypto-fluent than Coinbase but never crypto-native. "Trade with confidence" not "Trade your bags"
+- **Microcopy** — verbs are direct: "Sign up", "Buy crypto", "Trade", "Stake". Avoids both Binance's bombast and Coinbase's institutional restraint
+- **CTA verbs** — "Sign up" (top of page), "Get started" (post-feature), "Start trading" (Kraken Pro narrative), "Buy now" (asset-specific)
+- **Empty states** — supportive and direct. "Your first trade will appear here. Get started by buying crypto." with primary CTA below
+- **Error messages** — actionable. "Two-factor authentication required to continue. Set up 2FA in security settings." with inline "Set up" link
+- **Compliance copy** — 7px micro-type at the very bottom of every page. Regulatory disclaimers, jurisdictional restrictions, risk warnings. Never abbreviated, never visually hidden — the cost of being a regulated exchange
+- **Number formatting** — `tnum` mono with locale separators. Crypto amounts to 8 decimals truncated by significant figures
+
+## 12. Dark Mode & Theming
+
+Kraken's marketing surfaces are **light-default** with rare full-bleed dark hero punctuation (`#101114`). The product trading app supports a full dark mode (out of scope for this marketing-surface document).
+
+For dark hero punctuation, the token swap is minimal:
+- `bg` → `#101114`
+- `text` → `#ffffff`
+- `text-body` → `#9497a9`
+- `border` → `rgba(255,255,255,0.12)`
+- Brand purple `#7132f5` stays unchanged — the focus colour reads cleanly on both surfaces
+- Cards on dark heroes use `#1c1d22` background
+
+## 13. Lineage & Influences
+
+Kraken's design language inherits from **professional trading platforms** (Interactive Brokers, TradeStation) more than from consumer fintech. The single-purple-on-white discipline borrows from Stripe's single-blue strategy but commits to a more-saturated, more-distinctive hue. The Kraken-Brand display weight 700 + Kraken-Product UI dual-font system is a direct reference to financial-services typography (where display gravity matters but UI density matters more).
+
+What it borrows: pure-white canvas restraint from Coinbase; the dual-font display+UI split from Apple HIG (SF Pro Display + SF Pro Text); the whisper-shadow elevation from Linear and Notion. What it rejects: pill CTAs (Kraken's 12px is a distinct refusal), brand-tinted shadows, gradient atmospheric backgrounds, and the consumer-facing emoji-laden tone of Robinhood.
+
+Influences:
+- **Stripe** — Single-brand-colour discipline, pure white canvas. https://stripe.com
+- **Coinbase** — Institutional-finance restraint with crypto context. https://www.coinbase.com
+- **Interactive Brokers** — Professional trading-platform density and dual-font split. https://www.interactivebrokers.com
+- **Apple HIG** — SF Pro Display + SF Pro Text dual-family pattern. https://developer.apple.com/design/human-interface-guidelines
+- **IBM Plex Sans** — The declared fallback for Kraken-Brand and Kraken-Product. https://www.ibm.com/plex
+
+## 14. Do's and Don'ts
+
+### Do
+- Use Kraken Purple `#7132f5` for primary CTAs and links
+- Apply 12px radius on all buttons (rounded but distinctly not pill)
+- Use Kraken-Brand for display sizes 28+, Kraken-Product for everything else
+- Use whisper shadows (`rgba(0,0,0,0.03) 0 4px 24px`) for card elevation
+- Anchor sections at 80px vertical padding
+- Use cool blue-gray neutrals (`#686b82`, `#9497a9`) for muted text
+- Use mono with `tnum` for every numerical surface
+- Keep compliance micro-text at 7px and visible — regulatory required
+
+### Don't
+- Don't use pill buttons — 12px is the max radius for CTAs
+- Don't use other purples outside the defined scale (`#7132f5`, `#5741d8`, `#5b1ecf`)
+- Don't use warm grays — Kraken's cool blue-gray neutral is part of the brand
+- Don't use heavy shadows — whisper-level only
+- Don't use brand-tinted shadows (purple shadow is decorative; Kraken stays neutral)
+- Don't use Kraken-Brand below 22px — it's a display-only typeface
+- Don't soften the canvas to off-white — Kraken commits to pure `#ffffff`
+- Don't introduce a secondary brand colour — purple does all brand work
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Brand: Kraken Purple `#7132f5`
+- Brand dark: `#5741d8`
+- Brand subtle: `rgba(133,91,251,0.16)`
+- Text near-black: `#101114`
+- Body: `#33363f`
+- Muted: `#9497a9`
+- Border: `#dedee5`
+- Success: `#149e61`
+- Background: `#ffffff`
+
+### Example Component Prompts
+- "Create a Kraken hero band: white background, 48px Kraken-Brand weight 700 headline with -1px tracking in `#101114`, body-lg sub in `#33363f`, primary CTA `#7132f5` 12px radius 13×16 padding, outlined secondary `#5741d8` border + text on white."
+- "Design a feature card grid: 3-up on desktop with 24px gutters. Each card: white bg, 12px radius, 24px padding, whisper shadow `rgba(0,0,0,0.03) 0 4px 24px`. 32px purple icon top, feature-title 22/600 Kraken-Product `#101114`, body 16/400 `#33363f`."
+- "Build a stat callout band: `#fafafa` bg, 80px section padding. 3-up grid: each cell shows 48px Kraken-Brand weight 700 mono number in `#7132f5`, label below in caption-strong 14/700 `#686b82`."
+- "Compose a pricing tier card: white bg, 1px `#dedee5` border (no shadow on bordered cards), 12px radius, 32px padding. Tier name in feature-title, price in 36px Kraken-Brand weight 700, feature checklist below in body 16/400."
+
+### Iteration Guide
+1. Use the 12px radius universally — buttons, cards, inputs all share this radius family
+2. Display = Kraken-Brand at weight 700 with -1px tracking. Going to 400 breaks the brand
+3. Single brand colour: Kraken Purple `#7132f5`. Any decorative purple is a system violation
+4. Cool blue-gray neutrals only — no warm grays anywhere
+5. Whisper shadow is the default elevation — heavier shadows feel decorative
+6. Pure white canvas with rare dark-hero punctuation; never paper-cream
+7. Mono with `tnum` for every number; never use Kraken-Product for prices

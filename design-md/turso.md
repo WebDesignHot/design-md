@@ -1,0 +1,845 @@
+---
+name: Turso
+tagline: 'SQLite at the edge — a deep-teal canvas with a CRT-bright cyan accent (#00face) that reads as a glowing edge node.'
+author: webdesignhot
+source_url: https://turso.tech
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [dev-tools, saas]
+tags: [dark, sans, mono, structured, bright, cool]
+preview_swatch: ['#0f1419', '#00face', '#1ebca1']
+related: [neon, supabase, vercel]
+description: 'Turso runs a deep-teal near-black canvas (`#0f1419`) with a CRT-bright cyan accent (`#00face`) — the brand colour reads literally as the hex "FACE." Supporting tones range through emerald (`#1ebca1`, `#23765f`) for tinted panels, giving the SQLite-at-the-edge product a glowing-edge-node aesthetic. Mono numerals carry replication metrics; the cyan is reserved for primary action and live indicators.'
+
+colors:
+  # Primary
+  bg: '#0f1419'                  # deep-teal near-black canvas
+  bg-deep: '#0a0e12'             # deeper variant for footer
+  bg-elev-1: '#121b1f'           # subtle lift
+  bg-elev-2: '#182228'           # card surface
+  bg-elev-3: '#1c2b34'           # popover surface
+  surface: '#182228'             # card surface
+  surface-alt: '#18222b'         # secondary panel
+  surface-tinted: '#183134'      # tinted teal panel
+  surface-tinted-2: '#1c2b34'    # mid-tone tint
+  surface-tinted-3: '#1e3338'    # deeper tint
+
+  # Brand & Dark
+  brand: '#00face'               # CRT-bright cyan — literal hex "FACE"
+  brand-hover: '#00fbcf'         # hover variant
+  brand-pressed: '#00d8b0'       # pressed
+  brand-deep: '#00a890'          # deeper cyan for icons
+  brand-glow: '#00face33'         # 20% cyan glow
+  on-brand: '#0f1419'             # deep-teal text on cyan
+
+  # Accent
+  accent-emerald: '#1ebca1'      # mid-emerald
+  accent-emerald-deep: '#23765f' # darker emerald for tinted panels
+  accent-emerald-mid: '#1e6952'  # mid-deep emerald
+  accent-emerald-mute: '#29886e' # muted emerald
+  accent-emerald-soft: '#1ebca11f' # 12% emerald wash
+
+  # Interactive
+  link: '#00face'                # links use brand cyan
+  link-hover: '#00fbcf'          # link hover
+  link-visited: '#00d8b0'        # visited
+  selected: '#00face26'          # 15% cyan selection
+  disabled: '#283945'            # disabled bg
+  disabled-text: '#586876'       # disabled text
+
+  # Neutral Scale
+  text: '#ffffff'                # primary copy
+  text-heading: '#ffffff'        # headlines
+  text-muted: '#9ba3a8'          # secondary
+  text-soft: '#6b7882'           # tertiary
+  text-faint: '#4a5560'          # quaternary
+  text-disabled: '#586876'       # disabled
+
+  # Surface & Borders
+  border: '#1f2a33'              # solid hairline
+  border-soft: '#283945'         # softer border
+  border-strong: '#3a4a55'       # emphasized border
+  border-brand: '#00face66'      # 40% cyan on focus
+
+  # Shadow
+  shadow-ambient: 'rgba(0,0,0,0.35)'    # low ambient
+  shadow-standard: 'rgba(0,0,0,0.55)'   # standard
+  shadow-elevated: 'rgba(0,0,0,0.7)'    # popover
+  shadow-glow: 'rgba(0,250,206,0.35)'   # cyan focus glow
+
+  # Semantic
+  success: '#1ebca1'             # success uses emerald
+  success-bg: '#0f3a2e'          # success surface
+  warning: '#f5a623'             # amber warning
+  warning-bg: '#3a2710'          # warning surface
+  danger: '#ff5c5c'              # coral red
+  danger-bg: '#3a1818'           # danger surface
+  info: '#00face'                # info uses brand cyan
+  info-bg: '#0a3539'             # info surface
+
+typography:
+  display:
+    family: 'Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [600, 700]
+    opentype-features: ['ss01', 'cv11']
+  body:
+    family: 'Inter, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: ['ss01']
+  mono:
+    family: '"Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace'
+    weights: [400, 500, 600]
+    opentype-features: ['zero', 'tnum']
+  scale:
+    display-hero:   { size: 88, weight: 700, lineHeight: 1.0,  tracking: '-0.035em', family: display, opentype: 'ss01' }
+    display-large:  { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    h1:             { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.022em', family: display, opentype: 'ss01' }
+    h2:             { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.02em',  family: display }
+    h3:             { size: 22, weight: 600, lineHeight: 1.3,  tracking: '-0.01em',  family: display }
+    h4:             { size: 18, weight: 600, lineHeight: 1.35, tracking: '-0.005em', family: display }
+    body-large:     { size: 17, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body:           { size: 15, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body-small:     { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',         family: body }
+    label-mono:     { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.04em',    family: mono, opentype: 'zero, tnum' }
+    button:         { size: 15, weight: 500, lineHeight: 1.0,  tracking: '0',         family: body }
+    button-small:   { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',         family: body }
+    link:           { size: 15, weight: 500, lineHeight: 1.55, tracking: '0',         family: body }
+    metric:         { size: 32, weight: 500, lineHeight: 1.05, tracking: '-0.01em',   family: mono, opentype: 'zero, tnum' }
+    caption:        { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',         family: body }
+    caption-small:  { size: 12, weight: 400, lineHeight: 1.35, tracking: '0',         family: body }
+    micro:          { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.05em',    family: body }
+    code-body:      { size: 13, weight: 400, lineHeight: 1.55, tracking: '0',         family: mono, opentype: 'zero' }
+    code-bold:      { size: 13, weight: 600, lineHeight: 1.55, tracking: '0',         family: mono, opentype: 'zero' }
+    code-label:     { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.05em',    family: mono, opentype: 'zero, tnum' }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8           # button
+  lg: 12          # card
+  xl: 16          # hero shell
+  featured: 20    # signature feature shells
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section-sm: 64
+  section: 96
+  section-lg: 128
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — edge-node map pulse animations disabled, cyan glow pulses removed, transitions reduce to opacity.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0,0,0,0.35) 0 1px 2px'
+  standard: 'rgba(0,0,0,0.55) 0 8px 16px -4px'
+  elevated: 'rgba(0,0,0,0.7) 0 18px 36px -12px, rgba(0,0,0,0.4) 0 8px 16px -8px'
+  deep: 'rgba(0,0,0,0.8) 0 30px 60px -16px'
+  ring: '0 0 0 2px #00face'
+  glow: '0 0 24px rgba(0,250,206,0.4)'
+
+accessibility:
+  contrast-text-on-bg: 17.4         # AAA — white on #0f1419
+  contrast-text-on-brand: 13.8      # AAA — #0f1419 text on cyan brand
+  contrast-link-on-bg: 14.6         # AAA — cyan link on near-black
+  contrast-muted-on-bg: 6.4         # AA at body sizes
+  focus-ring: '2px solid #00face, offset 2px'
+  reduced-motion-honored: true
+  keyboard-nav: 'standard tab order; cyan focus ring on all interactive controls'
+
+components:
+  button-primary:
+    bg: '#00face'
+    text: '#0f1419'
+    padding: '10px 16px'
+    radius: 8
+    font: 'button (15/500)'
+    border: 'none'
+    hover: 'bg → #00fbcf; subtle 1.005 scale'
+    active: 'bg → #00d8b0'
+    use: 'primary CTA — Get started, Sign up'
+  button-ghost:
+    bg: 'transparent'
+    text: '#ffffff'
+    padding: '10px 16px'
+    radius: 8
+    font: 'button (15/500)'
+    border: '1px solid #283945'
+    hover: 'border → #3a4a55; bg → rgba(255,255,255,0.04)'
+    use: 'secondary action'
+  button-danger:
+    bg: 'transparent'
+    text: '#ff5c5c'
+    padding: '10px 16px'
+    radius: 8
+    border: '1px solid rgba(255,92,92,0.4)'
+    hover: 'bg → rgba(255,92,92,0.08)'
+    use: 'destructive action'
+  card:
+    bg: '#182228'
+    text: '#ffffff'
+    padding: '24px'
+    radius: 12
+    border: '1px solid #1f2a33'
+    shadow: 'rgba(0,0,0,0.35) 0 1px 2px'
+    hover: 'border → #283945; shadow → standard'
+    use: 'feature card, region card'
+  card-tinted:
+    bg: '#183134'
+    text: '#ffffff'
+    padding: '24px'
+    radius: 12
+    border: 'none'
+    use: 'tinted teal feature panel'
+  input:
+    bg: '#0a0e12'
+    text: '#ffffff'
+    placeholder: '#586876'
+    padding: '10px 14px'
+    radius: 8
+    border: '1px solid #283945'
+    focus: 'border → #00face; ring 2px solid rgba(0,250,206,0.3)'
+    use: 'text input, search'
+  badge:
+    bg: '#183134'
+    text: '#1ebca1'
+    padding: '2px 10px'
+    radius: 9999
+    font: 'micro (11/500)'
+    use: 'tag, region pill, status'
+  badge-live:
+    bg: 'transparent'
+    text: '#00face'
+    padding: '2px 10px'
+    radius: 9999
+    border: '1px solid rgba(0,250,206,0.3)'
+    font: 'micro (11/500 mono)'
+    use: 'live replica indicator'
+  nav-link:
+    bg: 'transparent'
+    text: '#9ba3a8'
+    padding: '8px 12px'
+    font: 'body-small (14/500)'
+    hover: 'text → #ffffff'
+    active: 'text → #00face'
+    use: 'top nav, sidebar'
+
+lineage:
+  summary: |
+    Turso's chromatic identity is built around a single piece of brand-as-
+    pun: the primary cyan is `#00face`, a hex that literally spells the
+    word **FACE**. That self-referential gag is the brand's wink at the
+    developers it courts, and the colour itself — a CRT-bright cyan
+    closer to `#00ffff` than to teal — gives the page a glowing-edge-node
+    feel. The deep-teal canvas `#0f1419` reads as the dark side of an
+    edge server, while the supporting emerald scale (`#1ebca1`,
+    `#1e6952`, `#23765f`) gives Turso a chromatic ladder rather than a
+    single-accent palette. Where Neon commits to mint and PlanetScale to
+    blood-red, Turso commits to **edge cyan** — bright, cool, glowing,
+    immediately readable as "live replica online." Type is Inter, weights
+    600–700 for display, with mono carrying replication metrics. Buttons
+    are 8px, cards 12px — Vercel-class geometry with the chromatic spine
+    doing the differentiation.
+  influences:
+    - name: 'SQLite logo blue'
+      role: "The glowing-cyan signal hue traces back to SQLite's documentation aesthetic; Turso modernises it to CRT brightness."
+      url: https://www.sqlite.org
+    - name: 'Neon'
+      role: 'Adjacent edge-database design language — both anchor on near-black canvases with a single bright accent.'
+      url: https://neon.com
+    - name: 'Vercel'
+      role: 'Inter at 700 with negative tracking, 8px button radius, generous vertical rhythm.'
+      url: https://vercel.com
+    - name: 'CRT phosphor displays'
+      role: 'The literal glowing-cyan-on-black aesthetic borrowed from CRT terminal colour-ways.'
+      url: https://en.wikipedia.org/wiki/Cathode-ray_tube
+
+dark-mode: native    # Turso ships dark-only — the CRT-glow aesthetic depends on the deep-teal canvas
+---
+
+## 1. Visual Theme & Atmosphere
+
+Turso's home page opens on a `#0f1419` canvas — a deep teal-black that
+sits between Neon's pure near-black and Supabase's forest-green. The
+brand cyan `#00face` (the hex literally reads "FACE") carries every
+primary action and live indicator. The page reads like the marketing
+equivalent of a glowing-edge-node dashboard. The first impression is
+**SQLite at the edge, rendered as CRT phosphor** — a brand that took
+the metaphor seriously enough to make it the substrate.
+
+The supporting emerald palette (`#1ebca1`, `#23765f`, `#1e6952`,
+`#29886e`) gives Turso four shades of green-teal for tinted panels,
+badge backgrounds, and feature blocks — a chromatic ladder broader
+than most single-accent dev brands. This breadth is what differentiates
+Turso from Neon: Neon's mint is a single-accent commitment, while
+Turso's cyan-emerald scale offers a tonal vocabulary across the whole
+chromatic family.
+
+The mood is **glowing edge node**. The cyan accent reads as a literal
+status indicator — when it appears next to a region label, you read
+it as "live replica online." Mono numerals carry replication metrics
+(latency to nearest replica, region count, query latency); the
+emerald-tinted feature panels function as section emphasis without
+breaking from the canvas's chromatic family.
+
+There is no skeuomorphic 3D, no decorative gradient mesh, no neon-
+glow effect outside the focus ring. Turso's brand identity comes from
+chromatic discipline (cyan + emerald + near-black) and typographic
+restraint (Inter + mono, no display experiments). The brand-as-pun
+(`#00face`) is the wink that tells you a developer designed this
+brand for developers.
+
+**Key Characteristics**
+
+- Deep teal-black canvas (`#0f1419`) with CRT-bright cyan accent (`#00face`)
+- Brand hex literally spells "FACE" — a self-referential developer wink
+- Emerald tonal scale (`#1ebca1`, `#23765f`, `#1e6952`, `#29886e`) for tinted panels
+- Inter display + body, Fira Code or JetBrains Mono for code/metrics
+- 8px button radius + 12px card radius (Vercel-class geometry)
+- Cyan reserved for primary action and live indicators only
+- Mono with `tnum` and `zero` features for replication metrics
+- Edge-node map visualization as signature layout element
+- Dark-only — no light variant
+- Region pills using mono labels with cyan dot indicators
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **Background** (`#0f1419`) [→ `--turso-bg`]: deep teal-black canvas — the brand's substrate
+- **Background Deep** (`#0a0e12`): deeper variant for footer and full-bleed transitions
+- **Primary Text** (`#ffffff`): full white on the deep-teal canvas
+- **Primary CTA Fill** (`#00face`): CRT-bright cyan
+
+### Brand & Dark
+
+- **Brand Cyan** (`#00face`): the brand's defining hue — literal hex "FACE"
+- **Brand Hover** (`#00fbcf`): slightly more saturated on hover
+- **Brand Pressed** (`#00d8b0`): pressed state
+- **Brand Deep** (`#00a890`): deeper cyan for icons and emphasized strokes
+- **Brand Glow** (`#00face33`): 20% wash for hover backgrounds
+- **On-Brand Text** (`#0f1419`): deep teal text on cyan fill — 13.8:1 AAA
+
+### Accent
+
+- **Emerald** (`#1ebca1`) [→ `--turso-emerald`]: mid-emerald, used for status and feature labels
+- **Emerald Deep** (`#23765f`): darker emerald for tinted panel backgrounds
+- **Emerald Mid** (`#1e6952`): deeper still for nested panels
+- **Emerald Mute** (`#29886e`): muted emerald for subtle accents
+- **Emerald Soft** (`#1ebca11f`): 12% emerald wash
+
+### Interactive
+
+- **Link** (`#00face`): links use the brand cyan (the brand assumes most links go to documentation)
+- **Link Hover** (`#00fbcf`)
+- **Link Visited** (`#00d8b0`)
+- **Selected** (`#00face26`): 15% cyan wash
+- **Disabled** (`#283945`)
+- **Disabled Text** (`#586876`)
+
+### Neutral Scale
+
+- **Text Heading** (`#ffffff`): full white
+- **Text Body** (`#ffffff`): full white
+- **Text Muted** (`#9ba3a8`): secondary copy, captions
+- **Text Soft** (`#6b7882`): tertiary
+- **Text Faint** (`#4a5560`): quaternary
+- **Text Disabled** (`#586876`)
+
+### Surface & Borders
+
+- **Surface** (`#182228`) [→ `--turso-surface`]: card surface
+- **Surface Alt** (`#18222b`): secondary panel
+- **Surface Tinted** (`#183134`): tinted teal feature panel — Turso's chromatic surface
+- **Surface Tinted 2** (`#1c2b34`): mid-tone tint
+- **Surface Tinted 3** (`#1e3338`): deeper tint
+- **Border** (`#1f2a33`) [→ `--turso-border`]: solid hairline
+- **Border Soft** (`#283945`): lighter border
+- **Border Strong** (`#3a4a55`): emphasized border on hover
+- **Border Brand** (`#00face66`): 40% cyan on focus
+
+### Shadow Colors
+
+Shadows are pure-black at varying alpha. The brand never tints standard shadows — depth stays neutral so the cyan accent reads as foreground action:
+
+- **Ambient** (`rgba(0,0,0,0.35)`): low resting
+- **Standard** (`rgba(0,0,0,0.55)`): card hover
+- **Elevated** (`rgba(0,0,0,0.7)`): popover
+- **Deep** (`rgba(0,0,0,0.8)`): modal
+- **Glow** (`rgba(0,250,206,0.4)`): cyan focus glow only
+
+### Semantic
+
+- **Success** (`#1ebca1`): success uses emerald (distinct from brand cyan, but in the same chromatic family)
+- **Success Bg** (`#0f3a2e`): dark emerald surface
+- **Warning** (`#f5a623`): amber — only colour outside the cyan-emerald family
+- **Warning Bg** (`#3a2710`)
+- **Danger** (`#ff5c5c`): coral red
+- **Danger Bg** (`#3a1818`)
+- **Info** (`#00face`): info uses brand cyan
+- **Info Bg** (`#0a3539`): dark teal surface
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: Inter — same family throughout
+- **Mono**: Fira Code (preferred for ligatures), JetBrains Mono fallback
+- **OpenType**: `ss01` (alternate single-storey g) on Inter; `tnum` (tabular numerals) and `zero` (slashed zero) on mono throughout metrics, region labels, code
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | display | 88 | 700 | 1.0 | -0.035em | ss01 | hero only |
+| display-large | display | 64 | 700 | 1.05 | -0.025em | ss01 | section opener |
+| h1 | display | 48 | 700 | 1.1 | -0.022em | ss01 | page title |
+| h2 | display | 36 | 700 | 1.15 | -0.02em | — | feature heading |
+| h3 | display | 22 | 600 | 1.3 | -0.01em | — | sub-feature |
+| h4 | display | 18 | 600 | 1.35 | -0.005em | — | card title |
+| body-large | body | 17 | 400 | 1.55 | 0 | — | hero supporting |
+| body | body | 15 | 400 | 1.55 | 0 | — | default — slightly tighter than 16 |
+| body-small | body | 13 | 400 | 1.45 | 0 | — | dense feature blocks |
+| label-mono | mono | 12 | 500 | 1.3 | 0.04em | zero, tnum | eyebrow, region tag |
+| button | body | 15 | 500 | 1.0 | 0 | — | primary/ghost |
+| button-small | body | 13 | 500 | 1.0 | 0 | — | dense controls |
+| link | body | 15 | 500 | 1.55 | 0 | — | inline link |
+| metric | mono | 32 | 500 | 1.05 | -0.01em | zero, tnum | replication metric callout |
+| caption | body | 13 | 400 | 1.4 | 0 | — | footnote |
+| caption-small | body | 12 | 400 | 1.35 | 0 | — | metadata |
+| micro | body | 11 | 500 | 1.3 | 0.05em | — | badge |
+| code-body | mono | 13 | 400 | 1.55 | 0 | zero | code blocks |
+| code-bold | mono | 13 | 600 | 1.55 | 0 | zero | emphasized id |
+| code-label | mono | 11 | 500 | 1.3 | 0.05em | zero, tnum | region/branch label |
+
+### Principles
+
+- **Mono with `tnum` for metrics**: replication latency, region count, query time — every numeric typeset for column-alignment
+- **Slashed zero on mono**: `zero` enabled to disambiguate `0` from `O` in identifiers and connection strings
+- **Single-family discipline**: Inter handles both display and body — chromatic cyan does the work of typographic differentiation
+- **Tight tracking on display**: -0.022em to -0.035em compresses the headline for confidence
+- **Body 15px, not 16px**: matches dense-tooling rhythm; only hero-supporting copy uses 17px
+- **`ss01` continuity**: alternate g feature shared between display and body for type consistency
+- **No serif anywhere**: Turso's brand is committedly sans + mono — no editorial-serif moments
+- **Mono labels in micro size**: region pills use 11–12px mono with positive tracking for legibility at small sizes
+
+## 4. Component Stylings
+
+### Buttons
+
+**button-primary** — Cyan primary
+- Background: `#00face`
+- Text: `#0f1419` at 15/500 (deep-teal text for max contrast)
+- Padding: 10px 16px
+- Radius: 8
+- Border: none
+- Hover: bg → `#00fbcf`, subtle 1.005× scale
+- Active: bg → `#00d8b0`
+- Focus: 2px solid `#00face` ring, 2px offset
+- Use: primary CTA — "Get started", "Sign up", "Try Turso"
+
+**button-ghost** — Outlined
+- Background: transparent
+- Text: `#ffffff` at 15/500
+- Padding: 10px 16px
+- Radius: 8
+- Border: 1px solid `#283945`
+- Hover: border → `#3a4a55`, bg → rgba(255,255,255,0.04)
+- Use: secondary action — "Documentation", "Sign in"
+
+**button-danger**
+- Background: transparent
+- Text: `#ff5c5c` at 15/500
+- Padding: 10px 16px
+- Radius: 8
+- Border: 1px solid rgba(255,92,92,0.4)
+- Hover: bg → rgba(255,92,92,0.08)
+- Use: destructive action
+
+**button-link** — Bare link
+- Background: transparent
+- Text: `#00face` at 15/500
+- Padding: 0
+- Hover: text → `#00fbcf`, underline grows from 0 → 1px
+
+### Cards
+
+**card-default**
+- Background: `#182228`
+- Padding: 24px
+- Radius: 12
+- Border: 1px solid `#1f2a33`
+- Shadow: ambient
+- Hover: border → `#283945`, shadow → standard
+- Use: feature card, region card, pricing tier
+
+**card-tinted** — Tinted teal feature panel
+- Background: `#183134`
+- Padding: 24px
+- Radius: 12
+- Border: none
+- Use: section-emphasis feature block
+
+### Badges / Tags / Pills
+
+**badge-tag**
+- Background: `#183134`
+- Text: `#1ebca1` at 11/500 micro
+- Padding: 2px 10px
+- Radius: pill (9999)
+- Use: tag, region label
+
+**badge-live** — Live replica indicator
+- Background: transparent
+- Text: `#00face` at 11/500 mono with `zero` feature
+- Padding: 2px 10px
+- Radius: pill
+- Border: 1px solid rgba(0,250,206,0.3)
+- Use: "live", "online", with optional cyan dot
+
+### Inputs / Forms
+
+**input-text**
+- Background: `#0a0e12`
+- Text: `#ffffff` at 15/400
+- Placeholder: `#586876`
+- Padding: 10px 14px
+- Radius: 8
+- Border: 1px solid `#283945`
+- Focus: border → `#00face`, ring 2px solid rgba(0,250,206,0.3)
+
+### Navigation
+
+**nav-link**
+- Background: transparent
+- Text: `#9ba3a8` at 14/500
+- Padding: 8px 12px
+- Hover: text → `#ffffff`
+- Active: text → `#00face`
+
+### Decorative
+
+**status-dot** — Cyan live indicator
+- 6px circle in `#00face`
+- Optional 0 0 8px rgba(0,250,206,0.5) glow on live state
+- Use: next to region/branch labels in `badge-live`
+
+**edge-map** — Global replica visualization
+- Dark canvas (`#0a0e12`) with subtle world-map paths
+- Cyan `#00face` dots at replica regions, 4–6px diameter
+- Optional pulse animation on dots (disabled with reduced-motion)
+- Connection lines between dots in 1px rgba(0,250,206,0.2)
+- Use: hero or product-section visualization
+
+**code-block**
+- Background: `#0a0e12`
+- Text: `#ffffff` at code-body (13/400 Fira Code)
+- Padding: 16px 20px
+- Radius: 8
+- Border: 1px solid `#1f2a33`
+- Inline backticks render in `#00face` cyan on rgba(0,250,206,0.1) wash
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px
+- **Scale**: 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128
+- **Density observation**: Turso's grid is **moderate density** — denser than Render's spacious whitespace, looser than PlanetScale's terminal density. Sections at 64–96px, feature blocks at 16–24px
+
+### Grid & Container
+
+- **Page width**: 1280px max
+- **Prose width**: 720px (documentation, marketing body)
+- **Hero treatment**: full-bleed deep-teal canvas with the edge-map visualization spanning the hero
+- **Feature grid**: 3-col at desktop, 2-col at tablet, 1-col at mobile
+
+### Whitespace Philosophy
+
+- Whitespace is functional — generous between sections, dense within feature blocks
+- The dark canvas itself functions as whitespace — chromatic depth, not flat colour
+- The edge-map visualization is the page's most decorative moment; everywhere else is restrained
+
+### Section Cadence
+
+- Hero (deep-teal canvas + edge-map) → feature grid → tinted teal feature panel → product detail → pricing → footer
+- The tinted teal panels function as section-break devices, not full backgrounds
+- The cyan accent stays foregrounded — it never anchors a section background
+
+## 6. Shapes & Radius Scale
+
+| Tier | Px | Use |
+|------|----|----|
+| Micro | 2 | inline pills, tight chips |
+| Standard | 4 | small badges, status pills |
+| Comfortable | 8 | buttons, inputs |
+| Relaxed | 12 | cards |
+| Featured | 16 | hero shells, feature blocks |
+| Large | 20 | signature illustrative panels |
+| Pill | 9999 | region pills, status pills, avatars |
+
+Compound radii are rare; when used, footer cards drop the bottom radius (`12 12 0 0`) to merge with the footer.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|----|
+| 0 | flat | hero copy on canvas |
+| 1 | 1px solid `#1f2a33` border | inline cards, code blocks |
+| 2 | 1px border + ambient shadow | feature cards |
+| 3 | standard shadow (0 8px 16px -4px) | hover state |
+| 4 | elevated shadow (0 18px 36px -12px) | popover, dropdown |
+| 5 | deep shadow (0 30px 60px -16px) | modal |
+
+**Shadow Philosophy**: shadows are pure-black at varying alpha — depth stays chromatically neutral so the cyan accent foregrounds as action. The only chromatic shadow is the cyan focus glow (`rgba(0,250,206,0.4)`), reserved for the focus ring on interactive controls. Multi-layer shadows at level 4+ soften edges without introducing chromatic noise.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — page transitions
+- **Decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — tooltips
+
+### Durations
+
+- **Fast** (120ms): hover, focus
+- **Standard** (200ms): card lift, button press
+- **Slow** (320ms): modal enter, edge-map pulse cycle
+
+### Per-Component Recipes
+
+- **Button hover**: bg colour transitions over 120ms; subtle 1.005× scale
+- **Card hover**: border opacity lifts, shadow intensifies, over 200ms
+- **Edge-map dot pulse**: opacity 0.5 → 1.0 over 1.5s ease-in-out infinite; staggered across regions
+- **Status dot live pulse**: opacity 0.6 → 1.0 over 1.2s ease-in-out infinite (disabled with reduced-motion)
+- **Link hover**: underline grows from 0 → 1px over 120ms
+
+### Page Transitions
+
+- Default: opacity-only fade over 320ms emphasized
+
+### Reduced Motion
+
+When `prefers-reduced-motion: reduce` is set:
+
+- Edge-map dot pulses become static
+- Status dot live pulses disabled
+- Card hover scale removed
+- All transitions reduce to opacity
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **White on `#0f1419` bg**: 17.4:1 (AAA)
+- **White on `#182228` surface**: 14.6:1 (AAA)
+- **Cyan `#00face` on `#0f1419`**: 14.6:1 (AAA)
+- **Deep-teal `#0f1419` on cyan `#00face` brand**: 13.8:1 (AAA)
+- **Emerald `#1ebca1` on `#0f1419`**: 8.4:1 (AAA)
+- **Muted `#9ba3a8` on `#0f1419`**: 6.4:1 (AA)
+- **Soft `#6b7882` on `#0f1419`**: 3.6:1 (AA Large only)
+
+### Focus Indicators
+
+- Default: 2px solid `#00face` ring, 2px offset
+- Inputs: focus border → `#00face` + ring 2px solid rgba(0,250,206,0.3)
+- Always visible
+
+### ARIA Patterns
+
+- **Combobox**: standard listbox pattern
+- **Dialog**: aria-labelledby + aria-describedby; trap focus; ESC to close
+- **Region pills**: aria-label spelling region (e.g., "Region: Frankfurt — fra")
+- **Live indicators**: aria-label="Live" or "Online" — never colour-only
+
+### Keyboard Navigation
+
+- Tab order follows visual order
+- Skip-link at page top
+- Enter/Space activates buttons
+- Cmd/Ctrl+K opens command palette
+- Arrow keys navigate within tab groups
+
+### Screen Reader Hints
+
+- Edge-map decorative — `aria-hidden="true"`
+- Status colour always paired with text label
+- Mono code uses `<code>` semantic
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` honored — see §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Min Width | Use |
+|------|-----------|----|
+| Mobile | — | default |
+| Tablet | 640 | 2-col grids |
+| Desktop | 1024 | 3-col grids |
+| Wide | 1280 | max page width |
+| Ultra | 1536 | hero-only |
+
+### Touch Targets
+
+- Minimum 44×44px for primary controls
+- Status dots remain 6px visual; hit-area expands to 24×24px
+
+### Collapsing Strategy
+
+- **Nav**: collapses to hamburger ≤ 768px
+- **Feature grid**: 3-col → 2-col @ 1024 → 1-col @ 640
+- **Hero**: display-hero (88px) reduces to 48px @ 640
+- **Edge-map**: scales with hero; simplifies to fewer dots @ 640
+- **Code blocks**: scroll horizontally on overflow
+
+### Image Behavior
+
+- Edge map is SVG, scales crisp
+- Logos lock at intrinsic size
+- Region flags scale with text
+
+## 11. Content & Voice
+
+### Tone
+
+Technical-developer-friendly, slightly playful. Turso writes for backend developers who want the database punchline without the corporate wrapper. The brand-as-pun (`#00face`) is the giveaway — Turso writes the way a developer who likes their tools writes about their tools. Direct, occasionally wry, never preachy.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started", "Try free", "Connect", "Replicate", "Deploy" — short and direct
+- **Error message recipe**: `[noun] [failed verb]: [reason]` — e.g., "Replication failed: region unreachable"
+- **Success confirmations**: `[noun] [verb-past] in [location]` — "Replica deployed in fra"
+- **Empty states**: "No replicas yet. [CTA: Add your first edge replica]"
+
+### CTA Verb Conventions
+
+- Top-level: "Get started" or "Try free"
+- Product: "Try Turso", "Replicate to the edge"
+- Documentation: "Read the docs"
+- Support: "Contact us"
+- Sales: "Talk to sales"
+
+## 12. Dark Mode & Theming
+
+Turso is **dark-only**. The deep-teal canvas (`#0f1419`) and CRT-bright cyan accent are the brand — they don't translate to a light surface (the cyan loses its glow, the chromatic story collapses). The dashboard product runs the same dark-only palette.
+
+If a light variant were ever needed for documentation legibility:
+- `bg`: `#0f1419` → `#fafafa`
+- `text`: `#ffffff` → `#0f1419`
+- `surface`: `#182228` → `#f0f4f5` (light teal)
+- `surface-tinted`: `#183134` → `#cfe7e2` (light emerald)
+- `brand` stays `#00face` (works on light, but loses the CRT-glow effect)
+
+The recommendation is **don't**. The deep-teal canvas is the brand.
+
+## 13. Lineage & Influences
+
+Turso's chromatic identity is built around a single piece of brand-as-pun: the primary cyan is `#00face`, a hex that literally spells the word **FACE**. That self-referential gag is the brand's wink at the developers it courts, and the colour itself — a CRT-bright cyan closer to `#00ffff` than to teal — gives the page a glowing-edge-node feel.
+
+The deep-teal canvas `#0f1419` reads as the dark side of an edge server, while the supporting emerald scale (`#1ebca1`, `#1e6952`, `#23765f`) gives Turso a chromatic ladder rather than a single-accent palette. Where Neon commits to mint and PlanetScale to blood-red, Turso commits to **edge cyan** — bright, cool, glowing, immediately readable as "live replica online." Type is Inter, weights 600–700 for display, with mono carrying replication metrics. Buttons are 8px, cards 12px — Vercel-class geometry with the chromatic spine doing the differentiation.
+
+- **SQLite logo blue** — https://www.sqlite.org — glowing-cyan signal hue, modernised to CRT brightness
+- **Neon** — https://neon.com — adjacent edge-database design language
+- **Vercel** — https://vercel.com — Inter at 700 with negative tracking, 8px button radius
+- **CRT phosphor displays** — https://en.wikipedia.org/wiki/Cathode-ray_tube — literal glowing-cyan-on-black aesthetic
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** reserve `#00face` for primary action and live indicators — it loses the "live replica online" semantic when used decoratively
+- **Do** layer the emerald scale (`#1ebca1` → `#23765f` → `#1e6952`) for tinted panels and feature blocks
+- **Do** keep the canvas at `#0f1419` — pure black collapses the teal undertone, lighter teals lose the near-black anchoring
+- **Do** use mono with `tnum` and `zero` for replication metrics, region pills, code samples
+- **Do** use the edge-map visualization as the hero's decorative moment
+- **Do** pair status colour-coding with text labels for accessibility
+- **Do** honor `prefers-reduced-motion` — disable edge-map and status-dot pulses
+- **Do** keep section rhythm at 64–96px (denser than Render, looser than PlanetScale)
+- **Do** use 8px button radius, 12px card radius (Vercel-class geometry)
+- **Do** anchor body copy on `#9ba3a8` for muted, never below `#6b7882` for tertiary
+
+### Don't
+
+- **Don't** swap the cyan for a more conventional `#06b6d4` Tailwind cyan; Turso's `#00face` is brighter, slightly bluer, and self-referential
+- **Don't** use the cyan and the emerald in the same component — they belong to different layers (action vs surface)
+- **Don't** add purple or magenta accents; the palette is intentionally cool-only, teal-to-cyan-to-green
+- **Don't** flip to light mode; Turso's identity depends on the deep-teal canvas
+- **Don't** apply heavy chromatic shadows; depth stays neutral so cyan reads as foreground
+- **Don't** use serif anywhere — Turso is committedly Inter + mono
+- **Don't** use mono for body copy — mono is for metrics, identifiers, code, region labels only
+- **Don't** mix the brand cyan with a glow gradient outside the focus ring — the cyan is flat-on-flat
+- **Don't** introduce orange or red as primary chromatic accents — semantic colours only
+- **Don't** soften the dark canvas above `#1c2b34`; lifting too much loses the edge-node aesthetic
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #0f1419
+bg-deep: #0a0e12
+surface: #182228
+surface-tinted: #183134
+text: #ffffff
+text-muted: #9ba3a8
+brand: #00face
+brand-hover: #00fbcf
+accent-emerald: #1ebca1
+border: #1f2a33
+on-brand: #0f1419
+```
+
+### Example Component Prompts
+
+1. "Create a hero section: deep teal-black `#0f1419` background, an 88px display-hero in white at 700 weight with -0.035em tracking and `ss01` alternate g enabled, body-large 17px subhead in `#9ba3a8`. Add a primary cyan button (`#00face` fill, `#0f1419` deep-teal text, 8px radius, 10px 16px padding) saying 'Get started' and a ghost button 'Read the docs' (transparent + `#283945` border)."
+
+2. "Design an edge-map hero visualization: dark canvas (`#0a0e12`) with subtle world-map path strokes in rgba(255,255,255,0.05), 4–6px cyan `#00face` dots at replica regions with `0 0 8px rgba(0,250,206,0.5)` glow, 1px connection lines between dots in rgba(0,250,206,0.2). Add aria-hidden=true and a screen-reader text describing 'Map showing global edge replica regions.'"
+
+3. "Build a region card: `#182228` background, 24px padding, 12px radius, 1px `#1f2a33` border. Inside: 6px live cyan dot, region label in 12px Fira Code with `zero` feature ('fra-1'), then 32px metric in mono with `tnum` ('5.2ms' replication latency), caption-small below 'Average replica latency.'"
+
+4. "Create a code block: `#0a0e12` background, 13px Fira Code `#ffffff` body text with `zero` slashed-zero feature, 16px 20px padding, 8px radius, 1px `#1f2a33` border. Inline backticks within prose render in `#00face` cyan on rgba(0,250,206,0.1) wash."
+
+5. "Design a feature panel: tinted teal `#183134` background, 24px padding, 12px radius, no border. Inside: 22px h3 in white at 600, 15px body in `#ffffff`, decorative `#1ebca1` emerald accent stripe on the left edge (4px wide). Optional cyan dot indicator in the top-right corner if the feature represents 'live edge.'"
+
+6. "Build a pricing-tier card: `#182228` background, 24px padding, 12px radius, 1px `#1f2a33` border. Recommended tier wraps in `#183134` tinted background instead. Recommended badge: 'POPULAR' in 11px mono at 500 with 0.05em tracking, on `#00face` cyan pill. Primary CTA is the cyan button; secondary is ghost."
+
+### Iteration Guide
+
+1. **Start with the canvas** — `#0f1419` (deep teal-black), not `#000`, not graphite. The teal undertone is the brand
+2. **Confirm the cyan is `#00face`** — not `#06b6d4` Tailwind cyan, not `#00ffff`. The literal "FACE" hex is the developer wink
+3. **Build the emerald ladder** — `#1ebca1` → `#23765f` → `#1e6952` for tinted panels and feature blocks
+4. **Reserve cyan for action and live state** — counting viewport cyan pixels; if more than ~5%, demote to emerald or muted text
+5. **Mono on metrics** — replication latency, region counts, query times typeset in Fira Code with `tnum` and `zero`
+6. **Use edge-map for hero decoration** — Turso's signature visualization; never repeat below the fold
+7. **Tighten display tracking** — -0.022em to -0.035em on display
+8. **Pair status colour with text** — never colour-only; aria-label spells region/state
