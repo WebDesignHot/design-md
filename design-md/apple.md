@@ -6,7 +6,7 @@ source_url: https://www.apple.com
 spec: design.md/v1.5
 quality: curated
 featured: true
-categories: [ecommerce, media]
+categories: [marketplace, media]
 tags: [light, minimal, sans, spacious, soft, premium, product-led]
 preview_swatch: ['#ffffff', '#0071e3', '#1d1d1f']
 related: [linear, vercel, stripe]

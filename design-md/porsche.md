@@ -1,0 +1,806 @@
+---
+name: Porsche
+tagline: Engineering-purity black-on-white — Porsche Next at 96px regular, Rosso #d5001c restraint, sharp 12px corners.
+author: webdesignhot
+source_url: https://www.porsche.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [automotive]
+tags: [luxury, light, sans, photography, editorial, engineering]
+preview_swatch: ['#ffffff', '#d5001c', '#000000']
+related: [ferrari, bmw, tesla]
+description: 'Porsche''s site reads as engineering catalog more than marketing brochure. The base canvas is paper-white `#ffffff` carrying display headlines in pure black `#000000` Porsche Next at regular 400 weight — never bold, never light, the geometry of the typeface itself is the voice. The single high-voltage chromatic moment is **Porsche Red** `#d5001c` (the racing stripe) used scarcely on primary CTA fills, the crest, and motorsport callouts. Section rhythm alternates white editorial bands with full-bleed cinematic photography (Stuttgart factory floors, Le Mans paddocks, Riviera coast roads). Sharp 12px corners on CTAs (relaxed from automotive''s usual 0px to soften the consumer surface), plus the iconic Porsche crest centered top in every header. Body copy runs the same Porsche Next at modest sizes with normal letter-spacing — disciplined engineering catalog, not bombastic luxury shouting.'
+
+colors:
+  bg: '#ffffff'                  # paper-white canvas — engineering catalog ground
+  bg-dark: '#000000'             # full-bleed dark photo bands, footer, racing-content sections
+  bg-elevated: '#fbfcff'         # near-white tier — surface variant on light
+  surface: '#f4f4f4'             # neutral grey panel — spec tables, comparison cards
+  surface-hover: '#ececec'       # hover state on light surface
+  surface-strong: '#d8d8d8'      # heavy panel — pricing strip
+  surface-on-dark: '#1a1a1a'     # card surface inside dark bands
+  text: '#000000'                # ink — primary text on light canvas
+  text-on-dark: '#fbfcff'        # display text on dark bands
+  text-body: '#313639'           # running body copy (charcoal grey, not pure black)
+  text-muted: '#626669'           # captions, metadata
+  text-faint: '#909294'           # disabled, footer secondary
+  text-disabled: '#a8aaab'        # disabled form text
+  brand: '#d5001c'               # Porsche Red — primary CTA, crest, motorsport
+  brand-hover: '#bd0017'         # press state
+  brand-active: '#a00012'        # deeper press
+  brand-soft: '#fdebec'          # softest tint — selected nav state, badge bg
+  on-brand: '#ffffff'            # text on Porsche Red
+  accent-gold: '#c9a55c'         # heritage program accent (911 Classic Club, certified pre-owned)
+  accent-blue: '#0061ff'         # Taycan electric-program accent (battery, EV-only contexts)
+  border: '#d8d8d8'              # standard 1px hairline on light
+  border-soft: '#e8e8e8'         # softer divider, table rows
+  border-strong: '#909294'       # input border, section divider
+  border-on-dark: '#313639'      # 1px hairline on dark surface
+  link: '#000000'                # inline links inherit ink, get underline
+  link-hover: '#d5001c'          # rare red-shift on hover for inline links
+  ring: '#000000'                # focus ring on light bg
+  ring-on-dark: '#ffffff'        # focus ring on dark bg
+  success: '#5cad4a'             # confirmation states
+  warning: '#e0801c'             # validation warnings
+  danger: '#d5001c'              # form errors (shares brand red)
+  info: '#0061ff'                # info badges (shares accent blue)
+
+typography:
+  display:
+    family: '"Porsche Next", "Arial Narrow", Arial, "Heiti SC", SimHei, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: []
+  body:
+    family: '"Porsche Next", "Arial Narrow", Arial, "Heiti SC", SimHei, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: []
+  mono:
+    family: '"SF Mono", Menlo, Monaco, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-mega:    { size: 96, weight: 400, lineHeight: 1.19, tracking: 'normal',  family: display, notes: 'Homepage hero h1 — single model name (Cayenne., Taycan., 911.)' }
+    display-xl:      { size: 64, weight: 400, lineHeight: 1.18, tracking: 'normal',  family: display, notes: 'Subsidiary heroes, model-line headlines' }
+    display-lg:      { size: 48, weight: 400, lineHeight: 1.20, tracking: 'normal',  family: display, notes: 'Section heads, feature band headlines' }
+    display-md:      { size: 32, weight: 400, lineHeight: 1.25, tracking: 'normal',  family: display, notes: 'Sub-section heads, card titles in feature grid' }
+    display-sm:      { size: 24, weight: 500, lineHeight: 1.30, tracking: 'normal',  family: display, notes: 'Component titles, navigation flyout heads' }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.40, tracking: 'normal',  family: body,    notes: 'Card titles, list section labels' }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.45, tracking: 'normal',  family: body,    notes: 'Small section titles, dense lists' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: 'normal',  family: body,    notes: 'Editorial body, intro paragraphs' }
+    body:            { size: 16, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: body,    notes: 'Default running text' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: body,    notes: 'Footer body, fine print, table cells' }
+    caption:         { size: 12, weight: 400, lineHeight: 1.45, tracking: 'normal',  family: body,    notes: 'Photo captions, metadata' }
+    caption-bold:    { size: 12, weight: 600, lineHeight: 1.45, tracking: '0.4px',   family: body,    notes: 'Section eyebrows, badge labels' }
+    button:          { size: 16, weight: 600, lineHeight: 1.00, tracking: 'normal',  family: body,    notes: 'CTA labels — sentence-case, never uppercase' }
+    nav-link:        { size: 14, weight: 600, lineHeight: 1.40, tracking: 'normal',  family: body,    notes: 'Top-nav menu items — sentence-case' }
+    spec-value:      { size: 64, weight: 600, lineHeight: 1.05, tracking: 'normal',  family: display, notes: 'Engine spec values (hp, top speed, 0-100)' }
+    spec-label:      { size: 14, weight: 400, lineHeight: 1.40, tracking: 'normal',  family: body,    notes: 'Spec metric labels under the value' }
+    code:            { size: 14, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: mono,    notes: 'Rare — appears only on developer/spec pages' }
+
+radius:
+  none: 0           # spec tables, hero photo containers
+  xs: 2             # decorative
+  sm: 4             # text inputs, small badges
+  md: 8             # secondary cards
+  lg: 12            # default CTA radius — relaxed from luxury-auto's usual 0
+  xl: 16            # primary cards
+  xxl: 24           # hero photo cards
+  pill: 9999        # avatar plates only (rare)
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 80
+  hero-height: '100vh on homepage; 720px on model pages'
+  section-padding: 96
+  card-grid-gutter: 24
+
+components:
+  top-nav:
+    bg: '#ffffff'
+    text: '#000000'
+    typography: 'Porsche Next 14/600'
+    height: 80
+    layout: 'Crest center-top + horizontal menu (Models / Pre-Owned / Build / Dealer / Owners) + utility icons right'
+    border-bottom: '1px solid #d8d8d8'
+    sticky: true
+  top-nav-on-dark:
+    bg: '#000000'
+    text: '#ffffff'
+    border-bottom: '1px solid #313639'
+    notes: 'Used on dark hero bands; otherwise identical to light variant'
+  crest:
+    height: 56
+    placement: 'center-top of nav, dominates the chrome'
+    notes: 'The Stuttgart-shield rampant horse + crown — non-negotiable nav element'
+  button-primary:
+    bg: '#d5001c'
+    text: '#ffffff'
+    padding: '14px 32px'
+    height: 48
+    radius: 12
+    border: 'none'
+    font: 'Porsche Next 16/600'
+    transition: 'background-color 200ms ease'
+    use: 'Build & Price, Configure, Find a Dealer'
+  button-primary-hover:
+    bg: '#bd0017'
+    notes: 'Color-only hover, no transform'
+  button-secondary:
+    bg: '#000000'
+    text: '#ffffff'
+    padding: '14px 32px'
+    height: 48
+    radius: 12
+    font: 'Porsche Next 16/600'
+    use: 'Secondary primary action when red is reserved (e.g. preowned listing CTAs)'
+  button-outline:
+    bg: 'transparent'
+    text: '#000000'
+    border: '1px solid #000000'
+    padding: '13px 31px'
+    height: 48
+    radius: 12
+    font: 'Porsche Next 16/600'
+    use: 'Tertiary action, paired with primary on hero bands'
+  button-outline-on-dark:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    padding: '13px 31px'
+    height: 48
+    radius: 12
+    use: 'Outline button on dark hero band'
+  button-text:
+    bg: 'transparent'
+    text: '#000000'
+    font: 'Porsche Next 16/600'
+    decoration: 'underline-offset 4px, underline grows on hover'
+    use: 'Inline editorial actions (Read More, View All)'
+  hero-band-cinema:
+    bg: '#000000'
+    text: '#ffffff'
+    photo: 'full-bleed cinematic, 100vh on desktop'
+    headline: 'Porsche Next 96/400'
+    cta-arrangement: 'one Porsche Red primary + one outline-on-dark secondary'
+    padding: 0
+  hero-band-light:
+    bg: '#ffffff'
+    text: '#000000'
+    headline: 'Porsche Next 64/400'
+    padding: '96px 48px'
+  feature-card:
+    bg: '#ffffff'
+    text: '#000000'
+    radius: 16
+    border: '1px solid #d8d8d8'
+    padding: 32
+    notes: 'Title display-md + body + button-text; image fills top edge-to-edge with rounded top corners'
+  feature-card-photo:
+    bg: '#000000'
+    text: '#ffffff'
+    radius: 24
+    overflow: hidden
+    notes: 'Photo-led card; image at top, title overlay or below, used on model line grid'
+  spec-cell:
+    bg: 'transparent'
+    text: '#000000'
+    typography: 'Porsche Next 64/600 normal'
+    label: 'caption 14/400'
+    padding: '32px 0'
+  spec-table-row:
+    bg: 'transparent'
+    text: '#313639'
+    border-bottom: '1px solid #e8e8e8'
+    padding: '16px 0'
+    layout: 'label left, value right; tabular figures aligned'
+  pricing-strip:
+    bg: '#f4f4f4'
+    text: '#000000'
+    radius: 12
+    padding: '24px 32px'
+    layout: 'model name left, price right, "Build & Price" CTA right-most'
+  text-input:
+    bg: '#ffffff'
+    text: '#000000'
+    border: '1px solid #909294'
+    radius: 4
+    padding: '12px 16px'
+    height: 48
+    font: 'Porsche Next 16/400'
+    focus-ring: '2px solid #000000 at 2px offset'
+  text-input-on-dark:
+    bg: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #ffffff'
+    radius: 4
+    focus-ring: '2px solid #ffffff at 2px offset'
+  badge-pill:
+    bg: '#fdebec'
+    text: '#d5001c'
+    radius: 9999
+    padding: '4px 12px'
+    font: 'caption-bold 12/600 0.4px'
+  footer-dark:
+    bg: '#000000'
+    text: '#909294'
+    columns: 4
+    padding: '64px 48px'
+  footer-link:
+    text: '#909294'
+    font: '14/400'
+    hover: 'text shifts to #ffffff'
+
+lineage:
+  summary: 'Porsche''s digital surface is the closest a marketing site comes to an engineering parts catalog. The discipline is German Bauhaus filtered through Stuttgart precision: paper-white canvas, single typeface (Porsche Next, a custom OTF cut), generous editorial pacing, and a single chromatic voltage in Porsche Red. The 12px CTA corner is a deliberate softening from the 0px sharpness of Ferrari/Lamborghini — Porsche''s consumer surface is approachable in a way pure-luxury automotive isn''t. The full-bleed cinematic photograph borrows from Apple-era product launches; the spec-table density and tabular discipline borrow from German engineering catalogs (BMW, Audi). What it rejects: ornamental gradients, decorative typography, color-coded section themes, anything that competes with the photograph or the engineering data.'
+  influences:
+    - name: 'Bauhaus / Dieter Rams'
+      role: 'Less-is-more discipline, function-over-decoration typography'
+      url: 'https://en.wikipedia.org/wiki/Dieter_Rams'
+    - name: 'Apple product pages'
+      role: 'Full-viewport cinematic hero photography, sentence-case CTA labels'
+      url: 'https://www.apple.com'
+    - name: 'BMW / Audi'
+      role: 'German engineering catalog density, spec-table tabular discipline'
+      url: 'https://www.bmw.com'
+    - name: 'Wallpaper* magazine'
+      role: 'Editorial pacing on automotive content, generous whitespace rhythm'
+      url: 'https://www.wallpaper.com'
+    - name: 'Massimo Vignelli / Italian Modernism'
+      role: 'Restrained chromatic vocabulary, single-accent voltage discipline'
+      url: 'https://en.wikipedia.org/wiki/Massimo_Vignelli'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-precision: 'cubic-bezier(0.65, 0, 0.35, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 400
+  duration-cinema: 800
+  hero-parallax: 'subtle 0.3 scroll-coefficient on cinema hero photograph'
+  spec-counter: 'count-up 800ms ease-precision on spec values when scrolled into view'
+  card-hover-lift: '4px translateY over 240ms with shadow-md fade-in'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — parallax disabled, count-ups become static, card-lift becomes opacity-only fade'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  flat: 'none'
+  hover-card: 'rgba(0,0,0,0.08) 0 4px 12px'
+  modal: 'rgba(0,0,0,0.18) 0 20px 48px -12px, rgba(0,0,0,0.10) 0 8px 16px -8px'
+  ring: '0 0 0 2px #000000'
+  ring-on-dark: '0 0 0 2px #ffffff'
+  notes: 'Shadows are restrained — depth comes primarily from photographic lighting and surface brightness steps, not chrome'
+
+accessibility:
+  contrast-text-on-bg: 21.0              # #000000 on #ffffff — AAA
+  contrast-text-on-dark: 19.7            # #fbfcff on #000000 — AAA
+  contrast-text-on-brand: 5.6            # #ffffff on #d5001c — AA Normal, AAA Large
+  contrast-body-on-bg: 12.1              # #313639 on #ffffff — AAA
+  focus-ring: '2px solid #000000 at 2px offset on light; 2px solid #ffffff on dark'
+  reduced-motion-honored: true
+  touch-target-min: 48                  # CTA height — exceeds WCAG 44
+
+dark-mode: 'no global dark toggle — Porsche is light-by-default. Dark sections are scoped contextual surfaces (cinema hero photographs, footer, motorsport content). Token swap is local: bg #ffffff → #000000, text #000000 → #fbfcff, border #d8d8d8 → #313639. brand and on-brand stay unchanged.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Porsche's website is what happens when an engineering catalog learns how to sell sports cars. The page opens onto a paper-white canvas (`#ffffff` — pure paper, no warmth, no cool tint) and the single model name appears at 96px in **Porsche Next** at weight 400 — never bold, never italic. "Cayenne." "Taycan." "911." A period at the end like a sentence delivered with finality. This is the brand voice: declarative, engineering-precise, confident enough to use a regular weight at display size where competitors bold-shout.
+
+The chromatic discipline is monk-like. Pure black `#000000` for text, paper white for canvas, a charcoal `#313639` for running body copy, and exactly one chromatic voltage: **Porsche Red** `#d5001c` — the Stuttgart racing red that has identified the brand since the 1948 356/2. It appears scarcely. Primary CTA fills, the rampant-horse-on-shield crest, and motorsport-content callouts. Body text is never red. Backgrounds are never red. When Porsche Red does appear, it carries the weight of a checkered flag dropping at Le Mans.
+
+The page rhythm alternates between paper-white editorial bands carrying spec tables, model comparisons, and dealer information — and full-bleed cinematic photographic bands (Stuttgart factory floors at golden hour, Le Mans paddocks at dawn, Riviera coast roads stretching into Italian alps) where the photograph fills the viewport edge-to-edge and the headline floats over it in pure white. The photograph IS the atmosphere; the chrome stays out of the way.
+
+Where Ferrari uses sharp 0px corners on every CTA to signal Italian-Modernist precision, Porsche **softens to 12px** — a deliberate consumer-surface relaxation. Porsche sells more cars than Ferrari, and more of those cars are daily-driveable. The 12px corner is the geometric tell: this is a sports car you can take to Whole Foods. Text inputs are 4px (functional), badges and pills are pill (rare), photo cards are 24px (relaxed luxury), and the dominant CTA radius lands at 12px (consumer-friendly precision).
+
+Body typography stays in the same Porsche Next family — no serif accent, no monospace except for developer-context spec pages. Modest sizes (16px body, 14px footer), normal letter-spacing, weights stepping 400 → 500 → 600 → 700. The discipline is German engineering: one excellent typeface used at every role, with sizing and weighting carrying the hierarchy.
+
+**Key Characteristics:**
+- Paper-white `#ffffff` canvas as primary ground — never warmed, never cooled
+- Pure black `#000000` for ink — engineering-catalog discipline, no charcoal grey for headlines
+- Single chromatic voltage: Porsche Red `#d5001c` for primary CTAs, the crest, motorsport callouts — used scarcely
+- Single typeface: Porsche Next (custom OTF cut) across every text role
+- Display copy at weight 400 (regular) — never bold display headlines
+- 12px CTA radius — softened from luxury-auto's 0px to a consumer-friendly relaxed corner
+- Full-bleed cinematic photography in dark hero bands as the primary visual depth
+- Spec tables with tabular figures — engineering-catalog discipline
+- 80px tall top-nav with the Stuttgart crest centered and dominant
+- Sentence-case CTA labels ("Build & Price", "Find a Dealer") — never uppercase, never tracked
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Paper White** (`#ffffff`): The canvas. Engineering-catalog ground, no warmth, no cool tint.
+- **Pure Black** (`#000000`): Primary ink. Headings, body strong, button labels on light. Porsche refuses charcoal-headline conventions; the headline is black.
+- **Porsche Red** (`#d5001c`): The single high-voltage chromatic moment. Primary CTA fills, the Stuttgart crest, motorsport-program callouts. Used scarcely.
+
+### Brand & Dark
+- **Cinema Black** (`#000000`): Dark-section ground for full-bleed hero photo bands, footer, motorsport content surfaces.
+- **Charcoal Body** (`#313639`): Default running body copy on light canvas — slightly softer than pure black for paragraph reading comfort.
+- **Surface Dark** (`#1a1a1a`): Card surface inside dark cinema bands — one tier elevated from cinema black.
+
+### Accent
+- **Heritage Gold** (`#c9a55c`): Reserved for heritage program contexts — 911 Classic Club, certified pre-owned heritage models, vintage program. Never appears outside heritage contexts.
+- **Taycan Blue** (`#0061ff`): Reserved for the Taycan electric program — battery callouts, EV-only feature highlights. Functions as a sub-brand accent.
+- No additional saturated brand colors. Porsche deliberately refuses chromatic variety.
+
+### Interactive
+- **Brand Hover** (`#bd0017`): Press state for Porsche Red CTAs — slight saturation drop.
+- **Brand Active** (`#a00012`): Deep press, click feedback.
+- **Brand Soft** (`#fdebec`): Selected-tab background, badge tint, very-soft brand surface.
+- **Link** (`#000000`): Inline links inherit ink and add `underline-offset: 4px` underline.
+- **Link Hover** (`#d5001c`): Rare red-shift on hover for inline links inside body copy.
+- **Disabled Text** (`#a8aaab`): Form inputs in disabled state.
+
+### Neutral Scale
+- **Ink** `#000000` — display, headlines, primary CTA labels on light
+- **Body Charcoal** `#313639` — running paragraph text on light canvas
+- **Muted** `#626669` — captions, photo metadata, secondary list copy
+- **Faint** `#909294` — disabled secondary text, footer secondary, form placeholder
+- **Disabled** `#a8aaab` — disabled form text, the lightest grey above background
+- **Border Strong** `#909294` — input border, section divider where strength is needed
+- **Border Default** `#d8d8d8` — standard 1px hairline on light surfaces
+- **Border Soft** `#e8e8e8` — soft divider, table row separator
+- **Surface** `#f4f4f4` — neutral grey panel for spec tables and comparison cards
+- **Surface Strong** `#d8d8d8` — heavy panel surface (rare; pricing strip)
+- **Bg Elevated** `#fbfcff` — near-white tier, subtle elevation marker on light
+
+### Surface & Borders
+- **bg** is `#ffffff` paper-white — the canvas.
+- **bg-elevated** `#fbfcff` is a subtle near-white above bg, used for cards on the canvas.
+- **surface** `#f4f4f4` is the neutral grey panel — spec tables, comparison frames, model picker shells.
+- **surface-on-dark** `#1a1a1a` for cards inside dark cinema bands.
+- **border** is `#d8d8d8` 1px hairline default; `#e8e8e8` for soft dividers; `#909294` for input borders.
+- **border-on-dark** is `#313639` 1px on dark.
+
+### Shadow Colors
+Porsche uses **restrained shadow tiers** — depth comes primarily from photographic lighting and brightness-step elevation. Shadows are subtle:
+- **Hover Card**: `rgba(0,0,0,0.08) 0 4px 12px` — a single soft tier on hovered feature cards.
+- **Modal**: `rgba(0,0,0,0.18) 0 20px 48px -12px, rgba(0,0,0,0.10) 0 8px 16px -8px` — two-layer elevation for dialogs.
+- **Focus Ring**: `0 0 0 2px #000000` (light) / `0 0 0 2px #ffffff` (dark).
+
+### Semantic
+- **Success** (`#5cad4a`): Order confirmation, dealer-contact submitted, build-saved confirmations.
+- **Warning** (`#e0801c`): Validation warnings on configurator, build incompatibility flags.
+- **Danger** (`#d5001c`): Form errors — shares the brand red hex deliberately. Brand and danger are visually identical; context disambiguates.
+- **Info** (`#0061ff`): Info badges, callout backgrounds — shares the Taycan accent blue.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `Porsche Next` — the custom OTF brand sans, originally cut in 2018 by MetaDesign (Berlin) and refined for digital. Geometric construction with subtle humanist terminals, reasonable x-height, exceptional weight scaling. The `"Arial Narrow"` fallback is unusual — chosen because narrow Arial holds the same condensed proportion as Porsche Next when web-fonts fail.
+- **Fallback chain**: `"Arial Narrow", Arial, "Heiti SC", SimHei, sans-serif` — Heiti/SimHei provide CJK fallback for Chinese-market deployments.
+- **Mono companion**: `"SF Mono", Menlo, Monaco, Consolas` — appears only on developer/technical-spec pages.
+- **OpenType features**: Default ligatures only. No tabular figures called out (the spec tables use Porsche Next's natural figure widths). No `ss01` or alternate sets.
+- **No italics in marketing context**. Italics appear only in editorial body copy on heritage/motorsport articles.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Mega | Porsche Next | 96 | 400 | 1.19 | normal | — | Homepage hero h1 — single model name (Cayenne., 911.) |
+| Display XL | Porsche Next | 64 | 400 | 1.18 | normal | — | Subsidiary heroes, model-line headlines |
+| Display Lg | Porsche Next | 48 | 400 | 1.20 | normal | — | Section heads, feature band headlines |
+| Display Md | Porsche Next | 32 | 400 | 1.25 | normal | — | Sub-section heads, card titles in feature grid |
+| Display Sm | Porsche Next | 24 | 500 | 1.30 | normal | — | Component titles, navigation flyout heads |
+| Title Md | Porsche Next | 18 | 600 | 1.40 | normal | — | Card titles, list section labels |
+| Title Sm | Porsche Next | 16 | 600 | 1.45 | normal | — | Small section titles |
+| Body Lg | Porsche Next | 18 | 400 | 1.55 | normal | — | Editorial body, intro paragraphs |
+| Body | Porsche Next | 16 | 400 | 1.50 | normal | — | Default running text |
+| Body Sm | Porsche Next | 14 | 400 | 1.50 | normal | — | Footer body, fine print, table cells |
+| Caption | Porsche Next | 12 | 400 | 1.45 | normal | — | Photo captions, metadata |
+| Caption Bold | Porsche Next | 12 | 600 | 1.45 | 0.4px | — | Section eyebrows, badge labels |
+| Button | Porsche Next | 16 | 600 | 1.00 | normal | — | CTA labels — sentence-case, never uppercase |
+| Nav Link | Porsche Next | 14 | 600 | 1.40 | normal | — | Top-nav menu items — sentence-case |
+| Spec Value | Porsche Next | 64 | 600 | 1.05 | normal | — | Engine spec values (hp, top speed, 0-100km/h) |
+| Spec Label | Porsche Next | 14 | 400 | 1.40 | normal | — | Spec metric labels under the value |
+| Code | SF Mono | 14 | 400 | 1.50 | normal | — | Rare — appears only on developer/technical-spec pages |
+
+### Principles
+- **Display weight stays at 400.** Porsche refuses bold display headlines. The geometric construction of Porsche Next at regular weight carries enough visual presence at 96px; bolding it would feel shouted.
+- **No tracking on display sizes.** Where Ferrari uses negative letter-spacing for compressed magazine-cover geometry, Porsche uses normal spacing — engineering catalogs don't compress text.
+- **Sentence-case CTA labels.** "Build & Price", "Find a Dealer", "Configure". Never uppercase, never tracked. The voice is declarative, not announce-y.
+- **Single typeface discipline.** Porsche Next handles every text role from 96px display down to 12px caption. No serif companion, no third-party sans, no decorative type.
+- **Body charcoal `#313639`, not pure black.** Pure black is reserved for headlines and ink-strong moments. Body paragraph text uses charcoal for paragraph reading comfort.
+- **Tabular figures emerge from the typeface, not OpenType.** Porsche Next's native figures align well enough in spec tables that no `tnum` feature toggle is needed.
+- **No italics in marketing.** Italics appear only in editorial body copy (heritage articles, motorsport features).
+- **Porsche Next is licensed.** Open-source substitute: **Inter** at weight 400 with 0 letter-spacing for body, weight 500 for headlines. Or **GT America Standard** for closer geometric proportion.
+
+## 4. Component Stylings
+
+### Buttons
+
+All primary surface buttons use **12px border-radius** — the brand's softened-luxury corner. Outline variants and secondary CTAs match the radius.
+
+**Primary (Porsche Red)** — the singular high-voltage action:
+- Background `#d5001c`, text `#ffffff`, font `Porsche Next 16/600 sentence-case`
+- Padding `14px 32px`, height `48px`, border-radius `12px`, no border
+- Transition `background-color 200ms ease`
+- Hover: background `#bd0017` (color-only, no transform)
+- Active: background `#a00012`
+- Use case: Build & Price, Configure, Find a Dealer
+
+**Secondary (Black)** — primary action when red is reserved:
+- Background `#000000`, text `#ffffff`, same dimensions and typography
+- Use case: Preowned listing primary CTA, dealer locator submit
+
+**Outline (Light)** — alternative action on light bands:
+- Background transparent, text `#000000`, border `1px solid #000000`
+- Padding `13px 31px` (1px less to compensate for border), height `48px`
+- Same `Porsche Next 16/600 sentence-case` typography
+- Hover: background `rgba(0,0,0,0.04)` fill
+- Use case: secondary CTA paired with primary on hero bands
+
+**Outline (Dark)** — alternative action on dark cinema bands:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`
+- Same dimensions and typography
+- Hover: background `rgba(255,255,255,0.06)` fill
+- Use case: secondary CTA on full-bleed cinema hero band
+
+**Text** — inline editorial actions:
+- Background transparent, text `#000000`, no border
+- Same `Porsche Next 16/600` (no padding constraints)
+- Decoration: `underline-offset: 4px` underline grows from invisible to visible on hover
+- Use case: "Read More", "View All" inside body copy
+
+### Hero Bands
+
+**Cinema (default hero)** — full-bleed cinematic photograph:
+- Background `#000000` underneath, but the photograph fills the viewport edge-to-edge at 100vh
+- Display headline floats over the photograph (typically lower-third) in `Porsche Next 96/400` pure white
+- One Porsche Red primary + one outline-on-dark secondary, side-by-side
+- Zero padding — the photograph fills edge-to-edge
+
+**Light Editorial** — paper-canvas hero variant:
+- Background `#ffffff`, text `#000000`
+- Headline in `Porsche Next 64/400`
+- Padding `96px 48px`
+- Used for owner pages, dealer locator, parts catalog
+
+### Cards
+
+**Feature Card** — light surface card:
+- Background `#ffffff`, text `#000000`, border `1px solid #d8d8d8`, radius `16px`, padding `32px`
+- Image fills top edge-to-edge with rounded top corners; title and body sit beneath
+- Hover: border shifts to `#909294`, shadow `rgba(0,0,0,0.08) 0 4px 12px` fades in over 240ms
+- Use case: Models grid, feature highlights, certified-pre-owned grid
+
+**Photo-Led Card** — image-dominant model card:
+- Background `#000000`, text `#ffffff`, radius `24px`, overflow hidden
+- Photograph fills the entire card; title overlays bottom-left in `Porsche Next 32/400`
+- Use case: Model line grid on the homepage
+
+### Spec & Pricing Surfaces
+
+**Spec Cell** — engineering-spec callout:
+- Transparent background
+- Value in `Porsche Next 64/600 normal` (pure black on light, white on dark)
+- Label below in `caption 14/400`
+- Padding `32px 0`
+- Use: hp, top speed, 0-100 km/h, range, charging time
+
+**Spec Table Row** — hairline-divided spec row:
+- Transparent background, `1px solid #e8e8e8` divider beneath each row
+- Layout: spec label left (`Porsche Next 14/400 #626669`), value right (`Porsche Next 14/600 #000000`)
+- Padding `16px 0`
+- Use: detailed spec sheets, comparison tables
+
+**Pricing Strip** — at-a-glance pricing band:
+- Background `#f4f4f4`, text `#000000`, radius `12px`, padding `24px 32px`
+- Layout: model name left (`Porsche Next 24/500`), MSRP center (`Porsche Next 24/600`), "Build & Price" CTA right
+- Use: model overview pages, configurator entry points
+
+### Forms & Inputs
+
+**Text Input (Light)**:
+- Background `#ffffff`, text `#000000`, border `1px solid #909294`, radius `4px`
+- Padding `12px 16px`, height `48px`
+- Font `Porsche Next 16/400`
+- Focus: border-color shifts to `#000000` and a `2px solid #000000` outline appears at 2px offset
+
+**Text Input (Dark)**:
+- Background transparent, text `#ffffff`, border `1px solid #ffffff`, radius `4px`
+- Same dimensions; focus ring shifts to white
+
+### Tags & Badges
+
+**Badge Pill** — small uppercase pill on light surface:
+- Background `#fdebec` (brand-soft), text `#d5001c` (Porsche Red), radius `9999px`
+- Padding `4px 12px`, font `caption-bold 12/600 0.4px`
+- Use: "New", "Certified", "GTS Edition" callouts
+
+### Navigation
+
+**Top Nav (Light)** — default nav on light pages:
+- Background `#ffffff`, text `#000000`, height `80px`, border-bottom `1px solid #d8d8d8`
+- Layout: Stuttgart crest center-top (56px tall), horizontal menu (Models / Pre-Owned / Build / Dealer / Owners) flanking, utility icons (search, account, language) right
+- Menu items render in `Porsche Next 14/600 sentence-case`
+- Hover: subtle Porsche Red 1px underline grows beneath active item
+
+**Top Nav (Dark)** — variant on dark cinema hero pages:
+- Background `#000000`, text `#ffffff`, border-bottom `1px solid #313639`
+- Otherwise identical to light variant
+
+### Footer
+
+**Footer Dark** — closing dark footer on every page:
+- Background `#000000`, text `#909294`
+- 4-column link list at desktop covering Models / Owners / Brand / Connect
+- Padding `64px 48px`
+- Stuttgart crest centered at the very top above link columns
+- Footer links hover to `#ffffff` (text color shift, no underline)
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit:** 4px.
+- **Scale:** `4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128`.
+- **Section padding:** 96px for major bands; 128px reserved for the homepage hero photo band.
+- **Card internal padding:** 32px for feature cards; 24px for photo-led cards.
+- **Gutters:** 24px between cards in 3-up grids; 32px in 2-up hero splits; 16px in dense spec tables.
+
+### Grid & Container
+- Max content width: **1440px** on editorial bands. Hero photography goes full-bleed.
+- Editorial body: 12-column grid.
+- Feature card grids: 2-up at desktop for hero splits, 3-up for benefit grids, 4-up for certified pre-owned listing tiles.
+- Footer: 4-column at desktop.
+
+### Whitespace Philosophy
+Generous engineering-catalog pacing. Cinematic hero photography occupies viewport-height canvases. Below them, body sections sit in tighter editorial layouts on white with disciplined density — the alternation between cinema-bands and editorial-bands creates magazine-spread pacing. The white editorial bands carry tighter density than the dark cinema bands; the contrast in density itself signals context shift. Spec tables run dense — they're meant to be scanned, not read linearly.
+
+### Section Cadence
+The homepage rhythm is a deliberate alternation: cinema-band → editorial-band → cinema-band → spec/feature-band → cinema-band → CTA-band → footer-dark. Each section's role is signalled by its background color before the content even renders. Heritage and motorsport pages skew darker (more cinema bands); owner and parts-catalog pages skew lighter (more editorial bands).
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|------|-------|-------|-----|
+| None | `none` | 0 | Spec table cells, hero photo containers |
+| Tight | `xs` | 2 | Decorative chip elements |
+| Standard | `sm` | 4 | Text inputs, small badges |
+| Comfortable | `md` | 8 | Secondary cards, compact UI |
+| Default CTA | `lg` | 12 | All primary/secondary/outline buttons — the brand corner |
+| Card | `xl` | 16 | Primary feature cards |
+| Photo Card | `xxl` | 24 | Photo-led model cards (relaxed luxury) |
+| Pill | `pill` | 9999 | Avatar plates, badge pills only |
+
+The **12px CTA radius** is the brand's tell. Where Ferrari and Lamborghini use 0px sharp corners to signal pure-luxury Italian-Modernist precision, Porsche softens to 12px for consumer-surface approachability. The same engineering brand sells everything from $50k Macans to $600k 911 Turbos S — the corner has to work across both. There is no compound-radius geometry on the site.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (Flat) | `#ffffff` canvas, no shadow | Body bands, footer link rows, content surfaces |
+| 1 (Card) | `#fbfcff` near-white background, `1px solid #d8d8d8` border, no shadow | Feature cards, default cards |
+| 2 (Hover Card) | Border shifts to `#909294`, `rgba(0,0,0,0.08) 0 4px 12px` shadow | Hovered feature card |
+| 3 (Photo Card) | Photograph fills, `radius 24px`, no border | Photo-led model cards |
+| 4 (Modal) | `rgba(0,0,0,0.18) 0 20px 48px -12px, rgba(0,0,0,0.10) 0 8px 16px -8px` | Dialogs, configurator save |
+| 5 (Photographic) | Full-bleed cinema imagery | Hero band, motorsport bands — depth via lens, not chrome |
+
+### Shadow Philosophy
+Porsche uses **restrained shadow tiers** — closer to BMW's engineering-catalog discipline than Apple's softly-elevated cards. Drop shadows are limited: a single soft tier on hovered feature cards, a two-layer tier on dialogs, and otherwise depth comes from photographic lighting (the hero photo carries its own depth from lens, lighting, subject) and from surface brightness steps (canvas → bg-elevated → surface). The shadow vocabulary stays out of the way; the photograph and the engineering data are the visual heavy-lifters.
+
+### Decorative Depth
+- **Full-bleed cinematic photography** is the brand's primary depth treatment.
+- **No decorative gradients.** The brand refuses gradient backgrounds, gradient text, or gradient accents on chrome.
+- **Surface brightness steps** (`#ffffff` → `#fbfcff` → `#f4f4f4` → `#d8d8d8`) carry the structural elevation.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — material-style ease for most micro-interactions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — stronger entrance for cinema bands and section reveals
+- **Precision**: `cubic-bezier(0.65, 0, 0.35, 1)` — engineering-precision ease used on spec count-ups and hero parallax
+
+### Duration Buckets
+- **Fast** (150ms): button background-color transitions, link underline-grow, hover shifts
+- **Standard** (240ms): card hover-lift, shadow fade-in, modal entrance
+- **Slow** (400ms): section entrance fades, hero band reveals
+- **Cinema** (800ms): spec value count-ups, hero parallax scroll-coefficient
+
+### Per-Component Micro-States
+- **Button Primary (Porsche Red)** — hover: background-color transitions to `#bd0017` over 150ms. No transform, no scale. Active: background drops to `#a00012`.
+- **Button Outline** — hover: background fills to `rgba(0,0,0,0.04)` (light) or `rgba(255,255,255,0.06)` (dark) over 150ms.
+- **Feature Card** — hover: border-color shifts to `#909294`, shadow `rgba(0,0,0,0.08) 0 4px 12px` fades in, card lifts 4px translateY over 240ms.
+- **Link** — hover: underline transitions from invisible to 1px solid (with 4px offset) over 150ms.
+- **Nav Item** — hover: 1px Porsche Red underline grows beneath the active item over 150ms.
+- **Spec Counter** — first-paint into-view: count-up animation from 0 to final value over 800ms ease-precision.
+- **Top Nav** — scroll-shrink: nav height transitions from 80px to 64px when scrolled past hero, with crest scaling proportionally.
+
+### Page Transitions
+Page-to-page transitions are minimal: a 200ms cross-fade between the previous page's hero and the new page's hero. Internal scroll-into-view triggers fade-up entrances on cinema bands (400ms emphasized) and feature card grids (staggered 80ms per card, 240ms standard ease). The hero photograph on the homepage holds a subtle `0.3` parallax coefficient on scroll — moving slower than the foreground content to create depth.
+
+### Reduced Motion Strategy
+Respects `prefers-reduced-motion: reduce`. Under reduced motion:
+- Hero parallax is disabled (photograph stays fixed at scroll-position-0)
+- Spec count-ups become static (final value renders immediately)
+- Card hover-lift becomes shadow-only fade (no translateY)
+- All scroll-triggered animations collapse to opacity transitions over 200ms
+- Hover micro-states remain (color transitions are not motion-coded)
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (WCAG)
+- **Text on Canvas**: `#000000` on `#ffffff` = 21.0:1 — AAA at all sizes
+- **Text on Cinema**: `#fbfcff` on `#000000` = 19.7:1 — AAA at all sizes
+- **Text on Brand**: `#ffffff` on `#d5001c` = 5.6:1 — AA Normal, AAA Large
+- **Body on Canvas**: `#313639` on `#ffffff` = 12.1:1 — AAA
+- **Muted on Canvas**: `#626669` on `#ffffff` = 6.0:1 — AA Normal, AAA Large
+- **Faint on Canvas**: `#909294` on `#ffffff` = 3.2:1 — fails AA at body sizes; reserved for caption-bold or non-essential metadata
+
+### Focus Indicators
+- **Ring color**: `#000000` on light bg; `#ffffff` on dark bg
+- **Ring style**: `2px solid` at `2px` offset from the element's outer edge
+- **Inset variants**: on Porsche Red CTAs, the ring renders outside the button (no inset) to preserve the 12px corner geometry
+- **Focus-visible only**: ring appears only on keyboard focus, not mouse-click focus
+
+### ARIA Patterns
+- **Combobox** (model search, dealer locator): `role="combobox"` with `aria-expanded`, `aria-controls`, `aria-activedescendant` patterns. Listbox panel uses `role="listbox"` with `aria-selected` on options.
+- **Dialog** (configurator save, dealer contact, sign-in): `role="dialog"` with `aria-modal="true"`, `aria-labelledby` pointing to the dialog title, focus trap on open, focus restore on close.
+- **Tabs** (model trim selector, configurator step navigation): `role="tablist"` with `aria-selected` on the active tab. Arrow-key navigation between tabs.
+- **Carousel** (homepage hero, motorsport gallery): exposed as `role="region"` with `aria-roledescription="carousel"`. Each slide is `role="group"`.
+
+### Keyboard Nav Order
+Tab order follows visual reading order: skip-to-content link → Stuttgart crest (home link) → primary nav (Models, Pre-Owned, Build, Dealer, Owners) → utilities (search, language, account) → hero CTAs (primary first, then outline) → editorial body content top-to-bottom → footer columns left-to-right → cookie banner if present.
+
+### Screen Reader Hints
+- The Stuttgart crest carries `aria-label="Porsche home"` rather than alt-text, since it serves as the home link.
+- Spec values carry `aria-label="3.5 seconds, 0 to 100 kilometers per hour"` for full unit context, even when only the number renders visually.
+- Photo captions are wrapped in `<figcaption>` inside `<figure>` for semantic correctness.
+- Decorative photography (cinema hero) uses `aria-hidden="true"` so SR users don't hear "Image: hero photograph" before every section.
+- The "Build & Price" CTA exposes its full intent: `aria-label="Build and price the 911 Carrera"`.
+
+### Reduced Motion Handling
+`@media (prefers-reduced-motion: reduce)` overrides scroll-triggered transforms, parallax, and spec count-ups. Documented in §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | < 640px | Hero h1 96→40px; cinema hero photograph crops vertically; feature card grid 1-up; nav collapses to hamburger; spec cells 1-up |
+| Tablet | 640–1024px | Hero h1 64px; feature card grid 2-up; nav still hamburger; spec cells 2-up |
+| Desktop | 1024–1280px | Hero h1 96px; feature card grid 3-up; horizontal nav appears; spec cells 4-up |
+| Wide | > 1280px | Editorial body content caps at 1440px; hero photography continues full-bleed; section padding increases to 128px |
+
+### Touch Targets
+- Primary CTA at 48px height — exceeds WCAG AAA (44 × 44).
+- Nav items render with 24px vertical padding for an effective 56px tap area on mobile hamburger menu.
+- Card tap zones: full card surface; no nested clickable elements that fight for the tap.
+
+### Collapsing Strategy
+- **Top nav** switches to hamburger below 1024px; the Stuttgart crest remains center-aligned but scales to 40px height.
+- **Hero photograph** reframes per breakpoint via art direction — desktop carries wide cinematic; mobile crops tighter or shifts to vertical-format imagery.
+- **Feature card grid**: 4-up → 3-up → 2-up → 1-up.
+- **Spec cells**: 4-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Pricing strip**: horizontal at desktop; stacks vertically on mobile (model + MSRP + CTA each on their own row).
+- **Footer**: 4-column at desktop, accordion-collapsed at mobile.
+
+### Image Behavior
+- Hero photography uses `<picture>` with mobile-cropped + desktop-wide art direction.
+- Photographs are served as AVIF with WebP fallback and JPEG floor.
+- All photography uses `loading="lazy"` except the homepage hero (eager) and any image above-the-fold on landing pages.
+
+### Container Queries
+Used selectively on the configurator pages where the spec panel needs to reflow based on its container width rather than the viewport.
+
+## 11. Content & Voice
+
+### Tone
+**Engineering-precise, declarative, confident.** The brand voice reads like an engineering catalog written by someone who genuinely loves cars. Sentences are short on the homepage and longer on heritage pages. There is no marketing-jargon, no "innovative" or "revolutionary" — those words are beneath the brand. Single-sentence taglines end with a period: "Cayenne." "Taycan." "911." The period itself is the voice — declarative finality.
+
+### Microcopy Patterns
+- **Buttons**: action-verb + noun. "Build & Price", "Find a Dealer", "Configure", "Schedule a Test Drive", "Read the Story". Never "Click here", never "Learn more about our..."
+- **Error message recipe**: `[What went wrong]. [What to do.]` — e.g. "We couldn't reach our servers. Please try again in a moment." Never blames the user.
+- **Success confirmations**: terse and proud. "Your build is saved." "Your appointment is confirmed." No exclamation marks.
+- **Form labels**: capitalized noun phrases. "Email Address", "Phone Number", "Preferred Dealer". Never lowercase, never "Enter your...".
+
+### Empty States
+- **No results**: "No models match your filters. Try widening your search or browse the full lineup." Always offers a path forward; never a dead end.
+- **Saved build empty**: "Your saved builds will appear here. Start configuring a model to begin." Explanatory + actionable.
+- **Cart empty (parts catalog)**: "Your cart is empty. Browse genuine Porsche parts." Brand-voice consistent.
+
+### CTA Verb Conventions
+- **Build & Price** — the primary verb on every model page (not "Customize" or "Spec it out")
+- **Configure** — secondary configurator entry (used inside the configurator flow)
+- **Find a Dealer** — for dealer locator (not "Locate a dealer" — too transactional)
+- **Schedule a Test Drive** — for test-drive (not "Book a test drive" — Porsche uses "Schedule")
+- **Read the Story** — for editorial articles (not "Continue" or "View")
+- **Sign In** — for owner/account pages (never "Login" — Porsche uses two words)
+
+## 12. Dark Mode & Theming
+
+Porsche has **no global user-facing dark/light toggle**. The site is light-by-default with paper-white as the canonical canvas. Dark sections appear as scoped contextual surfaces — the cinema hero band, the closing footer, and certain motorsport content sections. The token swap is local and predictable:
+
+- `bg`: `#ffffff` → `#000000`
+- `text`: `#000000` → `#fbfcff`
+- `text-body`: `#313639` → `#909294`
+- `border`: `#d8d8d8` → `#313639`
+- `surface`: `#f4f4f4` → `#1a1a1a`
+- `brand` and `on-brand` stay unchanged — Porsche Red CTAs render identically on both grounds.
+
+When dark sections appear, they are always sandwiched between light editorial bands or used as the closing footer. The site never inverts globally; the dark is contextual depth, not a theme.
+
+## 13. Lineage & Influences
+
+Porsche's digital surface is the closest a marketing site comes to an engineering parts catalog. The discipline is German Bauhaus filtered through Stuttgart precision: paper-white canvas, single typeface (Porsche Next, a custom OTF cut), generous editorial pacing, and a single chromatic voltage in Porsche Red. The 12px CTA corner is a deliberate softening from the 0px sharpness of Ferrari/Lamborghini — Porsche's consumer surface is approachable in a way pure-luxury automotive isn't.
+
+The full-bleed cinematic photographic-hero pattern is borrowed from Apple-era product launches; the spec-table density and tabular discipline borrow from German engineering catalogs (BMW, Audi). The single-accent restraint borrows from Italian Modernism (Vignelli) but the consumer-friendly 12px corner pulls it back from pure-luxury territory. What it rejects: ornamental gradients, decorative typography, color-coded section themes, anything that competes with the photograph or the engineering data.
+
+**Named influences:**
+- Bauhaus / Dieter Rams — function-over-decoration discipline (https://en.wikipedia.org/wiki/Dieter_Rams)
+- Apple product pages — full-viewport cinematic hero photography, sentence-case CTA labels (https://www.apple.com)
+- BMW / Audi — German engineering catalog density, spec-table tabular discipline (https://www.bmw.com)
+- Wallpaper* magazine — editorial pacing on automotive content (https://www.wallpaper.com)
+- Massimo Vignelli / Italian Modernism — restrained chromatic vocabulary, single-accent voltage discipline
+
+## 14. Do's and Don'ts
+
+### Do
+- Reserve Porsche Red `#d5001c` for primary CTAs, the Stuttgart crest, and motorsport callouts — used scarcely.
+- Set every CTA at 12px corners — the brand's softened-luxury signature.
+- Render CTA labels in sentence-case Porsche Next 16/600 — never uppercase, never tracked.
+- Use Porsche Next at weight 400 (regular) for display sizes — never bold display headlines.
+- Pair every cinema hero with a full-bleed photograph — the photograph IS the depth.
+- Use the explicit 8px-base spacing ladder rather than ad-hoc px values.
+- Use pure black `#000000` for headlines; charcoal `#313639` for body running text.
+- Render the Stuttgart crest center-top in every nav; it dominates the chrome.
+- Use sentence-case CTA verbs ("Build & Price", "Find a Dealer", "Schedule a Test Drive").
+- Hover states change color only — no scale, no lift on CTAs (cards may lift 4px).
+
+### Don't
+- Don't introduce a saturated brand color other than Porsche Red and the scoped Heritage Gold / Taycan Blue accents.
+- Don't bold display copy. The geometric construction of Porsche Next at 400 carries enough presence.
+- Don't use 0px sharp corners on CTAs — that's Ferrari/Lamborghini territory; Porsche softens to 12px.
+- Don't track display sizes with negative letter-spacing — Porsche Next stays at normal spacing.
+- Don't use uppercase CTA labels. Sentence-case is the brand voice.
+- Don't add ornamental gradients or gradient text. The site is paper white + photograph + Porsche Red.
+- Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs.
+- Don't translate "Build & Price" to "Customize" or "Spec it out" — the brand verb is "Build & Price".
+- Don't compress the 96px section rhythm. The whitespace is part of the engineering catalog pacing.
+- Don't add italic display copy. Italics appear only in editorial body on heritage articles.
+- Don't use Heritage Gold outside heritage program contexts (Classic Club, certified pre-owned heritage).
+- Don't use Taycan Blue outside electric-program contexts.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA: `#d5001c` (Porsche Red)
+- Background (light): `#ffffff` (Paper White)
+- Background (dark): `#000000` (Cinema Black)
+- Headings (light): `#000000` (Pure Black)
+- Body text (light): `#313639` (Charcoal Body)
+- Surface: `#f4f4f4` (Neutral Panel)
+- Border: `#d8d8d8` (Hairline)
+- CTA hover: `#bd0017` (Porsche Red Hover)
+- Focus ring (light): `#000000` 2px
+- Heritage accent: `#c9a55c` (Heritage Gold, scoped)
+
+### Example Component Prompts
+- "Create a hero band with full-bleed cinematic photography of a Porsche 911 Carrera on a Stuttgart factory floor at golden hour, 100vh tall. Float the headline 'Carrera.' (with the period) over the lower-third of the photograph in Porsche Next 96px regular weight (400) pure white, no letter-spacing. Below it, two side-by-side CTAs: a Porsche Red `#d5001c` 'Build & Price' button (Porsche Next 16/600, 14×32 padding, 48px tall, 12px corners) and a transparent outline-on-dark 'Find a Dealer' button (1px white border, same dimensions)."
+- "Design a Porsche feature card on a paper-white `#ffffff` canvas: 16px radius, 1px solid `#d8d8d8` border, 32px padding. Place a 16:9 photograph at the top with rounded top corners, then a title in Porsche Next 32/400 pure black, 16px gap, body copy in Porsche Next 16/400 charcoal `#313639`, 24px gap, and a 'Read the Story' text button with underline-offset 4. Hover: border shifts to `#909294`, card lifts 4px with a soft `rgba(0,0,0,0.08) 0 4px 12px` shadow."
+- "Build a Porsche spec cell: transparent background, 32px vertical padding, value in Porsche Next 64px weight 600 pure black ('670'), label below in Porsche Next 14/400 charcoal `#626669` ('hp'). Group four spec cells in a 4-up row at desktop, 2-up at tablet, 1-up at mobile."
+- "Create a Porsche pricing strip: `#f4f4f4` neutral grey background, 12px radius, 24×32 padding. Layout left-to-right: model name in Porsche Next 24/500 pure black, MSRP centered in Porsche Next 24/600 ('From $108,150'), Porsche Red 'Build & Price' CTA right-aligned at the same dimensions as the primary button."
+- "Build a Porsche top nav: 80px tall on `#ffffff`, with the Stuttgart crest (rampant horse + crown shield) center-top at 56px height. Horizontal menu (Models / Pre-Owned / Build / Dealer / Owners) flanks the crest in Porsche Next 14/600 sentence-case. Utility icons (search, language, account) far right. 1px solid `#d8d8d8` border-bottom. On scroll past hero, nav height shrinks to 64px with crest scaling proportionally."
+- "Design a Porsche outline button on dark cinema bg: transparent background, 1px solid pure white border, white text in Porsche Next 16/600 sentence-case ('Discover the Range'), 13×31 padding (compensating for the 1px border), 48px tall, 12px corners. Hover: background fills to `rgba(255,255,255,0.06)` over 150ms; no transform, no scale."
+
+### Iteration Guide
+1. Focus on ONE component at a time. Reference its YAML key (`button-primary`, `hero-band-cinema`, `feature-card`).
+2. Variants live as separate entries inside `components:` rather than as nested modifiers (button-outline, button-outline-on-dark, etc).
+3. CTAs default to 12px corners — the softened-luxury signature. Never 0px sharp, never pill (except badges).
+4. Use color tokens (`brand`, `text`, `surface`) — never inline hex on multiple components.
+5. Hover states change color only on CTAs — feature cards may lift 4px with a subtle shadow tier.
+6. Porsche Next at weight 400 for display sizes (never bold), 600 for CTAs, 400 for body. Sentence-case + normal tracking on CTAs and nav.
+7. Porsche Red stays scarce — primary CTAs, the Stuttgart crest, motorsport callouts only. Body text, backgrounds, decorative elements stay neutral.
+8. Use the explicit spacing ladder (4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128). Section padding 96px; hero band 128px.

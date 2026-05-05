@@ -3,7 +3,7 @@ name: Webflow
 tagline: Indigo-to-purple gradient discipline with a precise structural sans — the visual builder that markets itself like a design conference.
 author: webdesignhot
 source_url: https://webflow.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [design-tools, saas]
@@ -13,31 +13,66 @@ related: [framer, vercel, figma]
 description: 'Webflow''s site sits on a near-black `#080a12` hero canvas with an indigo-to-violet gradient (`#4353ff` → `#a285ff`) carrying every accent surface. A bespoke "Webflow Sans" handles display, Inter underwrites body, and a precise 1024–1280 grid keeps the marketing reading like a design-system documentation site rather than a SaaS landing page.'
 
 colors:
-  bg: '#ffffff'                # primary marketing canvas
-  bg-dark: '#080a12'           # hero / footer near-black
-  surface: '#f5f6fa'           # cool-grey panel
-  surface-2: '#e6e9f2'         # second-level neutral
-  surface-dark: '#11131c'      # dark-band card
-  text: '#1d1f2e'              # body, near-black with blue cast
-  text-strong: '#080a12'       # display headlines
-  text-muted: '#4a4d5e'        # captions
-  text-soft: '#7a7d92'         # tertiary
-  text-on-dark: '#ffffff'
-  text-on-dark-muted: '#a8acc1'
-  brand: '#4353ff'             # Webflow indigo (CTA primary)
-  brand-hover: '#3441cc'       # pressed
-  brand-deep: '#1a1f5c'        # deep indigo for hovers
-  accent: '#a285ff'            # violet gradient stop
-  accent-soft: '#e8e3ff'       # tinted surface
-  accent-cyan: '#22ccff'       # secondary spectrum stop
-  border: '#e0e3ec'            # cool hairline
-  border-dark: '#22253a'
+  # Primary
+  bg: '#ffffff'                    # primary marketing canvas
+  bg-soft: '#f9f9fc'               # near-white stripe
+  bg-elev: '#f5f6fa'               # cool-grey panel
+  bg-dark: '#080a12'               # hero / footer near-black
+  bg-dark-2: '#0e1018'             # softer dark
+  surface: '#f5f6fa'               # cool-grey card panel
+  surface-2: '#e6e9f2'             # second-level neutral
+  surface-3: '#d8dceb'             # pressed
+  surface-dark: '#11131c'          # dark-band card
+  surface-dark-2: '#181b27'        # dark-band hover
+
+  # Text
+  text: '#1d1f2e'                  # body, near-black with blue cast
+  text-strong: '#080a12'           # display headlines
+  text-muted: '#4a4d5e'            # captions
+  text-soft: '#7a7d92'             # tertiary
+  text-faint: '#a8acc1'            # disabled
+  text-on-dark: '#ffffff'          # white on dark band
+  text-on-dark-muted: '#a8acc1'    # muted on dark
+  text-on-dark-soft: '#7a7d92'     # tertiary on dark
+  text-on-brand: '#ffffff'         # white on gradient
+
+  # Brand & gradient
+  brand: '#4353ff'                 # Webflow indigo (CTA primary)
+  brand-hover: '#3441cc'           # pressed
+  brand-active: '#2d369e'          # active
+  brand-deep: '#1a1f5c'            # deep indigo for hovers
+  brand-soft: '#e8eaff'            # palest indigo wash
+
+  # Accent (gradient & spectrum)
+  accent: '#a285ff'                # violet gradient stop
+  accent-soft: '#e8e3ff'           # tinted surface
+  accent-deep: '#7a5dd9'           # deeper violet
+  accent-cyan: '#22ccff'           # secondary spectrum stop
+  accent-cyan-soft: '#dcf4ff'      # cyan tint
+
+  # Borders
+  border: '#e0e3ec'                # cool hairline
+  border-strong: '#cdd1de'         # emphasis
+  border-soft: '#eef0f5'           # softest divider
+  border-dark: '#22253a'           # dark-band hairline
+  border-dark-strong: '#33374f'    # dark-band emphasis
+
+  # Semantic
+  success: '#22c55e'
+  success-bg: '#dcfce7'
+  warning: '#f59e0b'
+  warning-bg: '#fef3c7'
+  danger: '#ef4444'
+  danger-bg: '#fee2e2'
+  info: '#4353ff'
+  info-bg: '#e8eaff'
   on-brand: '#ffffff'
 
 typography:
   display:
     family: '"Webflow Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype-features: 'kern, liga, ss01'
   body:
     family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
     weights: [400, 500, 600]
@@ -45,147 +80,708 @@ typography:
     family: '"JetBrains Mono", "Fira Code", Menlo, Consolas, monospace'
     weights: [400, 500]
   scale:
-    h1:    { size: 80, weight: 700, lineHeight: 1.0,  tracking: '-0.03em' }
-    h2:    { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.022em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.012em' }
-    body:  { size: 16, lineHeight: 1.55 }
-    label: { size: 13, weight: 500, family: mono }
+    display-hero:    { size: 96, weight: 700, lineHeight: 0.96, tracking: '-0.04em',  family: display, opentype: 'ss01' }
+    display-xl:      { size: 80, weight: 700, lineHeight: 1.0,  tracking: '-0.03em',  family: display }
+    display-lg:      { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.025em', family: display }
+    h1:              { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.022em', family: display }
+    h2:              { size: 40, weight: 700, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    h3:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.012em', family: display }
+    h4:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',        family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    eyebrow:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0.06em',   family: mono }
+    code:            { size: 14, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono }
+    code-micro:      { size: 12, weight: 500, lineHeight: 1.5,  tracking: '0',        family: mono }
 
 radius:
-  xs: 4
-  sm: 6
+  micro: 2
+  sm: 4
   md: 8
   lg: 12
-  card: 16
-  xl: 20
-  xxl: 28
-  button: 8
+  xl: 16
+  xxl: 20
+  featured: 28
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 140, 160, 200]
+
 layout:
-  container: 1280
-  gutter: 32
+  page-width: 1280
+  prose-width: 720
+  header-height: 72
+  hero-y: 160
   section-y: 140
+  gutter: 32
 
 components:
-  - gradient-cta-button
-  - dark-hero-band
-  - feature-card-light
-  - product-canvas-mockup
-  - testimonial-card-bordered
-  - integration-grid
+  button-primary:
+    bg: 'linear-gradient(135deg, #4353ff 0%, #a285ff 100%)'
+    text: '#ffffff'
+    radius: 8
+    paddingX: 22
+    paddingY: 13
+    font: 'Inter 500 / 15px'
+    hover: 'shadow-elevated + 1px lift'
+  button-solid:
+    bg: '#4353ff'
+    text: '#ffffff'
+    radius: 8
+    paddingX: 22
+    paddingY: 13
+    hover: 'bg #3441cc'
+    use: 'simpler primary alternative'
+  button-secondary:
+    bg: '#ffffff'
+    text: '#080a12'
+    radius: 8
+    border: '1px solid #e0e3ec'
+    paddingX: 22
+    paddingY: 13
+    hover: 'bg #f5f6fa'
+  button-ghost:
+    bg: 'transparent'
+    text: '#080a12'
+    radius: 8
+    paddingX: 22
+    paddingY: 13
+    hover: 'bg #f5f6fa'
+  card-default:
+    bg: '#ffffff'
+    radius: 16
+    padding: 32
+    border: '1px solid #e0e3ec'
+    shadow: '0 4px 14px rgba(13,16,40,0.08)'
+  card-dark:
+    bg: '#11131c'
+    text: '#ffffff'
+    radius: 16
+    padding: 32
+    border: '1px solid #22253a'
+    shadow: 'none'
+  input-text:
+    bg: '#ffffff'
+    border: '1px solid #cdd1de'
+    radius: 8
+    paddingX: 14
+    paddingY: 12
+    focus: 'border #4353ff + ring 2px rgba(67,83,255,0.2)'
+  badge:
+    bg: '#e8eaff'
+    text: '#4353ff'
+    radius: 9999
+    paddingX: 10
+    paddingY: 4
+    font: 'Inter 600 / 12px'
 
-lineage:
-  summary: |
-    Webflow's marketing system reads like the documentation site of a
-    design system that happens to sell software. The canvas is white,
-    but the hero and footer flip to a deep `#080a12` near-black —
-    a darker, cooler shade than Linear's `#08090a`, with a faint
-    indigo cast. The brand surface is the indigo-to-violet gradient
-    (`#4353ff` → `#a285ff`), used for the primary CTA, key icon
-    treatments, and the hero atmospheric glow. Type is anchored by
-    Webflow Sans (a custom display family inflected toward Söhne /
-    Inter-class proportions) for headlines, and Inter for body —
-    a structural pairing that reinforces the "we are a craft tool"
-    voice. Where Framer plays loud and chromatic, Webflow plays
-    restrained-with-a-signature-gradient. The closest sibling is
-    Vercel's monochrome discipline, but Webflow lets one gradient
-    in — and that gradient does all the brand work.
-  influences:
-    - name: Vercel
-      role: Achromatic structure with a single chromatic accent.
-      url: https://vercel.com
-    - name: Stripe
-      role: Indigo-family action colour and gradient atmospherics for hero zones.
-      url: https://stripe.com
-    - name: Apple
-      role: Dark-band hero rhythm and product-canvas mockup choreography.
-      url: https://www.apple.com
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  ease-soft: 'cubic-bezier(0.45, 0, 0.55, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  duration-cinematic: 640
+  reduced-motion: 'respects prefers-reduced-motion: reduce — gradient glow becomes static, scroll-triggered reveals collapse to opacity-only fade, hover lifts disabled'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: '0 1px 2px rgba(13,16,40,0.04)'
+  standard: '0 4px 14px rgba(13,16,40,0.08)'
+  elevated: '0 12px 32px rgba(13,16,40,0.12), 0 4px 8px rgba(13,16,40,0.06)'
+  deep: '0 24px 64px rgba(13,16,40,0.16), 0 8px 16px rgba(13,16,40,0.08)'
+  glow-indigo: '0 0 60px rgba(67,83,255,0.4)'
+  glow-violet: '0 0 60px rgba(162,133,255,0.4)'
+  glow-gradient: '0 0 80px rgba(67,83,255,0.3), 0 0 60px rgba(162,133,255,0.3)'
+  ring: '0 0 0 2px rgba(67,83,255,0.5)'
+  ring-dark: '0 0 0 2px rgba(255,255,255,0.5)'
+
+accessibility:
+  contrast-text-on-bg: 14.6           # AAA — #1d1f2e on white
+  contrast-strong-on-bg: 19.2         # AAA — #080a12 on white
+  contrast-muted-on-bg: 7.8           # AAA — #4a4d5e on white
+  contrast-text-on-brand: 5.0         # AA at body — white on #4353ff
+  contrast-text-on-dark: 19.2         # AAA — white on #080a12
+  contrast-on-violet: 3.7             # AA Large only — white on #a285ff (use ≥18px)
+  focus-ring: '2px solid #4353ff with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive; tab order matches DOM source'
+
+dark-mode: alternating              # Webflow alternates white / #080a12 sections per page rather than offering a global toggle
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Webflow's site lands on a clean white canvas, with hero and footer
-zones flipping to a deep cool near-black `#080a12`. The signature
-brand event is the indigo-to-violet gradient — `#4353ff` to `#a285ff` —
-which carries the primary CTA, atmospheric hero glows, and key
-illustration accents. Headlines use Webflow Sans (a Söhne-flavoured
-custom display) at 80px / 700 weight, and body type is plain Inter
-at 16/25.
+Webflow's site lands on a clean white canvas, with hero and footer zones flipping to a deep cool near-black `#080a12`. The signature brand event is the indigo-to-violet gradient — `#4353ff` to `#a285ff` — which carries the primary CTA, atmospheric hero glows, and key illustration accents. Headlines use Webflow Sans (a Söhne-flavoured custom display) at 80px / 700 weight, and body type is plain Inter at 16/25.
 
-The voice is design-tool-as-conference: precise grid, generous vertical
-rhythm, and a single confident gradient handling all chromatic work.
-Every page reads like a section of a design system documentation
-site — and that is the point.
+The voice is **design-tool-as-conference**: precise grid, generous vertical rhythm, and a single confident gradient handling all chromatic work. Every page reads like a section of a design system documentation site — and that is the point. Where Framer plays loud and chromatic with the cyan-magenta-orange-violet quartet, Webflow plays restrained-with-a-signature-gradient. Where Vercel plays pure achromatic, Webflow lets one gradient in — and that gradient does all the brand work.
 
-## Colors
+The atmosphere is **structural-craft**. Section vertical rhythm holds at 140px, the 12-column grid is rarely violated, and feature cards align to a precise baseline grid. The product-canvas mockup (a tilted rendering of the Webflow Designer interface) is the recurring composition device — it shows up in every major feature section, demonstrating "we are a design tool" without saying so explicitly.
 
-- **bg** `#ffffff` — the primary marketing canvas
-- **bg-dark** `#080a12` — near-black hero and footer band
-- **surface** `#f5f6fa` — cool-grey card panel
-- **text-strong** `#080a12` — display headlines
-- **text** `#1d1f2e` — body, near-black with a faint blue cast
+The dark `#080a12` band is cooler than Linear's `#08090a` and softer than Framer's pure `#000` — there's a faint indigo cast that ties it to the brand gradient. The cool near-black plus the indigo gradient is the partner-pair that defines the system.
+
+**Key Characteristics**
+- White canvas with `#080a12` near-black hero/footer flips
+- Indigo-to-violet gradient (`#4353ff` → `#a285ff`) for CTA + hero atmospherics
+- Webflow Sans display + Inter body — structural craft pairing
+- 8px button radius, 16px card radius — moderate-rounded discipline
+- 140px section vertical rhythm — disciplined-spacious
+- Cool-tinted hairlines `#e0e3ec` — never warm
+- Soft shadows tinted indigo (`rgba(13,16,40,...)`)
+- Gradient glows behind product mockups — only place gradient leaves CTAs
+- Mono eyebrow at 13px / 0.06em
+- 12-column grid that the page rarely violates
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** (`#ffffff`): the primary marketing canvas
+- **bg-soft** (`#f9f9fc`): near-white stripe with subtle blue cast
+- **bg-elev** (`#f5f6fa`): cool-grey panel
+- **bg-dark** (`#080a12`): near-black hero and footer band — cooler than Linear, softer than Framer
+- **bg-dark-2** (`#0e1018`): softer dark for secondary inversions
+- **text** (`#1d1f2e`): body, near-black with a faint blue cast
+- **text-strong** (`#080a12`): display headlines, deeper near-black
+- **on-brand** (`#ffffff`): white on indigo gradient
+
+### Brand & Gradient
+
+- **brand** (`#4353ff`): Webflow indigo, CTA primary — when used solid
+- **brand-hover** (`#3441cc`): pressed
+- **brand-active** (`#2d369e`): active state
+- **brand-deep** (`#1a1f5c`): deep indigo for hover overlays on dark
+- **brand-soft** (`#e8eaff`): palest indigo wash for badges and notification
+
+The gradient is **always linear, 135deg, indigo → violet** — the pairing is exact and protected. Drift toward magenta breaks recognition; drift toward cyan reads as Framer.
+
+### Accent (Gradient Endpoints & Spectrum)
+
+- **accent** (`#a285ff`): violet gradient endpoint
+- **accent-soft** (`#e8e3ff`): violet tint for badges
+- **accent-deep** (`#7a5dd9`): deeper violet for emphasis
+- **accent-cyan** (`#22ccff`): secondary spectrum stop — used sparingly in illustration
+- **accent-cyan-soft** (`#dcf4ff`): cyan tint for tertiary panels
+
+### Interactive
+
+- **link**: `#4353ff` — same as brand
+- **link-hover**: `#3441cc` with underline-grow
+- **link-on-dark**: `#ffffff` with 1px underline
+- **selected**: `rgba(67,83,255,0.1)` — soft indigo tint
+- **disabled**: `#a8acc1` text on `#f5f6fa` bg
+
+### Neutral Scale
+
+- **text** `#1d1f2e` — body
 - **text-muted** `#4a4d5e` — captions and meta
-- **brand** `#4353ff` — Webflow indigo, CTA primary
-- **accent** `#a285ff` — gradient violet endpoint
-- **accent-soft** `#e8e3ff` — tinted surface for badges
-- **border** `#e0e3ec` — cool hairline, never warm
+- **text-soft** `#7a7d92` — tertiary
+- **text-faint** `#a8acc1` — disabled
+- **border** `#e0e3ec` — cool hairline (never warm)
+- **border-strong** `#cdd1de` — emphasis
+- **border-soft** `#eef0f5` — softest divider
 
-## Typography
+### Surface & Borders (Light)
 
-Display is **Webflow Sans** weighted at 700, sized 80px with `-0.03em`
-tracking and a 1.0 line-height. The face reads close to Söhne but
-with slightly more open apertures — a custom move that distances
-Webflow from a generic Inter SaaS site. Body is Inter at 16px /
-1.55 line-height, set in 400 for paragraphs and 500 for nav.
+- **surface** `#f5f6fa` — cool-grey card panel
+- **surface-2** `#e6e9f2` — hover
+- **surface-3** `#d8dceb` — pressed
 
-A monospaced JetBrains Mono shows up for code-style labels, version
-strings, and the occasional "v1.0" badge in the changelog. There is
-no serif — Webflow's editorial work is carried by structural rhythm,
-not by typographic contrast.
+### Surface & Borders (Dark)
 
-## Layout
+- **surface-dark** `#11131c` — dark-band card
+- **surface-dark-2** `#181b27` — dark-band hover
+- **border-dark** `#22253a` — dark-band hairline
+- **border-dark-strong** `#33374f` — dark-band emphasis
+- **text-on-dark** `#ffffff` — white on dark
+- **text-on-dark-muted** `#a8acc1`
+- **text-on-dark-soft** `#7a7d92`
 
-The container is 1280px with 32px gutters and a generous 140px of
-section vertical rhythm. The grid stays disciplined — 12 columns
-that the page rarely violates — which gives the marketing its
-documentation feel. Hero zones bleed full-width but reset to the
-1280 grid for content. Cards sit at 16px radius, buttons at a tight
-8px.
+### Shadow Colors
 
-## Elevation & Depth
+Webflow's shadows are **indigo-tinted** — `rgba(13,16,40,...)` — keeping depth visually continuous with the brand's cool blue-cast. Never warm, never neutral grey.
 
-Depth on the white canvas is bordered (a 1px `#e0e3ec` hairline)
-plus a soft shadow on cards (`0 4px 14px rgba(13,16,40,0.08)`).
-Hero atmospherics use the indigo-to-violet gradient as a soft glow
-sitting behind product imagery — the only place gradients leak
-beyond CTAs. Dark-band cards use a 1px `#22253a` border with no
-shadow, leaning on tonal layering instead.
+- **shadow-ambient** `rgba(13,16,40,0.04)` — softest
+- **shadow-standard** `rgba(13,16,40,0.08)` — card resting
+- **shadow-elevated** `rgba(13,16,40,0.12)` — modals, hovered cards
+- **glow-indigo / violet / gradient** for hero atmospherics
 
-## Shapes
+### Semantic
 
-The signature shape is the **gradient CTA button** — a `#4353ff` →
-`#a285ff` linear gradient at 8px radius, white Inter 500 label,
-no border. Cards land at 16px, hero shells at 20–28px. The radius
-ladder is moderate-rounded — softer than Linear's 6px discipline,
-tighter than Framer's 20px+ pillow surfaces.
+- **success** `#22c55e` on `#dcfce7`
+- **warning** `#f59e0b` on `#fef3c7`
+- **danger** `#ef4444` on `#fee2e2`
+- **info** `#4353ff` on `#e8eaff` — reuses brand indigo
 
-## Components
+## 3. Typography Rules
 
-The defining components are the **gradient indigo-violet CTA button**,
-the **dark hero band** (`#080a12` background with white Webflow Sans
-display and an indigo gradient glow behind product mockups), the
-**feature card** (white panel, 16px radius, hairline border, soft
-shadow), and the **product-canvas mockup** — a slightly tilted
-rendering of the Webflow Designer interface, used to show the tool
-in motion. The integration grid uses a 6×N layout of mono-icon
-partner logos on a soft grey panel.
+### Font Family
 
-## Do's and Don'ts
+- **Display**: Webflow Sans — bespoke face inflected toward Söhne / Inter-class proportions; slightly more open apertures than Inter
+- **Body**: Inter — handles all body, label, and caption typesetting
+- **Mono**: JetBrains Mono — eyebrows, code blocks, version strings
+- **OpenType**: `kern, liga, ss01` on Webflow Sans for stylistic alternates; `tnum` on mono for tabular numerals
 
-- **Do** keep the brand gradient to one direction (`#4353ff` → `#a285ff`) and one angle — drift breaks the recognition.
-- **Do** flip to the deep `#080a12` for hero and footer; the cool near-black is the partner half of the system.
-- **Do** use Webflow Sans only for display; below 28px it loses the proportions that distinguish it from Inter.
-- **Don't** introduce a third gradient stop or shift toward magenta — the indigo-violet pairing is exact and protected.
-- **Don't** use the gradient inside body components (cards, dividers, icons); it lives on CTAs and hero atmospherics only.
-- **Don't** apply heavy drop shadows to dark-band cards; the dark zone uses tonal layering, not elevation.
+### Hierarchy
+
+| Role | Font | Size | Weight | Line H | Tracking | OT | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Webflow Sans | 96 | 700 | 0.96 | -0.04em | ss01 | Above-fold hero |
+| display-xl | Webflow Sans | 80 | 700 | 1.0 | -0.03em | — | Standard H1 |
+| display-lg | Webflow Sans | 64 | 700 | 1.05 | -0.025em | — | Section opener |
+| h1 | Webflow Sans | 56 | 700 | 1.05 | -0.022em | — | Subsection |
+| h2 | Webflow Sans | 40 | 700 | 1.1 | -0.018em | — | Feature header |
+| h3 | Webflow Sans | 28 | 600 | 1.25 | -0.012em | — | Card title |
+| h4 | Webflow Sans | 22 | 600 | 1.3 | -0.005em | — | Inline title |
+| h5 | Inter | 18 | 600 | 1.4 | 0 | — | Component label |
+| body-lg | Inter | 18 | 400 | 1.55 | 0 | — | Hero subhead |
+| body | Inter | 16 | 400 | 1.55 | 0 | — | Default paragraph |
+| body-sm | Inter | 14 | 400 | 1.5 | 0 | — | Captions |
+| label | Inter | 14 | 500 | 1.4 | 0 | — | Form & button |
+| caption | Inter | 13 | 500 | 1.4 | 0 | — | Meta below cards |
+| eyebrow | JetBrains Mono | 13 | 500 | 1.4 | 0.06em | — | Section taglines, ALL CAPS |
+| code | JetBrains Mono | 14 | 400 | 1.6 | 0 | tnum | Inline code |
+| code-micro | JetBrains Mono | 12 | 500 | 1.5 | 0 | tnum | Version strings |
+
+### Principles
+
+- **Webflow Sans only at ≥28px** — below that, the proportions distinguishing it from Inter collapse, and the brand savings aren't worth the load
+- **Display weight stays at 700** — 600 reads quiet at 80px
+- **Tracking is moderate-negative** — `-0.03em` at display, scaling to `-0.04em` at 96px hero
+- **No serif** — Webflow's editorial work is carried by structural rhythm, not by typographic contrast
+- **Body at 16px, not 17** — Webflow holds the SaaS norm; cinematic spacing comes from layout
+- **Mono eyebrow at 13px / 0.06em** — slightly larger than Twilio's 12, slightly tighter than Stripe's
+- **Inter for body, Webflow Sans for display** — the two-family discipline is the structural pairing
+- **All-caps eyebrows tracked +0.06em** — only positive-tracking move in the system
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary CTA** — the gradient indigo-violet rectangle
+- bg `linear-gradient(135deg, #4353ff 0%, #a285ff 100%)`
+- text `#ffffff`, radius `8px`, padding `13px 22px`, Inter 500 15px
+- hover: shadow-elevated + 1px translateY, 240ms ease-emphasized
+- focus: ring `2px solid #4353ff` + 2px offset
+- use: every primary action — "Get started", "Try Webflow", "Sign up"
+
+**Solid Primary** (alternate)
+- bg `#4353ff` solid, text `#ffffff`, radius `8px`
+- padding `13px 22px`, Inter 500 15px
+- hover: bg `#3441cc`
+- use: simpler primary in tight spaces or on cards
+
+**Secondary Button**
+- bg `#ffffff`, text `#080a12`, border `1px solid #e0e3ec`, radius `8px`
+- padding `13px 22px`, Inter 500 15px
+- hover: bg `#f5f6fa`
+- use: secondary action — "Watch the demo", "View pricing"
+
+**Ghost Button**
+- bg transparent, text `#080a12`, radius `8px`
+- padding `13px 22px`
+- hover: bg `#f5f6fa`
+- use: tertiary action
+
+**Inverted Button** (on dark band)
+- bg `#ffffff`, text `#080a12`, radius `8px`
+- use: primary action sitting on `#080a12` band
+
+### Cards
+
+**Card Default**
+- bg `#ffffff`, radius `16px`, padding `32px`
+- border `1px solid #e0e3ec`, shadow `0 4px 14px rgba(13,16,40,0.08)`
+- hover: shadow-elevated + 2px translateY, 240ms ease-emphasized
+
+**Card Dark** (on dark band)
+- bg `#11131c`, text `#ffffff`, radius `16px`, padding `32px`
+- border `1px solid #22253a`, no shadow (depth is tonal)
+- hover: bg `#181b27`
+
+**Card Hero** (oversized with gradient glow)
+- bg `#ffffff`, radius `28px`, padding `48–64px`
+- shadow `0 24px 64px rgba(13,16,40,0.16)` + `glow-gradient` behind
+- contains product-canvas mockup centered
+
+### Badges & Tags
+
+**Badge Brand**
+- bg `#e8eaff`, text `#4353ff`, radius `9999px`
+- padding `4px 10px`, Inter 600 12px
+
+**Badge Default**
+- bg `#f5f6fa`, text `#4a4d5e`, radius `9999px`
+- padding `4px 10px`, Inter 500 12px
+
+**Tag Mono Eyebrow**
+- bg transparent, text `#4a4d5e`, radius `0`
+- JetBrains Mono 13px / 0.06em ALL CAPS
+
+### Inputs & Forms
+
+**Text Input**
+- bg `#ffffff`, border `1px solid #cdd1de`, radius `8px`
+- padding `12px 14px`, Inter 400 16px
+- focus: border `#4353ff` + ring `2px rgba(67,83,255,0.2)`
+- placeholder: `#7a7d92`
+
+**Search Input**
+- bg `#f5f6fa`, no border, radius `8px`
+- inline magnifier left, padding `12px 14px 12px 40px`
+
+### Navigation
+
+**Top Nav**
+- bg `#ffffff` (or `#080a12` on dark hero), height `72px`, gutters `32px`
+- Webflow wordmark left, mega-dropdown nav center (Platform/Solutions/Resources/Customers/Pricing), CTAs right (gradient primary + ghost secondary)
+- hairline `#e0e3ec` bottom on scroll
+- mega-dropdown reveals on hover with rich preview cards
+
+**Footer**
+- bg `#080a12`, padding `120px 32px`
+- 6-column white link grid in Inter 14px
+- gradient mesh band above footer cuts the inversion
+- Webflow wordmark + © at bottom
+
+### Tabs / Tooltips / Toasts
+
+**Tab Group**
+- underline-style: 2px `#4353ff` on active, 1px `#e0e3ec` on rest
+- text `#080a12` active, `#4a4d5e` rest
+
+**Tooltip**
+- bg `#080a12`, text `#ffffff`, radius `6px`, padding `8px 12px`
+- Inter 500 12px
+
+**Toast**
+- bg `#ffffff`, border `1px solid #e0e3ec`, radius `12px`, shadow elevated
+- 16px Inter 500 message, 14px muted body
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **base** `4px`, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 140, 160, 200]`
+- Density philosophy: **disciplined-spacious**. Webflow holds 140px section rhythm — between Twilio's 96 (institutional) and Framer's 160 (cinematic).
+
+### Grid & Container
+
+- **page-width** `1280px` with 32px gutters
+- Strict 12-column grid that the page rarely violates
+- Hero zones bleed full-width but reset to 1280 for content
+- **prose-width** `720px` — used for blog and changelog
+- Cards align to a precise 4px baseline grid
+
+### Whitespace Philosophy
+
+Webflow's whitespace is **structural breathing**. Section vertical rhythm runs 140px between major bands — the page reads as a documentation site with confident chapter pacing. Cards have 32px internal padding. The grid discipline (rarely violated) is what gives the marketing its design-system feel.
+
+### Section Cadence
+
+The page reads as alternating light and dark:
+1. Dark `#080a12` hero with gradient glow + product canvas mockup
+2. White feature row with hairline-bordered cards
+3. Cool-grey `#f5f6fa` band with integration logo grid
+4. White testimonial wall
+5. Dark `#080a12` feature reveal with gradient atmospheric
+6. White pricing
+7. Dark `#080a12` footer
+
+The dark-light alternation is the rhythm — never two adjacent dark bands except hero+next-feature.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Code-tag corners |
+| Small | 4px | Inline code, small badges |
+| Medium | 8px | **Buttons, inputs** — Webflow's default |
+| Large | 12px | Tabs, secondary cards |
+| XL | 16px | **Default card** — signature card radius |
+| XXL | 20px | Featured cards |
+| Featured | 28px | Hero shells |
+| Pill | 9999px | Avatars, badges |
+
+The radius ladder is **moderate-rounded** — softer than Linear's 6px discipline, tighter than Framer's 20px+ pillow surfaces. The 8px button + 16px card pairing is the structural sweet spot.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow, no border | Display copy on bg |
+| 1 | 1px hairline `#e0e3ec` | Resting borders, dividers |
+| 2 | shadow-ambient `0 1px 2px rgba(13,16,40,0.04)` | Soft lifts |
+| 3 | shadow-standard `0 4px 14px rgba(13,16,40,0.08)` | Default cards |
+| 4 | shadow-elevated + glow-indigo | Hovered cards, modals |
+| 5 | shadow-deep + glow-gradient | Hero floating canvas, overlay |
+
+### Shadow Philosophy
+
+Webflow's depth on the white canvas is **bordered + lightly shadowed** — a 1px `#e0e3ec` hairline plus a soft `0 4px 14px rgba(13,16,40,0.08)` indigo-tinted shadow. The pairing is restrained but present, distinguishing Webflow from Twilio's pure-flat hairline-only and from Framer's neutral shadow + dramatic gradient atmosphere.
+
+Hero atmospherics use the indigo-to-violet gradient as a **soft glow** sitting behind product imagery — the only place gradients leak beyond CTAs. Dark-band cards use a 1px `#22253a` border with no shadow, leaning on tonal layering instead.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **ease-standard** `cubic-bezier(0.4, 0, 0.2, 1)` — most state changes
+- **ease-emphasized** `cubic-bezier(0.2, 0, 0, 1)` — modal entry, hero reveal
+- **ease-bounce** `cubic-bezier(0.34, 1.56, 0.64, 1)` — playful product demos
+- **ease-soft** `cubic-bezier(0.45, 0, 0.55, 1)` — symmetric breathing
+
+### Duration Buckets
+
+- **fast** `120ms` — button hover, link state
+- **standard** `240ms` — card hover, dropdown reveal
+- **slow** `400ms` — modal entry, page section reveal
+- **cinematic** `640ms` — hero gradient breathing, scroll parallax
+
+### Per-Component Recipes
+
+- **Primary CTA hover**: shadow ambient → elevated + 1px translateY, 240ms ease-emphasized
+- **Card hover**: shadow standard → elevated + 2px translateY, 240ms ease-standard
+- **Link hover**: text color shift `#4353ff` → `#3441cc` + underline grow, 200ms
+- **Mega-dropdown reveal**: fade + 4px down, 240ms ease-emphasized
+- **Hero gradient glow**: subtle hue breathing, 6s loop, 640ms cinematic
+- **Product canvas tilt**: scroll-tied 0deg → 2deg rotation, 640ms cinematic
+
+### Page Transitions
+
+- Section reveals on scroll: fade-up 12px, 400ms slow ease-emphasized
+- Hero on first paint: gradient glow blooms from center, 640ms cinematic
+- Sticky nav: solid bg fade-in on scroll past hero, 200ms
+
+### Reduced Motion Strategy
+
+Webflow respects `prefers-reduced-motion: reduce`:
+- Gradient glow becomes static (no breathing)
+- Product canvas tilt: disabled (static at 0deg)
+- Scroll-triggered reveals: opacity-only
+- Hover lifts: disabled, color/border changes only
+- Sticky nav: instant background change
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- text `#1d1f2e` on bg `#fff`: **14.6** — AAA all sizes
+- text-strong `#080a12` on bg `#fff`: **19.2** — AAA
+- text-muted `#4a4d5e` on bg `#fff`: **7.8** — AAA
+- on-brand `#fff` on brand `#4353ff`: **5.0** — AA body, AAA large
+- text-on-dark `#fff` on bg-dark `#080a12`: **19.2** — AAA
+- on-violet `#fff` on accent `#a285ff`: **3.7** — AA Large only — use ≥18px
+- text on bg-elev `#1d1f2e` on `#f5f6fa`: **13.2** — AAA
+
+### Focus Indicators
+
+- 2px solid `#4353ff` (brand indigo) with 2px offset
+- On dark surfaces: 2px solid `#ffffff` with 2px offset
+- Visible on every interactive
+- Never `outline: none` without replacement
+
+### ARIA Patterns
+
+- Mega-dropdown nav: `role="menu"` + `aria-haspopup="menu"` + `aria-expanded`
+- Modal dialogs: `role="dialog"` + `aria-modal="true"` + `aria-labelledby` + focus trap
+- Tab group: `role="tablist"` + `aria-orientation` + `aria-controls`
+- Search combobox: `role="combobox"` + `aria-expanded`
+- Decorative gradient glow: `aria-hidden="true"`
+
+### Keyboard Nav
+
+- Tab order matches DOM source
+- ENTER/SPACE activate buttons
+- ARROW navigates within tab groups, listboxes, mega-menus
+- ESC closes modals/dropdowns
+- All interactives reachable in tab cycle
+
+### Screen Reader Hints
+
+- Webflow wordmark SVG: `<title>Webflow</title>`
+- Product-canvas mockups: `<img alt>` describing the Designer UI shown
+- Mono eyebrow labels are semantic spans, not headings
+- Decorative gradient glows: `aria-hidden="true"`
+- Skip-to-content link at top, visible on focus
+
+### Reduced Motion
+
+- Honored across the site
+- Gradient breathing, parallax: disabled
+- Scroll reveals: opacity-only
+- Hover lifts: disabled
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Tier | Min-width | Use |
+|---|---|---|
+| mobile | 0–639px | Single-column stack |
+| tablet | 640–1023px | 2-column feature grid |
+| desktop | 1024–1279px | Full 12-column |
+| wide | 1280px+ | Container caps at 1280, generous gutters |
+
+### Touch Targets
+
+Minimum 44×44px on mobile. Primary CTA scales padding from `13px 22px` (desktop) to `15px 24px` (mobile) for 48px tap area.
+
+### Collapsing Strategy
+
+- **Hero display**: 96px → 72px → 56px → 40px down the cascade
+- **Feature grid**: 3-col → 2-col → 1-col
+- **Top nav**: full mega-dropdown → hamburger drawer at <1024px
+- **Section vertical rhythm**: 140px → 96px → 64px
+- **Product canvas tilt**: removed on mobile (becomes static, scaled to 100% width)
+
+### Image Behavior
+
+- Product canvas mockups: aspect-ratio 16:10, `object-fit: contain`, max-height 600px
+- Integration grid logos: 24×24px, mono SVG
+- Avatar images: 48×48 circular
+
+### Container Queries
+
+Webflow uses container queries on the integration grid — when narrower than 480px, the 6×N layout collapses to 4×N then 3×N progressively.
+
+## 11. Content & Voice
+
+### Tone
+
+**Designer-engineer-articulate.** Webflow talks to professionals who think in components and design systems. The voice is precise, slightly conference-keynote in cadence, uses craft vocabulary ("compose", "publish", "build") rather than tech buzzwords. "Build the web you imagine" rather than "Empower your digital journey". Adjectives are reserved for the user's work, not the marketing.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started", "Try Webflow", "Watch the demo", "Sign up", "Talk to sales"
+- **Empty states**: "No projects yet — create your first to begin." (Direct invitation.)
+- **Errors**: "Something went wrong. Please refresh and try again." (Calm, no jargon.)
+- **Success**: "Published." / "Saved." (Past tense.)
+- **Loading**: "Publishing your site…" (Verb in progress.)
+
+### CTA Verb Conventions
+
+Webflow prefers **"Get started"** as primary CTA across hero, pricing, and footer. Secondary is **"Watch the demo"** (never "See it in action" — too generic). For enterprise: **"Talk to sales"**, **"Schedule a demo"**. For learning: **"Browse templates"**, **"Read the docs"**.
+
+### Empty States
+
+Webflow's empty states are quiet invitations: "No collections yet — create your first." No hand-drawn illustrations, no upbeat exclamation marks. The design is meant to be functional, not personality-forward.
+
+## 12. Dark Mode & Theming
+
+Webflow ships **alternating dark bands** rather than a global dark-mode toggle on the marketing site. The page flips between white and `#080a12` near-black sections every 2–3 bands. The token swap inside any `<section data-theme="dark">`:
+
+```yaml
+colors-dark:
+  bg: '#080a12'
+  bg-elev: '#0e1018'
+  bg-elev-2: '#11131c'
+  surface: '#11131c'
+  surface-2: '#181b27'
+  surface-3: '#22253a'
+  text: '#ffffff'
+  text-strong: '#ffffff'
+  text-muted: '#a8acc1'
+  text-soft: '#7a7d92'
+  text-faint: '#4a4d5e'
+  brand: '#4353ff'              # gradient unchanged across modes
+  accent: '#a285ff'
+  border: '#22253a'
+  border-strong: '#33374f'
+  border-subtle: '#181b27'
+```
+
+Note: in product UI (the Webflow Designer), full dark mode is a user toggle. On the marketing site, dark theme is composition rhythm.
+
+## 13. Lineage & Influences
+
+Webflow's marketing system reads like the **documentation site of a design system that happens to sell software**. The canvas is white, but the hero and footer flip to a deep `#080a12` near-black — a darker, cooler shade than Linear's `#08090a`, with a faint indigo cast. The brand surface is the indigo-to-violet gradient (`#4353ff` → `#a285ff`), used for the primary CTA, key icon treatments, and the hero atmospheric glow.
+
+Type is anchored by **Webflow Sans** (a custom display family inflected toward Söhne / Inter-class proportions) for headlines, and Inter for body — a structural pairing that reinforces the "we are a craft tool" voice. Where Framer plays loud and chromatic with the Holo Shader quartet, Webflow plays restrained-with-a-signature-gradient. The closest sibling is Vercel's monochrome discipline, but Webflow lets one gradient in — and that gradient does all the brand work.
+
+The lineage runs through **Stripe's gradient-atmospherics era** (2018–2022) when indigo-family hero glows were the SaaS signature, **Apple's keynote rhythm** (dark band hero choreography), and **Google's Material Design discipline** (the structural grid, the precise baseline). Webflow synthesises these into a design-tool-specific dialect — more rigorous than Stripe, more chromatic than Vercel, more restrained than Framer.
+
+The product-canvas mockup (a tilted rendering of the Webflow Designer UI) is borrowed from Apple's product-as-protagonist marketing — every major feature section centres a tilted device showing the tool in motion. The slight 1–2deg rotation reads as "this is a real interface, not a render".
+
+**Named Influences**
+- **Vercel** ([vercel.com](https://vercel.com)) — Achromatic structure with a single chromatic accent
+- **Stripe** ([stripe.com](https://stripe.com)) — Indigo-family action colour and gradient atmospherics for hero zones
+- **Apple** ([apple.com](https://www.apple.com)) — Dark-band hero rhythm and product-canvas mockup choreography
+- **Linear** ([linear.app](https://linear.app)) — Cool near-black dark band, structural grid discipline
+- **Söhne** ([klim.co.nz/retail-fonts/sohne](https://klim.co.nz/retail-fonts/sohne)) — Display sans proportions Webflow Sans references
+
+## 14. Do's and Don'ts
+
+### Do
+
+- Keep the brand gradient to one direction (135deg, indigo → violet) — drift breaks recognition
+- Flip to the deep `#080a12` for hero and footer; the cool near-black is the partner half of the system
+- Use Webflow Sans only for display ≥28px; below that, Inter handles body
+- Hold button radius at 8px and card radius at 16px — the structural sweet spot
+- Tint shadows indigo (`rgba(13,16,40,...)`) — never warm, never neutral grey
+- Use the gradient as hero atmospheric glow behind product mockups
+- Use mono eyebrow at 13px / 0.06em ALL CAPS — broadcast-craft signal
+- Hold section vertical rhythm at 140px — disciplined-spacious
+- Use the product-canvas mockup in feature sections — slight 1–2deg tilt
+- Honor reduced motion — gradient glow must collapse to static
+
+### Don't
+
+- Introduce a third gradient stop or shift toward magenta — the indigo-violet pairing is exact and protected
+- Use the gradient inside body components (cards, dividers, icons); it lives on CTAs and hero atmospherics only
+- Apply heavy drop shadows to dark-band cards — the dark zone uses tonal layering, not elevation
+- Use Webflow Sans below 24px — proportions collapse into Inter-territory
+- Pure-black body type — `#1d1f2e` near-black with blue cast is the discipline
+- Use warm hairlines or warm shadows; cool-tinted is the brand
+- Pack section vertical rhythm tighter than 96px — structural breathing is required
+- Use the gradient on action surfaces beyond the primary CTA — keep gradient + CTA the protected pairing
+- Reverse the gradient (violet → indigo); always indigo-leading at 135deg
+- Mix Söhne or Helvetica into the display stack — Webflow Sans + Inter is the locked system
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:           #ffffff
+bg-dark:      #080a12 (cool near-black)
+text:         #1d1f2e
+text-muted:   #4a4d5e
+brand:        #4353ff (indigo)
+accent:       #a285ff (violet)
+gradient:     linear-gradient(135deg, #4353ff 0%, #a285ff 100%)
+border:       #e0e3ec (cool hairline)
+surface:      #f5f6fa
+```
+
+### Example Component Prompts
+
+1. *"Create a Webflow-style hero: dark `#080a12` background with subtle indigo-violet gradient glow behind centered product canvas mockup, Webflow Sans 700 at 80px white headline reading 'Build the web you imagine' tracked at -0.03em, body in Inter 18 #a8acc1 below, gradient CTA reading 'Get started for free' at 8px radius."*
+2. *"Design a Webflow feature card: white bg, 16px radius, 32px padding, 1px `#e0e3ec` cool hairline, soft `0 4px 14px rgba(13,16,40,0.08)` indigo-tinted shadow. Webflow Sans 28 title in `#080a12`, body in Inter 16 `#1d1f2e`, mono eyebrow at top reading 'CMS' in JetBrains Mono 13 / 0.06em `#4a4d5e`."*
+3. *"Build a Webflow gradient CTA: linear-gradient(135deg, #4353ff 0%, #a285ff 100%), white Inter 500 15px label saying 'Try Webflow', 8px radius, 13px×22px padding, soft `0 12px 32px rgba(13,16,40,0.12)` shadow on hover."*
+4. *"Compose a Webflow product-canvas hero: large white card, 28px radius, contains tilted (2deg) rendering of the Webflow Designer UI, soft indigo gradient glow `0 0 80px rgba(67,83,255,0.3)` behind it, 64px padding."*
+5. *"Create a Webflow dark feature reveal: full-bleed `#080a12` background, gradient glow center, Webflow Sans 700 at 64 white headline, Inter 18 body in `#a8acc1`, white-bg inverted CTA `#fff` with `#080a12` text."*
+6. *"Design a Webflow integration grid: 6-column layout of 24×24px monochrome partner SVG logos on `#f5f6fa` cool-grey panel, 32px gutters, optional hover state revealing partner name in Inter 14 muted below."*
+
+### Iteration Guide
+
+1. **Start with the gradient direction.** If the gradient appears horizontal or radial, force it to 135deg linear. The diagonal is part of recognition.
+2. **Cool the borders.** If hairlines look warm or neutral grey, swap to `#e0e3ec` cool. Webflow's neutrals are blue-tinted.
+3. **Tighten Webflow Sans usage.** If display copy below 28px is rendering in Webflow Sans, swap to Inter. The custom face is display-only.
+4. **Add mono eyebrow.** If sections lack section taglines, add JetBrains Mono 13px / 0.06em ALL CAPS in `#4a4d5e`. Structural-craft signal.
+5. **Insert one dark band.** If the page is monotonously white, drop one full-bleed `#080a12` section per major feature reveal. Light/dark alternation is the rhythm.
+6. **Tilt the product mockup.** If the product canvas sits flat, add a 1–2deg rotation. The slight tilt reads "real interface, not a render".
+7. **Hold the gradient to CTAs + hero glow.** If gradient appears on cards or dividers, pull back. CTA fill + atmospheric glow is the only pairing.
+8. **Section rhythm at 140px.** If sections are packed at 80–96px, expand to 140. Disciplined-spacious is the brand pacing.

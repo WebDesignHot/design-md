@@ -6,7 +6,7 @@ source_url: https://www.ford.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, corporate, sans, blue, american, truck, heritage, configurator]
 preview_swatch: ['#ffffff', '#003478', '#102b4e']
 related: [bmw, tesla, ferrari]

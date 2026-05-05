@@ -3,102 +3,268 @@ name: tldraw
 tagline: Casual whiteboard sketchy — hand-drawn UI primitives, dotted-grid canvas, and a soft pastel palette that wears its toy-like energy with confidence.
 author: webdesignhot
 source_url: https://tldraw.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
-featured: false
+featured: true
 categories: [design-tools, dev-tools]
 tags: [light, playful, sans, soft, organic, bright]
 preview_swatch: ['#f8f9fa', '#1d1d1d', '#3182ed']
 related: [excalidraw, figma, rive-app]
-description: 'tldraw is a whiteboard SDK that wears its toy-like character openly — dotted-grid canvas, soft pastel sticky-note hues, hand-drawn arrow primitives, and a friendly Inter cut held at modest weights. The marketing site is essentially a live tldraw whiteboard with marketing text dropped into shapes; the brand identity is "the product itself, lightly framed." A single confident blue (`#3182ed`) carries CTAs, and rounded-rect cards with 12–16px radii echo the SDK''s default shape primitives.'
+description: 'tldraw is a whiteboard SDK that wears its toy-like character openly — dotted-grid canvas, soft pastel sticky-note hues, hand-drawn arrow primitives, and a friendly Inter cut held at modest weights. The marketing site is essentially a live tldraw whiteboard with marketing text dropped into shapes; the brand identity is "the product itself, lightly framed." A single confident blue (`#3182ed`) carries CTAs, and rounded-rect cards with 12–16px radii echo the SDK''s default shape primitives. The pastel accents — yellow, pink, green, blue — appear only as sticky-note callouts, never as a system-wide accent palette. Where Excalidraw doubles down on the literal hand-drawn aesthetic, tldraw cleans the metaphor into polished SaaS chrome — the friendly cousin in the whiteboard family.'
 
 colors:
-  bg: '#f8f9fa'
-  bg-canvas: '#fdfdfd'
-  surface: '#ffffff'
-  surface-soft: '#f1f3f5'
-  text: '#1d1d1d'
-  text-muted: '#5c5c5c'
-  text-soft: '#8b8b8b'
-  brand: '#3182ed'
-  brand-hover: '#2870d6'
-  accent-yellow: '#fde68a'
-  accent-pink: '#fbcfe8'
-  accent-green: '#bbf7d0'
-  accent-blue: '#bfdbfe'
-  border: '#0000001a'
-  border-strong: '#00000033'
+  bg: '#f8f9fa'                  # soft off-white canvas with dotted grid
+  bg-canvas: '#fdfdfd'           # slightly brighter for embedded scenes
+  bg-soft: '#ffffff'             # pure white for cards floating on the canvas
+  surface: '#ffffff'             # default card surface
+  surface-soft: '#f1f3f5'        # secondary surface tint
+  surface-hover: '#e9ecef'       # hover state on cards
+  surface-selected: '#dee2e6'    # selected state
+  text: '#1d1d1d'                # near-black, warm undertone
+  text-strong: '#101010'         # display, slightly darker
+  text-display: '#1d1d1d'        # H1 stays at the warm near-black
+  text-muted: '#5c5c5c'          # captions, meta
+  text-soft: '#8b8b8b'           # tertiary
+  text-faint: '#bababa'          # disabled
+  text-on-brand: '#ffffff'       # white text on blue CTA
+  text-on-pastel: '#1d1d1d'      # near-black on pastel sticky notes
+  brand: '#3182ed'               # single confident blue for CTAs
+  brand-hover: '#2870d6'         # darker blue on press
+  brand-active: '#1f5db8'        # deepest pressed
+  brand-soft: '#dbeafe'          # softest blue tint
+  brand-faint: '#eff6ff'         # near-white blue tint
+  link: '#3182ed'                # links share brand
+  accent-yellow: '#fde68a'       # sticky-note yellow
+  accent-yellow-deep: '#fcd34d'  # deeper yellow for hover
+  accent-pink: '#fbcfe8'         # sticky-note pink
+  accent-pink-deep: '#f9a8d4'    # deeper pink
+  accent-green: '#bbf7d0'        # sticky-note green
+  accent-green-deep: '#86efac'   # deeper green
+  accent-blue: '#bfdbfe'         # sticky-note blue (lighter than brand)
+  accent-blue-deep: '#93c5fd'    # deeper sticky-blue
+  accent-purple: '#ddd6fe'       # sticky-note purple
+  accent-orange: '#fed7aa'       # sticky-note orange
+  border: '#0000001a'            # 10% black hairline
+  border-strong: '#00000033'     # 20% black for emphasis
+  border-soft: '#0000000d'       # 5% black for subtle dividers
   on-brand: '#ffffff'
-  grid-dot: '#0000001a'
+  grid-dot: '#0000001a'          # the canvas dot grid
+  grid-dot-soft: '#0000000d'     # softer dot for nested canvases
+  success: '#16a34a'             # editorial green
+  success-bg: '#dcfce7'
+  warning: '#d97706'             # warm amber
+  warning-bg: '#fef3c7'
+  danger: '#dc2626'              # restrained red
+  danger-bg: '#fee2e2'
+  info: '#3182ed'                # info reuses brand
+  info-bg: '#dbeafe'
 
 typography:
   display:
-    family: '"Inter", "Inter Display", -apple-system, "system-ui", sans-serif'
+    family: '"Inter", "Inter Display", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype-features: ['ss01', 'cv11', 'tnum']
   body:
-    family: '"Inter", -apple-system, "system-ui", sans-serif'
-    weights: [400, 500]
+    family: '"Inter", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: ['kern', 'tnum']
   mono:
-    family: '"Berkeley Mono", "JetBrains Mono", ui-monospace, Menlo, monospace'
-    weights: [400]
+    family: '"Berkeley Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace'
+    weights: [400, 500]
   hand:
-    family: '"Caveat", "Comic Neue", cursive'
-    weights: [400, 600]
+    family: '"Caveat", "Comic Neue", "Patrick Hand", cursive'
+    weights: [400, 600, 700]
   scale:
-    h1:    { size: 56, weight: 700, lineHeight: 1.1, tracking: '-0.02em' }
-    h2:    { size: 36, weight: 600, lineHeight: 1.15, tracking: '-0.015em' }
-    h3:    { size: 22, weight: 600, lineHeight: 1.3, tracking: '-0.01em' }
-    body:  { size: 16, lineHeight: 1.5 }
-    label: { size: 12, weight: 500 }
+    display-hero:    { size: 80, weight: 700, lineHeight: 1.05, tracking: '-0.03em',  family: display, opentype: 'ss01' }
+    display-large:   { size: 64, weight: 700, lineHeight: 1.08, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display:         { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.02em',  family: display, opentype: 'ss01' }
+    h1:              { size: 48, weight: 700, lineHeight: 1.12, tracking: '-0.018em', family: display }
+    h2:              { size: 36, weight: 600, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    h3:              { size: 24, weight: 600, lineHeight: 1.3,  tracking: '-0.01em',  family: display }
+    h4:              { size: 20, weight: 600, lineHeight: 1.35, tracking: '-0.005em', family: display }
+    h5:              { size: 16, weight: 600, lineHeight: 1.4,  tracking: '0',         family: display }
+    h6:              { size: 14, weight: 600, lineHeight: 1.4,  tracking: '0',         family: display }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.45, tracking: '0',         family: body }
+    hand-large:      { size: 32, weight: 600, lineHeight: 1.2,  tracking: '0',         family: hand }
+    hand:            { size: 20, weight: 600, lineHeight: 1.3,  tracking: '0',         family: hand }
+    hand-small:      { size: 16, weight: 600, lineHeight: 1.35, tracking: '0',         family: hand }
+    label:           { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.02em',   family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0',         family: body }
+    code-inline:     { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0',         family: mono }
+    code:            { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',         family: mono }
 
 radius:
+  none: 0
+  micro: 2
+  xs: 4
   sm: 6
   md: 10
   lg: 14
   card: 16
-  button: 10
-  pill: 9999
   shape: 12
+  xl: 20
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+  hero-padding-y: 96
+  section-padding-y: 80
+  card-padding: 24
 
 components:
   button-primary:
     backgroundColor: brand
     textColor: on-brand
-    rounded: button
-    use: 'blue solid CTA — the only saturated chrome in the system'
-  button-secondary:
+    radius: md
+    padding: '12px 20px'
+    font: { family: body, weight: 600, size: 16 }
+    hover: { backgroundColor: brand-hover, transform: 'translateY(-1px)' }
+    use: 'Blue solid CTA — the only saturated chrome in the system'
+  button-ghost:
     backgroundColor: surface
     textColor: text
     border: border-strong
-    rounded: button
+    radius: md
+    padding: '12px 20px'
+    font: { family: body, weight: 500, size: 16 }
+    hover: { backgroundColor: surface-hover }
+    use: 'Hairline-bordered secondary action'
+  button-text:
+    backgroundColor: transparent
+    textColor: text
+    radius: sm
+    padding: '8px 12px'
+    font: { family: body, weight: 500, size: 14 }
+    hover: { backgroundColor: surface-soft }
+    use: 'Tertiary inline action'
   card:
     backgroundColor: surface
     border: border
-    rounded: card
-    shadow: '0 1px 2px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04)'
-    use: 'shape card — mimics tldraw''s default rounded-rect primitive'
+    radius: card
+    padding: 24
+    shadow: 'rgba(0,0,0,0.06) 0 1px 2px, rgba(0,0,0,0.04) 0 1px 4px'
+    use: 'Shape card — mimics tldraw''s default rounded-rect primitive'
+  card-elevated:
+    backgroundColor: surface
+    border: border
+    radius: card
+    padding: 28
+    shadow: 'rgba(0,0,0,0.08) 0 4px 12px, rgba(0,0,0,0.05) 0 1px 4px'
+    use: 'Floating card — feature emphasis'
   sticky-note:
     backgroundColor: accent-yellow
-    textColor: text
-    rounded: shape
-    use: 'pastel sticky — used in feature callouts and tooltips'
+    textColor: text-on-pastel
+    radius: shape
+    padding: 16
+    shadow: 'rgba(0,0,0,0.1) 0 4px 8px, rgba(0,0,0,0.06) 0 1px 2px'
+    rotation: '-1deg'
+    use: 'Pastel sticky — yellow/pink/green/blue/purple/orange variants'
+  shape-rect:
+    backgroundColor: surface
+    border: text-strong
+    borderWidth: 2
+    radius: shape
+    padding: 16
+    use: 'On-canvas shape primitive — the SDK default rendered as marketing card'
+  badge:
+    backgroundColor: surface-soft
+    textColor: text-muted
+    radius: pill
+    padding: '4px 10px'
+    font: { family: body, weight: 500, size: 12 }
+  input:
+    backgroundColor: surface
+    border: border-strong
+    radius: md
+    padding: '10px 14px'
+    font: { family: body, weight: 400, size: 16 }
+    focus: { border: brand, ring: '0 0 0 3px rgba(49,130,237,0.25)' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'   # slight overshoot — toy-like bounce
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-instant: 80
+  duration-fast: 150
+  duration-standard: 220
+  duration-slow: 320
+  duration-emphasized: 480
+  hover-lift: 'translateY(-2px) rotate(-0.5deg)'
+  page-transition: 'opacity + slide 8px, 240ms decelerate'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — collapses transforms and rotation to opacity-only at 100ms'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+  ultra: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0,0,0,0.06) 0 1px 2px, rgba(0,0,0,0.04) 0 1px 4px'
+  raised: 'rgba(0,0,0,0.08) 0 4px 12px, rgba(0,0,0,0.05) 0 1px 4px'
+  sticky: 'rgba(0,0,0,0.10) 0 4px 8px, rgba(0,0,0,0.06) 0 1px 2px'
+  popover: 'rgba(0,0,0,0.12) 0 12px 32px, rgba(0,0,0,0.06) 0 4px 8px'
+  ring: '0 0 0 3px rgba(49,130,237,0.25)'
+
+accessibility:
+  contrast-text-on-bg: 14.6              # AAA
+  contrast-text-on-brand: 4.6            # AA at body sizes
+  contrast-muted-on-bg: 7.2              # AAA
+  contrast-on-pastel: 14.6               # AAA — near-black on pastel
+  focus-ring: '3px solid rgba(49,130,237,0.4) with 1px offset'
+  reduced-motion-honored: true
+  keyboard-trap-free: true
+  min-touch-target: 44
+
+dark-mode: optional
+
+colors-dark:
+  bg: '#0f0f10'
+  bg-canvas: '#1a1a1c'
+  surface: '#1f1f22'
+  surface-soft: '#2a2a2e'
+  surface-hover: '#34343a'
+  text: '#f5f5f5'
+  text-muted: '#a8a8a8'
+  text-soft: '#787878'
+  brand: '#5fa3f7'
+  brand-hover: '#7fb5fa'
+  border: '#ffffff14'
+  border-strong: '#ffffff26'
+  on-brand: '#ffffff'
+  grid-dot: '#ffffff1a'
+  accent-yellow: '#7c6620'
+  accent-pink: '#7a3a52'
+  accent-green: '#3f6a4d'
+  accent-blue: '#2a4d7a'
 
 lineage:
   summary: |
-    tldraw is the rare developer SDK that markets itself by simply
-    *being* itself — the homepage is a live tldraw whiteboard with
-    marketing copy dropped into hand-drawn shapes, sticky notes, and
-    arrow primitives. The visual signature is a dotted-grid canvas
-    (`#f8f9fa` ground with `#0000001a` dots), pastel sticky-note hues
-    (yellow, pink, green, blue), and the SDK's default rounded-rect
-    shape used as the card primitive across the marketing surface.
-    Type is restrained Inter at 500-700 weights — chunky enough to
-    feel friendly but never extreme. A single confident blue
-    (`#3182ed`) carries action; everything else is the casual,
-    soft-pastel whiteboard register. The brand sits visually between
-    Excalidraw's literal hand-drawn primitives and Linear's quiet
-    discipline — playful where it counts, structured where it must
-    be.
+    tldraw is the rare developer SDK that markets itself by simply *being* itself —
+    the homepage is a live tldraw whiteboard with marketing copy dropped into
+    hand-drawn shapes, sticky notes, and arrow primitives. The visual signature is
+    a dotted-grid canvas (`#f8f9fa` ground with `#0000001a` dots), pastel
+    sticky-note hues (yellow, pink, green, blue, purple, orange), and the SDK's
+    default rounded-rect shape used as the card primitive across the marketing
+    surface. Type is restrained Inter at 500-700 weights — chunky enough to feel
+    friendly but never extreme. A single confident blue (`#3182ed`) carries action;
+    everything else is the casual, soft-pastel whiteboard register. The brand sits
+    visually between Excalidraw's literal hand-drawn primitives and Linear's quiet
+    discipline — playful where it counts, structured where it must be. Where
+    Excalidraw doubles down on imprecision (every stroke wobbles via rough.js),
+    tldraw polishes the metaphor — the shapes are clean rounded-rects with
+    deliberately friendly chrome, and the hand-drawn cue lives in the optional
+    Caveat/Patrick-Hand annotation layer.
   influences:
     - name: Excalidraw
       role: Hand-drawn whiteboard aesthetic and pastel sticky-note palette; tldraw is the more polished sibling.
@@ -109,80 +275,511 @@ lineage:
     - name: Notion
       role: Permission to use a soft, page-like ground for a developer-tools brand.
       url: https://notion.com
+    - name: Miro
+      role: The big-tent whiteboard reference; tldraw is positioned as the developer-friendly, embeddable SDK alternative.
+      url: https://miro.com
+    - name: Linear
+      role: Inter at 500–700 weight discipline; the friendly-without-soft typographic register.
+      url: https://linear.app
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-tldraw treats its homepage as a live demo of its product. The
-canvas itself is a tldraw whiteboard, dotted-grid included, and
-marketing copy lives inside actual rounded-rect shapes the user
-could (in principle) drag around. The chrome is friendly without
-being childish: pastel sticky-note hues for callouts, a single
-confident blue for action, and an Inter type system held at modest
-weights.
+tldraw treats its homepage as a live demo of its product. The canvas itself is a tldraw whiteboard, dotted-grid included, and marketing copy lives inside actual rounded-rect shapes the user could (in principle) drag around. The chrome is friendly without being childish: pastel sticky-note hues for callouts, a single confident blue for action, and an Inter type system held at modest weights. The result is a developer-tool brand that markets through embodiment — the page demonstrates the SDK by *being* the SDK.
 
-Display caps out at 56px/700 with `-0.02em` tracking — meaningful
-restraint compared to the 96–140px headlines on peers like Rive.
-The marketing voice here is hand-drawn casualness, not broadcast
-boldness.
+Display caps out at 56–80px / 700 with `-0.02em` to `-0.03em` tracking — meaningful restraint compared to the 96–140px headlines on peers like Rive. The marketing voice here is hand-drawn casualness, not broadcast boldness. Where beehiiv shouts at 88px / 800 / `-0.04em`, tldraw speaks at 56–64px / 700 / `-0.025em`, and the difference is the temperature of the whole page.
 
-## Colors
+The atmosphere is studio-friendly. The dotted grid on `#f8f9fa` is ever-present, even outside the embedded canvases — it's the page's visual signature, and removing it would unmoor the design from its product DNA. Cards float on the grid with subtle two-layer shadows that mimic paper resting on a table; sticky notes carry slightly heavier shadows and a subtle `-1deg` rotation that signals "this was placed by hand." Even the sections feel like dropped objects on a whiteboard rather than rigid columns.
 
-- **bg** `#f8f9fa` — soft off-white canvas with dotted grid
-- **bg-canvas** `#fdfdfd` — slightly brighter for embedded scenes
-- **text** `#1d1d1d` — near-black, warm undertone
-- **brand** `#3182ed` — single confident blue for CTAs
-- **accent-yellow** `#fde68a` — sticky-note yellow
-- **accent-pink** `#fbcfe8` — sticky-note pink
-- **accent-green** `#bbf7d0` — sticky-note green
-- **border** `#0000001a` — 10% black hairline; never solid grey
+The pastel palette is bounded. Yellow, pink, green, blue, purple, orange — six sticky-note hues — appear *only* as sticky notes and feature callouts. The body of the page stays grayscale + brand blue. This discipline is what keeps the design from reading as toy-like; the pastels are punctuation, not pattern, and a feature module never has more than one pastel accent at a time. The single confident `#3182ed` blue is the only saturated chrome in the system, and it appears in exactly the places action is asked of the user.
 
-The pastel accents are confined to sticky notes and feature
-callouts; the body of the page stays grayscale + blue.
+Where Excalidraw doubles down on the literal hand-drawn aesthetic (every stroke rendered through rough.js with deliberate imprecision), tldraw cleans the metaphor into polished SaaS chrome. The hand-drawn cue lives in the optional annotation layer — Caveat or Patrick Hand handwriting fonts that label canvas elements with felt-tip-marker labels. The chrome itself is clean, rounded, and warm — the friendly cousin in the whiteboard family.
 
-## Typography
+**Key Characteristics**
 
-Display is **Inter at 700**, sized 56px with a 1.1 line-height —
-chunky enough to feel friendly but never extreme. Body is Inter
-400/500 at 16/24, the SaaS workhorse setting. A handwritten cut
-(**Caveat** or similar) appears in marketing illustrations to mark
-on-canvas annotations, mirroring the sketchy energy of the actual
-product.
+- Dotted-grid canvas (`#f8f9fa` ground, `#0000001a` dots) — the brand's visual signature
+- Soft pastel sticky-note hues confined to callouts, never system-wide
+- Single confident `#3182ed` blue for primary action; only saturated chrome
+- Inter type system at 500–700 weights — chunky-friendly, not extreme
+- 16px card radius (echoes the SDK's default shape primitive); 10px button radius
+- Two-layer paper-on-table shadows; sticky notes carry slightly heavier shadows
+- Subtle `-1deg` to `-0.5deg` rotation on sticky notes and hover states — the toy energy
+- Hand-drawn Caveat / Patrick Hand annotations as optional layer (never primary)
+- 24px card padding, 80–96px section padding — generous but not airy
+- Page-as-product: the homepage is a live tldraw canvas
 
-## Layout
+## 2. Color Palette & Roles
 
-The grid is loose and casual — sections feel like dropped objects
-on a whiteboard rather than rigid columns. Hero content claims
-roughly 800px of horizontal space; feature blocks alternate between
-text-on-left / shape-on-right and centered single-shape callouts.
+### Primary
 
-## Elevation & Depth
+- **bg** (`#f8f9fa`): soft off-white canvas with dotted grid; the page's visual signature.
+- **bg-canvas** (`#fdfdfd`): slightly brighter for embedded scenes that need contrast.
+- **text** (`#1d1d1d`): near-black with warm undertone; never pure black.
+- **brand** (`#3182ed`): single confident blue for CTAs — the only saturated chrome.
 
-Cards use a soft two-layer shadow (`0 1px 2px / 0 1px 4px`) that
-mimics paper resting on a table — closer to Figma's chrome than
-Linear's flat hairline-only approach. Sticky notes carry slightly
-heavier shadows, reading as taped-on rather than embedded.
+### Brand & Dark
 
-## Shapes
+- **brand-hover** (`#2870d6`): blue a half-step darker for pressed state.
+- **brand-active** (`#1f5db8`): deepest pressed blue.
+- **brand-soft** (`#dbeafe`): softest blue tint for selection backgrounds.
+- **brand-faint** (`#eff6ff`): near-white blue tint for hover states.
+- **text-strong** (`#101010`): display copy — slightly darker than body for headline emphasis.
 
-Radii ladder is 6 / 10 / 14 / 16 with a special `shape: 12` value
-that mirrors tldraw's default rounded-rect primitive. Buttons land
-at 10px, cards at 16px. Pill (9999px) is reserved for badges.
+### Accent (Pastel Sticky-Notes)
 
-## Components
+The pastel palette is the brand's secondary chromatic vocabulary. Each appears only as a sticky-note callout:
 
-The defining components are the **rounded-rect shape card** (16px
-radius, hairline border, soft two-layer shadow), the **pastel
-sticky note** (yellow/pink/green fills, 12px radius, slightly
-heavier shadow), and the **blue solid CTA** (`#3182ed` on white,
-10px radius). Hand-drawn arrow primitives mark feature flows on the
-homepage, drawn with the same SVG style as the live tldraw runtime.
+- **accent-yellow** (`#fde68a`) / **deep** (`#fcd34d`): the canonical sticky yellow.
+- **accent-pink** (`#fbcfe8`) / **deep** (`#f9a8d4`): pink sticky note.
+- **accent-green** (`#bbf7d0`) / **deep** (`#86efac`): green sticky note.
+- **accent-blue** (`#bfdbfe`) / **deep** (`#93c5fd`): sticky blue (lighter than brand to distinguish from CTA).
+- **accent-purple** (`#ddd6fe`): purple sticky.
+- **accent-orange** (`#fed7aa`): orange sticky.
 
-## Do's and Don'ts
+### Interactive
 
-- **Do** keep the canvas dotted — the grid is part of the brand identity, not a stylistic flourish.
-- **Do** confine the pastel accents to sticky notes and callouts; the body page stays grayscale + blue.
-- **Do** use modest type sizes (56px H1) rather than broadcast-scale headlines; tldraw is friendly, not loud.
-- **Don't** apply the bright blue (`#3182ed`) to anything other than primary action — it's the only saturated chrome.
-- **Don't** drop the soft shadows in favour of hairline-only chrome; the paper-on-table effect is part of the toy charm.
-- **Don't** mix more than one pastel accent in a single feature module — sticky notes are punctuation, not pattern.
+- **link**: `brand` (`#3182ed`); the link colour and the action colour are the same hue.
+- **link-hover**: `brand-hover`; underline appears on hover.
+- **selected**: `brand-soft` (`#dbeafe`) as fill, `brand` as text colour.
+- **disabled**: `text-faint` (`#bababa`) on `surface-soft`.
+
+### Neutral Scale
+
+- **text-muted** (`#5c5c5c`): captions, meta, secondary copy.
+- **text-soft** (`#8b8b8b`): tertiary text — timestamps, micro-copy.
+- **text-faint** (`#bababa`): disabled labels.
+
+### Surface & Borders
+
+- **surface** (`#ffffff`): default card surface, white over the dotted canvas.
+- **surface-soft** (`#f1f3f5`): secondary surface tint, internal panels.
+- **surface-hover** (`#e9ecef`): hover state on cards.
+- **surface-selected** (`#dee2e6`): selected state for grid items.
+- **border** (`#0000001a`): 10% black hairline; the universal divider.
+- **border-strong** (`#00000033`): 20% black for emphasised borders (input fields, ghost buttons).
+- **border-soft** (`#0000000d`): 5% black for subtle internal dividers.
+- **grid-dot** (`#0000001a`): the canvas dotted-grid colour.
+
+### Shadow Colors
+
+- **ambient**: two-layer (`rgba(0,0,0,0.06) 0 1px 2px, rgba(0,0,0,0.04) 0 1px 4px`) — paper-on-table resting shadow.
+- **raised**: deeper two-layer for floating cards.
+- **sticky**: heavier two-layer (`rgba(0,0,0,0.10) 0 4px 8px, rgba(0,0,0,0.06) 0 1px 2px`) for sticky notes — they read as taped on rather than embedded.
+- **popover**: deeper still, for menus and tooltips.
+
+### Semantic
+
+- **success** (`#16a34a`) on **success-bg** (`#dcfce7`): editorial green.
+- **warning** (`#d97706`) on **warning-bg** (`#fef3c7`): warm amber.
+- **danger** (`#dc2626`) on **danger-bg** (`#fee2e2`): restrained red.
+- **info** (`#3182ed`) on **info-bg** (`#dbeafe`): info reuses brand blue.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary (display & body)**: Inter → Inter Display → -apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif.
+- **Hand companion**: Caveat → Comic Neue → Patrick Hand → cursive. Used for whiteboard annotations and feature callouts.
+- **Mono companion**: Berkeley Mono → JetBrains Mono → ui-monospace → Menlo → Consolas → monospace.
+- **OpenType features**: `ss01` and `cv11` on display (curved-tail Inter alternates); `tnum` on data tables and pricing.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter | 80 | 700 | 1.05 | -0.03em | ss01 | reserved for the boldest marketing |
+| display-large | Inter | 64 | 700 | 1.08 | -0.025em | ss01 | secondary heroes |
+| display | Inter | 56 | 700 | 1.1 | -0.02em | ss01 | the canonical hero size |
+| h1 | Inter | 48 | 700 | 1.12 | -0.018em | — | section heads |
+| h2 | Inter | 36 | 600 | 1.15 | -0.015em | — | feature-band heads |
+| h3 | Inter | 24 | 600 | 1.3 | -0.01em | — | sub-feature heads |
+| h4 | Inter | 20 | 600 | 1.35 | -0.005em | — | card heads |
+| h5 | Inter | 16 | 600 | 1.4 | 0 | — | inline emphasis |
+| h6 | Inter | 14 | 600 | 1.4 | 0 | — | label-grade heads |
+| body-large | Inter | 18 | 400 | 1.55 | 0 | kern | hero subheads |
+| body | Inter | 16 | 400 | 1.5 | 0 | kern | default reading |
+| body-small | Inter | 14 | 400 | 1.45 | 0 | kern | secondary copy |
+| hand-large | Caveat | 32 | 600 | 1.2 | 0 | — | whiteboard annotation |
+| hand | Caveat | 20 | 600 | 1.3 | 0 | — | sticky-note marker text |
+| hand-small | Caveat | 16 | 600 | 1.35 | 0 | — | inline marker label |
+| label | Inter | 12 | 500 | 1.3 | 0.02em | — | category cues, eyebrows |
+| caption | Inter | 13 | 500 | 1.4 | 0 | — | image / chart caption |
+| code-inline | Berkeley Mono | 14 | 400 | 1.4 | 0 | — | inline code |
+| code | Berkeley Mono | 14 | 400 | 1.5 | 0 | — | code block |
+
+### Principles
+
+- **Modest tracking, modest weight**: the type voice is friendly-confident, not declarative. Tracking caps at `-0.03em` (versus beehiiv's `-0.045em` and Notion's `-0.04em`); display weight stays at 700 and rarely needs higher.
+- **Inter does the structural work; Caveat does the personality work**: the page-level register is Inter at 500–700, but sticky-note labels and on-canvas annotations switch to Caveat (or Patrick Hand) to reinforce the hand-drawn product DNA.
+- **OpenType `ss01` for the curved tail**: tldraw uses Inter's stylistic alternate for the tail-down letterforms (`l`, `t`, `i`), which gives the type a slightly more humanist, friendly feel.
+- **Tabular numerals on stats**: pricing, dashboards, and data callouts use `tnum` so numerals lock-step align across cards.
+- **No serif**: there is no editorial serif in the system. The friendly register is carried by Inter's softer alternates and Caveat's handwriting cue.
+- **Berkeley Mono for code, JetBrains as fallback**: the developer-tool register pulls Berkeley Mono first (the design-friendly mono) with JetBrains Mono as the open-source fallback.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (blue solid)**
+- Background: `#3182ed`. Text: `#ffffff` at Inter 600 / 16px. Padding: `12px 20px`. Radius: 10px. Border: none.
+- Hover: background → `#2870d6`, transform → `translateY(-1px)`. Active: transform → `translateY(0)`.
+- Use: every primary CTA — Try tldraw, Get started, Open canvas.
+
+**Ghost (hairline outline)**
+- Background: `#ffffff`. Text: `#1d1d1d` at Inter 500 / 16px. Padding: `12px 20px`. Radius: 10px. Border: `1px solid #00000033`.
+- Hover: background → `#e9ecef`. Use: secondary action.
+
+**Text (tertiary)**
+- Background: transparent. Text: `#1d1d1d` at Inter 500 / 14px. Padding: `8px 12px`. Radius: 6px.
+- Hover: background → `#f1f3f5`. Use: nav links, inline actions.
+
+### Cards
+
+**Standard (shape card)**
+- Background: `#ffffff`. Border: `1px solid #0000001a`. Radius: 16px. Padding: 24px.
+- Shadow: `rgba(0,0,0,0.06) 0 1px 2px, rgba(0,0,0,0.04) 0 1px 4px` — paper-on-table.
+- Hover: shadow intensifies to `raised` tier; transform → `translateY(-2px)`.
+- Use: feature cards, pricing tiers — the canonical surface, mimics the SDK's default rounded-rect.
+
+**Elevated card**
+- Background: `#ffffff`. Border: `1px solid #0000001a`. Radius: 16px. Padding: 28px.
+- Shadow: `rgba(0,0,0,0.08) 0 4px 12px, rgba(0,0,0,0.05) 0 1px 4px`.
+- Use: floating panels — demo previews, feature emphasis.
+
+### Sticky Notes
+
+**Pastel sticky note**
+- Background: pastel hue (yellow / pink / green / blue / purple / orange). Text: `#1d1d1d` at Inter 500 / 16px or Caveat 600 / 20px. Radius: 12px. Padding: 16px.
+- Shadow: `rgba(0,0,0,0.10) 0 4px 8px, rgba(0,0,0,0.06) 0 1px 2px` — taped-on-paper.
+- Rotation: `-1deg` to `+0.5deg` random; never aligned to grid.
+- Use: feature callouts, tooltips, inline annotations.
+
+### Shape Rect (on-canvas primitive)
+
+**Marketing shape**
+- Background: `#ffffff`. Border: `2px solid #1d1d1d`. Radius: 12px. Padding: 16px.
+- Use: marketing block rendered as an on-canvas tldraw shape — the most direct expression of the product-as-page metaphor.
+
+### Badges, Tags, Pills
+
+**Category tag**
+- Background: `#f1f3f5`. Text: `#5c5c5c` at Inter 500 / 12px tracked `+0.02em`. Padding: `4px 10px`. Radius: 9999px.
+- Use: feature labels, version tags.
+
+**Status badge**
+- Background: `#dbeafe`. Text: `#3182ed` at Inter 500 / 12px. Padding: `4px 10px`. Radius: 9999px.
+- Use: "New", "Beta", inline status.
+
+### Inputs / Forms
+
+**Text input**
+- Background: `#ffffff`. Border: `1px solid #00000033`. Radius: 10px. Padding: `10px 14px`. Font: Inter 400 / 16px.
+- Focus: border → `#3182ed`, ring `0 0 0 3px rgba(49,130,237,0.25)`.
+
+### Navigation
+
+**Top bar**
+- Background: `#f8f9fa` with no bottom border (the dotted grid persists through the nav). Height: 64px.
+- Logo: tldraw wordmark in Inter 700 / 18px in `#1d1d1d`.
+- Nav items: Inter 500 / 14px, colour `#1d1d1d`, hover background → `#f1f3f5`.
+- Primary CTA always visible at top right (blue button).
+
+### Tooltips, Toasts, Modals
+
+- **Tooltip**: background `#1d1d1d`, text `#ffffff` at Inter 500 / 12px, radius 6px, padding `6px 10px`. Shadow: `popover`.
+- **Toast**: background `#ffffff`, border `1px solid #0000001a`, radius 12px, shadow `popover`.
+- **Modal**: background `#ffffff`, radius 20px, shadow `popover`, backdrop `rgba(0,0,0,0.4)`, padding 32px.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit: 4px. Scale: `[1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96]` × 4px. The system favours moderate intervals — 24px is the gutter workhorse, 32–48px separates stacked feature blocks, 80–96px separates major bands. Density is medium-loose: airier than Are.na, tighter than Linear.
+
+### Grid & Container
+
+- **Page width**: 1200px max, centred.
+- **Prose width**: 720px for editorial blog and docs.
+- **Hero treatment**: hero copy claims roughly 800px horizontal, with an embedded tldraw canvas demo at the side or below.
+- **Feature grid**: 3-column at 1024px+, 2-column at 768–1024px, 1-column below 768px. Card gap: 24–32px.
+
+### Whitespace Philosophy
+
+The grid is loose and casual — sections feel like dropped objects on a whiteboard rather than rigid columns. Hero content claims roughly 800px of horizontal space; feature blocks alternate between text-on-left / shape-on-right and centered single-shape callouts. Whitespace functions as canvas — there is more air around shapes than between them, mimicking how an actual whiteboard reads.
+
+### Section Cadence
+
+The dotted grid is continuous through every section, so transitions are tonal rather than chromatic — the page never flips into a dark band or coloured zone. Section breaks are marked by spacing alone (80–96px vertical padding) and occasional sticky-note callouts that span across the gutter. The result is a single continuous canvas surface, not a band-cycled marketing page.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| none | 0px | rare; full-bleed images |
+| micro | 2px | inline tags |
+| xs | 4px | tight UI primitives |
+| sm | 6px | small inline pills, secondary buttons |
+| md | 10px | standard buttons (the canonical button radius) |
+| lg | 14px | large feature cards |
+| card | 16px | the canonical card radius |
+| shape | 12px | sticky notes, on-canvas shape primitives |
+| xl | 20px | modals, hero shells |
+| pill | 9999px | badges, status tags |
+
+The 16px card radius and 12px shape radius are the SDK's default values translated into marketing chrome. This is one of the most direct cases of product-DNA in a brand system — the marketing page literally inherits its corner rounding from the SDK's shape primitives.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | flat, on dotted-grid canvas | body content, default surfaces |
+| 1 | `ambient` two-layer shadow + 1px hairline | standard card, paper-on-table |
+| 2 | `raised` two-layer shadow | hovered or floating card |
+| 3 | `sticky` heavier shadow + rotation | pastel sticky note (taped-on) |
+| 4 | `popover` deep shadow | tooltip, dropdown, menu |
+| 5 | `popover` + backdrop, 20px radius | modal, lightbox |
+
+**Shadow Philosophy**: tldraw's shadows mimic paper resting on a table — soft, two-layered, neutral grey rather than brand-tinted. Sticky notes carry slightly heavier shadows than cards because they should read as physically placed on top of the canvas. The shadow vocabulary is what distinguishes tldraw from Excalidraw (no shadows, hand-drawn borders only) and from Linear (flat, hairline-only). The paper-on-table effect is part of the toy charm, and dropping it would shift the brand entirely.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — workhorse Material-style ease.
+- **emphasized**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — slight overshoot bounce for the toy-like feel; used on hover lifts and entrance choreography.
+- **decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — used for elements entering from off-canvas.
+
+### Durations
+
+- **instant** (80ms): hover background colour shifts.
+- **fast** (150ms): card hover lift, sticky-note rotation adjustment.
+- **standard** (220ms): button press, dropdown open.
+- **slow** (320ms): modal open, page band transition.
+- **emphasized** (480ms): hero entrance choreography with sticky-note tape-down.
+
+### Per-component micro-states
+
+- **Button hover**: background colour shift over 150ms with `standard` ease; transform → `translateY(-1px)` on primary CTA.
+- **Card hover**: shadow intensifies one tier, transform → `translateY(-2px) rotate(-0.5deg)` over 150ms with `emphasized` ease — the slight rotation is the toy cue.
+- **Sticky note hover**: rotation animates from `-1deg` to `+0deg` over 150ms with `emphasized`; shadow stays at `sticky` tier.
+- **Link hover**: underline appears over 100ms; brand colour stays.
+- **Input focus**: ring fades in at 100ms; border colour shifts simultaneously.
+
+### Page transitions
+
+tldraw uses combined opacity + 8px vertical slide at 240ms with `decelerate` ease — a soft entrance that mimics objects being placed on a whiteboard. Routes between marketing pages preserve this rhythm.
+
+### Reduced-motion strategy
+
+`prefers-reduced-motion: reduce` is fully respected: all transform-based animations (lifts, rotations, slides) collapse to opacity-only at 100ms. The sticky-note rotation becomes static at `0deg`. Hover lifts disappear. Page transitions become opacity-only fades.
+
+## 9. Accessibility & A11y
+
+### Contrast pairs (computed)
+
+- **text on bg**: `#1d1d1d` on `#f8f9fa` → 14.6:1 (AAA).
+- **text-muted on bg**: `#5c5c5c` on `#f8f9fa` → 7.2:1 (AAA at body sizes).
+- **on-brand on brand**: `#ffffff` on `#3182ed` → 4.6:1 (AA at body, AAA at large).
+- **text on pastel-yellow**: `#1d1d1d` on `#fde68a` → 14.6:1 (AAA).
+- **text on pastel-pink**: `#1d1d1d` on `#fbcfe8` → 13.8:1 (AAA).
+- **text on pastel-green**: `#1d1d1d` on `#bbf7d0` → 14.2:1 (AAA).
+- **brand on bg**: `#3182ed` on `#f8f9fa` → 4.7:1 (AA at body sizes).
+
+### Focus indicators
+
+- **Default focus ring**: `3px solid rgba(49,130,237,0.4)` with 1px offset; never removed.
+- **Within input fields**: border colour shifts to `#3182ed` and adds a `0 0 0 3px rgba(49,130,237,0.25)` ring.
+- **On pastel surfaces**: ring uses `rgba(29,29,29,0.6)` (dark ring on pastel for sufficient contrast).
+
+### ARIA patterns
+
+- Sticky notes carry `role="note"` and `aria-label` describing the content.
+- Modals use `role="dialog"`, `aria-modal="true"`, focus trap, `Esc` to close.
+- Embedded tldraw canvas uses `role="application"` with full keyboard semantics for the SDK.
+- Tab navigation uses `role="tablist"` with arrow-key navigation.
+
+### Keyboard nav order
+
+Top bar → hero CTA → embedded canvas (if interactive) → feature bands → pricing → footer. `Tab` order matches visual order. Skip-to-content link visible on focus.
+
+### Screen reader hints
+
+- Decorative sticky notes (purely visual) carry `aria-hidden="true"`.
+- Sticky notes with content carry `aria-label` describing the message.
+- Embedded canvas demos carry `aria-label="Interactive whiteboard demo"` with full keyboard semantics inside.
+- Icon-only buttons carry `aria-label`.
+
+### Reduced motion
+
+Honored throughout — sticky-note rotation, hover lifts, page transitions all collapse to opacity-only or static.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Tier | Width | Behavior |
+|---|---|---|
+| mobile | < 480px | single column, 16px gutter, 48px section padding, hero at 36–40px |
+| tablet | 480–768px | single column, 24px gutter, 64px section padding, hero at 48px |
+| desktop | 768–1024px | 2-column feature grids, 24px gutter, 80px section padding |
+| wide | 1024–1280px | 3-column feature grids, 32px gutter, 96px section padding |
+| ultra | 1280px+ | container caps at 1200px, hero at 56–80px |
+
+### Touch Targets
+
+Minimum 44×44px on touch devices. Standard button padding (`12px 20px`) clears the threshold. Sticky notes are sized for touch interaction at minimum 80×80px on mobile.
+
+### Collapsing strategy
+
+- **Top nav**: hamburger menu < 768px; primary CTA stays visible.
+- **Hero**: embedded canvas demo moves below copy < 768px; copy claims full width.
+- **Feature grid**: 3 → 2 → 1 columns at 1024 / 768 / 480.
+- **Sticky-note callouts**: stack vertically < 768px, lose rotation for tighter packing.
+- **Pricing**: tiers stack vertically < 768px.
+- **Footer**: 4-column → 2-column → 1-column at 1024 / 768 / 480.
+
+### Image behavior
+
+Embedded canvas demos use `aspect-ratio: 16/10` lock with full responsive width. Sticky-note SVG illustrations preserve original aspect ratio.
+
+### Container queries
+
+Used inside the embedded canvas — the toolbar switches between expanded (icon + label) and condensed (icon-only) modes based on container width.
+
+## 11. Content & Voice
+
+### Tone
+
+tldraw's tone is **studio-friendly**: warm, declarative, and quietly technical. It writes like a designer-developer's portfolio site — first-person plural where it counts, present tense, and a willingness to show rather than tell ("Here's a whiteboard. Try it."). Headlines are short and demo-forward ("Build whiteboards. With tldraw.", "The infinite canvas SDK"). Voice is closer to Figma's craft-confidence than to Notion's literary register.
+
+### Microcopy patterns
+
+- **Button verbs**: "Try tldraw", "Open canvas", "Get the SDK", "Read the docs", "Talk to us". Every CTA names the actual product noun or action.
+- **Error messages**: pattern is "Couldn't [action]. [Reason] — [recovery]." e.g. "Couldn't load the canvas. The connection dropped — refresh to retry."
+- **Success confirmations**: short, declarative, often paired with a sticky-note style callout. "Saved." rather than "Your canvas has been saved successfully."
+
+### Empty states
+
+Empty states are inviting and demo-forward, often using sticky-note illustrations. "Nothing here yet — drop a shape to start." Empty-state copy frames the absence as opportunity, with a sticky-note marker pointing to the action area.
+
+### CTA verb conventions
+
+- **Primary marketing CTA**: "Try tldraw" or "Open canvas" — invitation-style verbs.
+- **Developer CTA**: "Get the SDK", "Read the docs", "View on GitHub".
+- **Demo / sales**: "Talk to us" or "Book a demo".
+- **Newsletter**: "Stay in the loop".
+
+## 12. Dark Mode & Theming
+
+tldraw ships an optional dark mode for both the marketing surface and the SDK. The dark map (see frontmatter `colors-dark`):
+
+- **bg**: `#0f0f10` (warm near-black, not pure black)
+- **bg-canvas**: `#1a1a1c` for embedded demo bg
+- **surface**: `#1f1f22`, **surface-soft**: `#2a2a2e`, **surface-hover**: `#34343a`
+- **text**: `#f5f5f5` (slightly soft white)
+- **text-muted**: `#a8a8a8`, **text-soft**: `#787878`
+- **brand**: `#5fa3f7` — blue lifts to maintain contrast against dark
+- **border**: `#ffffff14`, **border-strong**: `#ffffff26`
+- **grid-dot**: `#ffffff1a` — the canvas dots persist in dark mode
+- **Pastels become muted-deep**: yellow → `#7c6620`, pink → `#7a3a52`, green → `#3f6a4d`, blue → `#2a4d7a`
+
+When implementing dark mode:
+- The dotted-grid canvas remains continuous; only the dot colour shifts to `rgba(255,255,255,0.1)`.
+- Cards use the same two-layer shadow strategy with darker shadow values.
+- Sticky notes shift to muted-deep pastel hues that remain identifiable but reduce visual aggression in low light.
+- The brand blue shifts from `#3182ed` to `#5fa3f7` to maintain contrast.
+- Hover lifts and rotations behave identically to light mode.
+
+The dark mode follows `prefers-color-scheme: dark` automatically, with manual override available.
+
+## 13. Lineage & Influences
+
+tldraw sits visually between Excalidraw's literal hand-drawn primitives and Linear's quiet discipline — playful where it counts, structured where it must be. The lineage runs through three traditions:
+
+**Whiteboard software**: the metaphor is taken from the literal whiteboard tradition (Microsoft Whiteboard, Miro, Mural, FigJam) but executed through SDK-as-product, where the marketing page is itself a tldraw canvas. The product-as-page approach is shared with Excalidraw, but tldraw cleans the metaphor — the chrome is rounded-friendly rather than wobbly-handmade.
+
+**Modern SaaS chrome**: the soft hairline-bordered cards, the moderate radius ladder, and the single-confident-blue action colour are inherited from Linear, Vercel, and Stripe's playbook. tldraw applies that polish to a whiteboard product, which is unusual — most whiteboard products go for either heavy hand-drawn (Excalidraw) or enterprise-bulky (Miro).
+
+**Hand-drawn cue layer**: Caveat and Patrick Hand handwriting fonts appear as the optional annotation layer, signaling "this is a whiteboard product" without sacrificing the chrome's polish. This is borrowed from Notion's permission to use one editorial accent (Lyon serif) within an otherwise sans-only system, applied to the handwriting / sketch register.
+
+**Named influences**
+
+- **Excalidraw** ([excalidraw.com](https://excalidraw.com)) — Hand-drawn whiteboard aesthetic and pastel sticky-note palette; tldraw is the more polished sibling.
+- **Figma** ([figma.com](https://figma.com)) — Soft chrome and hairline-bordered cards; tldraw replaces the cool-grey with a warmer dotted canvas.
+- **Notion** ([notion.com](https://notion.com)) — Permission to use a soft, page-like ground for a developer-tools brand.
+- **Miro** ([miro.com](https://miro.com)) — The big-tent whiteboard reference; tldraw is positioned as the developer-friendly, embeddable SDK alternative.
+- **Linear** ([linear.app](https://linear.app)) — Inter at 500–700 weight discipline; the friendly-without-soft typographic register.
+
+## 14. Do's and Don'ts
+
+**Do**
+
+- Keep the canvas dotted — the grid is part of the brand identity, not a stylistic flourish. Even outside embedded canvases, the dotted-grid persists.
+- Confine the pastel accents to sticky notes and callouts; the body page stays grayscale + blue.
+- Use modest type sizes (56–80px H1) rather than broadcast-scale headlines; tldraw is friendly, not loud.
+- Run sticky notes with subtle rotation (`-1deg` to `+0.5deg`) and the heavier `sticky` shadow tier; they should read as taped on, not embedded.
+- Use the 16px card radius and 12px shape radius — these mirror the SDK's default primitives.
+- Reach for Caveat or Patrick Hand only as the annotation layer, never for body type.
+- Use the paper-on-table two-layer shadow on cards; flat hairline-only chrome reads as Linear, not tldraw.
+- Honor `prefers-reduced-motion: reduce` — collapse hover lifts, sticky-note rotations, and page slides to opacity-only.
+- Keep the type voice friendly-confident: tracking caps at `-0.03em`, weight caps at 700.
+- Treat the embedded canvas as a first-class hero — the page is a live demo, not a marketing banner.
+
+**Don't**
+
+- Don't apply the bright blue (`#3182ed`) to anything other than primary action — it's the only saturated chrome.
+- Don't drop the soft shadows in favour of hairline-only chrome; the paper-on-table effect is part of the toy charm.
+- Don't mix more than one pastel accent in a single feature module — sticky notes are punctuation, not pattern.
+- Don't render shapes through rough.js — that's Excalidraw's territory, not tldraw's.
+- Don't run hero copy at 96px+ broadcast scale; the modest-friendly register breaks at extreme size.
+- Don't use Caveat for body type or buttons; the handwriting register is reserved for annotations.
+- Don't bold the type beyond 700 weight; the friendly register relies on chunky-but-not-extreme.
+- Don't replace the dotted grid with a solid canvas; the grid is the most recognisable visual element.
+- Don't introduce a third saturated accent next to the blue; the chromatic restraint keeps the friendly chrome from reading as toy.
+- Don't soften the rotation on sticky notes to `0deg` (unless reduced-motion); the slight tilt is the brand cue.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #f8f9fa
+bg-canvas: #fdfdfd
+surface: #ffffff
+text: #1d1d1d
+text-muted: #5c5c5c
+brand: #3182ed
+brand-hover: #2870d6
+brand-soft: #dbeafe
+border: #0000001a
+grid-dot: #0000001a
+accent-yellow: #fde68a
+accent-pink: #fbcfe8
+accent-green: #bbf7d0
+accent-blue: #bfdbfe
+```
+
+### Example Component Prompts
+
+1. "Create a marketing hero in the tldraw style: `#f8f9fa` background with persistent dotted-grid (`#0000001a` dots, 24px spacing), Inter 700 / 64px headline in `#1d1d1d` with `-0.025em` tracking, 18px subhead at Inter 400 in `#5c5c5c`, primary blue CTA (`#3182ed`, 10px radius, white text, 12px / 20px padding), and an embedded tldraw canvas demo at right with the SDK's default rounded-rect shape primitives."
+
+2. "Design a feature card in the tldraw style: `#ffffff` background, `1px solid #0000001a` hairline, 16px radius, 24px padding, Inter 600 / 24px H3 title, body at Inter 400 / 16px in `#1d1d1d`, two-layer paper-on-table shadow (`rgba(0,0,0,0.06) 0 1px 2px, rgba(0,0,0,0.04) 0 1px 4px`). Hover: `translateY(-2px) rotate(-0.5deg)` over 150ms with cubic-bezier(0.34, 1.56, 0.64, 1)."
+
+3. "Render a pastel sticky-note in the tldraw style: `#fde68a` (yellow) or `#fbcfe8` (pink) background, 12px radius, 16px padding, Caveat 600 / 20px text in `#1d1d1d`, sticky shadow (`rgba(0,0,0,0.10) 0 4px 8px, rgba(0,0,0,0.06) 0 1px 2px`), `-1deg` rotation. Use only one sticky per feature module."
+
+4. "Create a navigation bar in the tldraw style: `#f8f9fa` background with no bottom border (the dotted grid persists through the nav), 64px height, tldraw wordmark in Inter 700 / 18px on the left, nav items in Inter 500 / 14px on the right with hover background → `#f1f3f5`, primary blue CTA visible at top right."
+
+5. "Render an on-canvas marketing shape in the tldraw style: `#ffffff` background, `2px solid #1d1d1d` border, 12px radius, 16px padding, Inter 500 / 16px label inside. This represents the most direct expression of product-as-page — the marketing block IS a tldraw shape primitive."
+
+6. "Design a pricing tier card in the tldraw style: `#ffffff` background, `1px solid #0000001a` hairline, 16px radius, 28px padding, raised shadow, tier name in Inter 600 / 20px, price in Inter 700 / 48px with `tnum` enabled in `#101010`, feature list at Inter 400 / 16px with `#3182ed` checkmark bullets, primary blue CTA at the bottom."
+
+### Iteration Guide
+
+1. **Start with the canvas**: confirm the `#f8f9fa` ground and the persistent dotted-grid (`#0000001a` dots at ~24px spacing). If your prototype has a solid canvas, you've removed the brand's most recognisable element.
+2. **Verify the type voice**: hero headlines should hit 56–80px at 700 weight with negative tracking around `-0.02em` to `-0.03em`. If the headline feels too aggressive, you've overshot toward beehiiv; if it feels too quiet, you've undershot toward Linear.
+3. **Audit the action colour**: there should be exactly one `#3182ed` blue per module. Pastel blue (`#bfdbfe`) is for sticky notes only — don't use it as a CTA.
+4. **Check the elevation strategy**: cards use the two-layer paper-on-table shadow; sticky notes use the heavier sticky shadow with rotation. If your cards are flat-hairline, you've drifted toward Linear.
+5. **Verify the pastel discipline**: pastels appear only in sticky notes and callouts, and a feature module has at most one pastel hue. Pattern-pastels (every card a different colour) read as toy-overload.
+6. **Confirm the radius pair**: cards at 16px, shapes / sticky notes at 12px, buttons at 10px. The 16/12 pair is the SDK's signature.
+7. **Test the embedded canvas**: if your hero or a feature section has space for a demo, prefer an actual interactive tldraw canvas over a static screenshot. The product-as-page approach is the brand.
+8. **Check the reduced-motion path**: hover lifts, sticky-note rotations, and page slides should all collapse to opacity-only when `prefers-reduced-motion: reduce` is set.

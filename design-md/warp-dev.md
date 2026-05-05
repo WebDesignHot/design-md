@@ -3,70 +3,274 @@ name: Warp
 tagline: Near-black canvas, neon-lime cursor, real terminal screenshots — a marketing site that boots like a shell.
 author: webdesignhot
 source_url: https://www.warp.dev
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools, ai]
 tags: [dark, minimal, sans, mono, dense, structured, cool]
 preview_swatch: ['#121212', '#c2ff00', '#ffffff']
 related: [raycast, vercel, anthropic]
-description: 'Warp''s marketing site mirrors the terminal it sells — a near-black `#121212` canvas, Inter at 600 for an oversized hero "Warp is the agentic development environment", and white-button download CTAs that read like macOS app actions. Real screenshots of the agent terminal carry a neon-lime accent rather than the marketing surface itself, so the page feels like documentation that happens to convert.'
+description: 'Warp''s marketing site mirrors the terminal it sells — a near-black `#121212` canvas, Inter at 500 for an oversized 72px hero "Warp is the agentic development environment", and white-pill download CTAs that read like macOS app actions. Real screenshots of the agent terminal carry a neon-lime cursor accent rather than the marketing surface itself, so the page feels like documentation that happens to convert.'
 
 colors:
-  bg: '#121212'              # body backdrop, observed as rgb(18,18,18)
-  bg-100: '#1a1a1a'          # elevated panel base
-  bg-200: '#222222'          # input fields, terminal chrome
-  bg-300: '#2c2c2c'          # popover / hover state
-  surface-terminal: '#0e0e0e' # the actual terminal screenshot bg
-  text: '#ffffff'            # primary copy on dark
-  text-200: '#cccccc'         # secondary copy
-  text-300: '#999999'         # captions, "Trusted by" labels (rgba 255/255/255 .6)
-  text-400: '#666666'         # disabled / metadata
-  brand: '#c2ff00'           # neon-lime accent (terminal cursor / highlight)
-  brand-soft: '#7a9e1f'       # darker lime for hover states
-  on-brand: '#121212'
-  cta-bg: '#ffffff'          # primary "Download for Mac" button bg
-  cta-text: '#000000'        # primary CTA text
-  link: '#7eb8ff'             # in-copy link hue
-  border: '#2a2a2a'          # desaturated divider, never pure grey
+  bg: '#121212'                  # body backdrop, observed as rgb(18,18,18) — matches macOS Terminal default
+  bg-100: '#1a1a1a'              # elevated panel base — first tier card
+  bg-200: '#222222'              # input fields, terminal chrome strip
+  bg-300: '#2c2c2c'              # popover / hover state
+  bg-400: '#363636'              # rarely used, deepest elevated
+  surface-terminal: '#0e0e0e'    # the actual terminal screenshot bg, deeper than the page
+  surface-card: '#1a1a1a'        # primary card surface
+  surface-banner: '#f5f5f5'      # announcement banner light strip above hero
+  text: '#ffffff'                # primary copy on dark
+  text-200: '#cccccc'            # secondary copy
+  text-300: '#999999'            # captions, "Trusted by" labels (rgba 255,255,255,0.6)
+  text-400: '#666666'            # disabled / metadata
+  text-500: '#444444'            # faintest
+  text-banner: '#0a0a0a'         # text on light banner strip
+  brand: '#c2ff00'               # neon-lime accent (terminal cursor / highlight)
+  brand-soft: '#7a9e1f'           # darker lime for hover states inside terminal
+  brand-glow: 'rgba(194,255,0,0.20)' # lime glow halo around cursor
+  on-brand: '#121212'            # ink on lime
+  cta-bg: '#ffffff'              # primary "Download for Mac" button bg
+  cta-text: '#000000'            # primary CTA text
+  cta-bg-hover: '#f5f5f5'        # subtle off-white on hover
+  link: '#7eb8ff'                # in-copy link hue (cool blue)
+  link-hover: '#a3cdff'          # lighter blue on hover
+  border: '#2a2a2a'              # desaturated divider, never pure grey
+  border-soft: 'rgba(255,255,255,0.06)' # softer hairline
+  border-strong: 'rgba(255,255,255,0.12)' # hover/focus outline
+  terminal-cursor: '#c2ff00'     # the actual lime cursor inside terminal screenshots
+  terminal-prompt: '#a78bfa'     # purple command marker / prompt
+  terminal-success: '#86efac'    # green output text
+  terminal-error: '#fca5a5'      # red error text
+  terminal-warning: '#fde047'    # yellow warning
+  semantic-success: '#86efac'
+  semantic-warning: '#fde047'
+  semantic-danger: '#fca5a5'
+  semantic-info: '#7eb8ff'
 
 typography:
   display:
     family: 'Inter, "Inter Placeholder", -apple-system, "system-ui", sans-serif'
     weights: [400, 500, 600, 700]
+    opentype: ['kern', 'liga', 'calt']
   body:
     family: 'Inter, "Inter Placeholder", -apple-system, "system-ui", sans-serif'
     weights: [400, 500]
+    opentype: ['kern', 'liga', 'calt']
   mono:
-    family: '"Hack", "JetBrains Mono", "Fira Code", Menlo, Monaco, Courier, monospace'
-    weights: [400, 500]
+    family: '"Hack", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Monaco, Courier, monospace'
+    weights: [400, 500, 700]
+    opentype: ['kern', 'tnum', 'zero']
   scale:
-    h1:    { size: 72, weight: 500, lineHeight: 1.05, tracking: '-0.02em' }
-    h2:    { size: 40, weight: 500, lineHeight: 1.15, tracking: '-0.01em' }
-    h3:    { size: 24, weight: 500, lineHeight: 1.30 }
-    body:  { size: 16, weight: 400, lineHeight: 1.55 }
-    mono-label: { size: 12, weight: 500, family: mono }
+    display-hero:    { size: 96, weight: 500, lineHeight: 1.0, tracking: '-0.025em', family: display, opentype: 'kern, calt' }
+    display-large:   { size: 72, weight: 500, lineHeight: 1.05, tracking: '-0.02em', family: display, opentype: 'kern, calt' }
+    h1:              { size: 56, weight: 500, lineHeight: 1.1, tracking: '-0.015em', family: display, opentype: 'kern, calt' }
+    h2:              { size: 40, weight: 500, lineHeight: 1.15, tracking: '-0.01em', family: display, opentype: 'kern, calt' }
+    h3:              { size: 28, weight: 500, lineHeight: 1.25, tracking: '-0.005em', family: display, opentype: 'kern, calt' }
+    h4:              { size: 22, weight: 500, lineHeight: 1.3, tracking: '0', family: display, opentype: 'kern, calt' }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body, opentype: 'kern, calt' }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body, opentype: 'kern, calt' }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.55, tracking: '0', family: body, opentype: 'kern, calt' }
+    button:          { size: 15, weight: 500, lineHeight: 1.0, tracking: '0', family: body, opentype: 'kern, calt' }
+    button-large:    { size: 16, weight: 500, lineHeight: 1.0, tracking: '0', family: body, opentype: 'kern, calt' }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.4, tracking: '0', family: body, opentype: 'kern, calt' }
+    label:           { size: 12, weight: 500, lineHeight: 1.3, tracking: '0.04em', family: body, transform: 'uppercase' }
+    label-mono:      { size: 12, weight: 500, lineHeight: 1.3, tracking: '0.04em', family: mono, transform: 'uppercase' }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4, tracking: '0', family: body }
+    micro:           { size: 11, weight: 500, lineHeight: 1.3, tracking: '0.03em', family: body }
+    code:            { size: 13, weight: 400, lineHeight: 1.55, tracking: '0', family: mono, opentype: 'tnum, zero' }
+    code-prompt:     { size: 13, weight: 500, lineHeight: 1.55, tracking: '0', family: mono }
+    terminal-cmd:    { size: 14, weight: 400, lineHeight: 1.4, tracking: '0', family: mono }
 
 radius:
+  none: 0
+  micro: 2
   xs: 4
-  sm: 7       # primary CTA radius (observed)
+  sm: 7                          # primary CTA radius (observed)
   md: 8
   lg: 12
   xl: 16
+  xxl: 24
   card: 12
+  terminal: 12                   # terminal screenshot frame matches macOS window chrome
   pill: 9999
 
+spacing:
+  base: 4
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  xxl: 32
+  section-sm: 64
+  section: 96
+  section-lg: 128
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
 layout:
-  container: 1200
-  gutter: 24
-  rhythm: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+  hero-height: 720
+  grid-gap: 24
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-terminal: 'steps(1, end)'  # terminal-style instant transitions
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 320
+  duration-cursor-blink: 1000     # the lime cursor inside terminal screenshots
+  reduced-motion: 'respects prefers-reduced-motion: reduce — cursor blink stops; transforms collapse to opacity'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0,0,0,0.30) 0 1px 2px'
+  standard: 'rgba(0,0,0,0.40) 0 4px 12px'
+  elevated: 'rgba(0,0,0,0.60) 0 12px 32px'
+  deep: 'rgba(0,0,0,0.80) 0 24px 48px'
+  ring: '0 0 0 2px #c2ff00'
+  cta-glow: '0 0 0 4px rgba(255,255,255,0.10)'
+  terminal-glow: '0 0 24px rgba(194,255,0,0.10)'
+
+accessibility:
+  contrast-text-on-bg: 18.5              # white on #121212 — AAA
+  contrast-soft-on-bg: 9.4               # #cccccc on #121212 — AAA
+  contrast-muted-on-bg: 6.0              # #999999 on #121212 — AA at body, AAA at large
+  contrast-text-on-cta: 21.0             # black on white — AAA
+  contrast-link-on-bg: 7.6               # #7eb8ff on #121212 — AAA at body
+  focus-ring: '2px solid #c2ff00 with 2px offset on dark canvas'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual; skip-link present; download platform selector arrow-keys'
 
 components:
-  - cta-white-pill
-  - terminal-screenshot
-  - product-row-card
-  - logo-cloud
-  - announcement-banner
+  button-primary:
+    background: '#ffffff'
+    text: '#000000'
+    radius: 7
+    padding: '10px 18px'
+    height: 40
+    font: button-large
+    hover: 'background #f5f5f5'
+    active: 'background #ebebeb'
+    use: 'primary CTA — Download for Mac, white-pill the page''s most chromatic moment'
+  button-secondary:
+    background: 'transparent'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 7
+    padding: '10px 18px'
+    height: 40
+    font: button-large
+    hover: 'background #1a1a1a; border rgba(255,255,255,0.16)'
+    use: 'secondary action — View Docs / Read More'
+  button-ghost:
+    background: 'transparent'
+    text: '#cccccc'
+    radius: 7
+    padding: '8px 14px'
+    font: button
+    hover: 'text #ffffff'
+    use: 'tertiary text-link CTA / nav button'
+  button-platform:
+    background: '#1a1a1a'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 7
+    padding: '10px 16px'
+    font: button
+    hover: 'background #222222'
+    use: 'platform selector — Mac / Linux / Windows toggle'
+  card-feature:
+    background: '#1a1a1a'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 12
+    padding: '32px'
+    use: 'feature card — bg-100 above canvas, no shadow'
+  card-product-row:
+    background: '#1a1a1a'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 12
+    padding: '40px'
+    use: 'horizontal product-row card — feature copy left, screenshot right'
+  card-pricing:
+    background: '#1a1a1a'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 12
+    padding: '32px'
+    use: 'pricing tier card'
+  terminal-screenshot:
+    background: '#0e0e0e'
+    text: '#ffffff'
+    border: '1px solid #1a1a1a'
+    radius: 12
+    padding: 0
+    use: 'real terminal screenshot — deeper than canvas, with macOS traffic-light chrome'
+  terminal-chrome:
+    background: '#222222'
+    text: '#cccccc'
+    radius: '12 12 0 0'
+    height: 28
+    use: 'macOS-style terminal title bar with traffic-light buttons'
+  input:
+    background: '#1a1a1a'
+    text: '#ffffff'
+    border: '1px solid #2a2a2a'
+    radius: 7
+    padding: '10px 14px'
+    height: 40
+    font: body
+    focus: 'border #c2ff00; ring 0 0 0 2px rgba(194,255,0,0.20)'
+    use: 'email / form input'
+  badge-pill:
+    background: '#1a1a1a'
+    text: '#cccccc'
+    border: '1px solid #2a2a2a'
+    radius: 9999
+    padding: '4px 12px'
+    font: micro
+    use: 'NEW / category badge'
+  badge-lime:
+    background: 'rgba(194,255,0,0.10)'
+    text: '#c2ff00'
+    border: '1px solid rgba(194,255,0,0.20)'
+    radius: 9999
+    padding: '4px 12px'
+    font: micro
+    use: 'feature badge — lime tint, sparingly used'
+  announcement-banner:
+    background: '#f5f5f5'
+    text: '#0a0a0a'
+    radius: 0
+    padding: '8px 16px'
+    font: caption
+    use: 'top-of-page announcement strip — light on dark, single moment of bright contrast'
+  nav-link:
+    background: 'transparent'
+    text: '#cccccc'
+    font: nav-link
+    padding: '8px 14px'
+    hover: 'text #ffffff'
+    use: 'top nav menu — Product / Pricing / Docs / Blog / Sign In'
+  logo-cloud-item:
+    background: 'transparent'
+    opacity: 0.6
+    use: 'customer logo — desaturated, low opacity, hover lifts to 1.0'
+
+dark-mode: optional
 
 lineage:
   summary: |
@@ -74,110 +278,629 @@ lineage:
     every page reads like a CLI session that grew a marketing layer. The
     canvas sits at `#121212`, a touch lighter than Linear's `#08090a` and
     Raycast's `#07080a`, deliberately close to the macOS Terminal default
-    background. Display type is Inter at 500–600, sized 72px on the hero
-    "Warp is the agentic development environment" — the unusually open
-    line-height (1.05) and the centered alignment make the page feel like
-    a man-page title rather than a SaaS pitch. The brand chromatic accent
-    is a neon-lime (`#c2ff00`) that lives almost entirely *inside* the
-    product screenshots — the terminal's cursor and command markers — so
-    the marketing surface itself stays monochrome white-on-black, and the
-    color enters only when you're seeing real software. The download CTA
-    inverts the conventional dark-site logic: instead of a tinted accent
-    button, Warp ships a pure-white pill with black text, the same
-    affordance Apple uses for "Download macOS" buttons. That single move
-    is what makes the site feel like a system app rather than a SaaS.
+    background. Display type is Inter at 500–600, sized 72–96px on the
+    hero "Warp is the agentic development environment" — the unusually
+    open line-height (1.0–1.05) and the centered alignment make the page
+    feel like a man-page title rather than a SaaS pitch. The brand
+    chromatic accent is a neon-lime (`#c2ff00`) that lives almost
+    entirely *inside* the product screenshots — the terminal's cursor
+    and command markers — so the marketing surface itself stays
+    monochrome white-on-black, and the color enters only when you're
+    seeing real software. The download CTA inverts the conventional
+    dark-site logic: instead of a tinted accent button, Warp ships a
+    pure-white pill with black text at 7px radius, the same affordance
+    Apple uses for "Download macOS" buttons. That single move is what
+    makes the site feel like a system app rather than a SaaS. The
+    surface ladder (`#121212` → `#1a1a1a` → `#0e0e0e` for terminal
+    screenshots) is a deliberate inversion: the terminal screenshot
+    reads *deeper* than the card it sits on, like a window cut into the
+    page. Mono is `Hack`, an open-source terminal-grade family — used
+    only inside terminal screenshots, never on marketing chrome.
   influences:
-    - name: Linear
-      role: Pioneered the near-black dark-mode marketing canvas with Inter as display.
-      url: https://linear.app
-    - name: Apple (macOS download pages)
-      role: The white-pill download button on dark is lifted directly from Apple''s system-software pages.
-      url: https://www.apple.com/macos/
-    - name: Vercel
-      role: Confidence in oversized Inter display with tight tracking and dense data-heavy panels below.
-      url: https://vercel.com
+    - name: 'Linear'
+      role: 'Pioneered the near-black dark-mode marketing canvas with Inter as display for dev tools'
+      url: 'https://linear.app'
+    - name: 'Apple (macOS download pages)'
+      role: 'The white-pill download button on dark is lifted directly from Apple''s system-software pages — pure-white with black text, modest radius'
+      url: 'https://www.apple.com/macos/'
+    - name: 'Vercel'
+      role: 'Confidence in oversized Inter display with tight tracking and dense data-heavy panels below'
+      url: 'https://vercel.com'
+    - name: 'Hack font'
+      role: 'Open-source terminal-grade mono used inside the actual product screenshots — equalised stem widths for code legibility'
+      url: 'https://sourcefoundry.org/hack/'
+    - name: 'macOS Terminal default theme'
+      role: 'The `#121212` canvas value, the lime cursor placement, the macOS-style traffic-light terminal chrome — all lifted from the system terminal'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Warp's marketing site is a terminal that learned to convert. The
-canvas sits at `#121212` — a touch lighter than Linear or Raycast,
-matching the macOS Terminal default — and the hero "Warp is the
-agentic development environment" sets at 72px Inter 500 with white
-on black, centered. The download CTA is a pure-white pill with black
-text, the same affordance Apple uses for system-software downloads.
+Warp's marketing site is a terminal that learned to convert. The canvas sits at `#121212` — a touch lighter than Linear (`#08090a`) or Raycast (`#07080a`), matching the macOS Terminal default — and the hero "Warp is the agentic development environment" sets at 72–96px Inter 500 with white on black, centered. The download CTA is a pure-white pill with black text at 7px radius, the same affordance Apple uses for system-software downloads.
 
-Color enters the page almost exclusively through real product
-screenshots: the agent terminal's cursor flashes a neon-lime
-(`#c2ff00`) and its command markers glow purple, but the marketing
-surface itself stays monochrome. The page reads like documentation
-that happens to ship a "Download for Mac" button.
+Color enters the page almost exclusively through real product screenshots: the agent terminal's cursor flashes a neon-lime (`#c2ff00`) and its command markers glow purple (`#a78bfa`), but the marketing surface itself stays monochrome. The page reads like documentation that happens to ship a "Download for Mac" button — and that's exactly the register Warp wants. It's selling a serious developer tool, and the visual surface earns trust through restraint, not chromatic flourish.
 
-## Colors
+Below the hero, sections follow a clear rhythm — hero, product-row card pair (feature left, screenshot right), logo cloud, feature stack, FAQ. The dark canvas runs edge-to-edge without breaking into light bands. Real product screenshots sit on `#1a1a1a` cards (`bg-100`) and carry their own internal `#0e0e0e` background — deeper than the page, deeper than the card. That **deepest-thing-in-the-stack-is-the-screenshot** inversion is what makes the screenshot feel like a window cut into the page rather than something pasted on top.
 
-- **bg** `#121212` — terminal-default near-black body backdrop
-- **bg-100** `#1a1a1a` — first-tier elevated panel (cards)
-- **bg-200** `#222222` — input fields, terminal chrome strips
-- **surface-terminal** `#0e0e0e` — real terminal screenshot bg, deeper than the page
-- **text** `#ffffff` — primary copy
-- **text-300** `#999999` — "Trusted by industry leaders" caption hue
-- **brand** `#c2ff00` — neon-lime accent, lives inside terminal screenshots
-- **cta-bg** `#ffffff` — primary download button background
-- **cta-text** `#000000` — primary CTA label
-- **border** `#2a2a2a` — desaturated divider, never pure grey
+The signature visual moment is the **product-row card**: a horizontal pair of feature description (left) and terminal screenshot (right), with the screenshot's lime cursor as the only saturated color in view. That card pattern repeats 4–6 times down the page, each row demonstrating a different agent capability. The result is that the page reads like a series of capability proofs, not a marketing pitch.
 
-## Typography
+The announcement banner above the hero ("Warp is now open-source", "Warp 2.0: AI Agents") is the single moment of bright contrast — a `#f5f5f5` light strip with `#0a0a0a` text, sitting above the dark hero. That single 32px-tall light band is what signals "important news"; it's gone elsewhere on the page.
 
-Display is **Inter** at 500 (medium), sized 72px with a 1.05
-line-height — the hero is centered and reads as a single typographic
-block. Sub-display steps down to 40px Inter 500 for section heads
-("Trusted by industry leaders").
+**Key Characteristics:**
+- Near-black `#121212` canvas — matches macOS Terminal default exactly.
+- Three-tier surface ladder: page (`#121212`) → card (`#1a1a1a`) → terminal screenshot (`#0e0e0e`) — terminal is *deeper* than card.
+- Inter 500 display at 72–96px — medium-not-bold weight, the engineered hero voice.
+- Pure white pill download CTA at 7px radius — the page's most chromatic moment.
+- Neon-lime (`#c2ff00`) lives only inside terminal screenshots — never on marketing chrome.
+- Real product screenshots, not mockups — the agent terminal renders authentic output.
+- Hack mono inside screenshots; Inter on marketing surface.
+- Light announcement banner (`#f5f5f5`) above hero — the only bright contrast moment.
+- Centered hero alignment — like a man-page title, not a left-aligned SaaS pitch.
+- Border `#2a2a2a` — desaturated, never pure grey, the depth-without-shadow tool.
 
-Body is the same Inter family at 400/500 weights, sized 16px on
-1.55 line-height. Mono labels appear inside terminal screenshots
-and command-syntax callouts; the page itself uses very little mono
-on the marketing chrome.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-Container width is roughly 1200px with a 24px gutter. Sections
-follow a clear rhythm — hero, product-row card pair, logo cloud,
-feature stack, FAQ — and the dark canvas runs edge-to-edge
-without breaking into light bands. Real product screenshots sit
-on `#1a1a1a` cards and carry their own internal black background.
+- **Background** (`#121212`): canvas — body backdrop, all surfaces lift from this. Matches macOS Terminal default.
+- **Text** (`#ffffff`): primary copy on dark — pure white, no off-white calibration.
+- **Brand** (`#c2ff00`): neon-lime accent — lives almost entirely inside terminal screenshots.
+- **CTA Background** (`#ffffff`): primary download button — pure white pill on dark canvas.
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth is achieved through tonal layering: the page bg
-(`#121212`), card bg (`#1a1a1a`), terminal screenshot bg (`#0e0e0e`)
-form a three-step ladder. The terminal screenshot reads as
-*deeper* than the card it sits on — a deliberate inversion that
-makes the screenshot feel like a window cut into the page.
-Shadows are minimal; the chrome relies on tone, not blur.
+Three-tier surface ladder for elevation:
 
-## Shapes
+- **bg** (`#121212`): canvas.
+- **bg-100** (`#1a1a1a`): elevated panel base — cards, product-row containers.
+- **bg-200** (`#222222`): input fields, terminal chrome strip (the macOS-style title bar).
+- **bg-300** (`#2c2c2c`): popover / hover state.
+- **bg-400** (`#363636`): rarely used.
+- **surface-terminal** (`#0e0e0e`): the actual terminal screenshot bg — *deeper* than the canvas, the deliberate inversion.
 
-Buttons land at 7–8px (the observed primary CTA is 7px), cards
-at 12px, terminal-window screenshots at 12–16px to match macOS
-window chrome. Everything is rectangular and dense; the page
-avoids organic curves entirely.
+### Accent (Inside Terminal Screenshots Only)
 
-## Components
+These hues live inside the agent terminal's command output — never on the marketing chrome:
 
-The signature primitives are the **white-pill download CTA**
-(`#ffffff` bg, black text, 7px radius, the page's most chromatic
-moment), the **product-row card** (a horizontal pair of feature
-cards with a screenshot on the right), and the **terminal
-screenshot** itself — `#0e0e0e` background with the lime cursor
-as the only saturated color on the page. The announcement banner
-("Warp is now open-source") sits on a soft `#f5f5f5` strip above
-the dark hero.
+- **Terminal Cursor** (`#c2ff00`): the neon-lime cursor — the brand's signature accent.
+- **Terminal Prompt** (`#a78bfa`): purple command marker / agent prompt.
+- **Terminal Success** (`#86efac`): green output text for successful runs.
+- **Terminal Error** (`#fca5a5`): red error text.
+- **Terminal Warning** (`#fde047`): yellow warning.
 
-## Do''s and Don''ts
+### Interactive
 
-- **Do** anchor the canvas at `#121212` — lighter than Linear or Raycast, matching macOS Terminal default.
-- **Do** ship the primary download button as a pure-white pill with black text; tinted accent buttons read as generic dev-tool SaaS.
+- **Link** (`#7eb8ff`): cool blue inline link — used sparingly in body copy.
+- **Link Hover** (`#a3cdff`): lighter blue on hover.
+- **CTA BG** (`#ffffff`): primary download pill.
+- **CTA Text** (`#000000`): pure black on white.
+- **CTA BG Hover** (`#f5f5f5`): subtle off-white on hover.
+
+### Neutral Scale
+
+- **Text** (`#ffffff`): primary copy.
+- **Text 200** (`#cccccc`): secondary copy.
+- **Text 300** (`#999999`): captions, "Trusted by industry leaders" label hue (rgba 255,255,255,0.6).
+- **Text 400** (`#666666`): disabled / metadata.
+- **Text 500** (`#444444`): faintest, rarely used.
+
+### Surface & Borders
+
+- **Surface Card** (`#1a1a1a`): primary card surface (same as bg-100, named for component-level use).
+- **Surface Banner** (`#f5f5f5`): light announcement strip above hero — the only light surface on the page.
+- **Border** (`#2a2a2a`): desaturated divider, never pure grey. Lifts from `#121212` by ~14 lightness units.
+- **Border Soft** (`rgba(255,255,255,0.06)`): nested-row hairline.
+- **Border Strong** (`rgba(255,255,255,0.12)`): hover/focus outline.
+
+### Shadow Colors
+
+- **Ambient** (`rgba(0,0,0,0.30) 0 1px 2px`): rare faint card lift.
+- **Standard** (`rgba(0,0,0,0.40) 0 4px 12px`): hover elevation.
+- **Elevated** (`rgba(0,0,0,0.60) 0 12px 32px`): modal, command palette mockup.
+- **Terminal Glow** (`0 0 24px rgba(194,255,0,0.10)`): faint lime glow around active terminal screenshot — rare.
+
+### Semantic
+
+Mirrors terminal accent hues:
+
+- **Success** (`#86efac`): same as terminal success.
+- **Warning** (`#fde047`): same as terminal warning.
+- **Danger** (`#fca5a5`): same as terminal error.
+- **Info** (`#7eb8ff`): same as inline link.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display + Body:** `Inter, "Inter Placeholder", -apple-system, "system-ui", sans-serif`. Weights 400/500/600/700. The "Inter Placeholder" is a metric-matched fallback so layout never reflows on font load.
+- **Mono:** `"Hack", "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, Monaco, Courier, monospace`. **Hack** is the primary — open-source, terminal-grade, with intentionally equalised stem widths. Used only inside terminal screenshots and inline code chips.
+- **OpenType:** Inter ships with `kern`, `liga`, `calt` enabled. Hack ships with `kern`, `tnum`, `zero` (slashed-zero is the brand fingerprint inside terminal output).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter | 96 | 500 | 1.0 | -0.025em | kern, calt | Largest hero (rare) |
+| display-large | Inter | 72 | 500 | 1.05 | -0.02em | kern, calt | Homepage hero — "Warp is the agentic development environment" |
+| h1 | Inter | 56 | 500 | 1.10 | -0.015em | kern, calt | Section H1 |
+| h2 | Inter | 40 | 500 | 1.15 | -0.01em | kern, calt | Section heads |
+| h3 | Inter | 28 | 500 | 1.25 | -0.005em | kern, calt | Sub-section heads |
+| h4 | Inter | 22 | 500 | 1.30 | 0 | kern, calt | Card titles |
+| body-large | Inter | 18 | 400 | 1.55 | 0 | kern, calt | Hero deck |
+| body | Inter | 16 | 400 | 1.55 | 0 | kern, calt | Default body |
+| body-small | Inter | 14 | 400 | 1.55 | 0 | kern, calt | Footer body |
+| button | Inter | 15 | 500 | 1.0 | 0 | kern, calt | CTA label |
+| button-large | Inter | 16 | 500 | 1.0 | 0 | kern, calt | Hero primary CTA |
+| nav-link | Inter | 14 | 500 | 1.4 | 0 | kern, calt | Top nav |
+| label | Inter | 12 | 500 | 1.3 | 0.04em | kern | UPPERCASE eyebrow |
+| label-mono | Hack | 12 | 500 | 1.3 | 0.04em | tnum, uppercase | Mono UPPERCASE category label |
+| caption | Inter | 13 | 400 | 1.4 | 0 | kern | Caption |
+| micro | Inter | 11 | 500 | 1.3 | 0.03em | kern | Pill / badge text |
+| code | Hack | 13 | 400 | 1.55 | 0 | tnum, zero | Inline code chip |
+| code-prompt | Hack | 13 | 500 | 1.55 | 0 | tnum, zero | Terminal prompt marker |
+| terminal-cmd | Hack | 14 | 400 | 1.4 | 0 | tnum, zero | Command-line text inside screenshots |
+
+### Principles
+
+- **Inter at 500, not 700.** The display weight choice is medium, not bold. Bold display reads as marketing impact; medium reads as engineered. The hero authority comes from size + tracking, not weight.
+- **Tracking is heavy negative on display.** Display tier runs `-0.025em` to `-0.015em`. The negative tracking is what gives Inter the engineered, system-font feel at large size.
+- **Centered hero.** Like a man-page title — the centered alignment is part of the system-app register. Most marketing sites left-align hero copy; Warp centers.
+- **Mono is product-only.** Hack appears inside terminal screenshots and inline code chips. The marketing chrome itself is Inter throughout — buttons, nav, labels, even the "$" prompt-style microcopy.
+- **Slashed zero in mono (zero feature).** Terminal output renders zeros with slashes — a deliberate "this is real terminal" signal.
+- **No serif anywhere.** Even editorial blog posts on Warp's site are Inter — the brand is sans-only.
+- **Weight as hierarchy.** 500 for display + button, 400 for body. The 100-unit gap is the readability cue.
+- **UPPERCASE labels are sparing.** The 12px UPPERCASE eyebrow appears on section labels ("PRODUCT", "RESOURCES") with `0.04em` tracking — never on body or button text.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (White Pill — Download for Mac)**
+- Background: `#ffffff`
+- Text: `#000000`
+- Padding: `10px 18px`, height 40
+- Radius: **7 (sm)** — observed unusually small radius
+- Font: button-large (Inter 16 / 500)
+- Hover: `#f5f5f5` background
+- Active: `#ebebeb`
+- Use: hero CTA — Download for Mac. The page's most chromatic moment.
+
+**Secondary (Bordered Dark)**
+- Background: transparent
+- Text: `#ffffff`
+- Border: `1px solid #2a2a2a`
+- Padding: `10px 18px`, height 40
+- Radius: 7
+- Hover: `#1a1a1a` background + border `rgba(255,255,255,0.16)`
+- Use: secondary action — View Docs / Read More.
+
+**Ghost (Tertiary)**
+- Background: transparent
+- Text: `#cccccc`
+- Padding: `8px 14px`
+- Radius: 7
+- Hover: text `#ffffff`
+- Use: nav button, inline text-link CTA.
+
+**Platform Selector**
+- Background: `#1a1a1a`
+- Text: `#ffffff`
+- Border: `1px solid #2a2a2a`
+- Padding: `10px 16px`
+- Radius: 7
+- Hover: `#222222`
+- Use: Mac / Linux / Windows toggle for download.
+
+### Cards
+
+**Feature Card**
+- Background: `#1a1a1a` (bg-100)
+- Border: `1px solid #2a2a2a`
+- Radius: 12
+- Padding: 32
+- No shadow — depth comes from tonal lift only.
+
+**Product-Row Card**
+- Background: `#1a1a1a`
+- Border: `1px solid #2a2a2a`
+- Radius: 12
+- Padding: 40
+- Layout: horizontal split — feature copy left (~40% width), terminal screenshot right (~60%).
+- The signature card pattern of the page.
+
+**Pricing Card**
+- Background: `#1a1a1a`
+- Border: `1px solid #2a2a2a`
+- Radius: 12
+- Padding: 32
+- Use: pricing tier panel.
+
+### Terminal Screenshot
+
+The most distinctive primitive:
+- Background: `#0e0e0e` (deeper than canvas)
+- Border: `1px solid #1a1a1a`
+- Radius: 12 (matching macOS window chrome curvature)
+- **Chrome strip:** 28px tall `#222222` band at top with three traffic-light dots (red/yellow/green) — mimicking macOS Terminal title bar.
+- **Inside:** Hack mono at 13–14px with the `#c2ff00` lime cursor blinking, `#a78bfa` purple agent prompts, `#86efac` green success output.
+- The cursor blink animates at ~1s cadence; everything else is static.
+
+### Inputs / Forms
+
+**Input**
+- Background: `#1a1a1a`
+- Border: `1px solid #2a2a2a`
+- Radius: 7
+- Padding: `10px 14px`, height 40
+- Focus: border `#c2ff00` + ring `0 0 0 2px rgba(194,255,0,0.20)` lime ring
+- Use: email signup, contact form.
+
+### Badges
+
+**Pill Badge (Default)**
+- Background: `#1a1a1a`
+- Text: `#cccccc`
+- Border: `1px solid #2a2a2a`
+- Radius: 9999, Padding: `4px 12px`
+- Font: micro (11/500)
+
+**Lime Badge (Sparingly)**
+- Background: `rgba(194,255,0,0.10)`
+- Text: `#c2ff00`
+- Border: `1px solid rgba(194,255,0,0.20)`
+- Radius: 9999, Padding: `4px 12px`
+- Use: feature badges where lime is earned (e.g., "AGENTIC", "OPEN SOURCE").
+
+### Announcement Banner
+
+**Top Strip**
+- Background: `#f5f5f5` light
+- Text: `#0a0a0a` dark
+- Padding: `8px 16px`, height 32
+- Radius: 0 (edge-to-edge)
+- Use: "Warp is now open-source" / "Warp 2.0 launches" — the only light contrast moment on the page.
+
+### Navigation
+
+Top nav 64px tall, transparent on hero, `#121212` background with `1px solid #2a2a2a` border-bottom on scroll. Links: Inter 14/500 `#cccccc`, hover to `#ffffff`. Right side: GitHub icon + Sign In (ghost) + Download for Mac (white pill primary).
+
+### Logo Cloud
+
+Customer logo grid:
+- Each logo: low opacity (0.6), desaturated to greyscale.
+- Hover lifts opacity to 1.0 + restores color (rare on dark dev-tool sites).
+- 4-6 logos per row, ~32px tall.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base 4px. Scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160. Section gaps run 96–128px; inside-card padding 32–40; nav padding `8px 14px`; grid gap 24.
+
+The density is moderate-to-tight — denser than Apple's airy 160px sections, looser than Stripe's 64px information-dense rhythm. Warp's pacing matches its product: efficient, terminal-like.
+
+### Grid & Container
+
+- **Page width:** 1200px max.
+- **Prose width:** 720px (intro paragraphs).
+- **Header height:** 64px.
+- **Hero height:** ~720px.
+- **Grid gap:** 24px (tighter than Discord's 32, Linear's 24).
+
+The hero is centered (rare for SaaS — most left-align). Below the fold, product-row cards alternate orientation: feature-left/screenshot-right, then feature-right/screenshot-left, then back. The zigzag is what gives the page its scroll rhythm.
+
+### Whitespace Philosophy
+
+Warp's whitespace is **engineered**, not luxurious. Sections have enough air to breathe but never feel lavish. The page is meant to feel like documentation — efficient, dense with proof, not padded with marketing fluff. Whitespace is the negative space that lets terminal screenshots stand out.
+
+### Section Cadence
+
+The dark canvas runs edge-to-edge. Section breaks come from:
+1. Light announcement banner (above hero) — 32px tall, `#f5f5f5`.
+2. Hero (centered, 720px tall).
+3. Product-row stack (4–6 cards, alternating orientation, ~600px each).
+4. Logo cloud (compact, ~200px).
+5. Feature stack (text-heavy, ~500px).
+6. FAQ (accordion).
+7. Footer.
+
+The dark-canvas-throughout rule is the discipline — Warp does not break into light bands. The sole light moment is the announcement banner.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| None | 0 | Edge-bound elements, announcement banner |
+| Micro | 2 | Decorative pills (rare) |
+| XS | 4 | Tag chips |
+| **SM** | **7** | **Primary CTA, inputs** — observed unusually small radius |
+| MD | 8 | Standard panel chips |
+| **LG / Card** | **12** | **Card and terminal screenshot radius** |
+| XL | 16 | Modal corners |
+| XXL | 24 | Hero containers (rare) |
+| Pill | 9999 | Badges, status pills |
+
+Warp's radius scale is unusual: the primary CTA radius is **7px** (observed), not the 8px round number. That single-pixel-tighter-than-expected value is part of the brand's "we measured the actual macOS Terminal" precision. Cards land at 12 to match macOS window chrome.
+
+**Compound radii:** none. The terminal chrome strip has rounded top corners (`12 12 0 0`) which attach to the body's `0 0 12 12` — but that's inside the screenshot mockup, not on marketing components.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat, no shadow | Body copy on canvas, transparent buttons |
+| 1 | Tonal lift `#1a1a1a` over `#121212` | Feature cards |
+| 2 | Tonal `#0e0e0e` (deeper inversion) | Terminal screenshots — deeper than card |
+| 3 | `0 4px 12px rgba(0,0,0,0.40)` | Hover-elevated card (rare) |
+| 4 | `0 12px 32px rgba(0,0,0,0.60)` | Modal, popover |
+| 5 | `0 0 24px rgba(194,255,0,0.10)` | Active terminal glow (rare) |
+
+### Shadow Philosophy
+
+Warp uses **tonal layering, not blurs.** The page bg `#121212` → card bg `#1a1a1a` → terminal screenshot bg `#0e0e0e` forms a three-step ladder. The terminal screenshot reads as *deeper* than the card it sits on — a deliberate inversion that makes the screenshot feel like a window cut into the page rather than a panel pasted on top.
+
+Shadows are minimal and reserved for true elevation moments (modal, popover). The chrome relies on tone, not blur. The desaturated `#2a2a2a` border (slightly lighter than the surface, never pure grey) is the depth-without-shadow tool — it gives cards a hairline definition while preserving the matte register.
+
+## 8. Interaction & Motion ✨
+
+### Easing Curves
+
+- **Standard:** `cubic-bezier(0.4, 0, 0.2, 1)` — default ease-in-out.
+- **Emphasized:** `cubic-bezier(0.2, 0, 0, 1)` — modal, full reveal.
+- **Entrance:** `cubic-bezier(0, 0, 0.2, 1)` — content fade-in on scroll.
+- **Terminal:** `steps(1, end)` — instant transitions for cursor blink and command output reveal (mimics terminal behavior).
+
+### Duration Buckets
+
+- **Fast (100ms):** color transitions, button hover.
+- **Standard (180ms):** card lift, modal entry.
+- **Slow (320ms):** hero fade-in, large reveal.
+- **Cursor Blink (1000ms):** the lime cursor inside terminal screenshots.
+
+### Per-Component Micro-States
+
+- **Button (white pill):** background flickers `#ffffff` → `#f5f5f5` on hover. No shadow grow, no transform. 100ms.
+- **Button (secondary bordered):** background goes from transparent to `#1a1a1a`; border opacity rises from `#2a2a2a` to `rgba(255,255,255,0.16)`. 180ms.
+- **Card (feature):** border opacity slightly intensifies on hover (`#2a2a2a` → `rgba(255,255,255,0.12)`). No transform. 180ms.
+- **Logo cloud:** opacity 0.6 → 1.0 + greyscale → color on hover. 180ms.
+- **Link / nav-link:** text color `#cccccc` → `#ffffff` on hover. 100ms.
+- **Terminal cursor:** blinks `#c2ff00` ↔ transparent at 1s `steps(1, end)` infinite — sharp on/off, not faded.
+
+### Page Transitions
+
+- Hero: content fades + 8px translateY rise on load. 320ms ease-entrance.
+- Below-fold sections: fade + 6px translateY on scroll-into-viewport. 240ms.
+- Product-row cards: stagger 80ms between cards as they enter viewport.
+- Modal (rare): backdrop fade + scale 0.96 → 1.0. 320ms ease-emphasized.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)`:
+- Cursor blink stops (cursor stays solid lime).
+- All transforms collapse to opacity-only.
+- Logo cloud color/opacity restoration on hover persists (it's a state cue).
+- Page-load fade-ins reduce to opacity-only without translate.
+
+## 9. Accessibility & A11y ✨
+
+### Contrast Pairs
+
+- **Body text on canvas:** `#ffffff` on `#121212` → 18.5:1. **AAA at body sizes.**
+- **Soft text on canvas:** `#cccccc` on `#121212` → 9.4:1. **AAA at body.**
+- **Muted text on canvas:** `#999999` on `#121212` → 6.0:1. **AA at body, AAA at large.**
+- **CTA text on white:** `#000000` on `#ffffff` → 21.0:1. **AAA.**
+- **Inline link on canvas:** `#7eb8ff` on `#121212` → 7.6:1. **AAA at body.**
+- **Lime accent inside terminal:** `#c2ff00` on `#0e0e0e` → 17.4:1. **AAA at body and code sizes.**
+
+### Focus Indicators
+
+`2px solid #c2ff00` with 2px offset on dark canvas. The lime ring is the system signature — same color as the in-product terminal cursor. Form fields use the same lime ring at `0 0 0 2px rgba(194,255,0,0.20)` softer halo.
+
+### ARIA Pattern Recommendations
+
+- **Top nav:** `<nav aria-label="Primary">` with skip-link to `#main-content`.
+- **Platform selector:** `role="tablist"` with `role="tab"` (Mac / Linux / Windows), `aria-selected` on active.
+- **Terminal screenshot:** `role="img"` with descriptive `aria-label` summarizing the command and output (e.g., "Warp terminal showing `git status` command with green success output").
+- **Cursor blink:** `aria-hidden="true"` — purely decorative.
+- **Announcement banner:** `role="region"` with `aria-label="Announcement"` and a dismiss button.
+- **CTA buttons:** semantic `<button>` or `<a>`, descriptive labels ("Download Warp for Mac" not "Download").
+
+### Keyboard Navigation
+
+- Tab order: announcement banner dismiss → nav → primary CTA → secondary CTA → page content → footer.
+- Skip-link to `#main-content` first focus stop.
+- Platform selector arrow-keys (left/right between Mac/Linux/Windows).
+- FAQ accordion: Tab to expand, Enter/Space to toggle, Esc to collapse.
+
+### Screen Reader Hints
+
+- Terminal screenshots provide an `aria-label` summarizing what the terminal demonstrates — not the literal pixel content.
+- Cursor blink and decorative dots: `aria-hidden="true"`.
+- Logo cloud items have semantic `<img alt="Company name">` or descriptive `aria-label` on `<a>` if the logo is a link.
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` halts cursor blink, transform animations, and fade-in translateY. Hover state color/opacity transitions persist.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Breakpoint | Width | Notes |
+|---|---|---|
+| Mobile | 0–640px | Single column, hero shrinks to ~520px, terminal screenshots scale to fit |
+| Tablet | 640–1024px | Two-column features, product-row cards stack vertically (feature top, screenshot bottom) |
+| Desktop | 1024–1280px | Full product-row horizontal layout, three-column logo cloud |
+| Wide | 1280–1536px+ | 1200px container caps; surrounding gutters absorb extra width |
+
+### Touch Targets
+
+- Buttons height ≥40px; pad to 44 on mobile via vertical padding.
+- Platform selector tabs: 40px tall — exceeds 44 minimum with surrounding hit area.
+- Nav links 44px hit area on mobile.
+
+### Collapsing Strategy
+
+- **Hero:** display-large shrinks 72 → 56 → 44 → 36. Line-height stays 1.05–1.15.
+- **Product-row card:** horizontal split → vertical stack at <1024px. Screenshot scales to card width.
+- **Terminal screenshot:** scales fluidly; mono text inside reflows or scrolls horizontally on mobile (depending on content).
+- **Logo cloud:** 6-col → 4-col → 2-col across breakpoints.
+- **Announcement banner:** persists; text shortens on mobile if needed.
+
+### Image Behavior
+
+- Terminal screenshots: aspect-ratio container (typically 16:10), scale to fit card width.
+- Below-fold screenshots: `loading="lazy"`.
+- Customer logos: SVG, scale fluidly.
+
+### Container Queries
+
+Product-row cards may use `@container` queries to switch from horizontal to vertical layout based on container width — useful when a card sits in a narrow column.
+
+## 11. Content & Voice ✨
+
+### Tone
+
+**Engineered, direct, terminal-native.** Warp talks like a developer tool's documentation: short sentences, capability claims with proof, no marketing fluff. The brand voice avoids superlatives and emoji. It assumes the reader is technical and gives them specifics over hype.
+
+### Microcopy Patterns
+
+- **Headlines:** capability-direct. "Warp is the agentic development environment", "Run terminal commands as natural language", "Built for AI agents, not just humans."
+- **Decks:** specifics + proof. "The terminal that lets you write commands in plain English. With block output, AI suggestions, and team workflows."
+- **CTA verbs:** "Download for Mac", "Get Started Free", "Read the Docs", "Sign Up". Always specific and verb-first.
+- **Error messages** (in-product convention): direct, with recovery path. "Couldn't connect — check your network and retry."
+
+### Empty States
+
+In-product: terminal-native. "No agents yet. Try `warp agent create my-helper` to start." Always with a concrete command suggestion.
+
+### Success Confirmations
+
+- Download started: "Downloading Warp for Mac…"
+- Form submit: "Thanks! We'll be in touch."
+- Sign up: "Welcome to Warp. Check your email for the download link."
+
+### CTA Verb Conventions
+
+The verbs Warp uses, ranked:
+1. **Download for Mac** (primary conversion — never "Download Now")
+2. **Get Started** (secondary, broad)
+3. **Read the Docs** (educational)
+4. **Sign Up** / **Sign In**
+5. **Try Free** (rare; Warp's pricing is freemium)
+
+What Warp *doesn't* say: "Get Warp Today" (too marketing), "Click Here" (never), "Free Trial" (the brand prefers "Free" or "Try Free"). The verb register is system-software, not SaaS.
+
+## 12. Dark Mode & Theming ✨
+
+Warp's marketing site is **dark-only by default**. The brand identity is built around the near-black canvas and terminal-native register — there is no light-mode marketing variant. The in-product terminal supports light/dark themes (and custom themes via Warp's theme marketplace), but the marketing site stays dark across user preference.
+
+If a future light-mode variant were implemented (unlikely given brand identity), the canonical token swap would be:
+
+```yaml
+colors-light:
+  bg: '#fafafa'                  # near-white, not pure
+  bg-100: '#ffffff'              # elevated surface
+  bg-200: '#f0f0f0'              # input fields
+  surface-terminal: '#1a1a1a'    # terminal stays dark even in light mode (it's a real terminal)
+  text: '#0a0a0a'
+  text-200: '#3f3f3f'
+  text-300: '#6b6b6b'
+  brand: '#7a9e1f'               # darker lime for legibility on light
+  cta-bg: '#0a0a0a'              # invert: dark pill on light canvas
+  cta-text: '#ffffff'
+  border: '#e5e5e5'
+```
+
+The terminal screenshot would *not* invert — terminals are dark by convention even on light-OS chrome. The light-mode CTA would invert to dark-pill-on-light, mirroring how Apple shows download CTAs on light marketing pages.
+
+**Dark-only register** — Warp's brand identity is the terminal canvas; light variant is not offered.
+
+## 13. Lineage & Influences
+
+Warp's design lineage is the **Linear → Vercel → Raycast** dev-tool dark-canvas tradition, adjusted toward terminal-software register. Linear pioneered the near-black marketing canvas with Inter as display; Vercel proved oversized Inter display worked for dev infra; Raycast pushed into HSL accent hues and tonal surface ladders. Warp lifts the canvas and Inter pairing but adds two distinctive moves:
+
+1. **The terminal-screenshot deeper-than-canvas inversion.** Most dark sites elevate cards above canvas with lighter backgrounds; Warp puts the screenshot *deeper*, mimicking how a real terminal window looks slightly recessed in macOS chrome.
+
+2. **Lime accent that lives only inside product screenshots.** Linear and Vercel use brand accents on marketing chrome (Linear's blue gradients, Vercel's data colors); Warp restricts the lime to inside terminal screenshots. The marketing surface is monochrome; color enters only when you're seeing real software.
+
+The white-pill download CTA at 7px radius is lifted from Apple's macOS download pages — pure-white pill with black text, modest radius, no shadow on dark canvas. That single move is what makes the site feel like a system app's marketing surface (Apple, Logitech, Mac App Store) rather than a SaaS landing.
+
+**Influences:**
+- **Linear** — pioneered the near-black dev-tool marketing canvas with Inter display (https://linear.app)
+- **Apple (macOS download pages)** — white-pill download CTA on dark, lifted directly (https://www.apple.com/macos/)
+- **Vercel** — confidence in oversized Inter at 500 with tight tracking (https://vercel.com)
+- **Hack font** — open-source terminal-grade mono (https://sourcefoundry.org/hack/)
+- **macOS Terminal default theme** — `#121212` canvas, lime cursor, traffic-light chrome
+- **Raycast** — adjacent dev-tool with HSL accent strategy and similar surface ladder
+
+## 14. Do's and Don'ts
+
+### Do's
+
+- **Do** anchor the canvas at `#121212` — lighter than Linear or Raycast, matching macOS Terminal default exactly.
+- **Do** ship the primary download button as a pure-white pill with black text at 7px radius; tinted accent buttons read as generic dev-tool SaaS.
 - **Do** let neon-lime live inside the terminal screenshots, not on marketing chrome — that constraint is what keeps the page calm.
-- **Don''t** add gradient washes or particle backgrounds; the dark canvas is the brand.
-- **Don''t** introduce a second brand accent — lime is the only saturated color, and it belongs to the product, not the site.
-- **Don''t** soften display type below Inter 500; the hero''s authority comes from the medium-not-bold weight at large size.
+- **Do** use real terminal screenshots, not stylized mockups. Authentic command output is the brand's proof.
+- **Do** invert the terminal screenshot deeper (`#0e0e0e`) than the card it sits on (`#1a1a1a`). The depth inversion is the brand fingerprint.
+- **Do** center the hero. Like a man-page title, not a left-aligned SaaS pitch.
+- **Do** use Hack mono inside terminal screenshots, Inter on marketing chrome — the family swap is the register-switch.
+- **Do** keep the desaturated border at `#2a2a2a` — never pure grey; the slight cool tint is the depth-without-shadow tool.
+- **Do** ship the announcement banner as a `#f5f5f5` light strip — it should be the only bright contrast moment on the page.
+- **Do** use Inter at weight 500, not 700, for display. Medium-not-bold is the engineered hero voice.
+
+### Don'ts
+
+- **Don't** add gradient washes or particle backgrounds; the dark canvas is the brand. Animated gradients tip the page toward gaming-platform register.
+- **Don't** introduce a second brand accent — lime is the only saturated color, and it belongs to the product, not the site.
+- **Don't** soften display type below Inter 500; the hero's authority comes from the medium-not-bold weight at large size.
+- **Don't** apply the lime to button fills, badges, or backgrounds. The lime-stays-inside-screenshots discipline is non-negotiable.
+- **Don't** use a serif anywhere. Even editorial blog posts are Inter on Warp's site.
+- **Don't** elevate cards above canvas with shadows. Tonal layering (`#121212` → `#1a1a1a`) is the depth language.
+- **Don't** break into light bands mid-page. Aside from the announcement banner, the canvas runs dark edge-to-edge.
+- **Don't** use a 4px or 12px button radius. The 7px observed value is the system precision; rounding it to 8 reads as approximate.
+- **Don't** left-align the hero. Centered hero is the man-page register; left-aligned is the SaaS register.
+- **Don't** add emoji to marketing copy. The voice is engineered, not casual.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:                  #121212
+bg-100 (card):       #1a1a1a
+surface-terminal:    #0e0e0e
+text:                #ffffff
+text-200:            #cccccc
+text-300:            #999999
+brand (lime):        #c2ff00
+cta-bg:              #ffffff
+cta-text:            #000000
+link:                #7eb8ff
+border:              #2a2a2a
+banner-light:        #f5f5f5
+```
+
+### Example Component Prompts
+
+- **Hero:** "Create a centered hero on a `#121212` canvas with a 72px Inter / weight 500 / line-height 1.05 / tracking -0.02em headline reading 'Warp is the agentic development environment', a 18px Inter 400 deck below in `#cccccc`, a primary CTA pill in `#ffffff` with `#000000` text at 7px radius / `10px 18px` padding, and a secondary bordered button next to it. Centered alignment — like a man-page title."
+
+- **Product-row card:** "Design a horizontal product-row card with `#1a1a1a` background, `1px solid #2a2a2a` border, 12px radius, 40px padding. Left half (~40%): h3 heading in Inter 28/500 white, body in Inter 16/400 `#cccccc`, optional 'Learn more' ghost link. Right half (~60%): a terminal screenshot at `#0e0e0e` background with 12px radius, macOS traffic-light chrome strip at top, Hack mono command output inside with `#c2ff00` cursor."
+
+- **Terminal screenshot:** "Render a terminal screenshot at `#0e0e0e` background, 12px radius, `1px solid #1a1a1a` border. Add a 28px tall `#222222` chrome strip at top with three traffic-light dots (red `#ff5f57`, yellow `#febc2e`, green `#28c840`). Inside, render Hack mono at 13–14px with: a `$` prompt in `#cccccc`, the command in white, a blinking lime `#c2ff00` cursor, and output text in green `#86efac` for success or purple `#a78bfa` for agent prompts. Cursor blinks at 1s `steps(1, end)` infinite."
+
+- **Download CTA pill:** "Place a primary CTA button as `#ffffff` background with `#000000` text at 7px radius (note: 7px not 8), `10px 18px` padding, height 40, Inter 16/500 label 'Download for Mac'. Hover transitions background to `#f5f5f5` over 100ms — no shadow, no transform."
+
+- **Announcement banner:** "Add a top-of-page strip at `#f5f5f5` background with `#0a0a0a` text, height 32, full-bleed (radius 0), padding `8px 16px`. Inter 13/400 message + small dismiss × on the right. This is the only light-color moment on the page."
+
+- **Logo cloud:** "Build a customer logo cloud with 4–6 logos per row at ~32px height. Each logo desaturated (greyscale) and at 0.6 opacity. On hover, lift to 1.0 opacity + restore color. 180ms transitions."
+
+### Iteration Guide
+
+1. **Anchor canvas at `#121212`.** Lighter than Linear, matches macOS Terminal default. If you set it to pure black `#000000` or off-black `#0a0a0a`, the page loses the terminal-native register.
+2. **Set Inter at weight 500, not 700.** Display tier is medium-not-bold. The hero voice comes from size + tracking, not weight.
+3. **Center the hero.** Like a man-page title. Most SaaS hero are left-aligned; Warp's centered alignment is part of the system-software register.
+4. **Restrict lime to inside terminal screenshots.** If lime appears on a button or badge on the marketing chrome, the brand discipline is broken. The constraint is the brand.
+5. **Make terminal screenshots deeper than the card** (`#0e0e0e` inside `#1a1a1a` card on `#121212` canvas). The depth inversion is the fingerprint.
+6. **Use real product screenshots** — actual terminal output with real commands. Stylized mockups feel fake; real output earns trust.
+7. **White-pill primary CTA at 7px radius.** Pure white, black text, modest radius. This is the Apple system-app affordance — not the dev-tool brand-colored button.
+8. **Use Hack mono only inside screenshots.** Marketing chrome (buttons, nav, labels) all in Inter. The mono-inside / sans-outside split is the register-switch.

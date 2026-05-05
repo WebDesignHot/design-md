@@ -3,100 +3,275 @@ name: Excalidraw
 tagline: Literal hand-drawn whiteboard — wobbly SVG strokes, Virgil-style handwriting, and a deliberately primitive UI that turns digital sketching into nostalgia.
 author: webdesignhot
 source_url: https://excalidraw.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
-featured: false
+featured: true
 categories: [design-tools, dev-tools]
 tags: [light, playful, sans, soft, organic, retro, brutalist]
 preview_swatch: ['#fffefd', '#1b1b1f', '#6965db']
 related: [tldraw, figma, hashnode]
-description: 'Excalidraw is the literal hand-drawn whiteboard — every stroke is rendered with rough.js to look hand-sketched, the brand font is the Virgil handwriting cut, and the chrome stays deliberately primitive. The canvas is paper-white (`#fffefd`), text is near-black, and a single muted purple (`#6965db`) carries primary action. Where tldraw cleans up the whiteboard metaphor into polished SaaS chrome, Excalidraw doubles down on the sketchy charm — wobbly borders, hand-drawn icons, and deliberately rough rectangles.'
+description: 'Excalidraw is the literal hand-drawn whiteboard — every stroke is rendered with rough.js to look hand-sketched, the brand font is the Virgil handwriting cut (and its modern successor Excalifont), and the chrome stays deliberately primitive. The canvas is paper-white (`#fffefd`) with a slight cream undertone, text is near-black `#1b1b1f`, and a single muted purple (`#6965db`) carries primary action. Where tldraw cleans up the whiteboard metaphor into polished SaaS chrome, Excalidraw doubles down on the sketchy charm — wobbly borders, hand-drawn icons, dry-erase pastel fills, and deliberately rough rectangles. The design is open-source-pragmatic rather than marketing-polished, and the refusal of polish is itself the brand''s most coherent statement. The aesthetic descends from FiftyThree''s Paper.app, the rough.js library that powers every stroke, and the wider whiteboard / dry-erase tradition.'
 
 colors:
-  bg: '#fffefd'
-  bg-canvas: '#ffffff'
-  surface: '#f5f5f5'
-  surface-soft: '#fafafa'
-  text: '#1b1b1f'
-  text-muted: '#5b5b5b'
-  text-soft: '#8a8a8a'
-  brand: '#6965db'
-  brand-hover: '#5651c5'
-  brand-soft: '#e8e7fb'
-  accent-yellow: '#ffe066'
-  accent-pink: '#ffadad'
-  accent-green: '#9be7c4'
-  accent-blue: '#bde0fe'
-  accent-orange: '#ffb997'
-  border: '#1b1b1f1a'
+  bg: '#fffefd'                  # paper-white with cream undertone
+  bg-canvas: '#ffffff'           # pure white for embedded canvas demos
+  bg-warm: '#fdf6e3'             # warm cream tint for nested panels
+  bg-paper: '#fafafa'            # standard paper-fill for blocks
+  surface: '#ffffff'             # default card surface
+  surface-soft: '#fafafa'        # secondary panel
+  surface-warm: '#f5f0e0'        # warm-tint surface for callouts
+  surface-hover: '#f5f5f5'       # hover state on cards
+  surface-soft-warm: '#fdfaf2'   # softest warm tint
+  text: '#1b1b1f'                # near-black, used for hand-drawn borders too
+  text-strong: '#0f0f12'         # display, slightly darker
+  text-display: '#1b1b1f'        # H1 stays at near-black
+  text-muted: '#5b5b5b'          # captions, meta
+  text-soft: '#8a8a8a'           # tertiary
+  text-faint: '#bababa'          # disabled
+  text-on-brand: '#ffffff'       # white text on muted purple
+  text-on-pastel: '#1b1b1f'      # near-black on dry-erase pastels
+  brand: '#6965db'               # muted purple, the only saturated UI accent
+  brand-hover: '#5651c5'         # darker purple on press
+  brand-active: '#443fa3'        # deepest pressed
+  brand-soft: '#e8e7fb'          # softest purple tint
+  brand-faint: '#f3f2fd'         # near-white purple tint
+  link: '#6965db'                # links use brand
+  accent-yellow: '#ffe066'       # dry-erase yellow marker
+  accent-yellow-deep: '#fad434'  # deeper marker yellow
+  accent-pink: '#ffadad'         # pink marker
+  accent-pink-deep: '#ff8888'    # deeper pink
+  accent-green: '#9be7c4'        # green marker
+  accent-green-deep: '#6fd29f'   # deeper green
+  accent-blue: '#bde0fe'         # blue marker
+  accent-blue-deep: '#92c8fa'    # deeper blue
+  accent-orange: '#ffb997'       # orange marker
+  accent-orange-deep: '#ff9970'  # deeper orange
+  accent-purple: '#d4c5f9'       # purple marker (lighter than brand)
+  border: '#1b1b1f1a'            # 10% near-black hairline (rare; most borders are hand-drawn)
+  border-strong: '#1b1b1f33'     # 20% near-black for emphasis
+  border-soft: '#1b1b1f0d'       # 5% near-black for subtle dividers
+  border-hand: '#1b1b1f'         # full near-black for hand-drawn borders
   on-brand: '#ffffff'
+  success: '#16a34a'             # editorial green
+  success-bg: '#dcfce7'
+  warning: '#d97706'             # warm amber
+  warning-bg: '#fef3c7'
+  danger: '#dc2626'              # restrained red
+  danger-bg: '#fee2e2'
+  info: '#6965db'                # info reuses brand
+  info-bg: '#e8e7fb'
 
 typography:
   display:
-    family: '"Excalifont", "Cascadia", "Assistant", -apple-system, "system-ui", sans-serif'
+    family: '"Excalifont", "Virgil", "Cascadia", "Assistant", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [400, 500, 700]
+    opentype-features: ['kern']
   body:
-    family: '"Assistant", "Inter", -apple-system, "system-ui", sans-serif'
-    weights: [400, 500, 700]
+    family: '"Assistant", "Inter", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['kern']
   hand:
-    family: '"Virgil", "Caveat", "Comic Neue", cursive'
-    weights: [400]
+    family: '"Virgil", "Excalifont", "Caveat", "Comic Neue", "Patrick Hand", cursive'
+    weights: [400, 700]
   mono:
-    family: '"Cascadia", "JetBrains Mono", ui-monospace, Menlo, monospace'
-    weights: [400]
+    family: '"Cascadia Code", "Cascadia", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace'
+    weights: [400, 500]
   scale:
-    h1:    { size: 48, weight: 700, lineHeight: 1.1, tracking: '-0.01em' }
-    h2:    { size: 32, weight: 600, lineHeight: 1.2, tracking: '0' }
-    h3:    { size: 20, weight: 600, lineHeight: 1.3, tracking: '0' }
-    body:  { size: 16, lineHeight: 1.55 }
-    hand:  { size: 18, family: hand }
+    display-hero:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.012em', family: display }
+    display-large:   { size: 56, weight: 700, lineHeight: 1.08, tracking: '-0.01em',  family: display }
+    display:         { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.01em',  family: display }
+    h1:              { size: 40, weight: 700, lineHeight: 1.12, tracking: '-0.008em', family: display }
+    h2:              { size: 32, weight: 600, lineHeight: 1.2,  tracking: '0',         family: display }
+    h3:              { size: 24, weight: 600, lineHeight: 1.3,  tracking: '0',         family: display }
+    h4:              { size: 20, weight: 600, lineHeight: 1.35, tracking: '0',         family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',         family: display }
+    h6:              { size: 16, weight: 600, lineHeight: 1.4,  tracking: '0',         family: display }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',         family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    hand-large:      { size: 32, weight: 400, lineHeight: 1.2,  tracking: '0',         family: hand }
+    hand:            { size: 18, weight: 400, lineHeight: 1.3,  tracking: '0',         family: hand }
+    hand-small:      { size: 14, weight: 400, lineHeight: 1.35, tracking: '0',         family: hand }
+    label:           { size: 12, weight: 600, lineHeight: 1.3,  tracking: '0.02em',   family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0',         family: body }
+    code-inline:     { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0',         family: mono }
+    code:            { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',         family: mono }
 
 radius:
-  sm: 4
+  none: 0
+  micro: 2
+  xs: 4
+  sm: 6
   md: 6
-  lg: 10
   card: 8
   button: 6
+  lg: 10
+  xl: 12
   pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 56
+  hero-padding-y: 80
+  section-padding-y: 64
+  card-padding: 20
 
 components:
   button-primary:
     backgroundColor: brand
     textColor: on-brand
-    rounded: button
-    use: 'muted purple — primary action with rough-edge variant on hover'
+    radius: button
+    padding: '10px 18px'
+    font: { family: body, weight: 600, size: 15 }
+    border: border-hand
+    borderWidth: 2
+    hover: { backgroundColor: brand-hover }
+    use: 'Muted purple — primary action with hand-drawn 2px border'
   button-secondary:
     backgroundColor: transparent
     textColor: text
-    border: text
-    rounded: button
+    border: border-hand
+    borderWidth: 2
+    radius: button
+    padding: '10px 18px'
+    font: { family: body, weight: 600, size: 15 }
+    hover: { backgroundColor: surface-soft }
+    use: 'Hand-drawn outlined button — secondary action'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: text
+    radius: button
+    padding: '8px 12px'
+    font: { family: body, weight: 500, size: 14 }
+    hover: { backgroundColor: surface-soft }
+    use: 'Tertiary inline action'
   card:
-    backgroundColor: bg-canvas
-    border: text
-    rounded: card
-    use: 'sketch card — drawn with hand-rendered border, not a clean stroke'
+    backgroundColor: surface
+    border: border-hand
+    borderWidth: 2
+    radius: card
+    padding: 20
+    shadow: 'none'
+    use: 'Sketch card — drawn with hand-rendered border, not a clean stroke'
   shape-rect:
     backgroundColor: accent-yellow
-    border: text
-    rounded: sm
-    use: 'on-canvas drawn primitive — wobbly rectangle with hatched fill'
+    border: border-hand
+    borderWidth: 2
+    radius: sm
+    padding: 16
+    use: 'On-canvas drawn primitive — wobbly rectangle with marker fill'
+  sticky-marker:
+    backgroundColor: accent-yellow
+    textColor: text-on-pastel
+    border: border-hand
+    borderWidth: 2
+    radius: sm
+    padding: 12
+    rotation: '-1.5deg'
+    use: 'Dry-erase note with hand-drawn border and rough.js stroke randomness'
+  badge:
+    backgroundColor: surface-soft
+    textColor: text
+    border: border-hand
+    borderWidth: 1
+    radius: pill
+    padding: '4px 10px'
+    font: { family: body, weight: 600, size: 12 }
+  input:
+    backgroundColor: surface
+    border: border-hand
+    borderWidth: 2
+    radius: md
+    padding: '10px 14px'
+    font: { family: body, weight: 400, size: 16 }
+    focus: { border: brand, ring: '0 0 0 3px rgba(105,101,219,0.3)' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'   # toy-like overshoot
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-instant: 80
+  duration-fast: 150
+  duration-standard: 220
+  duration-slow: 320
+  duration-emphasized: 480
+  hover-lift: 'translateY(-1px) rotate(-0.3deg)'
+  page-transition: 'opacity, 220ms standard'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — collapses transforms and rotation to opacity-only at 100ms; rough.js stroke randomness is preserved (it is not motion)'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+  ultra: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'none'                                    # Excalidraw refuses ambient shadow
+  raised: 'rgba(0,0,0,0.06) 0 2px 4px'              # rare, only on hovered cards
+  popover: 'rgba(0,0,0,0.12) 0 8px 24px'            # tooltips, dropdowns
+  ring: '0 0 0 3px rgba(105,101,219,0.3)'
+
+accessibility:
+  contrast-text-on-bg: 16.8              # AAA — near-black on cream-white
+  contrast-text-on-brand: 4.7            # AA at body sizes
+  contrast-muted-on-bg: 7.4              # AAA at body
+  contrast-on-pastel-yellow: 16.4        # AAA — near-black on yellow marker
+  contrast-on-pastel-pink: 12.2          # AAA — near-black on pink marker
+  focus-ring: '3px solid rgba(105,101,219,0.4) with 1px offset'
+  reduced-motion-honored: true
+  keyboard-trap-free: true
+  min-touch-target: 44
+
+dark-mode: optional
+
+colors-dark:
+  bg: '#121212'
+  bg-canvas: '#1a1a1a'
+  bg-warm: '#1e1c18'
+  surface: '#1f1f1f'
+  surface-soft: '#2a2a2a'
+  surface-hover: '#333333'
+  text: '#f5f5f5'
+  text-muted: '#a8a8a8'
+  text-soft: '#787878'
+  text-faint: '#525252'
+  brand: '#8b87e6'
+  brand-hover: '#a4a0ed'
+  border-hand: '#f5f5f5'
+  border: '#ffffff1a'
+  border-strong: '#ffffff33'
+  on-brand: '#ffffff'
+  accent-yellow: '#5c4d20'
+  accent-pink: '#5c2828'
+  accent-green: '#2a4a37'
+  accent-blue: '#28456a'
+  accent-orange: '#5c3520'
+  accent-purple: '#3a2f5c'
 
 lineage:
   summary: |
-    Excalidraw's design philosophy is "draw it badly on purpose."
-    Every shape on the canvas is rendered through rough.js, which
-    introduces deliberate randomness into stroke paths so that a
-    rectangle never looks machine-perfect. The brand font is Virgil
-    (or its modern successor Excalifont), a handwriting cut designed
-    to read as if jotted on a whiteboard. The marketing site itself
-    is dressed in the same primitive chrome — paper-white canvas,
-    near-black hand-drawn borders, and pastel accent fills that
-    mimic dry-erase markers. A single muted purple (`#6965db`) carries
-    primary action, but even that button reads slightly hand-drawn
-    on hover. The lineage runs back through Paper.app and the
-    earlier whiteboard-software tradition; the descendants are
-    tldraw and Whimsical, which polish the metaphor. Excalidraw
-    keeps it deliberately rough.
+    Excalidraw's design philosophy is "draw it badly on purpose." Every shape on
+    the canvas is rendered through rough.js, which introduces deliberate randomness
+    into stroke paths so that a rectangle never looks machine-perfect. The brand
+    font is Virgil (and its modern successor Excalifont), a handwriting cut designed
+    to read as if jotted on a whiteboard. The marketing site itself is dressed in
+    the same primitive chrome — paper-white canvas with cream undertone, near-black
+    hand-drawn borders, and pastel accent fills that mimic dry-erase markers. A
+    single muted purple (`#6965db`) carries primary action, but even that button
+    reads slightly hand-drawn on hover, with the 2px border rendered through
+    rough.js for stroke randomness. The lineage runs back through Paper.app and
+    the earlier whiteboard-software tradition; the descendants are tldraw and
+    Whimsical, which polish the metaphor. Excalidraw keeps it deliberately rough.
+    The open-source-pragmatic ethos is itself part of the brand — the marketing
+    surface refuses the polish that would make it look like venture-backed SaaS,
+    and that refusal aligns with the project's open-source community-first values.
   influences:
     - name: Paper / FiftyThree
       role: Hand-drawn primitive aesthetic translated to web canvas; the original tablet-as-sketchbook lineage.
@@ -107,83 +282,514 @@ lineage:
     - name: Whiteboards / dry-erase tradition
       role: The conceptual ground; pastel marker hues, hand-printed labels, and accepted imprecision.
       url: https://en.wikipedia.org/wiki/Whiteboard
+    - name: tldraw
+      role: Inverse reference — tldraw polishes the whiteboard metaphor into SaaS chrome; Excalidraw refuses to polish.
+      url: https://tldraw.com
+    - name: Comic Neue / Caveat / Patrick Hand
+      role: The wider handwriting-fonts tradition; permission to use hand-drawn type as serious typography.
+      url: https://www.comicneue.com
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Excalidraw's most striking decision is to render every visual
-primitive with deliberate imprecision. Borders wobble. Rectangles
-have slightly different stroke weight on each side. Arrows curl in
-unexpected places. This is not an aesthetic accident — it's
-rough.js doing its work, and it's the entire brand. The marketing
-site extends the same philosophy: cards have hand-drawn borders,
-shape-fills are dry-erase pastels, and even the H1 sits in a
-handwriting-coded sans (Excalifont, the Virgil successor).
+Excalidraw's most striking decision is to render every visual primitive with deliberate imprecision. Borders wobble. Rectangles have slightly different stroke weight on each side. Arrows curl in unexpected places. This is not an aesthetic accident — it is rough.js doing its work, and it is the entire brand. The marketing site extends the same philosophy: cards have hand-drawn borders, shape-fills are dry-erase pastels, and even the H1 sits in a handwriting-coded sans (Excalifont, the Virgil successor).
 
-The canvas is paper-white at `#fffefd` with the slightest cream
-undertone. Text is near-black `#1b1b1f`. A single muted purple
-(`#6965db`) carries CTAs.
+The canvas is paper-white at `#fffefd` with the slightest cream undertone — not sterile pure white, not warm cream, but a near-paper that recalls a fresh whiteboard or the inside cover of a Moleskine. Text is near-black `#1b1b1f` with a touch of warm undertone; a single muted purple (`#6965db`) carries CTAs. The chromatic palette beyond that is dry-erase markers: yellow `#ffe066`, pink `#ffadad`, green `#9be7c4`, blue `#bde0fe`, orange `#ffb997`, purple `#d4c5f9`. These are not modern pastel surface tints (the way tldraw uses them as soft-pastel-card-fills) but literal dry-erase marker shades — saturated enough to read as marker-fluid, soft enough to not break the paper canvas.
 
-## Colors
+Display type is **Excalifont** (or Virgil, the original) — a handwriting-coded sans that reads as if printed by hand on a whiteboard. Sized 48–64px / 700 with `-0.01em` tracking. The slight negative track tightens what would otherwise feel too casual; without it, Excalifont at 700 reads as friendly-but-amateur. Body type is **Assistant** at 16px on a 1.55 line-height — a sans cut chosen for its friendly, slightly-rounded letterforms that pair with the handwriting display without competing against it. The mono companion is Cascadia Code (originally a Microsoft developer-focused mono), a typewriter-grade choice that feels appropriate for a tool used by developers.
 
-- **bg** `#fffefd` — paper-white with cream undertone
-- **text** `#1b1b1f` — near-black, used for hand-drawn borders too
-- **brand** `#6965db` — muted purple, the only saturated UI accent
-- **accent-yellow** `#ffe066` — dry-erase yellow marker fill
-- **accent-pink** `#ffadad` — pink marker
-- **accent-green** `#9be7c4` — green marker
-- **accent-blue** `#bde0fe` — blue marker
-- **border** `#1b1b1f1a` — 10% near-black hairline (used sparingly)
+The atmosphere is open-source-pragmatic. The marketing surface refuses the polish that would make it look like venture-backed SaaS — there are no glossy hero illustrations, no animated 3D mockups, no carefully-art-directed product photography. Instead, the page shows screenshots of Excalidraw itself, hand-drawn arrow primitives marking feature flows, and pastel-fill rectangles labeled with handwriting. The refusal to polish aligns with the project's open-source community-first values, and it is a deliberate brand statement: "we are a tool, not a product, and we look like one".
 
-Most borders on the page are not the 10% hairline but actual
-hand-drawn near-black strokes, rendered through rough.js so they
-look sketched.
+Where tldraw cleans the whiteboard metaphor into polished SaaS chrome (rounded shapes, soft shadows, friendly Inter weights), Excalidraw doubles down on the hand-drawn nature. The shape borders are *literally* hand-drawn through rough.js, which renders SVG paths with stroke randomness so a rectangle's four corners are never quite the same. The chrome is deliberately primitive — wobbly borders, hand-drawn icons, no shadows — and the imprecision is the brand's most coherent statement. The casual chrome would read as chaotic if not for the chromatic restraint (one purple, six dry-erase pastels) and the typographic discipline (Excalifont + Assistant, never more).
 
-## Typography
+**Key Characteristics**
 
-Display is **Excalifont** (or Virgil) — a handwriting-coded sans
-that reads as if printed by hand on a whiteboard. Sized 48px/700
-with `-0.01em` tracking — the slight negative track tightens what
-would otherwise feel too casual. Body type is **Assistant** at 16px
-on a 1.55 line-height, a sans cut chosen for its friendly,
-slightly-rounded letterforms.
+- Paper-white canvas (`#fffefd`) with slight cream undertone — never sterile white
+- Hand-drawn borders rendered through rough.js — every rectangle's strokes are randomised
+- Excalifont (or Virgil) display family — handwriting-coded sans for the whiteboard cue
+- Assistant body family — friendly slightly-rounded sans that pairs with handwriting
+- Dry-erase marker palette: yellow, pink, green, blue, orange, purple — saturated marker-fluid hues
+- Single muted purple (`#6965db`) carries primary action — the only modern UI accent
+- 2px hand-drawn near-black border (`#1b1b1f`) is the entire elevation system
+- Small radius ladder: 4 / 6 / 8 / 10px — the hand-drawn corners blur precision anyway
+- 20px card padding, 64–80px section padding — moderately tight, casual rather than airy
+- No drop shadows, no gradients, no atmospheric blur — the refusal of polish is the discipline
 
-## Layout
+## 2. Color Palette & Roles
 
-Layout is loose and casual, mirroring an actual whiteboard. Hero
-content typically sits at left, with a hand-drawn illustration
-(rendered live via rough.js) anchoring the right column. Sections
-flow vertically with generous whitespace, and section dividers are
-often hand-drawn squiggles rather than horizontal rules.
+### Primary
 
-## Elevation & Depth
+- **bg** (`#fffefd`): paper-white canvas with the slightest cream undertone; never pure white.
+- **text** (`#1b1b1f`): near-black with warm undertone; doubles as the colour of hand-drawn borders.
+- **brand** (`#6965db`): muted purple, the only saturated UI accent.
+- **bg-canvas** (`#ffffff`): pure white for embedded canvas demos that need maximum brightness.
 
-There is essentially no shadow in the system. Depth comes from the
-hand-drawn near-black border surrounding each card — wobbly stroke
-width, slight imperfection at the corners, no fill or hairline.
-This is the entire elevation system.
+### Brand & Dark
 
-## Shapes
+- **brand-hover** (`#5651c5`): darker purple a half-step on press.
+- **brand-active** (`#443fa3`): deepest pressed purple.
+- **brand-soft** (`#e8e7fb`): softest purple tint for selection backgrounds.
+- **brand-faint** (`#f3f2fd`): near-white purple tint for subtle hover surfaces.
+- **text-strong** (`#0f0f12`): display copy when extra punch is needed.
 
-Radii ladder is small: 4 / 6 / 8 / 10. Buttons land at 6px, cards
-at 8px. The hand-drawn nature of borders means radius rarely reads
-as a precise number — rough.js renders corners with their own
-subtle imprecision.
+### Accent (Dry-erase Markers)
 
-## Components
+The marker palette is the brand's secondary chromatic vocabulary. Each appears as a marker fill on shape primitives:
 
-The defining components are the **hand-drawn card** (rough.js
-border in near-black, paper-white fill, no shadow), the **dry-erase
-shape primitive** (yellow/pink/green/blue pastel fills with
-hand-drawn borders), and the **muted-purple CTA** (`#6965db` solid
-fill, 6px radius). Even the navigation reads as sketched — wordmark,
-hand-drawn icons, no chrome.
+- **accent-yellow** (`#ffe066`) / **deep** (`#fad434`): canonical marker yellow.
+- **accent-pink** (`#ffadad`) / **deep** (`#ff8888`): pink marker.
+- **accent-green** (`#9be7c4`) / **deep** (`#6fd29f`): green marker.
+- **accent-blue** (`#bde0fe`) / **deep** (`#92c8fa`): blue marker.
+- **accent-orange** (`#ffb997`) / **deep** (`#ff9970`): orange marker.
+- **accent-purple** (`#d4c5f9`): light marker purple (distinguished from brand purple).
 
-## Do's and Don'ts
+These are saturated enough to read as marker-fluid but soft enough to allow text overlay at 4.5:1+ contrast.
 
-- **Do** render shape borders through rough.js or equivalent — the imprecision is the brand, not a flaw.
-- **Do** use Virgil/Excalifont as the display family; a clean geometric sans breaks the whiteboard metaphor entirely.
-- **Do** keep the accent palette to dry-erase marker hues — saturated UI blues and greens read as "polished SaaS" instead.
-- **Don't** apply drop-shadows to cards; the hand-drawn border is the entire elevation system.
-- **Don't** clean up the hand-drawn aesthetic into polished SaaS chrome — that's tldraw's territory, not Excalidraw's.
-- **Don't** introduce a second saturated accent next to the muted purple; the chromatic restraint is what keeps the casual chrome from reading as chaotic.
+### Interactive
+
+- **link**: `brand` (`#6965db`); the link colour and the action colour are the same hue.
+- **link-hover**: `brand-hover`; underline appears on hover.
+- **selected**: `brand-soft` (`#e8e7fb`) as fill, `brand` as text.
+- **disabled**: `text-faint` (`#bababa`) on `surface-soft`.
+
+### Neutral Scale
+
+- **text-muted** (`#5b5b5b`): captions, meta, secondary copy.
+- **text-soft** (`#8a8a8a`): tertiary text — timestamps, micro-copy.
+- **text-faint** (`#bababa`): disabled labels.
+
+### Surface & Borders
+
+- **surface** (`#ffffff`): default card surface.
+- **surface-soft** (`#fafafa`): secondary panel tint.
+- **surface-warm** (`#f5f0e0`): warm-tint surface for editorial callouts.
+- **surface-soft-warm** (`#fdfaf2`): softest warm tint, just barely visible.
+- **surface-hover** (`#f5f5f5`): hover state.
+- **bg-warm** (`#fdf6e3`): warm cream tint for nested panels (rare).
+- **bg-paper** (`#fafafa`): standard paper-fill for blocks.
+- **border** (`#1b1b1f1a`): 10% near-black hairline (rare; most borders are hand-drawn).
+- **border-strong** (`#1b1b1f33`): 20% near-black for emphasis.
+- **border-soft** (`#1b1b1f0d`): 5% near-black for subtle dividers.
+- **border-hand** (`#1b1b1f`): full near-black for hand-drawn borders — the canonical card border.
+
+### Shadow Colors
+
+- **none**: the default — Excalidraw refuses ambient shadow on the canvas.
+- **raised** (`rgba(0,0,0,0.06) 0 2px 4px`): rare, only on hovered cards.
+- **popover** (`rgba(0,0,0,0.12) 0 8px 24px`): tooltips and dropdowns.
+
+The 2px hand-drawn near-black border is the entire elevation system. Shadows would compete with the hand-drawn cue and read as polished SaaS rather than rough whiteboard.
+
+### Semantic
+
+- **success** (`#16a34a`) on **success-bg** (`#dcfce7`): editorial green.
+- **warning** (`#d97706`) on **warning-bg** (`#fef3c7`): warm amber.
+- **danger** (`#dc2626`) on **danger-bg** (`#fee2e2`): restrained red.
+- **info** (`#6965db`) on **info-bg** (`#e8e7fb`): info reuses brand purple.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display**: Excalifont → Virgil → Cascadia → Assistant → -apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif.
+- **Body**: Assistant → Inter → -apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif.
+- **Hand companion**: Virgil → Excalifont → Caveat → Comic Neue → Patrick Hand → cursive. Used for on-canvas annotations.
+- **Mono companion**: Cascadia Code → Cascadia → JetBrains Mono → ui-monospace → Menlo → Consolas → monospace.
+- **OpenType features**: only `kern` (default) — Excalifont and Virgil are handwriting cuts that don't ship full OpenType feature sets, and the system embraces that constraint.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Excalifont | 64 | 700 | 1.05 | -0.012em | kern | reserved for the boldest marketing |
+| display-large | Excalifont | 56 | 700 | 1.08 | -0.01em | kern | secondary heroes |
+| display | Excalifont | 48 | 700 | 1.1 | -0.01em | kern | the canonical hero size |
+| h1 | Excalifont | 40 | 700 | 1.12 | -0.008em | kern | section heads |
+| h2 | Excalifont | 32 | 600 | 1.2 | 0 | kern | feature-band heads |
+| h3 | Excalifont | 24 | 600 | 1.3 | 0 | kern | sub-feature heads |
+| h4 | Excalifont | 20 | 600 | 1.35 | 0 | kern | card heads |
+| h5 | Excalifont | 18 | 600 | 1.4 | 0 | kern | inline emphasis |
+| h6 | Excalifont | 16 | 600 | 1.4 | 0 | kern | label-grade heads |
+| body-large | Assistant | 18 | 400 | 1.6 | 0 | kern | hero subheads |
+| body | Assistant | 16 | 400 | 1.55 | 0 | kern | default reading |
+| body-small | Assistant | 14 | 400 | 1.5 | 0 | kern | secondary copy |
+| hand-large | Virgil | 32 | 400 | 1.2 | 0 | — | whiteboard annotation |
+| hand | Virgil | 18 | 400 | 1.3 | 0 | — | sticky-note marker text |
+| hand-small | Virgil | 14 | 400 | 1.35 | 0 | — | inline marker label |
+| label | Assistant | 12 | 600 | 1.3 | 0.02em | — | category cues |
+| caption | Assistant | 13 | 500 | 1.4 | 0 | — | image / chart caption |
+| code-inline | Cascadia | 14 | 400 | 1.4 | 0 | — | inline code |
+| code | Cascadia | 14 | 400 | 1.5 | 0 | — | code block |
+
+### Principles
+
+- **Excalifont (or Virgil) is the headline voice**: a handwriting-coded sans signals the whiteboard register. A clean geometric sans (Inter, SF Pro) breaks the metaphor entirely and shifts the brand toward generic SaaS.
+- **Assistant is the body workhorse**: the friendly slightly-rounded sans pairs with the handwriting display without competing. Inter at 400 reads as too neutral; Cascadia at 400 reads as too technical. Assistant is the negotiated middle.
+- **Modest tracking discipline**: tracking caps at `-0.012em` at hero scale. Excalifont and Virgil are inherently softer than geometric sans; pulling negative tracking too hard collapses the letterforms.
+- **No serif in the system**: Excalidraw refuses serif outright. The handwriting + sans pair carries every typographic register.
+- **Cascadia for code**: the developer-tool register pulls Cascadia (originally a Microsoft developer-focused mono) first. JetBrains Mono is the open-source fallback.
+- **The hand companion is for on-canvas annotation**: anywhere the page is showing a sketch or annotation, type switches to Virgil. This is the typographic equivalent of writing on a whiteboard with a marker.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (muted purple with hand-drawn border)**
+- Background: `#6965db`. Text: `#ffffff` at Assistant 600 / 15px. Padding: `10px 18px`. Radius: 6px. Border: `2px solid #1b1b1f` (rendered through rough.js for stroke randomness).
+- Hover: background → `#5651c5`, no transform. Active: background → `#443fa3`.
+- Use: every primary CTA — Try Excalidraw, Open editor, Get started.
+
+**Secondary (outlined with hand-drawn border)**
+- Background: transparent. Text: `#1b1b1f` at Assistant 600 / 15px. Padding: `10px 18px`. Radius: 6px. Border: `2px solid #1b1b1f` (hand-drawn).
+- Hover: background → `#fafafa`. Use: secondary action.
+
+**Ghost (no border)**
+- Background: transparent. Text: `#1b1b1f` at Assistant 500 / 14px. Padding: `8px 12px`. Radius: 6px.
+- Hover: background → `#fafafa`. Use: nav links, tertiary inline action.
+
+### Cards
+
+**Sketch card** (the canonical card)
+- Background: `#ffffff`. Border: `2px solid #1b1b1f` rendered through rough.js for stroke randomness. Radius: 8px. Padding: 20px. No shadow.
+- Hover: transform → `translateY(-1px) rotate(-0.3deg)` over 150ms; the slight rotation reinforces the hand-drawn cue. Optional `raised` shadow on hover.
+- Use: feature cards, pricing, testimonials — the universal card primitive.
+
+**Marker shape** (on-canvas drawn primitive)
+- Background: pastel marker hue (yellow / pink / green / blue / orange / purple). Border: `2px solid #1b1b1f` hand-drawn. Radius: 6px. Padding: 16px.
+- Use: in-canvas drawn primitives, feature illustrations.
+
+**Sticky marker** (dry-erase note)
+- Background: `#ffe066` (or other marker hue). Text: `#1b1b1f` at Virgil 400 / 18px or Assistant 500 / 16px. Border: `2px solid #1b1b1f` hand-drawn. Radius: 6px. Padding: 12px.
+- Rotation: `-1.5deg` to `+1deg` randomised; never aligned to grid.
+- Use: feature callouts, on-canvas annotations.
+
+### Badges, Tags, Pills
+
+**Hand-drawn badge**
+- Background: `#fafafa`. Text: `#1b1b1f` at Assistant 600 / 12px tracked `+0.02em`. Border: `1px solid #1b1b1f` hand-drawn. Radius: 9999px. Padding: `4px 10px`.
+- Use: status tags, category labels.
+
+**Marker tag**
+- Background: marker pastel (e.g. `#9be7c4` green). Text: `#1b1b1f` at Assistant 600 / 12px. Border: `1px solid #1b1b1f` hand-drawn. Radius: 9999px. Padding: `4px 10px`.
+- Use: feature highlights inside marker shapes.
+
+### Inputs / Forms
+
+**Text input**
+- Background: `#ffffff`. Border: `2px solid #1b1b1f` hand-drawn. Radius: 6px. Padding: `10px 14px`. Font: Assistant 400 / 16px.
+- Focus: border → `#6965db`, ring `0 0 0 3px rgba(105,101,219,0.3)`.
+- Placeholder: `#8a8a8a`.
+
+### Navigation
+
+**Top bar**
+- Background: `#fffefd` with no bottom border (or hand-drawn `2px solid #1b1b1f` line if needed). Height: 56px.
+- Logo: Excalidraw wordmark in Excalifont 700 / 22px in `#1b1b1f`.
+- Nav items: Assistant 500 / 14px, colour `#1b1b1f`, hover background → `#fafafa`.
+- Primary CTA visible at top right (purple button with hand-drawn border).
+
+### Tooltips, Toasts, Modals
+
+- **Tooltip**: background `#1b1b1f`, text `#ffffff` at Assistant 500 / 12px, radius 4px, padding `6px 10px`. Shadow: `popover` (one of the few places shadow appears).
+- **Toast**: background `#ffffff`, border `2px solid #1b1b1f` hand-drawn, radius 8px, no shadow. Padding `12px 16px`.
+- **Modal**: background `#ffffff`, border `2px solid #1b1b1f` hand-drawn, radius 12px. Backdrop: `rgba(0,0,0,0.4)`. Padding 24px.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit: 4px. Scale: `[1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80]` × 4px. The system uses moderate-tight intervals — 16–20px gutters, 32–48px between feature blocks, 64–80px between major bands. Density is medium-tight: tighter than tldraw, tighter than ElevenLabs, looser than Are.na.
+
+### Grid & Container
+
+- **Page width**: 1200px max, centred.
+- **Prose width**: 720px for editorial blog and docs.
+- **Hero treatment**: hero copy claims roughly 700–800px horizontal, often with hand-drawn illustration (rendered live via rough.js) anchoring the right column.
+- **Feature grid**: 3-column at 1024px+, 2-column at 768–1024px, 1-column below 768px. Card gap: 20–24px.
+
+### Whitespace Philosophy
+
+Layout is loose and casual, mirroring an actual whiteboard. Hero content typically sits at left, with a hand-drawn illustration anchoring the right column. Sections flow vertically with moderate whitespace, and section dividers are often hand-drawn squiggles rather than horizontal rules. The casual rhythm is intentional — Excalidraw is not aiming for the precision-rhythm of Linear or the magazine-rhythm of Notion.
+
+### Section Cadence
+
+The cadence is single-canvas continuous — there is no band-cycling, no light-dark alternation, no chromatic event between sections. The page reads as a single hand-drawn surface from top to bottom, with sections separated by spacing and the occasional hand-drawn squiggle divider. The continuity is part of the brand's casual-pragmatic register.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| none | 0px | rare; full-bleed images |
+| micro | 2px | tight inline indicators |
+| xs | 4px | small inline pills, micro UI |
+| sm | 6px | tooltips, small popovers |
+| md | 6px | text inputs, secondary buttons (note: same as sm) |
+| button | 6px | the canonical button radius |
+| card | 8px | the canonical card radius |
+| lg | 10px | larger feature cards |
+| xl | 12px | modals |
+| pill | 9999px | badges, status tags |
+
+The radius ladder is small and tight: 4 / 6 / 8 / 10 / 12px. Buttons land at 6px, cards at 8px. The hand-drawn nature of borders means radius rarely reads as a precise number — rough.js renders corners with their own subtle imprecision, so the visible radius is "approximately 6–8px" rather than exactly that. The smallness of the radius ladder is what keeps the design from drifting toward modern-rounded SaaS chrome.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | flat, on `#fffefd` paper canvas | body content, default surfaces |
+| 1 | `2px solid #1b1b1f` hand-drawn border | the canonical card; depth via thick hand-drawn border |
+| 2 | hand-drawn border + `translateY(-1px) rotate(-0.3deg)` on hover | hovered card |
+| 3 | optional `raised` shadow on emphasis cards | rare floating panel |
+| 4 | `popover` shadow + 8px radius | tooltip, dropdown, menu |
+| 5 | hand-drawn border + backdrop, 12px radius | modal |
+
+**Shadow Philosophy**: there is essentially no shadow in the system. Depth comes from the hand-drawn near-black border surrounding each card — wobbly stroke width, slight imperfection at the corners, no fill or hairline. This is the entire elevation system. Shadows would compete with the hand-drawn cue and shift the brand toward polished SaaS. The only places shadow appears are tooltips and dropdowns where elevation is functionally required.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — workhorse Material-style ease.
+- **emphasized**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — slight overshoot for the toy-like cue; used on hover lifts.
+- **decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — used for elements entering from off-canvas.
+
+### Durations
+
+- **instant** (80ms): hover background colour shifts.
+- **fast** (150ms): card hover lift, link underline.
+- **standard** (220ms): button press, dropdown open.
+- **slow** (320ms): modal open.
+- **emphasized** (480ms): hero entrance choreography.
+
+### Per-component micro-states
+
+- **Button hover**: background colour shift over 150ms with `standard` ease; no transform.
+- **Card hover**: transform → `translateY(-1px) rotate(-0.3deg)` over 150ms with `emphasized` ease; the slight rotation reinforces the hand-drawn cue.
+- **Sticky marker hover**: rotation animates from `-1.5deg` to `0deg` (or vice versa) over 150ms; the hand-drawn border stays.
+- **Link hover**: underline appears over 100ms; brand purple stays.
+- **Input focus**: ring fades in at 100ms; border colour shifts to brand purple simultaneously.
+- **rough.js stroke randomness**: not motion — the stroke randomness is rendered once per element on mount and persists. It is not animated, and it persists under reduced-motion.
+
+### Page transitions
+
+Excalidraw uses opacity-only fades at 220ms with `standard` ease for route transitions — quiet and pragmatic, matching the open-source-pragmatic register. No slide, no scale, no parallax.
+
+### Reduced-motion strategy
+
+`prefers-reduced-motion: reduce` is fully respected: all transform-based animations (lifts, rotations) collapse to opacity-only at 100ms. The sticky-marker rotation becomes static. Hover lifts disappear. **rough.js stroke randomness is preserved** because it is not motion — it is a static visual rendering that happens to look hand-drawn.
+
+## 9. Accessibility & A11y
+
+### Contrast pairs (computed)
+
+- **text on bg**: `#1b1b1f` on `#fffefd` → 16.8:1 (AAA at all sizes).
+- **text-muted on bg**: `#5b5b5b` on `#fffefd` → 7.4:1 (AAA at body sizes).
+- **on-brand on brand**: `#ffffff` on `#6965db` → 4.7:1 (AA at body, AAA at large).
+- **text on accent-yellow**: `#1b1b1f` on `#ffe066` → 16.4:1 (AAA).
+- **text on accent-pink**: `#1b1b1f` on `#ffadad` → 12.2:1 (AAA).
+- **text on accent-green**: `#1b1b1f` on `#9be7c4` → 13.8:1 (AAA).
+- **text on accent-blue**: `#1b1b1f` on `#bde0fe` → 14.4:1 (AAA).
+- **brand on bg**: `#6965db` on `#fffefd` → 4.8:1 (AA at body).
+
+### Focus indicators
+
+- **Default focus ring**: `3px solid rgba(105,101,219,0.4)` with 1px offset; brand purple ring.
+- **Within input fields**: border colour shifts to `#6965db` and adds a `0 0 0 3px rgba(105,101,219,0.3)` ring.
+- **On marker pastels**: ring uses `rgba(27,27,31,0.5)` (near-black ring) for sufficient contrast.
+
+Focus rings are never removed. The hand-drawn border discipline does not extend to focus rings (which must be precise for accessibility).
+
+### ARIA patterns
+
+- Embedded canvas demos use `role="application"` with full keyboard semantics for the editor.
+- Sticky-marker callouts carry `role="note"` with `aria-label` describing the content.
+- Modals use `role="dialog"`, `aria-modal="true"`, focus trap, `Esc` to close.
+- The hand-drawn icons throughout the UI carry `aria-label` describing their action; visual idiosyncrasy doesn't excuse semantic clarity.
+
+### Keyboard nav order
+
+Top bar → hero CTA → embedded canvas (if interactive) → feature bands → pricing → footer. Tab order matches visual order. Skip-to-content link visible on focus.
+
+### Screen reader hints
+
+- Decorative hand-drawn squiggle dividers carry `aria-hidden="true"`.
+- Sticky-marker callouts carry `aria-label` describing the message.
+- Embedded canvas demos carry `aria-label="Interactive whiteboard editor"`.
+- Hand-drawn icons carry `aria-label` describing the action ("Save", "Export", "Open file").
+
+### Reduced motion
+
+Honored throughout — see §8. The rough.js stroke randomness is preserved (not motion).
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Tier | Width | Behavior |
+|---|---|---|
+| mobile | < 480px | single column, 12px gutter, 48px section padding, hero at 32–36px |
+| tablet | 480–768px | single column, 16px gutter, 56px section padding, hero at 40–48px |
+| desktop | 768–1024px | 2-column feature grids, 20px gutter, 64px section padding |
+| wide | 1024–1280px | 3-column feature grids, 24px gutter, 80px section padding |
+| ultra | 1280px+ | container caps at 1200px, hero at 48–64px |
+
+### Touch Targets
+
+Minimum 44×44px on touch devices. The 10px / 18px button padding on mobile expands to 12px / 20px to clear the threshold.
+
+### Collapsing strategy
+
+- **Top nav**: hamburger menu < 768px; primary CTA stays visible.
+- **Hero**: hand-drawn illustration moves below copy < 768px; copy claims full width.
+- **Feature grid**: 3 → 2 → 1 columns at 1024 / 768 / 480.
+- **Sticky markers**: stack vertically < 768px, lose extreme rotation for tighter packing.
+- **Footer**: 4-column → 2-column → 1-column at 1024 / 768 / 480.
+
+### Image behavior
+
+Hand-drawn illustrations rendered live via rough.js are scalable SVG and reflow naturally. Static screenshots use `aspect-ratio: 16/10` lock with `object-fit: contain`.
+
+### Container queries
+
+Used inside the embedded canvas — the toolbar switches between expanded (icon + label) and condensed (icon-only) modes based on container width.
+
+## 11. Content & Voice
+
+### Tone
+
+Excalidraw's tone is **open-source-pragmatic**: direct, friendly, and developer-respectful. It writes like a contributor README — present-tense, short bulletins, no marketing rhetoric. Headlines are descriptive ("Excalidraw is a virtual collaborative whiteboard."); secondary copy explains the mechanism plainly. The voice positions Excalidraw as a tool used by collaborators and developers, not a product sold to enterprises.
+
+### Microcopy patterns
+
+- **Button verbs**: "Try Excalidraw", "Open editor", "Get the source", "Read the docs", "Star on GitHub". Every CTA is action-forward; the GitHub-star CTA is the brand's open-source register.
+- **Error messages**: pattern is "[Action] failed. [Reason if known]." e.g. "Couldn't save — connection lost. Your drawing is preserved locally."
+- **Success confirmations**: short, declarative, often paired with a hand-drawn checkmark. "Saved." rather than "Your drawing has been saved successfully!"
+
+### Empty states
+
+Empty states are inviting and demo-forward, often using a hand-drawn arrow primitive pointing to the action area. "Start drawing here" with an arrow toward the canvas. Empty-state copy never uses cheerful illustrations or "Oops!" copy — the casual register stays even when the canvas is empty.
+
+### CTA verb conventions
+
+- **Primary marketing CTA**: "Try Excalidraw" — invitation-style verb, actually navigates to the live editor.
+- **Developer CTA**: "Get the source", "Read the docs", "Star on GitHub" — open-source community verbs.
+- **Feature CTA**: "Open editor", "Try in browser".
+- **Newsletter**: rare; if present, "Follow updates" or "Subscribe".
+
+## 12. Dark Mode & Theming
+
+Excalidraw ships an optional dark mode for both the marketing surface and the editor. The dark map (see frontmatter `colors-dark`):
+
+- **bg**: `#121212` (warm near-black, not pure black)
+- **bg-canvas**: `#1a1a1a` for embedded editor demos
+- **bg-warm**: `#1e1c18` for warm-tinted nested panels
+- **surface**: `#1f1f1f`, **surface-soft**: `#2a2a2a`, **surface-hover**: `#333333`
+- **text**: `#f5f5f5` (slightly soft white)
+- **text-muted**: `#a8a8a8`, **text-soft**: `#787878`
+- **brand**: `#8b87e6` — purple lifts to maintain contrast against dark
+- **border-hand**: `#f5f5f5` — inverted; the hand-drawn border becomes light-on-dark
+- **border**: `#ffffff1a`, **border-strong**: `#ffffff33`
+- **Marker pastels become muted-deep**: yellow → `#5c4d20`, pink → `#5c2828`, green → `#2a4a37`, blue → `#28456a`, orange → `#5c3520`, purple → `#3a2f5c`
+
+When implementing dark mode:
+- The hand-drawn `2px` border inverts to light-on-dark (`#f5f5f5` instead of `#1b1b1f`); rough.js stroke randomness persists.
+- The brand purple shifts from `#6965db` to `#8b87e6` to maintain contrast.
+- Marker pastels become muted-deep variants — still identifiable as "the yellow" or "the green", but tuned for low-light comfort.
+- No shadows are added; the hand-drawn border continues to carry elevation.
+- The cream undertone of the canvas is replaced with warm-near-black undertone (`#121212` instead of pure black `#000000`).
+
+The dark mode follows `prefers-color-scheme: dark` automatically, with manual override available via the editor's theme toggle.
+
+## 13. Lineage & Influences
+
+Excalidraw's design philosophy is "draw it badly on purpose." The lineage runs through three distinct traditions:
+
+**Hand-drawn primitive software**: FiftyThree's Paper.app (the original tablet sketchbook), Penultimate (the iPad note-taking app), and the wider tablet-as-sketchbook tradition. These references treat the digital canvas as a sketchbook surface and render strokes with deliberate randomness to mimic ink and pencil. Excalidraw inherits this language directly through rough.js.
+
+**rough.js library**: the JavaScript library that renders SVG paths with stroke randomness, written by Preet Shihn specifically to make computer-drawn graphics look hand-drawn. rough.js is not just a stylistic flourish — it is *central* to the brand identity, and removing it would unmoor Excalidraw from its visual lineage. Every shape on the canvas, every card border on the marketing site, and every illustration is rendered through rough.js.
+
+**Whiteboard / dry-erase tradition**: the conceptual ground. Pastel marker hues, hand-printed labels, accepted imprecision, the comfort of writing on a wall. Excalidraw translates this into web canvas form, and the pastel marker palette (yellow, pink, green, blue, orange, purple) is taken directly from the standard dry-erase marker set.
+
+What Excalidraw rejects: polished SaaS chrome (tldraw is the explicit polished sibling), broadcast marketing aesthetics (no Off-White-style typography, no industrial poster register), gradient or shadow elevation systems, and any chromatic system that involves more than the muted purple + dry-erase markers. The open-source-pragmatic register is itself the discipline.
+
+**Named influences**
+
+- **Paper / FiftyThree** ([fiftythree.com](https://www.fiftythree.com)) — Hand-drawn primitive aesthetic translated to web canvas; the original tablet-as-sketchbook lineage.
+- **rough.js** ([roughjs.com](https://roughjs.com)) — The library that renders every stroke wobbly; central to the brand identity, not just a stylistic flourish.
+- **Whiteboards / dry-erase tradition** ([Wikipedia](https://en.wikipedia.org/wiki/Whiteboard)) — The conceptual ground; pastel marker hues, hand-printed labels, accepted imprecision.
+- **tldraw** ([tldraw.com](https://tldraw.com)) — Inverse reference; tldraw polishes the whiteboard metaphor into SaaS chrome, Excalidraw refuses to polish.
+- **Comic Neue / Caveat / Patrick Hand** ([comicneue.com](https://www.comicneue.com)) — The wider handwriting-fonts tradition; permission to use hand-drawn type as serious typography.
+
+## 14. Do's and Don'ts
+
+**Do**
+
+- Render shape borders through rough.js or equivalent — the imprecision is the brand, not a flaw. Every rectangle's four corners should be subtly different.
+- Use Virgil or Excalifont as the display family; a clean geometric sans (Inter, SF Pro) breaks the whiteboard metaphor entirely.
+- Keep the accent palette to dry-erase marker hues — saturated UI blues and greens read as "polished SaaS" instead.
+- Use the 2px hand-drawn near-black border as the entire elevation system; it is the brand's most direct visual statement.
+- Pair Excalifont (display) with Assistant (body); the friendly slightly-rounded body sans is what keeps the type system legible at paragraph scale.
+- Run sticky markers with subtle randomised rotation (`-1.5deg` to `+1deg`) and the 2px hand-drawn border; they should read as taped on a whiteboard.
+- Use Cascadia Code for code samples; the developer-tool register pulls Cascadia first.
+- Honor `prefers-reduced-motion: reduce` — collapse hover lifts and rotations to opacity-only. **Preserve rough.js stroke randomness** (it is not motion).
+- Run sections at 64–80px vertical padding; the casual whiteboard rhythm is medium-tight.
+- Show the actual product (live Excalidraw editor screenshots and embedded demos) rather than art-directed marketing illustrations.
+
+**Don't**
+
+- Don't apply drop-shadows to cards; the hand-drawn border is the entire elevation system.
+- Don't clean up the hand-drawn aesthetic into polished SaaS chrome — that's tldraw's territory, not Excalidraw's.
+- Don't introduce a second saturated accent next to the muted purple; the chromatic restraint is what keeps the casual chrome from reading as chaotic.
+- Don't replace Excalifont / Virgil with Inter or SF Pro for headlines; the handwriting cue is non-negotiable.
+- Don't soften the 2px border to a 1px hairline; the thicker hand-drawn line is the brand's signature.
+- Don't render shape borders as machine-precise SVG paths; the imprecision through rough.js is the entire brand.
+- Don't use modern pastel surface tints (the way tldraw uses them) — the marker palette is more saturated and lives only as marker fills, not as surface tints.
+- Don't introduce gradients, atmospheric blur, or 3D effects; the page is flat-paper-with-hand-drawn-strokes.
+- Don't use the muted purple for body text; it is reserved for action and brand identity.
+- Don't soften the open-source-pragmatic voice with marketing-cheerful copy; the casual-direct register is the brand.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #fffefd
+bg-canvas: #ffffff
+surface: #ffffff
+text: #1b1b1f
+text-muted: #5b5b5b
+brand: #6965db
+brand-hover: #5651c5
+brand-soft: #e8e7fb
+border-hand: #1b1b1f
+accent-yellow: #ffe066
+accent-pink: #ffadad
+accent-green: #9be7c4
+accent-blue: #bde0fe
+accent-orange: #ffb997
+```
+
+### Example Component Prompts
+
+1. "Create a marketing hero in the Excalidraw style: `#fffefd` paper-white canvas with cream undertone, Excalifont (or Virgil) 700 / 56px headline in `#1b1b1f` with `-0.01em` tracking, Assistant 400 / 18px subhead in `#5b5b5b`, primary purple CTA (`#6965db` background, `#ffffff` text at Assistant 600 / 15px, `2px solid #1b1b1f` hand-drawn border rendered through rough.js, 6px radius, `10px 18px` padding), and a hand-drawn arrow illustration anchoring the right column."
+
+2. "Design a sketch card in the Excalidraw style: `#ffffff` background, `2px solid #1b1b1f` border rendered through rough.js for stroke randomness, 8px radius, 20px padding, NO drop shadow, Excalifont 600 / 24px H3 title, Assistant 400 / 16px body in `#1b1b1f`. Hover: `translateY(-1px) rotate(-0.3deg)` over 150ms with cubic-bezier(0.34, 1.56, 0.64, 1)."
+
+3. "Render a sticky marker in the Excalidraw style: `#ffe066` (yellow) or `#ffadad` (pink) background, `2px solid #1b1b1f` rough.js border, 6px radius, 12px padding, Virgil 400 / 18px text in `#1b1b1f`, randomised rotation between `-1.5deg` and `+1deg`."
+
+4. "Create a marker shape primitive in the Excalidraw style: `#9be7c4` (green) background or any dry-erase pastel, `2px solid #1b1b1f` rough.js border, 6px radius, 16px padding, Virgil 400 / 18px label inside. Use as on-canvas drawn primitive in feature illustrations."
+
+5. "Design a navigation bar in the Excalidraw style: `#fffefd` background with no bottom border (or hand-drawn `2px solid #1b1b1f` line if needed), 56px height, Excalifont 700 / 22px Excalidraw wordmark on the left, Assistant 500 / 14px nav items on the right, primary purple CTA visible at top right with hand-drawn border."
+
+6. "Render an empty-state in the Excalidraw style: plain `#1b1b1f` text at Assistant 400 / 16px reading 'Start drawing here' with the verb 'drawing' as `#6965db` inline link, accompanied by a hand-drawn arrow primitive pointing to the canvas area, no card, no illustration beyond the arrow, all on the `#fffefd` paper canvas."
+
+### Iteration Guide
+
+1. **Start with the canvas**: confirm `#fffefd` paper-white with the slightest cream undertone (not pure white, not warm cream). If your prototype reads sterile, you've drifted toward Linear; if it reads warm, you've drifted toward Notion.
+2. **Verify the hand-drawn discipline**: every card border should be 2px near-black rendered through rough.js (or a similar stroke-randomness library). Machine-precise hairlines break the brand entirely.
+3. **Audit the type voice**: hero headlines should hit 48–64px in Excalifont (or Virgil) at 700 weight. Body should be Assistant 400 / 16px on 1.55 line-height. If your headline is in Inter or SF Pro, you've broken the whiteboard metaphor.
+4. **Check the action colour**: there should be exactly one `#6965db` muted purple per module. Marker pastels (yellow, pink, green, blue, orange, purple) are for shape fills only, never CTAs.
+5. **Verify the elevation strategy**: zero drop shadows on cards. If you see any soft shadow, replace it with the 2px hand-drawn border. The only places shadow appears are tooltips and dropdowns.
+6. **Confirm the marker palette discipline**: dry-erase markers appear as shape fills only, never as surface tints. A feature module has at most one marker hue.
+7. **Test the rough.js rendering**: every shape should render with subtle stroke randomness — corners not quite identical, line weight slightly variable. Static SVG paths read as polished SaaS, not Excalidraw.
+8. **Check the reduced-motion path**: hover lifts and sticky-marker rotations should collapse to opacity-only when `prefers-reduced-motion: reduce` is set. **rough.js stroke randomness persists** — it is not motion.

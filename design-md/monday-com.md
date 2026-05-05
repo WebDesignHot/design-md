@@ -6,7 +6,7 @@ source_url: https://monday.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas, productivity]
+categories: [saas]
 tags: [light, colorful, poppins, bold, energetic, project-management]
 preview_swatch: ['#ffffff', '#ff3d57', '#323338']
 related: [asana, airtable, notion]

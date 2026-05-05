@@ -9,7 +9,7 @@ featured: false
 categories: [social, saas]
 tags: [light, blue, sans, clean, friendly, technical]
 preview_swatch: ['#ffffff', '#2aabee', '#0088cc']
-related: [discord, slack, signal-app]
+related: [discord, slack]
 description: 'Telegram''s visual identity is built on a single confident sky-cloud blue (`#2aabee`) and a paper-plane wordmark that signals the brand''s "messages take flight" promise. The marketing surface runs on a `#ffffff` clean canvas with `#2aabee` accent CTAs, while the in-product chat surface uses a slightly cooler `#1c2733` dark navy as default and offers user-customizable chat backgrounds. Roboto on Android, SF Pro on iOS, and a custom Telegram Sans on web — the system embraces native typography while preserving consistent color voltage. The brand''s defining visual is the chat-bubble pair: outgoing in `#effdde` mint-soft on light or `#766ac8` violet on dark, incoming in `#ffffff` white or `#182533` deep-navy. The platform reads as cloud-sync minimalism — secure, fast, infrastructure-feeling.'
 
 colors:

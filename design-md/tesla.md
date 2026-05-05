@@ -6,7 +6,7 @@ source_url: https://www.tesla.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, minimal, sans, photography, cinematic, monochrome]
 preview_swatch: ['#ffffff', '#3e6ae1', '#171a20']
 related: [apple, framer, vercel]

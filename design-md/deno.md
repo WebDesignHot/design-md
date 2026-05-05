@@ -1,63 +1,126 @@
 ---
 name: Deno
-tagline: Inkwell black on warm white with the dinosaur mascot — TypeScript runtime as Eric Carle children''s book.
+tagline: 'Inkwell black on warm white with the dinosaur mascot — TypeScript runtime as Eric Carle children''s book.'
 author: webdesignhot
 source_url: https://deno.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools]
 tags: [light, playful, sans, structured, warm, soft]
 preview_swatch: ['#ffffff', '#000000', '#70ffaf']
 related: [vercel, vite, tailwindcss]
-description: 'Deno''s site is built around its dinosaur mascot and a deliberately warm, illustrative register — pure white canvas, inkwell-black type, mint-green `#70ffaf` accents, and the rounded sans of a children''s book paired with crisp engineering documentation. Where Bun goes cream-and-pink, Deno goes white-and-mint with a hand-drawn warmth.'
+description: 'Deno''s site is built around its dinosaur mascot and a deliberately warm, illustrative register — pure white canvas, inkwell-black type, mint-green `#70ffaf` accents, and the rounded sans of a children''s book paired with crisp engineering documentation. Where Bun goes cream-and-pink, Deno goes white-and-mint with hand-drawn warmth. Inter Display at 700/800 carries the chunky bulletin tone; JetBrains Mono on a `#0d1117` panel foregrounds code as primary content. The brand sells security and developer happiness by refusing to shout — the dinosaur is the loudest thing on the page.'
 
 colors:
-  bg: '#ffffff'
-  bg-soft: '#f8f9fa'
-  surface: '#f4f5f7'
-  surface-strong: '#e8eaed'
-  text: '#000000'              # inkwell black
-  text-strong: '#000000'
-  text-muted: '#5b5e64'
-  brand: '#70ffaf'             # Deno mint green
-  brand-strong: '#34d399'
-  brand-soft: '#dcfce7'
-  accent: '#000000'             # the black is itself a brand color
-  accent-warm: '#f59e0b'        # secondary warm accent for callouts
-  border: '#e1e3e7'
-  border-strong: '#c3c6ca'
-  on-brand: '#000000'           # dark text on the mint button
-  code-bg: '#0d1117'
+  # — Primary —
+  bg: '#ffffff'                  # pure paper-white canvas
+  bg-soft: '#f8f9fa'             # alternate-section subtle gray
+  bg-strong: '#f4f5f7'           # card lift, sidebar panels
+  surface: '#ffffff'             # default surface (matches bg)
+  surface-strong: '#f4f5f7'      # raised card surface
+  surface-muted: '#e8eaed'       # pressed or active surface
+  text: '#000000'                # inkwell black, full strength
+  text-strong: '#000000'         # absolute black for emphasis
+  text-muted: '#5b5e64'          # captions, metadata
+  text-faint: '#8c8f95'          # tertiary, helper labels
+  text-disabled: '#b8babf'       # disabled labels
+  # — Brand & Accents —
+  brand: '#70ffaf'               # signature Deno mint
+  brand-strong: '#34d399'        # pressed mint, hover-down
+  brand-deep: '#10b981'           # deep mint for emphasis
+  brand-soft: '#dcfce7'           # mint wash for callouts
+  brand-faint: '#f0fdf4'           # palest mint tint
+  accent: '#000000'               # the black is itself a brand color
+  accent-warm: '#f59e0b'           # secondary warm accent for callouts
+  accent-warm-soft: '#fef3c7'      # warm callout background
+  # — Interactive —
+  link: '#0066cc'                 # documentation link blue, separate from brand
+  link-hover: '#004999'           # darker link on hover
+  link-visited: '#553c9a'         # visited link plum
+  selected: '#dcfce7'             # selected-row mint tint
+  disabled-bg: '#f4f5f7'          # disabled control surface
+  disabled-text: '#b8babf'        # disabled label
+  # — Neutrals & Borders —
+  border: '#e1e3e7'               # subtle gray hairline
+  border-strong: '#c3c6ca'        # emphasized divider
+  border-subtle: '#eef0f2'        # near-invisible divider
+  divider: '#e8eaed'              # table rules
+  # — Inverse / Dark Surfaces —
+  inverse-bg: '#0d1117'            # dark code-block background
+  inverse-text: '#e6e6e6'          # near-white text on dark code
+  inverse-text-muted: '#8b949e'    # muted code comment
+  inverse-border: '#30363d'        # dark-surface border
+  # — Shadow Colors —
+  shadow-soft: 'rgba(0, 0, 0, 0.04)'
+  shadow-standard: 'rgba(0, 0, 0, 0.08)'
+  shadow-mint: 'rgba(112, 255, 175, 0.32)'   # mint glow halo
+  # — Semantic —
+  success-bg: '#dcfce7'
+  success-text: '#166534'
+  success-border: '#86efac'
+  warning-bg: '#fef3c7'
+  warning-text: '#854d0e'
+  warning-border: '#fbbf24'
+  danger-bg: '#fee2e2'
+  danger-text: '#991b1b'
+  danger-border: '#fca5a5'
+  info-bg: '#dbeafe'
+  info-text: '#1e3a8a'
+  info-border: '#93c5fd'
+  on-brand: '#000000'              # inkwell-black ON the mint — Deno's signature inversion
+  on-accent-warm: '#000000'        # black ON the warm gold
 
 typography:
   display:
     family: '"Inter Display", Inter, -apple-system, "system-ui", sans-serif'
     weights: [600, 700, 800]
+    opentype-features: ['ss01', 'cv11']
   body:
     family: 'Inter, -apple-system, "system-ui", "Segoe UI", sans-serif'
     weights: [400, 500, 600]
+    opentype-features: ['cv01', 'cv11']
   mono:
-    family: '"JetBrains Mono", ui-monospace, "Fira Code", Menlo, monospace'
-    weights: [400, 500]
+    family: '"JetBrains Mono", ui-monospace, "Fira Code", Menlo, Consolas, monospace'
+    weights: [400, 500, 700]
+    opentype-features: ['zero', 'ss02']
   scale:
-    h1:    { size: 72, weight: 800, lineHeight: 1.0,  tracking: '-0.03em' }
-    h2:    { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.02em' }
-    h3:    { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.01em' }
-    body:  { size: 17, lineHeight: 1.6 }
-    small: { size: 14, lineHeight: 1.5 }
-    code:  { size: 14, family: mono, lineHeight: 1.6 }
+    display-hero:    { size: 88, weight: 800, lineHeight: 0.95, tracking: '-0.035em', family: display, opentype: 'ss01' }
+    display-large:   { size: 72, weight: 800, lineHeight: 1.0,  tracking: '-0.03em',  family: display }
+    display:         { size: 60, weight: 700, lineHeight: 1.05, tracking: '-0.025em', family: display }
+    h1:              { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.02em',  family: display }
+    h2:              { size: 36, weight: 700, lineHeight: 1.2,  tracking: '-0.018em', family: display }
+    h3:              { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.012em', family: display }
+    h4:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.4,  tracking: '0.1em',    family: body, transform: 'uppercase' }
+    body-lg:         { size: 19, weight: 400, lineHeight: 1.6,  tracking: '-0.005em', family: body }
+    body:            { size: 17, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body-sm:         { size: 15, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.5,  tracking: '0.01em',   family: body }
+    micro:           { size: 11, weight: 600, lineHeight: 1.4,  tracking: '0.04em',   family: body, transform: 'uppercase' }
+    code:            { size: 14, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono, opentype: 'zero' }
+    code-sm:         { size: 12, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono, opentype: 'zero' }
+    code-tabular:    { size: 14, weight: 500, lineHeight: 1.5,  tracking: '0',        family: mono, opentype: 'zero, tnum' }
 
 radius:
-  xs: 4
-  sm: 6
-  md: 8
-  lg: 12
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  xl: 12
+  xxl: 16
   card: 12
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+
 layout:
-  container: 1200
+  page-width: 1200
+  prose-width: 680
+  header-height: 64
   gutter: 24
   section-padding: 96
   grid: 12
@@ -68,20 +131,101 @@ components:
     color: '#ffffff'
     radius: 8
     weight: 600
+    padding: '12px 24px'
+    font: display
+    hover: 'bg #1a1a1a; translateY(-1px)'
   button-mint:
     bg: '#70ffaf'
     color: '#000000'
     radius: 8
     weight: 600
+    padding: '12px 24px'
+    font: display
+    hover: 'bg #34d399; color #000000'
+  button-ghost:
+    bg: 'transparent'
+    color: '#000000'
+    border: '1px solid #c3c6ca'
+    radius: 8
+    weight: 500
+    hover: 'bg #f4f5f7'
+  button-link:
+    bg: 'transparent'
+    color: '#0066cc'
+    underline: 'on hover'
+    weight: 500
   card:
     bg: '#ffffff'
     border: '1px solid #e1e3e7'
     radius: 12
+    padding: '24px'
+    shadow: 'rgba(0,0,0,0.04) 0 1px 2px'
+  card-callout:
+    bg: '#dcfce7'
+    border: '1px solid #86efac'
+    radius: 12
+    padding: '20px'
+  badge:
+    bg: '#dcfce7'
+    color: '#166534'
+    radius: 9999
+    padding: '4px 10px'
+    weight: 600
+    font: mono
+  input:
+    bg: '#ffffff'
+    color: '#000000'
+    border: '1px solid #c3c6ca'
+    radius: 8
+    padding: '10px 14px'
+    focus-ring: '0 0 0 3px rgba(112, 255, 175, 0.4)'
+  nav:
+    bg: '#ffffffe6'
+    backdrop-blur: 8
+    border-bottom: '1px solid #e1e3e7'
+    height: 64
   code-block:
     bg: '#0d1117'
-    color: '#ffffff'
+    color: '#e6e6e6'
     radius: 12
+    padding: '20px 24px'
     font: mono
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  duration-page: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translateY transforms collapse to opacity-only fades; mascot wiggles disabled.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.04) 0 1px 2px'
+  standard: 'rgba(0, 0, 0, 0.08) 0 4px 12px'
+  elevated: 'rgba(0, 0, 0, 0.10) 0 12px 24px -8px'
+  mint-glow: 'rgba(112, 255, 175, 0.32) 0 0 24px'
+  ring: '0 0 0 3px rgba(112, 255, 175, 0.4)'
+
+accessibility:
+  contrast-text-on-bg: 21.0                 # AAA — pure black on pure white
+  contrast-text-on-brand: 13.6              # AAA — pure black on mint
+  contrast-muted-on-bg: 7.4                 # AAA — #5b5e64 on white
+  contrast-link-on-bg: 6.8                  # AA at body sizes
+  focus-ring: '3px solid rgba(112, 255, 175, 0.4)'
+  focus-offset: '2px'
+  reduced-motion-honored: true
+  min-touch-target: 44
+
+dark-mode: null   # Light-only — no dark variant offered as primary theme
 
 lineage:
   summary: |
@@ -89,21 +233,20 @@ lineage:
     aesthetic. The canvas is pure `#ffffff` paper-white, the type is
     inkwell `#000000`, and the brand color — `#70ffaf`, a saturated
     mint green — sits as the single chromatic accent against the
-    monochrome page. The signature element is the **hand-drawn
-    sauropod mascot**, illustrated in a slightly naïve children's-
-    book register that pulls the brand away from generic dev-tool
-    coolness and into something closer to **Eric Carle meets Stripe
-    Press**. Display type is **Inter Display** at heavy weights
-    (700/800) with negative tracking, giving the marketing copy a
-    chunky bulletin tone. Code surfaces invert to a deep `#0d1117`
-    panel with JetBrains Mono — the only place dark appears on the
-    page. The closest design cousins are **Stripe** (single confident
-    accent on white) and **Vercel light mode** (clean dev-tool
-    minimalism), but Deno's mascot-led warmth and the mint-green
-    accent (rather than blue) are unmistakably its own. Ryan Dahl's
-    rebuild of Node sells itself on safety, simplicity, and developer
-    happiness — and the visual language sells the same things by
-    refusing to shout.
+    monochrome page. The signature element is the hand-drawn sauropod
+    mascot, illustrated in a slightly naïve children's-book register
+    that pulls the brand away from generic dev-tool coolness and into
+    something closer to Eric Carle meets Stripe Press. Display type
+    is Inter Display at heavy weights (700/800) with negative tracking,
+    giving the marketing copy a chunky bulletin tone. Code surfaces
+    invert to a deep `#0d1117` panel with JetBrains Mono — the only
+    place dark appears on the page. The closest design cousins are
+    Stripe (single confident accent on white) and Vercel light mode
+    (clean dev-tool minimalism), but Deno's mascot-led warmth and the
+    mint-green accent (rather than blue) are unmistakably its own.
+    Ryan Dahl's rebuild of Node sells itself on safety, simplicity,
+    and developer happiness — and the visual language sells the same
+    things by refusing to shout.
   influences:
     - name: Stripe
       role: Single confident accent on a pure-white canvas; trust-via-restraint chromatic discipline.
@@ -113,11 +256,17 @@ lineage:
     - name: Vercel
       role: Clean light-mode dev-tool template; Inter Display + monochrome rigor.
       url: https://vercel.com
+    - name: Stripe Press
+      role: Editorial-book typography discipline at heavy display weights.
+      url: https://press.stripe.com
+    - name: GitHub (dark code surfaces)
+      role: 'Dark code panel (#0d1117) as the singular dark-island convention.'
+      url: https://github.com
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Deno's marketing site is what happens when a TypeScript runtime is
+Deno's marketing site is what happens when a TypeScript runtime gets
 illustrated by a children's book artist. The canvas is pure `#ffffff`,
 the type is pure `#000000` inkwell, and the single chromatic accent
 is the saturated mint green `#70ffaf` that lives in the wordmark
@@ -126,73 +275,448 @@ appears throughout the site in slightly naïve illustrations that pull
 the brand away from generic dev-tool coolness and into something
 warmer, almost editorial.
 
-Where Bun leans cream-bakery and Vite leans cool-modern, Deno leans
-**inkwell-illustrative**. The black is real black, the mint green is
-the only saturated color, and the dinosaur does the emotional heavy
-lifting that a gradient hero would do elsewhere.
+The atmosphere is **inkwell-illustrative**. The black is real black
+(no charcoal hedge), the mint green is the only saturated color
+allowed in the marketing palette, and the dinosaur does the emotional
+heavy lifting that a gradient hero or a particle-field would do
+elsewhere. Where Bun leans cream-bakery and Vite leans cool-modern,
+Deno leans **picture-book paperback**: the page reads like a Penguin
+edition of a children's science book, illustrated by someone who
+also knows what a SIGTERM is.
 
-## Colors
+Depth is achieved through subtle gray layering and a single hairline
+border — `#ffffff` → `#f8f9fa` → `#f4f5f7` is the depth ladder, each
+step roughly 4–5% darker than the one below. The page generally
+avoids drop shadows, leaning on tonal contrast and the inkwell-black/
+pure-white opposition. The single dramatic depth move is the inverse
+`#0d1117` code block — a dark window cut into the white page, the
+visual equivalent of the dinosaur's silhouette: stark, recognizable,
+unapologetically dark inside the otherwise-white world.
 
-- **bg** `#ffffff` — pure paper-white canvas
-- **bg-soft** `#f8f9fa` — alternate-section subtle gray
-- **surface** `#f4f5f7` — card lift, sidebar panels
-- **text** `#000000` — inkwell black, full strength for body and display
-- **text-muted** `#5b5e64` — captions, nav metadata
-- **brand** `#70ffaf` — saturated mint green, the single accent
-- **brand-strong** `#34d399` — pressed state, deeper mint
-- **accent-warm** `#f59e0b` — secondary warm callout, used sparingly
-- **border** `#e1e3e7` — subtle gray hairline
-- **code-bg** `#0d1117` — dark code surface, only place dark appears
+The mascot is primary brand surface. On the homepage it bleeds across
+two columns; on feature pages it appears at section breaks; in the
+documentation, smaller dinosaur sketches mark progression. The
+illustrations are deliberately rough — visible pencil strokes, slightly
+wobbly outlines — to keep the children's-book register and to refuse
+the airbrushed mascot conventions of cooler dev tools. Deno's voice is
+"safe, simple, happy"; the dinosaur sells those words better than any
+copy could.
 
-## Typography
+**Key Characteristics**
 
-Display is **Inter Display** at weights 700 and 800. H1 sits at 72px
-with 1.0 line-height and `-0.03em` tracking — heavier and more
-negatively-tracked than typical Inter Display use, giving the
-marketing a chunky bulletin tone. Body type is **Inter** at 17px on
-a 1.6 line-height; documentation pages use the same Inter cut at 16px.
+- Pure paper-white canvas (`#ffffff`) — no warm tint, no cool tint
+- Inkwell-black type (`#000000`) — no charcoal hedge, full strength
+- Mint green (`#70ffaf`) as single saturated accent — no second hue
+- Hand-drawn sauropod mascot as primary brand surface
+- Inter Display at 700/800 with hard negative tracking
+- JetBrains Mono on `#0d1117` dark code panels — only dark surface
+- No gradients, no glows except the mint-green halo on hover
+- Tonal-gray layering for depth instead of drop shadows
+- Children's-book illustration register in marketing
+- Single chromatic discipline — mint plus monochrome plus rare warm gold
 
-Code surfaces use **JetBrains Mono** at 14px on the dark `#0d1117`
-panel — Deno is built around TypeScript-first execution, so code
-blocks are foregrounded as primary content, not chrome.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-Container caps at 1200px with 24px gutters; sections at 96px vertical.
-The grid is 12-column with frequent illustration-driven breaks — the
-sauropod mascot regularly bleeds across two or three columns, treating
-the layout as a picture-book spread rather than a strict grid.
+- **bg** (`#ffffff`): pure paper-white canvas, every page-level background
+- **text** (`#000000`): inkwell black, body and display, full strength
+- **brand** (`#70ffaf`): saturated mint green, the single chromatic accent
+- **on-brand** (`#000000`): inkwell-black ON the mint — Deno's signature inversion (never white-on-mint)
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth is achieved through **subtle gray layering** (`#ffffff` →
-`#f8f9fa` → `#f4f5f7`) plus a single hairline border. The page
-generally avoids drop shadows, leaning on tonal contrast and the
-inkwell-black/pure-white opposition. The inverse `#0d1117` code block
-is the dramatic depth move — a dark window cut into the white page,
-the visual equivalent of the dinosaur's silhouette.
+- **brand-strong** (`#34d399`): pressed mint, hover-down state
+- **brand-deep** (`#10b981`): deepest mint for emphasis or icon glyphs
+- **brand-soft** (`#dcfce7`): pale mint wash for callouts and badges
+- **inverse-bg** (`#0d1117`): dark code-block panel ground
+- **inverse-text** (`#e6e6e6`): near-white text on dark code
 
-## Shapes
+### Accent
 
-Radius ladder is 4 / 6 / 8 / 12, with pills at 9999. Buttons land at
-8px, cards at 12px. The mascot's hand-drawn rounded geometry echoes
-through the corner radii — slightly soft, never sharp-print, a
-warmer rounding than Remix's grid-aligned 6px.
+- **accent** (`#000000`): the black is itself a brand color, used as primary CTA fill
+- **accent-warm** (`#f59e0b`): secondary warm gold for callouts, used sparingly
+- **accent-warm-soft** (`#fef3c7`): warm callout background
+- **shadow-mint** (`rgba(112, 255, 175, 0.32)`): mint glow halo on hover/focus
 
-## Components
+### Interactive
 
-The defining components are the **black solid button** (`#000000` bg,
-white text, 8px radius, weight 600) for primary actions, the **mint
-secondary button** (`#70ffaf` bg, dark text, used for the wordmark-
-aligned CTA), the **sauropod mascot illustration** as primary brand
-surface, the **dark code block** with JetBrains Mono on `#0d1117`,
-and the **white card with subtle gray border** for feature blocks.
+- **link** (`#0066cc`): documentation link blue, distinct from brand mint
+- **link-hover** (`#004999`): darker link on hover
+- **link-visited** (`#553c9a`): visited link plum (only in long-form docs)
+- **selected** (`#dcfce7`): selected-row mint tint
+- **disabled-bg** (`#f4f5f7`): disabled control surface
+- **disabled-text** (`#b8babf`): disabled label gray
 
-## Do's and Don'ts
+### Neutral Scale
 
+- **text-strong** (`#000000`): absolute black, default
+- **text** (`#000000`): inkwell, body and display (same as text-strong — Deno does not soften)
+- **text-muted** (`#5b5e64`): captions, nav metadata, secondary copy
+- **text-faint** (`#8c8f95`): tertiary helper labels
+- **text-disabled** (`#b8babf`): disabled state labels
+- **bg-soft** (`#f8f9fa`): alternate-section subtle gray
+- **bg-strong** (`#f4f5f7`): card lift, sidebar panels
+
+### Surface & Borders
+
+- **surface** (`#ffffff`): default surface, matches canvas
+- **surface-strong** (`#f4f5f7`): raised card
+- **surface-muted** (`#e8eaed`): pressed or active surface
+- **border** (`#e1e3e7`): subtle gray hairline, default
+- **border-strong** (`#c3c6ca`): emphasized divider
+- **border-subtle** (`#eef0f2`): near-invisible divider
+- **divider** (`#e8eaed`): table rules
+
+### Shadow Colors
+
+Shadows are **neutral, not brand-tinted**. Unlike Stripe (which uses blue-tinted shadows) or Bun (which uses warm-tinted shadows), Deno keeps shadows in pure neutral with low alpha — `rgba(0, 0, 0, 0.04)` ambient, `rgba(0, 0, 0, 0.08)` standard. The brand-tinted treatment is reserved for the **mint glow halo** on hover and focus states, never for ambient depth.
+
+### Semantic
+
+- **success-bg** (`#dcfce7`) / **success-text** (`#166534`) / **success-border** (`#86efac`) — success uses the brand mint family
+- **warning-bg** (`#fef3c7`) / **warning-text** (`#854d0e`) / **warning-border** (`#fbbf24`)
+- **danger-bg** (`#fee2e2`) / **danger-text** (`#991b1b`) / **danger-border** (`#fca5a5`)
+- **info-bg** (`#dbeafe`) / **info-text** (`#1e3a8a`) / **info-border** (`#93c5fd`)
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary display**: `"Inter Display"`, fallback to `Inter`, then system stack
+- **Body**: `Inter`, fallback to `-apple-system`, `"system-ui"`, `"Segoe UI"`, `sans-serif`
+- **Mono**: `"JetBrains Mono"`, fallback to `ui-monospace`, `"Fira Code"`, `Menlo`, `Consolas`
+- **OpenType features used**: `ss01` (Inter Display alternate `g`), `cv01`/`cv11` (Inter character variants for `1` and `4`), `zero` (slashed zero in JetBrains Mono), `ss02` (JetBrains stylistic alternates)
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| display-hero | Inter Display | 88 | 800 | 0.95 | -0.035em | ss01 | Hero only |
+| display-large | Inter Display | 72 | 800 | 1.0 | -0.03em | — | Marketing H1 |
+| display | Inter Display | 60 | 700 | 1.05 | -0.025em | — | Section openers |
+| h1 | Inter Display | 48 | 700 | 1.1 | -0.02em | — | Page titles |
+| h2 | Inter Display | 36 | 700 | 1.2 | -0.018em | — | Sub-section headers |
+| h3 | Inter Display | 28 | 700 | 1.25 | -0.012em | — | Feature titles |
+| h4 | Inter Display | 22 | 600 | 1.3 | -0.005em | — | Card titles |
+| h5 | Inter Display | 18 | 600 | 1.4 | 0 | — | Sidebar headers |
+| eyebrow | Inter | 12 | 600 | 1.4 | 0.1em | uppercase | Section labels |
+| body-lg | Inter | 19 | 400 | 1.6 | -0.005em | — | Hero subhead |
+| body | Inter | 17 | 400 | 1.6 | 0 | — | Default body |
+| body-sm | Inter | 15 | 400 | 1.55 | 0 | — | Secondary body |
+| caption | Inter | 13 | 500 | 1.5 | 0.01em | — | Metadata |
+| micro | Inter | 11 | 600 | 1.4 | 0.04em | uppercase | Tags |
+| code | JetBrains Mono | 14 | 400 | 1.6 | 0 | zero | Code blocks |
+| code-sm | JetBrains Mono | 12 | 400 | 1.55 | 0 | zero | Inline code |
+| code-tabular | JetBrains Mono | 14 | 500 | 1.5 | 0 | zero, tnum | Benchmark tables |
+
+### Principles
+
+1. **Negative tracking on display, neutral on body.** Display rolls in tight (`-0.025em` to `-0.035em`); body sits at `0`. The chunky bulletin tone depends on negative tracking — without it, Inter Display reads as generic.
+2. **Pure black, never charcoal.** Body and display both use `#000000`. Softening to `#15151b` or `#1a1a1a` reads as Bun; softening further (`#333333`) reads as Notion. Deno commits to inkwell.
+3. **Heavy display, regular body.** Display uses 700/800; body stays at 400. The contrast in weight is part of the bulletin register — heavy headlines, calm prose.
+4. **Slashed zero in mono.** OpenType `zero` is enabled across all mono surfaces — the slashed zero is a recognizable code-surface cue that distinguishes data from text.
+5. **One display family, one body, one mono.** No secondary cuts, no italic display, no decorative faces. Discipline mirrors the single-color brand confidence.
+6. **JetBrains Mono is default.** Unlike Bun (Berkeley) or Linear (custom), Deno deliberately uses the dev-tool-default mono. The brand voice is "we are infrastructure, not fashion" — and the mono choice reflects that.
+7. **Eyebrow + display + body cadence.** Sections open eyebrow → display → body. The eyebrow is uppercase 12px Inter at 600 weight with `0.1em` tracking — a small but consistent label-then-headline rhythm.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (black solid)**: `#000000` background, `#ffffff` text, 8px radius, weight 600 in Inter Display, padding `12px 24px`. Hover lifts 1px and brightens to `#1a1a1a`. The dominant CTA — "Install Deno", "Get started", "Read the docs."
+
+**Mint (signature)**: `#70ffaf` background, `#000000` inkwell-black text (the inverse — never white-on-mint), 8px radius, weight 600. Hover deepens to `#34d399`. Used for the wordmark-aligned CTA, primarily in marketing.
+
+**Ghost**: transparent background, `#000000` text, 1px solid `#c3c6ca` border, 8px radius, weight 500. Hover fills to `#f4f5f7`.
+
+**Link button**: transparent background, `#0066cc` text, weight 500, underline on hover.
+
+### Cards
+
+**Default**: `#ffffff` background, 1px solid `#e1e3e7` hairline border, 12px radius, `rgba(0,0,0,0.04) 0 1px 2px` ambient shadow, 24px padding. Hover lifts shadow to `rgba(0,0,0,0.08) 0 4px 12px`.
+
+**Callout**: `#dcfce7` mint-soft background, 1px solid `#86efac` border, 12px radius, padding `20px`. For tips, security notes, "did you know" blocks.
+
+### Badges & Tags
+
+`#dcfce7` mint-soft background, `#166534` deep-green text, 9999 (pill) radius, padding `4px 10px`, weight 600, mono font. Used for version numbers, status indicators, technology tags.
+
+### Inputs
+
+`#ffffff` background, `#000000` text, 1px solid `#c3c6ca` border, 8px radius, padding `10px 14px`. Focus ring: `0 0 0 3px rgba(112, 255, 175, 0.4)` — the mint halo. Placeholder: `#8c8f95`.
+
+### Navigation
+
+`#ffffffe6` (90% white) background with `8px` backdrop-blur, 1px solid `#e1e3e7` bottom border, 64px height. Logo (sauropod silhouette + "Deno" wordmark) on the left, primary nav center, install CTA right.
+
+### Code blocks
+
+`#0d1117` near-black background, `#e6e6e6` near-white text, 12px radius, padding `20px 24px`, JetBrains Mono at 14px. Syntax highlighting uses GitHub Dark conventions: mint for keywords (`#79c0ff` adjusted toward `#70ffaf`), warm gold for strings, near-white for identifiers.
+
+### Mascot illustration
+
+The sauropod mascot is treated as primary brand surface. Multiple poses exist — standing, looking up, sitting on a code block. On the homepage hero, the mascot is ~400px tall. In features sections, ~200px. In documentation, ~80px as a section marker. Hand-drawn pencil/ink character is consistent across all sizes.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit is **4px**. Scale: `2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160`. Density: Deno is **mid-density** — 96px section padding, 24px card padding, 16px between related elements. The page breathes without becoming a billboard.
+
+### Grid & Container
+
+Container caps at **1200px** with **24px gutters**. Prose width: 680px. The grid is 12-column with frequent illustration-driven breaks — the sauropod mascot regularly bleeds across two or three columns, treating the layout as a picture-book spread rather than a strict grid.
+
+### Whitespace Philosophy
+
+The pure-white canvas is unforgiving — every element shows its weight. Deno compensates with generous whitespace (96px section padding, 32px between cards in a grid) and with the mascot illustrations that occupy negative space without filling it chromatically.
+
+### Section Cadence
+
+White canvas runs continuously; alternation happens via subtle `bg-soft` (`#f8f9fa`) bands every 2–3 sections. No brand-band moments (no full-mint sections); the mint is reserved for buttons, accents, and the mascot's eyes.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+| --- | --- | --- |
+| Micro | 2px | Border accents on dividers |
+| Standard | 4px | Inline tags, micro-pills |
+| Comfortable | 6px | Inputs, secondary buttons |
+| Relaxed | 8px | Primary buttons, default UI |
+| Large | 12px | Cards, code blocks |
+| Featured | 16px | Hero illustration frames |
+| Pill | 9999px | Badges, status pills |
+
+The mascot's hand-drawn rounded geometry echoes through corner radii — slightly soft, never sharp-print, a warmer rounding than Remix's grid-aligned 6px. Compound radii are rare; when used, they appear on tab-attached card headers (`12px 12px 0 0`).
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+| --- | --- | --- |
+| 0 — Flat | No shadow, no border | Page canvas |
+| 1 — Hairline | 1px solid `#e1e3e7` | Section dividers |
+| 2 — Lifted | 1px border + `rgba(0,0,0,0.04) 0 1px 2px` | Default cards |
+| 3 — Hovered | 1px border + `rgba(0,0,0,0.08) 0 4px 12px` | Card hover |
+| 4 — Elevated | `rgba(0,0,0,0.10) 0 12px 24px -8px` | Modals, popovers |
+| 5 — Mint-glow | `rgba(112, 255, 175, 0.32) 0 0 24px` | CTA hover, focus halo |
+
+**Shadow Philosophy** — Deno is a **neutral-shadow** brand. Shadows are pure-neutral, low-alpha, and used sparingly. The brand-tinted treatment (mint halo) is reserved for hover/focus interaction states, never for ambient depth. The page's primary depth strategy is **tonal-gray stepping** (`#ffffff` → `#f8f9fa` → `#f4f5f7` → `#e8eaed`), each step ~4–5% darker than the last, plus the hairline border. The single dramatic depth move is the inverse `#0d1117` code block — a dark island cut into the white page.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for color/opacity
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — entrances, feature reveals
+- **Decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — modal entry, popover open
+
+### Durations
+
+- **Fast (120ms)**: hover color shifts, link underline, badge state
+- **Standard (200ms)**: button hover lift, card shadow grow, focus ring
+- **Slow (320ms)**: section reveals, modal entrance, mascot wiggle
+- **Page (400ms)**: route transitions
+
+### Per-component Micro-states
+
+- **Button hover**: 1px translateY lift + color brighten over 200ms ease-standard
+- **Card hover**: shadow grows from `0 1px 2px` ambient to `0 4px 12px` standard over 200ms; border opacity unchanged
+- **Link hover**: underline grows 0→100% in 120ms, color deepens
+- **Mascot**: subtle wiggle on hover (rotate -3° → 3° → 0°, 320ms ease-standard) — only when mascot is the page's hero element
+- **Focus**: 3px mint halo fades in over 120ms, never crisp-snap
+
+### Page Transitions
+
+400ms cross-fade with 16px translateY enter. White canvas remains constant; only inline content shifts. Mascot persists across navigation when present in both source and target page.
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` honored. translateY transforms become opacity-only fades. Mascot wiggles disabled. Page transitions become instant. Focus rings remain visible (a11y not reduced).
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **Body on canvas** (`#000000` on `#ffffff`): **21:1** — AAA at all sizes, the maximum possible contrast
+- **Muted on canvas** (`#5b5e64` on `#ffffff`): **7.4:1** — AAA
+- **Body on brand** (`#000000` on `#70ffaf`): **13.6:1** — AAA (the on-brand inversion)
+- **Link on canvas** (`#0066cc` on `#ffffff`): **6.8:1** — AA at body sizes
+- **Inverse text on dark code** (`#e6e6e6` on `#0d1117`): **15.3:1** — AAA
+- **Mint badge text** (`#166534` on `#dcfce7`): **8.2:1** — AAA
+
+### Focus Indicators
+
+3px solid `rgba(112, 255, 175, 0.4)` ring with 2px offset. The mint halo is consistent across buttons, links, inputs, and interactive cards. Visible on both white and dark surfaces.
+
+### ARIA Patterns
+
+- **Combobox**: `role="combobox"` with `aria-expanded`, `aria-controls`, `aria-activedescendant`
+- **Dialog**: `role="dialog"` with `aria-modal="true"`, focus trap, restore focus on close
+- **Tooltip**: `role="tooltip"` with `aria-describedby` on the trigger
+- **Tabs**: `role="tablist"` / `role="tab"` / `role="tabpanel"` with arrow-key navigation
+- **Code-copy button**: `aria-label="Copy code"` with polite live region for confirmation
+
+### Keyboard Navigation
+
+- Tab order follows visual order
+- Skip-to-content link visually hidden until focused
+- Code blocks: Tab to copy button, Enter to copy, focus returns
+- Modals: Tab cycles within, Escape closes
+
+### Screen Reader Hints
+
+- Mascot: `alt="Deno's dinosaur mascot"` — descriptive but brief
+- Decorative SVGs: `aria-hidden="true"`
+- Code blocks: language announced via `aria-label`
+- Empty states: announced via `aria-live="polite"`
+
+### Reduced Motion
+
+See §8. All non-essential motion collapses to opacity fades or is disabled.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Notes |
+| --- | --- | --- |
+| Mobile | < 640px | Single column, mascot scales to 50% |
+| Tablet | 640–1024px | 8-column grid, hero stacks |
+| Desktop | 1024–1280px | Full 12-column grid |
+| Wide | 1280–1536px | Container caps at 1200px |
+| Ultra-wide | > 1536px | Container holds, side gutters expand |
+
+### Touch Targets
+
+Minimum 44×44px on mobile. Buttons that read 12×24px on desktop expand to 14×28px on mobile. Nav links get 48px height.
+
+### Collapsing Strategy
+
+- **Hero**: 12-col desktop → single-col mobile; mascot scales 50%, headline drops one tier
+- **Feature grid**: 3-up desktop → 2-up tablet → 1-up mobile
+- **Code blocks**: full-bleed on mobile, padded on desktop
+- **Documentation**: 3-col layout (sidebar / content / TOC) collapses to single-col with drawer-based sidebar at < 1024px
+
+### Image Behavior
+
+Mascot is SVG and scales without loss. Marketing illustrations use `srcset` 1x/2x/3x. Card images crop to `aspect-ratio: 16/9` desktop, `4/3` mobile.
+
+### Container Queries
+
+Used in feature cards: at < 480px container width, internal layout collapses from horizontal to vertical regardless of viewport.
+
+## 11. Content & Voice
+
+### Tone
+
+**Calm-technical with picture-book warmth.** Deno's voice is the opposite of urgency. Where Bun says "fast", Deno says "secure by default". Where Vercel says "ship", Deno says "build with confidence". The technical authority is non-negotiable, but the register is reassuring rather than excited.
+
+### Microcopy Patterns
+
+- **Button verbs**: prefer concrete actions ("Install Deno", "Read the manual", "Try the playground") over hedged verbs
+- **Error messages**: lead with the problem in plain language, then the fix. Example: `Permission denied: file system access. Run with --allow-read to grant access.`
+- **Success confirmations**: brief, period-terminated. "Installed." not "Installed!"
+- **Loading states**: minimal; Deno emphasizes startup speed, so visible loading is rare
+
+### Empty States
+
+What they say: "No modules cached. Run `deno cache main.ts` to fetch dependencies." (Concrete, command-shaped.)
+
+What they don't say: "It looks like you haven't added any modules yet." (Too apologetic for Deno's calm-confident voice.)
+
+### CTA Verb Conventions
+
+- **Primary action**: "Install Deno" (always product-named)
+- **Secondary action**: "Read the manual" / "Try in playground" / "View on GitHub"
+- **Footer CTA**: "Get started in seconds" — time-frame anchored
+- **Not used**: "Sign up free", "Get started for free" — Deno is open source; no signup framing
+
+## 12. Dark Mode & Theming
+
+**Light-only — no dark variant offered as primary theme.**
+
+Deno's identity is illustrative-light. A dark canvas erases the picture-book warmth that is the brand's emotional signature; the hand-drawn dinosaur and the inkwell-on-paper register both depend on the white canvas.
+
+The only dark surface on the entire site is the code block (`#0d1117` background with near-white text), and that surface is treated as an island — a window into the runtime, not a continuous theme. Users who set their OS to dark mode see the same white canvas; this is intentional. The brand identity is the canvas, not the user preference.
+
+If a future dark variant ships (currently not planned), the canvas would need to remain warm-leaning — a deep `#0d1117` rather than a cool blue-black — to preserve the inkwell register. Mint would brighten slightly to maintain contrast on the dark ground. But until that ships, light is the only mode.
+
+## 13. Lineage & Influences
+
+Deno's design language is a deliberate softening of the Node-era runtime aesthetic. From **Stripe**, Deno inherits the single-confident-accent-on-white discipline — both brands commit to monochrome plus one saturated accent. From **Vercel light mode**, Deno inherits the Inter Display + monochrome rigor and the negative-tracking display register. From **Eric Carle / children's book illustration**, Deno inherits the hand-drawn mascot and the picture-book layout breaks. From **Stripe Press**, the editorial-book heavy-display discipline. From **GitHub** (specifically the dark code panels), the `#0d1117` ground for code surfaces.
+
+What Deno rejects: dark-mode defaults (most peers), gradient hero (Vercel's marketing pages, Qwik), particle-field hero (Three.js demos), monochrome-without-accent (Notion). The brand's negative space — what it refuses to do — is part of its identity.
+
+**Named influences**
+
+- **Stripe** — single confident accent on white; trust-via-restraint chromatic discipline. https://stripe.com
+- **Eric Carle / children's book illustration** — hand-drawn mascot register softening dev-tool coolness.
+- **Vercel** — clean light-mode dev-tool template; Inter Display + monochrome rigor. https://vercel.com
+- **Stripe Press** — editorial-book heavy-display discipline. https://press.stripe.com
+- **GitHub (dark code panels)** — `#0d1117` ground for code surfaces. https://github.com
+
+## 14. Do's and Don'ts
+
+### Do's
+
+- **Do** keep the canvas pure `#ffffff`. No warm tint, no cool tint — purity is the discipline.
 - **Do** treat the sauropod mascot as primary brand surface. The hand-drawn warmth is what differentiates Deno from cooler peers like Vite or Bun.
 - **Do** keep the action color to either inkwell black or mint green. A second saturated accent breaks the monochrome-with-mint discipline.
-- **Do** use heavy Inter Display (700/800) with hard negative tracking. The chunky display register carries the brand voice.
+- **Do** use heavy Inter Display (700/800) with hard negative tracking. The chunky bulletin register carries the brand voice.
+- **Do** use the inverse-dark code block (`#0d1117`) for code surfaces — it is the only place dark appears.
+- **Do** pair mint with inkwell-black ON the mint, not white. Deno's signature inversion is `#000000` on `#70ffaf`.
+- **Do** lean on tonal-gray layering for depth. White → off-white → light-gray is the depth ladder, not drop shadows.
+- **Do** keep the mint halo (`shadow-mint`) for hover/focus moments only — never as ambient depth.
+- **Do** use JetBrains Mono in code surfaces. The dev-tool-default mono is part of "we are infrastructure, not fashion."
+- **Do** keep section padding generous (96px). The page needs whitespace to breathe.
+
+### Don'ts
+
 - **Don't** introduce dark mode as the default. Deno's identity is illustrative-light; a dark canvas erases the picture-book warmth.
 - **Don't** soften the black to charcoal or near-black. The inkwell `#000000` is non-negotiable; warmer blacks read as Bun, cooler navies read as Solid.
-- **Don't** mix in cool blues or purples. The brand's chromatic palette is monochrome plus mint plus the rare warm gold — no exceptions.
+- **Don't** mix in cool blues or purples as brand accents. The chromatic palette is monochrome plus mint plus the rare warm gold — no exceptions.
+- **Don't** use white-on-mint for the brand button. The signature is `#000000` on `#70ffaf`.
+- **Don't** add gradients on the brand mint. Single-hue, no gradients.
+- **Don't** over-use the mint. It should appear in 5–10% of the visual area maximum — buttons, accents, mascot eyes.
+- **Don't** apply heavy drop shadows. The brand uses neutral, low-alpha shadows only.
+- **Don't** use illustration registers other than hand-drawn pencil/ink for the mascot. Vector-clean mascot reads as cool-corporate and breaks the children's-book warmth.
+- **Don't** underline links in body copy by default. Use color (`#0066cc`) until hover; underline appears on hover.
+- **Don't** use Berkeley Mono or Fira Mono for code. JetBrains Mono is the brand-default mono.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #ffffff
+text: #000000
+text-muted: #5b5e64
+brand: #70ffaf
+brand-strong: #34d399
+border: #e1e3e7
+inverse-bg: #0d1117
+inverse-text: #e6e6e6
+link: #0066cc
+on-brand: #000000
+```
+
+### Example Component Prompts
+
+1. *"Create a hero with an 88px Inter Display 800 headline at -0.035em tracking, 19px Inter body subhead, a black `#000000` solid CTA button with white text and weight 600, and the Deno sauropod mascot anchored to the right at ~400px tall. Use the pure-white canvas, no shadows except subtle 0 1px 2px ambient on cards."*
+2. *"Design a feature card with `#ffffff` background, 1px solid `#e1e3e7` hairline border, 12px radius, 24px padding, ambient `rgba(0,0,0,0.04) 0 1px 2px` shadow, a 28px Inter Display 700 title, and 17px Inter body. On hover, shadow grows to `0 4px 12px`."*
+3. *"Build a dark code block with `#0d1117` background, `#e6e6e6` near-white text, JetBrains Mono at 14px, 12px radius, 20px×24px padding, slashed-zero OpenType feature enabled, GitHub-Dark-style syntax highlighting with mint keyword color. Include a copy button that fades in on hover."*
+4. *"Create a mint secondary button: `#70ffaf` background, inkwell-black `#000000` text (do not use white), 8px radius, weight 600 in Inter Display, padding 12px 24px. Hover deepens to `#34d399`."*
+5. *"Render the navigation: 64px height, `#ffffffe6` background with 8px backdrop-blur, 1px `#e1e3e7` bottom border, sauropod silhouette + 'Deno' wordmark on the left, primary nav center, install CTA on the right."*
+6. *"Add a mint callout card: `#dcfce7` background, 1px solid `#86efac` border, 12px radius, 20px padding, a 22px Inter Display 600 title, and a 17px Inter body in `#166534` deep-green text. Use for security tips and 'did you know' blocks."*
+
+### Iteration Guide
+
+1. **Verify the canvas is pure white.** If the bg is `#fafafa` or has a tint, the brand has drifted. Restore `#ffffff`.
+2. **Confirm the black is inkwell.** If display or body text is `#1a1a1a` or charcoal, push back to `#000000`. Deno commits.
+3. **Audit mint usage.** Mint should appear in 5–10% of visual area. If covering more, the brand has flattened toward generic green.
+4. **Verify on-brand inversion.** `#000000` on `#70ffaf` is Deno's signature; if the mint button has white text, the brand is wrong.
+5. **Check for the mascot.** If the page has no dinosaur, it's not Deno yet. Add it as primary brand surface.
+6. **Confirm display weight.** If the hero feels light, push display to 700/800 with hard negative tracking (`-0.025em` to `-0.035em`).
+7. **Audit shadows.** Drop shadows should be neutral and low-alpha. If they read as Material elevation, soften them.
+8. **Verify code-block ground.** Code surfaces must be `#0d1117`, not gray or another dark. The GitHub-dark island is the brand convention.

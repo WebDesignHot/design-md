@@ -9,7 +9,7 @@ featured: false
 categories: [marketplace]
 tags: [light, marketplace, sans, monochrome, delivery, food, mobile-first, system]
 preview_swatch: ['#ffffff', '#000000', '#06c167']
-related: [doordash, grubhub, instacart]
+related: [doordash, grubhub]
 description: 'Uber Eats is the most disciplined storefront in food delivery — a near-clinical white canvas (`#ffffff`) anchored on pure ink (`#000000`), with the unmistakable Uber visual signature: monochromatic chrome, **Uber Move** custom sans, and a single green accent (`#06c167`) reserved for "Uber One" / "Free delivery" moments. Where DoorDash leans on red-orange voltage and Grubhub on a friendlier red, Uber Eats inherits the parent Uber app''s pure-black + white discipline — the brand position is "operating system of mobility, extended to food." Type runs Uber Move at 500–700 weights with -0.5 to -1.5px tracking on display, body in Uber Move Text at 16/400. Cards round at 8px, CTAs are pill (9999px) at 48px height in pure black (`#000000`) with white text, and the entire surface is engineered around speed-of-conversion: address input lives at masthead, store cards lean on lifestyle food photography, and every page reads as a continuous thread with the Uber rides app you''ve had since 2015.'
 
 colors:

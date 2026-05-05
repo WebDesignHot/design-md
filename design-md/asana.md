@@ -6,7 +6,7 @@ source_url: https://asana.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas, productivity]
+categories: [saas]
 tags: [light, sans, approachable, purple, work-management, rainbow, warm]
 preview_swatch: ['#ffffff', '#796eff', '#1e1f21']
 related: [monday-com, notion, airtable]

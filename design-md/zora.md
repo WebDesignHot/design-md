@@ -9,7 +9,7 @@ featured: false
 categories: [marketplace, fintech]
 tags: [light, creator, vibrant, web3, mint, indie, zine, editorial]
 preview_swatch: ['#fffaee', '#5a3eff', '#000000']
-related: [opensea, magiceden, base-org]
+related: [opensea, magiceden]
 description: 'Zora reads like a riso-printed zine that learned to mint onchain. The default canvas is a warm cream-white `#fffaee` (more saturated than Magic Eden''s mint-cream — closer to a fresh-paper ivory), and the system pairs two voltages — electric purple `#5a3eff` for primary actions and signal-orange `#ff5b00` for highlight/featured states. Type runs a custom Zora display (a geometric-soft sans-display in the lineage of GT Zirkon and Söhne Breit) at large sizes, with Inter Tight for body and JetBrains Mono for tabular data. Where OpenSea is trader-pro density and Magic Eden is boutique gallery, Zora is **indie creator zine** — bold sans display headlines stretched at -3px tracking, oversized hero sections with cropped illustrations, vibrant mint-button CTAs in saturated purple, and editorial pull-quotes set in the same display family. Layout willingly gives 50% of the viewport to a single hero illustration on creator-spotlight pages — Zora isn''t a marketplace, it''s a creator network, and the visual language commits to that distinction. The brand''s clearest editorial choice: the secondary "minted-by" pill always shows the creator''s avatar + handle as a horizontal compound, never a generic "by @user" string. Creator identity is first-class on every surface.'
 
 colors:

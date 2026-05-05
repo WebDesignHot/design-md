@@ -3,31 +3,56 @@ name: Medium
 tagline: Editorial reading-first publishing — magazine-grade serif body, GT Super display, signature green-on-white pill CTAs.
 author: webdesignhot
 source_url: https://medium.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [media, social]
 tags: [light, editorial, serif, sans, warm, spacious]
 preview_swatch: ['#ffffff', '#1a8917', '#242424']
-related: [stripe, vercel]
-description: 'Medium is what happens when a tech company commits, fully, to magazine typography on the open web. The reading view runs in GT Super (a display serif inspired by Pi typeface) plus Sohne for UI, with a signature `#1a8917` green that appears only on action surfaces — never as decoration.'
+related: [stripe, vercel, theatlantic]
+description: 'Medium is what happens when a tech company commits, fully, to magazine typography on the open web. The reading view runs in GT Super (a display serif inspired by the Pi typeface tradition) plus Sohne for UI surfaces, with Source Serif Pro carrying the long-form reading column. The signature `#1a8917` green appears only on action surfaces — never as decoration — and the canvas is pure `#ffffff` with body type at near-black `#242424`. Body copy is deliberately larger than industry norm at 18–21px on 1.58 line-height, the measurements borrowed from broadsheet print typography rather than from web designer reflex. Reading width caps at 680px — a magazine column — while the page chrome stretches to 1192px. The result: typography is the product, color is the punctuation, and the design is confident enough that it doesn''t need to perform.'
 
 colors:
-  bg: '#ffffff'
-  surface: '#fafafa'
-  text: '#242424'
-  text-soft: '#6b6b6b'
-  text-faint: '#a8a8a8'
-  brand: '#1a8917'
-  brand-hover: '#0f730c'
-  border: 'rgba(36, 36, 36, 0.1)'
-  border-strong: 'rgba(36, 36, 36, 0.25)'
-  on-brand: '#ffffff'
+  bg: '#ffffff'                  # canvas — pure white reading surface
+  bg-soft: '#fafafa'             # nav and footer subtle gray
+  surface: '#ffffff'             # default card
+  surface-soft: '#fafafa'        # subtle muted band
+  surface-elev: '#ffffff'        # overlay surfaces
+  text: '#242424'                # warm near-black, body and headlines
+  text-strong: '#000000'         # rare full-black for emphasis
+  text-soft: '#6b6b6b'           # bylines, dates, supporting metadata
+  text-muted: '#8e8e8e'          # captions, faint metadata
+  text-faint: '#a8a8a8'          # tertiary, disabled
+  text-on-brand: '#ffffff'       # white on green pill
+  brand: '#1a8917'               # Medium green, action-only
+  brand-hover: '#0f730c'         # hover-darker green
+  brand-active: '#0a5d09'        # pressed/active green
+  brand-soft: 'rgba(26, 137, 23, 0.08)' # tinted green wash for member badges
+  brand-deep: '#0a5d09'          # darkest green for type on brand-soft
+  on-brand: '#ffffff'            # text on brand fills
+  link: '#242424'                # inline links inherit body, not green
+  link-hover: '#1a8917'          # hover shifts to green
+  link-underline: 'rgba(36, 36, 36, 0.4)' # subtle underline default
+  border: 'rgba(36, 36, 36, 0.1)' # 10% black hairline between tiles
+  border-strong: 'rgba(36, 36, 36, 0.25)' # outlined-button border
+  border-soft: 'rgba(36, 36, 36, 0.06)' # very faint divider
+  border-focus: '#1a8917'        # focus ring color
+  shadow-color: 'rgba(36, 36, 36, 0.06)' # ambient shadow at low alpha
+  shadow-color-md: 'rgba(36, 36, 36, 0.12)' # standard overlay shadow
+  shadow-color-lg: 'rgba(36, 36, 36, 0.18)' # modal shadow
+  selection-bg: 'rgba(26, 137, 23, 0.15)' # green-tinted text selection
+  highlight-yellow: '#fff8c5'    # reader highlight color
+  member-only: '#c89a16'         # gold star for member-only stories
+  success: '#1a8917'             # reuses brand green
+  warning: '#c89a16'             # warm gold
+  danger: '#c94a4a'              # subdued red, sparing
+  info: '#386dba'                # informational blue, rare
 
 typography:
   display:
     family: '"GT Super", "Lora", Georgia, "Times New Roman", serif'
     weights: [400, 500, 700]
+    opentype-features: "'kern', 'liga'"
   body:
     family: 'sohne, "Helvetica Neue", Helvetica, Arial, sans-serif'
     weights: [400, 500, 600]
@@ -38,26 +63,48 @@ typography:
     family: 'source-code-pro, Menlo, Monaco, "Courier New", monospace'
     weights: [400]
   scale:
-    display:    { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.03em' }
-    h1:         { size: 42, weight: 700, lineHeight: 1.1,  tracking: '-0.025em' }
-    h2:         { size: 28, weight: 700, lineHeight: 1.2,  tracking: '-0.015em' }
-    h3:         { size: 22, weight: 600, lineHeight: 1.3 }
-    body-large: { size: 21, weight: 400, lineHeight: 1.58 }
-    body:       { size: 18, weight: 400, lineHeight: 1.58 }
-    body-small: { size: 14, weight: 400, lineHeight: 1.4 }
-    label:      { size: 13, weight: 500, lineHeight: 1.3 }
+    display-hero:    { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.03em',  family: display, opentype: "'liga', 'kern'" }
+    display-h1:      { size: 42, weight: 700, lineHeight: 1.10, tracking: '-0.025em', family: display }
+    display-h2:      { size: 34, weight: 700, lineHeight: 1.15, tracking: '-0.02em',  family: display }
+    display-h3:      { size: 28, weight: 700, lineHeight: 1.20, tracking: '-0.015em', family: display }
+    display-h4:      { size: 22, weight: 600, lineHeight: 1.30, tracking: '-0.01em',  family: display }
+    deck:            { size: 21, weight: 400, lineHeight: 1.40, tracking: '-0.005em', family: reading, notes: 'subhead under hero — italic optional' }
+    body-reading-lg: { size: 21, weight: 400, lineHeight: 1.58, tracking: 0,          family: reading, notes: 'long-form first paragraph' }
+    body-reading:    { size: 18, weight: 400, lineHeight: 1.58, tracking: 0,          family: reading, notes: 'reading column body — Source Serif Pro' }
+    pull-quote:      { size: 28, weight: 400, lineHeight: 1.4,  tracking: '-0.01em',  family: display, notes: 'GT Super italic for pull quotes' }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  tracking: 0,          family: body, notes: 'UI body — Sohne' }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.4,  tracking: 0,          family: body }
+    label:           { size: 13, weight: 500, lineHeight: 1.3,  tracking: 0,          family: body }
+    meta:            { size: 13, weight: 400, lineHeight: 1.3,  tracking: 0,          family: body, notes: 'byline, date, read time' }
+    caption:         { size: 12, weight: 400, lineHeight: 1.4,  tracking: '0.01em',   family: body }
+    button:          { size: 14, weight: 500, lineHeight: 1.0,  tracking: 0,          family: body }
+    nav-link:        { size: 14, weight: 400, lineHeight: 1.3,  tracking: 0,          family: body }
+    code-inline:     { size: 16, weight: 400, lineHeight: 1.6,  tracking: 0,          family: mono }
 
 radius:
-  sm: 4
-  md: 6
-  lg: 8
-  card: 4
-  button: 99
+  micro: 2
+  xs: 4
+  sm: 6
+  md: 8
+  lg: 12
   pill: 9999
+
+spacing:
+  base: 4
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
+  section: 64
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128]
 
 layout:
   page-width: 1192
   reading-width: 680
+  prose-width: 680
   header-height: 57
 
 components:
@@ -66,36 +113,120 @@ components:
     textColor: on-brand
     rounded: pill
     padding: '7px 16px'
-    font: 'sohne 14px / weight 500'
-    use: 'Get started, Sign in — pill on canvas'
+    height: 32
+    use: 'Get started, Sign in — pill on canvas; the signature green CTA'
+  button-primary-large:
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: pill
+    padding: '11px 22px'
+    height: 44
+    use: 'Hero CTA at member-paywall and onboarding'
   button-secondary:
     backgroundColor: bg
     textColor: text
-    border: border-strong
+    border: '1px solid rgba(36, 36, 36, 0.25)'
     rounded: pill
     padding: '7px 16px'
-  card:
+    use: 'Follow / Following toggle; secondary actions'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: text
+    rounded: pill
+    padding: '7px 16px'
+    use: 'Tertiary actions in toolbars'
+  story-tile:
     backgroundColor: bg
     border: 'none'
-    rounded: card
-    use: 'Story preview tiles — borderless, separated by hairline rules'
+    rounded: micro
+    padding: 0
+    use: 'Story preview tiles — borderless, separated by hairlines, image + GT Super headline + Sohne meta'
+  card-member:
+    backgroundColor: bg
+    border: '1px solid rgba(36, 36, 36, 0.1)'
+    rounded: md
+    padding: 24
+    use: 'Member paywall cards on article middle'
+  input-text:
+    backgroundColor: bg
+    textColor: text
+    rounded: pill
+    padding: '12px 18px'
+    height: 44
+    border: '1px solid rgba(36, 36, 36, 0.25)'
+    use: 'Search and email signup inputs'
+  badge-member-only:
+    backgroundColor: 'rgba(200, 154, 22, 0.12)'
+    textColor: '#c89a16'
+    rounded: pill
+    padding: '2px 8px'
+    use: 'Gold star "Member-only story" indicator'
+  follow-button:
+    backgroundColor: text
+    textColor: bg
+    rounded: pill
+    padding: '7px 16px'
+    use: 'Black solid follow CTA on author profiles'
+  highlighted-text:
+    backgroundColor: highlight-yellow
+    textColor: text
+    rounded: micro
+    use: 'Reader highlight feature — soft yellow background on selected prose'
+  top-nav:
+    backgroundColor: 'rgba(255, 255, 255, 0.95)'
+    height: 57
+    border: '1px solid rgba(36, 36, 36, 0.1)'
+    use: 'Sticky header with hairline bottom border on scroll'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-editorial: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions to opacity-only, hover lifts removed'
+
+breakpoints:
+  mobile: 640
+  tablet: 904
+  desktop: 1192
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(36, 36, 36, 0.06) 0 1px 2px'
+  standard: 'rgba(36, 36, 36, 0.12) 0 4px 12px'
+  elevated: 'rgba(36, 36, 36, 0.18) 0 12px 32px -8px'
+  deep: 'rgba(36, 36, 36, 0.22) 0 24px 48px -12px'
+  ring: '0 0 0 2px #1a8917'
+
+accessibility:
+  contrast-text-on-bg: 14.8           # AAA — #242424 on #ffffff
+  contrast-text-on-brand: 4.7         # AA — #ffffff on #1a8917
+  contrast-soft-on-bg: 5.2            # AA — #6b6b6b on #ffffff
+  contrast-faint-on-bg: 2.6           # WCAG decorative-only — #a8a8a8
+  focus-ring: '2px solid #1a8917 with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'optional — Medium offers an opt-in dark theme with `#0d0d0d` canvas, `#e6e6e6` text, and `#5cd456` brightened-green brand for AA contrast on dark; reading column inverts but Source Serif Pro keeps its 18–21px sizing'
 
 lineage:
   summary: |
     Medium's design lineage is print magazine, not software product.
     The reading view runs at **18–21px** in **Source Serif Pro** (later
-    **GT Super** for display headlines) over a generous **680px** column
-    — the exact measurements borrowed from broadsheet body-text norms.
-    The system was rebuilt in 2020 around GT Super (Grilli Type), a
-    display serif explicitly designed to evoke Pi typeface and the
-    high-contrast magazine feel of the 1960s. Sohne (Klim Type Foundry)
-    handles UI surfaces — meta, navigation, captions — providing the
-    sans/serif duality of an old-school editorial layout. The signature
-    green `#1a8917` is purely functional: applied to "Get started" pills,
-    follow buttons, and the "Member-only" indicator. It never decorates.
-    Where most publishing platforms (Substack, Ghost) chase a colored
-    accent across their UI, Medium keeps the canvas pure white, the
-    type near-black `#242424`, and reserves brand color for the small
+    **GT Super** for display headlines) over a generous **680px**
+    column — the exact measurements borrowed from broadsheet body-text
+    norms. The system was rebuilt in 2020 around GT Super (Grilli
+    Type), a display serif explicitly designed to evoke the Pi
+    typeface and the high-contrast magazine feel of the 1960s. Sohne
+    (Klim Type Foundry) handles UI surfaces — meta, navigation,
+    captions — providing the sans/serif duality of an old-school
+    editorial layout. The signature green `#1a8917` is purely
+    functional: applied to "Get started" pills, follow buttons, and
+    the "Member-only" indicator. It never decorates. Where most
+    publishing platforms (Substack, Ghost) chase a colored accent
+    across their UI, Medium keeps the canvas pure white, the type
+    near-black `#242424`, and reserves brand color for the small
     cluster of conversion surfaces. The result: typography is the
     product, color is the punctuation.
   influences:
@@ -105,101 +236,447 @@ lineage:
     - name: Sohne (Klim Type Foundry)
       role: UI sans for meta, navigation, captions — editorial duality
       url: https://klim.co.nz/retail-fonts/soehne/
+    - name: Source Serif Pro (Adobe)
+      role: Reading-column body face — magazine-grade serif for long-form
+      url: https://github.com/adobe-fonts/source-serif
     - name: Pi Typeface / Magazine layout tradition
       role: Body-text width and reading rhythm borrowed from print
       url: https://en.wikipedia.org/wiki/Magazine
+    - name: The New Yorker
+      role: Display serif + reserved color discipline as editorial gravitas
+      url: https://www.newyorker.com
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Medium is the rare web product that reads like a magazine. Pure white
-canvas, near-black type at `#242424`, body copy that's deliberately
-**larger than industry norm** at 18–21px on 1.58 line-height — the
-measurements come from print body-text tradition, not from web
-designer reflex. GT Super for display, Sohne for UI, Source Serif Pro
-for the reading column itself. The design system is built around the
-act of reading; everything else is a rounding error.
+Medium reads like a magazine that learned to live on the open web. The canvas is pure `#ffffff` paper-white, and the body type lands at warm near-black `#242424` — never pure black, because pure black on pure white reads as system-document, not as printed page. The reading view runs in **Source Serif Pro at 18–21px** over a **680px column**, a width borrowed directly from broadsheet body-text typography. Headlines flip to **GT Super**, a high-contrast display serif from Grilli Type explicitly designed in the spirit of the Pi typeface and the magazine layout tradition of the 1960s.
 
-What makes it distinctive vs. nearby alternatives: Substack and Ghost
-both leaned into colored accents and decorative chrome to feel
-"warmer." Medium did the opposite — stripped illustrations, removed
-gradients, kept the green to a single pill at the top of every page.
-The system is confident enough that it doesn't need to perform.
+The signature `#1a8917` green is the rarest pigment on the page. It appears only on action surfaces: "Get started" pills, follow buttons, and the small star indicator that marks "Member-only" stories. It never decorates. There are no green section headers, no green underlines on prose, no green hover backgrounds for the reading column. The green is a punctuation mark, not a wallpaper.
 
-## Colors
+Sohne (Klim Type Foundry) handles UI surfaces — top nav, byline metadata, button labels, captions. The sans/serif duality recreates the old editorial-magazine partition where headlines and body sit in serif and chrome (folios, deck heads, captions, page numbers) sits in sans. Where Substack and Ghost both leaned into colored accents and decorative chrome to feel "warmer," Medium did the opposite — stripped illustrations, removed gradients, kept the green to a single pill at the top of every page. The system is confident enough that it doesn't need to perform.
 
-- **bg** `#ffffff` — pure white reading canvas, no tint.
-- **surface** `#fafafa` — very subtle gray for nav and footer.
-- **text** `#242424` — body copy, headlines (warm near-black).
-- **text-soft** `#6b6b6b` — bylines, dates, supporting metadata.
-- **brand** `#1a8917` — Medium green. Action surfaces only.
-- **border** `rgba(36, 36, 36, 0.1)` — translucent hairlines between
-  story tiles.
+The page rhythm is mostly hairline-separated story tiles (1192px outer cap, 680px reading inside) with rare card chrome. Story preview tiles are borderless: image up top, GT Super headline below, Sohne meta row underneath, no card lift. The **only meaningful elevation** is on overlay UI (member-paywall modal, dropdown menus) where a soft drop shadow lifts surfaces above the reading flow. Borders, not shadows, do every other piece of structural work.
 
-## Typography
+Body copy at 18–21px is **deliberately larger than the 16px web norm** — a measurement calibrated to magazine body-text, not to dashboard density. Combined with the 1.58 line-height, the reading column feels closer to a paperback or a Sunday magazine spread than to a typical SaaS landing.
 
-The display voice is **GT Super** at weight 700 — a high-contrast
-display serif released by Grilli Type in 2018. It's the typographic
-event of every page; long headlines flow on tight `-0.025em` tracking
-and 1.1 line-height to compress vertical space without sacrificing
-weight.
+**Key Characteristics:**
+- Pure white `#ffffff` canvas with warm near-black `#242424` body type.
+- Signature `#1a8917` green reserved strictly for action surfaces.
+- GT Super for display headlines; Source Serif Pro for the reading column.
+- Sohne (Klim Type Foundry) for every UI chrome surface.
+- 680px reading column on a 1192px page chrome — broadsheet measurements.
+- Body type at 18–21px on 1.58 line-height — larger than the 16px web norm.
+- Pill (`9999px`) buttons everywhere; soft 4–6px radii on tiles.
+- No shadows on story tiles; hairline borders carry separation.
+- Borderless story-preview tiles with image-headline-meta stacking.
+- Member-only stories marked with a single gold star, not a colored band.
 
-Body for the reading view is **Source Serif Pro** at 18–21px on a
-generous 1.58 line-height, capped at a 680px reading column. The
-sizes are intentionally larger than the 16px web norm — they're
-calibrated to magazine body-text, not to dashboard density.
+## 2. Color Palette & Roles
 
-Sohne (Klim Type Foundry) handles UI surfaces: navigation, post
-metadata, button labels. The sans/serif pair recreates the
-editorial-magazine duality where headlines and body sit in serif and
-chrome (folios, deck heads, captions) sits in sans.
+### Primary
+- **Bg / Canvas** (`#ffffff`): Pure white reading surface — never tinted.
+- **Text** (`#242424`): Warm near-black for headlines and body — adds magazine warmth pure black lacks.
+- **Brand / Primary CTA** (`#1a8917`): Medium green — the only chromatic accent in the entire system.
 
-## Layout
+### Brand & Dark
+- **Brand** (`#1a8917`): Action-only — "Get started" pills, follow buttons, member badges, focus rings.
+- **Brand Hover** (`#0f730c`): Hover-darker green for primary CTAs.
+- **Brand Active** (`#0a5d09`): Pressed/active deep green.
+- **Brand Soft** (`rgba(26, 137, 23, 0.08)`): Tinted green wash for member callouts and read-progress indicators.
+- **Brand Deep** (`#0a5d09`): Darkest green for type set on `brand-soft` surface.
 
-The hero page caps at **1192px** but the reading column inside it
-narrows to **680px** — measurements borrowed directly from broadsheet
-print typography. Header is `57px` tall, sticky with a hairline
-bottom border on scroll. Story tiles arrange in a 2- or 3-column
-masonry depending on viewport, separated by 1px hairlines rather
-than card chrome.
+### Accent
+Medium's accent system is intentionally minimal. The accents below appear only inside specific feature surfaces.
+- **Member Only** (`#c89a16`): Gold star indicator for paywalled stories — the only color outside green that appears on canonical reading surfaces.
+- **Highlight Yellow** (`#fff8c5`): Reader highlight feature background.
 
-## Elevation & Depth
+### Interactive
+- **Link** (`#242424`): Inline body links inherit body color — never blue, never green by default.
+- **Link Underline** (`rgba(36, 36, 36, 0.4)`): Subtle 40% black underline.
+- **Link Hover** (`#1a8917`): Hover shifts text and underline to brand green.
+- **Selected** (`rgba(26, 137, 23, 0.15)`): Green-tinted text selection.
+- **Disabled** (`#a8a8a8`): Tertiary disabled labels.
 
-Medium uses almost no shadows. Cards are flat. Story preview tiles
-sit on the white canvas separated by `rgba(36,36,36,0.1)` hairlines.
-The only meaningful elevation is on overlay UI (modals, dropdowns)
-where a soft `0 1px 4px` shadow at low opacity lifts the surface
-above the reading flow. Borders, not shadows, do the structural work.
+### Neutral Scale
+Medium runs a deliberate gray ramp: black-warmer at the strong end, lifting through three softer steps toward subtle metadata.
+- **Text** (`#242424`): Body, headlines — warm near-black.
+- **Text Strong** (`#000000`): Rare full-black for emphasis (e.g., follow button on author).
+- **Text Soft** (`#6b6b6b`): Bylines, dates, supporting metadata.
+- **Text Muted** (`#8e8e8e`): Captions, image credits.
+- **Text Faint** (`#a8a8a8`): Tertiary fine-print, disabled.
 
-## Shapes
+### Surface & Borders
+- **Bg / Surface** (`#ffffff`): Default content surface.
+- **Bg Soft** (`#fafafa`): Nav and footer subtle gray — barely-there tint.
+- **Surface Soft** (`#fafafa`): Section dividers, very-soft band tints.
+- **Border** (`rgba(36, 36, 36, 0.1)`): 10% black hairline between story tiles. The structural rule.
+- **Border Strong** (`rgba(36, 36, 36, 0.25)`): Outlined-button border.
+- **Border Soft** (`rgba(36, 36, 36, 0.06)`): Very faint divider on inputs.
 
-**4–6px** radius across editorial surfaces — story tile thumbnails,
-input fields, image rounding. The signature shape is the **pill
-button** (`9999px`) used for "Get started", "Follow", "Sign in" —
-inherited from social-media UI patterns and applied with magazine
-restraint. No zero-radius elements; no aggressively rounded
-"squircle" shapes.
+### Shadow Colors
+Medium uses neutral graphite shadows at low alpha — never blue-tinted, never colored. Shadows appear only on overlay UI.
+- **Shadow Color** (`rgba(36, 36, 36, 0.06)`): Ambient — almost imperceptible card lift.
+- **Shadow Color Md** (`rgba(36, 36, 36, 0.12)`): Standard overlay shadow.
+- **Shadow Color Lg** (`rgba(36, 36, 36, 0.18)`): Modal entrance shadow.
 
-## Components
+### Semantic
+- **Success** (`#1a8917`): Reuses brand green — confirmation toasts, "Saved" indicator.
+- **Warning** (`#c89a16`): Warm gold, used sparingly inside settings.
+- **Danger** (`#c94a4a`): Subdued red — destructive confirmation only.
+- **Info** (`#386dba`): Informational blue — only inside admin surfaces.
 
-The signature primary button: `#1a8917` background, white text,
-**fully rounded pill**, `7px 16px` padding, Sohne 14px weight 500.
-Story preview tiles are borderless — image on top, GT Super
-headline, Sohne meta row, no card chrome. Follow buttons match the
-primary CTA pattern, scaled smaller. Inline links in body text get
-underlined and shift to the brand green on hover.
+## 3. Typography Rules
 
-## Do's and Don'ts
+### Font Family
+- **Display / Reading**: GT Super (`"GT Super", "Lora", Georgia, "Times New Roman", serif`) for display headlines — high-contrast magazine serif.
+- **Reading column**: Source Serif Pro (`source-serif-pro, "Source Serif Pro", Charter, Georgia, serif`) — the long-form body face.
+- **Body / UI**: Sohne (`sohne, "Helvetica Neue", Helvetica, Arial, sans-serif`) — UI surfaces only.
+- **Mono**: Source Code Pro (`source-code-pro, Menlo, Monaco, "Courier New", monospace`) — inline code.
+- **OpenType features**: Standard ligatures (`liga`) and kerning (`kern`) on display sizes; no decorative alternates.
 
-- **Do** treat type as the product. Body text at 18–21px, headlines
-  in GT Super at `-0.025em` tracking, 680px reading width.
-- **Do** reserve `#1a8917` green strictly for action surfaces — never
-  decorate with it.
-- **Do** use pill (`9999px`) for buttons; soft 4–6px for tiles and
-  thumbnails.
-- **Don't** add shadows to story tiles. Hairline borders or empty
-  space carry the separation.
-- **Don't** mix display serif into UI chrome — keep Sohne for nav,
-  meta, and buttons.
-- **Don't** narrow the reading column below 680px or widen it past
-  720px. The measurement is the system.
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | GT Super | 56 | 700 | 1.05 | -0.03em | liga, kern | Topic-page hero, masthead headlines |
+| display-h1 | GT Super | 42 | 700 | 1.10 | -0.025em | liga | Article headline at top of reading view |
+| display-h2 | GT Super | 34 | 700 | 1.15 | -0.02em | liga | Section heads, large card titles |
+| display-h3 | GT Super | 28 | 700 | 1.20 | -0.015em | liga | Article H2 within long-form |
+| display-h4 | GT Super | 22 | 600 | 1.30 | -0.01em | liga | Small headlines, card titles |
+| deck | Source Serif Pro | 21 | 400 | 1.40 | -0.005em | — | Subhead under hero — italic optional |
+| body-reading-lg | Source Serif Pro | 21 | 400 | 1.58 | 0 | — | Long-form first paragraph (drop-cap optional) |
+| body-reading | Source Serif Pro | 18 | 400 | 1.58 | 0 | — | Reading column body — the canonical magazine size |
+| pull-quote | GT Super italic | 28 | 400 | 1.40 | -0.01em | — | Pull quotes inside articles |
+| body | Sohne | 16 | 400 | 1.50 | 0 | — | UI body — settings, modal copy |
+| body-small | Sohne | 14 | 400 | 1.40 | 0 | — | Secondary UI text |
+| label | Sohne | 13 | 500 | 1.30 | 0 | — | Form labels, button context |
+| meta | Sohne | 13 | 400 | 1.30 | 0 | — | Byline, date, read time row |
+| caption | Sohne | 12 | 400 | 1.40 | 0.01em | — | Image captions, image credits |
+| button | Sohne | 14 | 500 | 1.0 | 0 | — | Standard pill button label |
+| nav-link | Sohne | 14 | 400 | 1.30 | 0 | — | Top nav menu items |
+| code-inline | Source Code Pro | 16 | 400 | 1.6 | 0 | — | Inline code inside reading column |
+
+### Principles
+- **Body type is the product.** 18–21px Source Serif Pro on 1.58 line-height is non-negotiable — anything smaller breaks the magazine register.
+- **Display type rules every page-level moment.** GT Super's high-contrast serif is the typographic event; tighter tracking compresses long headlines without losing weight.
+- **Sans/serif duality is structural.** Sohne for UI chrome (nav, meta, captions, buttons), serifs for everything in the reading flow. Never mix.
+- **Negative tracking on display only.** `-0.03em` to `-0.015em` ladder. Body type sits at 0.
+- **Weights stay disciplined.** GT Super at 700 for display, 600 for sub-display. Source Serif Pro at 400 for body, 600 for inline emphasis. Sohne at 400/500/600.
+- **Reading column is sacred.** 680px wide, no wider, no narrower. The measurement is the system.
+- **Italic for pull-quotes only.** GT Super italic is reserved — used to mark emphasis, not decoration.
+- **Inline links inherit body color.** Underline for affordance, hover-shift to green for action. No green-by-default text.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**`button-primary`** — The signature green pill. Background `#1a8917`, text `#ffffff`, Sohne 14px / 500, padding 7px × 16px, fully rounded pill (9999px). Hover: `#0f730c` over 100ms; no lift, no shadow. The most-rendered Medium component.
+
+**`button-primary-large`** — Larger pill for hero CTAs. Same green, padding 11px × 22px, height 44px, font 16px / 500. Used on the home masthead and the member-paywall hero.
+
+**`button-secondary`** — Outlined pill. Background `#ffffff`, text `#242424`, 1px solid `rgba(36, 36, 36, 0.25)` border, same pill shape and padding. Used as the "Sign in" partner to the green primary.
+
+**`button-ghost`** — No fill, no border. Text `#242424`, hover lifts background to `rgba(36, 36, 36, 0.04)`. Used for tertiary actions in toolbars.
+
+**`follow-button`** — The author-page follow CTA. Black `#000000` solid, white text, pill shape — distinct from the green primary because following is an editorial action, not a conversion.
+
+### Cards
+
+**`story-tile`** — The most-rendered Medium surface. Borderless. Image top (16:9, 4px radius), GT Super headline below, deck/preview snippet in Source Serif Pro, then a Sohne meta row (author + date + read-time + clap count). Tiles are separated from each other by a 1px `rgba(36, 36, 36, 0.1)` hairline rule, never by card chrome.
+
+**`card-member`** — Member-paywall card on article middle. Background `#ffffff`, 1px `rgba(36, 36, 36, 0.1)` border, 8px radius, 24px padding. Contains a GT Super "Member-only story" headline, a brief description, and a primary green CTA.
+
+**`card-publication`** — Publication header card on topic pages. Larger image (2:1), GT Super title, Sohne description, follow button.
+
+### Badges & Pills
+
+**`badge-member-only`** — Gold star + "Member-only story" label. Background `rgba(200, 154, 22, 0.12)`, text `#c89a16`, pill shape, padding 2px × 8px, 12px caption text. The single non-green color marker on canonical reading surfaces.
+
+**`badge-topic`** — Topic chip on article footer. Background `rgba(36, 36, 36, 0.06)`, text `#242424`, pill shape, padding 4px × 12px, 13px Sohne. Hover lifts background tone.
+
+### Inputs / Forms
+
+**`input-text`** — Search and email signup input. Pill shape (9999px), padding 12px × 18px, height 44px, 1px `rgba(36, 36, 36, 0.25)` border. Focus shifts border to `#1a8917` and adds a 2px green ring at 2px offset.
+
+**`input-textarea`** — Composition surface. Borderless, transparent background, GT Super or Source Serif Pro inside the editor, full-width up to 680px reading column.
+
+### Navigation
+
+**`top-nav`** — Sticky 57px-tall bar with translucent white background `rgba(255, 255, 255, 0.95)` and a 1px `rgba(36, 36, 36, 0.1)` bottom border that appears only on scroll. Logo left, search center, primary green CTA + ghost "Sign in" right. Sohne nav links at 14px / 400.
+
+### Decorative
+
+**`highlighted-text`** — Reader highlight feature. Background `#fff8c5` soft yellow, applied as inline span, 2px micro-radius. Surrounds selected text after a reader presses the highlight button.
+
+**`drop-cap`** — Optional first-letter display treatment. GT Super 700 at 4× body line-height, floated left, kerned tightly to body text. Applied to feature articles only.
+
+**`pull-quote-block`** — GT Super italic 28px, indented by section gutter, with a thin `rgba(36, 36, 36, 0.25)` left border bar.
+
+**`clap-counter`** — Round button with hand-clap glyph, used at article foot. Sohne 14px count to the right.
+
+**`hairline-rule`** — 1px `rgba(36, 36, 36, 0.1)` divider with 32–64px vertical margin. The system's primary structural element.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `xxs:4 · xs:8 · sm:12 · md:16 · lg:24 · xl:32 · xxl:48 · section:64`. Scale: `[4, 8, 12, 16, 24, 32, 48, 64, 96, 128]`. The reading column's vertical rhythm uses 16–24px gaps between paragraphs and 32–48px before display headings.
+
+### Grid & Container
+Page container caps at **1192px** with 24px gutters, but the reading column inside narrows to **680px** centered. Story-tile grids run 2-column on tablet and 3-column on desktop. Topic pages use a 8/4 split for feature stories with a thin sidebar.
+
+### Whitespace Philosophy
+Generous, magazine-grade. Section padding is 64px vertical (not the 96–120px of brutalist sites, but more than the 32px of dashboard-density SaaS). The reading column trades width for line-height: 1.58 lh on 18px body produces ~28.5px line-spacing — close to print body-text.
+
+### Section Cadence
+White hero band → 3-column story-tile grid → hairline-divided feature article → editor's-pick band (subtle `#fafafa` tint) → publication strip → footer. Bands rarely tint; the canvas stays white and the structure relies on hairlines and type rhythm.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Reader highlight inline span, image rounding inside tiles |
+| XS | xs | 4px | Story-tile thumbnails, image rounding |
+| Standard | sm | 6px | Inputs, small inline buttons |
+| Comfortable | md | 8px | Cards (member paywall, publication header) |
+| Large | lg | 12px | Featured cards, modal corners |
+| Pill | pill | 9999px | Every button, every chip, every badge — the signature shape |
+
+The defining shape choice is the **pill button**. Inherited from social-media UI patterns and applied with magazine restraint. No zero-radius elements; no aggressively rounded "squircle" shapes; no sharp corners on action chrome. Tile thumbnails and embedded media rest at 4px — soft enough to register as digital, sharp enough to feel print-adjacent.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Reading column body, story-tile body |
+| 1 — Hairline | 1px `rgba(36, 36, 36, 0.1)` border or rule | Story-tile separators, member-paywall card, top-nav bottom |
+| 2 — Outlined | 1px `rgba(36, 36, 36, 0.25)` border | Secondary buttons, search input |
+| 3 — Soft shadow | Ambient shadow, no border | Dropdown menus, popovers (rare) |
+| 4 — Standard shadow | Standard overlay shadow | Modal, member-paywall full-screen overlay |
+| 5 — Modal | Deep shadow + backdrop dim | Sign-in modal, share modal |
+
+### Shadow Philosophy
+Medium uses **almost no shadows**. Cards are flat. Story preview tiles sit on the white canvas separated by `rgba(36, 36, 36, 0.1)` hairlines. The only meaningful elevation is on overlay UI (modals, dropdowns) where a soft `0 1px 4px` shadow at low opacity lifts the surface above the reading flow. Borders, not shadows, do the structural work. Shadow color is neutral graphite (`rgba(36, 36, 36, ...)`) — never colored, never tinted, because tinted shadows would break the magazine register.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for color and opacity transitions.
+- **Emphasized ease**: `cubic-bezier(0.2, 0, 0, 1)` — modal entrance, scroll-triggered reveals.
+- **Editorial ease**: `cubic-bezier(0.25, 0.1, 0.25, 1)` — gentler, used on the read-progress bar and reader-highlight animations.
+
+### Duration Buckets
+- **Fast (100ms)**: Color shifts on links, button hovers, focus-ring expansions.
+- **Standard (200ms)**: Card hover lifts, dropdown opens, tile background tone-shifts.
+- **Slow (300ms)**: Modal entrance, scroll-into-view fades, reader-highlight wash-in.
+
+### Per-Component Micro-States
+- **Button hover**: Pill primary darkens `#1a8917` → `#0f730c` over 100ms. No translateY lift, no shadow add — pill stays exactly where it sits.
+- **Story-tile hover**: Background lifts to `#fafafa` over 200ms; headline shifts no color (stays `#242424`). No card lift, no shadow.
+- **Link hover**: Body text shifts to `#1a8917` over 100ms; underline stays.
+- **Reader highlight**: On selection + highlight-button click, yellow `#fff8c5` background washes in over 300ms with a soft cubic-bezier curve.
+- **Read-progress bar**: 2px green `#1a8917` bar fixed at top, scales horizontally in proportion to scroll position. No animation lag — direct binding to scroll.
+- **Member-paywall reveal**: Soft fade-up (translateY(8px) + opacity 0→1) over 300ms when the user scrolls past the article midpoint.
+- **Input focus**: Border color shifts to `#1a8917`, then 2px green ring fades in at 2px offset over 100ms.
+
+### Page Transitions
+Standard browser navigation. Server-rendered article pages cross-fade content via View Transitions API where supported (Chromium); fallback is direct navigation with no transition. Reading position is restored on back-navigation — a magazine-rooted UX detail.
+
+### Reduced Motion
+Honored — `prefers-reduced-motion: reduce` removes:
+- All translateY lifts and scale transforms.
+- The reader-highlight wash-in (yellow appears instantly).
+- The member-paywall fade-up (modal appears at final state).
+- The read-progress bar scaling (renders instantly at correct width).
+
+Color and opacity transitions remain at standard duration to preserve affordance feedback.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#242424` on `#ffffff` = **14.8** — AAA at body sizes.
+- **Soft on bg**: `#6b6b6b` on `#ffffff` = **5.2** — AA at body sizes.
+- **Muted on bg**: `#8e8e8e` on `#ffffff` = **3.4** — AA at large only; reserved for non-essential metadata.
+- **Faint on bg**: `#a8a8a8` on `#ffffff` = **2.6** — decorative-only per WCAG (disabled labels, hairlines).
+- **On-brand on brand**: `#ffffff` on `#1a8917` = **4.7** — AA at body, AAA at large.
+- **Link hover green**: `#1a8917` on `#ffffff` = **4.7** — AA.
+- **Member-only on member-soft**: `#c89a16` on `rgba(200,154,22,0.12)` over white ≈ **4.5** — AA at the badge size.
+
+### Focus Indicators
+**2px solid `#1a8917`** ring with 2px offset. Applied on every interactive element via `:focus-visible`, never `:focus` (so mouse clicks don't show the ring, only keyboard navigation). The ring is brand green, signaling consistency between focus and primary CTA color — a deliberate brand-as-affordance choice.
+
+### ARIA Patterns
+- **Buttons**: Native `<button>`; icon-only buttons (clap, bookmark, share) carry `aria-label`.
+- **Articles**: `<article>` with `<h1>` for the title, `<header>` for byline, `<time datetime>` for the date.
+- **Reading column**: Wrapped in `<main>` for skip-link target; `<nav aria-label="Article topics">` for the topic chip row.
+- **Member badge**: `<span aria-label="Member-only story">` paired with the gold star glyph.
+- **Search**: Combobox pattern with `role="combobox"`, `aria-expanded`, `aria-controls` on the listbox of results.
+- **Modal**: `role="dialog"`, `aria-modal="true"`, `aria-labelledby` pointing to the modal headline; focus trapped, Escape closes.
+- **Read-progress bar**: `role="progressbar"` with `aria-valuemin`, `aria-valuemax`, `aria-valuenow`.
+
+### Keyboard Navigation
+- Tab order follows reading order: skip-link → top-nav links → primary CTA → search → article body → topic chips → footer.
+- `J` / `K` move between story tiles on the home feed (custom shortcut, opt-in).
+- Modals trap focus; Escape closes; focus restores to the trigger element.
+- Reader-highlight button activates on Enter or Space when the trigger has focus.
+
+### Screen Reader Hints
+- Byline reads as: `<author name>, <pub date>, <read time> minutes`. Read-time uses `aria-label` to spell out "minutes" rather than rendering "5 min read" literally.
+- Member-only stars carry `aria-label="Member-only story"` so screen readers announce the gating clearly.
+- Inline links use visible text only — no "click here" or "read more" link text. Link text always describes the destination.
+
+### Reduced Motion Handling
+Honored — see §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Hamburger nav; story tiles 1-up; hero h1 42→32px; reading column reduces to viewport with 16px gutters |
+| Tablet | 640–904px | Top-nav simplified; story tiles 2-up; reading column at 680px with margin |
+| Desktop | 904–1192px | Full top-nav with search; story tiles 3-up; reading column 680px centered |
+| Wide | > 1192px | Same as desktop with more side-margin breathing; max content 1192px; reading column stays 680px |
+
+### Touch Targets
+Pill buttons run 32px tall on standard scale, 44px on hero scale. Touch targets meet 44 × 44 minimum at the large variant; the standard pill is 32px tall but 64px+ wide, comfortable for thumb taps. Icon-only buttons (clap, share, bookmark) sit at 40 × 40 minimum.
+
+### Collapsing Strategy
+- Top-nav primary links collapse to hamburger at < 904px. Search bar persists as an icon-trigger.
+- Story-tile grid degrades 3 → 2 → 1 across breakpoints.
+- Story-tile thumbnails shift from right-side aside (desktop) to top-stacked (mobile).
+- Article toolbar (clap, comment, share, bookmark) sticks to viewport bottom on mobile; sits in-line on desktop.
+- Member-paywall modal goes full-screen on mobile, centered card on desktop.
+
+### Image Behavior
+- Article hero images run full-bleed on mobile, contained-680px on desktop.
+- Story-tile thumbnails stay 16:9 at all sizes; 4px radius; lazy-loaded with intersection observer.
+- Avatars default to 32px circles; member badges scale proportionally.
+
+### Container Queries
+Member-paywall card uses `@container` to swap from horizontal (CTA right) to vertical (CTA below) layout based on its parent width.
+
+## 11. Content & Voice
+
+### Tone
+**Editorial, considered, slightly formal.** Medium writes for readers and writers, not for "users." Headlines state subjects ("How I built an apartment in Brooklyn", "The rise of the editorial newsletter"), not feature lists. Subheads underline the story — they don't sell. CTA copy is short and direct.
+
+### Microcopy Patterns
+- **CTA verbs**: "Get started", "Sign in", "Read more", "Follow", "Save", "Share". Magazine-rooted, never SaaS-y. Notable absence: no "Try free", no "Get the demo", no "See pricing".
+- **Section labels**: Editorial — "Featured", "Editor's Picks", "From your network", "Trending". Sentence-case, not uppercase.
+- **Author byline**: `<Name> · <Pub or Topic> · <Date> · <Read time>` — em-dash separated, lowercase metadata.
+- **Member badge**: "Member-only story" — sentence-case, paired with gold star.
+- **Empty paywall state**: "This story is for members" — declarative, not apologetic.
+
+### Empty States
+- **No stories yet (new user)**: "Your home feed will fill up as you follow writers and topics. Try following one to start." Paired with primary green "Find writers" CTA.
+- **No notifications**: "You're all caught up." Single line, centered, soft-gray text, no illustration.
+- **No bookmarks**: "Save stories you want to come back to." Soft-gray, with primary green "Browse stories" CTA.
+
+### Error Messages
+**Pattern**: `<icon-x in #c94a4a> + plain-language statement + suggested next step`. Example: "Couldn't load this story. Try refreshing or check your connection." Never use exception types or technical codes; always end with a concrete next step.
+
+### Success Confirmations
+Toast in `#242424` text on `#fafafa` surface with a subtle green left border. "Story saved", "Author followed", "Highlight added". Auto-dismisses after 3 seconds; stacks vertically if multiple fire in succession.
+
+### CTA Verb Conventions
+The brand uses **"Get started"** for first-time signup, **"Sign in"** for returning users, **"Read more"** for article continuation, **"Follow"** / **"Following"** as a toggle for editorial relationships. Notably absent: "Try free", "Subscribe now", "Start your trial" — these sit on the membership upsell page only, where the more SaaS-y vocabulary becomes contextually appropriate.
+
+## 12. Dark Mode & Theming
+
+Medium ships an **opt-in dark theme**. Tokens map:
+- `bg: #0d0d0d` (warm near-black canvas, not pure black)
+- `bg-soft: #1a1a1a` (nav and footer surface)
+- `surface: #0d0d0d`
+- `surface-soft: #1a1a1a`
+- `text: #e6e6e6` (warm near-white body)
+- `text-soft: #9b9b9b` (bylines, dates)
+- `text-muted: #707070`
+- `text-faint: #555555`
+- `brand: #5cd456` (brightened green for AA contrast on dark — same hue, lifted lightness)
+- `brand-hover: #74e06e`
+- `border: rgba(255, 255, 255, 0.1)` (10% white hairline)
+- `border-strong: rgba(255, 255, 255, 0.25)`
+
+Reading column inverts but Source Serif Pro keeps its 18–21px sizing. Member-only gold shifts to `#e0b740` for dark contrast. Highlight yellow shifts to `rgba(200, 154, 22, 0.3)` translucent overlay. Dark theme is intentionally warm — Medium chose `#0d0d0d` over pure black to preserve magazine warmth even in dark mode, mirroring the warm-near-black light-theme body color.
+
+## 13. Lineage & Influences
+
+Medium's design lineage runs through **print-magazine typography**, not software product. The **680px reading column** is broadsheet measurement; the **18–21px serif body** is paperback body-text size; the **GT Super display** evokes the Pi typeface and 1960s magazine display tradition. Where Substack and Ghost both lean into colored chrome to feel "warmer," Medium does the opposite — strips illustrations, removes gradients, keeps the green to a single pill. The system trusts typography to do the entire job, the way Stripe Press, The New Yorker, and Apple's Pro Display marketing all do.
+
+The signature **green-on-white pill CTA** sits in a small lineage of social-app conversion buttons (Twitter's blue follow, Instagram's blue follow) repurposed with magazine restraint — pill shape borrowed from social, color reserved with editorial discipline. The 2020 redesign around GT Super marked Medium's most explicit commitment to magazine identity; everything in the system since has been consistent with that thesis.
+
+- **GT Super (Grilli Type)** — Display serif rebuild; the typographic spine of the new Medium. https://www.grillitype.com/typeface/gt-super
+- **Sohne (Klim Type Foundry)** — UI sans for chrome; sans/serif duality echoing print editorial layout. https://klim.co.nz/retail-fonts/soehne/
+- **Source Serif Pro (Adobe)** — Reading-column body face; magazine-grade serif for long-form prose. https://github.com/adobe-fonts/source-serif
+- **The New Yorker** — Display serif + reserved color discipline as editorial gravitas. https://www.newyorker.com
+- **Stripe Press** — Black-on-white editorial discipline; trusts typography to do the job. https://press.stripe.com
+- **Pi Typeface / Magazine layout tradition** — Body-text width and reading rhythm borrowed from print. https://en.wikipedia.org/wiki/Magazine
+
+## 14. Do's and Don'ts
+
+### Do
+- Treat type as the product. Body text at 18–21px, headlines in GT Super at `-0.025em` tracking, 680px reading width.
+- Reserve `#1a8917` green strictly for action surfaces — never decorate with it.
+- Use pill (`9999px`) for buttons; soft 4–6px for tiles and thumbnails.
+- Pair GT Super (display) with Source Serif Pro (reading body) and Sohne (UI chrome). The trio is the system.
+- Keep the canvas at pure `#ffffff`. Body type at warm `#242424` (never pure black).
+- Use hairline borders (`rgba(36, 36, 36, 0.1)`) for separation. Borders, not shadows.
+- Apply the gold star + soft yellow tint for "Member-only story" — the only non-green chromatic moment in canonical reading.
+- Render byline metadata in Sohne 13px / 400 — the structural separator between editorial chrome and the reading body.
+- Keep section padding at 64px vertical — generous magazine rhythm without brutalist void.
+- Use the green focus ring at 2px solid with 2px offset — brand-as-affordance.
+
+### Don't
+- Don't add shadows to story tiles. Hairline borders or empty space carry the separation.
+- Don't mix display serif into UI chrome — keep Sohne for nav, meta, and buttons.
+- Don't narrow the reading column below 680px or widen it past 720px. The measurement is the system.
+- Don't use the green for body text or section headers. Action surfaces only.
+- Don't introduce a third typeface. GT Super + Source Serif Pro + Sohne is the trio.
+- Don't use rounded corners past 12px on cards. Pills are reserved for buttons and chips.
+- Don't bold body text below 18px. Serif body needs the 18–21px scale to read as magazine.
+- Don't soften the canvas to off-white. Pure `#ffffff` is the system.
+- Don't switch link color to blue. Inline links inherit body color and shift to green only on hover.
+- Don't render code blocks larger than 16px inline — they live within the body line-height, not above it.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:     #ffffff (pure white)
+Bg Soft:         #fafafa (nav/footer subtle gray)
+Text:            #242424 (warm near-black)
+Text Soft:       #6b6b6b (bylines, metadata)
+Text Muted:      #8e8e8e (captions)
+Brand:           #1a8917 (Medium green — action only)
+Brand Hover:     #0f730c (hover-darker)
+On-Brand:        #ffffff (white on green pill)
+Border:          rgba(36, 36, 36, 0.1) (hairline)
+Border Strong:   rgba(36, 36, 36, 0.25) (outlined-button border)
+Member Only:     #c89a16 (gold star)
+Highlight:       #fff8c5 (reader highlight yellow)
+```
+
+### Example Component Prompts
+
+1. "Create a Medium-style article hero. White `#ffffff` canvas. GT Super 42px / 700 / -0.025em headline ('How I rebuilt my apartment'), Source Serif Pro 21px / 400 / 1.40 deck below in `#6b6b6b`. Sohne 13px byline row underneath: author name, pub date, read time, em-dash separated. Reading column caps at 680px centered. No card chrome, no shadow."
+
+2. "Design a 3-column story-tile grid on white `#ffffff` canvas. Each tile: 16:9 image at 4px radius, GT Super 22px / 600 headline below, Source Serif Pro 16px / 400 deck preview, Sohne 13px byline row. Tiles separated by 1px `rgba(36, 36, 36, 0.1)` hairlines, no card border, no shadow. 3-up at desktop, 2-up at tablet, 1-up at mobile."
+
+3. "Build a Medium primary CTA. Pill button (9999px radius) with `#1a8917` green background, white `#ffffff` text in Sohne 14px / 500, padding 7px × 16px. Hover darkens to `#0f730c` over 100ms. No lift, no shadow. Pair it with a `#ffffff` outlined secondary button: 1px `rgba(36, 36, 36, 0.25)` border, `#242424` text, same pill shape."
+
+4. "Create a member-paywall card mid-article. White `#ffffff` background, 1px `rgba(36, 36, 36, 0.1)` border, 8px radius, 24px padding. Centered GT Super 28px / 700 headline ('This story is for members'), Source Serif Pro 18px / 400 supporting copy, primary green pill CTA ('Join Medium'). Above the card: a 1px hairline rule with 32px vertical margin."
+
+5. "Design a top-nav for a Medium-style site. 57px tall, translucent white `rgba(255, 255, 255, 0.95)` background, sticky on scroll with 1px `rgba(36, 36, 36, 0.1)` bottom border that appears only when scrolled. Logo left, search input center (pill-shaped, 44px tall, gray placeholder), primary green pill CTA + ghost 'Sign in' button right. Sohne 14px / 400 nav links."
+
+6. "Compose a member-only story preview. Story tile in standard Medium format, but headline preceded by a small gold star glyph and a `rgba(200, 154, 22, 0.12)` background pill with `#c89a16` 12px caption-text 'Member-only story'. Pill sits above the GT Super headline, separated by 8px."
+
+### Iteration Guide
+1. Start with the white `#ffffff` canvas and warm `#242424` body. Do not soften either toward off-white or pure-black.
+2. Anchor every page on a 680px reading column inside a 1192px page chrome. The reading width is the system.
+3. Run all body in Source Serif Pro at 18–21px / 1.58 line-height. Larger than your web instinct — that's intentional.
+4. Reserve the `#1a8917` green for action surfaces only: buttons, follow toggles, focus rings, member-page accents. Never decorate with it.
+5. Use GT Super at 700 for display, Sohne 14px / 400–500 for UI chrome. Don't blend faces inside one role.
+6. Separate story tiles with 1px `rgba(36, 36, 36, 0.1)` hairlines, never with card borders or shadows. Hairlines are the structural rule.
+7. Apply pill (`9999px`) to every button and chip. Cards rest at 4–8px. The shape language is consistent.
+8. Add member-only chrome only where stories are paywalled. Gold star + `#fff8c5` highlight + `#c89a16` label — the only non-green chromatic moments.

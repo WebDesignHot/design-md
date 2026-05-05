@@ -1,197 +1,884 @@
 ---
 name: Vercel
-tagline: Brutalist developer-product polish — light canvas, pure black-on-near-white type, Geist sans + mono, conic-gradient accents.
+tagline: Brutalist developer-product polish — near-white canvas, near-pure black-on-near-white type, Geist sans + mono, conic-gradient accents.
 author: webdesignhot
 source_url: https://vercel.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: true
 categories: [dev-tools, saas]
-tags: [light, minimal, sans, mono, dense]
+tags: [light, minimal, sans, mono, dense, structured]
 preview_swatch: ['#fafafa', '#171717', '#0070f3']
-related: [linear, stripe]
-description: 'Vercel ships a proprietary type system (Geist) and uses it as a competitive moat. The site reads like an extension of the dashboard — high-contrast black-on-near-white, dense neutral ramp, the famous `#0070f3` accent reserved for links and edge cases.'
+related: [linear, stripe, hashnode]
+description: 'Vercel ships a proprietary type system (Geist) and uses it as a competitive moat. The marketing site reads like an extension of the dashboard — high-contrast near-pure black `#171717` on near-pure white `#fafafa`, a dense neutral ramp covering nine grayscale stops, and the famous `#0070f3` Vercel-blue reserved for links, focus rings, and the occasional conic-gradient corner. CTAs invert to black-on-white pills (matching Linear''s pattern at light-mode contrast); the brand blue *never* fills a primary button — it''s a link colour and a focus indicator, full stop. Where Linear caps page width at 1024px, Vercel goes 1200–1400px for dense data-shaped marketing rows: changelogs, pricing comparisons, customer logos, deployment dashboards. The neutral ramp is exhaustive: 9 grayscale stops from 100% white through 9% black, providing fine-grained hierarchy without color. The visual unification with the dashboard is intentional — a developer who signs up and lands inside the product shouldn''t feel a brand discontinuity. The site reads as a product showcase, not a separate marketing layer.'
 
 colors:
-  bg: '#fafafa'
-  bg-pure: '#ffffff'
-  bg-elev: '#f5f5f5'
-  text: '#171717'
-  text-pure: '#000000'
-  text-secondary: '#525252'
-  text-tertiary: '#737373'
-  text-faint: '#a3a3a3'
-  brand: '#0070f3'
-  link: '#0070f3'
-  focus: 'hsla(212, 100%, 48%, 1)'
-  border: 'hsla(0, 0%, 90%, 1)'
-  border-strong: 'hsla(0, 0%, 80%, 1)'
-  on-brand: '#ffffff'
+  bg: '#fafafa'                  # page canvas — near-white at 98% lightness, the only background
+  bg-pure: '#ffffff'             # card surface, modal background, pure white tier
+  bg-elev: '#f5f5f5'             # subtle elevation; section bands, inset blocks
+  bg-deeper: '#ededed'            # third tier; pricing-feature stripe, code-block fills
+  bg-ink: '#0a0a0a'              # near-black inversion band — rare, used for testimonials
+  bg-pure-black: '#000000'       # full black — used only on conic-gradient ground edges
+  surface: '#ffffff'             # default card surface
+  surface-elev: '#fafafa'        # nested card surface inside white panels
+  text: '#171717'                # primary text — near-black at 9% lightness, not pure black
+  text-pure: '#000000'           # rare full-black for peak display copy
+  text-secondary: '#525252'      # supporting copy, body in dense rows
+  text-tertiary: '#737373'       # captions, meta
+  text-faint: '#a3a3a3'          # placeholder, disabled, faintest meta
+  text-on-dark: '#ededed'        # text on bg-ink near-black band
+  text-on-dark-soft: '#a3a3a3'   # secondary text on dark band
+  brand: '#0070f3'               # the canonical Vercel blue — links, focus, gradient stops
+  brand-hover: '#0061d5'         # darker blue, hover state on links
+  brand-deep: '#0050b3'          # pressed/active state
+  brand-soft: 'rgba(0, 112, 243, 0.10)'   # soft blue wash — info banner, focus aura
+  brand-tint: 'rgba(0, 112, 243, 0.06)'   # subtlest blue tint
+  link: '#0070f3'                # inline link colour
+  link-hover: '#0070f3'          # hover keeps colour, shifts to underline
+  focus: 'hsla(212, 100%, 48%, 1)'        # focus ring — Vercel's HSL declaration
+  on-brand: '#ffffff'            # white text on brand blue (rare — buttons don't use brand fill)
+  cta-bg: '#171717'              # primary CTA fill — inverted near-black, not blue
+  cta-text: '#ffffff'            # CTA text on near-black pill
+  cta-bg-secondary: '#ffffff'    # secondary CTA fill
+  cta-text-secondary: '#171717'  # secondary CTA text
+  border: 'hsla(0, 0%, 90%, 1)'           # default hairline — 90% lightness translucent grey
+  border-soft: 'hsla(0, 0%, 95%, 1)'      # quietest separation
+  border-strong: 'hsla(0, 0%, 80%, 1)'    # outlined buttons, focused inputs
+  border-deep: 'hsla(0, 0%, 70%, 1)'      # rare strong border
+  shadow-ambient: 'rgba(0, 0, 0, 0.04)'        # the signature 4% opacity tone
+  shadow-card: 'rgba(0, 0, 0, 0.04)'           # near-invisible card lift
+  shadow-elev: 'rgba(0, 0, 0, 0.06)'           # elevated dropdown
+  shadow-deep: 'rgba(0, 0, 0, 0.10)'           # popover, modal
+  scrim: 'rgba(0, 0, 0, 0.40)'                  # modal backdrop
+  gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
+  gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
+  gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.20) 100%)'
+  success: '#0070f3'             # success uses brand blue (Vercel convention — info and success collapse)
+  success-soft: 'rgba(0, 112, 243, 0.10)'
+  warning: '#f5a623'             # advisory amber
+  warning-soft: 'rgba(245, 166, 35, 0.10)'
+  danger: '#e00'                 # Vercel-red (`#ee0000`), used for errors and 'destructive' actions
+  danger-soft: 'rgba(238, 0, 0, 0.10)'
+  info: '#0070f3'                # info reads as brand
+  info-soft: 'rgba(0, 112, 243, 0.10)'
 
 typography:
   display:
-    family: 'Geist, "GeistVariable", -apple-system, system-ui, sans-serif'
-    weights: [400, 500, 600, 700]
+    family: 'Geist, "GeistVariable", "Geist Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+    opentype-features: ['kern', 'liga', 'cv11', 'ss01', 'ss02']
   body:
-    family: 'Geist, "GeistVariable", -apple-system, system-ui, sans-serif'
-    weights: [400, 500]
+    family: 'Geist, "GeistVariable", "Geist Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: ['kern', 'liga']
   mono:
-    family: '"Geist Mono", ui-monospace, "SF Mono", monospace'
-    weights: [400, 500]
+    family: '"Geist Mono", "GeistMonoVariable", "Geist Mono Variable", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace'
+    weights: [400, 500, 600]
+    opentype-features: ['liga', 'calt', 'zero', 'tnum']
   scale:
-    display:    { size: 64, weight: 600, lineHeight: 1.05, tracking: -0.02 }
-    h1:         { size: 48, weight: 600, lineHeight: 1.05, tracking: -0.018 }
-    h2:         { size: 32, weight: 600, lineHeight: 1.15, tracking: -0.015 }
-    h3:         { size: 22, weight: 500, lineHeight: 1.3 }
-    body-large: { size: 18, weight: 400, lineHeight: 1.55 }
-    body:       { size: 16, weight: 400, lineHeight: 1.55 }
-    body-small: { size: 14, weight: 400, lineHeight: 1.5 }
-    label:      { size: 12, weight: 500, lineHeight: 1.3 }
+    display-hero:    { size: 72, weight: 600, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: ['ss01'] }
+    display-xl:      { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    display-lg:      { size: 48, weight: 600, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    h1:              { size: 40, weight: 600, lineHeight: 1.10, tracking: '-0.018em', family: display }
+    h2:              { size: 32, weight: 600, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    h3:              { size: 24, weight: 500, lineHeight: 1.25, tracking: '-0.01em',  family: display }
+    h4:              { size: 20, weight: 500, lineHeight: 1.30, tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 500, lineHeight: 1.40, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.40, tracking: '0.04em',   family: mono, transform: uppercase }
+    section-label:   { size: 13, weight: 500, lineHeight: 1.40, tracking: '0.04em',   family: mono, transform: uppercase }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    caption-mono:    { size: 12, weight: 500, lineHeight: 1.40, tracking: '0',        family: mono, opentype: ['tnum'] }
+    label:           { size: 12, weight: 500, lineHeight: 1.30, tracking: '0',        family: body }
+    label-mono:      { size: 11, weight: 500, lineHeight: 1.30, tracking: '0.04em',   family: mono, transform: uppercase }
+    button-md:       { size: 14, weight: 500, lineHeight: 1.20, tracking: '0',        family: body }
+    button-sm:       { size: 13, weight: 500, lineHeight: 1.20, tracking: '0',        family: body }
+    code-block:      { size: 13, weight: 400, lineHeight: 1.60, tracking: '0',        family: mono, opentype: ['liga', 'calt'] }
+    code-inline:     { size: 13, weight: 500, lineHeight: 1.40, tracking: '0',        family: mono }
+    code-micro:      { size: 11, weight: 500, lineHeight: 1.40, tracking: '0',        family: mono }
 
 radius:
-  sm: 4
-  md: 6
-  lg: 8
-  card: 12
-  hero: 16
-  pill: 100
+  micro: 2
+  sm: 4           # chips, status badges
+  md: 6           # the dominant Vercel radius — buttons, inputs, code chips
+  lg: 8           # cards, code blocks, dashboard tiles
+  xl: 12          # large cards, modal corners
+  hero: 16        # hero panels, large surfaces
+  pill: 9999      # hero pill CTAs, full-pill chips
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
 
 layout:
   page-width: 1200
   dense-width: 1400
+  prose-width: 720
   header-height: 64
-
-motion:
-  ease: 'cubic-bezier(0.4, 0, 0.2, 1)'
-  duration-fast: 100
-  duration-standard: 200
+  changelog-row-height: 88
+  feed-card-min-width: 320
 
 components:
   button-primary:
-    backgroundColor: text
-    textColor: bg
-    rounded: pill
-    padding: '0 14px (hero) | 0 6px (compact header)'
-    font: 'Geist 16px / weight 500'
-    use: 'Sign-up, Start Deploying — pure-black pill on light bg'
+    bg: '#171717'
+    color: '#ffffff'
+    radius: 9999
+    padding: '0 14px (hero) | 0 12px (default)'
+    height: 40
+    font: 'Geist 14px / 500'
+    hover-bg: '#000000'
+    use: 'Hero pill CTA — near-pure-black pill on near-white canvas. Sign up, Start Deploying. Always inverted; never blue.'
+  button-primary-rect:
+    bg: '#171717'
+    color: '#ffffff'
+    radius: 6
+    padding: '0 10px'
+    height: 32
+    font: 'Geist 13px / 500'
+    use: 'Compact header / table-row primary — same near-black fill, 6px radius for dense contexts.'
   button-secondary:
-    backgroundColor: bg-pure
-    textColor: text
-    border: border
-    rounded: md
+    bg: '#ffffff'
+    color: '#171717'
+    border: '1px solid hsla(0, 0%, 90%, 1)'
+    radius: 6
+    padding: '0 10px'
+    height: 32
+    font: 'Geist 13px / 500'
+    hover-border: 'hsla(0, 0%, 80%, 1)'
+    use: 'Outlined twin — white fill, 90%-grey border. Sign in, Learn more.'
+  button-ghost:
+    bg: 'transparent'
+    color: '#171717'
+    radius: 6
+    padding: '0 8px'
+    height: 32
+    font: 'Geist 13px / 500'
+    hover-bg: 'hsla(0, 0%, 95%, 1)'
+    use: 'Quiet third action — nav links, footer, in-table actions.'
+  button-link:
+    bg: 'transparent'
+    color: '#0070f3'
+    underline: 'none at rest, 1px on hover'
+    font: 'Geist 13px / 500'
+    use: 'Text-link CTA — Vercel blue, hover reveals underline.'
   card:
-    backgroundColor: bg-pure
-    border: border
-    rounded: card
-    shadow: '0 2px 2px rgba(0,0,0,0.04), 0 8px 16px -4px rgba(0,0,0,0.04)'
+    bg: '#ffffff'
+    border: '1px solid hsla(0, 0%, 90%, 1)'
+    radius: 12
+    padding: '20px 24px'
+    shadow: 'rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px'
+    use: 'Default feature card — white fill, hairline border, signature dual-layer 4%-opacity shadow.'
+  card-flat:
+    bg: '#ffffff'
+    border: '1px solid hsla(0, 0%, 90%, 1)'
+    radius: 12
+    padding: '24px'
+    shadow: 'none'
+    use: 'Pricing card, dense data card — border-only, no shadow.'
+  card-dark:
+    bg: '#0a0a0a'
+    color: '#ededed'
+    border: '1px solid rgba(255, 255, 255, 0.06)'
+    radius: 12
+    padding: '32px'
+    use: 'Inverted testimonial / quote card on dark band.'
+  text-input:
+    bg: '#ffffff'
+    color: '#171717'
+    radius: 6
+    height: 36
+    padding: '0 10px'
+    border: '1px solid hsla(0, 0%, 90%, 1)'
+    font: 'Geist 14px / 400'
+    placeholder-color: '#a3a3a3'
+    focus-border: '#0070f3'
+    focus-ring: '0 0 0 3px rgba(0, 112, 243, 0.20)'
+    use: 'Form fields, search bar — slim 36px height, 6px radius, brand-blue focus.'
+  badge-status:
+    bg: 'rgba(0, 112, 243, 0.10)'
+    color: '#0070f3'
+    radius: 4
+    padding: '2px 8px'
+    font: 'Geist Mono 11px / 500 / uppercase / 0.04em'
+    use: 'Status pill — NEW, BETA, READY. Mono caps in soft brand wash.'
+  badge-tag:
+    bg: 'hsla(0, 0%, 95%, 1)'
+    color: '#525252'
+    radius: 4
+    padding: '2px 8px'
+    font: 'Geist Mono 11px / 500'
+    use: 'Tag chip — version, region, framework labels.'
+  nav-top:
+    bg: 'rgba(250, 250, 250, 0.80)'
+    backdrop-filter: 'blur(12px) saturate(180%)'
+    height: 64
+    border-bottom: '1px solid hsla(0, 0%, 90%, 1)'
+    use: 'Sticky top nav — translucent near-white fill with blur, hairline divider.'
+  code-block:
+    bg: '#ededed'
+    color: '#171717'
+    radius: 8
+    padding: '16px 20px'
+    border: '1px solid hsla(0, 0%, 90%, 1)'
+    font: 'Geist Mono 13px / 400 / 1.60 line-height'
+    use: 'Inline code-tour block — third-tier grey fill, hairline border, JSX/Bash/TS examples.'
+  changelog-row:
+    bg: '#ffffff'
+    border-bottom: '1px solid hsla(0, 0%, 90%, 1)'
+    padding: '24px 0'
+    height: 88
+    use: 'Dense changelog row — version + date in mono, title + body + tags inline.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  duration-page: 400
+  link-hover: 'underline grows 100ms; color holds'
+  button-hover: 'bg shift 200ms standard, no transform'
+  card-hover: 'shadow tier intensifies + border deepens 200ms — no lift'
+  conic-gradient: 'rotates indefinitely on hero — 8s linear infinite (suppressed under reduced-motion)'
+  scroll-reveal: 'sections fade in over 300ms ease-out-soft when entering viewport'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — conic-gradient freezes, transforms suppress, opacity-only fades.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1200
+  dense: 1400
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.04) 0 1px 2px'
+  card: 'rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px'
+  elevated: 'rgba(0, 0, 0, 0.06) 0 4px 8px, rgba(0, 0, 0, 0.04) 0 12px 24px -8px'
+  popover: 'rgba(0, 0, 0, 0.10) 0 12px 32px -8px'
+  modal: 'rgba(0, 0, 0, 0.20) 0 24px 64px -16px'
+  ring: '0 0 0 3px rgba(0, 112, 243, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 14.8                  # #171717 on #fafafa — AAA at all sizes
+  contrast-text-pure-on-bg: 19.6             # #000000 on #fafafa — AAA (theoretical max for site)
+  contrast-text-secondary-on-bg: 7.4         # #525252 on #fafafa — AAA at body sizes
+  contrast-text-tertiary-on-bg: 4.6          # #737373 on #fafafa — AA at body sizes
+  contrast-text-on-cta: 14.0                 # #ffffff on #171717 — AAA at all sizes
+  contrast-link-on-bg: 4.5                   # #0070f3 on #fafafa — AA at body / AAA at large; reinforced with hover-underline
+  focus-ring: '3px solid rgba(0, 112, 243, 0.20) + 2px outline-offset; matches Vercel dashboard convention'
+  reduced-motion-honored: true
+  touch-target-min: 44
+  prose-line-length: 'capped at 720px / ~70 characters even on 1400px dense layouts'
+
+dark-mode: optional                          # Vercel ships a system-aware dark mode at vercel.com — duplicate token map below
+
+colors-dark:
+  bg: '#000000'                  # pure black canvas in dark mode (note: not navy — Vercel commits)
+  bg-pure: '#0a0a0a'             # card surface
+  bg-elev: '#111111'             # subtle elevation
+  bg-deeper: '#1a1a1a'           # third tier
+  text: '#ededed'                # near-white body
+  text-pure: '#ffffff'           # peak display
+  text-secondary: '#a3a3a3'      # supporting
+  text-tertiary: '#737373'       # captions
+  text-faint: '#525252'          # placeholder
+  brand: '#0070f3'               # blue unchanged
+  cta-bg: '#ffffff'              # CTA inverts to white in dark mode
+  cta-text: '#000000'            # black text on white pill
+  border: 'rgba(255, 255, 255, 0.10)'
+  border-soft: 'rgba(255, 255, 255, 0.06)'
+  border-strong: 'rgba(255, 255, 255, 0.20)'
 
 lineage:
-  summary: |
-    Vercel's design system is engineered around its proprietary type
-    family **Geist** — a sans + mono pair released open-source in 2024
-    that anchors the entire visual identity. The marketing site uses
-    near-pure black `#171717` on near-pure white `#fafafa`, with the
-    famous `#0070f3` blue reserved for links, focus rings, and the
-    occasional gradient corner. CTAs invert to black-on-white pills
-    (matching Linear's pattern but at light-mode contrast). Where Linear
-    ships a 1024px max page width, Vercel goes 1200–1400px — denser
-    information rows for dashboard-shaped marketing. The neutral ramp
-    is exhaustive: 9 grayscale stops covering 100% white through 9%
-    black, providing fine-grained control over hierarchy without
-    introducing color.
+  summary: 'Vercel''s design system is engineered around its proprietary type family **Geist** — a sans + mono pair released open-source in 2024 that anchors the entire visual identity. The marketing site uses near-pure black `#171717` on near-pure white `#fafafa`, with the famous `#0070f3` Vercel-blue reserved for links, focus rings, and the occasional conic-gradient corner. CTAs invert to black-on-white pills (matching Linear''s pattern at light-mode contrast). Where Linear ships a 1024px max page width, Vercel goes 1200–1400px — denser information rows for dashboard-shaped marketing. The neutral ramp is exhaustive: 9 grayscale stops covering 100% white through 9% black, providing fine-grained hierarchy without color. The visual unification with the dashboard is intentional — a developer who signs up and lands inside the product shouldn''t feel a brand discontinuity.'
   influences:
-    - name: Geist (open-source by Vercel)
-      role: Proprietary type identity — distinct silhouette vs. Inter / SF Pro
-      url: https://vercel.com/font
-    - name: Linear
-      role: Adjacent dev-tool peer; both invert text-color CTAs against canvas
-      url: https://linear.app
-    - name: Vercel design system (`@vercel/geist-ui`)
-      role: Open dashboard primitives that shape the marketing surface
-      url: https://geist-ui.dev
+    - name: 'Geist (Vercel, open-source)'
+      role: 'Proprietary type identity — distinct silhouette vs. Inter / SF Pro. The brand''s competitive moat.'
+      url: 'https://vercel.com/font'
+    - name: 'Linear'
+      role: 'Adjacent dev-tool peer; both invert text-color CTAs against canvas. Vercel borrows the inversion at light-mode contrast.'
+      url: 'https://linear.app'
+    - name: 'Vercel Geist UI / @vercel/geist-ui'
+      role: 'Open dashboard primitives that shape the marketing surface — same components, same tokens'
+      url: 'https://geist-ui.dev'
+    - name: 'Stripe (2019-2021 era)'
+      role: 'Conic-gradient corners and developer-product-as-magazine register descend from Stripe''s gradient-brand era'
+      url: 'https://stripe.com'
+    - name: 'Apple Pro Display marketing'
+      role: 'Dense data-shaped marketing rows (changelog, pricing, customer logos) at near-white canvas with near-black type'
+      url: 'https://www.apple.com/pro-display-xdr/'
+    - name: 'IBM Carbon (and the dev-product-as-system tradition)'
+      role: 'Dense neutral ramp + system-grade primitives shared across product and marketing'
+      url: 'https://carbondesignsystem.com'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Vercel's marketing site is the dashboard's editorial cousin. Same Geist
-type, same near-pure black-on-near-white contrast, same dense neutral
-ramp, same 8px-rounded card geometry. The visual unification is
-intentional: a developer who signs up and lands in the dashboard
-shouldn't feel a brand discontinuity. The site reads as a product
-showcase, not a separate marketing layer.
+Vercel's marketing site is the dashboard's editorial cousin. Same Geist type, same near-pure black-on-near-white contrast, same dense neutral ramp, same 6–8px-rounded card geometry. The visual unification is intentional: a developer who signs up at the marketing site and lands inside the product dashboard shouldn't feel a brand discontinuity. The site reads as a product showcase, not a separate marketing layer — and that's the entire pitch. The dashboard *is* the brand; the marketing surface is just the dashboard with editorial framing.
 
-Distinctive vs. nearby alternatives: most dev-tool marketing softens
-into cream / off-white tints to feel "warmer." Vercel refuses — `#fafafa`
-is the only background, and it's already as warm as the system gets.
-The famous `#0070f3` blue (`--geist-success` in legacy code) appears
-only as link color and gradient accents; it's never the primary CTA
-fill, which inverts to `#171717` for maximum contrast.
+What makes Vercel distinctive is the *typographic ownership*. **Geist** — Vercel's proprietary sans + mono pair, released open-source in 2024 — anchors every page. The silhouette is unmistakable: slightly narrower lowercase apertures than Inter, distinctive `g` and `a` glyph constructions, monoline strokes that read as engineered rather than humanist. Pages render in Geist for both display and body, which is unusual; most SaaS sites pair a display sans with a system body. Vercel's choice means the visual identity is carried by *the type itself*, not by the colour palette or the accent treatment. Even with the brand blue desaturated and the conic gradients removed, you'd still recognise a Vercel page by the type alone.
 
-## Colors
+The chromatic discipline is the second register. The brand colour `#0070f3` — known internally as "Vercel blue" — appears *only* as a link colour, focus indicator, and gradient stop. It never fills a primary button. The primary CTA is always inverted near-pure-black on near-pure-white (a pill at hero contexts, a 6px rectangle in compact headers). The blue is a hyperlink, not an action — a discipline that distinguishes Vercel from peers like Hashnode or Stripe who apply their brand colour to the primary action fill. The reasoning is system-coherent: in the dashboard, blue links lead to documentation, blue rings indicate keyboard focus, and the dominant action is a contrast-pill. The marketing site preserves the dashboard's chromatic logic exactly.
 
-- **bg** `#fafafa` — page canvas, near-white at 98% lightness.
-- **bg-pure** `#ffffff` — card surfaces, modal backgrounds.
-- **text** `#171717` — body copy, headlines (not pure black — slight grain).
-- **text-secondary** `#525252` — supporting copy.
-- **text-faint** `#a3a3a3` — metadata, captions.
-- **brand / link** `#0070f3` — the canonical "Vercel blue".
-- **border** `hsla(0,0%,90%,1)` — translucent gray for card and section edges.
+The third register is **density**. Where Linear caps page width at 1024px and Stripe sits around 1200, Vercel goes to 1400px on dense layouts (changelog feeds, customer logo grids, pricing comparison tables). The brand's signature reading experience is *information-rich rows* — a deployment changelog with version + date + title + body + tags inline at 88px row height; a pricing table with 9 grayscale tiers shading the row alternation; a customer-logo grid with 12 logos visible above the fold. The marketing site assumes a desktop-grade reader who's coming from a code editor, who can parse dense data layouts, who doesn't need each feature blown up into a full-bleed band.
 
-## Typography
+The atmospheric vocabulary that captures Vercel's feeling: *near-black, near-white, Geist-engineered, conic-cornered, dashboard-cousin, dense-data, link-blue-only, contrast-pill-primary, no-cream, no-warm, hairline-grey, brutalist-polish, system-coherent, magazine-tight.* Every surface lands like it was designed by an engineering-design partnership that has decided their marketing site should look like the rest of their dashboard — terminal-comfortable, type-disciplined, gradient-restrained except at the corners where the conic-gradient appears as a brand flourish.
 
-The display voice is **Geist** — Vercel's open-source proprietary sans
-released 2024. Headlines hold at weight `600`; body at `400`. Geist's
-silhouette (slightly narrower lowercase apertures, distinctive `g` and
-`a`) is what makes Vercel pages instantly recognizable even before you
-see the wordmark.
+**Key Characteristics**
+- Near-white `#fafafa` canvas — at 98% lightness, the only background; never cream, never warm
+- Near-pure black `#171717` body and headlines — full black `#000000` reserved for peak display
+- 9-stop neutral ramp covering 100% white through 9% black — fine-grained hierarchy without colour
+- Custom **Geist** type family (sans + mono) — proprietary, open-source, the brand's competitive moat
+- `#0070f3` Vercel-blue *only* for links, focus rings, conic-gradient stops — never primary button fills
+- Primary CTA inverts to near-black-on-near-white pill (hero) or 6px rectangle (header)
+- Conic-gradient signature: `from 230deg, #0070f3 → #00b8ff → #7928ca → #ff0080 → #0070f3`
+- 1200–1400px page widths for dense data layouts; 720px reading column inside
+- Dual-layer 4%-opacity card shadows — barely visible but enough to lift cards above `#fafafa`
+- 6px button radius (the dominant Vercel radius), 8px code blocks, 12px cards, 9999px hero pills
+- Dashboard-grade density: changelog rows at 88px, pricing tables with row-stripe alternation
+- 64px sticky header with `backdrop-filter: blur(12px)` + saturate boost
+- System-aware dark mode — pure black canvas, blue brand unchanged, CTA inverts to white
 
-Body copy at 16px / 1.55 line-height — slightly larger than Linear's
-15px baseline, optimized for marketing-page readability vs. product
-density. Reading width caps at ~720px even on 1400px pages.
+## 2. Color Palette & Roles
 
-Mono is **Geist Mono**, the matched mono pair to Geist Sans. Used for
-code blocks, dashboard route paths, env-var names, and the occasional
-inline command. Like Linear's Berkeley Mono, the choice signals type
-discipline — the mono isn't a fallback to system fonts.
+### Primary
 
-## Layout
+- **Canvas** (`#fafafa`): the page background — near-white at 98% lightness. The *only* background tone; warmer cream tints would shift the brand into Mintlify or Notion territory. Vercel commits to this single neutral as the brand entry ticket.
+- **Body Text** (`#171717`): primary text and headlines — near-pure-black at 9% lightness. The slight grain (vs. true `#000`) softens long-form reading without losing contrast at 14.8:1 against the canvas.
+- **Display Pure-Black** (`#000000`): rare full-black for peak display copy or contrast-critical UI. Used sparingly — most type lives at `#171717`.
+- **Card Surface** (`#ffffff`): pure white card and modal surface. The contrast against `#fafafa` canvas is the brand's primary elevation signal.
 
-Two canonical widths: 1200px for editorial / marketing sections,
-1400px for dense data layouts (changelog, pricing comparison, customer
-list). Header at 64px, sticky with backdrop blur on scroll. Section
-gutters generous — typically 96px+ between major regions.
+### Brand & Sub-Brand
 
-## Elevation & Depth
+- **Vercel Blue** (`#0070f3`): the canonical brand colour — known internally as the legacy `--geist-success` token. Applied *only* as link colour, focus ring, gradient stop. Never a primary button fill.
+- **Brand Hover** (`#0061d5`): darker blue for link hover states.
+- **Brand Deep** (`#0050b3`): pressed/active state.
+- **Brand Soft** (`rgba(0, 112, 243, 0.10)`): soft blue wash for info banners, focus aura, status pill backgrounds.
+- **Brand Tint** (`rgba(0, 112, 243, 0.06)`): subtlest blue tint, used for very quiet brand emphasis (e.g., `aria-current` row highlight).
 
-Light shadows, not heavy ones. The signature shadow stack is a near-
-invisible 2px / 8px dual layer at 4% black opacity — barely there, but
-enough to lift cards above the `#fafafa` ground. Borders take over
-when shadows are overkill.
+### Accent
 
-## Shapes
+The conic gradient is Vercel's only chromatic flourish: `conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)`. It appears at hero corner edges, on framework-icon backgrounds (Next.js, React, Svelte logos rendered with the gradient as a subtle wash), and on certain feature illustrations. The gradient cycles through blue → cyan → purple → magenta → blue, but the dominant impression is *blue with hot-edge accents*. It's never a section background — only a corner or a logo backdrop.
 
-`6px` is the dominant radius — used across buttons, inputs, code
-chips. Larger surfaces (cards, modals) move to `8–12px`. The `100px`
-pill appears only on hero CTAs; compact header buttons use `6px`. No
-zero-radius elements.
+### Interactive
 
-## Components
+- **Link** (`#0070f3`): inline links in body copy — Vercel blue, no underline at rest. Hover reveals a 1px underline; colour stays constant. (Note: Vercel does *not* darken on hover — the underline is the entire hover signal.)
+- **Selected** (`#0070f3` text on `rgba(0, 112, 243, 0.10)` background): selected nav, active TOC, current pricing tier.
+- **Disabled** (`#a3a3a3` text): disabled controls — drops to the faint neutral, no colour cue.
+- **Focus** (`hsla(212, 100%, 48%, 1)` with 3px translucent ring): keyboard focus indicator — matches the dashboard convention.
 
-The signature primary button: `#171717` background, white text, full
-pill on hero context, `6px` rectangle in compact header. Card uses
-white background + 1px border + subtle shadow — never just shadow
-alone. Inputs use the same `#0070f3` blue for focus rings, matching
-the link color.
+### Neutral Scale
 
-## Do's and Don'ts
+Vercel's neutral ramp is the most exhaustive of any modern SaaS — 9 grayscale stops covering hierarchy without introducing colour. The ramp:
 
-- **Do** use Geist for both headlines and body — Vercel's type unity
-  is a brand asset.
-- **Do** invert primary CTAs to black on white for maximum contrast.
-  The blue is for links and focus, not action fills.
-- **Do** cap reading width at ~720px even on 1400px layouts.
-- **Don't** use cream or off-white tints. `#fafafa` is the canvas.
-- **Don't** apply heavy shadows. Two-layer 4%-opacity shadows do the
-  full lifting.
-- **Don't** use the `#0070f3` blue as a primary button fill — it
-  becomes a link color the moment you're not careful.
+- **Pure White** (`#ffffff`) — card surface
+- **Canvas** (`#fafafa`) — page background, 98% lightness
+- **Bg Elev** (`#f5f5f5`) — subtle elevation, section bands
+- **Bg Deeper** (`#ededed`) — third tier, code-block fills, on-dark text colour
+- **Border** (`hsla(0, 0%, 90%, 1)`) — default hairline
+- **Border Strong** (`hsla(0, 0%, 80%, 1)`) — focused inputs, outlined buttons
+- **Text Faint** (`#a3a3a3`) — placeholder, disabled, faintest meta
+- **Text Tertiary** (`#737373`) — captions, meta
+- **Text Secondary** (`#525252`) — supporting copy, dense-row body
+- **Text** (`#171717`) — primary text, headlines — 9% lightness near-black
+- **Text Pure** (`#000000`) — peak display
+
+The 9-stop progression provides fine-grained control over hierarchy in dense data layouts (changelog, pricing tables, customer logos) without ever introducing a second hue.
+
+### Surface & Borders
+
+- **Canvas** (`#fafafa`) — the single background tone
+- **Pure White** (`#ffffff`) — card and modal surface
+- **Bg Elev** (`#f5f5f5`) — section band, inset block
+- **Bg Deeper** (`#ededed`) — third tier; pricing-feature stripe rows, code block fills
+- **Bg Ink** (`#0a0a0a`) — near-black inversion band (rare; testimonial sections)
+- **Border Default** (`hsla(0, 0%, 90%, 1)`) — translucent grey hairline at 90% lightness
+- **Border Soft** (`hsla(0, 0%, 95%, 1)`) — quietest separation
+- **Border Strong** (`hsla(0, 0%, 80%, 1)`) — outlined buttons, focused inputs
+- **Border Deep** (`hsla(0, 0%, 70%, 1)`) — rare strong border for high-emphasis dividers
+
+### Shadow Colors
+
+Vercel's signature shadow stack is **two layers at 4% opacity** — barely there, but enough to lift cards above the `#fafafa` ground. The discipline is "if you can see the shadow clearly, it's too heavy." The shadow philosophy descends from Vercel's dashboard, where dense-data UI can't tolerate heavy lifts.
+
+- `rgba(0, 0, 0, 0.04) 0 1px 2px` — ambient
+- `rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px` — card (the signature dual-layer)
+- `rgba(0, 0, 0, 0.06) 0 4px 8px, rgba(0, 0, 0, 0.04) 0 12px 24px -8px` — elevated dropdown
+- `rgba(0, 0, 0, 0.10) 0 12px 32px -8px` — popover
+- `rgba(0, 0, 0, 0.20) 0 24px 64px -16px` — modal
+
+### Semantic
+
+- **Success** (`#0070f3` on `rgba(0, 112, 243, 0.10)`): success uses brand blue — Vercel's convention collapses info and success into a single hue. The reasoning is dashboard-aligned: deployment success is a brand event, not a separate semantic.
+- **Warning** (`#f5a623` on `rgba(245, 166, 35, 0.10)`): advisory amber — warnings, rate limits.
+- **Danger** (`#e00` / `#ee0000` on `rgba(238, 0, 0, 0.10)`): the famous Vercel-red, used for errors, destructive actions, build failures.
+- **Info** (`#0070f3` on `rgba(0, 112, 243, 0.10)`): info reads as brand — same as success.
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `Geist, "GeistVariable", "Geist Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`. **Geist** is Vercel's proprietary sans, released open-source in 2024 under SIL Open Font License. The variable axis covers weights 100–900 in a single file. The silhouette is engineered-grade: slightly narrower lowercase apertures than Inter, distinctive `g` (single-storey, with a curl), distinctive `a` (double-storey with a slight tail), monoline strokes with subtle optical adjustments. The brand's competitive moat — even desaturated, you recognise a Vercel page by the type alone.
+
+**Mono companion**: `"Geist Mono", "GeistMonoVariable", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace`. Geist Mono is the matched mono pair to Geist Sans, also open-source. Used for code blocks, dashboard route paths, environment variable names, eyebrow labels, and inline command references. Like Linear's Berkeley Mono, the choice signals type discipline — the mono isn't a fallback to system fonts.
+
+**OpenType features**: Geist renders with `kern` and `liga` always on; `cv11`, `ss01`, and `ss02` are stylistic alternates available for the disambiguated `1`, alternate `g`, and alternate `a`. Geist Mono adds `liga` and `calt` for code ligatures (`=>`, `!=`, `>=`), `zero` for the slashed zero, and `tnum` for tabular numerals in pricing tables.
+
+The single-family discipline (Geist for both display and body) is what makes Vercel pages instantly recognizable. There is no system-fallback for body — Vercel ships Geist for everything.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Geist | 72px | 600 | 1.0 | -0.025em | ss01 | Hero — landing-page H1 |
+| display-xl | Geist | 64px | 600 | 1.05 | -0.02em | — | Major section opener |
+| display-lg | Geist | 48px | 600 | 1.05 | -0.018em | — | Sub-section opener |
+| h1 | Geist | 40px | 600 | 1.10 | -0.018em | — | Page title, blog post title |
+| h2 | Geist | 32px | 600 | 1.15 | -0.015em | — | Marketing section H2 |
+| h3 | Geist | 24px | 500 | 1.25 | -0.01em | — | Card heading, article H3 |
+| h4 | Geist | 20px | 500 | 1.30 | -0.005em | — | Sub-card heading |
+| h5 | Geist | 18px | 500 | 1.40 | 0 | — | Inline emphasis |
+| eyebrow | Geist Mono | 12px | 500 | 1.40 | 0.04em | uppercase | Section pre-label |
+| section-label | Geist Mono | 13px | 500 | 1.40 | 0.04em | uppercase | Marketing section eyebrow |
+| body-lg | Geist | 18px | 400 | 1.55 | 0 | — | Hero deck, lede paragraph |
+| body-md | Geist | 16px | 400 | 1.55 | 0 | — | Default body — slightly larger than Linear's 15px |
+| body-sm | Geist | 14px | 400 | 1.50 | 0 | — | Card body, dense-row body |
+| caption | Geist | 13px | 400 | 1.45 | 0 | — | Image caption, footer micro |
+| caption-mono | Geist Mono | 12px | 500 | 1.40 | 0 | tnum | Pricing values, dashboard meta |
+| label | Geist | 12px | 500 | 1.30 | 0 | — | Form field label |
+| label-mono | Geist Mono | 11px | 500 | 1.30 | 0.04em | uppercase | Mono caps label |
+| button-md | Geist | 14px | 500 | 1.20 | 0 | — | Default button copy |
+| button-sm | Geist | 13px | 500 | 1.20 | 0 | — | Compact header button |
+| code-block | Geist Mono | 13px | 400 | 1.60 | 0 | liga, calt | Code block content |
+| code-inline | Geist Mono | 13px | 500 | 1.40 | 0 | — | Inline `code` references |
+| code-micro | Geist Mono | 11px | 500 | 1.40 | 0 | — | Code tag chip, language label |
+
+### Principles
+
+- **Single-family discipline.** Geist for display, body, captions, labels. Geist Mono for code, eyebrows, dashboard metadata. There is no third face anywhere in the system.
+- **Weight 600 is the display weight.** Most modern sans systems push to 700–800 for hero copy; Vercel caps at 600. The rationale: Geist's engineered silhouette already reads as confident at 600, and pushing higher would feel shouty.
+- **Body holds at weight 400, never 500.** The crisp 400-weight Geist body is what makes the brand feel calm-and-precise rather than dense-and-loud.
+- **Negative tracking compresses with size.** `-0.025em` at 72px, `-0.02em` at 64px, `-0.018em` at 40–48px, `-0.015em` at 32px, `-0.01em` at 24px, near-zero below.
+- **16px body, 1.55 line-height.** Slightly larger than Linear's 15px baseline, optimised for marketing-page readability without dropping into editorial-spread territory.
+- **Reading width caps at 720px** even on 1400px dense layouts — line length is calibrated for ~70 characters.
+- **Mono caps for every section eyebrow, status pill, and dashboard caption.** The Geist Mono register at 11–13px / 0.04em tracking is the brand's secondary-identity tell.
+- **Tabular numerals (`tnum`) in pricing tables.** Pricing values use Geist Mono with `tnum` enabled so digits align column-wise — a dashboard-grade attention to micro-detail.
+- **No italic in display.** Geist is set roman across all hierarchy. Body italics carry quoted titles only.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary Pill (Hero)** — `#171717` near-black background, white text at 14px / 500, **9999px pill radius**, 0×14px padding (variable), 40px height. Hover deepens to pure `#000000` over 200ms standard. **No transform, no scale** — the colour shift carries the affordance. Use case: *Sign up*, *Start Deploying*, *Get a Demo* — the dominant hero CTA. The pill shape is reserved for hero contexts; compact contexts use the rectangle variant.
+
+**Primary Rectangle (Compact)** — `#171717` fill, white text at 13px / 500, **6px radius**, 0×10px padding, 32px height. Same near-black fill as the pill but in dense-data shape. Use case: top-nav `Sign up`, in-table actions, dashboard-style compact CTAs.
+
+**Secondary (Outlined)** — `#ffffff` fill, near-black text at 13px / 500, 1px border at `hsla(0, 0%, 90%, 1)` (the default hairline grey), 6px radius, 32px height. Hover deepens border to `hsla(0, 0%, 80%, 1)` over 200ms. Use case: *Sign in*, *Learn more*, *Read documentation* — paired adjacently with primary rectangles.
+
+**Ghost (Quiet)** — Transparent background, near-black text at 13px / 500, 6px radius, 0×8px padding, 32px height. Hover fills with `hsla(0, 0%, 95%, 1)` (the soft border tone). Use case: nav links, footer secondaries, in-card actions.
+
+**Link** — Transparent background, brand-blue text at 13px / 500. No underline at rest; 1px underline appears on hover. Use case: text-link CTA — *See pricing*, *View documentation*, *Read changelog*.
+
+### Cards
+
+**Default Card** — `#ffffff` pure-white fill, 1px hairline border at `hsla(0, 0%, 90%, 1)`, **12px radius**, 20×24px padding, dual-layer 4%-opacity shadow. The signature card — used across feature grids, customer logos, framework cards, partner directories. The shadow is intentionally near-invisible but enough to lift the card above the `#fafafa` canvas.
+
+**Flat Card** — Same as default but with `shadow: none`. Used for pricing cards, dense data cards, or any context where multiple cards are stacked tightly. The border alone carries the elevation.
+
+**Dark Card** — `#0a0a0a` near-black fill, `#ededed` text, 1px border at `rgba(255, 255, 255, 0.06)`, 12px radius, 32px padding. Used for inverted testimonial blocks or highlight cards on otherwise light pages. Rare; one or two per page.
+
+### Code Blocks
+
+**Code Block** — `#ededed` (third-tier grey) fill, near-black text, **8px radius**, 16×20px padding, 1px hairline border. Geist Mono 13px / 400 / 1.60 line-height. Used for inline code-tour blocks (CLI commands, JSX snippets, Bash scripts). Vercel doesn't typically apply syntax highlighting on the marketing site — the prose-level code blocks render as plain mono on grey, leaving syntax-highlighted blocks for the docs subsite.
+
+**Inline Code** — `hsla(0, 0%, 95%, 1)` (soft border tone) fill, near-black text at 13px / 500 in Geist Mono, 4px radius, 2×6px padding. Plain grey tint — Vercel doesn't apply brand-blue tinting to inline code (that's Hashnode's signature; Vercel preserves the neutral discipline).
+
+### Badges, Tags, Pills
+
+**Status Badge (Brand)** — `rgba(0, 112, 243, 0.10)` brand-soft fill, brand-blue text at 11px / 500 in Geist Mono uppercase with `0.04em` tracking, 4px radius, 2×8px padding. Use case: `NEW`, `BETA`, `READY`, `PRO`.
+
+**Tag Chip** — `hsla(0, 0%, 95%, 1)` neutral fill, secondary-text colour, 11px / 500 Geist Mono, 4px radius, 2×8px padding. Use case: framework labels, region tags, version chips.
+
+**Status Pill (Pulse)** — Used for live-status indicators (deployment in progress, region active). Includes a 6px circle status dot at `success` (green) or `danger` (red) on the left, with a 13px / 500 Geist label.
+
+### Inputs / Forms
+
+**Text Input** — `#ffffff` fill, near-black text at 14px / 400 in Geist, 1px border at `hsla(0, 0%, 90%, 1)`, **6px radius**, 36px height (slimmer than Linear's 40px), 0×10px padding. Placeholder colour at `#a3a3a3` faint. On focus: border shifts to `#0070f3` brand-blue and a 3px translucent brand-blue ring appears (`rgba(0, 112, 243, 0.20) 0 0 0 3px`).
+
+**Select** — Same shape as text-input with a chevron icon at right (12px) at tertiary-text colour.
+
+### Navigation
+
+**Top Nav** — `rgba(250, 250, 250, 0.80)` translucent near-white fill with `backdrop-filter: blur(12px) saturate(180%)`, **64px height**, 1px bottom hairline at `hsla(0, 0%, 90%, 1)` (always present, not scroll-conditional like Hashnode's). Wordmark left in Geist 18px / 500. Center: nav links (Products, Solutions, Resources, Enterprise, Docs, Pricing) at 13px / 500 ghost-button style. Right: ghost `Contact` + outlined secondary `Log in` + primary near-black `Sign up` rectangle.
+
+**Footer** — `#fafafa` canvas (no separation from page), 96px top padding, multi-column link grid (Products, Resources, Company, Legal) in Geist 13px / 400 secondary-text. Wordmark + system status indicator + theme switcher at the bottom.
+
+### Optional / Decorative
+
+**Conic-Gradient Corner** — A rotating conic-gradient applied to hero illustrations, framework icons, or section corner edges. The gradient: `conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)`. On the marketing hero, it appears as a 400×400px decorative element behind the H1 wordmark, rotating slowly (8s linear infinite) — under reduced-motion, it freezes static.
+
+**Changelog Row** — `#ffffff` fill, 1px bottom hairline, 88px row height, 24px vertical padding. Layout: version + date in Geist Mono 12px (left), title in Geist 16px / 500 + body in Geist 14px / 400 secondary-text (center), tags + read-link (right). The row is the brand's signature dense-data unit.
+
+**Customer Logo Grid** — 4-up at desktop, 12 logos visible above the fold. Each cell `#ffffff` fill with hairline border, 12px radius, 64px height, logo centered at `#525252` secondary-text colour (logos render monochrome — Vercel doesn't permit full-colour customer logos on the marketing surface).
+
+**Pricing Card** — Flat card with hairline border. Tier name in Geist 18px / 500, price in Geist Mono 48px / 600 with `tnum`, feature list with brand-blue checkmarks at body sizes. Featured tier replaces border with brand-blue 1px outline + brand-blue primary CTA at the bottom.
+
+**Modal** — `#ffffff` fill, 12px radius, 32px padding, modal shadow stack. Backdrop scrim at `rgba(0, 0, 0, 0.40)`. Max-width 480px for confirmations, 720px for sign-up dialogs.
+
+**Toast** — `#ffffff` fill, 1px hairline border, 8px radius, 12×16px padding. Icon + message in Geist 14px / 400 + dismiss button. Brand-blue accent for success/info, danger-red for errors.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128`
+- Section padding (vertical): 96–128px for major marketing bands; 48–64px between dense-row sections; 24–32px between paragraphs and content blocks
+- Card internal padding: 20×24px on default cards; 24px on flat pricing cards; 32px on dark testimonial cards; 16×20px on code blocks
+- Inter-card gutters: 24px between cards in 2-up; 16px in 3-up dense grids
+
+### Grid & Container
+
+- Two canonical max widths: **1200px** for editorial / marketing sections, **1400px** for dense data layouts (changelog, pricing comparison, customer logo grid)
+- 12-column grid with 24px gutters at 1200, 12 columns with 16px gutters at 1400
+- Reading column caps at **720px** even inside the 1400px dense container — line length calibrated for ~70 characters
+- Hero treatment: full-bleed near-white canvas, headline left-aligned (sometimes centered for emphasis), conic-gradient corner element offset to the upper-right or lower-left
+
+### Whitespace Philosophy
+
+The page balances density (changelog rows at 88px, customer logos in 4-up grids) with editorial breathing room (hero sections with 128px+ vertical padding, generous 96px+ section gutters). The dual-mode is intentional: marketing surfaces use editorial spacing; dashboard-shaped surfaces (changelog, pricing, customer directory) use dense spacing. The user reads them as different content types because they're spaced differently.
+
+### Section Cadence
+
+A typical Vercel page runs:
+
+1. **Hero** — `#fafafa` canvas with conic-gradient corner element, 72px / 600 H1, 18px / 400 body deck, dual CTA (primary near-black pill + secondary outlined)
+2. **Feature Grid** — `#ffffff` cards in 3-up at desktop, hairline borders, dual-layer 4%-opacity shadow, 24px / 500 card titles + 14px / 400 body
+3. **Code-Tour Band** — `#ffffff` background with a centered code block at full reading-column width, prose paragraphs in 16px / 400 introducing the example
+4. **Customer Logo Grid** — `#fafafa` background, 12 customer logos in 4-up at `#525252` monochrome
+5. **Changelog Excerpt** — `#ffffff` rows with hairline dividers, 88px row height, dense data layout
+6. **Pricing Cards** — flat cards in 3-up, featured tier ringed in brand-blue
+7. **Dark Testimonial Band** — rare `#0a0a0a` inversion with white text and dark cards (one-or-two appearances per page)
+8. **Closing CTA** — centered hero pill on near-white canvas, single dominant action
+9. **Footer** — `#fafafa` (no separation), multi-column link grid in 13px / 400 secondary
+
+The "alternation" is *brightness-based* (canvas → white → canvas → near-black → canvas) rather than colour-based.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2px | Decorative dividers, focus indicators inside chips |
+| Small | 4px | Status badges, tag chips |
+| Standard | 6px | Buttons (default), inputs, code chips — the dominant Vercel radius |
+| Comfortable | 8px | Code blocks, dense-data cards |
+| Featured | 12px | Cards (default), modals, partner directory tiles |
+| Hero | 16px | Large surfaces, hero panels |
+| Pill | 9999px | Hero CTAs, brand chip — reserved for emphasis moments |
+
+Vercel's signature shape is the **6px button radius** — sharper than the SaaS-pill convention (Mintlify, Cal.com use 12px+) and gentler than YC-era brutalism (4px). The 6px radius is consistent across the marketing site and the dashboard. The 9999px hero pill is reserved exclusively for primary CTAs in hero contexts; compact headers and dashboard chrome use 6px rectangles. The 12px card radius is the modern dev-tool consensus.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow, canvas bg | Page canvas, body sections |
+| 1 — Hairline | 1px `hsla(0, 0%, 90%, 1)` border | Flat cards, dense data tiles, pricing cards |
+| 2 — Card | 1px border + `rgba(0, 0, 0, 0.04) 0 2px 2px, 0 8px 16px -4px` | Default feature cards |
+| 3 — Elevated | `rgba(0, 0, 0, 0.06) 0 4px 8px, rgba(0, 0, 0, 0.04) 0 12px 24px -8px` | Dropdowns, hover-lifted cards |
+| 4 — Popover | `rgba(0, 0, 0, 0.10) 0 12px 32px -8px` | Command palette, popover menus |
+| 5 — Modal | scrim `rgba(0, 0, 0, 0.40)` + `rgba(0, 0, 0, 0.20) 0 24px 64px -16px` | Sign-up dialog, confirmation modals |
+
+### Shadow Philosophy
+
+Vercel uses **near-invisible 4%-opacity shadows** — barely there, but enough to lift cards above the `#fafafa` canvas. The discipline comes from the dashboard: dense-data UI can't tolerate heavy lifts, and the marketing site preserves that constraint exactly. Shadows are dual-layer (a tight 2px ambient + a wider 16px diffusion) to give cards a sense of *resting on the surface* without the dramatic lift of consumer-product shadows.
+
+The hairline border `hsla(0, 0%, 90%, 1)` does most of the elevation work. Cards lift via *border + canvas-vs-card brightness contrast* (`#fafafa` canvas vs `#ffffff` card) more than via shadow. Pricing cards and dense-data tiles drop the shadow entirely, leaving border alone. Heavy shadows (popover, modal) are reserved for true overlay UI where the element needs to read as floating *above* the page rather than *on* it.
+
+The signature dual-layer shadow — `rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px` — is one of the most-copied micro-details in modern SaaS design, and Vercel originated it.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, color transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; modal entry, toast slide-in
+- **Out-Soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — gentle settle; dropdown reveal, scroll-reveal
+
+### Duration Buckets
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Link underline grow, focus ring fade-in |
+| Standard | 200ms | Button hover bg shift, card border deepen |
+| Slow | 300ms | Scroll-reveal fade, dropdown reveal |
+| Page | 400ms | Route transitions |
+| Conic | 8000ms | The hero conic-gradient rotation (linear, infinite) |
+
+### Per-Component Recipes
+
+- **Brand-blue link hover**: colour holds at `#0070f3`, 1px underline grows from 0 to full width over 100ms ease-standard. **Colour does not darken on hover** — the underline is the entire signal.
+- **Primary CTA hover**: bg shifts `#171717` → `#000000` over 200ms standard. **No transform, no scale, no shadow change.**
+- **Secondary CTA hover**: border deepens `hsla(0, 0%, 90%, 1)` → `hsla(0, 0%, 80%, 1)` over 200ms.
+- **Ghost button hover**: bg fills `transparent` → `hsla(0, 0%, 95%, 1)` over 200ms.
+- **Card hover**: border deepens + shadow intensifies (the 4% layer becomes 6%) over 200ms. **No translate, no lift.**
+- **Conic-gradient rotation**: 8s linear infinite on the hero gradient corner. Smooth continuous rotation; under reduced-motion, freezes to a static rotation point.
+- **Scroll-reveal**: marketing-page sections fade in over 300ms ease-out-soft when entering viewport at 80% threshold. One-shot per section.
+- **Toast slide-in**: from top-right with 12px translate-down + opacity 0→1 over 300ms ease-emphasized. Auto-dismisses after 4s.
+- **Modal entry**: backdrop scrim fades in over 200ms; modal content fades + scales from 0.96 to 1.0 over 300ms ease-emphasized.
+
+### Page Transitions
+
+Page-to-page navigation uses a 400ms cross-fade with the sticky header staying static. Smooth-scroll for anchor links uses 600ms ease-emphasized. The Vercel marketing site uses Next.js client-side navigation with prefetching — most page changes feel instant, with the cross-fade only visible on cold cache.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. The conic-gradient hero element freezes to a static rotation point. All `translate` and `scale` transforms suppress entirely — replaced with instant render or opacity-only fades. Durations halve. Modal scale-in becomes instant render. Scroll-reveal becomes static on-mount. Link hover underline appears instantly rather than growing.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| `#171717` text on `#fafafa` canvas | 14.8 | AAA at all sizes |
+| `#000000` text on `#fafafa` canvas | 19.6 | AAA (theoretical max) |
+| `#525252` secondary on `#fafafa` | 7.4 | AAA at body sizes |
+| `#737373` tertiary on `#fafafa` | 4.6 | AA at body sizes |
+| `#a3a3a3` faint on `#fafafa` | 2.7 | Fails AA at body — used only for placeholder/disabled |
+| `#ffffff` text on `#171717` CTA | 14.0 | AAA at all sizes |
+| `#0070f3` link on `#fafafa` canvas | 4.5 | AA at body / AAA at large; reinforced with hover-underline |
+| `#0061d5` brand-hover on `#fafafa` | 5.6 | AA at body sizes |
+| `#171717` text on `#ffffff` card | 15.7 | AAA at all sizes |
+| `#ededed` text on `#0a0a0a` dark card | 14.0 | AAA at all sizes |
+
+The brand link colour `#0070f3` sits at exactly 4.5:1 against the canvas — passing WCAG AA at body sizes. Vercel reinforces the link affordance with a hover-underline so colour-blind users can identify links by the underline-on-hover behaviour even when the colour difference is subtle.
+
+### Focus Indicators
+
+Focus ring is `3px solid rgba(0, 112, 243, 0.20)` translucent brand-blue with 2px outline-offset. The ring matches the dashboard convention exactly — when a developer keyboard-tabs through the marketing site and lands inside the dashboard, the focus indicator looks identical. The 3px ring is more visible than the 2px Linear/Stripe convention, optimised for Vercel's dense data layouts where focused elements need to read clearly against neighbouring rows.
+
+### ARIA Patterns
+
+- **Top nav**: `<nav aria-label="Primary">` landmark with skip-link to `<main>`. Mega-menu dropdowns use `role="menu" aria-haspopup="true"`.
+- **Changelog feed**: `<section aria-label="Changelog">` with `<article>` rows; each row labelled with `aria-labelledby` pointing to the version.
+- **Pricing tables**: proper `<table>` semantics with `<th scope="col">` for tiers and `<th scope="row">` for features. Each cell announces the tier-feature pair.
+- **Code blocks**: `<pre><code role="region" aria-label="Bash command example" tabindex="0">` — focusable, language-labelled.
+- **Modal**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Combobox / search**: `role="combobox" aria-expanded aria-autocomplete="list"`.
+- **Toast notifications**: `aria-live="polite"` for non-critical, `aria-live="assertive"` for errors and build failures.
+- **System status indicator** in footer: `aria-live="polite"` with descriptive text ("All systems operational").
+
+### Keyboard Navigation
+
+- Tab order: skip-link → wordmark → primary nav → search → auth CTAs → main content (in document order) → footer
+- Arrow keys navigate inside command palette (⌘K) and mega-menu dropdowns
+- `Esc` closes modals, command palette, and dropdown menus
+- Code blocks are focusable (`tabindex="0"`) — keyboard users can tab into them
+- Pricing tier toggles use radio-button keyboard semantics (arrow keys switch tiers)
+
+### Screen Reader Hints
+
+- Mono-caps eyebrows use `text-transform: uppercase` (CSS) so screen readers announce natural-case
+- The conic-gradient hero element has `aria-hidden="true"` — purely decorative
+- Brand wordmark uses `aria-label="Vercel"`
+- Changelog row dates announce in human-readable form ("January 4, 2026") despite mono-formatted display
+- Pricing values announce with currency unit (`aria-label="forty-nine US dollars per month"`) for screen readers, despite tabular-numeral mono visual
+
+### Reduced Motion
+
+All transitions degrade to opacity-only or instant. Conic-gradient freezes static. Modal scale-in becomes instant. Scroll-reveal becomes static on-mount. Link hover underline appears instantly. The brand experience preserves visual consistency under reduced-motion — nothing breaks, nothing disappears.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top nav collapses to logo + auth + hamburger; hero H1 drops 72→40px; cards 1-up; changelog rows stack with vertical layout; conic-gradient corner shrinks to 200px |
+| Tablet | 640–1024px | Top nav keeps inline links (without mega-menu); hero H1 at 56px; cards 2-up; changelog rows still horizontal |
+| Desktop | 1024–1200px | Full nav with mega-menu; hero H1 at 64px; cards 3-up; full changelog row layout |
+| Wide | 1200–1400px | Content width caps at 1200; gutters absorb the rest |
+| Dense | >1400px | Dense layouts (changelog, pricing) expand to 1400px max |
+
+### Touch Targets
+
+- Buttons: 32px height on desktop (slim by SaaS standards), 40px height on mobile (Apple HIG minimum)
+- Hero pill: 40–48px height (always larger than compact buttons)
+- Tag chips: 24px visual height with 12px vertical padding for 44px effective tap area
+- Top nav links: 44×44px minimum tap area even at 13px text
+- Changelog rows: tap area covers the full 88px row height
+
+### Collapsing Strategy
+
+- **Top nav** at <1024px: primary nav links collapse into a hamburger sheet; mega-menus become accordion sections inside the sheet
+- **Hero CTA pair** at <640px: stacks vertically (primary above, secondary below)
+- **Card grids**: 4 → 3 → 2 → 1 columns
+- **Changelog rows** at <640px: layout shifts from horizontal (version + title + body + tags inline) to stacked (version above, title and body, tags below)
+- **Pricing cards** at <1024px: swipe-able horizontal scroll with snap points; otherwise 3-up at desktop
+- **Customer logo grid**: 4 → 3 → 2 columns; logos maintain aspect ratio
+- **Conic-gradient corner**: scales proportionally from 400px → 200px on smaller viewports
+
+### Image Behavior
+
+Customer logos use SVG with `currentColor` so they inherit the secondary-text colour. Dashboard screenshots use `aspect-ratio` to prevent layout shift. Marketing illustrations (rare) use `srcset` with 1x/2x/3x for retina displays. All below-fold images are lazy-loaded; hero images are eager.
+
+### Container Queries
+
+Used inside dashboard-screenshot cards: when the card width crosses 320px, the screenshot switches from above-the-fold to side-by-side with the card body. The query enables the same component to render compactly in dense 4-up grids and expansively in hero contexts.
+
+## 11. Content & Voice
+
+### Tone
+
+**Engineered, declarative, modestly enthusiastic.** Vercel writes like a senior platform engineer at an all-hands — knowledgeable, direct, willing to use product names without explanation, reluctant to oversell. Headlines are statements ("Build and Deploy on the AI Cloud"); subheads explain capability; product copy uses precise technical vocabulary (edge, region, ISR, middleware) without translating it for non-developers. The voice is inverse to consumer-product enthusiasm and inverse to enterprise-legalese; it sits in a peer-to-peer engineering register.
+
+### Microcopy Patterns
+
+- **Button verbs**: *Sign up*, *Start Deploying*, *Get a Demo*, *Read the Docs*, *View Pricing*, *Contact Sales*, *Log in*. Direct, outcome-focused.
+- **Error messages**: *"Build failed: missing `next.config.js`. Add a configuration file and redeploy."* — specific, accountable, actionable. Includes the exact technical detail rather than wrapping it.
+- **Success confirmations**: *"Deployment ready."* / *"Domain verified."* — Brief, declarative, no exclamation.
+- **Empty states**: *"No deployments yet. Run `vercel deploy` from your project root to start."* — instruction-led, includes the exact command.
+- **Field labels**: *Email*, *Project name*, *Branch*, *Region*. Single-word where possible, no friendly framing.
+- **Loading states**: *"Building…"*, *"Deploying…"*, *"Provisioning region…"* — context-specific, never just "Loading…"
+
+### Empty States
+
+The dashboard empty state ("No projects yet — connect a Git repository to start") is the brand's tonal anchor: explain the state, offer the next step, include the exact action verb. Marketing-site empty states (rare on the marketing surface) follow the same convention: "No customers in your region yet. Be the first." or "No changelog entries match this filter. Try a different keyword."
+
+### CTA Verb Conventions
+
+- Primary on hero: *Start Deploying*, *Sign up*, *Get a Demo*, *Talk to Sales*
+- Secondary: *Read the Docs*, *View Pricing*, *Contact Us*, *Log in*
+- Tertiary text: *See changelog*, *Browse customers*, *View framework support*, *Open community*
+- Avoided: *Click here*, *Submit*, *Get started* (too generic), *Buy now*, exclamation-heavy enthusiasm. Vercel uses outcome verbs and product names directly.
+
+The verbs match the engineering-peer voice — direct, never marketing-template.
+
+## 12. Dark Mode & Theming
+
+**System-aware dark mode.** Vercel ships a full dark variant at `vercel.com` that respects `prefers-color-scheme: dark` and provides a manual theme toggle in the footer. The dark mode is a complete token swap, not a partial inversion.
+
+Dark-mode token swap:
+
+- **canvas**: `#fafafa` → `#000000` (note: pure black, not navy — Vercel commits to true black on dark)
+- **bg-pure**: `#ffffff` → `#0a0a0a`
+- **bg-elev**: `#f5f5f5` → `#111111`
+- **bg-deeper**: `#ededed` → `#1a1a1a`
+- **text**: `#171717` → `#ededed` (near-white, slightly softened)
+- **text-pure**: `#000000` → `#ffffff`
+- **text-secondary**: `#525252` → `#a3a3a3`
+- **text-tertiary**: `#737373` → `#737373` (unchanged — sits in the middle of the ramp)
+- **text-faint**: `#a3a3a3` → `#525252`
+- **brand**: `#0070f3` (unchanged — Vercel-blue passes contrast on both grounds)
+- **cta-bg**: `#171717` → `#ffffff` (CTA inverts: white pill on black canvas)
+- **cta-text**: `#ffffff` → `#000000`
+- **border**: `hsla(0, 0%, 90%, 1)` → `rgba(255, 255, 255, 0.10)`
+- **border-strong**: `hsla(0, 0%, 80%, 1)` → `rgba(255, 255, 255, 0.20)`
+- **shadow opacities**: doubled in dark mode (4% → 8%) to remain visible on dark canvas
+
+The conic-gradient is unchanged in dark mode — the multi-stop gradient (`#0070f3 → #00b8ff → #7928ca → #ff0080`) reads strongly on both grounds. The dashboard preserves the same tokens, ensuring brand continuity between marketing dark mode and product dark mode.
+
+## 13. Lineage & Influences
+
+Vercel's design DNA traces three lineages: **Geist as proprietary type identity** (the brand's competitive moat — released open-source in 2024 to make Geist a category-defining face the way Linear's Inter Variable became), **Linear's contrast-pill discipline** (CTAs invert to text-color-on-canvas-color rather than fill the brand colour), and **the dashboard-as-marketing-cousin tradition** that Stripe pioneered with their 2019-2021 gradient era. Vercel's marketing site is engineered to feel like an editorial extension of the dashboard — same type, same neutral ramp, same component primitives, same density.
+
+The choice of `#fafafa` over `#ffffff` for the canvas is the brand's most considered single decision. Pure white reads as a default browser canvas — the user assumes they're on an unstyled page. Near-white at 98% lightness signals "intentional" without warming the page into cream. Vercel commits to this single neutral as the brand entry ticket; warmer tints would shift the brand into Mintlify or Notion territory, and colder tints would move toward Linear's grey-tinged neutrals.
+
+The brand-blue discipline — `#0070f3` reserved exclusively for links and focus rings — descends from Linear's accent-only philosophy but ports it to light mode. Where Hashnode and Stripe apply their brand colour to primary action fills (because they're more permissive about colour-as-affordance), Vercel withholds the blue from buttons because the dashboard withholds it. The marketing site's chromatic logic is a 1:1 import from the dashboard's chromatic logic.
+
+The 1200–1400px page widths are unusual — most modern SaaS caps at 1200px, and Linear caps at 1024. The wider container is shaped by Vercel's content type: changelogs, pricing comparisons, customer logos, and dashboard previews are all dense-data layouts that need horizontal room. The marketing site is *information architecture for engineers*, not marketing architecture for general visitors.
+
+What Vercel rejects: warm cream surfaces (Notion / Mintlify signal), pill-only button radii (Stripe / Cal.com signal), heavy drop shadows (consumer-product signal), serif body type (Medium signal), gradient backgrounds at section scale (early-2010s SaaS signal), brand colour as primary button fill (Hashnode / Stripe signal), generic system-fallback typography (most-of-SaaS signal).
+
+**Influences:**
+
+- **Geist (Vercel, open-source)** — Proprietary type identity; distinct silhouette vs. Inter / SF Pro. The brand's competitive moat. *https://vercel.com/font*
+- **Linear** — Adjacent dev-tool peer; both invert text-color CTAs against canvas. Vercel borrows the inversion at light-mode contrast. *https://linear.app*
+- **Vercel Geist UI / @vercel/geist-ui** — Open dashboard primitives that shape the marketing surface. Same components, same tokens. *https://geist-ui.dev*
+- **Stripe (2019-2021 gradient era)** — Conic-gradient corners and developer-product-as-magazine register descend from Stripe's gradient-brand era. *https://stripe.com*
+- **Apple Pro Display marketing** — Dense data-shaped marketing rows (changelog, pricing, customer logos) at near-white canvas with near-black type. *https://www.apple.com/pro-display-xdr/*
+- **IBM Carbon (and the dev-product-as-system tradition)** — Dense neutral ramp + system-grade primitives shared across product and marketing. *https://carbondesignsystem.com*
+- **Next.js** — Vercel's open-source framework; the marketing site is built in Next, and the brand-system primitives ship as `@vercel/geist-ui`. *https://nextjs.org*
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** use near-white `#fafafa` for the canvas — at 98% lightness, the only background. Cream tints break the brand.
+- **Do** use **Geist** for both display and body. The single-family discipline is the brand's competitive moat.
+- **Do** invert primary CTAs to near-black on near-white. The blue is for links and focus, never for action fills.
+- **Do** apply `#0070f3` brand-blue *only* to links, focus rings, and conic-gradient stops. Withhold it from buttons.
+- **Do** ship hairline borders at `hsla(0, 0%, 90%, 1)` for cards. The grey-on-white discipline.
+- **Do** use the dual-layer 4%-opacity card shadow — the signature Vercel elevation.
+- **Do** use 6px radius for buttons and inputs; 8px for code blocks; 12px for cards; 9999px only for hero pills.
+- **Do** cap reading width at 720px even on 1400px dense layouts. ~70-character line length.
+- **Do** ship Geist Mono for code, eyebrows, dashboard captions, and pricing values (with `tnum` for column alignment).
+- **Do** apply the conic-gradient as a corner element, framework-icon backdrop, or section accent — never a full section background.
+- **Do** use mono caps at 11–13px / 0.04em tracking for section eyebrows and status pills.
+- **Do** preserve dashboard-grade density on changelog and pricing surfaces — 88px rows, 4-up customer logo grids.
+
+### Don't
+
+- **Don't** use cream or off-white for the canvas. Near-white `#fafafa` is the entry ticket.
+- **Don't** use `#0070f3` blue as a primary button fill. The moment you do, it becomes a link colour and the action affordance breaks.
+- **Don't** apply heavy drop shadows. Two-layer 4%-opacity shadows do the full lifting.
+- **Don't** introduce a serif or a third sans face. Geist is the entire system.
+- **Don't** widen reading columns beyond 720px. The line length is calibrated.
+- **Don't** push display weight beyond 600. Geist's silhouette already reads as confident at 600.
+- **Don't** apply the conic-gradient as a section background. It's a corner element only.
+- **Don't** use system fallback for body. Geist body is the brand; the system fallback is for FOUT-prevention only.
+- **Don't** drop the dashboard-cousin density on changelog and pricing — those surfaces are *meant* to feel dense.
+- **Don't** introduce a second accent colour. The system is monochromatic-blue + 9-stop neutrals + the conic gradient.
+- **Don't** use exclamation marks in marketing copy. The voice is engineered-declarative, not consumer-enthusiasm.
+- **Don't** widen the container beyond 1400px. The dense-layout cap is the brand's information-density ceiling.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #fafafa
+Pure White:       #ffffff
+Bg Elev:          #f5f5f5
+Bg Deeper:        #ededed
+Text:             #171717
+Text Secondary:   #525252
+Text Tertiary:    #737373
+Brand Blue:       #0070f3
+CTA Bg:           #171717  (NEVER blue)
+CTA Text:         #ffffff
+Border:           hsla(0, 0%, 90%, 1)
+Border Strong:    hsla(0, 0%, 80%, 1)
+Focus Ring:       rgba(0, 112, 243, 0.20) 0 0 0 3px
+Conic Gradient:   conic-gradient(from 230deg, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)
+```
+
+### Example Component Prompts
+
+1. **"Create a Vercel-style hero: near-white `#fafafa` canvas, 72px / 600 Geist H1 with `-0.025em` tracking in `#171717` near-pure-black, 18px / 400 Geist body deck in same colour at 1.55 line-height, dual CTA pair below — primary near-black pill (`#171717` fill, white text 14px / 500, 9999px radius, 40px height) and secondary outlined button (`#ffffff` fill, near-black text 13px / 500, 1px `hsla(0, 0%, 90%, 1)` border, 6px radius, 32px height). Optional: 400×400px conic-gradient corner element in upper-right, slowly rotating."**
+
+2. **"Design a Vercel feature card: `#ffffff` pure-white background, 12px radius, 1px `hsla(0, 0%, 90%, 1)` hairline border, 20×24 padding, dual-layer 4%-opacity shadow `rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px`. Inside: 24×24 icon at top in `#171717`, 24px / 500 Geist heading, 14px / 400 Geist body in `#525252` secondary. Hover: border deepens to 0.80 lightness; shadow intensifies."**
+
+3. **"Build a Vercel changelog row: `#ffffff` background, 88px row height, 24×0 padding, 1px bottom hairline. Layout: left column (160px) shows version `v3.2.1` in Geist Mono 12px / 500 + date `Jan 4, 2026` below in Mono 12px / `#737373`. Center column shows title in Geist 16px / 500 near-black + body in 14px / 400 secondary. Right column shows tag chips (`#ededed` fill, 11px Mono, 4px radius) + `Read more` link in brand-blue."**
+
+4. **"Compose a Vercel pricing card with featured tier: `#ffffff` flat card (no shadow), 12px radius, 1px `hsla(0, 0%, 90%, 1)` border, 24px padding. Tier name in 18px / 500. Price in Geist Mono 48px / 600 with `tnum` enabled. Feature list with `#0070f3` brand-blue checkmarks. Featured tier replaces border with `#0070f3` 1px outline + brand-blue primary CTA at the bottom (still inverted near-black; blue is the *outline*, not the button fill)."**
+
+5. **"Render Vercel top nav: 64px height, `rgba(250, 250, 250, 0.80)` translucent fill with `backdrop-filter: blur(12px) saturate(180%)`, 1px bottom hairline `hsla(0, 0%, 90%, 1)`. Wordmark left in Geist 18px / 500 near-black. Center nav links (Products, Solutions, Resources, Enterprise, Docs, Pricing) in 13px / 500 ghost-button style. Right: ghost `Contact` + outlined `Log in` (white fill, hairline border, 32px height) + primary near-black `Sign up` rectangle (`#171717` fill, white text, 6px radius, 32px height)."**
+
+6. **"Build a Vercel code-tour block: `#ededed` (third-tier grey) fill, 8px radius, 1px hairline border, 16×20 padding. Geist Mono 13px / 400 / 1.60 line-height code content. Above the block: mono-caps eyebrow `BASH` at 11px / 500 / `0.04em` tracking in `#525252`. The code is plain mono on grey — Vercel doesn't apply syntax highlighting on the marketing surface (that's the docs subsite)."**
+
+### Iteration Guide
+
+1. **Check the canvas value.** If it's `#ffffff` or any cream tint, you've drifted. Vercel is `#fafafa` — at 98% lightness, the brand-defining single neutral.
+2. **Switch to Geist.** Inter at the same sizes collapses the brand into Linear/Hashnode territory. Geist is the moat — its narrower lowercase apertures and engineered silhouette are what make Vercel pages instantly recognizable.
+3. **Drop display weight to 600.** If your hero is 700–800, it's too loud. Geist at 600 with `-0.025em` is the canonical Vercel hero.
+4. **Invert the primary CTA.** If your primary button is brand-blue filled, you've ported Hashnode/Stripe logic. Vercel's primary is `#171717` near-black on `#fafafa` near-white.
+5. **Withhold the blue.** `#0070f3` is a link colour, a focus ring, a gradient stop. Never a button fill, never a section bg. Withholding it everywhere except links is the entire chromatic discipline.
+6. **Ship the dual-layer 4% shadow.** `rgba(0, 0, 0, 0.04) 0 2px 2px, rgba(0, 0, 0, 0.04) 0 8px 16px -4px`. Single-layer or 8%+ opacity collapses into consumer-product territory.
+7. **Cap reading at 720px.** Even on 1400px dense layouts. The line length is the brand.
+8. **Use mono caps for eyebrows.** Geist Mono at 11–13px / 0.04em tracking is the brand's secondary-identity tell. Sentence-case eyebrows lose the dashboard-grade signal.

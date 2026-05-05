@@ -9,7 +9,7 @@ featured: false
 categories: [social, media]
 tags: [dark, sans, clean, spacious, cool, mono-accent]
 preview_swatch: ['#000000', '#ffffff', '#fe0169']
-related: [meta, character-ai, bluesky]
+related: [meta, character-ai]
 description: 'Threads launched July 2023 as Meta''s text-first answer to Twitter, pairing Instagram''s authentication and identity layer with a deliberately quiet, type-led visual identity. The canvas runs pure `#000000` (or pure `#ffffff` in light mode), the wordmark is a single rotated "@" glyph, and the system runs Instagram Sans (a custom Inter cut) at conversational sizes. There is no brand color — the only chromatic accent is the rose-magenta `#fe0169` heart on liked posts, borrowed directly from Instagram''s love icon. The page rhythm is feed-as-stream: vertical post cards, generous whitespace, no card chrome, with the @ glyph and a thin profile-thread connector line carrying all the visual identity.'
 
 colors:

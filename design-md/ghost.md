@@ -3,7 +3,7 @@ name: Ghost
 tagline: Warm-cream content CMS aesthetic — Inter for chrome, a soft serif for the writing surface, and a single confident green for action.
 author: webdesignhot
 source_url: https://ghost.org
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [media, saas]
@@ -13,179 +13,753 @@ related: [substack, medium, hashnode]
 description: 'Ghost reads like a paper-cream literary journal stretched into a CMS. The marketing site sits on a warm off-white (`#fff8ed` family), bodies in a clean Inter, headlines with editorial restraint, and a single confident `#30cf43` green for action — a publishing tool that wants to be mistaken for a magazine.'
 
 colors:
-  bg: '#fff8ed'                # warm cream marketing canvas
-  bg-alt: '#ffffff'            # pure white inside cards / docs
-  surface: '#f4f3ef'           # soft beige panel
-  surface-soft: '#faf8f3'      # near-white warm tint
-  text: '#15171a'              # primary body (near-black with 1% blue cool tilt)
-  text-strong: '#0b0c0e'       # display headlines
-  text-muted: '#54595f'        # captions, meta
-  text-soft: '#7c8087'         # tertiary labels
-  brand: '#30cf43'             # Ghost green — primary CTA
-  brand-hover: '#26b337'       # pressed state
-  brand-active: '#1f9b2f'      # deep green for focus
-  accent: '#ff1a75'            # accent magenta for editorial pulls
-  accent-soft: '#ffe7f0'       # tint for badges
-  border: '#e5e1d6'            # warm hairline
-  border-soft: '#f0ece1'       # softest warm divider
+  # Primary
+  bg: '#fff8ed'                    # warm cream marketing canvas
+  bg-alt: '#ffffff'                # pure white inside cards / docs
+  bg-cream-deep: '#fef0d9'         # deeper cream stripe
+  surface: '#f4f3ef'               # soft beige panel
+  surface-2: '#ebe9e0'             # hover panel
+  surface-3: '#e0ddd1'             # pressed panel
+  surface-soft: '#faf8f3'          # softest neutral
+  surface-warm: '#fff5e1'          # warm-tinted card
+
+  # Text
+  text: '#15171a'                  # primary body — near-black with 1% blue cool tilt
+  text-strong: '#0b0c0e'           # display headlines, deeper near-black
+  text-muted: '#54595f'            # captions, meta, byline
+  text-soft: '#7c8087'             # tertiary labels
+  text-faint: '#a4a8af'            # disabled
+  text-on-brand: '#ffffff'         # white on green
+  text-on-dark: '#fff8ed'          # warm cream text on dark band
+
+  # Brand
+  brand: '#30cf43'                 # Ghost green — primary CTA
+  brand-hover: '#26b337'           # pressed
+  brand-active: '#1f9b2f'          # deep green for focus
+  brand-soft: '#e5fae8'            # palest green tint
+
+  # Accent
+  accent: '#ff1a75'                # editorial magenta pull
+  accent-soft: '#ffe7f0'           # tint for badges
+  accent-deep: '#cc1561'           # pressed magenta
+  accent-blue: '#3b73ff'           # rare hyperlink alt for editorial pieces
+  accent-blue-soft: '#e3ecff'
+
+  # Borders
+  border: '#e5e1d6'                # warm hairline
+  border-strong: '#d6d0bf'         # emphasis warm rule
+  border-soft: '#f0ece1'           # softest warm divider
+  border-focus: '#30cf43'          # brand green focus
+
+  # Dark band
+  bg-dark: '#15171a'               # near-black footer / inverted band
+  surface-dark: '#1d1f23'          # dark-mode card
+
+  # Semantic
+  success: '#30cf43'               # uses brand
+  success-bg: '#e5fae8'
+  warning: '#f59e0b'
+  warning-bg: '#fef3c7'
+  danger: '#e63946'
+  danger-bg: '#fde2e4'
+  info: '#3b73ff'
+  info-bg: '#e3ecff'
   on-brand: '#ffffff'
 
 typography:
   display:
     family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype-features: 'ss01, cv11'
   body:
     family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
     weights: [400, 500]
   serif:
     family: '"Tiempos Headline", "Tiempos Text", Georgia, "Times New Roman", serif'
     weights: [400, 600]
+    opentype-features: 'kern, liga, onum'
   mono:
     family: '"JetBrains Mono", "Fira Code", Menlo, Consolas, monospace'
     weights: [400]
   scale:
-    h1:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.022em' }
-    h2:    { size: 44, weight: 700, lineHeight: 1.1,  tracking: '-0.018em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em' }
-    body:  { size: 17, lineHeight: 1.55 }
-    quote: { size: 22, family: serif, lineHeight: 1.4 }
-    label: { size: 12, weight: 500, family: mono }
+    display-hero:    { size: 80, weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display-xl:      { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.022em', family: display }
+    display-lg:      { size: 52, weight: 700, lineHeight: 1.08, tracking: '-0.02em',  family: display }
+    h1:              { size: 44, weight: 700, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    h2:              { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    h3:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em',  family: display }
+    h4:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',        family: display }
+    body-lg:         { size: 19, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body:            { size: 17, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 15, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    serif-display:   { size: 40, weight: 400, lineHeight: 1.15, tracking: '-0.015em', family: serif }
+    serif-pull:      { size: 22, weight: 400, lineHeight: 1.4,  tracking: '0',        family: serif }
+    serif-numeric:   { size: 64, weight: 400, lineHeight: 1.0,  tracking: '-0.02em',  family: serif, opentype: 'onum' }
+    label:           { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0.1em',    family: mono }
+    code:            { size: 14, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.5,  tracking: '0',        family: mono }
 
 radius:
-  xs: 4
-  sm: 6
-  md: 8
-  lg: 10
-  card: 12
-  xl: 16
-  xxl: 24
-  button: 6
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  xl: 12
+  xxl: 16
+  featured: 24
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]
+
 layout:
-  container: 1200
-  gutter: 32
+  page-width: 1200
+  prose-width: 640
+  pricing-width: 720
+  header-height: 64
+  hero-y: 120
   section-y: 120
+  gutter: 32
 
 components:
-  - primary-cta-green
-  - editorial-hero
-  - feature-card-warm
-  - testimonial-pull-quote
-  - changelog-feed
-  - documentation-sidebar
+  button-primary:
+    bg: '#30cf43'
+    text: '#ffffff'
+    radius: 6
+    paddingX: 22
+    paddingY: 12
+    font: 'Inter 500 / 15px'
+    hover: 'bg #26b337'
+  button-ghost:
+    bg: 'transparent'
+    text: '#15171a'
+    radius: 6
+    border: '1px solid #e5e1d6'
+    paddingX: 22
+    paddingY: 12
+    hover: 'bg #f4f3ef'
+  button-link:
+    bg: 'transparent'
+    text: '#30cf43'
+    underline: 'hover'
+    font: 'Inter 500 / 15px'
+  card-warm:
+    bg: '#f4f3ef'
+    radius: 12
+    padding: 32
+    border: '1px solid #e5e1d6'
+    shadow: 'none'
+  card-publication:
+    bg: '#ffffff'
+    radius: 12
+    padding: 0
+    border: '1px solid #e5e1d6'
+    shadow: '0 8px 24px rgba(20,20,20,0.08)'
+  input-text:
+    bg: '#ffffff'
+    border: '1px solid #e5e1d6'
+    radius: 6
+    paddingX: 14
+    paddingY: 11
+    focus: 'border #30cf43 + ring 2px rgba(48,207,67,0.2)'
+  badge:
+    bg: '#f4f3ef'
+    text: '#54595f'
+    radius: 9999
+    paddingX: 10
+    paddingY: 4
+    font: 'Inter 500 / 12px'
 
-lineage:
-  summary: |
-    Ghost's identity is the writer's desk made software. The marketing
-    canvas is a literal warm cream (`#fff8ed`-ish) rather than a tech
-    white — a deliberate departure from the cool greys that Linear,
-    Vercel, and Stripe normalised. Inter does the bulk of the typesetting,
-    but Ghost reaches for a Tiempos-style display serif for editorial
-    flourishes, betraying its lineage as a writing tool more than a SaaS.
-    The single brand green (`#30cf43`) is borrowed from terminals and
-    Robin Hood-era trading apps, but Ghost holds it as the sole action
-    colour — every CTA, every link state, every focus ring traces back
-    to one hue. The result is a marketing site that feels closer to
-    Stripe Press or Substack than to a typical CMS landing page.
-    Where Substack uses a literary serif on white, Ghost lands on a
-    sans-on-cream — quieter, less editorial-loud, more workshop than
-    masthead.
-  influences:
-    - name: Substack
-      role: Sibling content-platform aesthetic — paper canvas + serif accents.
-      url: https://substack.com
-    - name: Medium
-      role: Long-form-first typography priorities and reading-width discipline.
-      url: https://medium.com
-    - name: Stripe Press
-      role: Warm-cream editorial canvas treated as a publishing surface.
-      url: https://press.stripe.com
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-soft: 'cubic-bezier(0.45, 0, 0.55, 1)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  duration-cinematic: 640
+  reduced-motion: 'respects prefers-reduced-motion: reduce — scroll-triggered reveals collapse to opacity-only fade, hover lifts disabled'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: '0 1px 2px rgba(20,20,20,0.05)'
+  standard: '0 4px 12px rgba(20,20,20,0.06)'
+  elevated: '0 8px 24px rgba(20,20,20,0.08)'
+  deep: '0 16px 48px rgba(20,20,20,0.12)'
+  ring: '0 0 0 2px rgba(48,207,67,0.5)'
+  ring-warm: '0 0 0 3px rgba(229,225,214,0.6)'
+
+accessibility:
+  contrast-text-on-bg: 14.2           # AAA — #15171a on #fff8ed
+  contrast-strong-on-bg: 17.1         # AAA
+  contrast-muted-on-bg: 5.8           # AA body
+  contrast-text-on-brand: 4.5         # AA at body — white on #30cf43
+  contrast-text-on-dark: 13.6         # AAA — #fff8ed on #15171a
+  focus-ring: '2px solid #30cf43 with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive; ghost-button outlines preserve when keyboard-focused'
+
+dark-mode: optional                  # Ghost ships product dark mode but the marketing site is light-only with cream canvas
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Ghost's marketing site is the rare SaaS landing page that feels like
-a literary magazine. The canvas is warm cream — somewhere around
-`#fff8ed` — not the cool white of Linear or the paper white of Notion.
-Inter handles 95% of the type, but a Tiempos-flavoured display serif
-shows up on hero numerals, pull quotes, and the occasional editorial
-flourish. The brand green (`#30cf43`) is the only chromatic event:
-every button, every focused link, every accent ring traces to it.
+Ghost's marketing site is the rare SaaS landing page that feels like a literary magazine. The canvas is warm cream — somewhere around `#fff8ed` — not the cool white of Linear or the paper white of Notion. Inter handles 95% of the type, but a Tiempos-flavoured display serif shows up on hero numerals, pull quotes, and the occasional editorial flourish. The brand green (`#30cf43`) is the only chromatic event: every button, every focused link, every accent ring traces to it.
 
-The voice is publisher rather than tool. Where Webflow leans into
-gradients and Framer leans into motion, Ghost leans into restraint —
-generous white space, narrow reading columns, a hairline-only divider
-strategy. The marketing reads as if a long-form essay decided to also
-have a pricing page.
+The voice is publisher rather than tool. Where Webflow leans into gradients and Framer leans into motion, Ghost leans into restraint — generous white space, narrow reading columns, a hairline-only divider strategy. The marketing reads as if a long-form essay decided to also have a pricing page.
 
-## Colors
+The atmosphere is **writer's-desk-as-software**. Pages alternate between cream feature bands and white documentation surfaces. The cream canvas is a deliberate departure from the cool greys that Linear, Vercel, and Stripe normalised — it places Ghost closer to Substack and Stripe Press than to a typical CMS landing page.
 
-- **bg** `#fff8ed` — the signature warm cream canvas
-- **bg-alt** `#ffffff` — pure white inside docs and product UI
-- **surface** `#f4f3ef` — beige panel for feature cards
-- **text-strong** `#0b0c0e` — display headlines
-- **text** `#15171a` — primary body (near-black with a faint cool cast)
+The compositional rhythm is editorial: hero with a tight Inter Display headline, then a Tiempos pull-quote breaking the column, then feature cards in warm beige, then a publication preview mockup floating in cream space. The reading width holds tight (640px for prose, 720px for pricing) — only the hero opens up to the full container. That width discipline is what makes Ghost feel like a magazine.
+
+**Key Characteristics**
+- Warm cream `#fff8ed` canvas (not cool white, not paper white)
+- Single brand green `#30cf43` for all action
+- Inter for chrome, Tiempos serif for editorial moments
+- Tight 6px button radius — typewriter-key, not pill
+- Hairline-only depth — no soft shadows on most surfaces
+- 17px body on tight 640px reading column
+- 120px section vertical rhythm
+- Magenta accent `#ff1a75` for editorial pulls (never CTAs)
+- Tiempos pull-quotes at 22px+ break feature copy
+- Publisher-first voice across every microcopy moment
+
+## 2. Color Palette & Roles
+
+### Primary
+
+- **bg** (`#fff8ed`): the signature warm cream canvas — paper-tinted, not white
+- **bg-alt** (`#ffffff`): pure white inside docs and product UI
+- **bg-cream-deep** (`#fef0d9`): deeper cream stripe for alternating bands
+- **text** (`#15171a`): primary body — near-black with a faint cool cast
+- **text-strong** (`#0b0c0e`): display headlines, deeper near-black
+- **on-brand** (`#ffffff`): white on green CTA
+
+### Brand
+
+- **brand** (`#30cf43`): Ghost green — borrowed from terminals and trading apps, held as the sole action colour
+- **brand-hover** (`#26b337`): pressed CTA state
+- **brand-active** (`#1f9b2f`): focus and active
+- **brand-soft** (`#e5fae8`): palest green tint for badges and success states
+
+### Accent (Editorial-Only)
+
+- **accent** (`#ff1a75`): editorial magenta pull — used for pull-quote dingbats, "Editor's Pick" badges, and decorative editorial moments. **Never on action surfaces.**
+- **accent-soft** (`#ffe7f0`): magenta tint for badges
+- **accent-deep** (`#cc1561`): pressed magenta
+- **accent-blue** (`#3b73ff`): rare hyperlink alt for editorial inline links
+- **accent-blue-soft** (`#e3ecff`): blue badge tint
+
+### Interactive
+
+- **link**: `#30cf43` — same as brand on marketing pages
+- **link-editorial**: `#3b73ff` — for inline links inside long-form posts
+- **link-hover**: underline-grow + 1px green-shift
+- **selected**: `rgba(48,207,67,0.1)` — soft green tint
+- **disabled**: `#a4a8af` text on `#f4f3ef` bg
+
+### Neutral Scale
+
+- **text** `#15171a` — body
 - **text-muted** `#54595f` — captions, meta, byline rows
-- **brand** `#30cf43` — the Ghost green, the sole action colour
-- **brand-hover** `#26b337` — pressed CTA state
-- **accent** `#ff1a75` — magenta editorial pull, used sparingly
-- **border** `#e5e1d6` — warm cream hairline, never grey
+- **text-soft** `#7c8087` — tertiary labels
+- **text-faint** `#a4a8af` — disabled
+- **border** `#e5e1d6` — warm hairline (never grey)
+- **border-strong** `#d6d0bf` — emphasis warm rule
+- **border-soft** `#f0ece1` — softest divider
 
-## Typography
+### Surface & Borders
 
-Display is **Inter** weighted at 700, set tight at `-0.022em` tracking
-on a 64px H1 with a 67px line-height. The negative tracking gives the
-masthead its bulletin compression. Body type drops to Inter 400 at
-17px on a 26px line — slightly larger than the 16/24 SaaS norm,
-because Ghost's marketing copy is meant to be read like an essay.
+- **surface** `#f4f3ef` — beige panel for feature cards
+- **surface-2** `#ebe9e0` — hover state
+- **surface-soft** `#faf8f3` — near-white warm tint
+- **surface-warm** `#fff5e1` — warm-tinted card with stronger cream
 
-The serif move is **Tiempos Headline** — a Klim Type Foundry book serif
-that appears on hero numerals (the "$0" pricing display), pull quotes,
-and editorial section dividers. Its high contrast and pinched terminals
-read as magazine-grade rather than tech-marketing. A monospaced
-**JetBrains Mono** appears in code blocks and documentation surfaces.
+### Shadow Colors
 
-## Layout
+Ghost's shadows are **neutral-warm tinted** — `rgba(20,20,20,...)` rather than blue or grey. Most surfaces use no shadow at all — depth is hairline + tonal layering. Shadows appear only on the floating publication preview cards.
 
-Reading columns are tight: feature copy holds to roughly 640px,
-pricing copy to 720px, and only the hero opens up to the full
-1200px container. Section vertical rhythm is generous — 120px
-between major bands — which is what gives the site its editorial
-breathing room. Cards use a 12px radius, buttons a tighter 6px.
+- **shadow-ambient** `rgba(20,20,20,0.05)` — softest
+- **shadow-standard** `rgba(20,20,20,0.06)` — light cards
+- **shadow-elevated** `rgba(20,20,20,0.08)` — publication preview floating
+- **shadow-deep** `rgba(20,20,20,0.12)` — modals only
 
-## Elevation & Depth
+### Semantic
 
-Depth on Ghost is almost entirely tonal. The cream canvas layers up
-through `#faf8f3` → `#f4f3ef` → `#e5e1d6`, and shadows are reserved
-for the floating publication preview cards (a soft `0 8px 24px
-rgba(0,0,0,0.08)`). Most surfaces use a 1px warm hairline rather
-than elevation.
+- **success** `#30cf43` on `#e5fae8` — reuses brand green
+- **warning** `#f59e0b` on `#fef3c7`
+- **danger** `#e63946` on `#fde2e4`
+- **info** `#3b73ff` on `#e3ecff`
 
-## Shapes
+### Dark Band
 
-Buttons land at 6px — tighter than Notion's 8px, deliberately closer
-to a typewriter key than a rounded SaaS pill. Feature cards sit at
-12px, hero shells at 16–24px. Avatars and badges go full pill
-(`9999px`). The radius ladder mirrors Ghost's editorial tone — rounded
-enough to feel humane, square enough to feel printed.
+Ghost occasionally inverts a section to `#15171a` near-black for testimonial walls and footer:
 
-## Components
+- **bg-dark** `#15171a` — inverted band
+- **surface-dark** `#1d1f23` — dark-mode card
+- **text-on-dark** `#fff8ed` — warm cream type on dark (preserves the cream voice even inverted)
 
-The defining components are the **green CTA button** (a flat
-`#30cf43` rectangle with white Inter 500), the **warm feature card**
-(cream `#f4f3ef` panel with a 12px radius and a 1px `#e5e1d6` border),
-the **Tiempos pull-quote** (used to break feature copy, lifting a line
-of marketing into editorial territory), and the **publication preview
-mockup** — a stacked iPad / iPhone composition showing real Ghost
-sites, slightly tilted. The nav is a thin, single-row affair that
-disappears on scroll, surrendering the page to the content.
+## 3. Typography Rules
 
-## Do's and Don'ts
+### Font Family
 
-- **Do** keep the action palette to a single Ghost green; secondary buttons go ghost-button (transparent with a hairline) rather than introducing a second hue.
-- **Do** reach for the Tiempos-style serif when a number or a quote needs editorial weight — it is what separates Ghost from a generic Inter SaaS site.
-- **Do** hold the canvas to warm cream `#fff8ed`; cool white reads as Notion or Linear, not Ghost.
-- **Don't** apply heavy drop shadows to feature cards — depth here is tonal-warm and bordered, not elevated.
-- **Don't** introduce a second accent hue alongside the green; the magenta pull is reserved for editorial moments and never appears on action surfaces.
-- **Don't** use the serif at small sizes; below 22px it loses the terminal contrast that makes it read as Tiempos.
+- **Display & Body**: Inter — single-family system handling 95% of typesetting
+- **Serif**: Tiempos Headline / Tiempos Text (Klim Type Foundry) — used for hero numerals, pull quotes, and editorial flourishes
+- **Mono**: JetBrains Mono — code blocks, eyebrows, version strings
+- **OpenType**: `ss01` (single-storey g) on Inter; `kern, liga, onum` on Tiempos for old-style numerals
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line H | Tracking | OT | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter | 80 | 700 | 1.0 | -0.025em | ss01 | Above-fold hero |
+| display-xl | Inter | 64 | 700 | 1.05 | -0.022em | — | Standard H1 |
+| display-lg | Inter | 52 | 700 | 1.08 | -0.02em | — | Section opener |
+| h1 | Inter | 44 | 700 | 1.1 | -0.018em | — | Subsection |
+| h2 | Inter | 36 | 700 | 1.15 | -0.015em | — | Feature header |
+| h3 | Inter | 28 | 600 | 1.25 | -0.01em | — | Card title |
+| h4 | Inter | 22 | 600 | 1.3 | -0.005em | — | Inline title |
+| h5 | Inter | 18 | 600 | 1.4 | 0 | — | Component label |
+| body-lg | Inter | 19 | 400 | 1.6 | 0 | — | Hero subhead, long-form lede |
+| body | Inter | 17 | 400 | 1.55 | 0 | — | Default — 1pt larger than SaaS norm |
+| body-sm | Inter | 15 | 400 | 1.5 | 0 | — | Captions |
+| serif-display | Tiempos | 40 | 400 | 1.15 | -0.015em | onum | Editorial hero numerals (e.g. "$0") |
+| serif-pull | Tiempos | 22 | 400 | 1.4 | 0 | — | Pull quote in feature copy |
+| serif-numeric | Tiempos | 64 | 400 | 1.0 | -0.02em | onum | Pricing numerals |
+| label | Inter | 14 | 500 | 1.4 | 0 | — | Form & button |
+| caption | Inter | 13 | 500 | 1.4 | 0 | — | Meta below cards |
+| eyebrow | JetBrains Mono | 12 | 500 | 1.4 | 0.1em | — | Section taglines, ALL CAPS |
+| code | JetBrains Mono | 14 | 400 | 1.6 | 0 | tnum | Inline code |
+| code-micro | JetBrains Mono | 12 | 400 | 1.5 | 0 | tnum | Version strings |
+
+### Principles
+
+- **Inter does the chrome, Tiempos does the editorial moment** — never the other way
+- **Tiempos only at ≥22px** — below that, the terminal contrast collapses into "Georgia in disguise"
+- **Old-style numerals (`onum`)** on Tiempos pricing — `$0` reads as a magazine pricing block
+- **Mono eyebrow** — Ghost uses mono for ALL CAPS section taglines (where peers use Inter eyebrow); this is the single quirk that separates Ghost from "Inter SaaS"
+- **17px body, not 16** — Ghost's marketing copy is meant to be read like an essay, not scanned
+- **Tight tracking on display** — `-0.025em` at 80px gives the bulletin compression
+- **No italic Inter** — italics are reserved for serif moments only
+- **Reading column at 640px** — hero opens to 1200, but feature copy holds tight
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary CTA** — the green rectangle
+- bg `#30cf43`, text `#ffffff`, radius `6px`
+- padding `12px 22px`, Inter 500 15px
+- hover: bg `#26b337`, 240ms ease-standard
+- focus: ring `2px solid #30cf43` + 2px offset
+- use: every primary action — "Start free trial", "Get Ghost", "Sign in"
+
+**Ghost Button** (secondary)
+- bg transparent, text `#15171a`, border `1px solid #e5e1d6`, radius `6px`
+- padding `12px 22px`, Inter 500 15px
+- hover: bg `#f4f3ef`
+- use: "Watch demo", "View docs", "See pricing"
+
+**Link Button** (tertiary)
+- bg transparent, text `#30cf43`, no border, no padding
+- Inter 500 15px, underline on hover
+- use: "Learn more", "Read changelog"
+
+**Dark-Band Inverted Button**
+- bg `#fff8ed` (warm cream), text `#15171a`, radius `6px`
+- padding `12px 22px`, Inter 500 15px
+- use: primary action sitting on the `#15171a` dark band
+
+### Cards
+
+**Card Warm**
+- bg `#f4f3ef`, radius `12px`, padding `32px`
+- border `1px solid #e5e1d6`, **no shadow**
+- hover: border `#d6d0bf`, no other change
+- use: feature cards, content blocks
+
+**Card Publication** (preview mockup)
+- bg `#ffffff`, radius `12px`, padding `0` (image fills)
+- border `1px solid #e5e1d6`, shadow `0 8px 24px rgba(20,20,20,0.08)`
+- slight 1–2deg rotational tilt as composition device
+- use: floating publication preview mockups
+
+**Card White**
+- bg `#ffffff`, radius `12px`, padding `32px`
+- border `1px solid #e5e1d6`, no shadow
+- use: docs surfaces, quoted testimonials
+
+### Badges & Tags
+
+**Badge Default**
+- bg `#f4f3ef`, text `#54595f`, radius `9999px`
+- padding `4px 10px`, Inter 500 12px
+
+**Badge Brand**
+- bg `#e5fae8`, text `#1f9b2f`, radius `9999px`
+
+**Badge Editorial** (magenta accent)
+- bg `#ffe7f0`, text `#cc1561`, radius `9999px`
+- use: "Editor's Pick", "Featured Post" — editorial only
+
+**Tag Mono Eyebrow**
+- bg transparent, text `#54595f`, radius `0`
+- JetBrains Mono 12px, ALL CAPS, tracking `0.1em`
+
+### Inputs & Forms
+
+**Text Input**
+- bg `#ffffff`, border `1px solid #e5e1d6`, radius `6px`
+- padding `11px 14px`, Inter 400 17px
+- focus: border `#30cf43` + ring `2px rgba(48,207,67,0.2)`
+- placeholder: `#7c8087`
+
+**Newsletter Subscribe** (signature Ghost component)
+- inline horizontal: white input + green button
+- 6px radius matched on both, single hairline group
+- placeholder: "yourname@email.com"
+
+### Navigation
+
+**Top Nav**
+- bg `#fff8ed` with backdrop-blur on scroll, height `64px`
+- gutters `32px`, hairline `#e5e1d6` bottom on scroll
+- Ghost wordmark left, link cluster center (Features/Pricing/Customers/Docs), green CTA pill right
+- thin, single-row affair that compresses (not hides) on scroll
+
+**Footer**
+- bg `#fff8ed` with top hairline, padding `96px 32px`
+- 5-column link grid in Inter 14px, muted `#54595f`
+- newsletter subscribe block right-aligned
+- Ghost wordmark + © at bottom
+
+### Tooltips / Toasts / Modals
+
+**Tooltip**
+- bg `#15171a`, text `#fff8ed`, radius `6px`, padding `8px 12px`
+- Inter 500 12px
+
+**Toast**
+- bg `#ffffff`, border `1px solid #e5e1d6`, radius `8px`, shadow elevated
+- Inter 500 15px message
+
+**Modal**
+- bg `#fff8ed` (warm cream — not white), radius `16px`, shadow deep
+- 480px max-width, 32px padding
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **base** `4px`, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]`
+- Density philosophy: **editorial-spacious**. Ghost holds wider gutters (32px vs 24 norm) and section rhythm at 120px.
+
+### Grid & Container
+
+- **page-width** `1200px` with 32px gutters
+- 12-column grid, hero rarely full-bleed
+- **prose-width** `640px` for feature copy and blog
+- **pricing-width** `720px` for pricing tables
+- Only the hero opens up to the full 1200; everything else holds tight reading columns
+
+### Whitespace Philosophy
+
+Ghost's whitespace is **editorial breathing room**. Section vertical rhythm runs 120px between major bands — generous enough that each band reads as a chapter. Cards have 32px internal padding. The reading column is the structural discipline — body copy never opens wider than 640px, which is what gives the marketing its essay feel.
+
+### Section Cadence
+
+The page reads as alternating cream and white:
+1. Cream hero with Inter Display + Tiempos numeral
+2. White feature row with publication preview cards
+3. Cream pricing band
+4. White testimonial wall
+5. Dark `#15171a` testimonial inversion (rare, used for emphasis)
+6. Cream CTA band
+7. Cream footer
+
+The cream-to-white alternation is the rhythm — never two cream bands in a row.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Inline code, mono badges |
+| Standard | 4px | Tooltips |
+| Medium | 6px | **Buttons, inputs** — Ghost's signature tight radius |
+| Large | 8px | Toasts, secondary panels |
+| Comfortable | 12px | **Default card** |
+| XL | 16px | Modals |
+| Featured | 24px | Hero shells (rare) |
+| Pill | 9999px | Avatars, badges |
+
+The signature radius decision is the **6px button** — tighter than Notion's 8, deliberately closer to a typewriter key than a rounded SaaS pill. Cards land at 12px. The radius ladder mirrors Ghost's editorial tone — rounded enough to feel humane, square enough to feel printed.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow, no border | Display copy on cream |
+| 1 | 1px hairline `#e5e1d6` | Resting cards |
+| 2 | shadow-ambient `0 1px 2px rgba(20,20,20,0.05)` | Sticky nav scroll-state |
+| 3 | shadow-standard `0 4px 12px rgba(20,20,20,0.06)` | Toasts |
+| 4 | shadow-elevated `0 8px 24px rgba(20,20,20,0.08)` | Publication preview cards |
+| 5 | shadow-deep `0 16px 48px rgba(20,20,20,0.12)` | Modals |
+
+### Shadow Philosophy
+
+Ghost's depth is **hairline + tonal layering**, not elevation. Most surfaces use no shadow — feature cards rely on a single 1px `#e5e1d6` warm hairline. Shadows appear only on the floating publication preview cards (which read as photographs of real Ghost sites laid on the page) and on toasts/modals. The aesthetic is **printed-page depth** rather than UI elevation. Shadows are neutral-warm tinted (`rgba(20,20,20,...)`) — never blue, never grey-cool.
+
+The cream canvas naturally provides depth through tonal layering: `#fff8ed` → `#faf8f3` → `#f4f3ef` → `#ebe9e0` is the depth ladder. Cards can feel "lifted" by surface tone alone, no shadow required.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **ease-standard** `cubic-bezier(0.4, 0, 0.2, 1)` — most state changes
+- **ease-emphasized** `cubic-bezier(0.2, 0, 0, 1)` — modal entry, hero reveal
+- **ease-soft** `cubic-bezier(0.45, 0, 0.55, 1)` — symmetric breathing
+
+### Duration Buckets
+
+- **fast** `120ms` — hover state shifts
+- **standard** `240ms` — card hover, link underline grow
+- **slow** `400ms` — modal entry, page section fade
+- **cinematic** `640ms` — hero parallax (rarely used)
+
+### Per-Component Recipes
+
+- **Primary CTA hover**: bg `#30cf43` → `#26b337`, 240ms ease-standard, no lift
+- **Card hover**: border `#e5e1d6` → `#d6d0bf`, no other change (no lift, no shadow)
+- **Link hover**: underline grows from 0% → 100%, 200ms ease-standard
+- **Publication preview card**: parallax-on-scroll, 1deg tilt + 8px translateY, 640ms cinematic
+- **Newsletter input focus**: border green-shift + ring, 240ms
+
+### Page Transitions
+
+- Section reveals on scroll: fade-up 8px, 400ms slow ease-emphasized (subtle, not theatrical)
+- Hero on first paint: fade + 12px up, 640ms ease-emphasized
+- Sticky nav appears: translateY -100% → 0, 240ms
+
+### Reduced Motion Strategy
+
+Ghost respects `prefers-reduced-motion: reduce`:
+- Scroll-triggered reveals collapse to opacity-only fade
+- Publication preview parallax: disabled
+- Hover lifts (already minimal): disabled
+- Link underline-grow becomes static underline
+- All hover state changes preserve color/border, drop motion
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- text `#15171a` on bg `#fff8ed`: **14.2** — AAA
+- text-strong `#0b0c0e` on bg `#fff8ed`: **17.1** — AAA
+- text-muted `#54595f` on bg `#fff8ed`: **5.8** — AA body, AAA large
+- on-brand `#fff` on brand `#30cf43`: **4.5** — AA body
+- text-on-dark `#fff8ed` on bg-dark `#15171a`: **13.6** — AAA
+- accent `#ff1a75` on bg `#fff8ed`: **4.6** — AA body — keep magenta to ≥18px display
+- border `#e5e1d6` on bg `#fff8ed`: 1.2 — decorative-only
+
+### Focus Indicators
+
+- 2px solid `#30cf43` (brand green) with 2px offset
+- On dark-band surfaces: 2px solid `#fff8ed` warm cream ring
+- Visible on every interactive
+- Never `outline: none` without replacement
+
+### ARIA Patterns
+
+- Newsletter signup form: `<form>` with `aria-label="Subscribe to Ghost newsletter"`
+- Ghost button (transparent border): `aria-pressed` not used; semantic `<button>` is sufficient
+- Modal: `role="dialog"` + `aria-modal="true"` + `aria-labelledby` + focus trap
+- Tooltip: `role="tooltip"` + `aria-describedby`
+- Eyebrow mono labels are semantic — wrapped in `<span class="eyebrow">` not headings
+
+### Keyboard Nav
+
+- Tab order matches DOM source
+- ENTER submits forms, SPACE activates buttons
+- ESC closes modals/dropdowns
+- Visible focus required on every interactive
+
+### Screen Reader Hints
+
+- Ghost wordmark SVG: `<title>Ghost</title>`
+- Tiempos pull-quotes: rendered as `<blockquote>` (semantic)
+- Decorative dingbats (rare): `aria-hidden="true"`
+- Publication preview cards: `alt` text describes the showcased site
+- Newsletter placeholder is decorative; `aria-label` carries the real label
+
+### Reduced Motion
+
+- Honored across the site
+- Parallax, scroll-triggered reveals: disabled
+- Underline-grow: collapses to static
+- Hover state changes preserve color, drop motion
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Tier | Min-width | Use |
+|---|---|---|
+| mobile | 0–639px | Single-column, full-width prose |
+| tablet | 640–1023px | 2-column feature grid |
+| desktop | 1024–1279px | Full grid, hero opens up |
+| wide | 1280px+ | Container caps at 1200, generous gutters |
+
+### Touch Targets
+
+Minimum 44×44px on mobile. Primary CTA scales padding from `12px 22px` → `14px 22px` for 48px tap area.
+
+### Collapsing Strategy
+
+- **Hero display**: 80px → 56px → 40px → 32px down the cascade
+- **Reading column**: 640px → 92% viewport on mobile
+- **Top nav**: full link bar → hamburger drawer at <1024px
+- **Section vertical rhythm**: 120px → 96px → 64px
+- **Publication preview cards**: 1deg tilt removed on mobile (becomes static)
+
+### Image Behavior
+
+- Publication preview mockups: aspect-ratio 4:3, `object-fit: cover`
+- Hero illustrations: `object-fit: contain`, max-height 480px
+- Author avatars: 40×40px circular, never stretched
+
+### Container Queries
+
+Ghost uses container queries on the publication preview grid — when a tile container narrows below 320px, the inline byline collapses below the title.
+
+## 11. Content & Voice
+
+### Tone
+
+**Publisher-direct.** Ghost talks to writers, journalists, and creators — people who care about the craft of publishing. The voice is plainspoken, slightly literary, never breathless. "Independent publishing" not "empower your creator journey". Adjectives are reserved for the writing experience, not the marketing copy itself.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Start free trial", "Get Ghost", "Subscribe", "Read more", "View pricing"
+- **Empty states**: "Nothing published yet. Start writing your first post." (Direct, action-oriented.)
+- **Errors**: "Something went wrong. Please try again." (Calm, no jargon.)
+- **Success**: "Subscribed." / "Published." (Past tense. Quiet.)
+- **Loading**: subtle spinner, no copy needed for brief loads
+
+### CTA Verb Conventions
+
+Ghost prefers **"Start free trial"** as the primary CTA on pricing and hero. Secondary is **"View pricing"** or **"See features"**. Newsletter CTA is **"Subscribe"** (not "Sign up", not "Join", not "Get the newsletter"). For docs/learning: **"Read the docs"**, **"Learn more"**.
+
+### Empty States
+
+Ghost fills empty states with quiet invitation: "Nothing here yet — write your first post." No illustrations, no upbeat exclamation marks. The emptiness is part of the writer's posture.
+
+## 12. Dark Mode & Theming
+
+Ghost's marketing site is **light-only** — no global dark mode. The product UI (the actual Ghost admin and publication theme system) ships dark mode toggles, but the marketing canvas commits to warm cream as part of the publisher posture. A dark marketing canvas would shift Ghost from "literary magazine" to "tech tool".
+
+Ghost does invert occasional sections to `#15171a` near-black for testimonial walls — this is composition rhythm, not preference. The token swap inside an inverted band:
+
+```yaml
+colors-inverted:
+  bg: '#15171a'
+  surface: '#1d1f23'
+  surface-2: '#26282d'
+  text: '#fff8ed'             # warm cream stays — preserves voice
+  text-muted: '#a4a8af'
+  brand: '#30cf43'            # brand green unchanged
+  border: '#26282d'
+```
+
+The product themes that Ghost users build can be light or dark — that's a theme choice, not a brand position.
+
+## 13. Lineage & Influences
+
+Ghost's identity is **the writer's desk made software**. The marketing canvas is a literal warm cream rather than a tech white — a deliberate departure from the cool greys that Linear, Vercel, and Stripe normalised.
+
+Inter does the bulk of the typesetting, but Ghost reaches for a Tiempos-style display serif for editorial flourishes, betraying its lineage as a writing tool more than a SaaS. The single brand green `#30cf43` is borrowed from terminals and Robin Hood-era trading apps, but Ghost holds it as the sole action colour — every CTA, every link state, every focus ring traces back to one hue.
+
+Where Substack uses a literary serif on white and Medium emphasises long-form-first typography, Ghost lands on a sans-on-cream combination — quieter, less editorial-loud, more **workshop than masthead**. The closest contemporary sibling is **Stripe Press**, which treats its publishing surface as warm-cream editorial canvas. The 6px button radius is borrowed from Notion's tighter discipline, but Ghost rejects Notion's pure white in favour of cream.
+
+The mono-eyebrow is the single quirk that separates Ghost from generic Inter SaaS — using JetBrains Mono at 12/0.1em ALL CAPS for section taglines is a developer-tool gesture imported into a publisher context, signalling "this CMS is built for technical publishers".
+
+**Named Influences**
+- **Substack** ([substack.com](https://substack.com)) — Sibling content-platform aesthetic with paper canvas + serif accents
+- **Medium** ([medium.com](https://medium.com)) — Long-form-first typography priorities and reading-width discipline
+- **Stripe Press** ([press.stripe.com](https://press.stripe.com)) — Warm-cream editorial canvas treated as a publishing surface
+- **Notion** ([notion.so](https://www.notion.so)) — Tight 6px button radius and editorial restraint
+- **Klim Type Foundry** ([klim.co.nz](https://klim.co.nz)) — Tiempos serif source
+
+## 14. Do's and Don'ts
+
+### Do
+
+- Keep the action palette to a single Ghost green; secondary buttons go ghost-outline rather than introducing a second hue
+- Reach for the Tiempos-style serif when a number or quote needs editorial weight
+- Hold the canvas to warm cream `#fff8ed`; cool white reads as Notion or Linear, not Ghost
+- Use 17px body type — the 1pt-larger-than-norm reads "essay-friendly"
+- Hold reading columns to 640px for prose, 720px for pricing
+- Use mono-eyebrow at 12px / `0.1em` — Ghost's signature quirk
+- Apply the magenta `#ff1a75` only to editorial pulls, never to CTAs or actions
+- Use Tiempos at ≥22px — below that, the contrast collapses
+- Keep button radius at 6px — typewriter-key tight
+- Section vertical rhythm at 120px between major bands
+
+### Don't
+
+- Apply heavy drop shadows to feature cards — depth here is tonal-warm and bordered, not elevated
+- Introduce a second accent hue alongside the green; the magenta is editorial-only
+- Use the serif at small sizes — below 22px Tiempos loses its terminal contrast
+- Drop the body font below 16px — 17 is the floor
+- Use cool grey on the cream canvas; borders and text both stay warm-toned
+- Use Inter at 800 weight on display — reads aggressive
+- Apply the magenta to a button or CTA — it's reserved for editorial moments
+- Pack vertical rhythm tighter than 96px — the editorial breathing is non-negotiable
+- Use a pill button — Ghost's 6px tightness is the brand
+- Pure white the marketing canvas; cream is load-bearing for the publisher posture
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:           #fff8ed (warm cream)
+bg-alt:       #ffffff
+surface:      #f4f3ef
+text:         #15171a
+text-muted:   #54595f
+brand:        #30cf43 (Ghost green)
+brand-hover:  #26b337
+accent:       #ff1a75 (editorial magenta)
+border:       #e5e1d6 (warm hairline)
+bg-dark:      #15171a (inverted band)
+```
+
+### Example Component Prompts
+
+1. *"Create a Ghost-style hero: warm cream `#fff8ed` background, Inter 700 at 64px headline reading 'Independent publishing for creators' tracked at -0.022em, Inter 400 19px body in #54595f below, primary green CTA `#30cf43` with white label saying 'Start free trial' (6px radius), and a ghost-outline secondary button saying 'View pricing'."*
+2. *"Design a Ghost feature card: `#f4f3ef` warm beige bg, 12px radius, 32px padding, 1px `#e5e1d6` warm hairline, no shadow. Inter 600 28px title, Inter 400 17px body in #15171a, mono eyebrow at top in JetBrains Mono 12px / 0.1em ALL CAPS reading 'EDITORIAL' in #54595f."*
+3. *"Build a Ghost-style pricing block: 720px reading width, Tiempos Headline 64px numeral '$0' with old-style numerals, Inter 600 22px label below saying 'per month, free forever', Inter 400 17px description, green `#30cf43` CTA pill saying 'Get started' below."*
+4. *"Compose a Ghost pull quote: Tiempos Headline 22px / 1.4 quote text in #15171a, magenta `#ff1a75` opening dingbat (large quotation mark), Inter 500 14px attribution in #54595f below. No card, no border — quote sits on cream canvas with 32px vertical air."*
+5. *"Create a Ghost newsletter signup: white input on cream bg, 6px radius, 1px `#e5e1d6` border, placeholder 'yourname@email.com' in #7c8087, paired right with green `#30cf43` button saying 'Subscribe' at matching 6px radius."*
+6. *"Design a Ghost dark testimonial band: full-bleed `#15171a` near-black background, warm cream `#fff8ed` Inter 600 36px quote, Inter 400 15px attribution + role in #a4a8af, 96px vertical padding."*
+
+### Iteration Guide
+
+1. **Start with the canvas color.** If the design feels generic-tech, the first move is shifting bg from white to `#fff8ed` cream. The cream is load-bearing for the entire posture.
+2. **Add the green sparingly.** If three CTAs are competing, drop two — Ghost holds a single primary action per section.
+3. **Reach for the serif.** If a hero numeral or pricing block looks plain, swap the digits to Tiempos with old-style numerals (`onum`). The serif is the editorial signal.
+4. **Tighten the button radius.** If a CTA lands at 8–12px, pull to 6. The typewriter-tight corner is the brand.
+5. **Hold the reading column.** If body copy spans 800px+, narrow to 640. The reading-width discipline is what makes the page feel like a magazine.
+6. **Use the mono eyebrow.** If sections are introduced with Inter eyebrow text, swap to JetBrains Mono 12px / 0.1em ALL CAPS. Ghost's signature quirk.
+7. **Strip the shadows.** If feature cards have soft shadows, replace with a single 1px `#e5e1d6` warm hairline. Depth here is hairline + tone, not elevation.
+8. **Add a Tiempos pull-quote.** If the page reads too feature-grid uniform, drop a pull-quote Tiempos at 22px breaking the column rhythm. One per page maximum.

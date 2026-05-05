@@ -6,7 +6,7 @@ source_url: https://sunsama.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas, productivity]
+categories: [saas]
 tags: [light, warm, cream, sans, calm, mindful, daily-planning]
 preview_swatch: ['#f8f4ec', '#e07a5f', '#1a1a1c']
 related: [notion, things-app, fantastical]

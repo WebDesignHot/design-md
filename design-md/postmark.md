@@ -1,100 +1,286 @@
 ---
 name: Postmark
-tagline: Yellow `#ffde00` + black + functional warmth — the transactional email API that designed itself like a friendly post office sign.
+tagline: 'Postal-yellow #ffde00 + warm-black #1c1d1f + paper-white canvas — the transactional email API designed like a friendly post office sign.'
 author: webdesignhot
 source_url: https://postmarkapp.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools, saas]
-tags: [light, playful, sans, warm, bright]
+tags: [light, playful, sans, warm, bright, friendly]
 preview_swatch: ['#ffde00', '#1c1d1f', '#ffffff']
 related: [stripe, vercel, supabase]
-description: 'Postmark''s site is the email-API equivalent of a friendly post office — a paper-white canvas, the iconic `#ffde00` postal-yellow accent (the same hue as the envelope mark), and a warm black `#1c1d1f` for type. The brand voice is functional, slightly playful, and defiantly anti-enterprise: ActiveCampaign acquired Postmark in 2022 and the marketing has retained the original Wildbit personality (pragmatic, opinionated, developer-friendly). Type uses **Inter** for body with a slightly heavier display weight, buttons are tight 6px radii, and product mocks lean into delivery-stat dashboards rendered with confidence rather than density.'
+description: 'Postmark''s site is the email-API equivalent of a friendly post office — a paper-white canvas, the iconic ''#ffde00'' postal-yellow accent (the same hue as the envelope mark), and a warm black ''#1c1d1f'' for type. The brand voice is functional, slightly playful, and defiantly anti-enterprise: ActiveCampaign acquired Postmark in 2022 and the marketing has retained the original Wildbit personality (pragmatic, opinionated, developer-friendly). Type uses Inter for body with a slightly heavier display weight, buttons are tight 6px radii, and product mocks lean into delivery-stat dashboards rendered with confidence rather than density.'
 
 colors:
-  bg: '#ffffff'                # paper-white canvas
-  bg-soft: '#fafaf7'           # warm-tinted secondary section bg
-  surface: '#fff8d4'           # tinted yellow surface for hero callouts
-  surface-neutral: '#f5f5f2'   # cool-neutral panel
-  bg-dark: '#1c1d1f'           # dark CTA / dark footer
-  text: '#1c1d1f'              # primary copy, warm black
-  text-strong: '#000000'       # headline-grade text
-  text-muted: '#5c5e63'        # secondary copy
-  text-soft: '#8a8d93'         # captions, metadata
-  brand: '#ffde00'             # the iconic Postmark postal-yellow
-  brand-hover: '#f0d000'       # pressed state
-  brand-soft: '#fff8d4'        # tinted surface for soft callouts
-  link: '#1c4eb8'              # functional blue link, not the yellow
-  on-brand: '#1c1d1f'          # dark text on yellow
-  accent-blue: '#1c4eb8'       # secondary functional blue
-  accent-green: '#22c55e'      # success / delivery indicator
-  accent-red: '#dc2626'        # bounce / error indicator in mocks
-  border: '#e5e5e2'            # warm-grey hairline
-  border-soft: '#f0f0ed'       # softer divider
+  bg: '#ffffff'                   # paper-white canvas — the post-office-counter ground
+  bg-soft: '#fafaf7'              # warm-tinted secondary section bg (toward cream, not gray)
+  bg-cream: '#fdfaf0'             # extra-warm cream band, used for testimonial strips
+  surface: '#fff8d4'              # tinted yellow surface for hero callouts — the brand's signature warmth gesture
+  surface-neutral: '#f5f5f2'      # cool-neutral panel for product mocks
+  surface-2: '#f0f0ed'            # secondary neutral surface for nested cards
+  bg-dark: '#1c1d1f'              # dark CTA / dark footer band
+  bg-dark-2: '#26272a'            # secondary dark surface (footer subnav, dark cards)
+  text: '#1c1d1f'                 # primary copy — warm black, never pure #000
+  text-strong: '#000000'          # rare full-strength black for hero punch
+  text-muted: '#5c5e63'           # secondary copy
+  text-soft: '#8a8d93'             # captions, metadata
+  text-faint: '#b3b6bc'           # disabled / quiet
+  text-on-dark: '#ffffff'         # primary text on dark surfaces
+  text-on-dark-soft: '#c9ccd1'    # secondary text on dark
+  brand: '#ffde00'                # the iconic Postmark postal-yellow — CTA + callout
+  brand-hover: '#f0d000'          # pressed state, slightly desaturated
+  brand-active: '#e6c500'         # active depressed state
+  brand-soft: '#fff8d4'            # tinted surface for soft callouts (alias of surface)
+  brand-deep: '#b39600'           # deep ochre — used for hero icons / illustrative accents
+  link: '#1c4eb8'                 # functional blue link — intentionally not yellow
+  link-hover: '#1a3f99'           # link hover
+  on-brand: '#1c1d1f'             # warm black on yellow — the only legible text on #ffde00
+  accent-blue: '#1c4eb8'          # secondary functional blue
+  accent-blue-soft: '#e6edff'     # tinted blue surface (rare)
+  accent-green: '#22c55e'         # success / delivery indicator in stat mocks
+  accent-green-soft: '#dcfce7'    # success badge background
+  accent-red: '#dc2626'           # bounce / error indicator in mocks
+  accent-red-soft: '#fee2e2'      # error badge background
+  accent-amber: '#f59e0b'         # warning state (rare)
+  border: '#e5e5e2'               # warm-grey hairline divider
+  border-soft: '#f0f0ed'          # softer divider, for nested chrome
+  border-strong: '#cdcdc8'        # stronger border (focus, emphasized cards)
+  border-dark: '#3a3b3e'          # border on dark surfaces
+  shadow-soft: 'rgba(28,29,31,0.06)'   # rare card lift
+  shadow-medium: 'rgba(28,29,31,0.10)' # hover elevation
+  shadow-strong: 'rgba(28,29,31,0.18)' # modal elevation
+  semantic-success: '#22c55e'
+  semantic-warning: '#f59e0b'
+  semantic-danger: '#dc2626'
+  semantic-info: '#1c4eb8'
 
 typography:
   display:
     family: 'Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [600, 700, 800]
+    opentype: ['kern', 'liga', 'calt', 'ss01']
   body:
     family: 'Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [400, 500, 600]
+    opentype: ['kern', 'liga', 'calt']
   mono:
     family: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    weights: [400, 500]
+    weights: [400, 500, 600]
+    opentype: ['kern', 'liga', 'tnum', 'zero', 'ss01']
   scale:
-    h1:    { size: 60, weight: 700, lineHeight: 1.1,  tracking: '-0.02em' }
-    h2:    { size: 40, weight: 700, lineHeight: 1.15, tracking: '-0.015em' }
-    h3:    { size: 26, weight: 600, lineHeight: 1.25, tracking: '-0.005em' }
-    body:  { size: 17, lineHeight: 1.6 }
-    code:  { size: 14, family: mono, lineHeight: 1.55 }
-    label: { size: 12, weight: 600, tracking: '0.04em' }
+    display-hero:    { size: 72, weight: 800, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'kern, liga, ss01' }
+    display-large:   { size: 60, weight: 700, lineHeight: 1.1,  tracking: '-0.02em',  family: display, opentype: 'kern, liga, ss01' }
+    h1:              { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.02em',  family: display, opentype: 'kern, liga' }
+    h2:              { size: 40, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display, opentype: 'kern, liga' }
+    h3:              { size: 26, weight: 600, lineHeight: 1.25, tracking: '-0.005em', family: display, opentype: 'kern, liga' }
+    h4:              { size: 20, weight: 600, lineHeight: 1.3,  tracking: '0',        family: body }
+    body-large:      { size: 19, weight: 400, lineHeight: 1.55, tracking: '0',        family: body, opentype: 'kern, liga' }
+    body:            { size: 17, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body, opentype: 'kern, liga' }
+    body-small:      { size: 15, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body, opentype: 'kern, liga' }
+    button:          { size: 15, weight: 600, lineHeight: 1.0,  tracking: '0',        family: body }
+    button-large:    { size: 16, weight: 600, lineHeight: 1.0,  tracking: '0',        family: body }
+    nav-link:        { size: 15, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    label:           { size: 12, weight: 600, lineHeight: 1.3,  tracking: '0.06em',   family: body, transform: 'uppercase' }
+    label-mono:      { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.04em',   family: mono, transform: 'uppercase' }
+    caption:         { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    micro:           { size: 11, weight: 600, lineHeight: 1.3,  tracking: '0.04em',   family: body, transform: 'uppercase' }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono, opentype: 'tnum, zero' }
+    code-bold:       { size: 14, weight: 500, lineHeight: 1.55, tracking: '0',        family: mono }
 
 radius:
+  none: 0
+  micro: 2
   xs: 4
-  sm: 6
-  md: 8
-  lg: 12
-  card: 8
-  button: 6
+  sm: 6                            # button radius — tight, dev-API-tradition
+  md: 8                            # card radius
+  lg: 12                           # yellow callout radius — softer, poster-like
+  xl: 16
   pill: 9999
 
+spacing:
+  base: 4
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  xxl: 32
+  section-sm: 64
+  section: 88                      # default vertical rhythm between sections
+  section-lg: 120
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 88, 120]
+
 layout:
-  container: 1200
-  gutter: 24
-  section: 88
-  grid: 12
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+  hero-height: 640
+  grid-gap: 24
+  grid-columns: 12
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-exit: 'cubic-bezier(0.4, 0, 1, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  duration-fade: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — yellow CTA hover collapses to opacity-only, dashboard-mock counter animations freeze to final value'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(28,29,31,0.04) 0 1px 2px'
+  standard: 'rgba(28,29,31,0.08) 0 4px 12px'
+  elevated: 'rgba(28,29,31,0.12) 0 12px 28px'
+  deep: 'rgba(28,29,31,0.20) 0 24px 48px'
+  ring: '0 0 0 3px rgba(255,222,0,0.45)'
+  ring-blue: '0 0 0 3px rgba(28,78,184,0.30)'
+  callout: 'rgba(255,222,0,0.18) 0 8px 24px -8px'
+
+accessibility:
+  contrast-text-on-bg: 14.6           # #1c1d1f on #ffffff — AAA at body
+  contrast-text-on-brand: 13.9        # #1c1d1f on #ffde00 — AAA — the yellow always pairs with warm black, never white
+  contrast-link-on-bg: 7.8            # #1c4eb8 on #ffffff — AAA at body
+  contrast-muted-on-bg: 5.6           # #5c5e63 on #ffffff — AA at body, AAA at large
+  contrast-text-on-dark: 16.4         # #ffffff on #1c1d1f — AAA
+  focus-ring: '3px solid rgba(255,222,0,0.45) — yellow ring, 2px offset; on yellow CTA focus, ring switches to blue (#1c4eb8) for legibility'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual flow; skip-link present in header; CTA buttons receive ring not yellow halo to remain distinguishable on yellow surfaces'
 
 components:
   button-primary:
-    bg: '#ffde00'
-    color: '#1c1d1f'
+    background: '#ffde00'
+    text: '#1c1d1f'
     radius: 6
-    weight: 600
     padding: '12px 22px'
-  button-secondary:
-    bg: 'transparent'
-    color: '#1c1d1f'
-    radius: 6
-    border: '1px solid #1c1d1f'
-  button-dark:
-    bg: '#1c1d1f'
-    color: '#ffffff'
-    radius: 6
-  card:
-    bg: '#ffffff'
-    radius: 8
-    border: '1px solid #e5e5e2'
-  callout-yellow:
-    bg: '#fff8d4'
-    radius: 12
+    height: 44
+    font: button
     border: 'none'
-  delivery-stat:
-    bg: '#ffffff'
+    hover: 'background #f0d000; transform translateY(-1px); shadow rgba(28,29,31,0.10) 0 4px 12px'
+    active: 'background #e6c500; transform translateY(0)'
+    focus: 'outline 3px solid rgba(28,78,184,0.30); outline-offset 2px'
+    use: 'primary CTA — Sign Up, Get Started, Try Free. The yellow is the brand''s primary action voice.'
+  button-secondary:
+    background: 'transparent'
+    text: '#1c1d1f'
+    radius: 6
+    padding: '12px 22px'
+    height: 44
+    font: button
+    border: '1px solid #1c1d1f'
+    hover: 'background #1c1d1f; color #ffffff'
+    use: 'secondary CTA — Talk to Sales, View Pricing. Outlined warm-black on white for restraint.'
+  button-dark:
+    background: '#1c1d1f'
+    text: '#ffffff'
+    radius: 6
+    padding: '12px 22px'
+    height: 44
+    font: button
+    hover: 'background #000000; transform translateY(-1px)'
+    use: 'high-contrast CTA on yellow callout backgrounds, where yellow-on-yellow would vanish.'
+  button-ghost:
+    background: 'transparent'
+    text: '#1c1d1f'
+    radius: 6
+    padding: '10px 16px'
+    font: button
+    hover: 'background #f5f5f2'
+    use: 'tertiary nav action — quiet text-link CTA.'
+  card-feature:
+    background: '#ffffff'
+    text: '#1c1d1f'
+    border: '1px solid #e5e5e2'
     radius: 8
-    family: mono
-    palette: [accent-green, accent-blue, accent-red]
+    padding: '28px'
+    use: 'feature card on white canvas — warm-grey hairline, no shadow.'
+  callout-yellow:
+    background: '#fff8d4'
+    text: '#1c1d1f'
+    border: 'none'
+    radius: 12
+    padding: '40px 48px'
+    use: 'hero callout / pull-quote band — the brand''s signature warmth gesture.'
+  callout-cream:
+    background: '#fdfaf0'
+    text: '#1c1d1f'
+    border: '1px solid #f0e8c8'
+    radius: 12
+    padding: '32px'
+    use: 'softer cream callout for testimonial blocks — warmer than #fff8d4.'
+  delivery-stat:
+    background: '#ffffff'
+    text: '#1c1d1f'
+    border: '1px solid #e5e5e2'
+    radius: 8
+    padding: '20px 24px'
+    font: code
+    use: 'product mock — delivery dashboard stat tile with green/blue/red severity tags in JetBrains Mono.'
+  badge-pill-success:
+    background: '#dcfce7'
+    text: '#15803d'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'delivered status pill in delivery-stat mocks.'
+  badge-pill-error:
+    background: '#fee2e2'
+    text: '#b91c1c'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'bounced status pill.'
+  badge-pill-info:
+    background: '#e6edff'
+    text: '#1c4eb8'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'queued / processing status pill.'
+  input:
+    background: '#ffffff'
+    text: '#1c1d1f'
+    border: '1px solid #cdcdc8'
+    radius: 6
+    padding: '11px 14px'
+    height: 44
+    font: body
+    focus: 'border #1c4eb8; ring 0 0 0 3px rgba(28,78,184,0.30)'
+    use: 'email / form input — warm-grey border, blue focus ring.'
+  code-block:
+    background: '#1c1d1f'
+    text: '#f5f5f2'
+    radius: 8
+    padding: '20px 24px'
+    font: code
+    border: 'none'
+    use: 'multi-line API code sample — warm-black fill (matches dark CTA), JetBrains Mono.'
+  code-chip:
+    background: '#f5f5f2'
+    text: '#1c1d1f'
+    border: '1px solid #e5e5e2'
+    radius: 4
+    padding: '2px 6px'
+    font: code
+    use: 'inline code chip — `npm install postmark`, API endpoint references.'
+  nav-link:
+    background: 'transparent'
+    text: '#1c1d1f'
+    font: nav-link
+    padding: '8px 14px'
+    hover: 'color #5c5e63'
+    use: 'top nav menu — Product / Docs / Pricing / Customers / Blog.'
+
+dark-mode: optional
 
 lineage:
   summary: |
@@ -102,117 +288,657 @@ lineage:
     studio behind Beanstalk and Tower for Mac — and the marketing
     surface still carries that 2010s indie-developer warmth even
     after the 2022 ActiveCampaign acquisition. The chromatic system
-    is built around the iconic `#ffde00` postal-yellow (the same
-    hue as the envelope mark), which operates as the primary CTA
-    fill and as a tinted callout surface (`#fff8d4`). The body
-    canvas is paper-white, type is set in **Inter** with a warm
-    black `#1c1d1f` (not pure `#000`) for body, and the link colour
-    is a functional blue `#1c4eb8` rather than the yellow — keeping
-    the yellow as decoration and CTA, not as wayfinding. Where
-    Resend uses a cold black-and-white minimalism for transactional
-    email, Postmark uses warm yellow + warm black for the same
-    product space; where Mailchimp uses Cavendish Yellow as its
-    entire personality, Postmark holds the yellow to specific
-    moments (CTAs, callouts, the envelope mark). The result is a
-    transactional-email API that feels approachable rather than
-    enterprise — closer to a friendly post office than to an SMTP
-    relay vendor.
+    is built around the iconic `#ffde00` postal-yellow (the same hue
+    as the envelope mark), which operates as the primary CTA fill
+    and as a tinted callout surface (`#fff8d4`). The body canvas is
+    paper-white, type is set in **Inter** with a warm black `#1c1d1f`
+    (not pure `#000`) for body, and the link colour is a functional
+    blue `#1c4eb8` rather than the yellow — keeping the yellow as
+    decoration and CTA, not as wayfinding. Where Resend uses a cold
+    black-and-white minimalism for transactional email, Postmark uses
+    warm yellow + warm black for the same product space; where
+    Mailchimp uses Cavendish Yellow as its entire personality,
+    Postmark holds the yellow to specific moments (CTAs, callouts,
+    the envelope mark). The result is a transactional-email API that
+    feels approachable rather than enterprise — closer to a friendly
+    post office than to an SMTP relay vendor.
   influences:
     - name: Wildbit
-      role: Originator studio — the indie-developer warmth and pragmatic typography lineage.
+      role: 'Originator studio — Philadelphia indie-dev outfit; Postmark inherits its pragmatic typography and developer-warmth tone directly from Wildbit''s 2010s brand register.'
       url: https://wildbit.com
     - name: Mailchimp
-      role: The yellow-as-brand reference; Postmark holds yellow tighter as CTA-only.
+      role: 'The yellow-as-brand reference. Postmark holds the yellow tighter — CTA and callout only, never as page wash — which prevents drift into Mailchimp''s playful-monkey territory.'
       url: https://mailchimp.com
     - name: Stripe
-      role: Single-accent dev-API brand discipline; tight button radii, restrained chromatic system.
+      role: 'Single-accent dev-API brand discipline — tight 6px button radii, restrained chromatic system, paper-white canvas. Postmark substitutes Stripe''s blurple for postal-yellow.'
       url: https://stripe.com
+    - name: Resend
+      role: 'Direct competitor in transactional email. Postmark deliberately countersteers — warm yellow + warm black versus Resend''s pure-black editorial register.'
+      url: https://resend.com
+    - name: Inter (Rasmus Andersson)
+      role: 'Open-source UI sans family at 400/500/600/700/800 — Postmark uses Inter as the entire type voice with a slightly larger body size (17px) than the dev-tool norm.'
+      url: https://rsms.me/inter/
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Postmark''s site is what a developer-facing transactional email API
-looks like when it''s designed by people who care about typography.
-The body canvas is paper-white, headlines hit 60px at weight 700 in
-**Inter** with `-0.02em` tracking, and the iconic postal-yellow
-`#ffde00` carries the primary CTA fills and the tinted hero callout
-(`#fff8d4`). Body text is set in a warm black `#1c1d1f` rather than
-pure `#000`, and links use a functional blue `#1c4eb8` to keep the
-yellow reserved for action moments rather than wayfinding.
+Postmark's marketing site is what a developer-facing transactional email API looks like when it's designed by people who care about typography. The body canvas is paper-white `#ffffff`, headlines hit 60px at weight 700 in **Inter** with `-0.02em` tracking, and the iconic postal-yellow `#ffde00` carries the primary CTA fills and the tinted hero callout (`#fff8d4`). Body text is set in a warm black `#1c1d1f` rather than pure `#000`, and links use a functional blue `#1c4eb8` to keep the yellow reserved for action moments rather than wayfinding.
 
-The visual signature is the **yellow-on-warm-white callout**: a soft
-`#fff8d4` tinted surface holding a hero pull-quote or a delivery-stat
-mock. It''s the brand''s "post office sign" gesture — friendly,
-functional, and impossible to confuse with the cold minimalism of
-Resend or the enterprise density of SendGrid.
+The visual signature is the **yellow-on-warm-white callout**: a soft `#fff8d4` tinted surface holding a hero pull-quote or a delivery-stat mock. It's the brand's "post office sign" gesture — friendly, functional, and impossible to confuse with the cold minimalism of Resend or the enterprise density of SendGrid. The yellow is chromatically loud but compositionally polite — the surface variant is so desaturated it reads almost cream, and the saturated `#ffde00` only shows up on buttons and small accent shapes (an envelope corner, a stamp icon, a check mark in a delivery row).
 
-## Colors
+Sections breathe at 88px vertical rhythm — generous but not luxurious. The page reads as a structured walkthrough: hero, benefits, product mock, integrations, pricing, footer. There's nothing flashy: no animated gradient, no parallax, no hero video. The atmosphere is "well-typeset trade publication for engineers" — closer to *Communications of the ACM* with personality than to a venture-funded SaaS landing.
 
-- **bg** `#ffffff` — paper-white canvas
-- **bg-soft** `#fafaf7` — warm-tinted secondary section
-- **surface** `#fff8d4` — tinted yellow callout surface
-- **bg-dark** `#1c1d1f` — dark CTA / dark footer
-- **brand** `#ffde00` — the iconic Postmark postal-yellow
-- **brand-hover** `#f0d000` — pressed state
-- **link** `#1c4eb8` — functional blue link colour (intentionally not yellow)
-- **text** `#1c1d1f` — warm black, never pure `#000`
-- **accent-green** `#22c55e` — delivery success indicator
-- **accent-red** `#dc2626` — bounce / error indicator in delivery-stat mocks
-- **border** `#e5e5e2` — warm-grey hairline divider
+The product mock — a delivery-stat dashboard with rows of recent emails, status pills (delivered / bounced / opened in green / red / blue), and inline JetBrains Mono message-IDs — is rendered with confidence rather than density. It says: "this is what the API surface looks like, and it's pleasant." That product-honesty register is inherited from Wildbit's broader catalogue (Beanstalk, Tower for Mac), where the marketing always showed the actual product chrome rather than stylised abstractions.
 
-## Typography
+Below the hero, integration logos appear in a quiet 6-column band in muted grayscale; testimonials run in cream callouts (`#fdfaf0`) with the customer's photo and a hand-set Inter pull-quote; pricing tiers sit in white cards with hairline borders. The overall tonal range is narrow — warm white, warm cream, warm black, postal yellow — but the discipline is what makes the brand cohere.
 
-Display and body are both **Inter** at weights 400/500/600/700/800,
-sized 60px on a 66px line-height (1.1) for the hero with `-0.02em`
-tracking. Body type is sized 17px (a touch larger than the dev-tool
-norm of 16px) on a 1.6 line-height — the slightly larger body is
-part of the warmth: the page reads as if you''re being addressed,
-not pitched to.
+**Key Characteristics:**
+- Paper-white canvas (`#ffffff`) — never grey-tinted, never cream-as-default.
+- Postal-yellow `#ffde00` reserved for CTA fills and the `#fff8d4` callout surface — never as page wash.
+- Warm black `#1c1d1f` for body, never pure `#000` — the warmth is the brand.
+- Functional blue `#1c4eb8` for links — yellow is action, blue is wayfinding.
+- Inter at 400/500/600/700/800 across the entire system — no display serif, no editorial drama.
+- Body type at 17px (a touch larger than the dev-tool norm) — addressed-to-you voice.
+- Tight 6px button radii — Stripe-tradition discipline.
+- 12px on yellow callouts — slightly softer, more poster-like.
+- Product mocks show real delivery-stat dashboard UI — honesty over abstraction.
+- Wildbit-lineage warmth — friendly post-office register, not enterprise SMTP vendor.
 
-Code samples use **JetBrains Mono** at 400 and 500, sized 14px, with
-labels in the same mono at 12px and `0.04em` tracking. The mono
-appears mainly in API documentation snippets and in delivery-stat
-chart labels, not as decoration.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-A 1200px max container with 24px gutters and 88px vertical rhythm
-between sections. Cards use 8px radii, buttons use 6px (tight, in
-the dev-API tradition), and the yellow-tinted callouts use a softer
-12px radius to feel more poster-like. The 12-column grid is
-densely subdivided in feature-comparison tables and integration-logo
-bands.
+- **Background** (`#ffffff`): paper-white canvas. The post-office-counter ground. No warmth tilt — the warmth comes from type and surfaces, not the body bg.
+- **Text** (`#1c1d1f`): warm black. The signature anti-`#000` choice — `#1c1d1f` carries a hair of cyan-grey that softens against pure white. AAA contrast at body sizes (14.6:1).
+- **Brand** (`#ffde00`): postal-yellow. The same hue as the envelope corner-mark on Postmark's logo. This is the action voice — CTA fills, accent shapes.
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth is achieved through warm tonal layering and a single warm-grey
-hairline (`#e5e5e2`). Cards rarely use shadows; instead the yellow-tinted
-callout (`#fff8d4`) acts as a soft pop of warmth that lifts content
-without elevation. The dark `#1c1d1f` CTA surfaces and footer bands
-provide tonal contrast against the paper-white canvas.
+- **Brand Hover** (`#f0d000`): pressed-state yellow, slightly desaturated.
+- **Brand Active** (`#e6c500`): active-depressed yellow, deeper.
+- **Brand Soft / Surface** (`#fff8d4`): tinted yellow callout surface — the brand's signature warmth gesture. Reads almost cream; the `#ffde00` saturation has been pulled down ~80% to let the surface hold large blocks of text without screaming.
+- **Brand Deep** (`#b39600`): deep ochre — used for hero illustrative accents (an envelope-mark icon, a stamp shadow).
+- **Bg Dark** (`#1c1d1f`): the warm black surface — dark CTA, dark footer, dark code-blocks. Same hue as text, used inverted.
+- **Bg Dark 2** (`#26272a`): secondary dark surface for nested chrome on the dark footer.
 
-## Shapes
+### Accent
 
-Radii ladder is 4/6/8/12, with buttons at 6px (matching Stripe''s
-tight CTA tradition) and yellow callouts at 12px (slightly softer,
-more poster-like). Pills appear only for status tags inside delivery
-stat mocks (delivered/bounced/opened).
+- **Link** (`#1c4eb8`): functional blue. Intentionally not the yellow — the yellow is reserved for action; blue carries reading wayfinding (links, inline references). AAA contrast (7.8:1) on white.
+- **Link Hover** (`#1a3f99`): deeper blue.
+- **Accent Blue Soft** (`#e6edff`): rare tinted blue surface for "info" callouts.
+- **Accent Green** (`#22c55e`): success / delivery indicator in stat mocks.
+- **Accent Red** (`#dc2626`): bounce / error indicator.
+- **Accent Amber** (`#f59e0b`): warning state — rare on marketing, common in product UI.
 
-## Components
+### Interactive
 
-The defining components are the **yellow CTA** (`#ffde00` fill,
-warm-black text, 6px radius, Inter 600), the **yellow-tinted callout**
-(`#fff8d4` bg, 12px radius, no border — the page''s warmth gesture),
-and the **delivery-stat dashboard mock** (white card, 8px radius,
-green/blue/red severity tags in JetBrains Mono). The dark `#1c1d1f`
-secondary CTA appears for high-contrast moments, and links are the
-functional blue `#1c4eb8` everywhere.
+- **CTA Background** (`#ffde00`): primary action fill.
+- **CTA Text on Yellow** (`#1c1d1f`): warm black — the only legible text on `#ffde00`. White on yellow is forbidden (fails contrast).
+- **Hover Yellow** (`#f0d000`): hover state.
+- **Active Yellow** (`#e6c500`): active depressed.
+- **Disabled Yellow** (`#fff3a0`): low-saturation pale yellow — disabled CTA.
+- **Focus Ring** (`rgba(255,222,0,0.45)` 3px): on neutral surfaces. On yellow CTAs the ring switches to blue (`rgba(28,78,184,0.30)`) for legibility against the yellow ground.
 
-## Do''s and Don''ts
+### Neutral Scale
 
-- **Do** hold the yellow `#ffde00` to CTAs and callout surfaces; using it as a body wash flattens the brand into Mailchimp territory.
-- **Do** set body text in warm black `#1c1d1f`, never pure `#000` — the warmth is what distinguishes Postmark from cold-minimal competitors like Resend.
+- **Text** (`#1c1d1f`): warm black, primary copy, headlines.
+- **Text Strong** (`#000000`): rare full-strength black for hero punch (used only at 60–72px).
+- **Text Muted** (`#5c5e63`): secondary copy. AA contrast at body sizes (5.6:1), AAA at large.
+- **Text Soft** (`#8a8d93`): captions, metadata, integration-band labels.
+- **Text Faint** (`#b3b6bc`): disabled, placeholder.
+- **Text on Dark** (`#ffffff`): primary on `#1c1d1f`.
+- **Text on Dark Soft** (`#c9ccd1`): secondary on dark.
+
+### Surface & Borders
+
+- **Bg Soft** (`#fafaf7`): warm-tinted secondary section background — cream-leaning, not cool-grey.
+- **Bg Cream** (`#fdfaf0`): testimonial-band cream — warmer than `bg-soft`.
+- **Surface Neutral** (`#f5f5f2`): cool-neutral panel for product mocks (intentional cool tilt to let the mock read as "product chrome" rather than "marketing surface").
+- **Surface 2** (`#f0f0ed`): nested neutral surface.
+- **Border** (`#e5e5e2`): warm-grey hairline. The default chrome rule.
+- **Border Soft** (`#f0f0ed`): softer divider for nested chrome.
+- **Border Strong** (`#cdcdc8`): emphasized border for inputs and hover states.
+- **Border Dark** (`#3a3b3e`): hairline on dark surfaces.
+
+### Shadow Colors
+
+- **Ambient** (`rgba(28,29,31,0.04) 0 1px 2px`): rare faint card lift.
+- **Standard** (`rgba(28,29,31,0.08) 0 4px 12px`): button-hover elevation.
+- **Elevated** (`rgba(28,29,31,0.12) 0 12px 28px`): modal / popover.
+- **Deep** (`rgba(28,29,31,0.20) 0 24px 48px`): rare full-modal backdrop.
+- **Callout Glow** (`rgba(255,222,0,0.18) 0 8px 24px -8px`): yellow under-glow on hero callouts — the only chromatic shadow.
+- **Ring** (`0 0 0 3px rgba(255,222,0,0.45)`): yellow focus ring.
+- **Ring Blue** (`0 0 0 3px rgba(28,78,184,0.30)`): blue focus ring (used on yellow CTAs).
+
+Postmark uses shadows sparingly — the hairline borders carry most chrome work. The yellow under-glow is the brand's only chromatic shadow moment.
+
+### Semantic
+
+- **Success** (`#22c55e`) on bg `#dcfce7`: delivered-status pill in mocks.
+- **Warning** (`#f59e0b`) on bg `#fef3c7`: queued / throttled state.
+- **Danger** (`#dc2626`) on bg `#fee2e2`: bounced-status pill.
+- **Info** (`#1c4eb8`) on bg `#e6edff`: processing / informational pill.
+
+## 3. Typography Rules
+
+### Font Family
+
+A single-family system — Inter for everything except code:
+
+- **Display:** `Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Rasmus Andersson's open-source UI sans, used at weights 600/700/800 for headlines. Hero punch comes from weight (800) and tracking (-0.025em), not from a custom display face. Inter's stylistic set 01 (`ss01`) — single-storey `a` and rounded `g` — is enabled for a hair of friendliness on display tier.
+- **Body:** Same family at 400/500/600. Body sits at 17px (a touch larger than the standard 16px dev-tool norm) on 1.6 line-height — the slightly-larger body is part of the warmth: the page reads as if you're being addressed, not pitched to.
+- **Mono:** `"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`. JetBrains' open-source mono with code ligatures, used at 14px for code samples. Tabular figures (`tnum`) and slashed zero (`zero`) for delivery-stat numerals.
+
+### OpenType Features
+
+- **Inter Display:** `kern, liga, ss01` — kerning, standard ligatures, and stylistic set 01 (single-storey `a`) for friendliness on hero tier.
+- **Inter Body:** `kern, liga, calt` — standard contextual alternates.
+- **JetBrains Mono:** `kern, liga, tnum, zero, ss01` — code ligatures + tabular figures + slashed zero. The `ss01` enables an alternate `r` that reads better in API code.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter | 72 | 800 | 1.05 | -0.025em | kern, liga, ss01 | Largest hero — homepage tagline |
+| display-large | Inter | 60 | 700 | 1.1 | -0.02em | kern, liga, ss01 | Section hero |
+| h1 | Inter | 48 | 700 | 1.1 | -0.02em | kern, liga | Page H1 |
+| h2 | Inter | 40 | 700 | 1.15 | -0.015em | kern, liga | Section heads |
+| h3 | Inter | 26 | 600 | 1.25 | -0.005em | kern, liga | Sub-section heads |
+| h4 | Inter | 20 | 600 | 1.3 | 0 | kern, liga | Card titles, feature heads |
+| body-large | Inter | 19 | 400 | 1.55 | 0 | kern, liga | Hero deck — addresses the reader |
+| body | Inter | 17 | 400 | 1.6 | 0 | kern, liga | Default body — slightly larger than 16px norm |
+| body-small | Inter | 15 | 400 | 1.5 | 0 | kern, liga | Footer, captions, dense regions |
+| button | Inter | 15 | 600 | 1.0 | 0 | kern | CTA label |
+| button-large | Inter | 16 | 600 | 1.0 | 0 | kern | Hero CTA |
+| nav-link | Inter | 15 | 500 | 1.4 | 0 | kern | Top nav |
+| label | Inter | 12 | 600 | 1.3 | 0.06em | kern, uppercase | UPPERCASE eyebrow over hero |
+| label-mono | JetBrains Mono | 12 | 500 | 1.3 | 0.04em | tnum, uppercase | Mono UPPERCASE — API category labels |
+| caption | Inter | 13 | 400 | 1.45 | 0 | kern | Caption under product mocks |
+| micro | Inter | 11 | 600 | 1.3 | 0.04em | kern, uppercase | Status pill text |
+| code | JetBrains Mono | 14 | 400 | 1.55 | 0 | tnum, zero | Inline code chip / API examples |
+| code-bold | JetBrains Mono | 14 | 500 | 1.55 | 0 | tnum, zero | Code emphasis |
+
+### Principles
+
+- **Inter everywhere.** Postmark uses Inter for display, body, button, nav, label — the entire system. The discipline reflects the brand's "no decoration, just craft" register.
+- **Body at 17px, not 16px.** The slightly-larger body is part of the addressed-to-you voice. Dropping to 16px would tip the page toward dev-doc density; 18px+ would tip toward consumer-marketing.
+- **Weight 800 only on hero.** Display-hero (72px) reaches weight 800 for hero punch; everything below 60px tops out at 700. Bold tier doesn't bleed into sub-heads.
+- **Negative tracking on display.** -0.025em on hero, -0.02em on display-large, scaling down to 0 at body — the standard Inter optical-size tradition.
+- **Stylistic set 01 enabled on hero.** Inter's `ss01` (single-storey `a`, rounded `g`) appears at display tier to add a hair of friendliness — Postmark's brand isn't austere, and the alternate `a` helps. At body sizes the standard `a` returns.
+- **JetBrains Mono only in code contexts.** The mono face appears in code blocks, code chips, delivery-stat IDs, and label-mono — never as decoration.
+- **Tabular figures in stat mocks.** `tnum` on delivery-stat numerals so columns align: `12,847 delivered / 23 bounced / 1,243 opened`.
+- **Slashed zero in API examples.** `zero` distinguishes 0 from O in message-IDs and API keys.
+- **No editorial italics.** Inter italics are present in the system but rare on marketing — the voice is functional, not literary.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Yellow)**
+- Background: `#ffde00`
+- Text: `#1c1d1f` (warm black — never white)
+- Padding: `12px 22px`, height 44
+- Radius: 6 (tight, dev-API tradition)
+- Border: none
+- Font: button (Inter 15 / 600)
+- Hover: background `#f0d000` + `translateY(-1px)` + shadow `rgba(28,29,31,0.10) 0 4px 12px`
+- Active: background `#e6c500` + `translateY(0)`
+- Focus: blue ring `0 0 0 3px rgba(28,78,184,0.30)` with 2px offset (blue ring on yellow because yellow-on-yellow ring would vanish)
+- Use: hero CTA — Sign Up, Get Started, Try Free. The brand's primary action voice.
+
+**Secondary (Outlined Warm-Black)**
+- Background: transparent
+- Text: `#1c1d1f`
+- Padding: `12px 22px`, height 44
+- Radius: 6
+- Border: `1px solid #1c1d1f`
+- Hover: background `#1c1d1f` + text `#ffffff` (full inversion)
+- Use: secondary CTA — Talk to Sales, View Pricing.
+
+**Dark (High-Contrast)**
+- Background: `#1c1d1f`
+- Text: `#ffffff`
+- Padding: `12px 22px`, height 44
+- Radius: 6
+- Hover: background `#000000` + `translateY(-1px)`
+- Use: high-contrast CTA on yellow callouts (yellow-on-yellow would vanish, so dark CTA carries the action on yellow surfaces).
+
+**Ghost (Tertiary)**
+- Background: transparent
+- Text: `#1c1d1f`
+- Padding: `10px 16px`
+- Radius: 6
+- Hover: background `#f5f5f2`
+- Use: nav action, inline tertiary CTA.
+
+### Cards
+
+**Feature Card**
+- Background: `#ffffff`
+- Border: `1px solid #e5e5e2`
+- Radius: 8
+- Padding: 28
+- Use: feature card on white canvas — warm-grey hairline, no shadow.
+
+**Yellow Callout (Hero)**
+- Background: `#fff8d4`
+- Border: none
+- Radius: 12 (slightly softer than card)
+- Padding: `40px 48px`
+- Optional under-glow: `rgba(255,222,0,0.18) 0 8px 24px -8px`
+- Use: hero pull-quote band, signature warmth gesture. The most recognisable Postmark surface.
+
+**Cream Callout (Testimonial)**
+- Background: `#fdfaf0`
+- Border: `1px solid #f0e8c8`
+- Radius: 12
+- Padding: 32
+- Use: testimonial card with customer photo + Inter pull-quote.
+
+**Pricing Card**
+- Background: `#ffffff`
+- Border: `1px solid #e5e5e2`
+- Radius: 12
+- Padding: 32
+- Use: pricing tier card.
+
+**Pricing Card (Featured)**
+- Background: `#fff8d4` (the yellow callout surface)
+- Border: `2px solid #ffde00`
+- Radius: 12
+- Padding: 32
+- Use: featured pricing tier — the rare full-saturation yellow border moment.
+
+### Badges (Status Pills in Delivery-Stat Mocks)
+
+**Success (Delivered)** — `#dcfce7` bg / `#15803d` text / 9999 radius / Inter micro 11/600 uppercase
+
+**Error (Bounced)** — `#fee2e2` bg / `#b91c1c` text
+
+**Info (Queued)** — `#e6edff` bg / `#1c4eb8` text
+
+**Warning (Throttled)** — `#fef3c7` bg / `#92400e` text
+
+### Inputs
+
+**Standard Input**
+- Background: `#ffffff`
+- Text: `#1c1d1f`
+- Border: `1px solid #cdcdc8`
+- Radius: 6 (matches button radius)
+- Padding: `11px 14px`, height 44
+- Focus: border `#1c4eb8` + ring `0 0 0 3px rgba(28,78,184,0.30)`
+- Use: email signup, form fields.
+
+### Navigation
+
+**Top Nav**
+- Background: transparent on white canvas, sticky on scroll with 90% white backdrop
+- Padding: `0 24px`, height 64
+- Links: Inter 15/500, color `#1c1d1f`, hover `#5c5e63`
+- Right-side: Sign In ghost button + yellow Get Started CTA
+- Items: Product / Customers / Pricing / Docs / Blog
+
+### Code
+
+**Code Block (Multi-Line)**
+- Background: `#1c1d1f` (warm black — matches dark CTA fill)
+- Text: `#f5f5f2` (slightly off-white for legibility)
+- Border: none
+- Radius: 8
+- Padding: `20px 24px`
+- Font: code (JetBrains Mono 14/400)
+- Use: API example snippets in Quickstart and integration sections.
+
+**Inline Code Chip**
+- Background: `#f5f5f2`
+- Text: `#1c1d1f`
+- Border: `1px solid #e5e5e2`
+- Radius: 4
+- Padding: `2px 6px`
+- Font: code 14/400
+- Use: `npm install postmark`, API endpoint references inline in body copy.
+
+### Decorative
+
+**Envelope Mark** — the postal-yellow corner glyph (an SVG envelope with `#ffde00` flap accent on warm-black body), used as section-divider decoration and in the logo.
+
+**Stamp Icon** — a deep-ochre `#b39600` square stamp glyph used in pricing tables and feature lists.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit is 4px with a scale of 4/8/12/16/20/24/32/40/48/64/88/120. Sections breathe at 88px vertical rhythm by default, 120px between major regions. Card padding sits at 28px (feature) or 32px (callout) or 40–48px (yellow hero callout). Button padding is 12/22 — the tight horizontal/vertical ratio that gives Postmark CTAs their slightly-pill-like proportion despite a 6px radius.
+
+### Grid & Container
+
+Page caps at **1200px** with **24px gutters**. The 12-column grid is densely subdivided in feature-comparison tables and integration logo bands — Postmark integrates with dozens of frameworks (Rails, Django, Laravel, Node, Python, Ruby, .NET, Go, PHP, Elixir) and the marketing shows them all in a quiet 6-column muted-grayscale band.
+
+Hero treatment: centered or left-aligned headline at 60–72px, centered or left-aligned 19px hero deck, primary yellow CTA + secondary outlined CTA pair, then a yellow callout band immediately below holding the product-mock or pull-quote.
+
+### Whitespace Philosophy
+
+Postmark's white space is **generous-but-functional**, not luxurious. The 88px section gap is enough to read each section as distinct, but tight enough that the page doesn't feel sparse. The yellow callouts get extra padding (40–48px) to let the warmth gesture breathe; feature cards use 28px to keep density honest.
+
+### Section Cadence
+
+Sections alternate between three tonal grounds:
+- **Paper-white** (`#ffffff`) — the default, dominant.
+- **Cream / warm soft** (`#fafaf7` or `#fdfaf0`) — testimonial bands, integration bands.
+- **Yellow callout** (`#fff8d4`) — hero pull-quote, signature warmth gesture (used 1–2 times per page max).
+- **Dark** (`#1c1d1f`) — footer band, occasional dark hero variant.
+
+The dark band only appears at the page's bottom (footer); the yellow callout only appears 1–2 times. Overuse would dilute the gesture.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Radius | Use |
+|---|---|---|
+| None | 0 | Hairline rules, table cells |
+| Micro | 2 | Code chips, status pills (small) |
+| XS | 4 | Inline code chip, small badges |
+| SM | 6 | **Buttons, inputs** — the dev-API-tradition tight CTA |
+| MD | 8 | **Cards, code blocks** — default content chrome |
+| LG | 12 | **Yellow callouts** — slightly softer, more poster-like |
+| XL | 16 | Modal corners (rare) |
+| Pill | 9999 | Status pills only — never on CTA |
+
+The button-vs-callout radius differential (6 vs 12) is deliberate: buttons read as functional dev-API actions, while yellow callouts read as friendly post-office signs. Two registers, two radii.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow, hairline border only | Default cards, feature tiles |
+| 1 | Hairline + faint ambient shadow `rgba(28,29,31,0.04) 0 1px 2px` | Sticky nav, faint card lift |
+| 2 | Hover state — `rgba(28,29,31,0.08) 0 4px 12px` + 1px translate | Button hover, card hover |
+| 3 | Yellow under-glow `rgba(255,222,0,0.18) 0 8px 24px -8px` | Hero yellow callout — chromatic depth |
+| 4 | Modal — `rgba(28,29,31,0.12) 0 12px 28px` | Pricing comparison modal, video lightbox |
+| 5 | Backdrop — `rgba(28,29,31,0.20) 0 24px 48px` + scrim | Full-screen modal |
+
+### Shadow Philosophy
+
+Postmark depth is mostly **hairline and tonal** — cards lift through `1px solid #e5e5e2` rather than shadow. The single chromatic shadow event is the yellow under-glow on hero callouts, which adds a hair of warmth without adding visual weight. Shadows are warm-tinted (`rgba(28,29,31,...)` rather than `rgba(0,0,0,...)`) to match the warm-black text — the system is colour-cohered down to the shadow channel.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard** (`cubic-bezier(0.4, 0, 0.2, 1)`) — default for all hover, color, and elevation transitions.
+- **Emphasized** (`cubic-bezier(0.2, 0, 0, 1)`) — overshoot for the hero CTA hover (subtle 1px lift).
+- **Entrance** (`cubic-bezier(0, 0, 0.2, 1)`) — for cards entering on scroll (rare, used only for the delivery-stat mock).
+- **Exit** (`cubic-bezier(0.4, 0, 1, 1)`) — modal close, popover dismiss.
+
+### Duration
+
+- **Fast** (100ms) — color hovers (link colour change, nav-link hover).
+- **Standard** (180ms) — button hover (color + 1px translate), card hover.
+- **Slow** (280ms) — modal open, popover reveal.
+- **Fade** (400ms) — page transitions, hero counter animations in delivery-stat mocks.
+
+### Per-Component Motion
+
+- **Button hover** — background colour transitions over 100ms; transform translateY(-1px) over 180ms; box-shadow fades in over 180ms. Active state collapses to translateY(0) in 100ms.
+- **Card hover** — hairline border `#e5e5e2 → #cdcdc8` over 180ms; faint shadow appears over 180ms. No scale transform.
+- **Yellow callout entrance** — fades in from `opacity: 0` over 400ms with a 12px Y-translate easing-out. Reduced-motion: opacity-only.
+- **Delivery-stat counter animation** — numbers count up from 0 to final value over 800ms with `cubic-bezier(0.4, 0, 0.2, 1)`. Reduced-motion: numbers freeze at final value.
+- **Link hover** — colour `#1c4eb8 → #1a3f99` over 100ms. Underline uses `text-decoration-thickness 1px → 2px` over 100ms — a hair-thicker underline on hover.
+- **Status pill hover** — none. Pills are stateless decoration.
+
+### Page Transitions
+
+The marketing site is mostly static — section reveals on scroll use IntersectionObserver with a 12px Y-translate fade-in over 400ms, but only fire once per element. There's no parallax, no animated gradient, no hero video. The interactivity is small and functional.
+
+### Reduced Motion
+
+All transforms collapse to opacity-only when `prefers-reduced-motion: reduce` is set. The delivery-stat counter freezes to final value. The yellow callout entrance becomes a static reveal.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **Body text on bg** — `#1c1d1f` on `#ffffff` = **14.6:1** — AAA at all sizes.
+- **Body text on yellow** — `#1c1d1f` on `#ffde00` = **13.9:1** — AAA. (White on yellow would be 1.7:1, fails AA — never used.)
+- **Body text on yellow callout surface** — `#1c1d1f` on `#fff8d4` = **14.0:1** — AAA.
+- **Link on bg** — `#1c4eb8` on `#ffffff` = **7.8:1** — AAA at body sizes.
+- **Muted text on bg** — `#5c5e63` on `#ffffff` = **5.6:1** — AA at body, AAA at large (14px+).
+- **Soft text on bg** — `#8a8d93` on `#ffffff` = **3.5:1** — AA at large only (used for captions ≥18px).
+- **Text on dark** — `#ffffff` on `#1c1d1f` = **16.4:1** — AAA.
+- **Success pill** — `#15803d` on `#dcfce7` = **5.9:1** — AA at body.
+- **Error pill** — `#b91c1c` on `#fee2e2` = **6.1:1** — AA at body.
+
+### Focus Indicators
+
+- **On neutral surfaces:** `0 0 0 3px rgba(255,222,0,0.45)` — yellow ring, 2px offset.
+- **On yellow CTA:** `0 0 0 3px rgba(28,78,184,0.30)` — blue ring, 2px offset. (Yellow ring on yellow vanishes; brand-blue ring is the substitute.)
+- **On dark surfaces:** `0 0 0 3px rgba(255,222,0,0.60)` — brighter yellow ring against dark.
+
+### ARIA Patterns
+
+- **Yellow CTA** — role="button" or `<button>`; `aria-label` only when icon-only (otherwise visible text suffices).
+- **Status pills** — wrap with `<span role="status">` for live-region announcements when status changes (e.g. delivery dashboard updating in real-time).
+- **Code chip / code block** — `<code>` and `<pre><code>`; copy-button has `aria-label="Copy code to clipboard"` and announces on copy via `aria-live="polite"`.
+- **Modal** — `role="dialog"`, `aria-modal="true"`, focus trap, ESC dismisses.
+- **Tooltip** — `role="tooltip"` with `aria-describedby` linkage.
+
+### Keyboard Navigation
+
+- Tab order follows visual flow: top-nav → hero CTA pair → in-page anchors → footer.
+- Skip-link present in header (`Skip to main content` — visually hidden, visible on focus).
+- All interactive surfaces (CTA, nav-link, pricing card, code-copy button) are keyboard-reachable.
+- Modal traps focus and returns to invoking element on close.
+
+### Screen Reader Hints
+
+- The envelope-mark logo has `aria-label="Postmark"` (decorative SVG inside).
+- Delivery-stat dashboard uses `<table>` with proper `<th>` and `<caption>` for screen-reader navigation.
+- Status pills include visible text (Delivered / Bounced) so `aria-label` is unnecessary.
+- Hero deck uses `<p>` paragraphs, not `<h2>`, to avoid noise in heading navigation.
+
+### Reduced Motion
+
+- All transform-based transitions collapse to opacity-only.
+- The delivery-stat counter animation freezes to final value.
+- Section entrance fades become static reveals.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Token | Width | Layout |
+|---|---|---|
+| Mobile | 0–639 | Single column, stacked hero, full-width CTAs |
+| Tablet | 640–1023 | Two-column feature grid, hero stacks |
+| Desktop | 1024–1279 | Full layout, 12-column grid |
+| Wide | 1280+ | Max 1200px container with auto margins |
+
+### Touch Targets
+
+All interactive elements are minimum **44×44px** (button height is 44, nav-link tap area is 44 via padding). Status pills are decoration only (not interactive); they don't need minimum touch area.
+
+### Collapsing Strategy
+
+- **Top nav** — collapses to hamburger at <1024px; full-width drawer slides in from right with stacked nav links + CTA pair at bottom.
+- **Hero** — headline shrinks from 72→48px on mobile; deck from 19→17px; CTA pair stacks vertically.
+- **Yellow callout** — padding shrinks from 48→24px on mobile; pull-quote wraps naturally.
+- **Feature grid** — collapses 3→2→1 columns at tablet and mobile.
+- **Pricing tiers** — collapses 4→2→1 columns; featured tier remains visually distinct.
+- **Delivery-stat mock** — hides "queued" and "throttled" columns on mobile; shows only delivered / bounced.
+- **Integration logo band** — 6→4→3 columns.
+
+### Image Behavior
+
+Product mocks use SVG where possible (delivery dashboard) for crispness at all DPRs; PNG/JPG for customer logos with `loading="lazy"` and explicit `width`/`height`. Customer photo avatars in testimonials use `srcset` for 1x/2x/3x.
+
+### Container Queries
+
+Used inside the delivery-stat mock card: when card width drops below 480px, the inline status pill column hides and recipient + status stack vertically.
+
+## 11. Content & Voice
+
+### Tone
+
+Functional, slightly playful, defiantly anti-enterprise. The brand voice is "the team that built this would rather show you the API than pitch you the platform." It's **friendly without being cute**, **technical without being dry**, and **opinionated without being snarky**.
+
+Sample register:
+- "Send transactional email people actually receive."
+- "We've been doing this since 2010. We know what we're doing."
+- "Free until you send 100 emails. Then $15/mo. No surprises."
+
+### Microcopy Patterns
+
+**Button verbs (action-direct):**
+- Sign Up Free
+- Start Sending
+- Try Postmark Free
+- Get Started
+- Talk to Sales (secondary)
+- Read the Docs (tertiary)
+
+**Error messages (clear, friendly):**
+- "We couldn't reach that domain. Double-check the DNS records?" (DNS verification fail)
+- "This email address looks suspicious — would you mind retyping it?" (validation soft-fail)
+- "Looks like you've hit your monthly limit. Upgrade or wait until reset?" (rate limit)
+
+**Success confirmations:**
+- "You're in. Check your inbox for a confirmation email — it'll be there in seconds." (signup success)
+- "Domain verified. You're ready to send." (DNS success)
+
+### Empty States
+
+- **Empty inbox** — "Nothing here yet. Send your first email and it'll show up in real-time."
+- **Empty servers list** — "Create a server to start sending. Each server gets its own API key."
+- **Empty bounce log** — "No bounces. Either you're sending great email or you haven't sent anything yet. Both are fine."
+
+### CTA Verb Conventions
+
+- **Primary action** — "Sign Up Free" (free is the brand promise; the word appears on the primary CTA).
+- **Secondary action** — "Talk to Sales" or "Read the Docs" (never "Learn More" — too vague for the dev-API register).
+- **Tertiary action** — "View Pricing", "See Customers" — direct verbs over abstract phrases.
+
+The yellow CTA always carries a verb-first label. "Try Postmark" beats "Postmark Trial". "Start Sending" beats "Send Email".
+
+## 12. Dark Mode & Theming
+
+Postmark's marketing site is **light-only** — there's no dark variant of the homepage or pricing pages. The product UI (the dashboard at app.postmarkapp.com) ships a dark mode separately, but it's not part of the marketing brand.
+
+If a future dark variant ships, the inversion would be:
+
+```yaml
+colors-dark:
+  bg: '#1c1d1f'              # warm black canvas (the existing dark CTA surface)
+  bg-soft: '#26272a'
+  bg-elev: '#2e2f32'
+  surface: '#fff8d4'         # the yellow callout would stay yellow — it's the brand
+  text: '#fafaf7'
+  text-muted: '#c9ccd1'
+  text-soft: '#8a8d93'
+  brand: '#ffde00'           # yellow remains identical
+  brand-soft: '#3a3625'      # darkened yellow surface for dark callouts
+  link: '#7ba6ff'            # lighter functional blue for legibility on warm-black
+  border: '#3a3b3e'
+  border-soft: '#2e2f32'
+  on-brand: '#1c1d1f'        # warm black on yellow — unchanged
+```
+
+The dark variant would preserve the yellow CTA and yellow callout — the brand voice doesn't shift between modes. Only the canvas inverts.
+
+## 13. Lineage & Influences
+
+Postmark's design lineage runs through **Wildbit's 2010s indie-developer warmth** — the Philadelphia studio (founded by Natalie Nagele and Eugene Fedorenko) that built Beanstalk, Tower for Mac, and Postmark before each was acquired or productised separately. The brand voice is recognisably Wildbit: pragmatic, opinionated, developer-first, and unwilling to dress dev-tooling up as enterprise SaaS. ActiveCampaign acquired Postmark in 2022 but retained the original design surface — a rare case of a post-acquisition brand staying intact rather than being homogenised.
+
+The chromatic gesture (yellow as brand, warm-black as ink) borrows from **Mailchimp's** early Cavendish-Yellow tradition without inheriting its playfulness. Where Mailchimp built an entire personality around its yellow (the chimp mascot, the playful illustration), Postmark holds the yellow tighter: only on CTAs, only in callouts, never as a page wash. The yellow appears at moments of action, not as ambient personality.
+
+The button-radius and chromatic-discipline tradition come from **Stripe** — tight 6px CTA radii, single-accent brand axis, paper-white canvas, restrained use of saturation. Postmark substitutes Stripe's blurple for postal-yellow but keeps the structural grammar. Where Stripe trusts a single confident hue across a sophisticated chromatic system, Postmark trusts a single confident hue applied with even more restraint.
+
+The competitor counterstance is **Resend** — both occupy the modern-transactional-email category, but they answer the brief in opposite registers. Resend goes pure-`#000` editorial with a Domaine Display serif at 144px; Postmark goes paper-white friendly with Inter and yellow accents. Where Resend says "developer infrastructure deserves Bloomberg Businessweek typography," Postmark says "developer infrastructure deserves a friendly post-office sign."
+
+**Named influences:**
+- **Wildbit** — originator studio. The pragmatic-developer-tone DNA, Philadelphia indie-dev register, "show the product, not the platform" honesty. https://wildbit.com
+- **Mailchimp** — the yellow-as-brand reference. Postmark holds yellow tighter — CTA and callout only — to avoid drift into Mailchimp's playful-mascot territory. https://mailchimp.com
+- **Stripe** — single-confident-accent dev-API discipline; tight 6px button radii; paper-white canvas; restrained chromatic system. Postmark substitutes blurple for postal-yellow. https://stripe.com
+- **Resend** — direct competitor in transactional email; Postmark countersteers with warm yellow + warm black against Resend's pure-black editorial. https://resend.com
+- **Inter** (Rasmus Andersson) — open-source UI sans family at 400/500/600/700/800; Postmark uses Inter as the entire type voice. https://rsms.me/inter/
+- **JetBrains Mono** — open-source code-ligature mono used for code blocks and delivery-stat numerals.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** hold the yellow `#ffde00` to CTAs and callout surfaces. Using it as a body wash flattens the brand into Mailchimp territory.
+- **Do** set body text in warm black `#1c1d1f`, never pure `#000`. The warmth is what distinguishes Postmark from cold-minimal competitors like Resend.
 - **Do** use the functional blue `#1c4eb8` for links and inline references, keeping yellow reserved for action.
-- **Don''t** apply the yellow to body text or headlines — it lives only in surfaces and CTAs.
-- **Don''t** soften the brand voice with rounded pills or playful illustration — Postmark''s tone is functional warmth, not playfulness.
-- **Don''t** drop body type below 17px; the slightly-larger body is part of the brand''s "addressed to you, not pitched at you" voice.
+- **Do** put warm-black text on yellow — never white. White-on-yellow fails contrast (1.7:1) and is forbidden.
+- **Do** size body type at 17px, not 16px. The slightly-larger body is part of the addressed-to-you voice.
+- **Do** use 6px button radii and 8–12px card radii. The two-tier radius differential (CTA tight, callout soft) is the brand's geometry.
+- **Do** keep the yellow callout (`#fff8d4`) to 1–2 appearances per page. Overuse dilutes the signature gesture.
+- **Do** show real delivery-stat dashboard UI in product mocks. The Wildbit honesty register depends on real chrome, not stylised diagrams.
+- **Do** use Inter at weight 800 only at the hero — never below display-large (60px). Bold tier doesn't bleed into sub-heads.
+- **Do** switch the focus ring to blue (`rgba(28,78,184,0.30)`) when on yellow CTAs — yellow-on-yellow rings vanish.
+
+### Don't
+
+- **Don't** apply the yellow to body text or headlines — it lives only in surfaces and CTAs.
+- **Don't** put white text on the yellow CTA — it fails contrast. The yellow always pairs with warm-black ink.
+- **Don't** soften the brand voice with rounded pills (9999 radius) on CTAs — Postmark's geometry is tight 6px, not pill. Pills appear only on status badges.
+- **Don't** introduce a display serif or editorial font. Inter is the entire system; introducing a serif tips the brand toward Resend territory.
+- **Don't** drop body type below 17px — the slightly-larger body is part of the brand's "addressed to you, not pitched at you" voice.
+- **Don't** stylise the delivery-stat dashboard into abstract charts. The literal product UI is the brand's honesty asset.
+- **Don't** use saturation-heavy gradients or hero animations. The brand is functional warmth, not motion-graphic SaaS.
+- **Don't** reach for pure `#000` for body text. Warm black `#1c1d1f` is non-negotiable.
+- **Don't** put more than two yellow callouts on a page. Once is signature; twice is reinforcement; three is shouting.
+- **Don't** use `loading="lazy"` on the hero illustration — it's above the fold and needs to render first paint.
+- **Don't** use yellow for error/danger states. Red `#dc2626` carries danger; yellow stays positive (action, callouts).
+- **Don't** introduce a new accent hue. The system is yellow + warm-black + functional-blue + green/red/amber for status — nothing else.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:           #ffffff
+text:         #1c1d1f
+brand:        #ffde00
+brand-soft:   #fff8d4
+brand-hover:  #f0d000
+on-brand:     #1c1d1f
+link:         #1c4eb8
+text-muted:   #5c5e63
+border:       #e5e5e2
+bg-dark:      #1c1d1f
+success:      #22c55e
+error:        #dc2626
+```
+
+### Example Component Prompts
+
+- **Hero:** "Create a hero in Postmark style — paper-white `#ffffff` canvas, Inter 72/800 headline 'Send transactional email people actually receive.' with `-0.025em` tracking, 19px Inter 400 deck below in `#5c5e63`, primary yellow CTA 'Sign Up Free' (`#ffde00` fill, `#1c1d1f` text, 6px radius, Inter 15/600) paired with outlined warm-black secondary 'Talk to Sales'. Center the layout. No hero video, no gradient."
+
+- **Yellow Callout:** "Design a Postmark-style yellow callout band — `#fff8d4` background, 12px radius, 40/48px padding, no border, soft `rgba(255,222,0,0.18) 0 8px 24px -8px` under-glow. Inside: Inter 26/600 pull-quote in `#1c1d1f`, attribution caption in 13/400 `#5c5e63` below."
+
+- **Delivery-Stat Mock Card:** "Build a Postmark delivery dashboard mock — white card with `1px solid #e5e5e2` hairline, 8px radius, 24px padding. Table inside: 4 columns (Recipient / Subject / Status / Sent At), 5 rows of sample data. Status column uses pill badges: green (`#dcfce7` bg, `#15803d` text) for Delivered, red (`#fee2e2` bg, `#b91c1c` text) for Bounced. JetBrains Mono 14px for the message-IDs, Inter 14px for everything else. `tnum` on numerals."
+
+- **Pricing Card:** "Create a Postmark pricing card — white card, 12px radius, `1px solid #e5e5e2`, 32px padding. Inter 26/600 plan name, Inter 48/700 price with `$` superscript, Inter 17/400 feature list with green check `#22c55e` glyphs. Featured tier swaps to `#fff8d4` background and `2px solid #ffde00` border."
+
+- **Code Block:** "Render a Postmark API code block — `#1c1d1f` warm-black fill, 8px radius, 20/24 padding, JetBrains Mono 14/400 in `#f5f5f2`, no syntax-highlighting colours (the brand keeps code blocks neutral). Add a small copy button in the top-right with a JetBrains Mono 11px label."
+
+- **Footer Band:** "Compose a Postmark footer — `#1c1d1f` warm-black band, full-bleed, 64px vertical padding. Four columns of nav links in Inter 15/500 `#c9ccd1`, hovering to `#ffffff`. Logo + copyright in left column with the postal-yellow envelope-mark glyph. No social-media icon clutter."
+
+### Iteration Guide
+
+1. **Start with the canvas, then add the yellow callout.** The brand begins with paper-white `#ffffff`. The first chromatic event should be a single `#fff8d4` callout — once the page has that, the rest of the system follows naturally.
+
+2. **Use yellow CTAs sparingly — one per viewport.** Each viewport scroll should see exactly one yellow action moment. Two yellows in a single screen flattens the hierarchy; the brand's chromatic discipline is what gives the yellow its punch.
+
+3. **Type before colour.** If a layout doesn't read in monochrome Inter at 17/600, no amount of yellow will fix it. Postmark's brand is type-first, accent-second.
+
+4. **Pair every yellow with warm-black.** White on yellow fails contrast. If the design needs white on yellow, switch to the dark CTA (`#1c1d1f` fill) instead.
+
+5. **Tight buttons, soft callouts.** Buttons at 6px radius, callouts at 12px. The differential is part of the brand. Don't homogenise the radii.
+
+6. **Show the dashboard, not a stylised abstraction.** Postmark's product mocks are real-looking — tables of real-looking emails with real-looking status pills. Avoid "what if this were a sci-fi data viz" temptation.
+
+7. **17px body, not 16px.** Drop the body to 16 only inside dense data tables. Marketing copy stays at 17 — the addressed-to-you voice depends on the slightly-larger size.
+
+8. **No editorial drama.** No display serif, no italic emphasis, no gradient hero. The brand is friendly post-office sign, not literary magazine. Add drama only via type weight (700/800 hero) and chromatic punctuation (the yellow), never via decoration.

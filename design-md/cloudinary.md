@@ -9,7 +9,7 @@ featured: false
 categories: [dev-tools, saas]
 tags: [light, blue, sans, technical, media, api, dev-tools]
 preview_swatch: ['#ffffff', '#3448c5', '#0d152e']
-related: [stripe, mux, livekit]
+related: [stripe]
 description: 'Cloudinary''s marketing surface is media-API technical infrastructure dressed in confident navy-blue. The canvas is pure white `#ffffff` with deep navy `#0d152e` mid-page bands, and the type is Inter at modest mid-weights (500–600 for display) sitting in a structured, dev-tool-credible layout. Brand voltage is `#3448c5` Cloudinary blue — a deep saturated blue that anchors primary CTAs, brand wordmark, and feature accents. Where Stripe is single-color discipline and AWS is enterprise-cool, Cloudinary occupies a media-platform middle ground: technical credibility (code blocks, API references, transformation strings) paired with media warmth (photo galleries, video thumbnails, image-transformation demos). The signature design move is the **transformation chip** — a small horizontal pill showing a Cloudinary URL fragment (`f_auto,q_auto,w_800`) as a code-style accent inline with feature copy. Demo cards carry real before/after image transformations, video player UI, and DAM (digital asset management) interfaces. Section rhythm: white hero → image-transformation demo grid → dark navy code-block band → white feature grid → pricing → footer. The voice is technically confident, dev-friendly, and explicitly capability-focused — Cloudinary writes about MIME types, transformation parameters, and CDN edge nodes alongside the marketing copy.'
 
 colors:

@@ -6,7 +6,7 @@ source_url: https://www.bmw-m.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [dark, motorsport, sans, bold, photography, racing]
 preview_swatch: ['#0a0a0a', '#1c69d4', '#e22718']
 related: [bmw, ferrari, lamborghini]

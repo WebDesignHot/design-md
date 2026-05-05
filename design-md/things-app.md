@@ -199,6 +199,22 @@ accessibility:
   touch-target-min: 44
 
 dark-mode: null   # Light-only marketing surface. The Things app itself ships system-controlled light/dark themes; the public marketing site mirrors macOS active-window light styling only.
+
+lineage:
+  summary: 'Things'' marketing site is a Mac App Store landing page in disguise. Cool macOS inactive-window grey canvas, unstyled `ui-sans-serif` typography (so SF Pro on Mac, San Francisco on iOS, Segoe UI on Windows), and the singular Things-blue (`#5c9cf5`) borrowed from the app icon. Translucent navy at 50% opacity for inactive nav — the macOS Big Sur convention. The brand position: the marketing site signals that the product is *part of the OS*, not an alternative to it.'
+  influences:
+    - name: 'Apple Mac App Store'
+      role: 'Source of every visual move — system-ui typography, cool grey canvas, single icon-driven hero, App Store badges'
+      url: 'https://www.apple.com/app-store/'
+    - name: 'macOS Big Sur HIG'
+      role: 'Translucent navy on white text, soft system greys, no custom branding — the Vibrancy / Materials convention'
+      url: 'https://developer.apple.com/design/human-interface-guidelines/'
+    - name: 'Tweetbot / Day One / Fantastical'
+      role: 'Indie-Mac developer aesthetic — restraint as positioning, "we are part of the OS"'
+      url: 'https://tapbots.com/tweetbot/'
+    - name: 'Cultured Code'
+      role: 'Stuttgart-based studio — German precision is in the page DNA; brand reads as bureaucratic-Apple'
+      url: 'https://culturedcode.com'
 ---
 
 ## 1. Visual Theme & Atmosphere

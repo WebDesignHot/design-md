@@ -1,98 +1,323 @@
 ---
 name: Retool
-tagline: Pragmatic blue `#3a55fc` + Inter + dense product mocks — the internal-tool platform that designed itself like a well-organised admin panel.
+tagline: 'Pragmatic blue #3a55fc + Inter + dense product mocks — the internal-tool platform that designed itself like a well-organised admin panel.'
 author: webdesignhot
 source_url: https://retool.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools, saas]
-tags: [light, structured, sans, dense, cool]
+tags: [light, structured, sans, dense, cool, pragmatic]
 preview_swatch: ['#ffffff', '#3a55fc', '#0a0a0a']
 related: [vercel, linear, supabase]
-description: 'Retool''s site is the internal-tool platform rendered as a marketing page — a paper-white canvas, a confident `#3a55fc` indigo-blue that does almost all the brand work, and dense product mocks showing real Retool apps (admin panels, CRUD forms, internal dashboards). Type is **Inter** at 400/500/600/700, headlines hit 56–72px with negative tracking, and buttons sit at 6–8px radii in the dev-infra tradition. The visual register is "we built this for engineers who would otherwise write internal tools from scratch" — pragmatic, structurally rigorous, and unafraid to show real product UI in every hero illustration.'
+description: 'Retool''s site is the internal-tool platform rendered as a marketing page — a paper-white canvas, a confident ''#3a55fc'' indigo-blue that does almost all the brand work, and dense product mocks showing real Retool apps (admin panels, CRUD forms, internal dashboards). Type is Inter at 400/500/600/700, headlines hit 56–72px with negative tracking, and buttons sit at 6–8px radii in the dev-infra tradition. The visual register is "we built this for engineers who would otherwise write internal tools from scratch" — pragmatic, structurally rigorous, and unafraid to show real product UI in every hero illustration.'
 
 colors:
-  bg: '#ffffff'                # paper-white canvas
-  bg-soft: '#fafafa'           # secondary section background
-  surface: '#f4f4f5'           # raised card / panel surface
-  surface-hover: '#ebebed'     # hover state
-  bg-dark: '#0a0a0a'           # dark CTA / dark footer band
-  bg-tinted: '#f0f3ff'         # tinted brand surface for hero band
-  text: '#0a0a0a'              # primary copy, near-black
-  text-strong: '#000000'       # headline-grade text
-  text-muted: '#525252'        # secondary copy
-  text-soft: '#737373'          # captions, metadata
-  brand: '#3a55fc'              # the Retool indigo-blue
-  brand-hover: '#2c45e5'        # pressed state
-  brand-soft: '#e8edff'         # tinted brand surface for callouts
-  link: '#3a55fc'
-  on-brand: '#ffffff'
-  accent-purple: '#7c3aed'      # secondary illustration accent
-  accent-green: '#10b981'       # success / status indicator
-  accent-orange: '#f97316'      # warning / highlight in product mocks
-  border: '#e4e4e7'             # cool-grey hairline
-  border-soft: '#f0f0f2'        # softer divider
+  bg: '#ffffff'                   # paper-white canvas — no warmth tilt, cool-neutral default
+  bg-soft: '#fafafa'              # secondary section background — almost imperceptible step
+  bg-elev: '#f4f4f5'              # raised card / panel surface, cool-grey
+  bg-elev-2: '#ebebed'            # hover state for raised surfaces
+  bg-tinted: '#f0f3ff'            # tinted brand surface — hero accent band, callout
+  bg-tinted-2: '#e8edff'          # deeper tinted brand surface
+  surface: '#ffffff'              # primary card surface — canvas-equal white
+  surface-2: '#fafafa'            # nested secondary card surface
+  surface-tint: '#f0f3ff'         # tinted callout / feature card surface
+  bg-dark: '#0a0a0a'              # dark CTA / dark footer band — near-black
+  bg-dark-2: '#171717'            # secondary dark surface (footer subnav)
+  bg-dark-3: '#262626'            # tertiary dark surface (dark cards on dark hero)
+  text: '#0a0a0a'                 # primary copy — near-black
+  text-strong: '#000000'          # rare full-strength black for hero punch
+  text-muted: '#525252'           # secondary copy
+  text-soft: '#737373'            # captions, metadata
+  text-faint: '#a3a3a3'           # disabled / quiet
+  text-on-dark: '#ffffff'         # primary on dark surfaces
+  text-on-dark-soft: '#d4d4d8'    # secondary on dark
+  text-on-dark-muted: '#a1a1aa'   # tertiary on dark
+  brand: '#3a55fc'                # the Retool indigo-blue — single brand axis
+  brand-hover: '#2c45e5'          # pressed state — deeper indigo
+  brand-active: '#2238c9'         # active depressed state
+  brand-soft: '#e8edff'           # tinted brand surface for callouts
+  brand-soft-2: '#f0f3ff'         # softer tinted surface
+  brand-deep: '#1f2db8'           # deep indigo — illustrative accent shadow
+  link: '#3a55fc'                 # links are the brand blue (single-axis discipline)
+  link-hover: '#2c45e5'
+  on-brand: '#ffffff'             # white text on brand blue
+  accent-purple: '#7c3aed'        # secondary illustration accent — rare, mock-only
+  accent-purple-soft: '#f3e8ff'   # tinted purple surface
+  accent-green: '#10b981'         # success / status indicator in product mocks
+  accent-green-soft: '#d1fae5'    # success badge background
+  accent-orange: '#f97316'        # warning / highlight in product mocks
+  accent-orange-soft: '#ffedd5'   # warning badge background
+  accent-red: '#ef4444'           # error / danger in mocks
+  accent-red-soft: '#fee2e2'      # error badge background
+  border: '#e4e4e7'               # cool-grey hairline
+  border-soft: '#f0f0f2'          # softer divider
+  border-strong: '#d4d4d8'        # stronger border (focus, emphasized cards)
+  border-dark: '#262626'          # border on dark surfaces
+  border-brand: '#3a55fc'         # brand-tinted border (focus rings, featured cards)
+  shadow-soft: 'rgba(10,10,10,0.04)'   # ambient card lift
+  shadow-medium: 'rgba(10,10,10,0.08)' # hover elevation
+  shadow-strong: 'rgba(10,10,10,0.16)' # modal elevation
+  shadow-brand: 'rgba(58,85,252,0.20)' # brand-tinted shadow on featured CTAs
+  semantic-success: '#10b981'
+  semantic-warning: '#f97316'
+  semantic-danger: '#ef4444'
+  semantic-info: '#3a55fc'
 
 typography:
   display:
     family: 'Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype: ['kern', 'liga', 'calt', 'ss03']
   body:
     family: 'Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [400, 500, 600]
+    opentype: ['kern', 'liga', 'calt']
   mono:
     family: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    weights: [400, 500]
+    weights: [400, 500, 600]
+    opentype: ['kern', 'liga', 'tnum', 'zero']
   scale:
-    h1:    { size: 72, weight: 600, lineHeight: 1.05, tracking: '-0.025em' }
-    h2:    { size: 48, weight: 600, lineHeight: 1.1,  tracking: '-0.02em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em' }
-    body:  { size: 16, lineHeight: 1.6 }
-    code:  { size: 13, family: mono, lineHeight: 1.55 }
-    label: { size: 12, weight: 500, tracking: '0.03em' }
+    display-hero:    { size: 80, weight: 600, lineHeight: 1.0,  tracking: '-0.03em',  family: display, opentype: 'kern, liga, ss03' }
+    display-large:   { size: 72, weight: 600, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'kern, liga, ss03' }
+    h1:              { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.022em', family: display, opentype: 'kern, liga' }
+    h2:              { size: 48, weight: 600, lineHeight: 1.1,  tracking: '-0.02em',  family: display, opentype: 'kern, liga' }
+    h3:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em',  family: display, opentype: 'kern, liga' }
+    h4:              { size: 20, weight: 600, lineHeight: 1.3,  tracking: '0',        family: body }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body, opentype: 'kern, liga' }
+    body:            { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body, opentype: 'kern, liga' }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body, opentype: 'kern, liga' }
+    button:          { size: 14, weight: 500, lineHeight: 1.0,  tracking: '0',        family: body }
+    button-large:    { size: 15, weight: 500, lineHeight: 1.0,  tracking: '0',        family: body }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    label:           { size: 12, weight: 500, lineHeight: 1.3,  tracking: '0.03em',   family: body, transform: 'uppercase' }
+    label-mono:      { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.04em',   family: mono, transform: 'uppercase' }
+    caption:         { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    micro:           { size: 11, weight: 500, lineHeight: 1.3,  tracking: '0.04em',   family: body, transform: 'uppercase' }
+    code:            { size: 13, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono, opentype: 'tnum, zero' }
+    code-bold:       { size: 13, weight: 500, lineHeight: 1.55, tracking: '0',        family: mono }
+    code-inline:     { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0',        family: mono }
 
 radius:
+  none: 0
+  micro: 2
   xs: 4
-  sm: 6
-  md: 8
-  lg: 12
-  card: 12
-  button: 8
+  sm: 6                            # input radius
+  md: 8                            # button radius — dev-infra norm
+  lg: 12                           # card radius
+  xl: 16                           # modal corners
   pill: 9999
 
+spacing:
+  base: 4
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  xxl: 32
+  section-sm: 64
+  section: 96                      # default vertical rhythm — dev-infra spacious
+  section-lg: 128
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96, 128, 160]
+
 layout:
-  container: 1280
-  gutter: 24
-  section: 96
-  grid: 12
-  density: 'high'
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+  hero-height: 720
+  grid-gap: 24
+  grid-columns: 12
+  density: 'high'                  # feature-comparison tables and integration grids run dense
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-exit: 'cubic-bezier(0.4, 0, 1, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  duration-fade: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — product-mock scroll animations freeze; CTA hover collapses to opacity-only; integration logo carousel pauses'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(10,10,10,0.04) 0 1px 2px'
+  standard: 'rgba(10,10,10,0.08) 0 4px 12px'
+  elevated: 'rgba(10,10,10,0.12) 0 16px 40px'
+  deep: 'rgba(10,10,10,0.20) 0 24px 56px'
+  ring: '0 0 0 3px rgba(58,85,252,0.30)'
+  ring-soft: '0 0 0 3px rgba(58,85,252,0.15)'
+  brand-glow: '0 0 0 6px rgba(58,85,252,0.10)'
+  product-mock: 'rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px'
+
+accessibility:
+  contrast-text-on-bg: 19.4              # #0a0a0a on #ffffff — AAA at all sizes
+  contrast-text-on-brand: 5.6            # #ffffff on #3a55fc — AA at body, AAA at large
+  contrast-link-on-bg: 5.6                # #3a55fc on #ffffff — AA at body, AAA at large
+  contrast-muted-on-bg: 7.8               # #525252 on #ffffff — AAA at body
+  contrast-soft-on-bg: 4.8                # #737373 on #ffffff — AA at body
+  contrast-text-on-dark: 19.4             # #ffffff on #0a0a0a — AAA
+  contrast-on-tinted: 18.2                # #0a0a0a on #f0f3ff — AAA
+  focus-ring: '3px solid rgba(58,85,252,0.30) — brand-tinted ring with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual; skip-link present; product-mock interactive elements are keyboard-accessible (the marketing site mocks aren''t actually interactive but their illustrative hover states respect keyboard focus)'
 
 components:
   button-primary:
-    bg: '#3a55fc'
-    color: '#ffffff'
+    background: '#3a55fc'
+    text: '#ffffff'
     radius: 8
-    weight: 500
     padding: '10px 18px'
+    height: 40
+    font: button
+    border: 'none'
+    hover: 'background #2c45e5; transform translateY(-1px); shadow rgba(58,85,252,0.20) 0 6px 16px -4px'
+    active: 'background #2238c9; transform translateY(0)'
+    focus: 'outline 3px solid rgba(58,85,252,0.30); outline-offset 2px'
+    use: 'primary CTA — Get Started, Start free trial, Book demo. The indigo is the only chromatic action voice on the page.'
   button-secondary:
-    bg: '#ffffff'
-    color: '#0a0a0a'
+    background: '#ffffff'
+    text: '#0a0a0a'
     radius: 8
+    padding: '10px 18px'
+    height: 40
+    font: button
     border: '1px solid #e4e4e7'
+    hover: 'background #fafafa; border #d4d4d8'
+    use: 'secondary CTA — Watch demo, Read docs. Outlined neutral pair to indigo primary.'
   button-dark:
-    bg: '#0a0a0a'
-    color: '#ffffff'
+    background: '#0a0a0a'
+    text: '#ffffff'
     radius: 8
-  card:
-    bg: '#ffffff'
-    radius: 12
+    padding: '10px 18px'
+    height: 40
+    font: button
+    hover: 'background #171717; transform translateY(-1px)'
+    use: 'high-contrast CTA on tinted brand callout backgrounds, where indigo-on-tinted-indigo would lose punch.'
+  button-ghost:
+    background: 'transparent'
+    text: '#0a0a0a'
+    radius: 8
+    padding: '8px 14px'
+    font: button
+    hover: 'background #f4f4f5'
+    use: 'tertiary text-link CTA / nav action.'
+  card-feature:
+    background: '#ffffff'
+    text: '#0a0a0a'
     border: '1px solid #e4e4e7'
-  product-mock:
-    bg: '#ffffff'
     radius: 12
+    padding: '24px'
+    use: 'feature card on canvas — cool-grey hairline, no shadow.'
+  card-tinted:
+    background: '#f0f3ff'
+    text: '#0a0a0a'
+    border: 'none'
+    radius: 12
+    padding: '32px'
+    use: 'tinted brand callout card — for hero "what is Retool" section.'
+  card-product-mock:
+    background: '#ffffff'
+    text: '#0a0a0a'
     border: '1px solid #e4e4e7'
-    chrome: 'admin-panel'   # tables, forms, sidebars rendered at marketing scale
+    radius: 12
+    padding: '0'
+    shadow: 'rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px'
+    chrome: 'admin-panel — sidebar, table grid, action bar, status pills'
+    use: 'the hero — actual Retool app rendered at marketing scale. The brand''s honesty asset.'
+  card-pricing:
+    background: '#ffffff'
+    text: '#0a0a0a'
+    border: '1px solid #e4e4e7'
+    radius: 12
+    padding: '32px'
+    use: 'pricing tier card — neutral default.'
+  card-pricing-featured:
+    background: '#ffffff'
+    text: '#0a0a0a'
+    border: '2px solid #3a55fc'
+    radius: 12
+    padding: '32px'
+    shadow: 'rgba(58,85,252,0.20) 0 12px 32px -8px'
+    use: 'featured pricing tier — brand-blue border + brand-tinted shadow.'
+  badge-pill-success:
+    background: '#d1fae5'
+    text: '#047857'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'success status pill in product mocks — Active, Synced, Connected.'
+  badge-pill-warning:
+    background: '#ffedd5'
+    text: '#c2410c'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'warning pill — Pending, Throttled.'
+  badge-pill-error:
+    background: '#fee2e2'
+    text: '#b91c1c'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'error pill — Failed, Disconnected.'
+  badge-pill-info:
+    background: '#e8edff'
+    text: '#3a55fc'
+    radius: 9999
+    padding: '4px 10px'
+    font: micro
+    use: 'info pill — Beta, New, Updated.'
+  input:
+    background: '#ffffff'
+    text: '#0a0a0a'
+    border: '1px solid #d4d4d8'
+    radius: 6
+    padding: '10px 14px'
+    height: 40
+    font: body
+    focus: 'border #3a55fc; ring 0 0 0 3px rgba(58,85,252,0.30)'
+    use: 'form input — sign-up email, contact form.'
+  code-block:
+    background: '#0a0a0a'
+    text: '#fafafa'
+    border: 'none'
+    radius: 8
+    padding: '20px 24px'
+    font: code
+    use: 'JS expression / API code sample — dark fill, JetBrains Mono 13.'
+  code-inline:
+    background: '#f4f4f5'
+    text: '#0a0a0a'
+    border: '1px solid #e4e4e7'
+    radius: 4
+    padding: '2px 6px'
+    font: code-inline
+    use: 'inline code chip — `{{ query.data }}`, `retool.dev/...` references.'
+  nav-link:
+    background: 'transparent'
+    text: '#525252'
+    font: nav-link
+    padding: '8px 14px'
+    hover: 'color #0a0a0a'
+    use: 'top nav menu — Product / Customers / Pricing / Docs / Blog.'
+  integration-tile:
+    background: '#ffffff'
+    text: '#0a0a0a'
+    border: '1px solid #e4e4e7'
+    radius: 8
+    padding: '20px'
+    use: 'integration logo + name tile — used in 8-column dense grid showing Retool''s ~100 integrations.'
+
+dark-mode: optional
 
 lineage:
   summary: |
@@ -101,12 +326,12 @@ lineage:
     for that — every hero illustration is an actual Retool app
     (CRUD form, admin panel, multi-table dashboard) rendered at
     marketing scale, with real-looking data and real-looking
-    sidebars. The body canvas is paper-white, headlines hit 72px
-    at weight 600 in **Inter** with `-0.025em` tracking, and the
-    confident `#3a55fc` indigo-blue carries every link, CTA fill,
-    and brand mark. Where Vercel and Linear use accent colours that
-    feel "designed", Retool''s indigo-blue feels chosen — it''s the
-    blue you''d pick if you were building an admin panel and only
+    sidebars. The body canvas is paper-white, headlines hit 72–80px
+    at weight 600 in **Inter** with `-0.025em → -0.03em` tracking,
+    and the confident `#3a55fc` indigo-blue carries every link, CTA
+    fill, and brand mark. Where Vercel and Linear use accent colours
+    that feel "designed", Retool''s indigo-blue feels chosen — it''s
+    the blue you''d pick if you were building an admin panel and only
     had time for one accent. **JetBrains Mono** carries every code
     sample (Retool''s low-code platform still ships JS expressions
     in every component), and the layout density is intentionally
@@ -115,105 +340,689 @@ lineage:
     Vercel-and-Linear-adjacent for chromatic restraint and grid
     discipline, but Retool pushes harder on product-mock fidelity
     and on the "this looks like the tool you''re buying" honesty.
+    The signature design move is the **admin-panel-as-hero**: the
+    page''s primary visual is not a stylised illustration of internal
+    tooling but a screenshot of an actual Retool app — sidebars,
+    tables, action bars, status pills, all rendered at full marketing
+    scale. The brand statement is encoded in that choice: "this is
+    the tool, and the tool is enough."
   influences:
     - name: Linear
-      role: Structural rigour, restrained accent palette, Inter-everywhere typography.
+      role: 'Structural rigour, restrained accent palette, Inter-everywhere typography. Retool inherits Linear''s grid discipline and dev-infra neutrality, but pushes harder on product-mock fidelity.'
       url: https://linear.app
     - name: Vercel
-      role: Cool dark/light contrast bands, single-accent dev-infra discipline, tight button radii.
+      role: 'Cool dark/light contrast bands, single-accent dev-infra discipline, tight button radii. Retool substitutes Vercel''s pure-black geometric register for a slightly warmer near-black canvas.'
       url: https://vercel.com
     - name: Stripe
-      role: Single-confident-blue brand axis (Stripe blurple → Retool indigo) and dense feature-table marketing pattern.
+      role: 'Single-confident-blue brand axis (Stripe blurple → Retool indigo). The dense feature-table marketing pattern and the "API as marketing surface" tradition.'
       url: https://stripe.com
+    - name: Supabase
+      role: 'Dev-infra-with-real-product-UI tradition. Both brands lean into showing the actual product chrome rather than abstracting it into stylised illustration.'
+      url: https://supabase.com
+    - name: Inter (Rasmus Andersson)
+      role: 'Open-source UI sans family — variable weights 100–900. The de-facto dev-infra type voice; Retool uses it across the entire system.'
+      url: https://rsms.me/inter/
+    - name: JetBrains Mono
+      role: 'Open-source code-ligature mono. Retool carries more mono than peers because the platform surfaces JS expressions in every component.'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Retool''s site refuses to dress up the internal-tool category. The
-canvas is paper-white, headlines hit 72px at weight 600 in **Inter**
-with `-0.025em` tracking, and the indigo-blue `#3a55fc` carries
-every link, CTA fill, and brand reference. Every hero illustration
-is an actual Retool app — admin panel, CRUD form, multi-table
-dashboard — rendered at marketing scale with real-looking data,
-real sidebars, and real interaction chrome.
+Retool's marketing site refuses to dress up the internal-tool category. The canvas is paper-white `#ffffff`, headlines hit 72–80px at weight 600 in **Inter** with `-0.025em` to `-0.03em` tracking, and the indigo-blue `#3a55fc` carries every link, CTA fill, and brand reference. Every hero illustration is an actual Retool app — admin panel, CRUD form, multi-table dashboard — rendered at marketing scale with real-looking data, real sidebars, and real interaction chrome.
 
-The signature gesture is the **product-mock-as-hero**: not a stylised
-illustration of what Retool could do, but a screenshot of what
-Retool *is*. It says "this is the tool, and the tool is enough." That
-honesty distinguishes Retool from competitors who try to make
-internal tooling look like consumer SaaS.
+The signature gesture is the **product-mock-as-hero**: not a stylised illustration of what Retool *could* do, but a screenshot of what Retool *is*. It says "this is the tool, and the tool is enough." That honesty distinguishes Retool from competitors who try to make internal tooling look like consumer SaaS. The product mock arrives below or beside the hero headline at full 1200px width, with a sidebar of database connections, a main table grid of order rows, action buttons in indigo, and status pills in green/orange/red. The entire visual is the product's actual chrome, calibrated for marketing.
 
-## Colors
+The atmosphere is **structural, cool, slightly serious** — closer to the trade-magazine register of Bloomberg's terminal than to consumer-SaaS warmth. Sections breathe at 96px vertical rhythm, the integration logo band runs dense (8 columns of small SaaS marks), and customer-quote bands use cool-grey surfaces with hairline borders. The page is not flashy: there's no animated gradient, no parallax, no hero video. The interactivity is purposeful — hover states on cards, gentle elevation on buttons, scroll-triggered reveals on the product mock — but never decorative.
 
-- **bg** `#ffffff` — paper-white canvas, no warmth tilt
-- **bg-soft** `#fafafa` — secondary section background
-- **surface** `#f4f4f5` — raised card / panel surface, cool-grey
-- **bg-tinted** `#f0f3ff` — tinted brand surface for hero accent band
-- **bg-dark** `#0a0a0a` — dark CTA / dark footer
-- **brand** `#3a55fc` — the Retool indigo-blue, single-hue brand axis
-- **brand-soft** `#e8edff` — tinted callout surface
-- **accent-purple** `#7c3aed` — secondary illustration accent
-- **text** `#0a0a0a` — near-black primary copy
-- **text-muted** `#525252` — secondary copy
-- **border** `#e4e4e7` — cool-grey hairline divider
+Below the hero, sections walk through the platform's value: **Connect to anything** (a grid of 100+ integration tiles), **Build with components** (a dense feature comparison table), **Deploy with confidence** (a code block showing JS expressions and API endpoints), **Customer stories** (cards with company logos and pull-quotes from engineering leaders at Coinbase, Brex, NBC, DoorDash). Each section uses the same chromatic discipline: indigo for the action moment, neutral grey for chrome, near-black for type.
 
-## Typography
+The overall tonal range is narrow — paper-white, cool-grey, near-black, indigo, with rare illustrative accents in purple and orange inside product mocks. The discipline is what makes the brand cohere: every page on retool.com looks like the same designer made it because every page uses the same five colours and the same grid system. The dark `#0a0a0a` footer band closes the page with a high-contrast inversion that mirrors the dark CTA used inside tinted callouts.
 
-Display and body are both **Inter** at weights 400/500/600/700, sized
-72px on a 75.6px line-height (1.05) for the hero with `-0.025em`
-tracking. Inter is the structurally-correct sans for dev-infra
-marketing — Retool inherits its typographic register directly from
-Linear/Vercel/Supabase, which is part of the brand''s "we know what
-camp we''re in" honesty.
+**Key Characteristics:**
+- Paper-white canvas (`#ffffff`) — cool-neutral default, no warmth tilt.
+- Single brand axis: indigo-blue `#3a55fc` carries CTAs, links, brand mark, illustrative accents.
+- Inter at 400/500/600/700 across the entire system — no display serif, no editorial register.
+- Hero hits 72–80px Inter 600 with `-0.025em → -0.03em` tracking — confident, structural.
+- Product-mock-as-hero — actual Retool app chrome, not stylised illustration.
+- 8px button radii / 12px card radii — dev-infra norm.
+- JetBrains Mono carries code samples and inline `{{ query.data }}` expressions — heavier mono presence than peer brands.
+- Dense layouts — 8-column integration grids, feature-comparison tables, customer-logo bands.
+- Cool-grey surface ladder (`#fafafa → #f4f4f5 → #ebebed`) — separates through tilt, not shadow.
+- Dark `#0a0a0a` footer — high-contrast page closure.
 
-Code samples and inline expressions use **JetBrains Mono** at 400
-and 500, sized 13px on a 1.55 line-height. The mono presence is
-heavier than on most marketing sites because Retool''s low-code
-platform still surfaces JS expressions in every component — the
-docs and marketing reflect that reality.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-A 1280px max container with 24px gutters and 96px vertical rhythm.
-Cards use 12px radii, buttons use 8px (the dev-infra norm), and
-product mocks use 12px with a hairline border to register as
-"raised panel". The 12-column grid is densely subdivided in
-feature-comparison tables and integration-logo bands (Retool
-integrates with hundreds of databases and APIs, and the marketing
-shows it).
+- **Background** (`#ffffff`): paper-white canvas. Cool-neutral default, no warmth tilt. The dev-infra ground.
+- **Text** (`#0a0a0a`): near-black primary copy. Slightly softer than pure `#000` to ease against pure-white. AAA contrast (19.4:1) at all sizes.
+- **Brand** (`#3a55fc`): the Retool indigo-blue — single brand axis. Carries CTAs, links, brand mark, focus rings, illustrative accents.
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth is achieved through cool-grey tonal layering and a single
-hairline (`#e4e4e7`). Cards rarely use shadows; the `#f4f4f5`
-surface tier separates from white through colour tilt alone.
-Product mocks sometimes carry a soft 0.04 black drop-shadow to
-lift them off the page, but the rule is restraint — the mocks
-are dense enough that they don''t need elevation to read as
-distinct panels.
+- **Brand Hover** (`#2c45e5`): pressed-state indigo, deeper.
+- **Brand Active** (`#2238c9`): active-depressed indigo.
+- **Brand Soft** (`#e8edff`): tinted brand surface for callouts and badge backgrounds.
+- **Brand Soft 2** (`#f0f3ff`): softer tinted surface for hero accent bands.
+- **Brand Deep** (`#1f2db8`): deep indigo — illustrative accent shadow inside product mocks.
+- **Bg Dark** (`#0a0a0a`): the near-black dark surface — dark CTA, dark footer, dark code blocks.
+- **Bg Dark 2** (`#171717`): secondary dark surface for nested chrome.
+- **Bg Dark 3** (`#262626`): tertiary dark surface for dark cards on dark hero variants.
 
-## Shapes
+### Accent
 
-Radii ladder is 4/6/8/12, with cards at 12px and buttons at 8px.
-The geometry sits squarely in the modern dev-infra norm (Vercel,
-Supabase, Linear), and Retool doesn''t deviate. Pills (`9999px`)
-appear only for status tags and integration chips inside product mocks.
+The single chromatic accent is the brand indigo. Secondary accents appear only inside product-mock illustrations:
 
-## Components
+- **Accent Purple** (`#7c3aed`): rare illustrative accent — used in product mocks for specific data points (chart series, status indicators).
+- **Accent Purple Soft** (`#f3e8ff`): tinted purple surface (rare).
+- **Accent Green** (`#10b981`): success indicator in mocks.
+- **Accent Orange** (`#f97316`): warning highlight in mocks.
+- **Accent Red** (`#ef4444`): error / danger in mocks.
 
-The defining components are the **indigo CTA** (`#3a55fc` fill,
-white text, 8px radius, Inter 500), the **product-mock card**
-(white panel, 12px radius, hairline border, real admin-panel UI),
-and the **dark `#0a0a0a` secondary CTA** for high-contrast moments.
-Customer-logo bands run dense (8–12 columns of small SaaS marks),
-and feature-comparison tables use the cool-grey surface tier with
-the indigo brand-pop for "yes, included" cells.
+These accents are **illustration-only** — they never structure the brand chrome. Indigo is the only structural accent.
 
-## Do''s and Don''ts
+### Interactive
 
-- **Do** keep `#3a55fc` as the single brand-axis colour; the purple/green/orange accents are illustration-only, never structural.
-- **Do** show real Retool product UI in hero illustrations — the platform''s honesty is the strongest brand asset, and stylised illustrations would dilute it.
-- **Do** lean into density in feature-comparison tables and integration-logo bands; Retool''s value proposition is breadth, and the layout should reflect it.
-- **Don''t** soften the brand voice with rounded pills or playful illustration — Retool''s tone is pragmatic engineering, not consumer warmth.
-- **Don''t** introduce a display sans or editorial serif; Inter + JetBrains Mono is the entire system, and the restraint is deliberate.
-- **Don''t** stylise product mocks into abstract diagrams — the actual admin-panel UI is what makes the marketing trustworthy.
+- **Link** (`#3a55fc`): inline links match the brand exactly. Single-axis discipline — Retool doesn't differentiate link colour from CTA colour.
+- **Link Hover** (`#2c45e5`): deeper indigo.
+- **Focus Ring** (`0 0 0 3px rgba(58,85,252,0.30)`): brand-tinted ring with 2px offset.
+- **Brand Glow** (`0 0 0 6px rgba(58,85,252,0.10)`): rare emphasis halo on featured CTAs.
+
+### Neutral Scale
+
+- **Text** (`#0a0a0a`): near-black primary copy.
+- **Text Strong** (`#000000`): rare full-strength black for hero punch.
+- **Text Muted** (`#525252`): secondary copy. AAA contrast (7.8:1).
+- **Text Soft** (`#737373`): captions, metadata. AA at body (4.8:1).
+- **Text Faint** (`#a3a3a3`): disabled, placeholder.
+- **Text on Dark** (`#ffffff`): primary on `#0a0a0a`.
+- **Text on Dark Soft** (`#d4d4d8`): secondary on dark.
+- **Text on Dark Muted** (`#a1a1aa`): tertiary on dark.
+
+### Surface & Borders
+
+- **Bg Soft** (`#fafafa`): secondary section background — almost imperceptible step from canvas.
+- **Bg Elev** (`#f4f4f5`): raised card / panel surface.
+- **Bg Elev 2** (`#ebebed`): hover state for raised surfaces.
+- **Bg Tinted** (`#f0f3ff`): tinted brand surface — hero accent band, callout.
+- **Bg Tinted 2** (`#e8edff`): deeper tinted brand surface.
+- **Border** (`#e4e4e7`): cool-grey hairline divider.
+- **Border Soft** (`#f0f0f2`): softer divider.
+- **Border Strong** (`#d4d4d8`): emphasized border (focus, hover).
+- **Border Dark** (`#262626`): hairline on dark surfaces.
+- **Border Brand** (`#3a55fc`): brand-tinted border (focus, featured cards).
+
+### Shadow Colors
+
+- **Ambient** (`rgba(10,10,10,0.04) 0 1px 2px`): rare faint card lift.
+- **Standard** (`rgba(10,10,10,0.08) 0 4px 12px`): button-hover elevation.
+- **Elevated** (`rgba(10,10,10,0.12) 0 16px 40px`): modal / large surface lift.
+- **Deep** (`rgba(10,10,10,0.20) 0 24px 56px`): rare full-modal backdrop.
+- **Brand Glow** (`rgba(58,85,252,0.20)`): brand-tinted shadow on featured CTA hover.
+- **Product Mock** (`rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px`): the two-layer shadow that lifts product mocks off the canvas.
+
+### Semantic
+
+- **Success** (`#10b981`) on bg `#d1fae5`: Active / Synced / Connected status pill.
+- **Warning** (`#f97316`) on bg `#ffedd5`: Pending / Throttled status pill.
+- **Danger** (`#ef4444`) on bg `#fee2e2`: Failed / Disconnected status pill.
+- **Info** (`#3a55fc`) on bg `#e8edff`: Beta / New / Updated status pill.
+
+## 3. Typography Rules
+
+### Font Family
+
+A single-family system with a code companion:
+
+- **Display:** `Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Rasmus Andersson's open-source UI sans, used at weights 500/600/700 for hero and section headlines. Hero punch comes from negative tracking and weight 600 (not bold) — the "structural" register avoids the loud impact of weight 700–800.
+- **Body:** Same family at 400/500/600. Body sits at 16px on 1.6 line-height — the dev-infra default. Body-large at 18px is reserved for hero deck.
+- **Mono:** `"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`. JetBrains' open-source mono with code ligatures. Used at 13px for code blocks (a touch tighter than peers) and 14px for inline code chips. Tabular figures (`tnum`) and slashed zero (`zero`) for data rows in product mocks.
+
+### OpenType Features
+
+- **Inter Display:** `kern, liga, ss03` — kerning, standard ligatures, and stylistic set 03 (alternate `f` and `t` shapes that read better at large sizes).
+- **Inter Body:** `kern, liga, calt` — standard contextual alternates.
+- **JetBrains Mono:** `kern, liga, tnum, zero` — code ligatures, tabular figures, slashed zero. Tabular figures matter most in product mocks where columns of numerical data appear.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Inter | 80 | 600 | 1.0 | -0.03em | kern, liga, ss03 | Largest hero — homepage tagline (rare) |
+| display-large | Inter | 72 | 600 | 1.05 | -0.025em | kern, liga, ss03 | Section hero |
+| h1 | Inter | 56 | 600 | 1.05 | -0.022em | kern, liga | Page H1 |
+| h2 | Inter | 48 | 600 | 1.1 | -0.02em | kern, liga | Section heads |
+| h3 | Inter | 28 | 600 | 1.25 | -0.01em | kern, liga | Sub-section heads |
+| h4 | Inter | 20 | 600 | 1.3 | 0 | kern, liga | Card titles, feature heads |
+| body-large | Inter | 18 | 400 | 1.55 | 0 | kern, liga | Hero deck |
+| body | Inter | 16 | 400 | 1.6 | 0 | kern, liga | Default body — dev-infra norm |
+| body-small | Inter | 14 | 400 | 1.5 | 0 | kern, liga | Footer, captions, dense regions |
+| button | Inter | 14 | 500 | 1.0 | 0 | kern | CTA label |
+| button-large | Inter | 15 | 500 | 1.0 | 0 | kern | Hero CTA |
+| nav-link | Inter | 14 | 500 | 1.4 | 0 | kern | Top nav |
+| label | Inter | 12 | 500 | 1.3 | 0.03em | kern, uppercase | UPPERCASE eyebrow |
+| label-mono | JetBrains Mono | 11 | 500 | 1.3 | 0.04em | tnum, uppercase | Mono UPPERCASE — API category labels |
+| caption | Inter | 13 | 400 | 1.45 | 0 | kern | Caption under product mocks |
+| micro | Inter | 11 | 500 | 1.3 | 0.04em | kern, uppercase | Status pill text |
+| code | JetBrains Mono | 13 | 400 | 1.55 | 0 | tnum, zero | Inline code in code blocks |
+| code-bold | JetBrains Mono | 13 | 500 | 1.55 | 0 | tnum, zero | Code emphasis |
+| code-inline | JetBrains Mono | 14 | 500 | 1.4 | 0 | tnum, zero | Inline code chip in body copy |
+
+### Principles
+
+- **Inter at weight 600, not 700.** Retool's hero punch comes from weight 600 with negative tracking, not from weight 700–800. The brand register is "structural confidence", not "marketing impact". Bumping to 700 would tip toward consumer-SaaS loudness.
+- **Negative tracking on display.** -0.03em on display-hero, scaling down to -0.022em at h1 and 0 at body. The standard Inter optical-size tradition; keeps wide letterforms tight at hero scale.
+- **Body at 16px.** Standard dev-infra norm. Retool doesn't deviate to 17 (Postmark) or 18 (consumer SaaS) — 16px is the docs-and-docs voice.
+- **JetBrains Mono carries more weight than peers.** Retool's platform surfaces JS expressions in every component (`{{ query.data }}`, `{{ self.value }}`), so the mono presence on marketing pages is heavier than at Linear or Vercel. Inline mono chips appear inside body paragraphs to demonstrate API surface.
+- **Slashed zero in product-mock data.** The `zero` feature distinguishes 0 from O in IDs, SKUs, and status codes — important for the trade-magazine-rigor register.
+- **Tabular figures in product mocks.** `tnum` ensures columns of numerical data (prices, quantities, timestamps) align — a small but important detail for the product-honesty pose.
+- **No editorial italics.** Inter italics are present in the system but rarely used on marketing — the voice is structural, not literary.
+- **Stylistic set 03 on display.** Inter's `ss03` enables an alternate `f` and `t` that read better at hero sizes. Subtle, but the brand notices.
+- **No display serif.** Retool refuses an editorial register. Inter handles every type job.
+- **CTA at weight 500.** Buttons use 14/500 — slightly lighter than Linear's 14/600. The lighter weight maps to the brand's understated CTA voice.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Indigo)**
+- Background: `#3a55fc`
+- Text: `#ffffff`
+- Padding: `10px 18px`, height 40
+- Radius: 8 (dev-infra norm)
+- Border: none
+- Font: button (Inter 14 / 500)
+- Hover: background `#2c45e5` + `translateY(-1px)` + shadow `rgba(58,85,252,0.20) 0 6px 16px -4px`
+- Active: background `#2238c9` + `translateY(0)`
+- Focus: outline `3px solid rgba(58,85,252,0.30)` with 2px offset
+- Use: hero CTA — Get Started, Start free trial, Book demo. The single chromatic action voice.
+
+**Secondary (Outlined)**
+- Background: `#ffffff`
+- Text: `#0a0a0a`
+- Padding: `10px 18px`, height 40
+- Radius: 8
+- Border: `1px solid #e4e4e7`
+- Hover: background `#fafafa` + border `#d4d4d8`
+- Use: secondary CTA — Watch demo, Read docs, View pricing.
+
+**Dark (High-Contrast)**
+- Background: `#0a0a0a`
+- Text: `#ffffff`
+- Padding: `10px 18px`, height 40
+- Radius: 8
+- Hover: background `#171717` + `translateY(-1px)`
+- Use: high-contrast CTA on tinted brand callouts (where indigo-on-tinted-indigo loses punch).
+
+**Ghost (Tertiary)**
+- Background: transparent
+- Text: `#0a0a0a`
+- Padding: `8px 14px`
+- Radius: 8
+- Hover: background `#f4f4f5`
+- Use: nav action, inline tertiary CTA.
+
+### Cards
+
+**Feature Card**
+- Background: `#ffffff`
+- Border: `1px solid #e4e4e7`
+- Radius: 12
+- Padding: 24
+- Use: feature card on canvas — cool-grey hairline, no shadow.
+
+**Tinted Brand Callout**
+- Background: `#f0f3ff`
+- Border: none
+- Radius: 12
+- Padding: 32
+- Use: hero accent band, "what is Retool" section, feature highlight.
+
+**Product Mock (Hero)**
+- Background: `#ffffff`
+- Border: `1px solid #e4e4e7`
+- Radius: 12
+- Padding: 0 (the chrome fills the entire card)
+- Shadow: two-layer `rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px`
+- Chrome inside: sidebar (database connections), main table grid (order rows), action bar (indigo CTAs), status pill column (green/orange/red).
+- Use: the brand's defining illustration. Always shows actual Retool app UI, never a stylised abstraction.
+
+**Pricing Card**
+- Background: `#ffffff`
+- Border: `1px solid #e4e4e7`
+- Radius: 12
+- Padding: 32
+- Use: pricing tier card — neutral default.
+
+**Pricing Card (Featured)**
+- Background: `#ffffff`
+- Border: `2px solid #3a55fc`
+- Radius: 12
+- Padding: 32
+- Shadow: `rgba(58,85,252,0.20) 0 12px 32px -8px`
+- Use: featured pricing tier — brand-blue border + brand-tinted shadow.
+
+### Badges (Status Pills in Product Mocks)
+
+**Success** — `#d1fae5` bg / `#047857` text / 9999 radius / Inter micro 11/500 uppercase: Active / Synced / Connected.
+
+**Warning** — `#ffedd5` bg / `#c2410c` text: Pending / Throttled.
+
+**Error** — `#fee2e2` bg / `#b91c1c` text: Failed / Disconnected.
+
+**Info** — `#e8edff` bg / `#3a55fc` text: Beta / New / Updated.
+
+### Inputs
+
+**Standard Input**
+- Background: `#ffffff`
+- Text: `#0a0a0a`
+- Border: `1px solid #d4d4d8`
+- Radius: 6 (slightly tighter than buttons — input convention)
+- Padding: `10px 14px`, height 40
+- Focus: border `#3a55fc` + ring `0 0 0 3px rgba(58,85,252,0.30)`
+- Use: form input — sign-up email, contact form.
+
+### Navigation
+
+**Top Nav**
+- Background: transparent on white canvas, sticky on scroll with 90% white backdrop + backdrop-blur
+- Padding: `0 24px`, height 64
+- Links: Inter 14/500, color `#525252`, hover `#0a0a0a`
+- Right-side: Sign In ghost button + indigo Get Started primary CTA
+- Items: Product / Customers / Pricing / Docs / Blog / Company
+
+### Code
+
+**Code Block (Multi-Line)**
+- Background: `#0a0a0a` (near-black)
+- Text: `#fafafa` (slightly off-white for legibility)
+- Border: none
+- Radius: 8
+- Padding: `20px 24px`
+- Font: code (JetBrains Mono 13/400)
+- Use: API example snippets, JS expression demos.
+
+**Inline Code Chip**
+- Background: `#f4f4f5`
+- Text: `#0a0a0a`
+- Border: `1px solid #e4e4e7`
+- Radius: 4
+- Padding: `2px 6px`
+- Font: code-inline (JetBrains Mono 14/500)
+- Use: `{{ query.data }}`, `retool.dev/...`, integration name references inline in body copy.
+
+### Integration Tile
+
+- Background: `#ffffff`
+- Border: `1px solid #e4e4e7`
+- Radius: 8
+- Padding: 20
+- Inside: integration logo (32×32) + integration name (Inter 14/500)
+- Use: 8-column dense grid showing Retool's ~100 integrations (Postgres / MySQL / MongoDB / REST / GraphQL / Stripe / Twilio / Snowflake / etc.).
+
+### Decorative
+
+**Indigo Accent Shape** — a subtle indigo geometric shape (often a quarter-arc or grid-line motif) used as section-divider decoration. Renders at 40% opacity to avoid competing with type.
+
+**Customer Quote Card** — neutral card with 64×64 customer photo, customer name in Inter 16/600, role/company in Inter 14/400 muted, pull-quote in Inter 18/400 with hairline left-border in `#e4e4e7`.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit is 4px with a scale of 4/8/12/16/20/24/32/40/48/64/96/128/160. Sections breathe at 96px vertical rhythm (denser than Postmark's 88, looser than Linear's 80) — the dev-infra spacious-but-purposeful register. Card padding sits at 24px (feature) or 32px (callout / pricing) or 0px (product mock — the chrome fills the card edge-to-edge). Button padding is 10/18 — the standard dev-infra ratio.
+
+### Grid & Container
+
+Page caps at **1280px** with **24px gutters**. The 12-column grid is densely subdivided in feature-comparison tables (4–6 columns of compared features) and integration logo bands (8 columns of 100+ integrations).
+
+Hero treatment: left-aligned headline at 72–80px, left-aligned 18px hero deck, primary indigo CTA + secondary outlined CTA pair, then the product mock card immediately below or to the right at full width. The product mock is the hero — the headline frames it.
+
+### Whitespace Philosophy
+
+Retool's whitespace is **structurally generous, intentionally dense at the integration band**. The 96px section gaps give the page breathing room; the 8-column integration grid runs tight (16px gutters) to communicate breadth. The contrast is part of the message: "we have a lot of integrations, and we're not going to abstract them — here are all 100."
+
+### Section Cadence
+
+Sections alternate between three tonal grounds:
+- **Paper-white** (`#ffffff`) — the default, dominant. Hero, feature grid, integration band.
+- **Soft grey** (`#fafafa` or `#f4f4f5`) — secondary section break, customer-quote band.
+- **Tinted brand** (`#f0f3ff`) — hero accent moment, "Get started" CTA band (used 1–2 times per page).
+- **Dark** (`#0a0a0a`) — footer band, occasional dark hero variant.
+
+The dark band only appears at the page's bottom (footer); the tinted brand callout only appears 1–2 times. The chromatic discipline keeps the indigo's punch.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Radius | Use |
+|---|---|---|
+| None | 0 | Hairline rules, table cells, full-bleed bands |
+| Micro | 2 | Small badges, code chip corners |
+| XS | 4 | Inline code chip, small status indicators |
+| SM | 6 | **Inputs** — slightly tighter than buttons |
+| MD | 8 | **Buttons, code blocks** — dev-infra norm |
+| LG | 12 | **Cards, callouts, product mocks** — content chrome |
+| XL | 16 | Modals, hero illustration containers |
+| Pill | 9999 | **Status pills only** — never on CTA |
+
+The button-vs-card radius differential (8 vs 12) is the dev-infra standard — Retool sits squarely in the Linear/Vercel/Supabase tradition. CTAs are tight; cards are softer; pills only appear on status.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow, hairline border only | Default cards, integration tiles, feature tiles |
+| 1 | Hairline + faint ambient `rgba(10,10,10,0.04) 0 1px 2px` | Sticky nav, faint card lift |
+| 2 | Hover state — `rgba(10,10,10,0.08) 0 4px 12px` + 1px translate | Button hover, card hover |
+| 3 | Product mock — two-layer `rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px` | The hero illustration card, customer quote cards |
+| 4 | Modal — `rgba(10,10,10,0.12) 0 16px 40px` | Pricing comparison modal, video lightbox |
+| 5 | Backdrop — `rgba(10,10,10,0.20) 0 24px 56px` + scrim | Full-screen modal |
+
+### Shadow Philosophy
+
+Retool depth is **mostly hairline + tonal**, with a single signature shadow event: the **two-layer product-mock shadow**. Cards lift through cool-grey hairlines (`#e4e4e7`); the product mock card lifts through a deliberate two-layer shadow that puts it visually "in front" of the surrounding layout. The two-layer pattern (a soft outer `12px 32px -8px` + a tighter `4px 8px`) is borrowed from the Refactoring UI tradition — sharp enough to register elevation, soft enough to feel calibrated.
+
+Shadows are **cool-tinted** (`rgba(10,10,10,...)` — slightly cooler than pure-black) to match the cool-neutral ground. Brand-tinted shadows appear only on featured CTAs and pricing-card hover, where the chromatic emphasis is intentional.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard** (`cubic-bezier(0.4, 0, 0.2, 1)`) — default for hover, color, and elevation.
+- **Emphasized** (`cubic-bezier(0.2, 0, 0, 1)`) — overshoot for hero CTA hover (subtle 1px lift).
+- **Entrance** (`cubic-bezier(0, 0, 0.2, 1)`) — for cards entering on scroll.
+- **Exit** (`cubic-bezier(0.4, 0, 1, 1)`) — modal close, popover dismiss.
+
+### Duration
+
+- **Fast** (100ms) — color hovers, link underline.
+- **Standard** (180ms) — button hover (color + 1px translate), card hover.
+- **Slow** (280ms) — modal open, popover reveal.
+- **Fade** (400ms) — page transitions, product-mock entrance.
+
+### Per-Component Motion
+
+- **Button hover** — background colour transitions over 100ms; transform translateY(-1px) over 180ms; box-shadow fades in over 180ms. Active state collapses to translateY(0) in 100ms.
+- **Card hover** — hairline border `#e4e4e7 → #d4d4d8` over 180ms; faint shadow appears over 180ms. No scale transform.
+- **Product mock entrance** — fades in from `opacity: 0` + 16px Y-translate over 400ms with `cubic-bezier(0, 0, 0.2, 1)`. Reduced-motion: opacity-only.
+- **Integration tile hover** — background `#ffffff → #fafafa` over 100ms; border `#e4e4e7 → #d4d4d8` over 100ms.
+- **Status pill** — stateless decoration, no hover.
+- **Link hover** — colour `#3a55fc → #2c45e5` over 100ms. Underline thickness `1px → 2px` over 100ms.
+- **Featured pricing card hover** — brand-glow shadow `rgba(58,85,252,0.10) 0 0 0 6px` fades in over 180ms.
+- **Code copy button** — icon swap (clipboard → checkmark) on click; 800ms pause; revert.
+
+### Page Transitions
+
+The marketing site is mostly static. Section reveals on scroll use IntersectionObserver with a 12–16px Y-translate fade-in over 400ms. The product-mock cards animate in with a slightly larger 24px translate and 600ms duration to register as the page's primary visual event. Customer-quote cards stagger in by 120ms when the band enters viewport.
+
+### Reduced Motion
+
+All transforms collapse to opacity-only when `prefers-reduced-motion: reduce` is set. The product-mock entrance becomes a static fade. Integration logo carousel (if present) pauses. Section-entrance Y-translates disable.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **Body text on bg** — `#0a0a0a` on `#ffffff` = **19.4:1** — AAA at all sizes.
+- **Body text on tinted brand** — `#0a0a0a` on `#f0f3ff` = **18.2:1** — AAA at all sizes.
+- **White on brand** — `#ffffff` on `#3a55fc` = **5.6:1** — AA at body, AAA at large (≥18px or 14px bold).
+- **Link on bg** — `#3a55fc` on `#ffffff` = **5.6:1** — AA at body, AAA at large. Underlined for non-text-context disambiguation.
+- **Muted text on bg** — `#525252` on `#ffffff` = **7.8:1** — AAA at body.
+- **Soft text on bg** — `#737373` on `#ffffff` = **4.8:1** — AA at body.
+- **Faint text on bg** — `#a3a3a3` on `#ffffff` = **2.8:1** — used only for placeholder / disabled (which has lowered contrast requirements).
+- **Text on dark** — `#ffffff` on `#0a0a0a` = **19.4:1** — AAA.
+- **Success pill** — `#047857` on `#d1fae5` = **5.4:1** — AA at body.
+- **Error pill** — `#b91c1c` on `#fee2e2` = **6.1:1** — AA at body.
+
+### Focus Indicators
+
+- **On neutral surfaces:** `0 0 0 3px rgba(58,85,252,0.30)` — brand-tinted ring with 2px offset.
+- **On brand CTA:** `0 0 0 3px rgba(255,255,255,0.50)` inner ring + `0 0 0 5px rgba(58,85,252,0.40)` outer ring — double-ring for legibility against indigo ground.
+- **On dark surfaces:** `0 0 0 3px rgba(58,85,252,0.50)` — brighter brand ring against dark.
+
+### ARIA Patterns
+
+- **Primary CTA** — `<button>` or `<a role="button">`; `aria-label` only for icon-only variants (otherwise visible text).
+- **Status pills** — when status changes dynamically (e.g., a connection going from Pending → Active in a live demo), wrap with `<span role="status" aria-live="polite">`.
+- **Code chip / code block** — `<code>` and `<pre><code>`; copy button has `aria-label="Copy code to clipboard"` and announces success via `aria-live="polite"`.
+- **Modal** — `role="dialog"`, `aria-modal="true"`, focus trap, ESC dismisses.
+- **Tooltip** — `role="tooltip"` with `aria-describedby` linkage.
+- **Pricing tier cards** — wrap in `<article>` with `aria-labelledby` pointing at the tier name; featured card adds `aria-current="true"`.
+- **Integration grid** — `<ul>` with `<li>` items; integration name visible (no `aria-label` needed).
+
+### Keyboard Navigation
+
+- Tab order follows visual flow: top-nav → hero CTA pair → in-page CTA bands → footer.
+- Skip-link present in header (`Skip to main content` — visually hidden, visible on focus).
+- All interactive surfaces (CTA, nav-link, pricing card, integration tile, code-copy button) are keyboard-reachable.
+- Modal traps focus and returns to invoking element on close.
+- The product mock is *not* interactive on the marketing site (it's an illustration of the actual product), but its hover-state demos disable on keyboard focus to avoid confusing screen-reader users.
+
+### Screen Reader Hints
+
+- Logo has `aria-label="Retool"` (decorative SVG inside).
+- Customer testimonials use `<blockquote>` with `<cite>` for attribution — semantic structure.
+- Integration tiles have visible logo + name; no redundant `aria-label`.
+- Hero deck uses `<p>` paragraphs, not `<h2>`, to keep heading navigation clean.
+- The product mock's interactive elements (table sort buttons, action menus) have `aria-hidden="true"` since they're illustration only.
+
+### Reduced Motion
+
+- All transform-based transitions collapse to opacity-only.
+- Product-mock entrance becomes a static fade.
+- Integration carousel pauses.
+- Section-entrance Y-translates disable.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Token | Width | Layout |
+|---|---|---|
+| Mobile | 0–639 | Single column, stacked hero, full-width CTAs |
+| Tablet | 640–1023 | Two-column feature grid, hero stacks above mock |
+| Desktop | 1024–1279 | Full layout, 12-column grid, side-by-side hero+mock |
+| Wide | 1280+ | Max 1280px container with auto margins |
+
+### Touch Targets
+
+All interactive elements are minimum **40×40px** (button height is 40, nav-link tap area is 40 via padding). Status pills are decoration only (not interactive); they don't need minimum touch area. Integration tiles are 96×96 minimum on mobile to accommodate touch.
+
+### Collapsing Strategy
+
+- **Top nav** — collapses to hamburger at <1024px; full-width drawer slides in from right with stacked nav links + CTA pair.
+- **Hero** — headline shrinks from 80→56→40px on mobile; deck from 18→16px; CTA pair stacks vertically.
+- **Product mock** — moves from beside hero to below hero on tablet; on mobile, the mock crops to show just the table grid with a "View full app" CTA below.
+- **Feature grid** — collapses 3→2→1 columns at tablet and mobile.
+- **Integration grid** — 8→6→4→2 columns at desktop/tablet/mobile.
+- **Pricing tiers** — collapses 4→2→1 columns; featured tier remains visually distinct.
+- **Customer-quote band** — 3→2→1 column on tablet/mobile.
+- **Footer** — 4→2→1 columns.
+
+### Image Behavior
+
+Product mocks use SVG where possible (admin panel chrome) for crispness; PNG/JPG for customer logos with `loading="lazy"` and explicit dimensions. Customer photo avatars use `srcset` for 1x/2x/3x. The hero product mock uses a high-DPR PNG (or WebP) at 1920×1200 with a low-quality placeholder fading in.
+
+### Container Queries
+
+Used inside the product-mock card: when card width drops below 720px, the sidebar collapses to an icon rail; below 480px, the sidebar hides entirely and the table grid takes full width.
+
+## 11. Content & Voice
+
+### Tone
+
+Pragmatic, structural, slightly serious. The brand voice is "we built this for engineers who would otherwise write internal tools from scratch, and we know what that's like." It's **technical without being dry**, **confident without being smug**, and **honest about what the product is and isn't**.
+
+Sample register:
+- "Build internal tools, remarkably fast."
+- "Connect to anything. Build what you need."
+- "Ship with the confidence of an admin panel that actually works."
+- "Used by engineers at Coinbase, Brex, NBC, DoorDash."
+
+The tone explicitly avoids consumer-SaaS warmth ("we ❤️ engineers") and dev-tool snark ("ditch your spreadsheet"). It speaks engineer-to-engineer without performance.
+
+### Microcopy Patterns
+
+**Button verbs (action-direct, slightly understated):**
+- Get Started
+- Start free trial
+- Book a demo (secondary)
+- Watch demo (tertiary)
+- Read the docs
+- Talk to Sales
+
+**Error messages (clear, fact-first):**
+- "We couldn't connect to that database. Check your connection string?"
+- "This query returned no rows. Either the table is empty or your filter excluded everything."
+- "Authentication failed. Re-enter your credentials or generate a new API key."
+
+**Success confirmations:**
+- "Connected. Your tables are ready."
+- "Deployed. Check the changelog for the version stamp."
+- "Welcome to Retool. Your first app starts here." (signup success — single sentence, no marketing fluff)
+
+### Empty States
+
+- **Empty resource list** — "No resources yet. Connect a database or API to get started."
+- **Empty query result** — "This query returned 0 rows. Adjust your filter or check the source data."
+- **Empty deploy log** — "No deployments yet. Push your first change to see it here."
+
+The empty-state copy is **functional first, friendly second** — the brand assumes engineers prefer clarity to encouragement.
+
+### CTA Verb Conventions
+
+- **Primary action** — "Get Started" (most common) or "Start free trial" (when emphasising the free path).
+- **Secondary action** — "Book a demo" (sales path) or "Watch demo" (self-serve preview).
+- **Tertiary action** — "Read the docs", "View pricing", "See customer stories" — direct verbs.
+
+The indigo CTA always carries a verb-first label. "Get Started" beats "Try Retool". "Book a demo" beats "Demo".
+
+## 12. Dark Mode & Theming
+
+Retool's marketing site is **light-only** — there's no dark variant of the homepage or pricing pages. The product UI (the actual Retool editor and runtime) ships a dark mode and a light mode separately, but it's not part of the marketing brand.
+
+If a future dark variant ships, the inversion would be:
+
+```yaml
+colors-dark:
+  bg: '#0a0a0a'              # near-black canvas (the existing dark CTA surface)
+  bg-soft: '#171717'
+  bg-elev: '#262626'
+  bg-tinted: '#1a1f4a'       # darkened brand surface
+  surface: '#171717'
+  text: '#fafafa'
+  text-muted: '#a3a3a3'
+  text-soft: '#737373'
+  brand: '#7180ff'           # lifted indigo for dark-mode legibility
+  brand-soft: '#1a1f4a'
+  link: '#7180ff'
+  border: '#262626'
+  border-soft: '#171717'
+  on-brand: '#ffffff'        # white text on lifted indigo — unchanged
+```
+
+The dark variant would lift the indigo from `#3a55fc` to `#7180ff` to maintain AA contrast against the dark canvas. The product-mock chrome would invert to dark-app UI (which is already what the actual Retool editor looks like in dark mode).
+
+## 13. Lineage & Influences
+
+Retool's design lineage runs through the **modern dev-infrastructure tradition** established by Stripe (single-confident-blue brand axis, paper-white canvas, dense feature tables) and refined by Linear, Vercel, and Supabase (Inter-everywhere typography, cool-grey neutral ramp, structural restraint). Retool inherits the grammar but pushes harder on **product-mock fidelity** — where Linear shows abstract task-list illustrations, Vercel shows simplified deployment graphs, and Stripe shows stylised payment flows, Retool shows the actual admin-panel UI at full marketing scale.
+
+The chromatic gesture (single indigo accent on paper-white) is borrowed from **Stripe's blurple tradition** but pushed slightly cooler — `#3a55fc` is more indigo than blue, more "engineer's default editor accent" than "consumer-app primary". The brand explicitly avoids consumer-SaaS warmth: there's no playful illustration, no mascot, no friendly hand-drawn touch. The voice is "engineers building for engineers" — closer to Bloomberg Terminal's trade-magazine rigor than to Notion's friendliness.
+
+The competitor counterstance is the broader low-code category — Bubble, Webflow, Airtable. Retool deliberately avoids their visual register: no decorative illustration, no hero animation, no consumer-friendly metaphors. The brand says "this is engineering tooling, and we treat it accordingly." The product-mock-as-hero is the strongest signal of that positioning.
+
+The **dense layout discipline** — 8-column integration grids, feature-comparison tables, customer-quote bands — comes from Stripe's marketing tradition. Stripe pioneered showing API surface as marketing copy (the "code samples in the hero" pattern); Retool extends it with product UI (the "actual app chrome in the hero" pattern). Both brands trust their audience to read complex visual information.
+
+**Named influences:**
+- **Linear** — structural rigour, restrained accent palette, Inter-everywhere typography. Grid discipline and dev-infra neutrality. https://linear.app
+- **Vercel** — cool dark/light contrast bands, single-accent dev-infra discipline, tight button radii. Retool substitutes Vercel's pure-black canvas for a slightly warmer near-black. https://vercel.com
+- **Stripe** — single-confident-blue brand axis, dense feature-table marketing, "API surface as marketing copy" tradition. Retool extends with "product UI as marketing copy". https://stripe.com
+- **Supabase** — dev-infra-with-real-product-UI tradition; both brands lean into showing actual product chrome rather than stylised illustration. https://supabase.com
+- **Inter** (Rasmus Andersson) — open-source UI sans family. The de-facto dev-infra type voice. https://rsms.me/inter/
+- **JetBrains Mono** — open-source code-ligature mono. Retool carries heavier mono presence than peers because the platform surfaces JS expressions in every component.
+- **Refactoring UI** (Adam Wathan + Steve Schoger) — the two-layer shadow tradition, the cool-grey neutral ramp grammar. https://www.refactoringui.com
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** keep `#3a55fc` as the single brand-axis colour. The purple/green/orange accents are illustration-only, never structural.
+- **Do** show real Retool product UI in hero illustrations — the platform's honesty is the strongest brand asset, and stylised illustrations would dilute it.
+- **Do** lean into density in feature-comparison tables and integration-logo bands. Retool's value proposition is breadth, and the layout should reflect it.
+- **Do** use Inter at weight 600 (not 700) for hero. Weight 600 + negative tracking is the structural register; weight 700+ tips toward consumer-SaaS loudness.
+- **Do** use 8px button radii and 12px card radii. The dev-infra norm — sit squarely in the Linear/Vercel/Supabase tradition.
+- **Do** carry JetBrains Mono inline in body copy where API surface is referenced (`{{ query.data }}`, `retool.dev/...`). The mono presence is part of the brand.
+- **Do** use the two-layer shadow on product mocks. The signature elevation pattern that distinguishes the hero illustration from feature cards.
+- **Do** keep the indigo CTA at weight 500 (not 600). The lighter weight maps to the understated CTA voice.
+- **Do** use status pills (success/warning/error/info) inside product mocks to demonstrate the platform's status-reporting capabilities.
+- **Do** use the dark `#0a0a0a` only at the footer band. It's the page-closing inversion, not a hero variant.
+
+### Don't
+
+- **Don't** soften the brand voice with rounded pills or playful illustration. Retool's tone is pragmatic engineering, not consumer warmth.
+- **Don't** introduce a display sans or editorial serif. Inter + JetBrains Mono is the entire system, and the restraint is deliberate.
+- **Don't** stylise product mocks into abstract diagrams. The actual admin-panel UI is what makes the marketing trustworthy.
+- **Don't** use the purple/green/orange accents structurally — they live only inside product mocks. Indigo is the only structural accent.
+- **Don't** drop the body type below 16px. The dev-infra norm is non-negotiable; 14px is for captions and dense regions only.
+- **Don't** introduce gradient hero backgrounds or animated gradients. Retool's brand is structural, not decorative.
+- **Don't** use weight 700 on hero. Weight 600 + `-0.025em` tracking is the structural register; bolder tips toward consumer-SaaS loudness.
+- **Don't** soften the integration logo grid into a carousel or scroll-snap. The 8-column dense grid is the brand's "we have a lot of integrations" gesture.
+- **Don't** use mascot illustration or hand-drawn warmth. The brand is engineer-to-engineer, not consumer-friendly.
+- **Don't** drop product-mock fidelity by abstracting tables into chart shapes. The literal admin-panel UI is the brand's honesty asset.
+- **Don't** use indigo on indigo callouts (e.g., `#3a55fc` button on `#f0f3ff` callout). Switch to the dark CTA (`#0a0a0a`) on tinted brand surfaces.
+- **Don't** introduce a new accent hue. The system is indigo + cool-grey + near-black + four illustration accents — nothing else.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:           #ffffff
+text:         #0a0a0a
+brand:        #3a55fc
+brand-soft:   #f0f3ff
+brand-hover:  #2c45e5
+on-brand:     #ffffff
+link:         #3a55fc
+text-muted:   #525252
+border:       #e4e4e7
+bg-dark:      #0a0a0a
+bg-elev:      #f4f4f5
+success:      #10b981
+error:        #ef4444
+```
+
+### Example Component Prompts
+
+- **Hero with Product Mock:** "Create a Retool-style hero — paper-white `#ffffff` canvas, left-aligned Inter 80/600 headline 'Build internal tools, remarkably fast.' with `-0.03em` tracking, 18px Inter 400 deck below in `#525252`, primary indigo CTA 'Get Started' (`#3a55fc` fill, white text, 8px radius, Inter 14/500) paired with outlined secondary 'Watch demo'. To the right: a 720×480 product-mock card with `1px solid #e4e4e7` hairline, 12px radius, two-layer shadow `rgba(10,10,10,0.06) 0 12px 32px -8px, rgba(10,10,10,0.04) 0 4px 8px`. Inside the card: a 200px sidebar with database icons + a main table grid with 8 rows of order data + indigo action buttons + green/orange/red status pills. Make it look like an actual admin panel."
+
+- **Feature Grid:** "Build a Retool feature grid — 3 columns of feature cards on white canvas. Each card: white background, `1px solid #e4e4e7` hairline, 12px radius, 24px padding. Inside: 32×32 indigo icon, Inter 20/600 feature title, Inter 14/400 description in `#525252`. Hover state: border lifts to `#d4d4d8` and faint shadow appears."
+
+- **Integration Tile Grid:** "Render a Retool integration grid — 8 columns of integration tiles showing Postgres / MySQL / MongoDB / REST / GraphQL / Stripe / Twilio / Snowflake / etc. Each tile: 96×96 white card, `1px solid #e4e4e7` hairline, 8px radius, 20px padding. 32×32 logo + Inter 14/500 integration name below. Hover: background `#fafafa`."
+
+- **Pricing Card (Featured):** "Create a Retool featured pricing tier — white card, `2px solid #3a55fc` brand border, 12px radius, 32px padding, brand-glow shadow `rgba(58,85,252,0.20) 0 12px 32px -8px`. Inside: an 'Most popular' indigo soft pill (`#e8edff` bg, `#3a55fc` text) at top, Inter 28/600 plan name, Inter 56/600 price with `$` superscript, Inter 16/400 feature list with green check `#10b981` glyphs."
+
+- **Code Block with JS Expression:** "Render a Retool code block — `#0a0a0a` near-black fill, 8px radius, 20/24 padding, JetBrains Mono 13/400 in `#fafafa`. Show a sample JS expression like `{{ query.users.data.filter(u => u.active) }}`. No syntax highlighting (the brand keeps code blocks neutral). Add a small copy button in the top-right with a JetBrains Mono 11px label 'Copy'."
+
+- **Tinted Brand Callout Band:** "Compose a Retool tinted callout band — full-bleed `#f0f3ff` background, 96px vertical padding. Centered content: Inter 48/600 'Ready to build?' headline in `#0a0a0a`, Inter 18/400 deck below, dark CTA pair (`#0a0a0a` fill / white text / 8px radius) — dark, not indigo, because indigo on tinted indigo loses punch."
+
+- **Footer Band:** "Compose a Retool footer — `#0a0a0a` near-black band, full-bleed, 64px vertical padding. Four columns of nav links in Inter 14/500 `#a1a1aa`, hovering to `#ffffff`. Logo + copyright in left column. Subtle indigo accent shape (geometric quarter-arc) at 40% opacity in the background."
+
+### Iteration Guide
+
+1. **Start with the canvas, then place the product mock.** The brand begins with paper-white `#ffffff`. The first chromatic event should be the product-mock card with its two-layer shadow — once the page has that, the rest of the system follows.
+
+2. **Use indigo CTAs sparingly — one per viewport.** Each viewport scroll should see exactly one indigo action moment. Two indigos in a single screen flattens the hierarchy.
+
+3. **Show actual product UI, not abstract illustration.** Retool's brand is product-honesty. If the design uses a stylised data viz instead of a real-looking admin panel, it's not Retool.
+
+4. **Density is the message.** The 8-column integration grid and the dense feature-comparison tables communicate breadth. Don't soften them into carousels or expandable sections.
+
+5. **Inter at weight 600, not 700.** The hero punch is structural, not loud. Bumping to 700 tips the brand toward consumer-SaaS.
+
+6. **Carry JetBrains Mono inline.** API surface references (`{{ query.data }}`, `retool.dev/...`) appear inline in body copy. The mono presence is part of the brand voice.
+
+7. **Tight buttons, soft cards.** 8px buttons, 12px cards, 9999 status pills only. The radius differential is the dev-infra grammar.
+
+8. **Cool, not warm.** The neutral ramp is cool-tinted (`#525252`, `#737373`, `#a3a3a3`) — not warm-grey. The shadows are cool-tinted (`rgba(10,10,10,...)`). The brand's tone is cool engineering rigor, not warm developer-friendliness.

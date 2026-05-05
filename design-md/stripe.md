@@ -3,193 +3,732 @@ name: Stripe
 tagline: Editorial fintech polish — light Söhne headlines at weight 300, navy-not-black text, signature `#533afd` purple CTAs.
 author: webdesignhot
 source_url: https://stripe.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: true
 categories: [fintech, saas]
-tags: [light, editorial, sans, cool, structured]
+tags: [light, editorial, sans, cool, structured, premium]
 preview_swatch: ['#ffffff', '#533afd', '#061b31']
-related: [vercel, linear]
-description: 'Stripe''s marketing site reads like a financial broadsheet — Söhne variable at weight 300 (light) for headlines, navy-not-black body text, the signature `#533afd` purple reserved for action surfaces with conservative 4px radius. The most editorial design system in fintech.'
+related: [vercel, linear, mercury]
+description: 'Stripe''s marketing site reads like a financial broadsheet — Söhne variable at weight 300 (light) for headlines, navy-not-black body text at `#061b31`, generous white space, and the signature `#533afd` purple reserved for action surfaces with a conservative 4px radius. Multi-layer blue-tinted shadows (`rgba(50,50,93,0.25)`) deliver depth that feels brand-coloured rather than neutral. The most editorial design system in fintech.'
 
 colors:
   bg: '#ffffff'
   bg-quiet: '#f8fafd'
   bg-min: '#ffffff'
-  text: '#061b31'
+  surface: '#ffffff'
+  surface-soft: '#f6f9fc'
+  surface-elev: '#ffffff'
+  bg-brand-dark: '#1c1e54'           # --hds-color-util-brand-900
+  bg-dark-navy: '#0d253d'            # --hds-color-core-neutral-975
+  text: '#061b31'                     # --hds-color-heading-solid
+  text-strong: '#061b31'
   text-soft: '#50617a'
   text-subdued: '#64748d'
+  text-label: '#273951'               # --hds-color-input-text-label
+  text-on-dark: '#ffffff'
+  text-on-dark-muted: 'rgba(255,255,255,0.7)'
   brand: '#533afd'
-  brand-hover: '#4032c8'
-  brand-light: '#665efd'
+  brand-hover: '#4434d4'
+  brand-deep: '#2e2b8c'               # --hds-color-button-ui-iconHover
+  brand-light: '#665efd'              # --hds-color-input-selector-text-range
   brand-tint: '#e8e9ff'
-  border: '#d4dee9'
-  border-subdued: '#d4dee9'
+  brand-soft: '#b9b9f9'                # --hds-color-action-bg-subduedHover
+  brand-bg-hover: 'rgba(83,58,253,0.05)'
+  accent-ruby: '#ea2261'              # --hds-color-accentColorMode-ruby-icon-solid
+  accent-magenta: '#f96bee'           # --hds-color-accentColorMode-magenta-icon-gradientMiddle
+  accent-magenta-soft: '#ffd7ef'      # --hds-color-util-accent-magenta-100
+  accent-info: '#2874ad'
+  border: '#e5edf5'
+  border-default: '#d4dee9'
+  border-strong: '#061b31'
+  border-purple: '#b9b9f9'
+  border-purple-soft: '#d6d9fc'
+  border-magenta: '#ffd7ef'
+  border-dashed: '#362baa'
   link: '#533afd'
+  link-hover: '#4434d4'
   on-brand: '#ffffff'
+  success: '#15be53'
+  success-text: '#108c3d'
+  success-bg: 'rgba(21,190,83,0.2)'
+  success-border: 'rgba(21,190,83,0.4)'
+  warning: '#9b6829'                  # --hds-color-core-lemon-500
+  danger: '#ea2261'
+  shadow-blue: 'rgba(50,50,93,0.25)'  # signature blue-tinted shadow
+  shadow-deep-blue: 'rgba(3,3,39,0.25)'
+  shadow-black: 'rgba(0,0,0,0.1)'
+  shadow-ambient: 'rgba(23,23,23,0.08)'
+  shadow-soft: 'rgba(23,23,23,0.06)'
 
 typography:
   display:
-    family: 'sohne-var, "SF Pro Display", -apple-system, sans-serif'
+    family: 'sohne-var, "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif'
     weights: [300, 400]
+    opentype-features: ['ss01']
   body:
-    family: 'sohne-var, "SF Pro Display", -apple-system, sans-serif'
+    family: 'sohne-var, "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif'
     weights: [300, 400]
+    opentype-features: ['ss01', 'tnum']
   mono:
-    family: 'SourceCodePro, "SFMono-Regular", ui-monospace, monospace'
-    weights: [400, 500]
+    family: 'SourceCodePro, "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace'
+    weights: [400, 500, 700]
   scale:
-    display:    { size: 64, weight: 300, lineHeight: 1.1, tracking: -0.018 }
-    h1:         { size: 48, weight: 300, lineHeight: 1.1, tracking: -0.015 }
-    h2:         { size: 32, weight: 300, lineHeight: 1.2, tracking: -0.012 }
-    h3:         { size: 22, weight: 400, lineHeight: 1.3 }
-    body-large: { size: 18, weight: 300, lineHeight: 1.55 }
-    body:       { size: 16, weight: 300, lineHeight: 1.55 }
-    body-small: { size: 14, weight: 400, lineHeight: 1.5 }
-    label:      { size: 12, weight: 400, lineHeight: 1.3 }
+    display-hero:    { size: 56, weight: 300, lineHeight: 1.03, tracking: '-1.4px',  family: display, opentype: 'ss01' }
+    display-large:   { size: 48, weight: 300, lineHeight: 1.15, tracking: '-0.96px', family: display, opentype: 'ss01' }
+    h1:              { size: 48, weight: 300, lineHeight: 1.10, tracking: '-0.015em', family: display, opentype: 'ss01' }
+    h2:              { size: 32, weight: 300, lineHeight: 1.10, tracking: '-0.64px', family: display, opentype: 'ss01' }
+    h3-large:        { size: 26, weight: 300, lineHeight: 1.12, tracking: '-0.26px', family: display, opentype: 'ss01' }
+    h3:              { size: 22, weight: 300, lineHeight: 1.10, tracking: '-0.22px', family: display, opentype: 'ss01' }
+    body-large:      { size: 18, weight: 300, lineHeight: 1.40, tracking: 'normal',   family: body, opentype: 'ss01' }
+    body:            { size: 16, weight: 300, lineHeight: 1.55, tracking: 'normal',   family: body, opentype: 'ss01' }
+    body-emphasis:   { size: 16, weight: 400, lineHeight: 1.55, tracking: 'normal',   family: body, opentype: 'ss01' }
+    button:          { size: 16, weight: 400, lineHeight: 1.00, tracking: 'normal',   family: body, opentype: 'ss01' }
+    button-small:    { size: 14, weight: 400, lineHeight: 1.00, tracking: 'normal',   family: body, opentype: 'ss01' }
+    link:            { size: 14, weight: 400, lineHeight: 1.00, tracking: 'normal',   family: body, opentype: 'ss01' }
+    caption:         { size: 13, weight: 400, lineHeight: 1.40, tracking: 'normal',   family: body, opentype: 'ss01' }
+    caption-small:   { size: 12, weight: 300, lineHeight: 1.33, tracking: 'normal',   family: body, opentype: 'ss01' }
+    caption-tabular: { size: 12, weight: 300, lineHeight: 1.33, tracking: '-0.36px', family: body, opentype: 'tnum' }
+    micro:           { size: 10, weight: 300, lineHeight: 1.15, tracking: '0.1px',    family: body, opentype: 'ss01' }
+    micro-tabular:   { size: 10, weight: 300, lineHeight: 1.15, tracking: '-0.3px',  family: body, opentype: 'tnum' }
+    code:            { size: 12, weight: 500, lineHeight: 2.00, tracking: 'normal',   family: mono }
+    code-bold:       { size: 12, weight: 700, lineHeight: 2.00, tracking: 'normal',   family: mono }
 
 radius:
+  micro: 1
   sm: 4
-  md: 6
-  button: 4
-  card: 8
+  md: 5
+  lg: 6
+  xl: 8
+  pill: 9999
+
+spacing:
+  base: 8
+  scale: [1, 2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20, 24, 32, 40, 48, 64, 80, 96, 120]
 
 layout:
-  page-width: 1264
-
-motion:
-  ease: 'cubic-bezier(0.4, 0, 0.2, 1)'
-  duration-fast: 150
-  duration-standard: 220
+  page-width: 1080
+  prose-width: 720
+  header-height: 72
+  gutter: 24
+  section-y: 96
 
 components:
   button-primary:
-    backgroundColor: brand
-    textColor: on-brand
-    rounded: 4
-    padding: '15.5px 24px 16.5px'
-    font: 'sohne-var 16px / weight 400'
-    use: 'Start now / Get started — high-impact purple at conservative radius'
-  button-secondary:
-    backgroundColor: bg-quiet
-    textColor: text
-    border: border
-    rounded: 4
+    background: brand
+    text: on-brand
+    radius: 4
+    padding: '8px 16px'
+    font: 'sohne-var 16px / weight 400 / ss01'
+    hover: 'background → #4434d4'
+    use: 'Start now / Contact sales — high-impact purple at conservative 4px radius'
+  button-ghost:
+    background: transparent
+    text: brand
+    border: '1px solid #b9b9f9'
+    radius: 4
+    padding: '8px 16px'
+    hover: 'background → rgba(83,58,253,0.05)'
+    use: 'Secondary action paired with primary CTA'
+  button-info:
+    background: transparent
+    text: '#2874ad'
+    border: '1px solid rgba(43,145,223,0.2)'
+    radius: 4
+    use: 'Tertiary info-level action'
   card:
-    backgroundColor: '#ffffff'
-    border: border-subdued
-    rounded: 8
-    shadow: '0 6px 22px rgba(0, 55, 112, 0.10), 0 4px 8px rgba(0, 59, 137, 0.02)'
+    background: '#ffffff'
+    border: '1px solid #e5edf5'
+    radius: 6
+    shadow: 'rgba(50,50,93,0.25) 0 30px 45px -30px, rgba(0,0,0,0.1) 0 18px 36px -18px'
+    use: 'Default content card with signature blue-tinted lift'
+  badge-success:
+    background: 'rgba(21,190,83,0.2)'
+    text: '#108c3d'
+    border: '1px solid rgba(21,190,83,0.4)'
+    radius: 4
+    padding: '1px 6px'
+    font: '10px sohne-var weight 300'
+  input:
+    background: '#ffffff'
+    border: '1px solid #e5edf5'
+    radius: 4
+    label-color: '#273951'
+    text-color: '#061b31'
+    placeholder: '#64748d'
+    focus: '1px solid #533afd, ring 0 0 0 2px rgba(83,58,253,0.2)'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-fast: 150
+  duration-standard: 220
+  duration-slow: 320
+  hover-lift: 'translate-Y(-1px) + shadow intensify'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — opacity-only transitions, no translate, no scale'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(23,23,23,0.06) 0 3px 6px'
+  soft: 'rgba(23,23,23,0.08) 0 15px 35px'
+  standard: 'rgba(0,55,112,0.10) 0 6px 22px, rgba(0,59,137,0.02) 0 4px 8px'
+  elevated: 'rgba(50,50,93,0.25) 0 30px 45px -30px, rgba(0,0,0,0.1) 0 18px 36px -18px'
+  deep: 'rgba(3,3,39,0.25) 0 14px 21px -14px, rgba(0,0,0,0.1) 0 8px 17px -8px'
+  ring: '0 0 0 2px #533afd'
+
+accessibility:
+  contrast-text-on-bg: 14.8                 # #061b31 on #ffffff — AAA
+  contrast-text-on-brand: 4.6               # #ffffff on #533afd — AA
+  contrast-link-on-bg: 6.8                  # #533afd on #ffffff — AA Large
+  focus-ring: '2px solid #533afd, 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows DOM; focus ring on all interactive elements; skip-to-content link in header'
 
 lineage:
   summary: |
-    Stripe pioneered the editorial fintech aesthetic — financial-grade
-    trust delivered through magazine typography rather than blue-suit
-    corporate gloss. Headlines use **Söhne variable** at weight `300`
-    (light), unusual for a tech company; body text uses the same family.
-    The text color is `#061b31` (deep navy) rather than pure black,
-    softening the editorial feel further. The signature `#533afd`
-    purple appears only on action surfaces with a tight `4px` radius —
-    the conservative geometry signals seriousness, while the saturated
-    purple itself signals modernity. Cool-toned shadows
-    (`rgba(0,55,112,...)` with a navy hue) reinforce the financial-blue
-    sensibility throughout. Where Vercel goes black-on-near-white at
-    weight 600 for tech polish, Stripe goes navy-on-pure-white at
-    weight 300 for editorial gravitas.
+    Stripe pioneered the editorial fintech aesthetic — financial-grade trust
+    delivered through magazine typography rather than corporate gloss. Headlines
+    use Söhne variable at weight 300 (light), unusual for a tech company; body
+    text uses the same family. The text colour is #061b31 (deep navy) rather
+    than pure black, softening the editorial feel further. The signature #533afd
+    purple appears only on action surfaces with a tight 4px radius — the
+    conservative geometry signals seriousness, while the saturated purple itself
+    signals modernity. Cool-toned multi-layer shadows reinforce the financial-blue
+    sensibility throughout.
   influences:
     - name: Söhne (Klim Type Foundry)
       role: Headline typeface — editorial serif-replacement sans, used at light weights
       url: https://klim.co.nz/retail-fonts/sohne/
     - name: Bloomberg Terminal / FT Online
-      role: Financial-broadsheet color discipline — navy text on white, purple/blue accent
+      role: Financial-broadsheet colour discipline — navy text on white, purple/blue accent
       url: https://www.bloomberg.com
     - name: Apple SF Pro Display
-      role: Type fallback in regions without Söhne license; sets tracking baseline
+      role: Type fallback in regions without Söhne licence; sets tracking baseline
       url: https://developer.apple.com/fonts/
+
+dark-mode: optional   # Stripe ships dark-section bands (#1c1e54 brand-dark, #0d253d neutral-975) but no full dark-mode token swap on marketing
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Stripe is editorial fintech at full conviction. The marketing site reads
-like a financial broadsheet — light-weight Söhne headlines at `300`
-(unusual for a tech company), navy-not-black text at `#061b31`, generous
-white space, and the signature `#533afd` purple CTAs at a conservative
-`4px` radius. The combination signals "we are serious about money, and
-we read magazines."
+Stripe's marketing site is the gold standard of editorial fintech — a system that reads simultaneously technical and luxurious, precise and warm. The page opens on a clean white canvas (`#ffffff`) with deep navy headings (`#061b31`) and a signature purple (`#533afd`) that anchors both brand and interaction. This isn't the cold clinical purple of enterprise software; it's a rich saturated violet that reads as confident and premium. The overall impression is of a financial institution redesigned by a world-class type foundry.
 
-Distinctive vs. nearby alternatives: where most fintech defaults to navy
-or green corporate palettes, Stripe took purple — and shipped it at a
-specific saturation (`#533afd`) that's both bright enough to feel modern
-and dark enough to feel trustworthy. The typography move is even
-braver: 300-weight headlines on a marketing site, where most companies
-push to 600+ for "make it pop." Stripe's restraint is the brand asset.
+The custom Söhne variable typeface is the defining element of Stripe's visual identity. Every text element enables the OpenType `ss01` stylistic set, which modifies character shapes for a distinctly geometric, modern feel. At display sizes (48–56px) Söhne runs at weight `300` — an extraordinarily light weight for headlines that creates an ethereal, almost whispered authority. This is the opposite of the "bold hero headline" convention; Stripe's headlines feel like they don't need to shout. Negative letter-spacing (`-1.4px` at 56px, `-0.96px` at 48px) tightens the text into dense engineered blocks.
 
-## Colors
+What truly distinguishes Stripe is its shadow system. Rather than the flat or single-layer approach of most sites, Stripe uses multi-layer blue-tinted shadows: the signature `rgba(50,50,93,0.25)` combined with `rgba(0,0,0,0.1)` creates depth with a cool, almost atmospheric character — like elements floating in a twilight sky. The blue-gray undertone of the primary shadow ties directly to the navy-purple brand palette, making even elevation feel on-brand.
 
-- **bg** `#ffffff` — pure white canvas (page paints over light gradients in hero).
-- **bg-quiet** `#f8fafd` — light sections, subtle elevation cues.
-- **text** `#061b31` — body and headlines. Deep navy, not black — softer.
-- **text-soft** `#50617a` — supporting copy.
-- **brand** `#533afd` — the signature Stripe purple. Action surfaces only.
-- **brand-hover** `#4032c8` — pressed/hover state.
-- **brand-tint** `#e8e9ff` — backgrounds for highlighted regions.
-- **border** `#d4dee9` — cool-tinted gray, never warm.
+Cool-toned card shadows (`rgba(0,55,112,0.10)` at 6px / 22px spread) reinforce the financial-blue sensibility throughout. Where Vercel goes black-on-near-white at weight 600 for tech polish, Stripe goes navy-on-pure-white at weight 300 for editorial gravitas. Where Linear builds depth from flat hairlines, Stripe layers branded shadow over neutral shadow for parallax-grade depth.
 
-## Typography
+**Key Characteristics:**
+- Söhne variable with OpenType `ss01` on every text element — the stylistic set IS the brand
+- Weight `300` as the signature headline weight — light, confident, anti-convention
+- Negative letter-spacing at display sizes (`-1.4px` at 56px, progressive relaxation downward)
+- Blue-tinted multi-layer shadows using `rgba(50,50,93,0.25)` — elevation that feels brand-coloured
+- Deep navy (`#061b31`) headings instead of black — warm, premium, financial-grade
+- Conservative border-radius (`4px`–`8px`) — nothing pill-shaped, nothing harsh
+- Ruby (`#ea2261`) and magenta (`#f96bee`) accents reserved for gradient and decorative elements
+- `SourceCodePro` as the monospace companion for code and technical labels
+- `tnum` tabular figures for any number set in financial data tables
 
-The display voice is **Söhne** — Klim Type Foundry's variable sans —
-shipped at weight `300` for headlines, an editorial choice that signals
-gravitas over urgency. Headlines at 64px / 300 read like magazine
-display. Body holds at `300` too; what most systems call "regular"
-(`400`) is "bold" in Stripe's hierarchy.
+## 2. Color Palette & Roles
 
-The lighter type weight forces longer line lengths to feel correct,
-which feeds the editorial rhythm. Reading width caps generously at
-~720–800px. SF Pro Display fallback in regions without Söhne licensing
-keeps the silhouette close.
+### Primary
 
-Mono is **Source Code Pro** for code blocks. Conservative; the system
-prefers showing API docs in compact, readable form rather than typo-
-graphically punching above its weight.
+- **Stripe Purple** (`#533afd`): primary brand, CTA backgrounds, link text, interactive highlights. A saturated blue-violet that anchors the entire system.
+- **Deep Navy** (`#061b31`) [→ `--hds-color-heading-solid`]: primary heading colour. Not black, not gray — a very dark blue that adds warmth and depth to text.
+- **Pure White** (`#ffffff`): page background, card surfaces, button text on dark backgrounds.
 
-## Layout
+### Brand & Dark
 
-Page width caps at `1264px`. Multi-column layouts appear in pricing,
-documentation, and product breakdowns. Marketing hero uses asymmetric
-grids — content left, animated demo right — common pattern. Section
-gutters at 80–120px depending on density.
+- **Brand Dark** (`#1c1e54`) [→ `--hds-color-util-brand-900`]: deep indigo for dark sections, footer backgrounds, immersive brand moments.
+- **Dark Navy** (`#0d253d`) [→ `--hds-color-core-neutral-975`]: the darkest neutral — almost-black with a blue undertone for maximum depth without harshness.
+- **Bg Quiet** (`#f8fafd`): subtle off-white for alternating section panels.
 
-## Elevation & Depth
+### Accent
 
-Cool-toned shadows are the system's depth tell. The signature card
-shadow uses `rgba(0,55,112,0.10)` — a navy-tinted shadow rather than
-neutral black — at 6px / 22px spread. Layered with a 4px micro-shadow
-at 2% opacity. Borders take over for tighter elevations.
+- **Ruby** (`#ea2261`) [→ `--hds-color-accentColorMode-ruby-icon-solid`]: warm red-pink for icons, alerts, and accent elements. Decorative only — never a button fill.
+- **Magenta** (`#f96bee`) [→ `--hds-color-accentColorMode-magenta-icon-gradientMiddle`]: vivid pink-purple for gradient stops and decorative highlights.
+- **Magenta Light** (`#ffd7ef`) [→ `--hds-color-util-accent-magenta-100`]: tinted surface for magenta-themed cards.
+- **Lemon** (`#9b6829`) [→ `--hds-color-core-lemon-500`]: warning and highlight accent.
 
-## Shapes
+### Interactive
 
-`4px` is the dominant button radius — conservative, financial. Cards
-move to `8px`. The system has no pills or `9999px` radii on action
-surfaces; that geometry is reserved for badges and avatar circles.
+- **Link / Primary** (`#533afd`): active and selected element foreground.
+- **Purple Hover** (`#4434d4`): pressed and hover on primary buttons.
+- **Purple Deep** (`#2e2b8c`) [→ `--hds-color-button-ui-iconHover`]: dark purple for icon hover.
+- **Purple Light** (`#b9b9f9`) [→ `--hds-color-action-bg-subduedHover`]: soft lavender for subdued hover backgrounds.
+- **Purple Mid** (`#665efd`) [→ `--hds-color-input-selector-text-range`]: range selector and input highlight.
 
-## Components
+### Neutral Scale
 
-Primary button: signature `#533afd` purple, white text, `4px` radius,
-weighty padding (15.5px top / 16.5px bottom — asymmetric for optical
-balance). Secondary buttons borrow `bg-quiet` for fill. Cards use white
-on cool-shadow + 1px navy-tinted border.
+- **Heading** (`#061b31`): primary headings, nav text, strong labels.
+- **Label** (`#273951`) [→ `--hds-color-input-text-label`]: form labels, secondary headings.
+- **Body** (`#64748d`): secondary text, descriptions, captions.
+- **Soft** (`#50617a`): supporting copy on light surfaces.
+- **Faint** (`rgba(16,16,16,0.3)`): disabled labels.
 
-## Do's and Don'ts
+### Surface & Borders
 
-- **Do** use weight `300` on headlines — the lightness is the brand.
-- **Do** color text navy `#061b31`, not pure black. The cool tint
-  unifies with shadows and accents.
-- **Do** reserve `#533afd` for action surfaces (CTAs, links, key
-  highlights). Never as a body-text fill.
-- **Don't** use radii larger than `8px` on action buttons. Stripe's
-  restraint is geometric.
-- **Don't** swap Söhne for Inter or another open-source sans without
-  changing the weight scheme — Inter at 300 reads anemic; Söhne is
-  designed to land at light.
-- **Don't** apply pure-black shadows. The cool-toned navy hint is what
-  keeps the system editorial rather than corporate-blue.
+- **Border Default** (`#e5edf5`): standard border for cards, dividers, containers.
+- **Border Cool** (`#d4dee9`): slightly stronger neutral border.
+- **Border Strong** (`#061b31`): dark accent border for high-emphasis cards.
+- **Border Purple** (`#b9b9f9`): active/selected state borders on buttons and inputs.
+- **Border Soft Purple** (`#d6d9fc`): subtle purple-tinted borders for secondary elements.
+- **Border Magenta** (`#ffd7ef`): pink-tinted borders for magenta-themed elements.
+- **Border Dashed** (`#362baa`): dashed borders for drop zones and placeholder elements.
+
+### Shadow Colors
+
+- **Shadow Blue** (`rgba(50,50,93,0.25)`): the signature blue-tinted primary shadow. Far layer.
+- **Shadow Deep Blue** (`rgba(3,3,39,0.25)`): deeper blue shadow for elevated modals.
+- **Shadow Black** (`rgba(0,0,0,0.1)`): secondary neutral layer beneath the branded blue.
+- **Shadow Ambient** (`rgba(23,23,23,0.08)`): soft ambient shadow for subtle elevation.
+- **Shadow Soft** (`rgba(23,23,23,0.06)`): minimal lift for hover hints.
+
+### Semantic
+
+- **Success** background `rgba(21,190,83,0.2)`, text `#108c3d`, border `rgba(21,190,83,0.4)`.
+- **Warning** lemon `#9b6829` text on `rgba(155,104,41,0.12)` background.
+- **Danger** ruby `#ea2261` text on `rgba(234,34,97,0.12)` background.
+- **Info** purple `#533afd` text on `#e8e9ff` (brand-tint) background.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary**: Söhne variable — Klim Type Foundry's editorial sans, used at light weights.
+- **Fallback chain**: `sohne-var, "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif`.
+- **Mono companion**: `SourceCodePro`, fallback `SFMono-Regular`, then `ui-monospace`.
+- **OpenType features**: `ss01` enabled globally on all Söhne text — non-negotiable. `tnum` for tabular numerals in financial data. The two modes never overlap — a number in a paragraph uses `ss01`, a number in a data table uses `tnum`.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Hero | Söhne | 56 | 300 | 1.03 | -1.4px | ss01 | Maximum size, whisper-weight authority |
+| Display Large | Söhne | 48 | 300 | 1.15 | -0.96px | ss01 | Secondary hero headlines |
+| H1 | Söhne | 48 | 300 | 1.10 | -0.015em | ss01 | Page titles |
+| H2 / Section | Söhne | 32 | 300 | 1.10 | -0.64px | ss01 | Feature section titles |
+| H3 Large | Söhne | 26 | 300 | 1.12 | -0.26px | ss01 | Card headings, sub-sections |
+| H3 | Söhne | 22 | 300 | 1.10 | -0.22px | ss01 | Smaller section heads |
+| Body Large | Söhne | 18 | 300 | 1.40 | normal | ss01 | Feature descriptions, intro text |
+| Body | Söhne | 16 | 300 | 1.55 | normal | ss01 | Standard reading text |
+| Body Emphasis | Söhne | 16 | 400 | 1.55 | normal | ss01 | Inline emphasis, bold |
+| Button | Söhne | 16 | 400 | 1.00 | normal | ss01 | Primary button text |
+| Button Small | Söhne | 14 | 400 | 1.00 | normal | ss01 | Secondary/compact buttons |
+| Link / Nav | Söhne | 14 | 400 | 1.00 | normal | ss01 | Navigation links |
+| Caption | Söhne | 13 | 400 | 1.40 | normal | ss01 | Small labels, metadata |
+| Caption Small | Söhne | 12 | 300 | 1.33 | normal | ss01 | Fine print, timestamps |
+| Caption Tabular | Söhne | 12 | 300 | 1.33 | -0.36px | tnum | Financial data, numbers |
+| Micro | Söhne | 10 | 300 | 1.15 | 0.1px | ss01 | Tiny labels, axis markers |
+| Micro Tabular | Söhne | 10 | 300 | 1.15 | -0.3px | tnum | Chart data, small numbers |
+| Code | SourceCodePro | 12 | 500 | 2.00 | normal | — | Code blocks, syntax |
+| Code Bold | SourceCodePro | 12 | 700 | 2.00 | normal | — | Bold code, keywords |
+
+### Principles
+
+- **Light weight as signature** — weight `300` at display sizes is Stripe's most distinctive typographic choice. Where others use 600–700 to command attention, Stripe uses lightness as luxury — the text is so confident it doesn't need weight to be authoritative.
+- **`ss01` everywhere** — the `ss01` stylistic set is non-negotiable. It modifies specific glyphs (alternate `a`, `g`, `l` forms) to create a more geometric, contemporary feel across all Söhne text.
+- **Two OpenType modes, no overlap** — `ss01` for display/body, `tnum` for tabular numerals in financial data. Never both at once.
+- **Progressive tracking** — letter-spacing tightens proportionally with size: `-1.4px` at 56px, `-0.96px` at 48px, `-0.64px` at 32px, `-0.26px` at 26px, normal at 16px and below.
+- **Two-weight simplicity** — primarily 300 (body and headings) and 400 (UI/buttons). No bold (700) in the primary font.
+- **Reading column ~720–800px** — the lighter type weight forces longer line lengths to feel correct, which feeds the editorial rhythm.
+- **Mono is conservative** — SourceCodePro at 12px / 500 with a generous 2.00 line height for readability.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary Purple**
+- Background: `#533afd`
+- Text: `#ffffff`
+- Padding: `8px 16px` (or `15.5px 24px 16.5px` on hero — asymmetric for optical balance)
+- Radius: `4px`
+- Font: 16px Söhne weight 400, `ss01`
+- Hover: background → `#4434d4`
+- Use: primary CTA — "Start now", "Contact sales"
+
+**Ghost / Outlined**
+- Background: transparent
+- Text: `#533afd`
+- Padding: `8px 16px`
+- Radius: `4px`
+- Border: `1px solid #b9b9f9`
+- Font: 16px Söhne weight 400, `ss01`
+- Hover: background → `rgba(83,58,253,0.05)`
+- Use: secondary action paired with primary CTA
+
+**Transparent Info**
+- Background: transparent
+- Text: `#2874ad`
+- Padding: `8px 16px`
+- Radius: `4px`
+- Border: `1px solid rgba(43,145,223,0.2)`
+- Use: tertiary/info-level action
+
+**Neutral Ghost (disabled)**
+- Background: transparent
+- Text: `rgba(16,16,16,0.3)`
+- Outline: `1px solid #d4dee9`
+- Use: disabled or muted action
+
+### Cards & Containers
+
+- Background: `#ffffff`
+- Border: `1px solid #e5edf5` (standard) or `1px solid #061b31` (dark accent)
+- Radius: `4px` (tight) / `5px` (standard) / `6px` (comfortable) / `8px` (featured)
+- Shadow standard: `rgba(0,55,112,0.10) 0 6px 22px, rgba(0,59,137,0.02) 0 4px 8px`
+- Shadow elevated: `rgba(50,50,93,0.25) 0 30px 45px -30px, rgba(0,0,0,0.1) 0 18px 36px -18px`
+- Hover: shadow intensifies, often adding the blue-tinted layer
+
+### Badges, Tags, Pills
+
+**Neutral Pill**
+- Background: `#ffffff`
+- Text: `#000000`
+- Padding: `0 6px`
+- Radius: `4px`
+- Border: `1px solid #f6f9fc`
+- Font: 11px weight 400
+
+**Success Badge**
+- Background: `rgba(21,190,83,0.2)`
+- Text: `#108c3d`
+- Padding: `1px 6px`
+- Radius: `4px`
+- Border: `1px solid rgba(21,190,83,0.4)`
+- Font: 10px weight 300
+
+**Magenta Decorative Tag**
+- Background: `#ffd7ef`
+- Text: `#ea2261`
+- Border: `1px solid #ffd7ef`
+- Use: hero decoration only — never an action
+
+### Inputs & Forms
+
+- Border: `1px solid #e5edf5`
+- Radius: `4px`
+- Focus: `1px solid #533afd` plus 2px ring `rgba(83,58,253,0.2)`
+- Label: `#273951`, 14px Söhne weight 400, `ss01`
+- Text: `#061b31`, 16px Söhne weight 400
+- Placeholder: `#64748d`
+- Error: border `#ea2261`, helper `#ea2261` 13px
+
+### Navigation
+
+- White sticky header with backdrop-filter `blur(12px)` over a translucent `rgba(255,255,255,0.7)`
+- Brand logotype left-aligned in `#061b31`
+- Links: Söhne 14px weight 400, `#061b31` text with `ss01`
+- Container radius: `6px`
+- CTA: purple `#533afd` button right-aligned ("Sign in", "Start now")
+- Mobile: hamburger toggle with 6px radius
+
+### Dark Brand Section
+
+- Background: `#1c1e54`
+- Heading: 32px Söhne weight 300, `-0.64px` tracking, white, `ss01`
+- Body: 16px weight 300, `rgba(255,255,255,0.7)`
+- Inner cards: `rgba(255,255,255,0.1)` border, 6px radius
+
+### Decorative Elements
+
+- **Dashed borders** — `1px dashed #362baa` (purple) for placeholder/drop zones; `1px dashed #ffd7ef` (magenta) for decorative.
+- **Gradient accents** — ruby-to-magenta (`#ea2261` → `#f96bee`) for hero decorations only.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: `8px`
+- Scale: `1, 2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20, 24, 32, 40, 48, 64, 80, 96, 120`
+- Density observation: dense at the small end (every 2px from 4–12), reflecting precision-oriented UI for financial data. Generous beyond 24px for chrome.
+
+### Grid & Container
+
+- Max content width: `~1080px` (header up to `1264px` for nav)
+- Hero: centred single-column with generous padding, lightweight headlines
+- Feature sections: 2–3 column grids
+- Full-width dark sections (`#1c1e54`) for brand immersion
+- Code/dashboard previews as contained cards with blue-tinted shadows
+- Asymmetric hero grids common — content left, animated demo right
+
+### Whitespace Philosophy
+
+- **Precision spacing** — every gap is a deliberate typographic choice, not vast emptiness.
+- **Dense data, generous chrome** — financial tables tightly packed, UI chrome generously spaced. Like a well-organised spreadsheet in a beautiful frame.
+- **Section gutters** at 80–120px depending on density.
+
+### Section Cadence
+
+- White → dark `#1c1e54` → white alternation prevents monotony without arbitrary colour
+- Brand-band pattern places the dark section as a deliberate emotional pause every 3–4 white sections
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 1px | Fine-grained elements, subtle rounding |
+| Standard | 4px | Buttons, inputs, badges — the workhorse |
+| Comfortable | 5px | Standard card containers |
+| Relaxed | 6px | Navigation, larger interactive elements |
+| Large | 8px | Featured cards, hero elements |
+| Pill | 9999px | Avatars only — never CTAs |
+
+Compound radii: `0 0 6px 6px` for bottom-rounded containers (tab panels, dropdown footers).
+
+The system has no pills or `9999px` radii on action surfaces; that geometry is reserved for badges and avatar circles. The conservative geometry signals seriousness; the saturated purple itself signals modernity.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | No shadow | Page background, inline text |
+| 1 — Ambient | `rgba(23,23,23,0.06) 0 3px 6px` | Subtle card lift, hover hints |
+| 2 — Standard | `rgba(0,55,112,0.10) 0 6px 22px, rgba(0,59,137,0.02) 0 4px 8px` | Standard cards, content panels |
+| 3 — Elevated | `rgba(50,50,93,0.25) 0 30px 45px -30px, rgba(0,0,0,0.1) 0 18px 36px -18px` | Featured cards, dropdowns, popovers |
+| 4 — Deep | `rgba(3,3,39,0.25) 0 14px 21px -14px, rgba(0,0,0,0.1) 0 8px 17px -8px` | Modals, floating panels |
+| 5 — Ring | `2px solid #533afd` outline | Keyboard focus ring |
+
+**Shadow Philosophy** — Stripe's shadow system is built on chromatic depth. Where most design systems use neutral gray, Stripe's primary shadow (`rgba(50,50,93,0.25)`) is a deep blue-gray that echoes the navy-purple palette. This creates shadows that don't just add depth — they add brand atmosphere. The multi-layer approach pairs blue-tinted shadow with a pure black secondary at a different offset, creating parallax-like depth where the branded shadow sits farther from the element and the neutral shadow sits closer. Negative spread values (`-30px`, `-18px`) keep elevation vertical and controlled.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **Standard** `cubic-bezier(0.4, 0, 0.2, 1)` — default for most state transitions
+- **Emphasized** `cubic-bezier(0.2, 0, 0, 1)` — for hero entrance animations
+- **Out** `cubic-bezier(0, 0, 0.2, 1)` — exits and dismissals
+
+### Duration Buckets
+
+- Fast: `150ms` — colour swaps, hover ring fades
+- Standard: `220ms` — button hover, card lift, dropdown open
+- Slow: `320ms` — modal entrance, hero reveals
+
+### Per-Component Micro-States
+
+- **Button hover** — background colour shift (`220ms` standard ease) + subtle `translate-Y(-1px)`. Shadow does NOT intensify on buttons.
+- **Card hover** — shadow intensifies from Standard (Level 2) to Elevated (Level 3) over `220ms`. No translate.
+- **Link hover** — underline `text-decoration` appears, never colour change. Underline animates from 0 to 100% width over `150ms`.
+- **Input focus** — border `#e5edf5` → `#533afd` plus 2px ring `rgba(83,58,253,0.2)` over `150ms`.
+- **Dropdown open** — opacity 0→1 + `translate-Y(-4px)` over `220ms` emphasized ease.
+
+### Page Transitions
+
+- Marketing pages use no client-side transitions; standard browser navigation. Heavy demo modules fade in over `320ms` once in viewport via Intersection Observer.
+
+### Reduced Motion Strategy
+
+- `@media (prefers-reduced-motion: reduce)` — all transitions degrade to opacity-only, `120ms` linear. Translate, scale, and rotate are removed. Auto-playing hero animations are paused.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- `#061b31` body on `#ffffff` bg — **14.8:1** (AAA at body sizes)
+- `#64748d` body on `#ffffff` bg — **4.6:1** (AA at body sizes)
+- `#ffffff` text on `#533afd` brand — **4.6:1** (AA at body sizes; AA Large at 18px+)
+- `#533afd` link on `#ffffff` bg — **6.8:1** (AA Large)
+- `#108c3d` success text on `rgba(21,190,83,0.2)` — **4.7:1** (AA)
+- `#ffffff` body on `#1c1e54` brand-dark — **15.2:1** (AAA)
+
+### Focus Indicators
+
+- Default focus ring: `2px solid #533afd` with `2px` offset (transparent gap)
+- On dark sections: ring colour becomes `#b9b9f9` (purple-light) for contrast
+- Inputs use a 2px purple ring inset rather than offset
+
+### ARIA Patterns
+
+- **Combobox** — `role="combobox"` with `aria-expanded`, `aria-controls` to listbox id
+- **Dialog** — `role="dialog"` `aria-modal="true"` with focus trap and `aria-labelledby` pointing to title
+- **Listbox** — `role="listbox"` with `aria-activedescendant` for keyboard selection
+- **Tab panels** — `role="tablist"` / `role="tab"` / `role="tabpanel"` with arrow-key navigation
+
+### Keyboard Navigation
+
+- Tab order follows DOM source order; no `tabindex` overrides except `-1` for offscreen
+- Skip-to-content link in header (visible on focus only)
+- All interactive elements reachable via Tab
+- `Esc` closes dropdowns, modals, popovers
+- Arrow keys navigate within tablists, comboboxes, and menubars
+
+### Screen Reader Hints
+
+- Icons inside buttons get `aria-hidden="true"` when paired with visible text
+- Icon-only buttons get `aria-label` matching tooltip
+- Live regions (`aria-live="polite"`) for inline form validation
+- `aria-describedby` for helper text under inputs
+
+### Reduced Motion
+
+- Honoured via `prefers-reduced-motion: reduce` — all non-essential animation removed; opacity-only fades retained for state legibility.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Single column, reduced heading sizes, stacked cards |
+| Tablet | 640–1024px | 2-column grids, moderate padding |
+| Desktop | 1024–1280px | Full layout, 3-column feature grids |
+| Wide | ≥1280px | Centred content with generous margins |
+
+### Touch Targets
+
+- Buttons use comfortable padding (`8px–16px` vertical) with a `44×44px` effective hit area
+- Navigation links 14px with `12–16px` horizontal spacing for tap forgiveness
+- Badges have minimum `6px` horizontal padding
+
+### Collapsing Strategy
+
+- Hero: `56px` display → `32px` mobile, weight 300 maintained
+- Navigation: horizontal links + CTA → hamburger toggle
+- Feature cards: 3-column → 2-column → single column stacked
+- Dark brand sections maintain full-width treatment, internal padding reduces from 96px to 48px
+- Financial data tables: horizontal scroll on mobile — never stacked
+- Section spacing: `64px+` → `40px` on mobile
+
+### Image Behavior
+
+- Dashboard/product screenshots maintain blue-tinted shadow at all sizes
+- Hero gradient decorations simplify on mobile (single layer instead of layered)
+- Code blocks maintain `SourceCodePro` treatment, may horizontally scroll
+- Card images maintain consistent `4–6px` border-radius
+
+### Container Queries
+
+- Cards within feature grid use container queries to switch from horizontal to stacked layout when their container drops below 360px — independent of viewport.
+
+## 11. Content & Voice
+
+### Tone
+
+Confident, technical, editorially restrained. The voice assumes the reader is intelligent and busy — Stripe never explains payments to its audience, it explains what's new about Stripe's approach. Headlines are short, declarative, often single-sentence claims that read like magazine standfirsts. Body copy is generous but never marketing-thick.
+
+### Microcopy Patterns
+
+- **Button verbs** — `Start now`, `Contact sales`, `Sign in`, `Read docs`. Never `Click here`, never `Get started today`.
+- **Error message recipe** — `What went wrong + What to do next`. Example: "Card declined. Try a different payment method or contact your bank."
+- **Success confirmations** — past-tense, terse: `Payment received`, `Account created`, `Webhook delivered`.
+- **Inline validation** — appears under field, ruby-coloured, 13px Söhne 400.
+
+### Empty States
+
+- Direct: `No transactions yet` followed by primary CTA `Create test charge` and a link `Read the docs`.
+- No mascots, no apologetic copy, no "Looks like…".
+- Explanatory paragraph at 16px / 300 weight, body slate `#64748d`.
+
+### CTA Verb Conventions
+
+- Primary: `Start now`, `Start with Stripe`, `Contact sales`
+- Secondary: `Read docs`, `See pricing`, `Watch demo`
+- Tertiary: `Learn more →` (with right-arrow glyph)
+
+## 12. Dark Mode & Theming
+
+Stripe ships **dark-section bands** (`#1c1e54` brand-dark, `#0d253d` neutral-975) inside an otherwise light marketing surface — but does NOT offer a full dark-mode token swap on stripe.com. The dashboard product has a full dark theme; the marketing site does not.
+
+When in a dark band:
+- Background: `#1c1e54`
+- Text: `#ffffff` for headings, `rgba(255,255,255,0.7)` for body
+- Borders: `rgba(255,255,255,0.1)`
+- Cards: `rgba(255,255,255,0.06)` background with `rgba(255,255,255,0.1)` border
+- CTA: same `#533afd` purple — colour does not flip
+- Code blocks invert: `#0d253d` background, `#e6e9f1` text
+
+Implementations targeting Stripe-flavour can offer a full dark mode by mapping:
+- `bg` `#ffffff` → `#0d253d`
+- `text` `#061b31` → `#f6f9fc`
+- `surface` `#ffffff` → `#1c1e54`
+- `border` `#e5edf5` → `rgba(255,255,255,0.1)`
+- `brand` `#533afd` stays — colour is brand-locked
+
+## 13. Lineage & Influences
+
+Stripe pioneered the editorial fintech aesthetic — financial-grade trust delivered through magazine typography rather than blue-suit corporate gloss. Headlines use Söhne variable at weight `300` (light), unusual for a tech company; body text uses the same family. The text colour is `#061b31` (deep navy) rather than pure black, softening the editorial feel further. The signature `#533afd` purple appears only on action surfaces with a tight `4px` radius — the conservative geometry signals seriousness, while the saturated purple itself signals modernity. Cool-toned shadows reinforce the financial-blue sensibility throughout.
+
+Where Vercel goes black-on-near-white at weight 600 for tech polish, Stripe goes navy-on-pure-white at weight 300 for editorial gravitas. Where Linear builds depth from flat hairlines, Stripe layers branded shadow over neutral shadow for parallax-grade depth. Where Square commits to monochrome ink, Stripe commits to the smallest possible chromatic accent (one purple) and treats it as scarce.
+
+The lineage runs through Klim Type Foundry's editorial typeface tradition, Bloomberg/FT's financial-broadsheet colour discipline (navy text on white, blue accent), and Apple's SF Pro Display tracking baseline. Stripe rejects the gradient maximalism of mid-2010s SaaS, the playful pastel of Brex, and the corporate-blue conservatism of legacy banks.
+
+**Named influences:**
+- Söhne (Klim Type Foundry) — headline typeface, editorial serif-replacement sans
+- Bloomberg Terminal / FT Online — financial-broadsheet colour discipline
+- Apple SF Pro Display — type fallback and tracking baseline
+
+## 14. Do's and Don'ts
+
+### Do
+
+- Use Söhne variable with `ss01` on every text element — the stylistic set IS the brand
+- Use weight `300` for all headlines and body text — lightness is the signature
+- Apply blue-tinted shadows (`rgba(50,50,93,0.25)`) for all elevated elements
+- Use `#061b31` (deep navy) for headings instead of `#000000` — the warmth matters
+- Keep border-radius between `4px–8px` — conservative rounding is intentional
+- Use `tnum` for any tabular/financial number display
+- Layer shadows: blue-tinted far + neutral close for depth parallax
+- Use `#533afd` purple as the primary interactive/CTA colour
+- Cap reading width around 720–800px — light type needs longer measure
+- Use SourceCodePro at 12/500 with 2.00 line-height for code blocks
+- Reserve dark `#1c1e54` bands as deliberate emotional pauses every 3–4 white sections
+- Pair primary purple button with ghost outlined secondary — never two filled buttons
+
+### Don't
+
+- Don't use weight 600–700 for Söhne headlines — weight 300 is the brand voice
+- Don't use large border-radius (`12px+`, pill shapes) on cards or buttons — Stripe is conservative
+- Don't use neutral gray shadows — always tint with blue
+- Don't skip `ss01` on any Söhne text — the alternate glyphs define the personality
+- Don't use pure black `#000000` for headings — always `#061b31` deep navy
+- Don't use warm accent colours (orange, yellow) for interactive elements — purple is primary
+- Don't apply positive letter-spacing at display sizes — Stripe tracks tight
+- Don't use the magenta/ruby accents for buttons or links — they're decorative/gradient only
+- Don't swap Söhne for Inter without changing the weight scheme — Inter at 300 reads anemic
+- Don't apply pure-black shadows — the cool navy hint keeps the system editorial rather than corporate-blue
+- Don't introduce a secondary fill colour on CTAs — purple is the only action colour
+- Don't add gradient overlays to UI — gradients are hero-decoration only
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+- Primary CTA: Stripe Purple `#533afd`
+- CTA Hover: Purple Dark `#4434d4`
+- Background: Pure White `#ffffff`
+- Heading text: Deep Navy `#061b31`
+- Body text: Slate `#64748d`
+- Label text: Dark Slate `#273951`
+- Border: Soft Blue `#e5edf5`
+- Link: Stripe Purple `#533afd`
+- Dark section: Brand Dark `#1c1e54`
+- Success: `rgba(21,190,83,0.2)` bg / `#108c3d` text
+- Accent decorative: Ruby `#ea2261`, Magenta `#f96bee`
+
+### Example Component Prompts
+
+- "Create a hero section on white background. Headline at 48px Söhne weight 300, line-height 1.15, letter-spacing -0.96px, color `#061b31`, font-feature-settings 'ss01'. Subtitle at 18px weight 300, line-height 1.40, color `#64748d`. Purple CTA button (`#533afd`, 4px radius, 8px 16px padding, white text) plus ghost button (transparent, 1px solid `#b9b9f9`, `#533afd` text, 4px radius)."
+- "Design a card: white background, 1px solid `#e5edf5` border, 6px radius. Shadow: `rgba(50,50,93,0.25) 0px 30px 45px -30px, rgba(0,0,0,0.1) 0px 18px 36px -18px`. Title at 22px Söhne weight 300, letter-spacing -0.22px, color `#061b31`, 'ss01'. Body at 16px weight 300, `#64748d`."
+- "Build a success badge: `rgba(21,190,83,0.2)` background, `#108c3d` text, 4px radius, 1px 6px padding, 10px Söhne weight 300, border `1px solid rgba(21,190,83,0.4)`."
+- "Create navigation: white sticky header with backdrop-filter `blur(12px)`. Söhne 14px weight 400 for links, `#061b31` text, 'ss01'. Purple CTA 'Start now' right-aligned (`#533afd` bg, white text, 4px radius). Nav container 6px radius."
+- "Design a dark brand section: `#1c1e54` background, white text. Headline 32px Söhne weight 300, letter-spacing -0.64px, 'ss01'. Body 16px weight 300, `rgba(255,255,255,0.7)`. Cards inside use `rgba(255,255,255,0.1)` border with 6px radius."
+- "Build a financial data table: tabular figures via `font-feature-settings: 'tnum'`, 12px Söhne weight 300, line-height 1.33, letter-spacing -0.36px. Numerics right-aligned, labels left-aligned. Hairline `#e5edf5` rules between rows, no zebra striping."
+
+### Iteration Guide
+
+1. Always enable `font-feature-settings: "ss01"` on Söhne text — this is the brand's typographic DNA
+2. Weight `300` is the default; use `400` only for buttons/links/navigation
+3. Shadow formula: `rgba(50,50,93,0.25) 0 Y1 B1 -S1, rgba(0,0,0,0.1) 0 Y2 B2 -S2` where Y1/B1 are larger (far shadow) and Y2/B2 are smaller (near shadow)
+4. Heading colour is `#061b31` (deep navy), body is `#64748d` (slate), labels are `#273951` (dark slate)
+5. Border-radius stays in the `4px–8px` range — never pill shapes or large rounding on action surfaces
+6. Use `tnum` for any numbers in tables, charts, or financial displays
+7. Dark sections use `#1c1e54` — not black, not gray, but a deep branded indigo
+8. SourceCodePro for code at `12px/500` with `2.00` line-height (very generous for readability)

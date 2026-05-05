@@ -1,96 +1,218 @@
 ---
 name: Vite
-tagline: Electric purple `#646cff` + Manrope display + a literal lightning-bolt mark — the build tool that designed itself to feel as fast as it is.
+tagline: 'Electric purple #646cff + Manrope display + a literal lightning-bolt mark — the build tool that designed itself to feel as fast as it is.'
 author: webdesignhot
 source_url: https://vite.dev
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools]
 tags: [dark, minimal, sans, mono, bright, cool]
 preview_swatch: ['#1b1b1f', '#646cff', '#41d1ff']
 related: [vercel, anthropic, supabase]
-description: 'Vite''s site is the open-source equivalent of a venture-backed dev brand — a near-black `#1b1b1f` canvas, a single electric `#646cff` purple paired with a complementary `#41d1ff` cyan that together form the iconic gradient lightning bolt, **Manrope** for display headlines, **Inter** for body, and a code-sample-heavy layout typical of VitePress documentation themes. The visual register is "the build tool that designed itself" — confident, minimal, gradient-forward, and unmistakably Evan You-adjacent (sharing chromatic DNA with Vue and Nuxt).'
+description: 'Vite''s site is the open-source equivalent of a venture-backed dev brand — a near-black `#1b1b1f` canvas, a single electric `#646cff` purple paired with a complementary `#41d1ff` cyan that together form the iconic gradient lightning bolt, **Manrope** for display headlines, **Inter** for body, and a code-sample-heavy layout typical of VitePress documentation themes. The visual register is "the build tool that designed itself" — confident, minimal, gradient-forward, and unmistakably Evan You-adjacent (sharing chromatic DNA with Vue and Nuxt). The signature gesture is the purple→cyan lightning-bolt mark — one shape that does the entire identity job, the same way Vercel''s V-prism or Linear''s tilted L do their brands'' work in a single glyph.'
 
 colors:
-  bg: '#1b1b1f'                # body canvas, near-black with slight cool tilt
-  bg-elevated: '#202127'       # raised card surface (VitePress default)
-  bg-soft: '#161618'           # darker footer / nav band
-  surface: '#252529'            # secondary panel
-  surface-hover: '#2c2c33'      # hover state
-  text: '#ffffffdd'             # primary copy (~87% white, VitePress default)
-  text-muted: '#ebebf599'       # body paragraphs
-  text-soft: '#ebebf580'        # captions, metadata
-  brand: '#646cff'              # the iconic Vite electric purple
-  brand-hover: '#535bf2'        # pressed state
-  brand-light: '#747bff'        # lighter brand variant for dark→light theme
-  brand-soft: '#1d1f3a'         # tinted brand surface
-  accent-cyan: '#41d1ff'        # the lightning-bolt cyan companion
+  bg: '#1b1b1f'                      # body canvas — VitePress default dark, near-black with cool tilt
+  bg-soft: '#161618'                 # darker footer / nav band / code-block ground
+  bg-elevated: '#202127'             # raised card surface (VitePress default)
+  surface: '#252529'                 # secondary panel
+  surface-hover: '#2c2c33'           # hover state on cards / list rows
+  surface-active: '#32323a'          # pressed card state
+  surface-deep: '#101013'             # deepest tier — used under code-block highlights
+  text: '#ffffffdd'                  # primary copy at ~87% white (VitePress default)
+  text-strong: '#ffffff'              # headline-grade pure white
+  text-muted: '#ebebf599'             # body paragraphs (~60% white-violet)
+  text-soft: '#ebebf580'              # captions, metadata
+  text-faint: '#ebebf538'             # disabled / tertiary fine print
+  text-on-brand: '#ffffff'
+  brand: '#646cff'                    # the iconic Vite electric purple
+  brand-hover: '#535bf2'              # pressed state — slightly deeper
+  brand-active: '#4b53e1'             # active / focus state
+  brand-light: '#747bff'              # lighter brand variant for inverse light theme
+  brand-soft: '#1d1f3a'               # tinted brand surface for callouts
+  brand-deep: '#3c44d4'               # darkest purple for type on brand-soft
   on-brand: '#ffffff'
-  # The signature gradient: purple → cyan, used in the lightning bolt mark
-  gradient-bolt: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'
-  gradient-text: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'
-  border: '#3c3f44'             # VitePress default divider, cool grey
-  border-soft: '#2e2e32'        # softer divider
+  accent-cyan: '#41d1ff'              # the lightning-bolt cyan companion
+  accent-purple-deep: '#bd34fe'       # the gradient origin purple, NOT used solo
+  link: '#646cff'                      # links match brand
+  link-hover: '#747bff'
+  border: '#3c3f44'                    # cool-grey divider, the VitePress default
+  border-strong: '#5a5d62'             # stronger divider for hover
+  border-soft: '#2e2e32'                # softer divider on dark cards
+  border-brand: '#646cff'                # focus border
+  shadow-color: 'rgba(0, 0, 0, 0.40)'   # ambient
+  shadow-color-md: 'rgba(0, 0, 0, 0.50)' # standard
+  shadow-color-lg: 'rgba(0, 0, 0, 0.60)' # elevated
+  shadow-glow-purple: 'rgba(100, 108, 255, 0.25)' # rare brand glow on bolt mark
+  gradient-bolt: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # signature mark gradient
+  gradient-text: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # rare display-headline highlight
+  success: '#22c55e'
+  warning: '#f59e0b'
+  danger: '#ef4444'
+  info: '#41d1ff'
+  code-bg: '#161618'
+  code-keyword: '#c792ea'
+  code-string: '#c3e88d'
+  code-comment: '#697098'
+  code-number: '#f78c6c'
 
 typography:
   display:
     family: 'Manrope, "Inter Variable", Inter, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [600, 700, 800]
+    opentype-features: "'ss01', 'cv11'"
   body:
     family: 'Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
-    weights: [400, 500, 600]
+    weights: [400, 500, 600, 700]
   mono:
     family: '"Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
     weights: [400, 500]
+    opentype-features: "'liga', 'calt'"
   scale:
-    h1:    { size: 64, weight: 800, lineHeight: 1.05, tracking: '-0.03em' }
-    h2:    { size: 44, weight: 700, lineHeight: 1.1,  tracking: '-0.02em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em' }
-    body:  { size: 16, lineHeight: 1.65 }
-    code:  { size: 14, family: mono, lineHeight: 1.6 }
-    label: { size: 12, weight: 500, family: mono, tracking: '0.05em' }
+    display-hero:      { size: 64, weight: 800, lineHeight: 1.05, tracking: '-0.03em', family: display, opentype: "'ss01'" }
+    display-xl:        { size: 56, weight: 800, lineHeight: 1.08, tracking: '-0.025em', family: display }
+    display-lg:        { size: 44, weight: 700, lineHeight: 1.10, tracking: '-0.02em',  family: display }
+    display-md:        { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    display-sm:        { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em',  family: display }
+    title-lg:          { size: 24, weight: 600, lineHeight: 1.30, tracking: '-0.005em', family: display }
+    title-md:          { size: 20, weight: 600, lineHeight: 1.35, tracking: 0,          family: body }
+    title-sm:          { size: 16, weight: 600, lineHeight: 1.40, tracking: 0,          family: body }
+    body-lg:           { size: 18, weight: 400, lineHeight: 1.65, tracking: 0,          family: body }
+    body-md:           { size: 16, weight: 400, lineHeight: 1.65, tracking: 0,          family: body }
+    body-sm:           { size: 14, weight: 400, lineHeight: 1.55, tracking: 0,          family: body }
+    caption:           { size: 13, weight: 500, lineHeight: 1.40, tracking: 0,          family: body }
+    label-uppercase:   { size: 12, weight: 500, lineHeight: 1.40, tracking: '0.05em',   family: mono, transform: uppercase }
+    code-md:           { size: 14, weight: 400, lineHeight: 1.60, tracking: 0,          family: mono }
+    code-sm:           { size: 13, weight: 400, lineHeight: 1.55, tracking: 0,          family: mono }
+    code-micro:        { size: 11, weight: 500, lineHeight: 1.40, tracking: 0,          family: mono }
+    button:            { size: 14, weight: 600, lineHeight: 1.0,  tracking: 0,          family: body }
+    nav-link:          { size: 14, weight: 500, lineHeight: 1.40, tracking: 0,          family: body }
 
 radius:
+  micro: 2
   xs: 4
   sm: 6
   md: 8
   lg: 12
-  card: 12
-  button: 20         # VitePress default action button (mid-pill)
+  xl: 20      # the VitePress signature mid-pill button radius
   pill: 9999
 
-layout:
-  container: 1152
-  gutter: 24
+spacing:
+  base: 4
+  xxs: 4
+  xs: 8
+  sm: 12
+  md: 16
+  lg: 24
+  xl: 32
+  xxl: 48
   section: 80
-  grid: 12
+  scale: [4, 8, 12, 16, 20, 24, 32, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1152
+  prose-width: 720
+  header-height: 64
 
 components:
   button-primary:
-    bg: '#646cff'
-    color: '#ffffff'
-    radius: 20
-    weight: 600
+    backgroundColor: brand
+    textColor: on-brand
+    rounded: xl
     padding: '0 20px'
     height: 40
+    use: 'every primary CTA — Get started, Why Vite'
+  button-brand-soft:
+    backgroundColor: brand-soft
+    textColor: brand-light
+    rounded: xl
+    padding: '0 20px'
+    height: 40
+    use: 'tinted secondary brand action'
   button-secondary:
-    bg: '#202127'
-    color: '#ffffffdd'
-    radius: 20
+    backgroundColor: bg-elevated
+    textColor: text
+    rounded: xl
+    padding: '0 20px'
+    height: 40
     border: '1px solid #3c3f44'
-  card:
-    bg: '#202127'
-    radius: 12
+    use: 'paired secondary action'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: text
+    rounded: xl
+    padding: '0 20px'
+    height: 40
+    use: 'tertiary action — View docs'
+  card-feature:
+    backgroundColor: bg-elevated
+    textColor: text
+    rounded: lg
+    padding: 24
     border: '1px solid #3c3f44'
-  code-block:
-    bg: '#161618'
-    radius: 8
-    family: mono
+    use: 'standard feature card'
+  card-code-window:
+    backgroundColor: bg-soft
+    textColor: text
+    rounded: md
     padding: '16px 20px'
+    use: 'embeds Vite config / CLI command snippets'
+  badge-pill:
+    backgroundColor: bg-elevated
+    textColor: text-muted
+    rounded: pill
+    padding: '4px 10px'
+  text-input:
+    backgroundColor: bg-elevated
+    textColor: text
+    rounded: sm
+    padding: '8px 12px'
+    height: 36
+    border: '1px solid #3c3f44'
   bolt-mark:
     background: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'
     shape: 'lightning bolt'
+    use: 'sole gradient surface — only place the bolt-gradient appears'
+  top-nav:
+    backgroundColor: bg
+    textColor: text
+    height: 64
+    border-bottom: '1px solid #2e2e32'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  reduced-motion: 'respects prefers-reduced-motion: reduce — bolt-gradient hue-shift removed; transitions reduced to opacity-only'
+
+breakpoints:
+  mobile: 640
+  tablet: 768
+  desktop: 1024
+  wide: 1440
+
+shadows:
+  ambient: 'rgba(0, 0, 0, 0.40) 0 1px 2px'
+  standard: 'rgba(0, 0, 0, 0.50) 0 4px 12px'
+  elevated: 'rgba(0, 0, 0, 0.60) 0 12px 32px -8px'
+  deep: 'rgba(0, 0, 0, 0.70) 0 24px 48px -12px'
+  glow-purple: 'rgba(100, 108, 255, 0.25) 0 16px 48px -8px'
+  glow-cyan: 'rgba(65, 209, 255, 0.20) 0 16px 48px -8px'
+  ring: '0 0 0 2px rgba(100, 108, 255, 0.50)'
+
+accessibility:
+  contrast-text-on-bg: 14.2              # AAA — #ffffffdd on #1b1b1f
+  contrast-body-on-bg: 9.1               # AAA — #ebebf599 on #1b1b1f
+  contrast-muted-on-bg: 5.4              # AA — #ebebf580 on #1b1b1f
+  contrast-text-on-brand: 4.8            # AA at body sizes — #ffffff on #646cff
+  focus-ring: '2px solid #646cff with 2px offset'
+  reduced-motion-honored: true
+
+dark-mode: 'default — Vite ships dark-first; the VitePress default-theme light mode swaps `bg` to `#ffffff`, `text` to `#3c3c43`, and `brand` to the lighter `#747bff` variant'
 
 lineage:
   summary: |
@@ -102,10 +224,10 @@ lineage:
     in one shape. The body canvas is `#1b1b1f` (the VitePress
     default-theme dark surface), text runs at ~87% white via
     `#ffffffdd`, and the brand purple `#646cff` carries every link,
-    CTA fill, and inline highlight. **Manrope** handles display
+    CTA fill, and inline highlight. Manrope handles display
     headlines (a geometric humanist sans designed by Mikhail
-    Sharanda, free on Google Fonts), with **Inter** for body and
-    **Fira Code** for code samples. The mid-pill 20px button radius
+    Sharanda, free on Google Fonts), with Inter for body and
+    Fira Code for code samples. The mid-pill 20px button radius
     is the VitePress default and shows up everywhere across the
     Vue/Nuxt/Vite ecosystem, giving the trio a shared visual
     grammar without explicit branding overlap. Where Vercel uses
@@ -122,89 +244,411 @@ lineage:
     - name: VitePress
       role: The default-theme tokens (bg `#1b1b1f`, divider `#3c3f44`, mid-pill buttons) ARE the marketing system — eat your own dog food made literal.
       url: https://vitepress.dev
+    - name: Linear
+      role: Dark-first dev-tool aesthetic and restrained accent palette.
+      url: https://linear.app
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Vite''s site is the open-source dev-tool brand at peak confidence.
-The body canvas is the VitePress default `#1b1b1f`, headlines hit
-64px at weight 800 in **Manrope** with `-0.03em` tracking, and
-the iconic lightning-bolt mark — a `#bd34fe → #41d1ff` purple-to-cyan
-gradient in the shape of a literal lightning bolt — does the entire
-brand-identification job in a single shape.
+Vite''s marketing surface reads like the build tool decided to design itself, and got it right on the first commit. The canvas is the VitePress default `#1b1b1f` — a near-black with a faint cool tilt that distinguishes it from the truly neutral blacks of Linear or the warm aubergine of Sentry. Over it, headlines hit 64px in **Manrope** at weight 800 with `-0.03em` tracking, and a single electric purple `#646cff` carries every link, every CTA fill, and every inline highlight. The total chromatic budget is two colors plus grayscale — purple and a complementary cyan `#41d1ff` — and the cyan only shows up inside one specific shape: the lightning bolt.
 
-The signature electric purple `#646cff` carries every link, CTA fill,
-and inline highlight, while the cyan `#41d1ff` companion appears
-inside the bolt gradient and as a secondary illustration accent.
-Code samples — heavy on the page, since Vite is a build tool — use
-**Fira Code** with ligatures inside `#161618` near-black blocks.
-The whole system feels like the build tool decided to design itself,
-and got it right on the first commit.
+The defining visual artifact is the **gradient lightning bolt**. A `#bd34fe → #41d1ff` purple-to-cyan diagonal gradient, clipped to a sharp lightning glyph. It''s the entire brand identity in one shape, the same way the V-prism is for Vercel. Crucially, the gradient lives only in the bolt — never in CTAs, buttons, cards, or text washes. The bolt earns its visibility by being the only gradient on the page, and that scarcity is the whole point.
 
-## Colors
+The second signature element is the **mid-pill 20px button radius**. Where Vercel and Linear sit at 6–8px and Sentry runs full pill, Vite parks at exactly 20px — fully rounded but not infinite — matching the VitePress default and creating an instantly-recognisable Vue/Nuxt/Vite ecosystem signature. Hit any landing page in the Evan You family and the button geometry tells you you''re in the right neighborhood.
 
-- **bg** `#1b1b1f` — VitePress default canvas, near-black with slight cool tilt
-- **bg-elevated** `#202127` — raised card surface
-- **bg-soft** `#161618` — darker footer / code-block band
-- **brand** `#646cff` — the iconic Vite electric purple
-- **brand-light** `#747bff` — lighter variant for the inverse light theme
-- **accent-cyan** `#41d1ff` — the lightning-bolt cyan companion
-- **gradient-bolt** `linear-gradient(120deg, #bd34fe 30%, #41d1ff)` — the signature mark gradient
-- **text** `#ffffffdd` — primary copy at ~87% white (VitePress default)
-- **text-muted** `#ebebf599` — body paragraphs
-- **border** `#3c3f44` — cool-grey divider, the VitePress default
+Type is a two-family system: **Manrope** for display headlines (geometric humanist sans by Mikhail Sharanda, free on Google Fonts) and **Inter** for body. Manrope''s slightly larger optical x-height and rounded geometry give Vite headlines a celebratory tone that pure Inter would not — which is why Inter is restricted to the body where its readability discipline shines. Code samples use **Fira Code** with ligatures enabled, the standard for ligature-aware monospace in dev-tool documentation.
 
-## Typography
+The page rhythm is restrained. Hero band → feature triplet → "Why Vite" three-column comparison → ecosystem partners (logos for Vue, Nuxt, Solid, Astro, Sveltekit) → community/sponsors → footer. Each band uses 80px vertical rhythm. There are almost no decorative illustrations — the bolt is the only piece of "art" on the page, and it''s sufficient.
 
-Display is **Manrope** at weights 600/700/800, sized 64px on a 67px
-line-height (1.05) for the hero with `-0.03em` tracking. Manrope is
-a humanist geometric sans designed by Mikhail Sharanda — it has
-slightly more personality than Inter, which is why it carries the
-celebratory headline role rather than the body.
+**Key Characteristics:**
+- Near-black `#1b1b1f` canvas with cool-violet tilt — VitePress default-theme dark surface.
+- Single electric purple `#646cff` for links, CTAs, inline highlights, and focus rings.
+- Cyan `#41d1ff` only appears inside the lightning-bolt gradient — never solo.
+- The `#bd34fe → #41d1ff` lightning-bolt is the only gradient on the page.
+- Manrope at 800 weight with `-0.03em` tracking for celebratory display.
+- Inter for body at ~87% white via `#ffffffdd`.
+- Fira Code for code samples with ligatures enabled.
+- VitePress signature 20px mid-pill button radius.
+- 1152px max content width — the VitePress default.
+- Cool-grey hairline `#3c3f44` for every divider — never shadows for depth.
+- 80px vertical rhythm between sections.
+- Light-mode swap available via VitePress default theme — same tokens, inverted ground.
 
-Body is **Inter** at 400/500/600, sized 16px on a 1.65 line-height,
-with text rendered at ~87% white via `#ffffffdd` (the VitePress
-default opacity tier). Code uses **Fira Code** at 400 and 500 — the
-ligature-aware monospace originally designed for the Atom editor
-and now ubiquitous across dev-tool docs.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
+- **Bg / Canvas** (`#1b1b1f`): The VitePress default dark surface — runs every marketing page.
+- **Text** (`#ffffffdd`): ~87% white, the VitePress default opacity tier — softens pure white for long-form reading.
+- **Brand / Primary CTA** (`#646cff`): The Vite electric purple — every link, CTA, brand-critical accent.
 
-A 1152px max container (the VitePress default) with 24px gutters
-and 80px vertical rhythm. Cards use 12px radii, code blocks use 8px,
-and buttons use the VitePress signature 20px mid-pill radius (40px
-tall, fully rounded but not infinite). The 12-column grid is honoured
-quietly under feature comparison tables.
+### Brand & Dark
+- **Brand** (`#646cff`): Single-hue brand axis. Reserved for primary CTAs, links, focus rings, inline highlights.
+- **Brand Hover** (`#535bf2`): Pressed/hover state — slightly deeper purple.
+- **Brand Active** (`#4b53e1`): Active/focus state.
+- **Brand Light** (`#747bff`): Lighter variant used in the inverse light theme.
+- **Brand Soft** (`#1d1f3a`): Tinted brand surface for badges and callouts.
+- **Brand Deep** (`#3c44d4`): Darkest purple — used for type on `brand-soft`.
+- **Bg Soft** (`#161618`): Darker tier — code-block ground, footer, nav strip.
+- **Surface Deep** (`#101013`): Deepest tier — used under code-block highlights.
 
-## Elevation & Depth
+### Accent
+The Vite accent system is tightly constrained — there is exactly one color allowed beyond the purple, and it shows up exclusively inside the lightning-bolt gradient.
+- **Accent Cyan** (`#41d1ff`): The bolt''s terminal stop — never used as a solo color, never as a CTA, never on text.
+- **Accent Purple Deep** (`#bd34fe`): The bolt''s origin stop — never used outside the gradient.
+- **Gradient Bolt** (`linear-gradient(120deg, #bd34fe 30%, #41d1ff)`): The signature mark gradient. Diagonal, clipped to the lightning shape only.
 
-Depth is built from cool-grey tonal layering on a near-black canvas:
-`#161618` → `#1b1b1f` → `#202127` → `#252529` form a four-step ladder,
-separated by the `#3c3f44` cool-grey divider. Shadows are absent;
-the gradient bolt mark provides the only visual "lift" on the page.
+### Interactive
+- **Link** (`#646cff`): Inline body links match brand. Underlined on hover.
+- **Link Hover** (`#747bff`): Lighter on hover.
+- **Selected** (`rgba(100, 108, 255, 0.20)`): Selected text background — purple tint at 20% alpha.
+- **Disabled** (`#ebebf538`): Disabled labels and tertiary fine-print.
 
-## Shapes
+### Neutral Scale
+- **Text Strong** (`#ffffff`): Headline-grade pure white — only at display sizes.
+- **Text** (`#ffffffdd`): Primary copy at 87% — VitePress default.
+- **Text Muted** (`#ebebf599`): Body paragraphs at ~60% white-violet.
+- **Text Soft** (`#ebebf580`): Captions, metadata.
+- **Text Faint** (`#ebebf538`): Disabled, tertiary fine-print.
 
-Radii ladder is 4/6/8/12, with the signature 20px mid-pill button
-radius that VitePress popularised across the Vue/Nuxt/Vite ecosystem.
-Cards land at 12px, code blocks at 8px. The lightning bolt is the
-only non-rectangular illustration shape on the page, and it earns
-its visibility through that exclusivity.
+### Surface & Borders
+- **Bg Soft** (`#161618`): Footer, nav strip, code-block ground.
+- **Bg Elevated** (`#202127`): Raised card surface.
+- **Surface** (`#252529`): Secondary panel.
+- **Surface Hover** (`#2c2c33`): Hover state on cards.
+- **Surface Active** (`#32323a`): Pressed state.
+- **Border** (`#3c3f44`): Cool-grey hairline divider — the VitePress default.
+- **Border Strong** (`#5a5d62`): Stronger divider for hover.
+- **Border Soft** (`#2e2e32`): Softer divider on dark cards.
+- **Border Brand** (`#646cff`): Focus border on inputs.
 
-## Components
+### Shadow Colors
+Vite is shadow-light. Most depth is built from tonal layering on the four-step ladder (`#161618` → `#1b1b1f` → `#202127` → `#252529`); when shadows do appear, they are pure black at low alpha rather than brand-tinted.
+- **Shadow Color** (`rgba(0, 0, 0, 0.40)`): Ambient shadow on raised cards.
+- **Shadow Color Md** (`rgba(0, 0, 0, 0.50)`): Standard hover shadow.
+- **Shadow Color Lg** (`rgba(0, 0, 0, 0.60)`): Modal entrance.
+- **Shadow Glow Purple** (`rgba(100, 108, 255, 0.25)`): Rare ambient glow on the bolt mark or hero CTA.
 
-The defining components are the **purple CTA** (`#646cff` fill,
-white text, 20px mid-pill radius, Manrope/Inter 600), the **gradient
-lightning-bolt mark** (the entire identity in one shape), and the
-**Fira Code code block** (`#161618` bg, 8px radius, ligature-aware
-monospace). Cards are `#202127` panels with the cool-grey hairline,
-and inline code uses the soft brand surface as a highlight.
+### Semantic
+- **Success** (`#22c55e`): Confirmation toasts, success badges in product mocks.
+- **Warning** (`#f59e0b`): Caution states.
+- **Danger** (`#ef4444`): Destructive actions, error chips.
+- **Info** (`#41d1ff`): Informational notices — the cyan does dual duty here.
 
-## Do''s and Don''ts
+## 3. Typography Rules
 
-- **Do** keep the bolt gradient (`#bd34fe → #41d1ff`) as the only gradient on the page; its singularity is what makes it iconic.
-- **Do** use the VitePress default tokens (`#1b1b1f` bg, `#3c3f44` border, 20px button radius) — eating your own dog food is part of the brand''s authenticity.
-- **Do** render Fira Code with ligatures enabled in code samples; the brand''s audience expects ligature-aware monospace from a build-tool documentation site.
-- **Don''t** apply the bolt gradient to text, buttons, or cards — it lives only in the lightning-bolt shape and occasional heading highlight.
-- **Don''t** swap Manrope for Inter in headlines; Manrope''s slightly humanist geometry is what gives Vite headlines their celebratory tone.
-- **Don''t** square off buttons to 4–8px radii — the 20px mid-pill is a deliberate VitePress signature that distinguishes the ecosystem from Vercel/Linear.
+### Font Family
+- **Display**: `Manrope, "Inter Variable", Inter, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Manrope at weights 600/700/800 carries every display headline.
+- **Body**: `Inter, "Inter Variable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Inter handles body text at 400/500/600/700.
+- **Mono**: `"Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`. Fira Code with ligatures (`'liga', 'calt'`) enabled by default — required for the brand''s arrow ligatures (`=>`, `!==`) in code samples.
+- **OpenType features**: Manrope display sizes use `'ss01'` (alternate 'a' stylistic set) and `'cv11'` (single-storey g) at 64px+ for a slightly more geometric register.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Manrope | 64 | 800 | 1.05 | -0.03em | ss01 | Homepage h1 ("Next Generation Frontend Tooling") |
+| display-xl | Manrope | 56 | 800 | 1.08 | -0.025em | ss01 | Major section heads |
+| display-lg | Manrope | 44 | 700 | 1.10 | -0.02em | — | Sub-section heads |
+| display-md | Manrope | 36 | 700 | 1.15 | -0.015em | — | Feature-band heads |
+| display-sm | Manrope | 28 | 600 | 1.25 | -0.01em | — | Card titles |
+| title-lg | Manrope | 24 | 600 | 1.30 | -0.005em | — | Pricing-tier names, large list items |
+| title-md | Inter | 20 | 600 | 1.35 | 0 | — | Card titles, navigation drawer |
+| title-sm | Inter | 16 | 600 | 1.40 | 0 | — | Small card titles, list labels |
+| body-lg | Inter | 18 | 400 | 1.65 | 0 | — | Hero subhead |
+| body-md | Inter | 16 | 400 | 1.65 | 0 | — | Default running-text |
+| body-sm | Inter | 14 | 400 | 1.55 | 0 | — | Footer body, fine-print |
+| caption | Inter | 13 | 500 | 1.40 | 0 | — | Badge labels, captions |
+| label-uppercase | Fira Code | 12 | 500 | 1.40 | 0.05em | — | Section eyebrows ("WHY VITE", "FEATURES") |
+| code-md | Fira Code | 14 | 400 | 1.60 | 0 | liga, calt | Code blocks, CLI snippets |
+| code-sm | Fira Code | 13 | 400 | 1.55 | 0 | liga, calt | Inline code |
+| code-micro | Fira Code | 11 | 500 | 1.40 | 0 | — | Micro-labels in syntax-highlighted snippets |
+| button | Inter | 14 | 600 | 1.0 | 0 | — | Standard button labels |
+| nav-link | Inter | 14 | 500 | 1.40 | 0 | — | Top-nav menu items |
+
+### Principles
+- **Manrope at 800 carries display weight.** The 800 cut is celebratory — too heavy for body, just right for hero shouting.
+- **Inter at 400 carries body.** The body weight stays light because the canvas is dark and ~87% white reads softer than pure white at long line-lengths.
+- **Negative tracking is mandatory at display sizes.** `-0.03em` at 64px, easing to 0 by 16px.
+- **Body line-height is generous (1.65).** Documentation-tall — Vite is a docs-heavy site and the rhythm reflects it.
+- **Mono uses Fira Code with ligatures ON.** The brand''s audience expects `=>` and `!==` to render as glyphs, not character sequences.
+- **Label-uppercase is mono, not body.** The 12px / 0.05em uppercase eyebrow uses Fira Code for a slightly engineering register — distinguishes Vite from Linear/Vercel which use sans uppercase eyebrows.
+- **Two-family discipline is intentional.** Manrope''s humanist warmth versus Inter''s neutral systemics — never swap.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**`button-primary`** — The signature purple CTA. Background `#646cff`, text `#ffffff`, Inter 14px / 600, padding `0 20px`, height 40px, radius 20px (mid-pill). Hover: `#535bf2` over 100ms; focus ring 2px `rgba(100, 108, 255, 0.50)` with 2px offset.
+
+**`button-brand-soft`** — Tinted brand secondary action. Background `#1d1f3a`, text `#747bff`, same shape and padding. Used for "Why Vite" or "Read the docs" beside primary CTAs.
+
+**`button-secondary`** — Bordered secondary on dark canvas. Background `#202127`, text `#ffffffdd`, 1px solid `#3c3f44` border, same shape.
+
+**`button-ghost`** — Pure text-link button, transparent background, hover lifts to `#202127`. Used for tertiary actions.
+
+### Cards
+
+**`card-feature`** — Standard dark feature card. Background `#202127`, radius 12px, padding 24px, 1px solid `#3c3f44` border. No shadow at rest; subtle ambient on hover.
+
+**`card-code-window`** — The Fira Code code block. Background `#161618` (deeper than canvas), radius 8px, padding `16px 20px`, syntax highlighting with `code-keyword: #c792ea` (purple), `code-string: #c3e88d` (green), `code-comment: #697098` (muted), `code-number: #f78c6c` (warm orange). Top-right "vite.config.ts" or "main.ts" tab indicator in `code-micro` typography.
+
+### Badges & Pills
+
+**`badge-pill`** — Small pill. Background `#202127`, text `#ebebf599`, caption typography, radius 9999. Used for "Beta" / "v5.0" version chips.
+
+**`badge-brand`** — Purple-tinted pill. Background `#1d1f3a`, text `#747bff`, label-uppercase typography, radius 9999. Used for "NEW" callouts.
+
+### Inputs / Forms
+
+**`text-input`** — Dark text input. Background `#202127`, text `#ffffffdd`, radius 6px, padding `8px 12px`, height 36px, 1px solid `#3c3f44` border.
+
+**`text-input-focused`** — 2px `#646cff` core ring with 2px transparent offset.
+
+### Navigation
+
+**`top-nav`** — Pinned to top, 64px tall, background `#1b1b1f` (canvas), 1px `#2e2e32` bottom border. Logo + "Vite" wordmark left (with bolt mark gradient), primary horizontal menu (Guide, Config, Plugins, Resources, Blog) center, right-side: GitHub link + version chip + theme toggle.
+
+### Decorative
+
+**`bolt-mark`** — The signature lightning-bolt. Background `linear-gradient(120deg, #bd34fe 30%, #41d1ff)`, clipped to a sharp lightning shape via SVG path. Sole gradient surface — appears only as the brand mark, never as a CTA, button, or text wash.
+
+**`feature-icon`** — 32px icon in the `#646cff` brand purple, drawn as 2px stroke linework. Sits at the top of every `card-feature`.
+
+**`stat-callout`** — Inline stat numbers ("10x faster", "Native ES modules", "0ms HMR"). Display-md typography (36px / 700) in `#ffffff` or `#646cff` with `label-uppercase` qualifier below.
+
+## 5. Layout Principles
+
+### Spacing System
+Base unit **4px**. Tokens: `xxs:4 · xs:8 · sm:12 · md:16 · lg:24 · xl:32 · xxl:48 · section:80`. The 80px section padding is the VitePress default and shows up between every band; 24px is the standard card padding.
+
+### Grid & Container
+Max content width **1152px** centered (the VitePress default). Editorial body uses a 12-column grid; hero often uses a 7/5 split (hero text left, code-window or bolt illustration right). Feature card grids run 3-up at desktop, 2-up at tablet, 1-up at mobile.
+
+### Whitespace Philosophy
+Vite uses moderate whitespace — generous enough to feel calm, tight enough to keep the documentation scannable. The site is information-dense by default (because it''s docs-led), and the marketing pages inherit that density rather than fighting it.
+
+### Section Cadence
+Hero band (with bolt mark) → feature triplet (3 columns) → "Why Vite" comparison (text + code-window) → ecosystem partner logos (Vue, Nuxt, Solid, Astro, Svelte) → community/sponsors strip → footer. Each band runs 80px vertical rhythm. There is no light/dark alternation — the entire page is dark-canvas, by design.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|---|---|---|---|
+| Micro | micro | 2px | Reserved for syntax-highlight chips |
+| XS | xs | 4px | Badge accents |
+| Standard | sm | 6px | Tight inputs, small inline buttons |
+| Comfortable | md | 8px | Code blocks, dropdowns |
+| Large | lg | 12px | Content cards, feature cards |
+| Featured | xl | 20px | The VitePress signature mid-pill button — fully rounded but not infinite |
+| Pill | pill | 9999px | Badges, version chips |
+
+The 20px button radius is the most distinctive shape decision in the entire system — it sits between Vercel''s 6px sharp rectangles and Sentry''s full pill, claiming a middle ground that the Vue/Nuxt/Vite ecosystem now collectively owns.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 — Flat | No shadow, no border | Body sections, top nav, hero text |
+| 1 — Soft hairline | 1px `#3c3f44` border | Standard feature cards |
+| 2 — Tonal lift | One step up the surface ladder (`#202127` over `#1b1b1f`) | Raised card on hero band |
+| 3 — Soft shadow | 1px border + ambient `rgba(0, 0, 0, 0.40)` shadow | Cards on hover |
+| 4 — Brand glow | 1px border + `glow-purple` shadow | Hero CTA card or bolt mark (rare) |
+| 5 — Modal | Standard shadow + backdrop dim 70% | Dialogs, search modal |
+
+### Shadow Philosophy
+Vite is fundamentally **shadow-light**. The four-step tonal ladder (`#161618` → `#1b1b1f` → `#202127` → `#252529`) does most of the elevation work; shadows appear only on hover or modal entrance, and they are pure black at low alpha rather than brand-tinted. The single brand-glow exception is the rare ambient halo on the bolt mark or a featured CTA — and it shows up at most once per page.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard ease**: `cubic-bezier(0.4, 0, 0.2, 1)` — every default transition.
+- **Emphasized ease**: `cubic-bezier(0.2, 0, 0, 1)` — CTA hover, modal entrances.
+- **Bounce ease**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — rare playful overshoot on the bolt mark hover.
+
+### Duration Buckets
+- **Fast (100ms)**: Color transitions, button hover.
+- **Standard (200ms)**: Card hover lifts, dropdown opens, focus ring fade-in.
+- **Slow (320ms)**: Modal entrance, page-section reveals.
+
+### Per-Component Micro-States
+- **Button hover**: Purple CTAs darken `#646cff → #535bf2` over 100ms; 1px translateY lift.
+- **Card hover**: TranslateY(-2px) over 200ms; ambient shadow appears.
+- **Bolt mark hover**: The gradient hue-rotates 8° over 600ms with bounce ease — rare playful gesture, on hero only.
+- **Code-window hover**: No state change; copy-button reveals on hover via opacity 0 → 1 over 200ms.
+- **Link hover**: Color brightens `#646cff → #747bff` + underline grows from 0 → 100% over 100ms.
+- **Input focus**: 2px `#646cff` ring expands over 200ms.
+
+### Page Transitions
+Standard browser navigation. Section-on-scroll reveals are 320ms fade-in-up with 50ms stagger between sibling cards.
+
+### Reduced Motion
+Honored — `prefers-reduced-motion: reduce` removes the bolt-mark hue-rotate, all translateY transforms become opacity-only, and section-reveal transitions are skipped entirely (content renders in final position immediately).
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- **Text on bg**: `#ffffffdd` on `#1b1b1f` = **14.2** — AAA at body sizes.
+- **Body on bg**: `#ebebf599` on `#1b1b1f` = **9.1** — AAA.
+- **Muted on bg**: `#ebebf580` on `#1b1b1f` = **5.4** — AA.
+- **On-brand on brand**: `#ffffff` on `#646cff` = **4.8** — AA at body sizes (large text AAA).
+- **Brand on bg**: `#646cff` on `#1b1b1f` = **5.0** — AA.
+
+### Focus Indicators
+2px solid `#646cff` ring with 2px transparent offset. Visible on every interactive surface (buttons, links, inputs, nav items).
+
+### ARIA Patterns
+- **Buttons**: Native `<button>`; icon-only carry `aria-label="Open theme switcher"`.
+- **Code blocks**: `<pre><code>` with `aria-label="Vite config example"` and a separately-positioned copy button labeled `aria-label="Copy code"`.
+- **Bolt mark**: SVG `<title>Vite</title>` + `<desc>` for screen-reader fallback.
+- **Top nav**: `<nav aria-label="Primary navigation">`.
+- **Search modal**: `role="dialog"` + `aria-labelledby` + focus trap.
+
+### Keyboard Navigation
+Tab order follows visual reading order. Skip-link to `<main>` available. Search opens via `Cmd+K` / `Ctrl+K`. Modal traps focus and closes on Escape.
+
+### Screen Reader Hints
+Stat numbers carry `aria-label` for full unit readout ("10 times faster" rather than "10x"). Code blocks announce language via `aria-label` ("TypeScript code"). The bolt mark is decorative — its SVG carries `<title>` for context, and the wordmark carries the actual brand name for announce-ability.
+
+### Reduced Motion Handling
+Honored — bolt-mark hue-rotate animation skipped, all transforms removed from hover states, section-reveal transitions disabled.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|---|---|---|
+| Mobile | < 640px | Hamburger nav; hero h1 64→36px; bolt mark scales to 32px; feature grids 1-up; code-window full-bleed with horizontal scroll |
+| Tablet | 640–1024px | Top nav tightens; feature cards 2-up; hero h1 52px |
+| Desktop | 1024–1440px | Full top-nav; 3-up feature cards; hero h1 64px |
+| Wide | > 1440px | Same as desktop with more breathing room; max content stays at 1152px |
+
+### Touch Targets
+Primary CTA min 40 × 40px (height already 40, padding `0 20px`). Icon-only nav buttons 36 × 36 with adequate hit area. Input height 36px.
+
+### Collapsing Strategy
+Top nav collapses to hamburger at < 768px. Hero 7/5 grid collapses to single-column. Code-window stacks below text on mobile. Bolt mark scales proportionally — the SVG retains its aspect ratio at every breakpoint.
+
+### Image Behavior
+Code blocks stay at fixed `code-md` font-size; horizontal scroll on mobile rather than wrapping. Customer/ecosystem logos retain native widths and align to a 32px row height.
+
+### Container Queries
+Used inside the `card-feature` shell — when the card is narrower than 320px, the feature icon stacks above the title rather than sitting beside it.
+
+## 11. Content & Voice
+
+### Tone
+**Confident, technical, slightly playful.** Vite writes for frontend developers who already know what HMR and ESM mean. The voice is direct and capability-led — "Next Generation Frontend Tooling" is the one-line pitch, and the body copy explains *how* without apologising for technical depth. The playfulness shows up in occasional flourishes (the bolt mark itself, the "lightning-fast" tagline tradition) but never tips into whimsy.
+
+### Microcopy Patterns
+- **CTA verbs**: "Get Started", "Why Vite", "View on GitHub", "Read the Docs". Direct, action-led, never marketing-speak.
+- **Section labels**: Uppercase eyebrow in Fira Code at 12px / 0.05em — "WHY VITE", "FEATURES", "ECOSYSTEM", "PLUGINS".
+- **Stat numbers**: Followed by qualifier — "10× faster", "Native ESM", "0ms HMR", "100+ plugins".
+- **Feature copy**: Verb-first with technical specificity ("Hot Module Replacement out of the box", "TypeScript support without configuration", "Tree-shaking by default").
+- **Error messages in product**: Direct and actionable — "Failed to resolve import — check that the package is installed."
+
+### Empty States
+Plugin marketplace empty: "No plugins match — try a broader search term, or browse the full registry." Friendly, instructive, includes an out.
+
+### CTA Verb Conventions
+"Get Started" appears as the primary CTA across every page — not "Sign Up", not "Try Free", not "Start Trial". Vite is open-source and free; the CTA reflects that. Secondary CTAs use technical verbs ("View Source", "Read RFC", "Browse Plugins").
+
+## 12. Dark Mode & Theming
+
+Vite is **dark-default**. The VitePress default theme ships a light variant available via the theme-toggle in the top-right of the nav, which performs a clean token swap:
+
+- `bg`: `#1b1b1f` → `#ffffff`
+- `bg-soft`: `#161618` → `#f6f6f7`
+- `bg-elevated`: `#202127` → `#fafafa`
+- `text`: `#ffffffdd` → `#3c3c43`
+- `text-muted`: `#ebebf599` → `#67676c`
+- `border`: `#3c3f44` → `#e2e2e3`
+- `brand`: `#646cff` → `#747bff` (lighter, for AA contrast on white)
+- `code-bg`: `#161618` → `#f6f6f7`
+
+The bolt-gradient stays exactly the same — `#bd34fe → #41d1ff` is brand-locked and renders identically against either ground. The 20px button radius, the 1152px container, the 80px rhythm — all geometry tokens are theme-invariant.
+
+## 13. Lineage & Influences
+
+Vite''s aesthetic descends from the **modern open-source dev-tool** lineage that runs through Vue, Nuxt, Astro, and the broader Evan You ecosystem. The dark-canvas + bright-accent + monospace-everywhere register is Linear-and-Vercel-adjacent for chromatic restraint, but Vite pushes harder on the celebratory display type (Manrope at 800 versus Inter at 600 across the dev-infra norm) and on the gradient-as-mark gesture.
+
+The signature `#bd34fe → #41d1ff` lightning-bolt gradient is Vite''s most distinctive contribution to the dev-tool aesthetic vocabulary. Most contemporaries hold the line at single-color marks (Vercel''s V-prism, Linear''s tilted L, Supabase''s green orbit) — Vite breaks the rule with a gradient and earns it back through ruthless restriction (the gradient appears nowhere else on the page).
+
+The 20px mid-pill button radius is a VitePress convention — the default theme used by the documentation site — and adopting it for marketing is the brand''s "eat your own dog food" gesture made literal. Vue and Nuxt sites built on the same toolkit inherit this geometry, which gives the trio a shared visual grammar without explicit logo overlap.
+
+The two-family typography (Manrope display + Inter body) is unusual in the dev-tool space, where most brands run Inter-only. Manrope''s slight humanist warmth is what gives Vite headlines a celebratory tone that pure Inter would not — it''s the typographic equivalent of the lightning-bolt: one departure from the systemic norm, applied with discipline.
+
+- **Vue / Nuxt** — Shared chromatic DNA; the Evan You ecosystem inheritance. https://vuejs.org
+- **Vercel** — V-prism-as-identity playbook; cool dark-canvas + bright-accent baseline. https://vercel.com
+- **VitePress** — The default-theme tokens ARE the marketing system; eat-your-own-dog-food made literal. https://vitepress.dev
+- **Linear** — Dark-first dev-tool aesthetic; restrained accent palette. https://linear.app
+- **Manrope** — Mikhail Sharanda''s humanist geometric sans, free on Google Fonts. https://manropefont.com
+
+## 14. Do''s and Don''ts
+
+### Do
+- Anchor every page on the `#1b1b1f` near-black canvas. Vite is dark-first.
+- Reserve the purple `#646cff` for primary CTAs, links, focus rings, and inline highlights.
+- Use the lightning-bolt gradient (`#bd34fe → #41d1ff`) only inside the bolt shape — never on text, buttons, or cards.
+- Use Manrope at weight 800 with `-0.03em` tracking for hero display.
+- Use Inter at 400 / 1.65 line-height for body — never Manrope for paragraphs.
+- Use Fira Code with ligatures enabled in every code sample.
+- Use the VitePress signature 20px mid-pill button radius — never 4–8px.
+- Use the cool-grey `#3c3f44` hairline for dividers — never colored borders.
+- Use 80px vertical rhythm between sections.
+- Use ~87% white via `#ffffffdd` for body text — never pure white at body sizes.
+- Render text-strong `#ffffff` only at display sizes and stat callouts.
+- Honor `prefers-reduced-motion` — skip the bolt hue-rotate and translateY transforms.
+
+### Don''t
+- Don''t apply the bolt gradient to text, CTAs, or cards — its singularity is what makes it iconic.
+- Don''t swap Manrope for Inter in headlines — Manrope''s humanist warmth is the celebratory signal.
+- Don''t square off buttons to 4–8px radii — the 20px mid-pill is the VitePress signature.
+- Don''t introduce a third brand color — purple + cyan + grayscale is the entire system.
+- Don''t use the cyan `#41d1ff` solo (outside the bolt gradient) — it lives only inside the gradient and as the rare info accent.
+- Don''t reach for shadows for depth — use the four-step tonal ladder.
+- Don''t use Fira Code without ligatures — the brand''s audience expects `=>` and `!==` to render as glyphs.
+- Don''t exceed 80px section padding — the VitePress rhythm is calibrated; widening it breaks the docs-marketing continuity.
+- Don''t use an editorial serif anywhere — Vite is a sans + mono system.
+- Don''t set body text in pure `#ffffff` — it''s too harsh against `#1b1b1f`; ~87% is the calibrated tier.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+```
+Bg / Canvas:     #1b1b1f (near-black with cool tilt)
+Bg Soft:         #161618 (footer / code-block ground)
+Bg Elevated:     #202127 (raised card surface)
+Border:          #3c3f44 (cool-grey hairline)
+Text:            #ffffffdd (~87% white — VitePress default)
+Text Muted:      #ebebf599 (~60% white-violet)
+Brand:           #646cff (Vite electric purple)
+Brand Hover:     #535bf2 (pressed)
+Accent Cyan:     #41d1ff (bolt-only — never solo)
+Gradient Bolt:   linear-gradient(120deg, #bd34fe 30%, #41d1ff)
+```
+
+### Example Component Prompts
+
+1. "Create a Vite hero band on `#1b1b1f` canvas, with a Manrope 64px / 800 / -0.03em tracking `#ffffff` headline (\"Next Generation Frontend Tooling\"), 18px / 400 `#ebebf599` Inter subhead, and a primary purple `#646cff` CTA (\"Get Started\") with 20px mid-pill radius paired with a transparent `button-ghost` (\"Why Vite\"). Right side: the gradient lightning-bolt mark at 240px, rendered as `linear-gradient(120deg, #bd34fe 30%, #41d1ff)` clipped to a sharp lightning glyph."
+
+2. "Design a feature triplet on a `#1b1b1f` canvas. Three cards in a 3-column grid, each `#202127` background, 12px radius, 24px padding, 1px solid `#3c3f44` border. Each card opens with a 32px `#646cff` purple linework icon (2px stroke), then a 20px / 600 Inter title, then 16px / 400 / 1.65 line-height `#ebebf599` body. Cards are: \"Lightning Fast HMR\", \"Rich Features\", \"Universally Compatible\"."
+
+3. "Embed a Vite config code-window. `#161618` background, 8px radius, `16px 20px` padding. Top-right shows a small `vite.config.ts` tab indicator in 11px Fira Code uppercase. Body is Fira Code 14px / 400 / 1.60 with syntax highlighting: keywords (`import`, `export`, `default`) in `#c792ea` purple, strings in `#c3e88d` green, comments in `#697098` muted, numbers in `#f78c6c` warm orange. Ligatures enabled (`'liga', 'calt'`)."
+
+4. "Compose a stat-callout band with three numbers (\"10×\", \"0ms\", \"100+\") in Manrope 36px / 700 / `#ffffff`, each with a `#ebebf599` 12px / 500 / 0.05em uppercase Fira Code label below (\"FASTER COLD-START\", \"HMR LATENCY\", \"PLUGINS\"). 80px vertical padding."
+
+5. "Build an ecosystem partner strip showing Vue, Nuxt, Astro, Solid, Svelte logos. Background `#161618`, 80px vertical padding, logos in `#ebebf580` (~50% white) on hover lifting to `#ffffffdd`. Logo height 32px, gap 64px, centered."
+
+6. "Design a `button-primary` Vite CTA: 40px tall, padding `0 20px`, radius 20px (mid-pill), background `#646cff`, white 14px / 600 Inter label. Hover: `#535bf2` over 100ms with subtle 1px translateY lift. Focus: 2px `rgba(100, 108, 255, 0.50)` ring with 2px offset."
+
+### Iteration Guide
+1. Start with the `#1b1b1f` near-black canvas — Vite is dark-first.
+2. Add exactly one purple `#646cff` per band. Reserve it for action moments.
+3. The lightning bolt is the only gradient. If you want a gradient elsewhere, use the bolt instead.
+4. Buttons are 20px radius mid-pills. Never round to 4–8px or full pill.
+5. Code windows use Fira Code with ligatures. The `=>` arrow renders as a glyph.
+6. Manrope at 800 weight is reserved for hero display. Inter handles every body size.
+7. Body text is ~87% white via `#ffffffdd` — pure white only at display sizes.
+8. The cool-grey hairline `#3c3f44` is the entire divider system. No colored borders, minimal shadows.

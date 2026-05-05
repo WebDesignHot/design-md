@@ -6,7 +6,7 @@ source_url: https://usemotion.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas, productivity]
+categories: [saas]
 tags: [light, ai, calendar, sans, gradient, scheduler]
 preview_swatch: ['#ffffff', '#16a34a', '#7c3aed']
 related: [linear, height, fantastical]

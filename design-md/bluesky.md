@@ -1,0 +1,1049 @@
+---
+name: Bluesky
+tagline: Sky-blue `#0085ff` on bright white with Inter sans — the AT-Protocol social network rendered as airy, federated, open.
+author: webdesignhot
+source_url: https://bsky.app
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [social]
+tags: [light, dark, social, sans, blue, federated, open]
+preview_swatch: ['#ffffff', '#0085ff', '#0c0c0c']
+related: [twitter-x, threads-app, telegram]
+description: 'Bluesky is the airy alternative-Twitter aesthetic — a bright `#ffffff` canvas with a confident `#0085ff` sky-blue used throughout the action layer (primary CTA, inline links, brand wordmark, butterfly icon), Inter pulling display through body in the canonical modern-social-app register, and a feed timeline whose density is calibrated for thoughtful scroll rather than addictive engagement. Where X (Twitter) leans into dark-mode-by-default chrome and aggressive monetization UI, Bluesky commits to **open-network warmth**: a paper-white canvas in light mode, every post is a federated AT Protocol record, the algorithmic feed picker lets you choose between Following / Discover / Custom Algorithms / What''s Hot. The brand''s argument is "we are building social media as a public utility on top of an open protocol" — and the visual language commits to the convention that protocol-native social products use: clean type, generous post-card padding, subtle brand-blue accent rationed for action, butterfly logo as the brand glyph. Hand-illustrated aesthetic touches (the butterfly logo descended from Mark Hamill''s feather pen sketch on Jay Graber''s napkin), playful pinned-post handles like @jay.bsky.team for verification, custom feed selectors at the top of every timeline. The dark-mode variant inverts the canvas to deep navy `#16161a` and lets the sky-blue do its work as the chromatic anchor. This is the cleanest, friendliest, most protocol-respectful social-network surface in 2024–2026.'
+
+colors:
+  bg: '#ffffff'                    # primary canvas (light)
+  bg-warm: '#f8f9fa'                # alt section band
+  bg-muted: '#f1f3f5'               # subtle bg variation
+  bg-deep: '#16161a'                # dark-mode canvas
+  bg-deeper: '#0c0c0c'               # dark mode footer / deepest surface
+  bg-promo: '#e8f4ff'               # soft sky-blue promo band
+  surface: '#ffffff'                # default card (light)
+  surface-elevated: '#ffffff'        # modal floor (with shadow)
+  surface-hover: '#f1f3f5'           # nav hover, list-row hover
+  surface-soft: '#eef7ff'            # secondary blue-tinted surface
+  surface-strong: '#e8eaee'          # divider band
+  surface-dark: '#1f1f23'            # dark card on dark canvas
+  surface-dark-elevated: '#26262d'   # raised dark card
+  surface-dark-hover: '#2c2c33'      # dark nav hover
+  text: '#0c0c0c'                    # primary body — near-pure black
+  text-strong: '#000000'             # display headlines
+  text-muted: '#5e6772'              # secondary metadata
+  text-soft: '#7a838e'               # tertiary captions, post timestamp
+  text-disabled: '#a8aebd'           # disabled state
+  text-on-brand: '#ffffff'            # text on sky-blue
+  text-on-dark: '#ffffff'             # text on dark mode canvas
+  text-dark-muted: '#8e96a3'         # muted on dark
+  text-dark-soft: '#666e7a'          # soft on dark
+  text-link: '#0085ff'               # inline link sky blue
+  text-link-hover: '#006cd9'         # link pressed
+  brand: '#0085ff'                   # Bluesky Sky Blue — primary CTA, brand surface, butterfly logo
+  brand-hover: '#006cd9'             # primary button hover
+  brand-active: '#0057b3'            # pressed
+  brand-soft: '#e8f4ff'              # soft tint surface, badge bg
+  brand-deep: '#0057b3'              # deeper blue for AAA contrast on white
+  accent-pink: '#fb44a3'             # bsky accent — like buttons, hearts
+  accent-purple: '#9a75e9'           # repost / share
+  accent-yellow: '#f5c518'           # pinned post, starred feed
+  accent-orange: '#f9a13e'           # warning / labeled content
+  accent-red: '#e84545'              # error, block
+  accent-green: '#2bb673'             # follow back, success
+  border: '#dde1e7'                  # default hairline (light)
+  border-soft: '#eef0f3'             # subtle divider
+  border-strong: '#bcc1c9'           # focused field outline
+  border-dark: '#2c2c33'             # border on dark surfaces
+  border-focus: '#0085ff'            # focus ring
+  on-brand: '#ffffff'                # label on brand surface
+  reply-line: '#dde1e7'              # threaded conversation tree line
+  reply-line-dark: '#2c2c33'         # threaded conversation line on dark
+  reaction-like: '#fb44a3'           # like heart pink
+  reaction-repost: '#9a75e9'         # repost arrow purple
+  reaction-reply: '#5e6772'          # reply icon muted
+  shadow-card: 'rgba(0,0,0,0.06)'   # default card shadow
+  shadow-modal: 'rgba(0,0,0,0.20)'   # modal floor
+  shadow-popover: 'rgba(0,0,0,0.12)' # popover/dropdown
+  success: '#2bb673'                 # account verified, follow succeeded
+  success-soft: '#e0f6ec'            # success bg
+  warning: '#f9a13e'                 # warning amber
+  warning-soft: '#fff3e0'            # warning bg
+  danger: '#e84545'                  # error, block
+  danger-soft: '#fdebeb'             # error bg
+  info: '#0085ff'                    # info sky blue
+  info-soft: '#e8f4ff'               # info bg
+
+colors-dark:
+  bg: '#16161a'
+  bg-deeper: '#0c0c0c'
+  surface: '#1f1f23'
+  surface-elevated: '#26262d'
+  surface-hover: '#2c2c33'
+  text: '#ffffff'
+  text-muted: '#8e96a3'
+  text-soft: '#666e7a'
+  brand: '#3aa3ff'                   # brightened for AAA on dark
+  brand-hover: '#5cb5ff'
+  brand-soft: '#0d2940'
+  border: '#2c2c33'
+  border-soft: '#1f1f23'
+  reaction-like: '#fb44a3'           # pink stays vibrant on dark
+  reaction-repost: '#9a75e9'
+  shadow-card: 'rgba(0,0,0,0.4)'
+
+typography:
+  display:
+    family: '"Inter", "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700, 800]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Inter", "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"SF Mono", "Roboto Mono", Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 56, weight: 800, lineHeight: 1.1,  tracking: '-0.025em', family: display, notes: 'Marketing landing — "Social media as it should be"' }
+    display-xl:      { size: 44, weight: 800, lineHeight: 1.15, tracking: '-0.02em', family: display, notes: 'Section hero, AT Protocol page' }
+    display-lg:      { size: 32, weight: 700, lineHeight: 1.2,  tracking: '-0.015em', family: display, notes: 'Feature section title' }
+    display-md:      { size: 24, weight: 700, lineHeight: 1.25, tracking: '-0.01em', family: display, notes: 'Section heading' }
+    display-sm:      { size: 20, weight: 700, lineHeight: 1.3,  tracking: '-0.005em', family: display, notes: 'Subsection heading' }
+    title-lg:        { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Card title, profile display name' }
+    title-md:        { size: 16, weight: 600, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'List item title' }
+    title-sm:        { size: 14, weight: 600, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Sidebar nav, dropdown header' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',       family: body, notes: 'Lead paragraph, hero subtitle' }
+    body-md:         { size: 15, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Default body, post text' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.45, tracking: '0',       family: body, notes: 'Reply, secondary metadata' }
+    button-lg:       { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, notes: '"Sign up" / "Create account" CTA' }
+    button-md:       { size: 14, weight: 600, lineHeight: 1.0,  tracking: '0',       family: body, notes: 'Default button label' }
+    handle:          { size: 14, weight: 400, lineHeight: 1.45, tracking: '0',       family: body, notes: '@username.bsky.social handle' }
+    timestamp:       { size: 13, weight: 400, lineHeight: 1.3,  tracking: '0',       family: body, opentype: ['tnum'], notes: '"3h" / "2024-04-15" timestamp' }
+    counter:         { size: 13, weight: 500, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'], notes: 'Like / repost / reply count' }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Disclosures, fine print' }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.0,  tracking: '0.06em',  family: body, notes: 'Uppercase eyebrow "DISCOVER"' }
+    badge:           { size: 11, weight: 600, lineHeight: 1.0,  tracking: '0.04em',  family: body, notes: '"NEW", "FOLLOWS YOU" tags' }
+
+radius:
+  micro: 2          # tiny indicator
+  sm: 4             # input, badge
+  md: 6             # tag chip
+  lg: 8             # post card, modal
+  xl: 12            # large card
+  pill: 9999        # primary button cap, follow button, avatar circle
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1280
+  content-max: 1080
+  feed-width: 600          # main feed column
+  prose-width: 600         # post-detail prose
+  sidebar-width: 320       # right rail (Discover / Trending)
+  nav-rail-width: 240      # left rail (logged-in)
+  header-height: 56
+
+components:
+  button-primary:
+    bg: '#0085ff'
+    color: '#ffffff'
+    radius: 9999
+    padding: '10px 24px'
+    height: 44
+    font: button-lg
+    weight: 700
+    use: '"Sign up" / "Create account" / "Post" — primary CTA, full-pill sky blue with white text.'
+  button-primary-hover:
+    bg: '#006cd9'
+    color: '#ffffff'
+    radius: 9999
+    use: 'Hover — darker sky blue, no shadow lift, no scale.'
+  button-secondary:
+    bg: '#ffffff'
+    color: '#0057b3'
+    border: '1px solid #0057b3'
+    radius: 9999
+    padding: '10px 24px'
+    height: 44
+    use: '"Sign in" outlined deeper-blue secondary on light. Uses `#0057b3` for AAA contrast.'
+  button-secondary-dark:
+    bg: '#1f1f23'
+    color: '#3aa3ff'
+    border: '1px solid #3aa3ff'
+    radius: 9999
+    padding: '10px 24px'
+    height: 44
+    use: 'Outlined secondary on dark surface — uses brightened brand for dark-mode AAA contrast.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#0085ff'
+    radius: 4
+    padding: '8px 12px'
+    use: 'Inline text link.'
+  button-icon:
+    bg: 'transparent'
+    color: '#5e6772'
+    radius: 9999
+    height: 36
+    width: 36
+    use: 'Reaction icon button (reply / repost / like / share / more) — circular, fills with brand-tint on hover.'
+  button-follow:
+    bg: '#0085ff'
+    color: '#ffffff'
+    radius: 9999
+    padding: '6px 16px'
+    height: 32
+    font: button-md
+    use: 'Compact "Follow" pill on profile cards and search results.'
+  button-following:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    border: '1px solid #dde1e7'
+    radius: 9999
+    padding: '6px 16px'
+    height: 32
+    use: '"Following" outlined state — neutral grey, hover red to "Unfollow".'
+  button-follow-back:
+    bg: '#ffffff'
+    color: '#0085ff'
+    border: '1px solid #0085ff'
+    radius: 9999
+    padding: '6px 16px'
+    height: 32
+    use: '"Follow back" — outlined sky-blue secondary appears when target follows you first.'
+  button-post-fab:
+    bg: '#0085ff'
+    color: '#ffffff'
+    radius: 9999
+    height: 56
+    width: 56
+    use: 'Compose-post floating action button — sticky bottom-right of feed on mobile, with pencil glyph.'
+  card-post:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 0
+    padding: 16
+    border-bottom: '1px solid #dde1e7'
+    use: 'Default post in feed — flush-edge with bottom hairline (Twitter convention). Avatar 40px circular left, post content right (display name + handle + timestamp + post text + optional embed + reaction row).'
+  card-post-hover:
+    bg: '#f8f9fa'
+    color: '#0c0c0c'
+    use: 'Hover — subtle warm-grey wash, no shadow.'
+  card-post-detail:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 0
+    padding: 24
+    use: 'Post detail page primary post — larger padding, larger 18px / 400 body type, full thread tree below.'
+  card-quote:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 12
+    padding: 12
+    border: '1px solid #dde1e7'
+    use: 'Quote-post embed — nested post card with rounded `12px` border, 12px padding inside parent post.'
+  card-feed-tile:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 8
+    padding: 16
+    border: '1px solid #dde1e7'
+    use: 'Custom-feed tile in feed picker — feed avatar 48px, name 16px / 600, description 14px / 400 muted, like count + "Pin to home" pill button.'
+  card-profile-header:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    use: 'Profile page header — banner image 1200×400, avatar 80px circular overlapping, display name + handle below + bio + post count + follower count + Follow CTA.'
+  card-link-embed:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 12
+    border: '1px solid #dde1e7'
+    use: 'External link embed — thumbnail left or top, title 16px / 600 + description 14px / 400 muted + domain caption.'
+  badge-follows-you:
+    bg: '#f1f3f5'
+    color: '#5e6772'
+    radius: 4
+    padding: '2px 6px'
+    use: '"Follows you" tiny grey tag inline next to handle.'
+  badge-pinned:
+    bg: '#fff8e0'
+    color: '#a06c0a'
+    radius: 4
+    padding: '2px 8px'
+    use: '"📌 Pinned" yellow tag.'
+  badge-labeled:
+    bg: '#fff3e0'
+    color: '#9d5511'
+    radius: 4
+    padding: '2px 8px'
+    use: '"Labeled by [Moderator]" content-warning tag.'
+  badge-new:
+    bg: '#e8f4ff'
+    color: '#0057b3'
+    radius: 4
+    padding: '2px 8px'
+    use: '"NEW" sky-blue tag.'
+  pill-feed-tab:
+    bg: 'transparent'
+    color: '#5e6772'
+    border: 'none'
+    radius: 9999
+    padding: '8px 16px'
+    use: 'Feed tab — "Following / Discover / [Custom Feed]" — inactive state.'
+  pill-feed-tab-active:
+    bg: '#0085ff'
+    color: '#ffffff'
+    border: 'none'
+    radius: 9999
+    padding: '8px 16px'
+    use: 'Active feed tab — sky-blue pill fill.'
+  reaction-icon:
+    color-default: '#5e6772'
+    color-active-like: '#fb44a3'
+    color-active-repost: '#9a75e9'
+    color-active-reply: '#0085ff'
+    use: 'Post reaction icon row — reply / repost / like / share + optional bookmark / more. Each icon shows count beside.'
+  input-search:
+    bg: '#f1f3f5'
+    color: '#0c0c0c'
+    radius: 9999
+    height: 44
+    padding: '10px 16px 10px 40px'
+    border: 'none'
+    use: 'Top-bar / right-rail search — pill-shaped, magnifying-glass icon left, "Search" placeholder.'
+  input-text:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 8
+    border: '1px solid #bcc1c9'
+    height: 44
+    padding: '10px 16px'
+    use: 'Form input — sign-up, profile, settings.'
+  input-compose:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    border: 'none'
+    radius: 0
+    use: 'Compose-post textarea — borderless, 18px / 400 / 1.5 body type, 300-character counter top-right (counts down to red below 20).'
+  filter-chip:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    border: '1px solid #dde1e7'
+    radius: 9999
+    padding: '6px 14px'
+    use: 'Search filter chip — "People / Posts / Feeds / Lists / Starter packs".'
+  filter-chip-active:
+    bg: '#0c0c0c'
+    color: '#ffffff'
+    border: '1px solid #0c0c0c'
+    radius: 9999
+    use: 'Applied filter — inverts to black.'
+  nav-top-bar:
+    bg: 'rgba(255,255,255,0.92)'
+    color: '#0c0c0c'
+    height: 56
+    backdrop: 'blur(12px)'
+    border-bottom: '1px solid #dde1e7'
+    use: 'Sticky top nav (logged-out) — Bluesky butterfly logo left, "About / Blog / Support / Jobs / Privacy / Terms" links right, "Sign in" + "Get the app" right.'
+  nav-rail-left:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    width: 240
+    use: 'Logged-in left rail — Home / Search / Notifications / Chat / Feeds / Lists / Profile / Settings vertically stacked, sky-blue "New post" pill CTA at bottom.'
+  nav-rail-right:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    width: 320
+    use: 'Right rail — search, "Suggested follows" card, "Trending topics" list, footer links.'
+  feed-tabs:
+    bg: 'rgba(255,255,255,0.92)'
+    color: '#0c0c0c'
+    backdrop: 'blur(12px)'
+    use: 'Sticky feed tabs above the timeline — "Following / Discover / [Custom Feed]" with horizontal scroll for additional pinned feeds.'
+  modal-dialog:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 12
+    shadow: '0 16px 48px rgba(0,0,0,0.2)'
+    padding: 24
+    use: 'Compose-post / settings / report modal.'
+  toast:
+    bg: '#0c0c0c'
+    color: '#ffffff'
+    radius: 8
+    padding: '12px 16px'
+    use: 'Confirmation toast — "Post sent", "Followed [user]" — bottom-left, auto-dismiss 3s.'
+
+lineage:
+  summary: 'Bluesky''s visual lineage is three-streamed: (1) the early-Twitter aesthetic of bright canvas, single confident blue, and timeline-as-feed paradigm — Bluesky honors the Jack-Dorsey-era visual DNA while sharpening the blue to a vivid `#0085ff` sky tone (vs Twitter''s deeper `#1da1f2`); (2) the protocol-native open-network tradition (Mastodon, ActivityPub, IndieWeb) — clean type, generous post-card padding, federation-as-design-principle, no monetization chrome; (3) the modern social-app convention of Inter sans + paper-white canvas + butterfly-as-glyph that emerged from Threads, Bluesky itself, and the broader 2023–2025 alternative-Twitter cohort. The butterfly logo descends from Mark Hamill''s feather pen sketch on Jay Graber''s napkin, scoped to the brand glyph (not the entire visual surface). What it rejects: dark-mode-by-default chrome, aggressive monetization UI, algorithmic-engagement-driven feed defaults, paid verification — Bluesky positions deliberately against the post-Musk Twitter visual vocabulary.'
+  influences:
+    - name: 'Twitter (early era)'
+      role: 'Bright-canvas single-blue timeline paradigm, founding visual DNA — Bluesky was incubated inside Twitter as @bluesky in 2019'
+      url: 'https://twitter.com'
+    - name: 'Mastodon / ActivityPub'
+      role: 'Federated-network open-protocol design tradition — feed as public utility, not engagement product'
+      url: 'https://joinmastodon.org'
+    - name: 'Threads (Meta)'
+      role: 'Modern Inter-sans alternative-Twitter visual register — paper-white canvas, generous post density'
+      url: 'https://www.threads.net'
+    - name: 'AT Protocol'
+      role: 'Underlying federated record protocol — design language commits to protocol-as-product visual transparency'
+      url: 'https://atproto.com'
+    - name: 'Inter / Rasmus Andersson'
+      role: 'Typographic foundation — Inter pulls display through body in the canonical modern-social-app register'
+      url: 'https://rsms.me/inter/'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-spring: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  duration-celebration: 500
+  reduced-motion: 'respects prefers-reduced-motion: like-button heart-pop animation collapses to instant colour-swap, repost rotation collapses to colour-only, modal scale-in becomes opacity-only, feed-loading skeleton pulse pauses.'
+
+breakpoints:
+  mobile: 600
+  tablet: 900
+  desktop: 1200
+  wide: 1400
+
+shadows:
+  none: 'none'
+  card-rest: 'none'
+  card-hover: 'none'
+  popover: '0 4px 16px rgba(0,0,0,0.12)'
+  modal: '0 16px 48px rgba(0,0,0,0.20)'
+  ring: '0 0 0 3px rgba(0,133,255,0.4)'
+
+accessibility:
+  contrast-text-on-bg: 19.2              # #0c0c0c on #ffffff — AAA
+  contrast-text-muted-on-bg: 5.4         # #5e6772 on #ffffff — AA at body
+  contrast-text-on-brand: 4.0            # white on #0085ff — fails AAA, used at 16px / 700 (large-text bracket)
+  contrast-link-on-bg: 4.0               # #0085ff on white — AA at body
+  contrast-deep-link-on-bg: 7.4          # #0057b3 on white — AAA
+  contrast-text-on-dark: 19.0            # white on #16161a — AAA
+  contrast-text-on-dark-brand: 5.5       # white on dark-brightened brand `#3aa3ff` on dark canvas — AA
+  focus-ring: '3px solid rgba(0,133,255,0.4) with 2px offset'
+  reduced-motion-honored: true
+  alt-text: 'image-alt-text required by default in compose modal — accessibility-first culture'
+  open-source: 'AT Protocol fully open-source; client apps (web, iOS, Android) open-source on GitHub'
+
+dark-mode: full            # Full dark-mode token swap supported — see colors-dark map
+---
+
+## 1. Visual Theme & Atmosphere
+
+Bluesky's site is the airy, protocol-respectful alternative-Twitter aesthetic. The canvas is bright `#ffffff` in light mode, deep navy `#16161a` in dark mode, and the chromatic event of the page is `#0085ff` — a confident sky-blue used throughout the action layer (primary CTA, inline links, brand wordmark, butterfly logo, active feed-tab pill, follow button, focus ring). The type is Inter pulling display through body in the canonical modern-social-app register, with display weights up to 800 (Inter Black) for marketing hero gravity. The brand's argument is "we are building social media as a public utility on top of an open protocol (AT Protocol)" — and the visual language commits to the convention that protocol-native social products use: clean type, generous post-card padding, subtle brand-blue rationed for action, butterfly logo as the brand glyph.
+
+The signature is the post timeline with feed-picker tabs. Walk into bsky.app and you'll see (logged in): a sticky top with feed-picker tabs ("Following / Discover / What's Hot / [Custom Feed]") rendered as pill-shaped tabs (active is sky-blue fill, inactive is transparent), then a 600px-wide centred timeline of post cards. Each post card is the workhorse component: 40px circular avatar left, then the post body — display name in 14px / 600 + handle in 14px / 400 muted (`@username.bsky.social`) + timestamp in 13px / 400 muted ("3h" or "2024-04-15") + post text in 15px / 400 / 1.5 + optional embed (image / link card / quote post) + reaction row (reply / repost / like / share icons with tabular counters). Post cards have NO border-radius — they sit flush-edge with a `1px solid #dde1e7` bottom hairline (Twitter convention). The list density is calibrated for thoughtful scroll — 16px padding around each post, generous reaction-icon spacing, no engagement-pumping highlights or gradient-borders. Posts breathe.
+
+Custom feeds are a defining feature, and the visual pattern reflects it. The Bluesky feed-picker lets users pin algorithmic feeds maintained by anyone — "Quiet Posters" (low-engagement-but-high-quality posts), "Mutuals" (only people who follow you back), "Discover" (Bluesky's house algorithm), "What's Hot" (legacy default), and dozens of community-maintained feeds. The feed-tile component (used in the feed picker) shows: 48px feed avatar (often a custom illustration or emoji), feed name in 16px / 600, description in 14px / 400 muted, like-count + creator handle, then a "Pin to home" CTA. This explicit-feed-picking UX is the brand's pedagogical commitment: users have agency over what they see, not just over what they post.
+
+Inter — Rasmus Andersson's open-source workhorse — sets the entire site. Display sizes go up to 56px / 800 (Inter Black) with `-0.025em` tracking; body is 15px / 400 / 1.5 line-height (note: 15px not 16px — slightly tighter than docs-grade, calibrated for social-feed scanning rather than long-form reading). Body-large at 18px is used for hero leads and post-detail-page primary post text. The font carries Bluesky's voice, which is the voice of an open-source community that's serious about building public infrastructure: clean, friendly, technically literate but not techbro-coded. There's no display-serif companion, no decorative italic.
+
+Reaction icons carry the brand's chromatic personality. The reply icon is muted grey by default; the repost icon turns purple `#9a75e9` when activated; the like heart turns hot pink `#fb44a3`. These three small saturated accents (sky-blue for action, pink for like, purple for repost) form the brand's social-action palette. They're discrete enough that the page never feels chromatically loud, but vibrant enough that interactions feel rewarded. The like animation is a small heart-pop on tap (scale `1 → 1.3 → 1` over 300ms ease-spring), the repost animation is a 360-degree rotation on tap.
+
+Density on the marketing site (the `bsky.app/about` and `bsky.social` surfaces) is sparse — generous 96–128px section gaps, 600px prose width, large 56px / 800 display headlines. Density in the app itself (the actual feed) is medium — 600px feed column, 16px post padding, no border-radius on post cards (Twitter convention). The dual-density signature reflects the brand's split mission: marketing-side, "explain why this exists"; app-side, "let people post and read."
+
+**Key Characteristics:**
+- Bright `#ffffff` canvas in light mode; deep navy `#16161a` in dark mode (full dark-mode token swap).
+- Signature `#0085ff` Sky Blue — primary CTA, brand wordmark, butterfly logo, inline links, active feed-tab pill.
+- Deeper `#0057b3` blue for outlined buttons on light (AAA contrast). Brightened `#3aa3ff` on dark.
+- Inter pulling display through body — display weights up to 800 (Inter Black) with `-0.025em` tracking for marketing hero.
+- 15px / 400 / 1.5 body type (slightly tighter than docs-grade) — calibrated for social-feed scanning.
+- Post cards with NO border-radius — flush-edge with `1px solid #dde1e7` bottom hairline (Twitter convention).
+- 40px circular avatars; 600px feed column width centred.
+- Sky-blue active feed-tab pill — the algorithmic-feed-picker UX is the brand's pedagogical commitment.
+- Reaction icons in three saturated accents: pink heart `#fb44a3` for like, purple `#9a75e9` for repost, sky-blue `#0085ff` for reply.
+- Pill-shaped (`9999px`) primary buttons; pill-shaped follow buttons; circular avatars.
+- Heart-pop animation on like (`1 → 1.3 → 1` over 300ms ease-spring); 360° rotation on repost.
+- Backdrop-blurred sticky nav and feed-tabs (`rgba(255,255,255,0.92)` + `blur(12px)`).
+- Open-source AT Protocol — client apps and protocol both on GitHub. The brand argument is "this is public infrastructure."
+- Custom-feed picker as a first-class UX — every user can pin algorithmic feeds maintained by anyone.
+- 800-weight Inter Black for marketing hero — among the heaviest weights deployed in modern social-app design.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Bright White** (`#ffffff`): The defining canvas in light mode. Pure white, no warm tint.
+- **Warm Off-White** (`#f8f9fa`): Hero band background, alt section banding, post-hover wash.
+- **Deep Navy** (`#16161a`): The dark-mode canvas. Slightly lifted from pure black to soften OLED bloom.
+- **Bluesky Sky Blue** (`#0085ff`): The brand's primary blue. Wordmark, butterfly logo, primary CTA, inline links, active feed-tab.
+- **Display Black** (`#0c0c0c`): Primary body text — near-pure black for the high-contrast register Bluesky favours.
+
+### Brand & Dark
+- **Brand Hover** (`#006cd9`): Pointer-over state.
+- **Brand Active** (`#0057b3`): Pressed state.
+- **Brand Soft** (`#e8f4ff`): Soft sky-blue tint surface, badge bg.
+- **Brand Deep** (`#0057b3`): Deeper blue for outlined buttons on light — AAA contrast.
+- **Dark Canvas** (`#16161a`): Dark-mode primary surface.
+- **Dark Surface** (`#1f1f23`): Dark-mode card.
+- **Dark Surface Elevated** (`#26262d`): Raised dark card.
+- **Dark Brand** (`#3aa3ff`): Brightened sky-blue for AAA contrast on dark.
+
+### Accent
+- **Like Pink** (`#fb44a3`): The like-heart pink. The brand's defining secondary accent.
+- **Repost Purple** (`#9a75e9`): Repost-arrow purple. Tertiary accent.
+- **Pinned Yellow** (`#f5c518`): Pinned-post tag.
+- **Labeled Orange** (`#f9a13e`): Content-warning tag.
+- **Block Red** (`#e84545`): Error / block / unfollow-confirm.
+- **Success Green** (`#2bb673`): Account verified, follow succeeded.
+
+### Interactive
+- **CTA Sky Blue** (`#0085ff`): Primary action button.
+- **Inline Link Sky Blue** (`#0085ff`): Inline links — same hue as CTA.
+- **Outlined Deep Blue** (`#0057b3` border on white): Secondary action with AAA contrast.
+- **Active Feed Tab** (`#0085ff` bg + white text): Pill fill for active feed.
+- **Filter Chip Active** (`#0c0c0c` bg + white text): Inverts to black.
+- **Disabled** (`#a8aebd` text on `#f1f3f5` bg): Non-interactive control.
+
+### Reaction-Action Colours (Saturated)
+- **Like** (`#fb44a3` pink): Heart icon when liked.
+- **Repost** (`#9a75e9` purple): Repost arrow when activated.
+- **Reply** (`#0085ff` sky-blue): Reply icon when active in compose.
+- **Share** (`#5e6772` neutral): Share-icon stays muted (not action-coloured).
+
+### Neutral Scale
+- **Display Black** (`#0c0c0c`): Body text.
+- **Strong Black** (`#000000`): Hero display only.
+- **Muted** (`#5e6772`): Secondary metadata, handle, timestamp.
+- **Soft** (`#7a838e`): Tertiary captions, post timestamp on dark.
+- **Disabled** (`#a8aebd`): Inactive form labels.
+- **Border Default** (`#dde1e7`): Card hairlines, dividers, post bottom-line.
+- **Border Soft** (`#eef0f3`): Subtle table-row dividers.
+- **Border Strong** (`#bcc1c9`): Focused field outline before brand-blue ring.
+- **Reply Tree Line** (`#dde1e7` light / `#2c2c33` dark): The vertical line connecting threaded replies.
+
+### Surface & Borders
+- **Surface Default** (`#ffffff` light / `#1f1f23` dark): Card.
+- **Surface Hover** (`#f1f3f5` light / `#2c2c33` dark): Nav hover, post hover.
+- **Surface Soft** (`#eef7ff` light / `#0d2940` dark): Soft brand-tinted surface.
+- **Surface Strong** (`#e8eaee` light): Divider band.
+- **Promo Surface** (`#e8f4ff` light): Soft sky-blue promo band.
+
+### Shadow Colors
+- Posts have NO shadow at rest or on hover. Bluesky relies on the bottom hairline for separation — Twitter convention.
+- **Popover Shadow** (`rgba(0,0,0,0.12)`): Dropdown, tooltip, more-options menu.
+- **Modal Shadow** (`rgba(0,0,0,0.20)`): Dialog floor.
+- **Dark Shadow** (`rgba(0,0,0,0.4)`): Dark-mode modal floor — deeper because dark canvas needs more contrast for shadow.
+
+### Semantic
+- **Success** (`#2bb673` text on `#e0f6ec` soft bg): Account verified, "Followed @user", "Post sent".
+- **Warning** (`#f9a13e` text on `#fff3e0` soft bg): "Labeled by [Moderator]" content-warning, low-quality-account warning.
+- **Danger** (`#e84545` text on `#fdebeb` soft bg): Form validation error, blocked user warning.
+- **Info** (`#0085ff` text on `#e8f4ff` soft bg): "New posts available" feed-update banner.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Inter"` (or `"Inter var"` variable) — version 4.0+. Fallback chain: `-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif`.
+- **Mono**: `"SF Mono", "Roboto Mono", Menlo, Consolas, monospace` — used for code samples in dev docs and AT Protocol records.
+- **OpenType Features**: `kern` and `liga` enabled site-wide. `tnum` enabled on like/repost/reply counters, follower counts, post timestamps, character counters.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Hero | Inter | 56px | 800 | 1.1 | -0.025em | kern,liga | Marketing landing — "Social media as it should be" |
+| Display XL | Inter | 44px | 800 | 1.15 | -0.02em | kern,liga | Section hero, AT Protocol page |
+| Display LG | Inter | 32px | 700 | 1.2 | -0.015em | kern,liga | Feature section title |
+| Display MD | Inter | 24px | 700 | 1.25 | -0.01em | kern,liga | Section heading |
+| Display SM | Inter | 20px | 700 | 1.3 | -0.005em | kern,liga | Subsection heading |
+| Title LG | Inter | 18px | 600 | 1.4 | 0 | kern,liga | Card title, profile display name |
+| Title MD | Inter | 16px | 600 | 1.4 | 0 | kern,liga | List item title |
+| Title SM | Inter | 14px | 600 | 1.4 | 0 | kern,liga | Sidebar nav, dropdown header |
+| Body LG | Inter | 18px | 400 | 1.55 | 0 | kern,liga | Lead paragraph, post-detail primary post |
+| Body MD | Inter | 15px | 400 | 1.5 | 0 | kern,liga | Default post text in feed |
+| Body SM | Inter | 14px | 400 | 1.45 | 0 | kern,liga | Reply, secondary metadata |
+| Button LG | Inter | 16px | 700 | 1.0 | 0 | kern,liga | "Sign up" / "Create account" CTA |
+| Button MD | Inter | 14px | 600 | 1.0 | 0 | kern,liga | Default button label |
+| Handle | Inter | 14px | 400 | 1.45 | 0 | kern,liga | @username.bsky.social handle |
+| Timestamp | Inter | 13px | 400 | 1.3 | 0 | tnum | "3h" / "2024-04-15" |
+| Counter | Inter | 13px | 500 | 1.0 | 0 | tnum | Like / repost / reply count |
+| Caption | Inter | 13px | 400 | 1.4 | 0 | kern,liga | Disclosures |
+| Eyebrow | Inter | 12px | 600 | 1.0 | 0.06em | kern,liga | Uppercase "DISCOVER" |
+| Badge | Inter | 11px | 600 | 1.0 | 0.04em | kern,liga | "NEW", "FOLLOWS YOU" |
+
+### Principles
+- **Single family discipline.** Inter covers display through body. There is no display-serif companion.
+- **800-weight (Inter Black) for marketing hero.** The 56px display headline uses Inter Black at 800 — among the heaviest weights deployed in modern social-app design. This is the brand's confidence signal.
+- **15px body, not 16px.** Default post text is 15px / 1.5 — slightly tighter than docs-grade. Calibrated for social-feed scanning rather than long-form reading. Body-large at 18px is used for hero leads and post-detail-page primary post.
+- **Modest negative tracking on display.** Display sizes use `-0.005em` to `-0.025em`.
+- **0.06em tracking on eyebrows.** Uppercase eyebrows use 12px / 600 / `0.06em`.
+- **Tabular numerals on counters.** Like / repost / reply counts, follower counts, character-counter on compose, post timestamps all use `tnum` so columns align.
+- **400 / 500 / 600 / 700 / 800.** Body at 400, counters at 500, titles at 600, display at 700, marketing hero at 800. Bluesky uses a wider weight palette than Signal because the social-app context benefits from typographic distinction.
+- **Sentence case for everything.** "Sign up", "Create account", "Pin to home". Capital first word only.
+- **Handles with bsky.social / domain DNS.** Bluesky's handle convention is `@username.bsky.social` for default users, but DNS-verified handles like `@jay.bsky.team` or `@jaytweets.com` use the user's own domain. The handle text is rendered in 14px / 400 muted, distinct from the 14px / 600 display name.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Sky-Blue Pill)**
+- Background: `#0085ff`. Text: `#ffffff`. Radius: `9999px` (full pill). Padding: `10px 24px`. Height: `44px`. Font: Inter 16px / 700.
+- Hover: `#006cd9`. No shadow lift, no scale.
+- Active: `#0057b3`.
+- Use: "Sign up", "Create account", "Post". One per viewport in marketing; multiple in app contexts.
+
+**Secondary (Outlined Deep Blue)**
+- Background: `#ffffff`. Text: `#0057b3`. Border: `1px solid #0057b3`. Radius: `9999px`. Padding: `10px 24px`.
+- Hover: bg `#e8f4ff`.
+- Use: "Sign in", "Read the docs". Note: uses deeper `#0057b3` for AAA contrast.
+
+**Tertiary Text**
+- Background: `transparent`. Color: `#0085ff`. Padding: `8px 12px`.
+- Hover: underline appears.
+- Use: Inline action, footer link.
+
+**Follow (Sky-Blue Compact Pill)**
+- Background: `#0085ff`. Text: `#ffffff`. Radius: `9999px`. Padding: `6px 16px`. Height: `32px`. Font: 14px / 600.
+- Use: Compact "Follow" pill on profile cards, search results, suggested-follows rail.
+
+**Following (Outlined Neutral Compact Pill)**
+- Background: `#ffffff`. Text: `#0c0c0c`. Border: `1px solid #dde1e7`. Radius: `9999px`. Padding: `6px 16px`. Height: `32px`.
+- Hover: text changes to "Unfollow" + bg `#fdebeb` with `#e84545` text.
+- Use: Following-state pill — clear visual differentiation from the active Follow CTA.
+
+**Follow Back**
+- Background: `#ffffff`. Text: `#0085ff`. Border: `1px solid #0085ff`. Radius: `9999px`. Padding: `6px 16px`. Height: `32px`.
+- Use: Outlined sky-blue when target follows you first.
+
+**Compose Floating Action Button (Mobile)**
+- Background: `#0085ff`. Color: `#ffffff` (pencil icon). Radius: `9999px`. Size: `56 × 56`.
+- Sticky bottom-right of feed on mobile.
+
+**Reaction Icon Button**
+- Background: `transparent`. Default color: `#5e6772`. Radius: `9999px`. Size: `36 × 36`.
+- Hover: bg fill with brand-tint (`rgba(0,133,255,0.1)` for reply; `rgba(155,117,233,0.1)` for repost; `rgba(251,68,163,0.1)` for like).
+- Active state: icon takes the saturated brand colour for that action.
+
+### Cards & Tiles
+
+**Post Card (Default)**
+- Background: `#ffffff`. Color: `#0c0c0c`. Radius: 0 (flush-edge). Padding: `16px`. Border-bottom: `1px solid #dde1e7`.
+- Layout: 40px circular avatar left, 12px gap, post body right (display name 14px / 600 + handle 14px / 400 muted + "·" + timestamp 13px / 400 muted, all in one line; then post text 15px / 400 / 1.5; then optional embed; then reaction row with 4 icons: reply / repost / like / share each with `tnum` counter).
+- Hover: bg `#f8f9fa` warm-grey wash. No shadow.
+- Use: Default post in feed.
+
+**Post Card (Detail Page)**
+- Background: `#ffffff`. Padding: `24px`. Larger 18px / 400 / 1.55 body type for the focal post. Below the focal post: full thread tree with reply-line `1px solid #dde1e7`.
+- Use: Post detail page primary post.
+
+**Quote Post Embed**
+- Background: `#ffffff`. Color: `#0c0c0c`. Radius: `12px`. Padding: `12px`. Border: `1px solid #dde1e7`.
+- Layout: nested post card with rounded `12px` border (different from flat-edge feed cards), 12px padding inside parent post.
+- Use: Quote-post embed within a parent post.
+
+**Custom Feed Tile**
+- Background: `#ffffff`. Color: `#0c0c0c`. Radius: `8px`. Padding: `16px`. Border: `1px solid #dde1e7`.
+- Layout: 48px feed avatar (often emoji or custom illustration) left, feed name 16px / 600 + creator handle 14px / 400 muted + description 14px / 400 (max 2 lines), like-count + "Pin to home" pill button below.
+- Use: Feed picker, "Discover Feeds" page.
+
+**Profile Header Card**
+- Background: `#ffffff`. No radius (flush-edge).
+- Layout: banner image 1200×400 (or default sky-blue gradient), 80px circular avatar overlapping at left bottom, then below banner: display name 22px / 700, handle 14px / 400 muted, "Follows you" badge inline, bio 15px / 400 / 1.5, post count + follower count + following count tabular row, primary "Follow" CTA top-right of header.
+
+**Link Embed Card**
+- Background: `#ffffff`. Color: `#0c0c0c`. Radius: `12px`. Border: `1px solid #dde1e7`.
+- Layout: thumbnail (16:9 or square) left or top depending on content, title 16px / 600 + description 14px / 400 muted (max 2 lines) + domain caption 13px / 400 muted with site-icon left.
+
+### Badges, Tags, Indicators
+
+**Follows You**
+- Background: `#f1f3f5`. Color: `#5e6772`. Radius: `4px`. Padding: `2px 6px`. Font: 11px / 500.
+- Use: Tiny grey tag inline next to handle on profile pages.
+
+**Pinned**
+- Background: `#fff8e0`. Color: `#a06c0a`. Radius: `4px`. Padding: `2px 8px`. Font: 11px / 600.
+- Format: "📌 Pinned" with pin emoji.
+- Use: Pinned-post indicator.
+
+**Labeled (Content Warning)**
+- Background: `#fff3e0`. Color: `#9d5511`. Radius: `4px`.
+- Use: "Labeled by [Moderator Service]" content-warning tag.
+
+**NEW**
+- Background: `#e8f4ff`. Color: `#0057b3`. Radius: `4px`.
+- Use: New-feature tag in marketing.
+
+**Reaction Counter**
+- Format: 13px / 500 tnum number beside icon.
+- Use: Like / repost / reply counts in reaction row.
+
+### Inputs & Forms
+
+**Search (Pill, Filled)**
+- Background: `#f1f3f5`. Color: `#0c0c0c`. Border: none. Radius: `9999px` (pill). Height: `44px`. Padding: `10px 16px 10px 40px`.
+- Magnifying-glass icon left in `#5e6772`. Placeholder "Search".
+- Focus: bg `#ffffff`, border `1px solid #0085ff`, ring `0 0 0 3px rgba(0,133,255,0.4)`.
+
+**Text Input**
+- Background: `#ffffff`. Color: `#0c0c0c`. Border: `1px solid #bcc1c9`. Radius: `8px`. Height: `44px`. Padding: `10px 16px`.
+- Label: 14px / 600 above. Hint: 13px / 400 muted below.
+- Focus: border `#0085ff`, ring `0 0 0 3px rgba(0,133,255,0.4)`.
+
+**Compose Post Textarea**
+- Background: `#ffffff`. Color: `#0c0c0c`. Border: none. Radius: 0.
+- Layout: 18px / 400 / 1.5 body type, 300-character counter top-right (counts down from 300 — turns red below 20).
+- Below: media-upload icons (image, GIF, video, link), language picker, alt-text reminder, primary "Post" CTA right.
+
+**Filter Chip**
+- Default: bg `#ffffff`, color `#0c0c0c`, border `1px solid #dde1e7`, radius `9999px`, padding `6px 14px`.
+- Active: bg `#0c0c0c`, color `#ffffff`. Inverts to black.
+- Use: Search filter — "People / Posts / Feeds / Lists / Starter packs".
+
+### Navigation
+
+**Top Bar (Logged-Out, Sticky, Glass)**
+- Background: `rgba(255,255,255,0.92)` with `backdrop-filter: blur(12px)`. Color: `#0c0c0c`. Border-bottom: `1px solid #dde1e7`. Height: `56px`.
+- Layout: Bluesky butterfly logo + "Bluesky" wordmark left (24px logo + 18px / 700 wordmark), nav links right ("About / Blog / Support / Jobs / Privacy / Terms"), "Sign in" + "Get the app" pill CTAs right.
+- Mobile: collapses to hamburger + "Get the app".
+
+**Left Rail (Logged-In)**
+- Background: `#ffffff`. Width: `240px`. Padding: `24px 16px`.
+- Vertical stack: Home / Search / Notifications (with red-dot badge if unread) / Chat (with badge) / Feeds / Lists / Profile / Settings — each row 16px icon + 16px / 600 label.
+- Bottom: sky-blue pill "New post" CTA.
+
+**Right Rail**
+- Background: `#ffffff`. Width: `320px`. Padding: `24px 16px`.
+- Search input top, "Suggested follows" card with 3 user rows + Follow buttons, "Trending" hashtag list, footer links band.
+
+**Feed Tabs (Sticky, Glass)**
+- Background: `rgba(255,255,255,0.92)` + `blur(12px)`. Border-bottom: `1px solid #dde1e7`.
+- Layout: horizontal scroll of pill tabs — "Following / Discover / What's Hot / [Custom Feed Name] / [+ Add]". Active tab: sky-blue fill, white text. Inactive: transparent with `#5e6772` muted text.
+
+### Modals & Toasts
+
+**Modal Dialog**
+- Background: `#ffffff`. Color: `#0c0c0c`. Radius: `12px`. Padding: `24px`.
+- Shadow: `0 16px 48px rgba(0,0,0,0.20)`.
+- Backdrop: `rgba(0,0,0,0.5)`.
+- Use: Compose post (full-screen on mobile), settings, report.
+
+**Toast**
+- Background: `#0c0c0c`. Color: `#ffffff`. Radius: `8px`. Padding: `12px 16px`.
+- Use: "Post sent", "Followed @user", "Link copied" — bottom-left, auto-dismiss 3s.
+
+## 5. Layout Principles
+
+### Spacing System
+- Base: 4px. Scale: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128.
+- Post-card padding: 16px.
+- Reaction-row icon spacing: 16px between icons.
+- Avatar gap: 12px between avatar and post body.
+- Section gap (marketing): 96–128px.
+- Feed column width: 600px centred.
+
+### Grid & Container
+- Page width: 1280px max.
+- Content max within page: 1080px centred (240px left rail + 600px feed + 320px right rail = 1160 with gutters).
+- Marketing pages: 600px prose width centred.
+- Hero: full-bleed background, content centred at 1080px.
+
+### Whitespace Philosophy
+Bluesky has dual-density. Marketing pages are sparse — generous 96–128px section gaps, 600px prose width, large 56px / 800 hero. The app feed is medium-density — 16px post padding, 1.5 line-height, no border-radius on cards. The marketing argument is "explain why this exists"; the app argument is "let people read and post." Both registers commit to bright white canvas and Inter typography.
+
+### Section Cadence (Marketing)
+- Top bar (sticky, glass)
+- Hero (560px+, 56px / 800 "Social media as it should be" headline, 18px lead, primary sky-blue pill CTA + outlined deeper-blue secondary)
+- "Choose your algorithm" feature explainer
+- "Own your identity" feature explainer (DNS-verified handles)
+- "Take your account anywhere" feature (AT Protocol)
+- "Try it now" CTA band
+- Press logos (NYT, Wired, The Verge, etc.)
+- Footer (3-column dark `#16161a` band — Get the app / Resources / Legal)
+
+### Section Cadence (App)
+- Top bar (sticky, glass) with feed tabs below
+- Feed timeline (post cards stacked)
+- Composer (sticky bottom on mobile / right rail on desktop)
+- Right rail (Suggested follows, Trending, footer)
+
+Light/dark alternation: light by default, full token swap to dark on `prefers-color-scheme: dark` or user toggle.
+
+## 6. Shapes & Radius Scale
+
+- **Micro** (`2px`): Tiny indicator dot.
+- **Standard** (`4px`): Input, badge.
+- **Comfortable** (`6px`): Tag chip.
+- **Relaxed** (`8px`): Custom feed tile, modal, form input — the workhorse mid radius.
+- **Featured** (`12px`): Quote-post embed, link-embed card, modal.
+- **Pill** (`9999px`): Primary button, follow button, search pill, feed-tab pill, avatar circle, FAB.
+- **Flat (0px)**: Post cards in feed — flush-edge with bottom hairline (Twitter convention).
+
+The flat-edge post card + pill button pairing is the geometric signature. Flat post cards signal "this is a feed; cards are temporal slices, not standalone artifacts." Pills signal action and identity (avatar). The combination reads as social-feed-native rather than as e-commerce or editorial.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (flat) | No shadow, no border | Section background, hero band, post card rest |
+| 1 (hairline) | `1px solid #dde1e7` bottom only | Post card separator, divider |
+| 2 (border) | `1px solid #dde1e7` all sides | Custom feed tile, link embed, quote-post embed |
+| 3 (popover) | `0 4px 16px rgba(0,0,0,0.12)` | Dropdown, more-options menu, search-result preview |
+| 4 (modal) | `0 16px 48px rgba(0,0,0,0.20)` | Dialog, compose modal, report |
+
+### Shadow Philosophy
+Posts have NO shadow. Feed cards rely on bottom hairline only — Twitter convention adopted in full. Modals and dropdowns use neutral shadows (no brand-tint). The brand never uses sky-blue-tinted shadows — blue belongs to action, not elevation. Dark-mode shadows deepen to 0.4 opacity because the dark canvas needs more contrast for shadow.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material standard ease.
+- **Out**: `cubic-bezier(0, 0, 0.2, 1)` — incoming elements.
+- **Spring**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — like-heart pop, repost rotation.
+
+### Duration Buckets
+- **Fast**: 100ms — colour shifts, hover transitions.
+- **Standard**: 200ms — modal open, dropdown.
+- **Slow**: 300ms — heart-pop animation, repost rotation.
+- **Celebration**: 500ms — like-confetti (rare, for milestone-likes).
+
+### Per-Component Recipes
+- **Like (heart-pop)**: On tap, heart icon scales `1 → 1.3 → 1` over 300ms ease-spring + colour `#5e6772 → #fb44a3` over 100ms. Counter increments with tnum number flip.
+- **Repost (rotation)**: On tap, repost arrow rotates 0 → 360deg over 300ms ease-spring + colour `#5e6772 → #9a75e9`.
+- **Reply (focus)**: On tap, reply icon colour `#5e6772 → #0085ff`, focus moves to inline composer.
+- **Follow toggle**: Sky-blue Follow pill swaps to outlined-neutral "Following" pill over 100ms colour transition.
+- **Post hover**: bg `#ffffff → #f8f9fa` over 100ms.
+- **Modal open**: 200ms ease-out, opacity `0 → 1` + scale `0.96 → 1`.
+- **Toast in**: slide up 6px + opacity over 200ms; auto-dismiss after 3s.
+- **Feed loading**: Skeleton shimmer pulse — `1.0 → 0.7 → 1.0` opacity over 1500ms ease-in-out, infinite. Pauses on `prefers-reduced-motion`.
+- **Character counter**: When typing in compose, counter `300 → 299 → ...` with tnum flip. Below 20 chars, counter turns `#e84545` red.
+- **New posts banner**: When new posts arrive, "Show new posts" sky-blue pill banner slides down from top of feed over 300ms ease-out.
+
+### Page Transitions
+Bluesky uses Next.js / React Router with client-side routing for app pages. Marketing pages are static (statically rendered). In-app navigation: 100ms opacity fade between feed pages.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` collapses:
+- Like heart-pop scale → instant colour-swap.
+- Repost rotation → instant colour-swap.
+- Modal scale-in → opacity-only.
+- Feed-loading skeleton pulse → static (no shimmer).
+- New-posts banner slide → instant appear.
+- Counter tnum flip → instant.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (Light Mode)
+- Display Black `#0c0c0c` on white `#ffffff`: **19.2:1** — AAA at all sizes.
+- Muted `#5e6772` on white: **5.4:1** — AA at body sizes.
+- White on Sky Blue `#0085ff`: **4.0:1** — fails AAA, used at 16px / 700 (large-text bracket boundary).
+- Sky Blue `#0085ff` on white: **4.0:1** — AA at body. For inline links, use deeper `#0057b3`.
+- Inline link Deep Blue `#0057b3` on white: **7.4:1** — AAA.
+- Like Pink `#fb44a3` on white: **3.4:1** — fails AA, used decoratively only (heart icon).
+- Disabled `#a8aebd` on white: **2.6:1** — fails, used for `aria-disabled` only.
+
+### Contrast Pairs (Dark Mode)
+- White on Dark Canvas `#16161a`: **19.0:1** — AAA at all sizes.
+- White on Dark Brightened Brand `#3aa3ff`: **5.5:1** — AA at body.
+- Dark Muted `#8e96a3` on Dark Canvas: **5.6:1** — AA at body.
+
+### Focus Indicators
+- Default focus: `3px solid rgba(0,133,255,0.4)` outline with `2px` offset.
+- Form fields: border lifts to `#0085ff` on focus, plus the 3px ring outside.
+- Tab order: top nav → feed tabs → main content top-to-bottom → reaction icons within each post → right rail → footer.
+
+### ARIA Patterns
+- Posts: `<article>` element with `aria-label="[Display name] posted: [Post text excerpt]. [Timestamp]. [Like count] likes, [Repost count] reposts, [Reply count] replies."`
+- Reaction icons: `role="button"` with `aria-pressed="true|false"` (for like/repost) and explicit `aria-label="Like" / "Liked"` swap.
+- Reply tree: `role="region" aria-label="Conversation thread"` with proper heading hierarchy.
+- Feed tabs: `role="tablist"` with `role="tab"` items; selected tab has `aria-selected="true"`.
+- Compose modal: `role="dialog" aria-modal="true"` with focus trap.
+- Image alt text: required by default in compose modal; "Add alt text" callout if user attaches image without describing.
+- Search: `role="search"` with `aria-label="Search Bluesky"`.
+- Feed update banner: `aria-live="polite"` announces new posts.
+
+### Keyboard Navigation
+- Tab: move forward through controls; Shift+Tab reverses.
+- J / K: move to next/previous post in feed (Vim-style; documented but optional).
+- L: like focused post.
+- R: reply to focused post.
+- T: repost focused post.
+- N: open compose modal.
+- ESC: close modal, dropdown.
+- Cmd-K / Ctrl-K: opens search.
+- Arrow keys: navigate within reaction row, feed tabs.
+
+### Screen Reader Hints
+- Avatars have `alt="[User] profile picture"`.
+- Display name + handle + timestamp combined into single screen-reader announcement so feeds scan fast.
+- Reaction counts announced with the action ("3 likes, 2 reposts, 1 reply").
+- New-posts banner: live-region announces count of new posts available.
+- Image alt text: when user adds alt text in compose, screen readers receive the description.
+- Quote-post embed: announces "Quoted post by [User]: [Quoted text]".
+
+### Reduced Motion
+Honoured. See §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Token | Min | Use |
+|-------|-----|-----|
+| mobile | 0px | Single-column feed, FAB compose button, bottom-nav tabs |
+| tablet | 600px | Feed centred, no rails |
+| desktop | 900px | Left rail visible (240px) + 600px feed |
+| wide | 1200px | Left rail + 600px feed + 320px right rail |
+
+### Touch Targets
+- 44×44 minimum on all interactive controls. Reaction icons at 36×36 visual but 44×44 tap target via padding.
+- FAB at 56×56 — generous mobile thumb target.
+
+### Collapsing Strategy
+- **Top nav**: collapses to hamburger + "Get the app" on `< 600px`.
+- **Left rail**: collapses to bottom-nav-bar tabs on mobile (Home / Search / Notifications / Chat / Profile).
+- **Right rail**: hidden on `< 1200px`.
+- **Feed tabs**: horizontal scroll on all breakpoints.
+- **FAB compose**: shows only on mobile (`< 900px`); desktop has compose in left rail.
+- **Hero (marketing)**: title scales 56 → 44 → 32 → 24; image collapses below text on `< 600px`.
+
+### Image Behavior
+- Avatars: served at 1×, 2×, 3× density; circular crop applied via CSS `border-radius: 9999px`.
+- Post images: max 1000×750 in feed; tap to open full-screen lightbox with zoom + alt-text overlay.
+- Video: native browser video controls; tap to play (autoplay disabled by default for accessibility + bandwidth).
+- Banner images: 1200×400 aspect; cropped to fill on different screens.
+
+### Container Queries
+Used on the post card — reaction row spacing collapses on narrow card widths; on link-embed card — thumbnail moves from left to top below 320px width.
+
+## 11. Content & Voice
+
+### Tone
+Bluesky's voice is **friendly, technically literate, and protocol-respectful**. Marketing copy reads like a hopeful open-source project's blog — clear, structured, free of techbro jargon but comfortable explaining "AT Protocol" or "DNS-verified handles" to a curious reader. Headlines ("Social media as it should be", "Choose your algorithm", "Own your identity") set political stakes; descriptions explain how the cryptographic / federated architecture actually works in plain English. The brand never assumes the reader is a Twitter refugee or a dev — it speaks to both. The voice is closer to Mastodon's project blog than to Twitter's marketing surface.
+
+### Microcopy Patterns
+- **Primary CTA**: "Sign up", "Create account", "Get the app", "Post".
+- **Secondary CTA**: "Sign in", "Read the docs", "Learn about AT Protocol".
+- **Tertiary**: "See more →", "View profile →".
+- **Confirmation toast**: "Post sent", "Followed @user", "Reposted", "Link copied".
+- **Empty feed**: "Welcome to Bluesky! Follow some accounts to see their posts here, or try the Discover feed."
+- **Empty notifications**: "No new notifications. When someone follows you, replies, or likes your posts, you'll see it here."
+- **Empty search**: "No results for [query]. Try different keywords or search for users by handle."
+- **Compose placeholder**: "What's up?"
+- **Character limit**: Counter in tnum number; "300 / 300" → "0 / 300" countdown; below 20, turns red.
+- **Error**: "Couldn't post. Check your connection and try again."
+- **AT Protocol pitch**: "Bluesky is built on AT Protocol — an open-source social networking technology. Anyone can build on it."
+
+### Empty States
+- Empty feed (new user): "Welcome to Bluesky! Follow some accounts to see their posts."
+- Empty notifications: "Nothing yet. Posts you like or accounts that follow you will show up here."
+- Empty messages: "No conversations yet. Tap the compose icon to start chatting."
+- Empty search: "No results. Try different keywords."
+
+### CTA Verb Conventions
+- "Post" — primary verb for sharing. Bluesky uses "post", not "tweet" or "skeet" (the unofficial-Bluesky term).
+- "Reply" — reply to a post.
+- "Repost" — share without comment. Bluesky uses "repost", not "retweet" or "boost".
+- "Quote" — share with comment.
+- "Like" — like a post (heart icon).
+- "Follow" / "Following" — relationship status.
+- "Pin" — pin a feed to home.
+- "Block" / "Mute" — moderation actions.
+- "Sign up" — create account. Bluesky uses "Sign up", not "Join" or "Get started".
+
+The brand explicitly avoids: "Tweet", "Boost" (Mastodon's term), "Engage", "Subscribe" (Bluesky has free public follow only).
+
+## 12. Dark Mode & Theming
+
+Bluesky has **full dark-mode support**. The brand respects `prefers-color-scheme: dark` by default and offers an explicit toggle in settings (System / Light / Dark). The dark-mode token swap lifts the canvas to `#16161a`, body text to `#ffffff`, the brand sky-blue brightens to `#3aa3ff` for AAA contrast, cards take `#1f1f23` surface with `#2c2c33` borders, and the like / repost / reply colours stay vibrant (pink, purple, sky-blue) because they're already designed for both modes.
+
+The dark mode is the brand's secondary canvas, not a tertiary afterthought. The whole component system has dark-mode tokens: surface, surface-elevated, surface-hover, border, border-soft, text, text-muted, text-soft, brand, brand-soft, shadow.
+
+Some patterns differ in dark mode:
+- The reply-tree line uses `#2c2c33` (deeper) instead of `#dde1e7` (light hairline).
+- Modal shadow deepens to `rgba(0,0,0,0.4)` so it registers against the dark canvas.
+- Backdrop-blurred sticky nav becomes `rgba(22,22,26,0.85)` + `blur(12px)` instead of light variant.
+- Feed-loading skeleton shimmer uses subtler opacity range on dark.
+
+The dark-mode is calibrated for the OLED display reality — most mobile users will see the dark variant. Bluesky's brand accommodates this rather than treating dark as niche.
+
+## 13. Lineage & Influences
+
+Bluesky's visual lineage is three-streamed.
+
+**The Twitter / classic-microblog tradition.** Bluesky was originally a Twitter project (announced 2019, spun out 2022) and the visual conventions descend directly: 600px feed column, 40px circular avatars, flush-edge post cards with bottom hairlines (no card border-radius), reaction row at the bottom (reply / repost / like / share), 280–300 character limit, real-time timeline, hashtag and @-mention conventions. Bluesky executed the visual grammar Twitter established but tuned away from the engagement-pumping additions Twitter / X added under Musk (algorithmic-recommendation forced primary, blue-check monetization, ad-tile injection in feed). Bluesky's argument is "the original Twitter visual contract was good; we're keeping it."
+
+**The federated-protocol tradition.** Mastodon (launched 2017), ActivityPub, and the broader fediverse aesthetic — each user's profile is a public AT-Protocol record, handles can use DNS for verification (`@nytimes.com` instead of `@nytimes.bsky.social`), the moderation system is composable (third-party labelers can mark content), the feed algorithm is composable (anyone can publish a custom feed). The visual surface reflects this: the feed-picker is a first-class UX element, not a hidden setting; the handle convention shows DNS verification visually; profile pages link to AT Protocol DIDs in advanced surfaces. Bluesky positions itself as the protocol-respectful descendant of Twitter, not as a closed alternative.
+
+**The modern-Inter web tradition.** Bluesky redesigned its app and marketing site around 2023–2024 using Inter as its single typeface, joining the post-2018 wave of Inter-everywhere web design (Linear, Vercel, Together, Cohere, Anthropic, Notion's NotionInter, Signal). The aggressive 800-weight (Inter Black) on marketing hero, the 15px / 1.5 body type for feed scanning, the pill-shaped primary CTA, the glass-blurred sticky nav — all conform to the modern-Inter web aesthetic. Bluesky differentiates within the genre via the like/repost/reply colour triad (pink, purple, sky-blue) and the butterfly logo glyph.
+
+What Bluesky rejects: dark-mode-as-default-only (full light + dark support), forced algorithmic feed (user chooses), monetized blue-check verification (DNS-verified handles instead), engagement-pumping notification UI, ad-tile injection in feed, modal pop-overs on launch.
+
+**Influences:**
+- **Twitter (classic)** — flush-edge post cards, 600px feed column, reaction row, microblog conventions. https://twitter.com (now https://x.com)
+- **Mastodon** — federated-protocol social, composable moderation, fediverse handle convention. https://joinmastodon.org
+- **AT Protocol** — the underlying decentralized social networking protocol. https://atproto.com
+- **Linear / Vercel** — modern-Inter web aesthetic, glass nav, generous spacing. https://linear.app
+- **Threads (Meta)** — peer alternative-Twitter app with similar feed-card grammar. https://threads.net
+- **Discord** — chat / DM patterns informing Bluesky's chat surface. https://discord.com
+- **Inter (Rasmus Andersson)** — single-typeface discipline. https://rsms.me/inter
+
+## 14. Do's and Don'ts
+
+**Do:**
+- Use `#0085ff` for the primary CTA, butterfly logo, brand wordmark, inline links, and active feed-tab pill — and `#0057b3` deeper blue for outlined buttons (better contrast on white).
+- Pair primary CTA with white text — at 16px / 700 the contrast is AA at body (large-text bracket).
+- Round primary buttons to full pill (`9999px`); custom feed tiles to `8px`; quote-post embeds and link cards to `12px`.
+- Render post cards FLAT with no border-radius — use bottom hairline (`1px solid #dde1e7`) for separation. Twitter convention is the brand commitment.
+- Apply NO shadow to post cards at rest or on hover. Hover gets a subtle bg wash (`#f8f9fa`) only.
+- Use 15px / 400 / 1.5 body type for post text — calibrated for social-feed scanning.
+- Use Inter Black (800) for marketing hero at 56px with `-0.025em` tracking — Bluesky's confidence signal.
+- Use 40px circular avatars with 12px gap to post body.
+- Render reaction icons in saturated brand-tints when activated: pink heart `#fb44a3` for like, purple `#9a75e9` for repost, sky-blue `#0085ff` for reply.
+- Animate the like with a heart-pop scale `1 → 1.3 → 1` over 300ms ease-spring; repost with a 360° rotation.
+- Use feed-tab pills above the timeline with active-state sky-blue fill — the algorithmic-feed-picker UX is a brand commitment.
+- Implement full dark-mode token swap, not just an inverted text colour.
+- Render DNS-verified handles in the user's domain (e.g., `@nytimes.com`) — the brand's verification model.
+- Use tabular numerals on like / repost / reply / follower counters.
+- Surface `aria-label` for image alt text in compose; require alt text by default.
+
+**Don't:**
+- Don't add card border-radius to post cards in the feed — flush-edge is the brand commitment.
+- Don't add shadows to post cards — hairline separation only.
+- Don't use `#0085ff` for body links — its 4.0:1 contrast on white only meets AA. Use `#0057b3` deeper blue.
+- Don't introduce a multi-color brand palette — sky-blue for action, pink for like, purple for repost. Three saturated accents, no more.
+- Don't use scale transforms on hover — Bluesky's elevation is hairline + bg-wash.
+- Don't use display-serif companion fonts — Inter alone carries everything.
+- Don't tighten display tracking past `-0.025em` — Bluesky is open and confident, not condensed.
+- Don't gate primary "Sign up" CTA behind email collection — the brand's open-network commitment requires low friction.
+- Don't add forced algorithmic-feed default — Bluesky's argument is "you choose your algorithm".
+- Don't add ad-tile injection in feed — the protocol-respectful brand precludes it.
+- Don't add modal pop-overs on app launch — friction-free open-network commitment.
+- Don't use "Tweet" / "Retweet" / "Boost" — Bluesky's verbs are "Post" / "Repost" / "Reply".
+- Don't add a monetized verification tier — DNS-verified handles are the verification model.
+- Don't compress post-card padding below 16px — feed density is calibrated for thoughtful scroll.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Canvas Light: `#ffffff`
+- Canvas Dark: `#16161a`
+- Sky Blue (Brand/CTA): `#0085ff`
+- Sky Blue Deep (Inline Link): `#0057b3`
+- Display Black: `#0c0c0c`
+- Muted: `#5e6772`
+- Border: `#dde1e7`
+- Like Pink: `#fb44a3`
+- Repost Purple: `#9a75e9`
+- Reply Sky Blue: `#0085ff`
+
+### Example Component Prompts
+1. "Create a Bluesky post card — `#ffffff` background, NO border-radius (flush-edge), `1px solid #dde1e7` bottom hairline only, NO shadow, `16px` padding; horizontal layout with 40px circular avatar left + 12px gap + post body right; post body has display name '14px / 600 #0c0c0c' followed by handle '14px / 400 #5e6772' followed by '·' separator followed by timestamp '13px / 400 #5e6772 with tnum' all in one line; below: post text '15px / 400 / 1.5 #0c0c0c'; below: reaction row with 4 icons (reply / repost / like / share) at 18px each, default colour #5e6772, with tnum counter beside each. On hover: bg becomes `#f8f9fa`, no shadow. On like-tap: heart icon scales `1 → 1.3 → 1` over 300ms ease-spring + colour swap to pink `#fb44a3`."
+2. "Design a Bluesky primary CTA — `9999px` full-pill radius, `#0085ff` background, white 16px / 700 'Sign up' label, `10px 24px` padding, `44px` height, hover bg `#006cd9`, no shadow lift."
+3. "Build a Bluesky marketing hero — `#ffffff` background, 56px Inter 800-weight (Black) headline 'Social media as it should be' in `#0c0c0c` with `-0.025em` tracking, 18px / 400 / 1.55 `#5e6772` lead 'A new kind of social network. Built on an open protocol.', primary sky-blue full-pill CTA 'Sign up' + outlined deeper-blue secondary 'Read the docs' inline. Bluesky butterfly illustration top-right of hero."
+4. "Render a Bluesky feed-tabs strip — sticky below top nav, `rgba(255,255,255,0.92)` bg with `backdrop-filter: blur(12px)`, `1px solid #dde1e7` border-bottom; horizontal scroll of pill tabs — 'Following / Discover / What''s Hot / [+ Custom Feed]'; active tab is `#0085ff` fill with white text; inactive tabs are transparent with `#5e6772` muted text; 8px gap between tabs."
+5. "Create a Bluesky custom feed tile — `#ffffff` background, `8px` radius, `1px solid #dde1e7` border, `16px` padding; 48px feed avatar (emoji or custom illustration) left, 12px gap, body right with feed name '16px / 600' + creator handle '14px / 400 muted #5e6772' + description '14px / 400 #0c0c0c' (max 2 lines); footer row: like-count with heart icon + 'Pin to home' sky-blue pill button right."
+6. "Build a Bluesky compose modal — `#ffffff` background, `12px` radius, `0 16px 48px rgba(0,0,0,0.20)` shadow, `24px` padding; top: 'X' close button left + 'Post' primary sky-blue pill CTA right; body: 40px circular avatar of current user left + 12px gap + textarea right (borderless, 18px / 400 / 1.5, placeholder 'What''s up?'); below textarea: media-upload icon row (image / GIF / video / link / language picker) + 13px / 500 tnum character counter '300 / 300' right (turns `#e84545` red below 20)."
+
+### Iteration Guide
+1. **Flat post cards.** If post cards have border-radius or shadows, force flush-edge with bottom hairline only. Twitter convention is the brand commitment.
+2. **Pill the CTA.** If primary buttons feel boxy, force `9999px` radius. Bluesky pill is non-negotiable.
+3. **Use Inter Black for hero.** If marketing hero feels light, switch to Inter 800 (Black). Bluesky's 56px / 800 is among the heaviest weights deployed in modern social-app design.
+4. **Three saturated accents.** Sky-blue for action, pink for like, purple for repost. If a fourth saturated colour appears in feed, audit and remove.
+5. **15px body, not 16px.** If post text feels too generous, drop to 15px / 1.5 — the feed-scanning calibration.
+6. **Heart-pop on like.** If like-tap feels static, add the scale `1 → 1.3 → 1` over 300ms ease-spring + colour swap.
+7. **Full dark-mode swap.** If only text colour inverted on dark, audit all surface, border, brand tokens for proper dark variant.
+8. **DNS-verified handles.** If verification feels missing, add support for DNS-verified handles (`@nytimes.com` instead of `@nytimes.bsky.social`). The brand's verification model is open, not monetized.

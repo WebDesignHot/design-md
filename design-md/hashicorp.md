@@ -6,7 +6,7 @@ source_url: https://hashicorp.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [dev-tools, infrastructure]
+categories: [dev-tools]
 tags: [dark, multi-color, enterprise, sans, dense, technical]
 preview_swatch: ['#000000', '#7b42bc', '#ffd02f']
 related: [vercel, fly-io, datadog]

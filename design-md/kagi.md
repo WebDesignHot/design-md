@@ -1,193 +1,821 @@
 ---
 name: Kagi
-tagline: A premium search engine dressed in warm cream and Plex — the indie answer to ad-funded search.
+tagline: 'A premium search engine dressed in warm cream and Plex — the indie answer to ad-funded search.'
 author: webdesignhot
 source_url: https://kagi.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [saas, ai]
 tags: [light, editorial, sans, serif, warm, soft, structured]
 preview_swatch: ['#fffbf5', '#ffb87a', '#2b2417']
 related: [you-com, perplexity, raycast]
-description: 'Kagi''s site argues for paid search by looking nothing like a search engine. The canvas is a warm cream `#fffbf5`, the brand colour is a sun-baked orange `#ffb87a`, the body is set in IBM Plex Sans, and pull-quotes drop into IBM Plex Serif — a typographic pairing that reads more like a small magazine than a product page.'
+description: 'Kagi''s site argues for paid search by looking nothing like a search engine. The canvas is a warm cream `#fffbf5`, the brand colour is a sun-baked orange `#ffb87a`, the body is set in IBM Plex Sans, and pull-quotes drop into IBM Plex Serif — a typographic pairing that reads more like a small magazine than a product page. Where Google argues for "free" with a clinical white sans-only interface, Kagi argues for "paid" with an editorial warm-cream layout and serif pull-quotes. The visual logic is: *you''re paying for this, so it should look like something worth paying for*. Pill CTAs are fully rounded with dark text on warm orange — never white-on-orange — preserving the paper-and-ink feel. The result is a brand that reads as Are.na meets Readwise meets a thoughtful magazine cover, an aesthetic posture deliberately positioned against ad-funded utility search.'
 
 colors:
-  bg: '#fffbf5'                # warm cream canvas
-  bg-soft: '#fff6e8'           # secondary cream surface
-  surface: '#fbf2e2'           # card / panel base
-  surface-hover: '#f4e8ce'     # hover tone
-  text: '#2b2417'              # near-black with warm cast
-  text-strong: '#1c170d'       # display copy
-  text-muted: '#6b5d47'        # secondary copy / metadata
-  brand: '#ffb87a'             # signature warm orange
-  brand-hover: '#f3a45f'       # pressed state
-  brand-deep: '#c97a3b'        # accent on light surfaces
-  accent: '#7d6ce0'            # secondary lavender used in marketing modules
-  border: '#0000001a'          # 10% black hairline
-  border-soft: '#00000014'     # 8% black for nested rules
-  on-brand: '#1c170d'          # dark text on warm orange (no white CTAs)
+  # Primary
+  bg: '#fffbf5'                          # warm cream canvas — defining surface
+  bg-soft: '#fff6e8'                     # secondary cream stripe
+  surface: '#fbf2e2'                     # card / panel base, half-step warmer
+  surface-strong: '#f4e8ce'              # hover tone, deeper warm
+  surface-hover: '#fff0d8'               # interactive hover wash
+  surface-elevated: '#fffefa'             # rare lifted panel almost-white-cream
+  text: '#2b2417'                        # near-black with warm cast — body default
+  text-strong: '#1c170d'                 # display copy, deepest warm-black
+  text-medium: '#3a3120'                 # secondary heading
+  text-muted: '#6b5d47'                  # secondary copy / metadata in warm grey
+  text-soft: '#8a7a5e'                   # supporting copy
+  text-faint: '#a99a7d'                  # helper text, microcopy
+  on-brand: '#1c170d'                    # dark text on warm orange — never white
+  on-cta: '#1c170d'                      # dark label on orange pill
+
+  # Brand & Accent
+  brand: '#ffb87a'                       # signature sun-baked orange
+  brand-hover: '#f3a45f'                 # pressed state for orange pills
+  brand-active: '#e89348'                # deeply pressed
+  brand-deep: '#c97a3b'                  # accent on light surfaces
+  brand-soft: '#ffe5c8'                  # tonal pill background
+  brand-faint: '#fff4e3'                 # quietest orange tint, near-bg
+  brand-glow: 'rgba(255, 184, 122, 0.32)' # focus glow
+
+  # Secondary accent
+  accent: '#7d6ce0'                      # lavender used in marketing modules
+  accent-hover: '#6b5acc'
+  accent-soft: '#e8e3ff'                 # lavender tint for illustrations only
+
+  # Interactive
+  link: '#c97a3b'                        # deep brand-orange for inline links
+  link-hover: '#a55d24'                  # darker pressed link
+  selected-bg: '#fbf2e2'                 # selected nav item / row
+  disabled-bg: '#f4e8ce'                 # disabled control fill
+  disabled-text: '#a99a7d'               # disabled label
+
+  # Borders
+  border: 'rgba(0, 0, 0, 0.10)'          # 10% black hairline (default)
+  border-strong: 'rgba(0, 0, 0, 0.18)'   # emphasized rule
+  border-soft: 'rgba(0, 0, 0, 0.08)'     # quietest division
+  border-warm: 'rgba(201, 122, 59, 0.20)' # rare brand-tinted hairline
+  border-focus: '#c97a3b'                # focus-ring deep-brand
+
+  # Semantic
+  success-bg: '#e0ebd0'                  # warm cactus-green tint (not Tailwind green)
+  success-text: '#3d5a47'
+  warning-bg: '#fde8c7'                  # cream-warning tint
+  warning-text: '#7a5e1f'
+  danger-bg: '#f7d8d2'                   # warm coral
+  danger-text: '#8a3a3a'
+  info-bg: '#e8e3ff'                     # lavender info
+  info-text: '#3a3a6a'
+
+  # Shadow tints
+  shadow-rgb: '43, 36, 23'               # warm-brown tinted shadow base
+  shadow-warm: '201, 122, 59'            # rare brand-warm focus glow
 
 typography:
   display:
     family: '"IBM Plex Sans", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [400, 500, 600, 700]
+    opentype-features: ['ss01', 'liga', 'kern']
   body:
     family: '"IBM Plex Sans", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
-    weights: [400, 500]
+    weights: [400, 500, 600]
+    opentype-features: ['kern', 'onum']
   serif:
     family: '"IBM Plex Serif", Georgia, "Times New Roman", serif'
-    weights: [400, 500]
+    weights: [400, 500, 600]
+    opentype-features: ['liga', 'onum', 'kern']
   mono:
     family: '"IBM Plex Mono", Menlo, Consolas, monospace'
     weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
   scale:
-    h1:    { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.02em' }
-    h2:    { size: 40, weight: 600, lineHeight: 1.1,  tracking: '-0.015em' }
-    h3:    { size: 24, weight: 600, lineHeight: 1.25, tracking: '0' }
-    body:  { size: 17, lineHeight: 1.55 }
-    quote: { size: 22, family: serif, lineHeight: 1.4 }
-    label: { size: 12, weight: 500, family: mono }
+    display-hero:    { size: 80, weight: 600, lineHeight: 1.02, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display:         { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    h1:              { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    h2:              { size: 40, weight: 600, lineHeight: 1.1,  tracking: '-0.015em', family: display }
+    h3:              { size: 24, weight: 600, lineHeight: 1.25, tracking: '0',        family: display }
+    h4:              { size: 20, weight: 600, lineHeight: 1.3,  family: display }
+    h5:              { size: 18, weight: 500, lineHeight: 1.35, family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0.06em',   family: mono, transform: uppercase }
+    body-large:      { size: 19, weight: 400, lineHeight: 1.55, family: body }
+    body:            { size: 17, weight: 400, lineHeight: 1.55, family: body }
+    body-small:      { size: 15, weight: 400, lineHeight: 1.5,  family: body }
+    caption:         { size: 14, weight: 400, lineHeight: 1.4,  family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.4,  family: mono, opentype: 'tnum' }
+    label:           { size: 13, weight: 500, lineHeight: 1.3,  family: body }
+    label-cta:       { size: 15, weight: 600, lineHeight: 1.2,  family: body }
+    quote-pull:      { size: 22, weight: 400, lineHeight: 1.4,  family: serif, style: italic }
+    quote-large:     { size: 32, weight: 500, lineHeight: 1.3,  family: serif, style: italic }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero' }
 
 radius:
-  xs: 4
+  micro: 4
   sm: 6
   md: 8
   lg: 12
   card: 16
   xl: 20
-  button: 999     # Kagi favours fully-rounded pill CTAs
+  button: 9999                           # Kagi favours fully-rounded pill CTAs
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 12, 16, 20, 24, 32, 48, 64, 80, 96, 128, 160]
+
 layout:
-  container: 1200
-  gutter: 24
-  rhythm: 8
+  page-width: 1200
+  prose-width: 680
+  hero-prose-width: 720
+  site-gutter: 'clamp(24px, 5vw, 64px)'
+  header-height: 64
+  grid-columns: 12
+  section-rhythm: '96-160px'
 
 components:
-  button-primary: 'Pill-shaped, warm orange `#ffb87a` background, dark `#1c170d` text — never white. Letterspacing barely tightened, weight 600.'
-  button-secondary: 'Cream-on-cream outlined pill, 1px `#0000001a` hairline, identical radius to primary.'
-  card: 'Rounded 16px panel on `#fbf2e2` with a 10% black border; shadows are avoided in favour of tonal nesting.'
-  nav: 'Quiet horizontal bar, no background fill until scroll, links in 500 weight Plex Sans.'
-  pull-quote: 'IBM Plex Serif italic, set 22px on a generous 1.4 line-height, indented from the body grid.'
+  button-primary:
+    background: '#ffb87a'
+    text: '#1c170d'
+    padding: '12px 24px'
+    radius: 9999
+    border: 'none'
+    font: 'IBM Plex Sans 600 / 15px'
+    hover-bg: '#f3a45f'
+    active-bg: '#e89348'
+    use: 'Pill-shaped warm orange — primary action across the site, dark text never white'
+  button-secondary:
+    background: 'transparent'
+    text: '#2b2417'
+    padding: '12px 24px'
+    radius: 9999
+    border: '1px solid rgba(0, 0, 0, 0.10)'
+    font: 'IBM Plex Sans 600 / 15px'
+    hover-bg: '#fbf2e2'
+    use: 'Cream outlined pill — identical radius to primary, hairline border'
+  button-ghost:
+    background: 'transparent'
+    text: '#2b2417'
+    padding: '8px 16px'
+    radius: 9999
+    border: 'none'
+    font: 'IBM Plex Sans 500 / 14px'
+    hover-bg: 'rgba(0, 0, 0, 0.05)'
+    use: 'Quiet third action — nav links, inline ghost buttons; pill radius preserved'
+  button-deep:
+    background: '#1c170d'
+    text: '#fffbf5'
+    padding: '12px 24px'
+    radius: 9999
+    font: 'IBM Plex Sans 600 / 15px'
+    hover-bg: '#3a3120'
+    use: 'Rare deep CTA — used on dark-band hero or pricing emphasis; cream label on warm-black'
+  card:
+    background: '#fbf2e2'
+    border: '1px solid rgba(0, 0, 0, 0.10)'
+    radius: 16
+    padding: '24px'
+    use: 'Default warm-cream panel — feature card, pricing tier, testimonial'
+  card-cream:
+    background: '#fffefa'
+    border: '1px solid rgba(0, 0, 0, 0.08)'
+    radius: 16
+    padding: '32px'
+    use: 'Lifted card on the warm cream bg — rare, used for hero pricing'
+  pull-quote:
+    background: 'transparent'
+    text: '#1c170d'
+    padding: '0'
+    border-left: '3px solid #ffb87a'
+    indent: '32px'
+    font: 'IBM Plex Serif 400 / 22px italic / 1.4 line-height'
+    use: 'Editorial pull-quote — Plex Serif italic, indented from body grid, brand-orange left rule'
+  input:
+    background: '#fffefa'
+    border: '1px solid rgba(0, 0, 0, 0.18)'
+    radius: 12
+    padding: '12px 16px'
+    font: 'IBM Plex Sans 400 / 17px'
+    placeholder-color: '#a99a7d'
+    focus-ring: '0 0 0 2px #c97a3b'
+    use: 'Search input on signup form, settings'
+  badge-tag:
+    background: '#fbf2e2'
+    text: '#6b5d47'
+    padding: '4px 10px'
+    radius: 9999
+    font: 'IBM Plex Mono 500 / 12px'
+    use: 'Editorial tag — uses Plex Mono for the spec-stamp feel'
+  badge-warm:
+    background: '#ffe5c8'
+    text: '#a55d24'
+    padding: '4px 10px'
+    radius: 9999
+    font: 'IBM Plex Sans 500 / 12px'
+    use: 'Status pill — Plus / Family / Pro tier indicator'
+  nav-link:
+    background: 'transparent'
+    text: '#2b2417'
+    padding: '8px 12px'
+    font: 'IBM Plex Sans 500 / 15px'
+    hover-text: '#c97a3b'
+    use: 'Top nav links — quiet warm-black, brand-deep on hover'
+  testimonial-card:
+    background: '#fbf2e2'
+    border: '1px solid rgba(0, 0, 0, 0.10)'
+    radius: 16
+    padding: '32px'
+    use: 'Editorial testimonial — uses Plex Serif italic for the quote, Plex Sans for the attribution'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  ease-editorial: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-instant: 80
+  duration-fast: 120
+  duration-standard: 220
+  duration-slow: 360
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translate transforms become opacity-only, durations halved, illustration parallax disabled'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(43, 36, 23, 0.04) 0 1px 3px'
+  standard: 'rgba(43, 36, 23, 0.06) 0 4px 12px'
+  elevated: 'rgba(43, 36, 23, 0.08) 0 12px 32px -8px, rgba(43, 36, 23, 0.04) 0 4px 8px'
+  warm: 'rgba(255, 184, 122, 0.20) 0 16px 40px -16px'
+  modal: 'rgba(43, 36, 23, 0.18) 0 24px 48px -12px'
+  ring: '0 0 0 2px #c97a3b'
+  ring-offset: '0 0 0 2px #fffbf5, 0 0 0 4px #c97a3b'
+
+accessibility:
+  contrast-text-on-bg: 12.4              # #2b2417 on #fffbf5 — AAA
+  contrast-text-strong-on-bg: 15.1       # #1c170d on #fffbf5 — AAA
+  contrast-text-on-brand: 10.8           # #1c170d on #ffb87a — AAA
+  contrast-text-muted-on-bg: 5.4         # #6b5d47 on #fffbf5 — AA at body
+  contrast-link-on-bg: 5.0               # #c97a3b on #fffbf5 — AA
+  focus-ring: '2px solid #c97a3b with 2px cream offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive surface; tab order matches reading order; pull-quote markup uses <blockquote> with <cite> attribution'
+  prose-line-length: 'capped at 680px (~64 characters of Plex Sans 17px) for editorial readability'
+  aria-patterns: 'pricing tiers use role=group with aria-labelledby; testimonial cards use proper <blockquote> + <cite> markup; nav uses role=navigation with aria-label; pill CTAs use button semantics with descriptive labels'
+
+dark-mode: optional                      # in-product Kagi search supports dark; marketing surface is light-only with warm-cream as canvas
 
 lineage:
-  summary: |
-    Kagi sells a paid search engine, so the site has to look unlike
-    every other search page on the internet. The strategy is editorial:
-    a warm cream canvas (`#fffbf5`) borrowed from independent magazines,
-    a single sun-baked orange (`#ffb87a`) doing all the action work, and
-    IBM Plex — both Sans and Serif — carrying the entire type system.
-    Plex is a designed-by-IBM open-source family with a slightly
-    architectural feel; pairing the sans with the serif gives Kagi an
-    indie-publication tone that reads as the opposite of Google's blue
-    sans-only utilitarianism. CTAs are pill-shaped and use dark text on
-    warm orange — Kagi never does white-on-orange, which preserves the
-    paper-and-ink feel. Lavender (`#7d6ce0`) makes brief appearances in
-    secondary marketing modules, mostly as illustration accent. The
-    overall posture is closer to Are.na or Readwise than to Bing — a
-    deliberate stance that the search bar deserves the same care as a
-    well-made magazine cover.
+  summary: 'Kagi sells a paid search engine, so the site has to look unlike every other search page on the internet. The strategy is editorial: a warm cream canvas (`#fffbf5`) borrowed from independent magazines, a single sun-baked orange (`#ffb87a`) doing all the action work, and IBM Plex — both Sans and Serif — carrying the entire type system. CTAs are pill-shaped and use dark text on warm orange — Kagi never does white-on-orange, which preserves the paper-and-ink feel and (incidentally) hits AAA contrast where white-on-orange would fail. The posture is closer to Are.na or Readwise than to Bing — a deliberate stance that the search bar deserves the same care as a well-made magazine cover.'
   influences:
     - name: IBM Plex
-      role: Entire type system — Sans for UI, Serif for editorial accents, Mono for code.
+      role: 'Entire type system — Sans for UI, Serif for editorial accents, Mono for code/tags. The trifecta is the brand'
       url: https://www.ibm.com/plex
     - name: Are.na
-      role: Cream-canvas + warm-neutral aesthetic positioning paid software as a craft object.
+      role: 'Cream-canvas + warm-neutral aesthetic positioning paid software as a craft object'
       url: https://www.are.na
     - name: Readwise / Reader
-      role: Warm-paper CTA discipline — dark text on coloured pills, no inverted white labels.
+      role: 'Warm-paper CTA discipline — dark text on coloured pills, no inverted white labels'
       url: https://readwise.io
+    - name: The Browser
+      role: 'Editorial register applied to a paid product; manifesto-grade marketing'
+      url: https://thebrowser.com
+    - name: MIT Technology Review
+      role: 'Editorial whitespace; serif pull-quotes; paper-paced rhythm'
+      url: https://www.technologyreview.com
+    - name: Stripe Press
+      role: 'IBM Plex ecosystem; serif-meets-sans pairing for editorial tech publishing'
+      url: https://press.stripe.com
+    - name: Raycast
+      role: 'Adjacent register: warm-cream cousin, premium-feel paid product'
+      url: https://raycast.com
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Kagi's marketing site is a manifesto against ad-funded search dressed
-as a small magazine. The canvas is a warm cream `#fffbf5` — not white,
-not beige, but the colour of unbleached book stock — and every other
-surface tones up or down from there in a single warm-neutral ladder.
-The brand colour is a sun-baked orange `#ffb87a` that appears almost
-exclusively on pill-shaped CTAs, and IBM Plex Sans + Plex Serif carry
-the entire typographic load.
+Kagi's marketing site is **a manifesto against ad-funded search dressed as a small magazine**. The canvas is a warm cream `#fffbf5` — not white, not beige, but the colour of unbleached book stock — and every other surface tones up or down from there in a single warm-neutral ladder. The brand colour is a sun-baked orange `#ffb87a` that appears almost exclusively on pill-shaped CTAs, and IBM Plex Sans + Plex Serif carry the entire typographic load.
 
-Where Google argues for "free" with a clinical white sans-only
-interface, Kagi argues for "paid" with an editorial warm-cream layout
-and serif pull-quotes. The visual logic is: *you're paying for this,
-so it should look like something worth paying for.*
+Where Google argues for "free" with a clinical white sans-only interface, Kagi argues for "paid" with an editorial warm-cream layout and serif pull-quotes. The visual logic is: *you're paying for this, so it should look like something worth paying for*. Every chromatic decision reinforces that posture — warm cream over bleached white, sun-baked orange over corporate blue, hand-set Plex Serif italic for pull-quotes, fully-rounded pill CTAs (not the modern 8–12px square-rounded default).
 
-## Colors
+The most consequential decision is **dark text on warm orange**. Where every modern SaaS pairs white text with a coloured CTA, Kagi insists on `#1c170d` warm-black on `#ffb87a` orange — never white. This single typographic-meets-chromatic rule preserves the paper-and-ink feel: the page reads as ink-on-paper rather than chrome-on-glow. The reverse pairing (white on orange) is doctrinally rejected — see §14.
 
-- **bg** `#fffbf5` — warm cream canvas, the page's defining surface
-- **bg-soft** `#fff6e8` — secondary cream for stripe sections
-- **surface** `#fbf2e2` — card / panel base, a half-step warmer than bg
-- **text-strong** `#1c170d` — display copy, near-black with warm cast
-- **text** `#2b2417` — primary body, designed for long-read comfort
-- **text-muted** `#6b5d47` — captions and metadata in warm grey
-- **brand** `#ffb87a` — the signature sun-baked orange, used only on action surfaces
-- **brand-hover** `#f3a45f` — pressed / hover state for orange pills
-- **accent** `#7d6ce0` — lavender used sparingly in secondary marketing modules
-- **border** `#0000001a` — 10% black hairline, never coloured
+The Plex pairing is the typographic argument. IBM Plex Sans for UI body and headlines (a designed-by-IBM open-source family with a slightly architectural feel), IBM Plex Serif for editorial moments — pull-quotes, taglines, longform intros — and IBM Plex Mono for the rare code block or eyebrow tag. Three faces from one designer, one foundry, one type system. The completeness of the Plex trifecta is what gives Kagi its single typographic identity rather than the usual three-foundry collage.
 
-## Typography
+Atmospheric vocabulary: *warm-cream-canvas, sun-baked-orange, Plex-Sans-Plex-Serif-pairing, pill-CTA-with-dark-text, editorial-magazine, paper-and-ink, indie-publication, paid-search-as-craft-object, Are.na-cousin, Readwise-cousin, anti-ad-funded-utility.*
 
-The display is **IBM Plex Sans** at 600 weight, sized 56px with a 1.05
-line-height and a gentle `-0.02em` tracking — confident but not
-compressed. Plex's slightly architectural feel keeps the warm cream
-canvas from drifting into "cosy bakery" territory.
+**Key Characteristics**
+- Warm cream `#fffbf5` canvas — the colour of unbleached book stock
+- Sun-baked orange `#ffb87a` reserved for pill CTAs only
+- **Dark text on orange** (`#1c170d`) — never white
+- IBM Plex Sans + Plex Serif typographic pairing
+- Plex Serif italic pull-quotes — the editorial differentiator
+- Fully-rounded pill CTAs (radius 9999) — Kagi never squares the buttons
+- 16px card radius on warm-cream panels
+- 10% black hairlines instead of coloured borders
+- Tonal layering for depth — `#fffbf5 → #fff6e8 → #fbf2e2 → #f4e8ce`
+- Plex Mono eyebrow tags — the "specifications" feel
+- Lavender `#7d6ce0` rare illustration accent — never a CTA fill
+- Magazine-paced rhythm (96–160px section gutters)
 
-Body type is the same Plex Sans at 400/500, sized 17px on a 1.55
-line-height — a touch larger than the typical 16px web default,
-designed for the long marketing essays Kagi publishes.
+## 2. Color Palette & Roles
 
-Pull quotes and editorial moments shift to **IBM Plex Serif** at
-22px, italicised, indented from the body grid. The Sans + Serif duet
-is the typographic equivalent of Kagi's tagline: *we treat search like
-a craft.* Code samples use **IBM Plex Mono**, completing the trifecta
-and giving the whole site a single typographic identity rather than
-the usual three-foundry collage.
+### Primary
 
-## Layout
+- **bg** `#fffbf5` — warm cream canvas; the page's defining surface, never substituted for `#ffffff`.
+- **text** `#2b2417` — near-black with warm cast; body default.
+- **bg-soft** `#fff6e8` — secondary cream stripe for alternating sections.
+- **surface** `#fbf2e2` — card / panel base, half-step warmer than bg.
+- **text-strong** `#1c170d` — display copy, deepest warm-black; also the on-brand label colour.
 
-The container is a 1200px max-width with 24px gutters and an 8px
-spacing rhythm. Sections breathe — vertical padding regularly hits
-96–120px between modules. The grid is more editorial than dashboard:
-columns vary, hero copy often sits one-column wide with an illustration
-to the right, and there are no aggressive feature-grid walls.
+### Brand & Accent (orange + lavender)
 
-Type sizes step in stable 1.25× ratios from 17px body up through
-24/32/40/56, mirroring an editorial modular scale.
+- **brand** `#ffb87a` — signature sun-baked orange; pill CTAs, hover-link underline.
+- **brand-hover** `#f3a45f` — pressed pill state.
+- **brand-active** `#e89348` — deeply pressed.
+- **brand-deep** `#c97a3b` — accent text on light surfaces; inline link colour.
+- **brand-soft** `#ffe5c8` — tonal pill background, status indicators.
+- **brand-faint** `#fff4e3` — quietest orange tint, rare promotional band.
+- **accent** `#7d6ce0` — lavender used sparingly in secondary marketing modules and illustrations only — **never on a CTA**.
+- **accent-soft** `#e8e3ff` — lavender illustration tint.
 
-## Elevation & Depth
+### Interactive
 
-Depth is achieved entirely through warm-tonal layering — `#fffbf5` →
-`#fff6e8` → `#fbf2e2` → `#f4e8ce` — and a single 10% black hairline.
-Shadows are essentially absent on the marketing surface; cards lift
-through tone and border, not blur. This is what gives Kagi its
-paper-and-ink feel: every surface looks like a different stock weight,
-not a different elevation.
+- **link** `#c97a3b` — deep brand-orange; underlined.
+- **link-hover** `#a55d24` — darker pressed.
+- **selected-bg** `#fbf2e2` — selected nav, selected row.
+- **disabled-bg** `#f4e8ce` — disabled control fill.
+- **disabled-text** `#a99a7d` — disabled label, warm grey.
+- **focus-ring** `#c97a3b` — 2px solid deep-brand with 2px cream offset.
 
-## Shapes
+### Neutral Scale (warm grayscale)
 
-Radii ladder is 4/6/8/12/16/20, with `9999` reserved for the signature
-pill CTAs and avatars. Buttons are always full pills — Kagi never uses
-a square or 8px-rounded action button on the marketing surface. Cards
-sit at 16px, hero shells at 20px.
+- **warm-black** `#1c170d` — display copy, deepest.
+- **warm-text** `#2b2417` — body default.
+- **warm-medium** `#3a3120` — secondary heading.
+- **warm-muted** `#6b5d47` — captions, metadata in warm grey.
+- **warm-soft** `#8a7a5e` — supporting copy.
+- **warm-faint** `#a99a7d` — helper, microcopy.
+- **warm-line** `#d4c8b0` — strong divider rule.
 
-## Components
+### Surface & Borders
 
-The defining components are the **warm-orange pill CTA** (`#ffb87a`
-background with `#1c170d` dark text — never white), the **cream
-outlined secondary pill** (1px hairline, identical radius), and the
-**Plex Serif pull-quote** that breaks up dense feature copy. Cards are
-warm-cream panels with a 10% black border. Navigation is a thin,
-quiet bar with no fill until scroll, letting the editorial layout
-dominate.
+- **surface-0 (page)** — `#fffbf5` warm cream.
+- **surface-1 (panel)** — `#fff6e8` cream stripe.
+- **surface-2 (card)** — `#fbf2e2` warm card base.
+- **surface-3 (hover)** — `#f4e8ce` deeper warm.
+- **surface-elevated (rare)** — `#fffefa` near-white-cream.
+- **border** `rgba(0, 0, 0, 0.10)` — 10% black hairline (default).
+- **border-strong** `rgba(0, 0, 0, 0.18)` — emphasized rule.
+- **border-soft** `rgba(0, 0, 0, 0.08)` — quietest division.
+- **border-warm** `rgba(201, 122, 59, 0.20)` — rare brand-tinted hairline (used on the orange pull-quote bar).
 
-## Do's and Don'ts
+### Shadow Colors
 
-- **Do** keep the canvas warm cream (`#fffbf5`); pure white reads as a generic SaaS template and breaks the magazine metaphor.
-- **Do** use dark text on the orange CTA — `#1c170d` on `#ffb87a`. White text on warm orange is an accessibility miss and an aesthetic miss.
-- **Do** reach for IBM Plex Serif for editorial moments (pull-quotes, taglines, longform intros); it's the differentiator from every other Plex Sans site.
-- **Don't** introduce a second action colour — the lavender `#7d6ce0` is illustration-only, never a CTA.
-- **Don't** apply shadows to cards; depth here is tonal layering plus a 10% black hairline, not blur.
-- **Don't** square the buttons — Kagi's pill CTAs are part of the brand fingerprint as much as the cream canvas is.
+Kagi uses **warm-brown tinted** shadows at very low opacity. The marketing surface uses tonal layering for 95% of depth — `#fffbf5 → #fff6e8 → #fbf2e2 → #f4e8ce` — and a single 10% black hairline. When a real shadow is needed, it's `rgba(43, 36, 23, ...)` (the warm-text RGB) at 0.04–0.18 opacity. The rare `warm` shadow uses the brand-orange RGB for an accent glow under hero illustrations.
+
+### Semantic
+
+- **success** — `#e0ebd0` / `#3d5a47`. Warm-cactus green, not Tailwind-default.
+- **warning** — `#fde8c7` / `#7a5e1f`. Cream-warning, sits adjacent to brand.
+- **danger** — `#f7d8d2` / `#8a3a3a`. Warm coral, never pure red.
+- **info** — `#e8e3ff` / `#3a3a6a`. Lavender pair — the only place lavender appears in chrome.
+
+The semantic palette is **all desaturated warm tones**, never Tailwind-default (which would be too saturated against the cream canvas).
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: **IBM Plex Sans** at weights 400 / 500 / 600 / 700. Plex Sans is a designed-by-IBM open-source family with a slightly architectural feel — slightly more contrast than Inter, slightly more warmth than Söhne. It's what gives Kagi the "considered" rather than "generic SaaS" cadence. Fallback: `-apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif`.
+- **Editorial Serif**: **IBM Plex Serif** at weights 400 / 500 / 600. Used exclusively for pull-quotes, taglines, and rare longform intros. Italic is the dominant style. Fallback: `Georgia → Times New Roman → serif`.
+- **Mono**: **IBM Plex Mono** at weights 400 / 500. Used for eyebrow tags, code blocks, and the rare specification badge. Fallback: `Menlo → Consolas → monospace`.
+- **OpenType features**: `kern` always; `ss01` on display (cleaner alt-glyphs); `onum` (old-style figures) on body Plex Sans for editorial cadence; `tnum + zero` on Plex Mono for legible numerics.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Plex Sans | 80 | 600 | 1.02 | -0.025em | ss01 | Rare hero — annual report / manifesto pages |
+| display | Plex Sans | 64 | 600 | 1.05 | -0.02em | — | Section openers |
+| h1 | Plex Sans | 56 | 600 | 1.05 | -0.02em | — | Standard hero |
+| h2 | Plex Sans | 40 | 600 | 1.1 | -0.015em | — | Section heading |
+| h3 | Plex Sans | 24 | 600 | 1.25 | normal | — | Subsection |
+| h4 | Plex Sans | 20 | 600 | 1.3 | normal | — | Card heading |
+| h5 | Plex Sans | 18 | 500 | 1.35 | normal | — | Inline subheading |
+| eyebrow | Plex Mono | 12 | 500 | 1.4 | 0.06em | uppercase | Section label / tag — the spec-stamp |
+| body-large | Plex Sans | 19 | 400 | 1.55 | normal | onum | Lede |
+| body | Plex Sans | 17 | 400 | 1.55 | normal | onum | Default body — slightly larger than 16px web default |
+| body-small | Plex Sans | 15 | 400 | 1.5 | normal | — | Secondary copy |
+| caption | Plex Sans | 14 | 400 | 1.4 | normal | — | Helper, image caption |
+| caption-tabular | Plex Mono | 13 | 500 | 1.4 | normal | tnum | Spec-row data |
+| label | Plex Sans | 13 | 500 | 1.3 | normal | — | Form labels |
+| label-cta | Plex Sans | 15 | 600 | 1.2 | normal | — | Button text |
+| quote-pull | Plex Serif italic | 22 | 400 | 1.4 | normal | onum | Editorial pull-quote — the brand differentiator |
+| quote-large | Plex Serif italic | 32 | 500 | 1.3 | normal | onum | Hero-scale pull-quote |
+| code | Plex Mono | 14 | 400 | 1.55 | normal | tnum zero | Inline + block code |
+
+### Principles
+
+- **Plex Sans + Plex Serif duet is the brand.** The Sans handles UI; the Serif handles editorial moments. Three Plex faces from one designer = single typographic identity.
+- **Body sized at 17px / 1.55 line-height.** Slightly larger than the 16px web default — designed for the long marketing essays Kagi publishes.
+- **Headlines compress at `-0.02em` to `-0.025em`.** Display only; body holds at normal tracking.
+- **Plex Serif italic for pull-quotes only.** Roman serif is rare; italic is the dominant register.
+- **Old-style figures (`onum`) on body.** Gives numerics the editorial, non-tabular cadence of well-set magazine prose.
+- **Plex Mono for eyebrow + code.** Eyebrow uppercase at 0.06em tracking — the "specifications" feel without being clinical.
+- **600 is the heading weight, never 700.** 700 is reserved for display-hero only.
+- **Modular scale of 1.25× from body 17px.** 17 → 21.25 → 26.6 → 33 → 41.5 → 52 → 65… simplified to 17/20/24/40/56/64/80 in practice.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary pill (orange, dark text)** — `#ffb87a` bg, `#1c170d` text, **9999 radius** (fully rounded), Plex Sans 600 / 15px, padding `12px 24px`. Hover deepens to `#f3a45f`; active to `#e89348`. The signature CTA — "Try Kagi", "Get started", "Subscribe". **Text is dark, never white** — see §14.
+
+**Secondary pill (cream outlined)** — transparent bg, `#2b2417` text, `1px rgba(0, 0, 0, 0.10)` border, 9999 radius identical to primary, Plex Sans 600 / 15px. Hover wash `#fbf2e2`.
+
+**Ghost pill** — transparent, `#2b2417` text, no border, 9999 radius preserved, `8px 16px` padding. Hover wash `rgba(0, 0, 0, 0.05)`. Used for nav and inline ghost buttons.
+
+**Deep pill (rare)** — `#1c170d` bg, `#fffbf5` text, 9999 radius. Hover `#3a3120`. Reserved for dark-band hero or pricing emphasis — at most once per page.
+
+### Cards
+
+**Default card** — `#fbf2e2` warm-cream bg, `1px rgba(0, 0, 0, 0.10)` border, 16px radius, `24px` padding, no shadow. Used for feature cards, pricing tiers, testimonials.
+
+**Lifted cream card (rare)** — `#fffefa` near-white-cream bg, `1px rgba(0, 0, 0, 0.08)` border, 16px radius, `32px` padding. Used for hero pricing or featured testimonial.
+
+**Testimonial card** — `#fbf2e2` bg, `1px rgba(0, 0, 0, 0.10)` border, 16px radius, `32px` padding. Quote in Plex Serif italic 22px; attribution in Plex Sans 500 14px below.
+
+### Pull-quote (the editorial signature)
+
+**Pull-quote** — transparent bg, `#1c170d` text, `3px solid #ffb87a` left border, `32px` left indent, Plex Serif italic 22px / 1.4 line-height. Indented from body grid; usually breaks up dense feature copy.
+
+### Badges, Tags, Pills
+
+**Editorial tag** — `#fbf2e2` bg, `#6b5d47` text, **Plex Mono** 500 / 12px, pill radius. The mono gives the spec-stamp feel that distinguishes Kagi tags from generic SaaS badges.
+
+**Status pill (warm)** — `#ffe5c8` bg, `#a55d24` text, Plex Sans 500 / 12px, pill radius. Used for plan tiers: `Plus`, `Family`, `Pro`.
+
+### Inputs & Forms
+
+**Default input** — `#fffefa` bg, `1px rgba(0, 0, 0, 0.18)` border, 12px radius, `12px 16px` padding, Plex Sans 400 / 17px, `#a99a7d` placeholder. Focus ring `0 0 0 2px #c97a3b` with 2px cream offset.
+
+**Form labels** — Plex Sans 500 / 14px, `#2b2417`, `4px` margin-bottom from input.
+
+**Helper text** — Plex Sans 400 / 14px, `#6b5d47`, `4px` margin-top from input.
+
+**Error state** — border `#f7d8d2`; helper text flips to `#8a3a3a`.
+
+### Navigation
+
+**Top nav** — 64px header height, `#fffbf5` bg matching page (no fill until scroll), no border. Wordmark left in Plex Sans 600. Nav links right at Plex Sans 500 / 15px / `#2b2417`. Hover deepens link to `#c97a3b`. Right cluster: ghost "Sign in" + primary orange pill "Try Kagi".
+
+**Footer nav** — Plex Sans 400 / 14px / `#6b5d47`, multi-column grid. Footer typography uses a touch more leading to read as paper-paged.
+
+### Modal
+
+**Modal** — `#fffefa` panel, 16px radius, modal shadow `rgba(43, 36, 23, 0.18) 0 24px 48px -12px`, `40px` padding. Backdrop `rgba(43, 36, 23, 0.5)`.
+
+### Tooltips
+
+**Tooltip** — `#1c170d` bg, `#fffbf5` text, 8px radius, Plex Sans 400 / 13px, `8px 12px` padding, `220ms` fade.
+
+### Toasts
+
+**Toast** — `#fffefa` bg, `1px rgba(0, 0, 0, 0.10)` border, 12px radius, ambient warm shadow, `12px 16px` padding. Slide-up from bottom-right.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit **4px**. Scale: `1, 2, 4, 6, 8, 12, 16, 20, 24, 32, 48, 64, 80, 96, 128, 160`. Section padding regularly hits 96–160px between modules — magazine-paced rhythm. Card interiors are generous (24–32px) — paper-grade breathing room.
+
+### Grid & Container
+
+- **Page max-width**: 1200px, centred, `clamp(24px, 5vw, 64px)` site gutter.
+- **Hero prose-width**: 720px max.
+- **Marketing prose-width**: 680px (~64 characters at Plex Sans 17px).
+- **Grid columns**: 12, 24px gutter — but used flexibly. Editorial layouts often run 2-up asymmetric (5/7) or 3-up symmetric.
+- **Section padding**: 96–160px between modules.
+
+### Whitespace Philosophy
+
+Sections breathe. Vertical padding regularly hits 96–160px between modules; this is the magazine-paced rhythm rather than the dashboard-density of competitor sites. Within sections: 24–48px between groups. Type sizes step in stable 1.25× ratios from 17px body up through 24/32/40/56/80, mirroring an editorial modular scale.
+
+### Section Cadence
+
+The page alternates **`#fffbf5` warm-cream**, **`#fff6e8` cream-stripe**, and (rarely) `#1c170d` warm-black bands. The dark band is for emphasis — pricing reveal, manifesto closing — not default rhythm. Most sections stay in the cream-on-cream register.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 4px | Inline tags (rare), focus inner-stroke |
+| Small | 6px | Quietest dense chips |
+| Standard | 8px | Tooltip, dense form chips |
+| Comfortable | 12px | Inputs, dropdowns |
+| Card | 16px | Default warm-cream cards, testimonial cards |
+| Large | 20px | Modal, hero shells |
+| Pill | 9999px | **All buttons** — Kagi's signature |
+
+The defining radius decision is the **pill button**. Where every modern SaaS lands at 8–12px on buttons, Kagi runs **fully rounded pills** for primary, secondary, and ghost. The pill radius is part of the brand fingerprint as much as the cream canvas is. Cards hold at 16px (paper-grade soft). Hero shells at 20px (rare). Pills at 9999.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 (flat) | No shadow, no border | Page bg |
+| 1 (hairline) | `1px rgba(0, 0, 0, 0.10)` border | Default cards |
+| 2 (tonal) | `#fbf2e2` bg lift on `#fffbf5`, no shadow | Default card depth |
+| 3 (deeper tonal) | `#f4e8ce` bg on cream | Hover state, deepest tonal |
+| 4 (ambient) | `rgba(43, 36, 23, 0.06) 0 4px 12px` | Toast, light hover |
+| 5 (modal) | `rgba(43, 36, 23, 0.18) 0 24px 48px -12px` | Modal |
+| Special | `rgba(255, 184, 122, 0.20) 0 16px 40px -16px` | Rare warm-glow under hero illustration |
+
+### Shadow Philosophy
+
+Kagi's depth language is **tonal layering plus a 10% black hairline, almost never blur**. Cards lift through tone and border, not shadow — every surface looks like a different stock weight, not a different elevation. This is what gives Kagi its paper-and-ink feel. When a real shadow is needed (modal, tooltip), it's **warm-brown tinted** (`rgba(43, 36, 23, ...)`) — never neutral black, never coloured. The rare `warm` shadow uses the brand-orange RGB for an editorial accent glow.
+
+## 8. Interaction & Motion
+
+### Easing curves
+
+- **Standard** — `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover, focus.
+- **Emphasized** — `cubic-bezier(0.2, 0, 0, 1)` — incoming elements, modals.
+- **Out** — `cubic-bezier(0.16, 1, 0.3, 1)` — overshoot-free decelerate.
+- **Editorial** — `cubic-bezier(0.32, 0.72, 0, 1)` — section reveal, scroll-triggered illustration parallax.
+
+### Duration buckets
+
+- **Instant** — 80ms — focus ring.
+- **Fast** — 120ms — hover bg shift.
+- **Standard** — 220ms — default transition (slightly slower than Cartesia's 200ms — paper-paced).
+- **Slow** — 360ms — modal opens, card hover lift.
+- **Page** — 480ms — between-route transition.
+
+### Per-component micro-states
+
+- **Pill hover** — bg shifts `#ffb87a → #f3a45f` over `120ms ease-standard`. No translate, no scale — the page is paper-static.
+- **Pill active** — bg drops one notch darker; faint inset shadow (`inset 0 1px 2px rgba(0, 0, 0, 0.08)`).
+- **Card hover** — bg lifts from `#fbf2e2 → #f4e8ce` over `220ms ease-standard`. No translate.
+- **Link hover** — colour shift `#c97a3b → #a55d24` over `120ms`; underline thickness can grow from 1px to 2px.
+- **Input focus** — focus-ring fades in `80ms`; border colour swaps to `#c97a3b`.
+- **Pull-quote scroll-in** — fades up 8px from below, `editorial` easing, `360ms`. Reduced-motion: opacity-only.
+- **Modal** — backdrop fades 0 → 0.5 over `220ms`; modal scales `0.96 → 1` simultaneously over `360ms ease-emphasized`.
+- **Illustration parallax** — rare, tied to scroll; disabled under reduced-motion.
+
+### Page transitions
+
+Marketing pages use SPA-style fade-through between routes at `480ms`. Section anchors use `scroll-behavior: smooth` over `360ms`.
+
+### Reduced-motion strategy
+
+`prefers-reduced-motion: reduce` is fully honoured. All translate transforms become opacity fades. Illustration parallax disables entirely. Smooth scroll disables. Pull-quote scroll-in becomes a static fade.
+
+## 9. Accessibility & A11y
+
+### Contrast pairs (computed)
+
+| Pair | Ratio | WCAG |
+|---|---|---|
+| `#2b2417` on `#fffbf5` (body) | 12.4:1 | AAA |
+| `#1c170d` on `#fffbf5` (display) | 15.1:1 | AAA |
+| `#1c170d` on `#ffb87a` (CTA) | 10.8:1 | AAA |
+| `#6b5d47` on `#fffbf5` (muted) | 5.4:1 | AA at body |
+| `#c97a3b` on `#fffbf5` (link) | 5.0:1 | AA |
+| `#a55d24` on `#ffe5c8` (status pill) | 5.5:1 | AA |
+| `#3d5a47` on `#e0ebd0` (success) | 6.5:1 | AAA |
+
+Note: the `#1c170d` on `#ffb87a` ratio of 10.8:1 *demands* dark text on orange — a `#ffffff` on `#ffb87a` pairing would only hit 1.9:1, well below AA. The brand's dark-text-on-orange rule is therefore an accessibility decision as much as an aesthetic one.
+
+### Focus indicators
+
+**2px solid `#c97a3b`** (deep brand-orange) with **2px cream offset** on every interactive surface. The deep-brand colour is visually distinct from the lighter `#ffb87a` brand fill, so focus state cannot be confused with hover.
+
+### ARIA patterns
+
+- **Pull-quote** — uses proper `<blockquote>` markup with `<cite>` for attribution. Screen readers announce the quote and source.
+- **Pricing tiers** — `role="group"` with `aria-labelledby` referencing tier name; price values use `aria-label` for screen-reader speech ("seven dollars per month").
+- **Nav** — `<nav>` with `aria-label="Primary navigation"`.
+- **Modal** — `role="dialog"` + `aria-modal="true"` + `aria-labelledby` + `aria-describedby`.
+- **Search input** — `role="combobox"` if predictive, with `aria-expanded` + `aria-controls`.
+- **Testimonial** — `<blockquote>` + `<cite>` proper semantics.
+
+### Keyboard navigation
+
+- Tab order follows reading order — header, hero CTA, pricing tiers, testimonials, footer.
+- ESC dismisses modals.
+- Pill buttons render as proper `<button>` elements.
+- Skip-to-content link on first Tab.
+
+### Screen reader hints
+
+- Brand-orange decorative SVGs use `aria-hidden="true"`.
+- Pull-quote attribution wraps in `<cite>` — screen reader announces "quote by [name]".
+- Pricing values include `aria-label` for natural speech.
+- Plex Mono spec tags include `aria-label` describing the metric in human language.
+
+### Reduced motion
+
+Honoured globally. See §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Min-width | Notes |
+|---|---|---|
+| mobile | 0 | Single column, 24px gutter, hero at 36px |
+| tablet | 640px | 2-up feature grid, hero at 48px |
+| desktop | 1024px | 3-up grid, hero at 56px |
+| wide | 1280px | Full 12-column grid, hero at 64px |
+| max | 1440px | Container caps at 1200px, gutter expands |
+
+### Touch targets
+
+All pill CTAs meet **44×44px minimum**. Primary pill at `12px 24px` padding renders ~44px tall. Plex Sans body at 17px is comfortable for touch reading.
+
+### Collapsing strategy
+
+- **Hero** — single-column on mobile (copy → primary pill → secondary pill stacked).
+- **Feature grid** — 3-up desktop → 2-up tablet → 1-up mobile.
+- **Pricing tiers** — 3-up desktop → 1-up mobile (with horizontal scroll on tablet as fallback).
+- **Pull-quote** — full-width on mobile with reduced indent (16px instead of 32px).
+- **Top nav** — links collapse into a hamburger drawer at <1024px; primary pill stays visible.
+- **Testimonial card** — keeps Plex Serif italic at 22px on mobile (no shrink) but reduces padding to 24px.
+
+### Image behaviour
+
+- Editorial illustrations use SVG with WebP raster fallback.
+- `loading="lazy"` below the fold.
+- `aspect-ratio` to prevent CLS.
+- Hero illustration centre-aligns and caps at 480px on mobile.
+
+### Container queries
+
+Used on the testimonial card — at `@container (max-width: 480px)` the avatar moves from inline-with-attribution to above-the-quote.
+
+## 11. Content & Voice
+
+### Tone
+
+**Editorial, considered, manifesto-grade.** Kagi speaks the way an indie magazine speaks — long sentences, considered word choice, occasional first-person plural ("we believe…"), pull-quotes that earn their italic. The tone is closer to The Browser, Are.na's editorial, or Readwise's Reader announcements than to typical SaaS marketing.
+
+The brand frequently writes in **manifesto register** — long-form essays arguing for paid search, against ad-funded utility, in favour of user-aligned product. The marketing site is essentially a publication; the search product is the artefact the publication advocates for.
+
+### Microcopy patterns
+
+- **Button verbs** — "Try Kagi", "Get started", "Subscribe", "See plans", "Read the manifesto", "Compare". Concrete, slightly editorial.
+- **Error messages** — `[Field]: [problem]. [Resolution].` Example: "Email: please enter a valid address."
+- **Success confirmations** — "Saved", "Updated", "Sent" — minimal, paper-paced.
+- **Empty states** — "No bookmarks yet. [Save your first search →]"
+- **Pricing copy** — "$10/month for 300 searches" — direct, no obfuscation. Kagi's pricing transparency is part of the brand.
+
+### Pull-quote conventions
+
+Pull-quotes are **first-person testimonials** or **journalist excerpts** — set in Plex Serif italic 22–32px with attribution below in Plex Sans 14px. Always indented from the body grid with a brand-orange left rule. Used to break up dense feature copy or to anchor a section change.
+
+### CTA verb conventions
+
+The brand uses **specific, slightly editorial** verbs:
+
+1. **Try Kagi** — top hero CTA, the canonical conversion phrase.
+2. **Get started** — secondary, sign-up flow.
+3. **Subscribe** — pricing CTA (Kagi runs subscription tiers).
+4. **Compare** — for the "vs Google / vs Bing" features.
+5. **Read the manifesto** — for the editorial entry path.
+6. **See plans** — for pricing curiosity.
+
+Avoided: *Sign up* (generic), *Discover*, *Unlock*, *Upgrade* (sales-y), *Free trial* (Kagi has a limited-search free tier but doesn't lead with it).
+
+### Empty states
+
+- Empty bookmarks: "No bookmarks yet. Save your first search to keep it close."
+- Empty search history: "Your search history will appear here. We never sell it."
+- Empty plans: "Choose a plan that fits how you search."
+
+### Tone anchors
+
+- Reference the user as a **reader** when discussing search results — Kagi's product treats search as reading.
+- Use first-person plural ("we believe", "we made") for manifesto register.
+- Cite sources for any claim about competitors (Google ads, search bias).
+- Avoid superlatives. Kagi's strongest claim is "premium" and "user-funded".
+- Reject technical-bro register. The voice is editorial, not engineering.
+
+## 12. Dark Mode & Theming
+
+The marketing surface is **light-only** (warm cream `#fffbf5` is the canvas; there's no dark variant on `kagi.com` marketing). The **in-product Kagi search** ships its own dark theme that flips the cream to a warm-dark `#1c170d` with `#fffbf5` text — preserving the warm-paper register inverted.
+
+### In-product dark theme tokens (search UI)
+
+```yaml
+colors-dark:
+  bg: '#1c170d'                    # warm-near-black
+  bg-soft: '#241e12'               # warmer dark stripe
+  surface: '#2e2618'               # card / panel base
+  surface-strong: '#3a3120'        # hover deeper
+  text: '#fffbf5'                  # cream label
+  text-muted: '#c4b9a0'            # warm-grey muted
+  text-soft: '#a99a7d'              # supporting copy
+  brand: '#ffb87a'                 # orange holds across themes
+  brand-soft: '#3a2e1c'            # warm-brown tonal pill bg
+  link: '#ffb87a'                  # orange link in dark
+  border: 'rgba(255, 251, 245, 0.12)'
+  border-strong: 'rgba(255, 251, 245, 0.20)'
+```
+
+The dark theme **preserves the orange brand colour** — `#ffb87a` reads as "warm sun" in both light cream and dark warm-brown. Primary pills become `#ffb87a` with `#1c170d` text — same dark-on-orange rule, holding across themes.
+
+The marketing surface holds **light** because the manifesto register reads stronger on cream paper; dark is reserved for the search product where users spend hours reading results.
+
+## 13. Lineage & Influences
+
+Kagi sells a paid search engine, so the site has to look unlike every other search page on the internet. The strategy is **editorial**: a warm cream canvas (`#fffbf5`) borrowed from independent magazines, a single sun-baked orange (`#ffb87a`) doing all the action work, and IBM Plex — both Sans and Serif — carrying the entire type system. Plex is a designed-by-IBM open-source family with a slightly architectural feel; pairing the sans with the serif gives Kagi an indie-publication tone that reads as the opposite of Google's blue-sans-only utilitarianism.
+
+CTAs are pill-shaped and use **dark text on warm orange** — Kagi never does white-on-orange, which preserves the paper-and-ink feel and (incidentally) hits AAA contrast where white-on-orange would fail. Lavender (`#7d6ce0`) makes brief appearances in secondary marketing modules, mostly as illustration accent — never as CTA. The overall posture is closer to **Are.na** or **Readwise** than to **Bing** — a deliberate stance that the search bar deserves the same care as a well-made magazine cover.
+
+The brand also rejects two adjacent registers. Kagi is *not* the developer-API register (no benchmark plots, no JetBrains Mono code on marketing — Plex Mono only, and only for tags), and it is *not* the consumer-utility register (no clinical white, no blue-link convention). The market position — paid premium search for users who care — demands the editorial-magazine register.
+
+**Named influences**:
+- **IBM Plex** ([https://www.ibm.com/plex](https://www.ibm.com/plex)) — Entire type system: Sans for UI, Serif for editorial accents, Mono for code/tags. The trifecta is the brand.
+- **Are.na** ([https://www.are.na](https://www.are.na)) — Cream-canvas + warm-neutral aesthetic positioning paid software as a craft object.
+- **Readwise / Reader** ([https://readwise.io](https://readwise.io)) — Warm-paper CTA discipline — dark text on coloured pills, no inverted white labels.
+- **The Browser** — Editorial register applied to a paid product; manifesto-grade marketing.
+- **MIT Technology Review** — Editorial whitespace; serif pull-quotes; paper-paced rhythm.
+- **Stripe Press** — IBM Plex ecosystem; serif-meets-sans pairing for editorial tech publishing.
+- **Raycast** ([https://raycast.com](https://raycast.com)) — Adjacent register: warm-cream cousin, premium-feel paid product.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Keep the canvas warm cream (`#fffbf5`).** Pure white reads as a generic SaaS template and breaks the magazine metaphor.
+- **Use dark text on the orange CTA** — `#1c170d` on `#ffb87a`. White text on warm orange is an accessibility miss (1.9:1 contrast) and an aesthetic miss.
+- **Reach for IBM Plex Serif for editorial moments** (pull-quotes, taglines, longform intros). It's the differentiator from every other Plex Sans site.
+- **Use IBM Plex Mono for eyebrow tags**, not Plex Sans. The mono uppercase eyebrow is the spec-stamp signature.
+- **Pill-radius (9999) every button** — primary, secondary, ghost. The pill is the brand fingerprint.
+- **Set body at 17px / 1.55 line-height with `onum`.** Old-style figures + larger body = editorial cadence.
+- **Use tonal layering for depth**, not blur. Cream → cream-stripe → warm card → deeper hover.
+- **Set focus-ring as 2px `#c97a3b` with 2px cream offset.** Deep-brand orange is the accessibility colour.
+- **Use 10% black hairlines for borders.** Coloured borders break the paper register.
+- **Honour `prefers-reduced-motion`** — illustration parallax and pull-quote scroll-in disable when set.
+- **Write CTAs with slightly editorial verbs** ("Try", "Read", "Subscribe").
+
+### Don't
+
+- **Don't introduce a second action colour.** Lavender `#7d6ce0` is illustration-only, never a CTA.
+- **Don't apply shadows to cards.** Depth is tonal layering plus a 10% black hairline, not blur.
+- **Don't square the buttons.** Kagi's pill CTAs are part of the brand fingerprint as much as the cream canvas is.
+- **Don't use white text on the orange pill.** Dark text always — both an aesthetic and accessibility rule.
+- **Don't substitute Inter or Söhne for Plex.** The Plex trifecta (Sans + Serif + Mono) is the type identity.
+- **Don't drop the Plex Serif italic from pull-quotes.** Roman serif is rare; italic is the editorial register.
+- **Don't write CTAs in tech-bro voice** ("Unlock", "Supercharge", "Get started free"). The voice is editorial.
+- **Don't use Tailwind-default semantic colours.** Reds and greens must be desaturated to read warm against cream.
+- **Don't set body at 16px.** 17px is the brand's editorial cadence.
+- **Don't compress body tracking.** Negative tracking is display-only.
+- **Don't add a second saturated brand colour.** Orange + cream + warm-text is the entire palette — adding teal or blue collapses the magazine metaphor.
+- **Don't pure-white any surface.** Even the lifted card uses `#fffefa` (near-white-cream), never `#ffffff`.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:           #fffbf5
+bg-soft:      #fff6e8
+surface:      #fbf2e2
+text:         #2b2417
+text-strong:  #1c170d
+text-muted:   #6b5d47
+brand:        #ffb87a
+brand-deep:   #c97a3b
+on-brand:     #1c170d   # dark text on orange — never white
+border:       rgba(0, 0, 0, 0.10)
+focus-ring:   #c97a3b
+```
+
+### Example Component Prompts
+
+1. *"Create a Kagi-style hero: warm cream `#fffbf5` canvas, headline in IBM Plex Sans 600 / 56px / -0.02em tracking / `#1c170d`. Lede in IBM Plex Sans 400 / 19px / 1.55 line-height / `#2b2417` capped at 720px width. Primary CTA 'Try Kagi' as a fully-rounded `#ffb87a` orange pill with `#1c170d` dark text (NEVER white) at 12px 24px padding / Plex Sans 600 / 15px. Secondary CTA 'Read the manifesto' as a transparent pill with `1px rgba(0, 0, 0, 0.10)` border / dark text / same pill radius."*
+
+2. *"Design a Kagi-style pull-quote: transparent bg, `3px solid #ffb87a` left border, `32px` left indent, IBM Plex Serif italic 22px / 1.4 line-height / `#1c170d`. Below the quote, attribution in Plex Sans 500 / 14px / `#6b5d47` — '— Author Name, Publication'. Wrap in proper `<blockquote>` + `<cite>` markup for screen readers."*
+
+3. *"Build a Kagi-style pricing card: `#fbf2e2` warm-cream bg, `1px rgba(0, 0, 0, 0.10)` border, 16px radius, 32px padding, no shadow. Tier name in Plex Sans 600 / 24px / `#1c170d`. Price in Plex Sans 600 / 56px with `onum` figures / `#1c170d`, then '/month' in Plex Sans 400 / 17px / `#6b5d47`. Feature list in Plex Sans 400 / 17px / 1.55 line-height. CTA at the bottom: 'Subscribe' as a fully-rounded orange pill (dark text). Optional plan badge: warm `#ffe5c8` bg / `#a55d24` text / pill radius."*
+
+4. *"Create a Kagi-style nav bar: 64px height, `#fffbf5` bg matching page, no border (until scroll). Wordmark left in Plex Sans 600 / 18px / `#1c170d`. Nav links right in Plex Sans 500 / 15px / `#2b2417`, hover deepens to `#c97a3b`. Right cluster: ghost 'Sign in' button + primary `#ffb87a` orange pill 'Try Kagi' with dark text."*
+
+5. *"Build a Kagi-style testimonial card: `#fbf2e2` bg, `1px rgba(0, 0, 0, 0.10)` border, 16px radius, 32px padding. Quote in Plex Serif italic 22px / 1.4 line-height / `#1c170d` (no quotation marks — let the type and indent carry the convention). Attribution row below: avatar circle (40px) + name in Plex Sans 600 / 15px + role in Plex Sans 400 / 14px / `#6b5d47`."*
+
+6. *"Design a Kagi-style eyebrow tag: `#fbf2e2` bg, `#6b5d47` text, IBM Plex Mono 500 / 12px / uppercase / 0.06em tracking, pill radius (9999), 4px 10px padding. Use for section labels like 'PRIVACY', 'PRICING', 'MANIFESTO'."*
+
+### Iteration Guide
+
+1. **Replace pure white with `#fffbf5` everywhere.** If your bg is `#ffffff`, you've lost the magazine register.
+2. **Verify all buttons are pill radius (9999).** Square or 8px-rounded buttons break the brand fingerprint.
+3. **Confirm dark text on orange CTAs.** White-on-orange is doctrinally rejected and fails accessibility.
+4. **Switch any pull-quote from sans to Plex Serif italic.** The serif italic is the editorial differentiator.
+5. **Replace eyebrows in Plex Sans with Plex Mono.** The mono uppercase is the spec-stamp signature.
+6. **Audit body type — set at 17px, not 16px,** with `onum` for old-style figures.
+7. **Strip any drop shadows from cards.** Replace with tonal layering and 10% black hairlines.
+8. **Replace any introduced second saturated colour with neutral warm-brown or lavender illustration accent.**

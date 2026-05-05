@@ -3,14 +3,14 @@ name: AgentKit
 tagline: Three swappable themes for AI agent products — editorial dark, daylight bright, fintech cool-blue.
 author: webdesignhot
 source_url: https://agentkit.webdesignhot.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: true
 categories: [dev-tools, ai]
 tags: [dark, light, bright, cool, multi-theme, mono, serif, minimal]
 preview_swatch: ['#0a0a0a', '#c6f432', '#06b6d4']
-related: [webdesignhot]
-description: 'Landing page kit for AI agent products. Swap between three themes via a single data-theme attribute — same component library renders identically in editorial-dark (acid-lime on near-black), bright (warm-emerald on off-white), and cool-blue (cyan on slate).'
+related: [webdesignhot, vercel, linear]
+description: 'Landing page kit for AI agent products. Swap between three themes via a single data-theme attribute — same component library renders identically in editorial-dark (acid-lime on near-black), bright (warm-emerald on off-white), and cool-blue (cyan on slate). Anchor components: streaming chat hero, agent trace viewer, tool-call panel.'
 
 lineage:
   summary: |
@@ -27,7 +27,7 @@ lineage:
   influences:
     - name: webdesignhot
       role: Source canvas, type voices, em-as-token rule
-      url: https://www.webdesignhot.com/design.md/webdesignhot
+      url: https://www.webdesignhot.com
     - name: Vercel Geist
       role: Themed but unified component library pattern
       url: https://vercel.com/geist/introduction
@@ -40,11 +40,17 @@ lineage:
     - name: Resend
       role: Bright theme's daylight clarity
       url: https://resend.com
+    - name: Anthropic
+      role: Editorial calm, mono-with-dot section rhythm
+      url: https://anthropic.com
+    - name: Rauno Freiberg
+      role: Italic-serif accents inside display headlines
+      url: https://rauno.me
 
 themes:
   default: editorial-dark
   available: [editorial-dark, bright, cool-blue]
-  switch-via: 'data-theme attribute on <html>; persisted in localStorage'
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; applied synchronously before paint to prevent FOUC'
 
 colors:
   editorial-dark:
@@ -52,55 +58,107 @@ colors:
     bg-elev: '#0f0f0f'
     bg-card: '#141416'
     bg-card-hover: '#1a1a1c'
+    bg-card-active: '#202024'
+    surface-overlay: 'rgba(10, 10, 10, 0.72)'
     text: '#ededed'
+    text-strong: '#ffffff'
     text-dim: '#8a8a8a'
     text-faint: '#525252'
+    text-disabled: '#3a3a3a'
+    text-on-brand: '#0a0a0a'
     brand: '#c6f432'
+    brand-hover: '#d2f854'
+    brand-pressed: '#b6e426'
     brand-tint: 'rgba(198, 244, 50, 0.10)'
+    brand-tint-strong: 'rgba(198, 244, 50, 0.25)'
+    brand-deep: '#9bcc1f'
     border: 'rgba(255, 255, 255, 0.08)'
     border-strong: 'rgba(255, 255, 255, 0.15)'
+    border-subtle: 'rgba(255, 255, 255, 0.04)'
     border-brand: 'rgba(198, 244, 50, 0.25)'
+    border-brand-strong: 'rgba(198, 244, 50, 0.45)'
+    selection-bg: 'rgba(198, 244, 50, 0.30)'
+    focus-ring: '#c6f432'
+    link: '#c6f432'
+    link-visited: '#9bcc1f'
     success: '#22c55e'
     warning: '#f59e0b'
     danger: '#ef4444'
+    info: '#60a5fa'
   bright:
     bg: '#fafafa'
     bg-elev: '#ffffff'
     bg-card: '#ffffff'
     bg-card-hover: '#f5f5f5'
+    bg-card-active: '#ededed'
+    surface-overlay: 'rgba(250, 250, 250, 0.78)'
     text: '#0a0a0a'
+    text-strong: '#000000'
     text-dim: '#525252'
     text-faint: '#a3a3a3'
+    text-disabled: '#cfcfcf'
+    text-on-brand: '#ffffff'
     brand: '#16a34a'
+    brand-hover: '#15913f'
+    brand-pressed: '#117a35'
     brand-tint: 'rgba(22, 163, 74, 0.08)'
+    brand-tint-strong: 'rgba(22, 163, 74, 0.18)'
+    brand-deep: '#14532d'
     border: 'rgba(0, 0, 0, 0.08)'
     border-strong: 'rgba(0, 0, 0, 0.15)'
+    border-subtle: 'rgba(0, 0, 0, 0.04)'
     border-brand: 'rgba(22, 163, 74, 0.25)'
+    border-brand-strong: 'rgba(22, 163, 74, 0.45)'
+    selection-bg: 'rgba(22, 163, 74, 0.18)'
+    focus-ring: '#16a34a'
+    link: '#16a34a'
+    link-visited: '#14532d'
     success: '#16a34a'
     warning: '#d97706'
     danger: '#dc2626'
+    info: '#2563eb'
   cool-blue:
     bg: '#0b1120'
     bg-elev: '#111827'
     bg-card: '#1a2233'
     bg-card-hover: '#212a3e'
+    bg-card-active: '#2a334a'
+    surface-overlay: 'rgba(11, 17, 32, 0.72)'
     text: '#f1f5f9'
+    text-strong: '#ffffff'
     text-dim: '#94a3b8'
     text-faint: '#64748b'
+    text-disabled: '#475569'
+    text-on-brand: '#0b1120'
     brand: '#06b6d4'
+    brand-hover: '#22d3ee'
+    brand-pressed: '#0891b2'
     brand-tint: 'rgba(6, 182, 212, 0.10)'
+    brand-tint-strong: 'rgba(6, 182, 212, 0.25)'
+    brand-deep: '#0e7490'
     border: 'rgba(148, 163, 184, 0.12)'
     border-strong: 'rgba(148, 163, 184, 0.20)'
+    border-subtle: 'rgba(148, 163, 184, 0.06)'
     border-brand: 'rgba(6, 182, 212, 0.30)'
+    border-brand-strong: 'rgba(6, 182, 212, 0.50)'
+    selection-bg: 'rgba(6, 182, 212, 0.30)'
+    focus-ring: '#06b6d4'
+    link: '#06b6d4'
+    link-visited: '#0e7490'
     success: '#10b981'
     warning: '#f59e0b'
     danger: '#f87171'
+    info: '#60a5fa'
 
 typography:
   display:
     family: 'Inter Variable, Inter, -apple-system, sans-serif'
     weights: [400, 500]
     feature-settings: "'ss01', 'cv11'"
+  body:
+    family: 'Inter Variable, Inter, -apple-system, sans-serif'
+    weights: [400, 500]
+    feature-settings: "'ss01'"
   serif:
     family: 'Instrument Serif, Iowan Old Style, Georgia, serif'
     style: italic
@@ -109,38 +167,107 @@ typography:
   mono:
     family: 'JetBrains Mono Variable, JetBrains Mono, ui-monospace, monospace'
     weights: [400, 500]
+    feature-settings: "'zero', 'ss01'"
     role: 'tool args, code blocks, status labels, metadata'
   scale:
-    display-hero:   { size: 72, weight: 500, lineHeight: 0.98, tracking: -0.035 }
-    h2-large:       { size: 56, weight: 500, lineHeight: 1.05, tracking: -0.025 }
-    h2:             { size: 40, weight: 500, lineHeight: 1.05, tracking: -0.025 }
-    h3:             { size: 22, weight: 500, lineHeight: 1.30, tracking: -0.015 }
-    body-lead:      { size: 17, weight: 400, lineHeight: 1.55, tracking: -0.01 }
-    body:           { size: 15, weight: 400, lineHeight: 1.65, tracking: -0.005 }
-    body-small:     { size: 13, weight: 400, lineHeight: 1.55, tracking: -0.005 }
-    label-mono:     { size: 11, weight: 500, lineHeight: 1.4,  tracking: 0.15, family: mono, transform: uppercase }
-    code-inline:    { size: 12, weight: 400, lineHeight: 1.6,  family: mono }
+    display-hero:    { size: 72, weight: 500, lineHeight: 0.98, tracking: -0.035, family: display }
+    display-large:   { size: 56, weight: 500, lineHeight: 1.05, tracking: -0.025, family: display }
+    h1:              { size: 48, weight: 500, lineHeight: 1.05, tracking: -0.03,  family: display }
+    h2:              { size: 40, weight: 500, lineHeight: 1.05, tracking: -0.025, family: display }
+    h3:              { size: 28, weight: 500, lineHeight: 1.20, tracking: -0.02,  family: display }
+    h4:              { size: 22, weight: 500, lineHeight: 1.30, tracking: -0.015, family: display }
+    h5:              { size: 18, weight: 500, lineHeight: 1.35, tracking: -0.01,  family: display }
+    body-lead:       { size: 17, weight: 400, lineHeight: 1.55, tracking: -0.01,  family: body }
+    body:            { size: 15, weight: 400, lineHeight: 1.65, tracking: -0.005, family: body }
+    body-small:      { size: 13, weight: 400, lineHeight: 1.55, tracking: -0.005, family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.45, tracking: 0,      family: body }
+    label-mono:      { size: 11, weight: 500, lineHeight: 1.4,  tracking: 0.15,   family: mono, transform: uppercase }
+    code-inline:     { size: 12, weight: 400, lineHeight: 1.6,  tracking: 0,      family: mono }
+    code-block:      { size: 13, weight: 400, lineHeight: 1.6,  tracking: 0,      family: mono }
+    chat-message:    { size: 15, weight: 400, lineHeight: 1.6,  tracking: -0.005, family: body }
+    em-accent:       { size: inherit, weight: 400, lineHeight: inherit, family: serif, style: italic, color: brand }
 
 spacing:
   base: 4
-  scale: [4, 8, 12, 16, 20, 24, 32, 48, 64, 80, 96, 128]
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+  named:
+    none: 0
+    xxs: 4
+    xs: 8
+    sm: 12
+    md: 16
+    lg: 24
+    xl: 32
+    xxl: 48
+    section: 64
+    section-large: 96
+    section-hero: 128
 
 radius:
+  none: 0
+  micro: 3
   small: 6
   standard: 8
   comfortable: 12
   card: 16
   hero: 24
+  pill: 9999
 
-layout:
-  page-width: 1200
-  prose-width: 800
+breakpoints:
+  mobile: 480
+  tablet: 768
+  laptop: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: '0 1px 2px rgba(0, 0, 0, 0.4)'
+  popover: '0 10px 30px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4)'
+  tooltip: '0 4px 14px rgba(0, 0, 0, 0.5)'
+  toast: '0 12px 36px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4)'
+  modal: '0 24px 64px rgba(0, 0, 0, 0.65), 0 4px 12px rgba(0, 0, 0, 0.4)'
+  ambient-light: '0 1px 2px rgba(0, 0, 0, 0.06)'
+  popover-light: '0 10px 30px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.06)'
+  modal-light: '0 24px 64px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.10)'
 
 motion:
-  ease: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-accelerate: 'cubic-bezier(0.4, 0, 1, 1)'
+  duration-instant: 80
   duration-fast: 150
   duration-standard: 240
   duration-slow: 320
+  duration-slower: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — non-essential transitions become opacity-only at 80ms; cursor-blink animation is replaced with a static lime caret; tool-call phase transitions render instantly without slide-in.'
+
+accessibility:
+  contrast-text-on-bg-dark: 14.6
+  contrast-text-on-bg-bright: 17.5
+  contrast-text-on-bg-cool: 14.0
+  contrast-text-on-brand-dark: 13.2
+  contrast-text-on-brand-bright: 4.7
+  contrast-text-on-brand-cool: 11.8
+  focus-ring: '2px solid var(--color-focus-ring) with 2px offset on bg'
+  focus-style: 'visible focus only on keyboard nav (:focus-visible)'
+  reduced-motion-honored: true
+  keyboard-nav: 'fully navigable; theme switcher dev-only and excluded from tab order in production'
+  screen-reader: 'streaming chat output is aria-live="polite"; tool-call phase changes announce via aria-live="polite"; trace viewer accordion uses Radix accordion semantics'
+  text-min-size: 12
+  touch-target: 44
+
+dark-mode: 'native — `editorial-dark` is the default; `bright` is the light variant; `cool-blue` is a third option. Theme persists in localStorage as `agentkit:theme` and applies via `data-theme` on `<html>` synchronously before paint.'
+
+stack:
+  framework: 'Next.js 16 (App Router, Turbopack, React Compiler)'
+  ui-runtime: React 19
+  styling: 'Tailwind CSS 4 (CSS-first config, @theme directive)'
+  ai-sdk: 'Vercel AI SDK v6'
+  primitives: 'Radix UI (accordion, dialog, slot, tabs, tooltip, popover)'
+  fonts: '@fontsource — Inter Variable, Instrument Serif, JetBrains Mono Variable'
+  icons: 'lucide-react'
 
 components:
   chat-hero:
@@ -148,131 +275,833 @@ components:
     backgroundColor: bg-card
     border: border
     rounded: card
-    streaming-cursor: 'lime "▋" character with cursor-blink animation'
+    padding: '24px'
+    streaming-cursor: 'lime "▋" character with 1s step-end cursor-blink animation; stops on stream end'
+    use: 'home hero — the kit''s most important visual proof'
   agent-trace-viewer:
-    role: 'expandable multi-step reasoning chain'
+    role: 'expandable multi-step reasoning chain with tool calls visible'
     backgroundColor: bg-card
     rounded: card
-    expand-anim: 'accordion-down/up with --radix-accordion-content-height'
+    padding: '24px'
+    expand-anim: 'Radix accordion-down/up with --radix-accordion-content-height, 200ms ease-standard'
+    use: 'feature row 2 — proof of agent observability'
   tool-call-panel:
-    role: 'visualized tool invocation prompt → calling → result → final'
+    role: 'visualized tool invocation with 4-phase animation'
     phases: [prompt, calling, result, final]
+    backgroundColor: bg-card
+    rounded: card
+    border: border
+    use: 'feature row 3 — proof of tool-use orchestration'
+  message-bubble:
+    role: 'individual chat message — user or assistant'
+    user-bg: bg-card-hover
+    assistant-bg: bg-card
+    rounded: comfortable
+    padding: '12px 16px'
+    alignment: 'user right-aligned, assistant left-aligned'
+  model-selector:
+    role: 'dropdown selecting model identity (Claude, GPT, Llama)'
+    rounded: standard
+    backgroundColor: bg-elev
+    border: border-strong
   primary-button:
     backgroundColor: brand
-    textColor: bg
+    textColor: text-on-brand
     rounded: standard
+    padding: '14px 20px'
+    font: 'display 14/500 -0.005em'
+    hover: 'background brand-hover; no scale, no glow'
     use: 'commerce CTA, hero "Get AgentKit"'
   ghost-button:
     backgroundColor: transparent
+    textColor: text
     border: border-strong
     rounded: standard
-
-stack:
-  framework: 'Next.js 16 (App Router, Turbopack, React Compiler)'
-  ui-runtime: React 19
-  styling: 'Tailwind CSS 4 (CSS-first config, @theme directive)'
-  ai-sdk: 'Vercel AI SDK v6'
-  primitives: 'Radix UI (accordion, dialog, slot, tabs, tooltip)'
-  fonts: '@fontsource — Inter Variable, Instrument Serif, JetBrains Mono Variable'
+    padding: '14px 20px'
+    hover: 'background card-hover'
+    use: 'secondary action'
+  card:
+    backgroundColor: bg-card
+    border: border
+    rounded: card
+    padding: '24px'
+    hover: 'background bg-card-hover'
+  input:
+    backgroundColor: bg-elev
+    border: border-strong
+    rounded: small
+    padding: '12px 14px'
+    focus: 'border-brand-strong, ring brand-tint-strong'
+  label:
+    backgroundColor: transparent
+    textColor: text-dim
+    font: 'mono 11/500 0.15em uppercase'
+    decorator: '6px brand dot left of text'
+  badge:
+    backgroundColor: brand-tint
+    textColor: brand
+    border: border-brand
+    font: 'mono 11/500 0.10em uppercase'
+    padding: '3px 8px'
+    rounded: micro
+  em:
+    family: serif
+    style: italic
+    color: brand
+    use: 'editorial accent inside display headlines — never grammatical emphasis'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-AgentKit is a **landing page kit for AI agent products** — built around the
-visual primitives that AI agent products actually need (streaming chat,
-agent trace viewer, tool-call visualizer, multi-step reasoning panels)
-rather than retrofitting a generic SaaS template.
+AgentKit is a **landing page kit for AI agent products** — built around
+the visual primitives that AI agent products actually need (streaming
+chat, agent trace viewer, tool-call visualizer, multi-step reasoning
+panels) rather than retrofitting a generic SaaS template. The kit's
+contribution to the genre is precisely those three anchor components:
+`<ChatHero>` (the agent answering a debugging question, live-streaming
+in the hero), `<AgentTraceViewer>` (an expandable multi-step reasoning
+chain), and `<ToolCallPanel>` (a four-phase visualization of a tool
+invocation: prompt → calling → result → final).
 
-The system is **theme-swappable from day one**: the same component library
-renders identically in three palettes — `editorial-dark` (default,
-acid-lime on near-black), `bright` (warm-emerald on off-white), and
-`cool-blue` (cyan on slate). Theme switches via a single `data-theme`
-attribute on `<html>`, persisted in `localStorage`, applied
-synchronously before paint to prevent FOUC.
+The system is **theme-swappable from day one**: the same component
+library renders identically in three palettes — `editorial-dark`
+(default, acid-lime on near-black), `bright` (warm-emerald on
+off-white), and `cool-blue` (cyan on slate). Theme switches via a
+single `data-theme` attribute on `<html>`, persisted in `localStorage`
+as `agentkit:theme`, and applied **synchronously before paint** via
+an inline script in `<head>` to prevent FOUC. The same component code
+references CSS variables only — never hex literals — so palette swap
+is a single attribute change.
 
-Type system is **three voices**: Inter for display and UI, Instrument
-Serif italic for editorial accents (only inside `<em>`), JetBrains Mono
-for tool args, code blocks, and metadata labels. Display weight stays at
-500 — hierarchy comes from size and tracking, not boldness.
+The atmospheric move is that **type and layout do not change between
+themes**. The same Inter / Instrument Serif italic / JetBrains Mono
+voices, the same 72px display hero, the same `-0.035em` tracking,
+the same `<em>` token rule. Only color swaps. This proves a
+designer's claim: hierarchy comes from *size and tracking*, not
+hue. A user moving from editorial-dark to bright should feel a
+palette shift, not a redesign.
 
-## Colors
+The brand voice is **technical, calm, agent-aware**. Headlines are
+imperative and ground-truthed (*"Ship your AI agent's landing page
+<em>this afternoon</em>"*). Section labels are mono uppercase with a
+6px brand dot — the rhythm anchor of every page. The streaming
+cursor is a brand-colored `▋` character that blinks at 1 Hz only
+during active stream and disappears the moment the agent finishes
+speaking.
 
-The system has three palettes — pick one, swap them by changing
-`data-theme` on `<html>`. Each palette defines the same role-based
-tokens; component code never references hex values directly, only
-`var(--color-*)` references.
+**Key Characteristics**
+- Three palettes, one component library
+- Theme swap via `data-theme` attribute, persisted in localStorage
+- Type system unchanged across themes
+- Anchor components define the agent-product genre
+- `<em>` as a design token (Instrument Serif italic in brand color)
+- Mono uppercase labels with brand dot rhythm
+- Streaming cursor `▋` with 1 Hz blink during active stream
+- Component code references CSS variables only — never hex
 
-**editorial-dark** — pure black `#0a0a0a` with `#c6f432` acid-lime accent.
-Magazine-grade contrast; CTAs feel like physical buttons. The accent is
-**only** used as solid CTA fills, status dots, focus rings, and selection
-background — never as a gradient or glow.
+## 2. Color Palette & Roles
 
-**bright** — `#fafafa` background with `#16a34a` warm emerald accent.
-Same contrast geometry as editorial-dark inverted; type weights and sizes
-are unchanged.
+The kit ships **three palettes**. Each defines the same role-based
+tokens; component code references `var(--color-*)`, never hex. Below,
+each role is listed with all three values: `editorial-dark / bright /
+cool-blue`.
 
-**cool-blue** — `#0b1120` slate background with `#06b6d4` cyan accent.
-Slightly cooler text tones to match. Tuned for fintech / data-tooling /
-observability adjacent products.
+### Primary
 
-## Typography
+- **bg** — `#0a0a0a` / `#fafafa` / `#0b1120`. The page ground.
+- **text** — `#ededed` / `#0a0a0a` / `#f1f5f9`. The default reading
+  color.
+- **brand** — `#c6f432` / `#16a34a` / `#06b6d4`. The single accent.
 
-**Display** sets at 72px max with `-0.035em` tracking. Headlines tighten
-as they grow; this reverses default browser behavior and produces the
-"engineered" feel.
+### Brand & Accent
 
-**Body** runs at 15px / 1.65 line-height. Lead paragraphs (hero
-subtitles) use 17px / 1.55. Reading width is capped at `prose-width`
-(800px).
+- **brand** — acid-lime / warm-emerald / cyan. Each theme picks a
+  brand that contrasts AAA against the page ground.
+- **brand-hover** — `#d2f854` / `#15913f` / `#22d3ee`. Used on button
+  hover (lighten on dark themes, darken on bright).
+- **brand-pressed** — `#b6e426` / `#117a35` / `#0891b2`. Used on
+  button press.
+- **brand-tint** — translucent brand at 8 – 10% opacity. Badge
+  background, halo on hover.
+- **brand-tint-strong** — translucent brand at 18 – 25% opacity.
+  Focus ring fill, active selection underlay.
+- **brand-deep** — a darker, lower-saturation cousin. Visited link
+  color.
 
-**`<em>` is a design token, not grammar.** It renders as Instrument
-Serif italic in brand color. Editorial copy uses it to punctuate display
-headlines (`Ship your AI agent's landing page <em>this afternoon</em>`).
+### Surfaces
 
-**Streaming cursor** is a lime `▋` character with a 1s step-end blink
-animation, applied via `.cursor-blink::after`. It only appears during
-active stream — gone the moment the agent finishes speaking.
+- **bg-elev** — `#0f0f0f` / `#ffffff` / `#111827`. Sticky nav, input
+  field, subtle container contrast.
+- **bg-card** — `#141416` / `#ffffff` / `#1a2233`. Content panels,
+  message bubbles.
+- **bg-card-hover** — `#1a1a1c` / `#f5f5f5` / `#212a3e`. Hovered
+  card.
+- **bg-card-active** — `#202024` / `#ededed` / `#2a334a`. Pressed
+  or selected card.
+- **surface-overlay** — translucent page-bg at 72 – 78% with
+  `backdrop-filter: blur(6px)`. Modal scrim.
 
-## Layout
+### Text Scale
 
-Single-column hero followed by full-width sections, all capped at
-`page-width` (1200px). Asymmetric splits appear where one side deserves
-visual primacy: hero is `1fr 1fr`, streaming features `1.4fr 1fr`, trace
-viewer `1fr 1fr`, tool-call `1.4fr 1fr`. Section rhythm is 96px desktop,
-64px mobile.
+- **text-strong** — pure white / pure black / pure white. Reserved
+  for AAA edge cases against a slightly lifted card.
+- **text** — default body and heading color.
+- **text-dim** — supporting copy, subtitles, inactive nav links.
+- **text-faint** — metadata, footer, disabled.
+- **text-disabled** — explicitly disabled controls.
+- **text-on-brand** — `#0a0a0a` / `#ffffff` / `#0b1120`. Black on
+  lime, white on emerald, near-black on cyan. Each theme picks the
+  text color that hits AAA against its brand.
 
-## Elevation & Depth
+### Borders
 
-**Tonal stacking, not shadows.** The 4-tier surface scale (bg →
-bg-elev → bg-card → bg-card-hover) provides implicit depth. Drop
-shadows are reserved for floating UI primitives only (Tooltip, Popover,
-Dialog, Toast). Cards use borders, not shadows, to define edges.
+- **border** — translucent text color at ~8% opacity. Default card
+  edge.
+- **border-strong** — translucent text color at ~15% opacity. Inputs,
+  buttons, emphasized rows.
+- **border-subtle** — translucent text color at ~4% opacity. Hairline
+  dividers in dense lists.
+- **border-brand** — translucent brand at ~25% opacity. Featured
+  pricing tier outline.
+- **border-brand-strong** — translucent brand at ~45% opacity.
+  Focused input outline, active toggle.
 
-## Shapes
+### Interactive
 
-Six radius tiers: `small` (6px) for inputs, `standard` (8px) for buttons,
-`comfortable` (12px) for FAQ rows, `card` (16px) for content cards,
-`hero` (24px) for large callouts. Pure-zero radius is forbidden except
-on full-bleed dividers.
+- **link** — `brand`. Decoration color is `text-faint` by default,
+  shifts to `brand` on hover, decoration offset 4px.
+- **focus-ring** — `brand`. `2px solid` with `2px offset` against
+  the page ground.
+- **selection** — translucent brand at 18 – 30% opacity.
 
-## Components
+### Semantic
 
-The kit ships **65 components total** (48 AI-native + 17 UI primitives)
-plus **9 composed landing sections**. Anchor AI components: `<ChatHero>`
-(streaming), `<AgentTraceViewer>` (multi-step reasoning), `<ToolCallPanel>`
-(4-phase animation), `<StreamingText>`, `<MessageBubble>`,
-`<ModelSelector>`. Section components compose primitives into ready-to-ship
-layouts.
+| Role | dark | bright | cool-blue |
+| --- | --- | --- | --- |
+| success | `#22c55e` | `#16a34a` | `#10b981` |
+| warning | `#f59e0b` | `#d97706` | `#f59e0b` |
+| danger | `#ef4444` | `#dc2626` | `#f87171` |
+| info | `#60a5fa` | `#2563eb` | `#60a5fa` |
 
-## Do's and Don'ts
+Semantic colors are reserved for **system feedback** — toasts, form
+errors, status badges. They do not appear in marketing composition.
 
-**Do** use `<em>` for italic-serif accents inside display headlines.
-**Do** pick one theme before shipping production. **Do** keep `<Label>`
-mono uppercase rhythm at every section. **Do** use the supplied keyframes
-(`accordion-down`, `accordion-up`, `cursor-blink`, `fade-in-up`).
+## 3. Typography Rules
 
-**Don't** introduce a second accent color per theme. **Don't** use
-`brand` as a gradient or glow — solid only. **Don't** `box-shadow` cards
-for depth — use `bg-card-hover` and `border-strong` instead. **Don't**
-hard-code hex values in components — always `var(--color-token)`.
-**Don't** ship with the theme switcher visible to your end users.
+### Font Family
+
+- **Display & Body**: Inter Variable. Self-hosted via
+  `@fontsource-variable/inter`.
+- **Serif accent**: Instrument Serif italic 400 only. Self-hosted via
+  `@fontsource/instrument-serif`.
+- **Mono**: JetBrains Mono Variable. Self-hosted via
+  `@fontsource-variable/jetbrains-mono`.
+
+OpenType features explicitly enabled on Inter: `'ss01'` (single-storey
+`g`), `'cv11'` (lowercase `l` with serif). On JetBrains Mono:
+`'zero'` (slashed zero), `'ss01'` (no-ligature mode for code blocks).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Tracking | OT | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| display-hero | Inter | 72 | 500 | 0.98 | -0.035 | ss01 cv11 | Hero on every theme |
+| display-large | Inter | 56 | 500 | 1.05 | -0.025 | ss01 cv11 | Section hero |
+| h1 | Inter | 48 | 500 | 1.05 | -0.03 | ss01 | Page title |
+| h2 | Inter | 40 | 500 | 1.05 | -0.025 | ss01 | Section opener |
+| h3 | Inter | 28 | 500 | 1.20 | -0.02 | ss01 | Component title |
+| h4 | Inter | 22 | 500 | 1.30 | -0.015 | — | Subsection |
+| h5 | Inter | 18 | 500 | 1.35 | -0.01 | — | Card title |
+| body-lead | Inter | 17 | 400 | 1.55 | -0.01 | — | Hero subtitle |
+| body | Inter | 15 | 400 | 1.65 | -0.005 | — | Default running text |
+| body-small | Inter | 13 | 400 | 1.55 | -0.005 | — | Caption |
+| caption | Inter | 12 | 400 | 1.45 | 0 | — | Footer rows |
+| label-mono | JetBrains | 11 | 500 | 1.4 | 0.15 | zero | Section markers |
+| code-inline | JetBrains | 12 | 400 | 1.6 | 0 | zero | `<code>` inside prose |
+| code-block | JetBrains | 13 | 400 | 1.6 | 0 | zero ss01 | `<pre>`, no ligatures |
+| chat-message | Inter | 15 | 400 | 1.6 | -0.005 | — | Streaming chat body |
+| em-accent | Instrument Serif | inherit | 400 | inherit | inherit | — | `<em>` italic in brand color |
+
+### Principles
+
+- **Display tightens with size.** `-0.035em` at 72px → `-0.005em` at
+  15px → `0` at 12px. The reverse of the browser default.
+- **Weights stay restrained.** Display is `500`, never `700`. Body
+  is `400`. The only `500`+ surfaces are mono labels and button text.
+- **`<em>` is a design token.** Instrument Serif italic in brand
+  color. Used inside display headlines only.
+- **Type is theme-invariant.** Sizes, weights, and tracking do not
+  change between editorial-dark / bright / cool-blue. Only colors
+  swap.
+- **Streaming cursor.** A brand-colored `▋` glyph with a 1s
+  step-end blink, applied via `.cursor-blink::after`. Visible only
+  during active stream.
+- **OpenType is global.** `font-feature-settings` is set on `<html>`
+  to opt into `ss01` and `cv11` once.
+- **Mono is reserved.** JetBrains Mono only on labels, code, tool
+  args, and numeric data — never body prose.
+
+## 4. Component Stylings
+
+### Button — Primary
+
+- Background: `var(--color-brand)`
+- Text: `var(--color-text-on-brand)`
+- Padding: `14px 20px`
+- Radius: `standard` (8px)
+- Font: Inter 14 / 500, tracking `-0.005em`
+- Hover: background → `brand-hover`. **No scale, no glow, no
+  translate.**
+- Active: background → `brand-pressed`.
+- Disabled: opacity `0.40`, cursor `not-allowed`.
+- Use: hero CTA — *Get AgentKit*, *Buy*, *Sign up*.
+
+### Button — Ghost
+
+- Background: transparent
+- Text: `var(--color-text)`
+- Padding: `14px 20px`
+- Radius: `standard` (8px)
+- Border: `1px solid var(--color-border-strong)`
+- Hover: background → `bg-card-hover`; border tightens to `text-dim`.
+- Use: secondary action paired with a primary CTA.
+
+### Button — Icon
+
+- 36px square, `comfortable` radius (12px), `text-dim` glyph.
+- Hover: background → `bg-card-hover`, glyph → `text`.
+- Use: copy-to-clipboard, theme-switch (dev only), dismiss.
+
+### Card
+
+- Background: `var(--color-bg-card)`
+- Border: `1px solid var(--color-border)`
+- Radius: `card` (16px)
+- Padding: `24px` default, `32px` for featured tier.
+- Hover: background → `bg-card-hover`. No translate.
+- No shadow on dark themes; on bright theme a subtle ambient-light
+  shadow may be used (1px 2px at 6% opacity).
+
+### ChatHero (anchor component)
+
+- Background: `bg-card`
+- Border: `1px solid border`
+- Radius: `card` (16px)
+- Padding: `24px`
+- Header: `Label` mono uppercase row at top — *"AGENT • LIVE"* — with
+  brand dot.
+- Body: alternating message bubbles, `assistant-bg = bg-card`,
+  `user-bg = bg-card-hover`.
+- Streaming cursor: `▋` glyph in `brand` color with `cursor-blink`
+  1s step-end animation, stops on stream end.
+
+### AgentTraceViewer (anchor component)
+
+- Background: `bg-card`
+- Radius: `card` (16px)
+- Padding: `24px`
+- Each step: numbered `01.`, `02.`, mono uppercase, with a
+  collapse/expand chevron on the right.
+- Open state: Radix `accordion-down` with
+  `--radix-accordion-content-height`, 200ms `ease-standard`.
+
+### ToolCallPanel (anchor component)
+
+- Background: `bg-card`
+- Border: `1px solid border`
+- Radius: `card` (16px)
+- 4 phases — `prompt` → `calling` → `result` → `final` — each as a
+  small card with mono-uppercase label and code-inline tool name.
+- Phase progression: each card slides in from below with 8px translate
+  and fades in over 240ms `ease-emphasized`. The `calling` card shows
+  a spinning `text-dim` `Loader` icon; the `result` card shows a
+  `success` checkmark.
+
+### MessageBubble
+
+- User bubble: `bg-card-hover`, right-aligned, max-width 80%.
+- Assistant bubble: `bg-card`, left-aligned, max-width 100%.
+- Padding: `12px 16px`, radius: `comfortable` (12px).
+- Code blocks inside: JetBrains Mono 13px on `bg-elev` with `small`
+  radius.
+
+### ModelSelector
+
+- Background: `bg-elev`
+- Border: `1px solid border-strong`
+- Radius: `standard` (8px)
+- Trigger shows model logo + name + chevron; popover lists available
+  models with selected one in `brand`.
+
+### Input
+
+- Background: `bg-elev`
+- Text: `text`; placeholder `text-faint`
+- Border: `1px solid border-strong`
+- Padding: `12px 14px`
+- Radius: `small` (6px)
+- Focus: border → `border-brand-strong`; ring `0 0 0 2px brand-tint-strong`.
+
+### Label
+
+- Mono 11 / 500 / 0.15em / uppercase, color `text-dim`.
+- 6px solid `brand` dot, 8px to the left of the text.
+- The rhythm anchor of every section.
+
+### Badge
+
+- Background: `brand-tint`
+- Text: `brand`
+- Border: `1px solid border-brand`
+- Mono 11 / 500 / 0.10em / uppercase, padding `3px 8px`, radius
+  `micro` (3px).
+
+### Em
+
+- Instrument Serif italic 400, color `brand`, inherits size and
+  line-height from parent.
+- Used inside display headlines only.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: `4px`. Scale: `[0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64,
+  80, 96, 128, 160]`.
+- Named: `xxs` → `xs` → `sm` → `md` → `lg` → `xl` → `xxl` → `section`
+  (64) → `section-large` (96) → `section-hero` (128).
+
+### Grid & Container
+
+- `page-width` (1200px) — the full marketing page.
+- `prose-width` (800px) — long-form text columns.
+- Hero is `1fr 1fr` desktop, single-column mobile.
+- Streaming feature row: `1.4fr 1fr` (chat panel weighted larger).
+- Trace viewer feature row: `1fr 1fr`.
+- Tool-call feature row: `1.4fr 1fr`.
+
+### Whitespace Philosophy
+
+Section rhythm uses `--space-13` (128px) between major sections on
+desktop; scales to `--space-10` (64px) on mobile. Hero gets an extra
+32px of top padding.
+
+### Section Cadence
+
+Sections do **not** alternate light/dark bands. The page is a single
+ground tone with cards and elevation doing the visual layering.
+Section labels (mono uppercase + brand dot) mark "new section starts
+here".
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+| --- | --- | --- |
+| none | 0px | Full-bleed dividers |
+| micro | 3px | Badges, mono code highlights |
+| small | 6px | Inputs, dropdowns |
+| standard | 8px | Buttons, most interactive surfaces |
+| comfortable | 12px | Message bubbles, FAQ rows |
+| card | 16px | Content cards, ChatHero, TraceViewer |
+| hero | 24px | Large hero panels, theme-preview tile |
+| pill | 9999px | Toggle pills, status chips |
+
+Pure-zero radius is forbidden except on full-bleed dividers. The mix
+of `8px` (functional) and `16px` (card) gives the page calm
+geometry without feeling Web-3 bubbly.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+| --- | --- | --- |
+| 0 | flat — `bg` ground | Default |
+| 1 | `bg-elev` | Sticky nav, input field |
+| 2 | `bg-card` | Cards, anchor components |
+| 3 | `bg-card-hover` | Hovered card |
+| 4 | `surface-overlay` + blur | Modal scrim |
+| 5 | `shadow.modal` + level-4 | Floating dialog |
+
+**Shadow Philosophy.** Tonal stacking, not shadows. The 4-tier surface
+scale provides implicit depth on every theme. Drop shadows are
+reserved for floating UI primitives only — Tooltip, Popover, Toast,
+Dialog. Cards use borders and surface elevation, not shadows. The
+`bright` theme uses softer, lower-opacity black shadows; the dark
+themes use higher-opacity neutral black.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- `ease-standard` `cubic-bezier(0.4, 0, 0.2, 1)` — default for hovers,
+  state changes, and accordion.
+- `ease-emphasized` `cubic-bezier(0.2, 0, 0, 1)` — modal entrance,
+  tool-call phase progression, page-level transitions.
+- `ease-decelerate` `cubic-bezier(0, 0, 0.2, 1)` — incoming elements.
+- `ease-accelerate` `cubic-bezier(0.4, 0, 1, 1)` — outgoing elements.
+
+### Durations
+
+- `duration-instant` 80ms — micro-feedback (toggle thumb, copy
+  acknowledgement).
+- `duration-fast` 150ms — button hover, link underline.
+- `duration-standard` 240ms — card hover, input focus ring,
+  tool-call phase entrance.
+- `duration-slow` 320ms — modal entrance, theme swap fade.
+- `duration-slower` 480ms — page transitions, hero reveal.
+
+### Per-component micro-states
+
+- **Button hover** — background tint shifts (`brand` → `brand-hover`)
+  over 150ms. No translate, no scale, no shadow.
+- **Card hover** — background `bg-card` → `bg-card-hover` over 240ms.
+- **Link hover** — decoration color `text-faint` → `brand` over
+  150ms.
+- **Input focus** — ring fades in at 240ms with `ease-emphasized`.
+- **Accordion (TraceViewer)** — Radix `accordion-down` /
+  `accordion-up` with `--radix-accordion-content-height`, 240ms
+  `ease-standard`.
+- **Modal entrance** — opacity 0 → 1 with translate-y 8px → 0 over
+  320ms `ease-emphasized`.
+- **Tool-call phase progression** — each phase card opacity 0 → 1
+  with translate-y 8px → 0 over 240ms `ease-emphasized`. Phases
+  advance every 800 – 1200ms during the loop.
+- **Streaming cursor** — `cursor-blink` 1s `step-end` infinite.
+  Stops on stream end (visibility goes `hidden`).
+- **Theme swap** — when `data-theme` changes, `<html>` transitions
+  `background-color` and `color` over 320ms `ease-standard`.
+
+### Page transitions
+
+The kit ships **without** view-transitions; each page loads
+independently. Adopters can opt in via Next 16 view-transitions where
+appropriate.
+
+### Reduced motion
+
+Honored at the root via `prefers-reduced-motion: reduce`. All
+non-essential transitions become opacity-only at 80ms. The
+streaming `cursor-blink` is replaced with a static brand-colored
+caret. Tool-call phase entrances render instantly with no slide-in.
+Theme swap snaps without transition.
+
+## 9. Accessibility & A11y
+
+### Contrast
+
+| Pair | dark | bright | cool-blue |
+| --- | --- | --- | --- |
+| text on bg | 14.6 (AAA) | 17.5 (AAA) | 14.0 (AAA) |
+| text-dim on bg | 5.9 (AA) | 7.4 (AAA) | 5.6 (AA) |
+| text-on-brand on brand | 13.2 (AAA) | 4.7 (AA) | 11.8 (AAA) |
+| brand on bg | 14.1 (AAA) | 4.5 (AA) | 6.5 (AA) |
+
+The `bright` theme is tuned so emerald `#16a34a` clears AA at body
+sizes against `#fafafa`; for AAA on small text, fall back to
+`brand-deep` (`#14532d`).
+
+### Focus indicators
+
+A `2px solid var(--color-focus-ring)` ring with `2px offset` wraps
+every interactive element. Uses `:focus-visible` so the ring only
+appears on keyboard focus.
+
+### ARIA patterns
+
+- **ChatHero** streams: outer container is `aria-live="polite"
+  aria-busy={isStreaming}`; finished messages are not announced
+  again.
+- **AgentTraceViewer** uses Radix `Accordion` semantics; each step
+  trigger is a `<button>` with proper `aria-expanded`.
+- **ToolCallPanel** phase changes are announced via a hidden
+  `aria-live="polite"` region: *"Tool call: search_web. Phase:
+  result."*
+- **ModelSelector** uses Radix `Select` (combobox pattern,
+  WAI-ARIA 1.2).
+- **Theme switcher** (dev mode) uses Radix `ToggleGroup`.
+
+### Keyboard nav
+
+Tab order matches DOM order. The `<ChatHero>` chat input is
+focusable and has `aria-label="Send a message to the agent"`.
+The theme switcher is excluded from production tab order.
+
+### Reduced motion
+
+See §8. The streaming cursor and tool-call phase animation are
+the two motion-heavy elements; both fall back to a static state
+under reduced motion.
+
+### Screen reader
+
+Streaming chat output is announced incrementally via `aria-live`.
+`<Label>` rows next to a heading are `aria-hidden`. Icon-only buttons
+carry `aria-label`.
+
+### Sizes
+
+Minimum text size is `12px` (caption). Touch targets meet the 44px
+minimum on mobile; chat input field is 48px height.
+
+## 10. Responsive Behavior
+
+| Breakpoint | Width | Anchor |
+| --- | --- | --- |
+| mobile | <480 | Single column, hero 48px |
+| tablet | 480 – 768 | Single column, hero 56px |
+| laptop | 768 – 1024 | Two-column where helpful, hero 64px |
+| desktop | 1024 – 1280 | Full grids, hero 72px |
+| wide | ≥1280 | Page-width capped at 1200 |
+
+### Touch targets
+
+44px minimum across mobile and tablet. Chat input is 48px.
+
+### Collapsing strategy
+
+- **Hero `1fr 1fr`** → stacks to single-column at <768px.
+- **ChatHero feature row `1.4fr 1fr`** → stacks at <1024px with
+  chat above prose.
+- **TraceViewer `1fr 1fr`** → stacks at <1024px.
+- **ToolCallPanel `1.4fr 1fr`** → stacks at <1024px.
+- **Pricing 3-up** → 2-up at <1024px → 1-up at <640px.
+
+### Image behavior
+
+Theme-preview tiles use `aspect-ratio: 4/3` with `object-fit: cover`
+inside a `bg-card` plate.
+
+### Container queries
+
+Used on `<MessageBubble>` so user-bubble width adapts when the chat
+panel is in a sidebar vs full-width context.
+
+## 11. Content & Voice
+
+### Tone
+
+**Technical, calm, agent-aware.** AgentKit writes for the developer
+shipping their first agent product. Headlines are imperative and
+ground-truthed. Adjectives are sparse; verbs are specific. Sample
+hero: *"Ship your AI agent's landing page <em>this afternoon</em>.
+65 components. 9 sections. Three swappable themes. One install."*
+
+### Microcopy patterns
+
+- **Buttons use verbs.** *Get AgentKit*, *Buy*, *View source*,
+  *Read the docs*, *Try the demo*.
+- **Errors describe the cause.** *"OPENAI_API_KEY missing. Add it to
+  `.env.local` and restart."*
+- **Success is quiet.** *"Theme set to bright."* — not *"Your theme
+  preference has been successfully updated!"*
+- **Empty states explain how to fill them.** *"No messages yet. Type
+  below to ping the agent."*
+
+### CTA verb conventions
+
+- Primary: *Get AgentKit*, *Buy*, *Sign up*, *Try the demo*.
+- Secondary: *View source*, *Read the docs*, *See examples*.
+- Tertiary (link): *Learn more*, *Browse components*, *See all*.
+
+The kit avoids: *Click here*, *Submit*, *Get started for free*,
+*Transform your business*.
+
+## 12. Dark Mode & Theming
+
+AgentKit is **theme-first**. Three themes ship by default —
+`editorial-dark` (default), `bright` (light), and `cool-blue`
+(slate). Theme is selected via a `data-theme` attribute on `<html>`
+and persisted in `localStorage` as `agentkit:theme`. An inline
+script in `<head>` reads the stored value and applies it
+synchronously **before paint** to prevent FOUC:
+
+```html
+<script>
+  try {
+    var t = localStorage.getItem('agentkit:theme') || 'editorial-dark';
+    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.style.colorScheme = t === 'bright' ? 'light' : 'dark';
+  } catch (e) {}
+</script>
+```
+
+CSS variables are declared per theme inside `:root[data-theme="..."]`
+selectors using Tailwind 4's `@theme` directive. Components reference
+`var(--color-*)` tokens only — never hex literals — so swapping
+themes is a single attribute change with zero component rewrites.
+
+When a developer ships AgentKit in production, they typically pick
+**one** theme and remove the dev-only theme switcher from their
+build. The system supports all three at runtime, but production
+sites usually commit to one identity.
+
+### System preference
+
+`prefers-color-scheme` is read on first load. Users on a light OS
+default to `bright`; users on a dark OS default to `editorial-dark`.
+Stored preference always wins over system preference.
+
+## 13. Lineage & Influences
+
+AgentKit extends webdesignhot's editorial-dark canvas into a
+three-theme system inspired by Vercel's Geist (themed but locked
+to a single component library) and Linear's spatial restraint.
+The chat-hero + agent-trace-viewer + tool-call-panel anchor
+components are the kit's own contribution — there's no reference for
+"agent product landing page" yet, so the kit defines the genre. The
+cool-blue theme borrows its palette discipline from Stripe (deep
+navy + cyan accent) for fintech-adjacent products; the bright theme
+tracks Resend's clean daylight feel. Type system is unchanged across
+themes — only color swaps — proving that hierarchy comes from size
+and tracking, not hue.
+
+What it rejects: gradient hero backgrounds, glow shadows, illustrated
+3D agent mascots, "AI sparkles" iconography, multi-accent palettes,
+600+ display weights, marketing pages that don't show the product.
+
+**Named influences**
+- [webdesignhot](https://www.webdesignhot.com) — source canvas, type
+  voices, em-as-token rule.
+- [Vercel Geist](https://vercel.com/geist/introduction) — themed but
+  unified component library pattern.
+- [Linear](https://linear.app) — spatial restraint, dense
+  agent-product surfaces.
+- [Stripe](https://stripe.com) — cool-blue palette discipline
+  (fintech-grade calm).
+- [Resend](https://resend.com) — bright theme's daylight clarity.
+- [Anthropic](https://anthropic.com) — editorial calm, mono-with-dot
+  section rhythm.
+- [Rauno Freiberg](https://rauno.me) — italic-serif `<em>` accents.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- Pick **one** theme before shipping production.
+- Use `<em>` for italic-serif accents inside display headlines.
+- Reference colors via `var(--color-*)` only — never hex literals.
+- Keep `<Label>` mono uppercase + brand dot at every section.
+- Use the supplied keyframes (`accordion-down`, `accordion-up`,
+  `cursor-blink`, `fade-in-up`).
+- Apply theme via `data-theme` synchronously in `<head>` to prevent
+  FOUC.
+- Use `text-on-brand` (theme-aware) on the brand CTA — never default
+  to white or black.
+- Honor `prefers-reduced-motion` everywhere.
+- Use `:focus-visible` so the focus ring only appears on keyboard
+  nav.
+- Cap chat-message width at 80% so messages remain scannable.
+
+### Don't
+
+- Introduce a second accent color per theme.
+- Use `brand` as a gradient or glow — solid fill only.
+- `box-shadow` cards for depth — use `bg-card-hover` and
+  `border-strong` instead.
+- Hard-code hex values in components — always `var(--color-token)`.
+- Ship with the theme switcher visible to your end users.
+- Use bold (`700`+) weights on display type.
+- Translate or scale buttons on hover — color-only state changes.
+- Use `<em>` for grammatical emphasis — it's a design token.
+- Mix tokens between themes (e.g. dark text on bright background).
+- Skip the streaming-cursor stop logic — the caret must disappear
+  the moment the agent finishes speaking.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference (editorial-dark default)
+
+```
+bg:           #0a0a0a
+text:         #ededed
+text-dim:     #8a8a8a
+brand:        #c6f432
+text-on-brand:#0a0a0a
+bg-card:      #141416
+border:       rgba(255,255,255,0.08)
+focus-ring:   #c6f432
+```
+
+### Bright theme
+
+```
+bg:    #fafafa | text: #0a0a0a | brand: #16a34a | text-on-brand: #fff
+```
+
+### Cool-blue theme
+
+```
+bg:    #0b1120 | text: #f1f5f9 | brand: #06b6d4 | text-on-brand: #0b1120
+```
+
+### Example Component Prompts
+
+1. *"Create an AgentKit ChatHero in the editorial-dark theme:
+   `#141416` background, 16px radius, 24px padding, 1px
+   `rgba(255,255,255,0.08)` border. Header is a mono uppercase row
+   'AGENT • LIVE' with a 6px `#c6f432` dot. Below, alternating
+   message bubbles — assistant on `#141416` left-aligned, user on
+   `#1a1a1c` right-aligned, both 12px radius. Streaming cursor is a
+   `#c6f432` `▋` glyph blinking at 1s step-end."*
+
+2. *"Build an AgentTraceViewer card: `bg-card` background, 16px
+   radius, 24px padding. Each step starts with a mono uppercase
+   `01.` label in `text-dim`, the step title in 22px Inter / 500.
+   Steps expand via Radix accordion with
+   `--radix-accordion-content-height` over 240ms `ease-standard`.
+   Inside an open step, render tool-call rows with mono code-inline
+   for tool name and args."*
+
+3. *"Compose a ToolCallPanel with 4 phases — prompt, calling, result,
+   final — each as a small card with mono uppercase phase label and
+   code-inline tool name. Phase progression slides each card in from
+   below with 8px translate over 240ms `ease-emphasized`. Calling
+   shows a spinning `text-dim` Loader; result shows a `success`
+   checkmark."*
+
+4. *"Design a primary button in the bright theme: `#16a34a`
+   background, white text, 14px Inter / 500, 14/20px padding, 8px
+   radius. Hover lightens to `#15913f` over 150ms — no scale, no
+   glow."*
+
+5. *"Build a theme-preview row showing the same hero in all three
+   themes side-by-side: each tile is 4/3 aspect, `card` (16px)
+   radius, 1px theme-appropriate border, with a mono uppercase
+   label below the tile naming the theme. Tiles render the same
+   ChatHero component — only colors differ."*
+
+6. *"Create a section anchor: 64px section padding, mono uppercase
+   label '03 — TRACE VIEWER' in `text-dim` 11/500/0.15em with brand
+   dot, a 40px Inter / 500 / -0.025 tracking headline below, and an
+   optional Instrument Serif italic `<em>` accent inside the
+   headline."*
+
+### Iteration Guide
+
+1. **Pick the default theme first.** Do all your composition in
+   `editorial-dark` until the layout reads correctly. Only after the
+   structure is solid, swap to `bright` and `cool-blue` and tune
+   contrast.
+2. **Reference variables only.** If you find yourself writing
+   `#c6f432` in a component, replace it with `var(--color-brand)`
+   immediately. The single discipline that makes the kit work.
+3. **Hold the accent in reserve.** Don't introduce the brand color
+   until the layout reads correctly without it. The accent should
+   arrive as a deliberate moment.
+4. **Build the anchor components first.** ChatHero, AgentTraceViewer,
+   and ToolCallPanel are what differentiate the kit. Compose
+   sections around them, not the other way around.
+5. **Use `<em>` once per hero.** Place exactly one Instrument Serif
+   italic accent inside the display headline. Test that removing
+   it flattens the page; test that adding a second one fights for
+   attention.
+6. **Apply the theme synchronously.** Read `localStorage` and set
+   `data-theme` on `<html>` in an inline `<head>` script before
+   first paint. FOUC is the most common single mistake when
+   shipping multi-theme.
+7. **Stop the streaming cursor.** The most common bug: the `▋`
+   keeps blinking after the stream ends. Wire `isStreaming === false`
+   to `visibility: hidden` on the cursor.
+8. **Audit accent count per theme.** When you're done, count every
+   `var(--color-brand)` reference. If it's above ~8 per page, remove
+   the weakest two. The kit is at its strongest when the accent is
+   rare on every theme.

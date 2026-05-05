@@ -6,7 +6,7 @@ source_url: https://height.app
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas, productivity]
+categories: [saas]
 tags: [light, pastel, sans, calm, ai, project-management]
 preview_swatch: ['#fdfcf9', '#7551dc', '#0e0e10']
 related: [linear, notion, asana]

@@ -6,7 +6,7 @@ source_url: https://www.ferrari.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [luxury, dark, sans, photography, cinematic, editorial]
 preview_swatch: ['#181818', '#da291c', '#ffffff']
 related: [tesla, bmw, apple]

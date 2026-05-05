@@ -6,10 +6,10 @@ source_url: https://www.audi.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [dark, premium, sans, monochrome, german, configurator, technical, photography]
 preview_swatch: ['#000000', '#ffffff', '#bb0a30']
-related: [bmw, porsche, mercedes-benz]
+related: [bmw]
 description: 'Audi.com is the technical-luxury German face — four-rings precision, near-monochrome discipline, and a deep commitment to the Vorsprung durch Technik tradition. The canvas oscillates between **pure white** (`#ffffff`) for showroom and configurator surfaces and **pure black** (`#000000`) for hero / RS performance / e-tron reveals. Type runs **Audi Type** — a bespoke 2009 family by Marc Wrigley — at weight 400 body / 700 display, with the brand''s characteristic technical sans proportions. The four-rings logomark anchors every page; the only saturated brand colour is **Audi Red** (`#bb0a30`) reserved for RS / Sport content. The signature visual move: **black hero band + four-rings + RS-red eyebrow + studio-light photography** — engineering, distilled.'
 
 colors:

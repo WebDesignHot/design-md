@@ -6,7 +6,7 @@ source_url: https://www.bugatti.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [luxury, dark, sans, serif, monospace, photography, minimal]
 preview_swatch: ['#000000', '#ffffff', '#c3d9f3']
 related: [ferrari, lamborghini, tesla]

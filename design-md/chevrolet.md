@@ -6,7 +6,7 @@ source_url: https://www.chevrolet.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, american, classic, sans, blue, gold, configurator, photography]
 preview_swatch: ['#ffffff', '#cd9834', '#1a1a1a']
 related: [ford, tesla, bmw]

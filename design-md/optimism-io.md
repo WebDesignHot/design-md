@@ -9,7 +9,7 @@ featured: false
 categories: [fintech, marketplace]
 tags: [light, infrastructure, web3, layer2, ethereum, red, bold, confident]
 preview_swatch: ['#ffffff', '#ff0420', '#000000']
-related: [ethereum-org, base-org, polygon-tech]
+related: [ethereum-org, polygon-tech]
 description: 'Optimism reads like a confident open-source infrastructure brand that decided to wear red instead of blue. The base canvas is **pure white** `#ffffff` with full-bleed dark `#000000` heroes for editorial punctuation — and a single brand voltage **Optimism Red** `#ff0420` carrying every primary action. Where Polygon chose deep purple as its anti-blue stake and Ethereum chose ethereum-blue, Optimism chose **the loudest possible red** — a saturated near-vermillion that signals "we''re not the corporate L2." Type runs **Inter** for body and a custom Optimism Display (Inter Display-style with sharper corners) at large sizes, both deliberately at weight 700 (not the calm-600 Polygon picked) — Optimism wants to read **bold, not calm**. Layout commits to confident infrastructure marketing: 1280px max-width, 96px section padding, partner-logo strips, 56px metric-display centrepieces ("17M transactions/day", "99.99% uptime"), and the signature red sun-glyph (a half-sun radiating beams) as persistent visual signature on dark heroes. The brand''s clearest editorial choice: it commits hard to **the red**. Every CTA is red. Every accent is red. Every dark hero has a red sun-glyph. The single-voltage discipline beats Coinbase''s single-blue and Stripe''s single-purple in saturation — Optimism Red is the loudest accent in the major-L2 set.'
 
 colors:

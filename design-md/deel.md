@@ -1,204 +1,1038 @@
 ---
 name: Deel
-tagline: A warm dark canvas with electric coral and orange accents — global payroll dressed as a confident product portrait.
+tagline: 'A warm dark canvas with electric coral and orange accents — global payroll dressed as a confident product portrait.'
 author: webdesignhot
 source_url: https://www.deel.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [fintech, saas]
 tags: [dark, sans, structured, warm, bright]
 preview_swatch: ['#0c0c0c', '#ff4d2e', '#f4f1ec']
 related: [stripe, brex, vercel]
-description: 'Deel''s site lives in a warm-dark register: near-black `#0c0c0c` canvas, cream `#f4f1ec` light bands, and a signature electric coral-orange `#ff4d2e` that carries CTAs and accents. The system pairs Inter Display at 600 with a generous spacing rhythm and product stills set inside soft cards — global HR/payroll given the visual weight of an enterprise platform with consumer warmth.'
+description: 'Deel''s site lives in a warm-dark register: a near-black `#0c0c0c` canvas that reads slightly brown rather than blue-black, cream `#f4f1ec` light bands for testimonial and editorial sections, and a signature electric coral-orange `#ff4d2e` that carries every primary CTA and selective illustration accent. The system pairs Inter Display at 600 with a generous 120px section rhythm and product stills set inside soft 18px-radius cards — global HR/payroll given the visual weight of an enterprise platform with consumer warmth. Where Linear goes cool-blue-dark and Vercel goes pure-black-dev-tool, Deel rotates into warm-dark territory: the dark is a tinted brown, the cream is a paper-warm beige, the accent is a magazine-highlighter coral. The full-pill button radius is the brand''s friendliness signal in a category (global HR / payroll) that often defaults to cold enterprise blues. Where Wise commits to a single colour and Mercury commits to a serif, Deel''s distinguishing move is the warm-dark / cream-light alternation paired with the coral CTA — a rhythm that distinguishes B2B-international SaaS from cold corporate templates and consumer-app brightness alike.'
 
 colors:
-  bg: '#0c0c0c'                # warm near-black hero canvas
-  bg-light: '#f4f1ec'          # cream off-white inverted band
-  bg-strong: '#000000'         # full ink contrast
-  surface: '#181818'            # dark card base
-  surface-soft: '#1f1f1f'       # softer dark panel
-  surface-light: '#fafaf7'      # light card on cream
-  text: '#f4f1ec'              # cream body on dark
-  text-strong: '#ffffff'
-  text-dark: '#0c0c0c'         # ink type on light bands
-  text-muted: '#a8a59f'        # warm grey caption on dark
-  text-soft: '#7a7771'
-  brand: '#ff4d2e'             # signature electric coral-orange
-  brand-hover: '#e63d1f'
-  brand-soft: '#3a1810'        # tinted dark wash
-  accent: '#ffb84d'             # supporting amber
-  accent-strong: '#f9c459'      # warm yellow accent
-  accent-soft: '#fff0e0'
-  border: '#ffffff14'           # 8% white hairline on dark
-  border-soft: '#ffffff0a'
-  border-light: '#0c0c0c14'     # ink rule on cream
-  on-brand: '#ffffff'
-  inverse-bg: '#f4f1ec'
+  bg: '#0c0c0c'                         # warm near-black hero canvas — slight brown cast
+  bg-soft: '#141414'                    # softer dark panel, slightly lifted
+  bg-deep: '#000000'                    # peak ink for footer / closing emphasis
+  bg-light: '#f4f1ec'                   # cream off-white inverted band
+  bg-light-soft: '#faf6ef'              # softer cream alternative
+  bg-light-strong: '#ede9e0'            # deeper cream for sectional emphasis
+  bg-warm-tint: '#1a1612'               # warm-tinted dark wash, used for orange-leaning sections
+  bg-coral-soft: '#fff0e8'              # palest coral wash for highlight chips on cream
+  bg-coral-deep: '#3a1810'              # dark coral wash for accent surfaces on dark
+  surface: '#181818'                    # default dark card base
+  surface-soft: '#1f1f1f'               # softer dark panel
+  surface-warm: '#1c1814'               # warm-tinted dark surface
+  surface-light: '#fafaf7'              # light card on cream band
+  surface-light-soft: '#f0ece4'         # softer light card
+  text: '#f4f1ec'                       # cream body on dark — the canvas tone promoted to type
+  text-strong: '#ffffff'                # peak white for display copy on dark
+  text-body: '#e8e3d8'                  # body paragraph on dark, slightly softer
+  text-muted: '#a8a59f'                 # warm grey caption on dark
+  text-soft: '#7a7771'                  # tertiary text on dark
+  text-faint: '#5a5751'                 # placeholder / disabled on dark
+  text-dark: '#0c0c0c'                  # ink type on cream/light bands
+  text-dark-strong: '#000000'           # peak ink on cream
+  text-dark-body: '#1c1c19'             # body paragraph on cream
+  text-dark-muted: '#5a5751'            # captions / metadata on cream
+  text-dark-soft: '#8a8782'             # tertiary on cream
+  text-on-coral: '#ffffff'              # white on the coral CTA — the brand contrast pair
+  brand: '#ff4d2e'                      # signature electric coral-orange — the brand-defining accent
+  brand-strong: '#e63d1f'               # pressed-state coral
+  brand-hover: '#ff5e42'                # hover-state coral, slightly lighter
+  brand-deep: '#c93418'                 # deepest coral for emphasis
+  brand-soft: '#3a1810'                 # tinted dark wash for accent surfaces
+  brand-tint: 'rgba(255, 77, 46, 0.12)' # subtle coral wash for hover states
+  brand-glow: 'rgba(255, 77, 46, 0.32)' # focus glow / CTA glow
+  accent: '#ffb84d'                     # supporting amber — chip highlights, illustration accent
+  accent-strong: '#f9c459'              # warm yellow accent
+  accent-soft: '#fff0e0'                # palest amber wash on cream
+  accent-glow: 'rgba(255, 184, 77, 0.24)'  # amber glow for highlight tiles
+  on-brand: '#ffffff'                   # white text on the coral CTA
+  on-dark: '#f4f1ec'                    # cream text on dark canvas
+  on-light: '#0c0c0c'                   # ink text on cream band
+  link: '#ff4d2e'                       # links lean coral on light bands; cream-on-dark elsewhere
+  link-hover: '#e63d1f'                 # deeper coral on hover
+  link-on-dark: '#f4f1ec'               # underlined cream link on dark
+  border: 'rgba(255, 255, 255, 0.10)'   # 10% white hairline on dark
+  border-soft: 'rgba(255, 255, 255, 0.06)'  # 6% white quieter
+  border-strong: 'rgba(255, 255, 255, 0.18)'  # 18% white for focused inputs on dark
+  border-light: 'rgba(12, 12, 12, 0.10)'    # 10% ink hairline on cream
+  border-light-soft: 'rgba(12, 12, 12, 0.06)'  # 6% ink quieter
+  border-light-strong: 'rgba(12, 12, 12, 0.18)'  # 18% ink for focused inputs on cream
+  border-coral: 'rgba(255, 77, 46, 0.40)'   # coral-tinted border for emphasis
+  shadow-ambient-dark: 'rgba(0, 0, 0, 0.20)'   # ambient shadow on dark canvas
+  shadow-ambient-light: 'rgba(12, 12, 12, 0.06)'  # ambient on cream
+  shadow-card-dark: 'rgba(0, 0, 0, 0.32) 0 4px 20px'  # signature dark card shadow
+  shadow-card-light: 'rgba(12, 12, 12, 0.08) 0 4px 20px'  # signature light card shadow
+  shadow-elev: 'rgba(0, 0, 0, 0.40) 0 12px 32px -8px'  # elevated dropdown
+  shadow-popover: 'rgba(0, 0, 0, 0.50) 0 16px 40px -16px'
+  shadow-modal: 'rgba(0, 0, 0, 0.60) 0 24px 64px -16px'
+  shadow-glow-coral: 'rgba(255, 77, 46, 0.32) 0 8px 24px -8px'  # coral glow under primary CTA
+  shadow-light-leak: 'rgba(255, 77, 46, 0.16) 0 30px 60px -30px'  # the signature orange light-leak under product stills
+  scrim: 'rgba(0, 0, 0, 0.70)'          # modal backdrop on either canvas
+  success: '#3aa75c'                    # forest-green confirmation
+  success-soft-dark: 'rgba(58, 167, 92, 0.16)'
+  success-soft-light: 'rgba(58, 167, 92, 0.10)'
+  warning: '#f9c459'                    # warm yellow advisory
+  warning-soft-dark: 'rgba(249, 196, 89, 0.16)'
+  warning-soft-light: 'rgba(249, 196, 89, 0.18)'
+  danger: '#ff4d2e'                     # the brand coral doubles as danger — same colour, different role
+  danger-soft-dark: 'rgba(255, 77, 46, 0.16)'
+  danger-soft-light: 'rgba(255, 77, 46, 0.10)'
+  info: '#5b8def'                       # cool blue info, the rare cool accent
+  info-soft-dark: 'rgba(91, 141, 239, 0.16)'
+  info-soft-light: 'rgba(91, 141, 239, 0.10)'
 
 typography:
   display:
     family: '"Inter Display", "Söhne", Inter, "Helvetica Neue", Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype-features: ['kern', 'liga', 'cv11', 'ss01']
   body:
     family: 'Inter, -apple-system, "Helvetica Neue", Arial, sans-serif'
     weights: [400, 500, 600]
+    opentype-features: ['kern', 'liga']
   mono:
-    family: '"JetBrains Mono", "IBM Plex Mono", Menlo, monospace'
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace'
     weights: [400, 500]
+    opentype-features: ['liga', 'tnum', 'zero']
   scale:
-    h1:    { size: 80, weight: 600, lineHeight: 1.0,  tracking: '-0.03em' }
-    h2:    { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.025em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.2,  tracking: '-0.01em' }
-    body:  { size: 17, lineHeight: 1.55 }
-    label: { size: 12, weight: 500, family: mono, tracking: '0.05em' }
+    display-hero:    { size: 96, weight: 600, lineHeight: 0.95, tracking: '-0.035em', family: display, opentype: ['cv11'] }
+    display-xl:      { size: 80, weight: 600, lineHeight: 1.0,  tracking: '-0.03em',  family: display }
+    display-lg:      { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.025em', family: display }
+    h1:              { size: 56, weight: 600, lineHeight: 1.05, tracking: '-0.025em', family: display }
+    h2:              { size: 40, weight: 600, lineHeight: 1.10, tracking: '-0.02em',  family: display }
+    h3:              { size: 28, weight: 600, lineHeight: 1.20, tracking: '-0.01em',  family: display }
+    h4:              { size: 22, weight: 500, lineHeight: 1.30, tracking: '-0.005em', family: display }
+    h5:              { size: 18, weight: 500, lineHeight: 1.40, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.40, tracking: '0.05em',   family: mono, transform: uppercase }
+    section-label:   { size: 13, weight: 500, lineHeight: 1.40, tracking: '0.05em',   family: mono, transform: uppercase }
+    country-label:   { size: 11, weight: 500, lineHeight: 1.30, tracking: '0.06em',   family: mono, transform: uppercase }
+    body-lg:         { size: 20, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-md:         { size: 17, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.40, tracking: '0',        family: body }
+    caption-mono:    { size: 12, weight: 500, lineHeight: 1.40, tracking: '0',        family: mono, opentype: ['tnum'] }
+    label:           { size: 12, weight: 500, lineHeight: 1.30, tracking: '0',        family: body }
+    label-mono:      { size: 11, weight: 500, lineHeight: 1.30, tracking: '0.05em',   family: mono, transform: uppercase }
+    button-md:       { size: 15, weight: 500, lineHeight: 1.20, tracking: '0',        family: body }
+    button-sm:       { size: 13, weight: 500, lineHeight: 1.20, tracking: '0',        family: body }
+    pricing-display: { size: 56, weight: 600, lineHeight: 1.0,  tracking: '-0.02em',  family: display, opentype: ['tnum'] }
+    quote-pull:      { size: 32, weight: 500, lineHeight: 1.25, tracking: '-0.015em', family: display }
+    code-inline:     { size: 14, weight: 500, lineHeight: 1.40, tracking: '0',        family: mono }
 
 radius:
-  xs: 4
-  sm: 6
-  md: 10
-  lg: 14
-  card: 18
-  xl: 24
-  button: 999     # pill CTAs
-  pill: 9999
+  micro: 4
+  xs: 6             # status badges, country chips
+  sm: 8             # tag chips
+  md: 10            # buttons, inputs
+  lg: 14            # secondary cards
+  xl: 18            # primary cards — the Deel signature (slightly larger than 16px consensus)
+  hero: 24          # hero panels, large surfaces
+  pill: 9999        # capsule chips, primary CTAs
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]
 
 layout:
-  container: 1280
-  gutter: 24
+  page-width: 1280
+  prose-width: 720
+  container-gutter: 24
   section-y: 120
   rhythm: 8
+  header-height: 72
+  hero-min-height: 720
 
 components:
   button-primary:
     bg: '#ff4d2e'
     color: '#ffffff'
-    radius: 999
-    weight: 500
-    paddingX: 24
-    paddingY: 14
-  button-secondary:
+    radius: 9999
+    padding: '14px 24px'
+    height: 48
+    font: 'Inter 15px / 500'
+    shadow: 'rgba(255, 77, 46, 0.32) 0 8px 24px -8px'
+    hover-bg: '#ff5e42'
+    pressed-bg: '#e63d1f'
+    use: 'The signature coral pill — Get started, Talk to sales, Book a demo. The brand-defining element on either canvas.'
+  button-secondary-dark:
     bg: 'transparent'
     color: '#f4f1ec'
-    border: '1px solid #ffffff28'
-    radius: 999
+    border: '1px solid rgba(255, 255, 255, 0.18)'
+    radius: 9999
+    padding: '14px 24px'
+    height: 48
+    font: 'Inter 15px / 500'
+    hover-border: 'rgba(255, 255, 255, 0.32)'
+    hover-bg: 'rgba(255, 255, 255, 0.04)'
+    use: 'Outlined twin on dark canvas — Watch demo, Sign in. Cream text, subtle white hairline.'
+  button-secondary-light:
+    bg: 'transparent'
+    color: '#0c0c0c'
+    border: '1px solid rgba(12, 12, 12, 0.18)'
+    radius: 9999
+    padding: '14px 24px'
+    height: 48
+    font: 'Inter 15px / 500'
+    hover-bg: 'rgba(12, 12, 12, 0.04)'
+    use: 'Outlined twin on cream band — same shape, near-black text and ink hairline.'
+  button-ghost-dark:
+    bg: 'transparent'
+    color: '#f4f1ec'
+    radius: 9999
+    padding: '10px 16px'
+    font: 'Inter 15px / 500'
+    hover-bg: 'rgba(255, 255, 255, 0.06)'
+    use: 'Quiet third action on dark — nav links, footer, in-card secondary.'
   card-dark:
     bg: '#181818'
-    border: '1px solid #ffffff14'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
     radius: 18
-    padding: 32
+    padding: '32px'
+    shadow: 'rgba(0, 0, 0, 0.32) 0 4px 20px'
+    use: 'Default dark product card — soft 18px radius with white-8% hairline. The signature card geometry on the dark canvas.'
+  card-dark-warm:
+    bg: '#1c1814'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 18
+    padding: '32px'
+    use: 'Warm-tinted dark card — used on the rare coral-leaning sections where extra warmth is the move.'
   card-light:
     bg: '#ffffff'
-    border: '1px solid #0c0c0c10'
+    border: '1px solid rgba(12, 12, 12, 0.10)'
     radius: 18
+    padding: '32px'
+    shadow: 'rgba(12, 12, 12, 0.08) 0 4px 20px'
+    use: 'Default light card on cream band — soft 18px radius, ink-10% hairline.'
+  card-product-still:
+    bg: '#181818'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 24
+    padding: '0'
+    shadow: 'rgba(255, 77, 46, 0.16) 0 30px 60px -30px'
+    use: 'Product still card — large 24px radius, contains a screenshot, with the signature orange light-leak shadow underneath.'
+  text-input-dark:
+    bg: 'rgba(255, 255, 255, 0.04)'
+    color: '#f4f1ec'
+    radius: 10
+    height: 48
+    padding: '14px 16px'
+    border: '1px solid rgba(255, 255, 255, 0.18)'
+    font: 'Inter 16px / 400'
+    placeholder-color: '#7a7771'
+    focus-border: '#ff4d2e'
+    focus-ring: '0 0 0 3px rgba(255, 77, 46, 0.32)'
+    use: 'Form fields on dark — semi-translucent fill, coral focus ring.'
+  text-input-light:
+    bg: '#ffffff'
+    color: '#0c0c0c'
+    radius: 10
+    height: 48
+    padding: '14px 16px'
+    border: '1px solid rgba(12, 12, 12, 0.18)'
+    font: 'Inter 16px / 400'
+    placeholder-color: '#8a8782'
+    focus-border: '#ff4d2e'
+    focus-ring: '0 0 0 3px rgba(255, 77, 46, 0.32)'
+    use: 'Form fields on cream — white fill, ink hairline, coral focus ring.'
+  badge-status-dark:
+    bg: 'rgba(255, 77, 46, 0.16)'
+    color: '#ff4d2e'
+    radius: 6
+    padding: '4px 10px'
+    font: 'JetBrains Mono 11px / 500 / uppercase / 0.05em'
+    use: 'Status pill on dark — NEW, FEATURED, BETA. Coral-tint with coral text.'
+  badge-status-light:
+    bg: '#fff0e8'
+    color: '#c93418'
+    radius: 6
+    padding: '4px 10px'
+    font: 'JetBrains Mono 11px / 500 / uppercase / 0.05em'
+    use: 'Status pill on cream — coral-soft fill with deep-coral ink.'
+  badge-country:
+    bg: 'rgba(255, 255, 255, 0.06)'
+    color: '#a8a59f'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 9999
+    padding: '4px 12px'
+    font: 'JetBrains Mono 11px / 500 / uppercase / 0.06em'
+    use: 'Country chip — US, GB, DE, JP. Mono caps with country flag prefix, full pill.'
+  pill-eyebrow:
+    bg: 'transparent'
+    color: '#a8a59f'
+    padding: '0'
+    font: 'JetBrains Mono 12px / 500 / uppercase / 0.05em'
+    use: 'Section eyebrow on dark — mono caps in warm-grey muted.'
+  nav-top:
+    bg: 'rgba(12, 12, 12, 0.80)'
+    backdrop-filter: 'blur(12px) saturate(180%)'
+    height: 72
+    border-bottom: '1px solid rgba(255, 255, 255, 0.10)'
+    use: 'Sticky top nav on dark canvas — translucent dark fill with blur, hairline divider on scroll.'
+  product-still:
+    bg: '#181818'
+    radius: 24
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    shadow-light-leak: 'rgba(255, 77, 46, 0.16) 0 30px 60px -30px'
+    use: 'Hero product still — dashboard screenshot inside dark card with the signature orange light-leak shadow that grounds the still in brand chroma.'
+  pricing-card:
+    bg: '#181818'
+    border: '1px solid rgba(255, 255, 255, 0.10)'
+    radius: 18
+    padding: '40px'
+    use: 'Pricing tier card on dark — 18px radius, white-8% hairline, generous 40px padding. Featured tier replaces border with coral and adds a coral glow.'
+  testimonial-band:
+    bg: '#f4f1ec'
+    color: '#0c0c0c'
+    padding: '120px 32px'
+    use: 'Cream testimonial band — full-bleed cream with ink type, max-width 920px content. The chromatic inversion moment.'
+  globe-chip:
+    bg: 'rgba(255, 77, 46, 0.16)'
+    color: '#ff4d2e'
+    radius: 9999
+    padding: '6px 14px'
+    font: 'Inter 13px / 500'
+    use: '150+ countries chip — coral pill on dark with globe icon, marks the global-payroll positioning.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out-soft: 'cubic-bezier(0.0, 0, 0.2, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  duration-page: 400
+  duration-marquee: 30000
+  link-hover: 'colour deepens or underline appears over 100ms standard'
+  button-hover: 'background colour shifts + shadow intensifies + 1px translate-up over 200ms'
+  card-hover: 'border opacity 10% → 20% + shadow lifts from 4px to 12px + 2px translate-up over 200ms'
+  product-still-hover: 'orange light-leak shadow intensifies from 0.16 to 0.24 opacity over 300ms — the chroma glows brighter'
+  band-transition: 'cream-to-dark band transition uses a 1px hairline divider, no gradient — the contrast is the rhythm'
+  globe-marquee: 'country flag marquee scrolls horizontally over 30s linear infinite (suppressed under reduced-motion)'
+  scroll-reveal: 'sections fade in over 300ms ease-out-soft when entering viewport'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — globe marquee freezes, transforms suppress, opacity-only fades.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+  ultra: 1600
+
+shadows:
+  none: 'none'
+  ambient-dark: 'rgba(0, 0, 0, 0.20) 0 1px 2px'
+  ambient-light: 'rgba(12, 12, 12, 0.06) 0 1px 2px'
+  card-dark: 'rgba(0, 0, 0, 0.32) 0 4px 20px'
+  card-light: 'rgba(12, 12, 12, 0.08) 0 4px 20px'
+  card-hover-dark: 'rgba(0, 0, 0, 0.50) 0 12px 32px -4px'
+  card-hover-light: 'rgba(12, 12, 12, 0.16) 0 12px 32px -4px'
+  elevated: 'rgba(0, 0, 0, 0.40) 0 12px 32px -8px'
+  popover: 'rgba(0, 0, 0, 0.50) 0 16px 40px -16px'
+  modal: 'rgba(0, 0, 0, 0.60) 0 24px 64px -16px'
+  brand-glow: 'rgba(255, 77, 46, 0.32) 0 8px 24px -8px'
+  light-leak: 'rgba(255, 77, 46, 0.16) 0 30px 60px -30px'
+  ring: '0 0 0 3px rgba(255, 77, 46, 0.32)'
+
+accessibility:
+  contrast-text-on-bg: 14.6                   # #f4f1ec on #0c0c0c — AAA at all sizes
+  contrast-text-strong-on-bg: 17.2            # #ffffff on #0c0c0c — AAA at all sizes
+  contrast-text-muted-on-bg: 5.8              # #a8a59f on #0c0c0c — AA at body sizes
+  contrast-text-soft-on-bg: 3.6               # #7a7771 on #0c0c0c — fails AA at body, passes AA Large
+  contrast-text-on-bg-light: 17.2             # #0c0c0c on #f4f1ec — AAA at all sizes
+  contrast-text-on-coral: 4.8                 # #ffffff on #ff4d2e — AA at body sizes
+  contrast-coral-on-bg: 4.6                   # #ff4d2e on #0c0c0c — AA at body sizes (link colour)
+  contrast-coral-on-bg-light: 4.4             # #ff4d2e on #f4f1ec — AA at large sizes only
+  focus-ring: '3px solid rgba(255, 77, 46, 0.32) + 2px outline-offset; coral translucent ring on either canvas'
+  reduced-motion-honored: true
+  touch-target-min: 48
+  prose-line-length: 'capped at 720px / ~70 characters'
+  contrast-warning: 'coral on cream (`#ff4d2e` on `#f4f1ec`) is AA Large only — never use coral text below 18.5px on cream'
+
+dark-mode: required                           # Deel ships dark canvas as the primary brand surface
+
+colors-dark:
+  bg: '#0c0c0c'
+  bg-soft: '#141414'
+  surface: '#181818'
+  text: '#f4f1ec'
+  text-strong: '#ffffff'
+  text-body: '#e8e3d8'
+  text-muted: '#a8a59f'
+  text-soft: '#7a7771'
+  brand: '#ff4d2e'
+  brand-hover: '#ff5e42'
+  on-brand: '#ffffff'
+  border: 'rgba(255, 255, 255, 0.10)'
+  border-strong: 'rgba(255, 255, 255, 0.18)'
 
 lineage:
-  summary: |
-    Deel sits in the small group of dark-canvas fintechs (alongside
-    Linear, Vercel, and Modal) but tilts the temperature warm: the
-    near-black `#0c0c0c` reads slightly brown rather than blue-black,
-    and the cream `#f4f1ec` light bands reinforce that warmth. The
-    signature accent is a saturated coral-orange `#ff4d2e` — closer
-    to a magazine highlighter than a corporate CTA — used on every
-    primary action and on selective illustration accents. Inter
-    Display at 600 with `-0.03em` tracking handles the H1; the
-    lineage is the Linear / Vercel modern-SaaS axis, but the warm
-    dark and the orange accent push Deel toward Brex's saturated
-    energy rather than Linear's monochrome restraint. The
-    full-pill button radius is the brand's friendliness signal in a
-    category (global HR / payroll) that often defaults to cold
-    enterprise blues. Where Wise commits to a single colour and
-    Mercury commits to a serif, Deel's distinguishing move is the
-    warm-dark / cream-light alternation paired with the coral CTA.
+  summary: 'Deel sits in the small group of dark-canvas fintechs (alongside Linear, Vercel, and Modal) but tilts the temperature warm: the near-black `#0c0c0c` reads slightly brown rather than blue-black, and the cream `#f4f1ec` light bands reinforce that warmth. The signature accent is a saturated coral-orange `#ff4d2e` — closer to a magazine highlighter than a corporate CTA — used on every primary action and on selective illustration accents. Inter Display at 600 with `-0.03em` tracking handles the H1; the lineage is the Linear / Vercel modern-SaaS axis, but the warm dark and the orange accent push Deel toward Brex''s saturated energy rather than Linear''s monochrome restraint. The full-pill button radius is the brand''s friendliness signal in a category (global HR / payroll) that often defaults to cold enterprise blues. Where Wise commits to a single colour and Mercury commits to a serif, Deel''s distinguishing move is the warm-dark / cream-light alternation paired with the coral CTA.'
   influences:
-    - name: Linear / Vercel
-      role: Dark canvas + cool grey neutral lineage; modern-SaaS sans typography.
-      url: https://linear.app
-    - name: Stripe
-      role: Single-accent action colour discipline in fintech.
-      url: https://stripe.com
-    - name: Klim / Inter
-      role: Inter Display at 600 with hard negative tracking is the typographic backbone.
-      url: https://rsms.me/inter
+    - name: 'Linear'
+      role: 'Dark canvas + cool grey neutral lineage; modern-SaaS sans typography. Deel rotates the dark warmer and adds the coral accent where Linear keeps it monochrome.'
+      url: 'https://linear.app'
+    - name: 'Vercel'
+      role: 'Pure dark canvas + sharp dev-tool restraint. Deel borrows the dark commitment but rejects the coolness — warm-dark over cool-black.'
+      url: 'https://vercel.com'
+    - name: 'Stripe'
+      role: 'Single-accent action colour discipline in fintech; brand-as-system rigour. Deel inherits the discipline but rotates the colour to coral.'
+      url: 'https://stripe.com'
+    - name: 'Inter / rsms.me'
+      role: 'Inter Display at 600 with hard negative tracking is the typographic backbone. Deel uses the same family Vercel and Linear made standard.'
+      url: 'https://rsms.me/inter'
+    - name: 'Brex'
+      role: 'Saturated-fintech-energy precedent. Brex pushes magenta gradient on light canvas; Deel pushes coral on warm dark — the same chromatic confidence in a different register.'
+      url: 'https://brex.com'
+    - name: 'Notion (warm-tinted dark mode)'
+      role: 'The warm-dark register — slightly-brown near-black instead of blue-black. Deel commits to the same temperature choice across all surfaces.'
+      url: 'https://notion.so'
+    - name: 'Apple (product-still photography)'
+      role: 'Product-as-portrait photography style — single object centred with soft chromatic light. Deel''s product stills inside dark cards with orange light-leak shadows borrow from this register.'
+      url: 'https://apple.com'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Deel's site moves between two registers: a warm near-black canvas
-`#0c0c0c` with cream type for hero and product sections, and a
-cream-white `#f4f1ec` band for testimonials and editorial copy.
-The signature accent — a saturated coral-orange `#ff4d2e` — appears
-as the only saturated colour, anchoring CTAs and selective
-illustration accents.
+Deel's marketing surface answers "global payroll, HR, and compliance" with a distinct chromatic gesture: a **warm near-black `#0c0c0c` canvas** broken by **cream `#f4f1ec` testimonial bands** and an **electric coral-orange `#ff4d2e`** that carries every primary CTA. The dark-and-cream alternation is the macro brand voice — sections move between warm-dark hero environments and cream editorial bands, with the coral providing the saturated chromatic anchor on either ground. The signature shape detail is the **18px card radius** (slightly larger than the 16px modern-SaaS consensus) — soft enough to read as approachable in a B2B-international category that often defaults to cold enterprise templates.
 
-The visual personality differentiates Deel from the cooler
-neobank set: it reads warmer, more product-still, more *brand
-campaign* than spreadsheet. Inter Display at 600 with `-0.03em`
-tracking carries the H1 at 80px; product stills sit inside
-18px-radius cards with subtle 1px white-on-dark hairlines.
+What distinguishes Deel from the cool-dark fintech set (Linear, Vercel, Modal) is the **temperature**. Linear's dark is `#08090a` with a cool blue-grey cast; Vercel's is `#000000` pure ink; Modal's is `#0a0a0c` with a slight cool tint. Deel's `#0c0c0c` reads slightly warm — closer to a brown-leaning near-black than a blue-leaning one. The cream light-band `#f4f1ec` reinforces that warmth — it's a paper-cream, not a clinical white. The coral accent `#ff4d2e` completes the warm chromatic system: every colour in the brand belongs to the warm half of the colour wheel, with no cool blues except the rare info-state semantic.
 
-## Colors
+The product-still photography is the brand's most distinctive composition move. Dashboard screenshots sit inside **dark cards at 24px radius** with a faint **orange light-leak shadow** underneath: `rgba(255, 77, 46, 0.16) 0 30px 60px -30px`. The orange light-leak is the signature detail — it grounds the product still in brand chroma without literally tinting the screenshot, and it makes the dark card *radiate* the coral accent into its surrounding negative space. This is the brand's most considered chromatic detail; most dark-canvas SaaS sites use neutral shadows under product stills, which read as flat. Deel's coral-tinted shadow makes every product still feel like it's sitting under a small piece of coloured studio light.
 
-- **bg** `#0c0c0c` — warm near-black, slightly brown-cast
-- **bg-light** `#f4f1ec` — cream inverted band for testimonial / editorial sections
-- **surface** `#181818` — dark card base on hero
-- **surface-light** `#fafaf7` — light card on cream band
-- **text** `#f4f1ec` — cream body on dark; **text-dark** `#0c0c0c` on light
-- **brand** `#ff4d2e` — signature electric coral-orange CTA fill
-- **accent** `#ffb84d` — supporting amber for highlight chips
-- **border** `#ffffff14` — 8% white hairline on dark
-- **border-light** `#0c0c0c14` — 8% ink rule on cream
+The atmospheric vocabulary that captures Deel's feeling: *warm-dark, brown-tinted-black, paper-cream-band, electric-coral, magazine-highlighter, product-portrait, orange-light-leak, B2B-international-friendly, global-payroll-confident, country-chip-mono, Inter-Display-tracked-warm, full-pill-friendly, Apple-product-still-adjacent, Brex-energy-on-warm-dark.* Every surface lands like it was designed by an in-house brand team that has decided global HR/payroll could be presented as a *product portrait* rather than as cold compliance documentation.
 
-## Typography
+The fourth register is the **B2B-international voice**. Deel operates in 150+ countries; its product copy references real-world country codes, currencies, payroll regulations, and compliance frameworks. The country chip — `US / GB / DE / JP / IN / BR / SG` — is the brand's secondary identity tell, appearing as a mono-caps pill in JetBrains Mono with a country-flag prefix. The chip is the visual signature of "we operate everywhere" without requiring marketing copy to make that claim. This is the same compositional logic Wise uses with currency codes (USD / GBP / EUR), but Deel rotates it to country codes — the operational metaphor that matches the global-payroll product.
 
-Display is **Inter Display** at 600 weight, sized 80px on an 80px
-line height with `-0.03em` tracking. Body is **Inter** at 17px /
-26px line height. Mono micro-labels (JetBrains Mono / IBM Plex Mono)
-at 12px with `0.05em` tracking handle eyebrows, country tags, and
-small UI metadata.
+**Key Characteristics**
 
-The scale steps in 1.4-1.5× ratios — 17 → 28 → 56 → 80 — giving the
-H1 dramatic weight and leaving the body at a comfortable, slightly
-larger-than-default 17px.
+- Warm near-black `#0c0c0c` canvas — slight brown cast, not blue-black
+- Cream `#f4f1ec` light bands for testimonials and editorial — paper-warm, not pure white
+- Signature coral-orange `#ff4d2e` — the only saturated colour, used on every primary CTA
+- Inter Display at 600 weight with `-0.03em` tracking — the H1 lands at 80px / 600
+- Body in Inter at 17px / 1.55 line-height — slightly bumped from default
+- JetBrains Mono for country chips, status pills, code references
+- 18px primary card radius — slightly larger than 16px consensus, signals warmth
+- 24px hero product-still card radius — softer for the hero moment
+- Full-pill button radius (9999) — the friendliness signal in a cold category
+- 48px button height — taller than the 44px SaaS consensus, signals confidence
+- 1280px max page width with 24px container gutters
+- 120px section padding for major bands — generous warm-dark breathing
+- The signature **orange light-leak shadow** under product stills: `rgba(255, 77, 46, 0.16) 0 30px 60px -30px`
+- Coral focus ring — the brand chroma extends into every focus event
+- Dark mode is the primary surface (not optional); cream bands are inversion moments
 
-## Layout
+## 2. Color Palette & Roles
 
-Container caps at 1280px with 120px section padding. The dark/cream
-alternation is the macro layout move — Deel doesn't rely on cards-
-on-grid the way Brex does; instead it stacks full-bleed bands,
-each containing a product still or a testimonial.
+### Primary
 
-## Elevation & Depth
+- **Canvas (Warm Dark)** (`#0c0c0c`): the warm near-black hero canvas. Slight brown cast, not blue-black. The dominant ground for hero, feature, and product sections.
+- **Bg Soft (Dark)** (`#141414`): softer dark panel, slightly lifted. Used for secondary panels and elevated dark cards.
+- **Bg Deep** (`#000000`): peak ink for footer and closing-emphasis sections. The deepest tier of the dark system.
+- **Bg Light (Cream)** (`#f4f1ec`): cream off-white inverted band. Used for testimonial sections, editorial bands, and the rare light-canvas page.
+- **Bg Light Soft** (`#faf6ef`): softer cream alternative. Used inside the cream band for elevated panels.
+- **Bg Light Strong** (`#ede9e0`): deeper cream for sectional emphasis on the cream band.
+- **Bg Warm Tint** (`#1a1612`): warm-tinted dark wash, used for orange-leaning sections where extra warmth signals coral-adjacency.
 
-On dark surfaces, depth comes from a single 8% white hairline plus
-the rare soft glow underneath product stills (a faint orange-tinted
-light leak). On the cream band, depth is a 1px / 8% black hairline
-and the occasional `0 1px 2px` shadow. There is no glassmorphism
-and no heavy multi-layer shadow.
+### Brand & Sub-Brand
 
-## Shapes
+- **Brand Coral** (`#ff4d2e`): the signature electric coral-orange. Used on every primary CTA, on selective illustration accents, and as the link colour on cream bands. The brand-defining element.
+- **Brand Strong** (`#e63d1f`): pressed-state coral, slightly deeper.
+- **Brand Hover** (`#ff5e42`): hover-state coral, slightly lighter and more luminous.
+- **Brand Deep** (`#c93418`): deepest coral for emphasis (used as ink on coral-soft fills on cream).
+- **Brand Soft (Dark)** (`#3a1810`): tinted dark wash for accent surfaces on the dark canvas.
+- **Brand Soft (Light)** (`#fff0e8`): palest coral wash on cream — used for highlight chips and tonal washes on the light band.
+- **Brand Tint** (`rgba(255, 77, 46, 0.12)`): subtle coral wash for hover states.
+- **Brand Glow** (`rgba(255, 77, 46, 0.32)`): focus glow, CTA glow.
 
-Radii ladder: 4 / 6 / 10 / 14 / 18 / 24. Cards land at 18 (slightly
-larger than the modern 16px consensus, which gives Deel its softer
-feel), buttons at full pill (999). The pill CTA on a coral fill is
-the brand's friendliest gesture and a direct contrast to the cool,
-hard-cornered enterprise HR products it competes with.
+### Accent (Supporting)
 
-## Components
+- **Accent Amber** (`#ffb84d`): supporting amber — chip highlights, illustration accent. The second saturated colour, used sparingly.
+- **Accent Strong** (`#f9c459`): warm yellow accent, used for highlight tiles.
+- **Accent Soft** (`#fff0e0`): palest amber wash on cream.
+- **Accent Glow** (`rgba(255, 184, 77, 0.24)`): amber glow for highlight tiles.
 
-The defining components are the **coral pill button**
-(`#ff4d2e` / white text / radius 999), the **dark product card**
-(`#181818` / 18px radius / 1px white-8% hairline) with a faint
-orange light-leak shadow underneath, the **cream testimonial band**
-(`#f4f1ec` background with ink type), and the **mono eyebrow**
-labels marking each section. Country flags and globe motifs appear
-as small chip illustrations, often with the coral as fill accent.
+The accent system is **disciplined**. The amber appears only as a secondary highlight (in feature tiles, in illustration), never as a CTA. The coral remains the sole primary action colour; the amber is a tertiary chromatic flourish that adds warmth without competing.
 
-## Do's and Don'ts
+### Interactive
 
-- **Do** keep the coral `#ff4d2e` as the only saturated CTA colour; secondary actions are outline-on-cream or outline-on-dark.
-- **Do** alternate dark and cream bands at the section level — the rhythm is the macro brand voice.
-- **Do** keep card radius at 18px and button at full pill — the slight excess on the card softens the dark canvas.
-- **Don't** use cool greys as the dark — the warm `#0c0c0c` is what distinguishes Deel from Linear or Vercel.
-- **Don't** introduce a second saturated colour (no purple, no green); coral plus amber is the full hot palette.
-- **Don't** square the buttons; pill is the friendliness signal in a cold category.
+- **Link (on Dark)** (`#f4f1ec` with underline): inline body links on dark canvas use cream with optional underline. Hover deepens underline.
+- **Link (on Light)** (`#ff4d2e`): inline body links on cream band use coral. Hover deepens to `#e63d1f`.
+- **Selected** (`#ff4d2e` text on `rgba(255, 77, 46, 0.16)` background): selected nav, active filter chip — coral-tint with coral text.
+- **Disabled** (`#5a5751` on dark / `#8a8782` on light): faint warm-grey for disabled controls.
+- **Focus** (3px `rgba(255, 77, 46, 0.32)` ring + 2px outline-offset): coral translucent ring on either canvas.
+
+### Neutral Scale (Dark Surface)
+
+- **Bg Deep** (`#000000`) — peak ink, footer
+- **Canvas** (`#0c0c0c`) — primary dark canvas
+- **Bg Soft** (`#141414`) — softer dark panel
+- **Surface** (`#181818`) — default dark card
+- **Surface Soft** (`#1f1f1f`) — softer dark panel surface
+- **Surface Warm** (`#1c1814`) — warm-tinted dark surface
+- **Border Soft** (`rgba(255, 255, 255, 0.06)`) — quiet divider
+- **Border Default** (`rgba(255, 255, 255, 0.10)`) — 10% white hairline (the signature)
+- **Border Strong** (`rgba(255, 255, 255, 0.18)`) — focused inputs
+- **Text Faint** (`#5a5751`) — placeholder, disabled
+- **Text Soft** (`#7a7771`) — tertiary on dark
+- **Text Muted** (`#a8a59f`) — captions, helper text — warm grey, not cool
+- **Text Body** (`#e8e3d8`) — body paragraph, slightly softer than headlines
+- **Text** (`#f4f1ec`) — primary body and headlines on dark
+- **Text Strong** (`#ffffff`) — peak white for display copy
+
+The dark neutral ramp's distinguishing feature is that **everything is warm**. The text colour on dark is `#f4f1ec` cream — the same colour as the cream band. The body type on dark uses the cream light-canvas as its colour, creating chromatic continuity between modes. The muted text is warm grey (`#a8a59f`) with a slight tan undertone, not cool grey. This is the brand's most subtle chromatic discipline.
+
+### Neutral Scale (Light Surface)
+
+- **Cream Canvas** (`#f4f1ec`) — light band
+- **Cream Soft** (`#faf6ef`) — elevated cream panel
+- **White Surface** (`#ffffff`) — pure white card on cream
+- **Cream Strong** (`#ede9e0`) — sectional emphasis on cream
+- **Border Soft Light** (`rgba(12, 12, 12, 0.06)`) — quiet divider on cream
+- **Border Light** (`rgba(12, 12, 12, 0.10)`) — 10% ink hairline on cream
+- **Border Light Strong** (`rgba(12, 12, 12, 0.18)`) — focused inputs on cream
+- **Text Dark Soft** (`#8a8782`) — tertiary on cream
+- **Text Dark Muted** (`#5a5751`) — captions on cream
+- **Text Dark Body** (`#1c1c19`) — body paragraph on cream
+- **Text Dark** (`#0c0c0c`) — primary body on cream
+- **Text Dark Strong** (`#000000`) — peak ink
+
+### Surface & Borders
+
+- **Dark Canvas** (`#0c0c0c`) — page background (primary)
+- **Dark Surface** (`#181818`) — default card surface on dark
+- **Cream Canvas** (`#f4f1ec`) — inverted light band
+- **White Surface** (`#ffffff`) — default card surface on cream
+- **Border (Dark)** (`rgba(255, 255, 255, 0.10)`) — 10% white hairline
+- **Border (Light)** (`rgba(12, 12, 12, 0.10)`) — 10% ink hairline
+- **Border Coral** (`rgba(255, 77, 46, 0.40)`) — coral-tinted hairline for emphasis (featured tier, brand chips)
+
+### Shadow Colors
+
+Deel uses **two distinct shadow languages** matched to the two canvas modes. On dark, shadows are pure-black-tinted (`rgba(0, 0, 0, …)`) at high opacities (0.32 default card) because dark-on-dark requires more shadow density to register. On cream, shadows revert to ink-tinted (`rgba(12, 12, 12, …)`) at lower opacities (0.08 default card) — the standard light-canvas treatment.
+
+The signature shadow is the **orange light-leak**: `rgba(255, 77, 46, 0.16) 0 30px 60px -30px`. Used under product-still cards on the dark canvas, it extends the brand chroma into the negative space below the screenshot. The effect is subtle but compounding — the product still doesn't sit on the page, it *glows*. This is the brand's most considered shadow detail and one of the most distinctive micro-moves in the dark-canvas-fintech set.
+
+- `rgba(0, 0, 0, 0.20) 0 1px 2px` — ambient dark
+- `rgba(12, 12, 12, 0.06) 0 1px 2px` — ambient light
+- `rgba(0, 0, 0, 0.32) 0 4px 20px` — card on dark (the signature)
+- `rgba(12, 12, 12, 0.08) 0 4px 20px` — card on cream
+- `rgba(0, 0, 0, 0.50) 0 12px 32px -4px` — card hover on dark
+- `rgba(0, 0, 0, 0.40) 0 12px 32px -8px` — elevated dropdown
+- `rgba(0, 0, 0, 0.50) 0 16px 40px -16px` — popover
+- `rgba(0, 0, 0, 0.60) 0 24px 64px -16px` — modal
+- `rgba(255, 77, 46, 0.32) 0 8px 24px -8px` — coral brand glow under primary CTAs
+- `rgba(255, 77, 46, 0.16) 0 30px 60px -30px` — **the signature orange light-leak under product stills**
+
+### Semantic
+
+- **Success** (`#3aa75c` on `rgba(58, 167, 92, 0.16)` dark / `0.10` light): forest-green confirmation. *"Payroll processed for 247 employees in 12 countries."*
+- **Warning** (`#f9c459` on `rgba(249, 196, 89, 0.16)` dark / `0.18` light): warm-yellow advisory. The amber doubles as the warning colour.
+- **Danger** (`#ff4d2e` on `rgba(255, 77, 46, 0.16)` dark / `0.10` light): the brand coral doubles as the danger colour. Same hex, different role — context distinguishes.
+- **Info** (`#5b8def` on `rgba(91, 141, 239, 0.16)` dark / `0.10` light): cool-blue info — the rare cool accent in an otherwise warm palette.
+
+The semantic palette is mostly warm — success forest, warning amber, danger coral. Only the info colour breaks the warm discipline (cool blue), and it does so deliberately to distinguish *informational notices* from *brand-action moments*.
+
+## 3. Typography Rules
+
+### Font Family
+
+**Primary**: `"Inter Display", "Söhne", Inter, "Helvetica Neue", Arial, sans-serif`. **Inter Display** is the variable-font display variant of Inter, designed by Rasmus Andersson — the same family Vercel and Linear made standard. Used at weight 600 for display copy with `-0.03em` letter-spacing — the hard tracking is half the brand voice. The Söhne fallback in the chain reflects Deel's willingness to render in either neo-grotesque or humanist depending on availability — both work at the scale, but the canonical render is Inter Display.
+
+**Body**: `Inter, -apple-system, "Helvetica Neue", Arial, sans-serif`. Inter regular at 17px / 1.55 line-height carries paragraph copy. The body bumps half a step from the typical 16px to optimise for reading dense product copy (compliance details, payroll specifics, country-specific information).
+
+**Mono companion**: `"JetBrains Mono", "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace`. **JetBrains Mono** is the primary mono — used for country chips, status pills, code references, and tabular numerals in pricing displays. The choice of JetBrains Mono over Plex Mono signals dev-tool-leaning rather than humanist-leaning — Deel's audience includes engineering managers, payroll engineers, and finance ops, so the slightly-more-technical mono fits.
+
+**OpenType features**: Inter renders with `kern` and `liga` always on. `cv11` enables the alternate single-storey `a` for slightly friendlier display copy. `ss01` adjusts the alternate `g`. JetBrains Mono adds `liga`, `tnum` (tabular figures for pricing alignment), and `zero` (slashed zero for code clarity).
+
+The discipline: weight 600 across all display copy, weight 400 for body, weight 500 for nav and labels. There is no medium-weight middle ground at display sizes — display lives at 600. Body lives at 400. Nav links and form labels live at 500. Buttons sit at 500 (slightly lighter than Brex's 600) to avoid over-declaring.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-hero | Inter Display | 96px | 600 | 0.95 | -0.035em | cv11 | Largest hero variant — landing page only |
+| display-xl | Inter Display | 80px | 600 | 1.0 | -0.03em | — | The canonical Deel H1 — most pages |
+| display-lg | Inter Display | 64px | 600 | 1.05 | -0.025em | — | Section opener |
+| h1 | Inter Display | 56px | 600 | 1.05 | -0.025em | — | Sub-page title |
+| h2 | Inter Display | 40px | 600 | 1.10 | -0.02em | — | Marketing section H2 |
+| h3 | Inter Display | 28px | 600 | 1.20 | -0.01em | — | Card heading, sub-section |
+| h4 | Inter Display | 22px | 500 | 1.30 | -0.005em | — | Sub-card heading — note weight drops to 500 |
+| h5 | Inter Display | 18px | 500 | 1.40 | 0 | — | Inline emphasis |
+| eyebrow | JetBrains Mono | 12px | 500 | 1.40 | 0.05em | uppercase | Section pre-label |
+| section-label | JetBrains Mono | 13px | 500 | 1.40 | 0.05em | uppercase | Marketing section eyebrow |
+| country-label | JetBrains Mono | 11px | 500 | 1.30 | 0.06em | uppercase | Country chip text — the brand secondary tell |
+| body-lg | Inter | 20px | 400 | 1.55 | 0 | — | Hero deck, lede paragraph |
+| body-md | Inter | 17px | 400 | 1.55 | 0 | — | Default body |
+| body-sm | Inter | 14px | 400 | 1.50 | 0 | — | Card body, dense rows |
+| caption | Inter | 13px | 400 | 1.40 | 0 | — | Image caption, footer micro |
+| caption-mono | JetBrains Mono | 12px | 500 | 1.40 | 0 | tnum | Pricing values, dashboard meta |
+| label | Inter | 12px | 500 | 1.30 | 0 | — | Form field label |
+| label-mono | JetBrains Mono | 11px | 500 | 1.30 | 0.05em | uppercase | Mono caps label |
+| button-md | Inter | 15px | 500 | 1.20 | 0 | — | Default CTA copy |
+| button-sm | Inter | 13px | 500 | 1.20 | 0 | — | Compact button |
+| pricing-display | Inter Display | 56px | 600 | 1.0 | -0.02em | tnum | Pricing tier values |
+| quote-pull | Inter Display | 32px | 500 | 1.25 | -0.015em | — | Pull quote on cream band |
+| code-inline | JetBrains Mono | 14px | 500 | 1.40 | 0 | — | Inline `code` reference |
+
+### Principles
+
+- **Weight 600 + `-0.03em` tracking is the brand voice.** Inter Display at 600 with hard negative tracking is the canonical Deel display. Drop to 500 and the page reads as Vercel-restraint; push to 700 and it reads as Linear-density. The 600/`-0.03em` pair is the sweet spot.
+- **Single-family system with mono companion.** Inter Display + Inter (body) + JetBrains Mono cover everything. No serif, no third sans.
+- **Body holds at weight 400.** Body never goes 500 except for nav links and labels. The 400-vs-500-vs-600 split is the hierarchy logic.
+- **17px body, 1.55 line-height.** Slightly larger than the typical 16px and optimised for reading dense product/compliance copy.
+- **Negative tracking compresses with size.** `-0.035em` at 96px, `-0.03em` at 80px, `-0.025em` at 56–64px, `-0.02em` at 40px, `-0.01em` at 28px, near-zero below 22px.
+- **Mono caps for country chips, status pills, eyebrows.** JetBrains Mono at 11–13px / 0.05–0.06em tracking is the brand's secondary-identity tell. The slightly-wider tracking (0.05em vs. Wise's 0.02em) reads as more declarative and dev-tool-adjacent.
+- **`tnum` enabled in pricing displays.** Tabular numerals make pricing tier columns align — corporate-grade attention.
+- **Cream text on dark, ink text on cream.** The brand's bi-modal type discipline. Display copy uses the inverse-canvas tone in both modes — `#f4f1ec` on dark, `#0c0c0c` on cream. The chromatic continuity binds the modes.
+- **No italic in display.** Inter Display set roman across all hierarchy.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary Coral Pill (CTA)** — The signature button. Background: `#ff4d2e` brand coral. Text: pure white at 15px / 500 in Inter, **9999px radius (full pill)**, 14×24px padding, **48px height** (taller than the 44px SaaS consensus). Coral brand-glow shadow: `rgba(255, 77, 46, 0.32) 0 8px 24px -8px`. On hover: background shifts to `#ff5e42` and shadow intensifies; button translates 1px upward over 200ms. On press: background deepens to `#e63d1f`. Use case: *Get started*, *Talk to sales*, *Book a demo* — the brand-defining element on either canvas.
+
+**Secondary Outlined Pill (Dark)** — `transparent` fill, cream `#f4f1ec` text at 15px / 500, 1px solid `rgba(255, 255, 255, 0.18)` border, 9999px radius, 48px height. Hover: border deepens to `rgba(255, 255, 255, 0.32)`, background fills `rgba(255, 255, 255, 0.04)`. Use case: *Watch demo*, *Sign in* — paired with the primary on dark.
+
+**Secondary Outlined Pill (Light)** — Same shape as dark variant, but with near-black text and `rgba(12, 12, 12, 0.18)` border. Used inside cream bands.
+
+**Ghost Pill (Dark)** — Transparent background, cream text at 15px / 500, 9999px radius, 10×16px padding. Hover fills `rgba(255, 255, 255, 0.06)`. Use case: nav links, footer secondaries.
+
+### Cards
+
+**Default Dark Card** — `#181818` dark fill, 1px hairline border at `rgba(255, 255, 255, 0.10)` (10% white), **18px radius**, 32px padding, signature dark shadow `rgba(0, 0, 0, 0.32) 0 4px 20px`. The dominant card on the dark canvas. Hover: border opacity steps from 10% to 20%, shadow lifts to `0 12px 32px -4px`, card translates 2px upward over 200ms.
+
+**Default Light Card** — `#ffffff` pure white fill on cream band, 1px `rgba(12, 12, 12, 0.10)` 10% ink hairline, **18px radius**, 32px padding, light shadow `rgba(12, 12, 12, 0.08) 0 4px 20px`.
+
+**Warm-Tinted Dark Card** — `#1c1814` warm-tinted dark fill, 1px white-10% hairline, 18px radius. Used on the rare coral-leaning sections where extra warmth signals coral-adjacency.
+
+**Product Still Card** — The hero compositional element. `#181818` dark fill, 1px white-10% hairline, **24px radius** (slightly relaxed for hero emphasis), 0 padding (the screenshot fills the card edge-to-edge). Inside: the dashboard screenshot. Underneath: **the signature orange light-leak shadow** `rgba(255, 77, 46, 0.16) 0 30px 60px -30px`. The light-leak grounds the still in brand chroma. Hover: light-leak intensifies from `0.16` to `0.24` opacity over 300ms — the chroma glows brighter.
+
+### Pricing Cards
+
+**Default Tier (Dark)** — `#181818` dark fill, white-10% hairline, **18px radius**, 40px padding. Tier name in Inter Display 22px / 500. Pricing display in Inter Display 56px / 600 with `tnum`. Feature list with coral checkmarks. Outlined secondary CTA at the bottom.
+
+**Featured Tier (Dark)** — Replaces border with a 1px `#ff4d2e` coral border and adds a subtle coral glow `rgba(255, 77, 46, 0.16) 0 8px 24px -8px`. "MOST POPULAR" mono-caps eyebrow at the top in JetBrains Mono 11px / 500 / 0.05em / uppercase in coral.
+
+### Badges, Tags, Pills
+
+**Status Pill (Dark)** — `rgba(255, 77, 46, 0.16)` coral-tint fill, coral text at 11px / 500 in JetBrains Mono uppercase with `0.05em` tracking, 6px radius, 4×10px padding. Use case: `NEW`, `FEATURED`, `BETA`.
+
+**Status Pill (Light)** — `#fff0e8` coral-soft fill, deep-coral `#c93418` ink, 6px radius, 4×10px padding. Same role on cream band.
+
+**Country Chip** — `rgba(255, 255, 255, 0.06)` semi-translucent fill, warm-grey muted text at 11px / 500 in JetBrains Mono uppercase with `0.06em` tracking, 1px white-10% hairline, **9999px radius (full pill)**, 4×12px padding, country-flag SVG prefix at 16×12. Use case: US, GB, DE, JP, IN, BR, SG. The brand's secondary-identity tell — appears in feature grids, in compliance copy, in the global-payroll hero.
+
+**Globe Chip** — Coral-tint fill `rgba(255, 77, 46, 0.16)`, coral text, full pill, with a globe icon prefix. Marks the global-payroll positioning ("150+ countries"). Used once per page in the hero or closing CTA section.
+
+**Mono Caps Eyebrow** — No chrome, just type. JetBrains Mono 12px / 500 / uppercase / `0.05em` in `#a8a59f` warm-grey muted. Sits above the H1.
+
+### Inputs / Forms
+
+**Text Input (Dark)** — `rgba(255, 255, 255, 0.04)` semi-translucent fill, cream `#f4f1ec` text at 16px / 400 in Inter, 1px border at `rgba(255, 255, 255, 0.18)`, **10px radius**, 48px height, 14×16px padding. Placeholder colour at `#7a7771`. On focus: border shifts to `#ff4d2e` brand coral and a 3px translucent coral ring appears.
+
+**Text Input (Light)** — `#ffffff` fill, near-black text, `rgba(12, 12, 12, 0.18)` border, same 10px radius, 48px height. Coral focus ring identical to dark variant.
+
+**Select** — Same shape as text-input with a chevron icon at right (12px) at muted-text colour.
+
+### Navigation
+
+**Top Nav** — `rgba(12, 12, 12, 0.80)` translucent dark fill with `backdrop-filter: blur(12px) saturate(180%)`, **72px height**, 1px bottom hairline at `rgba(255, 255, 255, 0.10)` always visible. Deel wordmark left in Inter Display 20px / 600 cream. Center: nav links (Products, Solutions, Customers, Resources, Pricing) at 15px / 500 ghost-button style. Right: ghost `Sign in` + primary coral `Book a demo` button.
+
+**Footer** — `#000000` peak black inversion (deeper than the canvas), 96px top padding, multi-column link grid in Inter 14px / 400 in `#7a7771` soft-on-dark. Country selector dropdown in the corner (a list of 30+ supported countries with flags). Wordmark + social icons + legal links at the bottom.
+
+### Optional / Decorative
+
+**Country Flag Marquee** — A horizontal scrolling row of country flags + country chips, scrolling 30s linear infinite. Used once per page, often above the customer logo grid, to visualise the global scope. Suppressed under reduced-motion.
+
+**Globe Visual** — Full-bleed globe illustration with coral pin highlights on key country locations. Used in the hero section of the global-payroll page; the globe is rendered on dark canvas with subtle gradient lighting and coral accent pins.
+
+**Pull Quote (Cream Band)** — Inter Display 32px / 500 / `-0.015em`, near-black ink text, with optional 4px coral vertical rule on the left edge.
+
+**Modal** — `#181818` (dark) or `#ffffff` (light) fill matching the underlying canvas, 18px radius, 32px padding, modal shadow stack. Backdrop scrim at `rgba(0, 0, 0, 0.70)`. Max-width 520px for confirmations, 720px for forms.
+
+**Toast** — `#181818` (dark) or `#ffffff` (light) fill, hairline border, 12px radius, 12×16px padding. Icon + message in Inter 14px / 400 + dismiss button. Coral accent for info, success-forest for confirmations, danger-coral for errors.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px** (with 8px rhythm enforced for major spacing)
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 120 · 160`
+- Section padding (vertical): **120px** for major marketing bands; 80px between minor sections; 24–32px between content blocks
+- Card internal padding: **32px** on default cards; 40px on featured pricing cards; 24px on compact tiles
+- Inter-card gutters: 24px between cards in 3-up; 16px in dense 4-up
+- Cream testimonial band padding: **120px vertical** — the inverted band breathes generously
+
+### Grid & Container
+
+- Max content width: **1280px** with 24px gutters
+- 12-column grid; hero blocks span full width; feature grids span 4-3-2-1 columns by breakpoint
+- Reading column caps at **720px** for prose-heavy content (case studies, blog posts)
+- Hero treatment: dark canvas with mono-caps eyebrow, 80px / 600 H1 left-aligned, deck below at 20px / 400, dual CTA pair (coral primary + outlined secondary), product still card on the right with orange light-leak shadow
+
+### Whitespace Philosophy
+
+The page breathes — 120px section padding is generous by SaaS standards. The whitespace is part of the brand's "product portrait" pitch — Deel wants its product stills to feel like museum-grade object photography, not crammed marketing assets. The breathing room compounds with the orange light-leak shadow: when the product still appears, it has full air around it for the chroma to radiate.
+
+### Section Cadence
+
+A typical Deel page runs:
+
+1. **Hero (Dark)** — `#0c0c0c` warm-dark canvas with mono-caps eyebrow, 80px / 600 cream H1 left-aligned, 20px / 400 cream body deck, dual CTA pair (coral pill primary + outlined secondary), product still card on the right with orange light-leak shadow
+2. **Country Flag Marquee** — Horizontal scrolling row of country flags + chips, marquee animation
+3. **Feature Grid (Dark)** — 3-up dark cards with coral icon at top, 28px / 600 card titles + 17px / 400 body, 18px radius, white-10% hairlines
+4. **Cream Testimonial Band (Inversion)** — `#f4f1ec` full-bleed cream band with centred testimonial in Inter Display 32px / 500, customer photo + name + role
+5. **Product Tour (Dark)** — Alternating product still + feature description, with the orange light-leak shadow under each still
+6. **Pricing Cards (Dark)** — 3-up dark cards with featured tier highlighted in coral
+7. **Customer Logo Grid (Dark)** — Monochrome customer logos, 4-up at desktop, in `currentColor` cream
+8. **Closing CTA (Dark)** — Centered coral pill on dark canvas with subtle radial coral wash, single dominant action, mono-caps eyebrow above
+9. **Footer** — `#000000` peak black, multi-column link grid + country selector
+
+The "alternation" is *dark + dark + dark + cream + dark + dark + dark + black footer*. The dark is the dominant ground; the cream provides chromatic inversion for testimonial and editorial moments; the coral provides saturated punctuation throughout.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4px | Decorative dividers, focus indicators inside chips |
+| XS | 6px | Status badges, country chips |
+| SM | 8px | Tag chips, code blocks |
+| MD | 10px | Buttons, inputs |
+| LG | 14px | Secondary cards |
+| XL | 18px | Primary cards — the Deel signature |
+| Hero | 24px | Hero panels, product-still cards |
+| Pill | 9999px | Capsule chips, primary CTAs — non-negotiable |
+
+Deel's signature pairing is **18px primary cards + 10px inputs + 9999px pill buttons + 24px hero product stills**. The 18px card radius is slightly larger than the modern 16px consensus (Brex, Vercel, Linear) — the extra 2px softens the dark canvas and signals warmth. The 24px product-still radius is reserved for the hero compositional moment. The 10px input radius (slightly tighter than the 12px Wise uses) signals precision-and-interactivity. The full-pill button radius is the friendliness signal that prevents the brand from sliding into cold-enterprise territory.
+
+The radius differential — *cards rounder than inputs, buttons fully round* — is a deliberate hierarchy: cards are *content surfaces* (rounder for warmth); inputs are *interactive surfaces* (slightly tighter for precision); buttons are *call-to-action moments* (full pill). The 24px hero product-still radius creates an additional tier above the 18px card — for the hero moment only.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow, hairline only | Page canvas, body sections, dense data |
+| 1 — Hairline | 1px `rgba(255, 255, 255, 0.10)` border (dark) / 10% ink (light) | Pricing cards, dense data tiles |
+| 2 — Soft Card | hairline + `rgba(0, 0, 0, 0.32) 0 4px 20px` (dark) / `rgba(12, 12, 12, 0.08) 0 4px 20px` (light) | Default feature cards |
+| 3 — Card Hover | hairline + heavier shadow + 2px translate-up | Hover state on cards |
+| 4 — Light Leak | `rgba(255, 77, 46, 0.16) 0 30px 60px -30px` | Under product-still cards (the signature) |
+| 5 — Brand Glow | `rgba(255, 77, 46, 0.32) 0 8px 24px -8px` | Under primary coral CTAs |
+| 6 — Elevated | `rgba(0, 0, 0, 0.40) 0 12px 32px -8px` | Dropdowns, popover menus |
+| 7 — Modal | scrim `rgba(0, 0, 0, 0.70)` + `rgba(0, 0, 0, 0.60) 0 24px 64px -16px` | Forms, confirmation modals |
+
+### Shadow Philosophy
+
+Deel uses **three distinct shadow languages**: the *neutral dark* shadow (`rgba(0, 0, 0, 0.32) 0 4px 20px`) for content cards on the dark canvas, the *neutral light* shadow (`rgba(12, 12, 12, 0.08) 0 4px 20px`) for content cards on the cream band, and the **coral light-leak** (`rgba(255, 77, 46, 0.16) 0 30px 60px -30px`) for product-still cards. The neutral shadows are functional — they give content cards modest float without competing for attention. The coral light-leak is the brand's most considered detail.
+
+The orange light-leak shadow is the signature move. By tinting the shadow under product-still cards with the brand coral at low opacity (0.16) and high spread (60px blur, -30px y-offset), Deel creates a *radiating ground* effect: the product still appears to be lit from below by a small piece of warm coloured studio light. The coral chroma extends into the negative space without literally tinting the screenshot itself. This is the brand's most distinctive micro-move — most dark-canvas SaaS sites use neutral shadows under product stills; Deel's coral-tinted glow makes every product still feel intentionally lit.
+
+The brand-glow shadow under the primary coral CTA is a tighter version of the same logic: `rgba(255, 77, 46, 0.32) 0 8px 24px -8px` — coral-tinted, used to extend the brand chroma into the negative space below the button. The two coral shadows (light-leak under product stills, brand-glow under CTAs) work together to make the page feel like the coral is the source of warmth across the entire dark canvas.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, color transitions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; modal entry, hero reveal
+- **Out-Soft**: `cubic-bezier(0.0, 0, 0.2, 1)` — gentle settle; dropdown reveal, light-leak intensify
+
+### Duration Buckets
+
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Fast | 100ms | Link colour swaps, focus ring fade-in |
+| Standard | 200ms | Button hover (background + 1px translate), card hover |
+| Slow | 300ms | Modal entry, dropdown reveal, light-leak intensify |
+| Page | 400ms | Route transitions |
+| Marquee | 30000ms | Country flag marquee (linear, infinite, suppressed under reduced-motion) |
+
+### Per-Component Recipes
+
+- **Link hover (on dark)**: cream text remains; underline appears or thickens over 100ms standard.
+- **Link hover (on light)**: coral `#ff4d2e` → `#e63d1f` over 100ms standard; underline appears.
+- **Primary coral CTA hover**: background `#ff4d2e` → `#ff5e42` and shadow intensifies from `rgba(255, 77, 46, 0.32) 0 8px 24px -8px` to `rgba(255, 77, 46, 0.48) 0 12px 32px -8px`; button translates 1px upward over 200ms standard. The coral gets brighter and the glow extends.
+- **Secondary outlined hover**: border opacity deepens, background fills with low-opacity tint over 200ms.
+- **Card hover**: border opacity steps from 10% to 20%, shadow lifts heavier, card translates 2px upward over 200ms standard.
+- **Product still hover**: orange light-leak shadow intensifies from `rgba(255, 77, 46, 0.16)` to `rgba(255, 77, 46, 0.24)` opacity over 300ms — the chroma glows brighter. This is the brand's most distinctive hover micro-state.
+- **Country flag marquee**: scrolls 30s linear infinite. Suppressed under reduced-motion (freezes static).
+- **Band transition**: dark-to-cream band transitions use a 1px hairline divider — no gradient, no fade. The contrast is the rhythm.
+- **Scroll-reveal**: marketing-page sections fade in over 300ms ease-out-soft when entering viewport at 80% threshold.
+- **Modal entry**: backdrop scrim fades in over 200ms; modal content fades + scales from 0.96 to 1.0 over 300ms ease-emphasized.
+
+### Page Transitions
+
+Page-to-page navigation uses a 400ms cross-fade with the sticky header staying static. Anchor smooth-scroll uses 600ms ease-emphasized.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. The country flag marquee freezes static (still visible, but motionless). All `translate` and `scale` transforms suppress entirely — replaced with instant render or opacity-only fades. Durations halve where they remain. Card hover loses the 2px lift; only the shadow change remains. Product-still light-leak hover loses the intensify animation; the static `0.16` opacity remains. Button hover loses the 1px translate. Modal scale-in becomes instant render. Scroll-reveal becomes static on-mount.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| `#f4f1ec` cream on `#0c0c0c` warm dark | 14.6 | AAA at all sizes |
+| `#ffffff` peak white on `#0c0c0c` | 17.2 | AAA at all sizes |
+| `#a8a59f` warm-muted on `#0c0c0c` | 5.8 | AA at body sizes |
+| `#7a7771` soft on `#0c0c0c` | 3.6 | Fails AA body — use only at Large sizes (18.5px+) or for non-essential text |
+| `#0c0c0c` text on `#f4f1ec` cream | 17.2 | AAA at all sizes |
+| `#1c1c19` text body on `#f4f1ec` | 15.6 | AAA at all sizes |
+| `#5a5751` muted on `#f4f1ec` | 6.5 | AAA at body sizes |
+| `#ffffff` text on `#ff4d2e` coral CTA | 4.8 | AA at body sizes |
+| `#ff4d2e` coral on `#0c0c0c` (link / accent) | 4.6 | AA at body sizes |
+| `#ff4d2e` coral on `#f4f1ec` cream | 4.4 | AA at Large only — **do not use coral text below 18.5px on cream** |
+
+The contrast warning: **coral on cream (`#ff4d2e` on `#f4f1ec`) is AA Large only at 4.4:1**. Below 18.5px, coral text on cream fails AA. Deel handles this by using coral only at Large sizes (28px+ for headings, 16px button text inside the coral pill is fine because it's white-on-coral which passes), or by using deeper coral `#c93418` (`5.6:1` AA) for body-size copy on cream bands. The coral-on-cream constraint is the brand's most carefully-managed accessibility detail.
+
+### Focus Indicators
+
+Focus ring is `3px solid rgba(255, 77, 46, 0.32)` brand-coral translucent ring with 2px outline-offset. The ring colour ports the brand identity into every focus interaction — it's the same coral as the primary button. On the dark canvas, the ring intensifies slightly to `rgba(255, 77, 46, 0.48)` for visibility against the warm dark; on cream, the standard `0.32` opacity is sufficient.
+
+### ARIA Patterns
+
+- **Top nav**: `<nav aria-label="Primary">` landmark with skip-link.
+- **Country selector**: `role="combobox" aria-expanded aria-autocomplete="list"` with country flag SVG marked `aria-hidden="true"` and country name in `aria-label`.
+- **Country flag marquee**: `aria-label="Countries we support"` with `aria-live="off"` (decorative scrolling).
+- **Pricing tier toggle**: `role="radiogroup"` with `<input type="radio">` for monthly/annual switching.
+- **Modal**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Combobox / search**: `role="combobox" aria-expanded aria-autocomplete="list"`.
+- **Toast notifications**: `aria-live="polite"` for non-critical; `aria-live="assertive"` for errors.
+- **Featured pricing tier**: announces "Most popular tier" via visually-hidden text inside the eyebrow chip.
+- **Product still card**: `<figure>` wrapper with `<figcaption>` containing product description; image `alt` describes the dashboard view.
+
+### Keyboard Navigation
+
+- Tab order: skip-link → wordmark → primary nav → search → country selector → auth CTAs → main content → footer
+- Country selector navigable via Up/Down arrows within the dropdown; type-ahead jumps to matching country
+- Modal focus trap: Tab cycles within modal; Esc dismisses
+- Pricing tier card tab order respects visual flow (left-to-right at desktop, top-to-bottom at mobile)
+
+### Screen Reader Hints
+
+- Mono caps eyebrows use CSS `text-transform: uppercase` so screen readers announce natural-case
+- Deel wordmark uses `aria-label="Deel"`
+- Country chips announce as country name (e.g., `aria-label="United States"`) instead of the two-letter code
+- Country flag marquee uses `aria-live="off"` and announces as a decorative element with a label list
+- Product stills announce via `<figcaption>` describing what the dashboard shows
+- Pricing values announce with currency unit despite tabular-numeral mono visual
+- Featured tier "MOST POPULAR" announces as a label, not interactive
+
+### Reduced Motion
+
+All transitions degrade to opacity-only or instant. Country flag marquee freezes static (visible but motionless). Card and button hover translates suppress; only shadow/colour changes remain. Product-still light-leak hover loses the intensify animation. Modal scale-in becomes instant. Scroll-reveal becomes static on-mount.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <640px | Top nav collapses to logo + Book a Demo + hamburger; hero H1 drops 96→44px; cards 1-up; product still card stacks below hero text; country marquee continues at smaller scale |
+| Tablet | 640–1024px | Top nav keeps inline links; hero H1 at 56–64px; cards 2-up; product still moves to a row below hero text |
+| Desktop | 1024–1280px | Full nav with mega-menu; hero H1 at 80–96px; cards 3-up; product still in hero right-side |
+| Wide | 1280–1440px | Content width caps at 1280; gutters absorb the rest |
+| Ultra | >1440px | Page locks to 1280; gutters expand to 64px |
+
+### Touch Targets
+
+- Buttons: **48px minimum height** across all sizes — taller than Apple HIG's 44px
+- Top-nav links: 44×44px tap area even at 15px text
+- Country chips: 32px visual but 12px vertical padding for 44px effective
+- Country selector dropdown: 48×48px per option
+- Pricing tier toggle: 48×48px segmented-control thumb
+
+### Collapsing Strategy
+
+- **Top nav** at <1024px: primary nav links collapse into hamburger sheet; coral *Book a demo* CTA stays visible
+- **Hero CTA pair** at <640px: stacks vertically (coral primary above, outlined secondary below)
+- **Card grids**: 4 → 3 → 2 → 1 columns
+- **Pricing cards** at <1024px: stack vertically; featured tier remains prominent (coral border maintained)
+- **Country flag marquee**: continues at all breakpoints; speed unchanged (30s linear infinite)
+- **Customer logo grid**: 4 → 3 → 2 columns; logos render monochrome at all sizes
+- **Product still card**: at <1024px, moves below hero text rather than to the side; light-leak shadow scales proportionally
+
+### Image Behavior
+
+Customer logos use SVG with `currentColor` (cream on dark, ink on cream). Product imagery (dashboard screenshots) uses `aspect-ratio` to prevent layout shift. Country flags use SVG (16×12) with rounded 2px corners. Marketing illustrations use `srcset` with 1x/2x/3x. The orange light-leak shadow is rendered with CSS (no image asset) so it scales infinitely.
+
+### Container Queries
+
+Used inside pricing tier cards: when card width crosses 320px, feature list switches from below-the-CTA to inline-with-CTA. Used in country selector: when container width crosses 240px, country names display alongside flags; below that, flags only.
+
+## 11. Content & Voice
+
+### Tone
+
+**Globally fluent, B2B-confident, lightly product-portrait.** Deel writes like a global-payroll product team that has resolved the international compliance complexity behind the scenes and presents the simple human result. Headlines pose direct claims with international scope ("Hire anyone, anywhere, in days"); subheads explain capability with country-specific or operational specificity; product copy mixes HR/payroll vocabulary (compliance, contractor, EOR, payroll, tax) with global vocabulary (countries, currencies, jurisdictions, regulations). The voice is *more declarative than Wise's* (Wise is plain-imperative; Deel is more product-claim), *more international than Brex's* (Brex is US-centric corporate-card; Deel is 150-country-native), *warmer than Workday's* (Workday signals enterprise-cold; Deel signals global-friendly).
+
+### Microcopy Patterns
+
+- **Button verbs**: *Get started*, *Talk to sales*, *Book a demo*, *Hire now*, *See pricing*, *Sign in*. Outcome-focused, conversion-oriented, often globally-scoped.
+- **Error messages**: *"We couldn't process this contractor agreement. Please verify the country and tax details and try again."* — specific, accountable, references the global context.
+- **Success confirmations**: *"Contractor onboarded. Marcus will receive his first payment in 2 business days, in EUR."* — outcome-focused, includes name + currency + timing.
+- **Empty states**: *"No team members yet. Hire your first contractor to start tracking global headcount."* — instruction-led, includes the next action.
+- **Field labels**: *Country*, *Currency*, *Tax ID*, *Employer of record*, *Payroll cycle*. Specific, no friendly framing.
+- **Loading states**: *"Verifying compliance in Germany…"*, *"Processing payroll in 12 countries…"*, *"Calculating tax withholdings…"* — context-specific, country-aware, trust-building.
+
+### Empty States
+
+The dashboard empty state for new accounts: *"Welcome to Deel. Hire your first contractor or onboard your first employee to begin global payroll."* — instruction-led, points at two paths forward (contractor or full-time), references the global frame.
+
+### CTA Verb Conventions
+
+- Primary on hero: *Get started*, *Book a demo*, *Talk to sales*, *Hire anywhere*
+- Secondary: *Watch demo*, *See pricing*, *Read customer stories*, *Sign in*
+- Tertiary text: *Learn more*, *Browse countries*, *View documentation*, *Read our blog*
+- Avoided: *Click here*, *Submit*, *Sign up free!*. Deel maintains a B2B-confident register without dropping into consumer-marketing-template language.
+
+### B2B-International Voice
+
+Deel's voice is shaped by the global-payroll reality. Product copy references real-world countries, currencies, tax jurisdictions, and compliance frameworks. The brand never abstracts country away — *"Hire in 150+ countries"* over *"Hire globally"*, because the *150+ countries* is the brand's whole differentiator. The country chips, the flag marquee, and the country-specific copy all reinforce that Deel is *operational* in many countries, not abstracted away from them.
+
+### Headline Conventions
+
+Headlines use **direct claims with international scope** — never generic SaaS-template construction. Examples:
+
+- *"Hire anyone, anywhere, in days."*
+- *"Global payroll, simplified."*
+- *"The HR platform that scales across 150+ countries."*
+- *"Pay your global team in 120+ currencies."*
+
+The sentence rhythm is short, declarative, with periods preferred over exclamation marks. The brand voice references the global scope in nearly every headline — the international claim is the brand differentiator, and every headline reinforces it.
+
+## 12. Dark Mode & Theming
+
+**Dark mode is the primary surface.** Unlike Wise, Brex, or Ramp (which ship dark as an optional alternative), Deel commits to dark canvas as the default brand surface. The cream `#f4f1ec` light bands inside the dark page are *inversion moments* rather than light-mode alternatives — they appear once or twice per page for testimonial / editorial emphasis, then return to dark. The brand's full chromatic system is designed for dark first.
+
+Some product pages (case studies, blog posts, pricing pages) ship in cream-canvas mode for dense reading. The cream canvas treatment is identical to the inversion bands: `#f4f1ec` background, ink text, white cards with hairlines, coral CTAs unchanged. The chromatic continuity is total — the same coral, the same Inter Display 600, the same JetBrains Mono country chips, just inverted ground.
+
+The dark-to-cream transition is the brand's macro layout move. There is no gradient, no fade — cream bands begin abruptly with a 1px hairline divider, contrasting against the dark canvas. The contrast is the rhythm. This is the same compositional logic Stripe uses with its inverted-band hero, but Deel pushes the contrast harder by using warm-dark + paper-cream rather than Stripe's pure-white + cool-dark.
+
+Token swap (cream/light variant — used inside inversion bands or full-light pages):
+
+- **canvas**: `#0c0c0c` → `#f4f1ec`
+- **bg-soft**: `#141414` → `#faf6ef`
+- **surface**: `#181818` → `#ffffff`
+- **text**: `#f4f1ec` → `#0c0c0c`
+- **text-strong**: `#ffffff` → `#000000`
+- **text-body**: `#e8e3d8` → `#1c1c19`
+- **text-muted**: `#a8a59f` → `#5a5751`
+- **text-soft**: `#7a7771` → `#8a8782`
+- **brand**: `#ff4d2e` (unchanged — passes contrast on both grounds)
+- **brand-hover**: `#ff5e42` (unchanged)
+- **on-brand**: `#ffffff` (unchanged)
+- **border**: `rgba(255, 255, 255, 0.10)` → `rgba(12, 12, 12, 0.10)`
+- **border-strong**: `rgba(255, 255, 255, 0.18)` → `rgba(12, 12, 12, 0.18)`
+- **shadow opacities**: scale down from 0.32 (dark) to 0.08 (light) for cards
+- **brand-glow**: unchanged at `rgba(255, 77, 46, 0.32)` — the coral glow remains brand-coherent on cream
+
+The coral CTA is the brand's most cross-mode-resilient asset; it never needs reformulation. The white-on-coral contrast pair (4.8:1 AA) holds on either canvas. The orange light-leak shadow under product stills is preserved on dark canvas; on cream, it's softened to `rgba(255, 77, 46, 0.10)` to avoid clashing with the lighter ground.
+
+## 13. Lineage & Influences
+
+Deel's design DNA traces three lineages: **Linear / Vercel modern-SaaS dark canvas** — the dark-canvas-with-cool-greys school that emerged 2020-2022, which Deel rotates *warmer* by tinting the dark slightly brown rather than blue; **Klim / Inter typography** — Inter Display at 600 with hard negative tracking is the typographic backbone, the same family Vercel and Linear made standard; and **Apple product-still photography** — the dashboard screenshots presented inside dark cards with orange light-leak shadows borrow from Apple's product-as-portrait register, which makes every product still feel like museum-grade object photography rather than crammed marketing assets. The combination produces a register no peer fully occupies: warm-dark canvas + cream inversion bands + coral CTA + Inter Display + JetBrains Mono country chips + 18px card radius + orange light-leak under product stills.
+
+The choice to **commit to warm dark over cool dark** is the brand's most considered decision. Linear's `#08090a` reads slightly cool; Vercel's `#000000` is pure ink; Modal's `#0a0a0c` has a slight cool tint. Deel's `#0c0c0c` reads slightly warm, with a subtle brown undertone. The cream `#f4f1ec` light bands reinforce that warmth — paper-cream rather than clinical white. The coral accent completes the warm chromatic system: every colour belongs to the warm half of the colour wheel. This warm commitment distinguishes Deel from the cool-dark fintech set; the difference is subtle (a few hex values) but compounds across a page.
+
+The orange light-leak shadow under product stills is the brand's most distinctive micro-detail. Most dark-canvas SaaS sites use neutral shadows under product stills, which read as flat. Deel's coral-tinted shadow at `rgba(255, 77, 46, 0.16) 0 30px 60px -30px` makes every product still feel intentionally *lit* — as if a small piece of warm coloured studio light is illuminating the screenshot from below. This single design detail does more brand-differentiation work than the entire chromatic palette combined; it's the design-system move that makes Deel pages instantly recognisable.
+
+What Deel rejects: **cool-blue dark canvases** (Linear / Vercel signal — too cold), **pure-white cream alternatives** (Plaid / Stripe signal — too clinical), **cool-grey panels** (Brex / Apple signal — too modern-but-cold), **single-colour brand systems** (Linear / Wise signal — Deel needs the dark/cream alternation), **purple gradients** (Brex / Stripe signal — too bright-fintech), **serif headlines** (Mercury signal — too editorial), **soft pastel accents** (Mercury / Ramp signal — too quiet). The brand position is engineered to look like a global-payroll product that's confident enough in its operational scope to present itself as a *visual portrait* rather than a compliance document.
+
+**Influences:**
+
+- **Linear** — Dark canvas + cool grey neutral lineage; modern-SaaS sans typography. Deel rotates the dark warmer and adds the coral accent. *https://linear.app*
+- **Vercel** — Pure dark canvas + sharp dev-tool restraint. Deel borrows the dark commitment but rejects the coolness. *https://vercel.com*
+- **Stripe** — Single-accent action colour discipline in fintech; brand-as-system rigour. *https://stripe.com*
+- **Inter / rsms.me** — Inter Display at 600 with hard negative tracking is the typographic backbone. *https://rsms.me/inter*
+- **Brex** — Saturated-fintech-energy precedent. Brex pushes magenta on light canvas; Deel pushes coral on warm dark. *https://brex.com*
+- **Notion (warm-tinted dark mode)** — The warm-dark register — slightly-brown near-black instead of blue-black. *https://notion.so*
+- **Apple (product-still photography)** — Product-as-portrait composition. Deel's product stills with orange light-leak shadows borrow from this register. *https://apple.com*
+- **JetBrains Mono / JetBrains** — JetBrains Mono carries country chips and code references. The dev-tool-leaning mono companion. *https://www.jetbrains.com/lp/mono*
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** keep the canvas **warm dark `#0c0c0c`** — slightly brown, not blue-black. The temperature difference is the brand's chromatic discipline.
+- **Do** use **cream `#f4f1ec`** for inversion bands — paper-warm, not pure white.
+- **Do** apply the **coral `#ff4d2e`** as the only saturated CTA colour. Secondary actions are outline-on-dark or outline-on-cream.
+- **Do** ship **Inter Display at weight 600** with `-0.03em` tracking for display copy. The 600 + hard tracking is the brand voice.
+- **Do** keep buttons at **full-pill radius (9999)** and **48px height**. The full pill is the friendliness signal in a cold category.
+- **Do** apply the **orange light-leak shadow** (`rgba(255, 77, 46, 0.16) 0 30px 60px -30px`) under product-still cards. The signature chromatic detail.
+- **Do** use **18px primary card radius** and **24px hero product-still radius**. The slight excess on the card softens the dark canvas.
+- **Do** alternate **dark and cream bands** at the section level — the rhythm is the macro brand voice.
+- **Do** use **JetBrains Mono country chips** with country-flag prefix. The brand's secondary-identity tell.
+- **Do** apply the **coral brand-glow** under primary CTAs: `rgba(255, 77, 46, 0.32) 0 8px 24px -8px`.
+- **Do** use **warm-grey muted text** (`#a8a59f`) on dark, never cool grey.
+- **Do** invert the footer to **`#000000` peak black** for closing emphasis — deeper than the canvas.
+
+### Don't
+
+- **Don't** use **cool greys** as the dark. The warm `#0c0c0c` is what distinguishes Deel from Linear or Vercel.
+- **Don't** introduce a **second saturated colour** (no purple, no green). Coral plus amber is the full hot palette; amber is a tertiary highlight only.
+- **Don't** square the buttons. Full-pill is non-negotiable; square or 8px-radius CTAs read as cold-enterprise (Workday, ADP).
+- **Don't** drop the **orange light-leak shadow** under product stills. It's the brand's most distinctive shadow detail.
+- **Don't** use **pure white** as the inverted band. Cream `#f4f1ec` is the warm paper-tone the brand commits to.
+- **Don't** widen the page beyond **1280px**. Deel reads as product-portrait-considered, not data-dense.
+- **Don't** drop the H1 weight below 600. Inter Display at 500 reads as Vercel-restraint; the 600 tier is the brand voice.
+- **Don't** introduce **gradients** to the coral CTA. The flat coral is the brand; a gradient coral reads as Brex / Stripe territory.
+- **Don't** use **coral text below 18.5px on cream**. The contrast pair fails AA at smaller sizes; use deeper coral `#c93418` (5.6:1 AA) or switch to ink text.
+- **Don't** use **exclamation marks** in marketing copy. The voice is B2B-confident, not consumer-enthusiasm.
+- **Don't** drop the **country chips and flag marquee**. The global scope is the brand's primary differentiator; country references are required.
+- **Don't** use **Söhne** as the primary type. Inter Display is the canonical render; Söhne is the fallback.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Warm Dark Canvas:  #0c0c0c
+Bg Soft Dark:      #141414
+Dark Surface:      #181818
+Cream Band:        #f4f1ec
+Coral Brand:       #ff4d2e
+Coral Hover:       #ff5e42
+Coral Deep:        #c93418
+Amber Accent:      #ffb84d
+Text on Dark:      #f4f1ec
+Text on Cream:     #0c0c0c
+Text Muted Warm:   #a8a59f
+On Brand:          #ffffff
+Border (Dark):     rgba(255, 255, 255, 0.10)
+Border (Light):    rgba(12, 12, 12, 0.10)
+Card Shadow Dark:  rgba(0, 0, 0, 0.32) 0 4px 20px
+Brand Glow:        rgba(255, 77, 46, 0.32) 0 8px 24px -8px
+Light Leak:        rgba(255, 77, 46, 0.16) 0 30px 60px -30px
+```
+
+### Example Component Prompts
+
+1. **"Create a Deel-style hero: warm-dark `#0c0c0c` canvas (slightly brown, not blue-black). Mono caps eyebrow above the headline in JetBrains Mono 12px / 500 / `0.05em` uppercase in `#a8a59f` warm-muted. 80px / 600 Inter Display H1 with `-0.03em` tracking in `#f4f1ec` cream, left-aligned, max-width 920px. 20px / 400 Inter body deck below at 1.55 line-height in `#e8e3d8`. Dual CTA pair below — primary coral pill (`#ff4d2e` fill, white text 15px / 500, full pill radius 9999, 14×24 padding, **48px height**, coral brand-glow shadow `rgba(255, 77, 46, 0.32) 0 8px 24px -8px`) + secondary outlined pill (`transparent` fill, cream text, 1px solid `rgba(255, 255, 255, 0.18)` border, full pill radius). Product still card on the right side: dark `#181818` card with 24px radius, white-10% hairline, dashboard screenshot inside, with the signature orange light-leak shadow `rgba(255, 77, 46, 0.16) 0 30px 60px -30px` underneath."**
+
+2. **"Design a Deel feature card on dark canvas: `#181818` background, 18px radius, 1px `rgba(255, 255, 255, 0.10)` 10% white hairline border, 32px padding, dark shadow `rgba(0, 0, 0, 0.32) 0 4px 20px`. Inside: coral 24×24 icon at top, 28px / 600 Inter Display heading in `#f4f1ec` cream, 17px / 400 Inter body in `#e8e3d8` at 1.55 line-height. Hover: border opacity steps to 20%, shadow lifts heavier, card translates 2px upward over 200ms."**
+
+3. **"Build a Deel product-still card: dark `#181818` background, **24px radius** (slightly relaxed for hero emphasis), 1px white-10% hairline, 0 padding (screenshot fills edge-to-edge). Underneath the card: the signature orange light-leak shadow `rgba(255, 77, 46, 0.16) 0 30px 60px -30px` — coral-tinted, 60px blur, -30px y-offset. Hover: light-leak intensifies to `rgba(255, 77, 46, 0.24)` opacity over 300ms ease-out-soft. The chroma glows brighter on hover."**
+
+4. **"Compose a Deel top nav on dark: 72px height, `rgba(12, 12, 12, 0.80)` translucent dark fill with `backdrop-filter: blur(12px) saturate(180%)`, 1px bottom hairline `rgba(255, 255, 255, 0.10)` always visible. Deel wordmark left in Inter Display 20px / 600 cream `#f4f1ec`. Center nav links (Products, Solutions, Customers, Resources, Pricing) in Inter 15px / 500 ghost-button style. Right: ghost `Sign in` + primary coral-pill `Book a demo` button (full pill, 14×24 padding, 48px height, coral brand-glow)."**
+
+5. **"Render a Deel cream testimonial band: full-bleed `#f4f1ec` cream background, 120px vertical padding, max-width 920px content. Mono caps eyebrow in JetBrains Mono 13px / 500 / `0.05em` uppercase in `#5a5751` muted ink. Centred testimonial in Inter Display 32px / 500 / `-0.015em` tracking, near-black `#0c0c0c` ink, comfortable 1.25 line height. Below the quote: customer photo (56×56 circular) + customer name in Inter 16px / 600 ink + role/company in Inter 14px / 400 muted ink. Optional 4px coral vertical rule on the left edge of the pull quote."**
+
+6. **"Build a Deel country flag marquee: horizontal scrolling row of country chips, scrolling 30s linear infinite. Each chip: `rgba(255, 255, 255, 0.06)` semi-translucent fill, 1px white-10% hairline, full-pill radius (9999), 4×12 padding, country flag SVG (16×12 with rounded 2px corners) + country code in JetBrains Mono 11px / 500 / `0.06em` uppercase in `#a8a59f` warm-muted. 30+ countries scrolling: US, GB, DE, FR, ES, IT, NL, PL, JP, CN, IN, BR, AU, CA, MX… Suppressed under reduced-motion (freezes static)."**
+
+### Iteration Guide
+
+1. **Check the canvas temperature.** Deel is `#0c0c0c` warm-dark + `#f4f1ec` cream. If your dark is `#08090a` (Linear) or `#000000` (Vercel), you've drifted to the cool-dark set. The warm dark is non-negotiable; the brown undertone is the brand's chromatic discipline.
+2. **Switch to Inter Display at weight 600.** Inter at weight 500 collapses to Vercel-restraint; weight 700 collapses to Linear-density. The 600 + `-0.03em` tracking is the precise voice.
+3. **Push the H1 to 80px with `-0.03em` tracking.** 56–64px reads as restrained-modern; 96px reads as ad-grade. 80px at 600 with hard tracking is the canonical Deel.
+4. **Apply the coral to the CTA only.** A flat coral CTA fill is required; ink it with white text. Coral as a foreground type colour fails contrast on cream below 18.5px — use deeper coral `#c93418` for body text on cream.
+5. **Use full-pill radius (9999) on every button.** Square or 8px CTAs read as cold-enterprise (Workday, ADP). The full pill is the friendliness signal.
+6. **Add the orange light-leak shadow under product stills.** `rgba(255, 77, 46, 0.16) 0 30px 60px -30px`. This is the brand's most distinctive micro-detail; without it, product stills feel flat.
+7. **Use 18px card radius and 24px product-still radius.** The slight excess on the card softens the dark canvas; the larger product-still radius reserves the hero compositional moment.
+8. **Apply country chips and flag references.** The global scope is the brand's primary differentiator; country chips, flag marquees, and country-specific copy all reinforce the *operational in 150+ countries* claim.

@@ -1,0 +1,894 @@
+---
+name: Udemy
+tagline: Signature `#a435f0` purple on white with Sailec sans — the open course-marketplace bazaar made approachable.
+author: webdesignhot
+source_url: https://www.udemy.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [media, marketplace]
+tags: [light, education, sans, friendly, purple, marketplace]
+preview_swatch: ['#ffffff', '#a435f0', '#1c1d1f']
+related: [coursera, masterclass, khan-academy]
+description: 'Udemy is the open marketplace aesthetic — a confident `#a435f0` electric purple snapped against a paper-white `#ffffff` canvas, Sailec sans pulling display through body in a friendly humanist register, and a course-card grid descended directly from Amazon''s product-tile lineage. The brand''s signature is the discount sticker: persistent orange-red `#cc0c39` price slashes, "60% off" callouts, "Bestseller" badges in mustard `#eceb98`, and a near-perpetual sale-state that makes every catalog page feel like Black Friday. Where Coursera whispers in royal blue, Udemy shouts in purple — but the shout is friendly, not aggressive. Course tiles render at `4px` radius (sharper than Coursera''s `8px`), pack five elements (thumbnail / title / instructor / 5-star yellow rating / red-line discount price) into a tight 16px-padding cell, and stack four-across at desktop. The brand''s personality is the world''s biggest open bazaar — anyone can teach, anyone can learn, and the bargain price is always front-of-mind.'
+
+colors:
+  bg: '#ffffff'                    # primary canvas
+  bg-warm: '#f7f9fa'                # alt section band
+  bg-muted: '#f3f4f6'               # course-list bg
+  bg-deep: '#1c1d1f'                # footer dark band, dark hero
+  bg-promo: '#f3eaff'               # soft purple promo band
+  bg-sale: '#fef2cd'                # sale callout warm yellow
+  surface: '#ffffff'                # default card
+  surface-elevated: '#ffffff'        # modal floor (with shadow)
+  surface-hover: '#f7f9fa'           # nav hover, list-row hover
+  surface-soft: '#faf9fc'            # secondary card bg
+  surface-strong: '#e7e9eb'          # divider band
+  surface-dark: '#2d2f31'            # dark card on dark hero
+  text: '#1c1d1f'                    # primary body — near-black
+  text-strong: '#000000'             # display headlines
+  text-muted: '#6a6f73'              # secondary metadata
+  text-soft: '#8b8d92'               # tertiary captions
+  text-disabled: '#a8aaae'           # disabled state
+  text-on-brand: '#ffffff'            # text on purple
+  text-on-dark: '#ffffff'             # text on bg-deep
+  text-link: '#5624d0'               # inline link purple (deeper)
+  text-link-hover: '#401b9c'         # link pressed
+  brand: '#a435f0'                   # Udemy Purple — primary CTA, links, brand
+  brand-hover: '#8710d8'             # primary button hover
+  brand-active: '#6d28d9'            # pressed
+  brand-soft: '#f3eaff'              # soft tint surface, badge bg
+  brand-deep: '#5624d0'              # deeper purple used in inline links and dark surfaces
+  accent-yellow: '#f69c08'           # rating star, achievement
+  accent-yellow-bg: '#eceb98'        # bestseller mustard tag bg
+  accent-orange: '#f3ca8c'           # promo band tint
+  accent-red: '#cc0c39'              # sale price text, urgent banner
+  accent-green: '#1c8c2e'             # in-stock / certificate complete
+  accent-blue: '#3268bd'             # info link variant
+  border: '#d1d7dc'                  # default hairline (warm grey)
+  border-soft: '#e9ebee'             # subtle divider
+  border-strong: '#9b9fa3'           # focused field outline
+  border-focus: '#5624d0'            # focus ring (deeper purple)
+  on-brand: '#ffffff'                # label on brand surface
+  rating-star: '#f69c08'             # star colour
+  rating-star-empty: '#d1d7dc'       # unfilled star
+  badge-bestseller: '#eceb98'        # bestseller mustard
+  badge-bestseller-text: '#3d3c0a'   # text on mustard
+  badge-hot: '#f3ca8c'               # hot-and-new orange tint
+  badge-hot-text: '#3d2305'          # text on hot
+  price-current: '#1c1d1f'           # current sale price
+  price-original: '#6a6f73'          # struck-through original
+  shadow-card: 'rgba(0,0,0,0.10)'   # default card shadow
+  shadow-modal: 'rgba(0,0,0,0.24)'   # modal floor
+  shadow-popover: 'rgba(0,0,0,0.16)' # popover/dropdown
+  success: '#1c8c2e'                 # certificate earned
+  success-soft: '#e6f2e8'            # success bg
+  warning: '#f4951f'                 # warning amber
+  warning-soft: '#fff5db'            # warning bg
+  danger: '#cc0c39'                  # error / sale price red
+  danger-soft: '#fbeaea'             # error bg
+  info: '#5624d0'                    # info purple
+  info-soft: '#f3eaff'               # info bg
+
+typography:
+  display:
+    family: '"Udemy Sans", "Sailec", "SuisseWorks", -apple-system, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 700]
+    opentype-features: ['kern', 'liga']
+  body:
+    family: '"Udemy Sans", "Sailec", "SuisseWorks", -apple-system, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif'
+    weights: [400, 700]
+  mono:
+    family: '"SF Mono", "Roboto Mono", Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-hero:    { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.02em', family: display, notes: 'Marketing landing hero — "Skills that drive you forward"' }
+    display-xl:      { size: 44, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display, notes: 'Section hero, business page' }
+    display-lg:      { size: 32, weight: 700, lineHeight: 1.2,  tracking: '-0.01em', family: display, notes: 'Course detail page title' }
+    display-md:      { size: 24, weight: 700, lineHeight: 1.3,  tracking: '-0.005em', family: display, notes: 'Section heading, modal title' }
+    display-sm:      { size: 20, weight: 700, lineHeight: 1.35, tracking: '0',       family: display, notes: 'Subsection heading' }
+    title-lg:        { size: 18, weight: 700, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Course card title at large breakpoints' }
+    title-md:        { size: 16, weight: 700, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Course card title default' }
+    title-sm:        { size: 14, weight: 700, lineHeight: 1.4,  tracking: '0',       family: display, notes: 'Sidebar nav, category tile label' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Lead paragraph, hero subtitle' }
+    body-md:         { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',       family: body, notes: 'Default body, course description' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.4,  tracking: '0',       family: body, notes: 'Secondary metadata, "Beginner · 12.5 total hours"' }
+    button-lg:       { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0',       family: display, notes: '"Add to cart" / "Buy now" primary CTA' }
+    button-md:       { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0',       family: body, notes: 'Default button label' }
+    caption:         { size: 12, weight: 400, lineHeight: 1.35, tracking: '0',       family: body, notes: 'Disclosures, fine print' }
+    metadata:        { size: 12, weight: 400, lineHeight: 1.3,  tracking: '0',       family: body, opentype: ['tnum'], notes: 'Rating count, learner count' }
+    badge:           { size: 12, weight: 700, lineHeight: 1.0,  tracking: '0',       family: body, notes: '"Bestseller", "Hot & new", "Highest rated" tags' }
+    rating:          { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0',       family: body, opentype: ['tnum'], notes: '"4.7" star aggregate' }
+    price-current:   { size: 22, weight: 700, lineHeight: 1.1,  tracking: '0',       family: display, opentype: ['tnum'], notes: 'Sale price "$13.99"' }
+    price-original:  { size: 14, weight: 400, lineHeight: 1.1,  tracking: '0',       family: body, opentype: ['tnum'], notes: 'Struck-through "$84.99"' }
+
+radius:
+  micro: 2          # tiny indicator
+  sm: 4             # input, small button, course card — Udemy's defining smaller-than-Coursera radius
+  md: 6             # tag, pill chip
+  lg: 8             # large card, modal
+  xl: 12            # featured card, hero shell
+  pill: 9999        # filter chip, badge pill, primary button cap
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1440
+  content-max: 1340
+  prose-width: 720
+  header-height: 72
+  sidebar-width: 280       # catalog filter rail
+  card-min: 240            # min course card width
+  card-max: 320            # max course card width
+  hero-min-height: 480
+
+components:
+  button-primary:
+    bg: '#a435f0'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 16px'
+    height: 48
+    font: button-lg
+    weight: 700
+    use: '"Add to cart", "Buy now", "Start subscribing" — primary CTA, square-ish radius (Udemy uses sharper corners than Coursera).'
+  button-primary-hover:
+    bg: '#8710d8'
+    color: '#ffffff'
+    radius: 4
+    use: 'Hover state — darker purple shift, no shadow lift.'
+  button-secondary:
+    bg: 'transparent'
+    color: '#5624d0'
+    border: '1px solid #5624d0'
+    radius: 4
+    padding: '12px 16px'
+    height: 48
+    use: '"Try Udemy Business" outlined secondary — uses the deeper inline-link purple `#5624d0` rather than the brand `#a435f0` for better contrast.'
+  button-tertiary-text:
+    bg: 'transparent'
+    color: '#5624d0'
+    radius: 4
+    padding: '8px 12px'
+    use: 'Inline text link / footer-style action.'
+  button-icon:
+    bg: 'transparent'
+    color: '#1c1d1f'
+    radius: 4
+    height: 32
+    width: 32
+    use: 'Wishlist heart, share, more-options icon button.'
+  button-cart:
+    bg: '#a435f0'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 32px'
+    height: 56
+    font: button-lg
+    use: '"Add to cart" on course detail page — wider, taller variant for high-conversion surface.'
+  card-course:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    radius: 4
+    padding: 0
+    border: '1px solid #d1d7dc'
+    shadow: 'none'
+    use: 'Default course tile in catalog grid — 16:9 thumb top-edge to top-edge, then 16px-padded body containing title, instructor, rating, learner count, price.'
+  card-course-hover:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    radius: 4
+    shadow: '0 2px 8px rgba(0,0,0,0.10)'
+    use: 'Hover lift — light shadow appears under the card, no scale, no translate.'
+  card-instructor:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    radius: 4
+    padding: 24
+    border: '1px solid #d1d7dc'
+    use: 'Instructor profile card on course detail — circular avatar 80px, instructor name 20px / 700, rating + reviews + students stats grid.'
+  card-bundle:
+    bg: '#fdf6e3'
+    color: '#1c1d1f'
+    radius: 4
+    padding: 24
+    border: '1px solid #d1d7dc'
+    use: 'Cross-sell "Frequently bought together" bundle card on course detail.'
+  badge-bestseller:
+    bg: '#eceb98'
+    color: '#3d3c0a'
+    radius: 4
+    padding: '4px 8px'
+    use: '"Bestseller" mustard tag — Udemy''s most recognizable badge, top-left of thumbnail.'
+  badge-hot-new:
+    bg: '#f3ca8c'
+    color: '#3d2305'
+    radius: 4
+    padding: '4px 8px'
+    use: '"Hot & New" warm orange tag.'
+  badge-highest-rated:
+    bg: '#f3eaff'
+    color: '#5624d0'
+    radius: 4
+    padding: '4px 8px'
+    use: '"Highest Rated" purple tag.'
+  badge-premium:
+    bg: '#1c1d1f'
+    color: '#eceb98'
+    radius: 4
+    padding: '4px 8px'
+    use: '"Premium" black tag with mustard text — used on Udemy Business surfaces.'
+  price-block:
+    bg: 'transparent'
+    color-current: '#1c1d1f'
+    color-original: '#6a6f73'
+    color-discount: '#1c8c2e'
+    use: 'Price stack — current sale price at 22px / 700 black, struck-through original at 14px / 400 muted, "60% off" 14px / 700 green right-aligned.'
+  rating-stars:
+    color: '#f69c08'
+    color-empty: '#d1d7dc'
+    use: '5-star rating row — orange filled / grey empty, paired with 14px / 700 black "4.7" + parenthesized 12px / 400 muted "(124,532)".'
+  input-search:
+    bg: '#f7f9fa'
+    color: '#1c1d1f'
+    radius: 9999
+    height: 48
+    padding: '12px 16px 12px 44px'
+    border: '1px solid #d1d7dc'
+    use: 'Top-bar global search — pill-shaped with magnifying-glass icon left, "Search for anything" placeholder.'
+  input-text:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    radius: 4
+    border: '1px solid #d1d7dc'
+    height: 48
+    padding: '12px 16px'
+    use: 'Form input — sign-in, profile fields.'
+  filter-chip:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    border: '1px solid #1c1d1f'
+    radius: 4
+    padding: '8px 12px'
+    use: 'Catalog filter pill — square-corner, black border (Udemy''s aggressive contrast).'
+  filter-chip-active:
+    bg: '#1c1d1f'
+    color: '#ffffff'
+    border: '1px solid #1c1d1f'
+    radius: 4
+    use: 'Applied-filter state — inverts to black bg.'
+  category-tile:
+    bg: '#f7f9fa'
+    color: '#1c1d1f'
+    radius: 4
+    padding: 16
+    use: '"Browse by category" homepage tile — illustration top, 14px / 700 label "Development / Business / IT & Software".'
+  partner-logo-rail:
+    bg: '#ffffff'
+    color: '#6a6f73'
+    use: '"Trusted by companies of all sizes" — Volkswagen / NASDAQ / Booking.com / Eventbrite logos in muted grey.'
+  nav-top-bar:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    height: 72
+    border-bottom: '1px solid #d1d7dc'
+    use: 'Sticky top nav — logo left, "Categories" dropdown, full-width search centre, "Udemy Business / Teach on Udemy / My learning / Cart / Notifications / Profile" right.'
+  sidebar-filter:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    width: 280
+    use: 'Catalog left rail — collapsible filter groups (Ratings / Video Duration / Topic / Subcategory / Level / Language / Price / Features / Subtitles).'
+  breadcrumb:
+    bg: 'transparent'
+    color: '#5624d0'
+    use: 'Course page breadcrumb — "Development > Web Development > [Course]" — links in deeper purple.'
+  modal-dialog:
+    bg: '#ffffff'
+    color: '#1c1d1f'
+    radius: 4
+    shadow: '0 8px 24px rgba(0,0,0,0.24)'
+    padding: 24
+    use: 'Sign-up / preview modal.'
+  toast:
+    bg: '#1c1d1f'
+    color: '#ffffff'
+    radius: 4
+    padding: '12px 16px'
+    use: 'Confirmation toast — "Added to cart".'
+  promo-banner-sale:
+    bg: '#1c1d1f'
+    color: '#ffffff'
+    height: 48
+    use: 'Sticky sale banner top of page — "Up to 80% off this week. Time to invest in YOU." with countdown timer.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-in-out: 'cubic-bezier(0.4, 0, 0.6, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 300
+  reduced-motion: 'respects prefers-reduced-motion: hover shadow lifts collapse to instant, modal scale-in becomes opacity-only, sale-banner countdown ticker pauses.'
+
+breakpoints:
+  mobile: 600
+  tablet: 900
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  none: 'none'
+  card-rest: 'none'
+  card-hover: '0 2px 8px rgba(0,0,0,0.10)'
+  popover: '0 4px 16px rgba(0,0,0,0.16)'
+  modal: '0 8px 24px rgba(0,0,0,0.24)'
+  ring: '0 0 0 3px rgba(86,36,208,0.4)'
+
+accessibility:
+  contrast-text-on-bg: 16.0              # #1c1d1f on #ffffff — AAA
+  contrast-text-muted-on-bg: 4.6         # #6a6f73 on #ffffff — AA at body
+  contrast-text-on-brand: 4.5            # white on #a435f0 — AA at body (NOT AAA — caveat)
+  contrast-link-on-bg: 9.4               # #5624d0 (deeper inline link purple) on white — AAA
+  focus-ring: '3px solid rgba(86,36,208,0.4) with 2px offset'
+  reduced-motion-honored: true
+  caption-track: 'video lectures ship with closed captions on every course; transcripts side-by-side with player'
+  language-support: '75+ languages with on-platform subtitles'
+
+dark-mode: null            # Light-only on web — mobile app has dark mode but no public web dark variant
+---
+
+## 1. Visual Theme & Atmosphere
+
+Udemy's site reads like the world's biggest open bazaar. The canvas is paper-white `#ffffff`, the type is Sailec sans pulling display through body in a friendly humanist register, and the chromatic event of the page is `#a435f0` — an electric purple that lives on the wordmark, the primary CTA, and the brand surfaces. Where Coursera whispers in royal blue and MasterClass shouts through cinematic black, Udemy occupies the friendly-bargain middle: confident enough to own its purple, casual enough to keep the sale stickers permanently affixed to every catalog page.
+
+The signature is the discount sticker. Walk into a Udemy catalog page and you'll see three things on every course card: the price stack (current sale price `$13.99` in 22px / 700, struck-through original `$84.99` in 14px / 400 muted, "84% off" tag in green), a yellow-orange `#f69c08` rating star row with the numeric aggregate "4.7" and a parenthesized learner count, and a mustard `#eceb98` "Bestseller" tag tucked top-left of the 16:9 thumbnail. The sale state is near-permanent — Udemy's commercial DNA is the perpetual flash sale, and the brand has built an entire visual language around making the discount look credible rather than spammy. The mustard tag is doing the work that "ON SALE" stickers do at retail: it draws the eye, but it's a soft warm yellow rather than a screaming red, so it reads as endorsement rather than as a hard sell.
+
+The course-card grid is the workhorse component. Cards render at `4px` radius (sharper than Coursera's `8px` — Udemy's aesthetic skews retail-utility), with the 16:9 thumbnail flush to the card's top edge, then a 16px-padded body containing the title in 16px / 700, the instructor in 12px / 400 muted grey, the rating row, the price stack, and the badge. There's no card shadow at rest — just a 1px hairline border in warm grey `#d1d7dc`. On hover, a subtle `0 2px 8px rgba(0,0,0,0.10)` shadow drops beneath the card. The interaction is whisper-soft; the visual weight comes from the content density, not from elevation theatrics.
+
+Sailec — the custom Udemy Sans (a Sailec derivative) — sets the entire site. Display sizes go up to 56px / 700 with `-0.02em` tracking; body is 16px / 400 on a 1.5 line-height. Sailec is a humanist sans with a slight roundness in the bowls of the o, e, and a — friendlier than Helvetica, less editorial than Inter. The font carries Udemy's voice, which is the voice of a teacher who knows you can do this if you just sign up: encouraging, plain, never academic, never elitist. There's no display-serif companion, no decorative italic, no condensed cut. One family pulls the entire load.
+
+Density is the third axis. The catalog page renders a 280px left-rail filter sidebar (collapsible groups: Ratings, Video Duration, Topic, Subcategory, Level, Language, Price, Features, Subtitles), a faceted breadcrumb up top, then the course-card grid in the centre. Filter chips on top of the grid show applied filters as black-bordered square pills you can dismiss. Above the catalog, a sticky black `#1c1d1f` sale banner perpetually advertises "Up to 80% off this week" with a countdown timer. The interaction model is e-commerce-faceted-search lifted from Amazon and adapted to courseware — but the pricing language ("84% off", "Lowest price in 30 days", "$13.99") is the part that distinguishes Udemy from any other learning marketplace.
+
+**Key Characteristics:**
+- Paper-white `#ffffff` canvas with a faint warm tilt — never a cool-grey tint.
+- Single confident `#a435f0` electric purple as the primary brand colour; deeper `#5624d0` for inline links and outlined buttons (better contrast).
+- Sailec / Udemy Sans humanist sans pulling display through body — one family, no companion.
+- `4px` radius across cards, buttons, modals — sharper-cornered than Coursera; closer to retail-utility than to soft-edu.
+- Permanent sale state: green discount tag, struck-through original price, mustard "Bestseller" badge.
+- Course card has 1px warm-grey border `#d1d7dc` at rest, light shadow `0 2px 8px rgba(0,0,0,0.10)` on hover.
+- 280px left-rail filter sidebar — Amazon-faceted search adapted to courses.
+- Sticky black `#1c1d1f` top sale banner with countdown — perpetual-flash-sale brand DNA.
+- Yellow-orange `#f69c08` rating stars; mustard `#eceb98` bestseller tags; the only saturated colors besides brand purple.
+- 16px / 400 body type on 1.5 line-height — friendly readable density.
+- Light-only on web (mobile app has dark mode); no public web dark variant.
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Paper White** (`#ffffff`): The defining canvas. Pure white, no warm tint — Udemy reads as a marketplace rather than as a textbook.
+- **Warm Off-White** (`#f7f9fa`): Hero band background, alt section banding, search input bg.
+- **Display Black** (`#1c1d1f`): Primary body text. Near-black with the slightest warm shift.
+- **Udemy Purple** (`#a435f0`): The brand's primary purple. Wordmark, primary CTA background, brand surfaces.
+
+### Brand & Dark
+- **Brand Hover** (`#8710d8`): Pointer-over state — slightly darker purple.
+- **Brand Active** (`#6d28d9`): Pressed state.
+- **Brand Soft** (`#f3eaff`): Soft-tint surface for badges, info banners, purple-tinted cards.
+- **Brand Deep** (`#5624d0`): Deeper purple used for inline text links, outlined-button borders, and on dark surfaces — provides AAA contrast on white where the brighter `#a435f0` only meets AA.
+- **Footer Black** (`#1c1d1f`): Sticky sale banner, footer band, dark hero, text.
+
+### Accent
+- **Star Orange** (`#f69c08`): Rating-star colour. The only place orange appears.
+- **Bestseller Mustard** (`#eceb98`): Bestseller-tag background — Udemy's most recognizable badge.
+- **Hot & New Tan** (`#f3ca8c`): Warm orange tag for newly launched courses.
+- **Sale Red** (`#cc0c39`): Urgent sale-banner accent, "70% off" callouts when extra urgency is needed.
+- **Achievement Green** (`#1c8c2e`): Certificate-earned, "84% off" discount label, success messaging.
+
+### Interactive
+- **CTA Purple** (`#a435f0`): Primary action button background.
+- **Link Purple** (`#5624d0`): Inline links — deeper than CTA so contrast is AAA.
+- **Outlined Purple** (`#5624d0` border on transparent): Secondary action.
+- **Filter Chip Active** (`#1c1d1f` bg + white text): Applied-filter state inverts to black.
+- **Disabled** (`#a8aaae` text on `#f3f4f6` bg): Non-interactive control.
+
+### Neutral Scale
+- **Display Black** (`#1c1d1f`): Display headlines, primary body — slight warm tint vs pure `#000`.
+- **Strong Black** (`#000000`): Used in 1-2 places for absolute display contrast.
+- **Muted** (`#6a6f73`): Secondary metadata — instructor name, "12.5 total hours · 56 lectures · Beginner".
+- **Soft** (`#8b8d92`): Tertiary captions, breadcrumb separator text.
+- **Disabled** (`#a8aaae`): Inactive form labels, disabled controls.
+- **Border Default** (`#d1d7dc`): Card hairlines, dividers — warm grey rather than cool.
+- **Border Soft** (`#e9ebee`): Subtle table-row dividers.
+- **Border Strong** (`#9b9fa3`): Focused field outline before purple ring kicks in.
+
+### Surface & Borders
+- **Surface Default** (`#ffffff`): Card, modal floor.
+- **Surface Hover** (`#f7f9fa`): Nav hover, list-row hover, search-input bg.
+- **Surface Soft** (`#faf9fc`): Faint purple-tinted secondary card bg.
+- **Surface Strong** (`#e7e9eb`): Divider band between major sections.
+- **Surface Dark** (`#2d2f31`): Dark card on dark hero (Udemy Business marketing).
+- **Promo Surface** (`#f3eaff`): Soft-purple promo band — "Get personalized recommendations".
+- **Sale Surface** (`#fef2cd`): Warm-yellow callout banner background.
+
+### Shadow Colors
+- **Card Rest**: No shadow. Udemy's cards rely on the 1px warm-grey border at rest, not on elevation.
+- **Card Hover** (`rgba(0,0,0,0.10)`): The hover-state shadow that drops `0 2px 8px` under the card. Light, never dramatic.
+- **Popover Shadow** (`rgba(0,0,0,0.16)`): Dropdown, tooltip, mega-menu.
+- **Modal Shadow** (`rgba(0,0,0,0.24)`): Dialog floor.
+
+### Semantic
+- **Success** (`#1c8c2e` text on `#e6f2e8` soft bg): Certificate earned, "84% off" discount label, "Added to cart" toast.
+- **Warning** (`#f4951f` text on `#fff5db` soft bg): "Sale ends in 4h 32m" countdown banner.
+- **Danger** (`#cc0c39` text on `#fbeaea` soft bg): Form validation error, payment failure, lowest-price-in-30-days callout.
+- **Info** (`#5624d0` text on `#f3eaff` soft bg): "New financial-aid options available."
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `"Udemy Sans"` (a custom Sailec derivative commissioned for Udemy). Fallback chain: `"Sailec", "SuisseWorks", -apple-system, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif`.
+- **Mono**: `"SF Mono", "Roboto Mono", Menlo, Consolas, monospace` — used in code lectures (Web Development, Data Science specializations) and inline code in articles.
+- **OpenType Features**: `kern` and `liga` enabled site-wide. `tnum` enabled on rating numbers, learner counts, prices, and runtime durations for column alignment.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Hero | Udemy Sans | 56px | 700 | 1.1 | -0.02em | kern,liga | Marketing landing — "Skills that drive you forward" |
+| Display XL | Udemy Sans | 44px | 700 | 1.15 | -0.015em | kern,liga | Section hero, business page |
+| Display LG | Udemy Sans | 32px | 700 | 1.2 | -0.01em | kern,liga | Course detail page title |
+| Display MD | Udemy Sans | 24px | 700 | 1.3 | -0.005em | kern,liga | Section heading, modal title |
+| Display SM | Udemy Sans | 20px | 700 | 1.35 | 0 | kern,liga | Subsection heading |
+| Title LG | Udemy Sans | 18px | 700 | 1.4 | 0 | kern,liga | Course card title at large breakpoints |
+| Title MD | Udemy Sans | 16px | 700 | 1.4 | 0 | kern,liga | Course card title default |
+| Title SM | Udemy Sans | 14px | 700 | 1.4 | 0 | kern,liga | Sidebar nav, category tile label |
+| Body LG | Udemy Sans | 18px | 400 | 1.5 | 0 | kern,liga | Lead paragraph, hero subtitle |
+| Body MD | Udemy Sans | 16px | 400 | 1.5 | 0 | kern,liga | Default body, course description |
+| Body SM | Udemy Sans | 14px | 400 | 1.4 | 0 | kern,liga | Secondary metadata |
+| Button LG | Udemy Sans | 16px | 700 | 1.0 | 0 | kern,liga | "Add to cart" / "Buy now" CTA label |
+| Button MD | Udemy Sans | 14px | 700 | 1.0 | 0 | kern,liga | Default button label |
+| Caption | Udemy Sans | 12px | 400 | 1.35 | 0 | kern,liga | Disclosures, fine print |
+| Metadata | Udemy Sans | 12px | 400 | 1.3 | 0 | tnum | Rating count, learner count |
+| Badge | Udemy Sans | 12px | 700 | 1.0 | 0 | kern,liga | "Bestseller", "Hot & New", "Highest Rated" |
+| Rating | Udemy Sans | 14px | 700 | 1.0 | 0 | tnum | "4.7" star aggregate |
+| Price (Current) | Udemy Sans | 22px | 700 | 1.1 | 0 | tnum | "$13.99" sale price |
+| Price (Original) | Udemy Sans | 14px | 400 | 1.1 | 0 | tnum | Struck-through "$84.99" |
+| Code | SF Mono | 14px | 400 | 1.5 | 0 | -- | Inline code, lectures |
+
+### Principles
+- **Single family discipline.** Udemy Sans (Sailec) covers display through body. There is no display-serif companion — Udemy's voice is bargain-friendly, not editorial.
+- **Two weights only: 400 and 700.** No 500, no 600. The system runs on a sharp regular-vs-bold contrast, which makes scanning catalog pages fast at thumbnail density.
+- **Modest negative tracking.** Display sizes use `-0.005em` to `-0.02em` only. Udemy never goes tighter than `-0.02em` — the brand is open and friendly.
+- **16px body, 1.5 line-height.** Course descriptions, lecture transcripts, blog articles all sit at this baseline. Same humanist density as Coursera, but the radii are sharper.
+- **Tabular numerals on counts and prices.** Rating aggregates ("4.7"), learner counts ("124,532"), prices ("$13.99 / $84.99"), runtimes ("12.5 total hours") all use `tnum` so columns align in the catalog grid.
+- **Sentence case for headings, title case for badges.** "Web development bootcamp" not "Web Development Bootcamp"; but "Bestseller" / "Hot & New" / "Highest Rated" are title case (badge convention).
+- **Bold-not-light for hierarchy.** Where Apple uses 100/200/300 light weights for editorial elegance, Udemy uses 400/700 — bargain-marketplace clarity over editorial finesse.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Udemy Purple)**
+- Background: `#a435f0`. Text: `#ffffff`. Radius: `4px` (sharp, not pill). Padding: `12px 16px`. Height: `48px`. Font: Udemy Sans 16px / 700.
+- Hover: `#8710d8`. No shadow lift, no scale transform.
+- Active: `#6d28d9`.
+- Use: "Add to cart", "Buy now", "Start subscribing". The square-ish radius is deliberate — Udemy reads more retail than soft-edu.
+
+**Add to Cart (Tall Variant)**
+- Same as primary but `56px` height, `12px 32px` padding. Used on course detail page where the CTA needs more visual weight.
+
+**Secondary (Outlined Deeper Purple)**
+- Background: `transparent`. Text: `#5624d0`. Border: `1px solid #5624d0`. Radius: `4px`. Padding: `12px 16px`.
+- Hover: bg `#f3eaff`.
+- Use: "Try Udemy Business", "Preview this course". Note: uses the deeper `#5624d0` rather than brand `#a435f0` so contrast is AAA on white.
+
+**Tertiary Text**
+- Background: `transparent`. Color: `#5624d0`. Padding: `8px 12px`.
+- Hover: underline appears.
+- Use: Inline action, footer link.
+
+**Icon Button**
+- Background: `transparent`. Color: `#1c1d1f`. Radius: `4px`. Size: `32 × 32`.
+- Hover: bg `#f7f9fa`.
+- Use: Wishlist heart, share, more-options.
+
+### Cards & Tiles
+
+**Course Card (Default)**
+- Background: `#ffffff`. Color: `#1c1d1f`. Radius: `4px`. Padding: 0 (thumbnail flush) then 16px on body. Border: `1px solid #d1d7dc`.
+- Layout: 16:9 thumbnail flush to top, then 16px-padded body — title (16px / 700, max 2 lines), 4px gap, instructor (12px / 400 `#6a6f73`), 8px gap, rating row (orange stars + 14px / 700 score + 12px / 400 muted count), 8px gap, price stack (22px / 700 current + 14px / 400 struck-through original).
+- Top-left of thumbnail: badge ("Bestseller" / "Hot & New" / "Highest Rated") if applicable.
+- Rest shadow: none.
+- Use: Default catalog tile.
+
+**Course Card (Hover)**
+- Shadow drops to `0 2px 8px rgba(0,0,0,0.10)` over 200ms. No scale, no translate.
+- Title color stays the same.
+- Use: Pointer-over interaction.
+
+**Instructor Card**
+- Background: `#ffffff`. Color: `#1c1d1f`. Radius: `4px`. Padding: `24px`. Border: `1px solid #d1d7dc`.
+- Layout: 80px circular avatar left, instructor name 20px / 700 right, rating + review count + students stats grid below.
+- Use: Course detail page instructor section.
+
+**Bundle Card ("Frequently Bought Together")**
+- Background: `#fdf6e3` (faint cream). Color: `#1c1d1f`. Radius: `4px`. Padding: `24px`.
+- Layout: 3 mini course thumbnails left-to-right with `+` glyphs between, total bundle price right, "Add all to cart" primary CTA.
+- Use: Cross-sell on course detail page.
+
+### Badges, Tags, Indicators
+
+**Bestseller**
+- Background: `#eceb98`. Color: `#3d3c0a`. Radius: `4px`. Padding: `4px 8px`. Font: 12px / 700.
+- Use: Mustard tag — Udemy's most recognizable badge. Top-left of thumbnail on top-rated courses.
+
+**Hot & New**
+- Background: `#f3ca8c`. Color: `#3d2305`. Radius: `4px`.
+- Use: Warm orange tag for recently launched courses with strong early traction.
+
+**Highest Rated**
+- Background: `#f3eaff`. Color: `#5624d0`. Radius: `4px`.
+- Use: Soft-purple tag for courses sustained 4.8+ rating.
+
+**Premium**
+- Background: `#1c1d1f`. Color: `#eceb98`. Radius: `4px`.
+- Use: Black tag with mustard text — Udemy Business surfaces.
+
+**Discount Tag (Inline with Price)**
+- Color: `#1c8c2e`. Font: 14px / 700.
+- Format: "84% off" rendered green inline next to current price.
+- Use: Always-on sale messaging.
+
+**Rating Stars**
+- Filled: `#f69c08`. Empty: `#d1d7dc`. Half-star supported.
+- Paired with: numeric aggregate "4.7" in 14px / 700 + "(124,532)" in 12px / 400 muted parens.
+
+### Inputs & Forms
+
+**Search (Pill)**
+- Background: `#f7f9fa`. Color: `#1c1d1f`. Border: `1px solid #d1d7dc`. Radius: `9999px` (pill). Height: `48px`. Padding: `12px 16px 12px 44px`.
+- Magnifying-glass icon left in `#1c1d1f`.
+- Placeholder: "Search for anything".
+- Focus: border `#5624d0`, ring `0 0 0 3px rgba(86,36,208,0.4)`.
+- Use: Top-bar global search — full-width, takes the centre slot of the nav.
+
+**Text Input**
+- Background: `#ffffff`. Color: `#1c1d1f`. Border: `1px solid #d1d7dc`. Radius: `4px`. Height: `48px`. Padding: `12px 16px`.
+- Label sits above, 14px / 700 `#1c1d1f`. Hint below, 12px / 400 `#6a6f73`.
+- Focus: border `#5624d0`, ring `0 0 0 3px rgba(86,36,208,0.4)`.
+- Use: Sign-in, profile, payment forms.
+
+**Filter Chip**
+- Default: bg `#ffffff`, color `#1c1d1f`, border `1px solid #1c1d1f`, radius `4px`, padding `8px 12px`. Square corners.
+- Active: bg `#1c1d1f`, color `#ffffff`. Inverts to black.
+- Use: Catalog filter pill — "Beginner", "12+ hours", "$10-20", "English".
+
+### Navigation
+
+**Top Bar (Sticky)**
+- Background: `#ffffff`. Border-bottom: `1px solid #d1d7dc`. Height: `72px`.
+- Layout: Udemy wordmark + "Categories" dropdown left, full-width search centre, "Udemy Business / Teach on Udemy / My learning / Cart icon (with count badge) / Notifications / Profile avatar" right.
+- Mobile: collapses to hamburger + cart + profile.
+
+**Sale Banner (Above Top Bar, Sticky)**
+- Background: `#1c1d1f`. Color: `#ffffff`. Height: `48px`.
+- Content: "Up to 80% off this week. Time to invest in YOU." + countdown timer "4h 32m left" right-aligned.
+- Always visible during sale events (which is most of the time).
+
+**Catalog Sidebar (Filter Rail)**
+- Background: `#ffffff`. Width: `280px`. Padding: `24px 16px`.
+- Collapsible accordion groups: Ratings, Video Duration, Topic, Subcategory, Level, Language, Price, Features, Subtitles. Each group title 16px / 700, options 14px / 400 with checkbox + count "(1,234)".
+- Sticky on scroll.
+
+**Mega Menu (Categories Dropdown)**
+- Background: `#ffffff`. Shadow: `0 4px 16px rgba(0,0,0,0.16)`.
+- Layout: 3-column flyout — top-level categories left (Development / Business / IT & Software / Design / Marketing), subcategories middle, featured courses right.
+- Use: Hover or click to expand from top nav.
+
+**Breadcrumb**
+- Color: `#5624d0` for links, `#6a6f73` for separator chars.
+- Format: "Development > Web Development > JavaScript > [Course]".
+
+### Modals & Toasts
+
+**Modal Dialog**
+- Background: `#ffffff`. Radius: `4px`. Padding: `24px`.
+- Shadow: `0 8px 24px rgba(0,0,0,0.24)`.
+- Backdrop: `rgba(0,0,0,0.5)`.
+- Use: Sign-up, course preview, payment.
+
+**Toast**
+- Background: `#1c1d1f`. Color: `#ffffff`. Radius: `4px`. Padding: `12px 16px`.
+- Use: "Added to cart" — bottom-left, auto-dismiss 3s.
+
+**Coupon Banner**
+- Background: `#fef2cd` (warm yellow). Color: `#1c1d1f`. Radius: `4px`. Border-left: `4px solid #f69c08`.
+- Use: "Coupon applied: SALE10. You saved $76.00."
+
+## 5. Layout Principles
+
+### Spacing System
+- Base: 4px. Scale: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128.
+- Card-to-card gap: 16px on desktop (tighter than Coursera), 12px on tablet, 8px on mobile.
+- Section gap (major modules): 48–64px.
+- Grid gutter: 16px.
+
+### Grid & Container
+- Page width: 1440px max.
+- Content max within page: 1340px centred (wider than Coursera — Udemy maximizes density).
+- Catalog: 280px filter sidebar + 1060px course grid (4-across at desktop, 3-across at 900px, 2-across at 600px, 1-across mobile).
+- Hero: full-bleed background, content centred at 1340px.
+
+### Whitespace Philosophy
+Udemy is a marketplace and prioritizes content density over breath. Sections breathe at 48–64px gaps, cards at 16px (Coursera's 24), and within a card the layout is tight (16px padding on a body, 0 padding on the thumbnail edge). The hero gets 64px top/bottom padding — generous but not lavish. Below the fold, the page packs four card rails, two category tiles, an instructor highlight, a partner-logo strip, and a footer into 4-5 viewports of vertical scroll. The brand never lets the page feel transactional — but it absolutely lets the page feel densely populated.
+
+### Section Cadence
+- Sale banner (sticky, black `#1c1d1f`)
+- Top bar (sticky)
+- Hero (Sailec 56px headline, 18px lead, "Plan starts at $11.99" CTA + "Try Udemy Business")
+- "Recommended for you" rail (4 course cards)
+- "Top categories" tile grid (8 illustrated category tiles)
+- "Most popular for [skill]" rail
+- "Featured courses in [topic]" rail
+- "Learners are viewing" rail
+- "Trusted by companies of all sizes" partner-logo band
+- "Become an instructor" CTA band
+- Footer (4-column dark `#1c1d1f` band — links, language picker, app downloads)
+
+Light/dark alternation: predominantly light. Sale banner and footer are the only dark bands.
+
+## 6. Shapes & Radius Scale
+
+- **Micro** (`2px`): Tiny indicator dot.
+- **Standard** (`4px`): Input, dropdown, badge, course card, button — the workhorse radius. Udemy's defining sharp-corner aesthetic.
+- **Comfortable** (`6px`): Tag chip, pill chip variant.
+- **Relaxed** (`8px`): Larger card, modal corners.
+- **Featured** (`12px`): Hero shell, premium card.
+- **Pill** (`9999px`): Search input, filter-chip alternative — only on the global search.
+
+The 4px-everything-except-search radius is the geometric signature. Where Coursera rounds cards to 8px and pillls buttons to 24px, Udemy keeps everything at 4px — a retail-utility aesthetic that says "we're a marketplace, not a museum."
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (flat) | No shadow, no border | Section background, hero band |
+| 1 (border) | `1px solid #d1d7dc` | Card rest, input field, divider — Udemy's primary depth tier |
+| 2 (hover lift) | `0 2px 8px rgba(0,0,0,0.10)` | Course card hover |
+| 3 (popover) | `0 4px 16px rgba(0,0,0,0.16)` | Mega menu, dropdown, tooltip |
+| 4 (modal) | `0 8px 24px rgba(0,0,0,0.24)` | Dialog, sign-up modal, payment |
+
+### Shadow Philosophy
+Udemy's depth system runs primarily on **borders, not shadows**. Course cards rest with no shadow at all — just a 1px warm-grey border. The 4px hover shadow is light and short-radius (8px blur), giving the card a hint of lift without theatrics. Modals and mega menus get the deeper 24px-blur shadow at 0.24 opacity. The brand never uses brand-tinted shadows — purple belongs to action, not to elevation. The aesthetic is Amazon-product-card-with-better-typography rather than Material Design — borders carry the weight, shadows are an afterthought.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — Material's standard ease, used for fades, opacity, simple slides.
+- **Out**: `cubic-bezier(0, 0, 0.2, 1)` — incoming elements (modal in, dropdown open).
+- **In-Out**: `cubic-bezier(0.4, 0, 0.6, 1)` — accordion expand/collapse.
+
+### Duration Buckets
+- **Fast**: 100ms — colour shifts, hover transitions, button-press feedback.
+- **Standard**: 200ms — card hover shadow lift, modal open, dropdown.
+- **Slow**: 300ms — accordion expand, mega-menu reveal.
+
+### Per-Component Recipes
+- **Course card hover**: Shadow `none → 0 2px 8px rgba(0,0,0,0.10)`, 200ms ease-standard. No scale, no translate — purely shadow.
+- **Primary CTA hover**: Background `#a435f0 → #8710d8`, 100ms ease-standard. No shadow change, no scale.
+- **Filter chip toggle**: bg + text + border swap together over 100ms.
+- **Mega menu open**: 200ms ease-out, opacity `0 → 1` + translateY `-4px → 0`.
+- **Modal open**: 200ms ease-out, opacity `0 → 1` + scale `0.96 → 1`.
+- **Dropdown open**: 150ms ease-out, opacity `0 → 1` + translateY `-4px → 0`.
+- **Toast in**: slide up from bottom 6px + opacity over 200ms; auto-dismiss after 3s with reverse motion.
+- **Sale-banner countdown**: ticks every 1s — pure JS update of the time display, no animation on the digits.
+- **Cart-count badge increment**: 200ms scale `1 → 1.2 → 1` pulse when an item is added.
+
+### Page Transitions
+Udemy's catalog and course pages are server-rendered with light client-side routing for filter changes. Filter applies trigger an instant grid swap (no fade). There's no full-page transition. Course detail page uses tabs (Overview / Curriculum / Instructor / Reviews) that swap via in-page anchor scroll.
+
+### Reduced Motion
+`prefers-reduced-motion: reduce` collapses:
+- Card hover shadow lifts → instant snap.
+- Modal scale-in → opacity-only.
+- Toast slide → instant appear/disappear.
+- Mega menu translate → opacity-only.
+- Cart-count pulse → no animation.
+- Sale-banner countdown ticker → still ticks (informational, not decorative) but no transitional animation.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+- Display Black `#1c1d1f` on white `#ffffff`: **16.0:1** — AAA at all sizes.
+- Muted `#6a6f73` on white `#ffffff`: **4.6:1** — AA at body sizes.
+- White `#ffffff` on Udemy Purple `#a435f0`: **4.5:1** — AA at body. **NOT AAA**, which is why critical CTAs use 16px / 700 (large-text bracket) and inline links use the deeper `#5624d0`.
+- Inline link `#5624d0` on white: **9.4:1** — AAA at all sizes.
+- Achievement Green `#1c8c2e` on white: **5.0:1** — AA at body.
+- Star Orange `#f69c08` on white: **2.4:1** — fails for text; used decoratively only (rating stars).
+- Disabled `#a8aaae` on white: **2.6:1** — fails AA, used for `aria-disabled` only.
+
+### Focus Indicators
+- Default focus: `3px solid rgba(86,36,208,0.4)` outline with `2px` offset on light surfaces. Uses the deeper inline-link purple for visibility.
+- Form fields: border lifts to `#5624d0` on focus, plus the 3px ring outside.
+- Tab order: sale banner skip-link → top nav → search → main content top-to-bottom → sidebar filters → grid cards → footer.
+
+### ARIA Patterns
+- Course cards: `role="article" aria-label="[Course Title], by [Instructor]. Rating [4.7] of 5 stars based on [124,532] reviews. [Beginner] level. Current price [$13.99], original price [$84.99]."`
+- Rating stars: `aria-hidden="true"` on the star icons; the numeric label carries semantic meaning.
+- Filter sidebar: `role="region" aria-label="Filter courses"`. Each accordion group: `aria-expanded`, `aria-controls`.
+- Course player: `role="region" aria-label="Course video player"`. Captions: `<track kind="captions">` per available language.
+- Modal: `role="dialog" aria-modal="true"` with focus trap.
+- Cart count badge: `aria-live="polite"` so screen readers announce additions.
+- Sale countdown: `aria-live="off"` (would be too chatty); the static "Sale ends in 4h 32m" text is sufficient.
+
+### Keyboard Navigation
+- Tab: move forward through controls; Shift+Tab reverses.
+- Enter / Space: activate focused button or card.
+- Arrow keys: navigate within catalog grid (roving tabindex).
+- ESC: close modal, mega menu, sidebar overlay.
+- "/" : focus top-bar search.
+
+### Screen Reader Hints
+- Course card aria-label packs title + instructor + rating + level + price into one string for fast scanning.
+- "Bestseller" / "Hot & New" badges have explicit `aria-label="Bestseller"`; not decorative.
+- Video player: live-region announces play/pause state changes and chapter advances.
+- Discount labels ("84% off") are announced as part of the price block.
+
+### Reduced Motion
+Honoured. See §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+| Token | Min | Use |
+|-------|-----|-----|
+| mobile | 0px | 1 card per row, sidebar collapses to filter modal |
+| tablet | 600px | 2 cards per row, sidebar shows as collapsible drawer |
+| tablet-lg | 900px | 3 cards per row, sidebar visible at 240px |
+| desktop | 1200px | 4 cards per row, full 280px sidebar |
+| wide | 1440px | content max 1340px centred |
+
+### Touch Targets
+- 48×48 minimum on all interactive controls. Card tap targets fill the entire card body (anchor wraps the whole card).
+- On mobile, filter chips reflow to wrap with 8px gaps; cart icon at 44×44 for thumb-reach.
+
+### Collapsing Strategy
+- **Top nav**: collapses to hamburger + search-icon + cart + profile on `< 900px`.
+- **Mega menu**: collapses to a stacked list inside the hamburger drawer on mobile.
+- **Sale banner**: stays visible on all breakpoints; countdown digits scale down.
+- **Filter sidebar**: collapses to "Filters" button on mobile that opens a full-screen drawer.
+- **Course grid**: 4 → 3 → 2 → 1 across the breakpoint cascade.
+- **Hero**: title scales 56 → 44 → 32 → 24; image collapses below text on `< 600px`.
+
+### Image Behavior
+- Course thumbnails: 16:9 aspect, served at 240w / 480w / 720w via responsive `srcset`. Lazy-load below the fold. Subtle 1px border `#d1d7dc` follows the card border.
+- Partner logos: SVG with `currentColor` for tint adjustability.
+- Video player: 16:9 with adaptive bitrate streaming (HLS).
+
+### Container Queries
+Used on the filter sidebar — accordion group titles collapse to icon-only at narrow rail widths; on the course-card body — instructor name truncates earlier when card width is below 240px.
+
+## 11. Content & Voice
+
+### Tone
+Udemy's voice is **encouraging, plain-spoken, and bargain-aware**. Course descriptions read like syllabi written by working practitioners — clear, structured, free of academic jargon. Marketing copy tilts aspirational ("Skills that drive you forward", "Unlock your potential") but pairs the aspiration with a price tag ("Plans starting at $11.99/month"). The brand never assumes the reader is an expert; it never assumes the reader has unlimited budget either. Every course page balances "this skill will change your career" with "and it's $13.99 today only".
+
+### Microcopy Patterns
+- **Primary CTA**: "Add to cart", "Buy now", "Subscribe", "Start subscribing", "Try free for 7 days".
+- **Secondary CTA**: "Try Udemy Business", "Preview this course", "Add to wishlist".
+- **Confirmation toast**: "Added to cart", "Welcome back, [Name]", "Course saved to wishlist".
+- **Empty wishlist**: "Save courses for later by clicking the heart on any course."
+- **Empty cart**: "Your cart is empty. Browse courses to find something new to learn."
+- **Empty learning**: "Your courses will appear here once you enroll. Start by exploring popular topics."
+- **Premium upsell**: "Get 12,000+ courses with Udemy Personal Plan."
+- **Sale urgency**: "Sale ends in 4h 32m. Don't miss out."
+- **Time-aware welcome**: "Welcome back, [Name]" + "Continue learning" CTA on resumed-course module.
+
+### Empty States
+- Empty wishlist: heart-icon illustration + "Your wishlist is empty" + "Browse Courses" CTA.
+- Empty cart: cart-icon illustration + "Your cart is empty" + "Keep shopping" CTA.
+- Empty learning: "You haven't started learning yet" + "Find a course" CTA.
+- Empty search: "We couldn't find any results for [query]" + "Try fewer or different keywords" + suggested searches.
+- Offline: "You're offline. Downloaded lectures are available below."
+
+### CTA Verb Conventions
+- "Add to cart" — primary purchase verb. Always sentence case, never "ADD TO CART".
+- "Buy now" — express checkout, single course.
+- "Subscribe" — Personal Plan monthly tier.
+- "Try free for 7 days" — Personal Plan trial.
+- "Save" — wishlist toggle.
+- "Continue learning" — returning-user CTA on in-progress courses.
+- "Preview this course" — secondary action to play sample lecture without buying.
+- "Get certificate" — completion CTA.
+- "Become an instructor" — recruit-side CTA on creator marketing pages.
+
+## 12. Dark Mode & Theming
+
+Udemy is **light-only on the web surface**. The mobile apps (iOS / Android) ship a dark mode that follows the system setting, but the web product and marketing site stay light-only. The reasons are likely commercial — the discount-sticker visual language reads more credibly on white (yellow Bestseller tag, green discount label, struck-through original price all need a clean light ground), and the catalog-page density doesn't benefit from a dark inversion the way a media-consumption product would.
+
+If theming were added to web, the canvas would shift to `#1c1d1f`, body text to `#f1f3f5`, brand purple `#a435f0` would brighten slightly to `#c084fc` for AAA contrast on dark, and the mustard Bestseller tag would shift to `#d4d35a` on a dark badge. Cards would take a `#2d2f31` surface with `#3a3c3e` border. But no public design has shipped this on web and there's no roadmap signal for it.
+
+The video player has a "theatre mode" that darkens the player chrome and surrounding page when expanded, but the underlying page remains light.
+
+## 13. Lineage & Influences
+
+Udemy's visual lineage is three-streamed.
+
+**The Amazon-product-card e-commerce tradition.** Udemy was founded in 2010 explicitly as the "Amazon for online courses" — and the catalog page bears the unmistakable fingerprint: 4-across product grid with 1px borders, 16:9 thumbnails, title / author / rating / price stack on every tile, left-rail faceted filter sidebar, breadcrumb top, "Customers also viewed" rails. Every element is borrowed from Amazon's product browse and adapted for courseware. The discount sticker is the single most direct lift — Amazon's "List Price: $84.99" struck through above "Price: $13.99 (84% off)" is reproduced literally on every Udemy course tile.
+
+**The Sailec / friendly-humanist sans tradition.** Sailec — designed by Type Dynamic in 2014 — became a darling of mid-2010s tech branding (used by Booking.com, Square, and others) for its warmer-than-Helvetica humanist register. Udemy commissioned a Sailec derivative as Udemy Sans circa 2018 to claim some typographic ownership while keeping the friendly-but-professional feel. The font choice signals "we're a workplace, not a campus" — Source Sans (Coursera) reads more institutional; Sailec reads more start-up.
+
+**The bargain-marketplace visual language.** Yellow Bestseller tags on Udemy descend from Amazon's "#1 Bestseller" orange ribbon, which itself descends from physical bookstore shelf-talkers. The struck-through original price is a 30-year-old retail convention (newspaper inserts, end-cap displays, holiday catalogs). Udemy's contribution is the discipline to keep these patterns subtle — soft mustard rather than screaming red, sentence-case copy rather than ALL CAPS, single accent rather than rainbow.
+
+What Udemy rejects: dark mode on web, decorative serif companion, multi-color brand palette, aggressive negative tracking, full-screen marketing video as hero, modal pop-overs. What it embraces: density over breath, content over chrome, value-pricing over premium-positioning.
+
+**Influences:**
+- **Amazon** — product-card grid, faceted-search left rail, "Frequently bought together" cross-sell, struck-through pricing. https://amazon.com
+- **Sailec / Type Dynamic** — humanist sans warmer than Helvetica that anchors the friendly-marketplace voice. https://typedynamic.com
+- **Booking.com** — Sailec-using contemporary, similar density-heavy faceted-search aesthetic. https://booking.com
+- **Coursera** — direct competitor whose softer 8px / royal-blue / pill-button aesthetic Udemy explicitly contrasts with sharper 4px / electric-purple / square-button language. https://coursera.org
+- **Skillshare** — peer creator-marketplace whose bolder serif headlines Udemy chose not to follow. https://skillshare.com
+
+## 14. Do's and Don'ts
+
+**Do:**
+- Use `#a435f0` for primary CTA backgrounds and the wordmark — and `#5624d0` for inline text links and outlined buttons (better contrast).
+- Pair primary CTA with white text — at 16px / 700 the contrast is AA at body, AAA at large-text bracket.
+- Round cards, buttons, and inputs to `4px` — the geometric signature is sharper-cornered than Coursera; only the global search is fully pilled.
+- Skip card shadows at rest — use the 1px warm-grey `#d1d7dc` border. Hover gets a light `0 2px 8px rgba(0,0,0,0.10)` shadow.
+- Use yellow-orange `#f69c08` rating stars exclusively — no other color for ratings.
+- Use mustard `#eceb98` for "Bestseller" tags, warm orange `#f3ca8c` for "Hot & New", soft purple `#f3eaff` for "Highest Rated".
+- Stack the price block: 22px / 700 sale price + 14px / 400 struck-through original + 14px / 700 green "X% off" inline.
+- Set body type at 16px / 400 / 1.5 line-height — bargain-friendly density.
+- Default to sentence case ("Add to cart"), title case for badge labels only.
+- Provide closed captions on every video lecture; transcripts side-by-side with the player.
+- Keep the sticky black `#1c1d1f` sale banner top-of-page during sale events with a live countdown.
+- Maximize content density — 4 cards across at desktop, 16px gaps, 280px filter sidebar.
+
+**Don't:**
+- Don't use `#a435f0` for inline body links — its 4.5:1 contrast on white fails AAA. Use `#5624d0` deeper purple instead.
+- Don't round buttons or cards to 8px+ — Udemy's brand reads sharper than Coursera's. Save the pill (9999px) for the global search.
+- Don't apply heavy shadows on cards (`> 0.15` opacity) — the elevation is whisper-soft.
+- Don't introduce a serif companion font — single-family Sailec carries everything.
+- Don't pair brand purple with a saturated secondary color — yellow stars and mustard Bestseller tags are the only saturated accents.
+- Don't tighten display tracking past `-0.02em` — the brand is open and friendly, not condensed.
+- Don't use scale transforms on hover — Udemy's elevation grows via shadow, not translation.
+- Don't introduce a dark theme on web — it's light-only by commercial design.
+- Don't strip the discount sticker from course cards — the always-on sale state is a brand commitment, not a quarterly campaign.
+- Don't use ALL CAPS for buttons or headlines — sentence case on everything except badges.
+- Don't widen the card body padding past 16px — density is the brand.
+- Don't drop the partner-logo "Trusted by" rail — it does enterprise-trust-building work.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Canvas: `#ffffff`
+- Warm Off-White: `#f7f9fa`
+- Udemy Purple (CTA): `#a435f0`
+- Inline Link Purple: `#5624d0`
+- Display Black: `#1c1d1f`
+- Muted: `#6a6f73`
+- Border: `#d1d7dc`
+- Star Orange: `#f69c08`
+- Bestseller Mustard: `#eceb98`
+- Discount Green: `#1c8c2e`
+- Sale Banner Black: `#1c1d1f`
+
+### Example Component Prompts
+1. "Create a Udemy-style course card — `#ffffff` background, `4px` radius, `1px solid #d1d7dc` border, no rest shadow; 16:9 thumbnail flush to top edge with `#eceb98` 'Bestseller' badge top-left in 12px / 700 `#3d3c0a`; below thumbnail in 16px-padded body: 16px / 700 `#1c1d1f` title 'The Complete Web Development Bootcamp' (max 2 lines), 12px / 400 `#6a6f73` 'Dr. Angela Yu', orange 5-star row + 14px / 700 '4.7' + 12px / 400 muted '(364,521)', then price stack — 22px / 700 `#1c1d1f` '$13.99' + 14px / 400 `#6a6f73` strike-through '$84.99'. On hover deepen shadow to `0 2px 8px rgba(0,0,0,0.10)` over 200ms."
+2. "Design a Udemy primary CTA — `4px` square radius, `#a435f0` background, white 16px / 700 'Add to cart' label, `12px 16px` padding, `48px` height, hover to `#8710d8`, no shadow lift."
+3. "Build a Udemy homepage hero — `#ffffff` background, 56px Udemy Sans 700-weight headline 'Skills that drive you forward' in `#1c1d1f` with `-0.02em` tracking, 18px / 400 `#6a6f73` lead 'Learn from over 250,000 video courses', primary purple CTA 'Plan starts at $11.99/month' + outlined deeper-purple secondary 'Try Udemy Business' inline."
+4. "Render a Udemy sticky sale banner — full-width `48px` tall, `#1c1d1f` background, white 14px / 700 copy 'Up to 80% off this week. Time to invest in YOU.' centred-left, with a live countdown timer right-aligned 'Sale ends in 4h 32m' in 14px / 400 with mustard `#eceb98` accent on the time."
+5. "Create a Udemy catalog page — 280px left filter sidebar with collapsible accordion groups (Ratings / Video Duration / Topic / Subcategory / Level / Language / Price / Features / Subtitles), each group title 16px / 700 with checkbox options 14px / 400 + count '(1,234)'; 1060px course grid right with 4-across course cards at 16px gap; sticky top with 'Development > Web Development > JavaScript' breadcrumb in `#5624d0`."
+6. "Build a Udemy course detail page header — `#1c1d1f` dark hero band 480px tall, white 32px / 700 course title left, white 16px / 400 short description, orange 5-star row + white '4.7 (124,532 ratings)' + white '589,123 students enrolled', warm `#eceb98` 'Bestseller' tag; right column hosts a sticky 320px-wide white card with course preview thumbnail, price stack, full-width purple `#a435f0` 'Add to cart' CTA, outlined 'Buy now' below, and 30-day money-back guarantee callout."
+
+### Iteration Guide
+1. **Sharpen the corners.** If buttons or cards feel too soft, drop radius to `4px` everywhere. Coursera lives at 8px / 24px; Udemy lives at 4px.
+2. **Skip the rest shadow.** If cards feel floaty, remove the rest shadow entirely. Use only the 1px `#d1d7dc` border. Save shadow for hover.
+3. **Use deeper purple for inline links.** If a link doesn't pop, switch from brand `#a435f0` to deeper `#5624d0` — its AAA contrast on white pulls the eye without screaming.
+4. **Keep the sale state on.** If the page feels premium-quiet, add the discount stack — green "84% off" + struck-through original price. Udemy's brand is bargain-aware year-round, not campaign-driven.
+5. **Single family discipline.** If display feels off-brand, drop the secondary font — Udemy Sans / Sailec carries everything. Two weights only: 400 and 700.
+6. **Sentence case everywhere except badges.** "Add to cart", not "ADD TO CART" or "Add To Cart". Title case is only for badge tokens (Bestseller, Hot & New, Highest Rated).
+7. **Yellow only for stars and bestseller.** If yellow appears anywhere besides rating stars or the mustard Bestseller tag, audit and remove.
+8. **Density over breath.** If the catalog feels sparse, tighten card gap to 16px and pack 4 cards across. Udemy is a marketplace; density is the brand.

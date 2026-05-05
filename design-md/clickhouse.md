@@ -6,7 +6,7 @@ source_url: https://clickhouse.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [dev-tools, data]
+categories: [dev-tools]
 tags: [dark, yellow, mono-accent, sans, dense, technical]
 preview_swatch: ['#0a0a0a', '#faff69', '#ffffff']
 related: [vercel, supabase, datadog]

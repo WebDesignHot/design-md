@@ -3,84 +3,244 @@ name: Nuxt
 tagline: Forest-green `#00dc82` glow on a near-black canvas — Vue-flavored warmth dressed for the cosmos.
 author: webdesignhot
 source_url: https://nuxt.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
-featured: false
+featured: true
 categories: [dev-tools]
 tags: [dark, sans, structured, cool, multi-theme]
 preview_swatch: ['#020420', '#00dc82', '#ffffff']
 related: [vercel, vite, tailwindcss]
-description: 'Nuxt''s site lives on a near-black `#020420` canvas — slightly cooler and bluer than pure black — with the signature `#00dc82` Vue-derived green doing all of the chromatic heavy lifting. Inter and DM Sans handle the type, the wordmark hex glyph anchors the upper-left, and a soft green glow leaks behind hero copy as a brand-tinted halo.'
+description: 'Nuxt''s site lives on a near-black `#020420` canvas — slightly cooler and bluer than pure black — with the signature `#00dc82` Vue-derived green doing all of the chromatic heavy lifting. Inter and DM Sans handle the type, the wordmark hex glyph anchors the upper-left, and a soft green glow leaks behind hero copy as a brand-tinted halo. Where Vercel runs near-black + Geist + magenta-pink and Astro runs cosmos navy + violet-orange gradients, Nuxt runs deep blue-black + DM Sans/Inter + single-accent green — a palette closer to a developer terminal than a marketing page, which suits a Vue meta-framework that sells itself on developer ergonomics. The brand also ships a polished light variant for documentation surfaces, making Nuxt one of the rare dev-tool brands with a genuinely first-class dual-theme system.'
 
 colors:
-  bg: '#020420'                # near-black canvas, slight blue tilt
-  bg-soft: '#0a0d2a'           # secondary panel
-  surface: '#10142e'           # card lift
-  surface-strong: '#1a1f42'
-  text: '#ffffff'              # primary, used full-strength on dark
-  text-muted: '#a0a8b8'        # secondary copy
-  text-soft: '#6c7384'
-  brand: '#00dc82'             # Nuxt green (Vue-derived)
-  brand-hover: '#00b86a'
-  brand-soft: '#003b22'        # deep tinted bg for callouts
-  accent: '#80eeb4'            # lighter green for hover/highlight
-  glow: '#00dc8266'            # 40% alpha green halo behind hero
-  border: '#ffffff14'
-  border-strong: '#ffffff26'
-  on-brand: '#020420'          # dark text on green button
+  # Primary (dark canvas — default)
+  bg: '#020420'                          # near-black canvas, slight cool-blue tilt
+  bg-soft: '#0a0d2a'                     # secondary panel, code blocks
+  bg-deep: '#050729'                     # tertiary panel for nested groups
+  surface: '#10142e'                     # card lift, one step above canvas
+  surface-strong: '#1a1f42'              # hover-lifted card
+  text: '#ffffff'                        # primary copy, full strength on dark
+  text-strong: '#ffffff'
+  text-medium: '#dbdfe9'                 # softer headline
+  text-muted: '#a0a8b8'                  # secondary copy, nav links
+  text-soft: '#7c8497'                   # captions, helper text
+  text-faint: '#525a6c'                  # disabled, footer microcopy
+  # Brand
+  brand: '#00dc82'                       # Nuxt green — Vue-derived, brighter and cooler
+  brand-hover: '#00b86a'                 # pressed / hover green
+  brand-deep: '#008a4f'                  # deeper accent for emphasis
+  brand-soft: '#003b22'                  # tinted background for callouts
+  brand-bright: '#80eeb4'                # lighter green for highlights
+  glow: 'rgba(0, 220, 130, 0.40)'        # 40% alpha green halo behind hero
+  glow-soft: 'rgba(0, 220, 130, 0.18)'   # quieter glow for capability cards
+  on-brand: '#020420'                    # dark text on green button — high contrast
+  # Interactive
+  link: '#00dc82'                        # brand-green links on dark
+  link-hover: '#80eeb4'                  # brighter on hover
+  selected-bg: 'rgba(0, 220, 130, 0.10)' # nav/selected wash
+  disabled: '#525a6c'
+  # Borders
+  border: 'rgba(255, 255, 255, 0.08)'    # 8% white hairline — defining border on dark
+  border-strong: 'rgba(255, 255, 255, 0.15)' # emphasized rule
+  border-soft: 'rgba(255, 255, 255, 0.04)' # quietest separation
+  border-brand: 'rgba(0, 220, 130, 0.40)' # brand-tinted divider
+  # Semantic
+  success-bg: 'rgba(0, 220, 130, 0.12)'  # brand-green doubles as success
+  success-text: '#80eeb4'
+  warning-bg: 'rgba(251, 191, 36, 0.12)'
+  warning-text: '#fcd34d'
   warning: '#fbbf24'
+  danger-bg: 'rgba(239, 68, 68, 0.12)'
+  danger-text: '#fca5a5'
+  info-bg: 'rgba(96, 165, 250, 0.12)'
+  info-text: '#93c5fd'
 
 typography:
   display:
-    family: '"DM Sans", Inter, -apple-system, "system-ui", sans-serif'
+    family: '"DM Sans", Inter, -apple-system, "system-ui", "Segoe UI", sans-serif'
     weights: [500, 600, 700]
+    opentype-features: ['ss01', 'liga', 'kern']
   body:
     family: 'Inter, -apple-system, "system-ui", "Segoe UI", sans-serif'
-    weights: [400, 500, 600]
+    weights: [400, 500, 600, 700]
+    opentype-features: ['liga', 'kern', 'cv11']
   mono:
-    family: '"DM Mono", ui-monospace, "JetBrains Mono", Menlo, monospace'
+    family: '"DM Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace'
     weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
   scale:
-    h1:    { size: 72, weight: 700, lineHeight: 1.05, tracking: '-0.02em' }
-    h2:    { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.015em' }
-    h3:    { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.005em' }
-    body:  { size: 16, lineHeight: 1.6 }
-    small: { size: 14, lineHeight: 1.5 }
-    code:  { size: 14, family: mono, lineHeight: 1.6 }
+    display-hero:    { size: 88, weight: 700, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display:         { size: 72, weight: 700, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    h1:              { size: 56, weight: 700, lineHeight: 1.08, tracking: '-0.02em', family: display }
+    h2:              { size: 44, weight: 700, lineHeight: 1.10, tracking: '-0.015em', family: display }
+    h3:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em', family: display }
+    h4:              { size: 22, weight: 600, lineHeight: 1.30, family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.40, family: display }
+    eyebrow:         { size: 13, weight: 500, lineHeight: 1.40, tracking: '0.04em', family: body, transform: uppercase }
+    body-large:      { size: 20, weight: 400, lineHeight: 1.6,  family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.6,  family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.5,  family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,  family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.4,  family: mono, opentype: 'tnum' }
+    label:           { size: 12, weight: 500, lineHeight: 1.3,  family: body }
+    code:            { size: 14, weight: 400, lineHeight: 1.6,  family: mono, opentype: 'tnum zero' }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.4,  family: mono }
+    quote-pull:      { size: 28, weight: 500, lineHeight: 1.3,  family: display }
 
 radius:
+  micro: 2
   xs: 4
   sm: 6
   md: 8
   lg: 12
+  xl: 16
   card: 16
+  button: 8
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+
 layout:
-  container: 1280
-  gutter: 24
-  section-padding: 96
-  grid: 12
+  page-width: 1280
+  prose-width: 720
+  site-gutter: 'clamp(24px, 5vw, 64px)'
+  header-height: 64
+  grid-columns: 12
+  section-rhythm: '96-160px'
 
 components:
   button-primary:
-    bg: '#00dc82'
-    color: '#020420'
+    background: '#00dc82'
+    text: '#020420'
+    padding: '12px 22px'
     radius: 8
-    weight: 600
+    border: 'none'
+    font: 'Inter 600 / 15px'
+    hover-bg: '#00b86a'
+    active-bg: '#008a4f'
+    use: 'Primary CTA — solid Nuxt-green with dark on-brand text. *Get started, Try Nuxt, Read docs.*'
   button-ghost:
-    bg: 'transparent'
-    color: '#ffffff'
-    border: '1px solid #ffffff26'
+    background: 'transparent'
+    text: '#ffffff'
+    padding: '12px 22px'
     radius: 8
+    border: '1px solid rgba(255, 255, 255, 0.15)'
+    font: 'Inter 500 / 15px'
+    hover-bg: 'rgba(255, 255, 255, 0.05)'
+    use: 'Outlined twin — same shape, hairline border on dark canvas.'
+  button-glow:
+    background: 'rgba(0, 220, 130, 0.10)'
+    text: '#00dc82'
+    padding: '10px 18px'
+    radius: 8
+    border: '1px solid rgba(0, 220, 130, 0.40)'
+    font: 'Inter 500 / 14px'
+    hover-bg: 'rgba(0, 220, 130, 0.18)'
+    use: 'Brand-tinted secondary — green-on-green-glow for accent CTAs.'
+  button-link:
+    background: 'transparent'
+    text: '#00dc82'
+    padding: '0'
+    radius: 0
+    font: 'Inter 500 / 15px'
+    hover-text: '#80eeb4'
+    use: 'Inline brand-green action — documentation references, "Read more →".'
   card:
-    bg: '#10142e'
-    border: '1px solid #ffffff14'
+    background: '#10142e'
+    border: '1px solid rgba(255, 255, 255, 0.08)'
     radius: 16
+    padding: '28px'
+    use: 'Capability tile, feature card — tonal-blue lift over canvas, never shadowed.'
+  card-glow:
+    background: '#10142e'
+    border: '1px solid rgba(0, 220, 130, 0.30)'
+    radius: 16
+    padding: '28px'
+    box-shadow: '0 0 80px -20px rgba(0, 220, 130, 0.25)'
+    use: 'Hero card with subtle green halo bleeding into surrounding negative space.'
   code-block:
-    bg: '#0a0d2a'
+    background: '#0a0d2a'
+    border: '1px solid rgba(255, 255, 255, 0.08)'
     radius: 12
-    font: mono
+    padding: '20px 24px'
+    font: 'DM Mono 400 / 14px'
+    use: 'Code surface — slightly lighter than canvas, signals interactivity.'
+  input:
+    background: '#0a0d2a'
+    border: '1px solid rgba(255, 255, 255, 0.15)'
+    radius: 8
+    padding: '12px 16px'
+    font: 'Inter 400 / 15px'
+    placeholder-color: '#7c8497'
+    focus-ring: '0 0 0 2px rgba(0, 220, 130, 0.40)'
+    focus-border: '#00dc82'
+    use: 'Form fields, search, docs filter — dark surface with green focus ring.'
+  badge-eyebrow:
+    background: 'transparent'
+    text: '#a0a8b8'
+    padding: '0'
+    radius: 0
+    font: 'Inter 500 / 13px / uppercase / 0.04em tracking'
+    use: 'Section eyebrow — no chrome, just type.'
+  badge-brand:
+    background: 'rgba(0, 220, 130, 0.12)'
+    text: '#80eeb4'
+    padding: '4px 10px'
+    radius: 4
+    font: 'Inter 500 / 12px'
+    use: 'Subtle green-tinted status pill — version tags, "New" labels.'
+  hex-glyph:
+    fill: '#00dc82'
+    stroke: 'none'
+    use: 'Six-sided wordmark icon — appears in nav, dividers, decorative spots throughout.'
+  nav-link:
+    background: 'transparent'
+    text: '#a0a8b8'
+    padding: '8px 12px'
+    font: 'Inter 500 / 14px'
+    hover-text: '#ffffff'
+    active-text: '#00dc82'
+    use: 'Header nav — muted by default, white on hover, green when active.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-glow: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  duration-page: 480
+  duration-glow-pulse: 2400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — glow pulse pauses, transitions become opacity-only, durations halved'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.20) 0 1px 3px'
+  standard: 'rgba(0, 0, 0, 0.30) 0 4px 12px'
+  elevated: 'rgba(0, 0, 0, 0.40) 0 12px 32px -8px'
+  glow-soft: '0 0 80px -20px rgba(0, 220, 130, 0.25)'
+  glow-hero: '0 0 160px -40px rgba(0, 220, 130, 0.45)'
+  ring: '0 0 0 2px rgba(0, 220, 130, 0.40)'
+
+accessibility:
+  contrast-text-on-bg: 18.8                # #ffffff on #020420 — AAA at all sizes
+  contrast-text-on-brand: 11.2             # #020420 on #00dc82 — AAA (high-contrast green button)
+  contrast-text-muted-on-bg: 8.6           # #a0a8b8 on #020420 — AAA at body
+  contrast-link-on-bg: 11.4                # #00dc82 on #020420 — AAA at all sizes
+  contrast-text-soft-on-bg: 5.8            # #7c8497 on #020420 — AA at body
+  focus-ring: '2px solid rgba(0, 220, 130, 0.40) with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive surface; tab order matches visual flow; glow pulse pauses on prefers-reduced-motion'
+  prose-line-length: 'capped at 720px (~70 characters) for documentation readability'
+  contrast-on-glow: 'glow halo applied behind text, not over — never reduces underlying text contrast'
 
 lineage:
   summary: |
@@ -102,99 +262,583 @@ lineage:
     which suits a framework that sells itself on developer ergonomics.
   influences:
     - name: Vue.js
-      role: Direct lineage — the Nuxt green is a brighter, cooler cut of Vue's `#42b883`.
+      role: Direct lineage — the Nuxt green is a brighter, cooler cut of Vue's `#42b883`
       url: https://vuejs.org
     - name: Vercel
-      role: Dark-canvas dev-tool template; near-black bg with a single brand accent.
+      role: Dark-canvas dev-tool template; near-black bg with a single brand accent
       url: https://vercel.com
     - name: Linear
-      role: Soft brand-tinted halo behind hero copy as a depth strategy.
+      role: Soft brand-tinted halo behind hero copy as a depth strategy
       url: https://linear.app
+    - name: Tailwind CSS
+      role: Dual-theme docs surface polish; light/dark variant feature parity
+      url: https://tailwindcss.com
+    - name: DM Sans / Colophon Foundry
+      role: Geometric humanist DNA reference; the DM Sans + DM Mono pairing gives Nuxt its Eurostile-soft register
+    - name: Vite
+      role: Sister-project visual cousin; dev-tool dark canvas with single-accent green-yellow
+      url: https://vitejs.dev
+
+dark-mode: present                         # default theme; light variant ships for docs surface
+
+colors-light:
+  bg: '#ffffff'                           # white canvas for docs surface
+  bg-soft: '#f6f8fa'                      # palest-grey panel
+  bg-deep: '#eef1f5'                      # tertiary panel
+  surface: '#ffffff'                      # cards lift via border, not shadow
+  surface-strong: '#f6f8fa'
+  text: '#020420'                         # near-black text, slight blue tilt
+  text-strong: '#020420'
+  text-medium: '#1f2533'
+  text-muted: '#4a5568'
+  text-soft: '#6b7280'
+  brand: '#00b86a'                        # slightly deeper green for AA contrast on white
+  brand-hover: '#008a4f'
+  brand-soft: 'rgba(0, 184, 106, 0.10)'
+  on-brand: '#ffffff'
+  link: '#00b86a'
+  link-hover: '#008a4f'
+  border: 'rgba(2, 4, 32, 0.10)'
+  border-strong: 'rgba(2, 4, 32, 0.20)'
+  border-soft: 'rgba(2, 4, 32, 0.05)'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Nuxt's marketing site reads as Vue's identity grown up and moved to
-a darker neighborhood. The canvas runs to `#020420` — a deep,
-slightly-blue near-black — and the brand color is the unmistakable
-`#00dc82` green that traces directly back to Vue's `#42b883`, pulled
-cooler and brighter for the dark canvas. That green appears as the
-primary CTA fill, as a soft halo behind hero copy, and as the
-accent on the hex-shaped Nuxt glyph in the upper-left corner.
+Nuxt's marketing site reads as Vue's identity grown up and moved to a darker neighborhood. The canvas runs to `#020420` — a deep, slightly-blue near-black that's intentionally cooler than Astro's cosmos navy and warmer than Linear's true black. The brand color is the unmistakable `#00dc82` green that traces directly back to Vue's `#42b883`, pulled cooler and brighter for the dark canvas. That green appears as the primary CTA fill, as a soft 40%-alpha halo behind hero copy, and as the accent on the hex-shaped Nuxt glyph that anchors the upper-left of the navigation.
 
-The type pairing is **DM Sans** for display and **Inter** for body —
-DM Sans is more geometric than Inter, with rounder counters, and
-that geometric quality reads as engineered. Code surfaces sit on
-`#0a0d2a` panels using DM Mono, completing a typographic family
-rather than mixing brands.
+The defining atmospheric move is the **green glow**. Rather than rendering brand identity as a hard-edged accent, Nuxt diffuses Nuxt-green into the surrounding negative space via blurred halos behind hero text and key feature blocks. The glow is `rgba(0, 220, 130, 0.40)` at 40% alpha, blurred 80–160px, sometimes pulsing gently on a 2.4-second cycle. It never hardens into a solid fill, never gets close enough to the brand mark to compete — it just *bleeds* Nuxt-green into the cosmos. The effect is closer to a developer terminal's CRT phosphor than to a marketing illustration.
 
-## Colors
+The type pairing is **DM Sans** for display and **Inter** for body — DM Sans is more geometric than Inter, with rounder counters and a broader x-height, and that geometric quality reads as engineered rather than journalistic. Code surfaces sit on `#0a0d2a` panels using **DM Mono**, completing a typographic family rather than mixing brands. The H1 holds at 56–72px with -0.02em tracking; body at 16px on a 1.6 line; eyebrows at 13px / 0.04em / uppercase Inter for section signals.
 
-- **bg** `#020420` — near-black canvas, slight cool blue tilt
-- **bg-soft** `#0a0d2a` — secondary panels and code blocks
-- **surface** `#10142e` — card lift, one step above bg
-- **text** `#ffffff` — primary copy, full-strength on dark
-- **text-muted** `#a0a8b8` — secondary copy, nav links
-- **brand** `#00dc82` — the Nuxt green, primary action color
-- **brand-soft** `#003b22` — deep tinted background for accent callouts
-- **glow** `#00dc8266` — 40% alpha green halo behind hero copy
-- **border** `#ffffff14` — 8% white hairline
-- **on-brand** `#020420` — dark text on the green button (high contrast)
+Cards are tonal-blue panels at `#10142e` — one step above the canvas — with 8% white hairlines. They're never shadowed; depth comes from value-stepping (`#020420` → `#0a0d2a` → `#10142e` → `#1a1f42`) plus the brand-tinted halo. The four-step ladder is Nuxt's elevation system: each step adds 4–8% lightness without changing hue, building depth via tone alone.
 
-## Typography
+The **hex-shaped Nuxt glyph** echoes through the system as a recurring motif. It appears in the wordmark, in section dividers, in icon-frames, and as a six-sided geometric hint inside small UI moments. The hex is the brand's angular accent against the otherwise soft 8–16px rounding — a deliberate geometric tension that mirrors the Vue-Nuxt relationship (Vue is friendlier; Nuxt is more engineered).
 
-Display is **DM Sans** by ColorFonts/Google at weights 600 and 700.
-H1 sits at 72px with 1.05 line-height and `-0.02em` tracking; DM
-Sans's slightly geometric character — rounder counters, broader x-
-height than Inter — gives the marketing a register distinct from
-Vercel-Geist monoculture.
+Atmospheric vocabulary that captures the feeling: *cosmos-blue-black, terminal-phosphor, hex-glyph-anchored, tonal-blue-stepped, Vue-green-evolved, glow-haloed-hero, DM-Sans-geometric, single-accent-green, framework-not-app, Nuxt-3-era.* The brand reads as a developer terminal that learned graphic design.
 
-Body type is **Inter** at 16px on a 1.6 line-height. The pairing is
-deliberate: DM Sans for the headlines, Inter for everything denser
-than a pull-quote. Code surfaces use **DM Mono** at 14px, keeping
-the typographic family unified.
+**Key Characteristics**
+- Near-black `#020420` canvas — slight cool-blue tilt, *not* pure black, *not* navy
+- Single brand color: **Nuxt green `#00dc82`** — Vue-derived, brighter and cooler
+- Signature **green glow** halo — 40% alpha bleed behind hero copy
+- DM Sans (display) + Inter (body) + DM Mono (code) — unified typographic family
+- Hex-shaped wordmark glyph repeats throughout as angular motif
+- Tonal-blue elevation ladder: `#020420` → `#0a0d2a` → `#10142e` → `#1a1f42`
+- 16px card radius, 8px button radius — modern dev-tool consensus
+- 8% white hairlines (`rgba(255, 255, 255, 0.08)`) — every border on dark
+- Dark-by-default with **first-class light variant** for docs surface
+- Solid green button fill (`#00dc82`) with dark text — high contrast, unmistakable
 
-## Layout
+## 2. Color Palette & Roles
 
-Container caps at 1280px with 24px gutters; sections breathe at 96px
-vertical. The grid is 12-column with frequent 8/4 splits for feature
-+ screenshot layouts. The hex-shaped Nuxt glyph in the wordmark
-echoes through small UI iconography — angular, six-sided geometric
-hints in dividers and section markers.
+### Primary
 
-## Elevation & Depth
+- **bg** `#020420` — near-black canvas with a cool-blue tilt; the defining ground. Cooler than Astro, warmer than Linear, never substituted for pure `#000` or pure navy.
+- **bg-soft** `#0a0d2a` — secondary panel, code-block ground, input surface.
+- **surface** `#10142e` — card lift, one step above the canvas. The dominant card colour.
+- **text** `#ffffff` — pure white, full strength. The high contrast against the cool-blue ground reads crisp without harshness.
 
-Depth comes from **tonal-blue layering** plus a brand-tinted halo.
-Cards sit at `#10142e`, one step above the `#020420` canvas; hover
-lifts to `#1a1f42`. The signature depth move is the **green glow**
-(`#00dc8266`, 40% alpha) blurred behind hero copy and key feature
-blocks — it bleeds Nuxt-green into the surrounding negative space
-without ever rendering as a hard accent. Borders are uniform 8%
-white hairlines.
+### Brand & Accent
 
-## Shapes
+- **brand** `#00dc82` — Nuxt green, the single accent. Vue-derived (`#42b883` → `#00dc82`), pulled cooler and brighter for digital surfaces.
+- **brand-hover** `#00b86a` — pressed / hover green.
+- **brand-deep** `#008a4f` — deeper accent for emphasis or active states.
+- **brand-soft** `#003b22` — deep tinted background for accent callouts; reads almost black at quick glance, reveals green on closer look.
+- **brand-bright** `#80eeb4` — lighter green for highlights, hover-link colour.
+- **glow** `rgba(0, 220, 130, 0.40)` — 40% alpha green halo behind hero copy. The signature depth move.
+- **glow-soft** `rgba(0, 220, 130, 0.18)` — quieter glow for capability cards.
+- **on-brand** `#020420` — dark text on green buttons (high-contrast, AAA).
 
-Radius ladder is 4 / 6 / 8 / 12 / 16, with pills at 9999. Buttons
-land at 8px, cards at 16px. The hex-glyph geometry of the Nuxt
-wordmark shows up in subtle places — chevrons, section dividers,
-icon-frames — giving the system an angular accent against the
-otherwise soft rounding.
+### Interactive
 
-## Components
+- **link** `#00dc82` — Nuxt green; underlined inside body copy.
+- **link-hover** `#80eeb4` — brighter green on hover (brand-bright).
+- **selected-bg** `rgba(0, 220, 130, 0.10)` — nav/selected wash.
+- **disabled** `#525a6c` — text-faint doubles as disabled.
 
-The defining components are the **solid green button** (`#00dc82`
-fill, `#020420` text, 8px radius — high-contrast and unmistakable),
-the **green-haloed hero card** (soft `#00dc8266` blur behind copy),
-the **dark code block** with DM Mono on `#0a0d2a`, and the **hex-
-glyph badge** that anchors the upper-left of the navigation. Cards
-are tonal-blue panels at `#10142e` with 8% white hairlines — never
-shadowed, always tonal-and-bordered.
+### Neutral Scale
 
-## Do's and Don'ts
+- **text-strong** `#ffffff` — pure white, headlines and high-emphasis copy.
+- **text-medium** `#dbdfe9` — softer headline variant.
+- **text-muted** `#a0a8b8` — secondary copy, nav links, body subordinate.
+- **text-soft** `#7c8497` — captions, helper text.
+- **text-faint** `#525a6c` — disabled labels, footer microcopy.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#020420` cosmos canvas.
+- **surface-1 (panel)** — `#0a0d2a` secondary panel.
+- **surface-2 (card)** — `#10142e` standard card.
+- **surface-3 (lifted)** — `#1a1f42` hover-lifted card or modal.
+- **border** `rgba(255, 255, 255, 0.08)` — 8% white hairline, the brand's defining border.
+- **border-strong** `rgba(255, 255, 255, 0.15)` — emphasized rule, hover deepening.
+- **border-soft** `rgba(255, 255, 255, 0.04)` — quietest separation.
+- **border-brand** `rgba(0, 220, 130, 0.40)` — rare brand-tinted divider on featured surfaces.
+
+### Shadow Colors
+
+Nuxt's depth on the dark canvas comes primarily from **tonal-blue layering** rather than shadows. Standard cards use no shadow at all — value contrast alone provides the lift. When shadows do appear (modals, popovers), they're deep and saturated (`rgba(0, 0, 0, 0.30–0.40)`) because they need to register on a near-black canvas. The signature elevation is **brand-tinted glow** — `0 0 80px -20px rgba(0, 220, 130, 0.25)` for cards, `0 0 160px -40px rgba(0, 220, 130, 0.45)` for hero halos. Glow is the brand's depth move; box-shadow is the rare overlay-only fallback.
+
+### Semantic
+
+- **success** — bg `rgba(0, 220, 130, 0.12)` (brand-tinted), text `#80eeb4`, border `rgba(0, 220, 130, 0.30)`. Brand green doubles as success — efficient and on-brand.
+- **warning** — bg `rgba(251, 191, 36, 0.12)`, text `#fcd34d`, border `rgba(251, 191, 36, 0.30)`.
+- **danger** — bg `rgba(239, 68, 68, 0.12)`, text `#fca5a5`, border `rgba(239, 68, 68, 0.30)`.
+- **info** — bg `rgba(96, 165, 250, 0.12)`, text `#93c5fd`, border `rgba(96, 165, 250, 0.30)`.
+
+The unusual choice: **success uses brand-green directly** rather than a separate Tailwind green-500. The brand teaches users that green = both Nuxt and OK; that pairing is intentional.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & UI**: `"DM Sans", Inter, -apple-system, "system-ui", "Segoe UI", sans-serif` — DM Sans by Google's Colophon Foundry, weight 600/700. Geometric humanist with rounder counters than Inter.
+- **Body**: `Inter, -apple-system, "system-ui", "Segoe UI", sans-serif` — weight 400/500/600 for paragraph copy and UI labels.
+- **Mono**: `"DM Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace` — for code blocks, terminal output, version tags. Same family as DM Sans, completing the trio.
+- **OpenType features**: `liga` and `kern` always on; `ss01` for stylistic alternate at display sizes; `cv11` (single-storey `a`) in Inter body for cleaner reading; `tnum` and `zero` (slashed zero) in DM Mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | DM Sans | 88px | 700 | 1.05 | -0.025em | ss01 liga | Homepage hero ceiling |
+| Display | DM Sans | 72px | 700 | 1.05 | -0.02em | ss01 | Section intro at scale |
+| H1 | DM Sans | 56px | 700 | 1.08 | -0.02em | liga | Page title |
+| H2 | DM Sans | 44px | 700 | 1.10 | -0.015em | liga | Major section |
+| H3 | DM Sans | 28px | 600 | 1.25 | -0.01em | — | Sub-section |
+| H4 | DM Sans | 22px | 600 | 1.30 | normal | — | Card heading |
+| H5 | DM Sans | 18px | 600 | 1.40 | normal | — | Inline emphasis |
+| Eyebrow | Inter | 13px | 500 | 1.40 | 0.04em | uppercase | Section pre-label |
+| Body Large | Inter | 20px | 400 | 1.60 | normal | cv11 | Lede paragraph |
+| Body | Inter | 16px | 400 | 1.60 | normal | cv11 | Default body |
+| Body Small | Inter | 14px | 400 | 1.50 | normal | — | Compact copy |
+| Caption | Inter | 13px | 400 | 1.40 | normal | — | Image captions |
+| Caption Tabular | DM Mono | 13px | 500 | 1.40 | normal | tnum | Stats, version tags |
+| Label | Inter | 12px | 500 | 1.30 | normal | — | UI labels |
+| Pull Quote | DM Sans | 28px | 500 | 1.30 | normal | — | Testimonial pull-quote |
+| Code | DM Mono | 14px | 400 | 1.60 | normal | tnum zero | Inline + block |
+| Code Micro | DM Mono | 12px | 400 | 1.40 | normal | — | API endpoint refs |
+
+### Principles
+
+- **DM Sans for display, Inter for body, DM Mono for code.** This trio is non-negotiable; mixing in Geist or JetBrains breaks the geometric register.
+- **DM Sans is rounder than Inter.** The slight geometric quality — broader counters, rounder x-height — gives the marketing a *Eurostile-flavored* register that distinguishes Nuxt from the Vercel-Geist monoculture of dev-tool sites.
+- **Weight 700 is the headline ceiling.** DM Sans 700 hits 56–72px on hero blocks; H3+ drops to 600. The geometric face needs the weight to assert presence on the dark canvas.
+- **Negative tracking scales with size.** -0.025em at 88px, -0.02em at 56–72px, -0.015em at 44px, -0.01em at 28px, normal below.
+- **Body line-height 1.6.** Inter on dark needs the extra leading; the cosmos canvas is unforgiving to tight body type.
+- **Code keeps the family.** DM Mono pairs visually with DM Sans (same designer/foundry); it doesn't fight the display register the way JetBrains Mono would.
+- **Single-storey `a` in body.** `cv11` enabled in Inter body so the alternate single-storey `a` reads cleaner at small sizes.
+- **Tabular figures in mono.** `tnum` and `zero` discipline in DM Mono for terminal output and version-tag alignment.
+- **No italic in display.** Italics reserved for body emphasis only. The geometric face doesn't italicise gracefully.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Solid Green)**
+- Background: `#00dc82` Nuxt green.
+- Text: `#020420` cosmos canvas (high-contrast, AAA).
+- Padding: `12px 22px`. Radius: `8px`. Border: none. Font: Inter 600 / 15px.
+- Hover: bg → `#00b86a`; transition `200ms ease-standard`.
+- Active: bg → `#008a4f` (deeper green press).
+- Use: Primary CTA — *Get started, Try Nuxt, Read docs.* The signature solid green button.
+
+**Ghost (Outlined)**
+- Background: transparent.
+- Text: `#ffffff`. Border: `1px solid rgba(255, 255, 255, 0.15)`. Radius: `8px`. Padding: `12px 22px`. Font: Inter 500 / 15px.
+- Hover: bg → `rgba(255, 255, 255, 0.05)`.
+- Use: Twin to primary — *View on GitHub, Read announcement, Watch video.*
+
+**Glow (Brand-Tinted)**
+- Background: `rgba(0, 220, 130, 0.10)`. Text: `#00dc82`. Border: `1px solid rgba(0, 220, 130, 0.40)`. Radius: `8px`. Padding: `10px 18px`.
+- Hover: bg → `rgba(0, 220, 130, 0.18)`.
+- Use: Brand-tinted secondary — green-on-green-glow for accent CTAs, "Try the playground".
+
+**Link (Inline Brand Green)**
+- Background: transparent. Text: `#00dc82`. Padding: 0. Font: Inter 500 / 15px.
+- Hover: text → `#80eeb4`.
+- Use: Inline CTAs — *"learn more →", "see the docs"*. The brand green's text home.
+
+### Cards
+
+**Standard Card (Tonal Lift)**
+- Background: `#10142e`. Border: `1px solid rgba(255, 255, 255, 0.08)`. Radius: `16px`. Padding: `28px`.
+- Shadow: none — value contrast alone provides separation.
+- Hover: bg → `#1a1f42`; border → `rgba(255, 255, 255, 0.15)`; transition `200ms`.
+- Use: Capability tile, feature card, blog excerpt.
+
+**Glow Card (Hero)**
+- Background: `#10142e`. Border: `1px solid rgba(0, 220, 130, 0.30)`. Radius: `16px`. Padding: `28px`.
+- Box-shadow: `0 0 80px -20px rgba(0, 220, 130, 0.25)` — soft green halo bleeding into surrounding space.
+- Use: Hero feature card, "Why Nuxt" callout — the signature glow-haloed surface.
+
+**Code Block**
+- Background: `#0a0d2a` (one step lighter than canvas). Border: `1px solid rgba(255, 255, 255, 0.08)`. Radius: `12px`. Padding: `20px 24px`.
+- Font: DM Mono 400 / 14px. Syntax highlighting in muted brand-adjacent palette (green for keywords, soft white for strings, muted blue for numbers).
+- Use: Documentation code samples, terminal output.
+
+### Badges, Tags, Pills
+
+**Mono Eyebrow Label** — bg transparent, text `#a0a8b8`, padding 0, font `Inter 500 / 13px / 0.04em / uppercase`. Section pre-label, no chrome.
+
+**Brand-Green Status Pill** — bg `rgba(0, 220, 130, 0.12)`, text `#80eeb4`, radius `4px`, padding `4px 10px`, font `Inter 500 / 12px`. Version tags, "New" labels, "Beta" indicators.
+
+**Hex Glyph** — six-sided SVG mark in `#00dc82`. Appears in nav, dividers, decorative spots throughout. Geometric counter-balance to the otherwise soft 8–16px rounding.
+
+**Semantic Status** — bg from semantic palette (success / warning / danger / info), radius `4px`, padding `4px 10px`. Tinted with the brand's saturation discipline.
+
+### Inputs / Forms
+
+- Background: `#0a0d2a`. Border: `1px solid rgba(255, 255, 255, 0.15)`. Radius: `8px`. Padding: `12px 16px`.
+- Font: Inter 400 / 15px. Placeholder: `#7c8497`.
+- Focus: `0 0 0 2px rgba(0, 220, 130, 0.40)` ring, border → `#00dc82`. Transition 120ms.
+- Error: border → `#fca5a5`, ring → `rgba(239, 68, 68, 0.30)`.
+- Helper: caption 13px text-soft below.
+
+### Navigation
+
+- Header height `64px`. Background `rgba(2, 4, 32, 0.80)` with `backdrop-filter: blur(12px)` (transparent over hero, frosted as you scroll).
+- Logo: Nuxt wordmark with hex glyph anchored upper-left, glyph in `#00dc82`.
+- Nav links: Inter 500 / 14px, colour `#a0a8b8`, padding `8px 12px`. Hover → `#ffffff`; active → `#00dc82`.
+- Right-side CTA pair: ghost "GitHub" + solid-green "Get started".
+- Mobile: full-screen sheet, links stack at 18px / 500 with hex-glyph divider.
+
+### Optional Components
+
+**Pull Quote** — DM Sans 28px / 500, text-medium, with a 3px Nuxt-green left rule.
+
+**Tooltip** — bg `#10142e`, text `#ffffff`, border `1px solid rgba(255, 255, 255, 0.15)`, radius `6px`, padding `8px 12px`, font `Inter 500 / 13px`.
+
+**Modal** — bg `#0a0d2a`, radius `16px`, shadow `rgba(0, 0, 0, 0.40) 0 24px 64px -16px`, max-width `560px`. Cosmos backdrop overlay at 70% opacity with backdrop-filter blur.
+
+**Toast** — bg `#10142e`, border `1px solid rgba(0, 220, 130, 0.30)`, radius `8px`, padding `12px 20px`, with brand-green left accent for success state.
+
+**Glow Halo (Hero Effect)** — pseudo-element behind hero text: `width: 80%`, `height: 60%`, `background: radial-gradient(rgba(0, 220, 130, 0.40), transparent 70%)`, `filter: blur(80px)`, gentle 2.4-second pulse cycle.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160 — modular, generous at the upper end.
+- **Density observation**: Nuxt is *medium-density* — denser than Anthropic's editorial layout but lighter than tightly-packed product UIs. Section padding sits at 96–160px vertical; intra-section spacing uses 16–32px.
+
+### Grid & Container
+
+- **Page max width**: `1280px` — generous, terminal-window proportions.
+- **Site gutter**: `clamp(24px, 5vw, 64px)` — comfortable on desktop, accommodating on mobile.
+- **Grid**: 12 columns with 24px gutters. Hero blocks span full width; capability rails span 8 columns; supporting sidebars span 4.
+- **Hero treatment**: full-bleed cosmos canvas, 56–72px headline anchored centre or left, body confined to a 720px column. Glow halo behind centred headline.
+- **Capability rail**: 3-up cards on desktop, 2-up on tablet, 1-up on mobile. Glow card every fourth tile for sectional rhythm.
+
+### Whitespace Philosophy
+
+The whitespace is *cosmos negative space* — Nuxt treats the dark canvas as positive composition territory. Section gutters run **96–160px** between major blocks; minor blocks sit on 48–64px gaps; intra-section spacing uses 16–32px. The cosmos canvas does sectional work without needing dividers; the green glow does emotional punctuation without needing illustration.
+
+### Section Cadence
+
+- Hero (cosmos) → Glow-haloed H1 + lede + dual CTA → Capability rail (3-up tonal-blue cards on cosmos) → Code block showcase (`#0a0d2a` panel with DM Mono) → Glow card (brand-tinted halo) → Quote / testimonial → Footer (cosmos with hex-glyph dividers).
+- Glow halos appear once or twice per page — never more, or the chromatic punctuation dilutes.
+- Tonal-blue elevation steps create vertical rhythm: canvas → panel → card → lifted card.
+- The hex-glyph repeats as section divider — angular geometric counter-balance to the soft 16px card radii.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Decorative dividers, slim chip corners |
+| XS | 4px | Status pills, inline tags, semantic badges |
+| Small (sm) | 6px | Tooltip corners, code-inline pills |
+| Comfortable (md) | 8px | **Buttons, inputs, dropdowns** — the dominant interactive radius |
+| Relaxed (lg) | 12px | Code blocks, nested panels |
+| Featured (xl) | 16px | **Cards** — capability tiles, feature cards, modals |
+| Pill | 9999px | Reserved for status chips and tags |
+
+The signature radii are **8px** on buttons / inputs and **16px** on cards. The 16px card corners are slightly softer than Vercel's 12px and notably softer than Linear's 8px — Nuxt sits at the Eurostile-soft end of the dev-tool ladder, matching the rounder DM Sans typography.
+
+The **hex glyph** is the angular counter-balance: the Nuxt wordmark glyph repeats throughout the system as a six-sided geometric mark. Chevrons in carousels, dividers between sections, icon-frames inside capability cards — all carry the hex motif. The angular hex against the soft 16px rounding creates a deliberate geometric tension that mirrors the Vue-Nuxt brand relationship.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — canvas `#020420` | Default page surface, hero |
+| 1 | Tonal lift to `#0a0d2a` (panel) | Code blocks, input fields, secondary panels |
+| 2 | Tonal lift to `#10142e` + 8% white border | Standard cards — the dominant elevation |
+| 3 | Tonal lift to `#1a1f42` + 15% white border | Hover-lifted cards, dropdown menus |
+| 4 | `rgba(0, 0, 0, 0.40) 0 12px 32px -8px` | Popover layers, tooltips |
+| 5 | `rgba(0, 0, 0, 0.40) 0 24px 64px -16px` | Modals, dialogs |
+| Glow | `0 0 80px -20px rgba(0, 220, 130, 0.25)` | Brand-haloed hero cards, signature depth |
+| Glow Hero | `0 0 160px -40px rgba(0, 220, 130, 0.45)` | Full hero halo behind H1 |
+
+### Shadow Philosophy
+
+Nuxt's depth is **tonal-blue layered + brand-tinted glow**. The four-step canvas → panel → card → lifted card ladder builds depth via lightness alone, with 8% / 15% white hairlines reinforcing the steps. Box-shadows are reserved for overlay layers (modals, popovers) where the visual stack must be unambiguous. The signature elevation is the **green glow** — brand-tinted radial blur behind hero copy and feature cards. It's never a hard accent, always a soft bleed that diffuses Nuxt-green into the surrounding cosmos. Where Vercel uses gradient meshes and Linear uses uniform tonal stacking, Nuxt uses tonal-stacking *plus* selective brand-tinted glow — the combination is the brand's depth signature.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- `ease-standard`: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, colour transitions.
+- `ease-emphasized`: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; modal enter, hero reveal.
+- `ease-glow`: `cubic-bezier(0.32, 0.72, 0, 1)` — slow-out, fast-settle; used on glow pulse cycles.
+
+### Duration Buckets
+
+- **Fast (120ms)** — colour transitions, focus rings, link hovers.
+- **Standard (200ms)** — button hover, card hover, dropdown reveal.
+- **Slow (320ms)** — modal enter/exit, page-section fade-in.
+- **Page (480ms)** — route transitions, hero reveal sequences.
+- **Glow Pulse (2400ms)** — gentle brand halo pulsing cycle, ease-glow.
+
+### Per-Component Micro-States
+
+- **Button hover (solid green)**: bg `#00dc82` → `#00b86a` over 200ms. No lift, no scale.
+- **Button hover (ghost)**: bg transparent → `rgba(255, 255, 255, 0.05)`; border stays at 0.15.
+- **Card hover**: bg `#10142e` → `#1a1f42`; border → `rgba(255, 255, 255, 0.15)`; transition `200ms`.
+- **Glow card hover**: glow intensifies from `0 0 80px -20px rgba(0, 220, 130, 0.25)` to `0 0 100px -20px rgba(0, 220, 130, 0.40)` over 320ms.
+- **Link hover**: text `#00dc82` → `#80eeb4` over 120ms; underline thickens 1px → 2px.
+- **Input focus**: 2px brand-green ring fades in over 120ms; border `rgba(255, 255, 255, 0.15)` → `#00dc82`.
+- **Nav link hover**: colour `#a0a8b8` → `#ffffff` over 120ms.
+- **Glow pulse**: hero halo opacity oscillates between 0.32 and 0.45 on a 2.4-second sine cycle. Subtle, ambient — closer to a CRT phosphor's persistence than to a UI animation.
+
+### Page Transitions
+
+Hero text fades in over 480ms with a 16px translate-up; glow halo fades in 320ms after text settles. Below-fold sections use `IntersectionObserver` triggered at 70% viewport, 320ms duration, opacity-only with subtle 12px translate-up. Code-block examples animate in with a typewriter-style character cascade for marketing screenshots (rare; reserved for hero featured code).
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)` — all transitions become opacity-only, durations halved. **Glow pulse pauses entirely** (the halo remains at 40% alpha but stops oscillating). Translate animations disabled; scroll-linked reveals snap to final state. The brand respects motion preferences as a first-class a11y concern, especially because the glow pulse is the most visible motion on the site.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#ffffff` text on `#020420` bg**: 18.8:1 — AAA at all sizes (maximum contrast).
+- **`#a0a8b8` text-muted on `#020420` bg**: 8.6:1 — AAA at body sizes.
+- **`#7c8497` text-soft on `#020420` bg**: 5.8:1 — AA at body sizes.
+- **`#020420` text on `#00dc82` brand button**: 11.2:1 — AAA (high-contrast green button).
+- **`#00dc82` link on `#020420` bg**: 11.4:1 — AAA at all sizes.
+- **`#80eeb4` text on `rgba(0, 220, 130, 0.12)` brand-tinted bg**: 7.4:1 effective — AAA.
+- **`#ffffff` text on `#10142e` card**: 14.6:1 — AAA at all sizes.
+
+### Focus Indicators
+
+- Default focus ring: `0 0 0 2px rgba(0, 220, 130, 0.40)` with 2px offset on dark canvas.
+- Inputs: ring + border colour shift to `#00dc82`.
+- Glow card focus: ring overlays the existing brand glow without conflict (different colour stops).
+- All interactive surfaces have visible focus states — no `outline: none` without a replacement.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link to main content.
+- **Disclosure**: `<button aria-expanded aria-controls>` for collapsible doc-tree sections.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Combobox** (search palette): `role="combobox" aria-expanded aria-autocomplete="list"` with `aria-activedescendant` for keyboard arrows.
+- **Live regions**: `aria-live="polite"` for form validation messages.
+- **Code blocks**: include `<code>` semantic + visible "Copy" button with `aria-label="Copy code"`.
+- **Hex glyph**: `aria-hidden="true"` when decorative; full SVG `<title>` when used as the wordmark.
+- **Glow halos**: `aria-hidden="true"` — pure decoration, never carries content meaning.
+
+### Keyboard Navigation
+
+- Tab order matches visual flow: skip-link → nav → hero CTA → main content → footer.
+- All buttons, links, inputs, code-block copy buttons reachable via Tab.
+- Modals trap focus inside until dismissed.
+- `Esc` closes modals, dropdowns, search palette.
+- Search palette: Cmd/Ctrl+K opens; arrow keys navigate; Enter selects; Esc closes.
+
+### Screen Reader Hints
+
+- Decorative SVGs (hex glyph as ornament, illustration art) marked `aria-hidden="true"`.
+- Icon-only buttons (copy code, share, close) have `aria-label`.
+- Stat callouts include hidden context: "30,000+ stars on GitHub" reads as full sentence.
+- Brand-green glow announced as decorative; never carries semantic meaning.
+
+### Reduced Motion
+
+Honoured via the global media query. Glow pulse pauses; translate animations disabled; durations halved. The brand never requires motion to convey information — motion is decoration, not signal.
+
+### Contrast on Glow
+
+The brand-tinted glow is applied **behind** text via pseudo-element with `z-index: -1`, never **over** text. The glow never reduces underlying text contrast — `#ffffff` on `#020420` always tests at 18.8:1 even when the halo is in frame.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single column, full-bleed sections, hamburger nav |
+| Tablet | 640–1024px | 2-column rails, narrower gutters, condensed hero |
+| Desktop | 1024–1280px | Full 12-col grid, 720px prose column |
+| Wide | 1280–1440px | Site max width hits at 1280px |
+| Ultra | > 1440px | Page locks to 1280, gutters expand symmetrically |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px (WCAG AAA).
+- Buttons: 44px minimum height on mobile (12px vertical padding × 2 + line-height accommodates).
+- Nav link tap area: 44×44px even when visual padding is smaller.
+- Hex-glyph icon buttons: 32×32px hit area extended via padding.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 88px headline → 56px → 40px across desktop / tablet / mobile.
+- **Capability grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Body width**: 720px → fluid 92vw at mobile.
+- **Section spacing**: 160px → 96px → 64px across sizes.
+- **Glow halo**: scales proportionally with hero text; reduces alpha by 20% at mobile to avoid overwhelming small viewports.
+
+### Image Behavior
+
+- Code-block screenshots use `srcset` with 1x/2x for retina.
+- Hero imagery uses `aspect-ratio` to prevent layout shift.
+- Lazy-loading on below-fold images; eager on hero.
+- SVG illustrations preferred for crisp rendering at any size.
+- Hex-glyph SVGs use `currentColor` so they theme correctly across light/dark modes.
+
+### Container Queries
+
+Used inside capability cards to switch layout when card width crosses 360px (icon-left vs. icon-top) and to scale the glow halo proportionally.
+
+## 11. Content & Voice
+
+### Tone
+
+**Friendly-engineered, developer-first, slightly enthusiastic.** Nuxt writes like an open-source maintainer who's excited about Vue 3 — full sentences, technical specificity, occasional warmth, no overt sales-pitch but no false-modesty either. Headlines describe capability ("The intuitive Vue framework"); subheads explain mechanism. The brand sounds like a senior developer who'd happily review your PR.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started," "Try Nuxt," "Read the docs," "View on GitHub," "Watch the talk," "Explore modules." Occasionally enthusiastic: "Try the playground". Never "Get instant access!" or "Sign up free →".
+- **Error messages**: "We couldn't load the docs. Try refreshing, or [report the issue]." Specific, actionable, no shame, no over-apology.
+- **Success confirmations**: "Copied." "Subscribed." Brief, present-tense.
+- **Loading states**: "Loading…", "Compiling…", "Generating…" — process-aware, dev-tool-flavoured.
+- **CLI / docs voice**: Imperative and direct. "Run `npx nuxi init` to get started." "Add the module to your `nuxt.config.ts`."
+
+### Empty States
+
+What they say: explain the empty state and offer the next step. *"No modules installed yet. Browse the marketplace to add your first."* *"Your search returned no results. Try a broader query."*
+What they don't say: "Oops!", "Sorry!", any apologetic exclamation. The dev-tool register is matter-of-fact.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Get started," "Try Nuxt," "Read the docs"
+- Secondary: "View on GitHub," "Explore modules," "Read the announcement"
+- Footer: "Browse modules," "Join Discord," "Sponsor on GitHub"
+
+The brand uses *enthusiastic-but-restrained* verbs. "Try the playground" is acceptable; "Try Nuxt today!" is not. The voice is community-engineering, never marketing-pitch.
+
+## 12. Dark Mode & Theming
+
+**Dark-by-default with a polished light variant.** Nuxt is one of the rare dev-tool brands with a genuinely first-class dual-theme system. The cosmos `#020420` canvas is the homepage and marketing default; the docs surface respects user OS preference and ships an equally-polished light variant. The light theme isn't an afterthought — it's a complete token swap with adjusted brand saturation for AA contrast on white.
+
+### Light Variant Tokens
+
+When light mode is active, the palette swaps as follows:
+
+- **bg**: `#ffffff` — white canvas for docs surface.
+- **bg-soft**: `#f6f8fa` — palest-grey panel.
+- **bg-deep**: `#eef1f5` — tertiary panel for nested groups.
+- **surface**: `#ffffff` — cards lift via border, not shadow.
+- **text**: `#020420` — near-black text with the brand's signature blue tilt.
+- **text-muted**: `#4a5568` — secondary copy.
+- **brand**: `#00b86a` — slightly deeper green for AA contrast on white (the dark-mode `#00dc82` falls below AA at body sizes on white; `#00b86a` hits 4.7:1).
+- **brand-soft**: `rgba(0, 184, 106, 0.10)`.
+- **on-brand**: `#ffffff` — white label on green button (4.7:1 AA).
+- **link**: `#00b86a` — adjusted for white-canvas readability.
+- **border**: `rgba(2, 4, 32, 0.10)` — 10% near-black hairline.
+
+### Theming Discipline
+
+The light variant preserves all brand identity decisions: the **hex-glyph stays angular**, the **brand green retains its identity** (just tuned for contrast), the **typographic family remains DM Sans + Inter + DM Mono**. The only loss in light mode is the **glow halo** — the brand-tinted blur doesn't translate well to a white canvas without becoming muddy, so light-mode pages drop the halo and lean harder on tonal contrast and the green CTA for chromatic punctuation.
+
+If a downstream surface needs a custom theme (e.g. for a Nuxt module's marketing page), the rules: keep the **single-accent green** discipline, keep the **DM Sans / Inter / DM Mono** trio, keep the **hex-glyph motif**, and pick **one canvas** — either cosmos `#020420` or pure `#ffffff`. Mid-tone canvases (greys, off-whites, navy) collapse the brand identity.
+
+## 13. Lineage & Influences
+
+Nuxt's design language is a **deliberate dark-mode reinterpretation of the Vue identity**. The brand color — `#00dc82`, a saturated forest-green — comes directly from Vue's `#42b883` lineage but has been pulled cooler and brighter for digital surfaces. The canvas is a deep blue-black at `#020420` (cooler than Astro's cosmos navy, warmer than Linear's true black), and the green appears as both the primary CTA and as a soft 40%-alpha glow behind hero copy.
+
+The typography pair — **DM Sans** for display, **Inter** for body — gives the marketing a slightly geometric, Eurostile-flavored register, distinct from the Geist-Inter monoculture of most dev-tool sites. The hex-shaped wordmark glyph is treated as an icon-token, repeated at multiple scales. Where Astro uses violet-to-orange gradients and Svelte uses pure white discipline, Nuxt uses **single-accent green-on-blue-black** — a palette closer to a developer terminal than a marketing page, which suits a framework that sells itself on developer ergonomics.
+
+What it inherits: **Vue's brand-green DNA** (cooler/brighter for dark surfaces), **dev-tool dark canvas** discipline (Vercel-Linear lineage), **soft brand-halo depth** (Linear's tinted glow tradition). What it borrows from contemporaries: Vercel's near-black + single-accent template, Linear's tonal-blue elevation ladder, Tailwind's documentation-page polish. What it rejects: gradient meshes (Astro / Mistral), purple-tech accents (early OpenAI), uniform-grayscale dev-tool minimalism (early Svelte), Geist-monoculture typography.
+
+**Named influences:**
+
+- **Vue.js** — Direct lineage — the Nuxt green is a brighter, cooler cut of Vue's `#42b883`. *https://vuejs.org*
+- **Vercel** — Dark-canvas dev-tool template; near-black bg with a single brand accent. *https://vercel.com*
+- **Linear** — Soft brand-tinted halo behind hero copy as a depth strategy. *https://linear.app*
+- **Tailwind CSS** — Dual-theme docs surface polish; light/dark variant feature parity. *https://tailwindcss.com*
+- **DM Sans / Colophon Foundry (Google Fonts)** — Geometric humanist DNA reference. The DM Sans + DM Mono pairing gives Nuxt its Eurostile-soft register.
+- **Vite** — Sister-project visual cousin; dev-tool dark canvas with single-accent green-yellow.
+
+## 14. Do's and Don'ts
+
+### Do
 
 - **Do** treat the green (`#00dc82`) as the single brand color; pair it only with the deep blue-black canvas, never with a second accent.
 - **Do** use the green-glow halo behind hero copy — the 40% alpha bleed is Nuxt's signature depth move and distinguishes it from Vercel.
 - **Do** keep the typographic family unified: DM Sans / Inter / DM Mono. Mixing in Geist or JetBrains breaks the geometric register.
+- **Do** ship the primary CTA as solid green (`#00dc82` bg, `#020420` text, 8px radius) — high-contrast and unmistakable.
+- **Do** anchor the hex-glyph in the upper-left wordmark and repeat it as a six-sided motif throughout (chevrons, dividers, icon-frames).
+- **Do** layer depth tonally: `#020420` → `#0a0d2a` → `#10142e` → `#1a1f42`. Each step adds 4–8% lightness without changing hue.
+- **Do** ship a polished light variant for docs surfaces — Nuxt is one of the rare dev-tool brands where light mode gets first-class attention.
+- **Do** keep all motion under 320ms (except the gentle 2.4-second glow pulse) and respect `prefers-reduced-motion`.
+- **Do** mark all decorative SVGs (hex-glyph ornaments, glow halos, illustrations) as `aria-hidden="true"`.
+- **Do** lift cards via tonal stepping + 8% white hairline, never via drop shadow.
+
+### Don't
+
 - **Don't** lighten the canvas to pure black or pure navy. The exact `#020420` blue undertone is what separates Nuxt from Linear and Astro.
 - **Don't** apply Nuxt-green to large fills. Reserve it for the CTA, the wordmark hex, and the soft halo; full-bleed green flattens the page.
 - **Don't** mix in Vue's `#42b883` directly. Nuxt's green is brighter and cooler — using Vue's exact green muddles the brand lineage.
+- **Don't** introduce gradients, conic backgrounds, or mesh shaders. The page is flat-tonal-with-glow.
+- **Don't** reach for Geist or JetBrains Mono. The DM Sans / Inter / DM Mono trio is the brand's typographic signature.
+- **Don't** use weight 700 below H2. The geometric DM Sans face needs the weight only at headline scale; over-using 700 in body breaks the register.
+- **Don't** harden the glow into a solid edge. The 40% alpha halo must always blur and bleed; a hard accent collapses the brand depth move.
+- **Don't** stack the hex-glyph in tight clusters. The angular motif is a counter-balance — too much hex turns into visual noise.
+- **Don't** apply the dark glow to the light variant. Light-mode pages drop the halo and lean on tonal contrast.
+- **Don't** ship marketing copy with exclamation marks, urgency CTAs, or emoji. The voice is dev-tool-engineering, not marketing-pitch.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #020420
+bg-soft: #0a0d2a
+surface: #10142e
+text: #ffffff
+text-muted: #a0a8b8
+brand: #00dc82
+brand-hover: #00b86a
+glow: rgba(0, 220, 130, 0.40)
+on-brand: #020420
+border: rgba(255, 255, 255, 0.08)
+```
+
+### Example Component Prompts
+
+1. **"Create a Nuxt-style hero — cosmos `#020420` canvas, 72px DM Sans 700 H1 with -0.02em tracking, 20px Inter 400 lede in `#a0a8b8`, dual CTA: solid Nuxt-green primary `#00dc82` / `#020420` text + ghost outlined `rgba(255, 255, 255, 0.15)` border at 8px radius. Behind the H1: blurred radial-gradient halo `rgba(0, 220, 130, 0.40)` with 80px blur, gentle 2.4s pulse. Hex-glyph anchored upper-left."**
+
+2. **"Design a capability card — `#10142e` background (one tonal step above canvas), 16px radius, 1px `rgba(255, 255, 255, 0.08)` border, 28px interior padding. 22px DM Sans 600 heading in white, 16px Inter 400 body in `#a0a8b8`. Hover: bg `#1a1f42`, border `rgba(255, 255, 255, 0.15)`. No drop shadow."**
+
+3. **"Build a glow card — `#10142e` background, 16px radius, 1px `rgba(0, 220, 130, 0.30)` brand-tinted border, 28px padding, plus `box-shadow: 0 0 80px -20px rgba(0, 220, 130, 0.25)` for the signature green halo bleed. Hover intensifies the glow to `0 0 100px -20px rgba(0, 220, 130, 0.40)`."**
+
+4. **"Compose a dark code block — `#0a0d2a` background, 12px radius, 1px `rgba(255, 255, 255, 0.08)` border, 20×24px padding, DM Mono 400 / 14px / 1.6 line-height. Syntax highlighting: keywords `#00dc82`, strings `#dbdfe9`, numbers `#80eeb4`, comments `#525a6c`. Top-right Copy button with `aria-label`."**
+
+5. **"Render the hex-glyph mark — six-sided SVG in `#00dc82`, 24px size, used as wordmark anchor and repeated as section divider. Geometric angular counter-balance to the otherwise soft 16px card radii. `aria-hidden=\"true\"` when decorative; full SVG `<title>` when used as the brand mark."**
+
+6. **"Create the primary nav — 64px header height, `rgba(2, 4, 32, 0.80)` background with `backdrop-filter: blur(12px)`, Nuxt wordmark + hex-glyph in `#00dc82` left-aligned, links 14px Inter 500 in `#a0a8b8` with white hover and `#00dc82` active. Right-aligned ghost 'GitHub' + solid-green 'Get started' at 8px radius."**
+
+### Iteration Guide
+
+1. **Cosmos `#020420`, not pure black.** If the canvas is `#000000`, change it to `#020420`. The cool-blue tilt is Nuxt's identity.
+2. **Solid green CTA, dark text.** If the primary button has white text or a different green, change to `#00dc82` background with `#020420` on-brand text. The inverted-contrast green button is the brand signature.
+3. **Add the glow.** If the hero has no halo, add a blurred radial gradient `rgba(0, 220, 130, 0.40)` behind the H1 with 80px blur. The signature depth move.
+4. **Switch type to DM Sans / Inter.** If headlines are in Geist or Inter alone, change display to DM Sans 700 with -0.02em tracking. The geometric register is the typographic signature.
+5. **Tonal-stack cards.** Replace any drop-shadow on cards with tonal-blue background steps (`#10142e` → `#1a1f42` on hover) plus 8% white hairlines.
+6. **Drop the second accent.** If you've added a magenta, purple, or yellow, remove it. Nuxt is single-accent green; second colours muddy the brand.
+7. **Add the hex.** Anchor the hex-glyph in the upper-left wordmark and repeat it as a section divider or icon-frame motif.
+8. **Calm the verbs.** Replace "Get started for free!" with "Get started" or "Try Nuxt"; replace "Sign up today →" with "Read the docs". The voice is dev-tool-engineering, never urgent.

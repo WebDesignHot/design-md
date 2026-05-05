@@ -6,7 +6,7 @@ source_url: https://www.lamborghini.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [luxury, dark, sans, photography, cinematic, geometric]
 preview_swatch: ['#000000', '#ffc000', '#ffffff']
 related: [ferrari, tesla, bmw]

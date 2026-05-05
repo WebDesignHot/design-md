@@ -6,7 +6,7 @@ source_url: https://www.bmw.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, corporate, sans, blue, configurator, photography]
 preview_swatch: ['#ffffff', '#1c69d4', '#262626']
 related: [bmw-m, tesla, apple]

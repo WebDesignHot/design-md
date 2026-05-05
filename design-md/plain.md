@@ -217,6 +217,28 @@ accessibility:
   prose-line-length: 'capped at 680px for readability'
 
 dark-mode: null                            # marketing surface is light-only; the radioactive green is calibrated for white only
+
+lineage:
+  summary: 'Plain runs the Linear playbook on a white canvas. The same restraint, the same single-accent commitment, the same type-led layout — but ported from Linear''s dark Inter-Variable register into pure white + ABC Favorit + radioactive lime-green. Where Intercom-style support tools dominate the category with colorful, illustrated, slightly cute pages, Plain refuses the entire vocabulary. The "BOOK A DEMO" button is set in all-caps on a radioactive green that looks more like a Linear keyboard chip than a SaaS button. Combined with the Dinamo-licensed grotesk, the page reads as deeply intentional — the kind of restraint that signals to engineering buyers that the product itself will respect their attention. The headline lands at 80px in weight 400 (not 600 or 700) — the type''s confidence signal: the form has enough character to hold the page without leaning on weight.'
+  influences:
+    - name: 'Dinamo Typefaces (ABC Favorit)'
+      role: 'The grotesk on the entire site; a design-conscious type choice that signals craft to the Linear-influenced audience'
+      url: 'https://abcdinamo.com/typefaces/favorit'
+    - name: 'Linear'
+      role: 'Restrained-sans-plus-single-accent vocabulary; weight-400 headlines; minimalism as proof of product confidence — the direct visual ancestor'
+      url: 'https://linear.app'
+    - name: 'Vercel'
+      role: 'White-canvas SaaS sibling; the modern reference for "type does the work, no illustration"'
+      url: 'https://vercel.com'
+    - name: 'Cal.com'
+      role: 'Adjacent precedent for design-conscious B2B SaaS with single-accent discipline'
+      url: 'https://cal.com'
+    - name: 'Intercom'
+      role: 'Direct competitor; Plain positions itself as the cleaner, more developer-shaped alternative. The visual differentiation is the entire pitch.'
+      url: 'https://intercom.com'
+    - name: 'Stripe'
+      role: 'Hairline-border restraint, single-accent confidence on a neutral canvas'
+      url: 'https://stripe.com'
 ---
 
 ## 1. Visual Theme & Atmosphere

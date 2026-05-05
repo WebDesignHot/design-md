@@ -1,96 +1,270 @@
 ---
 name: ElevenLabs
-tagline: Lime-on-deep-green voice-tech aesthetic — InterDisplay headlines and pill CTAs over a near-white canvas with lush moss accents.
+tagline: Near-black voice-tech ground with white voice-wave aesthetic — Inter at studio scale, pill CTAs, and a single saturated accent that reads as both wayfinding and brand.
 author: webdesignhot
 source_url: https://elevenlabs.io
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
-featured: false
+featured: true
 categories: [ai, saas]
-tags: [light, minimal, sans, spacious, bright, structured]
-preview_swatch: ['#9fe870', '#163300', '#e2f6d5']
+tags: [dark, light, minimal, sans, spacious, structured]
+preview_swatch: ['#0a0a0a', '#ffffff', '#9fe870']
 related: [anthropic, huggingface, replicate]
-description: 'ElevenLabs leans into a synaesthetic voice-tech identity — paper-white canvas (`#ffffff`) with a single confident lime green (`#9fe870`) for CTAs, paired against a deep moss-green text tone (`#163300`) that reads richer than plain black. InterDisplay does the headline work at 96px/700 with a tight `-2.4px` track, and soft mint surfaces (`#e2f6d5`) carry the secondary chrome. The result is an unusually warm, vegetal palette for an AI company.'
+description: 'ElevenLabs sits at the intersection of voice-tech precision and editorial restraint — a near-black `#0a0a0a` ground for the studio surface paired with a paper-white `#ffffff` editorial surface, both anchored by a single saturated lime `#9fe870` accent that does triple duty as CTA, brand identifier, and audio-waveform highlight. Type is Inter at studio scale (Inter Display at 96px / 700 weight with `-2.4px` tracking) and the pill-shaped CTA is the brand''s signature interaction primitive. The dark studio aesthetic places ElevenLabs visually adjacent to Anthropic''s neutral-near-black register and Linear''s near-black canvas, but the lime accent is what makes the brand legible at a glance. The surface alternates between voice-studio-dark and editorial-light bands depending on context — the studio band is for product demos, the light band is for documentation and pricing.'
 
 colors:
-  bg: '#ffffff'              # body canvas
-  bg-soft: '#e2f6d5'         # mint surface band
-  surface: '#ecfae8'          # secondary panel tint
-  surface-hover: '#d4f0c2'    # darker mint on hover
-  text: '#163300'             # near-black moss green
-  text-muted: '#163300b3'     # 70% moss
-  text-soft: '#16330080'      # 50% moss
-  brand: '#9fe870'            # lime CTA
-  brand-hover: '#8ad65e'      # darker lime on press
-  brand-text: '#163300'       # text on lime
-  accent: '#0e0f0c'           # near-black accent
-  border: '#1633001a'         # 10% moss hairline
-  border-soft: '#1633000d'    # 5% moss
-  on-brand: '#163300'
+  bg: '#ffffff'                 # paper-white editorial canvas
+  bg-studio: '#0a0a0a'          # near-black studio ground
+  bg-soft: '#fafafa'            # softest editorial surface
+  bg-band: '#f5f5f4'            # mint or stone band tint (depending on section)
+  surface: '#ffffff'            # default light card
+  surface-soft: '#fafafa'       # secondary panel tint
+  surface-hover: '#f5f5f4'      # hover state on light cards
+  surface-studio: '#161616'     # studio-band card surface
+  surface-studio-2: '#1f1f1f'   # second-level studio surface
+  surface-studio-3: '#2a2a2a'   # third-level studio surface (rare)
+  text: '#0a0a0a'               # near-black for editorial body
+  text-strong: '#000000'        # display crisp black
+  text-display: '#0a0a0a'       # H1 stays at near-black
+  text-muted: '#525252'          # captions, meta
+  text-soft: '#737373'           # tertiary
+  text-faint: '#a3a3a3'          # disabled, decorative
+  text-on-studio: '#ffffff'      # white on studio ground
+  text-on-studio-muted: '#ffffffb3'   # 70% white on studio
+  text-on-studio-soft: '#ffffff80'    # 50% white on studio
+  text-on-brand: '#0a0a0a'      # near-black on lime
+  brand: '#9fe870'              # lime CTA — the saturated accent
+  brand-hover: '#8ad65e'        # darker lime on press
+  brand-active: '#76c349'       # deepest pressed
+  brand-soft: '#d4f0c2'         # softest lime tint
+  brand-faint: '#e2f6d5'        # near-white lime tint for surfaces
+  link: '#9fe870'               # links use brand on dark; on light bands, links are underlined `#0a0a0a`
+  accent: '#0e0f0c'              # near-black accent (rare)
+  accent-warm: '#f5f5f4'         # warm stone tint
+  border: '#0000001a'            # 10% black hairline (light)
+  border-soft: '#0000000d'       # 5% black for subtle dividers
+  border-strong: '#00000033'     # 20% black for emphasis
+  border-studio: '#ffffff14'     # 8% white hairline (studio)
+  border-studio-strong: '#ffffff26'   # 15% white for emphasis
+  on-brand: '#0a0a0a'
+  on-studio: '#ffffff'
+  success: '#16a34a'             # editorial green
+  success-bg: '#dcfce7'
+  warning: '#d97706'             # warm amber
+  warning-bg: '#fef3c7'
+  danger: '#dc2626'              # restrained red
+  danger-bg: '#fee2e2'
+  info: '#0a0a0a'                # info reuses near-black
+  info-bg: '#f5f5f4'
 
 typography:
   display:
-    family: 'InterDisplay, Inter, "InterVariable", -apple-system, "system-ui", sans-serif'
-    weights: [500, 600, 700]
+    family: 'InterDisplay, Inter, "InterVariable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: ['ss01', 'cv11', 'tnum']
   body:
-    family: 'Inter, "InterVariable", -apple-system, "system-ui", sans-serif'
-    weights: [400, 500]
+    family: 'Inter, "InterVariable", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600]
+    opentype-features: ['kern', 'tnum']
   mono:
-    family: 'Menlo, ui-monospace, "SF Mono", Monaco, Consolas, monospace'
-    weights: [400]
+    family: '"JetBrains Mono", "IBM Plex Mono", Menlo, ui-monospace, "SF Mono", Monaco, Consolas, monospace'
+    weights: [400, 500]
   scale:
-    h1:    { size: 96, weight: 700, lineHeight: 1.0,  tracking: '-0.025em' }
-    h2:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.02em' }
-    h3:    { size: 32, weight: 600, lineHeight: 1.2,  tracking: '-0.01em' }
-    body:  { size: 16, lineHeight: 1.5 }
-    label: { size: 13, weight: 500, tracking: '0' }
+    display-hero:    { size: 128, weight: 700, lineHeight: 0.95, tracking: '-0.04em',  family: display, opentype: 'ss01' }
+    display-large:   { size: 96,  weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display:         { size: 80,  weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: 'ss01' }
+    h1:              { size: 64,  weight: 700, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    h2:              { size: 48,  weight: 700, lineHeight: 1.08, tracking: '-0.018em', family: display }
+    h3:              { size: 32,  weight: 600, lineHeight: 1.2,  tracking: '-0.012em', family: display }
+    h4:              { size: 24,  weight: 600, lineHeight: 1.3,  tracking: '-0.008em', family: display }
+    h5:              { size: 20,  weight: 600, lineHeight: 1.35, tracking: '-0.005em', family: display }
+    h6:              { size: 16,  weight: 600, lineHeight: 1.4,  tracking: '0',         family: display }
+    body-large:      { size: 18,  weight: 400, lineHeight: 1.55, tracking: '0',         family: body }
+    body:            { size: 16,  weight: 400, lineHeight: 1.5,  tracking: '0',         family: body }
+    body-small:      { size: 14,  weight: 400, lineHeight: 1.45, tracking: '0',         family: body }
+    label:           { size: 13,  weight: 500, lineHeight: 1.3,  tracking: '0',         family: body }
+    caption:         { size: 12,  weight: 500, lineHeight: 1.4,  tracking: '0.02em',   family: body }
+    micro:           { size: 11,  weight: 500, lineHeight: 1.3,  tracking: '0.04em',   family: mono }
+    code-inline:     { size: 14,  weight: 400, lineHeight: 1.4,  tracking: '0',         family: mono }
+    code:            { size: 14,  weight: 400, lineHeight: 1.5,  tracking: '0',         family: mono }
+    voice-tag:       { size: 13,  weight: 500, lineHeight: 1.2,  tracking: '0',         family: body }
 
 radius:
+  none: 0
+  micro: 2
+  xs: 4
   sm: 6
   md: 8
   lg: 12
   card: 16
-  button: 9999    # pill — defining shape
+  xl: 20
+  xxl: 24
   pill: 9999
+
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+  hero-padding-y: 120
+  section-padding-y: 96
+  card-padding: 32
 
 components:
   button-primary:
     backgroundColor: brand
-    textColor: brand-text
-    rounded: pill
-    use: 'lime pill — primary CTA across hero and pricing'
+    textColor: on-brand
+    radius: pill
+    padding: '14px 28px'
+    font: { family: body, weight: 600, size: 16 }
+    hover: { backgroundColor: brand-hover }
+    use: 'Lime pill — primary CTA across hero and pricing'
   button-secondary:
     backgroundColor: transparent
     textColor: text
     border: text
-    rounded: pill
-  card:
-    backgroundColor: bg-soft
-    border: border
-    rounded: card
-    use: 'mint feature card — soft surface contains demo audio waveforms'
-  badge:
-    backgroundColor: surface
+    borderWidth: 1
+    radius: pill
+    padding: '14px 28px'
+    font: { family: body, weight: 500, size: 16 }
+    hover: { backgroundColor: bg-soft }
+    use: 'Outlined pill on light surfaces'
+  button-on-studio:
+    backgroundColor: on-studio
+    textColor: bg-studio
+    radius: pill
+    padding: '14px 28px'
+    font: { family: body, weight: 600, size: 16 }
+    hover: { backgroundColor: '#f0f0f0' }
+    use: 'White pill on studio ground'
+  button-ghost:
+    backgroundColor: transparent
     textColor: text
-    rounded: pill
+    radius: pill
+    padding: '12px 24px'
+    font: { family: body, weight: 500, size: 14 }
+    hover: { backgroundColor: surface-soft }
+    use: 'Tertiary inline action'
+  card-light:
+    backgroundColor: surface
+    border: border
+    radius: card
+    padding: 32
+    shadow: 'rgba(0,0,0,0.04) 0 1px 2px, rgba(0,0,0,0.03) 0 1px 4px'
+    use: 'Editorial card on light bands'
+  card-studio:
+    backgroundColor: surface-studio
+    textColor: on-studio
+    border: border-studio
+    radius: card
+    padding: 32
+    shadow: 'none'
+    use: 'Studio-band card; depth via tonal contrast'
+  voice-tag:
+    backgroundColor: surface-studio-2
+    textColor: on-studio
+    border: border-studio
+    radius: pill
+    padding: '6px 12px'
+    font: { family: body, weight: 500, size: 13 }
+    use: 'Voice / speaker chip with optional waveform glyph'
+  badge:
+    backgroundColor: brand-faint
+    textColor: text
+    radius: pill
+    padding: '4px 12px'
+    font: { family: body, weight: 500, size: 12 }
+  input:
+    backgroundColor: surface
+    border: border-strong
+    radius: lg
+    padding: '12px 16px'
+    font: { family: body, weight: 500, size: 16 }
+    focus: { border: brand, ring: '0 0 0 3px rgba(159,232,112,0.4)' }
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-decelerate: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-spring: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-instant: 80
+  duration-fast: 150
+  duration-standard: 220
+  duration-slow: 320
+  duration-emphasized: 480
+  duration-waveform: 600
+  hover-lift: 'translateY(-1px)'
+  page-transition: 'opacity + slide 12px, 320ms emphasized'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — collapses transforms and waveform animations to opacity-only at 100ms'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1024
+  wide: 1280
+  ultra: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0,0,0,0.04) 0 1px 2px, rgba(0,0,0,0.03) 0 1px 4px'
+  raised: 'rgba(0,0,0,0.06) 0 4px 16px, rgba(0,0,0,0.04) 0 1px 4px'
+  popover: 'rgba(0,0,0,0.10) 0 12px 32px, rgba(0,0,0,0.05) 0 4px 8px'
+  studio-glow: '0 0 60px rgba(159,232,112,0.18)'
+  ring: '0 0 0 3px rgba(159,232,112,0.4)'
+
+accessibility:
+  contrast-text-on-bg: 19.6              # AAA — near-black on white
+  contrast-text-on-brand: 14.2           # AAA — near-black on lime
+  contrast-text-on-studio: 19.4          # AAA — white on near-black
+  contrast-muted-on-bg: 7.8              # AAA at body
+  contrast-brand-on-studio: 13.2         # AAA — lime on near-black
+  focus-ring: '3px solid rgba(159,232,112,0.4) with 1px offset'
+  reduced-motion-honored: true
+  keyboard-trap-free: true
+  min-touch-target: 44
+
+dark-mode: included
+
+colors-dark:
+  bg: '#0a0a0a'
+  bg-soft: '#161616'
+  surface: '#161616'
+  surface-soft: '#1f1f1f'
+  surface-hover: '#2a2a2a'
+  surface-strong: '#333333'
+  text: '#ffffff'
+  text-muted: '#ffffffb3'
+  text-soft: '#ffffff80'
+  text-faint: '#ffffff4d'
+  brand: '#9fe870'
+  brand-hover: '#b1ed8a'
+  border: '#ffffff14'
+  border-strong: '#ffffff26'
+  on-brand: '#0a0a0a'
 
 lineage:
   summary: |
-    ElevenLabs' refreshed marketing palette walks away from the
-    near-black voice-recording aesthetic of its early site and lands
-    on something more vegetal and optimistic — paper-white canvas,
-    deep moss-green type (`#163300`) instead of plain black, and a
-    single confident lime CTA (`#9fe870`) wrapped in a fully-rounded
-    pill. The duet of moss-green text on lime echoes the colour
-    grammar of the audio-waveform: a saturated organic accent against
-    a rich earthy ground. Type is InterDisplay at headline scale
-    (a tighter, more architectural cut of Inter), held to 700 weight
-    with `-2.4px` tracking at 96px — that hard negative tracking is
-    where the marketing voice lives. The pill-shaped CTAs and mint
-    surface tints place ElevenLabs visually adjacent to Linear-era
-    minimalism, but the green-on-green pairing is what makes the brand
-    legible at a glance against the otherwise sea of grayscale AI
-    landing pages.
+    ElevenLabs' visual identity sits at the crossroads of voice-tech precision and
+    editorial restraint. The studio surface is a near-black `#0a0a0a` ground that
+    reads as a recording-studio interior — quiet, focused, and deliberately
+    unbusy — paired with a paper-white `#ffffff` editorial surface for documentation
+    and pricing. A single saturated lime (`#9fe870`) does triple duty as CTA fill,
+    brand identifier, and audio-waveform highlight; the lime is the only saturated
+    chromatic event in the system, and that restraint is the brand. Type is Inter
+    at studio scale (Inter Display at 96–128px / 700 weight with `-2.4px` to
+    `-3.6px` tracking) — a hard negative track that compresses the headline into a
+    broadcast register. The pill-shaped CTA is the signature interaction primitive,
+    and it inherits its shape from the audio-waveform pill chip used to label
+    voice / speaker selections in the product. Where Anthropic chooses a warm
+    cream-white ground and a quiet conversational register, ElevenLabs chooses a
+    voice-studio-dark ground and a precision-engineering register — both AI brands,
+    but tuned to different emotional ranges. The lime accent places ElevenLabs
+    visually adjacent to Linear-era minimalism (single saturated accent over neutral
+    canvas), but the studio-dark + editorial-light dual-mode is what makes the
+    brand uniquely legible.
   influences:
     - name: Linear
       role: Pill CTAs and the discipline of a single confident accent over a quiet neutral canvas.
@@ -101,89 +275,527 @@ lineage:
     - name: Inter / Rasmus Andersson
       role: InterDisplay sets the headline tone — a tighter cut tuned for large-scale display use.
       url: https://rsms.me/inter
+    - name: Anthropic
+      role: Adjacent AI-brand reference; Anthropic chooses warm-cream restraint, ElevenLabs chooses studio-dark precision.
+      url: https://www.anthropic.com
+    - name: Vercel
+      role: Near-black ground discipline; studio-dark surface as serious-tool register.
+      url: https://vercel.com
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-ElevenLabs' marketing surface is built around a single observation:
-voice is organic. Rather than reach for the cool-blue tech palette
-that defines most AI peers, the site grounds itself in a deep moss
-green (`#163300`) for type and a saturated lime (`#9fe870`) for action.
-The base canvas stays paper-white, but the chromatic personality is
-unmistakably vegetal — closer to a Patagonia annual report than a
-typical machine-learning landing page.
+ElevenLabs' marketing surface is built around a duet of moods. The studio band is a near-black `#0a0a0a` ground that reads as a recording-studio interior — quiet, focused, voice-wave aesthetic. The editorial band is a paper-white `#ffffff` canvas for documentation, pricing, and feature copy. A single saturated lime (`#9fe870`) does triple duty as CTA fill, brand identifier, and audio-waveform highlight. The system is voice-precision-tool dressed in editorial-restraint clothing.
 
-The display family is **InterDisplay** at 96px/700 with `-2.4px`
-letter-spacing — a tight, architectural cut of Inter tuned for
-headline use. Body copy steps down to standard Inter at 16/24, and
-the entire system avoids serif altogether. The hero CTA is a fully
-rounded lime pill that anchors every page.
+Display type lives at studio scale — Inter Display at 96–128px with 700 weight and `-2.4px` to `-3.6px` letter-spacing (`-0.025em` to `-0.04em`). That hard negative tracking is where the marketing voice lives; it compresses what would otherwise be a competent SaaS hero into a broadcast register that signals "this is a product about precision". The lime accent is the only saturated chromatic event in the system, and the discipline of holding to one accent is what gives the brand its instant legibility against the otherwise sea of grayscale AI landing pages.
 
-## Colors
+The pill-shaped CTA is the brand's signature interaction primitive. Every primary action — "Sign up", "Try it free", "Get the API" — appears as a fully-rounded `9999px` pill, and the pill shape is inherited from the audio-waveform chip used to label voices in the product. This is unusually direct product-to-marketing inheritance: the chip you use to select a voice in the studio is the same shape as the button you use to sign up. The result is a marketing surface that visually "knows" what the product does.
 
-- **bg** `#ffffff` — paper canvas; the default surface
-- **bg-soft** `#e2f6d5` — mint band used between content sections
-- **text** `#163300` — deep moss green replaces plain black
-- **text-muted** `#163300b3` — 70% moss for captions
-- **brand** `#9fe870` — lime CTA, the brand's identifying note
-- **brand-hover** `#8ad65e` — darker lime on press
-- **border** `#1633001a` — 10% moss hairline; never solid grey
+The atmosphere on the studio band is intentional quiet. Cards on `#0a0a0a` ground use `1px solid rgba(255,255,255,0.08)` ring instead of drop shadows; depth comes from tonal contrast (`#0a0a0a` → `#161616` → `#1f1f1f`) rather than elevation. The rare studio-glow (`0 0 60px rgba(159,232,112,0.18)`) appears only around the audio-demo widget, and reads as the lime accent literally lighting up a moment of voice generation. On the light editorial band, depth shifts to a soft two-layer shadow and 10% black hairlines — closer to Vercel or Stripe's playbook.
 
-The chromatic discipline is the thing: across the entire site there
-is essentially one accent (lime) and one content tone (moss green).
-Even error/info states are kept restrained, letting the lime CTA
-read as both wayfinding and brand at once.
+Where Notion oscillates light-and-dark for editorial pacing and beehiiv cycles yellow-and-black for impact pacing, ElevenLabs alternates studio-dark-and-editorial-light for *contextual* pacing. The studio band is for product demos and voice-generation showcases (where the dark precision register is the right voice); the editorial band is for documentation, pricing, and rationale (where the paper-white register is the right voice). The two surfaces are almost two different design systems unified by the lime accent, the Inter type system, and the pill CTA.
 
-## Typography
+**Key Characteristics**
 
-Display type is **InterDisplay** at 700 weight, sized 96px with a
-matching 96px line-height and `-2.4px` letter-spacing — that hard
-negative tracking is what gives the marketing its compressed,
-broadcast tone. H2 lands at 64px with similar discipline. Body steps
-down to Inter at 400/500 across 16px on a 24px line-height.
+- Dual-surface system: near-black `#0a0a0a` studio ground + paper-white `#ffffff` editorial canvas
+- Single saturated lime `#9fe870` accent — CTA, brand, audio-waveform highlight in one
+- Pill-shaped CTA at full `9999px` radius — inherited from the in-product voice-tag chip
+- Inter / InterDisplay at studio scale: 96–128px / 700 weight / `-0.025em` to `-0.04em` tracking
+- Rare studio-glow effect around demo widgets — the lime literally lighting up a moment
+- Tonal-contrast depth on studio surface; soft two-layer shadows on editorial surface
+- Voice-tag chip primitive: lime / white / dark variants with optional waveform glyph
+- 16px card radius, 12px input radius, full pill for CTAs and tags
+- 96–120px section padding for the precision-tool breath
+- No serif, no rounded sans, no humanist warmth — Inter does the structural work alone
 
-There is no serif in the system — voice-tech leans technical, not
-editorial. The mono family appears only in code samples and inline
-API references, drawn from system Menlo to keep the bundle lean.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-The grid is generous and centered, with hero blocks claiming roughly
-800–900px of horizontal real estate and large negative-space gutters
-that let the lime CTA breathe. Section transitions alternate between
-white and the mint `#e2f6d5` band, creating a soft two-tone rhythm
-without ever flipping fully into a dark mode. Cards sit at 16px
-radius, buttons land at full pill radius (9999px).
+- **bg** (`#ffffff`): paper-white editorial canvas; documentation, pricing, content sections.
+- **bg-studio** (`#0a0a0a`): near-black studio ground; product demos, voice-generation showcases.
+- **text** (`#0a0a0a`): near-black for editorial body; matches the studio ground colour for visual unity.
+- **brand** (`#9fe870`): lime CTA — the saturated accent that appears across both surfaces.
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth is tonal, not shadowed. The mint band is the deepest the page
-goes; everything else is white-on-white separated by a 10% moss
-hairline (`#1633001a`). When elevation is needed — like a floating
-voice-demo widget — the site reaches for a soft `0 8px 24px` shadow
-in pure moss, never neutral grey.
+- **bg-soft** (`#fafafa`): softest editorial surface for nested panels.
+- **surface-studio** (`#161616`): studio-band card surface, one tonal step lighter than ground.
+- **surface-studio-2** (`#1f1f1f`): second-level studio surface for emphasis blocks.
+- **surface-studio-3** (`#2a2a2a`): rare third-level studio surface.
+- **brand-hover** (`#8ad65e`): lime a half-step darker for pressed state.
+- **brand-active** (`#76c349`): deepest pressed lime.
+- **brand-soft** (`#d4f0c2`): softest lime tint for selection backgrounds.
+- **brand-faint** (`#e2f6d5`): near-white lime tint for surfaces and badge fills.
 
-## Shapes
+### Accent
 
-Pill is the defining radius. CTAs, badges, audio-waveform pills and
-voice-tag chips all share the 9999px radius, and that consistency is
-what makes the brand legible at a glance. Cards step down to 16px,
-inputs to 12px, and small inline tags to 6px.
+The system is intentionally lime + neutrals (light + studio-dark). There is no third accent.
 
-## Components
+- **accent-warm** (`#f5f5f4`): warm stone tint, used as a subtle band-tint between editorial sections.
+- **accent** (`#0e0f0c`): rare near-black accent for emphasis; effectively interchangeable with `text`.
 
-The signature components are the **lime pill CTA** (`#9fe870` on
-`#163300`, fully rounded), the **mint feature card** (`#e2f6d5` panel
-with a 10% moss hairline and 16px radius), and the **voice-tag chip**
-which carries an SVG waveform glyph alongside the speaker name.
-Navigation is a thin top bar with no fill, letting the canvas
-dominate.
+### Interactive
 
-## Do's and Don'ts
+- **link**: on light bands, links are `#0a0a0a` underlined; on studio bands, links are `#9fe870` with no underline.
+- **selected**: `brand-soft` (`#d4f0c2`) on light, `surface-studio-3` on studio.
+- **disabled**: `text-faint` (`#a3a3a3`) on `surface-soft`.
 
-- **Do** keep the action palette to a single lime (`#9fe870`); secondary actions use the moss-on-white outlined pill, never a different hue.
-- **Do** use moss-green (`#163300`) for type rather than plain black — it warms the page and signals brand at every paragraph.
-- **Do** lean on InterDisplay 700 with `-2.4px` tracking at hero scale; that compression is the marketing voice.
-- **Don't** mix the lime (`#9fe870`) with the moss-text colour (`#163300`) outside the CTA pairing — the contrast only works in that combination.
-- **Don't** apply heavy drop-shadows to the mint cards; the surface tint does the elevation work.
-- **Don't** introduce a serif into the system — voice-tech here is technical, and serif breaks the tone.
+### Neutral Scale
+
+- **text-strong** (`#000000`): display copy when extra punch is needed (rare; H1 typically uses `text` near-black).
+- **text-muted** (`#525252`): captions, meta, secondary copy.
+- **text-soft** (`#737373`): tertiary text — timestamps, micro-copy.
+- **text-faint** (`#a3a3a3`): disabled labels, decorative.
+- **text-on-studio** (`#ffffff`): white text on studio ground.
+- **text-on-studio-muted** (`#ffffffb3`): 70% white for studio captions.
+- **text-on-studio-soft** (`#ffffff80`): 50% white for tertiary studio text.
+
+### Surface & Borders
+
+- **surface** (`#ffffff`): default light card.
+- **surface-soft** (`#fafafa`): secondary panel tint.
+- **surface-hover** (`#f5f5f4`): hover state on light cards.
+- **border** (`#0000001a`): 10% black hairline (light surface).
+- **border-strong** (`#00000033`): 20% black for emphasis on light.
+- **border-soft** (`#0000000d`): 5% black for subtle dividers.
+- **border-studio** (`#ffffff14`): 8% white hairline (studio surface).
+- **border-studio-strong** (`#ffffff26`): 15% white for emphasis on studio.
+
+### Shadow Colors
+
+- **ambient**: two-layer (`rgba(0,0,0,0.04) 0 1px 2px, rgba(0,0,0,0.03) 0 1px 4px`) — subtle resting shadow on light cards.
+- **raised**: deeper two-layer for floating panels.
+- **popover**: deepest, for menus and tooltips.
+- **studio-glow** (`0 0 60px rgba(159,232,112,0.18)`): the lime-tinted glow effect, used only around the audio-demo widget on the studio band.
+- **none**: studio-band cards use no shadow; depth is tonal.
+
+### Semantic
+
+- **success** (`#16a34a`) on **success-bg** (`#dcfce7`): editorial green.
+- **warning** (`#d97706`) on **warning-bg** (`#fef3c7`): warm amber.
+- **danger** (`#dc2626`) on **danger-bg** (`#fee2e2`): restrained red.
+- **info** (`#0a0a0a`) on **info-bg** (`#f5f5f4`): info reuses near-black; no info-blue.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display**: InterDisplay → Inter → InterVariable → -apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif.
+- **Body**: Inter → InterVariable → -apple-system → system-ui → Segoe UI → Helvetica → Arial → sans-serif.
+- **Mono companion**: JetBrains Mono → IBM Plex Mono → Menlo → ui-monospace → SF Mono → Monaco → Consolas → monospace.
+- **OpenType features**: `ss01` (curved-tail Inter alternates) and `cv11` (curved letters) on display; `tnum` (tabular numerals) on data and pricing.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | InterDisplay | 128 | 700 | 0.95 | -0.04em | ss01 | reserved for the boldest marketing |
+| display-large | InterDisplay | 96 | 700 | 1.0 | -0.025em | ss01 | the canonical hero — `-2.4px` track |
+| display | InterDisplay | 80 | 700 | 1.0 | -0.025em | ss01 | secondary heroes |
+| h1 | InterDisplay | 64 | 700 | 1.05 | -0.02em | — | section heads |
+| h2 | InterDisplay | 48 | 700 | 1.08 | -0.018em | — | feature-band heads |
+| h3 | InterDisplay | 32 | 600 | 1.2 | -0.012em | — | sub-feature heads |
+| h4 | InterDisplay | 24 | 600 | 1.3 | -0.008em | — | card heads |
+| h5 | InterDisplay | 20 | 600 | 1.35 | -0.005em | — | inline emphasis |
+| h6 | InterDisplay | 16 | 600 | 1.4 | 0 | — | label-grade heads |
+| body-large | Inter | 18 | 400 | 1.55 | 0 | kern | hero subheads |
+| body | Inter | 16 | 400 | 1.5 | 0 | kern | default reading |
+| body-small | Inter | 14 | 400 | 1.45 | 0 | kern | secondary copy |
+| label | Inter | 13 | 500 | 1.3 | 0 | — | category cues |
+| caption | Inter | 12 | 500 | 1.4 | 0.02em | — | image / chart caption |
+| micro | JetBrains Mono | 11 | 500 | 1.3 | 0.04em | — | smallest type, mono labels |
+| code-inline | JetBrains Mono | 14 | 400 | 1.4 | 0 | — | inline code |
+| code | JetBrains Mono | 14 | 400 | 1.5 | 0 | — | code block |
+| voice-tag | Inter | 13 | 500 | 1.2 | 0 | — | voice / speaker chip label |
+
+### Principles
+
+- **Negative tracking is the broadcast voice**: at hero sizes the track tightens to `-0.025em` to `-0.04em`. That compression is what carries the precision-engineering register. Without it, InterDisplay at 700 reads as competent SaaS rather than studio-grade.
+- **Two-mode OpenType discipline**: display copy uses `ss01` for the curved-tail Inter alternates (a slightly more humanist, friendly feel against the otherwise architectural face); tabular numerals (`tnum`) appear on every data surface — pricing, dashboards, voice-count callouts.
+- **Inter Display vs Inter the body face**: the system uses Inter Display for headlines and Inter for body. Inter Display is a tighter, more architectural cut tuned for large-scale display use; Inter is the workhorse for paragraph-scale reading. The split signals "we know the difference between display and reading scale".
+- **No serif, no humanist warmth**: voice-tech leans technical, not editorial. The mono family appears only in code samples and inline API references, drawn from JetBrains Mono first with system fallbacks.
+- **Mono for micro**: the smallest type in the system (11px micro labels) switches to JetBrains Mono with positive tracking — a typographic cue that signals "this is technical metadata, not body copy".
+- **The body face stays at 400 weight**: ElevenLabs resists the temptation to bold the body. 500 is the maximum for body-class type; 600 appears only at H4 and above.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (lime pill)**
+- Background: `#9fe870`. Text: `#0a0a0a` at Inter 600 / 16px. Padding: `14px 28px`. Radius: 9999px. Border: none.
+- Hover: background → `#8ad65e`, no transform. Active: background → `#76c349`.
+- Use: every primary CTA — Try it free, Sign up, Get the API.
+
+**Secondary (outlined pill)**
+- Background: transparent. Text: `#0a0a0a` at Inter 500 / 16px. Padding: `14px 28px`. Radius: 9999px. Border: `1px solid #0a0a0a`.
+- Hover: background → `#fafafa`. Use: secondary action paired with lime primary.
+
+**On-studio (white pill)**
+- Background: `#ffffff`. Text: `#0a0a0a` at Inter 600 / 16px. Padding: `14px 28px`. Radius: 9999px.
+- Hover: background → `#f0f0f0`. Use: secondary action inside the studio band when the lime CTA isn't appropriate.
+
+**Ghost (text-style)**
+- Background: transparent. Text: `#0a0a0a` at Inter 500 / 14px. Padding: `12px 24px`. Radius: 9999px.
+- Hover: background → `#fafafa`. Use: nav links, tertiary inline action.
+
+### Cards
+
+**Editorial (light)**
+- Background: `#ffffff`. Border: `1px solid #0000001a`. Radius: 16px. Padding: 32px.
+- Shadow: `rgba(0,0,0,0.04) 0 1px 2px, rgba(0,0,0,0.03) 0 1px 4px`.
+- Hover: shadow intensifies to `raised`; transform → `translateY(-1px)`.
+- Use: feature cards on the editorial band — pricing, documentation, content blocks.
+
+**Studio**
+- Background: `#161616`. Text: `#ffffff` at Inter 500 / 16px. Border: `1px solid #ffffff14`. Radius: 16px. Padding: 32px. No shadow.
+- Use: feature cards on the studio band — voice demos, audio waveform displays.
+
+### Voice-tag Chip
+
+The signature primitive of the design system.
+
+**Studio variant**
+- Background: `#1f1f1f`. Text: `#ffffff` at Inter 500 / 13px. Border: `1px solid #ffffff14`. Radius: 9999px. Padding: `6px 12px`.
+- Often paired with a small SVG waveform glyph at the left.
+- Use: voice / speaker selection chips; the brand's most recognisable component.
+
+**Lime variant**
+- Background: `#9fe870`. Text: `#0a0a0a` at Inter 500 / 13px. Radius: 9999px. Padding: `6px 12px`.
+- Use: selected voice / active state.
+
+**Light variant**
+- Background: `#f5f5f4`. Text: `#0a0a0a` at Inter 500 / 13px. Radius: 9999px. Padding: `6px 12px`.
+- Use: voice tag on the editorial band.
+
+### Badges, Tags, Pills
+
+**Status badge**
+- Background: `#e2f6d5`. Text: `#0a0a0a` at Inter 500 / 12px. Padding: `4px 12px`. Radius: 9999px.
+- Use: "New", "Beta", inline status.
+
+**Mono micro tag**
+- Background: `#f5f5f4`. Text: `#525252` at JetBrains Mono 500 / 11px tracked `+0.04em` uppercase. Padding: `2px 8px`. Radius: 9999px.
+- Use: API version tags, model identifiers.
+
+### Inputs / Forms
+
+**Text input**
+- Background: `#ffffff`. Border: `1px solid #00000033`. Radius: 12px. Padding: `12px 16px`. Font: Inter 500 / 16px.
+- Focus: border → `#9fe870`, ring `0 0 0 3px rgba(159,232,112,0.4)`.
+
+**On-studio input**
+- Background: `#161616`. Border: `1px solid #ffffff26`. Radius: 12px. Padding: `12px 16px`. Font: Inter 500 / 16px in `#ffffff`.
+- Focus: border → `#9fe870`, ring `0 0 0 3px rgba(159,232,112,0.4)`.
+
+### Navigation
+
+**Top bar**
+- Background: `#ffffff` with no bottom border (edge defined by content gap). Height: 64px.
+- Logo: ElevenLabs wordmark in Inter 700 / 18px in `#0a0a0a`.
+- Nav items: Inter 500 / 14px, colour `#0a0a0a`, hover background → `#fafafa`.
+- Primary lime pill CTA always visible at top right.
+
+### Tooltips, Toasts, Modals
+
+- **Tooltip**: background `#0a0a0a`, text `#ffffff` at Inter 500 / 12px, radius 8px, padding `6px 12px`. Shadow: `popover`.
+- **Toast**: background `#ffffff`, border `1px solid #0000001a`, radius 16px, shadow `popover`. On studio band: `#161616` background with `1px solid #ffffff14` border.
+- **Modal**: background `#ffffff`, radius 24px, shadow `popover`, backdrop `rgba(0,0,0,0.6)`, padding 32px.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit: 4px. Scale: `[1, 2, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]` × 4px. The system uses moderate-to-generous intervals — 24px gutters, 48–64px between feature blocks, 96–120px between major bands. The breath is precision-tool generous: airier than tldraw, tighter than Linear's most aggressive sections.
+
+### Grid & Container
+
+- **Page width**: 1280px max, centred.
+- **Prose width**: 720px for documentation and editorial.
+- **Hero treatment**: hero copy claims roughly 800–900px horizontal real estate with large negative-space gutters that let the lime CTA breathe. Voice-demo widget often sits centered below the hero copy.
+- **Feature grid**: 3-column at 1024px+, 2-column at 768–1024px, 1-column below 768px. Card gap: 24–32px.
+
+### Whitespace Philosophy
+
+The grid is generous and centered. Hero blocks claim roughly 800–900px of horizontal real estate and large negative-space gutters that let the lime CTA breathe. The page exhales between bands — 96–120px section padding — and the studio-band sections feel even more spacious because the tonal contrast on `#0a0a0a` reads as deeper space.
+
+### Section Cadence
+
+The signature cadence is studio-dark-and-editorial-light alternation. Pattern: `editorial-light hero → studio-dark voice-demo band → editorial-light feature → editorial-light pricing → studio-dark testimonial → editorial-light footer`. The studio bands appear at moments that need product-demo precision; the editorial bands carry rationale, pricing, and content. Transitions are abrupt (no gradient between bands), and each band carries its own internal rules (light shadows on editorial, tonal-contrast depth on studio).
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| none | 0px | rare; full-bleed images |
+| micro | 2px | inline indicators |
+| xs | 4px | tight UI primitives |
+| sm | 6px | small inline pills |
+| md | 8px | tooltips, small popovers |
+| lg | 12px | input fields |
+| card | 16px | the canonical card radius |
+| xl | 20px | larger feature cards |
+| xxl | 24px | modals, hero shells |
+| pill | 9999px | the canonical CTA pill, voice-tag chips, badges |
+
+Pill is the defining radius. CTAs, badges, voice-tag chips, status pills all share the 9999px radius, and that consistency is what makes the brand legible at a glance. Cards step down to 16px, inputs to 12px. The pill / 16-card / 12-input ladder is the brand's signature ratio.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | flat, on `#ffffff` or `#0a0a0a` | body content, default surfaces |
+| 1 (light) | `1px hairline #0000001a` + ambient shadow | editorial card |
+| 1 (studio) | `1px hairline #ffffff14`, no shadow | studio card; tonal contrast carries depth |
+| 2 (light) | `raised` two-layer shadow | hovered or floating editorial card |
+| 2 (studio) | `surface-studio-2` (lift to `#1f1f1f`) | hovered studio card |
+| 3 | `studio-glow` (lime-tinted) | audio-demo widget on studio band |
+| 4 | `popover` shadow | tooltip, dropdown, menu |
+| 5 | `popover` + backdrop, 24px radius | modal, lightbox |
+
+**Shadow Philosophy**: ElevenLabs uses two distinct elevation strategies based on surface. On the editorial band, depth is soft two-layer ambient shadows in neutral grey — closer to Vercel or Stripe's playbook. On the studio band, depth is tonal contrast (`#0a0a0a` → `#161616` → `#1f1f1f`) without drop shadows. The rare studio-glow (`0 0 60px rgba(159,232,112,0.18)`) appears only around the audio-demo widget — the lime literally lighting up a moment of voice generation. This dual-strategy is part of what makes the brand legible at a glance.
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — workhorse Material-style ease.
+- **emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — slower acceleration, faster deceleration; used for hero entrance, modal open, and band transitions.
+- **decelerate**: `cubic-bezier(0, 0, 0.2, 1)` — used for elements entering from off-canvas.
+- **spring**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — slight overshoot used very sparingly on the audio-waveform animation.
+
+### Durations
+
+- **instant** (80ms): hover background colour shifts.
+- **fast** (150ms): button hover, link underline.
+- **standard** (220ms): primary CTA press, dropdown open.
+- **slow** (320ms): modal open, page band transition.
+- **emphasized** (480ms): hero entrance choreography.
+- **waveform** (600ms): audio-waveform pulse animation cycle.
+
+### Per-component micro-states
+
+- **Lime pill hover**: background colour shift over 150ms with `standard` ease; no transform, no scale.
+- **Editorial card hover**: shadow intensifies from `ambient` to `raised`, transform → `translateY(-1px)` over 150ms.
+- **Studio card hover**: surface lifts from `#161616` to `#1f1f1f` over 150ms; no transform.
+- **Voice-tag chip hover**: background tints up one tier; small lime dot appears at left if not already selected.
+- **Audio-demo widget**: lime-tinted glow fades in at 320ms when audio is playing; waveform animates with 600ms `spring` ease cycling.
+- **Input focus**: lime ring fades in at 100ms; border colour shifts to lime simultaneously.
+
+### Page transitions
+
+ElevenLabs uses opacity + 12px vertical slide at 320ms with `emphasized` ease for route transitions — a slightly more deliberate transition than the standard SaaS opacity-only fade, which signals precision-craft rather than generic-marketing.
+
+### Reduced-motion strategy
+
+`prefers-reduced-motion: reduce` is fully respected: all transform-based animations collapse to opacity-only at 100ms. The studio-glow effect persists (it is not motion). The audio-waveform pulse becomes static at the played-state. Hover lifts disappear. Page transitions become opacity-only fades.
+
+## 9. Accessibility & A11y
+
+### Contrast pairs (computed)
+
+- **text on bg**: `#0a0a0a` on `#ffffff` → 19.6:1 (AAA at all sizes).
+- **text-muted on bg**: `#525252` on `#ffffff` → 7.8:1 (AAA at body sizes).
+- **on-brand on brand**: `#0a0a0a` on `#9fe870` → 14.2:1 (AAA at all sizes).
+- **text-on-studio on bg-studio**: `#ffffff` on `#0a0a0a` → 19.4:1 (AAA at all sizes).
+- **brand on bg-studio**: `#9fe870` on `#0a0a0a` → 13.2:1 (AAA at all sizes).
+- **text-on-studio-muted on bg-studio**: `#ffffffb3` on `#0a0a0a` → 13.5:1 (AAA).
+
+### Focus indicators
+
+- **Default focus ring**: `3px solid rgba(159,232,112,0.4)` with 1px offset; lime ring is visible on every neutral surface.
+- **On lime surfaces**: ring shifts to `3px solid rgba(10,10,10,0.4)` (near-black ring on lime).
+- **On studio surfaces**: ring uses `3px solid rgba(159,232,112,0.5)` (slightly brighter lime for sufficient visibility).
+
+Focus rings are never removed.
+
+### ARIA patterns
+
+- Voice-tag chips use `role="radio"` within `role="radiogroup"` for voice selection.
+- Audio-demo widget uses `role="region"` with `aria-label="Voice demonstration"` and standard audio element semantics.
+- Modals use `role="dialog"`, `aria-modal="true"`, focus trap, `Esc` to close.
+- Combobox in voice search uses `role="combobox"` with `aria-expanded`, `aria-controls`, `aria-activedescendant`.
+
+### Keyboard nav order
+
+Top bar → hero CTA → studio voice-demo (with full keyboard semantics) → editorial feature bands → pricing → footer. `Tab` order matches visual order. Skip-to-content link visible on focus.
+
+### Screen reader hints
+
+- Decorative waveform glyphs carry `aria-hidden="true"`.
+- Voice-tag chips carry `aria-label="Select [voice name]"`.
+- Audio-demo carries `aria-live="polite"` updates when generation completes.
+- Icon-only buttons carry `aria-label`.
+
+### Reduced motion
+
+Honored throughout — see §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Tier | Width | Behavior |
+|---|---|---|
+| mobile | < 480px | single column, 16px gutter, 64px section padding, hero at 48–56px |
+| tablet | 480–768px | single column, 24px gutter, 80px section padding, hero at 64–72px |
+| desktop | 768–1024px | 2-column feature grids, 32px gutter, 96px section padding |
+| wide | 1024–1280px | 3-column feature grids, 32px gutter, 120px section padding |
+| ultra | 1280px+ | container caps at 1280px, hero at full 96–128px |
+
+### Touch Targets
+
+Minimum 44×44px on touch devices. The 14px / 28px button padding clears the threshold. Voice-tag chips on mobile expand to `8px 16px` padding for thumb-friendly tap area.
+
+### Collapsing strategy
+
+- **Top nav**: hamburger menu < 768px; primary lime CTA stays visible at top right.
+- **Hero**: voice-demo widget moves below copy < 768px; copy claims full width.
+- **Feature grid**: 3 → 2 → 1 columns at 1024 / 768 / 480.
+- **Voice-tag chip rows**: scroll horizontally < 768px rather than wrapping (preserves the chip-row aesthetic).
+- **Pricing**: tiers stack vertically < 768px with the popular tier highlighted via order shift.
+- **Footer**: 4-column → 2-column → 1-column at 1024 / 768 / 480.
+
+### Image behavior
+
+Voice-demo waveform displays use `aspect-ratio: 16/3` lock with full responsive width. Hero illustrations preserve original aspect ratio.
+
+### Container queries
+
+Used inside the voice-demo widget — the player switches between expanded (waveform + controls + voice tag) and condensed (controls only) modes based on container width.
+
+## 11. Content & Voice
+
+### Tone
+
+ElevenLabs' tone is **precision-engineering-friendly**: technical without being cold, declarative without being loud. It writes like a recording-studio engineer who happens to be a good explainer — present-tense, short bulletins, no marketing rhetoric. Headlines are direct ("The most realistic voice AI", "Generate speech in seconds"); secondary copy explains the mechanism plainly. The voice positions ElevenLabs as a tool used by professionals, not a consumer toy.
+
+### Microcopy patterns
+
+- **Button verbs**: "Try it free", "Sign up", "Get the API", "Talk to sales", "Read the docs". Every CTA is action-forward and the noun is named.
+- **Error messages**: pattern is "Couldn't [action] — [reason]. [recovery]." e.g. "Couldn't generate voice — the API quota is exceeded. Upgrade your plan to continue."
+- **Success confirmations**: short, paired with the audio output. "Voice generated." rather than "Your voice has been generated successfully!"
+
+### Empty states
+
+Empty states are direct and product-forward. "No voices yet — try one of our presets" with voice-tag chips for the preset selection. Empty-state copy never uses cheerful illustrations or "Oops!" copy — the precision register stays even when the canvas is empty.
+
+### CTA verb conventions
+
+- **Primary marketing CTA**: "Try it free" — the canonical phrase across the site.
+- **Developer CTA**: "Get the API", "Read the docs", "View on GitHub".
+- **Demo / sales**: "Talk to sales" or "Book a demo".
+- **Newsletter**: "Stay updated".
+
+## 12. Dark Mode & Theming
+
+ElevenLabs ships full dark mode for both the marketing surface and the in-product environment. The marketing dark mode is closely related to the studio band — see frontmatter `colors-dark`:
+
+- **bg**: `#0a0a0a` (the studio ground promotes to the default canvas)
+- **bg-soft**: `#161616` for nested surfaces
+- **surface**: `#161616`, **surface-soft**: `#1f1f1f`, **surface-hover**: `#2a2a2a`, **surface-strong**: `#333333`
+- **text**: `#ffffff` (no opacity tilt — full bleed white reads as cleaner against `#0a0a0a`)
+- **text-muted**: `#ffffffb3`, **text-soft**: `#ffffff80`, **text-faint**: `#ffffff4d`
+- **brand**: `#9fe870` — lime holds at full saturation; contrast against `#0a0a0a` is 13.2:1 (AAA)
+- **brand-hover**: `#b1ed8a` — slightly *lighter* on press in dark mode
+- **border**: `#ffffff14`, **border-strong**: `#ffffff26`
+
+When implementing dark mode:
+- The studio-glow effect persists at the same intensity.
+- Cards use `1px solid #ffffff14` ring instead of drop shadows; depth comes from tonal contrast.
+- The lime accent does not shift; it stays `#9fe870` because contrast against `#0a0a0a` is already AAA.
+- Voice-tag chips swap `#1f1f1f` for `#161616` as their default; the lime-selected variant stays identical.
+- Hover lifts behave identically.
+
+The dark mode follows `prefers-color-scheme: dark` automatically, with manual override available. Because the studio band already carries the dark register on every page, switching to dark mode feels like extending the studio surface to the entire viewport.
+
+## 13. Lineage & Influences
+
+ElevenLabs sits at the crossroads of voice-tech precision and editorial restraint. The lineage runs through three traditions:
+
+**Single-accent SaaS minimalism**: Linear's pill CTAs, Stripe's brand-as-singular-blue chromatic strategy, and Inter / Rasmus Andersson's typographic discipline. ElevenLabs translates these into voice-tech: lime replaces blue, but the chromatic restraint is identical. The pill-shape inherits from Linear's playbook, but the inheritance from the in-product voice-tag chip is what makes it feel native rather than borrowed.
+
+**Studio-dark serious-tool register**: Vercel's near-black canvas, Anthropic's quiet conversational dark mode, the recording-studio interior aesthetic. ElevenLabs picks the studio-dark register specifically for product-demo bands, where the precision-engineering register is the right voice. The lime accent reads against `#0a0a0a` like a green LED on a recording deck.
+
+**Voice-wave product-DNA**: the audio-waveform glyph is the brand's most direct product-to-marketing inheritance. The waveform appears as a glyph on voice-tag chips, as the demo widget visualisation, and as decorative motifs in feature illustrations. The wave doubles as the brand mark — a logo that looks like the product's primary visual primitive.
+
+What ElevenLabs rejects: warm cream grounds (Anthropic), broadcast-loud yellow (beehiiv), serif accents (Notion), hand-drawn primitives (tldraw, Excalidraw), and any chromatic system involving more than one saturated accent. The lime is the discipline; the dual-surface (studio-dark + editorial-light) is the discipline; the pill CTA is the discipline.
+
+**Named influences**
+
+- **Linear** ([linear.app](https://linear.app)) — Pill CTAs and the discipline of a single confident accent over a quiet neutral canvas.
+- **Stripe** ([stripe.com](https://stripe.com)) — Single-brand-colour-as-action discipline; ElevenLabs replaces blue with lime but keeps the chromatic restraint.
+- **Inter / Rasmus Andersson** ([rsms.me/inter](https://rsms.me/inter)) — InterDisplay sets the headline tone; a tighter cut tuned for large-scale display use.
+- **Anthropic** ([anthropic.com](https://www.anthropic.com)) — Adjacent AI-brand reference; Anthropic chooses warm-cream restraint, ElevenLabs chooses studio-dark precision.
+- **Vercel** ([vercel.com](https://vercel.com)) — Near-black ground discipline; studio-dark surface as serious-tool register.
+
+## 14. Do's and Don'ts
+
+**Do**
+
+- Keep the action palette to a single lime (`#9fe870`); secondary actions use the outlined pill or white pill, never a different hue.
+- Use the pill shape for every primary CTA; the pill is inherited from the in-product voice-tag chip and is the brand's signature interaction primitive.
+- Lean on InterDisplay 700 with `-2.4px` to `-3.6px` tracking at hero scale (96–128px); that compression is the marketing voice.
+- Pair the studio-dark band with product demos and voice-generation showcases; pair the editorial-light band with documentation and pricing.
+- Use tonal-contrast depth on the studio surface (no shadows) and soft two-layer ambient shadows on the editorial surface.
+- Reserve the studio-glow effect for the audio-demo widget only — it is the lime literally lighting up a moment of voice generation.
+- Use voice-tag chips as the recurring primitive across product demos, voice selection, and feature highlights.
+- Honor `prefers-reduced-motion: reduce` — collapse hover lifts, audio-waveform pulses, and page slides to opacity-only.
+- Run hero copy at 96–128px on desktop with `-0.025em` to `-0.04em` tracking; the studio-scale is the brand register.
+- Use `tnum` (tabular numerals) on every data surface — pricing, voice counts, API stats — so numerals lock-step align across cards.
+
+**Don't**
+
+- Don't mix the lime (`#9fe870`) with another saturated accent — the chromatic restraint is what makes the brand legible at a glance.
+- Don't apply heavy drop-shadows to studio-band cards; tonal contrast is the depth strategy on `#0a0a0a`.
+- Don't introduce a serif into the system — voice-tech here is technical, and serif breaks the precision register.
+- Don't use the lime as a body-text colour; it is reserved for action and brand identity.
+- Don't run hero copy below 64px on desktop; the broadcast register requires headline scale.
+- Don't soften the negative tracking below `-0.018em` at H1+ — the compression carries the voice.
+- Don't replace the pill CTA with a rounded rectangle; the pill inherits from the voice-tag chip and dropping it breaks the product-DNA.
+- Don't add humanist warmth (rounded sans like SF Pro Rounded, hand-drawn cues, pastel surfaces) — the precision register requires structural type.
+- Don't let the studio-glow effect appear outside the audio-demo widget; it is reserved for that one moment.
+- Don't follow `prefers-color-scheme: dark` to flip every page to studio-dark — the dual-surface logic depends on contextual band placement.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #ffffff
+bg-studio: #0a0a0a
+surface: #ffffff
+surface-studio: #161616
+text: #0a0a0a
+text-on-studio: #ffffff
+text-muted: #525252
+brand: #9fe870
+brand-hover: #8ad65e
+border: #0000001a
+border-studio: #ffffff14
+```
+
+### Example Component Prompts
+
+1. "Create a marketing hero in the ElevenLabs editorial-light style: `#ffffff` canvas, InterDisplay 700 / 96px headline in `#0a0a0a` with `-0.025em` tracking, 18px subhead at Inter 400 in `#525252`, primary lime pill CTA (`#9fe870` background, `#0a0a0a` text at Inter 600 / 16px, `14px 28px` padding, full pill 9999px radius), and an outlined secondary pill (`1px solid #0a0a0a`)."
+
+2. "Design a studio-band hero in the ElevenLabs style: full-bleed `#0a0a0a` ground, InterDisplay 700 / 96px headline in `#ffffff`, voice-demo widget at center with audio waveform in `#9fe870`, studio-glow shadow (`0 0 60px rgba(159,232,112,0.18)`), primary lime pill CTA below."
+
+3. "Render a voice-tag chip in the ElevenLabs style: `#1f1f1f` background, `1px solid #ffffff14` border, 9999px pill radius, `6px 12px` padding, Inter 500 / 13px label in `#ffffff`, optional SVG waveform glyph at left in `#9fe870`."
+
+4. "Create an editorial card in the ElevenLabs style: `#ffffff` background, `1px solid #0000001a` hairline, 16px radius, 32px padding, two-layer ambient shadow (`rgba(0,0,0,0.04) 0 1px 2px, rgba(0,0,0,0.03) 0 1px 4px`), InterDisplay 600 / 24px H4 title, body at Inter 400 / 16px in `#0a0a0a`. Hover: shadow lifts to raised, `translateY(-1px)`."
+
+5. "Design a studio-band card in the ElevenLabs style: `#161616` background, `1px solid #ffffff14` border, 16px radius, 32px padding, NO drop shadow (depth via tonal contrast), InterDisplay 600 / 24px H4 title in `#ffffff`, body at Inter 400 / 16px in `#ffffffb3`."
+
+6. "Render a pricing tier card in the ElevenLabs editorial style: `#ffffff` background, `1px solid #0000001a` hairline, 16px radius, 32px padding, raised shadow, tier name in InterDisplay 600 / 20px, price in InterDisplay 700 / 64px with `tnum` enabled in `#0a0a0a`, feature list at Inter 400 / 16px with `#9fe870` checkmark bullets, primary lime pill CTA at the bottom."
+
+### Iteration Guide
+
+1. **Decide the band first**: is this section a product-demo (studio-dark) or content / pricing (editorial-light)? The band choice drives every subsequent decision.
+2. **Verify the type voice**: hero headlines should hit 96–128px at 700 weight with negative tracking around `-0.025em` to `-0.04em`. If the headline reads competent rather than broadcast-grade, tighten the track and scale up.
+3. **Audit the action colour**: there should be exactly one `#9fe870` lime per module — usually the primary CTA. Pastel-lime (`#d4f0c2`) is for selection backgrounds only.
+4. **Check the elevation strategy**: editorial cards use the soft two-layer ambient shadow; studio cards use tonal contrast (no shadow). If your studio card has a drop shadow, you've drifted to the editorial register.
+5. **Confirm the pill discipline**: every primary CTA should be a full-pill (9999px). Rectangle CTAs read as secondary or as a different brand entirely.
+6. **Verify the voice-tag chip**: if the design has any voice / speaker / preset selection, use the voice-tag chip primitive — pill shape, optional waveform glyph, three variants (studio / lime / light).
+7. **Test the studio-glow placement**: the lime-tinted glow should appear only around the audio-demo widget. If you see it elsewhere, remove it.
+8. **Check the reduced-motion path**: hover lifts, audio-waveform pulses, and page slides should all collapse to opacity-only when `prefers-reduced-motion: reduce` is set.

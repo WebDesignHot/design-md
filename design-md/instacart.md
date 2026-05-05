@@ -1,0 +1,869 @@
+---
+name: Instacart
+tagline: Grocery-shopping-list practical — Instacart Sans on white, signature carrot green #0aad0a, friendly-functional clarity.
+author: webdesignhot
+source_url: https://www.instacart.com
+spec: design.md/v1.5
+quality: curated
+featured: false
+categories: [marketplace]
+tags: [light, sans, friendly, marketplace, ecommerce, practical]
+preview_swatch: ['#ffffff', '#0aad0a', '#000000']
+related: [stripe, shopify, etsy]
+description: 'Instacart''s site reads as the grocery-shopping list elevated to a marketplace product — paper-white canvas, friendly-but-functional photography of fresh produce, and the iconic carrot-green `#0aad0a` voltage that has identified the brand since 2012. The base canvas is `#ffffff` paper-white carrying display headlines in pure black `#000000` Instacart Sans (a custom rounded sans cut for retail clarity). The single chromatic voltage is the Instacart green — used on primary CTAs, the carrot-shaped logo, in-stock badges, and selected-state indicators. Body copy at 16/400 in pure black with normal tracking — Instacart prioritizes scannability over editorial atmosphere because the user is hunting for groceries, not reading a magazine. Section rhythm alternates white editorial bands with green-tinted promotional bands and full-bleed produce photography. Pill-shaped CTAs (radius 9999) reinforce the friendly-marketplace voice — softer than enterprise SaaS, more approachable than fintech.'
+
+colors:
+  bg: '#ffffff'                  # paper-white canvas
+  bg-elevated: '#fafafa'         # near-white surface variant
+  bg-promo: '#003d2a'            # dark green promotional bands (sale callouts, hero)
+  bg-cream: '#f7f4ee'            # warm cream tone for fresh-produce sections
+  surface: '#f6f6f6'             # neutral grey panel — store cards, item cards
+  surface-hover: '#ededed'       # hover state on light surface
+  surface-strong: '#e4e4e4'      # heavier panel
+  surface-on-promo: '#005a3e'    # card surface on dark green promotional band
+  text: '#000000'                # ink — primary text on light canvas
+  text-strong: '#000000'         # body-strong (same hex)
+  text-body: '#1a1a1a'           # default running body copy
+  text-muted: '#666666'          # captions, metadata, secondary list copy
+  text-faint: '#999999'          # disabled, footer secondary
+  text-on-dark: '#ffffff'        # text on green promo bands
+  brand: '#0aad0a'               # Instacart Green — carrot-green primary
+  brand-hover: '#089408'         # press state
+  brand-active: '#067a06'        # deeper press
+  brand-soft: '#e3f5e3'          # softest tint — selected nav, badge bg
+  brand-deep: '#003d2a'          # deep forest green — promotional bands
+  on-brand: '#ffffff'            # white on Instacart Green
+  accent-orange: '#ff7a00'       # carrot-orange accent — fresh-produce callouts, highlights
+  accent-yellow: '#ffce5e'       # warm yellow — featured-item highlights
+  accent-red: '#e6483d'          # sale/discount callout (used scarcely)
+  border: '#e0e0e0'              # standard 1px hairline on light
+  border-soft: '#ededed'         # soft divider, item-card separator
+  border-strong: '#999999'       # input border, section divider
+  link: '#0aad0a'                # links default to brand green
+  link-hover: '#067a06'          # darker green on hover
+  ring: '#0aad0a'                # focus ring — Instacart green
+  success: '#0aad0a'             # confirmation (shares brand)
+  warning: '#ff7a00'             # validation warnings (shares carrot-orange)
+  danger: '#e6483d'              # form errors (shares sale-red)
+  info: '#3b82f6'                # info badges
+  rating-gold: '#fcb53b'          # store rating stars
+
+typography:
+  display:
+    family: '"Instacart Sans", "Instacart Sans Fallback", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: []
+  body:
+    family: '"Instacart Sans", "Instacart Sans Fallback", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
+    weights: [400, 500, 600, 700]
+    opentype-features: []
+  mono:
+    family: '"SF Mono", Menlo, Consolas, monospace'
+    weights: [400]
+  scale:
+    display-mega:    { size: 56, weight: 700, lineHeight: 1.10, tracking: '-0.5px',  family: display, notes: 'Homepage hero h1 over produce photography' }
+    display-xl:      { size: 44, weight: 700, lineHeight: 1.15, tracking: '-0.4px',  family: display, notes: 'Subsidiary heroes' }
+    display-lg:      { size: 32, weight: 700, lineHeight: 1.20, tracking: '-0.2px',  family: display, notes: 'Section heads, feature band headlines' }
+    display-md:      { size: 26, weight: 600, lineHeight: 1.30, tracking: 'normal',  family: display, notes: 'Sub-section heads, store-card titles' }
+    display-sm:      { size: 22, weight: 600, lineHeight: 1.35, tracking: 'normal',  family: display, notes: 'Component titles' }
+    title-md:        { size: 18, weight: 600, lineHeight: 1.40, tracking: 'normal',  family: body,    notes: 'Item-card titles, list section labels' }
+    title-sm:        { size: 16, weight: 600, lineHeight: 1.45, tracking: 'normal',  family: body,    notes: 'Small section titles' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: 'normal',  family: body,    notes: 'Editorial body, intro paragraphs' }
+    body:            { size: 16, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: body,    notes: 'Default running text — scannable' }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: body,    notes: 'Footer body, fine print, table cells' }
+    caption:         { size: 12, weight: 400, lineHeight: 1.45, tracking: 'normal',  family: body,    notes: 'Photo captions, metadata' }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.40, tracking: '0.6px',   family: body,    notes: 'Section eyebrows — uppercase' }
+    button:          { size: 16, weight: 600, lineHeight: 1.00, tracking: 'normal',  family: body,    notes: 'CTA labels — sentence-case' }
+    button-sm:       { size: 14, weight: 600, lineHeight: 1.00, tracking: 'normal',  family: body,    notes: 'Compact CTAs in cards' }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.40, tracking: 'normal',  family: body,    notes: 'Top-nav menu items' }
+    price:           { size: 18, weight: 700, lineHeight: 1.20, tracking: 'normal',  family: body,    notes: 'Item prices — bold for scannability' }
+    price-large:     { size: 28, weight: 700, lineHeight: 1.10, tracking: '-0.2px',  family: display, notes: 'Featured prices, totals' }
+    price-strikethrough: { size: 14, weight: 400, lineHeight: 1.40, tracking: 'normal', family: body, notes: 'Crossed-out original price on sale items' }
+    code:            { size: 14, weight: 400, lineHeight: 1.50, tracking: 'normal',  family: mono }
+
+radius:
+  none: 0           # rare; spec/data containers
+  xs: 4             # tight badges
+  sm: 8             # text inputs, small badges
+  md: 12            # secondary cards
+  lg: 16            # primary feature cards, item cards
+  xl: 24            # store cards, photo containers
+  xxl: 32           # promotional cards
+  pill: 9999        # CTAs (dominant), badge pills, chip selectors
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+  hero-height: '480px on desktop; 360px on mobile'
+  section-padding: 64
+  card-grid-gutter: 16
+
+components:
+  top-nav:
+    bg: '#ffffff'
+    text: '#000000'
+    typography: 'Instacart Sans 14/500'
+    height: 64
+    layout: 'carrot logo left + horizontal menu (Stores / Departments / Pickup / Delivery / Help) + utility (cart, account) right'
+    border-bottom: '1px solid #e0e0e0'
+    sticky: true
+  carrot-logo:
+    height: 32
+    placement: 'top-left of nav, in #0aad0a Instacart Green'
+    notes: 'The orange-and-green carrot icon + "instacart" wordmark — non-negotiable nav element'
+  button-primary:
+    bg: '#0aad0a'
+    text: '#ffffff'
+    padding: '12px 24px'
+    height: 48
+    radius: 9999
+    border: 'none'
+    font: 'Instacart Sans 16/600'
+    transition: 'background-color 200ms ease, transform 200ms ease'
+    use: 'Sign Up, Get Started, Add to Cart, Order Now'
+  button-primary-hover:
+    bg: '#089408'
+    notes: 'Color-only hover, optional 1.02 scale on signup CTAs'
+  button-primary-sm:
+    bg: '#0aad0a'
+    text: '#ffffff'
+    padding: '8px 16px'
+    height: 36
+    radius: 9999
+    font: 'Instacart Sans 14/600'
+    use: 'In-card Add to Cart, item action'
+  button-secondary:
+    bg: '#000000'
+    text: '#ffffff'
+    padding: '12px 24px'
+    height: 48
+    radius: 9999
+    use: 'Secondary primary action when green is reserved'
+  button-outline:
+    bg: 'transparent'
+    text: '#000000'
+    border: '1px solid #000000'
+    padding: '11px 23px'
+    height: 48
+    radius: 9999
+    use: 'Tertiary action paired with primary'
+  button-text:
+    bg: 'transparent'
+    text: '#0aad0a'
+    font: 'Instacart Sans 16/600'
+    decoration: 'underline-offset 4px, underline grows on hover'
+    use: 'Inline editorial actions (View All, See More)'
+  hero-band-light:
+    bg: '#ffffff'
+    text: '#000000'
+    photo: 'fresh produce or grocery photography, full-bleed at 480px desktop'
+    headline: 'Instacart Sans 56/700 -0.5px'
+    cta-arrangement: 'one Instacart Green primary + one outline secondary'
+    padding: '64px 24px'
+  hero-band-promo:
+    bg: '#003d2a'
+    text: '#ffffff'
+    headline: 'Instacart Sans 44/700 -0.4px white'
+    notes: 'Used for sale events, Instacart+ membership promos'
+    padding: 80
+  hero-band-cream:
+    bg: '#f7f4ee'
+    text: '#000000'
+    notes: 'Warm cream tone for fresh-produce sections'
+  store-card:
+    bg: '#ffffff'
+    text: '#000000'
+    radius: 24
+    border: '1px solid #e0e0e0'
+    padding: 16
+    layout: 'logo top-left + store name + delivery time + rating stars + "Shop now" CTA'
+    hover: 'border shifts to #999999, shadow fades in, lift 2px'
+  item-card:
+    bg: '#ffffff'
+    text: '#000000'
+    radius: 16
+    border: '1px solid #ededed'
+    padding: 12
+    layout: 'product photo top + price + name + Add to Cart compact button'
+  feature-card:
+    bg: '#ffffff'
+    text: '#000000'
+    radius: 16
+    border: '1px solid #e0e0e0'
+    padding: 24
+    notes: 'Marketing feature card — title + body + button-text'
+  promo-card:
+    bg: '#0aad0a'
+    text: '#ffffff'
+    radius: 32
+    padding: 32
+    notes: 'Bright-green promotional card — Instacart+ membership upsell'
+  text-input:
+    bg: '#ffffff'
+    text: '#000000'
+    border: '1px solid #999999'
+    radius: 8
+    padding: '12px 16px'
+    height: 48
+    font: 'Instacart Sans 16/400'
+    focus: 'border-color shifts to #0aad0a; ring 2px solid #0aad0a at 2px offset'
+  search-input:
+    bg: '#f6f6f6'
+    text: '#000000'
+    border: 'none'
+    radius: 9999
+    padding: '12px 20px 12px 44px'
+    height: 48
+    icon: 'magnifying glass left at 20×20'
+    placeholder: 'Search products at...'
+    notes: 'Pill-shaped search bar — central UX element'
+  badge-pill:
+    bg: '#e3f5e3'
+    text: '#0aad0a'
+    radius: 9999
+    padding: '4px 12px'
+    font: 'eyebrow 12/600 0.6px uppercase'
+  badge-sale:
+    bg: '#fef2f2'
+    text: '#e6483d'
+    radius: 9999
+    padding: '4px 12px'
+    notes: 'Sale/discount callout'
+  chip-selector:
+    bg: '#ffffff'
+    text: '#000000'
+    border: '1px solid #e0e0e0'
+    radius: 9999
+    padding: '8px 16px'
+    selected:
+      bg: '#000000'
+      text: '#ffffff'
+      border: 'none'
+    use: 'Filter chips, category navigation'
+  rating-stars:
+    icon-color: '#fcb53b'
+    icon-color-empty: '#e0e0e0'
+    notes: 'Five-star rating display under store card name'
+  cta-band:
+    bg: '#003d2a'
+    text: '#ffffff'
+    typography: 'Instacart Sans 36/700 -0.3px'
+    padding: 80
+    cta: 'single Instacart Green primary, centered'
+  footer-light:
+    bg: '#ffffff'
+    text: '#666666'
+    columns: 4
+    padding: '64px 24px'
+    border-top: '1px solid #e0e0e0'
+
+lineage:
+  summary: 'Instacart''s site is the grocery-shopping list elevated to marketplace UX. The discipline borrows from the friendly-functional vocabulary of consumer marketplaces (Etsy, Airbnb, DoorDash) — pill CTAs, soft radius, photography-led, scannable typography — but cuts the cute factor to keep the focus on getting groceries home. The signature carrot-green `#0aad0a` is one of the most committed single-accent brand voltages on the web — Instacart uses it everywhere green can possibly appear. Pill-shaped CTAs (radius 9999) reinforce the friendly-marketplace voice; the search bar is a dominant pill anchor. What it rejects: enterprise-SaaS rectangle CTAs, dense data tables (item cards are visual not tabular), monotone color schemes, anything that competes with the produce photography or the green voltage.'
+  influences:
+    - name: 'DoorDash'
+      role: 'Marketplace-CTA pill geometry, item-card visual conventions, delivery-time front-and-center'
+      url: 'https://www.doordash.com'
+    - name: 'Airbnb'
+      role: 'Photography-led card aesthetic, friendly-marketplace voice, soft radius'
+      url: 'https://www.airbnb.com'
+    - name: 'Whole Foods Market / Trader Joe''s'
+      role: 'Fresh-produce visual language, warm-cream surface tones'
+      url: 'https://www.wholefoodsmarket.com'
+    - name: 'Etsy'
+      role: 'Marketplace eyebrow + headline + search-as-anchor pattern'
+      url: 'https://www.etsy.com'
+    - name: 'Stripe'
+      role: 'Single-color brand voltage discipline (green vs purple)'
+      url: 'https://stripe.com'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-bounce: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 150
+  duration-standard: 200
+  duration-slow: 300
+  duration-cart-add: 400
+  cart-bump: 'cart-icon scales 1.0 → 1.15 → 1.0 over 400ms ease-bounce on Add-to-Cart'
+  card-hover-lift: '2px translateY over 200ms with shadow fade-in'
+  signup-cta-pulse: 'optional 1.0 → 1.02 scale pulse on primary CTAs every 4s (subtle)'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — cart-bump becomes static, card-lift becomes shadow-only, pulse disabled'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  flat: 'none'
+  card: 'rgba(0,0,0,0.04) 0 2px 8px'
+  hover-card: 'rgba(0,0,0,0.10) 0 4px 16px'
+  raised: 'rgba(0,0,0,0.15) 0 8px 24px'
+  modal: 'rgba(0,0,0,0.20) 0 24px 48px -12px'
+  ring: '0 0 0 2px #0aad0a'
+  notes: 'Subtle marketplace shadow ladder — soft enough to read on white, present enough to lift cards off canvas'
+
+accessibility:
+  contrast-text-on-bg: 21.0              # #000000 on #ffffff — AAA
+  contrast-body-on-bg: 19.7              # #1a1a1a on #ffffff — AAA
+  contrast-text-on-brand: 4.6            # #ffffff on #0aad0a — AA Normal at body 14px+, AAA Large
+  contrast-link-on-bg: 4.5               # #0aad0a on #ffffff — AA Normal at body 14px+
+  contrast-text-on-promo: 21.0           # #ffffff on #003d2a — AAA
+  focus-ring: '2px solid #0aad0a at 2px offset'
+  reduced-motion-honored: true
+  touch-target-min: 48                  # CTA height — exceeds WCAG 44
+
+dark-mode: 'no global dark toggle — Instacart is light-by-default. Dark sections are scoped contextual surfaces (promotional bands at #003d2a deep forest green, footer in some experiments). Token swap is local: bg #ffffff → #003d2a, text #000000 → #ffffff, border #e0e0e0 → #005a3e. brand and on-brand stay unchanged.'
+---
+
+## 1. Visual Theme & Atmosphere
+
+Instacart's website is the grocery-shopping list elevated to a marketplace product. The page opens onto a paper-white canvas (`#ffffff`) carrying display headlines in pure black `#000000` Instacart Sans at weight 700 — this is the practical-marketplace voice, not the editorial-publication voice. Where Notion uses a 64px display headline with negative tracking to feel like a magazine, Instacart uses a 56px display at weight 700 with `-0.5px` tracking to feel like a confident retail anchor. The user is hunting for tomatoes; the typography knows.
+
+The chromatic discipline is committed-monochrome with the famous carrot-green `#0aad0a` voltage. Instacart Green appears everywhere green can possibly appear: primary CTA fills, the carrot-shaped logo, in-stock badges, delivery-time indicators, sale-banner accents, link colors, focus rings, success-state confirmations. There is no second green; there is no second voltage. The carrot-orange (`#ff7a00`) appears only as a tertiary accent on fresh-produce highlights and the carrot-icon detail itself. Sale red and rating gold appear in scoped contexts only.
+
+Section rhythm alternates white editorial bands with green-tinted promotional bands and warm-cream produce sections (`#f7f4ee`). Full-bleed produce photography (overhead shots of farmer's-market tomatoes, hands packing a paper bag of groceries, a milk carton on a kitchen counter) carries the atmospheric warmth. Dark green promotional bands (`#003d2a` deep forest green) appear inside Instacart+ membership upsells, sale events, and the closing pre-footer CTA — the dark-green is where the brand voice gets emphatic.
+
+The CTAs are pill-shaped (radius 9999). Every primary CTA, every "Add to Cart" button, every chip selector, every search input. The pill geometry is the brand button signal — softer than enterprise SaaS rectangles, more approachable than fintech rounded-corners, more committed than consumer-tech 8px softness. The pill says: friendly marketplace, click here, get groceries, the workflow is fast.
+
+Typography runs **Instacart Sans** as the single sans family across every text role. It's a custom rounded sans cut for retail clarity — geometric construction with rounded terminals that feel approachable rather than engineered. Weight 700 dominates display (because retail headlines need to anchor, not whisper), 600 powers CTAs and titles, 400 runs body. Letter-spacing is normal at body sizes (the user is scanning, not reading), with light negative tracking on display sizes for compression.
+
+Item cards are the dominant content unit. Photo + price (bold) + name + small "Add to Cart" pill. Cards stack into 4-up grids at desktop, 2-up at mobile. The grid IS the marketplace. Store cards are larger — logo + store name + delivery time + 5-star rating + "Shop now" CTA — the equivalent of a restaurant card on DoorDash.
+
+**Key Characteristics:**
+- Paper-white `#ffffff` canvas — marketplace ground
+- Single chromatic voltage: carrot-green `#0aad0a` — committed brand discipline, used everywhere green can appear
+- Pill-shaped CTAs (radius 9999) — the dominant button geometry
+- Custom Instacart Sans — rounded terminals, retail-clarity construction
+- Display copy at weight 700 — bold retail anchors, not editorial whisper
+- Body copy at 16/400 normal tracking — scannability over editorial atmosphere
+- Item cards as the dominant content unit — photo + bold price + name + compact CTA
+- Pill-shaped search bar with grey `#f6f6f6` fill — central UX element
+- Warm-cream surface (`#f7f4ee`) for fresh-produce sections
+- Dark forest green `#003d2a` for promotional bands
+- Cart icon bumps with bounce easing on Add-to-Cart
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Paper White** (`#ffffff`): The canvas. Marketplace ground.
+- **Pure Black** (`#000000`): Primary ink. Display headlines, body strong, item card text. No charcoal-headline conventions.
+- **Instacart Green** (`#0aad0a`): The single high-voltage chromatic moment. Primary CTA fills, the carrot logo, success badges, in-stock indicators, link colors, focus rings.
+
+### Brand & Dark
+- **Brand Hover** (`#089408`): Press state for green CTAs.
+- **Brand Active** (`#067a06`): Deep press feedback. Also link-hover color.
+- **Brand Soft** (`#e3f5e3`): Selected-tab background, in-stock badge tint.
+- **Brand Deep** (`#003d2a`): Deep forest green — promotional bands, Instacart+ membership upsells, pre-footer CTA band.
+
+### Accent
+- **Carrot Orange** (`#ff7a00`): Fresh-produce callouts, the carrot icon detail itself. Used scarcely.
+- **Warm Yellow** (`#ffce5e`): Featured-item highlights, "Best Seller" callouts.
+- **Sale Red** (`#e6483d`): Sale and discount callouts. Used scarcely; reserved for actual price reductions.
+- **Rating Gold** (`#fcb53b`): Store rating stars. Used only inside rating contexts.
+
+### Interactive
+- **Link** (`#0aad0a`): Inline body links default to Instacart Green.
+- **Link Hover** (`#067a06`): Darker green on hover.
+- **Button Primary** (`#0aad0a`): Primary CTA fill.
+- **Button Hover** (`#089408`): Press state.
+- **Disabled** (`#999999`): Faint — disabled CTAs and form fields.
+
+### Neutral Scale
+- **Ink** `#000000` — display, headlines, primary CTA labels on light
+- **Body** `#1a1a1a` — running paragraph text on light canvas
+- **Muted** `#666666` — captions, photo metadata, secondary list copy
+- **Faint** `#999999` — disabled, footer secondary, form placeholder
+- **Border Strong** `#999999` — input border, section divider where strength is needed
+- **Border Default** `#e0e0e0` — standard 1px hairline
+- **Border Soft** `#ededed` — soft divider, item-card separator
+- **Surface** `#f6f6f6` — neutral grey panel — store cards, item cards, search bar fill
+- **Surface Strong** `#e4e4e4` — heavier panel surface
+- **Bg Cream** `#f7f4ee` — warm cream tone for fresh-produce sections
+- **Bg Promo** `#003d2a` — deep forest green for promotional bands
+
+### Surface & Borders
+- **bg** is `#ffffff` paper-white — the canvas.
+- **bg-elevated** `#fafafa` is a near-white tier above bg.
+- **bg-cream** `#f7f4ee` provides warm-tone variation in fresh-produce contexts.
+- **bg-promo** `#003d2a` for dark green promotional bands.
+- **surface** `#f6f6f6` is the search-bar fill and neutral panel ground.
+- **border** is `#e0e0e0` 1px hairline default; `#ededed` for soft dividers; `#999999` for input borders.
+
+### Shadow Colors
+Subtle marketplace shadow ladder:
+- **Card**: `rgba(0,0,0,0.04) 0 2px 8px` — default soft tier on item cards.
+- **Hover Card**: `rgba(0,0,0,0.10) 0 4px 16px` — stronger on hover.
+- **Raised**: `rgba(0,0,0,0.15) 0 8px 24px` — for elevated cards.
+- **Modal**: `rgba(0,0,0,0.20) 0 24px 48px -12px` — single deep tier for dialogs.
+- **Focus Ring**: `0 0 0 2px #0aad0a`.
+
+### Semantic
+- **Success** (`#0aad0a`): Confirmation states — order placed, item added, address saved. Shares brand green hex.
+- **Warning** (`#ff7a00`): Validation warnings — shares carrot-orange.
+- **Danger** (`#e6483d`): Form errors — shares sale-red.
+- **Info** (`#3b82f6`): Info badges, neutral callouts.
+
+## 3. Typography Rules
+
+### Font Family
+- **Primary**: `Instacart Sans` — the custom rounded sans cut for retail clarity. Geometric construction with rounded terminals; engineered for fast scannability at small sizes and confident anchoring at display sizes.
+- **Fallback chain**: `"Instacart Sans Fallback", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif` — system-ui ensures cross-platform consistency when web-fonts fail.
+- **Mono companion**: `"SF Mono", Menlo, Consolas` — appears only on developer surfaces (rare).
+- **OpenType features**: Default ligatures only. Tabular figures emerge from the typeface naturally — Instacart Sans's figures align well in price tables.
+- **No italics in marketing context.**
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| Display Mega | Instacart Sans | 56 | 700 | 1.10 | -0.5px | — | Homepage hero h1 over produce photography |
+| Display XL | Instacart Sans | 44 | 700 | 1.15 | -0.4px | — | Subsidiary heroes |
+| Display Lg | Instacart Sans | 32 | 700 | 1.20 | -0.2px | — | Section heads, feature band headlines |
+| Display Md | Instacart Sans | 26 | 600 | 1.30 | normal | — | Sub-section heads, store-card titles |
+| Display Sm | Instacart Sans | 22 | 600 | 1.35 | normal | — | Component titles |
+| Title Md | Instacart Sans | 18 | 600 | 1.40 | normal | — | Item-card titles, list section labels |
+| Title Sm | Instacart Sans | 16 | 600 | 1.45 | normal | — | Small section titles |
+| Body Lg | Instacart Sans | 18 | 400 | 1.55 | normal | — | Editorial body, intro paragraphs |
+| Body | Instacart Sans | 16 | 400 | 1.50 | normal | — | Default running text |
+| Body Sm | Instacart Sans | 14 | 400 | 1.50 | normal | — | Footer body, fine print |
+| Caption | Instacart Sans | 12 | 400 | 1.45 | normal | — | Photo captions, metadata |
+| Eyebrow | Instacart Sans | 12 | 600 | 1.40 | 0.6px | — | Section eyebrows — uppercase |
+| Button | Instacart Sans | 16 | 600 | 1.00 | normal | — | CTA labels — sentence-case |
+| Button Sm | Instacart Sans | 14 | 600 | 1.00 | normal | — | Compact CTAs in cards |
+| Nav Link | Instacart Sans | 14 | 500 | 1.40 | normal | — | Top-nav menu items |
+| Price | Instacart Sans | 18 | 700 | 1.20 | normal | — | Item prices — bold for scannability |
+| Price Large | Instacart Sans | 28 | 700 | 1.10 | -0.2px | — | Featured prices, totals |
+| Price Strikethrough | Instacart Sans | 14 | 400 | 1.40 | normal | — | Crossed-out original price on sale items |
+| Code | SF Mono | 14 | 400 | 1.50 | normal | — | Rare — developer surfaces |
+
+### Principles
+- **Display weight 700.** Retail headlines need to anchor — Instacart's hero is a confident retail voice, not an editorial whisper. Where Stripe uses 300 (luxury-light) and Notion uses 700 with negative tracking (bulletin-bold), Instacart uses 700 with light negative tracking for confident-retail anchoring.
+- **Body at 16/400 normal tracking.** The user is scanning for grocery items, not reading a magazine. Normal letter-spacing maximizes scannability.
+- **Sentence-case CTAs.** "Sign Up", "Get Started", "Add to Cart", "Order Now". Never uppercase. The voice is friendly, not announce-y.
+- **Prices bold at 18/700.** Price scannability is the marketplace primary affordance — bold weight on prices is the universal e-commerce convention.
+- **Strikethrough prices in 14/400 with line-through.** Smaller and lighter than the active price; the line-through is the discount signal.
+- **Light negative tracking on display only.** -0.2px to -0.5px on display sizes; body stays at 0.
+- **Single typeface discipline.** Instacart Sans handles every text role. No serif accent, no monospace except in developer contexts.
+- **Instacart Sans is licensed.** Open-source substitute: **Inter** at weight 700 with `-1%` letter-spacing for display, **Inter** at 400 for body. Or **Manrope** for closer rounded-terminal proportion.
+
+## 4. Component Stylings
+
+### Buttons
+
+All buttons use **pill geometry (radius 9999)** — the dominant brand button shape.
+
+**Primary (Instacart Green)** — the singular high-voltage action:
+- Background `#0aad0a`, text `#ffffff`, font `Instacart Sans 16/600 sentence-case`
+- Padding `12px 24px`, height `48px`, border-radius `9999px` (pill), no border
+- Transition `background-color 200ms ease, transform 200ms ease`
+- Hover: background `#089408` (color-only)
+- Active: background `#067a06`
+- Use case: Sign Up, Get Started, Add to Cart, Order Now
+
+**Primary Sm** — compact CTA in cards:
+- Background `#0aad0a`, text `#ffffff`, padding `8px 16px`, height `36px`, radius `9999px`
+- Font `Instacart Sans 14/600`
+- Use case: in-card "Add to Cart" pill on item cards
+
+**Secondary (Black)** — primary action when green is reserved:
+- Background `#000000`, text `#ffffff`, same dimensions and typography
+- Use case: secondary primary action in dual-CTA hero blocks
+
+**Outline** — alternative action paired with primary:
+- Background transparent, text `#000000`, border `1px solid #000000`
+- Padding `11px 23px` (1px less for border), height `48px`, radius `9999px`
+- Same `Instacart Sans 16/600 sentence-case` typography
+- Hover: background `rgba(0,0,0,0.04)` fill
+- Use case: tertiary CTA paired with primary
+
+**Text** — inline editorial actions:
+- Background transparent, text `#0aad0a`, no border
+- Same `Instacart Sans 16/600`
+- Decoration: `underline-offset: 4px` underline grows from invisible to visible on hover
+- Use case: "View All", "See More" inside body copy
+
+### Hero Bands
+
+**Light Hero** — primary hero on most pages:
+- Background `#ffffff`, text `#000000`
+- Full-bleed produce photography at 480px on desktop, 360px on mobile
+- Display headline in `Instacart Sans 56/700 -0.5px` pure black
+- One Instacart Green primary + one outline secondary, side-by-side
+- Padding `64px 24px`
+
+**Promo Hero** — dark green promotional variant:
+- Background `#003d2a` deep forest green, text `#ffffff`
+- Headline in `Instacart Sans 44/700 -0.4px` white
+- Used for Instacart+ membership promos, sale events
+- Padding `80px`
+
+**Cream Hero** — warm-tone fresh-produce variant:
+- Background `#f7f4ee` warm cream, text `#000000`
+- Used for fresh-produce category pages
+
+### Cards
+
+**Store Card** — the dominant marketplace card:
+- Background `#ffffff`, text `#000000`, radius `24px`, border `1px solid #e0e0e0`, padding `16px`
+- Layout: store logo top-left + store name (`Instacart Sans 18/600`) + delivery time (`14/400 muted`) + 5-star rating + "Shop now" pill CTA right-aligned
+- Hover: border shifts to `#999999`, shadow `rgba(0,0,0,0.10) 0 4px 16px` fades in, card lifts 2px translateY over 200ms
+- Use case: store grid on the homepage and category pages
+
+**Item Card** — product card in grocery aisle grids:
+- Background `#ffffff`, text `#000000`, radius `16px`, border `1px solid #ededed`, padding `12px`
+- Layout: product photo top (square aspect) + price bold (`Instacart Sans 18/700`) + product name (`14/400`) + compact "Add to Cart" pill
+- Subtle `rgba(0,0,0,0.04) 0 2px 8px` default shadow
+- Use case: item grid in 4-up at desktop, 2-up at mobile
+
+**Feature Card** — marketing card on landing pages:
+- Background `#ffffff`, text `#000000`, radius `16px`, border `1px solid #e0e0e0`, padding `24px`
+- Title `display-md 26/600` + body `body 16/400` + button-text below
+
+**Promo Card** — bright-green promotional card:
+- Background `#0aad0a`, text `#ffffff`, radius `32px`, padding `32px`
+- Title in `Instacart Sans 32/700 -0.2px` white + body white + outline-on-green CTA
+- Use case: Instacart+ membership upsell cards
+
+### Search & Forms
+
+**Search Input** — pill-shaped search bar (the central UX element):
+- Background `#f6f6f6` neutral grey, text `#000000`, border none, radius `9999px`
+- Padding `12px 20px 12px 44px` (extra left for icon), height `48px`
+- Magnifying-glass icon left at 20×20 in `#666666`
+- Placeholder: "Search products at..."
+- Focus: ring `2px solid #0aad0a` at 2px offset
+- The search bar dominates the homepage hero and persists in the top nav after scroll
+
+**Text Input** — standard text input:
+- Background `#ffffff`, text `#000000`, border `1px solid #999999`, radius `8px`
+- Padding `12px 16px`, height `48px`
+- Font `Instacart Sans 16/400`
+- Focus: border-color shifts to `#0aad0a`; ring `2px solid #0aad0a`
+
+### Tags & Badges
+
+**Badge Pill (Brand)** — green-tinted badge:
+- Background `#e3f5e3` (brand-soft), text `#0aad0a`, radius `9999px`
+- Padding `4px 12px`, font `eyebrow 12/600 0.6px uppercase`
+- Use: "In Stock", "Same-Day", "EBT" callouts
+
+**Badge Sale** — red-tinted sale badge:
+- Background `#fef2f2`, text `#e6483d`, radius `9999px`
+- Same dimensions
+- Use: "20% off", "Sale" callouts
+
+**Chip Selector** — filter/category chip:
+- Default: background `#ffffff`, text `#000000`, border `1px solid #e0e0e0`, radius `9999px`, padding `8px 16px`
+- Selected: background `#000000`, text `#ffffff`, no border
+- Use: filter chips at top of category pages, "All / Produce / Dairy / Meat" navigation
+
+### Rating
+
+**Rating Stars** — five-star rating display:
+- Filled icons in `#fcb53b` rating-gold
+- Empty icons in `#e0e0e0` border-default
+- Used inside store cards and item-detail pages
+
+### CTA Band
+
+**CTA Band Promo** — pre-footer band:
+- Background `#003d2a` deep forest green, text `#ffffff`
+- Centered display headline `Instacart Sans 36/700 -0.3px`
+- Single Instacart Green CTA centered below
+- Padding `80px` vertical
+
+### Navigation
+
+**Top Nav** — default nav on every page:
+- Background `#ffffff`, text `#000000`, height `64px`, border-bottom `1px solid #e0e0e0`, sticky
+- Layout: carrot logo top-left (32px height) + horizontal menu (Stores / Departments / Pickup / Delivery / Help) + utility (cart icon with badge, account) right
+- Menu items in `Instacart Sans 14/500`
+- Search bar appears in nav after scroll past hero
+
+### Footer
+
+**Footer Light** — closing footer on every page:
+- Background `#ffffff`, text `#666666`, border-top `1px solid #e0e0e0`
+- 4-column link list at desktop covering Get to Know Us / For Shoppers / For Stores / Help
+- Padding `64px 24px`
+- App-store badges (App Store, Google Play) at bottom
+
+## 5. Layout Principles
+
+### Spacing System
+- **Base unit:** 4px.
+- **Scale:** `4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128`.
+- **Section padding:** 64px for major bands (lighter than luxury automotive — Instacart prioritizes density).
+- **Card internal padding:** 16px for store cards, 12px for item cards, 24-32px for marketing feature cards.
+- **Gutters:** 16px between item cards in 4-up grids; 24px between store cards in 3-up grids.
+
+### Grid & Container
+- Max content width: **1280px** on editorial bands.
+- Editorial body: 12-column grid.
+- Item card grids: 4-up at desktop, 3-up at tablet, 2-up at mobile.
+- Store card grids: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- Footer: 4-column at desktop, accordion at mobile.
+
+### Whitespace Philosophy
+Practical-marketplace pacing. Hero photography occupies a confident 480px (not full-viewport — Instacart is friendly-functional, not flagship-cinematic). Body sections sit in tight grids with item cards densely packed. The grid IS the marketplace; tight density is a feature, not a bug. Section padding stays at 64px (lighter than 96px luxury or 128px flagship) — the user is shopping, not browsing a magazine.
+
+### Section Cadence
+The homepage rhythm: light hero with search → store grid (3-up) → category chip nav → item grid (4-up) → promo card (Instacart+ membership) → cream-section (fresh produce) → CTA band promo → footer. The sequence prioritizes commerce flow: discover stores → choose category → select items → upgrade to membership.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Token | Value | Use |
+|------|-------|-------|-----|
+| None | `none` | 0 | Spec/data containers (rare) |
+| Tight | `xs` | 4 | Tight badges (rare) |
+| Standard | `sm` | 8 | Text inputs, small badges |
+| Comfortable | `md` | 12 | Secondary cards |
+| Card | `lg` | 16 | Item cards, primary feature cards |
+| Photo | `xl` | 24 | Store cards, photo containers |
+| Promo | `xxl` | 32 | Promotional cards |
+| Pill | `pill` | 9999 | CTAs (dominant), badge pills, chip selectors, search bar |
+
+The **pill geometry on CTAs** is the brand's primary button signal. There is no compound-radius geometry on the site.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 (Flat) | `#ffffff` canvas, no shadow | Body bands, footer link rows |
+| 1 (Card Default) | `#ffffff` background, `1px solid #ededed` border, `rgba(0,0,0,0.04) 0 2px 8px` shadow | Item cards |
+| 2 (Hover Card) | Border `#999999`, `rgba(0,0,0,0.10) 0 4px 16px` shadow + 2px translateY | Hovered item/store cards |
+| 3 (Raised) | `rgba(0,0,0,0.15) 0 8px 24px` | Elevated promo cards, dropdowns |
+| 4 (Modal) | `rgba(0,0,0,0.20) 0 24px 48px -12px` | Dialogs, item-detail modals |
+| 5 (Photographic) | Full-bleed produce imagery | Hero band — depth via lens |
+
+### Shadow Philosophy
+Subtle marketplace shadow ladder. Item cards carry a gentle default shadow (`0.04` alpha) so they read as elevated even at rest — distinguishing them from the white canvas. Hover intensifies to `0.10`. The depth ladder reinforces the marketplace browsing UX where cards are tappable surfaces, not flat layouts.
+
+### Decorative Depth
+- **Full-bleed produce photography** — the brand's primary atmospheric depth.
+- **Brand-green promo cards** carry depth through saturation rather than shadow.
+- **Surface brightness steps** (`#ffffff` → `#fafafa` → `#f7f4ee` → `#f6f6f6`) carry structural elevation.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — material-style ease for most micro-interactions
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — stronger entrance for hero bands and modals
+- **Bounce**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — overshoot bounce used on cart-add interactions
+
+### Duration Buckets
+- **Fast** (150ms): button background-color transitions, hover shifts
+- **Standard** (200ms): card hover-lift, shadow fade-in
+- **Slow** (300ms): section entrance fades, modal entrance
+- **Cart Add** (400ms): cart-icon bump animation
+
+### Per-Component Micro-States
+- **Button Primary (Green)** — hover: background-color transitions to `#089408` over 150ms. Optional 1.02 scale on signup CTAs. Active: background drops to `#067a06`.
+- **Button Outline** — hover: background fills to `rgba(0,0,0,0.04)` over 150ms.
+- **Item Card** — hover: 2px translateY lift + shadow intensifies to `rgba(0,0,0,0.10) 0 4px 16px` over 200ms.
+- **Store Card** — hover: border shifts to `#999999`, same shadow intensification, lift 2px.
+- **Cart Icon** — Add-to-Cart trigger: cart icon scales `1.0 → 1.15 → 1.0` over 400ms ease-bounce. Cart badge count increments with a brief number-flip.
+- **Chip Selector** — selected state: background fills from white to `#000000` over 150ms; text inverts to white.
+- **Search Input** — focus: ring `2px solid #0aad0a` at 2px offset appears over 150ms.
+
+### Page Transitions
+Page-to-page: 200ms cross-fade between hero photographs. Item card grids stagger-fade-in on first paint at 50ms per card up to 12 cards.
+
+### Reduced Motion Strategy
+Respects `prefers-reduced-motion: reduce`. Under reduced motion:
+- Cart-bump becomes static (no scale animation)
+- Card hover-lift becomes shadow-only fade (no translateY)
+- Signup CTA scale-pulse disabled
+- Stagger-fade collapses to single fade-in over 200ms
+- All scroll-triggered animations collapse to opacity transitions
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs (WCAG)
+- **Text on Canvas**: `#000000` on `#ffffff` = 21.0:1 — AAA at all sizes
+- **Body on Canvas**: `#1a1a1a` on `#ffffff` = 19.7:1 — AAA at body sizes
+- **Text on Brand**: `#ffffff` on `#0aad0a` = 4.6:1 — AA Normal at body sizes 14px+, AAA Large
+- **Link on Canvas**: `#0aad0a` on `#ffffff` = 4.5:1 — AA Normal at body sizes 14px+
+- **Text on Promo**: `#ffffff` on `#003d2a` = 21.0:1 — AAA
+- **Muted on Canvas**: `#666666` on `#ffffff` = 5.7:1 — AA Normal
+
+### Focus Indicators
+- **Ring color**: `#0aad0a` (Instacart Green)
+- **Ring style**: `2px solid` at `2px` offset from element's outer edge
+- **Focus-visible only**: ring appears only on keyboard focus, not mouse-click focus
+- **Pill CTAs** receive an outer ring that respects the pill geometry (rounded ring, not square)
+
+### ARIA Patterns
+- **Combobox** (search input): `role="combobox"` with `aria-expanded`, `aria-controls`, `aria-activedescendant` for autocomplete dropdown.
+- **Listbox** (autocomplete results): `role="listbox"` with `aria-selected`.
+- **Dialog** (item-detail modal, address-edit, sign-in): `role="dialog"` with `aria-modal="true"`, `aria-labelledby`, focus trap.
+- **Tabs** (category navigation): `role="tablist"` with `aria-selected`. Arrow-key navigation.
+- **Live region** (cart updates): `role="status"` with `aria-live="polite"` announces "Item added to cart" after Add-to-Cart.
+
+### Keyboard Nav Order
+Tab order: skip-to-content → carrot logo (home) → primary nav (Stores, Departments, Pickup, Delivery, Help) → search input → utility (cart, account) → hero CTAs → store/item grid (left-to-right, top-to-bottom) → footer columns.
+
+### Screen Reader Hints
+- Carrot logo: `aria-label="Instacart home"`.
+- Cart icon: `aria-label="Cart, 3 items"` with item count read aloud.
+- Item prices: `aria-label="$4.99 per pound"` for full unit context.
+- Sale badges: `aria-label="On sale, 20 percent off"`.
+- Store cards: keyboard focusable as a single tap target with `aria-label` summarizing store + delivery time.
+- Star ratings: `aria-label="4.5 stars out of 5, 1,200 reviews"`.
+
+### Reduced Motion Handling
+`@media (prefers-reduced-motion: reduce)` overrides cart-bump, card-lift, signup CTA pulse. Documented in §8.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | < 640px | Hero h1 56→32px; hero photo 360px tall; item grid 2-up; nav collapses (hamburger + persistent search); store grid 1-up |
+| Tablet | 640–1024px | Hero h1 44px; item grid 3-up; nav still collapsed; store grid 2-up |
+| Desktop | 1024–1280px | Hero h1 56px; item grid 4-up; horizontal nav appears; store grid 3-up |
+| Wide | > 1280px | Editorial body content caps at 1280px |
+
+### Touch Targets
+- Primary CTA at 48px height — exceeds WCAG AAA (44 × 44).
+- Compact item-card "Add to Cart" pill at 36px is paired with full-card tap target for the item detail.
+- Chip selectors at 40px effective tap area.
+
+### Collapsing Strategy
+- **Top nav** collapses to hamburger + persistent search below 1024px.
+- **Hero photo** reframes per breakpoint via art direction; mobile shifts to vertical-format imagery.
+- **Item card grid**: 4-up → 3-up → 2-up.
+- **Store card grid**: 3-up → 2-up → 1-up.
+- **Footer**: 4-column at desktop, accordion-collapsed at mobile.
+- **Search input**: persistent in nav at all breakpoints; on mobile, the nav row is search + cart only, with hamburger revealing menu.
+
+### Image Behavior
+- Hero photography uses `<picture>` with mobile-cropped + desktop-wide art direction.
+- AVIF with WebP fallback and JPEG floor.
+- Item photos use `loading="lazy"` except first 8 above-the-fold.
+
+### Container Queries
+Used selectively on item-card grids where the card content reflows based on container width.
+
+## 11. Content & Voice
+
+### Tone
+**Friendly-functional, practical, warm.** The voice is the friend who actually knows where to find ripe avocados in February. Sentences are short and direct. There is no "innovative", no "revolutionary" — Instacart is service, not aspiration. The brand voice is helpful, slightly chatty, and committed to getting you groceries. Microcopy leans warm without being cute.
+
+### Microcopy Patterns
+- **Buttons**: action-verb + noun, sentence-case. "Sign Up", "Get Started", "Add to Cart", "Order Now", "Shop now", "View All". Never uppercase. Never "Click here".
+- **Eyebrows**: uppercase context cue. "FRESH PICKS", "WEEKLY DEALS", "INSTACART+ EXCLUSIVE".
+- **Error message recipe**: `[What happened]. [What to do.]` — e.g. "We couldn't add that item — it's out of stock. Try a similar product."
+- **Success confirmations**: warm + brief. "Added to your cart." "Order placed — see you at 5:30." Light exclamation marks acceptable.
+- **Form labels**: capitalized noun phrases above pill inputs. "Email", "Password", "Address".
+
+### Empty States
+- **Empty cart**: "Your cart is empty. Start shopping to see fresh picks here."
+- **No search results**: "We couldn't find that — try checking your spelling or browse by category."
+- **No nearby stores**: "No stores deliver to your address yet. Try a different ZIP or check back soon."
+
+### CTA Verb Conventions
+- **Sign Up** — primary verb on signup CTAs (not "Register" or "Create account")
+- **Get Started** — alternative primary on landing pages
+- **Add to Cart** — item-card CTA
+- **Order Now** — checkout-flow CTA
+- **Shop now** — store-card CTA
+- **View All** — for editorial section endings
+- **Sign In** — for returning users (never "Login")
+
+## 12. Dark Mode & Theming
+
+Instacart has **no global user-facing dark/light toggle**. The site is light-by-default. Dark sections are scoped contextual surfaces — promotional bands at `#003d2a` deep forest green, certain CTA bands, and Instacart+ membership upsells. The token swap is local:
+
+- `bg`: `#ffffff` → `#003d2a`
+- `text`: `#000000` → `#ffffff`
+- `text-body`: `#1a1a1a` → `#ffffff`
+- `border`: `#e0e0e0` → `#005a3e`
+- `surface`: `#f6f6f6` → `#005a3e`
+- `brand` and `on-brand` stay unchanged — green CTAs render identically on both grounds.
+
+When dark green sections appear, they're sandwiched between white editorial bands or used as the closing pre-footer CTA. The site never inverts globally.
+
+## 13. Lineage & Influences
+
+Instacart's site is the grocery-shopping list elevated to marketplace UX. The discipline borrows from the friendly-functional vocabulary of consumer marketplaces (DoorDash, Airbnb, Etsy) — pill CTAs, soft radius, photography-led, scannable typography — but cuts the cute factor to keep focus on the workflow: discover stores, choose category, select items, checkout.
+
+The signature carrot-green `#0aad0a` is one of the most committed single-accent brand voltages on the web. Where Stripe's purple shows up scarcely as a high-voltage moment, Instacart's green appears everywhere green can possibly appear: CTAs, badges, links, focus rings, in-stock indicators, success states, the carrot logo. The brand discipline is "if it could be green and serves the marketplace, it is green."
+
+What it rejects: enterprise-SaaS rectangle CTAs, dense data tables, monotone color schemes, anything that competes with the produce photography or the green voltage.
+
+**Named influences:**
+- DoorDash — marketplace-CTA pill geometry, item-card visual conventions (https://www.doordash.com)
+- Airbnb — photography-led card aesthetic, friendly-marketplace voice (https://www.airbnb.com)
+- Whole Foods Market / Trader Joe's — fresh-produce visual language (https://www.wholefoodsmarket.com)
+- Etsy — marketplace eyebrow + headline + search-as-anchor pattern (https://www.etsy.com)
+- Stripe — single-color brand voltage discipline (https://stripe.com)
+
+## 14. Do's and Don'ts
+
+### Do
+- Use Instacart Green `#0aad0a` everywhere green can appear — primary CTAs, badges, links, focus rings, in-stock indicators, success states, the carrot logo. The committed brand discipline is the brand voice.
+- Use pill geometry (radius 9999) on every CTA, chip, badge, and the search input. Pill is the brand button signal.
+- Render CTA labels in sentence-case Instacart Sans 16/600 — never uppercase.
+- Bold prices at 18/700 — price scannability is the marketplace primary affordance.
+- Use Instacart Sans at weight 700 for display sizes (retail anchor, not editorial whisper).
+- Body copy at 16/400 normal tracking — scannability over editorial atmosphere.
+- Use `#003d2a` deep forest green for promotional bands and Instacart+ membership upsells.
+- Use `#f7f4ee` warm cream for fresh-produce category sections.
+- Use 5-star ratings in `#fcb53b` rating-gold inside store cards.
+- Cart icon bumps with bounce easing on Add-to-Cart — the cart is the user's outcome.
+
+### Don't
+- Don't use rectangle CTAs. Pill is the brand button shape.
+- Don't introduce a saturated brand color other than Instacart Green and the scoped accents (orange, yellow, sale-red, rating-gold).
+- Don't use uppercase CTA labels. Sentence-case is the friendly-marketplace voice.
+- Don't use blue links. Instacart links are brand green.
+- Don't use 8px or smaller radius on CTAs. The brand button is pill.
+- Don't compress prices. Bold 18/700 prices are non-negotiable for scannability.
+- Don't use editorial-magazine display weight (300 or 400). Display is 700 for retail anchoring.
+- Don't crowd item cards with too much text — photo + price + name + Add-to-Cart pill is the canonical layout.
+- Don't use sale-red `#e6483d` outside actual price reductions. Reserved.
+- Don't add ornamental gradients. Single-color blocks + photography are the visual vocabulary.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- Primary CTA / Links / Brand: `#0aad0a` (Instacart Green)
+- Background: `#ffffff` (Paper White)
+- Body text: `#1a1a1a` (Body Black)
+- Display text: `#000000` (Pure Black)
+- Surface / Search bg: `#f6f6f6` (Neutral Panel)
+- Cream surface: `#f7f4ee` (Warm Cream)
+- Promo dark: `#003d2a` (Deep Forest Green)
+- CTA hover: `#089408`
+- Brand soft (badges): `#e3f5e3`
+- Sale red: `#e6483d`
+- Rating gold: `#fcb53b`
+
+### Example Component Prompts
+- "Create an Instacart hero band on `#ffffff` paper-white canvas, 480px tall on desktop, with a full-bleed photograph of overhead farmer's-market produce (tomatoes, basil, peaches in shallow wooden crates). The headline 'Order groceries for delivery or pickup today' floats over the lower-third in Instacart Sans 56px weight 700 with -0.5px letter-spacing in pure black. Below it, a pill-shaped search input with `#f6f6f6` neutral grey fill, magnifying-glass icon left, placeholder 'Search products at...' (48px tall, radius 9999, 12×20 padding with 44px left-padding for icon). Two CTAs below: an Instacart Green `#0aad0a` 'Sign Up' pill (Instacart Sans 16/600 sentence-case, 12×24 padding, 48px tall, radius 9999) and an outline 'Sign In' pill (1px solid black border, transparent fill)."
+- "Design an Instacart store card on `#ffffff` background: 24px radius, 1px solid `#e0e0e0` border, 16px padding, default `rgba(0,0,0,0.04) 0 2px 8px` shadow. Layout: store logo top-left at 64×64, store name in Instacart Sans 18/600 right of logo, delivery time in 14/400 muted `#666666` below name, 5-star rating in `#fcb53b` rating-gold below time, 'Shop now' Instacart Green pill CTA right-aligned. Hover: border shifts to `#999999`, shadow intensifies to `rgba(0,0,0,0.10) 0 4px 16px`, card lifts 2px translateY over 200ms."
+- "Create an Instacart item card on `#ffffff`: 16px radius, 1px solid `#ededed` border, 12px padding. Layout: square product photograph at top (organic tomatoes), bold price in Instacart Sans 18/700 black ('$4.99'), product name in 14/400 black ('Organic Roma Tomatoes, lb'), small unit-pricing caption in 12/400 muted `#666666`, and a compact Instacart Green 'Add to Cart' pill (Instacart Sans 14/600, 8×16 padding, 36px tall, radius 9999) right-aligned at bottom."
+- "Build an Instacart category-chip selector row: horizontal scrollable row of pill-shaped chips on `#ffffff` background. Default chip: white fill, 1px solid `#e0e0e0` border, black text in Instacart Sans 14/500, padding 8×16, radius 9999. Selected chip (e.g. 'All'): black fill `#000000`, white text, no border. Categories: 'All / Fresh produce / Dairy & eggs / Meat & seafood / Bakery / Pantry'."
+- "Design an Instacart Instacart+ promo card: bright Instacart Green `#0aad0a` background, 32px radius, 32px padding, white text. Headline 'Try Instacart+ free for 14 days' in Instacart Sans 32/700 white with -0.2px tracking, body in 16/400 white explaining unlimited free delivery on orders over $35, and an outline-on-green CTA 'Start Free Trial' (1px solid white border, transparent fill, white text in Instacart Sans 16/600, padding 12×24, 48px tall, radius 9999)."
+- "Build an Instacart top nav: 64px tall on `#ffffff`, sticky, 1px solid `#e0e0e0` border-bottom. Carrot logo top-left at 32px height (carrot icon + 'instacart' wordmark in Instacart Green). Pill-shaped search input center (48px tall, radius 9999, `#f6f6f6` fill). Right side: cart icon with badge count (cart bumps 1.0→1.15→1.0 on Add-to-Cart) and account icon. After scroll past the hero search, the search persists at center."
+
+### Iteration Guide
+1. Focus on ONE component at a time. Reference its YAML key (`button-primary`, `store-card`, `item-card`).
+2. Variants live as separate entries inside `components:`.
+3. CTAs default to PILL (radius 9999) — the brand button shape. No rectangle, no 8px softened.
+4. Use color tokens (`brand`, `text`, `surface`) — never inline hex on multiple components.
+5. Hover states change color on CTAs; cards lift 2px with shadow intensification.
+6. Instacart Sans 700 for display, 600 for CTAs/titles, 700 for prices, 400 for body. Sentence-case CTAs.
+7. Instacart Green appears EVERYWHERE green can appear — committed brand discipline.
+8. Use the explicit spacing ladder (4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128). Section padding 64px.
+9. Item card grid is 4-up at desktop — the dominant marketplace pattern.
+10. Cart icon is the user's outcome — bump it with bounce easing on every Add-to-Cart.

@@ -6,10 +6,10 @@ source_url: https://www.minimax.io
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [ai, saas, infrastructure]
+categories: [ai, saas, dev-tools]
 tags: [light, mono-then-vivid, sans, geometric, pill, dual-rhythm]
 preview_swatch: ['#ffffff', '#0a0a0a', '#ff5530']
-related: [together-ai, deepseek, anthropic]
+related: [deepseek, anthropic]
 description: 'MiniMax presents itself as a premium AI infrastructure brand through a striking duality — bold black-pill CTAs and stark white canvas for marketing, paired with vibrant gradient product cards (coral, magenta, blue, purple) that turn each model release into a distinctive visual identity. The system uses DM Sans across all surfaces, employs an oversized 80px hero display with -2px tracking, anchors major actions in deep near-black pills, and layers content density via a 3-column documentation grid with sidebar nav, prose body, and TOC.'
 
 colors:

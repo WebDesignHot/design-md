@@ -3,89 +3,239 @@ name: Plaid
 tagline: Pale blue trust on white, classical Stripe-adjacent type, and a Benjamin-Franklin-as-mascot moment of personality.
 author: webdesignhot
 source_url: https://plaid.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
-featured: false
+featured: true
 categories: [fintech, dev-tools]
 tags: [light, sans, structured, cool, soft, spacious]
 preview_swatch: ['#ffffff', '#0a85ea', '#000000']
 related: [stripe, vercel, mintlify]
-description: 'Plaid''s site uses a pale-blue trust palette — white canvas, near-black ink, a single confident `#0a85ea` action blue, and Inter (or a custom plaid-sans) for both display and body. The aesthetic descends from Stripe''s 2017-era restraint, but Plaid breaks the discipline with one move: an animated Benjamin-Franklin mascot that sits inside an otherwise institutional layout, signalling consumer warmth on a developer-finance product.'
+description: 'Plaid''s site uses a pale-blue trust palette — white canvas, near-black ink, a single confident `#0a85ea` action blue, and Inter (or a custom plaid-sans) for both display and body. The aesthetic descends from Stripe''s 2017-era restraint, but Plaid breaks the discipline with one move: an animated Benjamin-Franklin mascot that sits inside an otherwise institutional layout, signalling consumer warmth on a developer-finance product. The system reads as a quieter, more institutional cousin of modern Stripe — 1px / 10% black hairlines, no gradients, no glow, near-pure-black H1 at 64px, mono micro-labels at 12px / 0.04em tracking, and the cream Franklin band as the brand''s singular emotional zone.'
 
 colors:
-  bg: '#ffffff'                # white canvas
-  bg-soft: '#f7f9fb'           # palest blue-grey panel
-  bg-blue: '#eaf3ff'           # signature pale-blue band
-  bg-ink: '#000000'            # black hero band, used rarely
-  bg-cream: '#f3efe6'          # warm-cream "story" band (Franklin scenes)
-  surface: '#f3f5f8'           # cool-grey card base
-  surface-soft: '#fafbfc'
-  text: '#000000'              # near-pure black on white
-  text-strong: '#000000'
-  text-muted: '#4a5568'
-  text-soft: '#7a8390'
-  brand: '#0a85ea'             # Plaid action blue
-  brand-strong: '#0066c0'      # pressed / hover
-  brand-soft: '#dceeff'        # info wash
-  accent: '#000000'             # secondary brand colour is black
-  accent-soft: '#0a85ea14'      # 8% blue tint for chips
-  border: '#0000001a'           # 10% black hairline
-  border-soft: '#00000010'
+  # Primary
+  bg: '#ffffff'                          # white canvas — trust default
+  bg-soft: '#f7f9fb'                     # palest blue-grey panel
+  bg-blue: '#eaf3ff'                     # signature pale-blue trust band
+  bg-cream: '#f3efe6'                    # warm-cream "Franklin storytelling" band
+  bg-ink: '#000000'                      # rare black band for emphasis
+  surface: '#f3f5f8'                     # cool-grey card base
+  surface-soft: '#fafbfc'                # softer card lift on white
+  surface-cream: '#faf6ed'                # quieter cream tint inside Franklin sections
+  text: '#000000'                        # near-pure black on white
+  text-strong: '#000000'                 # absolute black for hero
+  text-medium: '#1a1f29'                 # rare deeper-cool ink
+  text-muted: '#4a5568'                  # secondary copy
+  text-soft: '#7a8390'                   # captions
+  text-faint: '#a0a8b3'                  # disabled, footer microcopy
+  # Brand
+  brand: '#0a85ea'                       # Plaid action blue — links and accent only
+  brand-strong: '#0066c0'                # pressed / hover blue
+  brand-deep: '#003c80'                  # rare deep blue for emphasis
+  brand-soft: '#dceeff'                  # info wash
+  brand-wash: 'rgba(10, 133, 234, 0.08)' # hover-tinted background
   on-brand: '#ffffff'
+  # Secondary brand: black (CTA fill)
+  accent: '#000000'                      # secondary brand colour is black — CTA fill
+  accent-soft: 'rgba(10, 133, 234, 0.08)' # 8% blue tint for chips
+  # Interactive
+  link: '#0a85ea'                        # action blue links
+  link-hover: '#0066c0'                  # pressed
+  selected-bg: '#eaf3ff'
+  disabled: '#c4cad3'
+  # Borders
+  border: 'rgba(0, 0, 0, 0.10)'          # 10% black hairline — defining border
+  border-strong: 'rgba(0, 0, 0, 0.20)'   # emphasized rule
+  border-soft: 'rgba(0, 0, 0, 0.06)'     # quietest separation
+  border-blue: 'rgba(10, 133, 234, 0.30)' # brand-tinted divider
+  # Semantic
+  success-bg: '#dcf3e3'
+  success-text: '#1f5d3f'
+  warning-bg: '#fff0c5'
+  warning-text: '#7a5e1f'
+  danger-bg: '#fde0e0'
+  danger-text: '#8a2828'
+  info-bg: '#dceeff'                     # brand-soft doubles as info
+  info-text: '#003c80'
 
 typography:
   display:
     family: '"Plaid Sans", "Inter Display", Inter, "Helvetica Neue", Arial, sans-serif'
     weights: [500, 600, 700]
+    opentype-features: ['ss01', 'liga', 'kern']
   body:
     family: '"Plaid Sans", Inter, -apple-system, "Helvetica Neue", Arial, sans-serif'
     weights: [400, 500, 600]
+    opentype-features: ['liga', 'kern']
   mono:
-    family: '"JetBrains Mono", "Menlo", Consolas, monospace'
+    family: '"JetBrains Mono", Menlo, Consolas, "SF Mono", monospace'
     weights: [400, 500]
+    opentype-features: ['tnum', 'zero']
   scale:
-    h1:    { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.02em' }
-    h2:    { size: 44, weight: 600, lineHeight: 1.1,  tracking: '-0.015em' }
-    h3:    { size: 24, weight: 600, lineHeight: 1.25 }
-    body:  { size: 16, lineHeight: 1.5 }
-    label: { size: 12, weight: 500, family: mono, tracking: '0.04em' }
+    display-hero:    { size: 80, weight: 600, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display:         { size: 64, weight: 600, lineHeight: 1.05, tracking: '-0.02em', family: display }
+    h1:              { size: 56, weight: 600, lineHeight: 1.08, tracking: '-0.02em', family: display }
+    h2:              { size: 44, weight: 600, lineHeight: 1.10, tracking: '-0.015em', family: display }
+    h3:              { size: 32, weight: 600, lineHeight: 1.20, tracking: '-0.01em', family: display }
+    h4:              { size: 24, weight: 600, lineHeight: 1.25, family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.40, family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.40, tracking: '0.04em', family: mono, transform: uppercase }
+    body-large:      { size: 20, weight: 400, lineHeight: 1.50, family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.50, family: body }
+    body-small:      { size: 14, weight: 400, lineHeight: 1.50, family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.40, family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.40, family: mono, opentype: 'tnum' }
+    label:           { size: 12, weight: 500, lineHeight: 1.30, family: mono, tracking: '0.04em', transform: uppercase }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero' }
+    code-micro:      { size: 12, weight: 400, lineHeight: 1.40, family: mono }
+    quote-pull:      { size: 28, weight: 500, lineHeight: 1.30, family: display }
 
 radius:
+  micro: 2
   xs: 4
   sm: 6
   md: 8
   lg: 12
-  card: 12
   xl: 16
+  card: 12
   button: 8
   pill: 9999
 
+spacing:
+  base: 8
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
+
 layout:
-  container: 1200
-  gutter: 24
-  section-y: 96
-  rhythm: 8
+  page-width: 1200
+  prose-width: 720
+  site-gutter: 'clamp(24px, 4vw, 56px)'
+  header-height: 72
+  grid-columns: 12
+  section-rhythm: '96-128px'
 
 components:
   button-primary:
-    bg: '#000000'
-    color: '#ffffff'
+    background: '#000000'
+    text: '#ffffff'
+    padding: '12px 20px'
     radius: 8
-    weight: 500
-    paddingX: 20
-    paddingY: 12
+    border: '1px solid #000000'
+    font: 'Plaid Sans 500 / 15px'
+    hover-bg: '#1a1f29'
+    active-bg: '#000000'
+    use: 'Primary CTA — black-on-white, the institutional fintech move. *Get started, Talk to sales, Try Plaid.*'
   button-secondary:
-    bg: '#ffffff'
-    color: '#000000'
-    border: '1px solid #0000001a'
+    background: '#ffffff'
+    text: '#000000'
+    padding: '12px 20px'
     radius: 8
+    border: '1px solid rgba(0, 0, 0, 0.10)'
+    font: 'Plaid Sans 500 / 15px'
+    hover-bg: '#f7f9fb'
+    use: 'Outlined twin — same shape, hairline border. *Read more, Watch demo.*'
+  button-tertiary:
+    background: 'transparent'
+    text: '#000000'
+    padding: '12px 16px'
+    radius: 8
+    border: '1px solid rgba(0, 0, 0, 0.06)'
+    font: 'Plaid Sans 500 / 15px'
+    hover-bg: 'rgba(0, 0, 0, 0.03)'
+    use: 'Quietest action — repeated CTAs, footer links.'
   button-link:
-    color: '#0a85ea'
+    background: 'transparent'
+    text: '#0a85ea'
+    padding: '0'
+    radius: 0
+    font: 'Plaid Sans 500 / 16px'
     underline: true
+    hover-text: '#0066c0'
+    use: 'Inline action blue — developer documentation references, citation links.'
   card:
-    bg: '#ffffff'
-    border: '1px solid #0000001a'
+    background: '#ffffff'
+    border: '1px solid rgba(0, 0, 0, 0.10)'
     radius: 12
+    padding: '32px'
+    use: 'Feature tile, capability card, pricing block — flat white on coloured panel.'
+  card-blue:
+    background: '#eaf3ff'
+    border: 'none'
+    radius: 12
+    padding: '32px'
+    use: 'Pale-blue trust panel — full-bleed signature section.'
+  card-cream:
+    background: '#f3efe6'
+    border: 'none'
+    radius: 12
+    padding: '40px 32px'
+    use: 'Cream Franklin band — illustration-heavy, the brand''s emotional zone.'
+  input:
+    background: '#ffffff'
+    border: '1px solid rgba(0, 0, 0, 0.20)'
+    radius: 8
+    padding: '12px 16px'
+    font: 'Plaid Sans 400 / 16px'
+    placeholder-color: '#7a8390'
+    focus-ring: '0 0 0 2px rgba(10, 133, 234, 0.40)'
+    focus-border: '#0a85ea'
+    use: 'Form fields, search, contact-sales inputs.'
+  badge-eyebrow:
+    background: 'transparent'
+    text: '#4a5568'
+    padding: '0'
+    radius: 0
+    font: 'JetBrains Mono 500 / 12px / uppercase / 0.04em tracking'
+    use: 'Section eyebrow — mono micro-label, no chrome.'
+  badge-blue:
+    background: 'rgba(10, 133, 234, 0.08)'
+    text: '#003c80'
+    padding: '4px 10px'
+    radius: 4
+    font: 'Plaid Sans 500 / 12px'
+    use: 'Subtle blue-tinted status pill on white card.'
+  nav-link:
+    background: 'transparent'
+    text: '#000000'
+    padding: '8px 12px'
+    font: 'Plaid Sans 500 / 15px'
+    hover-text: '#0a85ea'
+    use: 'Header nav — black with action-blue hover.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-institutional: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  duration-page: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — Franklin animations halt at first frame, transitions become opacity-only, durations halved'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 30, 0.04) 0 1px 3px'
+  standard: 'rgba(0, 0, 30, 0.06) 0 4px 12px'
+  elevated: 'rgba(0, 0, 30, 0.08) 0 12px 32px -8px, rgba(0, 0, 30, 0.04) 0 4px 8px'
+  cool: 'rgba(10, 30, 60, 0.10) 0 16px 40px -16px'
+  ring: '0 0 0 2px rgba(10, 133, 234, 0.40)'
+
+accessibility:
+  contrast-text-on-bg: 21.0               # #000 on #fff — AAA at all sizes
+  contrast-text-on-brand: 4.5             # #ffffff on #0a85ea — AA at body sizes
+  contrast-text-on-cta-bg: 21.0           # #ffffff on #000 — AAA
+  contrast-link-on-bg: 4.6                # #0a85ea on #ffffff — AA at body sizes
+  contrast-text-muted-on-bg: 8.6          # #4a5568 on #ffffff — AAA at body
+  focus-ring: '2px solid rgba(10, 133, 234, 0.40) with 2px offset'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive surface; tab order matches visual flow; Franklin mascot is decorative and aria-hidden'
+  prose-line-length: 'capped at 720px (~70 characters) for institutional readability'
+  franklin-mascot: 'decorative animation marked aria-hidden; pauses on prefers-reduced-motion; never carries content meaning'
 
 lineage:
   summary: |
@@ -106,93 +256,540 @@ lineage:
     6px) nor consumer-soft (Wise's full pill).
   influences:
     - name: Stripe (2017-2019 era)
-      role: Pale-blue trust palette, single-accent CTA discipline, classical sans typography.
+      role: Pale-blue trust palette, single-accent CTA discipline, classical sans typography
       url: https://stripe.com
     - name: Vercel
-      role: Black CTA on white canvas with mono micro-labels.
+      role: Black CTA on white canvas with mono micro-labels
       url: https://vercel.com
     - name: Mailchimp / Slack illustrations
-      role: Mascot-as-narrative-device — Plaid's Franklin echoes that warm-illustration tradition inside a fintech context.
+      role: Mascot-as-narrative-device — Plaid's Franklin echoes that warm-illustration tradition inside a fintech context
       url: https://mailchimp.com
+    - name: Mercury
+      role: Cousin in the modern-fintech-restraint lineage; tighter radii (6px) for a more archaic feel
+      url: https://mercury.com
+    - name: Linear
+      role: Institutional discipline; hairline-only depth strategy
+      url: https://linear.app
+    - name: Inter / Rasmus Andersson
+      role: DNA reference for Plaid Sans neo-grotesque proportions
+
+dark-mode: null                           # marketing surface is light-only; no dark variant offered
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Plaid's homepage is the trust-fintech archetype refined: white canvas,
-black H1, pale-blue trust panels, and a confident `#0a85ea` link
-blue. Where Stripe today reaches for chromatic gradient and
-animated grids, Plaid stays with the older Stripe-era restraint —
-near-pure black on white, single-accent blue, generous whitespace,
-1px hairlines.
+Plaid's homepage is the trust-fintech archetype, refined. White canvas, black H1, pale-blue trust panels, a single confident `#0a85ea` link blue, and 10%-black hairlines doing the structural work. Where contemporary Stripe reaches for chromatic gradient, animated grids, and 3D meshes, Plaid stays with the older Stripe-era restraint — near-pure black on white, single-accent blue, generous whitespace, hairline rules. The page reads as *infrastructure* rather than *campaign*: the visual register is closer to a primary-bank annual report than to a Y Combinator pitch deck, and the discipline is the point.
 
-The single piece of personality is a recurring Benjamin Franklin
-mascot illustration set inside warm cream `#f3efe6` bands. That
-animation is the brand's emotional signature in an otherwise
-institutional layout — and it's what differentiates Plaid from the
-otherwise-similar Stripe-trust-palette competitors.
+The single moment of personality in this otherwise institutional layout is the **Benjamin Franklin mascot** — an illustrated, gently-animated figure who narrates feature sections from inside warm-cream `#f3efe6` bands. That mascot is the brand's emotional signature: cool-blue-and-white precision broken once per page by a hand-drawn historical figure with subtle motion. The break from cool greys into warm cream — and from typographic restraint into character animation — is what differentiates Plaid from the otherwise-similar Stripe-trust-palette competitors. It positions Plaid as more *consumer-friendly* than the Visa/Mastercard infrastructure plays it competes against without abandoning the developer-credibility surface.
 
-## Colors
+Typographically, Plaid runs **one family across the entire site** — a custom Plaid Sans (an Inter-class neo-grotesque) at 500–600 weight for both display and body. There is no serif anywhere on the marketing surface. H1 holds at 56–64px with negative tracking; body is the same family at 16px on a 24px line; mono micro-labels appear at 12px with 0.04em tracking as eyebrow text. The typographic discipline reinforces the institutional tone — no mixed faces, no decorative weights, no ornamental italics.
 
-- **bg** `#ffffff` — white canvas
-- **bg-blue** `#eaf3ff` — pale-blue trust band
-- **bg-cream** `#f3efe6` — warm-cream "Franklin storytelling" band, the brand's emotional zone
-- **bg-ink** `#000000` — rare black band for emphasis
-- **text** `#000000` — near-pure black, no opacity softening
-- **brand** `#0a85ea` — Plaid action blue, used for links and accent
-- **accent** `#000000` — secondary brand is black; the CTA itself uses black, not blue
-- **border** `#0000001a` — 10% black hairline
+The CTA convention is decisive: **the action blue `#0a85ea` is reserved for links and accent, never as a primary button fill**. Primary buttons are *black-on-white* (`#000000` bg, `#ffffff` text, 8px radius). That distinction — blue for inline action, black for page-level commitment — is one of Plaid's signature design rules and the easiest way to break the brand if you ignore it.
 
-## Typography
+Atmospheric vocabulary that captures the feeling: *primary-bank, hairline-only, pale-blue-trust, near-pure-black-on-white, mono-micro-eyebrow, Franklin-cream-band, Stripe-2017, institutional-quiet, no-gradient-ever, structural-not-decorative.* The brand reads as if it were laid out by a CFO with taste.
 
-Display is a custom **Plaid Sans** (an Inter-class neo-grotesque) at
-600 weight, sized 64px on a 67px line height with `-0.02em`
-tracking. Body is the same family at 16px / 24px. Mono micro-labels
-appear at 12px with `0.04em` tracking. The system is fully sans;
-unlike Mercury's serif headline, Plaid keeps every weight in one
-typeface, reinforcing the institutional tone.
+**Key Characteristics**
+- White `#ffffff` canvas — the trust default, never substituted
+- **Action blue `#0a85ea` for links only** — never a primary button fill
+- Primary CTA is **black-on-white** (`#000000` / `#ffffff` / 8px radius)
+- Pale-blue `#eaf3ff` trust panels alternating with white sections
+- **Cream Franklin band `#f3efe6`** — the brand's singular emotional zone
+- 10%-black hairlines (`rgba(0, 0, 0, 0.10)`) — every border, every divider
+- No shadows, no gradients, no glow — flat-and-hairline discipline
+- Single typeface across site (Plaid Sans / Inter) — no serif
+- Mono micro-labels at 12px / 0.04em tracking as section eyebrows
+- 12px card radius, 8px button radius — modern but not consumer-soft
+- Animated Benjamin Franklin mascot — illustrated, decorative, signature
 
-The H1 size at 64 is notably more restrained than Brex's 72 or
-Ramp's 80 — Plaid plays it quieter, closer to a corporate bank
-than a tech-flash startup.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-Container is 1200px with 96px section padding. The 8px-rhythm
-spacing ladder is standard. Cards round at 12px, buttons at 8px —
-modern but not consumer-soft. Pages alternate between white,
-pale-blue panel, and the cream Franklin band, creating a calm
-sectional rhythm.
+- **bg** `#ffffff` — white canvas; the trust default, never substituted on body surfaces.
+- **bg-soft** `#f7f9fb` — palest blue-grey panel, a quieter alternation between white sections.
+- **text** `#000000` — near-pure black, no opacity softening. Plaid keeps body type at full strength.
+- **cta-bg** `#000000` — primary CTA fill; the brand's deliberate institutional move.
+- **on-cta** `#ffffff` — pure white label on black; maximum value contrast.
 
-## Elevation & Depth
+### Brand & Accent
 
-Depth is hairline-only (`1px / #0000001a`). There are no shadows,
-no glassmorphism, and no gradients. The pale-blue panels and
-cream Franklin scenes do all the sectional work; cards are flat
-white on coloured backgrounds.
+- **brand** `#0a85ea` — Plaid action blue. **Used for links and inline action only — never as a primary button fill.**
+- **brand-strong** `#0066c0` — pressed / hover state.
+- **brand-deep** `#003c80` — rare deep blue for emphasis or info text.
+- **brand-soft** `#dceeff` — info wash, soft pill backgrounds.
+- **brand-wash** `rgba(10, 133, 234, 0.08)` — hover tint for blue-themed surfaces.
+- **accent** `#000000` — secondary brand colour is *black*, not a second hue. The CTA itself uses black, not blue.
 
-## Shapes
+### Sectional Bands
 
-Radii ladder: 4 / 6 / 8 / 12 / 16. Cards at 12, buttons at 8 —
-the safe modern pairing. Pills (9999) reserved for status chips
-and tags. Plaid keeps every rounded corner conservative — softer
-radii would shift it toward consumer brand, harder toward legacy
-finance.
+- **bg-blue** `#eaf3ff` — signature pale-blue trust band; appears 1–2× per page.
+- **bg-cream** `#f3efe6` — warm-cream Franklin storytelling band; the brand's emotional zone.
+- **bg-ink** `#000000` — rare full-black band reserved for hero statements (e.g. trust statistics, security claims).
 
-## Components
+### Interactive
 
-The defining components are the **black CTA button**
-(`#000000` / white / radius 8 / weight 500), the **pale-blue
-trust panel** (`#eaf3ff` background with black type), the **cream
-Franklin band** (`#f3efe6` with illustrated character animations),
-and the **link blue** `#0a85ea` used for inline CTAs and developer
-documentation references. Mono code blocks render in monospace
-inside white cards with the same 12px radius.
+- **link** `#0a85ea` — action blue, with underline by default in body.
+- **link-hover** `#0066c0` — deeper pressed blue.
+- **selected-bg** `#eaf3ff` — pale-blue selection wash.
+- **disabled** `#c4cad3` — cool-grey muted.
 
-## Do's and Don'ts
+### Neutral Scale
 
-- **Do** keep the action CTA black, not blue — the `#0a85ea` is reserved for links and accent, never as a primary fill.
-- **Do** use the cream Franklin band as the brand's only warm zone; pale blue handles cool-trust sections.
+- **text-strong** `#000000` — near-pure black, the headline ink.
+- **text-medium** `#1a1f29` — deeper-cool variant for high-emphasis copy.
+- **text-muted** `#4a5568` — secondary copy, metadata.
+- **text-soft** `#7a8390` — captions, helper text.
+- **text-faint** `#a0a8b3` — disabled labels, footer microcopy.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#ffffff` white canvas.
+- **surface-1 (panel)** — `#f7f9fb` palest blue-grey.
+- **surface-2 (card)** — `#ffffff` white card on coloured panel; or `#f3f5f8` cool-grey card on white.
+- **surface-cream** — `#faf6ed` quieter cream tint inside Franklin sections.
+- **border** `rgba(0, 0, 0, 0.10)` — 10%-black hairline, the brand's defining border.
+- **border-strong** `rgba(0, 0, 0, 0.20)` — emphasized rule, hover deepening.
+- **border-soft** `rgba(0, 0, 0, 0.06)` — quietest separation.
+- **border-blue** `rgba(10, 133, 234, 0.30)` — rare brand-tinted divider on blue surfaces.
+
+### Shadow Colors
+
+Plaid's shadows are **cool-tinted and sparse**. The brand prefers hairline borders to drop shadows on every content surface — cards lift via 1px borders rather than elevation. When shadows do appear (modals, popover layers, the floating Plaid Link consent dialog), they're tinted with low-opacity cool blue (`rgba(0, 0, 30, 0.04)` to `0.08`), never neutral grey, and never warm. The cool tint reinforces the trust-palette temperature.
+
+### Semantic
+
+- **success** — bg `#dcf3e3`, text `#1f5d3f`, border `rgba(74, 122, 91, 0.30)`.
+- **warning** — bg `#fff0c5`, text `#7a5e1f`, border `rgba(180, 145, 60, 0.30)`.
+- **danger** — bg `#fde0e0`, text `#8a2828`, border `rgba(180, 50, 50, 0.30)`.
+- **info** — bg `#dceeff` (brand-soft), text `#003c80`, border `rgba(10, 133, 234, 0.30)`.
+
+The semantic palette is calm and institutional — no fluorescent warning yellow, no neon green-success. Every semantic colour stays within the cool-and-warm-cream temperature range of the brand.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & UI**: `"Plaid Sans", "Inter Display", Inter, "Helvetica Neue", Arial, sans-serif` — custom Plaid Sans is an Inter-class neo-grotesque cut for Plaid's house. Falls back gracefully to Inter or Helvetica Neue on slow connections.
+- **Body**: same family, weight 400/500/600.
+- **Mono**: `"JetBrains Mono", Menlo, Consolas, "SF Mono", monospace` — used for eyebrow micro-labels (12px / 0.04em tracking / uppercase) and code blocks in developer documentation.
+- **No serif anywhere on the marketing surface.**
+- **OpenType features**: `liga` and `kern` always on; `tnum` and `zero` (slashed zero) in mono for tabular alignment; `ss01` for stylistic alternate at display sizes.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | Plaid Sans | 80px | 600 | 1.05 | -0.025em | ss01 liga | Homepage hero ceiling — rare |
+| Display | Plaid Sans | 64px | 600 | 1.05 | -0.02em | ss01 | Section intro at scale |
+| H1 | Plaid Sans | 56px | 600 | 1.08 | -0.02em | liga | Page title — restrained vs Brex 72 |
+| H2 | Plaid Sans | 44px | 600 | 1.10 | -0.015em | liga | Major section |
+| H3 | Plaid Sans | 32px | 600 | 1.20 | -0.01em | — | Sub-section |
+| H4 | Plaid Sans | 24px | 600 | 1.25 | normal | — | Card heading |
+| H5 | Plaid Sans | 18px | 600 | 1.40 | normal | — | Inline emphasis |
+| Eyebrow | JetBrains Mono | 12px | 500 | 1.40 | 0.04em | uppercase | Mono micro-label — signature |
+| Body Large | Plaid Sans | 20px | 400 | 1.50 | normal | — | Lede paragraph |
+| Body | Plaid Sans | 16px | 400 | 1.50 | normal | — | Default body |
+| Body Small | Plaid Sans | 14px | 400 | 1.50 | normal | — | Compact copy |
+| Caption | Plaid Sans | 13px | 400 | 1.40 | normal | — | Image captions |
+| Caption Tabular | JetBrains Mono | 13px | 500 | 1.40 | normal | tnum | Stats, transaction lists |
+| Label | JetBrains Mono | 12px | 500 | 1.30 | 0.04em | uppercase | UI labels, section dividers |
+| Pull Quote | Plaid Sans | 28px | 500 | 1.30 | normal | — | Testimonial pull-quote |
+| Code | JetBrains Mono | 14px | 400 | 1.55 | normal | tnum zero | Inline + block |
+| Code Micro | JetBrains Mono | 12px | 400 | 1.40 | normal | — | API endpoint refs |
+
+### Principles
+
+- **One typeface, full system.** Plaid Sans + JetBrains Mono is the entire family. No serif, no decorative face. The mono is reserved for eyebrows, labels, and code — every other context uses Plaid Sans.
+- **Weight 600 is the headline ceiling.** Plaid never reaches for 700 or 800. The institutional register requires restraint; weight 600 reads as confident, not shouting.
+- **H1 caps at 56–64px.** Brex hits 72; Ramp hits 80; Plaid plays it quieter at 56, hitting 64 only on rare hero statements. The size restraint is a deliberate institutional gesture.
+- **Negative tracking scales with size.** -0.025em at 80px, -0.02em at 56–64px, -0.015em at 44px, -0.01em at 32px, normal below. Standard broadsheet compression.
+- **Mono eyebrow as section signature.** The 12px / 0.04em / uppercase JetBrains Mono micro-label is the brand's most distinctive typographic move — every section opens with one.
+- **Body width capped at 720px** even on a 1200px page — institutional reading column.
+- **Tabular figures everywhere numbers matter.** `tnum` discipline in mono so stats, transaction lists, and code line numbers align cleanly.
+- **No italic in display.** Italics are reserved for body emphasis only. Display type is upright, the institutional voice is calm.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Black-on-White)**
+- Background: `#000000` near-pure black.
+- Text: `#ffffff` pure white, Plaid Sans 500 / 15px.
+- Padding: `12px 20px`. Radius: `8px`. Border: `1px solid #000000`.
+- Hover: bg → `#1a1f29`; transition `180ms ease-standard`.
+- Active: bg → `#000000` (depressed micro-shift).
+- Use: Primary CTA — *Get started, Talk to sales, Try Plaid.* The institutional fintech move.
+
+**Secondary (Outlined)**
+- Background: `#ffffff`. Text: `#000000`. Border: `1px solid rgba(0, 0, 0, 0.10)`.
+- Same padding, radius, font as primary.
+- Hover: bg → `#f7f9fb`.
+- Use: Twin to primary — *Read more, Watch demo, Read the docs.*
+
+**Tertiary (Quietest)**
+- Background: transparent. Text: `#000000`. Border: `1px solid rgba(0, 0, 0, 0.06)`.
+- Hover: bg → `rgba(0, 0, 0, 0.03)`.
+- Use: Footer links, repeated in-section CTAs.
+
+**Link (Inline Action Blue)**
+- Background: transparent. Text: `#0a85ea` Plaid action blue, underlined.
+- Padding: 0. Font: Plaid Sans 500 / 16px.
+- Hover: text → `#0066c0`.
+- Use: Inline CTAs — *"learn more →", "see the docs"*. The action blue's primary home.
+
+### Cards
+
+**Feature Card (White on Panel)**
+- Background: `#ffffff`. Border: `1px solid rgba(0, 0, 0, 0.10)`. Radius: `12px`. Padding: `32px`.
+- Shadow: none — 1px hairline border alone.
+- Hover: border → `rgba(0, 0, 0, 0.20)`; transition `180ms`.
+- Use: Capability tile, pricing block, feature explanation.
+
+**Blue Trust Panel (Sectional)**
+- Background: `#eaf3ff`. Border: none. Radius: `12px` (or full-bleed).
+- Padding: `48px` to `96px` depending on context.
+- Use: Trust statement, security stat, "Plaid moves \$X trillion / year" type sectional.
+
+**Cream Franklin Card (Sectional)**
+- Background: `#f3efe6`. Border: none. Radius: `12px` (or full-bleed).
+- Padding: `40px 32px`.
+- Use: Illustrated Franklin scenes — the brand's emotional zone. Always paired with character animation.
+
+### Badges, Tags, Pills
+
+**Mono Eyebrow Label** — bg transparent, text `#4a5568`, padding 0, radius 0, font `JetBrains Mono 500 / 12px / 0.04em / uppercase`. The brand's most distinctive typographic chrome.
+
+**Blue Status Pill** — bg `rgba(10, 133, 234, 0.08)`, text `#003c80`, radius `4px`, padding `4px 10px`. Subtle blue-tinted status on white card.
+
+**Earth-Tone Status (Semantic)** — bg from semantic palette (success / warning / danger / info), radius `4px`, padding `4px 10px`. Calm, institutional, no fluorescents.
+
+### Inputs / Forms
+
+- Background: `#ffffff`. Border: `1px solid rgba(0, 0, 0, 0.20)`. Radius: `8px`. Padding: `12px 16px`.
+- Font: Plaid Sans 400 / 16px. Placeholder: `#7a8390`.
+- Focus: `0 0 0 2px rgba(10, 133, 234, 0.40)` ring, border → `#0a85ea`. Transition 100ms.
+- Error: border → `#8a2828`, ring → `rgba(180, 50, 50, 0.30)`.
+- Helper: caption 13px text-soft below.
+
+### Navigation
+
+- Header height `72px`. Background `#ffffff` (transparent on hero scrolling).
+- Logo: Plaid wordmark left-aligned, black.
+- Nav links: Plaid Sans 500 / 15px, colour `#000000`, padding `8px 12px`. Hover → `#0a85ea` action blue; underline appears under active link.
+- Right-side CTA pair: tertiary "Sign in" + primary black "Get started".
+- Mobile: full-screen sheet, links stack at 18px / 500 with 24px gap.
+
+### Optional Components
+
+**Pull Quote** — Plaid Sans 28px / 500, text-medium, with a 3px action-blue left rule. Reserved for customer-testimonial sections.
+
+**Code Block (Developer Docs)** — JetBrains Mono 14px, bg `#f7f9fb`, radius `8px`, padding `16px 20px`, border `rgba(0, 0, 0, 0.10)`. Inline code: same font, bg `rgba(0, 0, 0, 0.04)`, padding `2px 6px`, radius `4px`.
+
+**Tooltip** — bg `#000000`, text `#ffffff`, radius `6px`, padding `8px 12px`, font `Plaid Sans 500 / 13px`.
+
+**Modal** — bg `#ffffff`, radius `16px`, shadow `rgba(0, 0, 30, 0.08) 0 12px 32px -8px`, max-width `560px`. Cool overlay backdrop at 50% opacity.
+
+**Plaid Link Modal (Product UI)** — branded consent dialog with bank-logo grid, action-blue primary button, hairline-bordered list rows. The product UI's signature surface.
+
+**Toast** — bg `#000000`, text `#ffffff`, radius `8px`, padding `12px 20px`. Black-on-white inverted to match the CTA family.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 8px — the standard institutional rhythm.
+- **Scale**: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160 — modular, generous at the upper end.
+- **Density observation**: Plaid runs *medium-density* — denser than Anthropic's editorial layout but lighter than tech-heavy SaaS. Section padding sits at 96–128px vertical; intra-section spacing uses 16–32px.
+
+### Grid & Container
+
+- **Page max width**: `1200px` — moderate, primary-bank proportions.
+- **Site gutter**: `clamp(24px, 4vw, 56px)` — comfortable on desktop, accommodating on mobile.
+- **Grid**: 12 columns with 24px gutters. Hero blocks span full width; capability rails span 8 columns; supporting sidebars span 4.
+- **Hero treatment**: full-bleed white, 56–64px headline left-aligned, body confined to a 720px column anchored left of centre.
+- **Capability rail**: 3-up cards on desktop, 2-up on tablet, 1-up on mobile.
+
+### Whitespace Philosophy
+
+The whitespace is *institutional clearance*. Plaid leaves more empty space than necessary, and that calculated emptiness is the brand's claim to gravity. Section gutters run **96–128px** between major blocks; minor blocks sit on 48–64px gaps; intra-section spacing uses 16–32px. The page never crowds; the page never extends; the page reads as an annual report's interior layout.
+
+### Section Cadence
+
+- Hero (white) → Mono-eyebrow + H1 + lede + dual CTA → Blue trust panel (`#eaf3ff`) with stat — Capability rail (3-up white cards on `#f7f9fb`) → Cream Franklin band (`#f3efe6` with illustrated character animation) → Pricing or trust-detail (white) → Footer (`#ffffff` with `rgba(0, 0, 0, 0.10)` top border).
+- The cream Franklin band appears once or twice per page — never more, or its emotional weight dilutes.
+- Pages alternate cool-blue → warm-cream → white in a deliberate sectional rhythm.
+- Layouts are **left-aligned** by default; centred layouts are reserved for testimonial pull-quotes and rare hero statements.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 2px | Decorative dividers, slim chip corners |
+| XS | 4px | Status pills, inline tags, semantic badges |
+| Small (sm) | 6px | Tooltip corners, code-inline pills |
+| Comfortable (md) | 8px | **Buttons, inputs, dropdowns** — the dominant interactive radius |
+| Relaxed (lg) | 12px | **Cards** — feature tiles, pricing blocks, capability cards |
+| Featured (xl) | 16px | Modals, large editorial callouts |
+| Pill | 9999px | Reserved for status chips and tags only |
+
+The signature radii are **8px** on buttons / inputs and **12px** on cards. Plaid sits at the modern 2026 SaaS consensus — neither archaic (Mercury's 6px) nor consumer-soft (Wise's full-pill buttons). The discipline is deliberate: **softer radii would shift Plaid toward consumer brand; harder radii toward legacy finance**. The 8/12 pairing is the mid-point that signals *modern institutional trust*.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default page surface, hero, body sections |
+| 1 | 1px hairline border (`rgba(0, 0, 0, 0.10)`) | Cards, buttons, inputs — the dominant elevation |
+| 2 | `rgba(0, 0, 30, 0.04) 0 1px 3px` | Sticky nav (rare), dropdown menus |
+| 3 | `rgba(0, 0, 30, 0.06) 0 4px 12px` | Hover-lifted cards in product UI; rare on marketing |
+| 4 | `rgba(0, 0, 30, 0.08) 0 12px 32px -8px` | Plaid Link modal, popover layers |
+| 5 | `rgba(0, 0, 30, 0.08) 0 24px 64px -16px` | Marketing modals, dialogs |
+
+### Shadow Philosophy
+
+Plaid's depth is **hairline-and-flat**, *not elevation*. The defining elevation move is **1px / 10% black border** rather than a drop shadow. Cards on white are bordered, not shadowed; cards on coloured panels (pale-blue, cream) are flat-and-borderless. Drop shadows appear only on overlay layers (modals, popovers, the Plaid Link consent dialog) and are tinted cool-blue (`rgba(0, 0, 30, ...)`) to reinforce the trust temperature. The brand never uses warm or neutral shadows — that would crack the cool-institutional posture. There is no glassmorphism, no glow, no gradient. The discipline is the brand asset.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- `ease-standard`: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, colour transitions.
+- `ease-emphasized`: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; modal enter, hero reveal.
+- `ease-institutional`: `cubic-bezier(0.32, 0.72, 0, 1)` — slow-out, fast-settle; used on Franklin animation cycles.
+
+### Duration Buckets
+
+- **Fast (100ms)** — colour transitions, focus rings, link hovers.
+- **Standard (180ms)** — button hover, card hover, dropdown reveal.
+- **Slow (280ms)** — modal enter/exit, page-section fade-in.
+- **Page (400ms)** — route transitions, hero reveal sequences.
+
+Plaid's motion is **subtler and faster** than tech-startup defaults — the institutional posture demands restraint. No 800ms grand reveals; no spring-bounce; no parallax.
+
+### Per-Component Micro-States
+
+- **Button hover (black primary)**: bg `#000000` → `#1a1f29` over 180ms. No lift, no scale.
+- **Button hover (outlined secondary)**: bg `#ffffff` → `#f7f9fb`; border stays at 0.10.
+- **Card hover**: border deepens from `rgba(0, 0, 0, 0.10)` to `rgba(0, 0, 0, 0.20)` over 180ms; no shadow change.
+- **Link hover (action blue)**: text `#0a85ea` → `#0066c0` over 100ms; underline thickens 1px → 2px.
+- **Input focus**: 2px action-blue ring fades in over 100ms; border `rgba(0, 0, 0, 0.20)` → `#0a85ea`.
+- **Nav link hover**: colour shift to `#0a85ea`.
+- **Franklin mascot**: gentle 4–6 second loop animation (eyebrow raise, hand wave, head turn). Pauses on `prefers-reduced-motion`.
+
+### Page Transitions
+
+Hero text fades in over 400ms with a 12px translate-up; below-fold sections use `IntersectionObserver` triggered at 70% viewport, 280ms duration, opacity-only. The Franklin scenes never auto-play with attention-grabbing motion — they cycle gently in their cream bands.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)` — all transitions become opacity-only, durations halved. **Franklin mascot animations pause at the first frame** (the figure remains visible but motionless). Translate animations disabled entirely; scroll-linked reveals snap to final state. The brand respects motion preferences as a first-class a11y concern, especially because the mascot animation is the most motion-heavy element on the site.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#000000` text on `#ffffff` bg**: 21.0:1 — AAA at all sizes (maximum contrast).
+- **`#4a5568` text-muted on `#ffffff` bg**: 8.6:1 — AAA at body sizes.
+- **`#7a8390` text-soft on `#ffffff` bg**: 4.4:1 — AA at large sizes only.
+- **`#ffffff` text on `#000000` CTA**: 21.0:1 — AAA.
+- **`#0a85ea` link on `#ffffff` bg**: 4.6:1 — AA at body sizes; underline reinforces.
+- **`#003c80` text on `#dceeff` info bg**: 9.4:1 — AAA.
+- **`#000000` text on `#eaf3ff` blue panel**: 18.6:1 — AAA.
+- **`#000000` text on `#f3efe6` cream panel**: 18.4:1 — AAA.
+
+### Focus Indicators
+
+- Default focus ring: `0 0 0 2px rgba(10, 133, 234, 0.40)` with 2px offset on white pages.
+- Inputs: ring + border colour shift to `#0a85ea`.
+- On dark surfaces (rare): `0 0 0 2px #ffffff`.
+- All interactive surfaces have visible focus states — no `outline: none` without a replacement.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link to main content.
+- **Disclosure**: `<button aria-expanded aria-controls>` for collapsible sections in pricing tables.
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Plaid Link consent dialog**: `role="dialog" aria-modal="true"` with bank list as `<ul role="listbox">`.
+- **Live regions**: `aria-live="polite"` for form validation messages.
+- **Franklin mascot**: `aria-hidden="true"` — decorative animation never carries content meaning.
+
+### Keyboard Navigation
+
+- Tab order matches visual flow: skip-link → nav → hero CTA → main content → footer.
+- All buttons, links, inputs reachable via Tab.
+- Modals trap focus inside until dismissed.
+- `Esc` closes modals and dropdowns.
+- Plaid Link consent dialog: Arrow keys navigate the bank list; Enter selects; Esc closes.
+
+### Screen Reader Hints
+
+- Decorative illustrations (Franklin mascot, abstract trust graphics) marked `aria-hidden="true"`.
+- Icon-only buttons have `aria-label`.
+- Stat callouts include hidden context: "Plaid moves \$2 trillion per year" reads as full sentence rather than just "$2T".
+- Mono eyebrow labels (`API Reference`, `Quickstart`) are visible text, not pseudo-content.
+
+### Reduced Motion
+
+Honoured via the global media query. Franklin mascot animations halt at first frame; transitions become opacity-only; durations halved. The brand never requires motion to convey information.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single column, full-bleed sections, hamburger nav |
+| Tablet | 640–1024px | 2-column rails, narrower gutters, condensed hero |
+| Desktop | 1024–1280px | Full 12-col grid, 720px prose column |
+| Wide | 1280–1440px | Site max width hits at 1200px |
+| Ultra | > 1440px | Page locks to 1200, gutters expand symmetrically |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px (WCAG AAA).
+- Buttons: 44px minimum height on mobile (12px vertical padding × 2 + line-height accommodates).
+- Nav link tap area: 44×44px even when visual padding is smaller.
+- Plaid Link bank-list rows: 56px minimum on mobile for thumb-friendly selection.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below.
+- **Hero**: 64px headline → 48px → 36px across desktop / tablet / mobile.
+- **Capability grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Body width**: 720px → fluid 92vw at mobile.
+- **Section spacing**: 128px → 80px → 56px across sizes.
+- **Franklin band**: full-bleed cream on all sizes; mascot scales proportionally.
+
+### Image Behavior
+
+- Illustrations (Franklin scenes, capability hero art) use `srcset` with 1x/2x for retina.
+- Hero imagery uses `aspect-ratio` to prevent layout shift.
+- Lazy-loading on below-fold images; eager on hero.
+- SVG illustrations preferred for crisp rendering at any size.
+
+### Container Queries
+
+Used inside capability cards to switch layout when card width crosses 360px (icon-left vs. icon-top).
+
+## 11. Content & Voice
+
+### Tone
+
+**Institutional, precise, dryly confident.** Plaid writes like a primary bank's communications team — full sentences, technical specificity, no hype, no exclamation points, no emoji. Statistics are stated plainly: "Plaid powers 12,000+ apps." Headlines describe outcomes ("Connect financial accounts in seconds"); subheads explain mechanism. The brand sounds like infrastructure rather than software.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Get started," "Talk to sales," "Read the docs," "Try Plaid Link," "Watch demo," "View pricing." Never "Sign up free!" or "Get instant access →".
+- **Error messages**: "We couldn't connect to your bank. Try again, or [contact support]." Specific, no shame, no apologetic exclamation.
+- **Success confirmations**: "Connected." "Account linked." Brief, declarative, present-tense.
+- **Loading states**: "Connecting…" "Verifying account…" "Encrypting…" — process-aware, security-flavoured.
+- **Trust statements**: Numerical and specific. "AES-256 encryption", "SOC 2 Type II certified", "Used by 1 in 4 Americans with a bank account."
+
+### Empty States
+
+What they say: explain the empty state and offer the next step. *"No connections yet. Add your first account to begin."* *"Your transaction history is empty."*
+What they don't say: "Oops!", "Sorry!", any apologetic exclamation. Empty states are functional notes, not failures.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Get started," "Talk to sales," "Try Plaid Link"
+- Secondary: "Read the docs," "Watch demo," "View pricing"
+- Footer: "Read our research," "Browse the API," "View status"
+
+The brand never uses "Sign up free!" or "Get instant access today!" — the tone is institutional and unhurried. Plaid never trades in scarcity, never uses time-pressure CTAs, never countdowns. The Franklin mascot occasionally narrates with first-person voice ("Hi, I'm Ben") inside the cream band — that's the only first-person moment on the site, and it's a deliberate emotional break from the otherwise impersonal institutional voice.
+
+## 12. Dark Mode & Theming
+
+**Light-only — no dark variant offered on the marketing surface.** The white canvas, near-black ink, and pale-blue trust palette are the brand's defining institutional posture; a dark mode would require re-keying the entire system — including the Franklin cream band, which doesn't translate to dark — and would collapse the trust register that distinguishes Plaid from consumer-fintech competitors.
+
+The product UI (Plaid Dashboard, the Plaid Link consent dialog) handles its own theming and supports a partial dark variant for developers, but that variant is documented separately. The marketing site at `plaid.com` is intentionally light-only across all viewports and times of day.
+
+If a downstream surface ever needs a dark companion, the rules would be: keep the action blue at full saturation (`#0a85ea` is one of the rare blues that holds at AA contrast on both white *and* deep navy), drop the cream Franklin band entirely (no warm-on-dark equivalent works), and swap white for a deep institutional navy `#0a1530` rather than pure black. But this is not currently shipped.
+
+## 13. Lineage & Influences
+
+Plaid's marketing site descends directly from the **Stripe-era fintech trust palette**: white canvas, near-pure-black type, pale-blue panels, single confident action blue. The rendition is quieter and more institutional than today's Stripe — Plaid leans on classical typography (a Plaid-Sans variant of Inter at 500–600, no serif) and 1px / 10% black hairlines rather than gradients.
+
+The single moment of personality in an otherwise restrained system is the Benjamin Franklin mascot — an animated, illustrated figure who narrates feature sections from inside a warm cream band `#f3efe6`. That break from cool blue-greys to warm cream is Plaid's signature trick, and it positions Plaid as more *consumer-friendly* than the Visa/Mastercard infrastructure plays it competes against. The 12px card radius and 8px button radius sit at the modern 2026 SaaS consensus, neither archaic (Mercury's 6px) nor consumer-soft (Wise's full pill).
+
+What it inherits: **Stripe-2017 trust palette discipline** (pale-blue + white + black + single accent blue), **Inter-class neo-grotesque** typography, **hairline elevation** as the default. What it borrows from contemporaries: Vercel's black CTA on white canvas with mono micro-labels, Mailchimp/Slack's mascot-as-narrative-device tradition, Linear's institutional restraint. What it rejects: gradient meshes, neon accents, hero animations beyond the Franklin scene, AI-tech iconography, the consumer-app rounded-corner softness.
+
+**Named influences:**
+
+- **Stripe (2017–2019 era)** — Pale-blue trust palette, single-accent CTA discipline, classical sans typography. *https://stripe.com*
+- **Vercel** — Black CTA on white canvas with mono micro-labels. *https://vercel.com*
+- **Mailchimp / Slack illustrations** — Mascot-as-narrative-device — Plaid's Franklin echoes that warm-illustration tradition inside a fintech context. *https://mailchimp.com*
+- **Mercury** — Cousin in the modern-fintech-restraint lineage; Mercury runs slightly tighter radii (6px) for a more archaic feel. *https://mercury.com*
+- **Linear** — Institutional discipline; hairline-only depth strategy.
+- **Inter / Rasmus Andersson** — DNA reference for Plaid Sans neo-grotesque proportions.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** keep the action CTA black (`#000000` / `#ffffff` / 8px radius), not blue — the `#0a85ea` is reserved for links and accent, never as a primary fill.
+- **Do** use the cream Franklin band (`#f3efe6`) as the brand's only warm zone; pale blue handles cool-trust sections.
 - **Do** keep type fully sans — Plaid does not use serif anywhere on the marketing site.
-- **Don't** introduce gradients or glow — Plaid's discipline is hairline-and-flat.
+- **Do** open every section with a mono eyebrow label (12px / 0.04em / uppercase JetBrains Mono in `#4a5568`).
+- **Do** use 1px / 10% black hairlines (`rgba(0, 0, 0, 0.10)`) for borders — never thicker rules, never coloured borders on standard cards.
+- **Do** cap H1 at 56–64px — restrained vs Brex 72 or Ramp 80, the institutional gesture.
+- **Do** alternate white → pale-blue → cream → white for sectional rhythm.
+- **Do** lift cards via 1px hairline border, never via drop shadow.
+- **Do** mark the Franklin mascot `aria-hidden="true"` and pause animation on `prefers-reduced-motion`.
+- **Do** keep all motion subtle (≤280ms) and respect motion preferences as a first-class a11y concern.
+
+### Don't
+
+- **Don't** introduce gradients, glassmorphism, or glow — Plaid's discipline is hairline-and-flat.
 - **Don't** swap the H1 size larger than 64px; the restraint is a deliberate institutional gesture.
 - **Don't** centre layouts; left-aligned grid is the brand's classical posture.
+- **Don't** fill primary buttons with action blue. Black-on-white CTA is non-negotiable.
+- **Don't** use serif typography. Plaid is fully sans.
+- **Don't** stack multiple Franklin bands per page — the mascot is precious; one scene per page.
+- **Don't** introduce a second brand colour. Action blue + black is the entire palette; don't add a green-success or orange-accent.
+- **Don't** use exclamation marks, emoji, or "Get started today!" urgency. The voice is institutional.
+- **Don't** apply warm-toned shadows. Plaid's shadows are cool-tinted (`rgba(0, 0, 30, ...)`) when they appear at all.
+- **Don't** round buttons to 9999px. The 8px button radius is the modern-institutional move; full pills shift Plaid into consumer-app territory.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #ffffff
+bg-soft: #f7f9fb
+bg-blue: #eaf3ff
+bg-cream: #f3efe6
+text: #000000
+text-muted: #4a5568
+brand: #0a85ea
+brand-soft: #dceeff
+cta-bg: #000000
+cta-text: #ffffff
+border: rgba(0, 0, 0, 0.10)
+```
+
+### Example Component Prompts
+
+1. **"Create a Plaid-style hero — white `#ffffff` canvas, mono eyebrow label `API REFERENCE` in JetBrains Mono 12px / 0.04em / uppercase / `#4a5568`, 56px Plaid Sans 600 H1 in pure black with -0.02em tracking, 20px Plaid Sans 400 lede, dual CTA: black `#000000` primary + outlined `rgba(0, 0, 0, 0.10)` secondary at 8px radius. No gradient, no shadow, left-aligned."**
+
+2. **"Design a feature card — white `#ffffff` background, 12px radius, 1px `rgba(0, 0, 0, 0.10)` hairline border (not shadow), 32px interior padding, 24px Plaid Sans 600 heading, 16px Plaid Sans 400 body, link in `#0a85ea` action blue with underline. Hover: border deepens to `rgba(0, 0, 0, 0.20)`."**
+
+3. **"Build a pale-blue trust panel — full-bleed `#eaf3ff` background, 96px vertical padding, mono eyebrow label `TRUST` in `#4a5568`, 44px Plaid Sans 600 stat heading in pure black, 20px supporting copy in `#4a5568`, no border, no shadow."**
+
+4. **"Compose a cream Franklin band — full-bleed `#f3efe6` background, 80px vertical padding, illustrated Benjamin Franklin character anchored left (aria-hidden, animation pauses on prefers-reduced-motion), 32px Plaid Sans 600 heading right-column, 16px Plaid Sans 400 body, single primary CTA. The brand's emotional zone — one per page only."**
+
+5. **"Render a developer code block — JetBrains Mono 14px, `#f7f9fb` background, 8px radius, 1px `rgba(0, 0, 0, 0.10)` border, 16px / 20px padding, syntax highlighting in muted institutional palette (no neon). Inline code: same font, 4px radius, `rgba(0, 0, 0, 0.04)` background."**
+
+6. **"Create the primary nav — 72px header height, white `#ffffff` background, Plaid wordmark left-aligned in pure black, links 15px Plaid Sans 500 in `#000000` with `#0a85ea` action-blue hover. Right-aligned tertiary 'Sign in' + black-on-white primary 'Get started' at 8px radius."**
+
+### Iteration Guide
+
+1. **Black CTA, blue link.** If the primary button is action-blue-filled, change it to black-on-white. The action blue lives in links only.
+2. **Hairline, not shadow.** Replace any drop-shadow on cards with a `1px solid rgba(0, 0, 0, 0.10)` border. Plaid's depth is hairline-flat.
+3. **Drop the gradient.** Any mesh, conic, or radial gradient is wrong — replace with flat white, pale-blue panel, or cream Franklin band.
+4. **Cap the H1.** If the headline is over 64px, scale it down. Plaid's institutional restraint demands ≤56–64px.
+5. **Mono eyebrow.** Add a `JetBrains Mono 12px / uppercase / 0.04em` micro-label above every section heading. It's the brand's typographic signature.
+6. **Drop the serif.** If any heading is in serif, change it to Plaid Sans. The brand is fully sans.
+7. **Left-align.** Centre layouts shift Plaid toward consumer-app register. Default to left-aligned.
+8. **Calm the verbs.** Replace "Sign up free!" with "Get started"; replace "Try now →" with "Try Plaid Link". The voice is institutional, never urgent.

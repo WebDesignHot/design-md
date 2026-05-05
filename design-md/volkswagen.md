@@ -6,7 +6,7 @@ source_url: https://www.volkswagen.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, friendly, sans, blue, german, peoples-car, configurator, photography]
 preview_swatch: ['#ffffff', '#001e50', '#00b0f0']
 related: [audi, bmw, ford]

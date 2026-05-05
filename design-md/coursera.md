@@ -9,7 +9,7 @@ featured: false
 categories: [media, marketplace]
 tags: [light, education, sans, trustworthy, blue, academic]
 preview_swatch: ['#ffffff', '#0056d2', '#1f1f1f']
-related: [udemy, masterclass, khan-academy]
+related: []
 description: 'Coursera is the canonical online-university aesthetic — a confident `#0056d2` royal blue paired with a warm `#fafafa` off-white canvas, Source Sans Pro and Inter setting body copy in friendly 16px / 400, and a course-card grid that reads as a cross between a campus bulletin board and an Amazon recommendation rail. The brand''s discipline is restraint: one blue for action, one near-black `#1f1f1f` for body, and a generous radius scale that rounds every card to 8px so the page feels approachable rather than transactional. Coursera''s signature is the partner-logo rail — Stanford, Yale, Google, IBM monograms parade across the homepage in muted greys, lending the marketplace its university-credentialed authority. Dense above-the-fold content stacking, breadcrumb-driven course navigation, and a left-rail filter sidebar on catalog pages place Coursera squarely in the e-commerce-meets-edu category — but the typography never gets aggressive, the color never gets loud, and the layout never feels like a sales funnel.'
 
 colors:

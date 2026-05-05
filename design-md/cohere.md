@@ -6,7 +6,7 @@ source_url: https://cohere.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [ai, saas, enterprise]
+categories: [ai, saas]
 tags: [light, editorial, sans, restrained, monumental, enterprise]
 preview_swatch: ['#ffffff', '#003c33', '#17171c']
 related: [anthropic, mistral, openai]

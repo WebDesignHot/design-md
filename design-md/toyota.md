@@ -6,10 +6,10 @@ source_url: https://www.toyota.com
 spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [automotive, marketing]
+categories: [automotive, saas]
 tags: [light, mainstream, sans, red, japanese, reliability, configurator, photography]
 preview_swatch: ['#ffffff', '#eb0a1e', '#252525']
-related: [honda, ford, tesla]
+related: [ford, tesla]
 description: 'Toyota.com is the Japanese-reliability mainstream — calm, confident, dependable. The canvas is bright white, the brand voltage is the iconic **Toyota Red** (`#eb0a1e`) that has appeared on every Toyota since the 1990 ovals-within-an-oval emblem, and a deep ink (`#252525`) carries body type without going pure black. Type runs **ToyotaType** — a custom 2018 family by Monotype — at weight 400 body / 700 display with subtle humanist proportions designed for legibility across global markets including CJK siblings. The signature visual move: **Toyota oval emblem + red CTA + family/utility photography** — Camry, RAV4, Corolla, Tacoma, Tundra, GR Supra — selling reliability to the world''s largest mainstream automotive market.'
 
 colors:

@@ -9,7 +9,7 @@ featured: false
 categories: [marketplace, fintech]
 tags: [light, educational, community, open-source, web3, illustration, friendly]
 preview_swatch: ['#fafafa', '#1c64f2', '#1a1a1a']
-related: [polygon-tech, base-org, optimism-io]
+related: [polygon-tech, optimism-io]
 description: 'Ethereum.org reads like a community-maintained open-source documentation site that happens to look really good. The base canvas is an off-white `#fafafa` (slightly warmer than pure white, marking the site as approachable rather than clinical), and the brand operates as a quiet ethereum-blue `#1c64f2` voltage on primary CTAs and links. Type runs **Inter** for body and a soft serif (Mier B / NB International Pro Serif) for editorial pull-quotes and chapter intros — the sans-body + serif-accent duet borrows from the Wired/Notion editorial playbook to soften the technical-protocol register. Layout commits to **educational documentation density**: 720px reading column, generous 1.7 line-height on body, side-rail navigation on docs pages, and prominent illustrated heroes (the famous "futuristic city" hero by community contributors). The brand''s clearest editorial choice: it doesn''t look corporate. Instead of a clinical fintech surface (Coinbase, Polygon enterprise) or a trader-pro terminal (OpenSea, Blur), Ethereum.org commits to a **friendly community-led aesthetic** — illustrated icons (commissioned from independent artists, signed by name on each artwork-credits page), warm cream-tinted dark mode, and zero corporate-jargon copy. The "no one owns Ethereum" thesis is reinforced by the design: there''s no corporate brand wordmark beyond the unicorn glyph, no trademark assertions, no "Ethereum Foundation Inc." footer.'
 
 colors:

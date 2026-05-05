@@ -1,197 +1,965 @@
 ---
 name: Omnivore
-tagline: Open-source read-it-later — clean white reading canvas, focused green-on-black brand, and a deliberately archival tone after the Eleven Labs sunset.
+tagline: Open-source read-it-later — near-white reading canvas, focused emerald-on-paper brand, archival elegance after the Eleven Labs sunset.
 author: webdesignhot
 source_url: https://omnivore.app
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [media, dev-tools]
 tags: [light, dark, sans, minimal, multi-theme, structured]
-preview_swatch: ['#ffffff', '#1f2937', '#10b981']
+preview_swatch: ['#fdfdfb', '#1f2937', '#10b981']
 related: [readwise, ghost, github]
-description: 'Omnivore (now archived after the Eleven Labs acquisition) was the open-source read-it-later app dressed in a clean white reading canvas with a focused emerald `#10b981` brand and an Inter-based typographic system. Its marketing surface paired a near-black `#1f2937` chrome with generous reading widths — a calmer Pocket / Instapaper for the 2024–25 era.'
+description: 'Omnivore (now archived after the Eleven Labs acquisition) was the open-source read-it-later app dressed in a paper-toned near-white reading canvas with a focused emerald `#10b981` brand and a warm-grey body register set in Inter. Where Readwise leaned warm-cream and editorial, Omnivore leaned cool-paper and structural — a calmer, more developer-flavoured Pocket / Instapaper for the 2024–25 era. The site paired the near-white `#fdfdfb` canvas with a meaningful slate `#0f1419` reader-mode dark band, a Lora serif inside the reader product mockup (modelling the actual saved-article reading surface), and JetBrains Mono in the open-source badge. The dark mode was cooler than Linear''s near-black and slightly bluer than Notion''s campaign-zone — distinctively Omnivore. Now archived but elegant, the language remains a useful reference for open-source reading-app conventions: emerald-on-paper plus slate-dark-mode duet, with the warm amber `#fbbf24` reserved for in-text highlighter glyphs only.'
 
 colors:
-  bg: '#ffffff'                # primary marketing canvas
-  bg-dark: '#0f1419'           # reader-mode dark canvas
-  surface: '#f9fafb'           # cool-grey panel
-  surface-2: '#f3f4f6'         # second-level neutral
-  surface-dark: '#1f2937'      # dark-mode card
-  text: '#1f2937'              # body, slate-900
-  text-strong: '#0f1419'       # display
-  text-muted: '#6b7280'        # captions
-  text-soft: '#9ca3af'         # tertiary
-  text-on-dark: '#f3f4f6'
-  text-on-dark-muted: '#9ca3af'
-  brand: '#10b981'             # emerald action
-  brand-hover: '#059669'       # pressed
-  brand-deep: '#047857'        # deep green
-  brand-soft: '#d1fae5'        # tint
-  accent: '#fbbf24'            # warm amber for highlights
-  border: '#e5e7eb'
-  border-dark: '#374151'
-  on-brand: '#ffffff'
+  # Primary
+  bg: '#fdfdfb'                          # near-white paper-toned canvas — the defining ground
+  bg-pure-white: '#ffffff'               # rare pure white inside cards
+  bg-warm: '#faf9f5'                     # faintest warm paper-cream tonal panel
+  bg-cool: '#f9fafb'                     # cool-grey alternative panel
+  bg-dark: '#0f1419'                     # reader-mode dark canvas — meaningful slate, cooler than Linear's near-black
+  bg-dark-elevated: '#1f2937'            # dark-mode card and panel
+  bg-dark-deeper: '#0a0e13'              # deepest dark-mode ground for full-bleed bands
+  surface: '#ffffff'                     # white card on near-white canvas
+  surface-2: '#f3f4f6'                   # second-level neutral
+  surface-dark: '#1f2937'                # dark-mode card surface
+  # Text (light mode)
+  text: '#1f2937'                        # body, slate-900 — warm-grey on paper
+  text-strong: '#0f1419'                 # display, deep slate
+  text-medium: '#374151'                 # secondary heading
+  text-soft: '#4b5563'                   # supporting copy
+  text-muted: '#6b7280'                  # captions, helper text
+  text-faint: '#9ca3af'                  # tertiary, eyebrows, metadata
+  text-disabled: '#d1d5db'               # disabled label
+  # Text (dark mode)
+  text-on-dark: '#f3f4f6'                # primary body in dark mode
+  text-on-dark-strong: '#ffffff'         # display in dark mode
+  text-on-dark-medium: '#d1d5db'         # secondary in dark mode
+  text-on-dark-muted: '#9ca3af'          # caption in dark mode
+  text-on-dark-faint: '#6b7280'          # tertiary in dark mode
+  # Brand
+  brand: '#10b981'                       # emerald action — the signature
+  brand-hover: '#059669'                 # pressed/hover emerald
+  brand-deep: '#047857'                  # deep green active state
+  brand-soft: '#d1fae5'                  # tint for badges and selected backgrounds
+  brand-tint: 'rgba(16, 185, 129, 0.10)' # translucent emerald hover overlay
+  on-brand: '#ffffff'                    # white label on emerald
+  # Accent
+  accent: '#fbbf24'                      # warm amber — the highlighter colour, lives inside the reader mockup only
+  accent-soft: '#fef3c7'                 # amber wash background for highlighted-passage demos
+  accent-deep: '#d97706'                 # darker amber for hover on highlighter previews
+  # Interactive
+  link: '#10b981'                        # links use the emerald in light mode
+  link-hover: '#059669'                  # darker emerald on hover
+  link-visited: '#6b7280'                # muted slate
+  link-on-dark: '#34d399'                # lifted emerald in dark mode
+  selected-bg: '#d1fae5'
+  disabled: '#d1d5db'
+  cta-bg: '#10b981'
+  cta-text: '#ffffff'
+  # Neutral scale
+  ink-50: '#f9fafb'
+  ink-100: '#f3f4f6'
+  ink-200: '#e5e7eb'
+  ink-300: '#d1d5db'
+  ink-400: '#9ca3af'
+  ink-500: '#6b7280'
+  ink-600: '#4b5563'
+  ink-700: '#374151'
+  ink-800: '#1f2937'
+  ink-900: '#0f1419'
+  # Borders
+  border: '#e5e7eb'                      # default cool hairline
+  border-strong: '#d1d5db'               # emphasised rule
+  border-subtle: '#f3f4f6'               # quietest division
+  border-emerald: 'rgba(16, 185, 129, 0.30)' # emerald-tinted hairline
+  border-dark: '#374151'                 # dark-mode default border
+  border-dark-strong: '#4b5563'          # dark-mode emphasised
+  # Shadow palette
+  shadow-color: 'rgba(15, 20, 25, 0.06)' # cool-tinted shadow base
+  shadow-color-strong: 'rgba(15, 20, 25, 0.12)'
+  shadow-color-emerald: 'rgba(16, 185, 129, 0.18)' # rare emerald-tinted glow
+  # Semantic
+  success-bg: '#d1fae5'                  # emerald wash
+  success-text: '#047857'
+  warning-bg: '#fef3c7'                  # amber wash
+  warning-text: '#92400e'
+  danger-bg: '#fee2e2'
+  danger-text: '#991b1b'
+  info-bg: '#dbeafe'
+  info-text: '#1e40af'
 
 typography:
   display:
     family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-    weights: [600, 700]
+    weights: [600, 700, 800]
+    opentype-features: ['ss01', 'cv11', 'liga', 'kern']
+    note: 'Inter Display variant when available — slightly tighter for hero scale'
   body:
     family: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-    weights: [400, 500]
+    weights: [400, 500, 600]
+    opentype-features: ['ss01', 'liga', 'kern']
   serif:
-    family: '"Lora", "Charter", Georgia, serif'
-    weights: [400, 500]
+    family: '"Lora", "Charter", "Iowan Old Style", Georgia, "Times New Roman", serif'
+    weights: [400, 500, 600]
+    opentype-features: ['liga', 'onum', 'kern']
+    note: 'Lora appears inside the reader product mockup only — modelling the actual saved-article reading surface'
   mono:
-    family: '"JetBrains Mono", "Fira Code", Menlo, monospace'
-    weights: [400]
+    family: '"JetBrains Mono", "Fira Code", "SF Mono", Menlo, Consolas, monospace'
+    weights: [400, 500, 600]
+    opentype-features: ['tnum', 'zero', 'liga']
+    note: 'JetBrains Mono in the open-source badge, version strings, GitHub links'
   scale:
-    h1:    { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.022em' }
-    h2:    { size: 38, weight: 700, lineHeight: 1.15, tracking: '-0.015em' }
-    h3:    { size: 24, weight: 600, lineHeight: 1.3,  tracking: '-0.005em' }
-    body:  { size: 17, lineHeight: 1.6 }
-    quote: { size: 20, family: serif, lineHeight: 1.5 }
-    label: { size: 12, weight: 500, family: mono }
+    display-hero:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.025em', family: display, opentype: 'ss01 cv11', notes: 'Homepage hero' }
+    display:         { size: 56, weight: 700, lineHeight: 1.05, tracking: '-0.022em', family: display, opentype: 'ss01' }
+    h1:              { size: 48, weight: 700, lineHeight: 1.10, tracking: '-0.02em', family: display, opentype: 'ss01' }
+    h2:              { size: 38, weight: 700, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    h3:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.01em', family: display }
+    h4:              { size: 22, weight: 600, lineHeight: 1.30, family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.35, family: display }
+    eyebrow:         { size: 12, weight: 500, lineHeight: 1.30, tracking: '0.06em', family: body, transform: uppercase }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.6,  family: body }
+    body:            { size: 17, weight: 400, lineHeight: 1.6,  family: body, notes: 'Slightly larger than typical SaaS body to signal "reading app"' }
+    body-small:      { size: 15, weight: 400, lineHeight: 1.55, family: body }
+    quote-serif:     { size: 20, weight: 400, lineHeight: 1.55, family: serif, opentype: 'onum', notes: 'Lora serif inside reader mockup only' }
+    quote-large:     { size: 24, weight: 500, lineHeight: 1.45, family: serif, style: italic, notes: 'Pull-quote inside reader product surface' }
+    caption:         { size: 14, weight: 400, lineHeight: 1.45, family: body }
+    caption-tabular: { size: 13, weight: 500, lineHeight: 1.40, family: mono, opentype: 'tnum' }
+    label:           { size: 12, weight: 500, lineHeight: 1.30, family: mono, notes: 'Mono labels signal developer-tool register' }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, family: mono, opentype: 'tnum zero liga' }
+    code-micro:      { size: 11, weight: 400, lineHeight: 1.40, family: mono }
+    button-label:    { size: 15, weight: 500, lineHeight: 1.0,  family: body }
 
 radius:
-  xs: 4
+  micro: 4
   sm: 6
   md: 8
   lg: 10
+  xl: 12
+  xxl: 16
   card: 12
-  xl: 16
-  xxl: 20
   button: 8
+  input: 8
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [1, 2, 4, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
 layout:
-  container: 1180
-  gutter: 24
-  section-y: 96
+  page-width: 1180
+  prose-width: 720
+  reader-width: 680                      # the reader-mockup column — narrower than marketing prose
+  site-gutter: 'clamp(20px, 4vw, 56px)'
+  header-height: 64
+  grid-columns: 12
+  grid-gutter: 24
+  section-rhythm: '96px'
 
 components:
-  - emerald-cta-button
-  - reading-list-row
-  - article-card-clean
-  - dark-reader-toggle
-  - open-source-badge
-  - archive-banner
+  button-primary:
+    background: '#10b981'
+    text: '#ffffff'
+    padding: '10px 20px'
+    radius: 8
+    border: 'none'
+    font: 'Inter 500 / 15px'
+    hover-bg: '#059669'
+    active-bg: '#047857'
+    shadow: 'rgba(16, 185, 129, 0.18) 0 4px 12px'
+    use: 'Save to Omnivore, Get Started, Subscribe — emerald action button'
+  button-secondary:
+    background: '#ffffff'
+    text: '#1f2937'
+    padding: '10px 20px'
+    radius: 8
+    border: '1px solid #e5e7eb'
+    font: 'Inter 500 / 15px'
+    hover-bg: '#f9fafb'
+    hover-border: '#d1d5db'
+    use: 'Read the docs, View on GitHub — outlined twin'
+  button-tertiary:
+    background: 'transparent'
+    text: '#10b981'
+    padding: '10px 16px'
+    radius: 8
+    border: 'none'
+    font: 'Inter 500 / 15px'
+    hover-bg: 'rgba(16, 185, 129, 0.08)'
+    use: 'Quietest emerald action — text link with hover ground'
+  button-ghost:
+    background: 'transparent'
+    text: '#1f2937'
+    padding: '8px 12px'
+    radius: 8
+    border: 'none'
+    font: 'Inter 500 / 14px'
+    hover-bg: '#f3f4f6'
+    use: 'Nav links, footer actions'
+  card:
+    background: '#ffffff'
+    border: '1px solid #e5e7eb'
+    radius: 12
+    padding: '24px'
+    shadow: 'rgba(15, 20, 25, 0.06) 0 4px 12px'
+    use: 'Article card, feature tile — white panel with hairline + soft shadow'
+  card-dark:
+    background: '#1f2937'
+    border: '1px solid #374151'
+    radius: 12
+    padding: '24px'
+    shadow: 'none'
+    use: 'Reader-mode dark panel — slate over deep slate, hairline only'
+  reader-mockup:
+    background: '#0f1419'
+    border: '1px solid #374151'
+    radius: 16
+    padding: '40px 48px'
+    shadow: 'rgba(15, 20, 25, 0.18) 0 12px 32px'
+    use: 'Floating reader device frame — Lora serif body, amber-highlighted passages'
+  badge-eyebrow:
+    background: 'transparent'
+    text: '#6b7280'
+    padding: '0'
+    radius: 0
+    font: 'Inter 500 / 12px / uppercase / 0.06em tracking'
+    use: 'Section pre-label — no chrome, just type'
+  badge-pill:
+    background: '#d1fae5'
+    text: '#047857'
+    padding: '4px 10px'
+    radius: 9999
+    font: 'Inter 500 / 12px'
+    use: 'Status pill — "Open Source" / "Free" / "v1.x.x" emerald-tinted'
+  badge-mono:
+    background: '#f3f4f6'
+    text: '#374151'
+    padding: '2px 8px'
+    radius: 4
+    font: 'JetBrains Mono 500 / 12px'
+    use: 'Version tag, repo star count — mono on subtle grey'
+  open-source-badge:
+    background: '#ffffff'
+    text: '#1f2937'
+    padding: '8px 14px'
+    radius: 9999
+    border: '1px solid #e5e7eb'
+    font: 'JetBrains Mono 500 / 13px'
+    icon: 'GitHub mark + star count'
+    use: 'GitHub badge — pill-shaped, mono label, repo star count'
+  input:
+    background: '#ffffff'
+    border: '1px solid #d1d5db'
+    radius: 8
+    padding: '10px 14px'
+    font: 'Inter 400 / 15px'
+    placeholder-color: '#9ca3af'
+    focus-border: '#10b981'
+    focus-ring: '0 0 0 3px rgba(16, 185, 129, 0.20)'
+    use: 'Form fields, search — soft-cornered, emerald-focus'
+  nav-link:
+    background: 'transparent'
+    text: '#1f2937'
+    padding: '8px 12px'
+    font: 'Inter 500 / 14px'
+    hover-text: '#10b981'
+    active-color: '#10b981'
+  reading-list-row:
+    background: '#ffffff'
+    border-bottom: '1px solid #f3f4f6'
+    padding: '20px 24px'
+    title-font: 'Inter 600 / 17px'
+    meta-font: 'Inter 400 / 13px / colour #6b7280'
+    unread-mark: '8px emerald dot, left-aligned'
+    use: 'Reading-list row — title + source + time-to-read + unread emerald dot'
+  highlighter-mark:
+    background: '#fef3c7'
+    border-bottom: '2px solid #fbbf24'
+    text: 'inherit'
+    use: 'Amber highlight on a passage inside the reader mockup — never used in marketing chrome'
+  archive-banner:
+    background: '#fef3c7'
+    border: '1px solid #fbbf24'
+    radius: 8
+    padding: '16px 24px'
+    text: '#92400e'
+    use: 'Top-of-page archive notice (post-Eleven-Labs sunset) — amber band'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-reading: 'cubic-bezier(0.32, 0.72, 0, 1)'
+  duration-fast: 120
+  duration-standard: 220
+  duration-slow: 360
+  duration-page: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — all transitions become opacity-only, durations halved; reader-mode toggle becomes an instant theme swap'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(15, 20, 25, 0.04) 0 1px 3px'
+  standard: 'rgba(15, 20, 25, 0.06) 0 4px 12px'
+  elevated: 'rgba(15, 20, 25, 0.10) 0 8px 24px -4px'
+  reader-frame: 'rgba(15, 20, 25, 0.18) 0 12px 32px'
+  modal: 'rgba(15, 20, 25, 0.22) 0 24px 48px -8px'
+  ring: '0 0 0 3px rgba(16, 185, 129, 0.20)'
+  ring-emerald-deep: '0 0 0 3px rgba(16, 185, 129, 0.40)'
+  emerald-glow: 'rgba(16, 185, 129, 0.18) 0 4px 12px'
+
+accessibility:
+  contrast-text-on-bg: 13.8              # #1f2937 on #fdfdfb — AAA at all sizes
+  contrast-text-strong-on-bg: 18.2       # #0f1419 on #fdfdfb — AAA
+  contrast-text-soft-on-bg: 8.6          # #4b5563 on #fdfdfb — AAA
+  contrast-text-muted-on-bg: 5.2         # #6b7280 on #fdfdfb — AA at body sizes
+  contrast-text-on-brand: 4.6            # #ffffff on #10b981 — AA at body sizes
+  contrast-text-on-dark: 14.1            # #f3f4f6 on #0f1419 — AAA
+  contrast-text-on-dark-muted: 5.4       # #9ca3af on #0f1419 — AA
+  contrast-link-on-bg: 4.6               # #10b981 on #fdfdfb — AA at body sizes; safer at ≥18px
+  focus-ring: '3px solid rgba(16, 185, 129, 0.20) on light surfaces; rgba(16, 185, 129, 0.40) on dark'
+  reduced-motion-honored: true
+  keyboard-nav: 'visible focus on every interactive surface; tab order matches visual flow; reader supports j/k row navigation'
+  prose-line-length: 'capped at 720px on marketing; 680px inside reader product surface'
+
+dark-mode: optional                      # the reader has a meaningful slate dark mode; marketing site is light-only with a dark band for the reader mockup
+
+colors-dark:
+  bg: '#0f1419'                          # reader-mode dark canvas
+  bg-elevated: '#1f2937'                 # dark card surface
+  bg-deep: '#0a0e13'                     # deepest dark band
+  surface: '#1f2937'
+  surface-2: '#374151'
+  text: '#f3f4f6'                        # primary body
+  text-strong: '#ffffff'                 # display
+  text-medium: '#d1d5db'                 # secondary
+  text-muted: '#9ca3af'                  # caption
+  text-faint: '#6b7280'                  # tertiary
+  brand: '#34d399'                       # lifted emerald for dark canvas
+  brand-hover: '#10b981'
+  brand-soft: 'rgba(52, 211, 153, 0.18)'
+  on-brand: '#0f1419'                    # dark slate label on lifted emerald
+  accent: '#fbbf24'                      # amber holds across themes
+  link: '#34d399'
+  border: '#374151'
+  border-strong: '#4b5563'
+  border-subtle: '#1f2937'
 
 lineage:
   summary: |
     Omnivore was the open-source read-it-later app that filled the
     Pocket-shaped hole for serious readers between 2022 and the Eleven
     Labs acquisition / sunset in late 2024. Its marketing surface
-    inherited the calm reading-app conventions — white canvas,
-    Inter-based typography, generous reading widths — but distinguished
-    itself with an emerald `#10b981` brand colour pulled from terminal
-    palettes rather than the warm-orange of Readwise or the brand-blue
-    of Pocket. The dark mode was a meaningful slate `#0f1419` —
-    cooler than Linear's near-black, slightly bluer than Notion's
-    campaign-zone. Headers used Inter at 56px / 700 weight with tight
-    negative tracking, and a Lora-class serif appeared in the reader-
-    surface mockups to model the actual reading experience.
-    Spiritually closest to Instapaper's minimalism, technically
-    closest to GitHub's open-source design language, the system was
-    distinctive for being aggressively white-canvas where Readwise
-    is cream.
+    inherited the calm reading-app conventions — paper-toned near-white
+    canvas, Inter-based typography, generous reading widths — but
+    distinguished itself with an emerald `#10b981` brand colour pulled
+    from terminal palettes rather than the warm-orange of Readwise or
+    the brand-blue of Pocket. The dark mode was a meaningful slate
+    `#0f1419` — cooler than Linear's near-black, slightly bluer than
+    Notion's campaign-zone. Headers used Inter at 56–64px / 700 weight
+    with tight negative tracking, and a Lora-class serif appeared in the
+    reader-surface mockups to model the actual reading experience.
+    Spiritually closest to Instapaper's minimalism, technically closest
+    to GitHub's open-source design language, the system was distinctive
+    for being aggressively cool-paper where Readwise is warm-cream. The
+    amber `#fbbf24` accent was reserved exclusively for the in-text
+    highlighter glyph inside the reader, never marketing chrome — a
+    discipline that kept the brand's emerald-on-paper plus slate-dark
+    duet recognisable at thumbnail.
   influences:
     - name: Instapaper
       role: Reading-app minimalism — white canvas, generous reading width, no chromatic decoration.
       url: https://instapaper.com
-    - name: GitHub
-      role: Open-source brand vocabulary — emerald accent, Inter typography, hairline cards.
-      url: https://github.com
     - name: Pocket
       role: Direct functional predecessor; Omnivore positioned as the open-source alternative.
       url: https://getpocket.com
+    - name: GitHub
+      role: Open-source brand vocabulary — emerald accent, Inter typography, hairline cards, mono on metadata.
+      url: https://github.com
+    - name: Vercel / Geist
+      role: Restrained dev-tool register; cool-grey body, soft 8px radius, hairline borders.
+      url: https://vercel.com/geist
+    - name: Linear
+      role: Slate-tone discipline; meaningful dark mode that's never pure black.
+      url: https://linear.app
+    - name: Substack
+      role: Body-at-17px reading-app metric that signals "sit down and read for a while."
+      url: https://substack.com
+    - name: JetBrains Mono
+      role: The brand mono — developer-tool register on version strings and metadata.
+      url: https://www.jetbrains.com/lp/mono/
+    - name: Lora (Cyreal)
+      role: The reader-product serif; old-style figures and book-grade rendering.
+      url: https://fonts.google.com/specimen/Lora
+    - name: Bear
+      role: Reader-mode philosophy — the dark band as a chromatic event modelling the actual reading surface.
+      url: https://bear.app
+    - name: nvim / terminal palettes
+      role: Emerald colour-family source rather than Material/Tailwind defaults.
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Omnivore's marketing site sat on a clean white canvas with an
-emerald `#10b981` brand colour and Inter at 56px / 700 weight
-carrying the display headline. Where Readwise leaned warm-cream
-and editorial, Omnivore leaned cool-white and structural — a
-calmer, more developer-flavoured read-it-later app. The dark
-reader mode (a meaningful slate `#0f1419` rather than pure black)
-got its own mockup band on the marketing page.
+Omnivore was the open-source read-it-later app dressed in a **paper-toned near-white** canvas — `#fdfdfb`, the colour of slightly-warmed printer paper rather than pure white. Headlines ran **Inter** at 56–64px / 700 weight with tight negative tracking; body type sat at 17px Inter / 1.6 line-height in slate-900 `#1f2937` — a touch larger than typical SaaS body to signal *this is a reading app, sit down for a while*. The chromatic event of the page was the focused emerald `#10b981` — a foliage-class green pulled from terminal palettes rather than the warm-orange of Readwise or the brand-blue of Pocket.
 
-The site is now archived following the Eleven Labs acquisition
-in late 2024, but the design language remains a useful reference
-for open-source reading-app conventions. The emerald-on-white
-plus slate-dark-mode duet is the signature, paired with a Lora
-serif inside the reader mockups to model the actual reading
-experience.
+Where Readwise leaned warm-cream and editorial, Omnivore leaned **cool-paper and structural** — calmer, more developer-flavoured, more *built-in-the-open* than *curated-by-an-editor*. The site's signature visual move was the **dark reader-mockup band** — a meaningful slate `#0f1419` device frame that took up a full section of the marketing page, modelling exactly what the actual saved-article reading surface looked like. Inside that mockup, the typography flipped to **Lora serif** at 20px / 1.55 line-height with `onum` (old-style figures) — a calculated nod to print-book reading conventions that the marketing chrome itself never indulged. Lora lived only inside the reader. Outside, on the marketing page, everything stayed Inter sans.
 
-## Colors
+The accent colour was **warm amber `#fbbf24`** — but only as the literal highlighter colour inside the reader mockup. When you saved an article and highlighted a passage, the passage glowed amber. The marketing page demonstrated this by showing a highlighted Lora passage inside the dark reader frame. Outside that one product surface, amber appeared nowhere — never as a CTA, never as a link, never as a section background. The discipline was strict: emerald was for action, amber was the highlighter glyph, and the boundary between them was the brand's clarity signal.
 
-- **bg** `#ffffff` — primary marketing canvas
-- **bg-dark** `#0f1419` — reader-mode dark canvas
-- **surface** `#f9fafb` — cool-grey panel
-- **text-strong** `#0f1419` — display
-- **text** `#1f2937` — body, slate-900
-- **text-muted** `#6b7280` — captions
-- **brand** `#10b981` — emerald action colour
-- **brand-soft** `#d1fae5` — tint for badges and hovers
-- **accent** `#fbbf24` — warm amber for in-text highlights (the actual highlighter colour in the reader)
-- **border** `#e5e7eb` — cool hairline
+The dark mode was **cooler than Linear's near-black, slightly bluer than Notion's campaign-zone, never as warm as Bear's slate-graphite**. `#0f1419` is a meaningful slate — it has enough blue to register as engineered rather than monochrome, but not enough to feel cold. Cards inside the dark band sat at `#1f2937` with `#374151` hairline borders and no shadows; the reader mockup itself got a `12px 32px rgba(15,20,25,0.18)` shadow to read as a floating device frame.
 
-## Typography
+**Atmospheric vocabulary**: *paper-tone, near-white, foliage-emerald, slate-reader, Lora-inside-the-frame, JetBrains-mono-on-the-badge, GitHub-cousin, Pocket-shaped-hole, Instapaper-calm, archived-but-elegant, open-source-confident, terminal-green-not-tailwind-green.* The site read as a careful, built-by-engineers reading product — calm enough to live with, structured enough to recommend, and quietly proud of being open source.
 
-Display is **Inter** at 700 weight, sized 56px on a 59px line-height
-with `-0.022em` tracking. Body is plain Inter at 17px / 1.6 — slightly
-larger than typical SaaS body to signal "reading app." A **Lora** serif
-appears inside the reader mockups (and only there), modelling what
-the actual saved-article reading surface looks like.
+The site is now **archived following the Eleven Labs acquisition in late 2024**, but the design language remains a useful reference for open-source reading-app conventions. The emerald-on-paper plus slate-dark-mode duet is the signature.
 
-A monospaced **JetBrains Mono** shows up in the open-source badge,
-version strings, and the small "v1.x.x" labels. The system has
-no display serif — the serif lives only inside the product mockup,
-not in the marketing chrome.
+**Key Characteristics**
 
-## Layout
+- Near-white `#fdfdfb` paper-toned canvas — never pure white, always lightly warmed
+- Inter at 17px / 1.6 line-height for body — slightly larger than typical SaaS to signal "reading app"
+- Emerald `#10b981` brand colour — foliage-class, terminal-derived, not Tailwind's emerald-500
+- Lora serif inside the reader mockup only — modelling the actual saved-article reading surface
+- Slate `#0f1419` dark mode — cooler than Linear, bluer than Notion
+- Amber `#fbbf24` reserved for in-text highlighter glyphs — never marketing chrome
+- Generous 720px prose width on marketing, 680px inside the reader frame
+- 8–12px radius ladder — softer than GitHub's 6px, tighter than Webflow's 16px
+- JetBrains Mono in the open-source badge and version strings
+- Soft cool-tinted shadows (rgba(15,20,25,0.06–0.18)) — never warm, never neutral grey
 
-The container is 1180px with 24px gutters and a moderate 96px
-section vertical rhythm. The page reads as alternating bands:
-hero (white) → feature row → reader mockup (often dark) → pricing
-→ open-source CTA → footer. The dark-mode reader band is the
-chromatic event of the page.
+## 2. Color Palette & Roles
 
-## Elevation & Depth
+### Primary
 
-Depth on the white canvas is bordered (1px `#e5e7eb`) plus a soft
-`0 4px 12px rgba(15,20,25,0.06)` shadow on cards. The dark-mode
-mockup uses a 1px `#374151` border and no shadow, leaning on the
-slate-vs-black contrast. The reader mockup gets a slightly stronger
-shadow (`0 12px 32px rgba(15,20,25,0.18)`) to read as a floating
-device frame.
+- **bg** `#fdfdfb` — near-white paper-toned canvas. Never `#ffffff`, never warm-cream — always lightly warmed paper.
+- **text** `#1f2937` — slate-900, the warm-grey body register. Sits on paper rather than fighting it.
+- **bg-warm** `#faf9f5` — faintest paper-cream tonal panel, used inside elevated quote blocks.
+- **bg-cool** `#f9fafb` — cool-grey alternative panel for sidebar metadata.
+- **brand-cta-bg** `#10b981` — primary CTA emerald.
+- **on-cta** `#ffffff` — pure white label on emerald.
 
-## Shapes
+### Brand & Dark
 
-Buttons land at 8px, cards at 12px, hero shells at 16–20px. The
-radius ladder is moderate — softer than GitHub's 6px, tighter than
-Webflow's 16px. Avatars and pills go full 9999px. The system reads
-as developer-tool-rounded rather than SaaS-pillowy.
+- **brand** `#10b981` — emerald action colour. Foliage-class, terminal-derived. The signature.
+- **brand-hover** `#059669` — pressed/hover emerald.
+- **brand-deep** `#047857` — active state, deep green.
+- **brand-soft** `#d1fae5` — emerald wash for badges and selected backgrounds.
+- **brand-tint** `rgba(16, 185, 129, 0.10)` — translucent emerald hover overlay on tertiary buttons.
+- **bg-dark** `#0f1419` — reader-mode dark canvas. Meaningful slate, cooler than Linear's near-black.
+- **bg-dark-elevated** `#1f2937` — dark-mode card and panel.
+- **bg-dark-deeper** `#0a0e13` — deepest dark-mode ground for full-bleed bands.
 
-## Components
+### Accent
 
-The defining components are the **emerald CTA button** (`#10b981`
-fill, white Inter 500 label, 8px radius), the **reading-list row**
-(a horizontal article tile with title, source, time-to-read, and
-a small emerald checkmark for unread state), the **article card**
-(white panel, 12px radius, hairline border, soft shadow), the
-**dark reader mockup** (a slate `#0f1419` device frame showing
-Lora-set serif body text and amber-highlighted passages), and the
-**open-source badge** — a pill-shaped tile with a GitHub icon and
-the repo star count.
+- **accent** `#fbbf24` — warm amber. **Lives inside the reader mockup only** as the highlighter colour. Marking it anywhere else in the marketing chrome breaks the brand boundary.
+- **accent-soft** `#fef3c7` — amber wash background for highlighted-passage demos and the post-archive notice banner.
+- **accent-deep** `#d97706` — darker amber for hover on highlighter previews (rare).
 
-## Do's and Don'ts
+### Interactive
 
-- **Do** hold the brand to the emerald `#10b981`; drift toward teal or lime breaks the developer-tool reading.
-- **Do** reserve the Lora serif for the reader-product mockup only; using it in marketing chrome would imply Readwise / Substack territory.
+- **link** `#10b981` — links use the emerald in light mode.
+- **link-hover** `#059669` — darker emerald on hover.
+- **link-visited** `#6b7280` — muted slate for visited links (functional in archive listings).
+- **link-on-dark** `#34d399` — lifted emerald in dark mode for readable contrast.
+- **selected-bg** `#d1fae5` — emerald wash for selected nav state and focused list rows.
+- **disabled** `#d1d5db` — grey-light disabled control text.
+
+### Neutral Scale
+
+- **ink-50** `#f9fafb` — coolest near-white panel.
+- **ink-100** `#f3f4f6` — second-level neutral.
+- **ink-200** `#e5e7eb` — default border colour.
+- **ink-300** `#d1d5db` — emphasised border, disabled text.
+- **ink-400** `#9ca3af` — tertiary text, eyebrows, metadata.
+- **ink-500** `#6b7280` — muted text, captions, helper.
+- **ink-600** `#4b5563` — supporting copy, secondary heading variant.
+- **ink-700** `#374151` — secondary heading colour, body emphasis.
+- **ink-800** `#1f2937` — primary body text (slate-900).
+- **ink-900** `#0f1419` — display text, reader-mode dark canvas.
+
+### Surface & Borders
+
+- **surface-0 (page)** — `#fdfdfb` near-white paper.
+- **surface-1 (panel)** — `#faf9f5` warm tonal panel or `#f9fafb` cool tonal panel.
+- **surface-2 (card)** — `#ffffff` white card lift on near-white.
+- **surface-dark** — `#1f2937` dark-mode card, sits above `#0f1419` ground.
+- **border** `#e5e7eb` — default cool hairline.
+- **border-strong** `#d1d5db` — emphasised rule for inputs and outlined buttons.
+- **border-subtle** `#f3f4f6` — quietest separation; row dividers in reading-list panes.
+- **border-emerald** `rgba(16, 185, 129, 0.30)` — emerald-tinted hairline for focus and active selection.
+- **border-dark** `#374151` — dark-mode default border.
+
+### Shadow Colors
+
+Omnivore shadows are **cool-tinted slate** — `rgba(15, 20, 25, 0.04)` to `0.22`, never neutral grey, never warm-tinted, never emerald (except for the rare emerald-glow on primary buttons). The cool tint matches the slate-paper temperature of the page; warm shadows would feel wrong against the cool-paper canvas. The reader mockup gets the strongest shadow on the page — `rgba(15, 20, 25, 0.18) 0 12px 32px` — to read as a floating device frame.
+
+### Semantic
+
+- **success** — bg `#d1fae5` (emerald wash), text `#047857`, border `rgba(16, 185, 129, 0.30)`. Inherits the brand emerald, which makes success and brand visually adjacent — appropriate for a saving-app where the primary action *is* the success.
+- **warning** — bg `#fef3c7` (amber wash), text `#92400e`, border `rgba(251, 191, 36, 0.40)`. Uses the highlighter amber — quietly cohesive.
+- **danger** — bg `#fee2e2`, text `#991b1b`, border `rgba(239, 68, 68, 0.30)`.
+- **info** — bg `#dbeafe`, text `#1e40af`, border `rgba(37, 99, 235, 0.30)`.
+
+The semantic palette is unusual in that **success borrows the brand emerald** — a deliberate choice. In a reading-list app, "saved successfully" is the primary user goal, and the visual collapse of brand/success/saved-state reinforces that.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display & Body**: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` — Inter is the marketing voice. Variable axis when supported. Inter Display variant used at hero scale (≥48px) for slightly tighter letter-spacing.
+- **Serif (reader product surface only)**: `"Lora", "Charter", "Iowan Old Style", Georgia, "Times New Roman", serif` — Lora carries the **inside-the-reader-mockup** typography. Modelling the actual saved-article reading experience. Never appears in marketing chrome.
+- **Mono**: `"JetBrains Mono", "Fira Code", "SF Mono", Menlo, Consolas, monospace` — JetBrains Mono is the brand mono. Lives in the open-source badge, version strings ("v1.x.x"), GitHub-icon labels, and small data labels.
+- **OpenType features**: `ss01` for Inter's stylistic alternate (single-storey `a`), `cv11` for the alternate `g` at display sizes; `liga` and `kern` always on; `tnum` and `zero` enabled in mono for tabular figures and slashed zero; `onum` (old-style figures) enabled in Lora serif to honour print-book reading conventions.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| Display Hero | Inter Display | 64px | 700 | 1.05 | -0.025em | ss01 cv11 | Homepage hero — reading-app calm at scale |
+| Display | Inter Display | 56px | 700 | 1.05 | -0.022em | ss01 | Section intro at scale |
+| H1 | Inter Display | 48px | 700 | 1.10 | -0.02em | ss01 | Page title |
+| H2 | Inter | 38px | 700 | 1.15 | -0.015em | ss01 | Major section |
+| H3 | Inter | 28px | 600 | 1.25 | -0.01em | ss01 | Sub-section |
+| H4 | Inter | 22px | 600 | 1.30 | normal | kern | Card heading |
+| H5 | Inter | 18px | 600 | 1.35 | normal | kern | Inline emphasis |
+| Eyebrow | Inter | 12px | 500 | 1.30 | 0.06em | uppercase | Section pre-label |
+| Body Large | Inter | 18px | 400 | 1.6 | normal | kern | Lede paragraph |
+| Body | Inter | 17px | 400 | 1.6 | normal | kern | Default body — slightly larger than typical SaaS |
+| Body Small | Inter | 15px | 400 | 1.55 | normal | kern | Secondary text |
+| Quote (Reader) | Lora | 20px | 400 | 1.55 | normal | onum | Inside reader mockup only — saved-article body |
+| Quote Large (Reader) | Lora | 24px | 500 | 1.45 | normal | italic | Pull-quote inside reader product surface |
+| Caption | Inter | 14px | 400 | 1.45 | normal | kern | Image captions, helper text |
+| Caption Tabular | JetBrains Mono | 13px | 500 | 1.40 | normal | tnum | Stats, time-to-read indicators |
+| Label | JetBrains Mono | 12px | 500 | 1.30 | normal | tnum | UI labels — mono signals developer-tool register |
+| Code | JetBrains Mono | 14px | 400 | 1.55 | normal | tnum zero liga | Inline + block code |
+| Code Micro | JetBrains Mono | 11px | 400 | 1.40 | normal | — | Footnote refs, repo metadata |
+| Button Label | Inter | 15px | 500 | 1.0 | normal | kern | CTA button text |
+
+### Principles
+
+- **Inter is the voice; Lora is the product surface.** The marketing chrome stays Inter throughout. Lora appears only inside the dark reader-mockup, where it models the saved-article reading experience. Mixing them outside the mockup collapses the brand boundary.
+- **Body at 17px / 1.6** — deliberately larger than typical SaaS body (which sits at 14–16px). The +1px signals "reading app" the way Substack's 18px body does.
+- **Negative tracking scales with size.** -0.025em at 64px, -0.022em at 56px, -0.02em at 48px, -0.015em at 38px, -0.01em at 28px, normal at 22px and below.
+- **Mono labels are a developer-tool signal.** Where Vercel uses Geist Mono and Linear uses Söhne Mono, Omnivore uses JetBrains Mono — slightly more developer-coded than either. UI labels and version strings reach for mono to maintain that register.
+- **OpenType discipline**: `ss01` (single-storey `a`) and `cv11` (alternate `g`) on Inter at display sizes; `onum` on Lora inside the reader (old-style figures pair correctly with serif body); `tnum` and `zero` on mono for data alignment and slashed zero.
+- **Italics in serif body, never in display.** The Lora italic carries pull-quotes inside the reader mockup. The Inter display never italicises.
+- **Reading-app metrics on body.** 17px / 1.6 / 720px column — these are *reading-product* metrics, optimised for sustained prose reading rather than scannable marketing.
+- **Mono-as-developer-flag.** When the page wants to feel "open source first," labels switch to JetBrains Mono. When it wants to feel "calm reading product," labels switch to Inter. The two registers coexist intentionally.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Emerald)**
+- Background: `#10b981` emerald.
+- Text: `#ffffff` white, Inter 500 / 15px.
+- Padding: `10px 20px`. Radius: `8px`. Border: none.
+- Shadow: `rgba(16, 185, 129, 0.18) 0 4px 12px` — the rare emerald-glow drop shadow on primary buttons.
+- Hover: bg → `#059669`; shadow strengthens to `0 6px 16px`; transition `220ms ease-standard`.
+- Active: bg → `#047857`.
+- Use: Primary action — *Save to Omnivore, Get Started, Subscribe to Updates.*
+
+**Secondary (Outlined)**
+- Background: `#ffffff`. Text: `#1f2937`. Border: `1px solid #e5e7eb`.
+- Same padding, radius, font as primary.
+- Hover: bg → `#f9fafb`; border → `#d1d5db`.
+- Use: *Read the docs, View on GitHub, Browse the source.*
+
+**Tertiary (Emerald Text)**
+- Background: transparent. Text: `#10b981`. No border. Padding: `10px 16px`.
+- Hover: bg → `rgba(16, 185, 129, 0.08)`.
+- Use: Quietest emerald action — *Read more, Continue, Open in reader.*
+
+**Ghost (Nav)**
+- Background: transparent. Text: `#1f2937`. No border. Padding: `8px 12px`.
+- Hover: bg → `#f3f4f6`.
+- Use: Nav links, footer links.
+
+### Cards
+
+**Article Card (Light)**
+- Background: `#ffffff`. Border: `1px solid #e5e7eb`. Radius: `12px`. Padding: `24px`.
+- Shadow: `rgba(15, 20, 25, 0.06) 0 4px 12px` — soft cool drop.
+- Hover: border → `#d1d5db`; shadow strengthens to `0 6px 16px`.
+- Use: Article preview, feature tile, capability card.
+
+**Reader Card (Dark)**
+- Background: `#1f2937` slate-elevated. Border: `1px solid #374151`. Radius: `12px`. Padding: `24px`.
+- Shadow: none — leans on slate-on-slate value contrast.
+- Use: Capability card *inside the dark reader-mockup band*.
+
+**Reader Mockup Frame**
+- Background: `#0f1419` slate-deep. Border: `1px solid #374151`. Radius: `16px`. Padding: `40px 48px`.
+- Shadow: `rgba(15, 20, 25, 0.18) 0 12px 32px` — the "floating device" shadow.
+- Use: The signature dark-band element — shows Lora serif body, amber-highlighted passages, model the actual reading surface.
+
+### Badges, Tags, Pills
+
+**Eyebrow Label** — no chrome, just type. Inter 500 / 12px / uppercase / 0.06em tracking, colour `#6b7280`. Sits above section headlines.
+
+**Emerald Pill** — bg `#d1fae5`, text `#047857`, padding `4px 10px`, radius `9999px`, font Inter 500 / 12px. Marks "Open Source", "Free", status indicators.
+
+**Mono Tag** — bg `#f3f4f6`, text `#374151`, padding `2px 8px`, radius `4px`, font JetBrains Mono 500 / 12px. Marks version numbers ("v1.7.2"), release tags.
+
+**Open Source Badge (Pill)** — bg `#ffffff`, border `1px solid #e5e7eb`, radius `9999px` (full pill), padding `8px 14px`, font JetBrains Mono 500 / 13px. Includes GitHub octocat mark + repo star count. Lives in the hero and footer as an open-source proof point.
+
+### Inputs / Forms
+
+- Background: `#ffffff`. Border: `1px solid #d1d5db`. Radius: `8px`. Padding: `10px 14px`.
+- Font: Inter 400 / 15px. Placeholder: `#9ca3af`.
+- Focus: border → `#10b981`; ring → `0 0 0 3px rgba(16, 185, 129, 0.20)`.
+- Error: border → `#991b1b`, ring → `rgba(239, 68, 68, 0.20)`, helper text in `#991b1b`.
+- Helper: caption 14px in `#6b7280` below.
+
+### Navigation
+
+- Header height `64px`. Background `#fdfdfb` (transparent on hero, solid on scroll with `rgba(15, 20, 25, 0.04) 0 1px 3px` ambient shadow).
+- Logo: Omnivore wordmark in slate-900, paired with the small emerald glyph.
+- Nav links: Inter 500 / 14px, colour `#1f2937`, padding `8px 12px`. Hover → `#10b981`; active gets `#10b981` colour without underline.
+- Right-side CTA pair: ghost "Sign in" + primary emerald "Save to Omnivore" button.
+- Mobile: full-screen sheet, links stack at 18px / 600 with hairline dividers.
+
+### Reading-List Components
+
+**Reading-List Row** — white background, 1px `#f3f4f6` bottom border, 20×24 padding. Title in Inter 600 / 17px slate-900; meta line below in Inter 400 / 13px `#6b7280` ("The Atlantic · 12 min read · 2 days ago"). Unread state shows an 8px emerald dot at left margin. Hover background → `#f9fafb`.
+
+**Article Card (Reading List)** — white panel, 12px radius, 1px hairline border, soft shadow. Title 18px / 600, source 13px / `#6b7280`, time-to-read mono 12px tag in top-right.
+
+### Reader-Surface Components
+
+**Highlighter Mark** — `bg: #fef3c7` (amber wash) with `border-bottom: 2px solid #fbbf24`. Wraps a span of saved-article text. **Lives only inside the reader mockup; never used in marketing chrome.**
+
+**Pull Quote (Reader)** — Lora 24px / 500 / italic, slate-200 (`#e5e7eb`) text on the dark slate ground, with a 4px emerald `#10b981` left rule and 32px top/bottom margin.
+
+**Reader Toggle (Light/Dark)** — pill-shaped switch with sun and moon glyphs, 32px height, ground `#f3f4f6` light / `#1f2937` dark.
+
+### Optional Components
+
+**Modal** — bg `#ffffff`, radius `12px`, shadow `rgba(15, 20, 25, 0.22) 0 24px 48px -8px`, max-width `560px`, slate backdrop overlay at 60% opacity.
+
+**Tooltip** — bg `#1f2937`, text `#f3f4f6`, radius `6px`, padding `6px 10px`, font Inter 13px / 500.
+
+**Code Block** — JetBrains Mono 14px on `#f9fafb` ground, padding `16px 20px`, border `1px solid #e5e7eb`, radius `8px`.
+
+**Archive Banner** — `bg: #fef3c7` amber wash with `1px solid #fbbf24` border, radius `8px`, padding `16px 24px`, text in `#92400e`. Used post-Eleven-Labs sunset to announce the archive status.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- **Base unit**: 4px.
+- **Scale**: 4, 8, 16, 24, 32, 48, 64, 80, 96, 128 — moderate-density progression.
+- **Density observation**: Omnivore is *moderately spacious* — looser than GitHub, denser than Anthropic, similar in rhythm to early Linear or Vercel marketing pages. Section gutters at 96px, intra-section spacing at 24–48px.
+
+### Grid & Container
+
+- **Page max width**: `1180px` — slightly narrower than the 1280 standard, optimised for the reading-app calm feeling.
+- **Site gutter**: `clamp(20px, 4vw, 56px)` — generous on desktop, accommodating on mobile.
+- **Grid**: 12 columns with 24px gutters. Hero blocks span full width; capability rails span 8 columns; sidebar metadata spans 4.
+- **Reader mockup width**: `680px` — narrower than the 720px marketing prose column, because the reader interior models a focused single-column reading experience.
+- **Hero treatment**: full-bleed near-white, 64px headline anchored left, single primary emerald CTA below, open-source badge inline.
+
+### Whitespace Philosophy
+
+The whitespace philosophy is *paper-calm* — generous enough that the page feels like a single-column print spread, dense enough that the reading-list product never feels precious. Section gutters run **96px** between major blocks; minor blocks sit on 64–80px gaps; intra-section spacing uses 24–48px. The reader-mockup band uses tighter 32–48px interior spacing to model the reading-app density.
+
+### Section Cadence
+
+- Hero (near-white) → Capability Rail (white cards on near-white) → Reader Mockup (full-bleed slate `#0f1419` band, the chromatic event) → Pricing or Features (near-white) → Open Source Section (paper-cream `#faf9f5` warm panel) → Footer (paper-cream).
+- The dark-mode reader band is the *one chromatic event* of the page. It appears once per scroll-stop and demonstrates the actual reading product surface in full.
+- Sections separated by 1px `#e5e7eb` hairlines or by 96px spacing alone.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| Micro | 4px | Inline tags, mono badges, version stamps |
+| Standard (sm) | 6px | Compact chips, status pills, tooltip corners |
+| Comfortable (md) | 8px | Buttons, inputs, dropdowns — the dominant radius |
+| Relaxed (lg) | 10px | Code blocks, callouts, modals |
+| Featured (xl) | 12px | Cards, article tiles |
+| Larger (xxl) | 16px | Reader mockup frame, hero shells |
+| Pill | 9999px | Avatars, status pills, open-source badge, reader-toggle switch |
+
+Omnivore's signature radius is **8px on buttons, 12px on cards, 16px on the reader mockup**. Softer than GitHub's 6px (which reads as developer-tool-strict), tighter than Webflow's 16px-on-everything (which reads as SaaS-pillowy). The system reads as *developer-tool-rounded* — engineered, calm, but not austere.
+
+There are no compound radii. Avatars and pills use the full `9999px` for circles and stadiums.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Default page surface, hero, body sections |
+| 1 | 1px `#e5e7eb` border | Cards without lift, table rows |
+| 2 | `rgba(15, 20, 25, 0.04) 0 1px 3px` | Sticky nav background on scroll |
+| 3 | `rgba(15, 20, 25, 0.06) 0 4px 12px` | Article cards, feature tiles |
+| 4 | `rgba(15, 20, 25, 0.10) 0 8px 24px -4px` | Hover-lifted cards, dropdowns |
+| 5 | `rgba(15, 20, 25, 0.18) 0 12px 32px` | Reader mockup frame — floating device shadow |
+| 6 | `rgba(15, 20, 25, 0.22) 0 24px 48px -8px` | Modals, dialogs |
+| Special | `rgba(16, 185, 129, 0.18) 0 4px 12px` | Emerald-glow on primary buttons (the only coloured shadow) |
+
+### Shadow Philosophy
+
+Omnivore's depth is **cool-tinted slate** with one emerald exception. Cards lift off near-white by **a hairline border + soft slate-tinted shadow** — the bordered + shadowed pattern is the elevation strategy. The dark-mode card uses `border-only` (no shadow) and leans on slate-on-slate value contrast.
+
+The single coloured shadow in the system is the **emerald-glow on primary buttons** — `rgba(16, 185, 129, 0.18) 0 4px 12px`. It strengthens on hover and gives the emerald CTA a halo of presence without being garish. No other surface gets a coloured shadow.
+
+The brand never uses warm-tinted shadows (which would feel wrong against the cool-paper canvas) or pure black shadows (which would feel too heavy). The slate-tinted approach matches the page temperature exactly.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- `ease-standard`: `cubic-bezier(0.4, 0, 0.2, 1)` — Material-style; default for hover, focus, colour transitions.
+- `ease-emphasized`: `cubic-bezier(0.2, 0, 0, 1)` — punchier exit; used on modal enter, dropdown reveal.
+- `ease-reading`: `cubic-bezier(0.32, 0.72, 0, 1)` — slow-out, fast-settle; used on reader-mode toggle and article-list reveals to feel gentle and book-like.
+
+### Duration Buckets
+
+- **Fast (120ms)** — colour transitions, focus rings, link hovers.
+- **Standard (220ms)** — button hover, card hover, dropdown reveal.
+- **Slow (360ms)** — modal enter/exit, reader-mockup section reveal.
+- **Page (480ms)** — route transitions, hero fade-in sequences.
+
+### Per-Component Micro-States
+
+- **Primary button hover**: bg `#10b981` → `#059669`; shadow strengthens from `0 4px 12px` to `0 6px 16px`; transition `220ms ease-standard`.
+- **Card hover**: border deepens from `#e5e7eb` to `#d1d5db`; shadow strengthens from `0 4px 12px` to `0 6px 16px`. No translate.
+- **Article-card hover (reading list)**: 1px upward translate + shadow strengthens — the only "lift" in the system, used sparingly inside the reading-list product surface.
+- **Link hover**: colour `#10b981` → `#059669` over 120ms; underline already present, doesn't change.
+- **Input focus**: 3px emerald ring fades in over 120ms; border darkens to `#10b981`.
+- **Reader-mode toggle**: theme swap over 360ms `ease-reading`; entire band crossfades from light to dark, including text colour, card surfaces, and glyph swap.
+- **Highlighter draw (inside reader)**: amber wash animates in left-to-right over 280ms, simulating a pen stroke.
+
+### Page Transitions
+
+Hero text fades in over 480ms with 16px translate-up; below-fold sections use `IntersectionObserver` to fade in at 80% viewport, 360ms duration, 8px translate. The reader-mockup section gets a longer 480ms reveal with a subtle 24px translate from below — meant to feel like the reading surface "rising" into view.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)` — all transitions become opacity-only, durations halved. Translate animations are disabled entirely; reader-mode toggle becomes an instant theme swap; highlighter-draw animations snap to final state. The card-hover lift is disabled.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **`#1f2937` text on `#fdfdfb` bg**: 13.8:1 — AAA at all sizes.
+- **`#0f1419` text on `#fdfdfb` bg**: 18.2:1 — AAA.
+- **`#4b5563` text on `#fdfdfb` bg**: 8.6:1 — AAA at body sizes.
+- **`#6b7280` text on `#fdfdfb` bg**: 5.2:1 — AA at body sizes; comfortable at ≥18px.
+- **`#ffffff` text on `#10b981` emerald**: 4.6:1 — AA at body sizes; safe for buttons.
+- **`#10b981` link on `#fdfdfb` bg**: 4.6:1 — AA at body sizes; better at ≥18px.
+- **`#f3f4f6` text on `#0f1419` dark bg**: 14.1:1 — AAA.
+- **`#9ca3af` muted on `#0f1419` dark bg**: 5.4:1 — AA at body sizes.
+- **`#34d399` lifted-emerald link on `#0f1419` dark**: 6.2:1 — AA / borderline AAA.
+
+The single contrast watch-out is emerald-on-near-white at small text sizes — the `4.6:1` for `#10b981` on `#fdfdfb` is comfortable for buttons (≥14px / 500+) but not for body links smaller than 18px. The brand honours this: emerald links run 17px body or larger; smaller meta labels stay in slate-grey.
+
+### Focus Indicators
+
+- Default focus ring: `0 0 0 3px rgba(16, 185, 129, 0.20)` with 2px offset on light surfaces.
+- On dark surfaces (reader mockup): `0 0 0 3px rgba(16, 185, 129, 0.40)` — stronger emerald ring for visibility on slate.
+- All interactive surfaces must have a visible focus state — no `outline: none` without a replacement.
+
+### ARIA Patterns
+
+- **Navigation**: `<nav aria-label="Main">` with skip-link to main content.
+- **Disclosure**: `<button aria-expanded aria-controls>` for collapsible sections (FAQ, feature drawers).
+- **Dialog**: `role="dialog" aria-modal="true" aria-labelledby` with focus trap and Esc-to-close.
+- **Reading list**: `<ul role="list">` with each row as `<li>`; unread state communicated via `aria-label="Unread article: {title}"`.
+- **Reader toggle**: `<button role="switch" aria-checked aria-label="Toggle dark mode">`.
+- **Live regions**: `aria-live="polite"` for save-to-Omnivore confirmations and form validation.
+
+### Keyboard Navigation
+
+- Tab order matches visual flow: skip-link → nav → hero CTA → main content → reader-mockup → footer.
+- All buttons, links, inputs reachable via Tab; modals trap focus inside until dismissed.
+- `Esc` closes modals and dropdowns.
+- **Reader product** historically supports `j` / `k` for next/previous article in reading list, and `h` for highlighting selected text — vim-style affordances appropriate to the developer-flavoured audience.
+- Arrow keys navigate within tab groups and reader-toggle.
+
+### Screen Reader Hints
+
+- Decorative emerald dots (unread indicators) have `aria-hidden="true"` because state is communicated via `aria-label` on the row.
+- Highlighter marks inside reader mockup carry `aria-label="Highlighted: {text}"` so screen readers announce both the highlight state and the text.
+- Open-source badge has `aria-label="View on GitHub: {star count} stars"`.
+- Reader-toggle states announce via `aria-checked="true"` / `"false"` rather than visual-only.
+
+### Reduced Motion
+
+Honoured via the global media query. All translate/scale animations become opacity-only; durations halve; reader-mode toggle becomes an instant theme swap; highlighter-draw animations snap to final state.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Use |
+|---|---|---|
+| Mobile | < 640px | Single column, full-bleed sections, stacked CTAs |
+| Tablet | 640–1024px | 2-column rails, narrower gutters |
+| Desktop | 1024–1280px | Full 12-col grid, 720px prose, hero at 64px |
+| Wide | > 1280px | Page locks to 1180px, gutters expand |
+
+### Touch Targets
+
+- Minimum tap target: 44×44px (WCAG AAA).
+- Buttons: 44px minimum height on mobile (10px vertical padding × 2 + 15px line-height + buffer).
+- Reading-list rows: 56px minimum height — comfortable thumb-reach for scrolling.
+- Reader-toggle switch: 44×44px hit area on a 32×20 visual track.
+
+### Collapsing Strategy
+
+- **Header**: full nav at ≥1024px; hamburger sheet below — sheet slides from right, full-screen near-white, 18px / 600 stacked links.
+- **Hero**: 64px headline → 48px → 36px across desktop/tablet/mobile.
+- **Capability grid**: 3-up at desktop, 2-up at tablet, 1-up at mobile.
+- **Reader mockup**: full device frame at desktop, simplified panel at mobile (no chrome bezels), reader-toggle moves below content.
+- **Body width**: 720px → fluid 92vw at mobile.
+- **Section spacing**: 96px → 64px → 48px across sizes.
+
+### Image Behavior
+
+- Article preview thumbnails use `srcset` with 1x/2x for crisp Retina rendering.
+- Reader-mockup interior content (headline, body, highlighted passage) renders as actual HTML inside the device frame — not as a flattened image — so the typography stays sharp at all viewport sizes.
+- Open-source badge GitHub icon and star count are SVG.
+- Lazy-loading on below-fold images; eager on hero.
+
+### Container Queries
+
+Used inside reading-list rows to switch layout at 480px width (thumbnail-left + meta-right vs. stacked single-column). Reader-mockup interior uses container queries to scale Lora body text proportionally to mockup width.
+
+## 11. Content & Voice
+
+### Tone
+
+**Calm, considered, developer-flavoured.** Omnivore wrote the way a thoughtful open-source maintainer writes — clear sentences, no marketing exclamation marks, no scarcity language, occasional wry technical humour. Headlines stated what the product does ("Read more, save more") rather than how it would change your life. Subheads explained mechanics ("Save articles, listen to them, take notes, and sync with your favourite note-taking app"). The brand sounded like a small team of engineers who built the tool they wished existed — and happened to be open-sourcing it.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Save to Omnivore", "View on GitHub", "Read the docs", "Subscribe", "Open in reader". Never "Sign up free!", never "Get started today!".
+- **Error messages**: "Couldn't save this article. The page may have a paywall — try the simplified URL." Specific, technical, helpful.
+- **Success confirmations**: "Saved to your reading list." "Highlighted." "Synced to Notion." Brief, factual.
+- **Loading states**: "Saving article…", "Fetching content…", "Generating summary…" — tells you what the system is doing.
+
+### Empty States
+
+What they say: explain the empty state and offer the next step. *"Your reading list is empty. Install the browser extension or save by email to get started."*
+What they don't say: "Oops!", "Whoops!", apologetic exclamations. Empty states are starting points, not failures.
+
+### CTA Verb Conventions
+
+- Primary on hero: "Save to Omnivore", "Get Started", "Try the open-source reader".
+- Secondary: "View on GitHub", "Read the docs", "Browse the source".
+- Footer: "Star us on GitHub", "Read the changelog", "Self-host".
+- Post-archive: "Browse the GitHub archive", "Read the announcement", "View migration guide".
+
+The brand never used "Sign up free!" or "Get started today!" — the tone was invitational, technical, never urgent. Omnivore did not trade in scarcity; it traded in *care* — care for the saved-article corpus, care for the open-source community, care for the reading experience. The verbs reflected that: declarative, technical, calm.
+
+## 12. Dark Mode & Theming
+
+**Dual-mode by design — the reader product surface ships a meaningful slate dark mode.** The marketing site is *primarily light* with a full dark band for the reader-mockup section, and the reader product itself ships an actual dark mode that users toggle via the reader-toggle switch.
+
+**Light-mode tokens** (default): `bg #fdfdfb` near-white paper, `text #1f2937` slate-900, `brand #10b981` emerald, `border #e5e7eb` cool hairline.
+
+**Dark-mode tokens** (reader product): `bg #0f1419` meaningful slate, `bg-elevated #1f2937` card surface, `text #f3f4f6` paper-cool, `text-strong #ffffff` display, `brand #34d399` lifted emerald (more saturated for dark canvas), `border #374151` slate hairline.
+
+The dark mode is **cooler than Linear's near-black, slightly bluer than Notion's campaign-zone, never as warm as Bear's slate-graphite**. `#0f1419` has enough blue to register as engineered rather than monochrome. The dark-mode brand emerald lifts to `#34d399` — a slight saturation bump for visibility on slate, calculated to maintain AA contrast (6.2:1 against `#0f1419`).
+
+The amber accent `#fbbf24` holds across themes — the highlighter colour stays warm in both light and dark contexts, since highlighters are intentionally a chromatic punch that should read identically in either mode.
+
+Marketing chrome (header, hero, capability rails, footer) stays light-mode by default; a small reader-toggle button in the upper-right could flip the reader-mockup band to demonstrate the dark mode interactively. The page never offers a fully dark marketing surface — that would lose the paper-calm register.
+
+## 13. Lineage & Influences
+
+Omnivore's design DNA was **open-source-developer-tool meets reading-app calm** — calm enough to live with, structured enough to recommend, technical enough to build on. The lineage runs through three traditions: **Pocket / Instapaper** (the read-it-later product genre), **GitHub / Vercel** (open-source brand vocabulary — Inter typography, hairline cards, mono labels), and **terminal aesthetics** (the foliage emerald that pulled colour from `nvim` themes rather than Tailwind's emerald-500).
+
+What it inherited: Pocket's reading-list information architecture (article rows, time-to-read, source attribution), Instapaper's reading-app minimalism (white canvas, generous reading width, no chromatic decoration), GitHub's open-source brand vocabulary (emerald accent, Inter typography, hairline cards, JetBrains Mono on version strings), and Substack's slightly-larger body type signalling "this is a reading app." What it borrowed from contemporaries: Vercel's Geist-like restraint adapted to Inter, Linear's slate-tone discipline adapted to a cooler emerald-based register, Readwise's soft-cream warmth (rejected — Omnivore went cool-paper instead), and Bear's reader-mode philosophy (the dark band as a chromatic event).
+
+What it rejected: Pocket's brand-blue (too corporate), Readwise's cream-and-orange (too editorial), generic Tailwind emerald-500 `#059669` (used as `brand-hover` instead of `brand` to differentiate), warm-tinted shadows, gradient meshes, hero animations, mascots, and the "AI summarise everything" register that competing reading apps were drifting toward.
+
+**Named influences:**
+
+- **Instapaper** — reading-app minimalism: white canvas, generous reading width, no chromatic decoration.
+- **Pocket** — direct functional predecessor; Omnivore positioned as the open-source alternative.
+- **GitHub** — open-source brand vocabulary; emerald accent, Inter typography, hairline cards, mono on metadata.
+- **Vercel / Geist** — restrained dev-tool register; cool-grey body, soft 8px radius, hairline borders.
+- **Linear** — slate-tone discipline; meaningful dark mode that's never pure black.
+- **Substack** — body-at-17px reading-app metric that signals "sit down and read for a while."
+- **JetBrains Mono** — the brand mono; developer-tool register on version strings and metadata.
+- **Lora (Cyreal)** — the reader-product serif; old-style figures and book-grade rendering.
+- **Bear** — reader-mode philosophy: the dark band as a chromatic event modelling the actual reading surface.
+- **nvim / terminal palettes** — emerald colour-family source rather than Material/Tailwind defaults.
+
+## 14. Do's and Don'ts
+
+### Do
+
+- **Do** hold the brand to the emerald `#10b981`; drift toward teal `#06b6d4` or lime `#84cc16` breaks the developer-tool reading.
+- **Do** start with near-white `#fdfdfb`, not pure `#ffffff` — paper-tone is the canvas, never substitute.
+- **Do** ship body at 17px / 1.6 line-height; the +1px over typical SaaS body is the "reading app" signal.
+- **Do** reserve the **Lora serif for the reader-product mockup only**; using it in marketing chrome would imply Readwise / Substack territory.
 - **Do** flip to slate `#0f1419` rather than pure black for dark-mode bands; pure black reads as Linear, not Omnivore.
+- **Do** use the amber `#fbbf24` exclusively as the highlighter colour inside the reader; never on action surfaces.
+- **Do** pair the hero with an open-source badge (pill-shaped, JetBrains Mono, GitHub icon + star count) — the proof point that defines the brand register.
+- **Do** apply the soft cool-tinted shadow `rgba(15,20,25,0.06)` on cards — bordered + shadowed is the elevation pattern.
+- **Do** glow primary buttons with the emerald drop shadow `rgba(16,185,129,0.18) 0 4px 12px` — the one coloured shadow in the system.
+- **Do** use JetBrains Mono on labels, version strings, and metadata to maintain the developer-tool register.
+
+### Don't
+
 - **Don't** swap the emerald for terminal-green `#00ff00`; Omnivore's green is a calmer, foliage-class hue.
-- **Don't** use the amber accent on action surfaces; it represents the highlighter and lives inside the reader mockup only.
-- **Don't** apply heavy shadows to feature cards; the bordered + soft-shadow pattern is the elevation strategy.
+- **Don't** use the amber accent on action surfaces, links, or section backgrounds; it represents the highlighter and lives inside the reader mockup only.
+- **Don't** apply heavy or warm-tinted shadows to feature cards; the bordered + soft-cool-shadow pattern is the elevation strategy.
+- **Don't** introduce a custom typeface; Inter + Lora + JetBrains Mono is the trio.
+- **Don't** use Tailwind's default emerald-500 `#059669` as the primary brand; that's the hover state, not the rest state.
+- **Don't** ship marketing copy with exclamation marks or scarcity verbs ("Get started today!"). The tone is calm and technical.
+- **Don't** drop the GitHub badge; the open-source proof point is part of the visual identity.
+- **Don't** swap Lora for a different serif inside the reader; Lora's old-style figures and book-grade rendering are tuned to the reading experience.
+- **Don't** rotate or animate the hero text choreographically; the brand is *calm reading product*, not *dynamic SaaS announcer*.
+- **Don't** add a third theme (e.g. sepia). Light-paper + slate-dark are the two registers; adding more dilutes the reader-product clarity.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #fdfdfb
+bg-warm: #faf9f5
+bg-dark: #0f1419
+bg-dark-elevated: #1f2937
+text: #1f2937
+text-strong: #0f1419
+text-muted: #6b7280
+brand-emerald: #10b981
+brand-emerald-hover: #059669
+accent-amber: #fbbf24 (reader highlighter only)
+border: #e5e7eb
+border-dark: #374151
+```
+
+### Example Component Prompts
+
+1. **"Create a hero in Omnivore style — near-white `#fdfdfb` paper-tone canvas, 64px Inter Display 700 headline with -0.025em tracking and ss01 stylistic alternate, 18px Inter 400 lede in `#1f2937`, single primary CTA as an emerald `#10b981` button (10×20 padding, 8px radius, white Inter 500 / 15px label, `rgba(16,185,129,0.18) 0 4px 12px` emerald drop shadow), inline open-source badge as a white pill (1px `#e5e7eb` border, JetBrains Mono 13px / 500, GitHub icon + star count). Reading column capped at 720px."**
+
+2. **"Design an article card in Omnivore style — white `#ffffff` background, 1px `#e5e7eb` border, 12px radius, 24px interior padding, 18px Inter 600 title, 14px Inter 400 source/meta in `#6b7280`, 12px JetBrains Mono `#374151` mono tag (e.g., '12 min read'), `rgba(15,20,25,0.06) 0 4px 12px` soft cool drop shadow, hover deepens border to `#d1d5db` and lifts shadow to `0 6px 16px`."**
+
+3. **"Build a reader mockup band — full-bleed slate `#0f1419` background, 96px vertical padding, 16px radius device frame in `#0f1419` with 1px `#374151` border and `rgba(15,20,25,0.18) 0 12px 32px` shadow, interior content in Lora 20px / 400 / 1.55 line-height with `#f3f4f6` text, one paragraph wrapping a `#fef3c7` amber highlight (with 2px `#fbbf24` bottom border) over a phrase, 4px emerald `#10b981` left rule on a pull-quote in Lora 24px italic. Lora lives ONLY inside this mockup."**
+
+4. **"Compose a reading-list row in Omnivore style — white background, 1px `#f3f4f6` bottom border, 20×24 padding. Title in Inter 600 / 17px slate-900, second line meta 'The Atlantic · 12 min read · 2 days ago' in Inter 400 / 13px `#6b7280`, 8px emerald `#10b981` dot at left margin if unread, hover background `#f9fafb`. No card chrome — this is a list, not a grid."**
+
+5. **"Render the primary nav — 64px header, near-white `#fdfdfb` background (transparent on hero, solid + `rgba(15,20,25,0.04) 0 1px 3px` shadow on scroll), Omnivore wordmark in slate-900 with emerald glyph left-aligned, links 14px Inter 500 in `#1f2937` with `#10b981` hover, right-aligned ghost 'Sign in' + emerald primary 'Save to Omnivore' button (10×20, 8px radius, emerald glow shadow)."**
+
+6. **"Create an open-source badge — white `#ffffff` pill (radius 9999px), 1px `#e5e7eb` border, 8×14 padding, JetBrains Mono 500 / 13px label, GitHub octocat icon (16×16 dark slate) + 'Star on GitHub · 12.4k' label, hover background `#f9fafb`. Lives in the hero and footer as the brand's open-source proof point."**
+
+### Iteration Guide
+
+1. **Start with paper, not pure white.** If the bg is `#ffffff`, warm it to `#fdfdfb`. The paper-tone is the entry ticket.
+2. **Switch the brand to emerald `#10b981`.** If the brand is teal, lime, or pure green, replace it. Foliage-class emerald is the signature.
+3. **Larger body type.** Body should run 17px / 1.6 line-height — the "reading app" signal. If it's at 14–16px, bump it.
+4. **Confine Lora to the reader.** If Lora appears in the marketing chrome (hero, capability cards, footer), move it inside a slate `#0f1419` reader-mockup band where it belongs.
+5. **Reserve amber for highlighter glyphs.** If `#fbbf24` is anywhere besides a highlighted-passage demo or the post-archive notice banner, remove it.
+6. **Apply the cool-tinted shadow.** Replace warm shadows with `rgba(15, 20, 25, 0.06) 0 4px 12px` on cards and `rgba(16, 185, 129, 0.18) 0 4px 12px` on primary buttons.
+7. **Use JetBrains Mono on labels.** If UI labels are Inter, switch them to JetBrains Mono 12px / 500 — the developer-tool register.
+8. **Add the open-source badge.** If the hero lacks a GitHub-icon-plus-star-count pill, the page isn't reading as Omnivore yet. Add it.

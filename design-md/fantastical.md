@@ -3,181 +3,895 @@ name: Fantastical
 tagline: White paper, Effra geometric sans, full-round blue pills, and a rainbow of app-icon glass squares — a calendar app marketed like Apple''s Pro Apps.
 author: webdesignhot
 source_url: https://flexibits.com/fantastical
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
-categories: [saas]
+categories: [saas, design-tools]
 tags: [light, minimal, sans, bright, soft, structured, cool]
 preview_swatch: ['#ffffff', '#408fff', '#1d1e1f']
 related: [apple, things-app, stripe]
 description: 'Fantastical''s site is an Apple-pro promo spread for a calendar. White canvas, Effra sans throughout, a vivid `#408fff` Apple-system-blue CTA pill at 24px radius (fully round), and decorative glass-app-icon squares in cyan, magenta, green, and orange floating around the hero — borrowed directly from the way iOS shows app icons in the App Store. Body copy in near-black `#1d1e1f`, no custom display font, no editorial flourish — just precision and chromatic confetti.'
 
 colors:
-  bg: '#ffffff'              # paper-white canvas
-  bg-soft: '#f7f8fa'          # subtle cool grey for nested sections
-  surface: '#f0f2f6'          # cool card surface
-  text: '#1d1e1f'             # primary body copy, near-black
-  text-strong: '#000000'      # display copy
-  text-muted: '#5e6166'       # captions
-  brand: '#408fff'            # vivid Apple-system blue CTA
-  brand-hover: '#1f73ec'      # pressed state
-  brand-soft: 'rgba(116, 116, 128, 0.08)' # secondary button bg, system-style
-  accent-cyan: '#5ac8fa'      # app-icon glass square accent
-  accent-magenta: '#d94aff'   # app-icon glass square accent
-  accent-green: '#34c759'     # app-icon glass square accent
-  accent-orange: '#ff9500'    # app-icon glass square accent
-  border: '#0000001a'         # 10% black hairline
-  border-soft: '#00000010'
+  bg: '#ffffff'                  # paper-white canvas
+  bg-soft: '#f7f8fa'             # subtle cool grey for nested sections
+  bg-cooler: '#f2f4f7'           # pricing section bg
+  surface: '#f0f2f6'             # cool card surface
+  surface-warm: '#fafbfc'        # subtly warmer card variant
+  surface-elev: '#ffffff'        # elevated card on f7-grey ground
+  text: '#1d1e1f'                # primary body copy, near-black
+  text-strong: '#000000'         # display copy
+  text-muted: '#5e6166'          # captions, secondary
+  text-soft: '#86878a'           # tertiary, metadata
+  text-faint: '#b5b6b9'          # disabled, faintest
+  brand: '#408fff'               # vivid Apple-system blue CTA
+  brand-hover: '#1f73ec'         # pressed state, darker blue
+  brand-soft: 'rgba(116,116,128,0.08)' # secondary button bg, system-style
+  brand-tint: '#e8f1ff'          # tint for info banners
+  accent-cyan: '#5ac8fa'         # iOS app-icon glass square cyan
+  accent-cyan-deep: '#34aadc'    # darker cyan
+  accent-magenta: '#d94aff'      # iOS app-icon glass square magenta
+  accent-magenta-deep: '#c71fea' # darker magenta
+  accent-green: '#34c759'        # iOS app-icon glass square green
+  accent-green-deep: '#28a745'   # darker green
+  accent-orange: '#ff9500'       # iOS app-icon glass square orange
+  accent-orange-deep: '#e07b00'  # darker orange
+  accent-yellow: '#ffcc00'       # iOS yellow accent
+  accent-pink: '#ff2d55'         # iOS pink accent
+  accent-purple: '#af52de'       # iOS purple accent
+  accent-indigo: '#5856d6'       # iOS indigo accent
+  border: 'rgba(0,0,0,0.10)'     # 10% black hairline
+  border-soft: 'rgba(0,0,0,0.06)' # softer divider
+  border-strong: 'rgba(0,0,0,0.16)' # stronger outline on hover
+  shadow-card: 'rgba(0,0,0,0.04)' # subtle card shadow
+  shadow-elev: 'rgba(0,0,0,0.08)' # elevated mockup shadow
+  shadow-deep: 'rgba(0,0,0,0.12)' # device-mockup shadow
+  shadow-glow: 'rgba(64,143,255,0.18)' # blue CTA glow
+  semantic-success: '#34c759'
+  semantic-warning: '#ff9500'
+  semantic-danger: '#ff3b30'
+  semantic-info: '#408fff'
 
 typography:
   display:
     family: 'Effra, "Helvetica Neue", Arial, Helvetica, sans-serif'
     weights: [400, 500, 700]
+    opentype: ['kern', 'liga']
   body:
     family: 'Effra, "Helvetica Neue", Arial, Helvetica, sans-serif'
     weights: [400, 500]
+    opentype: ['kern', 'liga']
+  mono:
+    family: '"SF Mono", "Menlo", ui-monospace, monospace'
+    weights: [400, 500]
   scale:
-    h1:    { size: 64, weight: 500, lineHeight: 1.15, tracking: '-0.01em' }
-    h2:    { size: 40, weight: 500, lineHeight: 1.20 }
-    h3:    { size: 24, weight: 400, lineHeight: 1.40 }
-    body:  { size: 18, weight: 400, lineHeight: 1.55 }
-    label: { size: 14, weight: 500, tracking: '0.02em' }
+    display-hero:    { size: 80, weight: 500, lineHeight: 1.10, tracking: '-0.015em', family: display, opentype: 'kern, liga' }
+    display-large:   { size: 64, weight: 500, lineHeight: 1.15, tracking: '-0.01em', family: display }
+    h1:              { size: 56, weight: 500, lineHeight: 1.15, tracking: '-0.01em', family: display }
+    h2:              { size: 40, weight: 500, lineHeight: 1.20, tracking: '-0.005em', family: display }
+    h3:              { size: 32, weight: 500, lineHeight: 1.25, tracking: '0', family: display }
+    h4:              { size: 24, weight: 400, lineHeight: 1.40, tracking: '0', family: display }
+    body-large:      { size: 22, weight: 400, lineHeight: 1.50, tracking: '0', family: body }
+    body:            { size: 18, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    body-small:      { size: 16, weight: 400, lineHeight: 1.55, tracking: '0', family: body }
+    button:          { size: 17, weight: 500, lineHeight: 1.0, tracking: '0', family: body }
+    button-large:    { size: 18, weight: 500, lineHeight: 1.0, tracking: '0', family: body }
+    nav-link:        { size: 16, weight: 400, lineHeight: 1.40, tracking: '0', family: body }
+    label:           { size: 14, weight: 500, lineHeight: 1.30, tracking: '0.02em', family: body }
+    label-eyebrow:   { size: 13, weight: 500, lineHeight: 1.20, tracking: '0.05em', family: body, transform: 'uppercase' }
+    caption:         { size: 14, weight: 400, lineHeight: 1.40, tracking: '0', family: body }
+    micro:           { size: 12, weight: 500, lineHeight: 1.30, tracking: '0.01em', family: body }
 
 radius:
+  none: 0
+  micro: 2
   xs: 6
   sm: 12
   md: 16
   lg: 20
-  pill: 24      # primary CTA radius (observed)
-  app-icon: 22  # iOS app-icon squircle visual radius
+  xl: 22
+  app-icon: 22                   # iOS app-icon squircle visual radius
+  pill: 24                       # primary CTA pill — fully round at button height
   full: 9999
 
+spacing:
+  base: 4
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  xxl: 32
+  section-sm: 64
+  section: 96
+  section-lg: 128
+  scale: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+
 layout:
-  container: 1200
-  gutter: 32
-  rhythm: [4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160]
+  page-width: 1200
+  prose-width: 720
+  header-height: 72
+  hero-height: 720
+  grid-gap: 32
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-spring: 'cubic-bezier(0.5, 1.25, 0.75, 1.25)'
+  duration-fast: 120
+  duration-standard: 240
+  duration-slow: 400
+  duration-confetti-drift: 8000
+  reduced-motion: 'respects prefers-reduced-motion: reduce — app-icon confetti freezes; CTA hover collapses to opacity'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  ambient: 'rgba(0,0,0,0.04) 0 1px 3px'
+  standard: 'rgba(0,0,0,0.08) 0 4px 12px'
+  elevated: 'rgba(0,0,0,0.12) 0 12px 32px'
+  deep: 'rgba(0,0,0,0.16) 0 24px 48px'
+  device-mockup: 'rgba(0,0,0,0.18) 0 32px 64px -8px'
+  ring: '0 0 0 4px rgba(64,143,255,0.30)'
+  cta-glow: '0 8px 24px rgba(64,143,255,0.18)'
+
+accessibility:
+  contrast-text-on-bg: 16.4              # #1d1e1f on white — AAA
+  contrast-text-on-brand: 4.7            # white on #408fff — AA
+  contrast-muted-on-bg: 7.1              # #5e6166 on white — AAA at body
+  contrast-soft-on-bg: 4.5               # #86878a on white — AA at body
+  focus-ring: '4px solid rgba(64,143,255,0.30) — iOS-style halo'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual; device-tab selector arrow-keys; skip-link present'
 
 components:
-  - cta-blue-pill
-  - app-icon-confetti
-  - feature-card-cool
-  - calendar-mockup
-  - device-tab-selector
+  button-primary:
+    background: '#408fff'
+    text: '#ffffff'
+    radius: 24
+    padding: '14px 28px'
+    height: 50
+    font: button-large
+    hover: 'background #1f73ec; shadow 0 8px 24px rgba(64,143,255,0.18)'
+    active: 'background #1862c4'
+    use: 'primary CTA — Try Free, fully-round 24px blue pill, the iOS Continue affordance'
+  button-secondary:
+    background: 'rgba(116,116,128,0.08)'
+    text: '#408fff'
+    radius: 24
+    padding: '14px 28px'
+    height: 50
+    font: button-large
+    hover: 'background rgba(116,116,128,0.14)'
+    use: 'secondary CTA — Learn More, iOS tinted button style'
+  button-tertiary:
+    background: 'transparent'
+    text: '#408fff'
+    radius: 24
+    padding: '14px 28px'
+    font: button-large
+    hover: 'background rgba(64,143,255,0.06)'
+    use: 'tertiary action — text-only blue link with hover wash'
+  button-ghost:
+    background: 'transparent'
+    text: '#1d1e1f'
+    radius: 24
+    padding: '12px 20px'
+    font: button
+    hover: 'background rgba(0,0,0,0.04)'
+    use: 'nav button, dismiss action'
+  card-feature:
+    background: '#ffffff'
+    text: '#1d1e1f'
+    border: '1px solid rgba(0,0,0,0.06)'
+    radius: 16
+    padding: '32px'
+    shadow: '0 4px 12px rgba(0,0,0,0.04)'
+    use: 'feature card — white on f7-grey ground'
+  card-cool:
+    background: '#f0f2f6'
+    text: '#1d1e1f'
+    border: '1px solid rgba(0,0,0,0.06)'
+    radius: 20
+    padding: '32px'
+    use: 'cool-grey card — nested feature panel'
+  card-pricing:
+    background: '#ffffff'
+    text: '#1d1e1f'
+    border: '1px solid rgba(0,0,0,0.10)'
+    radius: 20
+    padding: '40px'
+    shadow: '0 12px 32px rgba(0,0,0,0.08)'
+    use: 'pricing tier card — elevated on cooler ground'
+  device-mockup:
+    background: '#000000'
+    radius: 36
+    padding: 0
+    shadow: '0 32px 64px -8px rgba(0,0,0,0.18)'
+    use: 'iPhone / Mac / iPad device mockup with screenshot'
+  app-icon-square:
+    background: 'gradient-glass'
+    radius: 22
+    padding: 0
+    shadow: '0 8px 24px rgba(0,0,0,0.10) inset 0 1px 0 rgba(255,255,255,0.40)'
+    use: 'glass-effect rounded square — cyan / magenta / green / orange confetti around hero'
+  input:
+    background: '#ffffff'
+    text: '#1d1e1f'
+    border: '1px solid rgba(0,0,0,0.16)'
+    radius: 12
+    padding: '12px 16px'
+    height: 48
+    font: body
+    focus: 'border #408fff; ring 0 0 0 4px rgba(64,143,255,0.20)'
+    use: 'email / form input — iOS-native rounded'
+  device-tab:
+    background: 'transparent'
+    text: '#5e6166'
+    radius: 24
+    padding: '8px 16px'
+    font: button
+    hover: 'background rgba(0,0,0,0.04); text #1d1e1f'
+    use: 'device-tab selector for switching between Mac / iPhone / iPad / Apple Watch screenshots'
+  device-tab-active:
+    background: 'rgba(64,143,255,0.10)'
+    text: '#408fff'
+    radius: 24
+    padding: '8px 16px'
+    font: button
+    use: 'active device tab — soft blue tint background'
+  badge-pill:
+    background: 'rgba(64,143,255,0.10)'
+    text: '#408fff'
+    radius: 9999
+    padding: '4px 12px'
+    font: micro
+    use: 'NEW / category badge — soft tinted pill'
+  nav-link:
+    background: 'transparent'
+    text: '#1d1e1f'
+    font: nav-link
+    padding: '8px 16px'
+    hover: 'opacity 0.7'
+    use: 'top nav menu — Mac / iPhone / iPad / Apple Watch / Pricing'
+
+dark-mode: optional
 
 lineage:
   summary: |
     Flexibits ships Fantastical the way Apple ships its Pro Apps —
     white canvas, system-blue CTA, geometric sans throughout, no
     editorial flourish. The display face is **Effra**, Foundry
-    Monotype''s humanist geometric sans with slightly-rounded
-    terminals, used at every level from 14px label to 64px hero.
-    The hero "Give Your Calendar Superpowers" sets at 40px Effra
+    Monotype's humanist geometric sans with slightly-rounded
+    terminals, used at every level from 14px label to 80px hero.
+    The hero "Give Your Calendar Superpowers" sets at 56–80px Effra
     500 — the medium-weight choice (rather than bold) is what gives
     the page its precision-instrument feel rather than marketing
-    impact. The action color is `#408fff`, identical to Apple''s
+    impact. The action color is `#408fff`, identical to Apple's
     system blue (`#007aff` adjusted slightly warmer for white
     backgrounds), and the CTA radius is 24px — fully round at the
-    button''s height, the same pill shape used on
-    iOS''s "Continue" affordances. The most distinctive move is
-    the **app-icon confetti**: glass-effect rounded squares in
-    cyan, magenta, green, and orange floating around the hero
-    image of the calendar, borrowed from how iOS / iPadOS shows
-    app icons drifting in the App Store''s Today tab. The result
-    is that Fantastical reads as Apple''s own Calendar app
+    button's height, the same pill shape used on iOS's "Continue"
+    affordances. The most distinctive move is the **app-icon
+    confetti**: glass-effect rounded squares in cyan, magenta, green,
+    and orange floating around the hero image of the calendar,
+    borrowed from how iOS / iPadOS shows app icons drifting in the
+    App Store's Today tab. The 22px squircle radius on those
+    confetti pieces is the iOS app-icon visual radius (the iOS
+    rounded-rectangle squircle is technically a continuous curve,
+    but 22px is the closest browser-renderable approximation). The
+    result is that Fantastical reads as Apple's own Calendar app
     marketing — same pixel discipline, same chromatic vocabulary.
   influences:
-    - name: Apple iOS App Store / Pro Apps
-      role: System blue CTA, fully-round pill radius, glass-app-icon decorative confetti.
-      url: https://www.apple.com/app-store/
-    - name: Stripe
-      role: Confidence in a single saturated blue as the entire chromatic action layer.
-      url: https://stripe.com
-    - name: Calendly / Cron (defunct)
-      role: Calendar-tool design conventions — soft cool greys, blue actions, rounded pill buttons.
-      url: https://calendly.com
+    - name: 'Apple iOS App Store / Pro Apps'
+      role: 'System blue CTA, fully-round pill radius, glass-app-icon decorative confetti, single-family Effra-style discipline'
+      url: 'https://www.apple.com/app-store/'
+    - name: 'Apple Human Interface Guidelines'
+      role: 'iOS color palette (system blue, system orange, system green, system magenta) used as accent confetti'
+      url: 'https://developer.apple.com/design/human-interface-guidelines/'
+    - name: 'Stripe'
+      role: 'Confidence in a single saturated blue as the entire chromatic action layer'
+      url: 'https://stripe.com'
+    - name: 'Calendly / Cron (defunct)'
+      role: 'Calendar-tool design conventions — soft cool greys, blue actions, rounded pill buttons'
+      url: 'https://calendly.com'
+    - name: 'Foundry Monotype / Effra'
+      role: 'The geometric humanist sans choice — rounded terminals soften what would otherwise be a too-sharp Helvetica clone'
+      url: 'https://www.monotype.com/fonts/effra'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Fantastical''s site is an Apple Pro Apps promo for a calendar.
-White canvas, **Effra** sans throughout, a vivid `#408fff`
-Apple-system-blue pill CTA at fully-round 24px radius, and a
-confetti of glass app-icon squares in cyan, magenta, green, and
-orange floating around the hero. The H1 sets at 40px Effra 500,
-the body deck at 24px Effra 400, all on a near-black `#1d1e1f`.
+Fantastical's site is an Apple Pro Apps promo for a calendar. White canvas, **Effra** sans throughout, a vivid `#408fff` Apple-system-blue pill CTA at fully-round 24px radius, and a confetti of glass app-icon squares in cyan, magenta, green, and orange floating around the hero. The H1 sets at 56–80px Effra 500, the body deck at 22–24px Effra 400, all on a near-black `#1d1e1f`. There is no editorial flourish, no serif moment, no warm cream — every chromatic, typographic, and spatial decision is borrowed from Apple's own Calendar / Notes / Reminders marketing.
 
-There is no editorial flourish, no serif moment, no warm cream.
-The page is pure precision — every chromatic, typographic, and
-spatial decision is borrowed from Apple''s own Calendar / Notes /
-Reminders marketing.
+The atmosphere is **precision-instrument-meets-playful-confetti**. The page itself is calm, white, structured — the kind of marketing surface that suggests "this app respects your time." But around the hero image, six to ten glass app-icon squares drift slowly in cyan, magenta, green, orange, and yellow, the same hues iOS uses for its system colors. The contrast — white-canvas calm with chromatic-confetti play — is what makes the page feel "Apple-native" rather than generic-SaaS-clean.
 
-## Colors
+Below the hero, the page follows a clean single-column rhythm: hero with confetti, a device-tab selector spread (switch between Mac / iPhone / iPad / Apple Watch screenshots), a feature spread on cool-grey ground, pricing on cooler ground, and a FAQ. White runs edge-to-edge; cool-grey nested sections only appear for pricing and feature sub-spreads. The grey is `#f7f8fa` — a true cool grey with a hint of blue, not warm or neutral, matching the macOS chrome.
 
-- **bg** `#ffffff` — paper-white canvas
-- **bg-soft** `#f7f8fa` — subtle cool grey for nested sections
-- **surface** `#f0f2f6` — cool card surface
-- **text** `#1d1e1f` — primary body copy, near-black
-- **text-muted** `#5e6166` — captions
-- **brand** `#408fff` — vivid Apple-system blue CTA
-- **brand-hover** `#1f73ec` — pressed state
-- **brand-soft** `rgba(116, 116, 128, 0.08)` — secondary button bg, iOS-style
-- **accent-cyan / magenta / green / orange** — app-icon confetti hues
-- **border** `#0000001a` — 10% black hairline
+Type is single-family throughout. **Effra** carries every role from 14px label to 80px hero — no second display face, no serif emphasis, no italic flourish. The medium weight (500) at large size is what gives the page its precision-instrument feel: not bold enough to read as marketing, not light enough to read as fashion. Tracking is restrained (`-0.01em` to `-0.015em` at display) — Effra's metrics are already tight, so heavy negative tracking would crush the air between letters.
 
-## Typography
+The hero "Give Your Calendar Superpowers" demonstrates the system: 56–80px Effra 500, sentence case, near-black `#1d1e1f`, line-height 1.10–1.15. Below sits a 22px deck in `#5e6166` muted text, then the primary CTA — a `#408fff` solid blue pill at 24px radius (fully round at button height), `#ffffff` text in Effra 500 / 17px, padding `14px 28px`. Hover triggers a `0 8px 24px rgba(64,143,255,0.18)` blue glow halo — the only chromatic motion on the marketing surface.
 
-Display is **Effra**, Foundry Monotype''s humanist geometric
-sans with slightly-rounded terminals. The H1 sets at 64px
-weight 500, sub-displays at 40px Effra 500, decks at 24px
-weight 400. The medium weight (not bold) at large size gives
-the page its precision-instrument feel rather than marketing
-impact.
+**Key Characteristics:**
+- White paper canvas, cool grey nested sections (`#f7f8fa`).
+- Single-family Effra discipline — no second face anywhere.
+- Apple system blue `#408fff` as the only saturated CTA color.
+- Fully-round 24px CTA pills — the iOS Continue radius.
+- Glass app-icon confetti (cyan / magenta / green / orange) at 22px squircle radius.
+- Medium-weight (500) display, never bold — precision over impact.
+- Device-tab selector for Mac / iPhone / iPad / Apple Watch screenshots.
+- Apple-style blurred shadows on device mockups, hairlines elsewhere.
+- Section rhythm clean and unhurried: hero → device tabs → feature → pricing → FAQ.
+- iOS color palette as decorative accent, never as content.
 
-Body is the same Effra family at 400/500, sized 18px on a 1.55
-line-height. There is no second face — Effra carries every
-type role, the way Helvetica Neue used to on Apple''s site
-before SF Pro.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
 
-Container is roughly 1200px with a 32px gutter. The page
-follows a clean single-column rhythm — hero with confetti,
-feature spread, device-tab calendar mockup, pricing, FAQ.
-White runs edge-to-edge; cool grey nested sections only appear
-for pricing.
+- **Background** (`#ffffff`): paper-white canvas, the page's defining ground. No off-white calibration.
+- **Text** (`#1d1e1f`): primary body copy — near-black with a barely-perceptible warm undertone (the 1d in red is a hair higher than 1d in green/blue).
+- **Brand** (`#408fff`): vivid Apple-system blue — the only saturated CTA hue. A touch warmer than iOS `#007aff` to read better on white.
 
-## Elevation & Depth
+### Brand & Dark
 
-Depth comes from soft drop shadows on the calendar mockups
-(Apple-style blurred shadows around the device chrome) and
-glass-effect on the app-icon confetti — translucent fills with
-inner highlights, mimicking iOS 17 / iOS 26 glass icons.
-Marketing chrome itself is flat with hairline borders.
+- **Brand Hover** (`#1f73ec`): pressed/hover state — darker blue.
+- **Brand Active** (`#1862c4`): deepest pressed blue (active state).
+- **Brand Soft** (`rgba(116,116,128,0.08)`): secondary button bg, iOS tinted-button style.
+- **Brand Tint** (`#e8f1ff`): info banner tint.
 
-## Shapes
+### Accent (iOS System Color Confetti)
 
-Primary CTA radius is 24px — fully-round at the button height,
-matching iOS''s "Continue" pill. Cards use 16px, feature shells
-20px. The app-icon confetti uses iOS''s 22px squircle radius.
-The mix of moderate and fully-round radii is what gives the
-page its iOS-native feel.
+These appear almost exclusively as **glass app-icon confetti** floating around the hero — never as button fills, never under text:
 
-## Components
+- **Cyan** (`#5ac8fa`): iOS system cyan.
+- **Cyan Deep** (`#34aadc`): darker cyan.
+- **Magenta** (`#d94aff`): iOS system magenta.
+- **Magenta Deep** (`#c71fea`): darker magenta.
+- **Green** (`#34c759`): iOS system green.
+- **Green Deep** (`#28a745`).
+- **Orange** (`#ff9500`): iOS system orange.
+- **Orange Deep** (`#e07b00`).
+- **Yellow** (`#ffcc00`): iOS yellow.
+- **Pink** (`#ff2d55`): iOS pink.
+- **Purple** (`#af52de`): iOS purple.
+- **Indigo** (`#5856d6`): iOS indigo.
 
-The signature primitives are the **blue pill CTA**
-(`#408fff` bg, white text, 24px radius — pure iOS lift), the
-**app-icon confetti** (glass-effect squares in cyan / magenta /
-green / orange floating around the hero), the **device tab
-selector** for switching between Mac / iPhone / iPad / Apple
-Watch screenshots, and the **soft-grey secondary button**
-(`rgba(116,116,128,0.08)` bg, blue text — iOS''s tinted button
-style).
+The full iOS system palette is available; only 4–6 hues appear on any given hero. The discipline is *which* confetti — cyan/magenta/green/orange is the canonical homepage set.
 
-## Do''s and Don''ts
+### Interactive
 
-- **Do** use Effra at every level — loading a second display face would break the "single typographic voice" discipline.
+- **Link / CTA** (`#408fff`): the brand blue.
+- **Hover** (`#1f73ec`): darker blue + 18% blue glow.
+- **Focus Ring** (`0 0 0 4px rgba(64,143,255,0.30)`): iOS-style halo, not a sharp 2px ring.
+
+### Neutral Scale
+
+- **Text Strong** (`#000000`): rare display emphasis.
+- **Text** (`#1d1e1f`): primary body.
+- **Text Muted** (`#5e6166`): captions, secondary copy.
+- **Text Soft** (`#86878a`): tertiary, metadata.
+- **Text Faint** (`#b5b6b9`): disabled, faintest.
+
+### Surface & Borders
+
+- **Surface** (`#f0f2f6`): cool card surface.
+- **BG Soft** (`#f7f8fa`): nested section ground (cool grey with hint of blue).
+- **BG Cooler** (`#f2f4f7`): pricing section ground.
+- **Surface Warm** (`#fafbfc`): subtly warmer card variant.
+- **Border** (`rgba(0,0,0,0.10)`): standard 10% black hairline.
+- **Border Soft** (`rgba(0,0,0,0.06)`): softer divider.
+- **Border Strong** (`rgba(0,0,0,0.16)`): hover/focus outline.
+
+### Shadow Colors
+
+- **Ambient** (`rgba(0,0,0,0.04) 0 1px 3px`): faint card lift.
+- **Standard** (`rgba(0,0,0,0.08) 0 4px 12px`): feature card.
+- **Elevated** (`rgba(0,0,0,0.12) 0 12px 32px`): pricing card.
+- **Device Mockup** (`rgba(0,0,0,0.18) 0 32px 64px -8px`): the blurred Apple-style shadow under iPhone/Mac mockups.
+- **CTA Glow** (`rgba(64,143,255,0.18) 0 8px 24px`): blue halo on primary CTA hover.
+
+### Semantic
+
+- **Success** (`#34c759`): iOS system green.
+- **Warning** (`#ff9500`): iOS system orange.
+- **Danger** (`#ff3b30`): iOS system red.
+- **Info** (`#408fff`): brand blue dual-duty.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display + Body:** `Effra, "Helvetica Neue", Arial, Helvetica, sans-serif`. Foundry Monotype's humanist geometric sans with slightly-rounded terminals — softer than Helvetica, more geometric than Frutiger. Weights 400/500 (500 is the medium that defines the brand voice); 700 reserved for emphasis spans.
+- **Mono:** `"SF Mono", "Menlo", ui-monospace, monospace`. System default — Fantastical does not use mono on the marketing surface (only inside the in-app Time Zone code identifiers).
+- **OpenType:** `kern` and `liga` standard. No stylistic-set tricks; Effra's character set is already precision-tuned.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Effra | 80 | 500 | 1.10 | -0.015em | kern, liga | Homepage H1 — medium not bold |
+| display-large | Effra | 64 | 500 | 1.15 | -0.01em | kern, liga | Section H1 |
+| h1 | Effra | 56 | 500 | 1.15 | -0.01em | kern, liga | Page H1 |
+| h2 | Effra | 40 | 500 | 1.20 | -0.005em | kern, liga | Section heads |
+| h3 | Effra | 32 | 500 | 1.25 | 0 | kern, liga | Sub-section heads |
+| h4 | Effra | 24 | 400 | 1.40 | 0 | kern, liga | Card titles |
+| body-large | Effra | 22 | 400 | 1.50 | 0 | kern, liga | Hero deck |
+| body | Effra | 18 | 400 | 1.55 | 0 | kern, liga | Default body |
+| body-small | Effra | 16 | 400 | 1.55 | 0 | kern, liga | Footer body, metadata |
+| button | Effra | 17 | 500 | 1.0 | 0 | kern, liga | CTA label |
+| button-large | Effra | 18 | 500 | 1.0 | 0 | kern, liga | Hero primary CTA |
+| nav-link | Effra | 16 | 400 | 1.40 | 0 | kern, liga | Top nav |
+| label | Effra | 14 | 500 | 1.30 | 0.02em | kern | Form labels |
+| label-eyebrow | Effra | 13 | 500 | 1.20 | 0.05em | kern, uppercase | Section eyebrow |
+| caption | Effra | 14 | 400 | 1.40 | 0 | kern, liga | Caption |
+| micro | Effra | 12 | 500 | 1.30 | 0.01em | kern | Pill / badge text |
+
+### Principles
+
+- **Single-family discipline.** Effra carries every level. Loading a second display face would break the precision-instrument register.
+- **Medium-weight at scale, not bold.** Display tier sets at 500, not 700. The medium weight is what reads as "instrument" rather than "marketing."
+- **Weight as hierarchy, not size alone.** 500 for headlines, 400 for body. The 100-unit weight gap is the system's primary readability cue.
+- **Tracking restraint.** Effra's metrics are tight. Display tracking goes negative `-0.005em` to `-0.015em` only. Body always 0. UPPERCASE labels positive (`0.02–0.05em`).
+- **Sentence case throughout.** Headlines, body, captions all sentence case. The only UPPERCASE register is the 13px eyebrow label — and it's used sparingly.
+- **No serif emphasis.** Even italics are rare. Effra carries every voice.
+- **Line-height precision.** Display 1.10–1.15, body 1.50–1.55. The narrow line-height at display lets the headline breathe across two lines without becoming a brick.
+- **Letter terminals matter.** Effra's slightly-rounded terminals — vs. Helvetica's sharp ones — soften the page just enough that it reads "approachable Apple" rather than "corporate Apple." If swapping for SF Pro, the page would tilt clinical.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (Blue Pill)**
+- Background: `#408fff`
+- Text: `#ffffff`
+- Padding: `14px 28px`, height 50px
+- Radius: **24px (fully round at button height)** — iOS Continue affordance
+- Font: button-large (Effra 18 / 500)
+- Hover: background `#1f73ec` + shadow `0 8px 24px rgba(64,143,255,0.18)` blue glow
+- Active: background `#1862c4`
+- Use: hero CTA — Try Free, Buy Fantastical, Subscribe.
+
+**Secondary (Soft-Grey Tinted)**
+- Background: `rgba(116,116,128,0.08)` — iOS tinted-button style
+- Text: `#408fff` — blue text on grey tint
+- Padding: `14px 28px`, height 50
+- Radius: 24
+- Hover: background opacity to 0.14
+- Use: Learn More, See Pricing — paired with primary on hero.
+
+**Tertiary (Text-Only Blue)**
+- Background: transparent
+- Text: `#408fff`
+- Padding: `14px 28px`
+- Radius: 24
+- Hover: `rgba(64,143,255,0.06)` background wash
+- Use: inline blue link with hover emphasis.
+
+**Ghost / Nav Button**
+- Background: transparent
+- Text: `#1d1e1f`
+- Padding: `12px 20px`
+- Hover: `rgba(0,0,0,0.04)` background
+- Use: nav menu link, dismiss action.
+
+### Cards
+
+**Feature Card (White on Cool Grey)**
+- Background: `#ffffff`
+- Border: `1px solid rgba(0,0,0,0.06)`
+- Radius: 16px (md)
+- Padding: 32px
+- Shadow: `0 4px 12px rgba(0,0,0,0.04)` faint lift
+- Use: feature card on `#f7f8fa` ground.
+
+**Cool-Grey Card (Nested)**
+- Background: `#f0f2f6`
+- Border: `1px solid rgba(0,0,0,0.06)`
+- Radius: 20px (lg)
+- Padding: 32
+- Use: nested feature panel with no shadow.
+
+**Pricing Card**
+- Background: `#ffffff`
+- Border: `1px solid rgba(0,0,0,0.10)`
+- Radius: 20px
+- Padding: 40
+- Shadow: `0 12px 32px rgba(0,0,0,0.08)` — elevated
+- Use: pricing tier card on `#f2f4f7` ground.
+
+**Device Mockup**
+- Background: `#000000` (the device frame itself)
+- Radius: 36 (matching iPhone bezel curvature)
+- Shadow: `0 32px 64px -8px rgba(0,0,0,0.18)` — Apple-style blurred shadow under the device
+- Use: iPhone / Mac / iPad / Apple Watch product screenshot.
+
+### App-Icon Confetti
+
+The signature decorative primitive:
+- 22px squircle radius (iOS app-icon visual radius)
+- Glass-effect fill: linear-gradient with translucent base + `inset 0 1px 0 rgba(255,255,255,0.40)` highlight
+- Outer shadow: `0 8px 24px rgba(0,0,0,0.10)`
+- Sizes: 48px / 64px / 80px / 96px (a mix per hero)
+- Hues: cyan / magenta / green / orange / yellow (4–6 per hero)
+- Slow drift animation (~8s cycle, ±4px translateY, low opacity 0.85–1.0 oscillation)
+
+### Inputs / Forms
+
+**Input**
+- Background: `#ffffff`
+- Border: `1px solid rgba(0,0,0,0.16)`
+- Radius: 12px
+- Padding: `12px 16px`, height 48
+- Focus: border `#408fff` + ring `0 0 0 4px rgba(64,143,255,0.20)` — iOS halo
+- Use: email signup, contact form.
+
+### Device-Tab Selector
+
+Distinctive horizontal selector used to switch between Mac / iPhone / iPad / Apple Watch screenshots:
+
+**Tab (Inactive)**
+- Background: transparent
+- Text: `#5e6166`
+- Radius: 24 (full pill at height)
+- Padding: `8px 16px`
+- Hover: `rgba(0,0,0,0.04)` bg + `#1d1e1f` text
+
+**Tab (Active)**
+- Background: `rgba(64,143,255,0.10)` soft blue tint
+- Text: `#408fff`
+- Radius: 24
+
+### Badges
+
+**Pill Badge**
+- Background: `rgba(64,143,255,0.10)` blue tint
+- Text: `#408fff`
+- Radius: 9999, Padding: `4px 12px`
+- Font: micro (12/500)
+- Use: NEW / FEATURED tags.
+
+### Navigation
+
+Top nav bar 72px tall, white background, hairline `1px solid rgba(0,0,0,0.06)` border-bottom on scroll. Links: Effra 16/400, hover opacity 0.7. Right side: Login (ghost) + Try Free (primary blue pill).
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base 4px. Scale: 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96 / 128 / 160. Section gaps 96–128px; inside-card padding 32–40; hero vertical margin 96; nav padding `8px 16px`.
+
+The density is moderate-to-loose — not as airy as Apple's own pages (which run 160–200px section gaps), but more spacious than Stripe's 64–80px tight rhythm.
+
+### Grid & Container
+
+- **Page width:** 1200px max.
+- **Prose width:** 720px (intro paragraphs and FAQ answers).
+- **Header height:** 72px.
+- **Hero height:** ~720px.
+- **Grid gap:** 32px between feature cards.
+
+The page follows a clean single-column rhythm — hero with confetti centered, device-tab selector below, feature spread, pricing, FAQ. No multi-column hero, no asymmetric splits.
+
+### Whitespace Philosophy
+
+Calendar apps live or die on **clarity**. Fantastical's marketing whitespace earns that clarity: deliberate air around the H1 (96px above and below), generous breathing room between feature cards (32px gutter), unhurried section pacing. The page never feels dense.
+
+### Section Cadence
+
+White → cool-grey → white → cooler-grey → white. The grounds don't strictly alternate; the rhythm is:
+1. Hero (white) with confetti — 720px
+2. Device-tab feature spread (white) — 600px
+3. Feature grid (`#f7f8fa` cool grey) — 600px
+4. Pricing (`#f2f4f7` cooler) — 700px
+5. FAQ (white) — 500px
+6. Footer (white)
+
+The cool-grey nested sections are deliberate accents — they signal "this is a deeper dive" without breaking the white-canvas calm.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| None | 0 | Edge-bound elements (rare) |
+| Micro | 2 | Tag chips (rare) |
+| XS | 6 | Small selector pills |
+| SM | 12 | Inputs, secondary chips |
+| **MD** | **16** | **Standard card radius** |
+| LG | 20 | Elevated/pricing cards |
+| XL | 22 | iOS app-icon squircle visual radius |
+| App-Icon | 22 | Glass-effect confetti pieces |
+| **Pill** | **24** | **Primary CTA — fully round at button height** |
+| Full | 9999 | Pill badges, status chips |
+
+Two radii do most of the work: **24** (the primary CTA pill) and **16** (the standard card). The 22 squircle is reserved for app-icon confetti — it's a decorative-not-component radius. Mixing these reads as off-system.
+
+**Compound radii:** none — Fantastical is consistent corners. The radius scale itself is the shape language.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| 0 | Flat — no shadow | Body copy, transparent buttons |
+| 1 | `0 1px 3px rgba(0,0,0,0.04)` | Faint card lift |
+| 2 | `0 4px 12px rgba(0,0,0,0.08)` | Feature card |
+| 3 | `0 12px 32px rgba(0,0,0,0.12)` | Pricing card, modal |
+| 4 | `0 32px 64px -8px rgba(0,0,0,0.18)` | Device mockup — Apple-style blurred |
+| 5 | `0 8px 24px rgba(64,143,255,0.18)` | Blue CTA glow on hover |
+
+### Shadow Philosophy
+
+Fantastical's shadows are **soft and Apple-style**: blurred, low-opacity, descended (negative Y offset on device mockups). The page chrome itself is mostly flat with hairline borders; shadows are reserved for:
+1. **Device mockups** — the canonical "iPhone floating above the page" Apple shadow.
+2. **Pricing cards** — moderate elevation to mark them as actionable.
+3. **CTA hover glow** — the only chromatic shadow, blue tinted for the primary action.
+
+Glass app-icon confetti also uses a slight inner highlight (`inset 0 1px 0 rgba(255,255,255,0.40)`) to mimic the iOS 17 / iOS 26 glass-icon highlight shader — not a true shader, but a CSS approximation that reads similar at small scales.
+
+## 8. Interaction & Motion ✨
+
+### Easing Curves
+
+- **Standard:** `cubic-bezier(0.4, 0, 0.2, 1)` — default ease-in-out.
+- **Emphasized:** `cubic-bezier(0.2, 0, 0, 1)` — modal entrance, full reveal.
+- **Entrance:** `cubic-bezier(0, 0, 0.2, 1)` — content fade-in on scroll.
+- **Spring:** `cubic-bezier(0.5, 1.25, 0.75, 1.25)` — iOS-style overshoot on CTA tap.
+
+### Duration Buckets
+
+- **Fast (120ms):** color transitions, button hover.
+- **Standard (240ms):** card lift, modal, transition.
+- **Slow (400ms):** hero fade-in, large reveal.
+- **Confetti Drift (8000ms):** the slow cyclic motion of glass app-icon squares around the hero.
+
+### Per-Component Micro-States
+
+- **Button (primary blue pill):** background `#408fff` → `#1f73ec` + shadow grows from none → `0 8px 24px rgba(64,143,255,0.18)`. 240ms standard ease.
+- **Button (secondary tinted):** background opacity 0.08 → 0.14. 120ms.
+- **Card (feature):** shadow intensifies `0 4px 12px` → `0 8px 20px` + 2px lift via translateY. 240ms.
+- **Device-tab:** background fades from transparent to soft blue tint. Active indicator slides on tab change with spring ease. 240ms.
+- **Link / nav-link:** opacity 1 → 0.7 on hover, 120ms.
+- **App-icon confetti:** continuous slow drift — translateY ±4px, opacity 0.85 → 1.0 oscillation, 8s cycle, ease-in-out infinite alternate.
+
+### Page Transitions
+
+- Hero: content fades + 12px translateY, 400ms ease-entrance.
+- Below-fold sections: fade + 8px translateY, 300ms ease-entrance, triggered on scroll-into-viewport.
+- Device-tab content swap: cross-fade 240ms, no translation.
+- Modal: backdrop fade 240ms + scale 0.96 → 1.0 + opacity 0 → 1, 320ms ease-emphasized.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)`:
+- App-icon confetti freezes at first frame (no drift).
+- All transforms collapse to opacity-only.
+- Shadow-grow on hover persists (it's a state cue, not animation).
+- Spring/overshoot easings replaced with standard.
+
+## 9. Accessibility & A11y ✨
+
+### Contrast Pairs
+
+- **Body text on white:** `#1d1e1f` on `#ffffff` → 16.4:1. **AAA at body sizes.**
+- **Button text on blue:** `#ffffff` on `#408fff` → 4.7:1. **AA at body sizes.**
+- **Muted text on white:** `#5e6166` on `#ffffff` → 7.1:1. **AAA at body.**
+- **Soft text on white:** `#86878a` on `#ffffff` → 4.5:1. **AA at body.**
+- **Brand-soft button text:** `#408fff` on `rgba(116,116,128,0.08)` (effective `#f0f0f2`) → 3.8:1. **AA at large only** — limit to 17px+ button labels, never body.
+- **Faint text:** `#b5b6b9` on `#ffffff` → 2.4:1 — fails. Reserve for disabled-only.
+
+### Focus Indicators
+
+iOS-style focus halo: `0 0 0 4px rgba(64,143,255,0.30)` — softer and more atmospheric than a sharp 2px ring. Form fields use the same halo pattern. Tab/keyboard focus is always visible; the brand explicitly avoids `outline: none` without replacement.
+
+### ARIA Pattern Recommendations
+
+- **Device-tab selector:** `role="tablist"` with `role="tab"` per pill, `role="tabpanel"` on the displayed device mockup. `aria-selected="true"` on active tab.
+- **Pricing toggle (monthly/yearly):** `role="group"` with `aria-label="Billing period"` and `<button>` with `aria-pressed`.
+- **Modal / dialog:** `role="dialog"` + `aria-modal="true"` + `aria-labelledby`.
+- **App-icon confetti:** `aria-hidden="true"` — purely decorative.
+- **CTA buttons:** semantic `<button>` or `<a>`, descriptive labels ("Try Fantastical Free" not "Click Here").
+
+### Keyboard Navigation
+
+- Tab order: nav → primary CTA → secondary CTA → page content → footer.
+- Skip-link to `#main-content` first focus stop.
+- Device-tab selector: arrow keys (left/right) navigate tabs, Enter activates.
+- FAQ: Tab to expand chevron, Enter to toggle, Esc to collapse.
+- Modal: focus trap until dismissed via Esc or close button.
+
+### Screen Reader Hints
+
+- Headlines use semantic `<h1>` through `<h4>` — no styled `<div>` headlines.
+- App-icon confetti: `aria-hidden="true"` (decorative).
+- Device-tab labels: explicit text "Mac", "iPhone", "iPad", "Apple Watch" — no icon-only.
+- Pricing tier badges ("Most Popular"): visible text + `aria-label` confirms.
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` halts confetti drift, transforms, and spring easings. Hover state color/opacity transitions persist (they aid usability).
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Breakpoint | Width | Notes |
+|---|---|---|
+| Mobile | 0–640px | Single column, hero shrinks to ~600px tall, confetti reduces to 3 pieces |
+| Tablet | 640–1024px | Two-column features, hero retains confetti |
+| Desktop | 1024–1280px | Three-column features, full confetti spread |
+| Wide | 1280–1536px+ | 1200px container caps; confetti density holds |
+
+### Touch Targets
+
+- Buttons height ≥48px on all breakpoints (50 desktop, 48 tablet/mobile) — exceeds WCAG 2.5.5 44×44.
+- Device tabs 36px height — pad to 44 with surrounding hit area on mobile.
+- Nav links 48px hit area via padding on mobile.
+
+### Collapsing Strategy
+
+- **Hero:** display-hero shrinks 80 → 56 → 44 → 36. Line-height stays 1.10–1.20.
+- **Feature grid:** 3-col → 2-col → 1-col. Card padding 32 → 28 → 24.
+- **Device tabs:** horizontal pill bar persists (it's narrow); on mobile, tabs may scroll horizontally.
+- **Confetti:** desktop 6–8 pieces; tablet 4–5; mobile 2–3 (largest only).
+- **Pricing:** 3-col → vertical stack on mobile, with "Most Popular" surfacing first.
+
+### Image Behavior
+
+- Device mockup: aspect-ratio container per device (iPhone 9:19.5, Mac 16:10, etc.), scales to fit viewport with max-width.
+- App-icon confetti: SVG, scales fluidly.
+- Screenshots: lazy-loaded below fold (`loading="lazy"`).
+
+### Container Queries
+
+Pricing cards may use `@container` queries to adapt internal padding (32 → 24) when stacked vertically on tablet, while preserving 40 padding on desktop.
+
+## 11. Content & Voice ✨
+
+### Tone
+
+**Calm, instrumental, Apple-product-page register.** Fantastical talks like a Pro App marketing page, not a SaaS landing. Sentences are short and direct. Avoids superlatives ("the best") in favor of capability claims ("Schedule meetings in seconds"). Never casual ("Hey, ready to plan your day?") — the tone is respectfully helpful.
+
+### Microcopy Patterns
+
+- **Headlines:** sentence case, capability-focused. "Give Your Calendar Superpowers", "Built for the way you work", "Scheduling, simplified."
+- **Decks:** specifics over claims. "Connect all your calendars in one place. Schedule meetings, set reminders, and find time with anyone — all from a single app."
+- **CTA verbs:** "Try Free", "Buy Fantastical", "Subscribe", "Learn More", "See Pricing." Always verb-first.
+- **Error messages** (in-app, but the convention): "Couldn't connect to iCloud — check your internet and try again." Specific cause + recovery action.
+
+### Empty States
+
+In-app: "No events today. Tap + to add one." — friendly, action-suggesting, never just "Empty."
+
+### Success Confirmations
+
+- Subscribe: "Welcome to Fantastical Premium!"
+- Schedule sent: "Invitation sent" — present-perfect, not past simple.
+- Form submit: "Thanks — we'll be in touch."
+
+### CTA Verb Conventions
+
+The verbs Fantastical uses, ranked:
+1. **Try Free** (primary conversion — note "Try" not "Start")
+2. **Buy Fantastical** (one-time alternative, where available)
+3. **Subscribe** (upsell)
+4. **Learn More** (secondary)
+5. **See Pricing**
+6. **Sign In** (returning users)
+
+What Fantastical *doesn't* say: "Get Started" (too SaaS-y), "Sign Up Now" (too aggressive), "Free Trial" (the brand prefers "Try Free" or "14-Day Trial"). The verb register is Apple-Pro-App, not B2B-conversion.
+
+## 12. Dark Mode & Theming ✨
+
+Fantastical's marketing site is **light-mode only** — Flexibits has not shipped a dark-mode variant of the marketing surface. The in-app product offers light/dark/system themes (matching macOS/iOS appearance), but the marketing page stays white-canvas across user preference.
+
+If a future dark-mode variant were implemented, the canonical token swap would mirror Apple's own dark-mode pages:
+
+```yaml
+colors-dark:
+  bg: '#000000'                 # pure black, matching iOS dark mode
+  bg-soft: '#1c1c1e'            # iOS systemGray6 dark
+  surface: '#2c2c2e'            # iOS systemGray5 dark
+  text: '#ffffff'
+  text-muted: '#aeaeb2'         # iOS systemGray dark
+  text-soft: '#8e8e93'          # iOS systemGray2 dark
+  brand: '#0a84ff'              # iOS systemBlue dark variant
+  brand-hover: '#409cff'        # lighter blue on dark
+  brand-soft: 'rgba(120,120,128,0.16)' # iOS tinted button on dark
+  border: 'rgba(255,255,255,0.10)'
+  border-soft: 'rgba(255,255,255,0.06)'
+  shadow-card: 'rgba(0,0,0,0.40)'
+```
+
+Note that Apple's system blue shifts from `#007aff` (light) to `#0a84ff` (dark) — slightly brighter, slightly cooler. Fantastical's `#408fff` is already the warm/light variant, so a dark equivalent should brighten further.
+
+**Light-only register** — for now, no dark variant offered.
+
+## 13. Lineage & Influences
+
+Fantastical's design lineage is **Apple Pro Apps**, specifically the marketing pages for Final Cut Pro, Logic Pro, and the Pages/Numbers/Keynote suite. Those pages share the visual vocabulary: white canvas, single-family Effra-or-SF, system-blue CTA, fully-round pill radius, glass app-icon confetti, device mockups with blurred shadows. Flexibits has explicitly built the marketing surface to live in that visual universe — the calendar app is positioned as "Apple's missing Pro App."
+
+The chromatic accent strategy — iOS system colors (cyan / magenta / green / orange) as decorative confetti only, never as button fills — is borrowed from the App Store's Today tab and from the Apple Music Now Playing badge sticker animation. The discipline is: **system colors are the page's playfulness; brand blue is the page's action.**
+
+What Fantastical *rejects*: warm tones (no cream, no off-white), serif emphasis (no Domaine, no Playfair), editorial rhythm (no broadsheet column, no asymmetric grid). The page is precision-instrument register, not editorial register.
+
+**Influences:**
+- **Apple iOS App Store / Pro Apps** — system blue CTA, fully-round pill radius, glass app-icon confetti, single-family discipline (https://www.apple.com/app-store/)
+- **Apple Human Interface Guidelines** — iOS system color palette as accent confetti (https://developer.apple.com/design/human-interface-guidelines/)
+- **Foundry Monotype / Effra** — humanist geometric sans with rounded terminals (https://www.monotype.com/fonts/effra)
+- **Stripe** — confidence in a single saturated blue as the entire chromatic action layer (https://stripe.com)
+- **Calendly / Cron (defunct)** — calendar-tool conventions (cool greys, blue actions, rounded pills) (https://calendly.com)
+
+## 14. Do's and Don'ts
+
+### Do's
+
+- **Do** use Effra (or a tight humanist geometric sans like Inter / SF Pro / Söhne) at every level. Loading a second display face would break the single-typographic-voice discipline.
 - **Do** ship the primary CTA as a fully-round 24px blue pill — anything less round reads as generic SaaS, not iOS-native.
-- **Do** scatter glass app-icon confetti around hero modules; that ornament is the brand''s playful counterweight to its precision.
-- **Don''t** introduce warm tones — Fantastical''s cool grey + system blue is the entire palette; a cream surface would tip the page toward Bear / Things'' editorial-Mac aesthetic.
-- **Don''t** raise body weight above 500; the medium-weight Effra is what gives the page its instrument-grade feel.
-- **Don''t** use a serif anywhere — even for emphasis. Effra sans carries the brand alone.
+- **Do** scatter glass app-icon confetti around hero modules; that ornament is the brand's playful counterweight to its precision.
+- **Do** weight the display tier at 500 (medium), not 700 (bold). The medium-not-bold choice is the precision register.
+- **Do** use cool grey (`#f7f8fa`) for nested sections, never warm grey or cream. The cool register matches iOS chrome.
+- **Do** apply Apple-style blurred shadows only to device mockups (`0 32px 64px -8px rgba(0,0,0,0.18)`); other shadows stay subtle.
+- **Do** lift iOS system colors directly for confetti accent — `#5ac8fa` cyan, `#34c759` green, `#ff9500` orange, `#d94aff` magenta. The exact hex matters.
+- **Do** use sentence case for everything except the rare 13px UPPERCASE eyebrow label.
+- **Do** add the iOS-style focus halo (`0 0 0 4px rgba(64,143,255,0.30)`) instead of a sharp 2px ring — it's softer and matches the brand atmosphere.
+
+### Don'ts
+
+- **Don't** introduce warm tones — Fantastical's cool grey + system blue is the entire neutral palette; a cream surface would tip the page toward Bear / Things' editorial-Mac aesthetic.
+- **Don't** raise body weight above 500; the medium-weight Effra is what gives the page its instrument-grade feel.
+- **Don't** use a serif anywhere — even for emphasis. Effra sans carries the brand alone.
+- **Don't** apply confetti hues to button fills or backgrounds — those colors live inside glass-icon decoration only. A magenta CTA would immediately feel off-brand.
+- **Don't** use a 12px or 8px button radius. The 24px fully-round pill is the iOS lockup; smaller radii read as Material Design or generic SaaS.
+- **Don't** stack the H1 in all-caps. Fantastical's display tier is sentence case; UPPERCASE H1s read as a different brand entirely.
+- **Don't** run drop shadows on every card. Most chrome is flat with hairline borders; shadows are reserved for device mockups, pricing cards, and CTA hover glows.
+- **Don't** mix Inter or SF Pro mid-page. The single-family Effra discipline is the precision signature; loading a second face dilutes it.
+- **Don't** add gradient washes to the canvas. The page is white-with-cool-grey-nested; gradient backgrounds would tip toward Stripe / Linear's chromatic register.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg:              #ffffff
+bg-soft:         #f7f8fa
+bg-cooler:       #f2f4f7
+text:            #1d1e1f
+text-muted:      #5e6166
+brand:           #408fff
+brand-hover:     #1f73ec
+brand-soft:      rgba(116,116,128,0.08)
+accent-cyan:     #5ac8fa
+accent-magenta:  #d94aff
+accent-green:    #34c759
+accent-orange:   #ff9500
+border:          rgba(0,0,0,0.10)
+```
+
+### Example Component Prompts
+
+- **Hero:** "Create a hero with a `#ffffff` canvas, a centered headline in Effra 80px / weight 500 / line-height 1.10 / tracking -0.015em reading 'Give Your Calendar Superpowers', a 22px Effra 400 deck below in `#5e6166`, a primary CTA pill in `#408fff` with white text at 24px radius / `14px 28px` padding, and 5–6 glass app-icon squares (cyan / magenta / green / orange / yellow) at 22px radius drifting around the hero in slow ±4px translateY oscillation."
+
+- **App-icon confetti:** "Render a glass-effect rounded-square at 22px radius, 64px size, gradient fill with translucent cyan base + `inset 0 1px 0 rgba(255,255,255,0.40)` highlight + `0 8px 24px rgba(0,0,0,0.10)` outer shadow. Animate continuous drift at ±4px translateY over 8s ease-in-out infinite alternate."
+
+- **Feature card:** "Design a feature card on a `#f7f8fa` cool-grey ground with `#ffffff` background, `1px solid rgba(0,0,0,0.06)` border, 16px radius, 32px padding, faint `0 4px 12px rgba(0,0,0,0.04)` shadow, h4 title in Effra 24/400, body in Effra 18/400 `#5e6166`."
+
+- **Device-tab selector:** "Build a horizontal device-tab selector with full-pill (24) tabs at `8px 16px` padding, inactive state transparent with `#5e6166` text, active state `rgba(64,143,255,0.10)` background with `#408fff` text. Tabs: 'Mac' / 'iPhone' / 'iPad' / 'Apple Watch'. On change, cross-fade the device mockup below 240ms."
+
+- **Pricing card:** "Place a pricing tier card with `#ffffff` background, `1px solid rgba(0,0,0,0.10)` border, 20px radius, 40px padding, `0 12px 32px rgba(0,0,0,0.08)` elevated shadow. Tier name in Effra 14/500 UPPERCASE eyebrow with `0.05em` tracking. Price in Effra 56/500. Features list in Effra 18/400. Subscribe CTA at the bottom — primary blue pill."
+
+- **Device mockup:** "Render an iPhone device mockup at 36px corner radius, `#000000` body color, `0 32px 64px -8px rgba(0,0,0,0.18)` Apple-style blurred descended shadow. Inside the frame, place a calendar screenshot at 9:19.5 aspect ratio."
+
+### Iteration Guide
+
+1. **Anchor on white.** Cool grey nested sections are accents, not the canvas. If you start from cream or off-white, the precision register collapses.
+2. **Set Effra at 500, not 700.** The medium weight at large size is what gives the page its instrument feel. Bold display reads as marketing-not-product.
+3. **Make the primary CTA a fully-round 24px blue pill.** `#408fff` background, white text, 14×28 padding, `0 8px 24px rgba(64,143,255,0.18)` blue glow on hover. This is the iOS Continue affordance — non-negotiable.
+4. **Add app-icon confetti.** 4–6 glass-effect squares at 22px radius around the hero, hues from iOS system palette. Drift slowly (±4px / 8s). Without confetti the page reads as generic clean SaaS.
+5. **Use cool grey (`#f7f8fa`)** for nested sections — it must have a hint of blue in it, not warm. Test by setting it next to white; it should feel cooler.
+6. **Apply shadows only where they earn:** device mockups (Apple blur), pricing cards (moderate lift), CTA hover glow (blue tint). Everywhere else, hairline borders.
+7. **Single-family discipline.** Don't load a second display face. Effra (or SF Pro / Inter) carries every level — display, body, button, label, caption.
+8. **iOS focus halo, not sharp ring.** `0 0 0 4px rgba(64,143,255,0.30)` is softer and matches the brand atmosphere — never `outline: 2px solid blue`.

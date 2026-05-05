@@ -9,7 +9,7 @@ featured: false
 categories: [fintech, marketplace]
 tags: [light, enterprise, infrastructure, web3, layer2, ethereum, purple, dual-mode]
 preview_swatch: ['#ffffff', '#8247e5', '#1a1233']
-related: [ethereum-org, base-org, optimism-io]
+related: [ethereum-org, optimism-io]
 description: 'Polygon reads like an enterprise infrastructure brand that quietly happens to settle on Ethereum. The base canvas alternates white `#ffffff` and a deep-purple dark hero `#1a1233` (signature Polygon gradient violet), with the brand voltage **deep purple** `#8247e5` carrying primary CTAs, links, and signature glyphs. Type runs **Inter** for body and a custom Polygon Display (DM Sans-style geometric sans) at large display sizes. Layout commits to the institutional-fintech register: 1200px max-width, 96px section padding, generous 24px card gutters, soft shadows on cards, and gradient hero washes that subtly transition the dark hero from `#1a1233` to `#8247e5`. Where ethereum.org reaches for community-warm illustration, Polygon reaches for enterprise-credible chrome — partner logos, transaction-throughput statistics, "trusted by" institutional moments. The brand''s clearest editorial choice: the gradient-mark hero illustration uses the Polygon hexagon glyph rendered in 3D with soft purple gradient — repeated as a watermark on every product page. The hexagon-mesh background (faint, sometimes animated) is the system''s persistent visual signature.'
 
 colors:

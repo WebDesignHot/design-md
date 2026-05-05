@@ -1,84 +1,256 @@
 ---
 name: OpenAI
-tagline: Pure white canvas, OpenAI Sans set in calm 500-weight, and a single black pill for the only action that matters — try ChatGPT.
+tagline: 'Pure white canvas, OpenAI Sans set in calm 500-weight, and a single black pill for the only action that matters — try ChatGPT.'
 author: webdesignhot
 source_url: https://openai.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [ai, saas]
-tags: [light, minimal, sans, spacious, structured, cool]
-preview_swatch: ['#ffffff', '#000000', '#f1f1f1']
+tags: [light, minimal, sans, spacious, structured, cool, monochrome, institutional]
+preview_swatch: ['#ffffff', '#000000', '#10a37f']
 related: [anthropic, vercel, stripe]
-description: 'OpenAI''s site is the platonic white-paper of AI marketing — pure `#ffffff` canvas, a custom OpenAI Sans set at a calm 500 weight, and a single black `#000000` pill button (40px radius) carrying every primary action. Where competitors reach for gradients and hero animations, OpenAI defaults to silence: large image rails, modest 22-48px headings with `-0.22px` to `-1.44px` tracking, and a 4% black hover surface that''s almost invisible. The restraint reads as institutional confidence.'
+description: 'OpenAI''s site is the platonic white-paper of AI marketing — pure `#ffffff` canvas, a custom OpenAI Sans set at a calm 500 weight, and a single black `#000000` pill button (40px+ radius) carrying every primary action. Where competitors reach for gradients and hero animations, OpenAI defaults to silence: large image rails, modest 22–48px headings with `-0.22px` to `-1.44px` tracking, and a 4% black hover surface that''s almost invisible. The restraint reads as institutional confidence — research-lab posture, not startup hustle. The ChatGPT product green `#10a37f` exists in the system but appears almost exclusively inside the app, never on the marketing surface.'
 
 colors:
-  bg: '#ffffff'
-  bg-soft: '#f1f1f1'           # locale picker / tab base
-  surface: '#fafafa'           # subtle module backgrounds
-  surface-hover: '#0a0a0a0a'   # 4% black hover state observed on nav buttons
-  text: '#000000'
-  text-muted: '#5d5d5d'        # captions and metadata
-  brand: '#000000'             # primary CTA is solid black
+  bg: '#ffffff'                    # pure white canvas — no warmth, no tint
+  bg-soft: '#f1f1f1'               # locale picker, tab base, subtle module floor
+  bg-section: '#f7f7f7'            # alternate band for subtle separation
+  surface: '#fafafa'               # subtle module backgrounds
+  surface-card: '#ffffff'           # card surface lifts back to white
+  surface-hover: 'rgba(0,0,0,0.04)' # 4% black observed hover state on nav
+  surface-press: 'rgba(0,0,0,0.08)' # 8% black for active state
+  text: '#000000'                  # solid black, no opacity softening
+  text-strong: '#000000'           # hero copy at full black
+  text-muted: '#5d5d5d'             # captions and metadata
+  text-subtle: '#8e8e8e'             # tertiary, "Updated 5 days ago"
+  text-faint: '#b4b4b4'              # quaternary, footer micro-text
+  text-on-brand: '#ffffff'          # white on black CTA
+  text-on-dark: '#ededed'           # text inside rare dark bands (research surface)
+  brand: '#000000'                 # primary CTA is solid black
+  brand-hover: '#1a1a1a'            # subtle warm-up on hover
+  brand-active: '#2c2c2c'           # pressed state
+  brand-on-dark: '#ffffff'          # CTA inverts on dark bands
   on-brand: '#ffffff'
-  accent: '#10a37f'            # ChatGPT product green (used sparingly in product UI)
-  border: '#0000001a'          # 10% black hairline
-  border-soft: '#00000014'     # 8% black sub-divisions
+  accent: '#10a37f'                # ChatGPT product green — used inside the app, almost never on marketing
+  accent-hover: '#0d8a6b'           # deeper green for hover
+  accent-soft: '#d6f3e8'             # soft green wash for product-status badges
+  link: '#000000'                  # body links are inline black with underline
+  link-hover: '#5d5d5d'              # link hover shifts to muted on hover (subtle)
+  link-visited: '#000000'            # OpenAI doesn't differentiate visited
+  border: 'rgba(0,0,0,0.1)'         # 10% black hairline — primary divider
+  border-soft: 'rgba(0,0,0,0.08)'   # 8% black sub-divisions
+  border-strong: 'rgba(0,0,0,0.16)' # focus state hairline
+  scrim: 'rgba(0,0,0,0.5)'           # modal backdrop
+  shadow-card: 'rgba(0,0,0,0.06)'
+  shadow-elev: 'rgba(0,0,0,0.10)'
+  shadow-modal: 'rgba(0,0,0,0.20)'
+  success: '#10a37f'                # ChatGPT green — used semantically inside product surfaces
+  warning: '#d97706'                # amber for caution
+  warning-soft: '#fdf3e7'
+  danger: '#cc2525'                 # red for errors
+  danger-soft: '#fae5e5'
+  info: '#3a3a3a'                   # OpenAI's "info" is just a darker grey, not blue
 
 typography:
   display:
-    family: '"OpenAI Sans", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif'
+    family: '"OpenAI Sans", "Söhne", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif'
     weights: [400, 500, 600]
+    opentype-features: ['liga', 'kern', 'tnum']
   body:
-    family: '"OpenAI Sans", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif'
+    family: '"OpenAI Sans", "Söhne", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif'
     weights: [400, 500]
+    opentype-features: ['liga', 'kern']
   mono:
     family: '"OpenAI Sans Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace'
-    weights: [400]
+    weights: [400, 500]
+    opentype-features: ['liga']
   scale:
-    h1:    { size: 48, weight: 500, lineHeight: 1.16, tracking: '-1.44px' }   # observed hero variant
-    h2:    { size: 22, weight: 500, lineHeight: 1.26, tracking: '-0.22px' }   # observed section heading
-    h3:    { size: 18, weight: 500, lineHeight: 1.4 }
-    body:  { size: 16, lineHeight: 1.5 }
-    label: { size: 12, weight: 500 }
+    display-mega:    { size: 64, weight: 500, lineHeight: 1.1,   tracking: '-1.92px',  family: display, opentype: ['liga'] }
+    display-hero:    { size: 48, weight: 500, lineHeight: 1.16,  tracking: '-1.44px',  family: display, opentype: ['liga'] }
+    h1:              { size: 40, weight: 500, lineHeight: 1.18,  tracking: '-1.2px',   family: display }
+    h2:              { size: 32, weight: 500, lineHeight: 1.2,   tracking: '-0.96px',  family: display }
+    h3:              { size: 22, weight: 500, lineHeight: 1.26,  tracking: '-0.22px',  family: display }
+    h4:              { size: 18, weight: 500, lineHeight: 1.4,   tracking: '-0.09px',  family: body }
+    sub-section:     { size: 16, weight: 500, lineHeight: 1.4,   tracking: '0',         family: body }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.55,  tracking: '0',         family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,   tracking: '0',         family: body }
+    body-default:    { size: 14, weight: 400, lineHeight: 1.43,  tracking: '0',         family: body }
+    caption:         { size: 13, weight: 400, lineHeight: 1.4,   tracking: '0',         family: body }
+    micro:           { size: 11, weight: 500, lineHeight: 1.3,   tracking: '0.04em',    family: body, transform: uppercase }
+    button-cta:      { size: 14, weight: 500, lineHeight: 1.0,   tracking: '0',         family: body }
+    button-cta-large: { size: 16, weight: 500, lineHeight: 1.0,   tracking: '0',         family: body }
+    nav-link:        { size: 14, weight: 500, lineHeight: 1.0,   tracking: '0',         family: body }
+    label:           { size: 12, weight: 500, lineHeight: 1.3,   tracking: '0.04em',    family: body, transform: uppercase }
+    code:            { size: 14, weight: 400, lineHeight: 1.5,   tracking: '0',         family: mono }
 
 radius:
+  micro: 4
   sm: 6
   md: 8
   lg: 12
   card: 12
-  button: 40                 # observed pill on nav and primary CTA (40px on small, 9999 on large variants)
+  button-small: 40                 # observed pill on nav small variants
+  button-large: 9999               # full pill on hero CTAs
   pill: 9999
+
+spacing:
+  base: 4
+  scale: [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160]
 
 layout:
   page-width: 1280
+  prose-width: 720
+  header-height: 64
+  rhythm: 8
 
 components:
   button-primary:
-    backgroundColor: '#000000'
-    textColor: '#ffffff'
-    rounded: 40
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 9999
     padding: '0 20px'
-    font: 'OpenAI Sans 500'
-    use: 'Try ChatGPT and other lead-conversion CTAs — there is rarely more than one per viewport.'
+    height: 40
+    font: 'OpenAI Sans 500 / 14px'
+    use: 'Try ChatGPT — the single hero CTA per viewport. Solid black pill, no shadow.'
+  button-primary-large:
+    bg: '#000000'
+    color: '#ffffff'
+    radius: 9999
+    padding: '0 28px'
+    height: 56
+    font: 'OpenAI Sans 500 / 16px'
+    use: 'Hero-band CTA — taller variant on the lead-conversion CTA.'
   button-secondary:
-    backgroundColor: '#0000000a'
-    textColor: '#000000'
-    rounded: 40
+    bg: 'rgba(0,0,0,0.04)'
+    color: '#000000'
+    radius: 9999
     padding: '8px 16px'
+    height: 40
+    font: 'OpenAI Sans 500 / 14px'
     use: 'Log in, Download, locale switchers — anything that is not the headline action.'
-  card:
-    backgroundColor: '#ffffff'
-    border: '1px solid #0000001a'
-    rounded: 12
-    use: 'News tiles, story cards, research index entries — flat, hairline-bordered, image-led.'
+  button-tertiary:
+    bg: 'transparent'
+    color: '#000000'
+    radius: 9999
+    padding: '8px 16px'
+    use: 'Fades into chrome until hover; on hover gains the 4% black surface.'
+  button-on-dark:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 9999
+    padding: '0 20px'
+    use: 'Inverted CTA on rare dark research-page bands.'
+  card-news:
+    bg: '#ffffff'
+    color: '#000000'
+    border: '1px solid rgba(0,0,0,0.1)'
+    radius: 12
+    padding: '0'
+    use: 'News tile — flat, hairline-bordered, image-led with metadata stack below.'
+  card-research:
+    bg: '#fafafa'
+    color: '#000000'
+    border: 'none'
+    radius: 12
+    padding: '24px'
+    use: 'Research index entry — soft surface, no border, denser metadata layout.'
+  text-input:
+    bg: '#ffffff'
+    color: '#000000'
+    radius: 9999
+    height: 44
+    padding: '12px 18px'
+    border: '1px solid rgba(0,0,0,0.1)'
+    focus: '2px solid #000000'
+    use: 'Pill-shaped input — locale switchers, search inputs.'
+  locale-picker:
+    bg: '#f1f1f1'
+    color: '#000000'
+    radius: 9999
+    padding: '8px 16px'
+    use: 'Footer locale picker — light grey pill with chevron.'
+  badge-pill:
+    bg: 'rgba(0,0,0,0.04)'
+    color: '#000000'
+    radius: 9999
+    padding: '4px 10px'
+    font: 'OpenAI Sans 500 / 12px'
+    use: 'Status pill — "New", "Available now". Subtle 4% black background.'
+  hero-band:
+    bg: '#ffffff'
+    color: '#000000'
+    use: 'Pure white hero band — typically a single h3 or h4 with image rail beneath.'
+  research-band-dark:
+    bg: '#0a0a0a'
+    color: '#ededed'
+    use: 'Rare dark band — used on research / safety pages for emphasis.'
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-out: 'cubic-bezier(0, 0, 0.2, 1)'
+  duration-instant: 100
+  duration-fast: 150
+  duration-standard: 200
+  duration-slow: 300
+  cta-press: 'CTA bg deepens #000000 → #1a1a1a over 150ms on :hover'
+  hover-fade: 'nav buttons fade-in a 4% black surface (rgba(0,0,0,0.04)) over 150ms on :hover'
+  card-hover: 'image scales 1.0 → 1.02 over 200ms standard easing on news cards; metadata stays stationary'
+  page-fade: 'opacity 0 → 1 over 300ms on initial paint; subsequent navigation has no transition'
+  reduced-motion: 'respects prefers-reduced-motion: reduce — image scale and translate suppressed; opacity transitions remain.'
+
+breakpoints:
+  mobile: 600
+  tablet: 960
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  ambient: 'none — OpenAI defaults flat'
+  card-hover: 'rgba(0,0,0,0.06) 0 4px 12px'
+  modal: 'rgba(0,0,0,0.20) 0 24px 48px'
+  ring: '0 0 0 2px rgba(0,0,0,0.5)'
+
+accessibility:
+  contrast-text-on-bg: 21.0                # #000000 on #ffffff — AAA
+  contrast-text-on-cta: 21.0                # #ffffff on #000000 — AAA
+  contrast-link-on-bg: 21.0                  # #000000 on #ffffff — AAA (links are black with underline)
+  contrast-muted-on-bg: 7.6                  # #5d5d5d on #ffffff — AAA
+  contrast-subtle-on-bg: 4.6                 # #8e8e8e on #ffffff — AA
+  contrast-text-on-dark: 12.7                # #ededed on #0a0a0a — AAA
+  focus-ring: '2px solid #000000 with 2px outline-offset; on dark surfaces inverts to white ring'
+  reduced-motion-honored: true
+  touch-target-min: 40
+  keyboard-nav: 'Tab: skip → masthead → main content → news rail → footer → locale picker; Esc closes overlays.'
+
+dark-mode: optional
+
+colors-dark:
+  bg: '#0a0a0a'                    # near-black canvas (used inside ChatGPT app and rare research bands)
+  bg-soft: '#171717'
+  bg-section: '#1a1a1a'
+  surface: '#171717'
+  surface-card: '#212121'
+  surface-hover: 'rgba(255,255,255,0.04)'
+  text: '#ededed'
+  text-strong: '#ffffff'
+  text-muted: '#b4b4b4'
+  text-subtle: '#8e8e8e'
+  brand: '#ffffff'                  # CTA inverts to white-on-black
+  brand-hover: '#ededed'
+  on-brand: '#0a0a0a'
+  border: 'rgba(255,255,255,0.1)'
+  border-soft: 'rgba(255,255,255,0.06)'
+  accent: '#10a37f'                 # green stays the same
+  link: '#ededed'
 
 lineage:
   summary: |
     OpenAI's marketing site is an exercise in withdrawal. The canvas is
     pure `#ffffff`, the typeface is a custom **OpenAI Sans** released
-    in 2024 to replace ColfaxAI, and headings hold a calm 500 weight
-    rather than the usual marketing-bold 700. Tracking is gently
+    in late 2024 to replace ColfaxAI, and headings hold a calm 500
+    weight rather than the usual marketing-bold 700. Tracking is gently
     negative — `-0.22px` at 22px, `-1.44px` at 48px — which gives the
     type a slightly compressed, broadcast-news feel without ever
     shouting. The only chromatic event on the page is the **single
@@ -88,9 +260,12 @@ lineage:
     Anthropic-Sans editorial calm — an institution speaking quietly
     because it doesn't need to convince you. Where Stripe builds
     trust through a single confident blue, OpenAI builds it through
-    the absence of colour entirely. Pill radii at 40-9999px and a 4%
+    the absence of colour entirely. Pill radii at 40–9999px and a 4%
     black hover state (`rgba(0,0,0,0.04)`) form the entire interactive
-    vocabulary; everything else is type, image, and white space.
+    vocabulary; everything else is type, image, and white space. The
+    ChatGPT product green `#10a37f` exists in the system but lives
+    almost exclusively inside the app — research, safety, and policy
+    pages stay rigorously monochromatic.
   influences:
     - name: Apple
       role: Monochrome reduction and the cultural authority of saying nothing extra.
@@ -101,93 +276,477 @@ lineage:
     - name: The New York Times
       role: News-broadcast tracking discipline at headline sizes; OpenAI's tracking ladder reads like a print masthead.
       url: https://www.nytimes.com
+    - name: Söhne / Klim Type Foundry
+      role: Geometric humanist precedent for OpenAI Sans (Söhne is OpenAI's documented fallback in CSS).
+      url: https://klim.co.nz/retail-fonts/soehne
+    - name: ColfaxAI (retired)
+      role: OpenAI's previous typeface (2020–2024) — the lineage OpenAI Sans inherited and refined.
+      url: https://processtypefoundry.com/fonts/colfax
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-OpenAI's homepage opens onto pure white. There is no hero gradient,
-no animated mesh, no product mock-up floating above the fold — just
-a stack of news tiles, "Recent news" set at 22px / 500 weight, and a
-single black pill that says "Try ChatGPT." The aesthetic mirrors the
-posture: a research lab that ships consumer software, not a startup
-that wants you to feel something.
+OpenAI's homepage opens onto pure white. There is no hero gradient, no animated mesh, no product mock-up floating above the fold — just a stack of news tiles, "Recent news" set at 22px / 500 weight, and a single black pill that says "Try ChatGPT." The aesthetic mirrors the posture: a research lab that ships consumer software, not a startup that wants you to feel something. Walk in from a Mistral or Vercel page and the temperature shift is immediate — quieter, less performative, more institutional.
 
-The custom **OpenAI Sans** carries the entire site. Released alongside
-the late-2024 brand refresh that quietly retired ColfaxAI, it is a
-geometric humanist sans with subtly relaxed terminals and a slightly
-narrower set than Inter — designed to read as institutional rather
-than tech-startup. Type weight stays at 500 across most surfaces;
-OpenAI rarely reaches for 700.
+The custom **OpenAI Sans** carries the entire site. Released alongside the late-2024 brand refresh that quietly retired ColfaxAI, it is a geometric humanist sans with subtly relaxed terminals and a slightly narrower set than Inter — designed to read as institutional rather than tech-startup. Type weight stays at 500 across most surfaces; OpenAI rarely reaches for 700. Headings sit at 22–48px / 500 weight with negative tracking that scales with size (`-0.22px` at 22, `-1.44px` at 48 — roughly a constant `-0.01em` to `-0.03em`). The H1 hero variant lands at 48px with a 55.68px line height; section headings drop to 22px.
 
-## Colors
+The chromatic identity is essentially two-tone: **pure white canvas** (`#ffffff`) plus **solid black** (`#000000`) for both type and the single CTA. The only "interactive" surface in the system is `rgba(0,0,0,0.04)` — a 4% black wash that nav buttons fade into on hover. Everything else is type, image, and white space. The ChatGPT product green `#10a37f` exists in the OpenAI design system but lives inside the app surface (chat bubbles, action confirmations); on the marketing site it appears almost never. Research / safety / policy pages stay entirely monochromatic.
 
-- **bg** `#ffffff` — pure white, no warmth, no tint
-- **text** `#000000` — solid black, no opacity softening
-- **text-muted** `#5d5d5d` — metadata and captions
-- **brand** `#000000` — the primary CTA colour is black, not blue
-- **on-brand** `#ffffff` — pill text
-- **surface-hover** `rgba(0,0,0,0.04)` — the entire hover vocabulary
-- **bg-soft** `#f1f1f1` — locale picker and tab base
-- **border** `rgba(0,0,0,0.1)` — hairline divisions on cards and rails
-- **accent** `#10a37f` — ChatGPT product green, used inside the app, almost never on the marketing site
+Shape language is pills + medium-soft cards. Buttons are 40-height pills (40px radius, effectively pill at button height) on nav and 56-height full pills (9999px) on hero CTAs. Cards land at 12px radius with a 10% black hairline (`rgba(0,0,0,0.1)`). There are no sharp 0-radius surfaces, no 4–6px "app-grade" radii — the entire vocabulary is *medium-soft cards* plus *full pills*, with no compromises in between.
 
-## Typography
+The defining experience is **silence**. OpenAI's marketing surface trusts the visitor to come to it; it doesn't sell. The page is a stack of recent news, a research index, a couple of product surfaces, and a footer — closer to **the front page of a newspaper** than to a SaaS landing page. The brand position is research-lab institutional confidence, and the chromatic discipline is the proof.
 
-Display and body are the same face: **OpenAI Sans**. Headings sit at
-22-48px / 500 weight with negative tracking that scales with size
-(`-0.22px` at 22, `-1.44px` at 48 — roughly a constant `-0.01em` to
-`-0.03em`). The H1 hero variant lands at 48px with a 55.68px line
-height; section headings drop to 22px. There is no italic, no display
-serif, no editorial counter-voice. **OpenAI Sans Mono** appears for
-code blocks and API surfaces.
+**Key Characteristics:**
+- Pure white canvas (`#ffffff`) with solid black (`#000000`) text and CTA — two-tone monochrome
+- Custom OpenAI Sans at calm 500 weight throughout — no 700 / 800 marketing-bold
+- Negative tracking scaling `-0.22px` → `-1.44px` from 22 → 48px headings — broadcast-news compression
+- Single black pill CTA at 40–9999px radius — the only action surface
+- 4% black (`rgba(0,0,0,0.04)`) as the entire hover vocabulary
+- No drop shadows on cards — flat hairline-bordered surfaces
+- ChatGPT green `#10a37f` exists semantically but is almost absent from marketing
+- Generous 96–128px section padding — newspaper rhythm
 
-The body face is the same OpenAI Sans at 16px / 24px line height, 400
-or 500 weight. The font-stack falls back through `ui-sans-serif`,
-`system-ui`, and Arial — minimal CJK stacking compared to Notion or
-Mistral.
+## 2. Color Palette & Roles
 
-## Layout
+### Primary
+- **Canvas** (`#ffffff`): pure white default page floor — no warmth, no tint, no off-white
+- **Bg Soft** (`#f1f1f1`): footer locale picker, tab base, very subtle module floor
+- **Bg Section** (`#f7f7f7`): alternate band for slight separation between sections
+- **Surface** (`#fafafa`): subtle module backgrounds (rare on marketing)
+- **Body Black** (`#000000`): solid black, primary text and CTA
+- **Display Black** (`#000000`): no separate display tier — OpenAI uses the same black for all weights
 
-Container width is generous (~1280px max), with edge gutters that
-breathe. The grid is a simple 3-up news rail under the fold; story
-cards are flat, hairline-bordered, image-led tiles at 12px radius.
-Section headings set the rhythm — there are no eyebrow labels, no
-all-caps section codes, no editorial flourish. Everything is title
-+ rail + repeat.
+### Brand & Action
+- **Brand Black** (`#000000`): the single CTA fill
+- **Brand Hover** (`#1a1a1a`): subtle warm-up by 26/26/26 RGB on hover
+- **Brand Active** (`#2c2c2c`): pressed state, briefly visible on `:active`
+- **On-Brand White** (`#ffffff`): label colour on black CTA
 
-## Elevation & Depth
+### Accent
+- **ChatGPT Green** (`#10a37f`): the product green — used in the ChatGPT app for action confirmations, "online" status, and certain product chrome. On the marketing site it is almost entirely absent.
+- **Accent Hover** (`#0d8a6b`): deeper green for hover (only inside product UI)
+- **Accent Soft** (`#d6f3e8`): soft green wash for "Available now" / "Released" badges (rare on marketing)
 
-There is essentially none. Cards are flat with a 10% black hairline
-(`rgba(0,0,0,0.1)`); hover state is a 4% black wash, not a shadow.
-Buttons have no drop-shadow, no inner highlight, no depth treatment
-at all — the black pill is solid `#000000` on `#ffffff` and that's
-the entire interaction model. Where Stripe and Linear use elevation
-to organise space, OpenAI uses spacing alone.
+### Interactive
+- **Link Default** (`#000000`): body links are inline black with underline — same as text colour, distinguished only by underline
+- **Link Hover** (`#5d5d5d`): subtle shift to muted on hover — restraint over chromatic announcement
+- **Visited** (`#000000`): no differentiation
+- **Focus Ring**: `2px solid #000000` with 2px outline-offset — black ring on light surfaces; inverts to white ring on dark
+- **Selected** (`#000000`): selected radio / checkbox / tab fill
 
-## Shapes
+### Neutral Scale
+- **Body Black** (`#000000`): primary text
+- **Muted** (`#5d5d5d`): captions, "Updated 5 days ago", metadata
+- **Subtle** (`#8e8e8e`): tertiary metadata, locale codes
+- **Faint** (`#b4b4b4`): footer micro-text, disabled state
+- **On-Dark Default** (`#ededed`): text inside rare dark bands
+- **Border Default** (`rgba(0,0,0,0.1)`): primary 10% black hairline
+- **Border Soft** (`rgba(0,0,0,0.08)`): 8% black sub-divisions
+- **Border Strong** (`rgba(0,0,0,0.16)`): focus state hairline
 
-Buttons are pills — radii at 40px on small variants and effectively
-9999px on hero CTAs. Cards land at 12px. Inputs and locale pickers
-also pill at 9999px. There are no sharp 0-radius surfaces, no 4-6px
-"app-grade" radii — the entire vocabulary is *medium-soft cards*
-plus *full pills*.
+### Surface & Borders
+- **Canvas** (`#ffffff`): default
+- **Bg Soft** (`#f1f1f1`): locale picker, occasional tab
+- **Bg Section** (`#f7f7f7`): alternating band (rare)
+- **Surface** (`#fafafa`): subtle module floor
+- **Hover Surface** (`rgba(0,0,0,0.04)`): the 4% black wash — nav and tertiary button hover
+- **Press Surface** (`rgba(0,0,0,0.08)`): 8% black for active state
+- **Hairline** (`rgba(0,0,0,0.1)`): used everywhere a divider is needed
 
-## Components
+### Shadow Colors
+OpenAI defaults flat — cards have no shadow, hover state is a 4% black wash, not a shadow. The only place a shadow appears is on news-card hover (subtle `0 4px 12px rgba(0,0,0,0.06)`) and modal overlays. The brand position: depth comes from spacing alone, not from elevation.
 
-The defining components are the **black pill CTA** (`#000000` bg,
-white text, 500 weight, 40px+ radius), the **hairline-bordered news
-card** (white, 12px radius, 10% black border, image-led), and the
-**4% black hover surface** that nav buttons fade into on rollover.
-A locale picker — pill, light grey `#f1f1f1` bg, OpenAI Sans 500 —
-sits in the footer chrome and is the only chromatic concession to
-internationalisation. Section headings (22px / 500) and a 16px body
-size handle nearly all editorial copy.
+- `rgba(0,0,0,0.06) 0 4px 12px` — card hover (rare)
+- `rgba(0,0,0,0.20) 0 24px 48px` — modal
 
-## Do's and Don'ts
+### Semantic
+- **Success Green** (`#10a37f`): the ChatGPT product green — used semantically inside product surfaces
+- **Warning Amber** (`#d97706`): caution copy
+- **Warning Soft** (`#fdf3e7`): warning badge background
+- **Danger Red** (`#cc2525`): error states
+- **Danger Soft** (`#fae5e5`): danger badge background
+- **Info** (`#3a3a3a`): OpenAI's "info" colour is just darker grey — never blue. Reinforces the monochrome discipline.
 
-- **Do** keep the action vocabulary monochrome — primary CTAs are black, secondary CTAs are 4% black, that is the entire ladder.
-- **Do** use OpenAI Sans at 500 weight for headings; the negative tracking does the work that bold weight does on other sites.
-- **Do** lean on white space and image cards; this brand earns trust by *not* filling space.
-- **Don't** introduce a brand blue or gradient hero — OpenAI has neither and adding one collapses the institutional register.
-- **Don't** stack drop shadows on cards; the visual language is hairline borders + flat surfaces, full stop.
-- **Don't** mix 4-8px "app-grade" radii into the marketing surface — pills (40px+) and medium cards (12px) are the only shapes here.
+## 3. Typography Rules
+
+### Font Family
+
+**Display & Body**: `OpenAI Sans` — the custom typeface OpenAI commissioned and rolled out alongside the late-2024 brand refresh, replacing ColfaxAI. Documented fallback chain: `"Söhne", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif`. Söhne (Klim Type Foundry, 2019) is the closest commercial twin and the canonical fallback — both share the geometric humanist DNA, narrower set, and slightly relaxed terminals.
+
+**Mono**: `OpenAI Sans Mono` — the monospaced companion to OpenAI Sans, used in code blocks and API documentation. Fallback through `ui-monospace, "SF Mono", Menlo, Consolas`.
+
+**OpenType features**: `liga` and `kern` everywhere; `tnum` enabled on numeric counts (research paper years, citation numerals, model parameter counts like "175B"). No stylistic-set swaps — OpenAI Sans is delivered as a single glyph set.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|------|------|------|--------|-------------|----------------|-------------|-------|
+| display-mega | OpenAI Sans | 64 | 500 | 1.1 | -1.92px | liga | Page-take-over hero (rare — used on flagship product launches) |
+| display-hero | OpenAI Sans | 48 | 500 | 1.16 | -1.44px | liga | Standard hero — observed H1 variant |
+| h1 | OpenAI Sans | 40 | 500 | 1.18 | -1.2px | — | Major page titles |
+| h2 | OpenAI Sans | 32 | 500 | 1.2 | -0.96px | — | Section openers |
+| h3 | OpenAI Sans | 22 | 500 | 1.26 | -0.22px | — | Sub-section heads — observed "Recent news" variant |
+| h4 | OpenAI Sans | 18 | 500 | 1.4 | -0.09px | — | News card titles |
+| sub-section | OpenAI Sans | 16 | 500 | 1.4 | 0 | — | Sub-section heads inside long bands |
+| body-large | OpenAI Sans | 18 | 400 | 1.55 | 0 | — | Hero sub-copy |
+| body | OpenAI Sans | 16 | 400 | 1.5 | 0 | — | Default paragraph |
+| body-default | OpenAI Sans | 14 | 400 | 1.43 | 0 | — | Card body, secondary copy |
+| caption | OpenAI Sans | 13 | 400 | 1.4 | 0 | — | News-card metadata |
+| micro | OpenAI Sans | 11 | 500 | 1.3 | 0.04em | uppercase | Eyebrow labels above titles |
+| button-cta | OpenAI Sans | 14 | 500 | 1.0 | 0 | — | Primary CTA label — medium weight, never bold |
+| button-cta-large | OpenAI Sans | 16 | 500 | 1.0 | 0 | — | Hero-band CTA |
+| nav-link | OpenAI Sans | 14 | 500 | 1.0 | 0 | — | Top nav |
+| label | OpenAI Sans | 12 | 500 | 1.3 | 0.04em | uppercase | "BETA" / "AVAILABLE NOW" badges |
+| code | OpenAI Sans Mono | 14 | 400 | 1.5 | 0 | liga | API doc samples |
+
+### Principles
+
+- **OpenAI Sans at 500 is the entire register.** The medium weight does the work that bold weight does on other sites — reinforced by the negative tracking that compresses the type subtly.
+- **Tracking scales with size.** `-0.22px` at 22px, `-1.44px` at 48px, `-1.92px` at 64px. The tracking is what gives OpenAI's headlines their broadcast-news compressed feel without ever feeling cramped.
+- **No 700 bold on marketing.** OpenAI Sans ships in 400, 500, and 600, but the marketing site overwhelmingly uses 500. The discipline reinforces "institutional, not promotional."
+- **Body at 16 / 1.5** is the editorial baseline. Sub-copy occasionally lifts to 18 / 1.55 for hero zones.
+- **No display serif, no italic, no editorial counter-voice.** OpenAI Sans is the only face on the page; the system has no decorative typographic moments.
+- **Tabular numerals on counts.** Research-paper years, citation numerals, model parameter sizes — `tnum` everywhere.
+- **Söhne is the canonical fallback.** When OpenAI Sans fails to load, Söhne renders close enough that the page barely shifts. This is the documented design intent.
+- **OpenAI Sans Mono on code.** Used on API documentation pages, never on the marketing surface.
+
+## 4. Component Stylings
+
+### Buttons
+
+**`button-primary`** — solid black (`#000000`) fill, white text in OpenAI Sans 14/500, 9999px pill radius (effectively 40px on small height variants — same shape), 0×20px padding (zero vertical padding because the button height is fixed), 40px height. The defining CTA: "Try ChatGPT", "Get started", "Sign up". On hover the fill transitions to `#1a1a1a` over 150ms — barely perceptible, like a press of breath.
+
+**`button-primary-large`** — taller variant for hero bands. 56px height, 14×28px padding, OpenAI Sans 16/500. Same 9999px pill, same solid black fill.
+
+**`button-secondary`** — 4% black (`rgba(0,0,0,0.04)`) fill, black text, 9999px pill, 8×16px padding, 40px height. Used for "Log in", "Download", locale switchers — anything that is not the headline action. On hover the fill deepens to 8% black.
+
+**`button-tertiary`** — transparent fill, fades into chrome until hover when it gains the 4% black surface. Used for nav action items. The "invisible" pattern.
+
+**`button-on-dark`** — white fill, black text. Used inside rare dark research-page bands. Same 9999px pill.
+
+### Cards
+
+**`card-news`** — white surface, 1px `rgba(0,0,0,0.1)` hairline, 12px radius, no padding around the image (image fills to corners), metadata stack below. Holds: 16:9 thumbnail with `object-fit: cover`, eyebrow label in 11/500 uppercase muted, headline in 18/500 black, dateline + author in 13/400 muted. On hover the image scales 1.0 → 1.02 over 200ms; the card itself stays stationary.
+
+**`card-research`** — soft `#fafafa` surface, no border, 12px radius, 24px padding. Used for the research index — a denser metadata layout with more text-per-card. Holds title, abstract preview, authors, publication date.
+
+**`card-product`** — white surface, 1px hairline, 12px radius, 24px padding. Used for product comparison cards (ChatGPT, API, Sora, etc.). Includes a small product mark + name + 1-line description.
+
+### Inputs / Forms
+
+**`text-input`** — pill-shaped (9999px radius), white fill, 1px `rgba(0,0,0,0.1)` hairline, 44px height, 12×18px padding, OpenAI Sans 16/400. On focus the border thickens to 2px solid black. Used for search inputs and locale switchers.
+
+**`textarea`** — same hairline + colour, 12px radius (less round than input), 80px min-height, resize: vertical.
+
+**`locale-picker`** — `#f1f1f1` light grey pill, 9999px radius, 8×16px padding, OpenAI Sans 14/500 with chevron icon at 8px right padding. The footer's only chromatic concession to internationalisation.
+
+### Badges, Tags, Pills
+
+**`badge-pill`** — 4% black (`rgba(0,0,0,0.04)`) fill, black text in OpenAI Sans 12/500, 9999px radius, 4×10px padding. Status pills like "New", "Available now", "Beta". Subtle and fades into the page.
+
+**`badge-eyebrow`** — no fill, 11/500 uppercase OpenAI Sans in muted, 0.04em tracking. Used as eyebrow labels above section titles.
+
+### Navigation
+
+**`nav-global`** — sticky top bar across every page, transparent fill with 8px backdrop-blur (rendered with `backdrop-filter: blur(8px)`) on scroll, 64px height. Wordmark left, primary nav centre (Research, Safety, Company), secondary actions right (Log in, Try ChatGPT). Nav link colour is black at 14/500. On hover, each link gains a 4% black pill surface around the text.
+
+**`nav-mobile`** — full-screen overlay with stacked nav items in OpenAI Sans 22/500. Closing X anchored top-right.
+
+**`footer`** — multi-column link list with 14/400 nav links, locale picker on the right. White fill, 1px top hairline. Bottom band has the OpenAI mark + copyright in 13/400 muted.
+
+### Modals & Toasts
+
+**`modal`** — centred dialog over a 50% black scrim. White surface, 12px radius, no border, modal shadow `0 24px 48px rgba(0,0,0,0.20)`. Close X anchored top-right.
+
+**`toast`** — bottom-centre notifications. Black fill, white text in 14/500, 9999px pill, 8×16px padding. Inverted from the page so the toast reads as ink-on-paper.
+
+### Hero Bands
+
+**`hero-band`** — pure white ground, content capped at 1280, 96–128px vertical padding. Single h3 (22/500) or h1 (40/500) with body-large sub-copy and a single black pill CTA. Sometimes paired with an image rail beneath.
+
+**`research-band-dark`** — rare dark variant on research / safety / policy pages. `#0a0a0a` ground, `#ededed` text, white pill CTA. Used 1–2 times per page maximum.
+
+## 5. Layout Principles
+
+### Spacing System
+
+- Base unit: **4px**; modular grid runs on **8px** rhythm
+- Scale: `4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64 · 80 · 96 · 128 · 160`
+- Section padding (vertical): **96–128px** between major bands — newspaper rhythm
+- Card internal padding: **24px** for product / research cards; **0 image / 16 metadata** for news cards
+- Gutters: **24px** between columns at desktop, **16px** at tablet, **12px** at mobile
+
+### Grid & Container
+
+- Max content width: **1280px** centred
+- Prose width inside long-form: **720px**
+- Hero: full-width band with content capped at 1280
+- News rail: 3-up at desktop, 2-up at tablet, 1-up at mobile
+- Research index: 2-column metadata layout
+
+### Whitespace Philosophy
+
+OpenAI gives each section more breath than its peers. The 96–128px vertical rhythm between sections, combined with a moderate 16px body type and 1.5 line-height, produces a marketing surface that paces like a newspaper. Inside each section, density stays moderate — news rails run 3-up with 24px gutters, and the hero column rarely fills more than 60% of the viewport width. The visual rhythm is **dense quiet type → generous breath → repeat**.
+
+### Section Cadence
+
+OpenAI overwhelmingly uses **white bands** (default `#ffffff`). Subtle alternating bands (`#f7f7f7`) appear occasionally as separators, and dark bands (`#0a0a0a`) appear 1–2 times per page on research / safety pages as emphasis. The brand resists chromatic alternation — most pages are pure white from top to bottom, with the news cards' image content providing visual variety.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4px | Rarely used |
+| Small | 6px | Internal app surfaces (rare on marketing) |
+| Medium | 8px | Subtle modules |
+| Card | 12px | News cards, product cards, modals |
+| Button Small | 40px | Pill on small-height buttons (effectively pill at 40px height) |
+| Button Large | 9999px | Full pill on hero CTAs |
+| Pill | 9999px | Tags, locale picker, inputs |
+
+The radii ladder is **medium-soft cards (12px) plus full pills (40+/9999px)** — there's nothing in between. OpenAI deliberately avoids 4–6px "app-grade" radii on the marketing surface. The discipline is part of the brand.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 — Flat | no shadow | Body, masthead, footer, all editorial bands (~98% of marketing surface) |
+| 1 — Hairline | 1px `rgba(0,0,0,0.1)` border | News cards, inputs |
+| 2 — Hover Surface | `rgba(0,0,0,0.04)` fill | Nav buttons, tertiary buttons on hover |
+| 3 — Press Surface | `rgba(0,0,0,0.08)` fill | Active state |
+| 4 — Card Hover | `rgba(0,0,0,0.06) 0 4px 12px` | News card hover (rare) |
+| 5 — Modal | `rgba(0,0,0,0.20) 0 24px 48px` | Centred dialog |
+
+### Shadow Philosophy
+
+OpenAI achieves depth through **spacing alone**. Cards are flat with a 10% black hairline; hover state is a 4% black wash, not a shadow. Buttons have no drop-shadow, no inner highlight, no depth treatment at all — the black pill is solid `#000000` on `#ffffff` and that's the entire interaction model. Where Stripe and Linear use elevation to organise space, OpenAI uses spacing — the 96–128px section padding is the depth event.
+
+## 8. Interaction & Motion
+
+### Easing
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default for hover, focus, fades
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — modal entry
+- **Out**: `cubic-bezier(0, 0, 0.2, 1)` — card image scale
+
+### Durations
+| Bucket | Value | Use |
+|--------|-------|-----|
+| Instant | 100ms | Focus ring fade-in |
+| Fast | 150ms | CTA bg warm-up, nav hover surface fade |
+| Standard | 200ms | News card image scale, modal scale |
+| Slow | 300ms | Initial page paint fade |
+
+### Per-Component Recipes
+
+- **CTA hover**: bg transitions `#000000` → `#1a1a1a` over 150ms standard easing — barely perceptible.
+- **CTA press**: deepens to `#2c2c2c` momentarily on `:active`.
+- **Nav hover**: nav buttons fade-in a 4% black surface (`rgba(0,0,0,0.04)`) over 150ms. The "invisible until hover" pattern.
+- **News card hover**: image scales 1.0 → 1.02 over 200ms ease-out; the metadata stack stays stationary; the card border stays the same.
+- **Page transitions**: initial page paint has an opacity 0 → 1 fade over 300ms; subsequent navigation has no transition. OpenAI prioritises perceived speed.
+- **Modal enter**: scrim fades in over 200ms, dialog scales `0.96 → 1` and translates from `translateY(8px) opacity(0)` to `0/1` over 200ms emphasized.
+- **Focus ring**: appears instantly on `:focus-visible`, fades opacity 0 → 1 over 100ms.
+
+### Reduced Motion
+
+Respects `prefers-reduced-motion: reduce`. Image scale, translate, and modal scale all degrade to opacity-only. Page-paint fade remains. Hover surface fade remains because it communicates state.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+| Pair | Ratio | Level |
+|------|-------|-------|
+| #000000 body on #ffffff | 21.0 | AAA |
+| #000000 link on #ffffff | 21.0 | AAA (links underlined) |
+| #ffffff on #000000 CTA | 21.0 | AAA |
+| #ffffff on #1a1a1a CTA hover | 18.7 | AAA |
+| #5d5d5d muted on #ffffff | 7.6 | AAA |
+| #8e8e8e subtle on #ffffff | 4.6 | AA |
+| #b4b4b4 faint on #ffffff | 2.6 | Fails AA — used only on micro-text and decorative elements |
+| #ededed text on #0a0a0a dark | 12.7 | AAA |
+| #ffffff on #10a37f green | 3.6 | Fails AA at body sizes — used primarily inside product UI at 14+/500 (passes AA-large) |
+
+OpenAI's contrast pairs sit overwhelmingly at AAA — the pure-black on pure-white CTA hits the maximum 21:1, and the body ink at 21:1 is at maximum legibility. The `#b4b4b4` faint colour fails AA but is used only on decorative micro-text where it doesn't carry semantic meaning. The product green has a marginal contrast against white but appears predominantly inside the product UI where larger type and bold context resolve it.
+
+### Focus Indicators
+
+Focus ring is **2px solid `#000000`** (or white on dark surfaces) with 2px outline-offset, applied via `:focus-visible`. The ring sits visibly on every focused button, link, and input. On dark backgrounds (research bands), the ring inverts to white. The pattern is deliberately monochromatic — no blue accent ring like GitHub's.
+
+### ARIA Patterns
+
+- **Skip link**: `<a href="#main">Skip to content</a>` is the first focusable element on every page.
+- **Global nav**: `<header role="banner">` wrapping the global nav; nav uses `<nav aria-label="Global">`.
+- **Hero CTA**: `<a href="/chatgpt">Try ChatGPT</a>` — standard link, no extra ARIA.
+- **News tile**: entire card wrapped in `<a>` with verbose `aria-label` — "OpenAI announces GPT-4 Turbo, published April 5, 2024".
+- **Locale picker**: `<button aria-haspopup="listbox" aria-expanded="false">English</button>` — opens a listbox of locales.
+- **Modal**: `role="dialog"` + `aria-modal="true"` + focus trap + Esc closes.
+- **Status badges**: "New" / "Available" pills include `aria-label` with full meaning.
+
+### Keyboard Navigation
+
+- Skip link → masthead → main content → news rail (each tile focusable) → research band → footer → locale picker
+- Within news rail: Tab moves through tiles in DOM order; arrow keys navigate inside expanded card detail
+- Nav: Tab moves through nav links; Esc closes any open dropdown
+- Modal: focus trapped; Esc closes; focus returns to trigger
+
+### Screen Reader Hints
+
+Verbose `aria-label` on icon-only buttons (the close-X on modals announces "Close dialog"). Decorative OpenAI mark in the masthead is `<svg aria-hidden="true">` with the brand name as visible text. News-card images carry alt text describing the published research illustration.
+
+### Reduced Motion
+
+All scale and translate transitions degrade to opacity-only. Page-paint fade and CTA hover fade remain.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Key Changes |
+|------|-------|-------------|
+| Mobile | <600px | Masthead collapses to logo + Try ChatGPT pill + hamburger; hero drops to 32/500; news rail 1-up |
+| Tablet | 600–960px | Full masthead; hero at 40/500; news rail 2-up |
+| Desktop | 960–1280px | Full nav with all primary links; news rail 3-up; hero at 48/500 |
+| Wide | 1280–1440px | Content caps at 1280; hero may scale to 64/500 on flagship pages |
+
+### Touch Targets
+
+- Primary CTAs: 40px height — meets AAA for touch (with 8px hit-target padding)
+- Hero CTAs: 56px height
+- Nav links: 40px hit area (text 14px + padding to 40)
+- Form inputs: 44px
+
+### Collapsing Strategy
+
+- Masthead: nav links collapse to hamburger at <960px; "Log in" hides first
+- Hero: display scales 64 → 48 → 40 → 32px across breakpoints
+- News rail: 3 → 2 → 1 columns
+- Footer: multi-column link list collapses to 2-column at tablet, 1-column at mobile
+
+### Image Behavior
+
+News-card thumbnails use `aspect-ratio: 16/9` with `object-fit: cover`. Research illustrations use SVG when possible, WebP with PNG fallback when raster. All illustration uses `loading="lazy"` for off-screen art.
+
+### Container Queries
+
+Product comparison cards use container queries to switch from "name + description side by side" to "name above description" when the card narrows below 320px.
+
+## 11. Content & Voice
+
+### Tone
+
+Calm, institutional, slightly understated. OpenAI's voice is "the research lab that doesn't need to convince you." Headlines lead with what the lab is doing ("Introducing GPT-5", "ChatGPT for everyone") rather than what the visitor should do. The brand consistently positions OpenAI as **a research organisation that ships consumer software** — not a startup, not a product company.
+
+### Microcopy Patterns
+
+- **Button verbs**: "Try ChatGPT", "Get started", "Log in", "Download", "Read the paper"
+- **Error message recipe**: terse + factual — "Something went wrong. Please try again."
+- **Success confirmations**: minimal — "Saved", "Subscribed"
+- **Field labels**: short and engineer-coded — "Email", "Password", "Organization"
+- **Empty states**: instructive — "No conversations yet. Start a new chat."
+
+### Empty States
+
+Empty research index: "No results for [query]. Try a different keyword or browse all research."
+
+Empty news feed: rare on the marketing site — OpenAI is constantly publishing, so the news rail is essentially never empty.
+
+Empty conversation history (in app): "No conversations yet. Start a new chat to begin." — names the next move.
+
+### CTA Verb Conventions
+
+- Primary: **"Try ChatGPT"** (default, top of every page), **"Get started"** (sign-up flow), **"Sign up"** (occasional)
+- Secondary: **"Log in"**, **"Read the paper"**, **"Read more"**
+- Tertiary: **"Learn more"**, **"View documentation"**, **"See the announcement"**
+- Avoided: "Click here", "Buy now", "Get instant access" — these would break the institutional register
+
+## 12. Dark Mode & Theming
+
+**Optional dark mode supported** primarily inside the ChatGPT app, with rare appearances on the marketing surface (the research-band-dark variant on safety / policy pages). The dark theme uses `#0a0a0a` as the canvas with `#ededed` text — the same palette as the ChatGPT app interior. The brand action colour inverts (black on white → white on near-black), and the ChatGPT product green stays the same `#10a37f` (it reads identically against either canvas).
+
+The full dark token swap is documented in `colors-dark:`. Hairlines shift to `rgba(255,255,255,0.1)`, surfaces step through `#0a0a0a → #171717 → #212121` (canvas / soft / card), and the link colour becomes `#ededed`. Cards inside the dark theme use `#212121` fill with the white-translucent hairline.
+
+The brand position: dark mode is **a product surface concession**, not a marketing register. The marketing site is overwhelmingly light because OpenAI's institutional posture depends on the white-paper aesthetic. Dark bands appear on research / safety pages as emphasis, never as a default state. The ChatGPT app, by contrast, ships with full dark mode support as a first-class state.
+
+## 13. Lineage & Influences
+
+OpenAI's visual lineage runs through three traditions: **mid-century institutional broadcasting** (NYT, BBC News — restrained typography, newspaper-grid layout, monochrome discipline), **Apple's product-page aesthetic** (pure white, generous whitespace, single CTA per viewport, type-as-image), and **the post-2020 AI-research-lab editorial wave** (Anthropic, DeepMind, Stanford HAI — all leaning into long-form essay register and avoiding traditional SaaS marketing chrome).
+
+Three contemporaries share the same neighbourhood. **Anthropic / Claude.ai** went serif-on-cream — the warm counter to OpenAI's cool monochrome. **Stripe** went editorial-blue with custom Söhne — closer to OpenAI's typography but with colour discipline OpenAI rejects. **Apple** is the strongest direct influence: pure white, generous whitespace, single CTA per viewport, no gradient, no mascot. Where OpenAI diverges from Apple is in the news-rail home page — Apple sells products top-of-fold; OpenAI publishes news. The closest spiritual sibling is **The New York Times** front page — a stack of recent news, dense type, generous whitespace, no chromatic announcement.
+
+What OpenAI rejects: brand colours beyond black and the product green, gradient meshes, hero animations, drop shadows, custom illustration that competes with type, marketing-bold (700+ weight) headlines, and any colour register that suggests "tech startup." The brand position is **research lab institutional confidence**, and the chromatic discipline is the strategic message: OpenAI doesn't need to perform; the work speaks.
+
+**Influences:**
+- Apple — monochrome reduction and the cultural authority of saying nothing extra, [apple.com](https://www.apple.com)
+- Anthropic — sister-lab editorial calm, [anthropic.com](https://www.anthropic.com)
+- The New York Times — news-broadcast rhythm and tracking discipline, [nytimes.com](https://www.nytimes.com)
+- Söhne (Klim Type Foundry) — geometric humanist precedent for OpenAI Sans, [klim.co.nz](https://klim.co.nz/retail-fonts/soehne)
+- ColfaxAI (retired) — OpenAI's previous typeface, the lineage OpenAI Sans inherited and refined
+- Stripe Press — editorial-software register at scale
+
+## 14. Do's and Don'ts
+
+**Do**
+- Anchor the canvas on pure white (`#ffffff`) — no warm tint, no off-white, no cream
+- Use solid black (`#000000`) for body type, headings, links, and the single CTA — two-tone monochrome
+- Set OpenAI Sans at 500 weight throughout — the medium weight does the work of bold elsewhere
+- Apply negative tracking that scales with size — `-0.22px` at 22px, `-1.44px` at 48px
+- Use a single black pill (40px–9999px radius) for the primary CTA — never more than one per viewport
+- Treat the 4% black wash (`rgba(0,0,0,0.04)`) as the entire hover vocabulary
+- Lean on white space and image cards; this brand earns trust by *not* filling space
+- Render news cards with hairline-bordered tiles + image-led layout — flat, 12px radius
+- Reserve the ChatGPT product green `#10a37f` for inside-the-app surfaces, not marketing
+- Maintain 96–128px section padding — newspaper rhythm
+
+**Don't**
+- Don't introduce a brand blue, gradient, or hero animation — OpenAI has none and adding any collapses the institutional register
+- Don't stack drop shadows on cards — the visual language is hairline borders + flat surfaces, full stop
+- Don't mix 4–8px "app-grade" radii into the marketing surface — pills (40px+) and medium cards (12px) are the only shapes here
+- Don't use OpenAI Sans at 700 weight on marketing — 500 medium is the discipline
+- Don't add a Copilot-style accent blue — OpenAI's only accent is the product green, and it lives in the app
+- Don't decorate with illustration that competes with type — news cards' real product imagery carries the visual interest
+- Don't shorten section padding below 96px — the breath is the brand
+- Don't use exclamation marks in copy — the voice is institutional, never enthusiastic
+- Don't differentiate visited links — OpenAI links stay black both before and after click
+- Don't introduce a Copilot-style "section eyebrow" hierarchy — OpenAI uses 11/500 uppercase eyebrows sparingly
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+Canvas:           #ffffff
+Bg Soft:          #f1f1f1
+Bg Section:       #f7f7f7
+Body Black:       #000000
+Brand:            #000000
+Brand Hover:      #1a1a1a
+Hover Surface:    rgba(0,0,0,0.04)
+Press Surface:    rgba(0,0,0,0.08)
+Hairline:         rgba(0,0,0,0.1)
+Muted:            #5d5d5d
+Subtle:           #8e8e8e
+ChatGPT Green:    #10a37f
+Locale Pill Bg:   #f1f1f1
+Dark Band:        #0a0a0a
+Dark Text:        #ededed
+```
+
+### Example Component Prompts
+
+- "Create an OpenAI-style primary CTA: a 40px-tall pill (9999px radius) with solid black (`#000000`) fill, white text in OpenAI Sans 14/500, 0×20px padding (zero vertical because the height is fixed). On hover the fill transitions to `#1a1a1a` over 150ms. No drop-shadow, no border. Single CTA per viewport — never more than one."
+- "Build an OpenAI hero band: pure white (`#ffffff`) ground, content capped at 1280px, 96–128px vertical padding. Display headline in OpenAI Sans 48/500 with -1.44px tracking — 'A new era of AI'. Body-large sub-copy at 18/400 in `#000000`. Single black pill CTA flush left ('Try ChatGPT'). No image, no animation — just type and white space."
+- "Design an OpenAI news card: white surface, 12px radius, 1px `rgba(0,0,0,0.1)` hairline, no padding around the image (image fills to corners). Stack: 16:9 thumbnail with `object-fit: cover`, eyebrow label in 11/500 uppercase muted ('RESEARCH'), headline in 18/500 black, dateline + author in 13/400 muted. On hover the image scales 1.0 → 1.02 over 200ms ease-out; the card itself stays stationary."
+- "Create an OpenAI nav button: transparent fill in default state, OpenAI Sans 14/500 black text, 8×16px padding. On hover, fade in a 4% black surface (`rgba(0,0,0,0.04)`) over 150ms — the button materialises only on interaction. Behaviour: invisible-until-hover."
+- "Build an OpenAI locale picker: light grey (`#f1f1f1`) pill, 9999px radius, 8×16px padding, OpenAI Sans 14/500 with chevron icon at 8px right padding. Sits in the footer — the only chromatic concession to internationalisation."
+- "Design an OpenAI dark research band: `#0a0a0a` ground, `#ededed` text, content capped at 1280, 96–128px vertical padding. Display in OpenAI Sans 32/500 white with -0.96px tracking — 'A safe and beneficial AGI'. Body sub-copy at 16/400 `#ededed`. White pill CTA inverted from the primary."
+
+### Iteration Guide
+
+1. **Pure white first.** If your canvas has any tint or warmth, it isn't OpenAI. `#ffffff` flat. The discipline is the brand.
+2. **Solid black on white.** No grey approximations, no near-black. `#000000` for body, headings, links, and CTA.
+3. **OpenAI Sans at 500 throughout.** The medium weight + negative tracking is the typographic signature. Substituting 700 bold breaks the institutional register.
+4. **One CTA per viewport.** Black pill, 40px height (or 56 on hero). The single action discipline is part of the trust.
+5. **4% black is the hover vocabulary.** `rgba(0,0,0,0.04)` for nav hover, tertiary buttons, badge backgrounds. No drop-shadow, no colour shift.
+6. **Cards at 12px radius with hairline border.** No 4–6px "app-grade" radii on marketing — medium-soft cards (12px) plus full pills (40+/9999px). Nothing in between.
+7. **96–128px section padding.** Newspaper rhythm. If the page feels cramped, it is.
+8. **No green on marketing.** The ChatGPT product green `#10a37f` exists in the system but lives almost exclusively inside the app. The marketing surface stays two-tone.

@@ -1,65 +1,130 @@
 ---
 name: SolidJS
-tagline: Deep navy with a blue-to-cyan brand gradient — reactive primitives dressed as a circuit diagram.
+tagline: 'Deep navy with a blue-to-cyan brand gradient — reactive primitives dressed as a circuit diagram.'
 author: webdesignhot
 source_url: https://www.solidjs.com
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools]
 tags: [dark, sans, structured, cool, multi-theme]
 preview_swatch: ['#0c1424', '#2c4f7c', '#66e6ff']
 related: [vite, vercel, tailwindcss]
-description: 'SolidJS leans into a deep `#0c1424` navy with a brand gradient that runs from a saturated `#2c4f7c` blue into a glowing `#66e6ff` cyan — the two-tone palette that lives in the Solid wordmark itself. The site reads like a circuit diagram: dense, technical, blue-on-blue-on-cyan, with code blocks treated as primary content rather than chrome.'
+description: 'SolidJS leans into a deep `#0c1424` navy with a brand gradient that runs from a saturated `#2c4f7c` blue into a glowing `#66e6ff` cyan — the two-tone palette that lives in the Solid wordmark itself. The site reads like a circuit diagram: dense, technical, blue-on-blue-on-cyan, with code blocks treated as primary content rather than chrome. Where Astro feels cosmic and Qwik feels kinetic, Solid feels infrastructural — the developer portal of a chip manufacturer rendered as marketing.'
 
 colors:
-  bg: '#0c1424'                # deep technical navy
-  bg-soft: '#142037'
-  surface: '#1a2640'
-  surface-strong: '#26334d'
-  text: '#f0f4fa'
-  text-muted: '#a8b3c7'
-  text-soft: '#7a8499'
-  brand: '#2c4f7c'             # Solid deep blue (wordmark left)
-  brand-strong: '#1d3a5f'
-  accent: '#66e6ff'            # Solid bright cyan (wordmark right)
-  accent-strong: '#33d4ff'
-  gradient-from: '#2c4f7c'
-  gradient-to: '#66e6ff'
-  border: '#ffffff14'
-  border-strong: '#ffffff26'
-  on-brand: '#ffffff'
-  on-accent: '#0c1424'
-  warning: '#fbbf24'
+  # — Primary —
+  bg: '#0c1424'                  # deep technical navy, the canvas
+  bg-soft: '#142037'              # secondary panel, code-block surface
+  bg-strong: '#1a2640'             # card lift
+  surface: '#1a2640'               # raised card
+  surface-strong: '#26334d'         # hovered card
+  surface-muted: '#0e1828'          # pressed card
+  text: '#f0f4fa'                  # primary, near-white with cool tint
+  text-strong: '#ffffff'           # absolute white emphasis
+  text-muted: '#a8b3c7'            # secondary copy
+  text-soft: '#7a8499'             # tertiary
+  text-faint: '#5a6478'             # quaternary
+  text-disabled: '#3a4258'           # disabled
+  # — Brand & Accents —
+  brand: '#2c4f7c'                 # Solid deep blue (wordmark left)
+  brand-strong: '#1d3a5f'          # darker pressed blue
+  brand-soft: '#2c4f7c33'          # 20% blue wash for callouts
+  brand-deep: '#0a1a2e'            # deepest blue near canvas
+  accent: '#66e6ff'                # Solid bright cyan (wordmark right)
+  accent-strong: '#33d4ff'         # pressed cyan
+  accent-soft: '#66e6ff22'         # 13% cyan wash
+  gradient-from: '#2c4f7c'         # gradient start
+  gradient-to: '#66e6ff'           # gradient end
+  glow: '#66e6ff44'                # 27% alpha cyan glow for hover halos
+  # — Interactive —
+  link: '#66e6ff'                  # link picks up cyan accent
+  link-hover: '#33d4ff'             # brighter cyan on hover
+  link-visited: '#a78bfa'           # visited soft violet
+  selected: '#2c4f7c33'             # selected-row tint
+  disabled-bg: '#26334d'            # disabled control surface
+  disabled-text: '#5a6478'          # disabled label
+  # — Neutrals & Borders —
+  border: '#ffffff14'               # 8% white hairline
+  border-strong: '#ffffff26'        # 15% white
+  border-subtle: '#ffffff0a'        # 4% white
+  border-cyan: '#66e6ff66'          # cyan 40% for emphasized borders
+  divider: '#ffffff14'              # table rules
+  # — Inverse / Light Surfaces —
+  inverse-bg: '#ffffff'             # rare light moments (pricing/contrast)
+  inverse-text: '#0c1424'           # near-black on light
+  inverse-text-muted: '#5b5e64'      # muted on light
+  inverse-border: '#e1e3e7'          # light-surface border
+  # — Shadow Colors —
+  shadow-deep: 'rgba(0, 0, 0, 0.4)'
+  shadow-cyan: 'rgba(102, 230, 255, 0.32)'   # cyan halo for emphasis
+  shadow-blue: 'rgba(44, 79, 124, 0.32)'      # blue glow
+  # — Semantic —
+  success-bg: '#0d2818'
+  success-text: '#86efac'
+  success-border: '#22c55e'
+  warning-bg: '#2a2010'
+  warning-text: '#fbbf24'
+  warning-border: '#f59e0b'
+  danger-bg: '#2a1414'
+  danger-text: '#fca5a5'
+  danger-border: '#ef4444'
+  info-bg: '#0c2030'
+  info-text: '#7dd3fc'
+  info-border: '#0ea5e9'
+  on-brand: '#ffffff'              # white ON the brand blue
+  on-accent: '#0c1424'             # deep navy ON the cyan (legibility)
 
 typography:
   display:
-    family: 'Gordita, Inter, -apple-system, "system-ui", sans-serif'
+    family: 'Gordita, "Inter Display", Inter, -apple-system, "system-ui", sans-serif'
     weights: [500, 600, 700]
+    opentype-features: ['ss01']
   body:
     family: 'Inter, -apple-system, "system-ui", "Segoe UI", sans-serif'
     weights: [400, 500, 600]
+    opentype-features: ['cv01', 'cv11']
   mono:
-    family: '"JetBrains Mono", "Fira Code", ui-monospace, Menlo, monospace'
-    weights: [400, 500]
+    family: '"JetBrains Mono", "Fira Code", ui-monospace, Menlo, Consolas, monospace'
+    weights: [400, 500, 700]
+    opentype-features: ['zero', 'ss02']
   scale:
-    h1:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.02em' }
-    h2:    { size: 44, weight: 700, lineHeight: 1.1,  tracking: '-0.015em' }
-    h3:    { size: 26, weight: 600, lineHeight: 1.3,  tracking: '0' }
-    body:  { size: 16, lineHeight: 1.65 }
-    small: { size: 14, lineHeight: 1.5 }
-    code:  { size: 14, family: mono, lineHeight: 1.6 }
+    display-hero:    { size: 80, weight: 700, lineHeight: 1.0,  tracking: '-0.025em', family: display, opentype: 'ss01' }
+    display-large:   { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    display:         { size: 52, weight: 700, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    h1:              { size: 44, weight: 700, lineHeight: 1.1,  tracking: '-0.015em', family: display }
+    h2:              { size: 34, weight: 700, lineHeight: 1.2,  tracking: '-0.012em', family: display }
+    h3:              { size: 26, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    h4:              { size: 21, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    h5:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.4,  tracking: '0.1em',    family: body, transform: 'uppercase' }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.65, tracking: '-0.005em', family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.65, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    caption:         { size: 13, weight: 500, lineHeight: 1.5,  tracking: '0.01em',   family: body }
+    micro:           { size: 11, weight: 600, lineHeight: 1.4,  tracking: '0.04em',   family: body, transform: 'uppercase' }
+    code:            { size: 14, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono, opentype: 'zero' }
+    code-sm:         { size: 12, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono, opentype: 'zero' }
+    code-tabular:    { size: 14, weight: 500, lineHeight: 1.5,  tracking: '0',        family: mono, opentype: 'zero, tnum' }
 
 radius:
-  xs: 4
-  sm: 6
-  md: 8
-  lg: 12
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  xl: 12
+  xxl: 16
   card: 12
   pill: 9999
 
+spacing:
+  base: 4
+  scale: [2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128]
+
 layout:
-  container: 1200
+  page-width: 1200
+  prose-width: 680
+  header-height: 64
   gutter: 24
   section-padding: 80
   grid: 12
@@ -70,19 +135,101 @@ components:
     color: '#ffffff'
     radius: 8
     weight: 600
+    padding: '12px 24px'
+    font: display
+    hover: 'shadow #66e6ff44 0 0 24px; brightness(1.05)'
   button-ghost:
     bg: 'transparent'
     color: '#66e6ff'
     border: '1px solid #66e6ff66'
     radius: 8
+    weight: 500
+    hover: 'bg #66e6ff11; border #66e6ff'
+  button-solid:
+    bg: '#2c4f7c'
+    color: '#ffffff'
+    radius: 8
+    weight: 600
+    hover: 'bg #1d3a5f'
+  button-link:
+    bg: 'transparent'
+    color: '#66e6ff'
+    underline: 'on hover'
+    weight: 500
   card:
     bg: '#1a2640'
     border: '1px solid #ffffff14'
     radius: 12
+    padding: '24px'
+    shadow: 'rgba(0, 0, 0, 0.2) 0 4px 12px'
+  card-tonal:
+    bg: '#142037'
+    border: '1px solid #ffffff0a'
+    radius: 12
+    padding: '20px'
+  badge:
+    bg: '#66e6ff22'
+    color: '#66e6ff'
+    radius: 9999
+    padding: '4px 10px'
+    weight: 600
+    font: mono
+  input:
+    bg: '#142037'
+    color: '#f0f4fa'
+    border: '1px solid #ffffff26'
+    radius: 8
+    padding: '10px 14px'
+    focus-ring: '0 0 0 3px rgba(102, 230, 255, 0.4)'
+  nav:
+    bg: '#0c1424cc'
+    backdrop-blur: 12
+    border-bottom: '1px solid #ffffff14'
+    height: 64
   code-block:
     bg: '#142037'
+    color: '#e6e6e6'
     radius: 8
+    padding: '20px 24px'
     font: mono
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-precise: 'cubic-bezier(0.32, 0.72, 0, 1)'  # engineering-precise, slight overshoot resistance
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 300
+  duration-page: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translateY transforms collapse to opacity-only fades; cyan glow halos remain static.'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1536
+
+shadows:
+  none: 'none'
+  ambient: 'rgba(0, 0, 0, 0.2) 0 1px 3px'
+  standard: 'rgba(0, 0, 0, 0.3) 0 4px 12px'
+  elevated: 'rgba(0, 0, 0, 0.4) 0 12px 24px -8px'
+  cyan-glow: 'rgba(102, 230, 255, 0.32) 0 0 24px'
+  blue-glow: 'rgba(44, 79, 124, 0.4) 0 0 24px'
+  ring: '0 0 0 3px rgba(102, 230, 255, 0.4)'
+
+accessibility:
+  contrast-text-on-bg: 14.2                 # AAA — #f0f4fa on #0c1424
+  contrast-muted-on-bg: 7.6                 # AAA — #a8b3c7 on #0c1424
+  contrast-text-on-brand: 6.8               # AA — #ffffff on #2c4f7c
+  contrast-text-on-accent: 12.6             # AAA — #0c1424 on #66e6ff
+  contrast-link-on-bg: 11.4                 # AAA — #66e6ff on #0c1424
+  focus-ring: '3px solid rgba(102, 230, 255, 0.4)'
+  focus-offset: '2px'
+  reduced-motion-honored: true
+  min-touch-target: 44
+
+dark-mode: default   # Dark IS the default; light variant exists for docs but marketing is dark-only
 
 lineage:
   summary: |
@@ -93,13 +240,13 @@ lineage:
     The canvas is `#0c1424`, a navy deep enough to read as technical
     rather than fashionable; cards lift to `#1a2640`, code blocks sit
     on `#142037`. Everything is a tonal step in the same blue family,
-    a discipline that reads as **engineering-document**, not marketing.
+    a discipline that reads as engineering-document, not marketing.
     Type pairs Gordita (a slightly-rounded geometric sans) with Inter
     for body, and code uses JetBrains Mono — the dev-tool default.
-    The closest design cousin is **MDN at night** or a hardware
-    company's developer portal: dense, technical, blue-on-blue, with
-    the only chromatic departure being the cyan glow that lights up
-    hover states and CTAs. Solid sells itself on raw performance and
+    The closest design cousin is MDN at night or a hardware company's
+    developer portal: dense, technical, blue-on-blue, with the only
+    chromatic departure being the cyan glow that lights up hover
+    states and CTAs. Solid sells itself on raw performance and
     fine-grained reactivity, and the site behaves the same way: no
     decoration that doesn't earn its place.
   influences:
@@ -112,9 +259,15 @@ lineage:
     - name: Cloudflare
       role: Engineering-document register — blue-tonal palette signaling infrastructure.
       url: https://www.cloudflare.com
+    - name: Vercel
+      role: Dark-canvas dev-tool template, gradient-led brand.
+      url: https://vercel.com
+    - name: Hardware developer portals (Intel, AMD, ARM)
+      role: Engineering-portal aesthetic — dense, blue-tonal, code-foregrounded.
+
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
 SolidJS's site is the most literal logo-to-design-system translation
 in the framework space. The wordmark is a two-tone gradient — deep
@@ -123,79 +276,466 @@ marketing surface is built from that exact pair. The canvas is
 `#0c1424`, a deep technical navy; cards lift to `#1a2640`; code
 blocks sit on `#142037`. Every surface is a tonal step in the same
 blue family, and the cyan only appears as the brand-gradient endpoint,
-on hover states, and on the wordmark itself.
+on hover states, and on the wordmark itself. The result reads as
+**engineering documentation rendered as marketing** — dense,
+blue-on-blue, with code treated as primary content rather than chrome.
 
-The result reads as **engineering documentation rendered as marketing**
-— dense, blue-on-blue, with code treated as primary content rather
-than chrome. Where Astro feels cosmic and Nuxt feels Vue-warm, Solid
-feels infrastructural, like the developer portal of a chip manufacturer.
-
-## Colors
-
-- **bg** `#0c1424` — deep technical navy, the canvas of every section
-- **bg-soft** `#142037` — secondary panel, code-block surface
-- **surface** `#1a2640` — card lift
-- **text** `#f0f4fa` — primary, near-white with slight cool tint
-- **text-muted** `#a8b3c7` — secondary copy, nav metadata
-- **brand** `#2c4f7c` — deep blue end of the wordmark gradient
-- **accent** `#66e6ff` — bright cyan, the gradient's glowing endpoint
-- **gradient** `#2c4f7c → #66e6ff` — the brand's signature pairing
-- **border** `#ffffff14` — 8% white hairline
-- **on-brand** `#ffffff` — text on solid brand fills
-
-## Typography
-
-Display is **Gordita** (or Inter as fallback) at weights 600 and 700.
-Gordita is a slightly-rounded geometric sans, more Avenir than Inter
-in feel — the rounder counters give the marketing a softer technical
-register, distinct from the Geist/Inter monoculture. H1 sits at 64px
-with `-0.02em` tracking and 1.05 line-height.
-
-Body type is **Inter** at 16px on a generous 1.65 line-height,
-signaling "read this carefully." Code surfaces use **JetBrains Mono**
-at 14px on the `#142037` panel — the dev-tool default mono, deliberately
-not a custom face, because Solid's brand voice is "we are infrastructure,
-not fashion."
-
-## Layout
-
-Container caps at 1200px with 24px gutters; sections at 80px vertical
-padding — slightly tighter than Astro or Nuxt, in keeping with the
-documentation register. The grid is 12-column with frequent two-pane
-layouts (prose / code) that mirror Stripe Docs.
-
-## Elevation & Depth
+The atmosphere is **infrastructural-precise**. Where Astro feels
+cosmic and Nuxt feels Vue-warm, Solid feels like the developer portal
+of a chip manufacturer. The page sells reactive primitives by
+behaving like documentation: tight spacing (80px section padding,
+slightly tighter than Bun's 96px), dense type, code blocks as the
+largest visual element on the page. The cyan glow is not decorative
+— it is the brand's depth signal, used on hover halos and CTA
+emissions like the trace of an oscilloscope.
 
 Depth is achieved through **tonal-blue stepping**: `#0c1424` →
 `#142037` → `#1a2640` → `#26334d`, each step roughly 6% lighter than
-the one below. Borders are uniform 8% white hairlines; shadows are
-absent. The signature depth move is a soft cyan glow (`#66e6ff` at
-20–30% alpha) behind hover states and primary CTAs, mimicking the
-emissive feel of an oscilloscope trace.
+the one below. Borders are uniform 8% white hairlines (`#ffffff14`);
+shadows are dark-neutral and used sparingly. The signature depth
+move is a soft cyan glow (`#66e6ff` at 20–30% alpha) behind hover
+states and primary CTAs — the brand's literal visualization of
+"reactive emission." Code blocks are foregrounded as primary content;
+they are frequently the largest visual element on the page, in
+keeping with Solid's documentation-first ethos.
 
-## Shapes
+Type pairs **Gordita** (display) with **Inter** (body) and **JetBrains
+Mono** (code). Gordita is a slightly-rounded geometric sans — more
+Avenir than Inter in feel — with rounder counters that give the
+marketing a softer technical register, distinct from the Geist/Inter
+monoculture. Body Inter at 16px on a generous 1.65 line-height
+signals "read this carefully." Code uses JetBrains Mono at 14px on
+the `#142037` panel, deliberately not a custom face, because Solid's
+brand voice is "we are infrastructure, not fashion."
 
-Radius ladder is 4 / 6 / 8 / 12, with pills at 9999. Buttons land at
-8px, cards at 12px. The geometry is grid-aligned and modest — nothing
-rounds past 12px except status pills, in keeping with the engineering-
-document register.
+**Key Characteristics**
 
-## Components
+- Deep technical navy canvas (`#0c1424`) — engineering, not fashion
+- Two-tone wordmark gradient (`#2c4f7c` → `#66e6ff`) drives the system
+- Tonal-blue stepping for depth — every surface in the same family
+- Cyan glow (`#66e6ff` at low alpha) as signature depth signal
+- 8% white hairline borders, uniform across the system
+- Gordita display + Inter body + JetBrains Mono code
+- Code blocks as primary content — often largest visual element
+- 80px section padding — slightly tighter than dev-tool peers
+- 12px card radius, modest geometry
+- Engineering-document register, dense and disciplined
 
-The defining components are the **gradient button** (`#2c4f7c` →
-`#66e6ff` linear gradient, 8px radius, white text), the **cyan-glow
-ghost button** for secondary actions (transparent fill, cyan border,
-soft halo on hover), the **code block on `#142037`** with JetBrains
-Mono — frequently the largest visual element on a page, in keeping
-with Solid's documentation-first ethos — and the **two-tone wordmark
-glyph** that anchors the navigation. Cards are tonal-blue panels with
-8% white hairlines.
+## 2. Color Palette & Roles
 
-## Do's and Don'ts
+### Primary
+
+- **bg** (`#0c1424`): deep technical navy, the canvas
+- **text** (`#f0f4fa`): primary, near-white with cool tint (not pure white)
+- **brand** (`#2c4f7c`): deep blue, left endpoint of wordmark gradient
+- **accent** (`#66e6ff`): bright cyan, right endpoint of gradient
+- **on-brand** (`#ffffff`): white ON the brand blue
+- **on-accent** (`#0c1424`): deep navy ON the cyan (legibility inversion)
+
+### Brand & Dark
+
+- **brand-strong** (`#1d3a5f`): darker pressed blue
+- **brand-deep** (`#0a1a2e`): deepest blue near canvas — used for nested panels
+- **accent-strong** (`#33d4ff`): pressed cyan
+- **gradient-from** (`#2c4f7c`): gradient start
+- **gradient-to** (`#66e6ff`): gradient end
+- **glow** (`#66e6ff44`): 27% alpha cyan glow halo
+
+### Accent
+
+- **brand-soft** (`#2c4f7c33`): 20% blue wash for callouts
+- **accent-soft** (`#66e6ff22`): 13% cyan wash for badges
+- **bg-soft** (`#142037`): code-block surface, secondary panel
+- **bg-strong** (`#1a2640`): card lift
+
+### Interactive
+
+- **link** (`#66e6ff`): link picks up cyan accent
+- **link-hover** (`#33d4ff`): brighter cyan on hover
+- **link-visited** (`#a78bfa`): visited soft violet (rare departure from blue)
+- **selected** (`#2c4f7c33`): selected-row blue tint
+- **disabled-bg** (`#26334d`): disabled control surface
+- **disabled-text** (`#5a6478`): disabled label
+
+### Neutral Scale
+
+- **text-strong** (`#ffffff`): absolute white emphasis
+- **text** (`#f0f4fa`): primary, slight cool tint — NOT pure white
+- **text-muted** (`#a8b3c7`): secondary copy
+- **text-soft** (`#7a8499`): tertiary, deemphasized
+- **text-faint** (`#5a6478`): quaternary helper labels
+- **text-disabled** (`#3a4258`): disabled
+
+### Surface & Borders
+
+- **surface** (`#1a2640`): default card surface
+- **surface-strong** (`#26334d`): hovered card
+- **surface-muted** (`#0e1828`): pressed card or nested panel
+- **border** (`#ffffff14`): 8% white hairline, default
+- **border-strong** (`#ffffff26`): 15% white, emphasized
+- **border-subtle** (`#ffffff0a`): 4% white
+- **border-cyan** (`#66e6ff66`): cyan 40% for emphasized branded borders
+- **divider** (`#ffffff14`): table rules
+
+### Shadow Colors
+
+Shadows are **dark-neutral on the dark canvas**, but the brand's depth signature is the **cyan glow** — `rgba(102, 230, 255, 0.32)` blurred at 24px, used behind hover states and CTAs. Where Stripe uses blue-tinted shadows on light grounds, Solid uses cyan-emissive glows on dark grounds — emulating the trace of an oscilloscope or LED indicator on a circuit board.
+
+### Semantic
+
+- **success-bg** (`#0d2818`) / **success-text** (`#86efac`) / **success-border** (`#22c55e`)
+- **warning-bg** (`#2a2010`) / **warning-text** (`#fbbf24`) / **warning-border** (`#f59e0b`)
+- **danger-bg** (`#2a1414`) / **danger-text** (`#fca5a5`) / **danger-border** (`#ef4444`)
+- **info-bg** (`#0c2030`) / **info-text** (`#7dd3fc`) / **info-border** (`#0ea5e9`)
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Primary display**: `Gordita`, fallback to `"Inter Display"`, `Inter`, system stack
+- **Body**: `Inter`, fallback to `-apple-system`, `"system-ui"`, `"Segoe UI"`
+- **Mono**: `"JetBrains Mono"`, fallback to `"Fira Code"`, `ui-monospace`, `Menlo`, `Consolas`
+- **OpenType features used**: `ss01` (Gordita/Inter alternate `g`), `cv01`/`cv11` (Inter character variants), `zero` (slashed zero in JetBrains Mono), `tnum` in benchmark/spec tables
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| display-hero | Gordita | 80 | 700 | 1.0 | -0.025em | ss01 | Hero only |
+| display-large | Gordita | 64 | 700 | 1.05 | -0.02em | — | Marketing H1 |
+| display | Gordita | 52 | 700 | 1.1 | -0.018em | — | Section openers |
+| h1 | Gordita | 44 | 700 | 1.1 | -0.015em | — | Page titles |
+| h2 | Gordita | 34 | 700 | 1.2 | -0.012em | — | Sub-section headers |
+| h3 | Gordita | 26 | 600 | 1.3 | 0 | — | Feature titles |
+| h4 | Gordita | 21 | 600 | 1.35 | 0 | — | Card titles |
+| h5 | Gordita | 18 | 600 | 1.4 | 0 | — | Sidebar headers |
+| eyebrow | Inter | 12 | 600 | 1.4 | 0.1em | uppercase | Section labels |
+| body-lg | Inter | 18 | 400 | 1.65 | -0.005em | — | Hero subhead |
+| body | Inter | 16 | 400 | 1.65 | 0 | — | Default body — generous line-height |
+| body-sm | Inter | 14 | 400 | 1.55 | 0 | — | Secondary |
+| caption | Inter | 13 | 500 | 1.5 | 0.01em | — | Metadata |
+| micro | Inter | 11 | 600 | 1.4 | 0.04em | uppercase | Tags |
+| code | JetBrains Mono | 14 | 400 | 1.6 | 0 | zero | Code blocks |
+| code-sm | JetBrains Mono | 12 | 400 | 1.55 | 0 | zero | Inline code |
+| code-tabular | JetBrains Mono | 14 | 500 | 1.5 | 0 | zero, tnum | Spec tables, benchmarks |
+
+### Principles
+
+1. **Gordita over Inter Display.** The slightly-rounded geometric character of Gordita gives Solid a softer technical register without sacrificing the engineering rigor. Inter Display would read as Vercel; Gordita reads as Solid.
+2. **Generous line-height on body (1.65).** Body Inter sits on a more generous line-height than Bun's or Deno's 1.6 — signaling "read this carefully", supporting the documentation-first voice.
+3. **Negative tracking on display, neutral on body.** Display rolls in tight (`-0.015em` to `-0.025em`); body stays at `0`. Tighter than Vercel's display tracking.
+4. **No italic display, no decorative cuts.** Discipline mirrors the engineering-document register.
+5. **Slashed zero in mono.** `zero` OpenType feature enabled across all mono surfaces.
+6. **JetBrains Mono is canonical.** No custom mono face; the dev-tool-default mono is part of the brand voice. Custom mono would read as fashion; JetBrains reads as infrastructure.
+7. **Eyebrow + display + body cadence.** Sections open with an uppercase eyebrow at `0.1em` tracking, then display, then body — the documentation-style hierarchy.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary (gradient)**: `linear-gradient(90deg, #2c4f7c, #66e6ff)` background, `#ffffff` text, 8px radius, weight 600 in Gordita, padding `12px 24px`. Hover adds cyan glow (`#66e6ff44 0 0 24px`) and brightens 5%. The signature CTA — used for "Get started", "Read the docs."
+
+**Ghost (cyan)**: transparent background, `#66e6ff` text, 1px solid `#66e6ff66` border, 8px radius, weight 500. Hover fills to `#66e6ff11` and border deepens to `#66e6ff`.
+
+**Solid blue**: `#2c4f7c` background, `#ffffff` text, 8px radius, weight 600. Hover deepens to `#1d3a5f`.
+
+**Link button**: transparent, `#66e6ff` text, weight 500, underline on hover.
+
+### Cards
+
+**Default**: `#1a2640` background, 1px solid `#ffffff14` hairline, 12px radius, padding `24px`, ambient `rgba(0, 0, 0, 0.2) 0 4px 12px` shadow. Hover lifts to `#26334d`.
+
+**Tonal**: `#142037` background (one step lighter than canvas), 1px solid `#ffffff0a` near-invisible border, 12px radius, padding `20px`. Used for nested panels, sidebar cards, less-emphasized content.
+
+### Badges & Tags
+
+`#66e6ff22` (13% cyan) background, `#66e6ff` cyan text, 9999 (pill) radius, padding `4px 10px`, weight 600, JetBrains Mono. Blue variant: `#2c4f7c33` background, `#a8b3c7` text.
+
+### Inputs
+
+`#142037` background, `#f0f4fa` text, 1px solid `#ffffff26` border, 8px radius, padding `10px 14px`. Focus ring: `0 0 0 3px rgba(102, 230, 255, 0.4)` — the cyan halo. Placeholder: `#5a6478`.
+
+### Navigation
+
+`#0c1424cc` (80% canvas) with `12px` backdrop-blur, 1px solid `#ffffff14` bottom border, 64px height. Two-tone wordmark glyph + "SolidJS" wordmark on the left, primary nav center, gradient CTA right.
+
+### Code blocks
+
+`#142037` background (one step lighter than canvas, distinctly its own surface), `#e6e6e6` near-white text, 8px radius, padding `20px 24px`, JetBrains Mono at 14px. Syntax highlighting: cyan for keywords, soft blue for strings, near-white for identifiers, muted gray for comments.
+
+Code blocks are frequently the **largest visual element** on a page — Solid foregrounds them as primary content, in keeping with the documentation-first ethos. Where Bun and Deno treat code as a contrasting island, Solid treats code as the headline.
+
+### Two-tone wordmark glyph
+
+The signature visual — used at multiple scales. Always rendered with the brand gradient (`linear-gradient(90deg, #2c4f7c, #66e6ff)`). The glyph is angular but with slightly-rounded corners, echoing Gordita's geometric character.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base unit is **4px**. Scale: `2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128`. Density is **mid-tight** — 80px section padding (slightly less than 96px peer default), 24px card padding. The tighter rhythm reflects the documentation register: more content per scroll, less marketing breathing room.
+
+### Grid & Container
+
+Container caps at **1200px** with **24px gutters**. Prose width: 680px. The grid is 12-column with frequent two-pane layouts (prose / code) that mirror Stripe Docs — Solid borrows this structure deliberately, treating documentation pages as a sibling of marketing pages.
+
+### Whitespace Philosophy
+
+The dark canvas absorbs whitespace as void. Solid compensates with explicit hairline borders on sections — borders articulate structure where light-canvas brands let whitespace do the work. The `#142037` `bg-soft` panels also do structural work, dividing sections without requiring large vertical gaps.
+
+### Section Cadence
+
+Canvas runs continuously; alternation happens via `bg-soft` (`#142037`) bands every 2–3 sections. Brand-band moments (full-cyan sections) are essentially absent; cyan is reserved for accents, glows, and the wordmark. Code-block-as-section is a deliberate pattern — entire sections built around large code panels.
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+| --- | --- | --- |
+| Micro | 2px | Border accents on dividers |
+| Standard | 4px | Inline tags, micro-pills |
+| Comfortable | 6px | Inputs, secondary buttons |
+| Relaxed | 8px | Primary buttons, default UI |
+| Large | 12px | Cards |
+| Featured | 16px | Hero illustration frames (rare) |
+| Pill | 9999px | Badges, status pills |
+
+The geometry is grid-aligned and modest — nothing rounds past 12px except status pills, in keeping with the engineering-document register. Where Qwik leans 16px-rounded for kinetic energy, Solid stays at 8/12px for engineering precision. Compound radii are absent.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+| --- | --- | --- |
+| 0 — Flat | No shadow, no border | Page canvas |
+| 1 — Hairline | 1px solid `#ffffff14` | Section dividers, tonal cards |
+| 2 — Lifted | 1px border + `rgba(0,0,0,0.2) 0 4px 12px` | Default cards |
+| 3 — Hovered | Lifted + brighter surface (`#26334d`) | Card hover |
+| 4 — Elevated | `rgba(0,0,0,0.4) 0 12px 24px -8px` | Modals, popovers |
+| 5 — Cyan-glow | `rgba(102, 230, 255, 0.32) 0 0 24px` | CTA hover, focus halo |
+
+**Shadow Philosophy** — Solid is a **tonal-step depth** brand. The primary depth strategy is tonal-blue stepping: `#0c1424` → `#142037` → `#1a2640` → `#26334d`, each surface ~6% lighter than the one below. Hairline borders articulate structure; drop shadows are present but understated. The brand-tinted depth signal is the **cyan glow** — `rgba(102, 230, 255, 0.32)` blurred at 24px, used on CTA hovers and focus rings. The glow mimics an oscilloscope trace or LED emission — the engineering-document equivalent of "reactive primitive firing."
+
+## 8. Interaction & Motion
+
+### Easing
+
+- **Standard**: `cubic-bezier(0.4, 0, 0.2, 1)` — default
+- **Emphasized**: `cubic-bezier(0.2, 0, 0, 1)` — feature reveals
+- **Precise**: `cubic-bezier(0.32, 0.72, 0, 1)` — engineering-precise, used on UI state changes that need to feel deliberate rather than springy
+
+### Durations
+
+- **Fast (100ms)**: hover color shifts, link underline (faster than dev-tool default)
+- **Standard (180ms)**: button hover lift, glow fade-in, focus ring
+- **Slow (300ms)**: section reveals, modal entrance
+- **Page (400ms)**: route transitions
+
+Solid's durations are **slightly faster** than peers (100/180/300 vs typical 120/200/320) — the engineering-precise voice favors responsiveness over indulgence.
+
+### Per-component Micro-states
+
+- **Button hover (gradient)**: cyan glow fades in over 180ms, brightness +5%, no translateY
+- **Card hover**: surface brightens from `#1a2640` to `#26334d` over 180ms
+- **Link hover**: underline grows 0→100% in 100ms; color brightens from `#66e6ff` to `#33d4ff`
+- **Focus**: 3px cyan halo fades in over 100ms
+- **Code-block copy**: copy button fades in on block hover over 180ms; on click, "Copied" confirmation appears with cyan glow then fades
+
+### Page Transitions
+
+400ms cross-fade with 16px translateY enter. Canvas remains constant; only inline content shifts. Reduced motion strips the translateY.
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` honored. translateY transforms become opacity-only fades. Cyan glows remain static (no fade-in pulse). Page transitions become instantaneous. Focus rings remain visible.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **Body on canvas** (`#f0f4fa` on `#0c1424`): **14.2:1** — AAA at all sizes
+- **Muted on canvas** (`#a8b3c7` on `#0c1424`): **7.6:1** — AAA
+- **Body on brand** (`#ffffff` on `#2c4f7c`): **6.8:1** — AA at body sizes
+- **Body on accent** (`#0c1424` on `#66e6ff`): **12.6:1** — AAA (the on-accent inversion)
+- **Link on canvas** (`#66e6ff` on `#0c1424`): **11.4:1** — AAA
+- **Code on code-bg** (`#e6e6e6` on `#142037`): **13.2:1** — AAA
+
+### Focus Indicators
+
+3px solid `rgba(102, 230, 255, 0.4)` cyan ring with 2px offset. Consistent across buttons, links, inputs, interactive cards. Visible on dark surfaces.
+
+### ARIA Patterns
+
+- **Combobox**: `role="combobox"` with `aria-expanded`, `aria-controls`, `aria-activedescendant`
+- **Dialog**: `role="dialog"` `aria-modal="true"`, focus trap, restore focus on close
+- **Tooltip**: `role="tooltip"` with `aria-describedby`
+- **Tabs**: `role="tablist"` / `role="tab"` / `role="tabpanel"` with arrow-key navigation
+- **Code-copy**: `aria-label="Copy code"` with polite live region
+- **Two-pane docs**: `role="navigation"` on sidebar, `role="main"` on content, `role="complementary"` on TOC
+
+### Keyboard Navigation
+
+- Tab order follows visual order
+- Skip-to-content link visually hidden until focused
+- Two-pane docs: Tab cycles sidebar → main → TOC; arrow keys navigate sidebar tree
+- Code blocks: Tab to copy button, Enter to copy, focus returns
+- Modals: Tab cycles within, Escape closes
+
+### Screen Reader Hints
+
+- Two-tone wordmark: `aria-label="SolidJS"` on the SVG when used as logo
+- Decorative SVGs: `aria-hidden="true"`
+- Code blocks: language announced via `aria-label`
+- Gradient buttons: text content is the label, never overridden
+
+### Reduced Motion
+
+See §8. Cyan glows freeze at static state; non-essential transforms become opacity fades.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Name | Width | Notes |
+| --- | --- | --- |
+| Mobile | < 640px | Single column, glow halos scale to 16px blur |
+| Tablet | 640–1024px | 8-column grid, two-pane docs collapses |
+| Desktop | 1024–1280px | Full 12-column grid, two-pane docs active |
+| Wide | 1280–1536px | Container caps at 1200px |
+| Ultra-wide | > 1536px | Container holds, gutters expand |
+
+### Touch Targets
+
+Minimum 44×44px on mobile. Buttons expand to `14×26px` padding. Nav links get 48px height.
+
+### Collapsing Strategy
+
+- **Hero**: 12-col → single-col; gradient illustration scales 50%
+- **Feature grid**: 3-up desktop → 2-up tablet → 1-up mobile
+- **Two-pane docs**: 3-col (sidebar / content / TOC) → single-col with drawer-based sidebar at < 1024px
+- **Code blocks**: full-bleed on mobile, padded on desktop
+- **Glow halos**: scale blur radius down on mobile to avoid overwhelming small screens
+
+### Image Behavior
+
+Two-tone wordmark SVG with gradient defs — scales without loss. Marketing illustrations (rare; Solid is text-heavy) use `srcset` 1x/2x/3x. Card images crop to `aspect-ratio: 16/9` desktop, `4/3` mobile.
+
+### Container Queries
+
+Used in feature cards and code-block-with-prose layouts: at < 480px container width, prose+code splits collapse to vertical stacks regardless of viewport.
+
+## 11. Content & Voice
+
+### Tone
+
+**Engineering-precise, documentation-first.** Solid's voice is calm and technical. Where Qwik says "instant" with excitement, Solid says "fine-grained reactivity" with reserve. Where Bun says "freshly-baked", Solid says "primitives that compose." The brand's confidence comes from rigor, not enthusiasm.
+
+### Microcopy Patterns
+
+- **Button verbs**: prefer technical actions ("Read the docs", "View the API", "Try in playground") over kinetic verbs
+- **Error messages**: lead with the technical reality, then the fix. Example: `Reactive context lost. Make sure your `createSignal` is called within a component or `createRoot`.` — names the primitive, names the fix.
+- **Success confirmations**: brief, period-terminated, never exclamation. "Saved." "Built."
+- **Loading states**: minimal; Solid's voice is "instant by design", so visible loading is rare
+
+### Empty States
+
+What they say: "No signals registered. Use `createSignal()` to begin." (Primitive-named, technical-direct.)
+
+What they don't say: "It looks like you haven't created any signals yet." (Too apologetic; Solid does not apologize for technical depth.)
+
+### CTA Verb Conventions
+
+- **Primary**: "Read the docs" / "Try the playground" / "View the API"
+- **Secondary**: "Browse examples" / "See benchmarks" / "Read the RFC"
+- **Footer CTA**: "Get started in seconds" — time-anchored
+- **Not used**: "Sign up free" — Solid is open source; "Learn more" — too vague for the engineering register
+
+## 12. Dark Mode & Theming
+
+**Dark IS the default for marketing; documentation has a light variant.**
+
+Solid's marketing identity is dark-canvas, blue-tonal, cyan-emissive — a light variant for the homepage would erase the engineering-portal voice and flatten the brand to a generic light-mode SaaS template.
+
+The documentation site **does** offer a light theme, where the canvas becomes `#ffffff`, body type becomes `#0c1424`, the brand gradient is preserved (it works on both grounds), and code blocks remain dark (`#142037`) as the constant island. The light docs theme is functional, not the brand voice — readers who want a less-fatiguing reading experience for long sessions choose it.
+
+If a future light marketing variant ships (currently not planned), the canvas would become `#ffffff`, the brand-soft callouts would become `#dbeafe` (soft blue), the cyan glow would become a soft cyan drop shadow, and the engineering-precise register would be preserved through tight type and dense layout. But until then, marketing is dark-only.
+
+## 13. Lineage & Influences
+
+Solid's design language sits at the intersection of three lineages. From **MDN at night**, Solid inherits the dense technical-documentation aesthetic — navy canvas, cyan link, code-foregrounded layout. From **Stripe Docs**, the code-as-content treatment and the two-pane prose/code layout pattern. From **Cloudflare**, the engineering-document register and the blue-tonal palette signaling infrastructure rather than fashion. From **Vercel**, the dark-canvas dev-tool template and the gradient-led brand convention. From **hardware developer portals** (Intel, AMD, ARM, NVIDIA), the engineering-portal aesthetic — dense, blue-tonal, code-foregrounded, with the kind of restrained chromatic discipline that signals "this is for people who care about clock cycles."
+
+What Solid rejects: warm canvas (Bun, Stripe Press), gradient hero as decoration (Qwik turns the gradient into a light show; Solid keeps it chromatic-only), illustrative mascot (Deno's dinosaur is off-brand for engineering rigor), kinetic motion (Solid's animations are precise, not springy).
+
+**Named influences**
+
+- **MDN Web Docs (dark mode)** — dense technical documentation aesthetic. https://developer.mozilla.org
+- **Stripe Docs** — code-as-content treatment. https://stripe.com/docs
+- **Cloudflare** — engineering-document register. https://www.cloudflare.com
+- **Vercel** — dark-canvas dev-tool template. https://vercel.com
+- **Hardware developer portals** (Intel, AMD, ARM) — engineering-portal aesthetic.
+
+## 14. Do's and Don'ts
+
+### Do's
 
 - **Do** scale the entire palette around the wordmark gradient. Every blue should be a tonal step between `#2c4f7c` and `#66e6ff`.
 - **Do** treat code blocks as primary content. SolidJS is sold on reactive primitives; mono blocks should feel like the headline, not the footnote.
-- **Do** use cyan glow (`#66e6ff` at low alpha) for hover states and CTA halos — it's the brand's depth signal.
+- **Do** use cyan glow (`#66e6ff` at low alpha) for hover states and CTA halos — it is the brand's depth signal.
+- **Do** use Gordita display for the rounded-geometric character. Inter Display is acceptable fallback but loses the Solid voice.
+- **Do** keep section padding tight (80px). The engineering-document register favors density.
+- **Do** use generous body line-height (1.65). Body Inter at 1.6 reads as marketing; at 1.65, it reads as documentation.
+- **Do** keep card radius at 12px maximum. Larger radii read as Qwik or Astro; Solid stays modest.
+- **Do** use the on-accent inversion (`#0c1424` ON the cyan) for CTA legibility. White on cyan fails AA.
+- **Do** lean on JetBrains Mono. The dev-tool default is part of "we are infrastructure, not fashion."
+- **Do** reserve cyan for accents, glows, links, and the wordmark endpoint. It should appear in 5–10% of visual area.
+
+### Don'ts
+
 - **Don't** introduce a non-blue accent. Greens, oranges, and warm hues break the engineering-document register.
 - **Don't** soften the canvas with a purple tilt. The exact `#0c1424` is what separates Solid from Astro and Linear; warmer or more colorful navies flatten the brand.
 - **Don't** use Gordita below 500 weight for headlines; the rounded geometric character lives in the heavier cuts.
+- **Don't** flatten the gradient to a single color. The brand identity is the two-tone — both endpoints must appear together on the wordmark.
+- **Don't** use white-on-cyan for buttons. Use `#0c1424` near-black ON the cyan for legibility.
+- **Don't** apply illustrative mascots to the marketing surface. Solid's voice is engineering-document; mascots break the register.
+- **Don't** add gradients to large surfaces. The two-tone gradient is reserved for wordmark, CTAs, and 1–2 hero illustrations maximum.
+- **Don't** use spring or bounce easing. Solid's motion is engineering-precise — clean cubic-beziers, no overshoot.
+- **Don't** lean on drop shadows for depth. The depth strategy is tonal-blue stepping plus cyan glow, not shadow stacking.
+- **Don't** use Berkeley Mono or Fira Mono for code. JetBrains is the brand-default mono.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg: #0c1424
+bg-soft: #142037
+surface: #1a2640
+text: #f0f4fa
+text-muted: #a8b3c7
+brand: #2c4f7c (deep blue)
+accent: #66e6ff (cyan)
+gradient: linear-gradient(90deg, #2c4f7c, #66e6ff)
+glow: #66e6ff44 (27% cyan halo)
+border: #ffffff14 (8% white)
+link: #66e6ff
+on-brand: #ffffff
+on-accent: #0c1424
+```
+
+### Example Component Prompts
+
+1. *"Create a hero with an 80px Gordita 700 headline at -0.025em tracking, 18px Inter body subhead at 1.65 line-height, a blue-to-cyan gradient CTA button (`linear-gradient(90deg, #2c4f7c, #66e6ff)`) with white text and weight 600. Canvas is `#0c1424`. Two-tone wordmark glyph anchors the top-left."*
+2. *"Design a feature card with `#1a2640` background, 1px solid `#ffffff14` hairline border, 12px radius, 24px padding, ambient `rgba(0,0,0,0.2) 0 4px 12px` shadow, a 26px Gordita 600 title, 16px Inter body. On hover, surface brightens to `#26334d` over 180ms."*
+3. *"Build a code-block-as-section: full-width `#142037` panel, `#e6e6e6` near-white text, JetBrains Mono at 14px, 8px radius, 20px×24px padding, slashed-zero enabled, cyan keyword highlighting (`#66e6ff`). The code block is the largest visual element on the page."*
+4. *"Create a ghost cyan button: transparent background, `#66e6ff` text, 1px solid `#66e6ff66` border, 8px radius, weight 500 in Gordita, padding 12px 24px. Hover fills to `#66e6ff11` and border deepens to solid `#66e6ff`."*
+5. *"Render the navigation: 64px height, `#0c1424cc` background with 12px backdrop-blur, 1px `#ffffff14` bottom border, two-tone wordmark glyph (gradient fill) + 'SolidJS' wordmark on left, primary nav center, gradient CTA right."*
+6. *"Add a cyan badge: `#66e6ff22` (13% cyan) background, `#66e6ff` cyan text, 9999 (pill) radius, padding 4px 10px, weight 600, JetBrains Mono. Used for version numbers and API status tags."*
+
+### Iteration Guide
+
+1. **Verify the canvas.** If bg is not `#0c1424`, the brand has drifted. Lighter navy reads as Qwik or Astro; warmer reads as Linear.
+2. **Confirm tonal stepping.** Cards should be `#1a2640`; bg-soft should be `#142037`. Each step ~6% lighter. If the depth ladder breaks, the engineering-document register flattens.
+3. **Audit cyan usage.** Cyan should appear in 5–10% of visual area — accents, links, glow halos, wordmark endpoint. If covering more, the brand has overcorrected toward fashion.
+4. **Check display family.** If the hero feels generic, push to Gordita. Inter Display is acceptable fallback but loses the rounded geometric character.
+5. **Verify body line-height.** Body Inter should be at 1.65. If at 1.6 or below, the documentation voice has flattened.
+6. **Confirm card radius at 12px max.** Larger radii read as Qwik or Astro; Solid stays modest.
+7. **Audit code-block prominence.** Code blocks should be foregrounded, often the largest element on a page. If they read as footnotes, the documentation-first ethos has slipped.
+8. **Check glow discipline.** Cyan glows should appear on CTA hovers and focus rings only. If glows are everywhere, the brand has over-emoted.

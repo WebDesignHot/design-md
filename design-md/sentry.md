@@ -1,90 +1,347 @@
 ---
 name: Sentry
-tagline: Deep-purple observability for developers — Rubik body, Dammit Sans display, JetBrains Mono code, and a single confident violet that says "your error report just landed."
+tagline: 'Deep-aubergine observability — Dammit Sans display, Rubik body, JetBrains Mono code, signature violet #7553ff and pill CTAs.'
 author: webdesignhot
 source_url: https://sentry.io
-spec: design.md/v1
+spec: design.md/v1.5
 quality: curated
 featured: false
 categories: [dev-tools, saas]
-tags: [dark, structured, sans, mono, cool, bright]
+tags: [dark, structured, sans, mono, cool, bright, playful]
 preview_swatch: ['#1f1633', '#7553ff', '#ffffff']
 related: [vercel, linear, posthog]
-description: 'Sentry''s marketing site is a dark-violet developer cathedral. The body bg is `#1f1633` (a deep aubergine plum, not a true black), Rubik handles UI text, the custom Dammit Sans does the headline shouting at 88px/700, and JetBrains Mono carries every code sample. The signature `#7553ff` purple appears as link colour, illustration accent, and product-stamp — a confident single-hue brand discipline borrowed from Stripe, but pitched at error-report violet instead of trust blue.'
+description: 'Sentry''s marketing site is a dark-violet developer cathedral pitched at error-report registers. The body bg is `#1f1633` (a deep aubergine plum, never pure black), Rubik handles UI text at 400/500/600, the custom Dammit Sans does the headline shouting at 88px/700 ("Code breaks. Fix it faster."), and JetBrains Mono carries every code sample, error trace, and dashboard label. The signature `#7553ff` violet operates as link colour, illustration accent, and product stamp — a single-hue brand discipline borrowed from Stripe but pitched into the violet end of the spectrum where almost no infra brand lives. Pill buttons (`border-radius: 9999px`) and warm purple-tinted shadows pull the system away from terminal-black brutalism toward consumer-friendly developer warmth.'
 
 colors:
-  bg: '#1f1633'                # observed body background, deep aubergine
-  bg-elevated: '#2b1b3d'       # raised card surface inside hero zones
-  bg-soft: '#0f0c1a'           # darker footer / code-block bands
-  surface: '#181225'           # secondary surface panels
-  text: '#ffffff'              # primary copy on dark canvas
-  text-muted: '#c8c5d8'        # secondary copy / body paragraphs
-  text-soft: '#9b97ad'         # captions, metadata, footer links
-  brand: '#7553ff'             # Sentry signature violet — link, accent, stamp
-  brand-hover: '#6240e8'       # pressed state, slightly deeper violet
-  brand-soft: '#36265c'        # tinted brand surface for callouts
-  accent-pink: '#ff70bc'       # secondary illustration accent (error pink)
-  accent-yellow: '#fdb81b'     # warning / highlight in dashboard mocks
-  accent-blue: '#63b3ed'       # documentation link colour
-  on-brand: '#ffffff'
-  border: '#ffffff14'          # ~8% white hairline on dark surfaces
-  border-soft: '#ffffff0a'     # softer divider for code blocks
-  cta-bg: '#efefef'            # near-white "Try Sentry Free" pill
-  cta-fg: '#1a1a1a'            # dark text on light pill
+  # Primary canvas — warm aubergine ladder
+  bg: '#1f1633'                    # primary body canvas — deep aubergine, warm not cool
+  bg-deep: '#150f23'               # deeper sections, footer ground, second-level bands
+  bg-soft: '#0f0c1a'               # darkest tier — code blocks, footer near-black
+  bg-elevated: '#2b1b3d'           # raised card surface inside hero zones
+  surface: '#181225'               # secondary surface panels
+  surface-deep: '#362d59'          # tinted callout surface
+  surface-violet: '#36265c'        # tinted brand surface for callouts / chips
+
+  # Text scale on dark canvas
+  text: '#ffffff'                  # primary copy on dark
+  text-muted: '#c8c5d8'            # body paragraphs, slightly violet-tinted
+  text-soft: '#9b97ad'             # captions, metadata
+  text-faint: '#6e6a82'            # disabled, faint
+  text-on-brand: '#ffffff'         # white on signature violet
+  text-on-cta: '#1a1a1a'           # near-black on near-white pill CTA
+  text-on-light: '#1f1633'         # aubergine ink on light surfaces
+  code-yellow: '#dcdcaa'           # syntax highlighting accent
+
+  # Brand spectrum — the signature violet axis
+  brand: '#7553ff'                 # Sentry signature violet — link, accent, stamp
+  brand-hover: '#6240e8'           # pressed state, slightly deeper violet
+  brand-active: '#5230d4'          # depressed
+  brand-deep: '#422082'            # deep violet — select / dropdown / high-emphasis
+  brand-soft: '#36265c'            # tinted brand surface for callouts
+  brand-mid: '#6a5fc1'             # mid-violet — alternate link colour
+  brand-muted: '#79628c'           # muted purple — tactile button background
+
+  # Accent spectrum — illustration-only accents
+  accent-pink: '#ff70bc'           # secondary illustration colour, error-pink
+  accent-coral: '#ffb287'          # focus state warm accent
+  accent-fuchsia: '#fa7faa'        # focus outlines, decorative
+  accent-yellow: '#fdb81b'         # warning, chart highlight, dashboard badge
+  accent-blue: '#63b3ed'           # documentation link colour
+  accent-lime: '#c2ef4e'           # rare lime highlight — special links / badges
+
+  # CTA system
+  cta-bg: '#efefef'                # near-white "Try Sentry Free" pill
+  cta-fg: '#1a1a1a'                # near-black ink on pill
+  cta-bg-hover: '#ffffff'          # pure white on hover
+  cta-border: 'transparent'        # no border on white pill
+
+  # Borders & dividers
+  border: 'rgba(255,255,255,0.08)' # ~8% white hairline on dark surfaces
+  border-soft: 'rgba(255,255,255,0.04)' # softer divider, code block trim
+  border-strong: 'rgba(255,255,255,0.16)' # hover/focus
+  border-violet: '#584674'         # tactile button border — muted purple trim
+  border-light-input: '#cfcfdb'    # form field border on white inputs
+
+  # Surface variants
+  glass-white: 'rgba(255,255,255,0.18)' # frosted glass button bg
+  glass-violet: 'rgba(54,22,107,0.14)'  # hover overlay on glass
+  input-white: '#ffffff'           # form input background
+
+  # On-brand foregrounds
+  on-brand: '#ffffff'              # white on violet
+  on-cta: '#1a1a1a'                # near-black on pill CTA
+
+  # Semantic
+  semantic-success: '#c2ef4e'      # lime — also accent
+  semantic-warning: '#fdb81b'      # yellow — dashboard warnings
+  semantic-danger: '#ff70bc'       # error pink — playful danger register
+  semantic-info: '#7553ff'         # signature violet doubles as info
 
 typography:
   display:
     family: '"Dammit Sans", Rubik, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
     weights: [500, 700]
+    opentype: ['kern', 'liga']
   body:
     family: 'Rubik, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'
-    weights: [400, 500, 600]
+    weights: [400, 500, 600, 700]
+    opentype: ['kern', 'liga']
   mono:
     family: '"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    weights: [400, 500]
+    weights: [400, 500, 700]
+    opentype: ['kern', 'tnum', 'zero', 'calt']
   scale:
-    h1:    { size: 88, weight: 700, lineHeight: 1.2,  tracking: 'normal' }   # observed 88/105.6
-    h2:    { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.01em' }
-    h3:    { size: 32, weight: 600, lineHeight: 1.25, tracking: '0' }
-    body:  { size: 16, lineHeight: 1.6 }
-    code:  { size: 14, family: mono, lineHeight: 1.55 }
-    label: { size: 12, weight: 500, family: mono, tracking: '0.05em' }
+    display-hero:    { size: 88, weight: 700, lineHeight: 1.2,  tracking: 'normal',  family: display, opentype: 'kern, liga' }
+    display-large:   { size: 72, weight: 700, lineHeight: 1.15, tracking: '-0.005em', family: display, opentype: 'kern, liga' }
+    display-secondary: { size: 60, weight: 500, lineHeight: 1.1, tracking: 'normal', family: display, opentype: 'kern, liga' }
+    h1:              { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.01em', family: display, opentype: 'kern, liga' }
+    h2:              { size: 44, weight: 700, lineHeight: 1.15, tracking: '-0.01em', family: body,    opentype: 'kern, liga' }
+    h3:              { size: 32, weight: 600, lineHeight: 1.25, tracking: '0',        family: body,    opentype: 'kern, liga' }
+    h4:              { size: 27, weight: 500, lineHeight: 1.25, tracking: '0',        family: body,    opentype: 'kern, liga' }
+    h5:              { size: 24, weight: 500, lineHeight: 1.25, tracking: '0',        family: body,    opentype: 'kern, liga' }
+    feature-title:   { size: 20, weight: 600, lineHeight: 1.25, tracking: '0',        family: body,    opentype: 'kern, liga' }
+    body-large:      { size: 18, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body,    opentype: 'kern, liga' }
+    body:            { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body,    opentype: 'kern, liga' }
+    body-emphasis:   { size: 16, weight: 500, lineHeight: 1.6,  tracking: '0',        family: body,    opentype: 'kern, liga' }
+    nav-link:        { size: 15, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body,    opentype: 'kern' }
+    button:          { size: 14, weight: 500, lineHeight: 1.2,  tracking: '0.014em',  family: body,    transform: 'uppercase' }
+    button-strong:   { size: 14, weight: 700, lineHeight: 1.2,  tracking: '0.014em',  family: body,    transform: 'uppercase' }
+    label:           { size: 15, weight: 500, lineHeight: 1.25, tracking: '0',        family: body,    transform: 'uppercase' }
+    caption:         { size: 14, weight: 500, lineHeight: 1.4,  tracking: '0.014em',  family: body }
+    micro:           { size: 10, weight: 600, lineHeight: 1.8,  tracking: '0.018em',  family: body,    transform: 'uppercase' }
+    code:            { size: 14, weight: 400, lineHeight: 1.55, tracking: '0',        family: mono,    opentype: 'tnum, zero, calt' }
+    code-bold:       { size: 14, weight: 500, lineHeight: 1.55, tracking: '0',        family: mono,    opentype: 'tnum, zero' }
+    code-block:      { size: 13, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono,    opentype: 'tnum, zero, calt' }
 
 radius:
+  none: 0
+  micro: 4
   xs: 4
   sm: 6
   md: 8
   lg: 12
   card: 16
-  button: 9999      # observed pill buttons (border-radius: 9999px)
+  xl: 18
   pill: 9999
+  button: 9999                     # observed pill buttons (border-radius: 9999px)
+  tactile: 13                      # muted purple tactile button radius
+
+spacing:
+  base: 4
+  xxs: 2
+  xs: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  xxl: 32
+  section-sm: 64
+  section: 96
+  section-lg: 128
+  scale: [2, 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128, 160]
 
 layout:
+  page-width: 1280
+  prose-width: 720
   container: 1280
   gutter: 24
-  section: 96       # vertical rhythm between hero/feature blocks
+  header-height: 64
+  hero-height: 720
+  section: 96
   grid: 12
+  grid-gap: 24
+
+motion:
+  ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
+  ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
+  ease-entrance: 'cubic-bezier(0, 0, 0.2, 1)'
+  ease-out: 'cubic-bezier(0.16, 1, 0.3, 1)'
+  duration-fast: 120
+  duration-standard: 200
+  duration-slow: 320
+  duration-hero: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — translateY rises collapse to opacity-only, illustration parallax freezes, hover lifts persist as opacity transitions only'
+
+breakpoints:
+  mobile: 576
+  tablet: 768
+  desktop: 992
+  wide: 1152
+  ultra: 1440
+
+shadows:
+  ambient: 'rgba(22,15,36,0.90) 0 4px 4px 9px'
+  inset-button: 'rgba(0,0,0,0.10) 0 1px 3px 0 inset'
+  card: 'rgba(0,0,0,0.10) 0 10px 15px -3px'
+  glass: 'rgba(0,0,0,0.08) 0 2px 8px'
+  hover: 'rgba(0,0,0,0.18) 0 0.5rem 1.5rem'
+  prominent: 'rgba(0,0,0,0.24) 0 24px 48px -12px'
+  ring: '0 0 0 2px #7553ff'
+  ring-soft: '0 0 0 3px rgba(117,83,255,0.30)'
+  ring-coral: 'rgba(106,95,193,1) solid 0.125rem'
+
+accessibility:
+  contrast-text-on-bg: 16.4              # #ffffff on #1f1633 — AAA
+  contrast-text-on-brand: 5.1            # #ffffff on #7553ff — AA at body, AAA at large
+  contrast-text-on-cta: 14.6             # #1a1a1a on #efefef — AAA
+  contrast-muted-on-bg: 9.8              # #c8c5d8 on #1f1633 — AAA
+  contrast-soft-on-bg: 5.7               # #9b97ad on #1f1633 — AA
+  focus-ring: '2px solid #7553ff with 4px purple-tinted halo (0 0 0 3px rgba(117,83,255,0.30))'
+  reduced-motion-honored: true
+  keyboard-nav: 'tab order follows visual; skip-link to #main-content; nav arrow-keys swap dropdowns; Esc closes modals'
 
 components:
-  button-primary:
-    bg: '#efefef'
-    color: '#1a1a1a'
+  button-pill-cta:
+    background: '#efefef'
+    text: '#1a1a1a'
     radius: 9999
-    weight: 500
     padding: '12px 20px'
-  button-brand:
-    bg: '#7553ff'
-    color: '#ffffff'
+    height: 44
+    font: 'Rubik 14 / 500 / uppercase / 0.014em'
+    border: 'none'
+    hover: 'background #ffffff; subtle scale(1.02)'
+    active: 'background #e6e6e6'
+    use: 'primary near-white pill CTA — Try Sentry Free, Get Started'
+  button-pill-brand:
+    background: '#7553ff'
+    text: '#ffffff'
     radius: 9999
-  card:
-    bg: '#2b1b3d'
-    radius: 16
-    border: '1px solid #ffffff14'
-  code-block:
-    bg: '#0f0c1a'
+    padding: '12px 20px'
+    height: 44
+    font: 'Rubik 14 / 500 / uppercase / 0.014em'
+    border: 'none'
+    hover: 'background #6240e8'
+    active: 'background #5230d4'
+    use: 'signature-violet pill CTA — secondary actions, in-product links'
+  button-tactile-muted:
+    background: '#79628c'
+    text: '#ffffff'
+    radius: 13
+    padding: '10px 18px'
+    height: 42
+    font: 'Rubik 14 / 500-700 / uppercase / 0.014em'
+    border: '1px solid #584674'
+    shadow: 'rgba(0,0,0,0.10) 0 1px 3px 0 inset'
+    hover: 'shadow rgba(0,0,0,0.18) 0 0.5rem 1.5rem'
+    use: 'tactile pressed-INTO-surface secondary button — feels physical'
+  button-glass:
+    background: 'rgba(255,255,255,0.18)'
+    text: '#ffffff'
     radius: 12
-    family: mono
+    padding: '8px'
+    border: 'none'
+    backdrop: 'blur(18px) saturate(180%)'
+    shadow: 'rgba(0,0,0,0.08) 0 2px 8px'
+    hover: 'background rgba(54,22,107,0.14)'
+    use: 'frosted secondary action over hero illustrations'
+  button-deep-violet:
+    background: '#422082'
+    text: '#ffffff'
+    radius: 8
+    padding: '8px 16px'
+    height: 36
+    font: 'Rubik 14 / 500'
+    use: 'select / dropdown / high-emphasis filter chip'
+  button-ghost:
+    background: 'transparent'
+    text: '#ffffff'
+    radius: 9999
+    padding: '10px 16px'
+    font: 'Rubik 14 / 500 / uppercase / 0.014em'
+    hover: 'background rgba(255,255,255,0.06)'
+    use: 'inline ghost CTA, nav button'
+  card-elevated:
+    background: '#2b1b3d'
+    text: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.08)'
+    radius: 16
+    padding: '32px'
+    shadow: 'rgba(0,0,0,0.10) 0 10px 15px -3px'
+    use: 'elevated feature card on aubergine canvas'
+  card-glass:
+    background: 'rgba(255,255,255,0.18)'
+    text: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.16)'
+    radius: 12
+    padding: '24px'
+    backdrop: 'blur(18px) saturate(180%)'
+    use: 'frosted glass panel — overlaid on hero illustrations'
+  card-deep:
+    background: '#181225'
+    text: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.04)'
+    radius: 12
+    padding: '28px'
+    use: 'secondary surface panel — flat trim'
+  code-block:
+    background: '#0f0c1a'
+    text: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.04)'
+    radius: 12
     padding: '16px 20px'
+    font: 'JetBrains Mono 13 / 400 / 1.6'
+    use: 'multi-line code sample, error stack trace'
+  code-chip:
+    background: '#0f0c1a'
+    text: '#7553ff'
+    border: '1px solid rgba(255,255,255,0.08)'
+    radius: 6
+    padding: '4px 8px'
+    font: 'JetBrains Mono 14 / 400'
+    use: 'inline code chip — error code, package names'
+  badge-pill:
+    background: 'rgba(117,83,255,0.20)'
+    text: '#c8c5d8'
+    border: '1px solid rgba(117,83,255,0.40)'
+    radius: 9999
+    padding: '4px 12px'
+    font: 'Rubik 10 / 600 / uppercase / 0.018em'
+    use: 'NEW / category badge — violet tint'
+  badge-yellow:
+    background: 'rgba(253,184,27,0.20)'
+    text: '#fdb81b'
+    border: '1px solid rgba(253,184,27,0.40)'
+    radius: 9999
+    padding: '4px 12px'
+    font: 'Rubik 10 / 600 / uppercase / 0.018em'
+    use: 'warning / dashboard severity badge'
+  input-light:
+    background: '#ffffff'
+    text: '#1f1633'
+    border: '1px solid #cfcfdb'
+    radius: 6
+    padding: '8px 12px'
+    height: 40
+    font: 'Rubik 16 / 400'
+    focus: 'shadow rgba(0,0,0,0.15) 0 2px 10px inset'
+    use: 'light-context email/form input'
+  input-dark:
+    background: '#0f0c1a'
+    text: '#ffffff'
+    border: '1px solid rgba(255,255,255,0.08)'
+    radius: 8
+    padding: '10px 14px'
+    height: 42
+    font: 'Rubik 16 / 400'
+    focus: 'border #7553ff; ring 0 0 0 3px rgba(117,83,255,0.30)'
+    use: 'dark-context input — search, signup'
+  nav-link:
+    background: 'transparent'
+    text: '#ffffff'
+    font: 'Rubik 15 / 500'
+    padding: '8px 14px'
+    hover: 'color #6a5fc1'
+    use: 'top nav menu — Product / Pricing / Docs / Customers'
+  nav-label:
+    background: 'transparent'
+    text: '#c8c5d8'
+    font: 'Rubik 15 / 500 / uppercase / 0.014em'
+    use: 'nav category eyebrow — uppercase letterspaced label'
+  illustration-3d:
+    background: 'transparent'
+    use: 'recurring 3D character illustrations + colorful product screenshots — punctuate dark canvas with bursts of pink/coral/lime'
+
+dark-mode: dark-only
 
 lineage:
   summary: |
@@ -106,108 +363,766 @@ lineage:
     (`border-radius: 9999px`) round off the developer-edginess and pull
     the system toward consumer-app friendliness — a deliberate softening
     against the brutalism of `posthog` and the structural rigour of
-    `linear`. The result is observability that feels less like a SOC
-    dashboard and more like a record label.
+    `linear`. Tactile inset shadows on muted-purple buttons (`#79628c`
+    with `1px solid #584674` and `inset` shadow) add a physical-button
+    register that almost no other infra brand reaches for. The result
+    is observability that feels less like a SOC dashboard and more
+    like a record label.
   influences:
     - name: Stripe
-      role: Single-hue brand discipline (one confident colour does all the heavy lifting).
+      role: 'Single-hue brand discipline — one confident colour does all the heavy lifting (violet ≈ blue, pitched 80° around the colour wheel).'
       url: https://stripe.com
     - name: JetBrains
-      role: JetBrains Mono and the developer-IDE chromatic register (warm darks, syntax violets).
+      role: 'JetBrains Mono and the developer-IDE chromatic register — warm darks, syntax violets, the same monospace Sentry users see every morning.'
       url: https://www.jetbrains.com
     - name: Mailchimp
-      role: Rubik humanist sans paired with quirky display typography for a friendlier tech voice.
+      role: 'Rubik humanist sans paired with quirky display typography — friendlier tech voice, less Inter-everywhere monoculture.'
       url: https://mailchimp.com
+    - name: Linear
+      role: 'Adjacent dev-tool peer that Sentry softens against — Linear is structural-rigorous, Sentry is illustration-rich and consumer-warm.'
+      url: https://linear.app
+    - name: Datadog
+      role: 'Closest observability competitor in the violet spectrum — Sentry pushes brighter, warmer, less corporate.'
+      url: https://www.datadoghq.com
+    - name: 'Dammit Sans (custom)'
+      role: 'Custom geometric display face — gives Sentry its bulletin-board energy ("Code breaks. Fix it faster.").'
 ---
 
-## Overview
+## 1. Visual Theme & Atmosphere
 
-Sentry's marketing surface is a deep-violet observability cathedral.
-The body bg sits at `#1f1633` — a warm aubergine that registers as
-"intentional darkness" rather than terminal-black. Headlines hit 88px
-at weight 700 in the custom **Dammit Sans**, a chunky display face that
-gives the site its bulletin-board energy ("Code breaks, fix it faster").
-Beneath the display, Rubik carries the body copy in a humanist register
-that pulls away from the Inter-everywhere monoculture, and JetBrains
-Mono handles every code sample, error trace, and dashboard label.
+Sentry's marketing surface is a **deep-violet observability cathedral**. The body canvas sits at `#1f1633` — a warm aubergine plum that registers as *intentional darkness* rather than terminal-black. Headlines hit 88px at weight 700 in the custom **Dammit Sans**, a chunky geometric display face that gives the site its bulletin-board energy ("Code breaks. Fix it faster."). Beneath the display, **Rubik** carries body copy in a humanist register that pulls away from the Inter-everywhere monoculture, and **JetBrains Mono** handles every code sample, error trace, and dashboard label.
 
-The signature gesture is a single confident violet — `#7553ff` —
-that operates as link colour, accent stamp, and brand identifier all
-at once. Where Datadog uses purple as a logo-mark, Sentry uses purple
-as a wayfinding system: every interactive surface eventually resolves
-to this hue.
+The signature gesture is a single confident violet — `#7553ff` — that operates as link colour, accent stamp, and brand identifier all at once. Where Datadog uses purple as a logo-mark, Sentry uses purple as a *wayfinding system*: every interactive surface eventually resolves to this hue. The discipline is borrowed from Stripe's blue, but pitched 80° around the colour wheel into a violet register where almost no infra brand lives.
 
-## Colors
+What makes Sentry distinctive in dev-tools is its embrace of the dark-IDE aesthetic *without* feeling cold or sterile. Warm aubergine replaces the cool grays of Datadog and the terminal-blacks of Vercel; bold illustrative elements (3D characters, colorful product screenshots, error-pink decorative bursts) punctuate the dark canvas. The tactile button system — muted purple `#79628c` with inset shadows — creates a "pressed-INTO-surface" quality that almost no other observability brand reaches for. Buttons feel physical, almost analog, against the digital cathedral.
 
-- **bg** `#1f1633` — the deep aubergine canvas, warm not cool
-- **bg-elevated** `#2b1b3d` — raised card surface inside hero zones
-- **bg-soft** `#0f0c1a` — code-block and footer near-black
-- **brand** `#7553ff` — the signature violet, link colour, accent stamp
-- **brand-hover** `#6240e8` — pressed state, slightly deeper
-- **accent-pink** `#ff70bc` — secondary illustration colour (error chips)
-- **accent-yellow** `#fdb81b` — warning / chart highlight
-- **text** `#ffffff` — primary copy on dark canvas
-- **text-muted** `#c8c5d8` — body paragraphs, slightly tinted with violet
-- **cta-bg** `#efefef` — the near-white pill CTA, intentionally generic
-- **border** `#ffffff14` — ~8% white hairline divider
+The pill-button discipline is the most visually distinctive shape decision. `border-radius: 9999px` reserved for primary CTAs pulls Sentry away from the "8px square button" default of Linear/Vercel and signals a more consumer-friendly, illustration-rich product personality. Combined with frosted glass effects (`backdrop-filter: blur(18px) saturate(180%)`) and the deep purple ambient shadow (`rgba(22,15,36,0.9) 0 4px 4px 9px`), the page reads as bioluminescent — content seems to emit its own purple-tinted light against the aubergine ground.
 
-## Typography
+Mid-page, illustration bursts in pink (`#ff70bc`), coral (`#ffb287`), and the occasional lime accent (`#c2ef4e`) puncture the violet ground — these are *illustration-only* accents, never structural. They appear in 3D character art, error-state mockups, and dashboard screenshots, never in chrome. The discipline is Stripe-style: one structural brand, many illustrative voices.
 
-Display is **Dammit Sans**, a custom geometric display weighted at 700
-and sized 88px on a 105.6px line-height (1.2 ratio) for the homepage
-hero. The face has a slightly chunky, almost cartoon-confident
-character — it's what gives Sentry's marketing its "you can fix this"
-energy.
+**Key Characteristics:**
+- Deep aubergine canvas `#1f1633` — warm not cool, never pure black
+- Three-step tonal ladder: `#0f0c1a` → `#1f1633` → `#2b1b3d` for depth without shadows
+- Signature violet `#7553ff` as single-hue brand axis (Stripe-style discipline)
+- **Dammit Sans** custom display at 88px / 700 — bulletin-board energy
+- **Rubik** humanist body at 400/500/600/700 — friendly, slightly rounded
+- **JetBrains Mono** for every code sample — IDE-credibility move
+- Pill buttons (`9999px`) for primary CTAs — consumer-friendly softening
+- Tactile muted-purple buttons with inset shadows — physical register
+- Frosted glass panels with `blur(18px) saturate(180%)` — layered surfaces
+- Deep purple ambient shadows — bioluminescent glow, not punching black
+- Uppercase + 0.014em tracking on buttons and labels — systematic technical pattern
+- Illustration bursts (pink, coral, lime) — never structural, always decorative
 
-Body and UI are **Rubik** at 400/500/600, a humanist geometric originally
-designed for Hebrew/Latin pairing. Rubik gives Sentry warmth that Inter
-and Söhne don't — body copy reads as approachable rather than systemic.
+## 2. Color Palette & Roles
 
-Code is universally **JetBrains Mono** at 400 and 500, sized 14px on
-a 1.55 line-height. Choosing JetBrains Mono is a quiet credibility
-signal: Sentry's audience opens IntelliJ, PyCharm, and WebStorm every
-morning, and they already see this typeface daily. Labels and small
-caps borrow the same mono at 12px with `0.05em` tracking.
+### Primary
 
-## Layout
+- **Background** (`#1f1633`): the deep aubergine canvas — warm not cool, has purple undertone, never pure black. The defining ground.
+- **Background Deep** (`#150f23`): deeper sections, footer ground, second-level bands.
+- **Background Soft** (`#0f0c1a`): darkest tier — code blocks, footer near-black band.
+- **Text** (`#ffffff`): primary copy on dark canvas.
+- **Brand** (`#7553ff`): signature violet — link, accent, stamp.
 
-A 1280px max container with 24px gutters, sectioned in 96px vertical
-rhythm between hero/feature/customer-logo bands. Cards use 16px radii,
-buttons use full pill (`9999px`), and the 12-column grid is honoured
-quietly under feature comparison tables. Hero zones are tall (often
-720px+) to give the deep aubergine room to breathe.
+### Brand & Dark
 
-## Elevation & Depth
+The signature violet operates as a single-hue brand axis. Variants for state:
 
-Depth is handled by tonal stacking on the violet axis: `#0f0c1a` →
-`#1f1633` → `#2b1b3d` form a three-step ladder, with an 8% white
-hairline (`#ffffff14`) separating raised surfaces. There are almost
-no shadows — the colour-temperature shift between layers is what
-creates the depth. Code blocks drop to the darkest tier, hero
-illustrations float on the elevated tier.
+- **Brand** (`#7553ff`): primary violet — link colour, accent stamp, brand identifier.
+- **Brand Hover** (`#6240e8`): pressed state, slightly deeper violet.
+- **Brand Active** (`#5230d4`): depressed.
+- **Brand Deep** (`#422082`): high-emphasis surfaces — select dropdowns, active filter chips.
+- **Brand Soft** (`#36265c`): tinted brand surface for callouts.
+- **Brand Mid** (`#6a5fc1`): mid-violet — alternate link colour, navigation hover.
+- **Brand Muted** (`#79628c`): muted purple — tactile button background, secondary interactive.
 
-## Shapes
+The dark band ground:
 
-Radii ladder is 4/6/8/12/16, with `9999px` pill reserved for every
-button. The pill-button discipline is the most visually distinctive
-shape decision: it pulls Sentry away from the "8px square button"
-default of Linear/Vercel and signals a more consumer-friendly,
-illustration-rich product personality.
+- **Surface** (`#181225`): secondary surface panels.
+- **Surface Deep** (`#362d59`): tinted callout surface, border ladder.
+- **BG Elevated** (`#2b1b3d`): raised card surface inside hero zones.
 
-## Components
+### Accent
 
-The defining components are the **pill CTA** (`#efefef` background,
-`#1a1a1a` text, 9999px radius, 500 weight Rubik), the **violet
-brand-pill** (`#7553ff`, white text, same shape), and the **JetBrains
-Mono code block** with the deepest `#0f0c1a` background. Cards are
-elevated `#2b1b3d` panels with 16px radii and an 8% white hairline.
-Navigation is a quiet bar that lets the deep purple canvas dominate.
+Illustration-only accents — never structural chrome, always decorative bursts:
 
-## Do's and Don'ts
+- **Pink** (`#ff70bc`): error-pink — secondary illustration colour, error chips.
+- **Coral** (`#ffb287`): focus state warm accent, illustration warmth.
+- **Fuchsia** (`#fa7faa`): focus outlines, decorative accents.
+- **Yellow** (`#fdb81b`): warning, chart highlight, dashboard badge.
+- **Blue** (`#63b3ed`): documentation link colour (rare).
+- **Lime** (`#c2ef4e`): rare lime highlight — special links / badge highlights, used once per section maximum.
 
-- **Do** keep the violet `#7553ff` as the only brand-axis colour; secondary accents (pink, yellow) are illustration-only, never structural.
-- **Do** use JetBrains Mono for every code sample, error trace, and dashboard label — it's the typographic stamp that ties Sentry to the JetBrains IDE lineage.
-- **Do** stack three violet-tonal layers (`#0f0c1a` → `#1f1633` → `#2b1b3d`) for depth instead of reaching for shadows.
-- **Don't** flatten the body bg to pure black `#000` — the warm aubergine is what gives Sentry its handmade character.
-- **Don't** swap pill buttons for square 8px-radius buttons; the full pill is the brand's friendliness signal.
-- **Don't** mix Rubik with Inter or Söhne in the same module — Rubik's humanist warmth is intentional contrast against the systemic-sans observability competition.
+### Interactive
+
+- **Brand** (`#7553ff`): primary link colour, primary CTA when violet variant.
+- **Brand Hover** (`#6240e8`): pressed state.
+- **Brand Mid** (`#6a5fc1`): nav hover, secondary link.
+- **Coral** (`#ffb287`): focus state background (rare, decorative).
+- **Focus Ring**: `2px solid #7553ff` + `0 0 0 3px rgba(117,83,255,0.30)` purple halo.
+
+### Neutral Scale
+
+White-to-violet tinted ramp:
+
+- **Text** (`#ffffff`): primary copy, pure white on dark.
+- **Text Muted** (`#c8c5d8`): body paragraphs, slightly violet-tinted (warmer than pure gray).
+- **Text Soft** (`#9b97ad`): captions, metadata, footer secondary.
+- **Text Faint** (`#6e6a82`): disabled, faintest, tertiary metadata.
+- **Code Yellow** (`#dcdcaa`): syntax highlighting accent.
+- **Text on Brand** (`#ffffff`): white on violet pill.
+- **Text on CTA** (`#1a1a1a`): near-black on near-white pill (intentionally not pure black — softer ink).
+- **Text on Light** (`#1f1633`): aubergine ink on light surfaces — matches canvas tone.
+
+### Surface & Borders
+
+- **Surface** (`#181225`): secondary surface panels.
+- **Surface Deep** (`#362d59`): tinted callout, border ladder.
+- **BG Elevated** (`#2b1b3d`): raised card surface.
+- **Glass White** (`rgba(255,255,255,0.18)`): frosted glass button bg.
+- **Glass Violet** (`rgba(54,22,107,0.14)`): hover overlay on glass.
+- **Border** (`rgba(255,255,255,0.08)`): primary hairline divider — ~8% white tint.
+- **Border Soft** (`rgba(255,255,255,0.04)`): softer divider, code block trim.
+- **Border Strong** (`rgba(255,255,255,0.16)`): hover/focus outline on cards.
+- **Border Violet** (`#584674`): tactile button border — muted purple trim.
+- **Border Light Input** (`#cfcfdb`): form field border on light context.
+
+### Shadow Colors
+
+Sentry's shadow vocabulary is **warm-purple-tinted**, never neutral gray. The signature is the deep aubergine ambient glow:
+
+- **Inset Button** (`rgba(0,0,0,0.10) 0 1px 3px 0 inset`): tactile pressed-into-surface — the brand's most physical move.
+- **Glass** (`rgba(0,0,0,0.08) 0 2px 8px`): subtle lift on frosted panels.
+- **Card** (`rgba(0,0,0,0.10) 0 10px 15px -3px`): standard card elevation.
+- **Hover** (`rgba(0,0,0,0.18) 0 0.5rem 1.5rem`): elevated hover state.
+- **Ambient Glow** (`rgba(22,15,36,0.90) 0 4px 4px 9px`): the deep aubergine ambient glow around hero — bioluminescent quality.
+- **Prominent** (`rgba(0,0,0,0.24) 0 24px 48px -12px`): modal backdrop.
+- **Ring** (`0 0 0 2px #7553ff`): primary focus indicator.
+- **Ring Soft** (`0 0 0 3px rgba(117,83,255,0.30)`): secondary focus halo.
+
+The `rgba(22,15,36,0.90)` ambient is Sentry's signature — that warm aubergine-tinted shadow is what creates the "content emits its own purple light" quality. Pure-black shadows would punch through; the violet-tinted glow merges into the canvas.
+
+### Semantic
+
+- **Success** (`#c2ef4e`): lime — also illustration accent.
+- **Warning** (`#fdb81b`): yellow — dashboard severity, warning chips.
+- **Danger** (`#ff70bc`): error pink — playful danger register (Sentry's most distinctive choice — most observability brands use saturated red here).
+- **Info** (`#7553ff`): signature violet doubles as info colour.
+
+The choice of pink-not-red for danger is a brand fingerprint. Sentry's whole register insists that "errors are not catastrophes — errors are the product." Pink danger softens the panic.
+
+## 3. Typography Rules
+
+### Font Family
+
+- **Display:** `"Dammit Sans", Rubik, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Custom geometric display face — slightly chunky, almost cartoon-confident. Used at 88px / 700 for the homepage hero. The face has bulletin-board energy that gives Sentry's marketing its "you can fix this" voice.
+- **Body / UI:** `Rubik, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif`. Humanist geometric originally designed for Hebrew/Latin pairing. Rubik gives Sentry warmth that Inter and Söhne don't — body copy reads as approachable rather than systemic. Weights 400 / 500 / 600 / 700.
+- **Mono:** `"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`. JetBrains' standard IDE monospace — quiet credibility move: Sentry's audience already opens IntelliJ, PyCharm, WebStorm every morning and sees this typeface daily.
+- **OpenType:** `kern`, `liga` standard. Mono enables `tnum` (tabular figures for stack traces), `zero` (slashed zero), and `calt` (contextual alternates for `==>`, `!=`, etc.).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | Line Height | Letter Spacing | OT Features | Notes |
+|---|---|---|---|---|---|---|---|
+| display-hero | Dammit Sans | 88 | 700 | 1.20 | normal | kern, liga | Maximum impact — "Code breaks. Fix it faster." |
+| display-large | Dammit Sans | 72 | 700 | 1.15 | -0.005em | kern, liga | Section hero |
+| display-secondary | Dammit Sans | 60 | 500 | 1.10 | normal | kern, liga | Secondary hero text |
+| h1 | Dammit Sans | 56 | 700 | 1.10 | -0.01em | kern, liga | Page H1 |
+| h2 | Rubik | 44 | 700 | 1.15 | -0.01em | kern, liga | Section heads — Rubik takes over below display tier |
+| h3 | Rubik | 32 | 600 | 1.25 | 0 | kern, liga | Sub-section heads |
+| h4 | Rubik | 27 | 500 | 1.25 | 0 | kern, liga | Feature card headings |
+| h5 | Rubik | 24 | 500 | 1.25 | 0 | kern, liga | Card and block headings |
+| feature-title | Rubik | 20 | 600 | 1.25 | 0 | kern, liga | Emphasized feature names |
+| body-large | Rubik | 18 | 400 | 1.60 | 0 | kern, liga | Hero deck |
+| body | Rubik | 16 | 400 | 1.60 | 0 | kern, liga | Default body |
+| body-emphasis | Rubik | 16 | 500 | 1.60 | 0 | kern, liga | Bold body, nav items |
+| nav-link | Rubik | 15 | 500 | 1.40 | 0 | kern | Top nav links |
+| button | Rubik | 14 | 500 | 1.20 | 0.014em | uppercase | Primary CTA label |
+| button-strong | Rubik | 14 | 700 | 1.20 | 0.014em | uppercase | Tactile button — heavy weight |
+| label | Rubik | 15 | 500 | 1.25 | 0 | uppercase | Section eyebrow uppercase |
+| caption | Rubik | 14 | 500 | 1.40 | 0.014em | kern | Caption, often uppercase |
+| micro | Rubik | 10 | 600 | 1.80 | 0.018em | uppercase | Subtle annotations |
+| code | JetBrains Mono | 14 | 400 | 1.55 | 0 | tnum, zero, calt | Inline code chip |
+| code-bold | JetBrains Mono | 14 | 500 | 1.55 | 0 | tnum, zero | Code emphasis |
+| code-block | JetBrains Mono | 13 | 400 | 1.60 | 0 | tnum, zero, calt | Multi-line code, stack traces |
+
+### Principles
+
+- **Dual personality.** Dammit Sans brings irreverent brand character at display tier (88–56px); Rubik provides clean professionalism for everything functional (44px and below). The handoff is exactly at the h1/h2 line — display is custom, structural is humanist.
+- **Uppercase as system.** Buttons, captions, labels, and micro-text all use `text-transform: uppercase` with subtle letter-spacing (0.014em–0.018em), creating a systematic "technical label" pattern throughout. Body and headlines stay sentence case.
+- **Weight stratification on Rubik.** Four-tier weight system: 400 (body), 500 (emphasis/nav), 600 (titles/strong), 700 (buttons/CTAs). Each weight has a specific role; mixing within a tier is forbidden.
+- **Tight headings, relaxed body.** All headings use 1.10–1.25 line-height; body uses 1.60; small captions expand to 1.80 for readability at tiny sizes. The contrast is deliberate — display tier is dense and confident, body tier is open and readable.
+- **JetBrains Mono is non-negotiable for code.** Every code sample, error trace, dashboard label, install command, and inline `<code>` chip uses JetBrains Mono. The OpenType `calt` (contextual alternates) ligatures `==>`, `!=`, `=>` render Sentry's docs and error traces with the same arrows users see in IntelliJ/PyCharm.
+- **Slashed zero by default.** Mono `zero` feature is on always — distinguishes 0 from O in error codes, hashes, and DSN strings. Critical for ops/debugging context.
+- **No display below 56px.** Dammit Sans never appears below h1 size. The custom display is reserved for moments where its character earns the load; using it at 32px would dilute the bulletin-board energy.
+- **Tracking discipline.** Display tier uses near-zero or slightly negative tracking (-0.005em to -0.01em). Body tier is zero. Uppercase labels and buttons get +0.014em to +0.018em — uppercase always needs space.
+
+## 4. Component Stylings
+
+### Buttons
+
+**Primary Pill CTA (Near-White)**
+- Background: `#efefef` (intentionally not pure white — softer pill against deep aubergine)
+- Text: `#1a1a1a` near-black, uppercase, 14px Rubik weight 500, letter-spacing 0.014em
+- Padding: `12px 20px`, height 44
+- Radius: 9999 (full pill)
+- Border: none
+- Hover: background lifts to `#ffffff`; subtle `scale(1.02)` transform
+- Active: background `#e6e6e6`
+- Use: hero CTA — Try Sentry Free, Get Started. The signature near-white pill.
+
+**Brand Pill (Signature Violet)**
+- Background: `#7553ff`
+- Text: `#ffffff`, uppercase, 14px Rubik weight 500
+- Padding: `12px 20px`, height 44
+- Radius: 9999
+- Hover: background `#6240e8`
+- Active: background `#5230d4`
+- Use: secondary actions, in-product CTAs, anywhere violet wants to lead.
+
+**Tactile Muted-Purple (Pressed-INTO-Surface)**
+- Background: `#79628c` (muted purple)
+- Text: `#ffffff`, uppercase, 14px Rubik weight 500–700, letter-spacing 0.014em
+- Border: `1px solid #584674` (slightly darker muted-purple trim)
+- Radius: 13 (tactile, not pill)
+- Padding: `10px 18px`, height 42
+- Shadow: `rgba(0,0,0,0.10) 0 1px 3px 0 inset` (the inset shadow is the signature — button feels pressed INTO the surface)
+- Hover: shadow elevates to `rgba(0,0,0,0.18) 0 0.5rem 1.5rem` (pulls UP from the surface)
+- Use: secondary actions where physicality matters — pricing CTAs, dashboard chips. The tactile button is Sentry's most physical move.
+
+**Glass White (Frosted)**
+- Background: `rgba(255,255,255,0.18)`
+- Text: `#ffffff`
+- Padding: 8px (split-rounded variant: `12px 0 0 12px`)
+- Radius: 12 (or compound for attached variants)
+- Backdrop: `blur(18px) saturate(180%)`
+- Shadow: `rgba(0,0,0,0.08) 0 2px 8px`
+- Hover: background `rgba(54,22,107,0.14)` violet overlay
+- Use: secondary action overlaid on hero illustrations.
+
+**Deep Violet (Select / Dropdown)**
+- Background: `#422082`
+- Text: `#ffffff`, 14px Rubik weight 500
+- Padding: `8px 16px`, height 36
+- Radius: 8
+- Use: filter chips, dropdown buttons, high-emphasis selectors.
+
+**Ghost (Inline)**
+- Background: transparent
+- Text: `#ffffff`, uppercase, 14px Rubik weight 500
+- Padding: `10px 16px`
+- Radius: 9999
+- Hover: background `rgba(255,255,255,0.06)`
+- Use: nav button, inline ghost CTA.
+
+### Cards
+
+**Elevated Card**
+- Background: `#2b1b3d`
+- Border: `1px solid rgba(255,255,255,0.08)`
+- Radius: 16
+- Padding: 32
+- Shadow: `rgba(0,0,0,0.10) 0 10px 15px -3px`
+- Use: feature card on aubergine canvas — the default elevated tier.
+
+**Glass Card**
+- Background: `rgba(255,255,255,0.18)`
+- Border: `1px solid rgba(255,255,255,0.16)`
+- Radius: 12
+- Padding: 24
+- Backdrop: `blur(18px) saturate(180%)`
+- Use: frosted glass panel — overlaid on hero illustrations or screenshots.
+
+**Deep Card**
+- Background: `#181225`
+- Border: `1px solid rgba(255,255,255,0.04)`
+- Radius: 12
+- Padding: 28
+- Use: secondary surface panel — flat trim, no shadow.
+
+### Code Blocks & Chips
+
+**Code Block (Multi-line)**
+- Background: `#0f0c1a` (the darkest tier)
+- Text: `#ffffff` with syntax highlighting in `#7553ff` / `#dcdcaa` / `#ff70bc`
+- Border: `1px solid rgba(255,255,255,0.04)`
+- Radius: 12
+- Padding: `16px 20px`
+- Font: JetBrains Mono 13 / 400 / 1.6
+- Use: error stack traces, multi-line samples.
+
+**Code Chip (Inline)**
+- Background: `#0f0c1a`
+- Text: `#7553ff` (signature violet ink for inline code emphasis)
+- Border: `1px solid rgba(255,255,255,0.08)`
+- Radius: 6
+- Padding: `4px 8px`
+- Font: JetBrains Mono 14 / 400
+- Use: inline code chip — error code, package names, DSN snippets.
+
+### Inputs / Forms
+
+**Light Input**
+- Background: `#ffffff`
+- Text: `#1f1633` (aubergine ink, not pure black)
+- Border: `1px solid #cfcfdb`
+- Padding: `8px 12px`, height 40
+- Radius: 6
+- Focus: shadow `rgba(0,0,0,0.15) 0 2px 10px inset` (border stays — the inset shadow is the focus signal)
+- Use: light-context email/form input.
+
+**Dark Input**
+- Background: `#0f0c1a`
+- Text: `#ffffff`
+- Border: `1px solid rgba(255,255,255,0.08)`
+- Padding: `10px 14px`, height 42
+- Radius: 8
+- Focus: border `#7553ff` + ring `0 0 0 3px rgba(117,83,255,0.30)` purple halo
+- Use: dark-context input — search, signup form on aubergine canvas.
+
+### Badges
+
+**Violet Pill Badge**
+- Background: `rgba(117,83,255,0.20)` violet tint
+- Text: `#c8c5d8` muted-cream
+- Border: `1px solid rgba(117,83,255,0.40)`
+- Radius: 9999, Padding: `4px 12px`
+- Font: Rubik 10 / 600 / uppercase / 0.018em
+- Use: NEW / category badges.
+
+**Yellow Severity Badge**
+- Background: `rgba(253,184,27,0.20)` yellow tint
+- Text: `#fdb81b`
+- Border: `1px solid rgba(253,184,27,0.40)`
+- Radius: 9999
+- Use: warning / dashboard severity / "BETA" tag.
+
+### Navigation
+
+**Top Nav**
+- 64px tall, transparent over hero (or `#1f1633` solid on scroll)
+- 1px `rgba(255,255,255,0.04)` border-bottom on scroll
+- Links: Rubik 15 / 500 / `#ffffff`, hover color `#6a5fc1` (mid-violet)
+- Category labels: uppercase, 0.014em letter-spacing, `#c8c5d8` muted
+
+**Nav Link**
+- Background: transparent
+- Text: `#ffffff`, Rubik 15 / 500
+- Padding: `8px 14px`
+- Hover: color `#6a5fc1`
+- Use: top nav menu — Product / Pricing / Docs / Customers / Pricing.
+
+### Decorative
+
+**3D Character Illustrations**
+- Recurring 3D character art, colorful product screenshots, error-state mockups
+- Use: punctuate dark canvas with bursts of pink (`#ff70bc`), coral (`#ffb287`), lime (`#c2ef4e`)
+- Always decorative — never carry information that isn't also in text.
+
+**Ambient Purple Glow**
+- Shadow: `rgba(22,15,36,0.90) 0 4px 4px 9px`
+- Use: hero zone ambient glow — content seems to emit purple light against the canvas.
+
+## 5. Layout Principles
+
+### Spacing System
+
+Base 4px. Scale: 2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128 / 160. Section gaps 96px (the standard rhythm); inside-card padding 28–32; nav padding `8px 14px`; grid gap 24.
+
+The density observation: Sentry's whitespace is **generous between sections** but **tight within cards**. Hero zones often run 720px+ tall to give the deep aubergine room to breathe; cards are dense with content. The light/dark *tonal* shift (rather than spacing) is the primary section-rhythm device.
+
+### Grid & Container
+
+- **Page width:** 1280px max container
+- **Prose width:** 720px (intro paragraphs, long-form copy)
+- **Header height:** 64px
+- **Hero height:** 720px (often 720px+ on homepage)
+- **Grid gap:** 24px between feature cards
+- **Grid:** 12-column, honored quietly under feature comparison tables and pricing grids
+
+The hero is **left-aligned** (rare for product analytics — most observability brands center their hero). Headlines run 88px Dammit Sans / 700 with the call to action stacked below, leaving the right column open for 3D illustration or product screenshot.
+
+Below the hero, multi-column dense product surface — feature panels stack horizontally and vertically. Cards stack 3-col → 2-col → 1-col responsive collapse. The pricing surface is a 3-tier grid with a "Most Popular" middle tier slightly elevated.
+
+### Whitespace Philosophy
+
+Sentry's whitespace is **dark breathing room**. Generous vertical spacing between sections (96px standard, 128px for hero-to-feature transitions) lets the deep aubergine canvas serve as a visual rest. Inside cards and panels, density is moderate — the 32px card padding gives text room without feeling lavish.
+
+The trick: the dark canvas itself functions as whitespace. Where a light-canvas brand would need 160px of section padding to feel airy, Sentry can run 96px because the aubergine is doing emotional whitespace work.
+
+### Section Cadence
+
+Aubergine canvas (`#1f1633`) → deeper section (`#150f23`) → aubergine → near-black band (`#0f0c1a`, often code-heavy) → footer (`#150f23`). The tonal violet-ladder sections are the page's rhythm device — there are almost no light-canvas inversions on Sentry's marketing surface. The system stays dark.
+
+A typical homepage flow:
+1. Hero (`#1f1633`) with 88px Dammit Sans + near-white pill CTA — 720px+
+2. "How it works" feature spread (`#1f1633` with elevated `#2b1b3d` cards) — 800px
+3. Code-block emphasis section (`#0f0c1a` band, JetBrains Mono samples) — 600px
+4. Customer logos / social proof (`#150f23` deeper band) — 300px
+5. Pricing tier grid (`#1f1633`) — 700px
+6. "Sentry for [language]" SDK strip (`#150f23`) — 400px
+7. Footer (`#150f23`)
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|---|---|---|
+| None | 0 | Edge-bound elements |
+| Micro | 4 | Decorative pills, smallest chips |
+| XS | 4 | Tag chips |
+| SM | 6 | Form inputs, code chips, small interactive |
+| MD | 8 | Buttons (deep-violet variant), cards (default minimum), dropdowns |
+| LG | 12 | Glass panels, code blocks, larger containers |
+| **Card** | **16** | **Elevated cards — default feature card** |
+| XL | 18 | Image containers, badge variants |
+| **Tactile** | **13** | **Muted-purple tactile button — physical register** |
+| **Pill** | **9999** | **Primary CTAs — full pill, the brand fingerprint** |
+
+The radii ladder is **4 / 6 / 8 / 12 / 16 / 18**, with `9999px` pill reserved for primary CTAs. The pill-button discipline is the most visually distinctive shape decision: it pulls Sentry away from the "8px square button" default of Linear/Vercel and signals consumer-friendly, illustration-rich product personality.
+
+The tactile 13px radius on the muted-purple button is unusual — neither pill nor squared. The slightly-non-standard radius reads as physical, almost analog, against the systematic 4/8/12/16 grid. It's a deliberate misalignment that gives the tactile button its hand-crafted feel.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|---|---|---|
+| -1 (Sunken) | `rgba(0,0,0,0.10) 0 1px 3px 0 inset` | Tactile primary buttons — pressed-INTO-surface |
+| 0 (Flat) | No shadow, hairline border only | Default surfaces, dark backgrounds, text bands |
+| 1 (Surface) | `rgba(0,0,0,0.08) 0 2px 8px` | Glass buttons, subtle cards |
+| 2 (Elevated) | `rgba(0,0,0,0.10) 0 10px 15px -3px` | Cards, floating panels |
+| 3 (Prominent) | `rgba(0,0,0,0.18) 0 0.5rem 1.5rem` | Hover states, modals, popovers |
+| 4 (Ambient) | `rgba(22,15,36,0.90) 0 4px 4px 9px` | Deep purple ambient glow — hero zones |
+| 5 (Modal Backdrop) | `rgba(0,0,0,0.24) 0 24px 48px -12px` | Modal backdrop |
+
+### Shadow Philosophy
+
+Sentry uses a unique **three-layer depth system**: tonal stacking, inset shadows, and ambient glow. Each handles a different elevation problem:
+
+1. **Tonal stacking on the violet axis** (`#0f0c1a` → `#1f1633` → `#2b1b3d`) is the dominant strategy. The 8% white hairline (`rgba(255,255,255,0.08)`) separates raised surfaces. There are almost no traditional shadows in chrome — the colour-temperature shift between layers does the work. Code blocks drop to the darkest tier; hero illustrations float on the elevated tier.
+
+2. **Inset shadows on tactile buttons** (`rgba(0,0,0,0.10) 0 1px 3px 0 inset`) create a sunken, pressed-INTO-surface quality. This is Sentry's most physical move — almost no other observability brand uses sunken depth. The inset shadow is what makes the muted-purple button feel like a physical key.
+
+3. **Ambient purple glow** (`rgba(22,15,36,0.90) 0 4px 4px 9px`) is the signature. The deep aubergine ambient shadow creates a bioluminescent quality where content seems to emit its own purple-tinted light. Pure-black shadows would punch through; the violet-tinted glow merges into the canvas. Reserved for hero zones, large illustrations, and the rare pricing-tier "Most Popular" card.
+
+Hover lifts use `rgba(0,0,0,0.18) 0 0.5rem 1.5rem` — neutral black, slight elevation. The transition from inset → elevated on tactile buttons is the brand's most satisfying micro-state.
+
+## 8. Interaction & Motion
+
+### Easing Curves
+
+- **Standard:** `cubic-bezier(0.4, 0, 0.2, 1)` — default ease-in-out for hover transitions, color shifts.
+- **Emphasized:** `cubic-bezier(0.2, 0, 0, 1)` — modal entrance, hero reveal.
+- **Entrance:** `cubic-bezier(0, 0, 0.2, 1)` — content fade-in on scroll.
+- **Out:** `cubic-bezier(0.16, 1, 0.3, 1)` — overshoots on illustration entrance.
+
+### Duration Buckets
+
+- **Fast (120ms):** color transitions, button hover, link hover.
+- **Standard (200ms):** card hover, dropdown open, transitions.
+- **Slow (320ms):** hero fade-in, modal entrance.
+- **Hero (480ms):** section parallax, hero illustration entrance.
+
+### Per-Component Micro-States
+
+- **Pill CTA (near-white):** background `#efefef` → `#ffffff` on hover with `scale(1.02)` transform. 120ms standard.
+- **Pill CTA (violet):** background `#7553ff` → `#6240e8` on hover. 120ms.
+- **Tactile button (muted-purple):** the signature transition — inset shadow `rgba(0,0,0,0.10) 0 1px 3px 0 inset` → hover lifts to `rgba(0,0,0,0.18) 0 0.5rem 1.5rem`. The button rises from sunken to elevated. 200ms standard ease-out.
+- **Card (elevated):** border opacity 0.08 → 0.16 on hover; subtle `translateY(-2px)`. 200ms.
+- **Glass card:** backdrop-filter blur intensifies subtly; opacity stays. 200ms.
+- **Code chip:** background `#0f0c1a` → `#181225` on hover. 120ms.
+- **Link / nav-link:** color `#ffffff` → `#6a5fc1` (mid-violet). 120ms.
+- **Brand link (in-text):** color `#7553ff` → `#6240e8` with underline grow from 0 → full. 120ms.
+
+### Page Transitions
+
+- **Hero:** content fades + 12px translateY rise. 480ms ease-emphasized.
+- **Below-fold sections:** fade + 8px translateY on scroll-into-viewport. 320ms ease-entrance.
+- **Modal entrance:** scale `0.96 → 1` + fade. 200ms ease-emphasized.
+- **Dropdown open:** translateY `-4px → 0` + fade. 120ms.
+- **Tab swap:** cross-fade 200ms, no translation.
+
+### Scroll Behavior
+
+- Sticky nav becomes opaque (`#1f1633` solid + `1px rgba(255,255,255,0.04)` border-bottom) after 64px scroll.
+- Hero illustrations parallax slowly (~0.3 multiplier) for the first 480px.
+- Section reveal: `opacity: 0 → 1` + `translateY(8px → 0)` on `IntersectionObserver` 0.1 threshold.
+
+### Reduced Motion
+
+`@media (prefers-reduced-motion: reduce)`:
+- All translateY rises collapse to opacity-only.
+- Scale transforms freeze.
+- Illustration parallax disabled.
+- Hover lift transitions persist as opacity-only (they aid usability).
+- Color transitions persist (purely informational).
+- Hero entrance becomes instant fade.
+
+## 9. Accessibility & A11y
+
+### Contrast Pairs
+
+- **Primary text on canvas:** `#ffffff` on `#1f1633` → 16.4:1. **AAA at body sizes.**
+- **Muted text on canvas:** `#c8c5d8` on `#1f1633` → 9.8:1. **AAA at body.**
+- **Soft text on canvas:** `#9b97ad` on `#1f1633` → 5.7:1. **AA at body, AAA at large.**
+- **White on signature violet:** `#ffffff` on `#7553ff` → 5.1:1. **AA at body, AAA at large.**
+- **Near-black on near-white pill:** `#1a1a1a` on `#efefef` → 14.6:1. **AAA.**
+- **White on tactile muted-purple:** `#ffffff` on `#79628c` → 4.7:1. **AA at body** (passes by 0.2 — careful with small text).
+- **White on deep violet:** `#ffffff` on `#422082` → 9.2:1. **AAA.**
+- **Code violet on darkest:** `#7553ff` on `#0f0c1a` → 5.6:1. **AA at body, AAA at large** (used for inline code chip ink).
+- **Faint text:** `#6e6a82` on `#1f1633` → 3.0:1 — *fails body sizes*. Reserve for disabled states only.
+
+### Focus Indicators
+
+- **Primary focus ring:** `2px solid #7553ff` + `0 0 0 3px rgba(117,83,255,0.30)` purple halo (4px combined offset). The violet ring matches signature brand colour and is highly visible against the aubergine canvas.
+- **Form fields (light context):** shadow `rgba(0,0,0,0.15) 0 2px 10px inset` — the inset focus is the pattern.
+- **Form fields (dark context):** border `#7553ff` + ring `0 0 0 3px rgba(117,83,255,0.30)`.
+- **Coral focus variant:** rare — `rgba(106,95,193,1) solid 0.125rem` for special-emphasis focusable elements.
+
+### ARIA Pattern Recommendations
+
+- **Top nav:** `<nav aria-label="Primary">` with skip-link to `#main-content`.
+- **Mega-menu dropdowns:** `role="menu"` + `aria-haspopup` on trigger, `aria-expanded` on open.
+- **Pricing toggle (monthly/yearly):** `role="group"` + `aria-pressed` on each option.
+- **Modal / dialog:** `role="dialog"` + `aria-modal="true"` + focus trap; Esc closes.
+- **Code blocks:** `<pre><code>` with `aria-label="Error stack trace example"` for context.
+- **Decorative illustrations:** `aria-hidden="true"` — purely decorative.
+- **CTA buttons:** semantic `<button>`/`<a>`, descriptive labels ("Try Sentry Free" not "Try Free", "Get a demo of Sentry" not "Get demo").
+
+### Keyboard Navigation
+
+- **Tab order:** skip-link → nav → primary CTA → secondary CTA → page content → footer.
+- **Skip-link** to `#main-content` first focus stop.
+- **Mega-menu:** arrow keys navigate within open menu; Esc closes; Tab continues to next nav item.
+- **Pricing toggle:** arrow keys swap monthly/yearly.
+- **FAQ accordion:** Tab to expand, Enter/Space to toggle, Esc to collapse.
+- **Modal:** focus trap inside open modal; Esc closes; Tab cycles within.
+
+### Screen Reader Hints
+
+- Decorative 3D character illustrations: `aria-hidden="true"`.
+- Code chips: rendered in `<code>` so screen readers announce as code.
+- Install commands: announce literally — `"npx @sentry/wizard@latest -i nextjs"`.
+- Severity badges: `aria-label="Severity: warning"` for color-only context.
+- Logo: `aria-label="Sentry"`.
+
+### Reduced Motion
+
+`prefers-reduced-motion: reduce` honored globally. Translation transforms collapse to opacity. Parallax disabled. Hover state colour transitions persist for usability.
+
+## 10. Responsive Behavior
+
+### Breakpoints
+
+| Breakpoint | Width | Notes |
+|---|---|---|
+| Mobile | 0–576px | Single column, hamburger nav, stacked CTAs |
+| Small Tablet | 576–768px | 2-column features begin |
+| Tablet | 768–992px | Full nav visible, side-by-side layouts |
+| Desktop | 992–1152px | Standard layout |
+| Wide | 1152–1440px | Max-width 1280px container caps |
+| Ultra | 1440px+ | Container caps; generous side margins |
+
+### Touch Targets
+
+- **Pill CTAs:** 44px height — meets WCAG 2.5.5 with surrounding hit area.
+- **Tactile buttons:** 42px — pad to 44 with `py-1` surrounding hit zone.
+- **Nav links:** 44px hit area on mobile (smaller visual chrome, larger tap target).
+- **Code chips:** 28px tall — not tap targets, decorative only.
+
+### Collapsing Strategy
+
+- **Hero text:** Dammit Sans 88 → 72 → 60 → 44. Line-height stays 1.10–1.20.
+- **Navigation:** horizontal → hamburger with full-width slide-out menu at <768px.
+- **Feature grid:** 3-col → 2-col → 1-col stacked. Card padding 32 → 28 → 24.
+- **Pricing grid:** 3-col → vertical stack on mobile, "Most Popular" tier first.
+- **Hero illustration:** 3D character art column collapses below content on mobile.
+- **CTA pair:** inline pair → full-width stacked, primary on top.
+- **Container padding:** 64 → 32 → 16 horizontal.
+
+### Image Behavior
+
+- 3D character illustrations: SVG / WebP, scale fluidly.
+- Product UI screenshots: aspect-ratio container, lazy-loaded below fold.
+- Customer logos: SVG, low opacity hover restores to full.
+- Hero ambient glow: fixed pixel offset, scales with viewport but not container.
+
+### Container Queries
+
+The pricing grid and feature card surfaces are good candidates for `@container` queries — switching between 3-col and stacked layouts based on container width rather than viewport, especially in dashboard embed contexts.
+
+## 11. Content & Voice
+
+### Tone
+
+**Confident, irreverent, technical.** Sentry talks like a senior engineer who's seen production incidents and refuses to dress them up. The voice is matter-of-fact about errors ("Code breaks. Fix it faster."), allergic to corporate marketing-speak, and willing to be funny. The brand insists errors are *not catastrophes — errors are the product*. That posture is what licenses the pink-not-red danger color, the bulletin-board display type, and the playful 3D illustrations.
+
+### Microcopy Patterns
+
+- **Headlines:** capability + bluntness. "Code breaks. Fix it faster." "Application monitoring built for engineers." "Stop guessing. Get to the root cause."
+- **Decks:** specifics over claims. "Sentry combines error tracking, session replay, performance monitoring, and profiling — all in one developer-friendly platform with first-class integrations for every framework."
+- **CTA verbs:** "Try Sentry Free", "Get Started", "Install with one command", "Talk to sales", "Read the docs". Always concrete + actionable.
+- **Error messages** (in-product convention): friendly + recovery-oriented. "We couldn't connect to your project. Check your DSN and try again." Never stack-trace-leaking.
+- **Empty states:** instructional, often with a code suggestion or install command.
+
+### Empty States
+
+In-product: "No errors yet — that's a good thing! Install the Sentry SDK to start tracking." The pattern is **friendly + concrete next step** — never just "No data." Often pairs with an install command rendered in JetBrains Mono.
+
+### Success Confirmations
+
+- After install: "Welcome! Your first event will appear here once your app sends data."
+- After signup: "Check your email — we sent you a magic link to sign in."
+- Toast pattern: icon (small 3D illustration) + short message + optional action button. 320ms ease-out entrance.
+
+### CTA Verb Conventions
+
+The verbs Sentry uses, ranked:
+1. **Try Sentry Free** (primary conversion — always with brand name)
+2. **Get Started**
+3. **Install with one command**
+4. **Read the docs**
+5. **Talk to sales** (enterprise tier)
+6. **Watch demo** (rare — Sentry prefers self-serve)
+7. **Sign In** (returning users)
+
+What Sentry *doesn't* say: "Sign up now" (too aggressive), "Schedule a meeting" (Sentry avoids gated demos as primary CTA), "Click here" (never), "Contact us" (replaced by "Talk to sales" for enterprise). The voice avoids B2B marketing-speak entirely.
+
+### Voice in Code Examples
+
+Code samples often include intentionally human comments — `// this is the line that broke prod`, `// catch all the things` — anchoring Sentry's "we are engineers writing for engineers" register. The comments aren't generic Lorem-Ipsum placeholder text.
+
+## 12. Dark Mode & Theming
+
+Sentry's marketing site is **dark-mode-first and dark-only**. The brand was built for dark canvas — the deep aubergine `#1f1633` is non-negotiable, and there is no light-canvas variant of the marketing surface. The entire colour, type, illustration, and shadow system assumes dark ground.
+
+The in-product app does support both light and dark themes (the dashboard offers a light variant for users who prefer it), but the marketing site never inverts. The aesthetic case: Sentry is for developers, who already work in dark IDEs; pretending the brand is canvas-agnostic would dilute its register.
+
+If a third party wanted to render Sentry-flavored chrome on a light canvas (e.g., embedded in a documentation site that's light-mode), the canonical inversion would be:
+
+```yaml
+# Hypothetical light-canvas variant — NOT used on sentry.io marketing
+colors-light:
+  bg: '#ffffff'                  # pure white canvas
+  bg-deep: '#f7f6fa'              # tinted-violet near-white
+  bg-soft: '#efeef4'              # deepest near-white tier
+  surface: '#ffffff'
+  surface-elev: '#faf9fc'
+  text: '#1f1633'                 # aubergine ink stays — matches brand
+  text-muted: '#4a3f6b'
+  text-soft: '#7e7494'
+  brand: '#7553ff'                # signature violet stays — high contrast on both
+  brand-hover: '#5230d4'
+  brand-deep: '#422082'
+  border: 'rgba(31,22,51,0.08)'
+  border-soft: 'rgba(31,22,51,0.04)'
+  shadow-card: 'rgba(31,22,51,0.06)'
+  on-brand: '#ffffff'
+```
+
+Note: the signature violet `#7553ff` and aubergine ink `#1f1633` remain unchanged — they're high-contrast against both dark and light. The mode is a tonal inversion, not a chromatic swap. Sentry's marketing site does not use this variant.
+
+## 13. Lineage & Influences
+
+Sentry's design lineage is **dark-mode developer warmth** — a tradition that pulls from JetBrains' IDE chromatic register (warm darks, syntax violets), Stripe's single-hue brand discipline (one confident colour does all the heavy lifting), and Mailchimp's quirky display-typography move (custom display + humanist body). The design rejects the cold corporate grays of Datadog, the terminal-blacks of Vercel, and the structural rigour of Linear — Sentry chooses warmth, illustration, and bulletin-board confidence over any of those.
+
+The type stack is the brand's most explicit signal: **Dammit Sans** (custom display) + **Rubik** (humanist Apache 2.0) + **JetBrains Mono** (Apache 2.0) is a fully open-license-or-custom type stack. The choice of JetBrains Mono is especially load-bearing — it's the same monospace Sentry's audience sees every day inside IntelliJ, PyCharm, and WebStorm. Using it on marketing is a credibility move: Sentry is part of the JetBrains visual lineage that its users already trust.
+
+What Sentry *rejects*: the SOC-dashboard aesthetic of Datadog (corporate gray-and-purple); the terminal-black brutalism of Vercel; the structural rigour of Linear; the white-canvas-and-blue-CTA monoculture of every other observability brand. The brand chooses to look hand-crafted, illustrated, and willing to be funny — in exchange for trust from developers who are tired of glossy SaaS.
+
+The pill-button discipline (`9999px` radius) is the most distinctive single decision. Square-cornered 8px buttons are the dev-tool default; Sentry's pill softens the entire register and pulls the system toward consumer-app friendliness. Combined with the tactile inset-shadow muted-purple button, the system has *two* button registers — one consumer-warm pill, one engineer-physical tactile. That duality is Sentry's clever middle-ground between Linear-style minimalism and Mailchimp-style playfulness.
+
+**Influences:**
+
+- **Stripe** — single-hue brand discipline, one confident colour does the work (https://stripe.com)
+- **JetBrains** — JetBrains Mono and the IDE chromatic register; warm darks, syntax violets (https://www.jetbrains.com)
+- **Mailchimp** — Rubik humanist sans + quirky custom display pairing for friendlier tech voice (https://mailchimp.com)
+- **Linear** — adjacent dev-tool peer; Sentry softens against Linear's structural rigour (https://linear.app)
+- **Datadog** — closest observability competitor in violet spectrum; Sentry pushes brighter and warmer (https://www.datadoghq.com)
+- **Dammit Sans** (custom) — bulletin-board energy; "Code breaks. Fix it faster." voice
+- **Rubik** (Hubert & Fischer / Google Fonts) — humanist Hebrew/Latin pairing; Apache 2.0
+- **JetBrains Mono** (JetBrains) — open-license IDE monospace; ligature-rich; Apache 2.0
+
+## 14. Do's and Don'ts
+
+### Do's
+
+- **Do** use deep aubergine `#1f1633` as the canvas — never pure black `#000000`. The warm purple undertone is the brand's defining gesture.
+- **Do** stack three violet-tonal layers (`#0f0c1a` → `#1f1633` → `#2b1b3d`) for depth instead of reaching for shadows. Tonal stacking is the primary elevation strategy.
+- **Do** keep the signature violet `#7553ff` as the only structural brand colour. Secondary accents (pink, coral, lime) are illustration-only, never structural chrome.
+- **Do** use Dammit Sans **only** for hero/display tier (56px and above). Below that, hand off to Rubik. The custom display is reserved for moments where its character earns the load.
+- **Do** use JetBrains Mono for **every** code sample, error trace, install command, and inline code chip. It's the typographic stamp that ties Sentry to the JetBrains IDE lineage.
+- **Do** use full pill (`9999px`) for primary CTAs. The pill is the brand's friendliness signal — consumer-warm against the developer-dark canvas.
+- **Do** apply inset shadows (`rgba(0,0,0,0.10) 0 1px 3px 0 inset`) on tactile muted-purple buttons. The pressed-INTO-surface quality is signature.
+- **Do** apply uppercase + 0.014em tracking on buttons and labels. The systematic technical-label pattern is brand DNA.
+- **Do** use Rubik's 4-tier weight system: 400 (body), 500 (nav/emphasis), 600 (titles), 700 (CTAs). Each weight has a specific role.
+- **Do** ship 3D character illustrations and colorful product screenshots as decorative bursts. The illustration-rich register is the anti-corporate signal.
+- **Do** use frosted glass (`backdrop-filter: blur(18px) saturate(180%)`) for layered surfaces over hero illustrations.
+- **Do** maintain warm purple-tinted shadow tones. The deep aubergine ambient (`rgba(22,15,36,0.90)`) creates the bioluminescent quality.
+
+### Don'ts
+
+- **Don't** flatten the body bg to pure black `#000000`. The warm aubergine is what gives Sentry its handmade character — terminal-black would tilt the brand toward Vercel's brutalism.
+- **Don't** use Dammit Sans below 56px or for body text. The custom display loses its character at small sizes; Rubik does that work.
+- **Don't** mix Rubik with Inter or Söhne in the same module. Rubik's humanist warmth is intentional contrast against the systemic-sans observability competition.
+- **Don't** swap pill buttons for square 8px-radius buttons. The full pill is the brand's friendliness signal — square corners pull the register toward Linear's structural rigour.
+- **Don't** drop the inset shadow on tactile muted-purple buttons. The pressed-into-surface quality is signature; flat shadows would dilute it.
+- **Don't** drop the uppercase + letter-spacing treatment on buttons and labels. It's a system-wide pattern; breaking it makes UI feel inconsistent.
+- **Don't** use saturated red for danger states. Sentry uses error-pink `#ff70bc` because the brand register insists errors are *the product*, not catastrophes.
+- **Don't** mix the lime-green accent with the coral/pink accents in the same component. The illustration palette uses one accent at a time per surface.
+- **Don't** use neutral gray shadows. Sentry's shadows are warm-purple-tinted (`rgba(22,15,36,...)`) — neutral grays would punch through the canvas.
+- **Don't** use standard gray (`#666`, `#999`) for borders. Use white-tinted alphas (`rgba(255,255,255,0.08)`) on dark or violet-tinted neutrals (`#362d59`, `#584674`).
+- **Don't** center-align the hero. Sentry's left-aligned hero leaves room for 3D illustration on the right column — centering the hero would orphan the illustration system.
+- **Don't** schedule-a-demo as the primary CTA. Sentry's brand explicitly prefers self-serve "Try Sentry Free" over gated demos.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+
+```
+bg (aubergine):       #1f1633
+bg-deep:              #150f23
+bg-soft (darkest):    #0f0c1a
+bg-elevated (card):   #2b1b3d
+text:                 #ffffff
+text-muted:           #c8c5d8
+text-soft:            #9b97ad
+brand (violet):       #7553ff
+brand-hover:          #6240e8
+brand-deep:           #422082
+brand-muted (tactile):#79628c
+accent-pink:          #ff70bc
+accent-yellow:        #fdb81b
+cta-bg (near-white):  #efefef
+cta-fg (near-black):  #1a1a1a
+border:               rgba(255,255,255,0.08)
+on-brand:             #ffffff
+```
+
+### Example Component Prompts
+
+- **Hero:** "Create a left-aligned hero on a `#1f1633` deep-aubergine canvas with an 88px Dammit Sans / weight 700 / line-height 1.20 headline reading 'Code breaks. Fix it faster.', an 18px Rubik 400 / line-height 1.60 deck below in `#c8c5d8` muted-violet text. Place a near-white pill CTA — `#efefef` background, `#1a1a1a` text, full pill (9999px radius), `12px 20px` padding, height 44, Rubik 14/500 uppercase 0.014em label 'Try Sentry Free'. Add a violet pill secondary `#7553ff` next to it. Right column shows a 3D character illustration with subtle parallax (~0.3 multiplier on scroll). Apply a deep purple ambient glow `rgba(22,15,36,0.90) 0 4px 4px 9px` around the hero zone."
+
+- **Feature card:** "Design an elevated feature card on aubergine canvas with `#2b1b3d` background, `1px solid rgba(255,255,255,0.08)` hairline border, 16px radius, 32px padding, shadow `rgba(0,0,0,0.10) 0 10px 15px -3px`. Title in Rubik 27/500 white, body in Rubik 16/400 line-height 1.60 in `#c8c5d8`. Optional uppercase eyebrow label at 10/600 letter-spacing 0.018em in `#9b97ad`."
+
+- **Tactile muted-purple button:** "Build a tactile secondary button: background `#79628c`, border `1px solid #584674`, inset shadow `rgba(0,0,0,0.10) 0 1px 3px 0 inset`, white uppercase Rubik 14/500-700 letter-spacing 0.014em label, 13px radius, `10px 18px` padding, height 42. Hover transitions inset shadow OUT to elevated `rgba(0,0,0,0.18) 0 0.5rem 1.5rem` over 200ms — the button rises from sunken to lifted."
+
+- **JetBrains Mono code block:** "Create a code block with `#0f0c1a` (darkest tier) background, `1px solid rgba(255,255,255,0.04)` border, 12px radius, `16px 20px` padding. Render in JetBrains Mono 13/400 line-height 1.60 with `tnum, zero, calt` OpenType features. Apply syntax highlighting in `#7553ff` (keywords), `#dcdcaa` (strings), `#ff70bc` (error tokens). Include intentional human comments like `// this is the line that broke prod`."
+
+- **Glass card panel:** "Design a frosted glass panel: background `rgba(255,255,255,0.18)`, `1px solid rgba(255,255,255,0.16)` border, `backdrop-filter: blur(18px) saturate(180%)`, 12px radius, 24px padding. White text content. Use over hero illustrations or product screenshots — never over plain canvas."
+
+- **Pricing tier card (Most Popular):** "Design a 3-column pricing grid on `#1f1633` canvas. Each tier card: `#2b1b3d` background, `1px solid rgba(255,255,255,0.08)` border, 16px radius, 40px padding. The middle 'Most Popular' tier elevated with the deep purple ambient `rgba(22,15,36,0.90) 0 4px 4px 9px`. Tier name in Rubik 24/500 white. Price in Dammit Sans 56/700. Feature list in Rubik 16/400 `#c8c5d8` with violet check icons `#7553ff`. CTA: violet pill `#7553ff` for popular, near-white pill `#efefef` for others."
+
+### Iteration Guide
+
+1. **Anchor the canvas at `#1f1633` aubergine.** Pure black tilts the brand toward Vercel's terminal-brutalism. The warm purple undertone is the differentiation — every other infra brand is cold-gray or terminal-black.
+2. **Use the violet `#7553ff` as the only structural brand colour.** Pink, coral, yellow, and lime are illustration-only. If your CTAs and links aren't violet, you've drifted from the brand axis.
+3. **Set Dammit Sans at 88/700 for the hero.** Lighter weights or smaller sizes lose the bulletin-board energy. The custom display is the voice.
+4. **Hand off to Rubik below 56px.** Dammit Sans below display tier reads as decorative; Rubik takes over for h2 and below. The handoff is exact.
+5. **Use JetBrains Mono for everything code.** Inline chips, multi-line blocks, install commands, error traces, dashboard labels. The OpenType `calt` ligatures (`==>`, `!=`) are part of the lineage.
+6. **Pill all primary CTAs.** `border-radius: 9999px` on the near-white pill is the brand's most distinctive shape decision. Square corners signal Linear/Vercel; pills signal Sentry.
+7. **Add tactile inset shadows on muted-purple buttons.** The pressed-INTO-surface quality is what makes secondary CTAs feel physical against the dark canvas.
+8. **Stack three violet-tonal layers for depth, not shadows.** `#0f0c1a` → `#1f1633` → `#2b1b3d` ladder does the work that drop shadows would do on a light-canvas brand.
+9. **Apply uppercase + 0.014em tracking on buttons and labels.** It's system-wide. Sentence case headlines + uppercase chrome is the typographic discipline.
+10. **Use the warm aubergine ambient glow** `rgba(22,15,36,0.90) 0 4px 4px 9px` around hero zones. The bioluminescent quality is signature — neutral black shadows would punch through.
+11. **Never schedule-a-demo as primary.** Sentry's brand explicitly prefers self-serve "Try Sentry Free". Gated demos belong in tertiary tier.
+12. **Include 3D character illustrations and colorful product screenshots.** The illustration-rich register is the anti-corporate signal — without illustrations, the page tilts toward generic dark-mode dev tool.
