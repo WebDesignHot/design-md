@@ -12,57 +12,101 @@ preview_swatch: ['#ffffff', '#1a73e8', '#9168c0']
 related: [openai, claude-ai, perplexity]
 description: 'Gemini''s product surface is a textbook Material 3 application of Google''s house brand — a near-white canvas, soft tonal containers, Google Sans across the entire UI, and the signature Google blue `#1a73e8` flowing into a Gemini-specific violet `#9168c0` for the brand sparkle gradient. The aesthetic is calm, rounded, and deliberately conversational rather than tool-like — Material 3''s tonal-container ladder doing the depth work that shadows would do in older systems.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Material 3 dark mode toggle in account settings; persisted server-side. Marketing site honors prefers-color-scheme. The blue→lavender→coral sparkle gradient is invariant across themes.'
+
 colors:
-  # Page grounds (Material 3 surface ladder)
-  bg: '#ffffff'                  # surface (canvas)
-  bg-soft: '#f8fafd'             # surface-container-low — prompt input bg
-  surface: '#eef2f7'             # surface-container — selected, hover
-  surface-high: '#dde3ea'        # surface-container-high — popover, menu
-  surface-highest: '#cdd2da'     # surface-container-highest — modal scrim base
-  surface-tinted: '#e7eef9'      # primary-tonal-container — chip bg, blue tint
-  surface-violet-tinted: '#f3eafa'  # secondary-tonal-container, lavender tint
-  # Text
-  text: '#1f1f1f'                # on-surface — primary copy
-  text-strong: '#0f0f0f'         # display, max contrast
-  text-muted: '#5f6368'          # on-surface-variant — Google grey-700
-  text-soft: '#80868b'            # captions, metadata
-  text-disabled: '#bdc1c6'
-  text-on-tinted: '#0b57d0'      # text colour inside primary-tonal-container
-  # Brand & gradient
-  brand: '#1a73e8'               # Google blue 600 — primary CTA
-  brand-hover: '#1967d2'         # blue 700
-  brand-press: '#185abc'         # blue 800
-  brand-deep: '#185abc'          # alias
-  brand-soft: '#e8f0fe'           # primary container — chip/pill backgrounds
-  gradient-from: '#4285f4'       # Google blue 500 — sparkle start
-  gradient-via: '#9b72cb'        # lavender mid
-  gradient-to: '#d96570'          # coral pink end (the famous trio)
-  gradient-via-2: '#9168c0'      # Gemini-specific violet — secondary trio stop
-  accent-violet: '#9168c0'       # standalone violet
-  accent-coral: '#d96570'         # standalone coral
-  accent-soft-blue: '#e8f0fe'
-  accent-soft-violet: '#f3eafa'
-  # Borders
-  border: '#dadce0'              # Google's default hairline
-  border-soft: '#e8eaed'          # subtle
-  border-strong: '#bdc1c6'        # emphasized
-  border-focus: '#1a73e8'        # focus outline base
-  # CTA
-  on-brand: '#ffffff'
-  on-tonal: '#0b57d0'             # text on tonal blue container
-  on-surface-tonal: '#1f1f1f'
-  # Semantic
-  success: '#188038'
-  success-bg: '#e6f4ea'
-  warning: '#f29900'
-  warning-bg: '#fef7e0'
-  danger: '#d93025'
-  danger-bg: '#fce8e6'
-  info: '#1a73e8'
-  info-bg: '#e8f0fe'
-  # Misc
-  scrim: 'rgba(32,33,36,0.4)'
-  ring-focus: 'rgba(26,115,232,0.32)'
+  light:
+    bg: '#ffffff'                  # surface (canvas)
+    bg-soft: '#f8fafd'             # surface-container-low — prompt input bg
+    surface: '#eef2f7'             # surface-container
+    surface-high: '#dde3ea'        # surface-container-high
+    surface-highest: '#cdd2da'     # surface-container-highest
+    surface-tinted: '#e7eef9'      # primary-tonal-container — chip bg
+    surface-violet-tinted: '#f3eafa'  # secondary-tonal-container
+    text: '#1f1f1f'                # on-surface — primary copy
+    text-strong: '#0f0f0f'         # display, max contrast
+    text-muted: '#5f6368'          # on-surface-variant — Google grey-700
+    text-soft: '#80868b'            # captions, metadata
+    text-disabled: '#bdc1c6'
+    text-on-tinted: '#0b57d0'      # text inside primary-tonal-container
+    brand: '#1a73e8'               # Google blue 600 — primary CTA
+    brand-hover: '#1967d2'         # blue 700
+    brand-press: '#185abc'         # blue 800
+    brand-deep: '#185abc'
+    brand-soft: '#e8f0fe'           # primary container
+    gradient-from: '#4285f4'       # Google blue 500 — sparkle start
+    gradient-via: '#9b72cb'        # lavender mid
+    gradient-to: '#d96570'          # coral pink end
+    gradient-via-2: '#9168c0'
+    accent-violet: '#9168c0'
+    accent-coral: '#d96570'
+    accent-soft-blue: '#e8f0fe'
+    accent-soft-violet: '#f3eafa'
+    border: '#dadce0'
+    border-soft: '#e8eaed'
+    border-strong: '#bdc1c6'
+    border-focus: '#1a73e8'
+    on-brand: '#ffffff'
+    on-tonal: '#0b57d0'
+    on-surface-tonal: '#1f1f1f'
+    success: '#188038'
+    success-bg: '#e6f4ea'
+    warning: '#f29900'
+    warning-bg: '#fef7e0'
+    danger: '#d93025'
+    danger-bg: '#fce8e6'
+    info: '#1a73e8'
+    info-bg: '#e8f0fe'
+    scrim: 'rgba(32,33,36,0.4)'
+    ring-focus: 'rgba(26,115,232,0.32)'
+
+  dark:
+    bg: '#131314'                  # Material 3 dark surface — Google's official dark canvas
+    bg-soft: '#1e1f20'             # surface-container-low — prompt input
+    surface: '#282a2c'             # surface-container
+    surface-high: '#333537'        # surface-container-high — popover, menu
+    surface-highest: '#3f4144'     # surface-container-highest — modal scrim base
+    surface-tinted: '#1a3a6e'      # primary-tonal-container on dark — blue tint
+    surface-violet-tinted: '#3a2a55'  # secondary-tonal-container on dark — lavender tint
+    text: '#e3e3e3'                # on-surface — primary copy on dark (M3 spec)
+    text-strong: '#ffffff'
+    text-muted: '#9aa0a6'          # on-surface-variant on dark
+    text-soft: '#80868b'
+    text-disabled: '#5f6368'
+    text-on-tinted: '#a8c7fa'      # blue 200 — text inside dark tonal blue container
+    brand: '#a8c7fa'               # Google blue 200 — M3 dark primary
+    brand-hover: '#c2d7fc'         # blue 100
+    brand-press: '#dde9fc'
+    brand-deep: '#7baaf7'           # blue 300
+    brand-soft: 'rgba(168, 199, 250, 0.16)'
+    gradient-from: '#4285f4'       # gradient stays — chromatic identity
+    gradient-via: '#9b72cb'
+    gradient-to: '#d96570'
+    gradient-via-2: '#9168c0'
+    accent-violet: '#cfbcff'        # lifted lavender on dark
+    accent-coral: '#f4a4ad'         # lifted coral on dark
+    accent-soft-blue: 'rgba(168, 199, 250, 0.16)'
+    accent-soft-violet: 'rgba(207, 188, 255, 0.16)'
+    border: '#3f4144'              # dark hairline
+    border-soft: '#282a2c'
+    border-strong: '#5f6368'
+    border-focus: '#a8c7fa'
+    on-brand: '#062e6f'             # dark blue 900 text on blue 200 (M3)
+    on-tonal: '#a8c7fa'
+    on-surface-tonal: '#e3e3e3'
+    success: '#81c995'              # green 300 — M3 dark success
+    success-bg: 'rgba(129, 201, 149, 0.16)'
+    warning: '#fdd663'              # yellow 300 — M3 dark warning
+    warning-bg: 'rgba(253, 214, 99, 0.16)'
+    danger: '#f28b82'               # red 300 — M3 dark error
+    danger-bg: 'rgba(242, 139, 130, 0.16)'
+    info: '#a8c7fa'
+    info-bg: 'rgba(168, 199, 250, 0.16)'
+    scrim: 'rgba(0, 0, 0, 0.6)'
+    ring-focus: 'rgba(168, 199, 250, 0.32)'
 
 typography:
   display:

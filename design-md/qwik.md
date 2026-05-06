@@ -12,69 +12,117 @@ preview_swatch: ['#0a0e1a', '#ac7ef4', '#18b6f6']
 related: [vite, vercel, tailwindcss]
 description: 'Qwik''s identity is a high-voltage gradient — `#ac7ef4` violet flowing into `#18b6f6` electric blue — set against a near-black `#0a0e1a` canvas. The lightning-bolt glyph anchors the wordmark, and Inter (paired with Poppins for select display moments) carries the marketing copy. The brand reads as kinetic infrastructure: speed-as-aesthetic, execution-as-electricity. Resumability is the framework''s technical pitch; the violet halo is its visual analog. Where Astro feels cosmic and Solid feels infrastructural, Qwik feels like a charging arc.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-theme on <html>; persisted in localStorage; respects prefers-color-scheme. Marketing site is dark; docs honor user preference. The violet+cyan brand gradient is invariant across themes.'
+
 colors:
-  # — Primary —
-  bg: '#0a0e1a'                  # cool near-black, the canvas
-  bg-soft: '#11162a'              # secondary panel, code-block surface
-  bg-strong: '#1a2040'             # card lift
-  surface: '#1a2040'               # raised card surface
-  surface-strong: '#252b50'         # hovered card
-  surface-muted: '#0d1224'         # pressed card
-  text: '#ffffff'                  # primary copy, full strength
-  text-strong: '#ffffff'           # absolute white
-  text-muted: '#a8b1c2'            # secondary copy
-  text-soft: '#7a8499'             # tertiary, deemphasized
-  text-faint: '#5a6478'            # quaternary, helper labels
-  text-disabled: '#3a4258'         # disabled labels
-  # — Brand & Accents —
-  brand: '#ac7ef4'                 # Qwik violet, left endpoint of gradient
-  brand-strong: '#8b5cf0'          # pressed violet
-  brand-soft: '#ac7ef422'          # 13% violet wash for callouts
-  accent: '#18b6f6'                # electric blue, right endpoint
-  accent-strong: '#0a9ad9'         # pressed cyan
-  accent-soft: '#18b6f622'         # 13% blue wash
-  gradient-from: '#ac7ef4'         # gradient start
-  gradient-to: '#18b6f6'           # gradient end
-  gradient-via: '#7c3aed'           # optional middle stop for thicker gradients
-  glow: '#ac7ef466'                # 40% alpha violet halo behind hero
-  glow-blue: '#18b6f666'           # 40% alpha blue halo for accents
-  # — Interactive —
-  link: '#18b6f6'                  # link picks up accent cyan
-  link-hover: '#33d4ff'             # brighter cyan on hover
-  link-visited: '#c4b5fd'           # visited violet
-  selected: '#ac7ef422'             # selected-row violet tint
-  disabled-bg: '#252b50'            # disabled control surface
-  disabled-text: '#5a6478'          # disabled label
-  # — Neutrals & Borders —
-  border: '#ffffff14'               # 8% white hairline
-  border-strong: '#ffffff26'        # 15% white
-  border-subtle: '#ffffff0a'        # 4% white, near-invisible
-  border-brand: '#ac7ef466'         # violet 40% for branded borders
-  divider: '#ffffff14'              # 8% white for table rules
-  # — Inverse / Light Surfaces —
-  inverse-bg: '#ffffff'             # rare light surface, used in pricing or contrast moments
-  inverse-text: '#0a0e1a'           # near-black on light surface
-  inverse-text-muted: '#5b5e64'      # muted on light
-  inverse-border: '#e1e3e7'          # light-surface border
-  # — Shadow Colors —
-  shadow-deep: 'rgba(0, 0, 0, 0.4)'  # deep dark shadow
-  shadow-violet: 'rgba(172, 126, 244, 0.32)' # violet halo for emphasis
-  shadow-blue: 'rgba(24, 182, 246, 0.32)'    # cyan halo for emphasis
-  # — Semantic —
-  success-bg: '#0d2818'
-  success-text: '#86efac'
-  success-border: '#22c55e'
-  warning-bg: '#2a2010'
-  warning-text: '#fbbf24'
-  warning-border: '#f59e0b'
-  danger-bg: '#2a1414'
-  danger-text: '#fca5a5'
-  danger-border: '#ef4444'
-  info-bg: '#0c2030'
-  info-text: '#7dd3fc'
-  info-border: '#0ea5e9'
-  on-brand: '#ffffff'              # white ON the violet
-  on-accent: '#0a0e1a'             # near-black ON the cyan (for legibility)
+  dark:
+    bg: '#0a0e1a'                  # cool near-black canvas
+    bg-soft: '#11162a'              # secondary panel, code-block surface
+    bg-strong: '#1a2040'             # card lift
+    surface: '#1a2040'               # raised card surface
+    surface-strong: '#252b50'         # hovered card
+    surface-muted: '#0d1224'         # pressed card
+    text: '#ffffff'
+    text-strong: '#ffffff'
+    text-muted: '#a8b1c2'
+    text-soft: '#7a8499'
+    text-faint: '#5a6478'
+    text-disabled: '#3a4258'
+    brand: '#ac7ef4'                 # Qwik violet
+    brand-strong: '#8b5cf0'
+    brand-soft: '#ac7ef422'           # 13% violet
+    accent: '#18b6f6'                # electric blue
+    accent-strong: '#0a9ad9'
+    accent-soft: '#18b6f622'
+    gradient-from: '#ac7ef4'
+    gradient-to: '#18b6f6'
+    gradient-via: '#7c3aed'
+    glow: '#ac7ef466'
+    glow-blue: '#18b6f666'
+    link: '#18b6f6'
+    link-hover: '#33d4ff'
+    link-visited: '#c4b5fd'
+    selected: '#ac7ef422'
+    disabled-bg: '#252b50'
+    disabled-text: '#5a6478'
+    border: '#ffffff14'
+    border-strong: '#ffffff26'
+    border-subtle: '#ffffff0a'
+    border-brand: '#ac7ef466'
+    divider: '#ffffff14'
+    shadow-deep: 'rgba(0, 0, 0, 0.4)'
+    shadow-violet: 'rgba(172, 126, 244, 0.32)'
+    shadow-blue: 'rgba(24, 182, 246, 0.32)'
+    success-bg: '#0d2818'
+    success-text: '#86efac'
+    success-border: '#22c55e'
+    warning-bg: '#2a2010'
+    warning-text: '#fbbf24'
+    warning-border: '#f59e0b'
+    danger-bg: '#2a1414'
+    danger-text: '#fca5a5'
+    danger-border: '#ef4444'
+    info-bg: '#0c2030'
+    info-text: '#7dd3fc'
+    info-border: '#0ea5e9'
+    on-brand: '#ffffff'
+    on-accent: '#0a0e1a'
+
+  light:
+    bg: '#ffffff'                  # docs light canvas
+    bg-soft: '#f8fafc'              # subtle alt panel
+    bg-strong: '#f1f5f9'             # raised surface tier
+    surface: '#ffffff'
+    surface-strong: '#f1f5f9'
+    surface-muted: '#fafbfc'
+    text: '#0a0e1a'                  # mirrors dark/bg as text role
+    text-strong: '#000000'
+    text-muted: '#475569'             # slate-600
+    text-soft: '#64748b'              # slate-500
+    text-faint: '#94a3b8'             # slate-400
+    text-disabled: '#cbd5e1'
+    brand: '#7c3aed'                  # deeper violet for AAA on white
+    brand-strong: '#6d28d9'
+    brand-soft: 'rgba(124, 58, 237, 0.10)'
+    accent: '#0a9ad9'                 # deeper cyan for legibility
+    accent-strong: '#0e7490'
+    accent-soft: 'rgba(24, 182, 246, 0.10)'
+    gradient-from: '#ac7ef4'          # gradient stays — chromatic identity
+    gradient-to: '#18b6f6'
+    gradient-via: '#7c3aed'
+    glow: 'rgba(172, 126, 244, 0.30)'
+    glow-blue: 'rgba(24, 182, 246, 0.20)'
+    link: '#0a9ad9'                   # cyan link
+    link-hover: '#0e7490'
+    link-visited: '#7c3aed'
+    selected: 'rgba(124, 58, 237, 0.08)'
+    disabled-bg: '#f1f5f9'
+    disabled-text: '#94a3b8'
+    border: '#e2e8f0'                 # slate-200 hairline
+    border-strong: '#cbd5e1'           # slate-300
+    border-subtle: '#f1f5f9'           # slate-100
+    border-brand: 'rgba(124, 58, 237, 0.40)'
+    divider: '#e2e8f0'
+    shadow-deep: 'rgba(15, 23, 42, 0.12)'
+    shadow-violet: 'rgba(172, 126, 244, 0.18)'
+    shadow-blue: 'rgba(24, 182, 246, 0.18)'
+    success-bg: '#f0fdf4'
+    success-text: '#15803d'
+    success-border: '#22c55e'
+    warning-bg: '#fffbeb'
+    warning-text: '#b45309'
+    warning-border: '#f59e0b'
+    danger-bg: '#fef2f2'
+    danger-text: '#b91c1c'
+    danger-border: '#ef4444'
+    info-bg: '#f0f9ff'
+    info-text: '#0369a1'
+    info-border: '#0ea5e9'
+    on-brand: '#ffffff'
+    on-accent: '#ffffff'
 
 typography:
   display:

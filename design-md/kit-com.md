@@ -12,53 +12,95 @@ preview_swatch: ['#f9f7f4', '#1e1e1e', '#44b1ff']
 related: [stripe, notion, linear]
 description: 'Kit (formerly ConvertKit) is the editorial newsletter platform reborn with a publication-grade chrome. The canvas is a warm cream `#f9f7f4` and a slightly deeper `#f2efe9` for inset zones; display copy uses the custom **KitSansFont** at 80px, weight 500, and the secondary chrome runs **Libre Franklin**. The brand''s chromatic identity is a pastel-rainbow chip set — sky `#bce1fa`, peach `#ffd0ad`, mint `#b9e9c5`, lilac `#e7c9f1`, gold `#f2ba41` — anchored by a single confident sky-blue CTA `#44b1ff`. The result reads more like a literary magazine than an email tool. Where Substack runs orange + serif and Mailchimp runs yellow + cute-illustration, Kit splits the difference: a custom chunky-humanist display sans on cream, a sky-blue Stripe-discipline anchor, and a pastel chip set that signals creator-warmth without joining the bubblegum-illustration crowd. The 2024 ConvertKit-to-Kit rebrand traded a generic SaaS chrome for a magazine-grade editorial system; the chunky 80px headline at weight 500 with line-height < 1.0 is the brand''s typographic signature.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is the warm cream paper canvas; creator dashboard honors prefers-color-scheme. The sky-blue brand and pastel chip palette are invariant across themes.'
+
 colors:
-  # Primary
-  bg: '#f9f7f4'                          # warm cream canvas, ecru not white
-  bg-alt: '#f2efe9'                      # deeper paper inset for feature bands
-  bg-tertiary: '#ebe6dd'                 # deepest cream for emphasis
-  surface: '#ffffff'                     # raised paper card
-  surface-elev: '#fffdf9'                # subtle lift over cream
-  text: '#1e1e1e'                        # near-black display copy
-  text-strong: '#0f0f0f'                 # rare deepest black for hero
-  text-medium: '#000000cc'               # 80% black caption
-  text-soft: '#00000099'                 # 60% black metadata
-  text-faint: '#00000066'                # 40% black helper
-  text-muted: '#0000004d'                # 30% black disabled
-  # Brand
-  brand: '#44b1ff'                       # signature sky-blue CTA
-  brand-soft: '#44b1ffd9'                # 85% sky for hover
-  brand-deep: '#2c8fd6'                  # pressed-state sky
-  brand-tint: '#bce1fa'                  # sky tint chip
-  on-brand: '#1e1e1e'                    # near-black label on sky
-  # Pastel chip set (the editorial palette)
-  accent-sky: '#bce1fa'                  # sky chip — audience pillar
-  accent-sky-deep: '#a2d1f1'             # deeper sky variant
-  accent-peach: '#ffd0ad'                # peach chip — tools pillar
-  accent-mint: '#b9e9c5'                 # mint chip — growth pillar
-  accent-lilac: '#e7c9f1'                # lilac chip — community pillar
-  accent-gold: '#f2ba41'                 # gold pricing/highlight
-  accent-gold-soft: '#fce8b8'            # gold wash background
-  accent-rose: '#f7c4cd'                 # rose chip (rarer)
-  # Interactive
-  link: '#44b1ff'                        # sky link in body copy
-  link-hover: '#2c8fd6'                  # deeper sky on hover
-  selected-bg: '#f2efe9'                 # selected nav state
-  disabled: '#0000004d'
-  # Borders
-  border: '#0000000f'                    # ~6% black hairline
-  border-strong: '#00000019'             # ~10% black for emphasis
-  border-subtle: '#00000008'             # ~3% black quietest
-  border-brand: 'rgba(68, 177, 255, 0.30)' # sky-tinted hairline
-  # Semantic
-  success-bg: '#b9e9c5'                  # mint chip
-  success-text: '#1f4d2c'
-  warning-bg: '#fce8b8'                  # gold-soft wash
-  warning-text: '#7a5a00'
-  danger-bg: '#f7c4cd'                   # rose chip
-  danger-text: '#a8113a'
-  info-bg: '#bce1fa'                     # sky chip
-  info-text: '#1a3a7a'
+  light:
+    bg: '#f9f7f4'                          # warm cream canvas, ecru not white
+    bg-alt: '#f2efe9'                      # deeper paper inset
+    bg-tertiary: '#ebe6dd'                 # deepest cream
+    surface: '#ffffff'                     # raised paper card
+    surface-elev: '#fffdf9'                # subtle lift over cream
+    text: '#1e1e1e'                        # near-black display
+    text-strong: '#0f0f0f'                 # rare deepest black
+    text-medium: '#000000cc'               # 80% black
+    text-soft: '#00000099'                 # 60% black
+    text-faint: '#00000066'                # 40% black
+    text-muted: '#0000004d'                # 30% black
+    brand: '#44b1ff'                       # signature sky-blue CTA
+    brand-soft: '#44b1ffd9'                # 85% sky for hover
+    brand-deep: '#2c8fd6'                  # pressed
+    brand-tint: '#bce1fa'                  # sky tint chip
+    on-brand: '#1e1e1e'
+    accent-sky: '#bce1fa'                  # audience pillar
+    accent-sky-deep: '#a2d1f1'
+    accent-peach: '#ffd0ad'                # tools pillar
+    accent-mint: '#b9e9c5'                 # growth pillar
+    accent-lilac: '#e7c9f1'                # community pillar
+    accent-gold: '#f2ba41'
+    accent-gold-soft: '#fce8b8'
+    accent-rose: '#f7c4cd'
+    link: '#44b1ff'
+    link-hover: '#2c8fd6'
+    selected-bg: '#f2efe9'
+    disabled: '#0000004d'
+    border: '#0000000f'                    # ~6% black hairline
+    border-strong: '#00000019'             # ~10% black
+    border-subtle: '#00000008'             # ~3% black
+    border-brand: 'rgba(68, 177, 255, 0.30)'
+    success-bg: '#b9e9c5'
+    success-text: '#1f4d2c'
+    warning-bg: '#fce8b8'
+    warning-text: '#7a5a00'
+    danger-bg: '#f7c4cd'
+    danger-text: '#a8113a'
+    info-bg: '#bce1fa'
+    info-text: '#1a3a7a'
+
+  dark:
+    bg: '#1a1814'                          # warm-tinted near-black (cream's dark cousin)
+    bg-alt: '#23201b'                      # deeper warm-dark inset
+    bg-tertiary: '#2c2922'                 # deepest warm-dark
+    surface: '#23201b'                     # raised dark card with warm tint
+    surface-elev: '#2c2922'
+    text: '#f9f7f4'                        # cream text on warm dark (mirrors light/bg as text)
+    text-strong: '#ffffff'
+    text-medium: '#ffffffcc'
+    text-soft: '#ffffff99'
+    text-faint: '#ffffff66'
+    text-muted: '#ffffff4d'
+    brand: '#5cbdff'                       # lifted sky for AAA on warm-dark
+    brand-soft: '#5cbdffd9'
+    brand-deep: '#44b1ff'
+    brand-tint: 'rgba(92, 189, 255, 0.18)'
+    on-brand: '#1e1e1e'
+    accent-sky: 'rgba(188, 225, 250, 0.20)'
+    accent-sky-deep: '#a2d1f1'
+    accent-peach: 'rgba(255, 208, 173, 0.20)'
+    accent-mint: 'rgba(185, 233, 197, 0.20)'
+    accent-lilac: 'rgba(231, 201, 241, 0.20)'
+    accent-gold: '#fbbf24'
+    accent-gold-soft: 'rgba(252, 232, 184, 0.18)'
+    accent-rose: 'rgba(247, 196, 205, 0.20)'
+    link: '#5cbdff'
+    link-hover: '#7cc9ff'
+    selected-bg: '#2c2922'
+    disabled: '#ffffff4d'
+    border: '#ffffff14'                    # 8% white hairline
+    border-strong: '#ffffff26'             # 15% white
+    border-subtle: '#ffffff0a'             # 4% white
+    border-brand: 'rgba(92, 189, 255, 0.40)'
+    success-bg: 'rgba(185, 233, 197, 0.18)'
+    success-text: '#7ed4a8'
+    warning-bg: 'rgba(252, 232, 184, 0.18)'
+    warning-text: '#fbbf24'
+    danger-bg: 'rgba(247, 196, 205, 0.18)'
+    danger-text: '#f7c4cd'
+    info-bg: 'rgba(188, 225, 250, 0.18)'
+    info-text: '#bce1fa'
 
 typography:
   display:

@@ -12,73 +12,117 @@ preview_swatch: ['#06051d', '#2d0e36', '#9061f9']
 related: [openai, anthropic, claude-ai]
 description: 'Midjourney''s site reads like a private chapel for image research. The canvas is a deep navy-violet `#06051d`, headlines are typeset in JetBrains Mono at regular weight (a deliberate refusal of marketing-bold), and body copy uses DM Sans for warmth. The interior swatches go straight to wide-gamut OKLCH — saturated greens, oranges, and magentas Photoshop cannot name — so the chrome itself signals that this is a tool that lives past sRGB.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'Web app default is the cosmic-navy dark canvas; explore/help docs honor user preference. The violet brand and OKLCH accent palette are invariant across themes.'
+
 colors:
-  # Primary
-  bg: '#06051d'                   # cosmic navy-violet ground
-  bg-alt: '#0f1c36'               # secondary panel
-  text: '#ffffff'                 # display white on dark
-  text-strong: '#ffffff'          # bolder heading white
-  text-body: '#2e3038'            # body slate on light surfaces
-  text-muted: '#9ca0ad'           # secondary on dark
-  text-soft: '#ebf8ff'            # iced highlight tone
-  text-faint: '#5a5d6c'           # quiet metadata
+  dark:
+    bg: '#06051d'                   # cosmic navy-violet ground
+    bg-alt: '#0f1c36'               # secondary panel
+    text: '#ffffff'                 # display white on dark
+    text-strong: '#ffffff'
+    text-body: '#ebf8ff'             # iced body on dark
+    text-muted: '#9ca0ad'
+    text-soft: '#ebf8ff'
+    text-faint: '#5a5d6c'
+    brand: '#9061f9'                # signature violet
+    brand-deep: '#5b21b6'
+    brand-soft: '#3b2566'
+    on-brand: '#ffffff'
+    accent-rose: '#fc2c83'
+    accent-amber: '#f5a524'
+    accent-emerald: '#16a394'
+    accent-sky: '#63b3ed'
+    accent-magenta: '#d946ef'
+    accent-cyan: '#22d3ee'
+    link: '#9061f9'
+    link-hover: '#a78bfa'
+    link-visited: '#7c3aed'
+    selected: '#3b2566'
+    disabled: '#3a3d4a'
+    neutral-50: '#f8f8fb'
+    neutral-100: '#ebecf0'
+    neutral-300: '#9ca0ad'
+    neutral-500: '#5a5d6c'
+    neutral-700: '#2e3038'
+    neutral-900: '#161827'
+    surface: '#2d0e36'              # violet card surface
+    surface-deep: '#28172e'
+    surface-soft: '#314062'
+    surface-raised: '#3a1c44'
+    border: '#00000099'
+    border-strong: '#ffffff1f'
+    border-subtle: '#ffffff0a'
+    shadow-ambient: 'rgba(6,5,29,0.4)'
+    shadow-violet: 'rgba(144,97,249,0.25)'
+    shadow-deep: 'rgba(0,0,0,0.6)'
+    success: '#16a394'
+    success-bg: '#0e2a26'
+    success-text: '#5eead4'
+    warning: '#f5a524'
+    warning-bg: '#2e2010'
+    warning-text: '#fcd34d'
+    danger: '#fc2c83'
+    danger-bg: '#2c0a1a'
+    danger-text: '#fda4af'
+    info: '#63b3ed'
+    info-bg: '#0f1f33'
+    info-text: '#93c5fd'
 
-  # Brand & Dark
-  brand: '#9061f9'                # signature violet — oklch(0.541 0.281 293)
-  brand-deep: '#5b21b6'           # pressed violet
-  brand-soft: '#3b2566'           # tinted violet panel
-  on-brand: '#ffffff'
-
-  # Accent (wide-gamut OKLCH set)
-  accent-rose: '#fc2c83'          # research-rose — oklch(0.645 0.246 16)
-  accent-amber: '#f5a524'         # sandstone amber — oklch(0.795 0.184 86)
-  accent-emerald: '#16a394'       # generative green — oklch(0.696 0.17 162)
-  accent-sky: '#63b3ed'           # fallback link blue
-  accent-magenta: '#d946ef'       # rare emphasis
-  accent-cyan: '#22d3ee'          # status pulse
-
-  # Interactive
-  link: '#9061f9'
-  link-hover: '#a78bfa'
-  link-visited: '#7c3aed'
-  selected: '#3b2566'
-  disabled: '#3a3d4a'
-
-  # Neutral scale
-  neutral-50: '#f8f8fb'
-  neutral-100: '#ebecf0'
-  neutral-300: '#9ca0ad'
-  neutral-500: '#5a5d6c'
-  neutral-700: '#2e3038'
-  neutral-900: '#161827'
-
-  # Surface & Borders
-  surface: '#2d0e36'              # violet card surface
-  surface-deep: '#28172e'         # alternate violet panel
-  surface-soft: '#314062'         # blue-grey panel
-  surface-raised: '#3a1c44'       # hover-raised card
-  border: '#00000099'             # 60% black hairline on dark
-  border-strong: '#ffffff1f'      # 12% white hairline alt
-  border-subtle: '#ffffff0a'      # 4% white hairline
-
-  # Shadow colors
-  shadow-ambient: 'rgba(6,5,29,0.4)'
-  shadow-violet: 'rgba(144,97,249,0.25)'
-  shadow-deep: 'rgba(0,0,0,0.6)'
-
-  # Semantic
-  success: '#16a394'
-  success-bg: '#0e2a26'
-  success-text: '#5eead4'
-  warning: '#f5a524'
-  warning-bg: '#2e2010'
-  warning-text: '#fcd34d'
-  danger: '#fc2c83'
-  danger-bg: '#2c0a1a'
-  danger-text: '#fda4af'
-  info: '#63b3ed'
-  info-bg: '#0f1f33'
-  info-text: '#93c5fd'
+  light:
+    bg: '#fafafa'                   # near-white canvas (docs / pricing in light mode)
+    bg-alt: '#f4f4f8'               # secondary panel with violet tint
+    text: '#06051d'                 # cosmic-navy text on white (mirrors dark/bg as text)
+    text-strong: '#000000'
+    text-body: '#2e3038'
+    text-muted: '#5a5d6c'
+    text-soft: '#9ca0ad'
+    text-faint: '#cbd0d8'
+    brand: '#7c3aed'                # deeper violet for AAA on white
+    brand-deep: '#5b21b6'
+    brand-soft: 'rgba(144, 97, 249, 0.10)'
+    on-brand: '#ffffff'
+    accent-rose: '#e11d74'           # darker for legibility on white
+    accent-amber: '#b45309'
+    accent-emerald: '#0e7470'
+    accent-sky: '#0369a1'
+    accent-magenta: '#a21caf'
+    accent-cyan: '#0e7490'
+    link: '#7c3aed'
+    link-hover: '#6d28d9'
+    link-visited: '#5b21b6'
+    selected: 'rgba(144, 97, 249, 0.08)'
+    disabled: '#cbd0d8'
+    neutral-50: '#f8f8fb'
+    neutral-100: '#ebecf0'
+    neutral-300: '#9ca0ad'
+    neutral-500: '#5a5d6c'
+    neutral-700: '#2e3038'
+    neutral-900: '#161827'
+    surface: '#ffffff'              # white card on near-white canvas
+    surface-deep: '#f8f8fb'
+    surface-soft: '#ebecf0'
+    surface-raised: '#ffffff'
+    border: '#e5e7eb'                # slate-200
+    border-strong: '#d1d5db'
+    border-subtle: '#f3f4f6'
+    shadow-ambient: 'rgba(6, 5, 29, 0.06)'
+    shadow-violet: 'rgba(144, 97, 249, 0.18)'
+    shadow-deep: 'rgba(15, 23, 42, 0.12)'
+    success: '#0e7470'                  # darker for AAA on white
+    success-bg: '#dcfce7'
+    success-text: '#166534'
+    warning: '#b45309'
+    warning-bg: '#fef3c7'
+    warning-text: '#92400e'
+    danger: '#e11d74'
+    danger-bg: '#fce7f3'
+    danger-text: '#9d174d'
+    info: '#0369a1'
+    info-bg: '#dbeafe'
+    info-text: '#1e40af'
 
 typography:
   display:

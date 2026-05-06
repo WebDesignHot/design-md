@@ -12,68 +12,115 @@ preview_swatch: ['#0c1424', '#2c4f7c', '#66e6ff']
 related: [vite, vercel, tailwindcss]
 description: 'SolidJS leans into a deep `#0c1424` navy with a brand gradient that runs from a saturated `#2c4f7c` blue into a glowing `#66e6ff` cyan — the two-tone palette that lives in the Solid wordmark itself. The site reads like a circuit diagram: dense, technical, blue-on-blue-on-cyan, with code blocks treated as primary content rather than chrome. Where Astro feels cosmic and Qwik feels kinetic, Solid feels infrastructural — the developer portal of a chip manufacturer rendered as marketing.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-theme on <html>; persisted in localStorage; respects prefers-color-scheme. Marketing site is dark; docs honor user preference. The blue+cyan brand gradient is invariant across themes.'
+
 colors:
-  # — Primary —
-  bg: '#0c1424'                  # deep technical navy, the canvas
-  bg-soft: '#142037'              # secondary panel, code-block surface
-  bg-strong: '#1a2640'             # card lift
-  surface: '#1a2640'               # raised card
-  surface-strong: '#26334d'         # hovered card
-  surface-muted: '#0e1828'          # pressed card
-  text: '#f0f4fa'                  # primary, near-white with cool tint
-  text-strong: '#ffffff'           # absolute white emphasis
-  text-muted: '#a8b3c7'            # secondary copy
-  text-soft: '#7a8499'             # tertiary
-  text-faint: '#5a6478'             # quaternary
-  text-disabled: '#3a4258'           # disabled
-  # — Brand & Accents —
-  brand: '#2c4f7c'                 # Solid deep blue (wordmark left)
-  brand-strong: '#1d3a5f'          # darker pressed blue
-  brand-soft: '#2c4f7c33'          # 20% blue wash for callouts
-  brand-deep: '#0a1a2e'            # deepest blue near canvas
-  accent: '#66e6ff'                # Solid bright cyan (wordmark right)
-  accent-strong: '#33d4ff'         # pressed cyan
-  accent-soft: '#66e6ff22'         # 13% cyan wash
-  gradient-from: '#2c4f7c'         # gradient start
-  gradient-to: '#66e6ff'           # gradient end
-  glow: '#66e6ff44'                # 27% alpha cyan glow for hover halos
-  # — Interactive —
-  link: '#66e6ff'                  # link picks up cyan accent
-  link-hover: '#33d4ff'             # brighter cyan on hover
-  link-visited: '#a78bfa'           # visited soft violet
-  selected: '#2c4f7c33'             # selected-row tint
-  disabled-bg: '#26334d'            # disabled control surface
-  disabled-text: '#5a6478'          # disabled label
-  # — Neutrals & Borders —
-  border: '#ffffff14'               # 8% white hairline
-  border-strong: '#ffffff26'        # 15% white
-  border-subtle: '#ffffff0a'        # 4% white
-  border-cyan: '#66e6ff66'          # cyan 40% for emphasized borders
-  divider: '#ffffff14'              # table rules
-  # — Inverse / Light Surfaces —
-  inverse-bg: '#ffffff'             # rare light moments (pricing/contrast)
-  inverse-text: '#0c1424'           # near-black on light
-  inverse-text-muted: '#5b5e64'      # muted on light
-  inverse-border: '#e1e3e7'          # light-surface border
-  # — Shadow Colors —
-  shadow-deep: 'rgba(0, 0, 0, 0.4)'
-  shadow-cyan: 'rgba(102, 230, 255, 0.32)'   # cyan halo for emphasis
-  shadow-blue: 'rgba(44, 79, 124, 0.32)'      # blue glow
-  # — Semantic —
-  success-bg: '#0d2818'
-  success-text: '#86efac'
-  success-border: '#22c55e'
-  warning-bg: '#2a2010'
-  warning-text: '#fbbf24'
-  warning-border: '#f59e0b'
-  danger-bg: '#2a1414'
-  danger-text: '#fca5a5'
-  danger-border: '#ef4444'
-  info-bg: '#0c2030'
-  info-text: '#7dd3fc'
-  info-border: '#0ea5e9'
-  on-brand: '#ffffff'              # white ON the brand blue
-  on-accent: '#0c1424'             # deep navy ON the cyan (legibility)
+  dark:
+    bg: '#0c1424'                  # deep technical navy canvas
+    bg-soft: '#142037'              # secondary panel, code-block
+    bg-strong: '#1a2640'             # card lift
+    surface: '#1a2640'
+    surface-strong: '#26334d'
+    surface-muted: '#0e1828'
+    text: '#f0f4fa'                  # near-white with cool tint
+    text-strong: '#ffffff'
+    text-muted: '#a8b3c7'
+    text-soft: '#7a8499'
+    text-faint: '#5a6478'
+    text-disabled: '#3a4258'
+    brand: '#2c4f7c'                 # Solid deep blue
+    brand-strong: '#1d3a5f'
+    brand-soft: '#2c4f7c33'
+    brand-deep: '#0a1a2e'
+    accent: '#66e6ff'                # Solid bright cyan
+    accent-strong: '#33d4ff'
+    accent-soft: '#66e6ff22'
+    gradient-from: '#2c4f7c'
+    gradient-to: '#66e6ff'
+    glow: '#66e6ff44'
+    link: '#66e6ff'
+    link-hover: '#33d4ff'
+    link-visited: '#a78bfa'
+    selected: '#2c4f7c33'
+    disabled-bg: '#26334d'
+    disabled-text: '#5a6478'
+    border: '#ffffff14'
+    border-strong: '#ffffff26'
+    border-subtle: '#ffffff0a'
+    border-cyan: '#66e6ff66'
+    divider: '#ffffff14'
+    shadow-deep: 'rgba(0, 0, 0, 0.4)'
+    shadow-cyan: 'rgba(102, 230, 255, 0.32)'
+    shadow-blue: 'rgba(44, 79, 124, 0.32)'
+    success-bg: '#0d2818'
+    success-text: '#86efac'
+    success-border: '#22c55e'
+    warning-bg: '#2a2010'
+    warning-text: '#fbbf24'
+    warning-border: '#f59e0b'
+    danger-bg: '#2a1414'
+    danger-text: '#fca5a5'
+    danger-border: '#ef4444'
+    info-bg: '#0c2030'
+    info-text: '#7dd3fc'
+    info-border: '#0ea5e9'
+    on-brand: '#ffffff'
+    on-accent: '#0c1424'
+
+  light:
+    bg: '#ffffff'                  # docs light canvas
+    bg-soft: '#f8fafc'              # subtle alt panel
+    bg-strong: '#f1f5f9'             # raised tier
+    surface: '#ffffff'
+    surface-strong: '#f1f5f9'
+    surface-muted: '#fafbfc'
+    text: '#0c1424'                  # mirrors dark/bg as text role
+    text-strong: '#000000'
+    text-muted: '#475569'             # slate-600
+    text-soft: '#64748b'              # slate-500
+    text-faint: '#94a3b8'             # slate-400
+    text-disabled: '#cbd5e1'
+    brand: '#2c4f7c'                  # deep blue is already AAA on white — invariant
+    brand-strong: '#1d3a5f'
+    brand-soft: 'rgba(44, 79, 124, 0.10)'
+    brand-deep: '#0a1a2e'
+    accent: '#0a9ad9'                 # deeper cyan for AAA on white
+    accent-strong: '#0e7490'
+    accent-soft: 'rgba(102, 230, 255, 0.18)'
+    gradient-from: '#2c4f7c'          # gradient stays
+    gradient-to: '#66e6ff'
+    glow: 'rgba(102, 230, 255, 0.20)'
+    link: '#0a9ad9'
+    link-hover: '#0e7490'
+    link-visited: '#7c3aed'
+    selected: 'rgba(44, 79, 124, 0.08)'
+    disabled-bg: '#f1f5f9'
+    disabled-text: '#94a3b8'
+    border: '#e2e8f0'                 # slate-200
+    border-strong: '#cbd5e1'           # slate-300
+    border-subtle: '#f1f5f9'           # slate-100
+    border-cyan: 'rgba(102, 230, 255, 0.40)'
+    divider: '#e2e8f0'
+    shadow-deep: 'rgba(15, 23, 42, 0.12)'
+    shadow-cyan: 'rgba(102, 230, 255, 0.20)'
+    shadow-blue: 'rgba(44, 79, 124, 0.18)'
+    success-bg: '#f0fdf4'
+    success-text: '#15803d'
+    success-border: '#22c55e'
+    warning-bg: '#fffbeb'
+    warning-text: '#b45309'
+    warning-border: '#f59e0b'
+    danger-bg: '#fef2f2'
+    danger-text: '#b91c1c'
+    danger-border: '#ef4444'
+    info-bg: '#f0f9ff'
+    info-text: '#0369a1'
+    info-border: '#0ea5e9'
+    on-brand: '#ffffff'
+    on-accent: '#ffffff'
 
 typography:
   display:

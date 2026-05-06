@@ -12,58 +12,95 @@ preview_swatch: ['#ffffff', '#ff66c4', '#9b6bff']
 related: [cursor, vercel, framer]
 description: 'Lovable''s site sells "build apps by chatting" with a deliberately friendly chromatic system: pure white canvas, a hot pink-to-violet gradient (`#ff66c4` → `#9b6bff`) for the brand mark and primary CTA, soft Inter at sensible sizes, and big rounded super-ellipse cards. Where most AI coding tools lean dark and serious, Lovable leans bright, warm, and human — the visual equivalent of "no, really, this is approachable".'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is the bright illustrative light canvas; the in-app builder honors prefers-color-scheme + manual toggle. The pink→violet brand gradient is invariant across themes.'
+
 colors:
-  # Primary
-  bg: '#ffffff'                    # white canvas
-  bg-soft: '#fafafb'               # secondary stripe surface
-  bg-elev: '#f8f9fc'               # tertiary tint
-  surface: '#f4f5f8'               # default card base
-  surface-2: '#ebedf2'             # hover card
-  surface-3: '#dfe2ea'             # pressed
-  surface-tint-pink: '#fff0f8'     # soft pink wash
-  surface-tint-violet: '#f4eeff'   # soft violet wash
+  light:
+    bg: '#ffffff'                    # white canvas
+    bg-soft: '#fafafb'               # secondary stripe surface
+    bg-elev: '#f8f9fc'               # tertiary tint
+    surface: '#f4f5f8'               # default card base
+    surface-2: '#ebedf2'             # hover card
+    surface-3: '#dfe2ea'             # pressed
+    surface-tint-pink: '#fff0f8'     # soft pink wash
+    surface-tint-violet: '#f4eeff'   # soft violet wash
+    text: '#1a1a23'                  # near-black with violet cast
+    text-strong: '#0a0a14'           # display copy
+    text-muted: '#6b6e7d'            # secondary copy
+    text-soft: '#9498a8'              # tertiary, helper
+    text-faint: '#c1c4d0'             # disabled
+    text-on-brand: '#ffffff'         # white on gradient
+    brand: '#ff66c4'                 # gradient start — hot pink
+    brand-mid: '#c068dd'             # gradient mid — magenta
+    brand-end: '#9b6bff'             # gradient end — soft violet
+    brand-solid: '#a665ff'           # gradient collapsed for solo marks
+    brand-hover: '#8f54f0'           # pressed solid
+    brand-active: '#7d44e0'          # active solid
+    accent-cream: '#fff1e6'
+    accent-cream-deep: '#ffd9bf'
+    accent-mint: '#bdf3d8'
+    accent-mint-deep: '#7ed4a8'
+    accent-sky: '#cfe9ff'
+    accent-yellow: '#fff5b8'
+    border: '#0000000f'              # 6% black hairline
+    border-strong: '#0000001a'       # 10% black
+    border-subtle: '#00000008'       # 3% black
+    border-brand: '#ff66c4'
+    border-focus: '#9b6bff'
+    success: '#22c55e'
+    success-bg: '#dcfce7'
+    warning: '#f59e0b'
+    warning-bg: '#fef3c7'
+    danger: '#ef4444'
+    danger-bg: '#fee2e2'
+    info: '#9b6bff'
+    info-bg: '#f4eeff'
+    on-brand: '#ffffff'
 
-  # Text
-  text: '#1a1a23'                  # near-black with violet cast
-  text-strong: '#0a0a14'           # display copy — deeper near-black
-  text-muted: '#6b6e7d'            # secondary copy
-  text-soft: '#9498a8'             # tertiary, helper
-  text-faint: '#c1c4d0'            # disabled
-  text-on-brand: '#ffffff'         # white on gradient
-
-  # Brand & gradient
-  brand: '#ff66c4'                 # gradient start — hot pink
-  brand-mid: '#c068dd'             # gradient mid — magenta
-  brand-end: '#9b6bff'             # gradient end — soft violet
-  brand-solid: '#a665ff'           # gradient collapsed for solo marks
-  brand-hover: '#8f54f0'           # pressed solid
-  brand-active: '#7d44e0'          # active solid
-
-  # Accent
-  accent-cream: '#fff1e6'          # warm illustration background
-  accent-cream-deep: '#ffd9bf'     # warm illustration foreground
-  accent-mint: '#bdf3d8'           # secondary illustration accent
-  accent-mint-deep: '#7ed4a8'      # mint emphasis
-  accent-sky: '#cfe9ff'            # tertiary illustration tint
-  accent-yellow: '#fff5b8'         # rare highlight tint
-
-  # Borders
-  border: '#0000000f'              # 6% black hairline (very soft)
-  border-strong: '#0000001a'       # 10% black
-  border-subtle: '#00000008'       # 3% black
-  border-brand: '#ff66c4'          # gradient brand border
-  border-focus: '#9b6bff'          # focus violet
-
-  # Semantic
-  success: '#22c55e'
-  success-bg: '#dcfce7'
-  warning: '#f59e0b'
-  warning-bg: '#fef3c7'
-  danger: '#ef4444'
-  danger-bg: '#fee2e2'
-  info: '#9b6bff'
-  info-bg: '#f4eeff'
-  on-brand: '#ffffff'
+  dark:
+    bg: '#0a0a14'                    # deeper near-black with violet cast (mirrors light/text-strong)
+    bg-soft: '#13131e'               # secondary stripe on dark
+    bg-elev: '#1a1a26'               # tertiary tint
+    surface: '#1f1f2e'               # default dark card
+    surface-2: '#272739'             # hover dark card
+    surface-3: '#33334a'             # pressed
+    surface-tint-pink: 'rgba(255, 102, 196, 0.10)'
+    surface-tint-violet: 'rgba(155, 107, 255, 0.10)'
+    text: '#f4f4fa'                  # near-white with violet cast (mirrors light/text)
+    text-strong: '#ffffff'
+    text-muted: '#a0a3b3'
+    text-soft: '#7a7d8e'
+    text-faint: '#4a4d5e'
+    text-on-brand: '#ffffff'
+    brand: '#ff66c4'                 # gradient stays — chromatic identity
+    brand-mid: '#c068dd'
+    brand-end: '#9b6bff'
+    brand-solid: '#a665ff'
+    brand-hover: '#b87aff'           # lifted on dark for legibility
+    brand-active: '#9b6bff'
+    accent-cream: 'rgba(255, 217, 191, 0.18)'
+    accent-cream-deep: '#d4b08a'
+    accent-mint: 'rgba(126, 212, 168, 0.20)'
+    accent-mint-deep: '#7ed4a8'
+    accent-sky: 'rgba(207, 233, 255, 0.20)'
+    accent-yellow: 'rgba(255, 245, 184, 0.20)'
+    border: '#ffffff14'              # 8% white hairline
+    border-strong: '#ffffff26'       # 15% white
+    border-subtle: '#ffffff0a'       # 4% white
+    border-brand: '#ff66c4'
+    border-focus: '#b87aff'
+    success: '#22c55e'
+    success-bg: 'rgba(34, 197, 94, 0.18)'
+    warning: '#fbbf24'
+    warning-bg: 'rgba(245, 158, 11, 0.18)'
+    danger: '#ef4444'
+    danger-bg: 'rgba(239, 68, 68, 0.18)'
+    info: '#b87aff'
+    info-bg: 'rgba(155, 107, 255, 0.18)'
+    on-brand: '#ffffff'
 
 typography:
   display:

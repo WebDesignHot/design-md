@@ -12,50 +12,81 @@ preview_swatch: ['#0a0a0a', '#ffffff', '#9fe870']
 related: [anthropic, huggingface, replicate]
 description: 'ElevenLabs sits at the intersection of voice-tech precision and editorial restraint — a near-black `#0a0a0a` ground for the studio surface paired with a paper-white `#ffffff` editorial surface, both anchored by a single saturated lime `#9fe870` accent that does triple duty as CTA, brand identifier, and audio-waveform highlight. Type is Inter at studio scale (Inter Display at 96px / 700 weight with `-2.4px` tracking) and the pill-shaped CTA is the brand''s signature interaction primitive. The dark studio aesthetic places ElevenLabs visually adjacent to Anthropic''s neutral-near-black register and Linear''s near-black canvas, but the lime accent is what makes the brand legible at a glance. The surface alternates between voice-studio-dark and editorial-light bands depending on context — the studio band is for product demos, the light band is for documentation and pricing.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is editorial paper-white; the studio band (hero, features) inverts to near-black. App settings persist toggle in localStorage. The lime brand is invariant.'
+
 colors:
-  bg: '#ffffff'                 # paper-white editorial canvas
-  bg-studio: '#0a0a0a'          # near-black studio ground
-  bg-soft: '#fafafa'            # softest editorial surface
-  bg-band: '#f5f5f4'            # mint or stone band tint (depending on section)
-  surface: '#ffffff'            # default light card
-  surface-soft: '#fafafa'       # secondary panel tint
-  surface-hover: '#f5f5f4'      # hover state on light cards
-  surface-studio: '#161616'     # studio-band card surface
-  surface-studio-2: '#1f1f1f'   # second-level studio surface
-  surface-studio-3: '#2a2a2a'   # third-level studio surface (rare)
-  text: '#0a0a0a'               # near-black for editorial body
-  text-strong: '#000000'        # display crisp black
-  text-display: '#0a0a0a'       # H1 stays at near-black
-  text-muted: '#525252'          # captions, meta
-  text-soft: '#737373'           # tertiary
-  text-faint: '#a3a3a3'          # disabled, decorative
-  text-on-studio: '#ffffff'      # white on studio ground
-  text-on-studio-muted: '#ffffffb3'   # 70% white on studio
-  text-on-studio-soft: '#ffffff80'    # 50% white on studio
-  text-on-brand: '#0a0a0a'      # near-black on lime
-  brand: '#9fe870'              # lime CTA — the saturated accent
-  brand-hover: '#8ad65e'        # darker lime on press
-  brand-active: '#76c349'       # deepest pressed
-  brand-soft: '#d4f0c2'         # softest lime tint
-  brand-faint: '#e2f6d5'        # near-white lime tint for surfaces
-  link: '#9fe870'               # links use brand on dark; on light bands, links are underlined `#0a0a0a`
-  accent: '#0e0f0c'              # near-black accent (rare)
-  accent-warm: '#f5f5f4'         # warm stone tint
-  border: '#0000001a'            # 10% black hairline (light)
-  border-soft: '#0000000d'       # 5% black for subtle dividers
-  border-strong: '#00000033'     # 20% black for emphasis
-  border-studio: '#ffffff14'     # 8% white hairline (studio)
-  border-studio-strong: '#ffffff26'   # 15% white for emphasis
-  on-brand: '#0a0a0a'
-  on-studio: '#ffffff'
-  success: '#16a34a'             # editorial green
-  success-bg: '#dcfce7'
-  warning: '#d97706'             # warm amber
-  warning-bg: '#fef3c7'
-  danger: '#dc2626'              # restrained red
-  danger-bg: '#fee2e2'
-  info: '#0a0a0a'                # info reuses near-black
-  info-bg: '#f5f5f4'
+  light:
+    bg: '#ffffff'                 # paper-white editorial canvas
+    bg-soft: '#fafafa'            # softest editorial surface
+    bg-band: '#f5f5f4'            # mint or stone band tint
+    surface: '#ffffff'            # default light card
+    surface-soft: '#fafafa'       # secondary panel tint
+    surface-hover: '#f5f5f4'      # hover state on light cards
+    text: '#0a0a0a'               # near-black for editorial body
+    text-strong: '#000000'        # display crisp black
+    text-display: '#0a0a0a'
+    text-muted: '#525252'          # captions, meta
+    text-soft: '#737373'           # tertiary
+    text-faint: '#a3a3a3'          # disabled
+    text-on-brand: '#0a0a0a'       # near-black on lime
+    brand: '#9fe870'              # lime CTA — the saturated accent
+    brand-hover: '#8ad65e'
+    brand-active: '#76c349'
+    brand-soft: '#d4f0c2'
+    brand-faint: '#e2f6d5'
+    link: '#0a0a0a'               # links underlined near-black on light
+    accent: '#0e0f0c'
+    accent-warm: '#f5f5f4'
+    border: '#0000001a'            # 10% black hairline
+    border-soft: '#0000000d'       # 5% black
+    border-strong: '#00000033'     # 20% black
+    on-brand: '#0a0a0a'
+    success: '#16a34a'
+    success-bg: '#dcfce7'
+    warning: '#d97706'
+    warning-bg: '#fef3c7'
+    danger: '#dc2626'
+    danger-bg: '#fee2e2'
+    info: '#0a0a0a'
+    info-bg: '#f5f5f4'
+
+  dark:
+    bg: '#0a0a0a'                 # near-black studio ground
+    bg-soft: '#161616'            # softest studio surface
+    bg-band: '#1f1f1f'            # second-level studio band
+    surface: '#161616'            # studio-band card surface
+    surface-soft: '#1f1f1f'       # second-level studio surface
+    surface-hover: '#2a2a2a'      # third-level / hover
+    text: '#ffffff'               # white on studio ground
+    text-strong: '#ffffff'
+    text-display: '#ffffff'
+    text-muted: '#ffffffb3'        # 70% white on studio
+    text-soft: '#ffffff80'         # 50% white on studio
+    text-faint: '#ffffff4d'        # 30% white
+    text-on-brand: '#0a0a0a'
+    brand: '#9fe870'              # lime — invariant
+    brand-hover: '#b3ee85'         # lifted lime on dark
+    brand-active: '#8ad65e'
+    brand-soft: 'rgba(159, 232, 112, 0.18)'
+    brand-faint: 'rgba(159, 232, 112, 0.10)'
+    link: '#9fe870'                # links use brand on dark
+    accent: '#ffffff'
+    accent-warm: '#1f1f1f'
+    border: '#ffffff14'            # 8% white hairline
+    border-soft: '#ffffff0a'       # 4% white
+    border-strong: '#ffffff26'     # 15% white
+    on-brand: '#0a0a0a'
+    success: '#22c55e'             # lifted green for dark legibility
+    success-bg: 'rgba(34, 197, 94, 0.18)'
+    warning: '#fbbf24'
+    warning-bg: 'rgba(251, 191, 36, 0.18)'
+    danger: '#ef4444'
+    danger-bg: 'rgba(239, 68, 68, 0.18)'
+    info: '#ffffff'
+    info-bg: '#1f1f1f'
 
 typography:
   display:

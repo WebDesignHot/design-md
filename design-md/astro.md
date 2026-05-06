@@ -12,49 +12,89 @@ preview_swatch: ['#060913', '#ff5d01', '#a374ff']
 related: [vercel, vite, tailwindcss]
 description: 'Astro''s marketing site behaves like an observatory dashboard. The canvas runs to `#060913` — deep cosmos navy, near-black but unmistakably blue under any reasonable display calibration — and the type stack leads with **Mona Sans**, GitHub''s open variable grotesk, used at heavy weights for an editorial-engineered register. The signature gesture is a violet-to-orange brand gradient: `#a374ff` flowing diagonally into `#ff5d01`, the same hue pair that lives in the Astro rocket glyph. Code surfaces are first-class — Inter for prose, IBM Plex Mono on a lifted `#0d1117` panel for `.astro` syntax — because Astro is sold to developers via its content-first MPA architecture, islands hydration, and zero-JS-by-default philosophy. The starfield motifs and rocket warmth temper the engineered grid; the underlying structure is dense, twelve-column, and 96px-rhythmed.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-theme on <html>; persisted in localStorage; respects prefers-color-scheme. astro.build is dark; docs.astro.build defaults to user preference. The orange+violet brand gradient is invariant across both themes.'
+
 colors:
-  # Primary
-  bg: '#060913'                          # deep cosmos navy — page canvas, near-black with intentional blue
-  bg-soft: '#0d1117'                     # secondary surface (matches GitHub dark for code blocks)
-  bg-deep: '#02040a'                     # darkest tier — footer, modal backdrop
-  surface: '#11162a'                     # card panel, lifted from bg with subtle blue tint
-  surface-strong: '#1a2040'              # hover/active surface
-  surface-elevated: '#222850'            # popover, dropdown, tooltip surface
-  text: '#f2f6fa'                        # primary text on dark — slight cool tint
-  text-muted: '#bfc1c9'                  # secondary copy, nav links
-  text-soft: '#8a8fa3'                   # captions, metadata, footer
-  text-faint: '#5a5e72'                  # disabled, decorative
-  # Brand & gradient
-  brand: '#ff5d01'                       # signature Astro orange (rocket glyph)
-  brand-hover: '#e54e00'                 # pressed state
-  brand-deep: '#c43f00'                  # active/depressed
-  accent: '#a374ff'                      # violet — partner in the brand gradient
-  accent-hover: '#8e5dff'                # pressed accent
-  accent-soft: '#7611a6'                 # deep purple background tint
-  accent-deep: '#4c0c70'                 # darkest violet for backgrounds
-  gradient-from: '#a374ff'               # violet start
-  gradient-to: '#ff5d01'                 # orange end
-  gradient-mid: '#d465a8'                # midpoint for radial halos
-  on-brand: '#ffffff'                    # white text on orange/violet fills
-  # Interactive
-  link: '#bfc1c9'                        # default body link
-  link-hover: '#ff5d01'                  # orange on hover
-  selected-bg: '#1a2040'                 # selected surface
-  disabled: '#5a5e72'                    # disabled control
-  # Borders
-  border: '#ffffff14'                    # 8% white hairline — never solid grey
-  border-strong: '#ffffff26'             # ~15% white for emphasized rules
-  border-subtle: '#ffffff0a'             # 4% white for quietest division
-  border-brand: 'rgba(255, 93, 1, 0.40)' # orange-tinted hairline on hover cards
-  # Semantic
-  success: '#17c964'                     # green for shipped/passing
-  success-bg: 'rgba(23, 201, 100, 0.12)' # tinted success ground
-  warning: '#f5a524'                     # amber for caution
-  warning-bg: 'rgba(245, 165, 36, 0.14)'
-  danger: '#f31260'                      # red for error
-  danger-bg: 'rgba(243, 18, 96, 0.14)'
-  info: '#a374ff'                        # violet doubles as info
-  info-bg: 'rgba(163, 116, 255, 0.14)'
+  dark:
+    bg: '#060913'                          # deep cosmos navy — page canvas, near-black with intentional blue
+    bg-soft: '#0d1117'                     # secondary surface (matches GitHub dark for code blocks)
+    bg-deep: '#02040a'                     # darkest tier — footer, modal backdrop
+    surface: '#11162a'                     # card panel, lifted from bg with subtle blue tint
+    surface-strong: '#1a2040'              # hover/active surface
+    surface-elevated: '#222850'            # popover, dropdown, tooltip surface
+    text: '#f2f6fa'                        # primary text on dark — slight cool tint
+    text-muted: '#bfc1c9'                  # secondary copy, nav links
+    text-soft: '#8a8fa3'                   # captions, metadata, footer
+    text-faint: '#5a5e72'                  # disabled, decorative
+    brand: '#ff5d01'                       # signature Astro orange (rocket glyph)
+    brand-hover: '#e54e00'                 # pressed state
+    brand-deep: '#c43f00'                  # active/depressed
+    accent: '#a374ff'                      # violet — partner in the brand gradient
+    accent-hover: '#8e5dff'                # pressed accent
+    accent-soft: '#7611a6'                 # deep purple background tint
+    accent-deep: '#4c0c70'                 # darkest violet for backgrounds
+    gradient-from: '#a374ff'               # violet start
+    gradient-to: '#ff5d01'                 # orange end
+    gradient-mid: '#d465a8'                # midpoint for radial halos
+    on-brand: '#ffffff'                    # white text on orange/violet fills
+    link: '#bfc1c9'                        # default body link
+    link-hover: '#ff5d01'                  # orange on hover
+    selected-bg: '#1a2040'
+    disabled: '#5a5e72'
+    border: '#ffffff14'                    # 8% white hairline
+    border-strong: '#ffffff26'             # ~15% white
+    border-subtle: '#ffffff0a'             # 4% white
+    border-brand: 'rgba(255, 93, 1, 0.40)' # orange-tinted hairline
+    success: '#17c964'
+    success-bg: 'rgba(23, 201, 100, 0.12)'
+    warning: '#f5a524'
+    warning-bg: 'rgba(245, 165, 36, 0.14)'
+    danger: '#f31260'
+    danger-bg: 'rgba(243, 18, 96, 0.14)'
+    info: '#a374ff'
+    info-bg: 'rgba(163, 116, 255, 0.14)'
+
+  light:
+    bg: '#ffffff'                          # docs.astro.build light canvas — pure white
+    bg-soft: '#fafafa'                     # secondary surface
+    bg-deep: '#f4f4f5'                     # zinc-100 deepest light tier
+    surface: '#ffffff'                     # card panel — same as bg, lifted by shadow
+    surface-strong: '#f4f4f5'              # hover/active surface (zinc-100)
+    surface-elevated: '#ffffff'            # popover, dropdown — shadow-lifted
+    text: '#1a1d23'                        # primary near-black with cool tint (mirrors dark text)
+    text-muted: '#52525b'                  # secondary — zinc-600
+    text-soft: '#71717a'                   # captions — zinc-500
+    text-faint: '#a1a1aa'                  # disabled — zinc-400
+    brand: '#ff5d01'                       # Astro orange — invariant
+    brand-hover: '#e54e00'
+    brand-deep: '#c43f00'
+    accent: '#7611a6'                      # deeper violet for AAA on white
+    accent-hover: '#8e5dff'
+    accent-soft: 'rgba(163, 116, 255, 0.10)'
+    accent-deep: '#4c0c70'
+    gradient-from: '#a374ff'               # gradient stays — chromatic identity
+    gradient-to: '#ff5d01'
+    gradient-mid: '#d465a8'
+    on-brand: '#ffffff'
+    link: '#52525b'                        # neutral-grey body link
+    link-hover: '#ff5d01'                  # orange on hover (mirrors dark)
+    selected-bg: '#f4f4f5'
+    disabled: '#a1a1aa'
+    border: '#e4e4e7'                      # zinc-200 hairline (light's equivalent to 8% white)
+    border-strong: '#d4d4d8'               # zinc-300 emphasized
+    border-subtle: '#f4f4f5'               # zinc-100 quietest
+    border-brand: 'rgba(255, 93, 1, 0.40)'
+    success: '#15803d'                     # darker green for AAA on white
+    success-bg: 'rgba(23, 201, 100, 0.10)'
+    warning: '#b45309'                     # darker amber on white
+    warning-bg: 'rgba(245, 165, 36, 0.10)'
+    danger: '#b91c1c'                      # darker red on white
+    danger-bg: 'rgba(243, 18, 96, 0.10)'
+    info: '#7611a6'
+    info-bg: 'rgba(163, 116, 255, 0.08)'
 
 typography:
   display:

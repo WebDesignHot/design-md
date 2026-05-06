@@ -12,48 +12,75 @@ preview_swatch: ['#000000', '#ffffff', '#0b0f15']
 related: [vercel, linear, openai]
 description: 'Krea''s site is a black-room gallery for creative AI. The canvas is pure `#000`, the type is **Suisse Intl** at 60px regular weight (not bold), and the chrome is a tight neutral grey ladder — every pixel of saturation belongs to the videos in the hero grid. The single chromatic accent is a deep cobalt declared in `oklch(0.579 0.2497 257)`, used as a quiet hover and link tone. The brand''s rainbow is the user-generated work, not the wrapper. Where Midjourney goes cosmic-violet and Runway goes editorial near-black, Krea commits to absolute `#000000` and trusts Swiss-Typefaces'' Suisse Intl at weight 400 to set the headline — a museum placard, not a marketing banner.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'Web app default is the gallery-black canvas; support / pricing / docs render on the iced near-white surface (in-data already as paper-* keys). Cobalt brand is invariant across themes.'
+
 colors:
-  # Primary
-  bg: '#000000'                  # pure black gallery canvas
-  bg-alt: '#0b0f15'              # near-black alternate panel for inset zones
-  surface: '#171717'             # neutral-900 raised card
-  surface-soft: '#262626'        # neutral-800 panel
-  surface-elevated: '#2a2a2a'    # popover / modal raised
-  surface-iced: '#f5f5f5'        # neutral-100 light surface for support pages
-  surface-paper: '#fafafa'       # rare paper-light background
-  text: '#ffffff'                # display white on dark
-  text-strong: '#ffffff'         # primary copy on black
-  text-muted: '#a3a3a3'          # neutral-400 captions and metadata
-  text-soft: '#737373'           # neutral-500 quiet labels
-  text-faint: '#525252'          # neutral-600 disabled
-  text-paper: '#404040'          # body on light surfaces
-  text-paper-muted: '#737373'    # muted on light
-  # Brand
-  brand: '#3b82f6'               # cobalt declared via oklch(0.579 0.2497 257)
-  brand-deep: '#2563eb'          # pressed cobalt
-  brand-soft: 'rgba(59, 130, 246, 0.15)' # cobalt wash for hover/tint
-  on-brand: '#ffffff'            # white label on cobalt
-  # Interactive
-  link: '#ffffff'                # links stay white on dark; underlined
-  link-hover: '#3b82f6'          # cobalt on hover
-  link-paper: '#171717'          # links on light surfaces
-  selected-bg: 'rgba(255, 255, 255, 0.08)' # 8% white selected state
-  disabled: '#525252'
-  # Borders
-  border: 'rgba(255, 255, 255, 0.08)'   # ~8% white hairline on dark
-  border-strong: 'rgba(255, 255, 255, 0.16)' # emphasized rule
-  border-subtle: 'rgba(255, 255, 255, 0.04)' # quietest division
-  border-paper: 'rgba(0, 0, 0, 0.05)'   # 5% black hairline on light
-  border-cobalt: 'rgba(59, 130, 246, 0.40)' # brand-tinted ring
-  # Semantic
-  success-bg: 'rgba(34, 197, 94, 0.12)'
-  success-text: '#86efac'
-  warning-bg: 'rgba(234, 179, 8, 0.12)'
-  warning-text: '#fde047'
-  danger-bg: 'rgba(239, 68, 68, 0.12)'
-  danger-text: '#fca5a5'
-  info-bg: 'rgba(59, 130, 246, 0.12)'
-  info-text: '#93c5fd'
+  dark:
+    bg: '#000000'                  # pure black gallery canvas
+    bg-alt: '#0b0f15'              # near-black alternate panel
+    surface: '#171717'             # neutral-900 raised card
+    surface-soft: '#262626'        # neutral-800 panel
+    surface-elevated: '#2a2a2a'    # popover / modal raised
+    text: '#ffffff'                # display white
+    text-strong: '#ffffff'
+    text-muted: '#a3a3a3'          # neutral-400 captions
+    text-soft: '#737373'            # neutral-500
+    text-faint: '#525252'           # neutral-600 disabled
+    brand: '#3b82f6'               # cobalt — oklch(0.579 0.2497 257)
+    brand-deep: '#2563eb'
+    brand-soft: 'rgba(59, 130, 246, 0.15)'
+    on-brand: '#ffffff'
+    link: '#ffffff'                # links stay white on dark
+    link-hover: '#3b82f6'          # cobalt on hover
+    selected-bg: 'rgba(255, 255, 255, 0.08)'
+    disabled: '#525252'
+    border: 'rgba(255, 255, 255, 0.08)'
+    border-strong: 'rgba(255, 255, 255, 0.16)'
+    border-subtle: 'rgba(255, 255, 255, 0.04)'
+    border-cobalt: 'rgba(59, 130, 246, 0.40)'
+    success-bg: 'rgba(34, 197, 94, 0.12)'
+    success-text: '#86efac'
+    warning-bg: 'rgba(234, 179, 8, 0.12)'
+    warning-text: '#fde047'
+    danger-bg: 'rgba(239, 68, 68, 0.12)'
+    danger-text: '#fca5a5'
+    info-bg: 'rgba(59, 130, 246, 0.12)'
+    info-text: '#93c5fd'
+
+  light:
+    bg: '#fafafa'                  # paper-light canvas (was paper-bg)
+    bg-alt: '#f5f5f5'              # iced near-white alternate
+    surface: '#ffffff'             # pure white card on near-white canvas
+    surface-soft: '#f5f5f5'        # neutral-100
+    surface-elevated: '#ffffff'    # raised card
+    text: '#171717'                # near-black on light
+    text-strong: '#000000'
+    text-muted: '#525252'
+    text-soft: '#737373'
+    text-faint: '#a3a3a3'
+    brand: '#2563eb'                # deeper cobalt for AAA on white
+    brand-deep: '#1d4ed8'
+    brand-soft: 'rgba(59, 130, 246, 0.10)'
+    on-brand: '#ffffff'
+    link: '#171717'                # links use near-black ink (mirrors dark/link-paper)
+    link-hover: '#2563eb'
+    selected-bg: 'rgba(0, 0, 0, 0.04)'
+    disabled: '#a3a3a3'
+    border: 'rgba(0, 0, 0, 0.05)'   # 5% black hairline on light
+    border-strong: 'rgba(0, 0, 0, 0.10)'
+    border-subtle: 'rgba(0, 0, 0, 0.03)'
+    border-cobalt: 'rgba(59, 130, 246, 0.40)'
+    success-bg: 'rgba(34, 197, 94, 0.10)'
+    success-text: '#15803d'
+    warning-bg: 'rgba(234, 179, 8, 0.12)'
+    warning-text: '#a16207'
+    danger-bg: 'rgba(239, 68, 68, 0.10)'
+    danger-text: '#b91c1c'
+    info-bg: 'rgba(59, 130, 246, 0.08)'
+    info-text: '#1d4ed8'
 
 typography:
   display:
