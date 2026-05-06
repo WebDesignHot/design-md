@@ -12,55 +12,111 @@ preview_swatch: ['#fafafa', '#171717', '#0070f3']
 related: [linear, stripe, hashnode]
 description: 'Vercel ships a proprietary type system (Geist) and uses it as a competitive moat. The marketing site reads like an extension of the dashboard — high-contrast near-pure black `#171717` on near-pure white `#fafafa`, a dense neutral ramp covering nine grayscale stops, and the famous `#0070f3` Vercel-blue reserved for links, focus rings, and the occasional conic-gradient corner. CTAs invert to black-on-white pills (matching Linear''s pattern at light-mode contrast); the brand blue *never* fills a primary button — it''s a link colour and a focus indicator, full stop. Where Linear caps page width at 1024px, Vercel goes 1200–1400px for dense data-shaped marketing rows: changelogs, pricing comparisons, customer logos, deployment dashboards. The neutral ramp is exhaustive: 9 grayscale stops from 100% white through 9% black, providing fine-grained hierarchy without color. The visual unification with the dashboard is intentional — a developer who signs up and lands inside the product shouldn''t feel a brand discontinuity. The site reads as a product showcase, not a separate marketing layer.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  bg: '#fafafa'                  # page canvas — near-white at 98% lightness, the only background
-  bg-pure: '#ffffff'             # card surface, modal background, pure white tier
-  bg-elev: '#f5f5f5'             # subtle elevation; section bands, inset blocks
-  bg-deeper: '#ededed'            # third tier; pricing-feature stripe, code-block fills
-  bg-ink: '#0a0a0a'              # near-black inversion band — rare, used for testimonials
-  bg-pure-black: '#000000'       # full black — used only on conic-gradient ground edges
-  surface: '#ffffff'             # default card surface
-  surface-elev: '#fafafa'        # nested card surface inside white panels
-  text: '#171717'                # primary text — near-black at 9% lightness, not pure black
-  text-pure: '#000000'           # rare full-black for peak display copy
-  text-secondary: '#525252'      # supporting copy, body in dense rows
-  text-tertiary: '#737373'       # captions, meta
-  text-faint: '#a3a3a3'          # placeholder, disabled, faintest meta
-  text-on-dark: '#ededed'        # text on bg-ink near-black band
-  text-on-dark-soft: '#a3a3a3'   # secondary text on dark band
-  brand: '#0070f3'               # the canonical Vercel blue — links, focus, gradient stops
-  brand-hover: '#0061d5'         # darker blue, hover state on links
-  brand-deep: '#0050b3'          # pressed/active state
-  brand-soft: 'rgba(0, 112, 243, 0.10)'   # soft blue wash — info banner, focus aura
-  brand-tint: 'rgba(0, 112, 243, 0.06)'   # subtlest blue tint
-  link: '#0070f3'                # inline link colour
-  link-hover: '#0070f3'          # hover keeps colour, shifts to underline
-  focus: 'hsla(212, 100%, 48%, 1)'        # focus ring — Vercel's HSL declaration
-  on-brand: '#ffffff'            # white text on brand blue (rare — buttons don't use brand fill)
-  cta-bg: '#171717'              # primary CTA fill — inverted near-black, not blue
-  cta-text: '#ffffff'            # CTA text on near-black pill
-  cta-bg-secondary: '#ffffff'    # secondary CTA fill
-  cta-text-secondary: '#171717'  # secondary CTA text
-  border: 'hsla(0, 0%, 90%, 1)'           # default hairline — 90% lightness translucent grey
-  border-soft: 'hsla(0, 0%, 95%, 1)'      # quietest separation
-  border-strong: 'hsla(0, 0%, 80%, 1)'    # outlined buttons, focused inputs
-  border-deep: 'hsla(0, 0%, 70%, 1)'      # rare strong border
-  shadow-ambient: 'rgba(0, 0, 0, 0.04)'        # the signature 4% opacity tone
-  shadow-card: 'rgba(0, 0, 0, 0.04)'           # near-invisible card lift
-  shadow-elev: 'rgba(0, 0, 0, 0.06)'           # elevated dropdown
-  shadow-deep: 'rgba(0, 0, 0, 0.10)'           # popover, modal
-  scrim: 'rgba(0, 0, 0, 0.40)'                  # modal backdrop
-  gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
-  gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
-  gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.20) 100%)'
-  success: '#0070f3'             # success uses brand blue (Vercel convention — info and success collapse)
-  success-soft: 'rgba(0, 112, 243, 0.10)'
-  warning: '#f5a623'             # advisory amber
-  warning-soft: 'rgba(245, 166, 35, 0.10)'
-  danger: '#e00'                 # Vercel-red (`#ee0000`), used for errors and 'destructive' actions
-  danger-soft: 'rgba(238, 0, 0, 0.10)'
-  info: '#0070f3'                # info reads as brand
-  info-soft: 'rgba(0, 112, 243, 0.10)'
+  light:
+    bg: '#fafafa'                  # page canvas — near-white at 98% lightness
+    bg-pure: '#ffffff'             # card surface, modal background, pure white tier
+    bg-elev: '#f5f5f5'             # subtle elevation; section bands, inset blocks
+    bg-deeper: '#ededed'           # third tier; pricing-feature stripe, code-block fills
+    bg-ink: '#0a0a0a'              # near-black inversion band — rare, used for testimonials
+    bg-pure-black: '#000000'       # full black — used only on conic-gradient ground edges
+    surface: '#ffffff'             # default card surface
+    surface-elev: '#fafafa'        # nested card surface inside white panels
+    text: '#171717'                # primary text — near-black at 9% lightness
+    text-pure: '#000000'           # rare full-black for peak display copy
+    text-secondary: '#525252'      # supporting copy, body in dense rows
+    text-tertiary: '#737373'       # captions, meta
+    text-faint: '#a3a3a3'          # placeholder, disabled, faintest meta
+    text-on-dark: '#ededed'        # text on bg-ink near-black band
+    text-on-dark-soft: '#a3a3a3'   # secondary text on dark band
+    brand: '#0070f3'               # the canonical Vercel blue
+    brand-hover: '#0061d5'         # darker blue, hover state on links
+    brand-deep: '#0050b3'          # pressed/active state
+    brand-soft: 'rgba(0, 112, 243, 0.10)'   # soft blue wash
+    brand-tint: 'rgba(0, 112, 243, 0.06)'   # subtlest blue tint
+    link: '#0070f3'                # inline link colour
+    link-hover: '#0070f3'          # hover keeps colour, shifts to underline
+    focus: 'hsla(212, 100%, 48%, 1)'        # focus ring
+    on-brand: '#ffffff'            # white text on brand blue
+    cta-bg: '#171717'              # primary CTA fill — inverted near-black, not blue
+    cta-text: '#ffffff'            # CTA text on near-black pill
+    cta-bg-secondary: '#ffffff'    # secondary CTA fill
+    cta-text-secondary: '#171717'  # secondary CTA text
+    border: 'hsla(0, 0%, 90%, 1)'           # default hairline
+    border-soft: 'hsla(0, 0%, 95%, 1)'      # quietest separation
+    border-strong: 'hsla(0, 0%, 80%, 1)'    # outlined buttons, focused inputs
+    border-deep: 'hsla(0, 0%, 70%, 1)'      # rare strong border
+    shadow-ambient: 'rgba(0, 0, 0, 0.04)'
+    shadow-card: 'rgba(0, 0, 0, 0.04)'
+    shadow-elev: 'rgba(0, 0, 0, 0.06)'
+    shadow-deep: 'rgba(0, 0, 0, 0.10)'
+    scrim: 'rgba(0, 0, 0, 0.40)'
+    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
+    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
+    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.20) 100%)'
+    success: '#0070f3'
+    success-soft: 'rgba(0, 112, 243, 0.10)'
+    warning: '#f5a623'
+    warning-soft: 'rgba(245, 166, 35, 0.10)'
+    danger: '#e00'
+    danger-soft: 'rgba(238, 0, 0, 0.10)'
+    info: '#0070f3'
+    info-soft: 'rgba(0, 112, 243, 0.10)'
+
+  dark:
+    bg: '#000000'                  # pure black canvas — Vercel's dark mode default
+    bg-pure: '#0a0a0a'             # card surface — slightly lifted near-black
+    bg-elev: '#111111'             # subtle elevation, section bands
+    bg-deeper: '#1a1a1a'           # third tier — code-block fills, pricing stripes
+    bg-ink: '#fafafa'              # near-white inversion band, mirrors light/bg-ink
+    bg-pure-black: '#000000'       # canvas tier
+    surface: '#0a0a0a'             # default card surface (zinc-950 territory)
+    surface-elev: '#111111'        # nested card surface
+    text: '#ededed'                # primary text — near-white
+    text-pure: '#ffffff'           # rare absolute white for peak emphasis
+    text-secondary: '#a3a3a3'      # supporting copy
+    text-tertiary: '#737373'       # captions, meta
+    text-faint: '#525252'          # placeholder, disabled
+    text-on-dark: '#171717'        # inverted band text (mirrors light theme)
+    text-on-dark-soft: '#525252'
+    brand: '#0070f3'               # Vercel blue — identical across themes
+    brand-hover: '#3291ff'         # lifted blue on dark for legibility
+    brand-deep: '#0050b3'
+    brand-soft: 'rgba(0, 112, 243, 0.16)'   # stronger wash on dark
+    brand-tint: 'rgba(0, 112, 243, 0.10)'
+    link: '#0070f3'
+    link-hover: '#3291ff'
+    focus: 'hsla(212, 100%, 56%, 1)'        # lifted focus ring on dark
+    on-brand: '#ffffff'
+    cta-bg: '#ffffff'              # primary CTA inverts to white on dark
+    cta-text: '#000000'            # black text on white pill
+    cta-bg-secondary: '#0a0a0a'    # secondary CTA stays surface-tier
+    cta-text-secondary: '#ededed'
+    border: 'hsla(0, 0%, 16%, 1)'           # default hairline — 16% lightness
+    border-soft: 'hsla(0, 0%, 10%, 1)'
+    border-strong: 'hsla(0, 0%, 24%, 1)'
+    border-deep: 'hsla(0, 0%, 32%, 1)'
+    shadow-ambient: 'rgba(0, 0, 0, 0.40)'        # deeper shadows on dark
+    shadow-card: 'rgba(0, 0, 0, 0.40)'
+    shadow-elev: 'rgba(0, 0, 0, 0.55)'
+    shadow-deep: 'rgba(0, 0, 0, 0.70)'
+    scrim: 'rgba(0, 0, 0, 0.70)'
+    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
+    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
+    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.30) 100%)'
+    success: '#0070f3'
+    success-soft: 'rgba(0, 112, 243, 0.16)'
+    warning: '#f5a623'
+    warning-soft: 'rgba(245, 166, 35, 0.16)'
+    danger: '#ff4d4d'              # lifted danger red on dark
+    danger-soft: 'rgba(238, 0, 0, 0.18)'
+    info: '#0070f3'
+    info-soft: 'rgba(0, 112, 243, 0.16)'
 
 typography:
   display:

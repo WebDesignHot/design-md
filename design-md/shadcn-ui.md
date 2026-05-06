@@ -12,56 +12,91 @@ preview_swatch: ['#ffffff', '#0a0a0a', '#71717a']
 related: [vercel, tailwindcss, framer]
 description: 'shadcn/ui''s site is the visual argument for its design philosophy: pure black-on-white minimalism, Geist Sans for everything except code, Geist Mono / JetBrains Mono for code, and components rendered as themselves. There''s no marketing chrome, no gradients, no illustration — the page is a documentation surface that doubles as the most-referenced component library of the 2020s. The chromatic posture is aggressively monochromatic — pure white `#ffffff` canvas, near-black `#0a0a0a` for primary action, and the zinc neutral family (`#fafafa` → `#f4f4f5` → `#e4e4e7` → `#a1a1aa` → `#71717a` → `#52525b` → `#3f3f46` → `#27272a` → `#18181b` → `#0a0a0a`) supplying every grey. The dark theme inverts the canvas to `#0a0a0a` and the button to `#fafafa`, with no other adjustment. The famous `--radius: 0.5rem` (8px) card radius and 6px button radii became the default look of New Web Software circa 2023–2025.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; system preference honored on first paint'
+
 colors:
-  bg: '#ffffff'                  # canvas — light theme default, pure white
-  bg-dark: '#0a0a0a'             # dark theme canvas (near-black, never pure)
-  surface: '#fafafa'             # zinc-50, muted background
-  surface-strong: '#f4f4f5'      # zinc-100, accent / hover
-  surface-muted: '#f4f4f5'       # alias for muted card background
-  surface-accent: '#f4f4f5'      # accent surface for hover/select
-  surface-elevated: '#ffffff'    # popover, dialog
-  surface-dark: '#0a0a0a'        # dark canvas
-  surface-dark-elevated: '#171717' # zinc-900 dark muted
-  surface-dark-card: '#18181b'   # zinc-900 dark card
-  text: '#0a0a0a'                # primary body — near-black (the iconic 'foreground')
-  text-strong: '#000000'         # display copy at full black, rare
-  text-secondary: '#3f3f46'      # zinc-700, body emphasis
-  text-muted: '#71717a'          # zinc-500 — the iconic muted-fg
-  text-faint: '#a1a1aa'          # zinc-400, captions and disabled
-  text-on-dark: '#fafafa'        # near-white on dark
-  text-on-dark-muted: '#a1a1aa'  # muted on dark
-  brand: '#0a0a0a'               # primary action — near-black solid button
-  brand-hover: '#1a1a1a'         # hover-darker (which is actually lighter on light theme — it's a subtle lift to zinc-900)
-  brand-active: '#27272a'        # zinc-800, pressed
-  brand-on-dark: '#fafafa'       # inverted on dark theme — light button on dark canvas
-  brand-on-dark-hover: '#e4e4e7' # zinc-200 on dark hover
-  on-brand: '#fafafa'            # near-white text on the black button
-  on-brand-dark: '#0a0a0a'       # near-black text on the white-inverted button
-  link: '#0a0a0a'                # links inherit foreground; underline for affordance
-  link-hover: '#3f3f46'          # subtle darken
-  destructive: '#ef4444'         # red-500, destructive actions
-  destructive-hover: '#dc2626'   # red-600
-  destructive-foreground: '#fafafa' # white on destructive
-  border: '#e4e4e7'              # zinc-200 — the hairline, the structural rule
-  border-soft: '#f4f4f5'         # zinc-100, subtle separator
-  border-strong: '#d4d4d8'       # zinc-300, emphasized
-  border-dark: '#27272a'         # zinc-800 dark hairline
-  input: '#e4e4e7'               # alias for input border
-  input-border: '#e4e4e7'
-  ring: '#0a0a0a'                # focus ring color (light)
-  ring-dark: '#fafafa'           # focus ring color (dark)
-  selection-bg: 'rgba(10, 10, 10, 0.1)' # text selection, near-black at 10%
-  shadow-color: 'rgba(0, 0, 0, 0.05)' # ambient shadow at low alpha
-  shadow-color-md: 'rgba(0, 0, 0, 0.1)' # standard popover shadow
-  shadow-color-lg: 'rgba(0, 0, 0, 0.15)' # modal shadow
-  success: '#10b981'             # emerald-500, sparingly used
-  warning: '#f59e0b'             # amber-500
-  info: '#3b82f6'                # blue-500
-  chart-1: '#e76e50'             # chart palette (used in dashboard demos)
-  chart-2: '#2a9d90'
-  chart-3: '#274754'
-  chart-4: '#e8c468'
-  chart-5: '#f4a462'
+  light:
+    bg: '#ffffff'                  # canvas — pure white
+    surface: '#fafafa'             # zinc-50, muted background
+    surface-strong: '#f4f4f5'      # zinc-100, accent / hover
+    surface-muted: '#f4f4f5'       # alias for muted card background
+    surface-accent: '#f4f4f5'      # accent surface for hover/select
+    surface-elevated: '#ffffff'    # popover, dialog
+    text: '#0a0a0a'                # primary body — near-black (the iconic 'foreground')
+    text-strong: '#000000'         # display copy at full black, rare
+    text-secondary: '#3f3f46'      # zinc-700, body emphasis
+    text-muted: '#71717a'          # zinc-500 — the iconic muted-fg
+    text-faint: '#a1a1aa'          # zinc-400, captions and disabled
+    brand: '#0a0a0a'               # primary action — near-black solid button
+    brand-hover: '#1a1a1a'         # hover-darker (subtle lift toward zinc-900)
+    brand-active: '#27272a'        # zinc-800, pressed
+    on-brand: '#fafafa'            # near-white text on the black button
+    link: '#0a0a0a'                # links inherit foreground; underline for affordance
+    link-hover: '#3f3f46'          # subtle darken
+    destructive: '#ef4444'         # red-500, destructive actions
+    destructive-hover: '#dc2626'   # red-600
+    destructive-foreground: '#fafafa' # white on destructive
+    border: '#e4e4e7'              # zinc-200 — the hairline, the structural rule
+    border-soft: '#f4f4f5'         # zinc-100, subtle separator
+    border-strong: '#d4d4d8'       # zinc-300, emphasized
+    input: '#e4e4e7'               # alias for input border
+    input-border: '#e4e4e7'
+    ring: '#0a0a0a'                # focus ring color
+    selection-bg: 'rgba(10, 10, 10, 0.1)' # text selection, near-black at 10%
+    shadow-color: 'rgba(0, 0, 0, 0.05)' # ambient shadow at low alpha
+    shadow-color-md: 'rgba(0, 0, 0, 0.1)' # standard popover shadow
+    shadow-color-lg: 'rgba(0, 0, 0, 0.15)' # modal shadow
+    success: '#10b981'             # emerald-500, sparingly used
+    warning: '#f59e0b'             # amber-500
+    info: '#3b82f6'                # blue-500
+    chart-1: '#e76e50'             # chart palette (used in dashboard demos)
+    chart-2: '#2a9d90'
+    chart-3: '#274754'
+    chart-4: '#e8c468'
+    chart-5: '#f4a462'
+
+  dark:
+    bg: '#0a0a0a'                  # dark canvas (near-black, never pure)
+    surface: '#171717'             # zinc-900, muted background
+    surface-strong: '#18181b'      # zinc-900 card
+    surface-muted: '#171717'       # zinc-900 muted
+    surface-accent: '#27272a'      # zinc-800 accent surface
+    surface-elevated: '#18181b'    # zinc-900 popover, dialog
+    text: '#fafafa'                # primary body — near-white
+    text-strong: '#ffffff'         # display copy
+    text-secondary: '#d4d4d8'      # zinc-300, body emphasis
+    text-muted: '#a1a1aa'          # zinc-400, the muted-fg in dark
+    text-faint: '#71717a'          # zinc-500, captions and disabled
+    brand: '#fafafa'               # inverted — light button on dark canvas
+    brand-hover: '#e4e4e7'         # zinc-200 on hover
+    brand-active: '#d4d4d8'        # zinc-300 pressed
+    on-brand: '#0a0a0a'            # near-black text on the white-inverted button
+    link: '#fafafa'                # links inherit foreground
+    link-hover: '#d4d4d8'          # zinc-300 subtle softening
+    destructive: '#7f1d1d'         # red-900, dark-mode destructive (matches shadcn defaults)
+    destructive-hover: '#991b1b'   # red-800
+    destructive-foreground: '#fafafa'
+    border: '#27272a'              # zinc-800 hairline
+    border-soft: '#18181b'         # zinc-900 subtle separator
+    border-strong: '#3f3f46'       # zinc-700, emphasized
+    input: '#27272a'
+    input-border: '#27272a'
+    ring: '#fafafa'                # focus ring color
+    selection-bg: 'rgba(250, 250, 250, 0.12)' # text selection on dark
+    shadow-color: 'rgba(0, 0, 0, 0.30)' # deeper ambient on dark
+    shadow-color-md: 'rgba(0, 0, 0, 0.45)'
+    shadow-color-lg: 'rgba(0, 0, 0, 0.60)'
+    success: '#10b981'             # emerald, identical across themes
+    warning: '#f59e0b'
+    info: '#3b82f6'
+    chart-1: '#e76e50'
+    chart-2: '#2a9d90'
+    chart-3: '#274754'
+    chart-4: '#e8c468'
+    chart-5: '#f4a462'
 
 typography:
   display:

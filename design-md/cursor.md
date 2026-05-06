@@ -12,40 +12,81 @@ preview_swatch: ['#f7f7f4', '#f54e00', '#26251e']
 related: [linear, vercel, anthropic]
 description: 'Cursor''s marketing site renders the AI-IDE in a warm cream canvas with a custom CursorGothic display family — geometric, slightly retro, and unlike any nearby dev tool. The accent is a vivid `#f54e00` orange (matching the editor''s selection highlight); code surfaces run in JetBrains Mono; and a hidden EB Garamond serif reserves the right to drop in editorial moments. Five pastel timeline pills (peach / mint / blue / lavender / gold) mark AI-action stages inside in-product agent visualizations only — never as system action colors.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  bg: '#f7f7f4'                 # warm cream canvas
-  bg-soft: '#fafaf7'            # IDE-pane interior
-  surface: '#ffffff'            # pure white feature card surface
-  surface-soft: '#f2f1ed'       # alternate elevated band
-  surface-strong: '#e6e5e0'     # badge/chip background
-  text: '#26251e'               # ink (warm near-black)
-  text-strong: '#26251e'        # display emphasis
-  text-body: '#5a5852'          # default running text
-  text-soft: 'rgba(38, 37, 30, 0.6)'  # color-mix derived secondary
-  text-muted: '#807d72'         # sub-titles
-  text-faint: '#a09c92'         # disabled
-  brand: '#f54e00'              # Cursor Orange CTA + wordmark
-  brand-active: '#d04200'       # press state
-  on-brand: '#ffffff'           # white text on orange CTA
-  link: '#26251e'               # ink links — no chromatic blue
-  link-hover: '#f54e00'         # orange on hover only
-  border: '#e6e5e0'             # 1px hairline divider
-  border-soft: '#efeee8'        # lighter divider
-  border-strong: '#cfcdc4'      # stronger panel outline
-  border-translucent: 'rgba(38, 37, 30, 0.1)'  # color-mix border
-  timeline-thinking: '#dfa88f'  # peach — AI thinking pill
-  timeline-grep: '#9fc9a2'      # mint — grepping pill
-  timeline-read: '#9fbbe0'      # pastel blue — reading pill
-  timeline-edit: '#c0a8dd'      # lavender — editing pill
-  timeline-done: '#c08532'      # warm gold — done pill
-  selection-orange: '#f54e00'   # editor selection highlight
-  diff-add-bg: 'rgba(31, 138, 101, 0.12)'  # inserted-line background
-  diff-remove-bg: 'rgba(207, 45, 86, 0.12)' # removed-line background
-  success: '#1f8a65'            # deep green — confirmation
-  warning: '#c08532'            # gold — warning
-  danger: '#cf2d56'             # red-pink — validation error
-  info: '#9fbbe0'               # pastel blue — informational
-  shadow-tint: 'rgba(38, 37, 30, 0.08)'  # warm-tinted shadow
+  light:
+    bg: '#f7f7f4'                 # warm cream canvas
+    bg-soft: '#fafaf7'            # IDE-pane interior
+    surface: '#ffffff'            # pure white feature card surface
+    surface-soft: '#f2f1ed'       # alternate elevated band
+    surface-strong: '#e6e5e0'     # badge/chip background
+    text: '#26251e'               # ink (warm near-black)
+    text-strong: '#26251e'
+    text-body: '#5a5852'          # default running text
+    text-soft: 'rgba(38, 37, 30, 0.6)'
+    text-muted: '#807d72'
+    text-faint: '#a09c92'
+    brand: '#f54e00'              # Cursor Orange — identical across themes
+    brand-active: '#d04200'
+    on-brand: '#ffffff'
+    link: '#26251e'
+    link-hover: '#f54e00'
+    border: '#e6e5e0'
+    border-soft: '#efeee8'
+    border-strong: '#cfcdc4'
+    border-translucent: 'rgba(38, 37, 30, 0.1)'
+    timeline-thinking: '#dfa88f'
+    timeline-grep: '#9fc9a2'
+    timeline-read: '#9fbbe0'
+    timeline-edit: '#c0a8dd'
+    timeline-done: '#c08532'
+    selection-orange: '#f54e00'
+    diff-add-bg: 'rgba(31, 138, 101, 0.12)'
+    diff-remove-bg: 'rgba(207, 45, 86, 0.12)'
+    success: '#1f8a65'
+    warning: '#c08532'
+    danger: '#cf2d56'
+    info: '#9fbbe0'
+    shadow-tint: 'rgba(38, 37, 30, 0.08)'
+
+  dark:
+    bg: '#1a1a17'                 # warm-tinted near-black canvas (cursor IDE dark)
+    bg-soft: '#1f1f1c'            # IDE-pane interior
+    surface: '#26251e'            # ink — primary card surface, mirrors light/text role
+    surface-soft: '#2e2d26'       # alternate elevated band
+    surface-strong: '#3a3933'     # badge/chip background
+    text: '#f2f1ed'               # warm cream text on dark
+    text-strong: '#ffffff'
+    text-body: '#cfcdc4'
+    text-soft: 'rgba(242, 241, 237, 0.6)'
+    text-muted: '#a09c92'
+    text-faint: '#807d72'
+    brand: '#f54e00'              # orange unchanged — brand axis
+    brand-active: '#ff6a26'       # lifted on dark for contrast
+    on-brand: '#ffffff'
+    link: '#f2f1ed'               # cream links on dark — mirrors ink-on-light
+    link-hover: '#f54e00'
+    border: '#3a3933'
+    border-soft: '#2e2d26'
+    border-strong: '#5a5852'
+    border-translucent: 'rgba(242, 241, 237, 0.1)'
+    timeline-thinking: '#dfa88f'  # pastel pills retain hue, just on dark substrate
+    timeline-grep: '#9fc9a2'
+    timeline-read: '#9fbbe0'
+    timeline-edit: '#c0a8dd'
+    timeline-done: '#c08532'
+    selection-orange: '#f54e00'
+    diff-add-bg: 'rgba(31, 138, 101, 0.20)'
+    diff-remove-bg: 'rgba(207, 45, 86, 0.20)'
+    success: '#3fb98a'            # lifted green for dark legibility
+    warning: '#dfa88f'
+    danger: '#f06b8b'
+    info: '#9fbbe0'
+    shadow-tint: 'rgba(0, 0, 0, 0.50)'
 
 typography:
   display:

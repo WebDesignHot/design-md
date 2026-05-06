@@ -12,42 +12,85 @@ preview_swatch: ['#0d1117', '#5fed83', '#f0f6fc']
 related: [linear, vercel, anthropic]
 description: 'GitHub''s marketing surface is a dark-mode developer canvas anchored by Mona Sans (the variable display family GitHub commissioned and open-sourced) and a lime-green `#5fed83` accent that punctuates an otherwise restrained near-black ground. The system reads as a confident extension of the product chrome — not a separate marketing layer. Bento-grid cards open the door to a multi-hue decorative palette (coral, lemon, indigo, pink) used inside icon backgrounds while the chrome stays disciplined and dark.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-color-mode attribute on <html>; persisted as cookie + localStorage; respects prefers-color-scheme'
+
 colors:
-  bg: '#0d1117'                # canvas-default — GitHub dark ground
-  bg-soft: '#0f1511'           # canvas-subtle — bento card body
-  bg-elev: '#191f1b'           # accordion idle / hover-state cards
-  surface: '#0f1511'           # primary card surface
-  surface-soft: '#161b22'      # secondary surface — code blocks
-  surface-strong: '#21262d'    # tertiary — inline rows
-  text: '#f0f6fc'              # primary copy
-  text-strong: '#ffffff'       # display emphasis
-  text-soft: '#a4aea6'         # captions, supporting metadata
-  text-muted: '#7d8590'        # secondary text
-  text-faint: '#484f58'        # disabled
-  brand: '#5fed83'             # lime-green accent (matches diff "added")
-  brand-emphasis: '#08872b'    # darker emphasis-grade green for accent CTAs
-  brand-soft: 'rgba(95, 237, 131, 0.15)'  # tinted background
-  on-brand: '#000000'          # text on lime CTA
-  primary-cta-bg: '#ffffff'    # white-on-black primary inversion
-  primary-cta-text: '#000000'
-  primary-cta-hover: '#f0f6fc'
-  link: '#79c0ff'              # GitHub link blue (product carryover)
-  link-hover: '#a5d6ff'
-  border: '#353d37'            # neutral low-contrast divider
-  border-soft: '#21262d'       # nested row border
-  border-strong: '#484f58'     # input + secondary border
-  bento-coral: '#ff6b6b'       # decorative — bento icon background
-  bento-lemon: '#ffd43b'       # decorative — bento icon background
-  bento-indigo: '#7c5cff'      # decorative — bento icon background
-  bento-pink: '#ff7eb6'        # decorative — bento icon background
-  bento-cyan: '#56d4dd'        # decorative — bento icon background
-  diff-add-bg: 'rgba(46, 160, 67, 0.15)'  # added line tint
-  diff-remove-bg: 'rgba(248, 81, 73, 0.15)'  # removed line tint
-  semantic-success: '#3fb950'  # success state (matches diff add)
-  semantic-warning: '#d29922'  # warning state
-  semantic-danger: '#f85149'   # danger / error state
-  semantic-info: '#58a6ff'     # info banner
-  shadow-tint: 'rgba(0, 0, 0, 0.5)'  # neutral dark shadow
+  dark:
+    bg: '#0d1117'                # canvas-default — GitHub dark ground
+    bg-soft: '#0f1511'           # canvas-subtle — bento card body
+    bg-elev: '#191f1b'           # accordion idle / hover-state cards
+    surface: '#0f1511'           # primary card surface
+    surface-soft: '#161b22'      # secondary surface — code blocks
+    surface-strong: '#21262d'    # tertiary — inline rows
+    text: '#f0f6fc'              # primary copy
+    text-strong: '#ffffff'       # display emphasis
+    text-soft: '#a4aea6'         # captions, supporting metadata
+    text-muted: '#7d8590'        # secondary text
+    text-faint: '#484f58'        # disabled
+    brand: '#5fed83'             # lime-green accent (matches diff "added")
+    brand-emphasis: '#08872b'    # darker emphasis-grade green for accent CTAs
+    brand-soft: 'rgba(95, 237, 131, 0.15)'  # tinted background
+    on-brand: '#000000'          # text on lime CTA
+    primary-cta-bg: '#ffffff'    # white-on-black primary inversion
+    primary-cta-text: '#000000'
+    primary-cta-hover: '#f0f6fc'
+    link: '#79c0ff'              # GitHub link blue (product carryover)
+    link-hover: '#a5d6ff'
+    border: '#353d37'            # neutral low-contrast divider
+    border-soft: '#21262d'       # nested row border
+    border-strong: '#484f58'     # input + secondary border
+    bento-coral: '#ff6b6b'       # decorative — bento icon background
+    bento-lemon: '#ffd43b'
+    bento-indigo: '#7c5cff'
+    bento-pink: '#ff7eb6'
+    bento-cyan: '#56d4dd'
+    diff-add-bg: 'rgba(46, 160, 67, 0.15)'
+    diff-remove-bg: 'rgba(248, 81, 73, 0.15)'
+    semantic-success: '#3fb950'
+    semantic-warning: '#d29922'
+    semantic-danger: '#f85149'
+    semantic-info: '#58a6ff'
+    shadow-tint: 'rgba(0, 0, 0, 0.5)'
+
+  light:
+    bg: '#ffffff'                # canvas-default light — pure white per Primer light tokens
+    bg-soft: '#f6f8fa'           # canvas-subtle — bento card body, repository file rows
+    bg-elev: '#eaeef2'           # hovered card / accordion-hovered surface
+    surface: '#ffffff'           # primary card surface
+    surface-soft: '#f6f8fa'      # secondary surface — code blocks
+    surface-strong: '#d0d7de'    # tertiary — inline rows
+    text: '#1f2328'              # primary copy — fg-default
+    text-strong: '#000000'       # display emphasis
+    text-soft: '#656d76'         # captions, supporting metadata — fg-muted
+    text-muted: '#6e7781'        # secondary — fg-subtle
+    text-faint: '#8c959f'        # disabled
+    brand: '#1f883d'             # success/lime green primary in light mode
+    brand-emphasis: '#1a7f37'    # darker emphasis green
+    brand-soft: 'rgba(31, 136, 61, 0.10)'
+    on-brand: '#ffffff'          # white text on green CTA
+    primary-cta-bg: '#1f2328'    # near-black CTA in light mode (mirrors dark's white CTA)
+    primary-cta-text: '#ffffff'
+    primary-cta-hover: '#000000'
+    link: '#0969da'              # GitHub link blue light — fg-accent
+    link-hover: '#0550ae'
+    border: '#d0d7de'            # default light border
+    border-soft: '#eaeef2'
+    border-strong: '#afb8c1'
+    bento-coral: '#cf222e'       # adapted bento accents for light contrast
+    bento-lemon: '#bf8700'
+    bento-indigo: '#5e35b1'
+    bento-pink: '#bf3989'
+    bento-cyan: '#0e7c86'
+    diff-add-bg: 'rgba(46, 160, 67, 0.15)'
+    diff-remove-bg: 'rgba(207, 34, 46, 0.15)'
+    semantic-success: '#1a7f37'
+    semantic-warning: '#9a6700'
+    semantic-danger: '#cf222e'
+    semantic-info: '#0969da'
+    shadow-tint: 'rgba(31, 35, 40, 0.10)'
 
 typography:
   display:

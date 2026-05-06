@@ -12,48 +12,87 @@ preview_swatch: ['#020420', '#00dc82', '#ffffff']
 related: [vercel, vite, tailwindcss]
 description: 'Nuxt''s site lives on a near-black `#020420` canvas — slightly cooler and bluer than pure black — with the signature `#00dc82` Vue-derived green doing all of the chromatic heavy lifting. Inter and DM Sans handle the type, the wordmark hex glyph anchors the upper-left, and a soft green glow leaks behind hero copy as a brand-tinted halo. Where Vercel runs near-black + Geist + magenta-pink and Astro runs cosmos navy + violet-orange gradients, Nuxt runs deep blue-black + DM Sans/Inter + single-accent green — a palette closer to a developer terminal than a marketing page, which suits a Vue meta-framework that sells itself on developer ergonomics. The brand also ships a polished light variant for documentation surfaces, making Nuxt one of the rare dev-tool brands with a genuinely first-class dual-theme system.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  # Primary (dark canvas — default)
-  bg: '#020420'                          # near-black canvas, slight cool-blue tilt
-  bg-soft: '#0a0d2a'                     # secondary panel, code blocks
-  bg-deep: '#050729'                     # tertiary panel for nested groups
-  surface: '#10142e'                     # card lift, one step above canvas
-  surface-strong: '#1a1f42'              # hover-lifted card
-  text: '#ffffff'                        # primary copy, full strength on dark
-  text-strong: '#ffffff'
-  text-medium: '#dbdfe9'                 # softer headline
-  text-muted: '#a0a8b8'                  # secondary copy, nav links
-  text-soft: '#7c8497'                   # captions, helper text
-  text-faint: '#525a6c'                  # disabled, footer microcopy
-  # Brand
-  brand: '#00dc82'                       # Nuxt green — Vue-derived, brighter and cooler
-  brand-hover: '#00b86a'                 # pressed / hover green
-  brand-deep: '#008a4f'                  # deeper accent for emphasis
-  brand-soft: '#003b22'                  # tinted background for callouts
-  brand-bright: '#80eeb4'                # lighter green for highlights
-  glow: 'rgba(0, 220, 130, 0.40)'        # 40% alpha green halo behind hero
-  glow-soft: 'rgba(0, 220, 130, 0.18)'   # quieter glow for capability cards
-  on-brand: '#020420'                    # dark text on green button — high contrast
-  # Interactive
-  link: '#00dc82'                        # brand-green links on dark
-  link-hover: '#80eeb4'                  # brighter on hover
-  selected-bg: 'rgba(0, 220, 130, 0.10)' # nav/selected wash
-  disabled: '#525a6c'
-  # Borders
-  border: 'rgba(255, 255, 255, 0.08)'    # 8% white hairline — defining border on dark
-  border-strong: 'rgba(255, 255, 255, 0.15)' # emphasized rule
-  border-soft: 'rgba(255, 255, 255, 0.04)' # quietest separation
-  border-brand: 'rgba(0, 220, 130, 0.40)' # brand-tinted divider
-  # Semantic
-  success-bg: 'rgba(0, 220, 130, 0.12)'  # brand-green doubles as success
-  success-text: '#80eeb4'
-  warning-bg: 'rgba(251, 191, 36, 0.12)'
-  warning-text: '#fcd34d'
-  warning: '#fbbf24'
-  danger-bg: 'rgba(239, 68, 68, 0.12)'
-  danger-text: '#fca5a5'
-  info-bg: 'rgba(96, 165, 250, 0.12)'
-  info-text: '#93c5fd'
+  dark:
+    bg: '#020420'                          # near-black canvas, slight cool-blue tilt
+    bg-soft: '#0a0d2a'                     # secondary panel, code blocks
+    bg-deep: '#050729'                     # tertiary panel for nested groups
+    surface: '#10142e'                     # card lift
+    surface-strong: '#1a1f42'              # hover-lifted card
+    text: '#ffffff'
+    text-strong: '#ffffff'
+    text-medium: '#dbdfe9'
+    text-muted: '#a0a8b8'
+    text-soft: '#7c8497'
+    text-faint: '#525a6c'
+    brand: '#00dc82'                       # Nuxt green — identical across themes
+    brand-hover: '#00b86a'
+    brand-deep: '#008a4f'
+    brand-soft: '#003b22'
+    brand-bright: '#80eeb4'
+    glow: 'rgba(0, 220, 130, 0.40)'
+    glow-soft: 'rgba(0, 220, 130, 0.18)'
+    on-brand: '#020420'                    # dark text on green button
+    link: '#00dc82'
+    link-hover: '#80eeb4'
+    selected-bg: 'rgba(0, 220, 130, 0.10)'
+    disabled: '#525a6c'
+    border: 'rgba(255, 255, 255, 0.08)'
+    border-strong: 'rgba(255, 255, 255, 0.15)'
+    border-soft: 'rgba(255, 255, 255, 0.04)'
+    border-brand: 'rgba(0, 220, 130, 0.40)'
+    success-bg: 'rgba(0, 220, 130, 0.12)'
+    success-text: '#80eeb4'
+    warning-bg: 'rgba(251, 191, 36, 0.12)'
+    warning-text: '#fcd34d'
+    warning: '#fbbf24'
+    danger-bg: 'rgba(239, 68, 68, 0.12)'
+    danger-text: '#fca5a5'
+    info-bg: 'rgba(96, 165, 250, 0.12)'
+    info-text: '#93c5fd'
+
+  light:
+    bg: '#ffffff'                          # pure white canvas — Nuxt docs light
+    bg-soft: '#f4f6fb'                     # secondary panel, code blocks
+    bg-deep: '#eef1f7'                     # tertiary panel
+    surface: '#ffffff'                     # card surface
+    surface-strong: '#f8fafc'              # hover-lifted card
+    text: '#020420'                        # near-black ink, mirrors dark/bg as text
+    text-strong: '#020420'
+    text-medium: '#1f2937'
+    text-muted: '#4b5563'
+    text-soft: '#6b7280'
+    text-faint: '#9ca3af'
+    brand: '#00dc82'                       # green stays
+    brand-hover: '#00b86a'
+    brand-deep: '#008a4f'
+    brand-soft: 'rgba(0, 220, 130, 0.10)'
+    brand-bright: '#00dc82'
+    glow: 'rgba(0, 220, 130, 0.20)'        # softer glow on light
+    glow-soft: 'rgba(0, 220, 130, 0.10)'
+    on-brand: '#020420'
+    link: '#008a4f'                        # deeper green for legibility on white
+    link-hover: '#00b86a'
+    selected-bg: 'rgba(0, 220, 130, 0.08)'
+    disabled: '#9ca3af'
+    border: 'rgba(2, 4, 32, 0.08)'         # 8% near-black hairline
+    border-strong: 'rgba(2, 4, 32, 0.15)'
+    border-soft: 'rgba(2, 4, 32, 0.04)'
+    border-brand: 'rgba(0, 220, 130, 0.40)'
+    success-bg: 'rgba(0, 220, 130, 0.10)'
+    success-text: '#008a4f'
+    warning-bg: 'rgba(251, 191, 36, 0.12)'
+    warning-text: '#92400e'
+    warning: '#d97706'
+    danger-bg: 'rgba(239, 68, 68, 0.10)'
+    danger-text: '#b91c1c'
+    info-bg: 'rgba(96, 165, 250, 0.10)'
+    info-text: '#1e40af'
 
 typography:
   display:

@@ -12,44 +12,79 @@ preview_swatch: ['#fafafa', '#171717', '#000000']
 related: [vercel, linear, anthropic]
 description: 'v0 is Vercel''s AI app builder, and its marketing surface is the calmest prompt canvas on the internet. The body sits at `oklch(0.985 0 0)` (a near-white that reads as paper, not white), display copy uses **GeistSans** at a restrained 32px weight 600 with `-1.28px` tracking, and the entire palette is engineered as a pure OKLCH grayscale ladder. There is no chromatic accent on the marketing chrome — the prompt input is the hero, the templates are the supporting cast, and the whole page acts like an empty document waiting for input. Where every other AI tool reaches for a 64–80px hero headline, v0 trusts the prompt input itself to carry the weight at a deliberate 32px restraint.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  # Primary
-  bg: '#fafafa'                  # observed body bg, oklch(0.985 0 0) near-white paper
-  bg-pure: '#ffffff'             # oklch(1) for raised modals and dialogs
-  surface: '#f2f2f2'             # oklch(0.961) panel for inset zones
-  surface-soft: '#f0f0f0'        # oklch(0.94) for cards and chips
-  surface-strong: '#e6e6e6'      # oklch(0.90) for emphasised dividers
-  text: '#262626'                # oklch(0.205 0 0) near-black display
-  text-strong: '#000000'         # rare absolute black for ultra-emphasis
-  text-medium: '#525252'         # oklch(0.32) secondary copy
-  text-muted: '#7c7c7c'          # oklch(0.51) caption
-  text-deep: '#969696'           # oklch(0.59) ui label
-  text-soft: '#bababa'           # oklch(0.732) quietest metadata
-  text-faint: '#cfcfcf'          # oklch(0.82) disabled
-  # Brand
-  brand: '#000000'               # pure black is the brand — Vercel-derived
-  brand-deep: '#000000'          # no second tone — flat black
-  brand-soft: 'rgba(0, 0, 0, 0.08)' # 8% black wash for ghost hover
-  on-brand: '#ffffff'            # white label on black
-  # Interactive
-  link: '#000000'                # links are pure black; underlined or distinguished by weight
-  link-hover: '#525252'          # link hover tones down by value
-  selected-bg: '#f2f2f2'         # selected state — surface step
-  disabled: '#bababa'
-  # Borders
-  border: 'rgba(0, 0, 0, 0.078)'        # ~7.8% black hairline
-  border-strong: 'rgba(0, 0, 0, 0.14)'  # emphasised rule
-  border-subtle: 'rgba(0, 0, 0, 0.05)'  # 5% black soft hairline
-  border-focus: '#000000'               # focus ring is pure black
-  # Semantic — v0 keeps semantics monochrome where possible
-  success-bg: '#f0f7f1'
-  success-text: '#1f6b3e'
-  warning-bg: '#fef6e4'
-  warning-text: '#7a5a14'
-  danger-bg: '#fbebec'
-  danger-text: '#9a2c34'
-  info-bg: '#f2f2f2'              # info collapses into surface — no chromatic info
-  info-text: '#262626'
+  light:
+    bg: '#fafafa'                  # observed body bg, oklch(0.985 0 0) near-white paper
+    bg-pure: '#ffffff'             # oklch(1) for raised modals and dialogs
+    surface: '#f2f2f2'             # oklch(0.961) panel for inset zones
+    surface-soft: '#f0f0f0'        # oklch(0.94) for cards and chips
+    surface-strong: '#e6e6e6'      # oklch(0.90) for emphasised dividers
+    text: '#262626'                # oklch(0.205) near-black display
+    text-strong: '#000000'         # rare absolute black for ultra-emphasis
+    text-medium: '#525252'         # oklch(0.32) secondary copy
+    text-muted: '#7c7c7c'          # oklch(0.51) caption
+    text-deep: '#969696'           # oklch(0.59) ui label
+    text-soft: '#bababa'           # oklch(0.732) quietest metadata
+    text-faint: '#cfcfcf'          # oklch(0.82) disabled
+    brand: '#000000'               # pure black is the brand — Vercel-derived
+    brand-deep: '#000000'          # no second tone — flat black
+    brand-soft: 'rgba(0, 0, 0, 0.08)' # 8% black wash for ghost hover
+    on-brand: '#ffffff'            # white label on black
+    link: '#000000'                # links are pure black
+    link-hover: '#525252'
+    selected-bg: '#f2f2f2'
+    disabled: '#bababa'
+    border: 'rgba(0, 0, 0, 0.078)'
+    border-strong: 'rgba(0, 0, 0, 0.14)'
+    border-subtle: 'rgba(0, 0, 0, 0.05)'
+    border-focus: '#000000'
+    success-bg: '#f0f7f1'
+    success-text: '#1f6b3e'
+    warning-bg: '#fef6e4'
+    warning-text: '#7a5a14'
+    danger-bg: '#fbebec'
+    danger-text: '#9a2c34'
+    info-bg: '#f2f2f2'
+    info-text: '#262626'
+
+  dark:
+    bg: '#0a0a0a'                  # near-black canvas — v0 dark mirrors Vercel's deep black
+    bg-pure: '#000000'             # absolute black for modals/dialogs (rare)
+    surface: '#171717'             # oklch(~0.18) panel for inset zones (zinc-900 territory)
+    surface-soft: '#1c1c1c'        # cards and chips
+    surface-strong: '#262626'      # emphasised dividers
+    text: '#ededed'                # near-white display
+    text-strong: '#ffffff'         # rare absolute white emphasis
+    text-medium: '#a3a3a3'         # secondary copy
+    text-muted: '#7c7c7c'          # caption (mid-grey works in both themes)
+    text-deep: '#525252'
+    text-soft: '#404040'
+    text-faint: '#262626'          # disabled (matches surface-strong)
+    brand: '#ffffff'               # brand inverts — pure white is the action color
+    brand-deep: '#ffffff'
+    brand-soft: 'rgba(255, 255, 255, 0.10)'
+    on-brand: '#000000'            # black label on white
+    link: '#ffffff'
+    link-hover: '#a3a3a3'
+    selected-bg: '#1c1c1c'
+    disabled: '#525252'
+    border: 'rgba(255, 255, 255, 0.10)'
+    border-strong: 'rgba(255, 255, 255, 0.18)'
+    border-subtle: 'rgba(255, 255, 255, 0.06)'
+    border-focus: '#ffffff'
+    success-bg: 'rgba(31, 107, 62, 0.15)'
+    success-text: '#3fb950'
+    warning-bg: 'rgba(122, 90, 20, 0.15)'
+    warning-text: '#d29922'
+    danger-bg: 'rgba(154, 44, 52, 0.15)'
+    danger-text: '#f85149'
+    info-bg: '#171717'
+    info-text: '#ededed'
 
 typography:
   display:

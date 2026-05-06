@@ -12,63 +12,97 @@ preview_swatch: ['#000000', '#ff1e56', '#0096ff']
 related: [vercel, vite, tailwindcss]
 description: 'Turbo''s site inherits the Vercel design system''s pure-black canvas and Geist type stack, then layers in its own signature: a magenta-to-blue brand gradient sweeping from `#ff1e56` to `#0096ff` across the wordmark and key CTAs. The page reads as Vercel-grade minimalism with one allocated chromatic surface — the brand sweep — and nothing else.'
 
+themes:
+  default: dark
+  available: [dark, light]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  # Primary surfaces
-  bg: '#000000'                    # pure black canvas, Vercel-grade — non-negotiable
-  bg-soft: '#0a0a0a'               # secondary panels, code blocks
-  surface: '#111111'               # card lift tier 1
-  surface-strong: '#1a1a1a'        # card lift tier 2, hover
-  surface-elevated: '#202020'      # popovers, dialogs
-  bg-overlay: 'rgba(0, 0, 0, 0.72)' # modal scrim
+  dark:
+    bg: '#000000'                    # pure black canvas
+    bg-soft: '#0a0a0a'               # secondary panels, code blocks
+    surface: '#111111'               # card lift tier 1
+    surface-strong: '#1a1a1a'        # card lift tier 2, hover
+    surface-elevated: '#202020'      # popovers, dialogs
+    bg-overlay: 'rgba(0, 0, 0, 0.72)'
+    text: '#ffffff'
+    text-strong: '#ffffff'
+    text-muted: '#a1a1a1'
+    text-soft: '#666666'
+    text-faint: '#444444'
+    text-on-brand: '#ffffff'
+    brand: '#ff1e56'                 # Turbo magenta — identical across themes
+    brand-strong: '#e6164a'
+    brand-soft: 'rgba(255, 30, 86, 0.12)'
+    accent: '#0096ff'                # Turbo blue
+    accent-strong: '#0078cc'
+    accent-soft: 'rgba(0, 150, 255, 0.12)'
+    gradient-from: '#ff1e56'
+    gradient-via: '#9b56b3'
+    gradient-to: '#0096ff'
+    glow-magenta: 'rgba(255, 30, 86, 0.4)'
+    glow-blue: 'rgba(0, 150, 255, 0.35)'
+    glow-soft: 'rgba(255, 30, 86, 0.2)'
+    border: 'rgba(255, 255, 255, 0.08)'
+    border-strong: 'rgba(255, 255, 255, 0.15)'
+    border-subtle: 'rgba(255, 255, 255, 0.05)'
+    border-brand: 'rgba(255, 30, 86, 0.4)'
+    border-focus: '#ff1e56'
+    success: '#0cce6b'
+    success-bg: 'rgba(12, 206, 107, 0.1)'
+    warning: '#f5a623'
+    warning-bg: 'rgba(245, 166, 35, 0.1)'
+    danger: '#ff4d4f'
+    danger-bg: 'rgba(255, 77, 79, 0.1)'
+    info: '#0096ff'
+    info-bg: 'rgba(0, 150, 255, 0.1)'
+    on-brand: '#ffffff'
+    on-accent: '#ffffff'
+    on-surface: '#ffffff'
+    on-bg: '#ffffff'
 
-  # Text scale
-  text: '#ffffff'                  # primary copy, full strength
-  text-strong: '#ffffff'           # display headlines, wordmark
-  text-muted: '#a1a1a1'            # secondary copy, nav links
-  text-soft: '#666666'             # tertiary copy, captions
-  text-faint: '#444444'            # disabled, watermark
-  text-on-brand: '#ffffff'
-
-  # Brand — the only allocated chromatic surface
-  brand: '#ff1e56'                 # Turbo magenta (left of gradient)
-  brand-strong: '#e6164a'          # hover/active magenta
-  brand-soft: 'rgba(255, 30, 86, 0.12)' # tinted backgrounds
-  accent: '#0096ff'                # Turbo blue (right of gradient)
-  accent-strong: '#0078cc'         # hover/active blue
-  accent-soft: 'rgba(0, 150, 255, 0.12)'
-
-  # Gradient stops
-  gradient-from: '#ff1e56'
-  gradient-via: '#9b56b3'          # midpoint reference for 3-stop variants
-  gradient-to: '#0096ff'
-
-  # Glows / atmosphere
-  glow-magenta: 'rgba(255, 30, 86, 0.4)'
-  glow-blue: 'rgba(0, 150, 255, 0.35)'
-  glow-soft: 'rgba(255, 30, 86, 0.2)'
-
-  # Borders
-  border: 'rgba(255, 255, 255, 0.08)'    # 8% white hairline — identical to Vercel
-  border-strong: 'rgba(255, 255, 255, 0.15)'
-  border-subtle: 'rgba(255, 255, 255, 0.05)'
-  border-brand: 'rgba(255, 30, 86, 0.4)'
-  border-focus: '#ff1e56'
-
-  # Semantic
-  success: '#0cce6b'
-  success-bg: 'rgba(12, 206, 107, 0.1)'
-  warning: '#f5a623'
-  warning-bg: 'rgba(245, 166, 35, 0.1)'
-  danger: '#ff4d4f'
-  danger-bg: 'rgba(255, 77, 79, 0.1)'
-  info: '#0096ff'
-  info-bg: 'rgba(0, 150, 255, 0.1)'
-
-  # On-color
-  on-brand: '#ffffff'
-  on-accent: '#ffffff'
-  on-surface: '#ffffff'
-  on-bg: '#ffffff'
+  light:
+    bg: '#ffffff'                    # pure white canvas
+    bg-soft: '#fafafa'               # secondary panels
+    surface: '#f5f5f5'               # card lift tier 1
+    surface-strong: '#ededed'        # card lift tier 2, hover
+    surface-elevated: '#ffffff'      # popovers (raised on inset surfaces)
+    bg-overlay: 'rgba(0, 0, 0, 0.40)'
+    text: '#0a0a0a'                  # near-black text on white
+    text-strong: '#000000'
+    text-muted: '#525252'
+    text-soft: '#737373'
+    text-faint: '#a3a3a3'
+    text-on-brand: '#ffffff'
+    brand: '#ff1e56'                 # gradient brand stays — chromatic identity is the brand
+    brand-strong: '#e6164a'
+    brand-soft: 'rgba(255, 30, 86, 0.10)'
+    accent: '#0096ff'
+    accent-strong: '#0078cc'
+    accent-soft: 'rgba(0, 150, 255, 0.10)'
+    gradient-from: '#ff1e56'
+    gradient-via: '#9b56b3'
+    gradient-to: '#0096ff'
+    glow-magenta: 'rgba(255, 30, 86, 0.18)'   # softer glow on white
+    glow-blue: 'rgba(0, 150, 255, 0.16)'
+    glow-soft: 'rgba(255, 30, 86, 0.08)'
+    border: 'rgba(0, 0, 0, 0.08)'             # 8% black hairline mirrors dark/border
+    border-strong: 'rgba(0, 0, 0, 0.15)'
+    border-subtle: 'rgba(0, 0, 0, 0.04)'
+    border-brand: 'rgba(255, 30, 86, 0.40)'
+    border-focus: '#ff1e56'
+    success: '#0a7c47'                # deeper green for light contrast
+    success-bg: 'rgba(12, 206, 107, 0.10)'
+    warning: '#b87600'
+    warning-bg: 'rgba(245, 166, 35, 0.12)'
+    danger: '#cc0000'
+    danger-bg: 'rgba(255, 77, 79, 0.12)'
+    info: '#0078cc'
+    info-bg: 'rgba(0, 150, 255, 0.10)'
+    on-brand: '#ffffff'
+    on-accent: '#ffffff'
+    on-surface: '#ffffff'
+    on-bg: '#ffffff'
 
 typography:
   display:

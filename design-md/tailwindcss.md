@@ -12,66 +12,109 @@ preview_swatch: ['#ffffff', '#06b6d4', '#0f172a']
 related: [vercel, linear, refactoring-ui]
 description: 'Tailwind''s marketing site is the framework demonstrating itself — Inter Variable headlines, the canonical slate-on-white palette, signature cyan ''#06b6d4'' brand, and every component composable from the utility classes the site is selling. The most self-referential design system on the web — when you ship a CSS framework, your marketing page is your demo.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'data-theme attribute on <html>; persisted in localStorage; respects prefers-color-scheme on first paint'
+
 colors:
-  bg: '#ffffff'                   # pure white canvas
-  bg-quiet: '#f8fafc'             # slate-50 — section breakers, subtle alternation
-  bg-elev: '#f1f5f9'              # slate-100 — raised card / panel surface
-  bg-elev-2: '#e2e8f0'            # slate-200 — hover surface, deeper elevation
-  bg-tint: '#ecfeff'              # cyan-50 — tinted brand surface for callouts
-  bg-tint-2: '#cffafe'            # cyan-100 — deeper tinted brand surface
-  surface: '#ffffff'              # primary card surface
-  surface-2: '#f8fafc'            # nested secondary card
-  bg-dark: '#0f172a'              # slate-900 — dark section, code-block fill, footer
-  bg-dark-2: '#1e293b'             # slate-800 — secondary dark surface
-  bg-dark-3: '#334155'            # slate-700 — tertiary dark surface
-  text: '#0f172a'                 # slate-900 — body, headlines (full-strength near-black with navy hint)
-  text-soft: '#475569'            # slate-600 — supporting copy
-  text-muted: '#64748b'           # slate-500 — secondary copy, labels
-  text-faint: '#94a3b8'           # slate-400 — meta, captions
-  text-quiet: '#cbd5e1'           # slate-300 — disabled
-  text-on-dark: '#f1f5f9'         # slate-100 — primary on dark
-  text-on-dark-soft: '#cbd5e1'    # slate-300 — secondary on dark
-  text-on-dark-muted: '#94a3b8'   # slate-400 — tertiary on dark
-  brand: '#06b6d4'                # cyan-500 — the signature brand axis
-  brand-hover: '#0891b2'          # cyan-600 — pressed state
-  brand-active: '#0e7490'         # cyan-700 — active depressed
-  brand-soft: '#cffafe'           # cyan-100 — tinted callout
-  brand-soft-2: '#ecfeff'         # cyan-50 — softer tinted surface
-  brand-deep: '#155e75'           # cyan-800 — deep brand for illustrative shadow
-  brand-bright: '#22d3ee'         # cyan-400 — brighter brand for hover/highlight on dark
-  accent-sky: '#0ea5e9'           # sky-500 — secondary accent, paired with cyan in gradients
-  accent-sky-soft: '#e0f2fe'      # sky-100
-  accent-blue: '#3b82f6'           # blue-500 — tertiary accent (gradients with cyan)
-  accent-violet: '#8b5cf6'         # violet-500 — illustrative accent in gradients
-  accent-pink: '#ec4899'           # pink-500 — illustrative accent in gradients
-  accent-emerald: '#10b981'        # emerald-500 — semantic success
-  accent-amber: '#f59e0b'          # amber-500 — semantic warning
-  accent-rose: '#f43f5e'           # rose-500 — semantic danger
-  border: '#e2e8f0'               # slate-200 — hairline rules
-  border-strong: '#cbd5e1'        # slate-300 — emphasized border
-  border-soft: '#f1f5f9'           # slate-100 — softer divider
-  border-dark: '#334155'          # slate-700 — border on dark
-  border-brand: '#06b6d4'         # cyan-500 — brand-tinted border
-  link: '#0891b2'                 # cyan-600 — link colour (slightly deeper than brand for legibility)
-  link-hover: '#0e7490'           # cyan-700 — link hover
-  on-brand: '#ffffff'             # white text on cyan
-  code-bg: '#0f172a'              # slate-900 — code block fill
-  code-bg-light: '#1e293b'        # slate-800 — alternate code-block fill
-  code-text: '#e2e8f0'            # slate-200 — primary code text
-  code-keyword: '#22d3ee'         # cyan-400 — syntax keyword
-  code-string: '#86efac'          # green-300 — syntax string
-  code-attribute: '#fbbf24'       # amber-400 — syntax attribute
-  code-comment: '#64748b'         # slate-500 — syntax comment
-  code-tag: '#f87171'             # red-400 — syntax tag
-  shadow-soft: 'rgba(15,23,42,0.04)'   # ambient
-  shadow-medium: 'rgba(15,23,42,0.08)' # standard
-  shadow-strong: 'rgba(15,23,42,0.16)' # elevated
-  shadow-deep: 'rgba(15,23,42,0.24)'   # deep
-  shadow-brand: 'rgba(6,182,212,0.30)' # brand-tinted shadow
-  semantic-success: '#10b981'
-  semantic-warning: '#f59e0b'
-  semantic-danger: '#f43f5e'
-  semantic-info: '#06b6d4'
+  light:
+    bg: '#ffffff'                   # pure white canvas
+    bg-quiet: '#f8fafc'             # slate-50 — section breakers, subtle alternation
+    bg-elev: '#f1f5f9'              # slate-100 — raised card / panel surface
+    bg-elev-2: '#e2e8f0'            # slate-200 — hover surface, deeper elevation
+    bg-tint: '#ecfeff'              # cyan-50 — tinted brand surface for callouts
+    bg-tint-2: '#cffafe'            # cyan-100 — deeper tinted brand surface
+    surface: '#ffffff'              # primary card surface
+    surface-2: '#f8fafc'            # nested secondary card
+    text: '#0f172a'                 # slate-900 — body, headlines
+    text-soft: '#475569'            # slate-600 — supporting copy
+    text-muted: '#64748b'           # slate-500 — secondary copy, labels
+    text-faint: '#94a3b8'           # slate-400 — meta, captions
+    text-quiet: '#cbd5e1'           # slate-300 — disabled
+    brand: '#06b6d4'                # cyan-500 — the signature brand axis
+    brand-hover: '#0891b2'          # cyan-600 — pressed state
+    brand-active: '#0e7490'         # cyan-700 — active depressed
+    brand-soft: '#cffafe'           # cyan-100 — tinted callout
+    brand-soft-2: '#ecfeff'         # cyan-50 — softer tinted surface
+    brand-deep: '#155e75'           # cyan-800 — deep brand for illustrative shadow
+    brand-bright: '#22d3ee'         # cyan-400 — brighter brand for hover/highlight
+    accent-sky: '#0ea5e9'           # sky-500 — secondary accent
+    accent-sky-soft: '#e0f2fe'      # sky-100
+    accent-blue: '#3b82f6'          # blue-500
+    accent-violet: '#8b5cf6'        # violet-500
+    accent-pink: '#ec4899'          # pink-500
+    accent-emerald: '#10b981'       # emerald-500 — semantic success
+    accent-amber: '#f59e0b'         # amber-500 — semantic warning
+    accent-rose: '#f43f5e'          # rose-500 — semantic danger
+    border: '#e2e8f0'               # slate-200 — hairline rules
+    border-strong: '#cbd5e1'        # slate-300 — emphasized border
+    border-soft: '#f1f5f9'          # slate-100 — softer divider
+    border-brand: '#06b6d4'         # cyan-500 — brand-tinted border
+    link: '#0891b2'                 # cyan-600 — link colour
+    link-hover: '#0e7490'           # cyan-700 — link hover
+    on-brand: '#ffffff'             # white text on cyan
+    code-bg: '#0f172a'              # slate-900 — code block fill (always dark, even in light theme)
+    code-bg-light: '#1e293b'        # slate-800 — alternate code-block fill
+    code-text: '#e2e8f0'            # slate-200 — primary code text
+    code-keyword: '#22d3ee'         # cyan-400 — syntax keyword
+    code-string: '#86efac'          # green-300 — syntax string
+    code-attribute: '#fbbf24'       # amber-400 — syntax attribute
+    code-comment: '#64748b'         # slate-500 — syntax comment
+    code-tag: '#f87171'             # red-400 — syntax tag
+    shadow-soft: 'rgba(15,23,42,0.04)'
+    shadow-medium: 'rgba(15,23,42,0.08)'
+    shadow-strong: 'rgba(15,23,42,0.16)'
+    shadow-deep: 'rgba(15,23,42,0.24)'
+
+  dark:
+    bg: '#0f172a'                   # slate-900 — dark canvas
+    bg-quiet: '#1e293b'             # slate-800 — section breakers
+    bg-elev: '#1e293b'              # slate-800 — raised card / panel
+    bg-elev-2: '#334155'            # slate-700 — hover surface, deeper elevation
+    bg-tint: 'rgba(6, 182, 212, 0.08)'  # cyan tint for callouts
+    bg-tint-2: 'rgba(6, 182, 212, 0.16)'
+    surface: '#1e293b'              # slate-800 — primary card surface
+    surface-2: '#334155'            # slate-700 — nested
+    text: '#f1f5f9'                 # slate-100 — body, headlines
+    text-soft: '#cbd5e1'            # slate-300 — supporting copy
+    text-muted: '#94a3b8'           # slate-400 — secondary copy
+    text-faint: '#64748b'           # slate-500 — meta, captions
+    text-quiet: '#475569'           # slate-600 — disabled
+    brand: '#22d3ee'                # cyan-400 — brighter on dark for legibility
+    brand-hover: '#06b6d4'          # cyan-500 — pressed
+    brand-active: '#0891b2'         # cyan-600 — active depressed
+    brand-soft: 'rgba(34, 211, 238, 0.10)'
+    brand-soft-2: 'rgba(34, 211, 238, 0.18)'
+    brand-deep: '#155e75'
+    brand-bright: '#67e8f9'         # cyan-300 — brightest for highlights
+    accent-sky: '#38bdf8'           # sky-400
+    accent-sky-soft: 'rgba(56, 189, 248, 0.16)'
+    accent-blue: '#60a5fa'          # blue-400
+    accent-violet: '#a78bfa'        # violet-400
+    accent-pink: '#f472b6'          # pink-400
+    accent-emerald: '#34d399'       # emerald-400
+    accent-amber: '#fbbf24'         # amber-400
+    accent-rose: '#fb7185'          # rose-400
+    border: '#334155'               # slate-700 — hairline rules
+    border-strong: '#475569'        # slate-600 — emphasized
+    border-soft: '#1e293b'          # slate-800 — softer
+    border-brand: '#22d3ee'
+    link: '#22d3ee'                 # cyan-400 link
+    link-hover: '#67e8f9'           # cyan-300 hover
+    on-brand: '#0f172a'             # slate-900 text on cyan
+    code-bg: '#020617'              # slate-950 — code block deeper than canvas
+    code-bg-light: '#0f172a'        # canvas tier as alternate
+    code-text: '#e2e8f0'
+    code-keyword: '#22d3ee'
+    code-string: '#86efac'
+    code-attribute: '#fbbf24'
+    code-comment: '#64748b'
+    code-tag: '#f87171'
+    shadow-soft: 'rgba(0, 0, 0, 0.30)'
+    shadow-medium: 'rgba(0, 0, 0, 0.45)'
+    shadow-strong: 'rgba(0, 0, 0, 0.60)'
+    shadow-deep: 'rgba(0, 0, 0, 0.75)'
 
 typography:
   display:
