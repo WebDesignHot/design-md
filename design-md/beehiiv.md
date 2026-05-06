@@ -12,48 +12,79 @@ preview_swatch: ['#ffd60a', '#000000', '#ffffff']
 related: [substack, ghost, kit-com]
 description: 'beehiiv hits like a tabloid front page — a saturated `#ffd60a` highway yellow against pure black `#000`, heavy display type set tight, and pure-white feature bands that flash between the yellow hero and the black footer. The result is the loudest newsletter platform on the marketing internet, and it is intentional. Display caps at 88–112px / 800 weight tracked at `-0.04em`, cards use a 2px solid black border at 12px radius (no shadow), and the black-pill CTA is the brand''s pressure point. Where Substack frames itself around writing, beehiiv frames itself around making money — and every visual decision carries that monetisation-first energy. The lineage runs through the Wall Street Journal''s tabloid cousins, Off-White / Virgil''s industrial graphic vocabulary, and 2010s zine culture''s love of the black-on-yellow contrast pair.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is white-with-yellow-bands (light); footer + hero contrast bands ship in dark. Persisted in localStorage on the product app.'
+
 colors:
-  bg: '#ffffff'                 # primary marketing canvas
-  bg-yellow: '#ffd60a'          # signature hero band — highway yellow
-  bg-yellow-soft: '#fff7c2'     # softest yellow tint
-  bg-yellow-deep: '#e6c000'     # deeper press of the yellow
-  bg-dark: '#000000'            # pure black footer / contrast band
-  bg-dark-soft: '#0a0a0a'       # near-black interior surface
-  bg-dark-deep: '#000000'       # full-bleed black, identical for purity
-  surface: '#fafafa'            # near-white card panel
-  surface-2: '#f0f0f0'          # second-level neutral
-  surface-3: '#e5e5e5'          # third-level neutral
-  surface-dark: '#0a0a0a'       # dark-band card
-  surface-dark-2: '#1a1a1a'     # second-level dark surface
-  text: '#000000'               # plain black body
-  text-strong: '#000000'        # display, identical
-  text-display: '#000000'       # H1, identical (no opacity)
-  text-muted: '#666666'         # captions
-  text-soft: '#999999'          # tertiary
-  text-faint: '#cccccc'         # disabled
-  text-on-dark: '#ffffff'       # white text on black
-  text-on-dark-muted: '#ffffffb3'
-  text-on-yellow: '#000000'     # always black on yellow, never white
-  text-on-yellow-muted: '#000000a8'
-  brand: '#ffd60a'              # the yellow itself is the brand
-  brand-hover: '#e6c000'        # pressed
-  brand-active: '#cca800'       # deepest pressed
-  brand-soft: '#fff7c2'         # soft tint
-  accent: '#000000'             # black is the secondary brand
-  accent-soft: '#1a1a1a'        # softer accent
-  border: '#000000'             # 2px solid black border on cards
-  border-soft: '#e5e5e5'        # softer divider for internal grids
-  border-dark: '#1f1f1f'        # 1px black-on-black ring inside dark band
-  on-brand: '#000000'           # text on yellow
-  on-dark: '#ffffff'            # text on black
-  success: '#15803d'            # editorial green
-  success-bg: '#dcfce7'         # success surface
-  warning: '#a16207'            # amber, not yellow (yellow is brand)
-  warning-bg: '#fef3c7'         # warning surface
-  danger: '#b91c1c'             # brick
-  danger-bg: '#fee2e2'          # danger surface
-  info: '#000000'               # info reuses black
-  info-bg: '#fafafa'            # info surface
+  light:
+    bg: '#ffffff'                 # primary marketing canvas
+    bg-yellow: '#ffd60a'          # signature hero band — highway yellow
+    bg-yellow-soft: '#fff7c2'     # softest yellow tint
+    bg-yellow-deep: '#e6c000'     # deeper press of the yellow
+    surface: '#fafafa'            # near-white card panel
+    surface-2: '#f0f0f0'          # second-level neutral
+    surface-3: '#e5e5e5'          # third-level neutral
+    text: '#000000'               # plain black body
+    text-strong: '#000000'
+    text-display: '#000000'
+    text-muted: '#666666'         # captions
+    text-soft: '#999999'          # tertiary
+    text-faint: '#cccccc'         # disabled
+    text-on-yellow: '#000000'     # always black on yellow
+    text-on-yellow-muted: '#000000a8'
+    brand: '#ffd60a'              # the yellow itself is the brand
+    brand-hover: '#e6c000'
+    brand-active: '#cca800'
+    brand-soft: '#fff7c2'
+    accent: '#000000'             # black is the secondary brand
+    accent-soft: '#1a1a1a'
+    border: '#000000'             # 2px solid black border on cards
+    border-soft: '#e5e5e5'        # softer divider
+    on-brand: '#000000'           # text on yellow
+    success: '#15803d'
+    success-bg: '#dcfce7'
+    warning: '#a16207'            # amber, not yellow (yellow is brand)
+    warning-bg: '#fef3c7'
+    danger: '#b91c1c'
+    danger-bg: '#fee2e2'
+    info: '#000000'
+    info-bg: '#fafafa'
+
+  dark:
+    bg: '#000000'                 # pure black canvas
+    bg-yellow: '#ffd60a'          # yellow band stays — chromatic identity
+    bg-yellow-soft: 'rgba(255, 214, 10, 0.18)'
+    bg-yellow-deep: '#e6c000'
+    surface: '#0a0a0a'            # near-black card
+    surface-2: '#1a1a1a'          # second-level dark
+    surface-3: '#262626'          # third-level dark
+    text: '#ffffff'               # white on black
+    text-strong: '#ffffff'
+    text-display: '#ffffff'
+    text-muted: '#a3a3a3'
+    text-soft: '#737373'
+    text-faint: '#525252'
+    text-on-yellow: '#000000'     # black on yellow stays inviolable
+    text-on-yellow-muted: '#000000a8'
+    brand: '#ffd60a'
+    brand-hover: '#ffe45c'        # lifted on dark for legibility
+    brand-active: '#e6c000'
+    brand-soft: 'rgba(255, 214, 10, 0.18)'
+    accent: '#ffffff'             # white doubles as accent on dark (mirrors light/black role)
+    accent-soft: '#e5e5e5'
+    border: '#ffffff'             # 2px white border on cards (mirrors light's 2px black)
+    border-soft: '#1f1f1f'
+    on-brand: '#000000'
+    success: '#22c55e'            # lifted green for dark
+    success-bg: 'rgba(34, 197, 94, 0.18)'
+    warning: '#fbbf24'
+    warning-bg: 'rgba(251, 191, 36, 0.18)'
+    danger: '#ef4444'
+    danger-bg: 'rgba(239, 68, 68, 0.18)'
+    info: '#ffffff'
+    info-bg: '#0a0a0a'
 
 typography:
   display:

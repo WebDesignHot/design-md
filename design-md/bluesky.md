@@ -12,83 +12,111 @@ preview_swatch: ['#ffffff', '#0085ff', '#0c0c0c']
 related: [twitter-x, threads-app, telegram]
 description: 'Bluesky is the airy alternative-Twitter aesthetic — a bright `#ffffff` canvas with a confident `#0085ff` sky-blue used throughout the action layer (primary CTA, inline links, brand wordmark, butterfly icon), Inter pulling display through body in the canonical modern-social-app register, and a feed timeline whose density is calibrated for thoughtful scroll rather than addictive engagement. Where X (Twitter) leans into dark-mode-by-default chrome and aggressive monetization UI, Bluesky commits to **open-network warmth**: a paper-white canvas in light mode, every post is a federated AT Protocol record, the algorithmic feed picker lets you choose between Following / Discover / Custom Algorithms / What''s Hot. The brand''s argument is "we are building social media as a public utility on top of an open protocol" — and the visual language commits to the convention that protocol-native social products use: clean type, generous post-card padding, subtle brand-blue accent rationed for action, butterfly logo as the brand glyph. Hand-illustrated aesthetic touches (the butterfly logo descended from Mark Hamill''s feather pen sketch on Jay Graber''s napkin), playful pinned-post handles like @jay.bsky.team for verification, custom feed selectors at the top of every timeline. The dark-mode variant inverts the canvas to deep navy `#16161a` and lets the sky-blue do its work as the chromatic anchor. This is the cleanest, friendliest, most protocol-respectful social-network surface in 2024–2026.'
 
-colors:
-  bg: '#ffffff'                    # primary canvas (light)
-  bg-warm: '#f8f9fa'                # alt section band
-  bg-muted: '#f1f3f5'               # subtle bg variation
-  bg-deep: '#16161a'                # dark-mode canvas
-  bg-deeper: '#0c0c0c'               # dark mode footer / deepest surface
-  bg-promo: '#e8f4ff'               # soft sky-blue promo band
-  surface: '#ffffff'                # default card (light)
-  surface-elevated: '#ffffff'        # modal floor (with shadow)
-  surface-hover: '#f1f3f5'           # nav hover, list-row hover
-  surface-soft: '#eef7ff'            # secondary blue-tinted surface
-  surface-strong: '#e8eaee'          # divider band
-  surface-dark: '#1f1f23'            # dark card on dark canvas
-  surface-dark-elevated: '#26262d'   # raised dark card
-  surface-dark-hover: '#2c2c33'      # dark nav hover
-  text: '#0c0c0c'                    # primary body — near-pure black
-  text-strong: '#000000'             # display headlines
-  text-muted: '#5e6772'              # secondary metadata
-  text-soft: '#7a838e'               # tertiary captions, post timestamp
-  text-disabled: '#a8aebd'           # disabled state
-  text-on-brand: '#ffffff'            # text on sky-blue
-  text-on-dark: '#ffffff'             # text on dark mode canvas
-  text-dark-muted: '#8e96a3'         # muted on dark
-  text-dark-soft: '#666e7a'          # soft on dark
-  text-link: '#0085ff'               # inline link sky blue
-  text-link-hover: '#006cd9'         # link pressed
-  brand: '#0085ff'                   # Bluesky Sky Blue — primary CTA, brand surface, butterfly logo
-  brand-hover: '#006cd9'             # primary button hover
-  brand-active: '#0057b3'            # pressed
-  brand-soft: '#e8f4ff'              # soft tint surface, badge bg
-  brand-deep: '#0057b3'              # deeper blue for AAA contrast on white
-  accent-pink: '#fb44a3'             # bsky accent — like buttons, hearts
-  accent-purple: '#9a75e9'           # repost / share
-  accent-yellow: '#f5c518'           # pinned post, starred feed
-  accent-orange: '#f9a13e'           # warning / labeled content
-  accent-red: '#e84545'              # error, block
-  accent-green: '#2bb673'             # follow back, success
-  border: '#dde1e7'                  # default hairline (light)
-  border-soft: '#eef0f3'             # subtle divider
-  border-strong: '#bcc1c9'           # focused field outline
-  border-dark: '#2c2c33'             # border on dark surfaces
-  border-focus: '#0085ff'            # focus ring
-  on-brand: '#ffffff'                # label on brand surface
-  reply-line: '#dde1e7'              # threaded conversation tree line
-  reply-line-dark: '#2c2c33'         # threaded conversation line on dark
-  reaction-like: '#fb44a3'           # like heart pink
-  reaction-repost: '#9a75e9'         # repost arrow purple
-  reaction-reply: '#5e6772'          # reply icon muted
-  shadow-card: 'rgba(0,0,0,0.06)'   # default card shadow
-  shadow-modal: 'rgba(0,0,0,0.20)'   # modal floor
-  shadow-popover: 'rgba(0,0,0,0.12)' # popover/dropdown
-  success: '#2bb673'                 # account verified, follow succeeded
-  success-soft: '#e0f6ec'            # success bg
-  warning: '#f9a13e'                 # warning amber
-  warning-soft: '#fff3e0'            # warning bg
-  danger: '#e84545'                  # error, block
-  danger-soft: '#fdebeb'             # error bg
-  info: '#0085ff'                    # info sky blue
-  info-soft: '#e8f4ff'               # info bg
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Toggle in account settings; persisted server-side per account + locally for logged-out browsing. Respects prefers-color-scheme on first paint.'
 
-colors-dark:
-  bg: '#16161a'
-  bg-deeper: '#0c0c0c'
-  surface: '#1f1f23'
-  surface-elevated: '#26262d'
-  surface-hover: '#2c2c33'
-  text: '#ffffff'
-  text-muted: '#8e96a3'
-  text-soft: '#666e7a'
-  brand: '#3aa3ff'                   # brightened for AAA on dark
-  brand-hover: '#5cb5ff'
-  brand-soft: '#0d2940'
-  border: '#2c2c33'
-  border-soft: '#1f1f23'
-  reaction-like: '#fb44a3'           # pink stays vibrant on dark
-  reaction-repost: '#9a75e9'
-  shadow-card: 'rgba(0,0,0,0.4)'
+colors:
+  light:
+    bg: '#ffffff'                    # primary canvas
+    bg-warm: '#f8f9fa'                # alt section band
+    bg-muted: '#f1f3f5'               # subtle bg variation
+    bg-promo: '#e8f4ff'               # soft sky-blue promo band
+    surface: '#ffffff'                # default card
+    surface-elevated: '#ffffff'        # modal floor
+    surface-hover: '#f1f3f5'           # nav hover, list-row hover
+    surface-soft: '#eef7ff'            # secondary blue-tinted surface
+    surface-strong: '#e8eaee'          # divider band
+    text: '#0c0c0c'                    # primary body — near-pure black
+    text-strong: '#000000'             # display headlines
+    text-muted: '#5e6772'              # secondary metadata
+    text-soft: '#7a838e'               # tertiary captions, post timestamp
+    text-disabled: '#a8aebd'           # disabled state
+    text-on-brand: '#ffffff'            # text on sky-blue
+    text-link: '#0085ff'               # inline link sky blue
+    text-link-hover: '#006cd9'         # link pressed
+    brand: '#0085ff'                   # Bluesky Sky Blue — primary CTA, butterfly logo
+    brand-hover: '#006cd9'             # primary button hover
+    brand-active: '#0057b3'            # pressed
+    brand-soft: '#e8f4ff'              # soft tint surface, badge bg
+    brand-deep: '#0057b3'              # deeper blue for AAA contrast on white
+    accent-pink: '#fb44a3'             # bsky accent — like buttons, hearts
+    accent-purple: '#9a75e9'           # repost / share
+    accent-yellow: '#f5c518'           # pinned post, starred feed
+    accent-orange: '#f9a13e'           # warning / labeled content
+    accent-red: '#e84545'              # error, block
+    accent-green: '#2bb673'             # follow back, success
+    border: '#dde1e7'                  # default hairline
+    border-soft: '#eef0f3'             # subtle divider
+    border-strong: '#bcc1c9'           # focused field outline
+    border-focus: '#0085ff'            # focus ring
+    on-brand: '#ffffff'                # label on brand surface
+    reply-line: '#dde1e7'              # threaded conversation tree line
+    reaction-like: '#fb44a3'
+    reaction-repost: '#9a75e9'
+    reaction-reply: '#5e6772'
+    shadow-card: 'rgba(0,0,0,0.06)'
+    shadow-modal: 'rgba(0,0,0,0.20)'
+    shadow-popover: 'rgba(0,0,0,0.12)'
+    success: '#2bb673'
+    success-soft: '#e0f6ec'
+    warning: '#f9a13e'
+    warning-soft: '#fff3e0'
+    danger: '#e84545'
+    danger-soft: '#fdebeb'
+    info: '#0085ff'
+    info-soft: '#e8f4ff'
+
+  dark:
+    bg: '#16161a'                      # dark canvas
+    bg-warm: '#1c1c20'                 # alt dark band
+    bg-muted: '#1f1f23'                # subtle dark variation
+    bg-promo: 'rgba(0, 133, 255, 0.16)' # tinted promo on dark
+    surface: '#1f1f23'                 # default dark card
+    surface-elevated: '#26262d'        # raised dark card / modal
+    surface-hover: '#2c2c33'           # nav/list hover on dark
+    surface-soft: 'rgba(0, 133, 255, 0.10)'
+    surface-strong: '#26262d'
+    text: '#ffffff'                    # primary body
+    text-strong: '#ffffff'
+    text-muted: '#8e96a3'              # muted on dark
+    text-soft: '#666e7a'               # soft on dark
+    text-disabled: '#4a525e'
+    text-on-brand: '#ffffff'
+    text-link: '#3aa3ff'               # lifted link blue on dark
+    text-link-hover: '#5cb5ff'
+    brand: '#3aa3ff'                   # brightened for AAA on dark
+    brand-hover: '#5cb5ff'
+    brand-active: '#0085ff'
+    brand-soft: '#0d2940'              # tinted dark surface, badge bg
+    brand-deep: '#0057b3'
+    accent-pink: '#fb44a3'             # accents stay vibrant on dark
+    accent-purple: '#9a75e9'
+    accent-yellow: '#f5c518'
+    accent-orange: '#f9a13e'
+    accent-red: '#e84545'
+    accent-green: '#2bb673'
+    border: '#2c2c33'                  # default hairline on dark
+    border-soft: '#1f1f23'             # subtle divider
+    border-strong: '#3a3a42'           # focused field outline
+    border-focus: '#3aa3ff'
+    on-brand: '#ffffff'
+    reply-line: '#2c2c33'              # threaded conversation tree on dark
+    reaction-like: '#fb44a3'
+    reaction-repost: '#9a75e9'
+    reaction-reply: '#8e96a3'
+    shadow-card: 'rgba(0,0,0,0.4)'
+    shadow-modal: 'rgba(0,0,0,0.6)'
+    shadow-popover: 'rgba(0,0,0,0.5)'
+    success: '#2bb673'
+    success-soft: 'rgba(43, 182, 115, 0.18)'
+    warning: '#f9a13e'
+    warning-soft: 'rgba(249, 161, 62, 0.18)'
+    danger: '#e84545'
+    danger-soft: 'rgba(232, 69, 69, 0.18)'
+    info: '#3aa3ff'
+    info-soft: 'rgba(58, 163, 255, 0.16)'
 
 typography:
   display:

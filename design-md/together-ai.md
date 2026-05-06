@@ -12,73 +12,129 @@ preview_swatch: ['#ffffff', '#0f1f3d', '#0070f3']
 related: [anthropic, openai, cohere]
 description: 'Together AI is the open-source LLM-cloud aesthetic — a deep navy `#0f1f3d` (rendered as the brand surface and footer) anchored against a near-white `#fafafa` canvas, Inter pulling display through body in the canonical developer-platform register, and JetBrains Mono carrying every code block in a generous 14px / 1.6 line-height. The brand''s argument is "we are the cloud where you run open models" — Llama, DeepSeek, Qwen, Mistral, Mixtral, Stable Diffusion, FLUX — and the visual language commits to the developer-platform conventions that Stripe, Vercel, Linear, and Anthropic established: confident single-blue (`#0070f3`) action colour, generous grayscale ramp, syntax-highlighted code blocks treated as first-class layout citizens, and pricing tables with tabular numerics where every model''s per-million-token rate sits on a baseline grid. Where OpenAI and Anthropic keep the API surface behind editorial chat-product framing, Together leans hard into infrastructure-platform — the homepage is benchmarks, latency charts, model pricing tables, and code samples. The brand''s personality is the senior infrastructure engineer who reads benchmarks for fun: technically dense, comfortable with numbers, allergic to marketing copy that doesn''t cite a source.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is light/cool-white; the navy brand surface and code-running consoles ship dark. Toggle persisted in localStorage on the playground.'
+
 colors:
-  bg: '#fafafa'                    # primary canvas — near-white off cool
-  bg-pure: '#ffffff'                # pure white card / modal
-  bg-surface: '#f4f5f7'             # subtle surface band
-  bg-deep: '#0f1f3d'                # signature deep navy — footer, dark hero, brand surface
-  bg-deeper: '#080f1f'              # deepest navy, code-block bg on dark surfaces
-  bg-code: '#1a1d29'                # code block bg on light surfaces
-  bg-promo: '#e7f0ff'               # soft blue promo band
-  surface: '#ffffff'                # default card
-  surface-elevated: '#ffffff'        # modal floor (with shadow)
-  surface-hover: '#f4f5f7'           # nav hover, list-row hover
-  surface-soft: '#f9fafb'            # subtle secondary surface
-  surface-strong: '#e5e7eb'          # divider band
-  surface-dark: '#1a2440'            # dark card on navy surfaces
-  surface-dark-elevated: '#27314e'   # raised dark card
-  text: '#0f1f3d'                    # primary body — same navy as bg-deep, tonal harmony
-  text-strong: '#06091a'             # display headlines
-  text-muted: '#5a627a'              # secondary metadata
-  text-soft: '#7d839a'               # tertiary captions
-  text-disabled: '#a8aebd'           # disabled state
-  text-on-brand: '#ffffff'            # text on blue
-  text-on-dark: '#ffffff'             # text on navy
-  text-dark-muted: '#a4adc8'         # muted on dark
-  text-dark-soft: '#727a98'          # soft on dark
-  text-link: '#0070f3'               # inline link blue
-  text-link-hover: '#0058c2'         # link pressed
-  brand: '#0f1f3d'                   # Together navy — primary brand surface
-  brand-hover: '#1a2d52'             # nav hover lift
-  brand-soft: '#27314e'              # softer navy variant
-  brand-deep: '#080f1f'              # deepest navy
-  accent-blue: '#0070f3'             # action blue — primary CTA
-  accent-blue-hover: '#0058c2'       # CTA hover
-  accent-blue-active: '#003e8c'      # pressed
-  accent-blue-soft: '#e7f0ff'        # soft blue promo bg
-  accent-cyan: '#00d4ff'             # gradient stop, AI-product accent
-  accent-purple: '#7c3aed'           # secondary accent — model badge purple
-  accent-green: '#10b981'             # success / new-model badge
-  accent-orange: '#f59e0b'           # warning / "popular" badge
-  accent-red: '#ef4444'              # error
-  border: '#e5e7eb'                  # default hairline
-  border-soft: '#f0f1f3'             # subtle divider
-  border-strong: '#cbd0d8'           # focused field outline
-  border-dark: '#27314e'             # border on dark surfaces
-  border-focus: '#0070f3'            # focus ring
-  on-brand: '#ffffff'                # label on brand surface
-  code-bg-light: '#f4f5f7'          # inline-code bg on light pages
-  code-bg-dark: '#1a1d29'            # block-code bg on light pages
-  code-text: '#e5e7eb'              # code default text on dark bg
-  code-comment: '#7d839a'           # /* comment */
-  code-keyword: '#c084fc'           # function, class, const
-  code-string: '#86efac'            # "string literal"
-  code-function: '#60a5fa'          # function name
-  code-variable: '#fcd34d'          # variable identifier
-  code-punct: '#a4adc8'             # ; { } [ ]
-  code-number: '#fb923c'            # numeric literal
-  shadow-card: 'rgba(15,31,61,0.06)' # default card shadow
-  shadow-modal: 'rgba(15,31,61,0.2)' # modal floor
-  shadow-popover: 'rgba(15,31,61,0.12)' # popover/dropdown
-  shadow-elevated: 'rgba(15,31,61,0.10)' # elevated card
-  success: '#10b981'                 # API call succeeded, deploy complete
-  success-soft: '#d1fae5'            # success bg
-  warning: '#f59e0b'                 # rate-limit warning
-  warning-soft: '#fef3c7'            # warning bg
-  danger: '#ef4444'                  # error
-  danger-soft: '#fee2e2'             # error bg
-  info: '#0070f3'                    # info blue
-  info-soft: '#e7f0ff'               # info bg
+  light:
+    bg: '#fafafa'                    # primary canvas — near-white off cool
+    bg-pure: '#ffffff'                # pure white card / modal
+    bg-surface: '#f4f5f7'             # subtle surface band
+    bg-promo: '#e7f0ff'               # soft blue promo band
+    surface: '#ffffff'                # default card
+    surface-elevated: '#ffffff'        # modal floor
+    surface-hover: '#f4f5f7'           # nav hover, list-row hover
+    surface-soft: '#f9fafb'            # subtle secondary surface
+    surface-strong: '#e5e7eb'          # divider band
+    text: '#0f1f3d'                    # primary body — navy tonal harmony with brand
+    text-strong: '#06091a'             # display headlines
+    text-muted: '#5a627a'              # secondary metadata
+    text-soft: '#7d839a'               # tertiary captions
+    text-disabled: '#a8aebd'           # disabled state
+    text-on-brand: '#ffffff'            # text on blue
+    text-link: '#0070f3'               # inline link blue
+    text-link-hover: '#0058c2'         # link pressed
+    brand: '#0f1f3d'                   # Together navy — primary brand surface
+    brand-hover: '#1a2d52'             # nav hover lift
+    brand-soft: '#27314e'              # softer navy variant
+    brand-deep: '#080f1f'              # deepest navy
+    accent-blue: '#0070f3'             # action blue — primary CTA
+    accent-blue-hover: '#0058c2'       # CTA hover
+    accent-blue-active: '#003e8c'      # pressed
+    accent-blue-soft: '#e7f0ff'        # soft blue promo bg
+    accent-cyan: '#00d4ff'             # gradient stop, AI-product accent
+    accent-purple: '#7c3aed'           # model badge purple
+    accent-green: '#10b981'             # success / new-model badge
+    accent-orange: '#f59e0b'           # warning / "popular" badge
+    accent-red: '#ef4444'              # error
+    border: '#e5e7eb'                  # default hairline
+    border-soft: '#f0f1f3'             # subtle divider
+    border-strong: '#cbd0d8'           # focused field outline
+    border-focus: '#0070f3'            # focus ring
+    on-brand: '#ffffff'
+    code-bg-light: '#f4f5f7'           # inline-code bg
+    code-bg-dark: '#1a1d29'            # block-code bg (always dark even on light pages)
+    code-text: '#e5e7eb'
+    code-comment: '#7d839a'
+    code-keyword: '#c084fc'
+    code-string: '#86efac'
+    code-function: '#60a5fa'
+    code-variable: '#fcd34d'
+    code-punct: '#a4adc8'
+    code-number: '#fb923c'
+    shadow-card: 'rgba(15,31,61,0.06)'
+    shadow-modal: 'rgba(15,31,61,0.2)'
+    shadow-popover: 'rgba(15,31,61,0.12)'
+    shadow-elevated: 'rgba(15,31,61,0.10)'
+    success: '#10b981'
+    success-soft: '#d1fae5'
+    warning: '#f59e0b'
+    warning-soft: '#fef3c7'
+    danger: '#ef4444'
+    danger-soft: '#fee2e2'
+    info: '#0070f3'
+    info-soft: '#e7f0ff'
+
+  dark:
+    bg: '#0f1f3d'                      # signature deep navy canvas
+    bg-pure: '#080f1f'                 # deepest navy modal/dialog
+    bg-surface: '#1a2440'              # subtle surface band
+    bg-promo: 'rgba(0, 112, 243, 0.18)' # tinted promo on dark
+    surface: '#1a2440'                 # default dark card on navy
+    surface-elevated: '#27314e'        # raised dark card
+    surface-hover: '#27314e'
+    surface-soft: '#1f2a4a'
+    surface-strong: '#2f3a5e'
+    text: '#ffffff'                    # primary body on navy
+    text-strong: '#ffffff'
+    text-muted: '#a4adc8'              # muted on dark
+    text-soft: '#727a98'               # soft on dark
+    text-disabled: '#525a78'
+    text-on-brand: '#ffffff'
+    text-link: '#3a91ff'               # lifted link blue on dark
+    text-link-hover: '#5cabff'
+    brand: '#0070f3'                   # action blue takes brand role on dark (navy IS the canvas)
+    brand-hover: '#3a91ff'
+    brand-soft: 'rgba(0, 112, 243, 0.18)'
+    brand-deep: '#0058c2'
+    accent-blue: '#3a91ff'
+    accent-blue-hover: '#5cabff'
+    accent-blue-active: '#0070f3'
+    accent-blue-soft: 'rgba(58, 145, 255, 0.18)'
+    accent-cyan: '#00d4ff'
+    accent-purple: '#a78bfa'
+    accent-green: '#34d399'
+    accent-orange: '#fbbf24'
+    accent-red: '#f87171'
+    border: '#27314e'                  # border on dark surfaces
+    border-soft: '#1a2440'
+    border-strong: '#3f4a6e'
+    border-focus: '#3a91ff'
+    on-brand: '#ffffff'
+    code-bg-light: '#1a1d29'           # code block on dark stays code-themed
+    code-bg-dark: '#080f1f'
+    code-text: '#e5e7eb'
+    code-comment: '#7d839a'
+    code-keyword: '#c084fc'
+    code-string: '#86efac'
+    code-function: '#60a5fa'
+    code-variable: '#fcd34d'
+    code-punct: '#a4adc8'
+    code-number: '#fb923c'
+    shadow-card: 'rgba(0,0,0,0.40)'
+    shadow-modal: 'rgba(0,0,0,0.60)'
+    shadow-popover: 'rgba(0,0,0,0.50)'
+    shadow-elevated: 'rgba(0,0,0,0.45)'
+    success: '#34d399'
+    success-soft: 'rgba(52, 211, 153, 0.18)'
+    warning: '#fbbf24'
+    warning-soft: 'rgba(251, 191, 36, 0.18)'
+    danger: '#f87171'
+    danger-soft: 'rgba(248, 113, 113, 0.18)'
+    info: '#3a91ff'
+    info-soft: 'rgba(58, 145, 255, 0.18)'
 
 typography:
   display:

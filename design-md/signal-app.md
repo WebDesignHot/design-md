@@ -12,57 +12,109 @@ preview_swatch: ['#ffffff', '#3a76f0', '#1c1f23']
 related: [telegram, threads-app, twitter-x]
 description: 'Signal is the most restrained surface in modern messaging — a paper-white `#ffffff` canvas with a confident `#3a76f0` Signal blue used sparingly for the primary action, Inter pulling display through body in the canonical privacy-tooling register, and the absolute minimum visual chrome compatible with explaining end-to-end encrypted messaging to non-technical readers. The brand''s argument is "we are a nonprofit, we have no ads, your messages are encrypted by default, and you can read the protocol on GitHub." Where Telegram leans into colourful sticker culture and WhatsApp leans into bubbly chat-app warmth, Signal commits to **deliberate minimalism**: one CTA blue, one Donate-deeper-blue, no decorative illustration beyond the whisper-mark logo, no celebrity endorsements (Edward Snowden''s tweet is the closest the brand gets), and section spacing generous enough that every block of body type breathes. Body type sits at 16px / 400 / 1.6 line-height — book-readable density. The encryption claim is rendered as a Signal Foundation 501(c)(3) banner at the bottom: "Signal is funded entirely by grants and donations from people like you." This is a brand whose visual restraint is an extension of its political position — you cannot trust an ad-supported messaging app to keep your messages private, and the visual surface refuses to look like one.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'OS-level appearance follow on the desktop apps; web marketing site honors prefers-color-scheme. Persisted per-platform in app settings.'
+
 colors:
-  bg: '#ffffff'                    # primary canvas
-  bg-warm: '#f8f9fa'                # alt section band
-  bg-muted: '#f1f3f5'               # subtle bg variation
-  bg-deep: '#1c1f23'                # footer dark band
-  bg-promo: '#e8efff'               # soft Signal-blue promo band
-  bg-cream: '#fef9e9'                # warm cream — donate / nonprofit ask band
-  surface: '#ffffff'                # default card
-  surface-elevated: '#ffffff'        # modal floor (with shadow)
-  surface-hover: '#f8f9fa'           # nav hover, list-row hover
-  surface-soft: '#f4f7ff'            # secondary blue-tinted surface
-  surface-strong: '#e8eaee'          # divider band
-  surface-dark: '#2e3138'            # dark card on dark surfaces
-  text: '#1c1f23'                    # primary body — warm near-black
-  text-strong: '#0a0d11'             # display headlines
-  text-muted: '#5b6068'              # secondary metadata
-  text-soft: '#7a7f87'               # tertiary captions
-  text-disabled: '#a8acb3'           # disabled state
-  text-on-brand: '#ffffff'            # text on Signal blue
-  text-on-dark: '#ffffff'             # text on bg-deep
-  text-link: '#2e62d8'               # inline link deeper blue
-  text-link-hover: '#1f4ab2'         # link pressed
-  brand: '#3a76f0'                   # Signal Blue — primary CTA, brand surface
-  brand-hover: '#2e62d8'             # primary button hover
-  brand-active: '#234fb8'            # pressed
-  brand-soft: '#e8efff'              # soft tint surface, badge bg
-  brand-deep: '#234fb8'              # deeper blue for inline links + dark surfaces
-  donate-blue: '#2c6bed'             # donate CTA (slight differentiation)
-  accent-cyan: '#5fb3f9'             # subtle accent
-  accent-yellow: '#f1c40f'           # not heavily used; awareness highlight
-  accent-orange: '#e69138'           # warning
-  accent-red: '#d04a3c'              # error / danger
-  accent-green: '#3eaa6c'             # encryption-verified, success
-  border: '#e0e3e8'                  # default hairline
-  border-soft: '#eef0f2'             # subtle divider
-  border-strong: '#bcc0c7'           # focused field outline
-  border-focus: '#3a76f0'            # focus ring
-  on-brand: '#ffffff'                # label on brand surface
-  encryption-verified: '#3eaa6c'     # green lock — verified safety number
-  encryption-unverified: '#7a7f87'   # grey lock — encrypted but unverified contact
-  shadow-card: 'rgba(28,31,35,0.06)' # default card shadow
-  shadow-modal: 'rgba(28,31,35,0.20)' # modal floor
-  shadow-popover: 'rgba(28,31,35,0.12)' # popover/dropdown
-  success: '#3eaa6c'                 # message delivered, verified
-  success-soft: '#e0f3e7'            # success bg
-  warning: '#e69138'                 # warning amber
-  warning-soft: '#fdf3e8'            # warning bg
-  danger: '#d04a3c'                  # error, security warning
-  danger-soft: '#fbeae6'             # error bg
-  info: '#3a76f0'                    # info blue
-  info-soft: '#e8efff'               # info bg
+  light:
+    bg: '#ffffff'                    # primary canvas
+    bg-warm: '#f8f9fa'                # alt section band
+    bg-muted: '#f1f3f5'               # subtle bg variation
+    bg-promo: '#e8efff'               # soft Signal-blue promo band
+    bg-cream: '#fef9e9'                # warm cream — donate / nonprofit ask band
+    surface: '#ffffff'                # default card
+    surface-elevated: '#ffffff'        # modal floor
+    surface-hover: '#f8f9fa'           # nav hover, list-row hover
+    surface-soft: '#f4f7ff'            # secondary blue-tinted surface
+    surface-strong: '#e8eaee'          # divider band
+    text: '#1c1f23'                    # primary body — warm near-black
+    text-strong: '#0a0d11'             # display headlines
+    text-muted: '#5b6068'              # secondary metadata
+    text-soft: '#7a7f87'               # tertiary captions
+    text-disabled: '#a8acb3'           # disabled state
+    text-on-brand: '#ffffff'            # text on Signal blue
+    text-link: '#2e62d8'               # inline link deeper blue
+    text-link-hover: '#1f4ab2'         # link pressed
+    brand: '#3a76f0'                   # Signal Blue — primary CTA, brand surface
+    brand-hover: '#2e62d8'             # primary button hover
+    brand-active: '#234fb8'            # pressed
+    brand-soft: '#e8efff'              # soft tint surface, badge bg
+    brand-deep: '#234fb8'              # deeper blue for inline links
+    donate-blue: '#2c6bed'             # donate CTA
+    accent-cyan: '#5fb3f9'
+    accent-yellow: '#f1c40f'
+    accent-orange: '#e69138'
+    accent-red: '#d04a3c'
+    accent-green: '#3eaa6c'
+    border: '#e0e3e8'                  # default hairline
+    border-soft: '#eef0f2'             # subtle divider
+    border-strong: '#bcc0c7'           # focused field outline
+    border-focus: '#3a76f0'            # focus ring
+    on-brand: '#ffffff'
+    encryption-verified: '#3eaa6c'     # green lock — verified safety number
+    encryption-unverified: '#7a7f87'   # grey lock — encrypted but unverified contact
+    shadow-card: 'rgba(28,31,35,0.06)'
+    shadow-modal: 'rgba(28,31,35,0.20)'
+    shadow-popover: 'rgba(28,31,35,0.12)'
+    success: '#3eaa6c'
+    success-soft: '#e0f3e7'
+    warning: '#e69138'
+    warning-soft: '#fdf3e8'
+    danger: '#d04a3c'
+    danger-soft: '#fbeae6'
+    info: '#3a76f0'
+    info-soft: '#e8efff'
+
+  dark:
+    bg: '#1c1f23'                      # warm near-black canvas (Signal desktop dark)
+    bg-warm: '#23272d'                 # alt dark band
+    bg-muted: '#2a2e35'                # subtle dark variation
+    bg-promo: 'rgba(58, 118, 240, 0.18)' # tinted promo on dark
+    bg-cream: 'rgba(241, 196, 15, 0.10)' # tinted cream band on dark
+    surface: '#2e3138'                 # default dark card
+    surface-elevated: '#383b42'        # raised dark card / modal
+    surface-hover: '#3a3e45'           # nav hover on dark
+    surface-soft: 'rgba(58, 118, 240, 0.12)'
+    surface-strong: '#383b42'
+    text: '#f0f3f7'                    # primary body on dark
+    text-strong: '#ffffff'
+    text-muted: '#a3a9b3'              # muted on dark
+    text-soft: '#7a7f87'               # soft on dark
+    text-disabled: '#5b6068'
+    text-on-brand: '#ffffff'
+    text-link: '#5b8df5'               # lifted blue link on dark
+    text-link-hover: '#7ea4f9'
+    brand: '#5b8df5'                   # lifted Signal Blue for AAA on dark
+    brand-hover: '#7ea4f9'
+    brand-active: '#3a76f0'
+    brand-soft: 'rgba(91, 141, 245, 0.18)'
+    brand-deep: '#234fb8'
+    donate-blue: '#5b8df5'
+    accent-cyan: '#5fb3f9'             # accents stay across themes
+    accent-yellow: '#f1c40f'
+    accent-orange: '#e69138'
+    accent-red: '#d04a3c'
+    accent-green: '#3eaa6c'
+    border: '#383b42'                  # default hairline on dark
+    border-soft: '#2e3138'
+    border-strong: '#4a4e57'
+    border-focus: '#5b8df5'
+    on-brand: '#ffffff'
+    encryption-verified: '#3eaa6c'     # safety lock cues stay across themes
+    encryption-unverified: '#a3a9b3'
+    shadow-card: 'rgba(0,0,0,0.40)'
+    shadow-modal: 'rgba(0,0,0,0.60)'
+    shadow-popover: 'rgba(0,0,0,0.50)'
+    success: '#3eaa6c'
+    success-soft: 'rgba(62, 170, 108, 0.18)'
+    warning: '#e69138'
+    warning-soft: 'rgba(230, 145, 56, 0.18)'
+    danger: '#d04a3c'
+    danger-soft: 'rgba(208, 74, 60, 0.18)'
+    info: '#5b8df5'
+    info-soft: 'rgba(91, 141, 245, 0.18)'
 
 typography:
   display:

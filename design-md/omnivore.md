@@ -12,83 +12,123 @@ preview_swatch: ['#fdfdfb', '#1f2937', '#10b981']
 related: [readwise, ghost, github]
 description: 'Omnivore (now archived after the Eleven Labs acquisition) was the open-source read-it-later app dressed in a paper-toned near-white reading canvas with a focused emerald `#10b981` brand and a warm-grey body register set in Inter. Where Readwise leaned warm-cream and editorial, Omnivore leaned cool-paper and structural — a calmer, more developer-flavoured Pocket / Instapaper for the 2024–25 era. The site paired the near-white `#fdfdfb` canvas with a meaningful slate `#0f1419` reader-mode dark band, a Lora serif inside the reader product mockup (modelling the actual saved-article reading surface), and JetBrains Mono in the open-source badge. The dark mode was cooler than Linear''s near-black and slightly bluer than Notion''s campaign-zone — distinctively Omnivore. Now archived but elegant, the language remains a useful reference for open-source reading-app conventions: emerald-on-paper plus slate-dark-mode duet, with the warm amber `#fbbf24` reserved for in-text highlighter glyphs only.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Reader-mode toggle in the header; persisted in localStorage. Light is the marketing/inbox default; dark is the reader-mode signature surface.'
+
 colors:
-  # Primary
-  bg: '#fdfdfb'                          # near-white paper-toned canvas — the defining ground
-  bg-pure-white: '#ffffff'               # rare pure white inside cards
-  bg-warm: '#faf9f5'                     # faintest warm paper-cream tonal panel
-  bg-cool: '#f9fafb'                     # cool-grey alternative panel
-  bg-dark: '#0f1419'                     # reader-mode dark canvas — meaningful slate, cooler than Linear's near-black
-  bg-dark-elevated: '#1f2937'            # dark-mode card and panel
-  bg-dark-deeper: '#0a0e13'              # deepest dark-mode ground for full-bleed bands
-  surface: '#ffffff'                     # white card on near-white canvas
-  surface-2: '#f3f4f6'                   # second-level neutral
-  surface-dark: '#1f2937'                # dark-mode card surface
-  # Text (light mode)
-  text: '#1f2937'                        # body, slate-900 — warm-grey on paper
-  text-strong: '#0f1419'                 # display, deep slate
-  text-medium: '#374151'                 # secondary heading
-  text-soft: '#4b5563'                   # supporting copy
-  text-muted: '#6b7280'                  # captions, helper text
-  text-faint: '#9ca3af'                  # tertiary, eyebrows, metadata
-  text-disabled: '#d1d5db'               # disabled label
-  # Text (dark mode)
-  text-on-dark: '#f3f4f6'                # primary body in dark mode
-  text-on-dark-strong: '#ffffff'         # display in dark mode
-  text-on-dark-medium: '#d1d5db'         # secondary in dark mode
-  text-on-dark-muted: '#9ca3af'          # caption in dark mode
-  text-on-dark-faint: '#6b7280'          # tertiary in dark mode
-  # Brand
-  brand: '#10b981'                       # emerald action — the signature
-  brand-hover: '#059669'                 # pressed/hover emerald
-  brand-deep: '#047857'                  # deep green active state
-  brand-soft: '#d1fae5'                  # tint for badges and selected backgrounds
-  brand-tint: 'rgba(16, 185, 129, 0.10)' # translucent emerald hover overlay
-  on-brand: '#ffffff'                    # white label on emerald
-  # Accent
-  accent: '#fbbf24'                      # warm amber — the highlighter colour, lives inside the reader mockup only
-  accent-soft: '#fef3c7'                 # amber wash background for highlighted-passage demos
-  accent-deep: '#d97706'                 # darker amber for hover on highlighter previews
-  # Interactive
-  link: '#10b981'                        # links use the emerald in light mode
-  link-hover: '#059669'                  # darker emerald on hover
-  link-visited: '#6b7280'                # muted slate
-  link-on-dark: '#34d399'                # lifted emerald in dark mode
-  selected-bg: '#d1fae5'
-  disabled: '#d1d5db'
-  cta-bg: '#10b981'
-  cta-text: '#ffffff'
-  # Neutral scale
-  ink-50: '#f9fafb'
-  ink-100: '#f3f4f6'
-  ink-200: '#e5e7eb'
-  ink-300: '#d1d5db'
-  ink-400: '#9ca3af'
-  ink-500: '#6b7280'
-  ink-600: '#4b5563'
-  ink-700: '#374151'
-  ink-800: '#1f2937'
-  ink-900: '#0f1419'
-  # Borders
-  border: '#e5e7eb'                      # default cool hairline
-  border-strong: '#d1d5db'               # emphasised rule
-  border-subtle: '#f3f4f6'               # quietest division
-  border-emerald: 'rgba(16, 185, 129, 0.30)' # emerald-tinted hairline
-  border-dark: '#374151'                 # dark-mode default border
-  border-dark-strong: '#4b5563'          # dark-mode emphasised
-  # Shadow palette
-  shadow-color: 'rgba(15, 20, 25, 0.06)' # cool-tinted shadow base
-  shadow-color-strong: 'rgba(15, 20, 25, 0.12)'
-  shadow-color-emerald: 'rgba(16, 185, 129, 0.18)' # rare emerald-tinted glow
-  # Semantic
-  success-bg: '#d1fae5'                  # emerald wash
-  success-text: '#047857'
-  warning-bg: '#fef3c7'                  # amber wash
-  warning-text: '#92400e'
-  danger-bg: '#fee2e2'
-  danger-text: '#991b1b'
-  info-bg: '#dbeafe'
-  info-text: '#1e40af'
+  light:
+    bg: '#fdfdfb'                          # near-white paper-toned canvas — the defining ground
+    bg-pure-white: '#ffffff'               # rare pure white inside cards
+    bg-warm: '#faf9f5'                     # faintest warm paper-cream tonal panel
+    bg-cool: '#f9fafb'                     # cool-grey alternative panel
+    surface: '#ffffff'                     # white card on near-white canvas
+    surface-2: '#f3f4f6'                   # second-level neutral
+    text: '#1f2937'                        # body, slate-900 — warm-grey on paper
+    text-strong: '#0f1419'                 # display, deep slate
+    text-medium: '#374151'                 # secondary heading
+    text-soft: '#4b5563'                   # supporting copy
+    text-muted: '#6b7280'                  # captions, helper text
+    text-faint: '#9ca3af'                  # tertiary, eyebrows, metadata
+    text-disabled: '#d1d5db'               # disabled label
+    brand: '#10b981'                       # emerald action — the signature
+    brand-hover: '#059669'                 # pressed/hover emerald
+    brand-deep: '#047857'                  # deep green active state
+    brand-soft: '#d1fae5'                  # tint for badges and selected backgrounds
+    brand-tint: 'rgba(16, 185, 129, 0.10)' # translucent emerald hover overlay
+    on-brand: '#ffffff'                    # white label on emerald
+    accent: '#fbbf24'                      # warm amber — the highlighter colour, lives inside the reader mockup only
+    accent-soft: '#fef3c7'                 # amber wash background for highlighted-passage demos
+    accent-deep: '#d97706'                 # darker amber for hover on highlighter previews
+    link: '#10b981'                        # links use the emerald in light mode
+    link-hover: '#059669'                  # darker emerald on hover
+    link-visited: '#6b7280'                # muted slate
+    selected-bg: '#d1fae5'
+    disabled: '#d1d5db'
+    cta-bg: '#10b981'
+    cta-text: '#ffffff'
+    ink-50: '#f9fafb'
+    ink-100: '#f3f4f6'
+    ink-200: '#e5e7eb'
+    ink-300: '#d1d5db'
+    ink-400: '#9ca3af'
+    ink-500: '#6b7280'
+    ink-600: '#4b5563'
+    ink-700: '#374151'
+    ink-800: '#1f2937'
+    ink-900: '#0f1419'
+    border: '#e5e7eb'                      # default cool hairline
+    border-strong: '#d1d5db'               # emphasised rule
+    border-subtle: '#f3f4f6'               # quietest division
+    border-emerald: 'rgba(16, 185, 129, 0.30)' # emerald-tinted hairline
+    shadow-color: 'rgba(15, 20, 25, 0.06)' # cool-tinted shadow base
+    shadow-color-strong: 'rgba(15, 20, 25, 0.12)'
+    shadow-color-emerald: 'rgba(16, 185, 129, 0.18)' # rare emerald-tinted glow
+    success-bg: '#d1fae5'
+    success-text: '#047857'
+    warning-bg: '#fef3c7'
+    warning-text: '#92400e'
+    danger-bg: '#fee2e2'
+    danger-text: '#991b1b'
+    info-bg: '#dbeafe'
+    info-text: '#1e40af'
+
+  dark:
+    bg: '#0f1419'                          # reader-mode dark canvas — meaningful slate, cooler than Linear's near-black
+    bg-pure-white: '#0a0e13'               # mirrors light/bg-pure-white role — deeper than canvas
+    bg-warm: '#141a20'                     # warm-tinted dark panel
+    bg-cool: '#0f1419'                     # canvas alias
+    surface: '#1f2937'                     # dark-mode card surface
+    surface-2: '#374151'                   # second-level dark surface
+    text: '#f3f4f6'                        # primary body in dark mode
+    text-strong: '#ffffff'                 # display in dark mode
+    text-medium: '#d1d5db'                 # secondary in dark mode
+    text-soft: '#a3a9b3'
+    text-muted: '#9ca3af'                  # caption in dark mode
+    text-faint: '#6b7280'                  # tertiary in dark mode
+    text-disabled: '#4b5563'
+    brand: '#34d399'                       # lifted emerald for dark legibility
+    brand-hover: '#10b981'                 # pressed/hover
+    brand-deep: '#059669'                  # deep green active
+    brand-soft: 'rgba(52, 211, 153, 0.18)' # translucent tint for badges
+    brand-tint: 'rgba(52, 211, 153, 0.10)'
+    on-brand: '#0f1419'                    # dark canvas text on emerald
+    accent: '#fbbf24'                      # amber highlighter — chromatic identity stays
+    accent-soft: 'rgba(251, 191, 36, 0.20)'
+    accent-deep: '#f59e0b'
+    link: '#34d399'                        # lifted emerald links on dark
+    link-hover: '#6ee7b7'
+    link-visited: '#9ca3af'
+    selected-bg: 'rgba(52, 211, 153, 0.18)'
+    disabled: '#4b5563'
+    cta-bg: '#34d399'
+    cta-text: '#0f1419'
+    ink-50: '#0f1419'                      # ink scale inverts in dark
+    ink-100: '#1f2937'
+    ink-200: '#374151'
+    ink-300: '#4b5563'
+    ink-400: '#6b7280'
+    ink-500: '#9ca3af'
+    ink-600: '#d1d5db'
+    ink-700: '#e5e7eb'
+    ink-800: '#f3f4f6'
+    ink-900: '#ffffff'
+    border: '#374151'                      # dark-mode default border
+    border-strong: '#4b5563'               # dark-mode emphasised
+    border-subtle: '#1f2937'
+    border-emerald: 'rgba(52, 211, 153, 0.30)'
+    shadow-color: 'rgba(0, 0, 0, 0.40)'    # deeper shadows on dark
+    shadow-color-strong: 'rgba(0, 0, 0, 0.60)'
+    shadow-color-emerald: 'rgba(52, 211, 153, 0.24)'
+    success-bg: 'rgba(52, 211, 153, 0.16)'
+    success-text: '#34d399'
+    warning-bg: 'rgba(251, 191, 36, 0.16)'
+    warning-text: '#fbbf24'
+    danger-bg: 'rgba(239, 68, 68, 0.16)'
+    danger-text: '#f87171'
+    info-bg: 'rgba(96, 165, 250, 0.16)'
+    info-text: '#93c5fd'
 
 typography:
   display:

@@ -12,59 +12,81 @@ preview_swatch: ['#ffffff', '#000000', '#0099ff']
 related: [webflow, vercel, figma]
 description: 'Framer''s site is a demo of itself. Black `#000` headlines hammer against pure white, then break into electric gradient floods (cyan → magenta → orange → violet) and dark-mode hero cards. Inter Display 700 at 96px+, motion baked into every scroll, and a `#0099ff` action blue that signals "click to design". It''s a no-code tool dressed as a 2026 design magazine — the marketing page renders itself as a Framer canvas.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing site default is light/white; hero bands and the canvas product itself ship dark. Toggle persisted in localStorage; respects prefers-color-scheme on first paint.'
+
 colors:
-  # Primary
-  bg: '#ffffff'                    # marketing canvas — full white, no warm tint
-  bg-dark: '#000000'               # hero band, dark-mode flip — full black
-  bg-elev: '#fafafa'               # near-white panel
-  bg-elev-2: '#f2f2f2'             # second-level neutral
-  surface: '#fafafa'               # default card on white
-  surface-2: '#f2f2f2'             # hover card
-  surface-3: '#ebebeb'             # active card
-  surface-dark: '#0a0a0a'          # dark-mode card body
-  surface-dark-2: '#141414'        # dark-mode hover
-  surface-dark-3: '#1f1f1f'        # dark-mode pressed
+  light:
+    bg: '#ffffff'                    # marketing canvas — full white, no warm tint
+    bg-elev: '#fafafa'               # near-white panel
+    bg-elev-2: '#f2f2f2'             # second-level neutral
+    surface: '#fafafa'               # default card on white
+    surface-2: '#f2f2f2'             # hover card
+    surface-3: '#ebebeb'             # active card
+    text: '#000000'                  # body on white — full black, no opacity tilt
+    text-strong: '#000000'           # display
+    text-muted: '#666666'            # captions
+    text-soft: '#999999'             # tertiary, meta
+    text-faint: '#bfbfbf'            # disabled
+    text-on-brand: '#ffffff'         # white on action blue
+    brand: '#0099ff'                 # Framer action blue — pill CTA only
+    brand-hover: '#0080d6'           # pressed
+    brand-active: '#0066ad'          # active
+    accent-cyan: '#00d2ff'           # Holo Shader stop 1
+    accent-magenta: '#ff00aa'        # Holo Shader stop 2
+    accent-orange: '#ff6b00'         # Holo Shader stop 3
+    accent-violet: '#7c3aed'         # Holo Shader stop 4
+    accent-pink: '#ff66cc'           # secondary tint
+    accent-blue-deep: '#0044ff'      # gradient overlap zone
+    border: '#e5e5e5'                # default hairline on white
+    border-strong: '#cccccc'         # emphasised
+    border-subtle: '#f0f0f0'         # softest
+    success: '#22c55e'
+    success-bg: '#dcfce7'
+    warning: '#f59e0b'
+    warning-bg: '#fef3c7'
+    danger: '#ef4444'
+    danger-bg: '#fee2e2'
+    info: '#0099ff'
+    info-bg: '#dbeafe'
+    on-brand: '#ffffff'
 
-  # Text
-  text: '#000000'                  # body on white — full black, no opacity tilt
-  text-strong: '#000000'           # display
-  text-muted: '#666666'            # captions
-  text-soft: '#999999'             # tertiary, meta
-  text-faint: '#bfbfbf'            # disabled
-  text-on-dark: '#ffffff'          # body on black
-  text-on-dark-muted: '#a3a3a3'    # captions on black
-  text-on-dark-soft: '#737373'     # tertiary on black
-  text-on-brand: '#ffffff'         # white on action blue
-
-  # Brand & gradient quartet
-  brand: '#0099ff'                 # Framer action blue — pill CTA only
-  brand-hover: '#0080d6'           # pressed
-  brand-active: '#0066ad'          # active
-  accent-cyan: '#00d2ff'           # Holo Shader stop 1
-  accent-magenta: '#ff00aa'        # Holo Shader stop 2
-  accent-orange: '#ff6b00'         # Holo Shader stop 3
-  accent-violet: '#7c3aed'         # Holo Shader stop 4
-  accent-pink: '#ff66cc'           # secondary tint
-  accent-blue-deep: '#0044ff'      # gradient overlap zone
-
-  # Borders
-  border: '#e5e5e5'                # default hairline on white
-  border-strong: '#cccccc'         # emphasised
-  border-subtle: '#f0f0f0'         # softest
-  border-dark: '#1f1f1f'           # default hairline on black
-  border-dark-strong: '#333333'    # emphasised on black
-  border-dark-subtle: '#141414'    # softest on black
-
-  # Semantic
-  success: '#22c55e'
-  success-bg: '#dcfce7'
-  warning: '#f59e0b'
-  warning-bg: '#fef3c7'
-  danger: '#ef4444'
-  danger-bg: '#fee2e2'
-  info: '#0099ff'
-  info-bg: '#dbeafe'
-  on-brand: '#ffffff'
+  dark:
+    bg: '#000000'                    # hero band / dark-mode flip — full black
+    bg-elev: '#0a0a0a'               # near-black panel
+    bg-elev-2: '#141414'             # second-level dark
+    surface: '#0a0a0a'               # dark-mode card body
+    surface-2: '#141414'             # dark-mode hover
+    surface-3: '#1f1f1f'             # dark-mode pressed
+    text: '#ffffff'                  # body on black
+    text-strong: '#ffffff'           # display
+    text-muted: '#a3a3a3'            # captions on black
+    text-soft: '#737373'             # tertiary on black
+    text-faint: '#525252'            # disabled
+    text-on-brand: '#ffffff'
+    brand: '#0099ff'                 # blue stays — gradient quartet identity
+    brand-hover: '#3aafff'           # lifted on dark
+    brand-active: '#66c4ff'
+    accent-cyan: '#00d2ff'
+    accent-magenta: '#ff00aa'
+    accent-orange: '#ff6b00'
+    accent-violet: '#7c3aed'
+    accent-pink: '#ff66cc'
+    accent-blue-deep: '#0044ff'
+    border: '#1f1f1f'                # default hairline on black
+    border-strong: '#333333'         # emphasised on black
+    border-subtle: '#141414'         # softest on black
+    success: '#22c55e'
+    success-bg: 'rgba(34, 197, 94, 0.15)'
+    warning: '#f59e0b'
+    warning-bg: 'rgba(245, 158, 11, 0.15)'
+    danger: '#ef4444'
+    danger-bg: 'rgba(239, 68, 68, 0.15)'
+    info: '#0099ff'
+    info-bg: 'rgba(0, 153, 255, 0.15)'
+    on-brand: '#ffffff'
 
 typography:
   display:

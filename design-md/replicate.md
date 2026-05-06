@@ -12,48 +12,71 @@ preview_swatch: ['#ffffff', '#202020', '#fcfcfc']
 related: [vercel, anthropic, github]
 description: 'Replicate splits its marketing into two layers — a bright `#ffffff` page chrome and a near-black `#202020` hero canvas where rb-Freigeist Neue runs at 72px / weight 700. The system uses zero corner radius (sharp rectangles), basier-square sans for body, and JetBrains Mono for the omnipresent code samples that double as the product demo. Every section shows the literal `replicate.run("...")` API call rendered inline. Where every other AI/API site rounds to 6–12px, Replicate refuses — the brutalist 0px geometry says "this is the API, rendered." The two-canvas light/dark rhythm creates an immediate "before/after" beat: light is your code, dark is the model running.'
 
+themes:
+  default: light
+  available: [light, dark]
+  switch-via: 'Marketing chrome is light by default; the hero band and code-running panels invert to dark canvas. Toggle persisted in localStorage on the dashboard.'
+
 colors:
-  # Primary
-  bg: '#ffffff'                  # bright page chrome canvas
-  bg-dark: '#202020'             # near-black hero canvas — the second ground
-  bg-alt: '#fdfdfd'              # near-white alternate panel
-  surface: '#fcfcfc'             # off-white code-block surface (used inside dark hero)
-  surface-light: '#f5f5f5'       # neutral-100 inset panel
-  surface-dark-soft: '#2a2a2a'   # raised panel within dark canvas
-  surface-dark-strong: '#333333' # emphasised panel within dark canvas
-  text: '#202020'                # primary copy on light
-  text-strong: '#000000'         # rare absolute black for ultra-emphasis
-  text-medium: '#404040'         # secondary copy on light
-  text-soft: '#646464'           # supporting copy, metadata
-  text-muted: '#8a8a8a'          # captions, faint UI
-  text-faint: '#b3b3b3'          # disabled, footer microcopy
-  text-on-dark: '#fcfcfc'        # near-pure white for text on dark canvas
-  text-on-dark-soft: '#a3a3a3'   # muted on dark
-  # Brand
-  brand: '#202020'               # the brand colour is the dark canvas itself
-  brand-deep: '#000000'          # absolute black for active/pressed states
-  on-brand: '#fcfcfc'            # near-pure white label on the dark canvas
-  # Interactive
-  link: '#202020'                # links are dark on light, distinguished by underline
-  link-hover: '#000000'          # absolute-black link hover
-  link-on-dark: '#fcfcfc'        # links on dark canvas stay near-white
-  selected-bg: '#f5f5f5'         # selected state (rare on chrome)
-  disabled: '#b3b3b3'
-  # Borders
-  border: '#e9e9e9'              # neutral light grey hairline (1px solid)
-  border-strong: '#cccccc'       # emphasised divider
-  border-subtle: '#f0f0f0'       # quietest division
-  border-dark: 'rgba(255, 255, 255, 0.10)' # 10% white hairline within dark canvas
-  border-dark-strong: 'rgba(255, 255, 255, 0.18)' # emphasised on dark
-  # Semantic
-  success-bg: '#e7f5ec'
-  success-text: '#1f6b3e'
-  warning-bg: '#fef6e4'
-  warning-text: '#7a5a14'
-  danger-bg: '#fbebec'
-  danger-text: '#9a2c34'
-  info-bg: '#eef2f7'
-  info-text: '#1f4a7a'
+  light:
+    bg: '#ffffff'                  # bright page chrome canvas
+    bg-alt: '#fdfdfd'              # near-white alternate panel
+    surface: '#fcfcfc'             # off-white code-block surface
+    surface-light: '#f5f5f5'       # neutral-100 inset panel
+    text: '#202020'                # primary copy
+    text-strong: '#000000'         # rare absolute black for ultra-emphasis
+    text-medium: '#404040'         # secondary copy
+    text-soft: '#646464'           # supporting copy, metadata
+    text-muted: '#8a8a8a'          # captions, faint UI
+    text-faint: '#b3b3b3'          # disabled, footer microcopy
+    brand: '#202020'               # the brand colour is the dark canvas itself
+    brand-deep: '#000000'          # absolute black for active/pressed states
+    on-brand: '#fcfcfc'            # near-pure white label on the dark canvas
+    link: '#202020'                # links are dark on light, distinguished by underline
+    link-hover: '#000000'          # absolute-black link hover
+    selected-bg: '#f5f5f5'         # selected state (rare on chrome)
+    disabled: '#b3b3b3'
+    border: '#e9e9e9'              # neutral light grey hairline (1px solid)
+    border-strong: '#cccccc'       # emphasised divider
+    border-subtle: '#f0f0f0'       # quietest division
+    success-bg: '#e7f5ec'
+    success-text: '#1f6b3e'
+    warning-bg: '#fef6e4'
+    warning-text: '#7a5a14'
+    danger-bg: '#fbebec'
+    danger-text: '#9a2c34'
+    info-bg: '#eef2f7'
+    info-text: '#1f4a7a'
+
+  dark:
+    bg: '#202020'                  # near-black hero canvas — Replicate's signature ground
+    bg-alt: '#1a1a1a'              # alternate dark panel
+    surface: '#2a2a2a'             # raised panel within dark canvas
+    surface-light: '#333333'       # emphasised panel within dark canvas
+    text: '#fcfcfc'                # near-pure white for text on dark
+    text-strong: '#ffffff'         # rare absolute white emphasis
+    text-medium: '#d4d4d4'         # secondary copy on dark
+    text-soft: '#a3a3a3'           # supporting on dark
+    text-muted: '#7a7a7a'          # captions on dark
+    text-faint: '#525252'          # disabled, footer microcopy on dark
+    brand: '#fcfcfc'               # brand inverts on dark — bright label on dark canvas
+    brand-deep: '#ffffff'          # absolute white pressed state
+    on-brand: '#202020'            # near-black label on inverted brand
+    link: '#fcfcfc'                # links on dark canvas stay near-white
+    link-hover: '#ffffff'
+    selected-bg: '#2a2a2a'
+    disabled: '#525252'
+    border: 'rgba(255, 255, 255, 0.10)' # 10% white hairline within dark canvas
+    border-strong: 'rgba(255, 255, 255, 0.18)' # emphasised on dark
+    border-subtle: 'rgba(255, 255, 255, 0.05)'
+    success-bg: 'rgba(31, 107, 62, 0.20)'
+    success-text: '#3fb950'
+    warning-bg: 'rgba(122, 90, 20, 0.20)'
+    warning-text: '#d29922'
+    danger-bg: 'rgba(154, 44, 52, 0.20)'
+    danger-text: '#f85149'
+    info-bg: 'rgba(31, 74, 122, 0.20)'
+    info-text: '#79c0ff'
 
 typography:
   display:
