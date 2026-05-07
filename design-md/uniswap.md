@@ -1,0 +1,375 @@
+---
+name: Uniswap
+tagline: Uniswap Pink on white — DEX design with Basel sans, unicorn-mark whimsy, and rounded-card softness in a usually-brutalist DeFi space.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:45.378Z
+author: webdesignhot
+source_url: https://uniswap.org
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [fintech]
+tags: [light, playful, sans, rounded, bright]
+preview_swatch: ['#ffffff', '#ff007a', '#131313']
+related: [phantom-app, metamask, arbitrum]
+description: 'Uniswap''s site is the rare DeFi protocol that has decided playfulness is on-brand. The canvas is white, headings sit in Basel (Lift Type''s rounded grotesque) at 56–88px, and the brand color is "Uniswap Pink" `#ff007a` — a hot magenta-pink that anchors every CTA. Where MetaMask leaned warm-friendly and Phantom leaned editorial-restrained, Uniswap leaned playful-confident: rounded 16-24px corners, soft pink-tinted shadows, the unicorn brand mark used sparingly (no NFT-bro language, but the unicorn shows up). Voice is direct-friendly: "Trade tokens", "Earn fees on liquidity". The whole brand reads as "DeFi for grown-ups who haven''t lost their sense of humor".'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f5f6fc'
+  bg-warm: '#fff4f9'
+  surface: '#ffffff'
+  surface-soft: '#fafbfd'
+  surface-strong: '#f1f3f9'
+  brand: '#ff007a'
+  brand-hover: '#e60069'
+  brand-pressed: '#cc005f'
+  brand-deep: '#a60052'
+  brand-tint: '#ffe5f1'
+  brand-soft: '#ffb3d6'
+  on-brand: '#ffffff'
+  text: '#131313'
+  text-strong: '#000000'
+  text-muted: '#5d6785'
+  text-soft: '#888d9b'
+  text-faint: '#cdcdcd'
+  text-on-brand: '#ffffff'
+  link: '#ff007a'
+  link-hover: '#cc005f'
+  selected-bg: '#ffe5f1'
+  border: '#ededed'
+  border-strong: '#cdcdcd'
+  border-soft: '#f7f8fa'
+  border-brand: '#ff007a'
+  unicorn-purple: '#9c52ff'
+  ethereum-blue: '#627eea'
+  success: '#27ae60'
+  warning: '#f3b71e'
+  danger: '#fd4040'
+  info: '#0068fc'
+
+typography:
+  display:
+    family: '"Basel", "Inter", "Söhne", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [500, 600, 700]
+  body:
+    family: '"Basel", "Inter", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 88, weight: 600, lineHeight: 1.0,  tracking: '-0.025em', family: display }
+    display-xl:      { size: 72, weight: 600, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    display-lg:      { size: 56, weight: 600, lineHeight: 1.1,  tracking: '-0.015em', family: display }
+    h1:              { size: 40, weight: 600, lineHeight: 1.15, tracking: '-0.012em', family: display }
+    h2:              { size: 32, weight: 500, lineHeight: 1.2,  tracking: '-0.008em', family: display }
+    h3:              { size: 24, weight: 500, lineHeight: 1.25, tracking: '-0.005em', family: display }
+    h4:              { size: 18, weight: 500, lineHeight: 1.3,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.2,  tracking: '0.10em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    label:           { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 16, weight: 600, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    address:         { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',        family: mono }
+    swap-amount:     { size: 36, weight: 500, lineHeight: 1.0,  tracking: '-0.012em', family: display }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 72
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 12px rgba(255, 0, 122, 0.06)'
+  card-hover: '0 8px 24px rgba(255, 0, 122, 0.14)'
+  modal: '0 24px 64px rgba(0, 0, 0, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 18.0
+  contrast-text-on-brand: 4.6
+  focus-ring: '3px solid #ff007a'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: pill, font: button }
+  button-secondary: { bg: brand-tint, text: brand-pressed, padding: '12px 30px', radius: pill, font: button }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 16, padding: 24, shadow: 'card' }
+  swap-card: { bg: surface, radius: 24, padding: 24, border: '1px solid border-soft', shadow: 'card' }
+  pill: { bg: surface-strong, text: text, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: surface-soft, border: '1px solid border-soft', text: text, radius: 16, padding: '16px 20px', focus-border: brand }
+
+lineage:
+  summary: 'Uniswap''s marketing system descends from Hayden Adams''s 2018 DEX origin, refined through V2 (2020) and V3 (2021) brand iterations. Uniswap Pink `#ff007a` was anchored in V2 — picked specifically to differentiate from the brutalist black-and-blue DeFi default of Aave, Compound, and Curve. Basel (Lift Type''s rounded grotesque sans) handles every heading. The unicorn-mark wordmark is Uniswap''s defining identity element, used sparingly as accent ornament rather than mascot. Cards have 16-24px radius — softer than typical DeFi protocols. Voice is direct-friendly: "Trade tokens", "Earn fees on liquidity". The whole brand reads as DeFi-for-grown-ups: sophisticated enough to handle V3 concentrated liquidity, friendly enough not to alienate first-time swappers.'
+  influences:
+    - { name: 'Hayden Adams (founder, 2018)', role: 'DEX origin shaping protocol-as-design instinct', url: 'https://en.wikipedia.org/wiki/Uniswap' }
+    - { name: 'Basel by Lift Type', role: 'rounded grotesque sans for friendly DeFi typography', url: 'https://lift-type.fr' }
+    - { name: 'Uniswap Pink (V2 introduction, 2020)', role: 'brand color anchored in V2 design refresh', url: 'https://uniswap.org' }
+    - { name: 'Aave / Compound / Curve', role: 'DeFi peers — Uniswap differentiated via pink + rounded', url: 'https://aave.com' }
+    - { name: 'Unicorn mark heritage', role: 'whimsy in sophisticated DeFi context', url: 'https://uniswap.org' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Uniswap's site is the rare DeFi protocol that has decided playfulness is on-brand. The canvas is white `#ffffff`, headings sit in Basel (Lift Type's rounded grotesque sans) at 56–88px, and the brand color is **Uniswap Pink** `#ff007a` — a hot magenta-pink that anchors every CTA. Where MetaMask leaned warm-friendly and Phantom leaned editorial-restrained, Uniswap leaned **playful-confident**: rounded 16-24px corners, soft pink-tinted shadows, the unicorn brand mark used sparingly (no NFT-bro language, but the unicorn shows up).
+
+The swap interface is the brand's product-as-hero pattern — a 24px-radius card with token selectors, amount inputs, and a single Pink CTA "Swap". Cards have 16px radius elsewhere. Voice is direct-friendly: "Trade tokens", "Earn fees on liquidity". The unicorn-mark wordmark anchors brand identity but doesn't get anthropomorphized.
+
+CTAs are pill-radius (9999px) with white text on Pink bg. Body uses 16px line-height 1.5. Mono renders Solana-style truncated addresses. The whole brand reads as **DeFi-for-grown-ups**: sophisticated enough for V3 concentrated liquidity, friendly enough not to alienate first-time swappers.
+
+**Key Characteristics:**
+- White canvas + Uniswap Pink `#ff007a`
+- Basel (Lift Type) rounded grotesque sans
+- Pill-radius CTAs, 16-24px cards
+- Swap-card UI (24px radius) as product hero
+- Unicorn wordmark mark, never anthropomorphized
+- Soft pink-tinted shadows
+- Mono for blockchain addresses
+- Light-only canvas (V4 site has both, marketing is light)
+- Direct-friendly voice
+- Light-grey-tinted purple `#9c52ff` and Ethereum blue accents in chips
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): white.
+- **Bg Soft** (`#f5f6fc`): cool-blue-tinted alternate.
+- **Bg Warm** (`#fff4f9`): pale-pink wash for hero.
+- **Text** (`#131313`): body.
+
+### Brand — Uniswap Pink
+- **Brand** (`#ff007a`): primary CTA, brand mark.
+- **Brand Hover** (`#e60069`), **Pressed** (`#cc005f`), **Deep** (`#a60052`).
+- **Brand Tint** (`#ffe5f1`): selection wash.
+
+### Accent
+- **Unicorn Purple** (`#9c52ff`): rare accent, sometimes in unicorn mark
+- **Ethereum Blue** (`#627eea`): chain chip color
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfd`), **Surface Strong** (`#f1f3f9`).
+
+### Borders
+- **Border** (`#ededed`), **Border Strong** (`#cdcdcd`), **Border Soft** (`#f7f8fa`).
+
+### Semantic
+- success `#27ae60`, warning `#f3b71e`, danger `#fd4040`, info `#0068fc`.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Basel (Lift Type's rounded grotesque). Falls back to Inter → Söhne.
+- **Mono**: JetBrains Mono / IBM Plex Mono for addresses.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Basel | 88 | 600 | 1.0 | -0.025em |
+| display-lg | Basel | 56 | 600 | 1.1 | -0.015em |
+| h1 | Basel | 40 | 600 | 1.15 | -0.012em |
+| h2 | Basel | 32 | 500 | 1.2 | -0.008em |
+| h3 | Basel | 24 | 500 | 1.25 | -0.005em |
+| eyebrow | Basel | 12 | 600 | 1.2 | 0.10em UPPER |
+| body | Basel | 16 | 400 | 1.5 | 0 |
+| label | Basel | 13 | 600 | 1.3 | 0.04em |
+| button | Basel | 16 | 600 | 1.0 | 0.02em |
+| address | JetBrains Mono | 13 | 400 | 1.5 | 0 |
+| swap-amount | Basel | 36 | 500 | 1.0 | -0.012em |
+
+### Principles
+- **Basel for everything**, mono for addresses.
+- **600 weight on display + buttons** — confident but not aggressive.
+- **Tight tracking on display** (-0.025em hero).
+- **Mixed case display, UPPER eyebrows.**
+
+## 4. Component Stylings
+
+### Buttons (3 variants — pill-radius)
+
+**Primary** — Uniswap Pink:
+- bg `#ff007a`, text white, 16px Basel 600 0.02em
+- Padding 14×32, radius 9999 (pill)
+- Hover: bg `#e60069`, scale 1.02
+
+**Secondary** — pink tint:
+- bg `brand-tint`, text `brand-pressed`, pill radius
+
+**Ghost**: bg transparent, text pink, padding 10×20.
+
+### Cards
+- bg white, **16px radius**, padding 24
+- Soft pink-tinted shadow `0 2px 12px rgba(255,0,122,0.06)`
+- Hover: shadow shifts to `0 8px 24px rgba(255,0,122,0.14)`
+
+### Swap Card (the product hero)
+- bg white, **24px radius**, padding 24, 1px soft border, soft pink shadow
+- "From" + "To" sections with 16px radius inner inputs
+- Token selector pills (pill-radius, surface-strong bg)
+- Single Pink CTA "Swap" full-width pill at bottom
+
+### Pills (token selectors, network chips)
+- Token: pill radius, surface-strong bg, with token icon + symbol
+- Network: pill radius, network-color outlined
+
+### Inputs (token amount)
+- bg surface-soft, 1px soft border, 16px radius (rounded for swap-card aesthetic)
+- Focus: border pink
+
+### Navigation
+- 72px sticky header, white bg
+- Uniswap unicorn wordmark left (pink), top-level nav center, "Connect Wallet" pink pill CTA right
+
+## 5. Layout Principles
+
+- Base 4px, 96-160px between sections
+- Page max width 1280px
+- Hero: swap-card centered with overlapping headline above
+- Feature grid: 3-up at desktop, 2-up at tablet
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | indicators |
+| Standard | 8 | tooltips |
+| Comfortable | 12 | dropdowns |
+| Relaxed | 16 | **default cards** |
+| Featured | 24 | **swap card** (product hero) |
+| Pill | 9999 | **buttons + token pills** |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 12px rgba(255,0,122,0.06)` resting cards |
+| 2 | `0 8px 24px rgba(255,0,122,0.14)` hover |
+| 3 | `0 12px 32px rgba(255,0,122,0.18)` swap-card |
+| 4 | `0 24px 64px rgba(0,0,0,0.20)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, emphasized for celebrate states
+- 150ms hover, 240ms standard, 400ms slow
+- Swap-card hover: shadow lift + 1.005 scale
+- Token selector dropdown: 240ms slide-down
+
+## 9. Accessibility & A11y
+
+- text on bg = **18.0:1** AAA
+- on-brand on brand: white on Uniswap Pink = **4.6:1** AA
+- 3px Uniswap Pink focus ring
+
+Token selectors `role="combobox"` with proper aria. Swap card flow accessible via keyboard tab order. Address truncation has full-address available via tooltip.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 88→48; nav hamburger; swap-card full-width. tablet: 2-up grid. desktop+: 3-up.
+
+## 11. Content & Voice
+
+### Tone
+**Direct-friendly.** Sophisticated DeFi without lecturing.
+
+### Microcopy patterns
+- Primary CTA: **"Connect Wallet"** / **"Swap"** / **"Provide liquidity"**
+- Errors: **"Insufficient balance — add more ETH to swap"**
+- Loading: **"Confirming swap…"**
+- Success: **"Swapped 100 USDC for 0.05 ETH"**
+
+### CTA verb conventions
+- **Connect / Swap / Provide / Stake / Bridge**
+- Avoid: NFT-bro language, "Get started" alone
+
+## 12. Dark Mode & Theming
+
+**Light-only** marketing site. The Uniswap Interface (app.uniswap.org) has both modes — dark uses bg `#191b1f` with pink unchanged.
+
+## 13. Lineage & Influences
+
+Uniswap descends from Hayden Adams's 2018 DEX origin, refined through V2 (2020) and V3 (2021) brand iterations. Uniswap Pink `#ff007a` was anchored in V2 — differentiating from Aave/Compound/Curve's brutalist black-and-blue. Basel (Lift Type) handles typography. The unicorn wordmark is the brand's defining identity.
+
+**Named influences:**
+- **Hayden Adams (founder, 2018)** — DEX origin
+- **Basel by Lift Type** — rounded grotesque sans
+- **Uniswap Pink (V2, 2020)** — brand anchor
+- **Aave / Compound / Curve** — DeFi peers differentiated against
+- **Unicorn mark heritage** — whimsy in sophisticated DeFi
+
+## 14. Do's and Don'ts
+
+### Do
+- **Uniswap Pink `#ff007a` for primary CTA + brand only.**
+- **Basel (or Inter fallback) for everything.**
+- **Pill-radius CTAs, 16px cards, 24px swap-card.**
+- **Soft pink-tinted shadows.**
+- **Unicorn mark in wordmark, sparingly elsewhere.**
+- **Mono for addresses.**
+- **Direct-friendly voice.**
+
+### Don't
+- **Don't substitute pink.** `#ff007a` is the brand, not Tailwind pink.
+- **Don't anthropomorphize the unicorn.**
+- **Don't add gradients on CTA.**
+- **Don't all-caps headlines.**
+- **Don't add NFT-bro microcopy.**
+- **Don't use brutalist DeFi aesthetics.** Rounded + pink IS Uniswap.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#131313`
+- brand (Uniswap Pink): `#ff007a` / hover `#e60069`
+- unicorn-purple: `#9c52ff`
+- ethereum-blue: `#627eea`
+- border: `#ededed`
+
+### Example Component Prompts
+
+> Build a Uniswap-style hero: white canvas, swap-card centered (24px radius, 24px pad, pink shadow), 88px Basel 600 heading "Swap any token, on any chain" above. Pink `#ff007a` CTA "Connect Wallet" pill-radius 16px Basel 600 0.02em.
+
+> Design a swap card: 24px radius, white surface, 1px soft border, pink-tinted shadow. "From" section with token selector pill + amount input. Arrow swap-direction button center. "To" section identical. "Swap" CTA full-width pink pill at bottom.
+
+> Render a token selector pill: pill radius, surface-strong `#f1f3f9` bg, token icon left + symbol "ETH" 16px Basel 600. Chevron right.
+
+> Build a "Connect Wallet" CTA: pill radius, Uniswap Pink bg, white 16px Basel 600 0.02em "Connect Wallet", padding 14×32. Hover: bg `#e60069`, scale 1.02.
+
+> Design an address display: JetBrains Mono 13px gray on white, "0xa1B2...E5f6" truncated, copy-icon button in pink.
+
+### Iteration Guide
+
+1. **White + Uniswap Pink + Basel + Unicorn mark.**
+2. **Pill-radius CTAs, 16-24px cards.**
+3. **Swap-card 24px radius is the product hero.**
+4. **Soft pink-tinted shadows.**
+5. **Mono for addresses.**
+6. **Sophisticated-friendly voice.**
+7. **Reject brutalist DeFi, NFT-bro language, gradient CTAs.**

@@ -1,0 +1,406 @@
+---
+name: Hilton
+tagline: Hilton Blue on white — confident-contemporary hospitality with Söhne-adjacent sans, blue-on-white photography-led layouts.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:01.510Z
+author: webdesignhot
+source_url: https://www.hilton.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [hospitality]
+tags: [light, structured, sans, cool, warm]
+preview_swatch: ['#ffffff', '#005091', '#1a1a1a']
+related: [marriott, delta-air, jetblue]
+description: 'Hilton''s site is the contemporary-confident counterpart to Marriott''s luxury-traditional. The canvas is pure white, headings sit in a Söhne-adjacent grotesque sans at 48–72px Bold, and the brand color is "Hilton Blue" `#005091` — a precise navy-leaning blue carried from the 1919 Conrad Hilton wordmark. Where Marriott chose Caudex serif and gold, Hilton chose Söhne-adjacent sans and blue. Photography is the dominant visual instrument — full-bleed lobby and destination interiors at 16:9 color-graded toward warm-neutral. CTAs are rectangular with 4-6px corners; cards have 1-2px radius and soft shadows. The brand reads premium-accessible: aspirational enough for Conrad and Waldorf, accessible enough for Hampton Inn.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f4f6f9'
+  bg-warm: '#faf9f6'
+  surface: '#ffffff'
+  surface-soft: '#fafbfc'
+  surface-strong: '#f4f6f9'
+  brand: '#005091'
+  brand-hover: '#003d75'
+  brand-pressed: '#002a52'
+  brand-deep: '#001b38'
+  brand-tint: '#e0ebf6'
+  brand-soft: '#cee0f0'
+  on-brand: '#ffffff'
+  text: '#1a1a1a'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#005091'
+  link-hover: '#003d75'
+  selected-bg: '#e0ebf6'
+  border: '#dcdfe4'
+  border-strong: '#bcc0c8'
+  border-soft: '#eef0f4'
+  border-brand: '#005091'
+  honors-purple: '#67266c'
+  success: '#1a8757'
+  warning: '#cc8800'
+  danger: '#c4313a'
+  info: '#005091'
+
+typography:
+  display:
+    family: '"Söhne", "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [500, 600, 700]
+  body:
+    family: '"Söhne", "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 700, lineHeight: 1.0,  tracking: '-0.02em',  family: display }
+    display-xl:      { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 600, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 600, lineHeight: 1.2,  tracking: '0.16em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0.06em',   family: body }
+    button:          { size: 15, weight: 600, lineHeight: 1.0,  tracking: '0.04em',   family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 80
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 0, 0.34, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 8px rgba(0, 80, 145, 0.06)'
+  card-hover: '0 6px 20px rgba(0, 80, 145, 0.10)'
+  modal: '0 24px 64px rgba(0, 80, 145, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 16.1
+  contrast-text-on-brand: 8.6
+  focus-ring: '2px solid #005091 + 2px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: 4, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '12px 30px', radius: 4, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 4, padding: 24, shadow: 'card', border: '1px solid border-soft' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg, border: '1px solid border-strong', text: text, radius: 4, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Hilton''s marketing system descends from Conrad Hilton''s 1919 wordmark and the contemporary-confident hospitality language refined under Christopher Nassetta''s tenure. Hilton Blue `#005091` — preserved as Pantone 7691 C — is the sole chromatic anchor across 24 brands (Conrad, Waldorf, Hampton, Hilton Garden Inn, Tru, Spark, etc.). A Söhne-adjacent grotesque sans (Klim Type Foundry''s Söhne is the closest commercial relative) handles every heading. Photography is color-graded warm-neutral — never as cinematic as Marriott''s amber/teal, never as saturated as Booking.com''s holiday brochure. The brand sits between Marriott''s luxury-traditional and Booking''s deal-finder utilitarian: aspirational enough for Conrad, accessible enough for Hampton.'
+  influences:
+    - { name: 'Söhne by Klim Type Foundry', role: 'contemporary grotesque sans, the closest commercial relative to Hilton''s display face', url: 'https://klim.co.nz/retail-fonts/sohne/' }
+    - { name: 'Pantone 7691 C — Hilton Blue', role: 'brand color anchor since 1919 wordmark', url: 'https://www.pantone.com' }
+    - { name: 'Marriott Bonvoy', role: 'sibling rival in luxury-hospitality positioning', url: 'https://www.marriott.com' }
+    - { name: 'Conde Nast Traveler', role: 'aspirational hospitality photography style', url: 'https://www.cntraveler.com' }
+    - { name: 'Hilton Honors program', role: 'loyalty-program design language across 24 brands', url: 'https://www.hilton.com/en/hilton-honors' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Hilton's site is the contemporary-confident counterpart to Marriott's luxury-traditional. The canvas is pure white `#ffffff`, headings sit in a Söhne-adjacent grotesque sans at 48–72px Bold, and the brand color is "Hilton Blue" `#005091` — a precise navy-leaning blue preserved from the 1919 Conrad Hilton wordmark. Where Marriott chose Caudex serif and gold, Hilton chose contemporary sans and blue.
+
+Photography is the dominant visual instrument — full-bleed lobby and destination interiors at 16:9 color-graded toward warm-neutral. CTAs are rectangular with 4-6px corners; cards have 1-2px radius with soft shadows tinted slightly blue. The Hilton Honors loyalty program threads through every property page, with a secondary "Honors Purple" `#67266c` reserved for tier badges (Diamond, Gold, Silver, Member).
+
+The brand reads premium-accessible. Where Marriott unifies under traditional restraint, Hilton presents 24 distinct brands (Conrad, Waldorf, Hampton, Hilton Garden Inn, Tru, Spark, Tempo, etc.) with a shared chromatic + typographic foundation — each property page gets the brand's visual identity layered on top of the Hilton design system.
+
+**Key Characteristics:**
+- Pure white canvas `#ffffff`
+- Hilton Blue `#005091` (Pantone 7691 C) is the sole chromatic anchor
+- Söhne-adjacent grotesque sans for everything
+- 4-6px radius on UI (rectangular but slightly softened)
+- Photography color-graded warm-neutral — never saturated
+- Honors Purple `#67266c` for loyalty tier badges only
+- Soft shadows tinted blue
+- 0.04-0.06em tracking on uppercase
+- Mixed case display, UPPER eyebrows
+- Light-only canvas
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): pure white. Marriott chose cream, Hilton chose white.
+- **Bg Soft** (`#f4f6f9`): cool-gray alternate band.
+- **Bg Warm** (`#faf9f6`): rare warm wash for editorial moments.
+- **Text** (`#1a1a1a`): body. Soft near-black.
+- **Text Strong** (`#000000`): emphasized headlines.
+
+### Brand — Hilton Blue
+- **Brand** (`#005091`): Pantone 7691 C, sole chromatic anchor.
+- **Brand Hover** (`#003d75`), **Pressed** (`#002a52`), **Deep** (`#001b38`).
+- **Brand Tint** (`#e0ebf6`): selection wash.
+- **Brand Soft** (`#cee0f0`): tinted surface for tabs, info bands.
+
+### Honors Purple (loyalty tier accent)
+- **Honors Purple** (`#67266c`): Diamond/Gold tier badges only. Not for primary CTA.
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfc`), **Surface Strong** (`#f4f6f9`).
+
+### Borders
+- **Border** (`#dcdfe4`): default.
+- **Border Strong** (`#bcc0c8`): inputs.
+- **Border Soft** (`#eef0f4`): softest divider.
+
+### Semantic
+- success `#1a8757`, warning `#cc8800`, danger `#c4313a`, info = brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Hilton's commissioned grotesque (Söhne-adjacent). Falls back to Söhne → Inter → Helvetica Neue.
+- **Mono**: system mono only.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking | Notes |
+|------|------|------|--------|-----|----------|-------|
+| display-hero | Söhne | 80 | 700 | 1.0 | -0.02em | property hero |
+| display-xl | Söhne | 64 | 700 | 1.05 | -0.018em | feature |
+| display-lg | Söhne | 48 | 700 | 1.1 | -0.012em | section H |
+| h1 | Söhne | 36 | 700 | 1.15 | -0.008em | sub-section |
+| h2 | Söhne | 28 | 600 | 1.2 | -0.005em | card H |
+| h3 | Söhne | 22 | 600 | 1.3 | 0 | sub-card |
+| eyebrow | Söhne | 12 | 600 | 1.2 | 0.16em (UPPER) | section labels |
+| body | Söhne | 16 | 400 | 1.55 | 0 | body |
+| label | Söhne | 13 | 600 | 1.3 | 0.06em (UPPER) | tags |
+| button | Söhne | 15 | 600 | 1.0 | 0.04em (UPPER) | CTA |
+
+### Principles
+- **One typeface system** — Hilton's grotesque handles every weight from 12px caption to 80px display.
+- **600 weight on display + buttons** — confident but not aggressive.
+- **Mixed case display, UPPER eyebrows + labels + buttons.**
+- **Body 16px / 1.55** — standard SaaS rhythm.
+- **Tracking 0.04em on buttons, 0.06em on labels, 0.16em on eyebrows.**
+
+## 4. Component Stylings
+
+### Buttons (3 variants — 4px radius)
+
+**Primary** — Hilton Blue:
+- bg `#005091`, text white, font Söhne 15px 600 0.04em UPPER
+- padding 14×32, radius 4
+- Hover: bg `#003d75`
+- Press: bg `#002a52`
+- Disabled: bg 30% blue
+
+**Secondary** — bordered:
+- bg white, text brand, 1px brand border, radius 4
+- Hover: bg `brand-tint`
+
+**Ghost**: bg transparent, text brand, padding 10×20.
+
+### Cards
+- bg white, **4px radius**, padding 24
+- 1px `#eef0f4` soft border + soft blue-tinted shadow `0 2px 8px rgba(0,80,145,0.06)`
+- Hover: shadow shifts to `0 6px 20px rgba(0,80,145,0.10)`
+- Featured cards: 1px Hilton Blue left border
+
+### Pills (loyalty tiers, amenity tags)
+- bg `brand-tint`, text `brand-pressed`, radius pill, label font
+- Diamond tier: bg `honors-purple-tint`, text `honors-purple`
+
+### Inputs
+- bg white, 1px `#bcc0c8` border, radius 4, padding 12×16
+- Focus: border Hilton Blue, no glow
+
+### Navigation
+- 80px sticky header, white bg, hairline bottom
+- Hilton wordmark left (blue script), top-level nav center, "Sign in" + "Honors" right
+
+## 5. Layout Principles
+
+### Spacing
+- Base 4px, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]`
+- 96-120px between sections
+- 24px card pad
+
+### Grid & Container
+- Page max width 1280px
+- Hero often full-bleed photography 70vh
+- Property grid: 3-up at desktop, 2-up at tablet, 1-up at mobile
+
+### Whitespace
+- Generous around hero, dense in property grids and search results
+
+### Section Cadence
+- White-on-white with photography breaks
+- Occasional `bg-soft` cool-gray band
+- Blue band on Honors-related sections
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2 | indicators |
+| Standard | 4 | **default for buttons, cards, inputs** |
+| Comfortable | 6 | dropdowns, modals |
+| Relaxed | 8 | featured cards |
+| Pill | 9999 | tier + amenity pills |
+
+The brand commits to gentle 4px corners — softer than Marriott's 0px, harder than Nintendo's 16px.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | none | inline |
+| 1 | `0 2px 8px rgba(0,80,145,0.06)` | resting cards |
+| 2 | `0 6px 20px rgba(0,80,145,0.10)` | hover, dropdown |
+| 3 | `0 12px 32px rgba(0,80,145,0.14)` | featured |
+| 4 | `0 24px 64px rgba(0,80,145,0.20)` | modal |
+
+### Shadow Philosophy
+Soft, blue-tinted (mirroring brand color), generous blur. Distinguishes Hilton from Marriott's navy-tinted shadows.
+
+## 8. Interaction & Motion
+
+- **Standard ease**: `cubic-bezier(0.25, 0.1, 0.25, 1)`
+- **Emphasized ease**: `cubic-bezier(0.34, 0, 0.34, 1)`
+- 150ms hover, 240ms standard, 360ms cinematic transitions
+
+Per-component: primary CTA hover bg darken 150ms, card hover shadow lift 240ms, photography subtle Ken Burns slow zoom.
+
+## 9. Accessibility & A11y
+
+- text on bg: `#1a1a1a` on `#ffffff` = **16.1:1** (AAA)
+- on-brand on brand: `#ffffff` on `#005091` = **8.6:1** (AAA at body)
+- 2px solid Hilton Blue focus ring + 2px outset gap
+
+Property cards `role="link"` with full property name + brand + location. Honors tier badges use `<abbr>` for tier abbreviations. Date picker uses semantic dialog.
+
+## 10. Responsive Behavior
+
+| Breakpoint | px | Behavior |
+|-----------|-----|----------|
+| mobile | 0-479 | hero scales 80→44; nav hamburger; 1-up grid |
+| tablet | 480-767 | 2-up, sticky reservation CTA |
+| desktop | 768-1279 | 3-up, full nav |
+| wide | 1280-1440 | 3-up larger photography |
+
+44×44 min touch targets. Date-picker → bottom sheet on mobile.
+
+## 11. Content & Voice
+
+### Tone
+**Confident-accessible.** Premium without bragging, friendly without being casual. Voice is a polished concierge who works at both Conrad and Hampton.
+
+### Microcopy patterns
+- Primary CTA: **"Book now"** / **"Reserve now"**
+- Sign-up: **"Join Hilton Honors"** — capitalized
+- Errors: **"Something went wrong. Try again."**
+- Loading: **"Searching properties…"**
+- Empty: **"No properties match your search. Try expanding dates or destination."**
+
+### CTA verb conventions
+- **Book / Reserve** (primary)
+- **Explore** (browse)
+- **Join Honors** (loyalty)
+- Avoid: "Buy", "Get"
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** No dark mode published. The brand's identity is anchored to white canvas + blue accent.
+
+## 13. Lineage & Influences
+
+Hilton's marketing system descends from Conrad Hilton's 1919 wordmark and the contemporary-confident hospitality language refined under Christopher Nassetta's tenure. Hilton Blue `#005091` (Pantone 7691 C) is the sole chromatic anchor across 24 brands. A Söhne-adjacent grotesque sans handles every heading. Photography is color-graded warm-neutral — never as cinematic as Marriott's amber/teal, never as saturated as Booking.com's holiday brochure.
+
+The brand sits between Marriott's luxury-traditional and Booking's deal-finder utilitarian: aspirational enough for Conrad and Waldorf, accessible enough for Hampton Inn.
+
+**Named influences:**
+- **Söhne by Klim Type Foundry** — closest commercial relative to Hilton's display face
+- **Pantone 7691 C — Hilton Blue** — brand color since 1919
+- **Marriott Bonvoy** — sibling rival
+- **Conde Nast Traveler** — hospitality photography style
+- **Hilton Honors** — loyalty design language
+
+## 14. Do's and Don'ts
+
+### Do
+- **Pure white canvas** — Marriott chose cream, Hilton chose white.
+- **Hilton Blue `#005091` only for primary CTA + brand mark.** Honors Purple is for tier badges only.
+- **Söhne-adjacent grotesque sans** — no Helvetica, no Inter unless absolutely necessary.
+- **4-6px radius on UI** — gentle rectangular.
+- **Mixed case display, UPPER eyebrows + buttons.**
+- **Soft blue-tinted shadows.**
+- **Photography color-graded warm-neutral.**
+- **0.04-0.06em tracking on uppercase.**
+
+### Don't
+- **Don't use cream bg.** That's Marriott.
+- **Don't substitute Hilton Blue.** No Tailwind blue, no `#1d4ed8`.
+- **Don't all-caps headlines.**
+- **Don't add gradients on CTA.**
+- **Don't oversaturate photography.**
+- **Don't use Honors Purple for primary CTA** — it's a tier badge color only.
+- **Don't add a friendly mascot.**
+- **Don't add dark mode** without explicit Hilton approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#1a1a1a` / strong `#000000`
+- brand (Hilton Blue): `#005091` / hover `#003d75`
+- honors-purple (tier badge): `#67266c`
+- border: `#dcdfe4` / strong `#bcc0c8`
+
+### Example Component Prompts
+
+> Build a Hilton-style property hero: 70vh full-bleed lobby photo color-graded warm-neutral, 80px Söhne Bold heading "Welcome to Conrad" mixed-case, 18px Söhne subhead in `#1a1a1a`. Primary CTA "Book now" 4px-radius Hilton Blue `#005091` 15px Söhne 600 0.04em UPPER, padding 14×32.
+
+> Design a property card: white surface, 4px radius, 24px pad, soft blue-tinted shadow `0 2px 8px rgba(0,80,145,0.06)`, 1px `#eef0f4` border. 22px Söhne h3, eyebrow "WALDORF ASTORIA" in 12px UPPER 0.16em Hilton Blue, 14px body for amenities.
+
+> Render an Honors tier pill: pill radius, purple-tint bg, Honors Purple `#67266c` text 13px Söhne 600 0.06em UPPER "DIAMOND".
+
+> Build a "Join Hilton Honors" CTA: 4px radius, Hilton Blue bg, white 15px Söhne 600 0.04em UPPER text, padding 14×32.
+
+> Design a date-range input: white bg, 1px `#bcc0c8` border, 4px radius, padding 12×16, label above in 12px UPPER 0.16em eyebrow blue. Focus: border shifts to Hilton Blue.
+
+### Iteration Guide
+
+1. **White canvas + Söhne-adjacent sans + Hilton Blue.**
+2. **4-6px radius — gentle rectangular.**
+3. **Honors Purple is for tier badges only.**
+4. **Soft blue-tinted shadows beat hairline rules.**
+5. **Mixed case display, UPPER eyebrows + buttons.**
+6. **0.04em tracking on buttons, 0.16em on eyebrows.**
+7. **Photography warm-neutral color-graded.**
+8. **24 brands share this foundation — only the wordmark + small accent shifts per brand.**

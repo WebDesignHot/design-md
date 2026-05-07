@@ -1,0 +1,391 @@
+---
+name: Calm
+tagline: Mindfulness in a serif — Calm Cream canvas, soft moonlit blue and forest green, Visby Round display, breathing-pace motion.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:24.739Z
+author: webdesignhot
+source_url: https://www.calm.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [healthcare]
+tags: [light, soft, serif, sans, warm, spacious]
+preview_swatch: ['#f6f1e6', '#1d4763', '#2a4a3e']
+related: [headspace, brilliant-org, marriott]
+description: 'Calm''s site is the rare wellness brand that has rejected both the medical-utility look and the corporate-consumer-app look in favor of something closer to a Japanese-tea-ceremony space online. The canvas is "Calm Cream" `#f6f1e6` (warm off-white, never pure), display headings sit in Visby Round Bold (a soft humanist sans with rounded terminals) at 48–72px, body in a quieter serif (Calm''s commissioned face descended from Garamond) at 16-18px line-height 1.7. The dual brand colors are Moonlit Blue `#1d4763` (deep teal-blue) and Forest Green `#2a4a3e` (muted moss). All UI motion follows a 4-second breathing pace — buttons scale ±2px on a slow inhale-exhale rhythm. The whole brand reads like a guided meditation translated to web typography.'
+
+colors:
+  bg: '#f6f1e6'
+  bg-soft: '#fbf8f0'
+  bg-deeper: '#ede5d3'
+  bg-warm: '#f9f4ea'
+  surface: '#ffffff'
+  surface-soft: '#fbf8f0'
+  surface-cream: '#f0e9d8'
+  brand: '#1d4763'
+  brand-hover: '#163847'
+  brand-pressed: '#102835'
+  brand-deep: '#091e29'
+  brand-tint: '#dde6ed'
+  on-brand: '#f6f1e6'
+  forest: '#2a4a3e'
+  forest-deep: '#1c3a30'
+  forest-soft: '#dce5e0'
+  text: '#1d2629'
+  text-strong: '#091e29'
+  text-muted: '#5a6770'
+  text-soft: '#8a949c'
+  text-faint: '#bcc4ca'
+  text-on-brand: '#f6f1e6'
+  link: '#1d4763'
+  link-hover: '#2a4a3e'
+  selected-bg: '#dde6ed'
+  border: '#d8d2c4'
+  border-strong: '#bcb6a8'
+  border-soft: '#e8e3d6'
+  border-brand: '#1d4763'
+  amber: '#cb9c45'
+  rose: '#c47e7e'
+  success: '#2a4a3e'
+  warning: '#cb9c45'
+  danger: '#a35353'
+  info: '#1d4763'
+
+typography:
+  display:
+    family: '"Visby Round", "Avenir Next", "Inter", -apple-system, sans-serif'
+    weights: [400, 600, 700]
+  serif:
+    family: '"Calm Serif", "Garamond Premier Pro", "Adobe Garamond Pro", Georgia, serif'
+    weights: [400, 600]
+  body:
+    family: '"Visby Round", "Avenir Next", "Inter", -apple-system, sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 600, lineHeight: 1.1,  tracking: '-0.015em', family: serif }
+    display-xl:      { size: 56, weight: 600, lineHeight: 1.15, tracking: '-0.012em', family: serif }
+    display-lg:      { size: 48, weight: 600, lineHeight: 1.2,  tracking: '-0.008em', family: serif }
+    h1:              { size: 36, weight: 600, lineHeight: 1.25, tracking: '-0.005em', family: serif }
+    h2:              { size: 28, weight: 600, lineHeight: 1.3,  tracking: '0',        family: serif }
+    h3:              { size: 22, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.4,  tracking: '0',        family: display }
+    eyebrow:         { size: 11, weight: 700, lineHeight: 1.2,  tracking: '0.20em',   family: display }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.7,  tracking: '0',        family: display }
+    body:            { size: 16, weight: 400, lineHeight: 1.7,  tracking: '0',        family: display }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.6,  tracking: '0',        family: display }
+    label:           { size: 12, weight: 600, lineHeight: 1.3,  tracking: '0.10em',   family: display }
+    button:          { size: 15, weight: 600, lineHeight: 1.0,  tracking: '0.04em',   family: display }
+    caption:         { size: 12, weight: 400, lineHeight: 1.5,  tracking: '0',        family: display }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 8
+  scale: [0, 8, 16, 24, 32, 40, 48, 64, 80, 96, 120, 160, 200]
+
+layout:
+  page-width: 1200
+  prose-width: 680
+  header-height: 80
+
+motion:
+  ease-standard: 'cubic-bezier(0.42, 0, 0.58, 1)'
+  ease-breathing: 'cubic-bezier(0.5, 0, 0.5, 1)'
+  duration-slow: 320
+  duration-breathe: 4000
+  reduced-motion: 'respects prefers-reduced-motion: reduce — disables breathing-pace UI animations'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  card: '0 2px 16px rgba(29, 71, 99, 0.08)'
+  card-hover: '0 8px 28px rgba(29, 71, 99, 0.12)'
+  modal: '0 24px 64px rgba(29, 71, 99, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 13.4
+  contrast-text-on-brand: 7.8
+  focus-ring: '2px solid #1d4763 + 2px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: pill, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '12px 30px', radius: pill, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 16, padding: 32, shadow: 'card' }
+  pill: { bg: surface-cream, text: brand, radius: pill, padding: '4px 14px', font: 'label' }
+  input: { bg: surface, border: '1px solid border-strong', text: text, radius: 12, padding: '14px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Calm''s marketing system rejects both the medical-utility look (e.g., MyFitnessPal, GoodRx) and the corporate consumer-app look (e.g., Headspace pre-2023) in favor of something closer to a Japanese-tea-ceremony space translated to web. Calm Cream `#f6f1e6` (warm off-white) is the canvas — never pure white. Visby Round (a soft humanist sans with rounded terminals) handles UI; a commissioned serif descended from Garamond carries display headlines and meditation-quote pull-quotes. Moonlit Blue `#1d4763` and Forest Green `#2a4a3e` are the brand''s muted dual anchors. All UI motion follows a 4-second breathing pace — buttons subtly inhale-exhale, hero photographs slow-pan over 8-12 seconds. The whole brand reads like a guided meditation translated to typography.'
+  influences:
+    - { name: 'Visby Round (Connary Fagen)', role: 'rounded humanist sans for soft, breathable UI', url: 'https://connary.com/visby.html' }
+    - { name: 'Garamond Premier Pro / Adobe Garamond', role: 'serif lineage for editorial meditation pull-quotes', url: 'https://fonts.adobe.com/fonts/garamond-premier-pro' }
+    - { name: 'Japanese tea-ceremony spatial design', role: 'wabi-sabi negative space + warm-cream palette', url: 'https://en.wikipedia.org/wiki/Japanese_tea_ceremony' }
+    - { name: 'Aman Resorts brand language', role: 'luxury-wellness contemporary; muted nature palette', url: 'https://www.aman.com' }
+    - { name: 'Headspace (pre-2023)', role: 'wellness contemporary; Calm differentiated via cream + serif', url: 'https://www.headspace.com' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Calm's site is the rare wellness brand that has rejected both the medical-utility look (MyFitnessPal, GoodRx) and the corporate consumer-app look (Headspace pre-2023) in favor of something closer to a Japanese-tea-ceremony space translated to web. The canvas is "Calm Cream" `#f6f1e6` — a warm off-white, never pure. Display headings sit in a commissioned serif (descended from Garamond Premier Pro) at 48–72px; UI sits in Visby Round (rounded humanist sans) at 14-18px line-height 1.7.
+
+The dual brand colors are Moonlit Blue `#1d4763` (deep teal-blue evoking twilight skies) and Forest Green `#2a4a3e` (muted moss). All UI motion follows a 4-second breathing pace — buttons subtly inhale-exhale, hero photographs slow-pan over 8-12 seconds. Photography is nature-led — forests, lakes at dusk, candle-lit interiors, never people in poses. The whole brand reads like a guided meditation translated to typography.
+
+Where Headspace went bright orange and animated friendly mascots, Calm went muted moonlit-and-forest with no mascot. Where MyFitnessPal went corporate utility, Calm went editorial spaciousness. The brand commits to its meditation thesis: design that lowers the user's heart rate.
+
+**Key Characteristics:**
+- Warm cream canvas `#f6f1e6` (never pure white)
+- Serif display + rounded-sans UI (Visby Round) — dual-typeface signature
+- Moonlit Blue `#1d4763` + Forest Green `#2a4a3e` dual anchors
+- Body line-height 1.7 (more generous than typical)
+- 4-second breathing-pace motion
+- No mascot, no aspirational selfies, only nature
+- Pill-radius CTAs (subtly soft, not aggressive)
+- 16px card radius
+- Light-only canvas on web (mobile app has dark)
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#f6f1e6`): warm cream off-white. Calm's signature canvas.
+- **Bg Soft** (`#fbf8f0`): palest cream alternate band.
+- **Bg Deeper** (`#ede5d3`): deeper cream for nested panels.
+- **Bg Warm** (`#f9f4ea`): hero-warm wash.
+- **Text** (`#1d2629`): body. Soft warm dark.
+- **Text Strong** (`#091e29`): emphasized headlines.
+
+### Brand — Moonlit Blue (primary)
+- **Brand** (`#1d4763`): deep teal-blue. Primary CTA, wordmark.
+- **Brand Hover** (`#163847`), **Pressed** (`#102835`), **Deep** (`#091e29`).
+- **Brand Tint** (`#dde6ed`): selection wash.
+
+### Forest Green (secondary)
+- **Forest** (`#2a4a3e`): muted moss. Subscription tier accent, sleep-content theme.
+- **Forest Deep** (`#1c3a30`), **Forest Soft** (`#dce5e0`).
+
+### Surface
+- **Surface** (`#ffffff`): cards lift slightly from cream.
+- **Surface Soft** (`#fbf8f0`), **Surface Cream** (`#f0e9d8`).
+
+### Accent
+- **Amber** (`#cb9c45`): warm accent for editorial moments, warning states.
+- **Rose** (`#c47e7e`): rare pink for love/heart features.
+
+### Borders
+- **Border** (`#d8d2c4`), **Border Strong** (`#bcb6a8`), **Border Soft** (`#e8e3d6`).
+
+### Semantic
+- success forest, warning amber, danger `#a35353`, info brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display (Serif)**: Calm Serif (commissioned, descended from Garamond Premier Pro). Fallback Garamond Premier → Adobe Garamond → Georgia.
+- **UI + Body**: Visby Round (rounded humanist sans by Connary Fagen). Fallback Avenir Next → Inter.
+- **Mono**: system mono only.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Serif | 72 | 600 | 1.1 | -0.015em |
+| display-lg | Serif | 48 | 600 | 1.2 | -0.008em |
+| h1 | Serif | 36 | 600 | 1.25 | -0.005em |
+| h2 | Serif | 28 | 600 | 1.3 | 0 |
+| h3 | Visby Round | 22 | 600 | 1.35 | 0 |
+| h4 | Visby Round | 18 | 600 | 1.4 | 0 |
+| eyebrow | Visby Round | 11 | 700 | 1.2 | 0.20em UPPER |
+| body | Visby Round | 16 | 400 | 1.7 | 0 |
+| label | Visby Round | 12 | 600 | 1.3 | 0.10em |
+| button | Visby Round | 15 | 600 | 1.0 | 0.04em |
+
+### Principles
+- **Serif for editorial display + meditation pull-quotes only.** UI uses sans.
+- **Body line-height 1.7** — deliberately generous. Reading rhythm matters.
+- **Heavy tracking on uppercase** (0.10-0.20em).
+- **Mixed case display, UPPER eyebrows + labels.**
+- **Visby Round's tucked terminals** are the brand's UI texture.
+
+## 4. Component Stylings
+
+### Buttons (3 variants — pill-radius)
+
+**Primary** — Moonlit Blue:
+- bg `#1d4763`, text cream `#f6f1e6`, 15px Visby 600 0.04em
+- Padding 14×32, **radius 9999 (pill)**
+- Hover: bg `#163847`, subtle scale +0.5%
+- Press: bg `#102835`
+
+**Secondary** — bordered:
+- bg cream, text brand, 1px brand border, pill radius
+
+**Ghost**: bg transparent, text brand, padding 10×20.
+
+### Cards
+- bg white, **16px radius**, padding 32
+- Soft moonlit-blue-tinted shadow `0 2px 16px rgba(29,71,99,0.08)`
+- Hover: shadow shifts to `0 8px 28px rgba(29,71,99,0.12)`
+
+### Pills (content tags)
+- bg `surface-cream`, text brand, pill radius, label font
+
+### Inputs
+- bg white, 1px gray-cream border, 12px radius, padding 14×16
+- Focus: border Moonlit Blue
+
+### Navigation
+- 80px sticky header, cream bg with soft hairline
+- Calm wordmark left (serif italic, navy), top-level nav center, "Try Calm Free" pill CTA right
+
+## 5. Layout Principles
+
+- Base 8px (not 4 — looser rhythm), 96-160px between sections
+- Page max width 1200px, prose 680px
+- Hero often full-bleed nature photograph with Ken Burns zoom
+- Content grid: 2-up at desktop (looser than typical 3-up), 1-up at tablet/mobile
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | inline tags |
+| Standard | 8 | tooltips |
+| Comfortable | 12 | inputs |
+| Relaxed | 16 | **cards** |
+| Featured | 24 | hero modules |
+| Pill | 9999 | **buttons + tags** |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 16px rgba(29,71,99,0.08)` resting (very soft, generous blur) |
+| 2 | `0 8px 28px rgba(29,71,99,0.12)` hover |
+| 3 | `0 16px 40px rgba(29,71,99,0.16)` featured |
+| 4 | `0 24px 64px rgba(29,71,99,0.20)` modal |
+
+### Shadow Philosophy
+Very soft, generous blur, blue-tinted (mirrors brand). Never harsh black shadows.
+
+## 8. Interaction & Motion
+
+- **Standard ease**: gentle in-out
+- **Breathing ease**: `cubic-bezier(0.5, 0, 0.5, 1)` — for 4-second inhale-exhale animations
+- 320ms standard transitions, 4000ms breathing-pace UI loops
+- Hero photographs Ken Burns zoom 8-12s
+- Buttons subtly inhale-exhale on idle (scale 1.0 → 1.005 → 1.0 over 4s)
+- Reduced motion disables breathing animations entirely
+
+## 9. Accessibility & A11y
+
+- text on bg = **13.4:1** AAA
+- on-brand on brand = **7.8:1** AAA
+- 2px Moonlit Blue focus ring + 2px outset gap
+
+Meditation-content cards have `aria-describedby` linking to duration + description. Photography is `aria-hidden` decorative. Audio meditations have full transcripts available.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 72→44; nav hamburger; 1-up cards. tablet 480-767: 1-up still. desktop+: 2-up.
+
+## 11. Content & Voice
+
+### Tone
+**Calm-considered.** Slow, present, never urgent. Voice is the meditation teacher who has time.
+
+### Microcopy patterns
+- Primary CTA: **"Try Calm Free"** / **"Begin"** — short, present-tense
+- Sign-up: **"Create a Calm account"**
+- Errors: **"That didn't quite work. Take a breath and try again."**
+- Loading: **"Preparing your session…"**
+- Empty: **"Begin your first session — try a 1-minute breathing exercise"**
+
+### CTA verb conventions
+- **Begin / Start / Try / Continue**
+- Avoid: imperative ("Buy", "Click"), urgency ("Last chance")
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** The cream canvas IS the brand. Mobile app has dark mode (deep moonlit blue bg with cream text); web has not adopted.
+
+## 13. Lineage & Influences
+
+Calm's marketing system rejects medical-utility and corporate consumer-app aesthetics for something closer to a Japanese tea-ceremony space online. Visby Round (humanist sans with rounded terminals) handles UI; commissioned serif descended from Garamond Premier carries display + meditation pull-quotes. Moonlit Blue + Forest Green are the muted dual anchors.
+
+The brand reads like a guided meditation translated to web typography — slow, present, never hurried.
+
+**Named influences:**
+- **Visby Round (Connary Fagen)**
+- **Garamond Premier Pro** — serif lineage
+- **Japanese tea-ceremony spatial design** — wabi-sabi negative space
+- **Aman Resorts brand language** — luxury-wellness contemporary
+- **Headspace (pre-2023)** — wellness contemporary differentiation
+
+## 14. Do's and Don'ts
+
+### Do
+- **Cream canvas `#f6f1e6`** — never pure white.
+- **Serif display + Visby Round UI.**
+- **Moonlit Blue + Forest Green dual anchors.**
+- **Body line-height 1.7** — generous.
+- **Pill-radius CTAs.**
+- **Breathing-pace motion (4s inhale-exhale loops).**
+- **Nature photography only** — forests, water, candlelight.
+- **Mixed case display, 0.20em UPPER eyebrows.**
+
+### Don't
+- **Don't use pure white.** Cream is the brand.
+- **Don't add a mascot.** Calm has no mascot.
+- **Don't use bright/saturated accents.** Muted-only palette.
+- **Don't add gradients on CTA.**
+- **Don't use sans for display headlines.** Serif is the brand's editorial voice.
+- **Don't add urgency microcopy.** ("Last chance", "Hurry") is anti-brand.
+- **Don't add aspirational lifestyle photos** (people in yoga poses, etc.). Nature only.
+- **Don't add dark mode** to web without explicit Calm approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg (Calm Cream): `#f6f1e6`
+- text: `#1d2629` / strong `#091e29`
+- brand (Moonlit Blue): `#1d4763` / hover `#163847`
+- forest: `#2a4a3e`
+- amber: `#cb9c45` / rose: `#c47e7e`
+- border: `#d8d2c4`
+
+### Example Component Prompts
+
+> Build a Calm-style hero: full-bleed forest-at-dusk photo with slow Ken Burns zoom, cream-tinted overlay scrim, 72px Calm Serif heading "Find your calm" mixed-case `-0.015em`. Pill-radius Moonlit Blue `#1d4763` "Try Calm Free" CTA, 15px Visby Round 600 0.04em.
+
+> Design a meditation-session card: white surface, 16px radius, 32px pad, soft blue-tinted shadow `0 2px 16px rgba(29,71,99,0.08)`. 22px Visby Round h3 "10-Minute Breathing", 11px UPPER 0.20em eyebrow "BEGINNER · MEDITATION" Moonlit Blue. Body in 16px Visby line-height 1.7.
+
+> Render a quote pull-out: 36px Calm Serif italic, body 16px Visby Round, on cream surface-cream `#f0e9d8` band, 96px vertical padding.
+
+> Build a "Begin Session" button: pill radius, Moonlit Blue bg, cream `#f6f1e6` text 15px Visby Round 600 0.04em. On idle, scale 1.0 → 1.005 → 1.0 over 4 seconds (breathing pace).
+
+> Design a content tag pill: pill radius, surface-cream `#f0e9d8` bg, brand text 12px Visby Round 600 0.10em "BEGINNER".
+
+### Iteration Guide
+
+1. **Cream canvas + Serif display + Visby Round UI.**
+2. **Moonlit Blue primary, Forest Green secondary.**
+3. **Body line-height 1.7** — generous reading rhythm.
+4. **Pill-radius CTAs, 16px radius cards.**
+5. **Soft blue-tinted shadows, generous blur.**
+6. **Breathing-pace motion (4s loops).**
+7. **Nature photography only, no people-in-pose.**
+8. **Reject pure white, mascots, urgency, bright saturation.**

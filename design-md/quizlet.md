@@ -1,0 +1,376 @@
+---
+name: Quizlet
+tagline: Study-buddy design — Quizlet purple-blue on white, custom Hurmes Geometric, flashcard-as-hero pattern.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:20.653Z
+author: webdesignhot
+source_url: https://quizlet.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [education, saas]
+tags: [light, playful, sans, rounded, cool]
+preview_swatch: ['#ffffff', '#4257b2', '#0a3370']
+related: [duolingo, brilliant-org, masterclass]
+description: 'Quizlet''s site is the contemporary-friendly counterpart to Brilliant''s STEM-rigorous. The canvas is white, headings sit in Hurmes Geometric (a custom rounded geometric sans, Inter-adjacent) at 40–64px, and the brand color is "Quizlet Purple" `#4257b2` — a deep periwinkle blue picked for friendly study-buddy energy without going as cute as Duolingo. Hero illustrations are flashcards in mid-flip — the brand''s defining product motif translated to web. Cards have 12-16px radius and soft purple-tinted shadows. Voice is study-coach: "Master your terms", "Find study sets". The whole brand reads like the kid in your study group who shares notes — friendly, capable, slightly nerdy in a nice way.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f6f7fb'
+  bg-warm: '#fff8f0'
+  surface: '#ffffff'
+  surface-soft: '#fafbfd'
+  surface-strong: '#f0f2f9'
+  brand: '#4257b2'
+  brand-hover: '#374a99'
+  brand-pressed: '#2a3a78'
+  brand-deep: '#0a3370'
+  brand-tint: '#e8ebf7'
+  brand-soft: '#cdd4ed'
+  on-brand: '#ffffff'
+  yellow: '#ffcc00'
+  yellow-soft: '#fff7d6'
+  text: '#282d49'
+  text-strong: '#0a3370'
+  text-muted: '#5a6075'
+  text-soft: '#8b8fa3'
+  text-faint: '#bcbfc9'
+  text-on-brand: '#ffffff'
+  link: '#4257b2'
+  link-hover: '#2a3a78'
+  selected-bg: '#e8ebf7'
+  border: '#e1e3ee'
+  border-strong: '#c4c8d9'
+  border-soft: '#eef0f5'
+  border-brand: '#4257b2'
+  success: '#3da568'
+  warning: '#f0a020'
+  danger: '#e0394f'
+  info: '#4257b2'
+
+typography:
+  display:
+    family: '"Hurmes Geometric", "Inter", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [600, 700, 800]
+  body:
+    family: '"Hurmes Geometric", "Inter", -apple-system, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 64, weight: 800, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    display-xl:      { size: 56, weight: 800, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.15, tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.2,  tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 700, lineHeight: 1.3,  tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.10em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    caption:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 64
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 400
+  duration-flip: 600
+  reduced-motion: 'respects prefers-reduced-motion: reduce — disables flashcard flip animations'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 8px rgba(66, 87, 178, 0.08)'
+  card-hover: '0 8px 24px rgba(66, 87, 178, 0.14)'
+  flashcard: '0 4px 12px rgba(66, 87, 178, 0.10)'
+  modal: '0 20px 60px rgba(66, 87, 178, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 11.8
+  contrast-text-on-brand: 7.8
+  focus-ring: '3px solid #4257b2'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: 12, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '12px 30px', radius: 12, border: '2px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 12, padding: 24, shadow: 'card' }
+  flashcard: { bg: surface, radius: 16, padding: 32, shadow: 'flashcard', border: '1px solid border-soft' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg, border: '2px solid border-strong', text: text, radius: 12, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Quizlet''s marketing system descends from Andrew Sutherland''s 2005 high-school study-aid origins, refined through multiple brand iterations to land at the current "study-buddy contemporary" language. Quizlet Purple `#4257b2` (deep periwinkle) was picked specifically to land between Duolingo''s green-cute and Brilliant''s coral-rigorous — friendly without being childish, capable without being austere. Hurmes Geometric (custom rounded geometric sans) handles every heading. The flashcard motif drives every hero — cards mid-flip, stacks of cards animating into view, "Master 100 cards" CTA microcopy. The brand reads like the kid in your study group who shares notes — friendly, capable, slightly nerdy in a nice way.'
+  influences:
+    - { name: 'Andrew Sutherland (founder, 2005)', role: 'high-school study-aid origin shaping product-as-tool brand instinct', url: 'https://en.wikipedia.org/wiki/Quizlet' }
+    - { name: 'Hurmes Geometric (custom)', role: 'in-house rounded geometric sans, Inter-adjacent', url: 'https://quizlet.com' }
+    - { name: 'Duolingo + Brilliant', role: 'edtech contemporaries; Quizlet positioned between cute-green and rigorous-coral', url: 'https://www.duolingo.com' }
+    - { name: 'Flashcard pedagogy (paper origins)', role: 'physical study-card metaphor preserved in animated UI', url: 'https://en.wikipedia.org/wiki/Flashcard' }
+    - { name: 'Material Design (rounded variants)', role: 'soft-shadow + rounded-card language influence', url: 'https://m3.material.io' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Quizlet's site is the contemporary-friendly counterpart to Brilliant's STEM-rigorous. The canvas is white `#ffffff`, headings sit in Hurmes Geometric (custom rounded geometric sans, Inter-adjacent) at 40–64px, and the brand color is "Quizlet Purple" `#4257b2` — a deep periwinkle blue picked for friendly study-buddy energy. Where Duolingo went green-cute and Brilliant went coral-rigorous, Quizlet landed between: capable enough to learn medical-school terminology, friendly enough for a 9th-grader's vocabulary list.
+
+Hero illustrations are flashcards mid-flip — the brand's defining product motif translated to web. Cards have 12-16px radius and soft purple-tinted shadows. Buttons are 12px radius (gentle rounded). Voice is study-coach: "Master your terms", "Find study sets shared by 60 million students". The whole brand reads like the kid in your study group who shares notes.
+
+The product itself (Quizlet Plus, AI Tutor, Learn Mode) drives navigation, with primary CTAs leading to "Find a study set" or "Create your own". Photography is rare — illustrations of flashcards, students with phones, and abstract geometric study aids dominate visual real estate.
+
+**Key Characteristics:**
+- White canvas + Quizlet Purple `#4257b2` (deep periwinkle)
+- Hurmes Geometric custom rounded geometric sans
+- Flashcard-mid-flip as visual hero motif
+- 12-16px radius on UI
+- Soft purple-tinted shadows
+- Yellow accent `#ffcc00` for "Plus" tier highlights
+- Light-only canvas (web has no dark mode; mobile app does)
+- Mixed case display, UPPER eyebrows
+- Friendly study-coach voice
+- Product-led marketing (no aspirational language)
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): white.
+- **Bg Soft** (`#f6f7fb`): cool-purple-tinted alternate band.
+- **Text** (`#282d49`): body. Soft purple-tinted dark.
+- **Text Strong** (`#0a3370`): emphasized headlines in deep brand-blue.
+
+### Brand — Quizlet Purple
+- **Brand** (`#4257b2`): deep periwinkle. Primary CTA, brand mark.
+- **Brand Hover** (`#374a99`), **Pressed** (`#2a3a78`), **Deep** (`#0a3370`).
+- **Brand Tint** (`#e8ebf7`): selection wash.
+
+### Yellow — Plus Tier Accent
+- **Yellow** (`#ffcc00`): Quizlet Plus subscription badge, AI Tutor highlight.
+- **Yellow Soft** (`#fff7d6`): tinted band.
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfd`), **Surface Strong** (`#f0f2f9`).
+
+### Borders
+- **Border** (`#e1e3ee`), **Border Strong** (`#c4c8d9`), **Border Soft** (`#eef0f5`).
+
+### Semantic
+- success `#3da568`, warning `#f0a020`, danger `#e0394f`, info = brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Hurmes Geometric (custom). Falls back to Inter → Avenir Next.
+- **Mono**: system mono only.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Hurmes | 64 | 800 | 1.05 | -0.02em |
+| display-lg | Hurmes | 48 | 700 | 1.15 | -0.012em |
+| h1 | Hurmes | 36 | 700 | 1.2 | -0.008em |
+| h2 | Hurmes | 28 | 700 | 1.25 | -0.005em |
+| h3 | Hurmes | 22 | 700 | 1.3 | 0 |
+| eyebrow | Hurmes | 12 | 700 | 1.2 | 0.10em UPPER |
+| body | Hurmes | 16 | 400 | 1.55 | 0 |
+| label | Hurmes | 13 | 700 | 1.3 | 0.04em |
+| button | Hurmes | 16 | 700 | 1.0 | 0.02em |
+
+### Principles
+- **Hurmes Geometric for everything.** Inter is fallback only.
+- **Heavy weights on display** (700-800).
+- **Mixed case display, UPPER eyebrows.**
+- **Body 16px / 1.55** — standard SaaS rhythm.
+
+## 4. Component Stylings
+
+### Buttons (3 variants — 12px radius)
+
+**Primary** — Quizlet Purple:
+- bg `#4257b2`, text white, 16px Hurmes 700 0.02em
+- Padding 14×32, radius 12
+- Hover: bg `#374a99`, scale 1.02
+
+**Secondary** — bordered:
+- bg white, text brand, 2px brand border, radius 12
+
+**Ghost**: bg transparent, text brand, padding 10×20.
+
+### Cards
+- bg white, **12px radius**, padding 24
+- Soft purple-tinted shadow `0 2px 8px rgba(66,87,178,0.08)`
+- Hover: shadow shifts to `0 8px 24px rgba(66,87,178,0.14)`
+
+### Flashcards (the brand's defining component)
+- bg white, **16px radius**, padding 32
+- Shadow `0 4px 12px rgba(66,87,178,0.10)` (slightly stronger than regular cards)
+- 1px soft border
+- Click: 600ms flip animation (3D rotateY) revealing back of card
+
+### Pills
+- Topic tags: `brand-tint` bg, brand-pressed text, pill radius
+- Plus badge: yellow bg, dark text, pill radius
+
+### Inputs
+- bg white, 2px gray border, 12px radius
+- Focus: border purple
+
+### Navigation
+- 64px sticky header, white bg
+- Quizlet wordmark left (purple), top-level nav center ("Study sets", "Library", "Plus"), Account icon right
+
+## 5. Layout Principles
+
+- Base 4px, 96-120px between sections
+- Page max width 1280px
+- Hero: flashcard illustration right 50% with overlapping headline left
+- Study-set grid: 4-up at desktop, 2-up at tablet, 1-up at mobile
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | inline tags |
+| Standard | 8 | tooltips |
+| Comfortable | 12 | **buttons + cards** |
+| Relaxed | 16 | **flashcards** |
+| Featured | 24 | hero modules |
+| Pill | 9999 | topic tags + Plus badges |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 8px rgba(66,87,178,0.08)` resting |
+| 2 | `0 8px 24px rgba(66,87,178,0.14)` hover |
+| 3 | `0 4px 12px rgba(66,87,178,0.10)` flashcards |
+| 4 | `0 20px 60px rgba(66,87,178,0.20)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, emphasized with overshoot for celebrate states
+- 150ms hover, 240ms standard, 400ms slow, 600ms flashcard flip
+- Hero flashcards loop subtle flip animation; lessons completed trigger celebrate ease
+
+## 9. Accessibility & A11y
+
+- text on bg = **11.8:1** AAA
+- on-brand on brand = **7.8:1** AAA
+- 3px purple focus ring
+
+Flashcards have proper `role="button"` and `aria-pressed` for flip state. Topic pills use semantic markup. Plus badge is `aria-label="Quizlet Plus subscriber"`.
+
+## 10. Responsive Behavior
+
+mobile <479: hero illustration scales down; nav hamburger; 1-up grid. tablet 480-767: 2-up. desktop+: 4-up.
+
+## 11. Content & Voice
+
+### Tone
+**Study-buddy friendly.** Helpful without being patronizing, capable without being austere.
+
+### Microcopy patterns
+- Primary CTA: **"Get started — it's free"** / **"Find study sets"**
+- Sign-up: **"Sign up"** / **"Continue with Google"**
+- Errors: **"Hmm, that didn't work — try again"**
+- Loading: **"Loading study set…"**
+- Success: **"You mastered 5 terms!"**
+
+### CTA verb conventions
+- **Find / Master / Learn / Continue / Practice**
+- Avoid: "Buy", "Get" alone
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Mobile app has dark mode; web stays light.
+
+## 13. Lineage & Influences
+
+Quizlet's marketing system descends from Andrew Sutherland's 2005 high-school study-aid origins. Quizlet Purple `#4257b2` was picked to land between Duolingo's green-cute and Brilliant's coral-rigorous. Hurmes Geometric (custom) handles every heading. Flashcard motif drives every hero.
+
+**Named influences:**
+- **Andrew Sutherland (founder, 2005)** — study-aid origin
+- **Hurmes Geometric (custom)** — rounded geometric sans
+- **Duolingo + Brilliant** — edtech contemporaries
+- **Flashcard pedagogy** — physical metaphor preserved in animated UI
+- **Material Design (rounded)** — soft-shadow + rounded-card language
+
+## 14. Do's and Don'ts
+
+### Do
+- **Quizlet Purple `#4257b2` for primary CTA + brand.**
+- **Hurmes Geometric (or Inter fallback).**
+- **12-16px radius on UI.**
+- **Soft purple-tinted shadows.**
+- **Flashcard motif as hero illustration.**
+- **Yellow `#ffcc00` for Plus tier only.**
+- **Mixed case display, UPPER eyebrows.**
+- **Friendly study-coach microcopy.**
+
+### Don't
+- **Don't substitute Quizlet Purple.**
+- **Don't use yellow as primary CTA** — Plus tier only.
+- **Don't add gradients on CTA.**
+- **Don't all-caps headlines.**
+- **Don't add a friendly mascot** — Quizlet has no mascot.
+- **Don't use cool-blue (Hilton's territory) or coral (Brilliant's).**
+- **Don't add dark mode** without explicit Quizlet approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#282d49` / strong `#0a3370`
+- brand (Quizlet Purple): `#4257b2` / hover `#374a99`
+- yellow (Plus tier): `#ffcc00`
+- border: `#e1e3ee`
+
+### Example Component Prompts
+
+> Build a Quizlet-style hero: white canvas, flashcard mid-flip illustration right 50%, 64px Hurmes Geometric Bold heading "Study smarter — together" left, 18px subhead. Primary CTA "Get started — it's free" 12px-radius purple `#4257b2` 16px Hurmes 700 0.02em.
+
+> Design a study-set card: white surface, 12px radius, 24px pad, soft purple-tinted shadow `0 2px 8px rgba(66,87,178,0.08)`. 22px Hurmes h3 "Spanish Vocabulary 101", 13px UPPER 0.10em eyebrow "100 TERMS · 1,234 STUDIERS" purple. Topic pills below in pill-radius brand-tint.
+
+> Render a flashcard: white surface, 16px radius, 32px pad, 1px soft border, 600ms 3D rotateY flip on click revealing back.
+
+> Build a Plus tier pill: pill radius, yellow `#ffcc00` bg, dark text 13px Hurmes 700 0.04em UPPER "PLUS".
+
+> Design a Find Study Sets input: white bg, 2px gray border, 12px radius, padding 12×16, placeholder "Search 500M study sets…", focus border purple.
+
+### Iteration Guide
+
+1. **White + Quizlet Purple + Hurmes Geometric.** The trio.
+2. **Flashcard motif drives hero illustration.**
+3. **12-16px radius on UI.**
+4. **Soft purple-tinted shadows.**
+5. **Yellow for Plus tier only.**
+6. **Friendly study-coach voice.**
+7. **Mixed case display, UPPER eyebrows.**
+8. **Reject mascots, gradients on CTA, dark mode without approval.**

@@ -1,0 +1,459 @@
+---
+name: PlayStation
+tagline: Sony's Cinema-Black canvas with PS Blue and a custom SST sans — gaming-as-cinema, premium hardware in editorial restraint.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:01:38.781Z
+author: webdesignhot
+source_url: https://www.playstation.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [gaming]
+tags: [dark, structured, sans, cool, spacious]
+preview_swatch: ['#000000', '#0070d1', '#ffffff']
+related: [xbox, valorant, sony]
+description: 'PlayStation''s site reads like a cinema poster from a hardware company that knows it. The canvas is true black `#000000`, headings sit in SST (Sony''s in-house sans descended from Frutiger''s FF Mark) at 56–96px, and the only chromatic accent is "PS Blue" `#0070d1`. Body text is pure white, structured grids hold dense game grids next to full-bleed video heroes, and the layout philosophy traces directly to Sony''s industrial-design heritage: Bauhaus, Dieter Rams, and 1980s automotive marketing. Every CTA is rectangular with crisp 4-6px corners; cards have hairline rules, never blur shadows. The whole brand reads premium, technical, and slightly cinematic.'
+
+colors:
+  bg: '#000000'
+  bg-deep: '#0c0c0c'
+  bg-section: '#181818'
+  bg-elev: '#1f1f1f'
+  surface: '#181818'
+  surface-strong: '#252525'
+  surface-translucent: 'rgba(0, 0, 0, 0.78)'
+  brand: '#0070d1'
+  brand-hover: '#1a85e0'
+  brand-pressed: '#005ba8'
+  brand-deep: '#003d75'
+  brand-tint: 'rgba(0, 112, 209, 0.16)'
+  on-brand: '#ffffff'
+  text: '#ffffff'
+  text-strong: '#ffffff'
+  text-muted: '#a8a8a8'
+  text-soft: '#787878'
+  text-faint: '#5a5a5a'
+  text-on-brand: '#ffffff'
+  link: '#1a85e0'
+  link-hover: '#ffffff'
+  selected-bg: 'rgba(0, 112, 209, 0.16)'
+  border: 'rgba(255, 255, 255, 0.10)'
+  border-strong: 'rgba(255, 255, 255, 0.20)'
+  border-brand: '#0070d1'
+  success: '#00b890'
+  warning: '#ffa61a'
+  danger: '#ff5252'
+  info: '#0070d1'
+  ps-yellow: '#ffd71a'
+  ps-green: '#00b890'
+
+typography:
+  display:
+    family: '"SST W20", "SST", "Helvetica Neue", "Helvetica", "Arial", sans-serif'
+    weights: [500, 700, 800]
+  body:
+    family: '"SST W20", "SST", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 96, weight: 700, lineHeight: 1.0,  tracking: '-0.02em',  family: display }
+    display-xl:      { size: 72, weight: 700, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-lg:      { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    h1:              { size: 40, weight: 700, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h2:              { size: 32, weight: 700, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h3:              { size: 24, weight: 700, lineHeight: 1.25, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 700, lineHeight: 1.3,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.16em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 15, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body-sm:         { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.05em',   family: body }
+    caption:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    code:            { size: 13, weight: 400, lineHeight: 1.6,  tracking: '0',        family: mono }
+
+radius:
+  none: 0
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 128, 160, 200]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 80
+  hero-y: 160
+
+motion:
+  ease-standard: 'cubic-bezier(0.45, 0.05, 0.55, 0.95)'
+  ease-emphasized: 'cubic-bezier(0.85, 0, 0.15, 1)'
+  duration-fast: 100
+  duration-standard: 200
+  duration-slow: 320
+  duration-cinematic: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce — disables video autoplay, freezes carousel'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 1px 0 0 rgba(255, 255, 255, 0.10)'
+  card-hover: '0 0 0 1px rgba(0, 112, 209, 0.6)'
+  modal: '0 32px 80px rgba(0, 0, 0, 0.85)'
+
+accessibility:
+  contrast-text-on-bg: 21
+  contrast-text-on-brand: 4.6
+  focus-ring: '2px solid #0070d1 + 1px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: 4, font: button }
+  button-secondary: { bg: transparent, text: text, padding: '12px 30px', radius: 4, border: '1px solid border-strong' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 4, padding: 24, border: '1px solid border' }
+  pill: { bg: surface-strong, text: text, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg-elev, border: '1px solid border-strong', text: text, radius: 4, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'PlayStation''s marketing system descends directly from Sony''s industrial-design heritage. SST (Sony Sans Text), an in-house typeface developed in 2010, descends from Frutiger''s FF Mark with custom adjustments — it''s the same family that runs every Sony hardware label, BRAVIA TV menu, and α-mirrorless camera UI. PS Blue `#0070d1` traces back to the original 1994 PlayStation wordmark and has shifted only marginally across PS1-PS5. Where Xbox went bold and gamer-coded, Sony stayed cinematic and editorially restrained. The "famous four" face buttons (triangle, circle, X, square in their iconic colors) became symbolic equity protected with as much rigor as the Nike swoosh. The whole language is engineered to read premium and technical without veering into corporate-bland.'
+  influences:
+    - { name: 'SST W20 by Sony', role: 'in-house typeface descended from Frutiger FF Mark', url: 'https://www.linotype.com/2147/ff-mark.html' }
+    - { name: 'Sony industrial design (Walkman, Trinitron, BRAVIA)', role: 'minimalist hardware aesthetics', url: 'https://www.sony.com' }
+    - { name: 'Bauhaus / Dieter Rams', role: 'less-but-better discipline visible in CTA restraint', url: 'https://en.wikipedia.org/wiki/Dieter_Rams' }
+    - { name: 'Cinematic film posters', role: 'full-bleed key art with editorial typography overlay', url: 'https://en.wikipedia.org/wiki/Movie_poster' }
+    - { name: '1980s automotive marketing', role: 'spec-block dense layout coexisting with hero photography', url: 'https://en.wikipedia.org/wiki/Automotive_advertising' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+PlayStation's site reads like a cinema poster from a hardware company that knows it. The canvas is true black `#000000`, headings sit in SST (Sony's in-house sans, descended from Frutiger's FF Mark) at 56–96px, and the only chromatic accent is "PS Blue" `#0070d1`. Body text is pure white, structured grids hold dense game grids next to full-bleed video heroes, and the layout philosophy traces directly to Sony's industrial-design heritage: Bauhaus, Dieter Rams, and 1980s automotive marketing.
+
+Where Xbox chose bold and gamer-coded, Sony stayed editorially restrained. Headings are mixed-case, not all-caps. CTAs are rectangular with 4-6px corners (not rounded, not skewed, not pill). The "famous four" face buttons — triangle (green), circle (red), X (blue), square (purple) — appear as icons but never as primary palette colors; PS Blue carries the system. Cards use 1px hairline rules, never blur shadows. The whole brand reads premium, technical, slightly cinematic.
+
+The hero pattern is consistent: full-bleed game key art (often video that auto-plays muted), 96px SST headline overlaid bottom-left, 18px white dek beneath, single PS-Blue CTA. Below the fold, dense game-tile grids show 4-6 titles per row at desktop, each tile a hairline-bordered card with key art, title, system, and price.
+
+**Key Characteristics:**
+- True black canvas `#000000`, never near-black tinted
+- PS Blue `#0070d1` is the only chromatic CTA color
+- SST W20 for display + body — the same Sony hardware typeface
+- Mixed case on every heading — never all-caps
+- 4-6px radius on buttons and cards — never 0, never pill
+- Hairline borders, no blur shadows on UI
+- Famous-four colors (green/red/blue/purple) reserved for face-button iconography
+- Hero typography 72-96px, structured grids beneath
+- Spec-block density coexists with cinematic key art
+- Premium-restrained voice; no all-caps shouting, no friendly mascot
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#000000`): true black canvas — never near-black, never tinted.
+- **Text** (`#ffffff`): pure white at 100%, primary copy.
+- **Text Muted** (`#a8a8a8`): captions, metadata.
+
+### Brand — PS Blue
+- **Brand** (`#0070d1`): the iconic PS Blue, every CTA.
+- **Brand Hover** (`#1a85e0`): slight lift on hover.
+- **Brand Pressed** (`#005ba8`): pressed state.
+- **Brand Deep** (`#003d75`): icon strokes inside blue badges.
+- **Brand Tint** (16% blue): selection wash.
+
+### Surface
+- **Surface** (`#181818`): cards on black.
+- **Surface Strong** (`#252525`): featured / hover.
+- **Surface Translucent** (78% black): video-hero overlay panels.
+- **Bg Section** (`#181818`): alternate dark band.
+- **Bg Elev** (`#1f1f1f`): inputs, dense panels.
+
+### Borders
+- **Border** (10% white): hairline.
+- **Border Strong** (20% white): emphasis.
+- **Border Brand** (`#0070d1`): focus, hover ring.
+
+### Famous Four (icons only, not palette)
+- triangle green `#00b890`, circle red `#ff5252`, X blue `#0070d1`, square purple `#ce82ff`
+
+### Semantic
+- success `#00b890`, warning `#ffa61a`, danger `#ff5252`, info = brand
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: SST W20 (Sony Sans Text). Falls back to SST → Helvetica Neue → Helvetica → Arial. Custom weights 500/700/800. SST is also the in-house typeface for Sony BRAVIA, α-mirrorless cameras, Walkman, and Sony Music — the same face across all Sony hardware.
+- **Mono**: JetBrains Mono / IBM Plex Mono in stat blocks and code samples.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking | Notes |
+|------|------|------|--------|-----|----------|-------|
+| display-hero | SST | 96 | 700 | 1.0 | -0.02em | game reveal |
+| display-xl | SST | 72 | 700 | 1.05 | -0.018em | feature heading |
+| display-lg | SST | 56 | 700 | 1.1 | -0.012em | section H |
+| h1 | SST | 40 | 700 | 1.15 | -0.008em | sub-section |
+| h2 | SST | 32 | 700 | 1.2 | -0.005em | card H |
+| h3 | SST | 24 | 700 | 1.25 | 0 | sub-card |
+| h4 | SST | 18 | 700 | 1.3 | 0 | inline |
+| eyebrow | SST | 12 | 700 | 1.2 | 0.16em (UPPER) | section labels |
+| body-lg | SST | 18 | 400 | 1.55 | 0 | hero subhead |
+| body | SST | 15 | 400 | 1.6 | 0 | body |
+| body-sm | SST | 13 | 400 | 1.5 | 0 | secondary |
+| label | SST | 13 | 700 | 1.3 | 0.04em | form labels |
+| button | SST | 14 | 700 | 1.0 | 0.05em | CTA |
+
+### Principles
+- **SST everywhere** — display, body, button, label. The brand's typographic monoculture is intentional.
+- **Mixed case for display** — never all-caps. Eyebrows and labels can be UPPER.
+- **Tight tracking on display** (-0.02em hero), normal on body.
+- **Body 15px, 1.6 leading** — denser than typical SaaS, more editorial.
+- **Helvetica Neue is the only acceptable substitute** if SST unavailable. Avoid Arial unless absolutely necessary.
+
+## 4. Component Stylings
+
+### Buttons (3 variants)
+
+**Primary** — PS Blue:
+- bg `#0070d1`, text white, font SST 14px 700 0.05em
+- padding 14×32, **radius 4** (not 0, not pill — the brand's button signature)
+- Hover: bg `#1a85e0`, no transform
+- Press: bg `#005ba8`
+- Disabled: bg 30% blue, text 60% white
+
+**Secondary** — bordered:
+- bg transparent, text white, 1px white-20% border, radius 4
+- Hover: bg surface-strong, border white-30%
+
+**Ghost** — link-style:
+- bg transparent, text PS Blue, padding 10×20, no border
+
+### Cards
+- bg `#181818`, 4px radius, padding 24
+- 1px white-10% border (hairline) — no drop shadow
+- Hover: 1px PS Blue ring outside the card (`box-shadow: 0 0 0 1px #0070d1`)
+- Featured cards: 1px PS Blue border + small "Featured" eyebrow
+
+### Pills (used for game tags, age ratings)
+- bg surface-strong, text white, radius pill (only place pills exist)
+- font label, 4×12 padding
+
+### Inputs
+- bg `#1f1f1f`, 1px border at 20% white, radius 4
+- Focus: border PS Blue, no glow
+- Label sits above in eyebrow style
+
+### Navigation
+- 80px sticky header, true black bg with bottom hairline
+- PlayStation wordmark left (PS Blue), top-level nav center, account + cart right
+- "Sign in" CTA in PS Blue, 4px radius
+
+## 5. Layout Principles
+
+### Spacing
+- Base 4px, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 128, 160, 200]`
+- 96px between major sections
+- 200px reserved for hero top
+
+### Grid & Container
+- Page max width 1440px
+- Hero often full-bleed video / key art, 100vh
+- Game grid: 4-up at desktop (1280+), 3-up at 1024, 2-up at tablet, 1-up at mobile
+- Spec tables: 2-col with definition list pattern
+
+### Whitespace
+- Generous around hero typography (96-160px section pads)
+- Density allowed in spec blocks (PS5 hardware specs page is dense)
+- Cards 24px internal pad
+
+### Section Cadence
+- Mostly black-on-black with hairline rules separating
+- Occasional `bg-section` (`#181818`) full-width band for editorial articles
+- Footer keeps black
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0 | rare; reserved for full-bleed video |
+| Micro | 2 | hairline indicators |
+| Standard | 4 | **default for buttons, cards, inputs** |
+| Comfortable | 6 | dropdowns, modals |
+| Relaxed | 8 | featured / oversized cards |
+| Pill | 9999 | pills only (game tags, age) |
+
+The brand commits to 4px on most UI — not 0 (too brutalist), not 8+ (too friendly).
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | none | inline |
+| 1 | 1px hairline rule | cards |
+| 2 | 1px PS Blue ring | hover state |
+| 3 | 1px PS Blue solid border | featured cards |
+| 4 | `0 32px 80px rgba(0,0,0,0.85)` | modal / video lightbox |
+
+### Shadow Philosophy
+The brand rejects soft blur shadows on UI. Elevation = hairlines + rings. Modals get heavy black shadow because they're cinematic, not interface.
+
+## 8. Interaction & Motion
+
+### Easing & duration
+- **Standard ease**: `cubic-bezier(0.45, 0.05, 0.55, 0.95)` — Sony's published curve, similar to Apple's
+- **Emphasized ease**: `cubic-bezier(0.85, 0, 0.15, 1)` — sharp for cinematic moments
+- Durations: 100ms (hover), 200ms (focus, dropdown), 320ms (modal), 480ms (cinematic — game reveal)
+
+### Per-component
+- **Primary CTA hover**: bg shift in 100ms
+- **Card hover**: 1px PS Blue ring grows from 0 to 1px in 200ms
+- **Game tile reveal (scroll)**: fade + 16px translate in 320ms
+- **Hero video**: autoplay loops, no audio default
+
+### Reduced Motion
+Honors `prefers-reduced-motion: reduce`. Video hero pauses with poster frame; carousel auto-advance disabled; transforms replaced with opacity.
+
+## 9. Accessibility & A11y
+
+### Contrast
+- white on bg: `#ffffff` on `#000000` = **21:1** (AAA)
+- on-brand on brand: `#ffffff` on `#0070d1` = **4.6:1** (AA at body)
+- text muted on bg: `#a8a8a8` on `#000000` = **9.3:1** (AAA)
+
+### Focus
+2px solid PS Blue ring with 1px outset gap. Distinct from hover (1px ring) so keyboard nav is unambiguous.
+
+### ARIA & Keyboard
+- Game tiles use `role="link"` with descriptive aria-label (title + system + price)
+- Hero video has visible play/pause + audio toggle
+- Famous-four icons have `aria-label="Triangle button" / "Circle button"` etc.
+
+### Screen Reader
+- All-caps eyebrows are NOT all-caps in HTML (CSS uppercase) for SR pronunciation
+- Decorative key-art images are `aria-hidden="true"`
+- Spec lists use `<dl>` semantic markup
+
+## 10. Responsive Behavior
+
+| Breakpoint | px | Behavior |
+|-----------|-----|----------|
+| mobile | 0-479 | hero scales 96→44px; nav hamburger; 1-up game grid |
+| tablet | 480-767 | 2-up grid, sticky CTA bottom |
+| desktop | 768-1279 | 3-up grid, full nav |
+| wide | 1280-1440 | 4-up grid, larger heroes |
+
+### Touch Targets
+44×44 min, primary CTAs scale to 56-64px on hero.
+
+### Per-component
+- Nav → hamburger overlay at <768px
+- Game grid → vertical scroll snap at <768px
+- Spec tables → horizontal scroll with PS Blue gradient fade
+
+### Image Behavior
+- Key art: `cover`, top-aligned 16:9 typical
+- Hero video: `cover`, 100vh, muted autoplay
+
+## 11. Content & Voice
+
+### Tone
+**Premium-restrained.** Confident without bragging, technical without being dry, cinematic without being dramatic. Voice is a hardware-engineer who happens to be passionate about cinema.
+
+### Microcopy patterns
+- Primary CTA: **"Buy now"** / **"Pre-order"** / **"Add to cart"**
+- Sign-up: **"Sign in"** / **"Create account"** (capitalized as proper noun)
+- Errors: **"Something went wrong. Try again."** — direct, no apology theater
+- Loading: **"Loading…"** — no whimsy
+- Empty state: **"No results. Try different filters."** — utilitarian
+
+### Empty states
+Clean, suggestive, never apologetic. Sometimes show a single relevant recommendation.
+
+### CTA verb conventions
+- **Buy / Pre-order / Add to cart** (commerce)
+- **Watch trailer / Watch story** (video)
+- **Sign in / Create account** (auth)
+- **View details / Learn more** (informational)
+- Avoid: "Click", "Submit", aggressive imperative
+
+## 12. Dark Mode & Theming
+
+**Dark-only.** True black is the brand's only canvas — has been since the PS1 era. Marketing site, PS Store, and PSN all use the same `#000000` base.
+
+The brand has no light mode published. If a partner integration requires light, the published guidance keeps PS Blue unchanged and inverts to white bg with `#1f1f1f` text — but no marketing surface ships light.
+
+## 13. Lineage & Influences
+
+PlayStation's marketing system descends directly from Sony's industrial-design heritage. SST (Sony Sans Text), an in-house typeface developed in 2010, descends from Frutiger's FF Mark with custom adjustments — it's the same family that runs every Sony hardware label, BRAVIA TV menu, and α-mirrorless camera UI. PS Blue `#0070d1` traces to the original 1994 PlayStation wordmark and has shifted only marginally across PS1-PS5.
+
+Where Xbox went bold and gamer-coded, Sony stayed cinematic and editorially restrained. The "famous four" face buttons (triangle, circle, X, square in their iconic colors) became symbolic equity protected with as much rigor as the Nike swoosh. The whole language is engineered to read premium and technical without veering into corporate-bland.
+
+**Named influences:**
+- **SST W20 by Sony** — in-house typeface descended from Frutiger's FF Mark
+- **Sony industrial design** (Walkman, Trinitron, BRAVIA) — minimalist hardware aesthetics
+- **Bauhaus / Dieter Rams** — less-but-better discipline visible in CTA restraint
+- **Cinematic film posters** — full-bleed key art with editorial typography overlay
+- **1980s automotive marketing** — spec-block density coexisting with hero photography
+
+## 14. Do's and Don'ts
+
+### Do
+- **Use PS Blue `#0070d1` for brand + primary CTA only.**
+- **Keep canvas true black `#000000`.** No near-black, no warm tint.
+- **SST or Helvetica Neue for everything.** No Inter, no Manrope, no rounded sans.
+- **Mixed case headlines.** All-caps is for eyebrows + labels only.
+- **4-6px radius on UI.** Not 0, not 12+.
+- **Hairlines and rings for elevation.** No blur shadows on UI.
+- **Famous-four colors as icons.** Never as palette accents.
+- **Premium-restrained voice.** "Buy now" beats "GET YOURS".
+
+### Don't
+- **Don't use near-black `#0a0a0a`.** True black is the brand.
+- **Don't round corners 12+ on UI.** Stays cinematic, not friendly.
+- **Don't all-caps headlines.**
+- **Don't add gradients on CTA.**
+- **Don't substitute PS Blue.** `#0070d1` is the brand, not Tailwind blue.
+- **Don't add a friendly mascot.** Sony's brand has no mascot.
+- **Don't use serif anywhere.**
+- **Don't add a light mode** without explicit Sony approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#000000`
+- text: `#ffffff` / muted `#a8a8a8`
+- brand (PS Blue): `#0070d1` / hover `#1a85e0` / pressed `#005ba8`
+- surface: `#181818` / strong `#252525`
+- border: 10% white / strong 20% white
+
+### Example Component Prompts
+
+> Build a PlayStation-style hero: 100vh full-bleed game key art video, true-black overlay scrim 30% from bottom, 96px SST Bold heading "Welcome to PS5 Pro" mixed-case `-0.02em`, 18px SST regular dek in pure white. Primary CTA "Buy now" in 4px-radius PS Blue `#0070d1` with 14px SST 700 0.05em.
+
+> Design a game tile card: bg `#181818`, 4px radius, 1px hairline white-10% border, key art top full-bleed, 24px SST 700 game title, 13px metadata row (system + genre + price). Hover: 1px PS Blue ring outside card grows from 0.
+
+> Render a spec block: 2-col definition list, eyebrow "TECHNICAL SPECS" in 12px SST 700 0.16em UPPER PS Blue, dt in 13px white 700, dd in 13px white-muted regular. 1px hairline divider between rows.
+
+> Build a sign-in CTA: 4px radius, PS Blue `#0070d1` bg, white 14px SST 700 0.05em "Sign in", padding 14×32. Hover bg shifts to `#1a85e0`.
+
+> Design a tag pill: pill radius, surface-strong `#252525` bg, 13px SST 700 0.04em white text "PS5 EXCLUSIVE", padding 4×12.
+
+### Iteration Guide
+
+1. **Start with true black canvas + SST.** Get the typographic monoculture right.
+2. **PS Blue is the only chromatic accent.** Famous-four colors are icons, not palette.
+3. **4-6px radius on UI.** Cinematic-restrained, not friendly-rounded.
+4. **Hairline borders, never blur shadows on UI.** Modals are the only exception.
+5. **Mixed case display, all-caps eyebrows only.**
+6. **Premium-restrained voice.** No exclamation marks, no friendly mascots.
+7. **Density is OK in spec tables**, generous around hero.
+8. **Reject all-caps display, friendly mascots, near-black tints, and rounded sans.**

@@ -1,0 +1,380 @@
+---
+name: Arbitrum
+tagline: Arbitrum Blue on white — Layer 2 chain marketing with Inter sans, structured grids, sophisticated-restraint contrasted with Solana's cinematic.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:51.929Z
+author: webdesignhot
+source_url: https://arbitrum.io
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [fintech]
+tags: [light, structured, sans, cool, spacious]
+preview_swatch: ['#ffffff', '#28a0f0', '#152d54']
+related: [phantom-app, uniswap, ethereum-org]
+description: 'Arbitrum''s site is the sophisticated-restrained counterpart to Solana''s cinematic experimentation. The canvas is white, headings sit in Inter at 48–72px, and the brand color is "Arbitrum Blue" `#28a0f0` (a precise sky-leaning blue) paired with deep navy `#152d54` for emphasized typography. Where Solana went gradient + true black + Diatype, Arbitrum went solid blue + white + Inter — Ethereum-side restraint expressing as L2-scaling-protocol confidence. Cards have 8-12px radius, soft blue-tinted shadows, and house structured ecosystem grids. Voice is technical-precise: "Ethereum scaling, made simple". The whole brand reads as the L2 that has read the white papers and chosen not to dramatize them.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f5f7fa'
+  bg-warm: '#fafbfd'
+  surface: '#ffffff'
+  surface-soft: '#fafbfd'
+  surface-strong: '#eef2f7'
+  brand: '#28a0f0'
+  brand-hover: '#1d8edb'
+  brand-pressed: '#1773b8'
+  brand-deep: '#125a90'
+  brand-tint: '#dceefb'
+  brand-soft: '#a6d4f5'
+  on-brand: '#ffffff'
+  navy: '#152d54'
+  navy-deep: '#0a1d3d'
+  navy-soft: 'rgba(21, 45, 84, 0.08)'
+  text: '#0d1626'
+  text-strong: '#152d54'
+  text-muted: '#5a647a'
+  text-soft: '#8a93a6'
+  text-faint: '#bcc2cf'
+  text-on-brand: '#ffffff'
+  link: '#28a0f0'
+  link-hover: '#152d54'
+  selected-bg: '#dceefb'
+  border: '#dde2eb'
+  border-strong: '#bcc4d2'
+  border-soft: '#eaeef5'
+  border-brand: '#28a0f0'
+  arbitrum-orbit: '#9b59ff'
+  arbitrum-nova: '#ff8a00'
+  ecosystem-defi: '#28a0f0'
+  ecosystem-gaming: '#9b59ff'
+  ecosystem-nft: '#ff8a00'
+  success: '#1a8757'
+  warning: '#cc8800'
+  danger: '#c4313a'
+  info: '#28a0f0'
+
+typography:
+  display:
+    family: '"Inter", "Söhne", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [600, 700, 800]
+  body:
+    family: '"Inter", "Söhne", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 800, lineHeight: 1.05, tracking: '-0.02em',  family: display }
+    display-xl:      { size: 56, weight: 800, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.15, tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.2,  tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 700, lineHeight: 1.25, tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 700, lineHeight: 1.3,  tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.14em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.06em',   family: body }
+    button:          { size: 15, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    address:         { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',        family: mono }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 72
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 12px rgba(40, 160, 240, 0.08)'
+  card-hover: '0 6px 20px rgba(40, 160, 240, 0.14)'
+  modal: '0 24px 64px rgba(21, 45, 84, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 16.7
+  contrast-text-on-brand: 3.0
+  focus-ring: '2px solid #28a0f0 + 2px outset gap'
+  reduced-motion-honored: true
+  note: 'Arbitrum Blue `#28a0f0` is on the AA edge for white text at body — primary CTAs use the navy variant `#152d54` when smaller-than-18px text is on bg, or use white-on-brand only at 16px+ bold.'
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: 8, font: button }
+  button-navy: { bg: navy, text: on-brand, padding: '14px 32px', radius: 8, font: button }
+  button-secondary: { bg: bg, text: navy, padding: '12px 30px', radius: 8, border: '1px solid border-strong' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 12, padding: 24, shadow: 'card', border: '1px solid border-soft' }
+  pill: { bg: brand-tint, text: navy, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg, border: '1px solid border-strong', text: text, radius: 8, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Arbitrum''s marketing system descends from Offchain Labs'' 2018 founding by Princeton-Yale-Stanford crypto researchers (Ed Felten, Steven Goldfeder, Harry Kalodner). The brand''s sophisticated-restraint reflects academic origin — light canvas, structured grids, Inter typography, deep navy `#152d54` for typographic gravitas, Arbitrum Blue `#28a0f0` for accent. Where Solana went cinematic-experimental, Arbitrum went restrained-confident. Sub-product accent palette (Orbit purple `#9b59ff` for the L3 framework, Nova orange `#ff8a00` for the gaming-optimized chain) chips ecosystem categories. Voice is technical-precise: "Ethereum scaling, made simple" — confident enough to skip explainers.'
+  influences:
+    - { name: 'Offchain Labs (founders 2018)', role: 'Princeton-Yale-Stanford academic origin', url: 'https://offchainlabs.com' }
+    - { name: 'Inter (Rasmus Andersson)', role: 'tech-app sans default', url: 'https://rsms.me/inter' }
+    - { name: 'Ethereum brand language', role: 'L1 parent chain typographic restraint', url: 'https://ethereum.org' }
+    - { name: 'Solana + Optimism + zkSync', role: 'L1/L2 contemporaries differentiated against', url: 'https://solana.com' }
+    - { name: 'Pantone 285 / cyan palette', role: 'sky-leaning blue lineage', url: 'https://www.pantone.com' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Arbitrum's site is the sophisticated-restrained counterpart to Solana's cinematic experimentation. The canvas is white `#ffffff`, headings sit in Inter at 48–72px Bold, and the brand color is **Arbitrum Blue** `#28a0f0` (a precise sky-leaning blue) paired with deep navy `#152d54` for emphasized typography. Where Solana went gradient + true black + Diatype, Arbitrum went solid blue + white + Inter — Ethereum-side restraint expressing as L2-scaling-protocol confidence.
+
+The brand reflects its academic origin (Offchain Labs founded by Princeton-Yale-Stanford researchers in 2018). Layout is structured grids; section type is restrained 0.14em-tracked uppercase eyebrows. Cards have 8-12px radius and soft blue-tinted shadows. Sub-product accent palette (Orbit purple `#9b59ff` for the L3 framework, Nova orange `#ff8a00` for gaming-optimized chain) chips ecosystem categories. Voice is technical-precise: "Ethereum scaling, made simple".
+
+A note on color contrast: Arbitrum Blue `#28a0f0` is on the AA edge for white text at body sizes (3.0:1, fails AA). Primary CTAs use the navy variant `#152d54` when text is below 18px, or only large-text white-on-brand when the size threshold (18px+ Bold) is met.
+
+**Key Characteristics:**
+- White canvas + Arbitrum Blue `#28a0f0` + Navy `#152d54`
+- Inter sans for everything
+- 8-12px radius on UI
+- Sub-product accents: Orbit purple, Nova orange (chips only)
+- Soft blue-tinted shadows
+- Mono for addresses
+- Light-only canvas
+- Technical-precise voice
+- Navy as typographic gravitas
+- Academic-origin sophisticated-restraint
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): white.
+- **Text** (`#0d1626`): body. Slightly warm dark navy.
+- **Text Strong** (`#152d54`): emphasized headlines in deep navy.
+
+### Brand — Arbitrum Blue
+- **Brand** (`#28a0f0`): primary CTA + brand mark.
+- **Brand Hover** (`#1d8edb`), **Pressed** (`#1773b8`), **Deep** (`#125a90`).
+- **Brand Tint** (`#dceefb`): selection wash.
+
+### Navy — Typographic Gravitas
+- **Navy** (`#152d54`): emphasized headlines, secondary CTA bg.
+- **Navy Deep** (`#0a1d3d`): pressed.
+
+### Sub-Product Accents (chips only)
+- **Orbit Purple** (`#9b59ff`): Arbitrum Orbit (L3 framework)
+- **Nova Orange** (`#ff8a00`): Arbitrum Nova (gaming-optimized chain)
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfd`), **Surface Strong** (`#eef2f7`).
+
+### Borders
+- **Border** (`#dde2eb`), **Border Strong** (`#bcc4d2`), **Border Soft** (`#eaeef5`).
+
+### Semantic
+- success `#1a8757`, warning `#cc8800`, danger `#c4313a`, info = brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Inter. Falls back to Söhne → Helvetica Neue.
+- **Mono**: JetBrains Mono / IBM Plex Mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Inter | 72 | 800 | 1.05 | -0.02em |
+| display-lg | Inter | 48 | 700 | 1.15 | -0.012em |
+| h1 | Inter | 36 | 700 | 1.2 | -0.008em |
+| h2 | Inter | 28 | 700 | 1.25 | -0.005em |
+| h3 | Inter | 22 | 700 | 1.3 | 0 |
+| eyebrow | Inter | 12 | 700 | 1.2 | 0.14em UPPER |
+| body | Inter | 16 | 400 | 1.55 | 0 |
+| label | Inter | 13 | 700 | 1.3 | 0.06em |
+| button | Inter | 15 | 700 | 1.0 | 0.02em |
+| address | JetBrains Mono | 13 | 400 | 1.5 | 0 |
+
+### Principles
+- **Inter for everything**, mono for addresses.
+- **800 weight on hero, 700 elsewhere on display.**
+- **Body 16px / 1.55** — standard rhythm.
+- **Mixed case display, UPPER eyebrows + buttons.**
+
+## 4. Component Stylings
+
+### Buttons (4 variants — 8px radius)
+
+**Primary** — Arbitrum Blue:
+- bg `#28a0f0`, text white, 15px Inter 700 0.02em UPPER
+- Padding 14×32, radius 8
+- Note: 3.0:1 contrast white-on-blue is borderline; use only at 15px+ Bold (which we do)
+
+**Navy** — emphasized when smaller text or higher contrast required:
+- bg `#152d54`, text white, otherwise primary
+
+**Secondary** — bordered:
+- bg white, text navy, 1px gray border, radius 8
+
+**Ghost**: bg transparent, text Arbitrum Blue, padding 10×20.
+
+### Cards
+- bg white, **12px radius**, padding 24
+- 1px `#eaeef5` soft border + soft blue-tinted shadow `0 2px 12px rgba(40,160,240,0.08)`
+- Hover: shadow `0 6px 20px rgba(40,160,240,0.14)`
+
+### Pills (sub-product chips)
+- Default: `brand-tint` bg, navy text, pill radius
+- Orbit chip: purple-tint bg, purple text
+- Nova chip: orange-tint bg, orange text
+
+### Inputs
+- bg white, 1px gray border, 8px radius
+- Focus: border Arbitrum Blue
+
+### Navigation
+- 72px sticky header, white bg
+- Arbitrum wordmark left (blue), top-level nav center, "Build on Arbitrum" navy CTA right
+
+## 5. Layout Principles
+
+- Base 4px, 96-160px between sections
+- Page max width 1280px
+- Hero: structured layout — typography left, infographic / data viz right
+- Ecosystem grid: 4-up at desktop, 2-up at tablet
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | indicators |
+| Standard | 8 | **buttons + inputs** |
+| Comfortable | 12 | **cards** |
+| Relaxed | 16 | featured cards |
+| Pill | 9999 | sub-product + ecosystem chips |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 12px rgba(40,160,240,0.08)` resting |
+| 2 | `0 6px 20px rgba(40,160,240,0.14)` hover |
+| 3 | `0 12px 32px rgba(40,160,240,0.18)` featured |
+| 4 | `0 24px 64px rgba(21,45,84,0.20)` modal (navy-tinted) |
+
+## 8. Interaction & Motion
+
+- Standard ease, 150-360ms durations
+- Card hover: shadow lift, no transform
+- Hero data viz: subtle animation on scroll-reveal
+
+## 9. Accessibility & A11y
+
+- text on bg: `#0d1626` on `#ffffff` = **16.7:1** AAA
+- white on brand: `#ffffff` on `#28a0f0` = **3.0:1** — borderline, use Bold 15px+ only or fall back to navy
+- white on navy: `#ffffff` on `#152d54` = **12.6:1** AAA
+- 2px Arbitrum Blue focus ring + 2px outset
+
+Sub-product chips use `aria-label="Arbitrum Orbit, layer-3 framework"`.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 72→44; nav hamburger; 1-up. tablet: 2-up. desktop+: 4-up.
+
+## 11. Content & Voice
+
+### Tone
+**Technical-precise.** Academic-origin sophistication without lecturing.
+
+### Microcopy patterns
+- Primary CTA: **"Build on Arbitrum"** / **"Bridge to Arbitrum"** / **"Get Started"**
+- Errors: **"Bridge transaction failed. Check L1 confirmation."**
+- Loading: **"Confirming on Arbitrum One…"**
+- Sub-products: **"Build with Arbitrum Orbit"** / **"Play on Arbitrum Nova"**
+
+### CTA verb conventions
+- **Build / Bridge / Deploy / Get Started**
+- Avoid: NFT-bro, generic "Sign up"
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Mobile bridge has dark; marketing stays light.
+
+## 13. Lineage & Influences
+
+Arbitrum descends from Offchain Labs' 2018 founding by Princeton-Yale-Stanford crypto researchers. The brand's sophisticated-restraint reflects academic origin — Inter sans, deep navy for gravitas, Arbitrum Blue for accent. Where Solana went cinematic-experimental, Arbitrum went restrained-confident. Sub-product accents (Orbit purple, Nova orange) chip ecosystem categories.
+
+**Named influences:**
+- **Offchain Labs (2018)** — academic founders
+- **Inter (Rasmus Andersson)** — tech-app sans
+- **Ethereum brand language** — parent-chain restraint
+- **Solana + Optimism + zkSync** — L1/L2 peers
+- **Pantone 285 / cyan palette** — sky-blue lineage
+
+## 14. Do's and Don'ts
+
+### Do
+- **Arbitrum Blue `#28a0f0` for primary CTA + brand.**
+- **Navy `#152d54` for emphasized typography + smaller-text CTAs.**
+- **Inter for everything.**
+- **8-12px radius on UI.**
+- **Sub-product chip colors (Orbit purple / Nova orange) for chips only.**
+- **Mono for addresses.**
+- **White text on blue only at 15px+ Bold** — accessibility on edge.
+- **Soft blue-tinted shadows.**
+
+### Don't
+- **Don't put white text on Arbitrum Blue** at body sizes. Use navy bg or larger Bold.
+- **Don't substitute brand colors.**
+- **Don't use sub-product accents as primary CTA.**
+- **Don't all-caps headlines.**
+- **Don't add gradients on CTA.**
+- **Don't add NFT-bro microcopy.**
+- **Don't add a friendly mascot.**
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#0d1626` / strong (Navy): `#152d54`
+- brand (Arbitrum Blue): `#28a0f0` / hover `#1d8edb`
+- navy: `#152d54` (use for smaller-text CTAs)
+- orbit-purple: `#9b59ff` / nova-orange: `#ff8a00`
+
+### Example Component Prompts
+
+> Build an Arbitrum-style hero: white canvas, structured layout — 72px Inter 800 heading "Ethereum scaling, made simple" left, animated data-viz infographic right 50%. Primary CTA "Build on Arbitrum" 8px-radius blue `#28a0f0` with white 15px Inter 700 0.02em UPPER (Bold ensures AA at this size).
+
+> Design an ecosystem card: white surface, 12px radius, 24px pad, soft blue-tinted shadow. 22px Inter h3 protocol name, 13px UPPER 0.14em eyebrow "DEFI ON ARBITRUM ONE" navy. Sub-product chip "ORBIT" in purple-tint pill if applicable.
+
+> Render an address display: JetBrains Mono 13px gray, "0xa1B2...E5f6" truncated, copy-icon button in Arbitrum Blue.
+
+> Build a "Bridge to Arbitrum" CTA at smaller size: 8px radius, **navy `#152d54`** bg (better contrast), white 14px Inter 700 0.02em UPPER, padding 12×28.
+
+> Design a sub-product chip: pill radius, accent-color-tint bg with accent-color text. Orbit (purple), Nova (orange), Arbitrum One (Arbitrum Blue).
+
+### Iteration Guide
+
+1. **White + Arbitrum Blue + Inter + Navy gravitas.**
+2. **8-12px radius — gentle restrained.**
+3. **White-on-blue only at 15px+ Bold** — switch to navy bg below.
+4. **Sub-product accents (Orbit / Nova) for chips only.**
+5. **Mono for addresses.**
+6. **Soft blue-tinted shadows.**
+7. **Technical-precise voice.**
+8. **Reject white-on-blue at body, mascots, NFT-bro language, gradient CTAs.**

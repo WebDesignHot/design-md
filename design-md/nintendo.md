@@ -1,0 +1,462 @@
+---
+name: Nintendo
+tagline: Joyful red on paper-white — Nintendo's site is the toy-aisle of the web, illustration-rich and refusal-of-darkness intentional.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:01:43.787Z
+author: webdesignhot
+source_url: https://www.nintendo.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [gaming]
+tags: [light, playful, rounded, warm, sans, bright]
+preview_swatch: ['#ffffff', '#e60012', '#1f1f1f']
+related: [duolingo, playstation, xbox]
+description: 'Nintendo''s marketing site refuses what every other gaming brand commits to. The canvas is paper-white `#ffffff`, the only chromatic accent is "Nintendo Red" `#e60012`, and the rest of the page is filled with photography of plastic toys and full-bleed illustrations of Mario, Link, and Pikachu. Headings sit in a custom rounded sans called Nintendo Sans, body in friendly Inter. Cards have soft 12-16px radius and gentle drop shadows, never hard corners. Where Valorant chose magazine, Nintendo chose toy aisle — bright, optimistic, family-first, and proud not to apologize for it.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f5f5f5'
+  bg-warm: '#fff8f0'
+  bg-tinted: '#ffeeee'
+  surface: '#ffffff'
+  surface-soft: '#fafafa'
+  surface-strong: '#f5f5f5'
+  brand: '#e60012'
+  brand-hover: '#cc0010'
+  brand-active: '#a8000d'
+  brand-deep: '#8a000a'
+  brand-tint: '#ffeeee'
+  on-brand: '#ffffff'
+  text: '#1f1f1f'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#0066cc'
+  link-hover: '#cc0010'
+  selected-bg: '#ffeeee'
+  border: '#e5e5e5'
+  border-strong: '#cccccc'
+  border-soft: '#f0f0f0'
+  border-brand: '#e60012'
+  success: '#00a345'
+  warning: '#ff8c00'
+  danger: '#e60012'
+  info: '#0066cc'
+
+typography:
+  display:
+    family: '"Nintendo Sans", "Avenir Next Rounded", "Helvetica Neue", -apple-system, sans-serif'
+    weights: [600, 700, 800]
+  body:
+    family: '"Helvetica Neue", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 800, lineHeight: 1.0,  tracking: '-0.02em',  family: display }
+    display-xl:      { size: 64, weight: 800, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 700, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 700, lineHeight: 1.25, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.03em',   family: body }
+    button:          { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: display }
+    caption:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]
+
+layout:
+  page-width: 1440
+  prose-width: 720
+  header-height: 80
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'   # bounce on toy-themed reveals
+  duration-fast: 150
+  duration-standard: 250
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce — disables bounce, keeps fades'
+
+breakpoints:
+  mobile: 640
+  tablet: 1024
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 4px 12px rgba(0, 0, 0, 0.08)'
+  card-hover: '0 8px 24px rgba(0, 0, 0, 0.12)'
+  modal: '0 20px 60px rgba(0, 0, 0, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 14.6
+  contrast-text-on-brand: 5.9
+  focus-ring: '3px solid #0066cc'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: pill, font: button }
+  button-secondary: { bg: bg, text: text, padding: '12px 30px', radius: pill, border: '2px solid border-strong' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 16, padding: 24, shadow: 'card' }
+  pill: { bg: bg-soft, text: text, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg, border: '2px solid border-strong', text: text, radius: 12, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Nintendo''s marketing system rejects every aesthetic choice the rest of the gaming industry has made. Where competitors went dark, edgy, and "AAA cinematic", Nintendo stayed bright, joyful, and family-first. The brand''s visual ancestry traces back to Disney parks signage, classic Japanese toy packaging (Bandai, Tomy), and the IRL retail aisle of Toys R Us. The wordmark — drawn in Pantone 186 C (`#e60012`) by Yamauchi family designers in 1985 — has barely shifted in 40 years. Nintendo Sans (a custom rounded sans developed in-house) descends from the Avenir Next Rounded family. The whole language is engineered to be read by an 8-year-old browsing for Christmas presents at the same comfort level as their parent vetting the product.'
+  influences:
+    - { name: 'Disney parks signage', role: 'family-first chromatic palette and curve language', url: 'https://disneyparks.disney.go.com' }
+    - { name: 'Bandai / Tomy toy packaging', role: 'Japanese toy aisle visual lineage', url: 'https://www.bandai.com' }
+    - { name: 'Avenir Next Rounded (Frutiger)', role: 'fallback typography lineage for Nintendo Sans', url: 'https://www.linotype.com/1267/avenir-next-rounded.html' }
+    - { name: 'Pantone 186 C', role: 'Nintendo Red anchor color since 1985', url: 'https://www.pantone.com' }
+    - { name: 'Toys R Us retail aisle', role: 'brand-first product photography on white', url: 'https://en.wikipedia.org/wiki/Toys_%22R%22_Us' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Nintendo's marketing site refuses what every other gaming brand commits to. The canvas is paper-white `#ffffff` (never tinted, never warmed unless illustration calls for it), the only chromatic accent is "Nintendo Red" `#e60012`, and the rest of the page is filled with photography of plastic toys and full-bleed illustrations of Mario, Link, and Pikachu. Cards have soft 12–24px radius and gentle drop shadows, never hard corners or hairline rules.
+
+Where Valorant chose magazine and PlayStation chose cinema, Nintendo chose **toy aisle**. The visual lineage runs through Disney parks, Toys R Us, Japanese toy packaging (Bandai, Tomy), and Saturday-morning broadcast television. The brand is unembarrassed by joy. There is no dark mode, no edgy "DEPLOY" microcopy, no skewed CTA. The pill-radius primary button reads "Buy now" or "Sign up" in cheerful pure-white-on-red.
+
+What's striking is the consistency. The wordmark — drawn in Pantone 186 C by Yamauchi family designers in 1985 — has barely shifted in 40 years. The site adapts to new product launches (Switch 2, Mario Kart World) but never to platform aesthetic trends. While other brands cycled through skeuomorphism, flat design, neumorphism, glass, and brutalism, Nintendo did the same thing the same way, year after year, because their customer was 8 then, 8 now, and 8 in 2030.
+
+**Key Characteristics:**
+- Paper-white canvas `#ffffff` — illustrations bleed into it, no contrast band
+- "Nintendo Red" `#e60012` (Pantone 186 C) is the only chromatic anchor
+- Custom Nintendo Sans for display — a rounded humanist sans
+- Helvetica Neue / Inter for body — extreme legibility for kids and parents
+- Pill-radius primary buttons (9999px), 16-24px radius cards
+- Family of full-bleed character illustrations (Mario, Link, Pikachu, Animal Crossing)
+- Soft drop shadows on every card, never hairlines
+- No dark mode, no edge, no irony
+- Microcopy is direct, descriptive, never gamer-coded
+- Heavily product-photography-led: the toy on the white page
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): the entire marketing canvas. Never tinted.
+- **Text** (`#1f1f1f`): body copy. Slightly soft-black, not pure.
+- **Text Strong** (`#000000`): pure black for display headlines.
+
+### Brand — Nintendo Red
+- **Brand** (`#e60012`): Pantone 186 C. The only saturated CTA color, the wordmark color.
+- **Brand Hover** (`#cc0010`): slight darken on hover.
+- **Brand Active** (`#a8000d`): pressed.
+- **Brand Deep** (`#8a000a`): icon strokes inside red badges.
+- **Brand Tint** (`#ffeeee`): palest red wash for selected rows.
+
+### Surface
+- **Surface** (`#ffffff`): cards lift via shadow, not bg.
+- **Surface Soft** (`#fafafa`): hover lift, alternate band.
+- **Surface Strong** (`#f5f5f5`): pressed input bg.
+- **Bg Warm** (`#fff8f0`): seasonal/warm campaigns (rare).
+- **Bg Tinted** (`#ffeeee`): celebration / featured campaigns.
+
+### Interactive
+- **Link** (`#0066cc`): clean blue, distinct from brand red.
+- **Link Hover** (`#cc0010`): hover shifts to red.
+- **Selected bg** (`#ffeeee`): red tint behind selected.
+
+### Borders
+- **Border** (`#e5e5e5`): default hairline.
+- **Border Strong** (`#cccccc`): inputs, selected card edge.
+- **Border Brand** (`#e60012`): focus ring on red CTA.
+
+### Semantic
+- success `#00a345` (Mario green), warning `#ff8c00`, danger `#e60012` (= brand), info `#0066cc`.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display**: Nintendo Sans — a custom rounded humanist sans developed in-house, descended from Avenir Next Rounded. Falls back to Avenir Next Rounded → Helvetica Neue.
+- **Body**: Helvetica Neue / Inter at 16px line-height 1.55. Hyper-legibility for cross-generational readers.
+- **Mono**: system mono only, used in spec lists for hardware specs.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking | Notes |
+|------|------|------|--------|-----|----------|-------|
+| display-hero | Nintendo Sans | 80 | 800 | 1.0 | -0.02em | new product hero |
+| display-xl | Nintendo Sans | 64 | 800 | 1.05 | -0.018em | feature heading |
+| display-lg | Nintendo Sans | 48 | 700 | 1.1 | -0.012em | section H |
+| h1 | Nintendo Sans | 36 | 700 | 1.15 | -0.008em | page title |
+| h2 | Nintendo Sans | 28 | 700 | 1.2 | -0.005em | sub-section |
+| h3 | Nintendo Sans | 22 | 700 | 1.25 | 0 | card heading |
+| h4 | Nintendo Sans | 18 | 600 | 1.3 | 0 | sub-heading |
+| body-lg | Helvetica | 18 | 400 | 1.55 | 0 | hero subhead |
+| body | Helvetica | 16 | 400 | 1.55 | 0 | body |
+| body-sm | Helvetica | 14 | 400 | 1.5 | 0 | secondary |
+| label | Helvetica | 13 | 700 | 1.3 | 0.03em | form labels |
+| button | Nintendo Sans | 16 | 700 | 1.0 | 0.02em | CTA |
+| caption | Helvetica | 12 | 500 | 1.4 | 0 | image captions |
+
+### Principles
+- **Round, friendly, never austere.** Nintendo Sans's tucked-in corners are non-negotiable.
+- **Mixed case for everything** including buttons. No all-caps display.
+- **Tight tracking on display, normal on body.** -0.02em hero, 0 body.
+- **Helvetica Neue for body** — extreme legibility, intentionally familiar, never trendy.
+- **Heavy weights only in display** (700-800). Body stays 400.
+- **Never small caps**, never decorative ligatures. The brand is functional-friendly.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**Primary** — Nintendo Red:
+- bg `#e60012`, text white, font Nintendo Sans 16px 700 0.02em
+- padding 14×32, **radius 9999 (pill)** — the brand's button signature
+- Hover: bg `#cc0010`, scale 1.03
+- Press: bg `#a8000d`, scale 0.98
+- Disabled: bg 30% red, text 60% white
+
+**Secondary** — bordered:
+- bg white, text `#1f1f1f`, 2px gray border, pill radius
+- Hover: bg `#fafafa`, border darkens
+
+**Ghost** — link-style:
+- bg transparent, text `#e60012`, padding 10×20
+
+**Buy Now** (oversized variant):
+- 18px font, padding 18×40, otherwise primary
+
+### Cards
+- bg white, no border, radius **16-24px** (depends on content density)
+- Shadow: `0 4px 12px rgba(0,0,0,0.08)` resting → `0 8px 24px rgba(0,0,0,0.12)` hover
+- Featured cards (new product) get a red 2-3px left border
+
+### Pills (rare — used for game ratings, age tags)
+- radius 9999, padding 4×12, label font
+- bg `bg-soft`, text dark
+
+### Inputs
+- 2px border `#cccccc`, radius 12
+- Focus: border red `#e60012`, no glow
+- Error: border red, helper text red
+- Search input has rounded full pill radius
+
+### Navigation
+- 80px sticky header, white bg, soft hairline bottom
+- Nintendo wordmark left (red), top-level nav center
+- Account + cart icons right, sign-in CTA in primary red pill
+
+## 5. Layout Principles
+
+### Spacing
+- Base 4px, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 120, 160]`
+- 64-96px between feature sections
+- 24px most-used (card padding, internal block padding)
+
+### Grid & Container
+- Page max width 1440px (wider than typical SaaS)
+- Hero often full-bleed photography or illustration with constrained text
+- Game grid: 4-up at desktop, 2-up at tablet, 1-up at mobile
+
+### Whitespace
+- Generous around hero illustrations — products need room
+- 96px+ between major sections
+- Cards 24px internal padding minimum
+
+### Section Cadence
+- Mostly white-on-white with illustration breaks
+- Occasional bg-tinted (`#ffeeee`) campaign band
+- Footer dark on rare exceptions (legal, jobs)
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | inline tags, kbd-style hints |
+| Standard | 8 | tooltips, dropdowns |
+| Comfortable | 12 | inputs |
+| Relaxed | 16 | **default card radius** |
+| Featured | 24 | hero cards, modals, oversized |
+| Pill | 9999 | **all buttons + age tags** |
+
+The brand commits to **rounded everything**. 0px corners would feel un-Nintendo immediately.
+
+## 7. Depth & Elevation
+
+| Level | Treatment | Use |
+|-------|-----------|-----|
+| 0 | none | inline |
+| 1 | `0 4px 12px rgba(0,0,0,0.08)` | resting cards |
+| 2 | `0 8px 24px rgba(0,0,0,0.12)` | hover, dropdown |
+| 3 | `0 12px 36px rgba(0,0,0,0.15)` | featured campaigns |
+| 4 | `0 20px 60px rgba(0,0,0,0.20)` | modal |
+
+### Shadow Philosophy
+Soft, generous, neutral-blue-tinted. Never colored shadows on UI; the only "tinted" shadow is occasional warm tone on toy-photography product cards. Always blurred (8-20px), never flat-color.
+
+## 8. Interaction & Motion
+
+### Easing & duration
+- **Standard ease**: `cubic-bezier(0.25, 0.1, 0.25, 1)` — Apple's gentle in-out
+- **Emphasized ease**: `cubic-bezier(0.34, 1.56, 0.64, 1)` — bounce for character reveals (Mario jump, Link sword swing)
+- Durations: 150ms (hover), 250ms (focus, dropdown), 400ms (modal, page transition)
+
+### Per-component
+- **Primary CTA hover**: scale 1.03 + bg darken in 150ms
+- **Card hover**: shadow lifts (level 1 → 2), no transform
+- **Character illustrations**: subtle bob ±4px every 2.5s on idle
+- **Game tile reveal (scroll)**: fade in + 12px translate, no scale
+- **Mario coin animation**: emphasized ease bounce on rare success states
+
+### Reduced Motion
+Honors `prefers-reduced-motion: reduce`. Bounce ease replaced with linear; bob disabled; coin/character animations replaced with static.
+
+## 9. Accessibility & A11y
+
+### Contrast
+- text on bg: `#1f1f1f` on `#ffffff` = **14.6:1** (AAA)
+- on-brand on brand: `#ffffff` on `#e60012` = **5.9:1** (AA at body, AAA at large)
+- link on bg: `#0066cc` on `#ffffff` = **5.6:1** (AA)
+
+### Focus
+3px solid `#0066cc` (info blue, not red — distinct from brand for keyboard nav). 2px outset gap.
+
+### ARIA & Keyboard
+- Game tiles use `role="link"` with descriptive aria-label including game title + system + rating
+- Character illustrations are `aria-hidden="true"` (decorative)
+- Age ratings (E10+, T, M) use `<abbr>` with full title
+- Cart icon has live count via `aria-live="polite"`
+
+### Screen Reader
+- Image alt text describes the toy first ("White Nintendo Switch 2 console with Joy-Con controllers attached")
+- Video product reveals have closed captions and audio description tracks
+- "Buy now" button announces as "Buy now: [product name]"
+
+## 10. Responsive Behavior
+
+| Breakpoint | px | Behavior |
+|-----------|-----|----------|
+| mobile | 0-639 | hero scales 80→44px; nav hamburger; 1-up game grid |
+| tablet | 640-1023 | 2-up grid, sticky CTA bottom of page |
+| desktop | 1024-1279 | 3-up grid, full nav |
+| wide | 1280-1440 | 4-up grid, larger illustrations |
+
+### Touch Targets
+44×44 min on mobile; pill buttons get 56px+ height on hero CTAs.
+
+### Per-component
+- Nav → hamburger overlay at <640px
+- Game grid → vertical scroll with snap at <640px
+- Carousel → swipe at all sizes; chevron arrows at >1024px
+
+### Image Behavior
+- Product photos: `cover`, white bg, transparent PNG with subtle drop shadow
+- Character illustrations: SVG when possible, scales fluidly
+- Hero photography: 16:9 with text overlay 30% from bottom
+
+## 11. Content & Voice
+
+### Tone
+**Cheerful-direct.** Friendly without infantilizing, descriptive without being technical. Voice is a salesclerk in the toy aisle who knows every game by heart.
+
+### Microcopy patterns
+- Primary CTA: **"Buy now"** / **"Pre-order"** — never "Add to cart" alone
+- Sign-up: **"Create a Nintendo Account"** (capitalized as proper noun)
+- Errors: **"Hmm, something went wrong"** — gentle, never "Error" alone
+- Loading: **"Loading…"** + occasionally a Mario coin spin animation
+- Empty state: **"No items yet — start with a recommendation below"**
+
+### Empty states
+Always include a recommended path forward. Never apologetic.
+
+### CTA verb conventions
+- **Buy / Pre-order** (commerce)
+- **Play / Try** (game demo)
+- **Discover / Explore** (browse)
+- **Sign in / Create account** (auth)
+- Avoid: "Click", "Submit", "Continue" (too generic)
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** The brand's identity is anchored to white canvas — the toy aisle metaphor falls apart in dark mode.
+
+The Nintendo Switch console UI has a dark mode (charcoal `#2d2d2d` bg + Nintendo Red unchanged), but this never appears on web. If a partner integration requires dark, the brand's published guidance keeps red unchanged and inverts text, but no marketing surface ships dark.
+
+## 13. Lineage & Influences
+
+Nintendo's visual system rejects every aesthetic choice the rest of the gaming industry has made. Where competitors (Sony, Microsoft, Riot) went dark, edgy, and "AAA cinematic", Nintendo stayed bright, joyful, family-first. The brand's ancestry traces back to:
+1. **Disney parks signage** — family-first chromatic palette discipline, curve language
+2. **Bandai / Tomy toy packaging** — Japanese toy aisle visual lineage, white-bg-with-character
+3. **Avenir Next Rounded (Frutiger, 2012)** — typographic ancestor of in-house Nintendo Sans
+4. **Pantone 186 C** — anchor color since the 1985 wordmark refresh
+5. **Toys R Us / Macy's toy aisle** — brand-first product photography on white
+
+The wordmark itself has barely shifted in 40 years. The Nintendo Switch (2017), Switch OLED (2021), and Switch 2 (2025) all sat on the same visual foundation. While competitors cycled through skeuomorphism, flat design, neumorphism, glass, and brutalism, Nintendo did the same thing the same way — because their customer was 8 then, 8 now, and 8 in 2030.
+
+## 14. Do's and Don'ts
+
+### Do
+- **Use Nintendo Red `#e60012` for brand + primary CTA only.** It loses meaning if used decoratively.
+- **Pill radius (9999px) on all buttons.** Square buttons feel un-Nintendo.
+- **Round everything else 12-24px.** No 0-2px corners on UI.
+- **Keep canvas pure white.** Tinting it warmer loses the toy-aisle feel.
+- **Use mixed case on display.** No all-caps, no shouting.
+- **Cheerful microcopy.** "Hmm, something went wrong" > "Error 404".
+- **Soft drop shadows everywhere.** Cards, buttons, pop-ups all blurred shadows.
+- **Use character illustrations.** Mario, Link, Pikachu, Animal Crossing — they're the brand.
+
+### Don't
+- **Don't use a dark canvas.** The brand has no dark mode on web.
+- **Don't add gradients on CTA.** Solid red only.
+- **Don't all-caps headlines.** Mixed case, always.
+- **Don't use serif fonts.** No exceptions, even for legal copy.
+- **Don't substitute red.** `#e60012` is Pantone 186 C — not Tailwind red, not `#dc2626`.
+- **Don't add edgy microcopy.** "DEPLOY" or "INITIALIZE" is off-brand.
+- **Don't hairline borders.** Soft shadows do the elevation work.
+- **Don't show characters in dark scenes.** Bright lighting always.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#1f1f1f` / strong: `#000000`
+- brand (Nintendo Red): `#e60012` / hover `#cc0010`
+- link: `#0066cc`
+- border: `#e5e5e5` / strong `#cccccc`
+- success (Mario green): `#00a345`
+
+### Example Component Prompts
+
+> Build a Nintendo-style hero: paper-white bg, 80px Nintendo Sans Bold heading "Welcome to Switch 2", 18px Helvetica subhead in `#1f1f1f`. Primary CTA "Buy now" in pill-radius red `#e60012` 16px button. Mario character illustration right 50%, gently bobbing. Section pad 96px vertical.
+
+> Design a game card: white surface, 16px radius, 24px pad, `0 4px 12px rgba(0,0,0,0.08)` shadow. 22px Nintendo Sans game title, 13px Helvetica genre tag in pill radius `bg-soft`. Box art image top, full-bleed inside card.
+
+> Render an age-rating pill: 9999 radius, padding 4×12, "E10+" label in 13px Helvetica 700, gray bg with dark text. Use `<abbr title="Everyone 10+">E10+</abbr>` for screen readers.
+
+> Build a "Buy Now" CTA: pill radius, Nintendo Red bg, white 16px Nintendo Sans 700 0.02em "Buy now". 18×40 padding (oversized hero variant). Hover scale 1.03 + bg `#cc0010`.
+
+> Design a search input: pill radius, 2px gray border, 16px height, gray placeholder "Search games, characters, news…", focus border shifts to red `#e60012`.
+
+### Iteration Guide
+
+1. **Pill all the buttons.** 9999px radius is the brand's button signature.
+2. **Round everything 12-24px.** Sharp corners feel wrong immediately.
+3. **Use Nintendo Sans (or Avenir Next Rounded) for display.** Never sharp sans.
+4. **Body in Helvetica or Inter.** Prioritize legibility over personality in body.
+5. **One red CTA per fold.** Don't spam Nintendo Red.
+6. **Use mixed case everywhere.** All-caps feels gamer-bro and off-brand.
+7. **Soft drop shadows beat hairlines.** Blur 8-20px, opacity 0.08-0.12.
+8. **Character illustrations belong here.** If you can include Mario without licensing nightmare, do.

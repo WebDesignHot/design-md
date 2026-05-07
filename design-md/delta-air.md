@@ -1,0 +1,395 @@
+---
+name: Delta Air Lines
+tagline: Whitney sans on near-white, Delta navy + signal red — the Hartsfield-Jackson aircraft livery translated to web typography.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:03.914Z
+author: webdesignhot
+source_url: https://www.delta.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [hospitality, saas]
+tags: [light, structured, sans, cool]
+preview_swatch: ['#ffffff', '#003366', '#e01933']
+related: [jetblue, marriott, hilton]
+description: 'Delta''s site translates the Hartsfield-Jackson aircraft livery directly to web. The canvas is near-white `#fafafa`, headings sit in Whitney (Hoefler & Co''s humanist sans drawn for the WSJ Magazine and now Delta''s in-house face) at 40–64px, and the dual brand colors are Delta Navy `#003366` and Delta Red `#e01933` — colors visible from the airport jetway. Where Marriott chose serif gravitas and Hilton chose contemporary sans, Delta chose American-airline confidence: rectangular CTAs, dense fare-comparison tables, premium-but-accessible voice. The Delta SkyMiles loyalty program and SkyMiles tiers (Silver, Gold, Platinum, Diamond) thread through every fare page. The whole brand reads as "I trust this company with my flight" — durable, structured, slightly conservative.'
+
+colors:
+  bg: '#fafafa'
+  bg-soft: '#f4f5f7'
+  bg-warm: '#faf9f6'
+  surface: '#ffffff'
+  surface-soft: '#fafbfc'
+  surface-strong: '#f0f2f5'
+  brand: '#003366'
+  brand-hover: '#002952'
+  brand-pressed: '#001f3d'
+  brand-deep: '#001428'
+  brand-tint: '#e6ebf2'
+  brand-soft: '#cbd5e0'
+  on-brand: '#ffffff'
+  red: '#e01933'
+  red-deep: '#b8132a'
+  red-soft: '#ffe5e8'
+  text: '#1a1a1a'
+  text-strong: '#003366'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#003366'
+  link-hover: '#e01933'
+  selected-bg: '#e6ebf2'
+  border: '#d8dce0'
+  border-strong: '#b8bdc4'
+  border-soft: '#eaecf0'
+  border-brand: '#003366'
+  diamond-tier: '#3b3540'
+  platinum-tier: '#737a82'
+  gold-tier: '#b08a4a'
+  silver-tier: '#a0a4a8'
+  success: '#1d8049'
+  warning: '#cc8800'
+  danger: '#e01933'
+  info: '#003366'
+
+typography:
+  display:
+    family: '"Whitney", "Whitney HTF", "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 700]
+  body:
+    family: '"Whitney", "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 64, weight: 700, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-xl:      { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.015em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.15, tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.2,  tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.16em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.06em',   family: body }
+    button:          { size: 15, weight: 700, lineHeight: 1.0,  tracking: '0.05em',   family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 88
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 360
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 8px rgba(0, 51, 102, 0.06)'
+  card-hover: '0 4px 16px rgba(0, 51, 102, 0.10)'
+  modal: '0 24px 64px rgba(0, 51, 102, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 14.6
+  contrast-text-on-brand: 12.8
+  focus-ring: '2px solid #003366 + 2px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 28px', radius: 4, font: button }
+  button-red: { bg: red, text: on-brand, padding: '14px 28px', radius: 4, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '12px 26px', radius: 4, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 4, padding: 24, shadow: 'card', border: '1px solid border-soft' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: surface, border: '1px solid border-strong', text: text, radius: 4, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Delta''s marketing system descends directly from the Hartsfield-Jackson aircraft livery refresh of 2007 (the "Delta widget" mark). Whitney — Hoefler & Co''s humanist sans drawn for the WSJ Magazine and adopted by Delta as in-house typography in 2018 — handles every heading. Delta Navy `#003366` and Delta Red `#e01933` are the dual brand colors, both lifted directly from the aircraft tail and fuselage. The system commits to American-airline confidence: rectangular CTAs (4px radius), dense fare-comparison tables, premium-but-accessible voice that lands between United''s corporate restraint and JetBlue''s playfulness. SkyMiles tier badges (Silver, Gold, Platinum, Diamond) carry their own typographic weight as semi-luxe metallic accents. The whole brand reads "I trust this company with my flight".'
+  influences:
+    - { name: 'Whitney by Hoefler & Co', role: 'humanist sans drawn for WSJ Magazine, adopted by Delta in 2018', url: 'https://www.typography.com/fonts/whitney' }
+    - { name: 'Delta widget mark (2007)', role: 'aircraft livery brand refresh anchoring navy + red', url: 'https://www.delta.com/us/en/about-delta/history' }
+    - { name: 'WSJ Magazine', role: 'typographic sibling — Whitney + structured editorial layouts', url: 'https://www.wsj.com/news/lifestyle' }
+    - { name: 'United Polaris', role: 'corporate-restrained airline-design contemporary', url: 'https://www.united.com/en/us/fly/travel/inflight/polaris.html' }
+    - { name: 'Pantone 281 (Delta Navy) + Pantone 200 (Delta Red)', role: 'dual brand color anchors', url: 'https://www.pantone.com' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Delta's site translates the Hartsfield-Jackson aircraft livery directly to web. The canvas is near-white `#fafafa`, headings sit in Whitney (Hoefler & Co's humanist sans drawn for the WSJ Magazine, adopted by Delta as in-house typography in 2018) at 40–64px, and the dual brand colors are Delta Navy `#003366` and Delta Red `#e01933` — colors visible from the airport jetway and preserved across decades.
+
+Where Marriott chose serif gravitas and Hilton chose contemporary sans, Delta chose **American-airline confidence**: rectangular CTAs at 4px radius, dense fare-comparison tables, premium-but-accessible voice that lands between United's corporate restraint and JetBlue's playfulness. The SkyMiles loyalty program and tier badges (Silver, Gold, Platinum, Diamond) thread through every fare page with semi-luxe metallic accents.
+
+CTAs are predominantly Delta Navy `#003366` for primary actions; Delta Red `#e01933` is reserved for urgency states (last seats, limited offers, error states). Photography is utilitarian — terminal interiors, premium-cabin seating, route maps. Cards have hairline borders + 4px radius + soft navy-tinted shadows. The whole brand reads durable, structured, slightly conservative — exactly what someone trusting their flight wants.
+
+**Key Characteristics:**
+- Near-white canvas `#fafafa`
+- Dual brand: Delta Navy `#003366` (primary) + Delta Red `#e01933` (urgency)
+- Whitney (Hoefler & Co) for everything
+- 4px radius on UI (gentle rectangular)
+- SkyMiles tier badges in metallic accents
+- Photography utilitarian — never as cinematic as Marriott
+- Soft navy-tinted shadows
+- 0.05em tracking on buttons UPPER
+- Mixed case display, UPPER eyebrows + buttons
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#fafafa`): near-white. Slight cool-gray tilt.
+- **Surface** (`#ffffff`): cards lift from near-white canvas.
+- **Text** (`#1a1a1a`): body. Soft near-black.
+- **Text Strong** (`#003366`): emphasized headlines in Delta Navy.
+
+### Brand — Delta Navy
+- **Brand** (`#003366`): primary CTA, brand wordmark, headline emphasis.
+- **Brand Hover** (`#002952`), **Pressed** (`#001f3d`), **Deep** (`#001428`).
+- **Brand Tint** (`#e6ebf2`): selection wash.
+
+### Red — Urgency Accent
+- **Red** (`#e01933`): last-seat warnings, limited offers, error states. Never primary CTA except for booking urgency.
+- **Red Deep** (`#b8132a`), **Red Soft** (`#ffe5e8`).
+
+### SkyMiles Tier Accents
+- **Diamond** (`#3b3540`): dark gunmetal.
+- **Platinum** (`#737a82`): cool gray.
+- **Gold** (`#b08a4a`): muted brass.
+- **Silver** (`#a0a4a8`): light steel.
+
+### Borders
+- **Border** (`#d8dce0`), **Border Strong** (`#b8bdc4`), **Border Soft** (`#eaecf0`).
+
+### Semantic
+- success `#1d8049`, warning `#cc8800`, danger `#e01933` (= red), info navy.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Whitney (Hoefler & Co's humanist sans). Falls back to Inter → Helvetica Neue. Whitney is also used by WSJ Magazine, Yale, and the New York City subway signage.
+- **Mono**: system mono only.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking | Notes |
+|------|------|------|--------|-----|----------|-------|
+| display-hero | Whitney | 64 | 700 | 1.05 | -0.018em | fare hero |
+| display-xl | Whitney | 56 | 700 | 1.1 | -0.015em | feature |
+| display-lg | Whitney | 48 | 700 | 1.15 | -0.012em | section H |
+| h1 | Whitney | 36 | 700 | 1.2 | -0.008em | sub-section |
+| h2 | Whitney | 28 | 600 | 1.25 | -0.005em | card H |
+| h3 | Whitney | 22 | 600 | 1.3 | 0 | sub-card |
+| eyebrow | Whitney | 12 | 700 | 1.2 | 0.16em (UPPER) | section labels |
+| body | Whitney | 16 | 400 | 1.55 | 0 | body |
+| label | Whitney | 13 | 700 | 1.3 | 0.06em (UPPER) | tags |
+| button | Whitney | 15 | 700 | 1.0 | 0.05em (UPPER) | CTA |
+
+### Principles
+- **Whitney everywhere** — display through body. The brand's typographic monoculture.
+- **700 weight on display + buttons** — confident.
+- **Mixed case display, UPPER eyebrows + labels + buttons.**
+- **Body 16px / 1.55** — standard rhythm.
+
+## 4. Component Stylings
+
+### Buttons (4 variants)
+
+**Primary** — Delta Navy:
+- bg `#003366`, text white, 15px Whitney 700 0.05em UPPER
+- padding 14×28, radius 4
+- Hover: bg `#002952`
+
+**Red** — urgency only:
+- bg `#e01933`, text white, otherwise primary
+- "Book in 5 minutes — only 3 seats left"
+
+**Secondary** — bordered:
+- bg white, text navy, 1px navy border, radius 4
+
+**Ghost**: bg transparent, text navy, padding 10×20.
+
+### Cards
+- bg white, 4px radius, padding 24
+- 1px soft border + soft navy-tinted shadow `0 2px 8px rgba(0,51,102,0.06)`
+- Featured fare cards: 1px navy left border + "BEST VALUE" eyebrow
+
+### Pills (loyalty tiers, fare classes)
+- Tier badges: pill radius, tier-color bg, white or dark text, label font
+- Fare-class pills: `brand-tint` bg, navy text
+
+### Inputs
+- bg white, 1px border, radius 4, padding 12×16
+- Focus: border navy
+
+### Navigation
+- 88px sticky header, near-white bg with hairline bottom
+- Delta widget logo left (red), top-level nav center ("Book" / "My trips" / "SkyMiles" / "Help"), Account icon right
+
+## 5. Layout Principles
+
+### Spacing
+- Base 4px, scale `[0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120]`
+- 80-96px between sections
+- 24px card pad
+
+### Grid & Container
+- Page max width 1280px
+- Hero: photo or aircraft illustration with fare-search overlay
+- Fare results: dense table, 3-up at desktop, stacked at mobile
+- Route maps: full-width SVG with airport pins
+
+### Whitespace
+- Generous around hero, dense in fare-comparison tables and SkyMiles statements
+
+### Section Cadence
+- Near-white-on-near-white with photography breaks
+- Occasional `bg-soft` cool-gray band
+- Footer is navy with white text
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2 | indicators |
+| Standard | 4 | **default for buttons, cards, inputs** |
+| Comfortable | 6 | dropdowns |
+| Relaxed | 8 | featured cards |
+| Pill | 9999 | tier + fare-class pills |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 0 | none |
+| 1 | `0 2px 8px rgba(0,51,102,0.06)` resting |
+| 2 | `0 4px 16px rgba(0,51,102,0.10)` hover |
+| 3 | `0 12px 32px rgba(0,51,102,0.14)` featured |
+| 4 | `0 24px 64px rgba(0,51,102,0.20)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease `cubic-bezier(0.25, 0.1, 0.25, 1)`
+- 150ms hover, 240ms standard, 360ms slow
+
+## 9. Accessibility & A11y
+
+- text on bg: `#1a1a1a` on `#fafafa` = **14.6:1** AAA
+- on-brand: `#ffffff` on `#003366` = **12.8:1** AAA
+- 2px navy focus ring + 2px outset gap
+
+Fare-comparison tables use semantic `<table>` markup. SkyMiles tier badges use `<abbr>` for tier names.
+
+## 10. Responsive Behavior
+
+mobile <479: hero scales 64→40; nav hamburger; fare results stack. tablet 480-767: 2-up cards, sticky search. desktop+: 3-up, full nav.
+
+## 11. Content & Voice
+
+### Tone
+**Confident-trustworthy.** Premium without being aspirational, accessible without being casual. Voice is the captain's announcement on a smooth flight.
+
+### Microcopy patterns
+- Primary CTA: **"Book"** / **"Continue"** / **"Search flights"**
+- Sign-up: **"Join SkyMiles"**
+- Errors: **"We couldn't process your request. Try again."**
+- Loading: **"Searching flights…"**
+- Empty: **"No flights match. Try different dates."**
+- Urgency: **"Only 3 seats left at this price"** in Delta Red
+
+### CTA verb conventions
+- **Book / Search / Continue / Confirm**
+- **Join SkyMiles**
+- Avoid: "Buy", "Click"
+
+## 12. Dark Mode & Theming
+
+**Light-only** on web. The brand's identity is navy + red on near-white.
+
+## 13. Lineage & Influences
+
+Delta's marketing system descends from the Hartsfield-Jackson aircraft livery refresh of 2007 (the "Delta widget" mark). Whitney — drawn for WSJ Magazine, adopted by Delta as in-house typography in 2018 — handles every heading. Delta Navy `#003366` and Delta Red `#e01933` are lifted directly from the aircraft tail and fuselage.
+
+The system commits to American-airline confidence: rectangular CTAs, dense fare tables, premium-but-accessible voice that lands between United's corporate restraint and JetBlue's playfulness.
+
+**Named influences:**
+- **Whitney by Hoefler & Co** ([typography.com](https://www.typography.com/fonts/whitney))
+- **Delta widget mark (2007)** — aircraft livery refresh
+- **WSJ Magazine** — Whitney sibling
+- **United Polaris** — corporate-restrained contemporary
+- **Pantone 281 + Pantone 200** — dual brand color anchors
+
+## 14. Do's and Don'ts
+
+### Do
+- **Whitney for everything** — Hoefler & Co's humanist sans is non-negotiable.
+- **Delta Navy `#003366` for primary CTA + brand mark.**
+- **Delta Red `#e01933` for urgency states only** — never decorative.
+- **4px radius on UI** — gentle rectangular.
+- **Mixed case display, UPPER buttons + eyebrows.**
+- **0.05em tracking on UPPER buttons.**
+- **SkyMiles tier badges in metallic accents.**
+- **Soft navy-tinted shadows.**
+
+### Don't
+- **Don't substitute Whitney.** Inter and Helvetica Neue are emergency fallbacks only.
+- **Don't use Delta Red as primary CTA color** — it's urgency only.
+- **Don't all-caps headlines.**
+- **Don't add gradients.**
+- **Don't substitute brand colors** — `#003366` + `#e01933` exclusively.
+- **Don't add a friendly mascot.**
+- **Don't add dark mode** without explicit Delta approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#fafafa`
+- text: `#1a1a1a` / strong (Delta Navy): `#003366`
+- brand (Delta Navy): `#003366` / hover `#002952`
+- red (urgency): `#e01933`
+- tier badges: diamond `#3b3540`, platinum `#737a82`, gold `#b08a4a`, silver `#a0a4a8`
+
+### Example Component Prompts
+
+> Build a Delta-style fare hero: full-bleed aircraft cabin photo, near-white scrim 30% from bottom, 64px Whitney Bold heading "Delta One — Refreshed", 18px subhead. Primary CTA "Search flights" 4px-radius Delta Navy `#003366` 15px Whitney 700 0.05em UPPER, padding 14×28.
+
+> Design a fare card: white surface, 4px radius, 24px pad, soft navy-tinted shadow. 22px Whitney h3 "Atlanta → New York", price `$129` in 36px navy bold. Eyebrow "BASIC ECONOMY" in 12px UPPER 0.16em. Urgency banner "Only 3 seats left" in Delta Red 14px below.
+
+> Render a Diamond tier badge: pill radius, dark gunmetal `#3b3540` bg, white 13px Whitney 700 0.06em UPPER "DIAMOND". 4×12 padding.
+
+> Build a "Join SkyMiles" CTA: 4px radius, Delta Navy bg, white 15px Whitney 700 0.05em UPPER text, padding 14×28.
+
+> Design a route-map: full-width SVG, navy airport pins, red active route line, white labels in Whitney 13px.
+
+### Iteration Guide
+
+1. **Whitney for everything.** Get Hoefler's humanist sans right.
+2. **Delta Navy primary, Delta Red urgency only.**
+3. **4px radius on UI** — gentle rectangular.
+4. **SkyMiles tier badges in metallic accents** (gunmetal/gold/silver/platinum).
+5. **Mixed case display, UPPER buttons.**
+6. **Photography utilitarian, not cinematic.**
+7. **Dense fare tables OK; generous around hero.**
+8. **Reject mascots, gradients, all-caps headlines, alt color schemes.**

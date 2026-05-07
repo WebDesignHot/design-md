@@ -1,0 +1,371 @@
+---
+name: Brilliant
+tagline: STEM education with playful diagram-energy — warm coral CTA on near-black, custom Brilliant Sans, illustrated geometry as hero.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:18.801Z
+author: webdesignhot
+source_url: https://brilliant.org
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [education]
+tags: [dark, structured, sans, playful, bright]
+preview_swatch: ['#0c0e16', '#fc6e51', '#ffffff']
+related: [duolingo, quizlet, masterclass]
+description: 'Brilliant''s site is the rare STEM-education brand that has decided learning math should feel like watching a Vimeo science explainer rather than reading a textbook. The canvas is a near-black `#0c0e16` (very slight cool tilt), headings sit in Brilliant Sans (a custom Inter-adjacent rounded sans) at 56–88px, and the only chromatic accent is "Brilliant Coral" `#fc6e51` — a warm orange-coral picked specifically to evoke geometric diagrams in a high-school physics textbook. Where Khan Academy chose green and Duolingo chose green, Brilliant chose this distinctive coral. Hero illustrations are full-bleed animated geometry — circles, triangles, isometric grids in coral and white. The brand reads as "education that respects your intelligence" — premium, structured, never cute.'
+
+colors:
+  bg: '#0c0e16'
+  bg-deep: '#06070d'
+  bg-section: '#13151f'
+  bg-elev: '#1c1f2c'
+  surface: '#13151f'
+  surface-strong: '#1f2230'
+  brand: '#fc6e51'
+  brand-hover: '#ff8268'
+  brand-pressed: '#e25738'
+  brand-deep: '#b8401f'
+  brand-tint: 'rgba(252, 110, 81, 0.15)'
+  on-brand: '#ffffff'
+  text: '#ffffff'
+  text-strong: '#ffffff'
+  text-muted: '#a8acba'
+  text-soft: '#7a7e8c'
+  text-faint: '#5a5e6c'
+  text-on-brand: '#ffffff'
+  link: '#fc6e51'
+  link-hover: '#ffffff'
+  selected-bg: 'rgba(252, 110, 81, 0.15)'
+  border: 'rgba(255, 255, 255, 0.08)'
+  border-strong: 'rgba(255, 255, 255, 0.16)'
+  border-brand: '#fc6e51'
+  diagram-coral: '#fc6e51'
+  diagram-yellow: '#ffd44d'
+  diagram-cyan: '#5ac3e5'
+  diagram-purple: '#b582ff'
+  success: '#5ac38a'
+  warning: '#ffd44d'
+  danger: '#ff5a6d'
+  info: '#5ac3e5'
+
+typography:
+  display:
+    family: '"Brilliant Sans", "Inter", "Larken", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [600, 700, 800]
+  body:
+    family: '"Brilliant Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 88, weight: 700, lineHeight: 1.0,  tracking: '-0.02em',  family: display }
+    display-xl:      { size: 72, weight: 700, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-lg:      { size: 56, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    h1:              { size: 40, weight: 700, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h2:              { size: 32, weight: 600, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h3:              { size: 24, weight: 600, lineHeight: 1.25, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.12em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.6,  tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 700, lineHeight: 1.3,  tracking: '0.05em',   family: body }
+    button:          { size: 16, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    caption:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+    formula:         { size: 18, weight: 400, lineHeight: 1.5,  tracking: '0',        family: mono }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8
+  lg: 12
+  xl: 16
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 72
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 400
+  duration-cinematic: 600
+  reduced-motion: 'respects prefers-reduced-motion: reduce — disables geometry animations'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 8px rgba(0, 0, 0, 0.40)'
+  card-hover: '0 4px 16px rgba(252, 110, 81, 0.20)'
+  modal: '0 24px 64px rgba(0, 0, 0, 0.85)'
+
+accessibility:
+  contrast-text-on-bg: 17.6
+  contrast-text-on-brand: 4.5
+  focus-ring: '3px solid #fc6e51'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 28px', radius: 8, font: button }
+  button-secondary: { bg: transparent, text: text, padding: '12px 26px', radius: 8, border: '1px solid border-strong' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 12, padding: 24, border: '1px solid border' }
+  pill: { bg: surface-strong, text: text, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg-elev, border: '1px solid border-strong', text: text, radius: 8, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Brilliant''s marketing system is the rare STEM-education brand that has decided learning math should feel like watching a Vimeo science explainer rather than reading a textbook. The site descends from the geometric-diagram tradition of high-school physics textbooks (Halliday & Resnick, Feynman Lectures) — hand-drawn diagrams of circles, triangles, isometric grids — translated to web with full-bleed animated SVG geometry. Brilliant Coral `#fc6e51` was picked specifically to evoke the warm orange that physics-textbook authors used for "the answer key" markings. Brilliant Sans (custom Inter-adjacent rounded humanist sans) handles every heading. The brand commits to "education that respects your intelligence" — premium, structured, never cute.'
+  influences:
+    - { name: 'Halliday & Resnick / Feynman Lectures', role: 'physics-textbook diagram tradition — circles, vectors, isometric grids', url: 'https://en.wikipedia.org/wiki/Fundamentals_of_Physics' }
+    - { name: 'Brilliant Sans (custom)', role: 'in-house Inter-adjacent rounded humanist sans', url: 'https://brilliant.org' }
+    - { name: '3Blue1Brown / Vimeo science explainers', role: 'animated-geometry video pacing as visual lineage', url: 'https://www.3blue1brown.com' }
+    - { name: 'Inter (Rasmus Andersson)', role: 'rounded humanist sans typographic ancestor', url: 'https://rsms.me/inter' }
+    - { name: 'Khan Academy', role: 'STEM-education contemporary; Brilliant chose dark canvas + coral as differentiation', url: 'https://www.khanacademy.org' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Brilliant's site is the rare STEM-education brand that has decided learning math should feel like watching a Vimeo science explainer rather than reading a textbook. The canvas is a near-black `#0c0e16` (very slight cool tilt), headings sit in Brilliant Sans at 56–88px, and the only chromatic accent is "Brilliant Coral" `#fc6e51` — a warm orange-coral picked specifically to evoke geometric diagrams.
+
+Where Khan Academy chose forest green and Duolingo chose feather green, Brilliant chose this distinctive coral. Hero illustrations are full-bleed animated geometry — circles morphing to spheres, triangles tiling into hexagons, isometric grids — in coral and white on near-black. Diagram accent colors (yellow `#ffd44d`, cyan `#5ac3e5`, purple `#b582ff`) appear inside illustrations but never as primary CTA palette.
+
+The brand reads as **education that respects your intelligence** — premium, structured, never cute. Body copy is full white at 100% on near-black for maximum legibility (math equations need contrast). Cards have 12px radius and dark surfaces. Buttons are 8px radius (gentle rectangular). Voice is direct: "Learn the math that actually matters", "Solve problems daily".
+
+**Key Characteristics:**
+- Near-black canvas `#0c0e16` (slight cool tilt)
+- Brilliant Coral `#fc6e51` is the only chromatic CTA color
+- Brilliant Sans (custom rounded humanist sans, Inter-adjacent)
+- Full white text — equations need max contrast
+- 8-12px radius on UI
+- Diagram accent palette (yellow/cyan/purple) inside illustrations only
+- Animated SVG geometry as hero
+- Mono font for equations (JetBrains Mono / Plex Mono)
+- Coral-tinted shadows on hover
+- Dark-only canvas
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#0c0e16`): near-black with slight cool tilt. Never pure black.
+- **Text** (`#ffffff`): pure white at 100% — legibility for equations.
+- **Text Muted** (`#a8acba`): captions, metadata.
+
+### Brand — Brilliant Coral
+- **Brand** (`#fc6e51`): primary CTA, brand mark, diagram answer-key markings.
+- **Brand Hover** (`#ff8268`), **Pressed** (`#e25738`), **Deep** (`#b8401f`).
+- **Brand Tint** (15% coral): selection wash.
+
+### Diagram Accent Palette (illustrations only, not UI)
+- **Diagram Yellow** (`#ffd44d`), **Cyan** (`#5ac3e5`), **Purple** (`#b582ff`)
+- Used inside SVG geometry hero illustrations, never as primary CTA or UI accent.
+
+### Surface
+- **Surface** (`#13151f`), **Surface Strong** (`#1f2230`), **Bg Elev** (`#1c1f2c`).
+
+### Borders
+- **Border** (8% white), **Border Strong** (16% white), **Border Brand** (coral).
+
+### Semantic
+- success `#5ac38a`, warning `#ffd44d`, danger `#ff5a6d`, info `#5ac3e5`.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Brilliant Sans (custom). Falls back to Inter → Larken → system stacks.
+- **Mono**: JetBrains Mono / IBM Plex Mono for equations + code.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking | Notes |
+|------|------|------|--------|-----|----------|-------|
+| display-hero | Brilliant Sans | 88 | 700 | 1.0 | -0.02em | hero |
+| display-lg | Brilliant Sans | 56 | 700 | 1.1 | -0.012em | section |
+| h1 | Brilliant Sans | 40 | 700 | 1.15 | -0.008em | sub |
+| h2 | Brilliant Sans | 32 | 600 | 1.2 | -0.005em | card |
+| h3 | Brilliant Sans | 24 | 600 | 1.25 | 0 | sub-card |
+| eyebrow | Brilliant Sans | 12 | 700 | 1.2 | 0.12em UPPER | section labels |
+| body | Brilliant Sans | 16 | 400 | 1.6 | 0 | body |
+| label | Brilliant Sans | 13 | 700 | 1.3 | 0.05em | tags |
+| button | Brilliant Sans | 16 | 700 | 1.0 | 0.02em | CTA |
+| formula | JetBrains Mono | 18 | 400 | 1.5 | 0 | inline equations |
+
+### Principles
+- **Brilliant Sans for everything** non-equation. Equations use mono.
+- **White text on near-black** at 100% — equations need max contrast.
+- **Mixed case display, UPPER eyebrows.**
+- **Body 16px / 1.6** — generous line-height for prose problems.
+
+## 4. Component Stylings
+
+### Buttons (3 variants — 8px radius)
+
+**Primary** — Coral:
+- bg `#fc6e51`, text white, 16px Brilliant Sans 700 0.02em
+- Padding 14×28, radius 8
+- Hover: bg `#ff8268`, scale 1.02
+
+**Secondary** — bordered:
+- bg transparent, text white, 1px white-16% border, radius 8
+
+**Ghost**: bg transparent, text coral, padding 10×20.
+
+### Cards
+- bg `#13151f`, **12px radius**, padding 24
+- 1px white-8% border + dark shadow `0 2px 8px rgba(0,0,0,0.40)`
+- Hover: shadow shifts to `0 4px 16px rgba(252,110,81,0.20)` — coral-tinted
+
+### Pills (subject tags, lesson types)
+- bg surface-strong, text white, pill radius, label font 13px 0.05em
+- Featured "PREMIUM" pill: coral bg
+
+### Inputs
+- bg bg-elev, 1px white-16% border, 8px radius
+- Focus: border coral
+
+### Navigation
+- 72px sticky header, near-black bg with hairline bottom
+- Brilliant wordmark left (white), top-level nav center, "Get started" coral CTA right
+
+## 5. Layout Principles
+
+- Base 4px, 96-120px between sections
+- Page max width 1280px
+- Hero: full-bleed animated geometry SVG with overlaid headline
+- Lesson grid: 3-up at desktop, 2-up at tablet, 1-up at mobile
+- Problem display: single-column 720px with mono equations
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2 | indicators |
+| Standard | 4 | tooltips |
+| Comfortable | 8 | **buttons, inputs** |
+| Relaxed | 12 | **cards** |
+| Featured | 16 | hero modules |
+| Pill | 9999 | tags, badges |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 8px rgba(0,0,0,0.40)` resting cards |
+| 2 | `0 4px 16px rgba(252,110,81,0.20)` hover (coral tint) |
+| 3 | `0 8px 24px rgba(0,0,0,0.55)` featured |
+| 4 | `0 24px 64px rgba(0,0,0,0.85)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, emphasized has gentle overshoot
+- 150ms hover, 240ms standard, 400-600ms cinematic for geometry transitions
+- Lesson card hover: shadow shifts to coral tint
+- Geometry animations on hero loop subtly, paused with `prefers-reduced-motion`
+
+## 9. Accessibility & A11y
+
+- text on bg = **17.6:1** AAA
+- on-brand on brand = **4.5:1** AA
+- 3px coral focus ring
+
+Equations are rendered as MathJax / KaTeX with proper screen-reader announcement. Geometry animations are `aria-hidden`. Lesson cards use `role="link"` with full lesson-name aria-label.
+
+## 10. Responsive Behavior
+
+mobile <479: hero geometry → static SVG; nav hamburger; 1-up lesson grid. tablet: 2-up. desktop+: 3-up.
+
+## 11. Content & Voice
+
+### Tone
+**Rigorous-friendly.** Confident enough to teach calculus, friendly enough not to make you feel stupid. Voice is the postdoc TA who genuinely loves the subject.
+
+### Microcopy patterns
+- Primary CTA: **"Get started"** / **"Try free"** / **"Continue lesson"**
+- Sign-up: **"Create your account"**
+- Errors: **"Hmm, that's not quite right — try again"**
+- Loading: **"Computing…"**
+- Empty: **"No lessons yet — start with Algebra Foundations"**
+- Encouragement: **"You solved 5 problems today!"**
+
+### CTA verb conventions
+- **Get started / Try / Continue / Solve**
+- Avoid: "Buy", "Sign up" alone (too transactional)
+
+## 12. Dark Mode & Theming
+
+**Dark-only on web.** Light mode would lose the geometric-diagram-on-blackboard metaphor. The mobile app has light + dark; web stays dark.
+
+## 13. Lineage & Influences
+
+Brilliant's marketing system descends from:
+1. **Halliday & Resnick / Feynman Lectures** — physics-textbook diagram tradition
+2. **Brilliant Sans (custom)** — in-house Inter-adjacent rounded humanist
+3. **3Blue1Brown / Vimeo science explainers** — animated-geometry video pacing
+4. **Inter (Rasmus Andersson)** — rounded humanist typographic ancestor
+5. **Khan Academy** — STEM contemporary; Brilliant differentiated via dark canvas + coral
+
+The brand commits to "education that respects your intelligence" — premium, structured, never cute.
+
+## 14. Do's and Don'ts
+
+### Do
+- **Near-black canvas + Brilliant Coral primary CTA.**
+- **Brilliant Sans (or Inter fallback) for all UI.**
+- **Mono font for equations** — JetBrains Mono or Plex Mono.
+- **8-12px radius on UI.**
+- **Diagram accent palette** (yellow/cyan/purple) inside SVG illustrations only.
+- **Coral-tinted shadow on card hover.**
+- **White text 100%** for equations — legibility paramount.
+- **Animated geometry hero** when bandwidth allows.
+
+### Don't
+- **Don't use light canvas** — kills the blackboard/diagram metaphor.
+- **Don't substitute coral.** `#fc6e51` is the brand, not Tailwind orange.
+- **Don't use diagram accent colors as primary CTA.** They're for illustrations only.
+- **Don't add gradients on CTA.**
+- **Don't use cute illustrations of mascots.** Brilliant is geometric, not anthropomorphic.
+- **Don't add light mode** without explicit Brilliant approval.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#0c0e16`
+- text: `#ffffff` / muted `#a8acba`
+- brand (Brilliant Coral): `#fc6e51` / hover `#ff8268`
+- diagram accents (illustration only): yellow `#ffd44d`, cyan `#5ac3e5`, purple `#b582ff`
+- border: 8% white / strong 16% white
+
+### Example Component Prompts
+
+> Build a Brilliant-style hero: near-black bg, full-bleed animated SVG geometry (rotating triangles → hexagons in coral+white) right 50%, 88px Brilliant Sans Bold heading "Learn math that matters" left, 18px subhead in white. Primary CTA "Try free" 8px-radius coral `#fc6e51` 16px Brilliant Sans 700 0.02em.
+
+> Design a lesson card: surface `#13151f`, 12px radius, 24px pad, 1px white-8% border. 24px Brilliant Sans h3 "Geometry Foundations", 13px UPPER 0.12em eyebrow "ALGEBRA · 12 LESSONS" in coral. Body in 16px white. Hover: coral-tinted shadow.
+
+> Render an inline equation: JetBrains Mono 18px regular, white on near-black, no background. `f(x) = ax² + bx + c`.
+
+> Build a "Continue lesson" CTA: 8px radius, coral bg, white 16px Brilliant Sans 700 "Continue lesson", padding 14×28. Hover: bg `#ff8268`, scale 1.02.
+
+> Design a problem card: surface, 12px radius, monospace formula display top, "Submit answer" button bottom in coral.
+
+### Iteration Guide
+
+1. **Near-black canvas + Brilliant Coral.** No exceptions.
+2. **Brilliant Sans (or Inter) for UI, mono for equations.**
+3. **Diagram colors live inside illustrations, not on UI.**
+4. **8-12px radius — gentle rounded.**
+5. **White text 100% on near-black** for equation legibility.
+6. **Coral-tinted hover shadows.**
+7. **Animated geometry hero when possible.**
+8. **Reject light canvas, mascots, gradient CTAs, diagram colors as UI.**

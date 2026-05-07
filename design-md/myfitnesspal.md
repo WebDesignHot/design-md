@@ -1,0 +1,381 @@
+---
+name: MyFitnessPal
+tagline: Fitness-tracking utility — MFP Blue on white, Inter sans, dense calorie-and-macro grids, conversion-first navigation.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-07T20:02:28.993Z
+author: webdesignhot
+source_url: https://www.myfitnesspal.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [healthcare, saas]
+tags: [light, structured, sans, dense, cool]
+preview_swatch: ['#ffffff', '#0066ee', '#1a1a1a']
+related: [strava, peloton, classpass]
+description: 'MyFitnessPal''s site is the utility-first counterpart to Calm''s editorial-spaciousness. The canvas is white, headings sit in Inter (or Avenir Next) at 32–56px, and the brand color is MFP Blue `#0066ee` — a precise informational blue distinct from JetBlue''s navy or PlayStation''s navy. Where Calm chose serif and breathing-pace motion, MyFitnessPal chose dense calorie-and-macro grids and conversion-first nav. Cards have 8px radius, soft shadows, and house the brand''s signature meal-logging UI (food name + calorie count + macros at a glance). The Premium tier gets a teal `#00aaaa` accent. Voice is direct: "Track calories, eat better, lose weight". The whole brand reads as a tracker — it lets you measure and stops there.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#f4f6f8'
+  bg-warm: '#fafbfc'
+  surface: '#ffffff'
+  surface-soft: '#fafbfc'
+  surface-strong: '#f0f2f5'
+  brand: '#0066ee'
+  brand-hover: '#0052cc'
+  brand-pressed: '#003d99'
+  brand-deep: '#002966'
+  brand-tint: '#e0eeff'
+  on-brand: '#ffffff'
+  premium-teal: '#00aaaa'
+  premium-teal-deep: '#008888'
+  premium-teal-soft: '#cceaea'
+  text: '#1a1a1a'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#0066ee'
+  link-hover: '#0052cc'
+  selected-bg: '#e0eeff'
+  border: '#dcdfe4'
+  border-strong: '#bcc0c8'
+  border-soft: '#eef0f4'
+  border-brand: '#0066ee'
+  protein: '#ec5e8a'
+  carbs: '#f0a020'
+  fat: '#a05ec5'
+  success: '#1a8757'
+  warning: '#cc8800'
+  danger: '#c4313a'
+  info: '#0066ee'
+
+typography:
+  display:
+    family: '"Inter", "Avenir Next", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [600, 700, 800]
+  body:
+    family: '"Inter", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: '"JetBrains Mono", ui-monospace, SFMono-Regular, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 56, weight: 800, lineHeight: 1.1,  tracking: '-0.018em', family: display }
+    display-xl:      { size: 48, weight: 800, lineHeight: 1.15, tracking: '-0.015em', family: display }
+    display-lg:      { size: 40, weight: 700, lineHeight: 1.2,  tracking: '-0.012em', family: display }
+    h1:              { size: 32, weight: 700, lineHeight: 1.25, tracking: '-0.008em', family: display }
+    h2:              { size: 24, weight: 700, lineHeight: 1.3,  tracking: '-0.005em', family: display }
+    h3:              { size: 20, weight: 600, lineHeight: 1.35, tracking: '0',        family: display }
+    h4:              { size: 16, weight: 600, lineHeight: 1.4,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.10em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body-sm:         { size: 13, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    label:           { size: 12, weight: 600, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 14, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    caption:         { size: 11, weight: 400, lineHeight: 1.4,  tracking: '0',        family: body }
+    nutrition:       { size: 24, weight: 700, lineHeight: 1.0,  tracking: '0',        family: display }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 8
+  lg: 12
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80]
+
+layout:
+  page-width: 1200
+  prose-width: 720
+  header-height: 64
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 120
+  duration-standard: 180
+  duration-slow: 280
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1200
+  wide: 1440
+
+shadows:
+  card: '0 1px 4px rgba(0, 102, 238, 0.06)'
+  card-hover: '0 4px 12px rgba(0, 102, 238, 0.10)'
+  modal: '0 16px 40px rgba(0, 102, 238, 0.18)'
+
+accessibility:
+  contrast-text-on-bg: 16.1
+  contrast-text-on-brand: 4.7
+  focus-ring: '2px solid #0066ee + 1px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '10px 20px', radius: 8, font: button }
+  button-premium: { bg: premium-teal, text: on-brand, padding: '10px 20px', radius: 8, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '8px 18px', radius: 8, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '6px 12px' }
+  card: { bg: surface, radius: 8, padding: 16, border: '1px solid border', shadow: 'card' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '2px 10px', font: 'caption' }
+  input: { bg: bg, border: '1px solid border-strong', text: text, radius: 8, padding: '10px 12px', focus-border: brand }
+
+lineage:
+  summary: 'MyFitnessPal''s marketing system is the utility-first counterpart to Calm''s editorial-spaciousness. The brand descends from the 2005 calorie-counting database that became the iPhone-era fitness-tracker default. MFP Blue `#0066ee` — a precise informational blue — was picked specifically to read "data-trustable" rather than aspirational. Inter (or Avenir Next as fallback) handles every heading. The macro palette (Protein pink `#ec5e8a`, Carbs orange `#f0a020`, Fat purple `#a05ec5`) is the brand''s most-recognizable visual feature — a 3-color system that appears in every nutrition card, every food log, every progress chart. Premium teal `#00aaaa` accents subscription tiers. The whole brand reads as a tracker — it lets you measure and stops there.'
+  influences:
+    - { name: 'Inter (Rasmus Andersson)', role: 'data-app sans typographic ancestor', url: 'https://rsms.me/inter' }
+    - { name: 'Under Armour acquisition (2015-2020)', role: 'corporate-fitness brand-language influence period', url: 'https://www.underarmour.com' }
+    - { name: 'Macro palette tradition (protein/carbs/fat 3-color)', role: 'nutrition-textbook color-coding lineage', url: 'https://en.wikipedia.org/wiki/Macronutrient' }
+    - { name: 'Strava + Peloton', role: 'fitness-tracker contemporary peers', url: 'https://www.strava.com' }
+    - { name: 'iOS Health app', role: 'data-density UI inspiration for nutrition cards', url: 'https://www.apple.com/ios/health' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+MyFitnessPal's site is the utility-first counterpart to Calm's editorial-spaciousness. The canvas is pure white `#ffffff`, headings sit in Inter Bold at 32–56px, and the brand color is **MFP Blue** `#0066ee` — a precise informational blue picked to read "data-trustable" rather than aspirational. Where Calm chose serif and breathing-pace motion, MyFitnessPal chose dense calorie-and-macro grids and conversion-first nav.
+
+The brand's most-recognizable visual feature is the **macro palette** — Protein pink `#ec5e8a`, Carbs orange `#f0a020`, Fat purple `#a05ec5` — a 3-color system appearing in every nutrition card, food log, progress chart. Premium teal `#00aaaa` flags subscription upgrades. Cards have 8px radius, soft blue-tinted shadows, and house the brand's signature meal-logging UI (food name + calorie count + macros at a glance).
+
+Voice is direct utility: "Track calories, eat better, lose weight". No aspirational language, no lifestyle photography, no celebrity endorsements. The brand reads as a tracker — it lets you measure and stops there. Marketing photos when used are crops of the app's nutrition charts and food-logging interfaces — product-as-hero, not lifestyle-as-hero.
+
+**Key Characteristics:**
+- White canvas + MFP Blue `#0066ee` (informational blue, not aspirational)
+- Inter / Avenir Next sans for everything
+- Macro palette (Protein pink, Carbs orange, Fat purple) — the brand signature
+- Premium Teal `#00aaaa` for subscription tier
+- 8px radius on UI
+- Body 14px (denser than typical SaaS)
+- Soft blue-tinted shadows
+- Product-as-hero (not lifestyle photos)
+- Direct utility voice
+- Light-only canvas
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): white.
+- **Text** (`#1a1a1a`): body. Soft near-black.
+
+### Brand — MFP Blue
+- **Brand** (`#0066ee`): primary CTA, brand mark.
+- **Brand Hover** (`#0052cc`), **Pressed** (`#003d99`), **Deep** (`#002966`).
+- **Brand Tint** (`#e0eeff`): selection wash.
+
+### Premium Teal — Subscription
+- **Premium Teal** (`#00aaaa`): Premium tier badges + upgrade CTAs.
+- **Premium Teal Deep** (`#008888`), **Soft** (`#cceaea`).
+
+### Macro Palette (the brand's signature)
+- **Protein** (`#ec5e8a`): pink
+- **Carbs** (`#f0a020`): orange
+- **Fat** (`#a05ec5`): purple
+
+These appear in every nutrition card, progress chart, and food-log row.
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfc`), **Surface Strong** (`#f0f2f5`).
+
+### Borders
+- **Border** (`#dcdfe4`), **Border Strong** (`#bcc0c8`), **Border Soft** (`#eef0f4`).
+
+### Semantic
+- success `#1a8757`, warning `#cc8800`, danger `#c4313a`, info = brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Inter. Falls back to Avenir Next → Helvetica Neue.
+- **Mono**: JetBrains Mono for nutrition values when monospace alignment matters.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Inter | 56 | 800 | 1.1 | -0.018em |
+| display-lg | Inter | 40 | 700 | 1.2 | -0.012em |
+| h1 | Inter | 32 | 700 | 1.25 | -0.008em |
+| h2 | Inter | 24 | 700 | 1.3 | -0.005em |
+| h3 | Inter | 20 | 600 | 1.35 | 0 |
+| body | Inter | 14 | 400 | 1.5 | 0 |
+| label | Inter | 12 | 600 | 1.3 | 0.04em |
+| button | Inter | 14 | 700 | 1.0 | 0.02em |
+| nutrition | Inter | 24 | 700 | 1.0 | 0 |
+
+### Principles
+- **Inter for everything** — the data-app sans default.
+- **Smaller body 14px** — tracker UI prioritizes density.
+- **Bold weights on display + nutrition values** (700-800).
+- **Mixed case display, UPPER eyebrows + labels.**
+
+## 4. Component Stylings
+
+### Buttons (4 variants — 8px radius)
+
+**Primary** — MFP Blue:
+- bg `#0066ee`, text white, 14px Inter 700 0.02em
+- Padding 10×20, radius 8
+
+**Premium** — teal upgrade CTA:
+- bg `#00aaaa`, otherwise same as primary
+
+**Secondary** — bordered:
+- bg white, text brand, 1px brand border, radius 8
+
+**Ghost**: bg transparent, text brand, padding 6×12.
+
+### Cards
+- bg white, **8px radius**, padding 16
+- 1px gray border + soft blue-tinted shadow `0 1px 4px rgba(0,102,238,0.06)`
+
+### Nutrition Card (the brand's signature)
+- White surface, 8px radius, 16px pad
+- Food name in 16px Bold + calorie count right-aligned in 24px Bold
+- Macro pills below: Protein (pink) / Carbs (orange) / Fat (purple) in pill format with gram values
+
+### Pills
+- Default: brand-tint bg, brand-pressed text, pill radius
+- Macro pills: respective macro color bg-soft + macro color text
+
+### Inputs
+- bg white, 1px gray border, 8px radius, padding 10×12
+- Focus: border MFP Blue
+
+### Navigation
+- 64px sticky header, white bg
+- MFP wordmark left (blue), top-level nav center, "Sign in" + "Premium" CTA right
+
+## 5. Layout Principles
+
+- Base 4px, 56-80px between sections (denser than SaaS norm)
+- Page max width 1200px
+- Hero often shows app-screenshot mockup with text right
+- Food-log grid: dense 1-up vertical scroll list
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2 | indicators |
+| Standard | 4 | tooltips |
+| Comfortable | 8 | **default for buttons + cards** |
+| Relaxed | 12 | featured cards (rare) |
+| Pill | 9999 | macro pills + tags |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 1px 4px rgba(0,102,238,0.06)` resting |
+| 2 | `0 4px 12px rgba(0,102,238,0.10)` hover |
+| 3 | `0 8px 20px rgba(0,102,238,0.14)` featured |
+| 4 | `0 16px 40px rgba(0,102,238,0.18)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, faster durations (120-280ms) — matches tracker snappy feel
+- Card hover: subtle shadow lift, no transform
+
+## 9. Accessibility & A11y
+
+- text on bg = **16.1:1** AAA
+- on-brand on brand = **4.7:1** AA
+- 2px MFP Blue focus ring + 1px outset
+
+Macro pills use `aria-label="<macro>: <grams>g"`. Nutrition cards use semantic table markup. Progress charts have data tables for screen readers.
+
+## 10. Responsive Behavior
+
+mobile <479: hero scales 56→32; nav hamburger; food log stacks. tablet 480-767: 2-up cards. desktop+: full nav + dashboard layout.
+
+## 11. Content & Voice
+
+### Tone
+**Direct-utility.** Helpful without being preachy, capable without being austere. Voice is a fitness-coach friend who doesn't lecture.
+
+### Microcopy patterns
+- Primary CTA: **"Sign up free"** / **"Log meal"** / **"Track now"**
+- Premium CTA: **"Try Premium free"**
+- Errors: **"Couldn't find that food. Try a different name."**
+- Loading: **"Looking up nutrition info…"**
+- Success: **"Logged! +25g protein"**
+
+### CTA verb conventions
+- **Sign up / Log / Track / Add**
+- **Try Premium**
+- Avoid: aspirational ("Transform", "Discover")
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Mobile app has dark; web stays light.
+
+## 13. Lineage & Influences
+
+MyFitnessPal descends from a 2005 calorie-counting database that became the iPhone-era fitness-tracker default. MFP Blue `#0066ee` reads "data-trustable" rather than aspirational. The macro palette (Protein pink, Carbs orange, Fat purple) is the brand's most-recognizable visual feature — appearing in every nutrition card, food log, progress chart.
+
+**Named influences:**
+- **Inter (Rasmus Andersson)** — data-app sans
+- **Under Armour acquisition (2015-2020)** — corporate-fitness influence
+- **Macro palette tradition** — nutrition-textbook color-coding
+- **Strava + Peloton** — fitness-tracker peers
+- **iOS Health app** — data-density UI inspiration
+
+## 14. Do's and Don'ts
+
+### Do
+- **MFP Blue `#0066ee` for primary CTA + brand.**
+- **Premium Teal `#00aaaa` for subscription only.**
+- **Macro palette (pink/orange/purple) for protein/carbs/fat exclusively.**
+- **Inter for everything.**
+- **8px radius on UI.**
+- **Body 14px — denser than typical SaaS.**
+- **Soft blue-tinted shadows.**
+- **Product-as-hero (app screenshots, not lifestyle photos).**
+
+### Don't
+- **Don't substitute MFP Blue.** Aspirational blues (JetBlue navy, etc.) read different.
+- **Don't repurpose macro colors** for non-nutrition UI.
+- **Don't add lifestyle/aspirational photography.**
+- **Don't use serif fonts.**
+- **Don't add gradients on CTA.**
+- **Don't add a friendly mascot.**
+- **Don't add aspirational microcopy** ("Become your best self") — utility only.
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#1a1a1a`
+- brand (MFP Blue): `#0066ee` / hover `#0052cc`
+- premium-teal: `#00aaaa`
+- macros: protein `#ec5e8a` / carbs `#f0a020` / fat `#a05ec5`
+- border: `#dcdfe4`
+
+### Example Component Prompts
+
+> Build a MyFitnessPal-style hero: white bg, app-screenshot mockup right 50%, 56px Inter Bold heading "Track calories, eat better" left, 18px subhead. Primary CTA "Sign up free" 8px-radius MFP Blue `#0066ee` 14px Inter 700, padding 10×20. Premium teal "Try Premium" secondary CTA right.
+
+> Design a nutrition card: white surface, 8px radius, 16px pad, soft blue-tinted shadow. Food name "Avocado Toast" 16px Bold left, "320 kcal" 24px Bold right. Macro pills below: Protein 12g (pink), Carbs 32g (orange), Fat 18g (purple).
+
+> Render a macro pill: pill radius, 4×10 pad, macro-color-soft bg with macro-color text 12px 700 0.04em UPPER. Format: "P 24g".
+
+> Build a "Log meal" CTA: 8px radius, MFP Blue bg, white 14px Inter 700 0.02em "Log meal", padding 10×20.
+
+> Design a Premium upgrade banner: teal `#00aaaa` bg, white 14px Inter 700 "Try Premium for free", icon left, "Try free" CTA right.
+
+### Iteration Guide
+
+1. **White + MFP Blue + Macro palette.** The trio.
+2. **Inter for everything.**
+3. **8px radius — gentle utilitarian.**
+4. **Body 14px — denser SaaS.**
+5. **Macros pink/orange/purple — never repurpose for UI.**
+6. **Direct utility microcopy.**
+7. **Product-as-hero, not lifestyle.**
+8. **Reject serifs, lifestyle photography, mascots, aspirational language.**
