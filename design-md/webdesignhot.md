@@ -3,7 +3,7 @@ name: webdesignhot
 tagline: AI-era editorial dark — pure black with one acid-lime accent.
 author: webdesignhot
 source_url: https://www.webdesignhot.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: true
 categories: [marketplace, dev-tools]

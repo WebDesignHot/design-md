@@ -2,7 +2,7 @@
 
 > The largest curated open catalog of real-brand `DESIGN.md` files for AI coding agents.
 
-**254 production design systems** extracted from real marketing sites — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [DESIGN.md/v1.5](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
+**254 production design systems** extracted from real marketing sites — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) DESIGN.md spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
 
 ```bash
 # Drop any one into your repo in seconds
@@ -15,13 +15,14 @@ npx @webdesignhot/design-md add linear   # writes ./DESIGN.md
 
 ## Why this exists
 
-Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. [Google Labs](https://github.com/google-labs-code/design.md) defined the v1 spec. We:
+Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. [Google Labs](https://github.com/google-labs-code/design.md) introduced the DESIGN.md format. We:
 
 1. **Extracted 254 real brands** from production marketing sites (not invented "vibes")
-2. **Extended the spec to v1.5** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode
+2. **Published our own webdesignhot/0.1 spec** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode — plus a richer machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
 vs the alternatives:
+- [Google Labs alpha](https://github.com/google-labs-code/design.md) — official format, currently labelled `version: alpha`. webdesignhot/0.1 is a parallel format alongside it; both are cross-readable.
 - [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) — 70 brands, MIT (we built on top of their work for ~30 brands; see attribution in each file's `lineage` block)
 - [designdotmd.directory](https://designdotmd.directory) — 216 mostly AI-generated "vibe" entries, single author, closed source
 
@@ -47,8 +48,8 @@ The remaining 229 entries ship a single canonical theme — that's how the brand
 
 ```
 design-md/
-├── linear.md          # Linear's design system, v1.5 spec
-├── stripe.md          # Stripe's design system, v1.5 spec
+├── linear.md          # Linear's design system, webdesignhot/0.1 spec
+├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
 ├── anthropic.md
 ├── ...                # 254 entries total
 └── webdesignhot.md    # The catalog's own site
@@ -65,7 +66,63 @@ npx @webdesignhot/design-md add stripe -o brand.md # custom path
 npx @webdesignhot/design-md list                  # browse all 254
 ```
 
+<details>
+<summary><b>All CLI commands</b></summary>
+
+```
+add <slug> [-o, --out <path>] [-f, --force]
+  Write the chosen DESIGN.md to your CWD.
+
+list
+  Print the full catalog (slug · name · tags).
+
+category [name]
+  Without a name, lists every category with a count.
+  With a name, lists every design in that category.
+
+init
+  Interactive picker (default if no command given).
+
+lint <file> [--format=text|json]
+  Validate a DESIGN.md for spec compliance.
+
+diff <a> <b> [--format=text|json]
+  Token-level diff between two DESIGN.md files.
+
+export <file> --to <tailwind|css|dtcg|figma>
+  Convert tokens to one of:
+    tailwind   — theme.extend block for tailwind.config.js
+    css        — :root { --color-bg, --radius-card, … }
+    dtcg       — W3C Design Tokens Community Group JSON
+    figma      — Figma Variables import format
+
+extract <url> [-o <path>] [--token-only]
+  Extract a draft DESIGN.md from any production URL.
+  (Requires a webdesignhot session — opens the browser flow.)
+
+theme <slug> [--dark|--light]
+  Compute a dark/light variant of any design.
+
+preview <slug>
+  Open the directory detail page in your browser.
+
+help
+  Print the full command list.
+```
+
+Install globally if you'd rather skip `npx`:
+
+```bash
+npm i -g @webdesignhot/design-md
+design-md add linear
+```
+
+Requires Node 18+.
+
+</details>
+
 **Option 2 — MCP server** (in-IDE, for Claude Desktop / Cursor / Cline):
+
 ```json
 {
   "mcpServers": {
@@ -76,9 +133,41 @@ npx @webdesignhot/design-md list                  # browse all 254
   }
 }
 ```
+
 Then in chat: *"install Stripe's DESIGN.md here"* — your agent does the rest.
 
+<details>
+<summary><b>All MCP tools</b></summary>
+
+The MCP server exposes 6 tools any compliant agent can call:
+
+| Tool | What it does |
+|---|---|
+| `list_designs` | List every design with optional `featured_only` / `category` / `tag` filters |
+| `get_design` | Fetch the full DESIGN.md (webdesignhot/0.1) source for a slug |
+| `search_designs` | Fuzzy search by name, tagline, tags, categories |
+| `diff_designs` | Token-level diff between any two designs |
+| `export_design` | Render tokens to tailwind / css / dtcg / figma |
+| `install_design` | Get the npx command + raw markdown to install one |
+
+Try it once connected:
+
+> *"List the top 10 dark editorial design systems."*
+>
+> *"Install Stripe's DESIGN.md into this project."*
+>
+> *"Diff Linear and Vercel — what changes if I switch?"*
+>
+> *"Export Anthropic's tokens as Tailwind config."*
+
+Cursor users: Settings → Features → MCP → "Add new MCP server" → Type `command`, Command `npx -y @webdesignhot/design-md-mcp`.
+
+Cline / Roo / any stdio-MCP client: same `npx -y @webdesignhot/design-md-mcp` command works.
+
+</details>
+
 **Option 3 — direct download**:
+
 ```bash
 curl https://raw.githubusercontent.com/WebDesignHot/design-md/main/design-md/linear.md > DESIGN.md
 ```
@@ -97,12 +186,13 @@ declared there. Quote the section number when citing a token
 (e.g. "per §3 Typography Rules").
 ```
 
-## The v1.5 spec
+## The webdesignhot/0.1 spec
 
 [Read the full spec → `SPEC.md`](./SPEC.md)
 
 15 numbered sections in every file's body:
-| # | Section | New in v1.5 |
+
+| # | Section | webdesignhot/0.1 addition |
 |---|---------|-------------|
 | 1 | Visual Theme & Atmosphere | |
 | 2 | Color Palette & Roles | |
@@ -120,12 +210,12 @@ declared there. Quote the section number when citing a token
 | 14 | Do's and Don'ts | |
 | 15 | Agent Prompt Guide | |
 
-v1.5 is a strict superset of v1 — every v1-aware tool reads v1.5 files without modification.
+webdesignhot/0.1 is a parallel format alongside the [Google Labs alpha](https://github.com/google-labs-code/design.md) spec — both are cross-readable by any tool that opens a markdown file. See [`SPEC.md`](./SPEC.md) for field-by-field comparison.
 
 ## Contributing
 
 We welcome:
-- 🆕 **New brands** — add `design-md/{slug}.md` following the v1.5 schema
+- 🆕 **New brands** — add `design-md/{slug}.md` following the webdesignhot/0.1 schema
 - 🔧 **Refinements** — better tokens, missing sections, prose improvements
 - 🐛 **Corrections** — wrong colors, broken URLs, factual errors
 
@@ -136,7 +226,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the workflow + schema validation to
 - 🌐 **Web app**: <https://www.webdesignhot.com/design.md/> (browse, preview, search, AI generator)
 - 📦 **CLI**: <https://www.npmjs.com/package/@webdesignhot/design-md>
 - 🔌 **MCP server**: <https://www.npmjs.com/package/@webdesignhot/design-md-mcp>
-- 📜 **Original v1 spec**: <https://github.com/google-labs-code/design.md>
+- 📜 **Google Labs alpha spec**: <https://github.com/google-labs-code/design.md>
 - 🌱 **Inspired by / built on**: <https://github.com/VoltAgent/awesome-design-md>
 
 ## License

@@ -5,7 +5,7 @@ updated_at: 2026-05-06T08:44:32+12:00
 published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://grafana.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: true
 categories: [dev-tools, saas, observability]

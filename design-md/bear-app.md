@@ -5,7 +5,7 @@ updated_at: 2026-05-05T14:31:15+12:00
 published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://bear.app
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [saas, media]

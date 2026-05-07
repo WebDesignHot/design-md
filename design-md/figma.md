@@ -5,7 +5,7 @@ updated_at: 2026-05-04T20:53:02+12:00
 published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.figma.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [saas, dev-tools]

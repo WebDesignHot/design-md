@@ -5,7 +5,7 @@ updated_at: 2026-05-05T20:10:49+12:00
 published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://brex.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [fintech, saas]

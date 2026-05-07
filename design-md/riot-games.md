@@ -5,7 +5,7 @@ updated_at: 2026-05-04T19:57:58+12:00
 published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.riotgames.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [media]

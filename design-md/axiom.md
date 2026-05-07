@@ -5,7 +5,7 @@ updated_at: 2026-05-06T08:15:13+12:00
 published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://axiom.co
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [dev-tools, saas]

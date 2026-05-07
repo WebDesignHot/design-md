@@ -5,7 +5,7 @@ Thanks for considering a contribution! This catalog stays useful only if every e
 ## Three kinds of PRs
 
 ### 1. New brand
-Add `design-md/{kebab-case-slug}.md`. Follow the v1.5 schema in [`SPEC.md`](./SPEC.md). Quick template:
+Add `design-md/{kebab-case-slug}.md`. Follow the webdesignhot/0.1 schema in [`SPEC.md`](./SPEC.md). Quick template:
 
 ```markdown
 ---
@@ -13,7 +13,7 @@ name: Brand Name
 tagline: One-line essence — under 80 chars
 author: webdesignhot
 source_url: https://example.com
-spec: design.md/v1.5
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [...]    # ai | dev-tools | saas | fintech | media | social | marketplace | design-tools | automotive | fashion
@@ -33,11 +33,11 @@ description: 'Long single-quoted YAML. Internal apostrophes doubled — like ''t
 ## 5. Layout Principles
 ## 6. Shapes & Radius Scale
 ## 7. Depth & Elevation
-## 8. Interaction & Motion          (NEW v1.5)
-## 9. Accessibility & A11y           (NEW v1.5)
+## 8. Interaction & Motion          (webdesignhot/0.1)
+## 9. Accessibility & A11y           (webdesignhot/0.1)
 ## 10. Responsive Behavior
-## 11. Content & Voice               (NEW v1.5)
-## 12. Dark Mode & Theming           (NEW v1.5)
+## 11. Content & Voice               (webdesignhot/0.1)
+## 12. Dark Mode & Theming           (webdesignhot/0.1)
 ## 13. Lineage & Influences
 ## 14. Do's and Don'ts
 ## 15. Agent Prompt Guide

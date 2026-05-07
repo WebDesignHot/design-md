@@ -1,12 +1,21 @@
-# DESIGN.md/v1.5 — webdesignhot extension
+# DESIGN.md / webdesignhot 0.1
 
-A strict superset of Google Labs' DESIGN.md/v1 + VoltAgent/awesome-design-md's prose depth, with **four new sections** they don't cover and our existing **machine-readable YAML frontmatter** preserved.
+This is the spec every entry on `www.webdesignhot.com/design.md` ships under:
+`spec: webdesignhot/0.1`.
 
-This is the spec for what every entry on www.webdesignhot.com/design-md should look like.
+## Why a parallel spec
 
-## Why a v1.5
+Google Labs publishes the canonical DESIGN.md format at
+[google-labs-code/design.md](https://github.com/google-labs-code/design.md).
+Their current spec version is labelled `alpha` (their `version: alpha` field
+in frontmatter), and it intentionally stays minimal — flat token bundle plus
+free-form prose.
 
-Google's v1 spec is *just* the YAML token bundle and free-form prose. VoltAgent ships dense numbered sections + per-component spec depth + agent-prompt guides — but no machine-readable frontmatter, no motion spec, no a11y spec. Our v1.5 takes the union of both, then adds:
+VoltAgent's awesome-design-md ships dense numbered sections + per-component
+spec depth — but no machine-readable frontmatter, no motion, no a11y.
+
+webdesignhot/0.1 takes the union of both, then adds **four new sections** they
+don't cover and a **richer machine-readable layer**:
 
 - **§8 Interaction & Motion** — easing curves, durations, hover micro-states, page transitions, reduced-motion
 - **§9 Accessibility & A11y** — contrast pairs, focus indicators, ARIA patterns, keyboard nav
@@ -15,18 +24,21 @@ Google's v1 spec is *just* the YAML token bundle and free-form prose. VoltAgent 
 
 Net: **15 sections**, ~600–900 lines per entry.
 
-## YAML frontmatter (machine-readable)
+webdesignhot/0.1 is a **parallel format**, not a fork of Google Labs alpha.
+The two formats are designed to be cross-readable: any tool that parses the
+markdown body and YAML frontmatter of one can parse the other; only the field
+names and section structure differ.
 
-All v1 fields preserved + four additions.
+## YAML frontmatter (machine-readable)
 
 ```yaml
 ---
-# v1 base (mandatory)
+# Identity (mandatory)
 name: Brand
 tagline: One-line essence — 80 chars max
 author: webdesignhot
 source_url: https://example.com
-spec: design.md/v1.5      # bumped from v1
+spec: webdesignhot/0.1
 quality: curated
 featured: false
 categories: [...]
@@ -46,6 +58,15 @@ colors:
   # Plus brand-specific roles, with source CSS var as inline comment when known
   brand-shadow: 'rgba(50,50,93,0.25)'   # --hds-color-shadow-md
 
+# Multi-theme variant (optional): nest palettes under colors by theme name
+# colors:
+#   light: { bg: '#fafafa', text: '#0a0a0a', ... }
+#   dark:  { bg: '#0a0a0a', text: '#ededed', ... }
+# themes:
+#   default: dark
+#   available: [light, dark]
+#   switch-via: 'data-theme attribute on <html>'
+
 typography:
   display: { family, weights, opentype-features }
   body:    { family, weights }
@@ -60,7 +81,6 @@ layout: { page-width, prose-width, header-height }
 components: { button-primary, button-ghost, card, input, ... }
 lineage: { summary, influences: [...] }
 
-# v1.5 additions
 motion:
   ease-standard: 'cubic-bezier(0.4, 0, 0.2, 1)'
   ease-emphasized: 'cubic-bezier(0.2, 0, 0, 1)'
@@ -87,8 +107,6 @@ accessibility:
   contrast-text-on-brand: 4.6              # AA at body sizes
   focus-ring: '2px solid #brand'
   reduced-motion-honored: true
-
-dark-mode: optional        # `null` if brand has no dark variant; otherwise duplicate `colors:` map under `colors-dark:`
 ---
 ```
 
@@ -149,11 +167,11 @@ Numeric scale with tier names (Micro 1–2px, Standard 4px, Comfortable 6px, Rel
 
 Table: Level | Treatment | Use. Levels 0 (flat) → 5 (modal). Plus a **Shadow Philosophy** paragraph explaining brand-tinted vs neutral, multi-layer logic.
 
-### 8. Interaction & Motion ✨
+### 8. Interaction & Motion
 
 Easing curves (with cubic-bezier values), duration buckets (fast/standard/slow), per-component micro-state recipes (button hover lift, card hover shadow intensify, link hover underline grow), page-transition behavior, **reduced-motion strategy**.
 
-### 9. Accessibility & A11y ✨
+### 9. Accessibility & A11y
 
 - Contrast pairs computed (text/bg, text/brand, label/surface) with WCAG level
 - Focus indicators (ring color + offset)
@@ -166,16 +184,16 @@ Easing curves (with cubic-bezier values), duration buckets (fast/standard/slow),
 
 Breakpoints table + Touch Targets + Collapsing Strategy (per component) + Image Behavior + Container Queries (when used).
 
-### 11. Content & Voice ✨
+### 11. Content & Voice
 
 - **Tone** — formal/playful/neutral/technical anchored in 1–2 sentences
 - **Microcopy patterns** — button verbs, error message recipe, success confirmations
 - **Empty states** — what they say, what they don't
 - **CTA verb conventions** — "Get started" vs "Sign up" vs "Start free trial" — the brand's actual verbs
 
-### 12. Dark Mode & Theming ✨
+### 12. Dark Mode & Theming
 
-If the brand has a dark mode: full token swap (colors-dark map with same keys as colors). If they don't: explicitly note "Light-only — no dark variant offered."
+If the brand has a dark mode: full token swap (nested under `colors:` or as a sibling `dark:` block). If they don't: explicitly note "Light-only — no dark variant offered."
 
 ### 13. Lineage & Influences
 
@@ -197,10 +215,29 @@ Three subsections:
 
 Run `design-md lint <file>` for required fields + section presence. CI lints all entries on PR.
 
-## Compatibility
+## Compatibility with Google Labs alpha
 
-v1.5 frontmatter is a strict superset of v1 — every v1-compliant tool can ignore the new fields. Body sections 1–15 supersede v1's free-form prose; tools that expect free-form prose still work.
+webdesignhot/0.1 is a parallel format alongside the Google Labs alpha spec.
+The two formats share the same DESIGN.md philosophy (YAML frontmatter +
+markdown prose, AI-agent-readable) but use different field names and
+structures:
+
+| Concern | Google Labs alpha | webdesignhot/0.1 |
+|---|---|---|
+| Spec version field | `version: alpha` | `spec: webdesignhot/0.1` |
+| Color scale roles | `primary` / `secondary` / `tertiary` | `bg` / `surface` / `text` / `brand` |
+| Typography | `typography.h1` / `typography.body` | `typography.scale.display-hero` (15–20 rows) |
+| Radius | `rounded.{xs\|sm\|md\|lg\|xl\|full}` | `radius.{micro\|sm\|md\|lg\|xl\|pill}` |
+| Body structure | Free-form markdown | 15 numbered sections |
+| Motion / a11y / voice | Optional, free-form | First-class frontmatter blocks + sections §8/§9/§11 |
+
+Both formats are designed to be cross-readable by any tool that opens a
+markdown file. If Google's spec evolves to absorb capabilities currently
+unique to webdesignhot/0.1, we'll align.
 
 ## Migration
 
-Existing v1 entries → v1.5: Phase 2e enriches in-place. CLI gains `design-md upgrade <file>` in v0.2 to scaffold the missing v1.5 sections from observed tokens.
+Existing entries with `spec: design.md/v1` or `spec: design.md/v1.5` are
+read as-is by the catalog (the Zod schema accepts all four legacy values).
+Run `design-md lint --migrate <file>` (planned for CLI 0.2) to scaffold the
+0.1 frontmatter fields and section headers from observed tokens.
