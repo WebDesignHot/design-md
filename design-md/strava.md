@@ -1,6 +1,8 @@
 ---
 name: Strava
 tagline: Signature `#fc4c02` orange + Inter on white — endurance-athlete data-driven storefront with map-overlay heritage.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.strava.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Microsoft
 tagline: Fluent surfaces — off-white canvas, Segoe UI Variable Display, and a Cortana-blue action color carrying every product.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.microsoft.com
 spec: design.md/v1.5

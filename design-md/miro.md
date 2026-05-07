@@ -1,6 +1,8 @@
 ---
 name: Miro
 tagline: Canary-yellow #ffd02f wordmark over white canvas with sticky-note pastels and Roobert PRO carrying a playful AI-powered visual workspace.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://miro.com
 spec: design.md/v1.5

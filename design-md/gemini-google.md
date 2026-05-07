@@ -1,6 +1,8 @@
 ---
 name: Gemini (Google)
 tagline: Blue-into-violet gradient, Google Sans, soft Material 3 surfaces — Google''s house style applied to a chat interface.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://gemini.google.com
 spec: design.md/v1.5

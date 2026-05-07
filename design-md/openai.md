@@ -1,6 +1,8 @@
 ---
 name: OpenAI
 tagline: 'Pure white canvas, OpenAI Sans set in calm 500-weight, and a single black pill for the only action that matters — try ChatGPT.'
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://openai.com
 spec: design.md/v1.5

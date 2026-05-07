@@ -1,6 +1,8 @@
 ---
 name: Turso
 tagline: 'SQLite at the edge — a deep-teal canvas with a CRT-bright cyan accent (#00face) that reads as a glowing edge node.'
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://turso.tech
 spec: design.md/v1.5

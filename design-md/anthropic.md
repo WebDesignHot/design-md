@@ -1,6 +1,8 @@
 ---
 name: Anthropic
 tagline: Editorial broadsheet for AI safety — cream canvas, Anthropic Serif body, terracotta clay accent, magazine geometry.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://anthropic.com
 spec: design.md/v1.5

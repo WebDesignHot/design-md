@@ -1,6 +1,8 @@
 ---
 name: Porsche
 tagline: Engineering-purity black-on-white — Porsche Next at 96px regular, Rosso #d5001c restraint, sharp 12px corners.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.porsche.com
 spec: design.md/v1.5

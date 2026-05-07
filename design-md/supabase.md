@@ -1,6 +1,8 @@
 ---
 name: Supabase
 tagline: Off-black canvas, signature emerald `#3ecf8e`, Circular as display, Postgres-grade type discipline.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://supabase.com
 spec: design.md/v1.5

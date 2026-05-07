@@ -1,6 +1,8 @@
 ---
 name: Netflix
 tagline: Pure-black streaming theatre with signature `#e50914` red and Netflix Sans — the canonical media-tile grid.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.netflix.com
 spec: design.md/v1.5

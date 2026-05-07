@@ -1,6 +1,8 @@
 ---
 name: SteelSeries
 tagline: Esports orange `#ff6900` on near-black with Inter — Danish precision peripherals for competitive play.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://steelseries.com
 spec: design.md/v1.5

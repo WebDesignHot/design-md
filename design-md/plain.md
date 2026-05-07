@@ -1,6 +1,8 @@
 ---
 name: Plain
 tagline: B2B support tool with a Dinamo grotesk and a single radioactive `#1ad379` action — Linear-restraint applied to support.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.plain.com
 spec: design.md/v1.5

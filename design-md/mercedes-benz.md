@@ -1,6 +1,8 @@
 ---
 name: Mercedes-Benz
 tagline: Three-pointed-star authority — MBCorpo on near-black canvas, silver-blue #00adef accent, tracked uppercase nav.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.mercedes-benz.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Lovable
 tagline: Pink-into-violet gradient on white — vibe-coding dressed in playful, friendly chromatics.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://lovable.dev
 spec: design.md/v1.5

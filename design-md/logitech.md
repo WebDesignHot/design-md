@@ -1,6 +1,8 @@
 ---
 name: Logitech
 tagline: Soft consumer-tech blue gradients with Brown sans — design for the way you work, play, and create.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.logitech.com
 spec: design.md/v1.5

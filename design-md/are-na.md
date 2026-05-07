@@ -1,6 +1,8 @@
 ---
 name: Are.na
 tagline: Bare grey-and-orange minimalism — a single Helvetica-class sans, hairline borders, and a stubborn refusal to optimise for engagement.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.are.na
 spec: design.md/v1.5

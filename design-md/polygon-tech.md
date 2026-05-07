@@ -1,6 +1,8 @@
 ---
 name: Polygon
 tagline: Deep purple `#8247e5` voltage, soft surface ladder, and Inter at enterprise calm — Ethereum L2 as institutional infrastructure.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://polygon.technology
 spec: design.md/v1.5

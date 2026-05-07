@@ -1,6 +1,8 @@
 ---
 name: v0
 tagline: A near-white prompt canvas with GeistSans and pure OKLCH grayscale — Vercel''s AI builder dressed as the calmest text editor on the internet.
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://v0.app
 spec: design.md/v1.5

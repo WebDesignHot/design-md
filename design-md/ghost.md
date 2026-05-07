@@ -1,6 +1,8 @@
 ---
 name: Ghost
 tagline: Warm-cream content CMS aesthetic — Inter for chrome, a soft serif for the writing surface, and a single confident green for action.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://ghost.org
 spec: design.md/v1.5

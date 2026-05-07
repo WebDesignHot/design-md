@@ -1,6 +1,8 @@
 ---
 name: Apple TV+
 tagline: Pure-black cinematic theatre with SF Pro and ruthless minimalism — content as the only voice.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://tv.apple.com
 spec: design.md/v1.5

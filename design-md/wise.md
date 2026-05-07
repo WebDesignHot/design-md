@@ -1,6 +1,8 @@
 ---
 name: Wise
 tagline: 'A flexible bright-lime green on cream-white — money that travels in sans-serif and a single confident accent.'
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://wise.com
 spec: design.md/v1.5

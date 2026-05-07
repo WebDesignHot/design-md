@@ -1,6 +1,8 @@
 ---
 name: Brex
 tagline: Cool grey-blue surfaces, magenta-to-purple-to-indigo gradient, Söhne 600 — fintech as fast, modern, slightly flashy.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://brex.com
 spec: design.md/v1.5

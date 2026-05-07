@@ -1,6 +1,8 @@
 ---
 name: Peloton
 tagline: Signature `#cb1e4e` red on midnight ink, Inter display, instructor-led premium-fitness storefront.
+updated_at: 2026-05-05T09:41:09+12:00
+published_at: 2026-05-05T09:41:09+12:00
 author: webdesignhot
 source_url: https://www.onepeloton.com
 spec: design.md/v1.5

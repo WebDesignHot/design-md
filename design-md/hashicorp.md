@@ -1,6 +1,8 @@
 ---
 name: HashiCorp
 tagline: Black canvas hosting a per-product color portfolio — Terraform purple, Vault yellow, Consul red, Waypoint cyan — multi-product identity made literal.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://hashicorp.com
 spec: design.md/v1.5

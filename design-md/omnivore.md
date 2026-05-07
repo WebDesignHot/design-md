@@ -1,6 +1,8 @@
 ---
 name: Omnivore
 tagline: Open-source read-it-later — near-white reading canvas, focused emerald-on-paper brand, archival elegance after the Eleven Labs sunset.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://omnivore.app
 spec: design.md/v1.5

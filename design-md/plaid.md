@@ -1,6 +1,8 @@
 ---
 name: Plaid
 tagline: Pale blue trust on white, classical Stripe-adjacent type, and a Benjamin-Franklin-as-mascot moment of personality.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://plaid.com
 spec: design.md/v1.5

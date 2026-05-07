@@ -1,6 +1,8 @@
 ---
 name: Meta
 tagline: Optimistic blue (#0467df) on a white corporate canvas — Optimistic Display headlines, generous space, social-platform conglomerate at rest.
+updated_at: 2026-05-03T20:43:35+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://about.meta.com
 spec: design.md/v1.5

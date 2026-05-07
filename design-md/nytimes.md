@@ -1,6 +1,8 @@
 ---
 name: The New York Times
 tagline: Cheltenham serif headlines on paper-white, signature breaking-news red, the canonical American broadsheet rendered for the web.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.nytimes.com
 spec: design.md/v1.5

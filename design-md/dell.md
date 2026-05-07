@@ -1,6 +1,8 @@
 ---
 name: Dell
 tagline: Pragmatic blue `#007db8` with custom Roboto-derivative — business-first PC commerce since the dorm room.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.dell.com
 spec: design.md/v1.5

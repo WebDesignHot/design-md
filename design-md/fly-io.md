@@ -1,6 +1,8 @@
 ---
 name: Fly.io
 tagline: 'Mackinac display + Fragment Mono on a violet-saturated canvas — a PaaS that dresses like a small-press magazine.'
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://fly.io
 spec: design.md/v1.5

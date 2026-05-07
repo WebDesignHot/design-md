@@ -1,6 +1,8 @@
 ---
 name: Base
 tagline: Coinbase-adjacent L2 minimalism — coinbaseSans on white, signature electric blue #0000ff, aggressive -4px display tracking.
+updated_at: 2026-05-05T20:30:27+12:00
+published_at: 2026-05-05T20:30:27+12:00
 author: webdesignhot
 source_url: https://www.base.org
 spec: design.md/v1.5

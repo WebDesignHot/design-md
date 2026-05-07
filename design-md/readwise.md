@@ -1,6 +1,8 @@
 ---
 name: Readwise
 tagline: 'Pastel-orange book-club warmth — soft cream canvas, friendly Tiempos serif accents, and a tangerine that signals ''this is your library.'''
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://readwise.io
 spec: design.md/v1.5

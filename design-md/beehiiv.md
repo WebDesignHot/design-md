@@ -1,6 +1,8 @@
 ---
 name: beehiiv
 tagline: Aggressive black-on-yellow newsletter punch — heavy display sans, hyper-flat cards, and a `#ffd60a` highway-yellow that reads like a tabloid front page.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.beehiiv.com
 spec: design.md/v1.5

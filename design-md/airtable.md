@@ -1,6 +1,8 @@
 ---
 name: Airtable
 tagline: White-canvas editorial workflow software with full-bleed coral and forest signature cards punctuating a near-black pill-CTA system.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://airtable.com
 spec: design.md/v1.5

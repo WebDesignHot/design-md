@@ -1,6 +1,8 @@
 ---
 name: Ory
 tagline: White canvas with Inter 48/400 display + signature deep-navy `#0f172a` CTA — open-source-first identity for technical teams.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://ory.sh
 spec: design.md/v1.5

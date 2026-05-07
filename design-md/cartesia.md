@@ -1,6 +1,8 @@
 ---
 name: Cartesia
 tagline: 'Bright clinical white with a single deep-blue action — voice-AI presented as scientific instrument rather than consumer product.'
+updated_at: 2026-05-05T20:18:33+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://cartesia.ai
 spec: design.md/v1.5

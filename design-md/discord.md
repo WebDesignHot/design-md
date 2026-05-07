@@ -1,6 +1,8 @@
 ---
 name: Discord
 tagline: Indigo-ground hangout — gg sans body, ABC Ginto Nord display, 12-16px tile radii, white pill CTAs.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://discord.com
 spec: design.md/v1.5

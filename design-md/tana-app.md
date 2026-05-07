@@ -1,6 +1,8 @@
 ---
 name: Tana
 tagline: Pure black canvas, a custom tanaClassic serif at 83px, and a pale-pistachio CTA — a knowledge graph dressed as a literary supplement.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://tana.inc
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Midjourney
 tagline: A deep cosmic canvas where JetBrains Mono headlines float over a wide-gamut OKLCH rainbow — a research lab dressed as a chapel.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://www.midjourney.com
 spec: design.md/v1.5

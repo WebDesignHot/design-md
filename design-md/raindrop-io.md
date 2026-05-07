@@ -1,6 +1,8 @@
 ---
 name: Raindrop.io
 tagline: White paper, system-ui sans, soft watercolor blob backgrounds, and a vivid `#0b7ed0` blue CTA — a bookmark manager that ships like a creative-tool sketch.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://raindrop.io
 spec: design.md/v1.5

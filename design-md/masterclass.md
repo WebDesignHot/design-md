@@ -1,6 +1,8 @@
 ---
 name: MasterClass
 tagline: Pure-black cinema with custom display serif and editorial reverence — celebrity-instructor learning as a premium streaming product.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.masterclass.com
 spec: design.md/v1.5

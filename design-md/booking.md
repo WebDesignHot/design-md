@@ -1,6 +1,8 @@
 ---
 name: Booking.com
 tagline: Deep-blue commerce engine — Bookin Sans on white, yellow CTA voltage, dense booking-funnel maximalism.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.booking.com
 spec: design.md/v1.5

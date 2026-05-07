@@ -1,6 +1,8 @@
 ---
 name: Svelte
 tagline: 'Hot orange #ff3e00 against clean white with a confident sans — the framework that wears its flame as a wordmark.'
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://svelte.dev
 spec: design.md/v1.5

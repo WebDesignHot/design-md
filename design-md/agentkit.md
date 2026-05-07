@@ -1,6 +1,8 @@
 ---
 name: AgentKit
 tagline: Three swappable themes for AI agent products — editorial dark, daylight bright, fintech cool-blue.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-02T09:19:36+12:00
 author: webdesignhot
 source_url: https://agentkit.webdesignhot.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Twilio
 tagline: Signal-red `#f22f46` against clean white — communications APIs given the visual weight of a broadcast colour.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://twilio.com
 spec: design.md/v1.5

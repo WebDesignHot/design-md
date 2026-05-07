@@ -1,6 +1,8 @@
 ---
 name: Webflow
 tagline: Indigo-to-purple gradient discipline with a precise structural sans — the visual builder that markets itself like a design conference.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://webflow.com
 spec: design.md/v1.5

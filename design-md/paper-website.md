@@ -1,6 +1,8 @@
 ---
 name: Paper Website
 tagline: A literal sheet-of-paper website — single literary serif, off-white sheet canvas, narrow reading columns, ink-blue links.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://paper.website
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Suno
 tagline: A near-black booth with cream Neue Montreal and a hot-pink cue light — a music studio, a record sleeve, and a chat app fused into one canvas.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://suno.com
 spec: design.md/v1.5

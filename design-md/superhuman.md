@@ -1,6 +1,8 @@
 ---
 name: Superhuman
 tagline: White paper canvas, a custom Super Sans variable, and a single confident lavender — premium email dressed as a stationery brand.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://superhuman.com
 spec: design.md/v1.5

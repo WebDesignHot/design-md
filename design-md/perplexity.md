@@ -1,6 +1,8 @@
 ---
 name: Perplexity
 tagline: Cream paper canvas, custom pplxSans, and the unmistakable Tropic-cyan accent — a reference-library answer engine dressed in warm tones.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.perplexity.ai
 spec: design.md/v1.5

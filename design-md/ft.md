@@ -1,6 +1,8 @@
 ---
 name: Financial Times
 tagline: Salmon-pink page (`#fff1e5`) — the world''s most recognizable newspaper background, paired with Financier display + MetricWeb sans for global markets coverage.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.ft.com
 spec: design.md/v1.5

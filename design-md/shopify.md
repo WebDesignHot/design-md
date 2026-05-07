@@ -1,6 +1,8 @@
 ---
 name: Shopify
 tagline: Dark-first commerce theatre — 96px NeueHaasGrotesk at weight 330, electric mint focus rings, and stacked multi-layer shadows.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.shopify.com
 spec: design.md/v1.5

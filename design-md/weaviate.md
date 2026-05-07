@@ -1,6 +1,8 @@
 ---
 name: Weaviate
 tagline: White canvas with Inter and a signature `#1cdb46` open-source green — modular vector database dressed in approachable engineering chrome.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://weaviate.io
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Costco
 tagline: Warehouse blue + signature red, Helvetica utilitarian — bulk-buying signage translated to web.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.costco.com
 spec: design.md/v1.5

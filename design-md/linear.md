@@ -1,6 +1,8 @@
 ---
 name: Linear
 tagline: Dark-canvas product surface — pure-black ground, indigo accent, custom Inter weights, pill CTAs.
+updated_at: 2026-05-06T08:15:13+12:00
+published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://linear.app
 spec: design.md/v1.5

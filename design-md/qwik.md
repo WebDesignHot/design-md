@@ -1,6 +1,8 @@
 ---
 name: Qwik
 tagline: 'Electric purple-to-blue gradient on near-black — resumable execution dressed as a lightning bolt.'
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://qwik.dev
 spec: design.md/v1.5

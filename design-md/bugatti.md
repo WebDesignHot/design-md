@@ -1,6 +1,8 @@
 ---
 name: Bugatti
 tagline: French-engineered austerity — pure black canvas, three Bugatti typefaces, and full-bleed photography as the only voltage.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.bugatti.com
 spec: design.md/v1.5

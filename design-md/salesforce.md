@@ -1,6 +1,8 @@
 ---
 name: Salesforce
 tagline: Cloud-trust dashboards — Salesforce Sans on a sky-blue ground, with Astro the bear standing guard over a dense CRM portal.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.salesforce.com
 spec: design.md/v1.5

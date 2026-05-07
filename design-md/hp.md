@@ -1,6 +1,8 @@
 ---
 name: HP
 tagline: Cyan-blue `#0096d6` HP-circle on white with Forma DJR — the 84-year-old technology brand''s mainstream face.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.hp.com
 spec: design.md/v1.5

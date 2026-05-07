@@ -1,6 +1,8 @@
 ---
 name: Hulu
 tagline: Near-black canvas anchored on Hulu Green `#1ce783` with Graphik sans — the bright, cable-meets-streaming UI.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.hulu.com
 spec: design.md/v1.5

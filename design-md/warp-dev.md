@@ -1,6 +1,8 @@
 ---
 name: Warp
 tagline: Near-black canvas, neon-lime cursor, real terminal screenshots — a marketing site that boots like a shell.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.warp.dev
 spec: design.md/v1.5

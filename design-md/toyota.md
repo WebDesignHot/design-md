@@ -1,6 +1,8 @@
 ---
 name: Toyota
 tagline: Japanese-reliability mainstream — `#eb0a1e` Toyota red on white, ToyotaType sans, and a calm-confident marketing surface for the world's most-sold automotive brand.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://www.toyota.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Things
 tagline: Cool light-blue canvas, system-ui sans, vivid Things-blue accent — a task manager that ships like an Apple Pro Display.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://culturedcode.com/things
 spec: design.md/v1.5

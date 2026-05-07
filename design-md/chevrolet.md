@@ -1,6 +1,8 @@
 ---
 name: Chevrolet
 tagline: Gold-cross American classic — Louis sans on white with a `#cd9834` bowtie, a `#003876` corporate blue, and Camaro/Corvette red drama in reserve.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.chevrolet.com
 spec: design.md/v1.5

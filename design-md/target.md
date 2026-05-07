@@ -1,6 +1,8 @@
 ---
 name: Target
 tagline: Bullseye red CTA, Helvetica Neue, photographic hero — friendly mass-market design with confident chromatic restraint.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.target.com
 spec: design.md/v1.5

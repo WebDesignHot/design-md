@@ -1,6 +1,8 @@
 ---
 name: Mastercard
 tagline: Cream-canvas editorial fintech, circular-portrait orbits, MarkForMC at 450 weight — institutional-but-warm payments brand.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.mastercard.com
 spec: design.md/v1.5

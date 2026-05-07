@@ -1,6 +1,8 @@
 ---
 name: Raycast
 tagline: Near-black canvas, glowing keycaps, monospaced shortcut chips — a marketing site that thinks like a launcher.
+updated_at: 2026-05-04T21:08:09+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.raycast.com
 spec: design.md/v1.5

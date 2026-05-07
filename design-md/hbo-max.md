@@ -1,6 +1,8 @@
 ---
 name: HBO Max
 tagline: Deep purple-black premium streaming canvas with custom Sharp Grotesk and the unmistakable Max wordmark.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.max.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Honda
 tagline: Reliability-first restraint — HondaGlobalFont on white, signature red #cc0000 used scarcely, Power-of-Dreams confidence.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://global.honda
 spec: design.md/v1.5

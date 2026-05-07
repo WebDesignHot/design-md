@@ -1,6 +1,8 @@
 ---
 name: TikTok
 tagline: Electric cyan-magenta on pure black — vertical-video voltage with custom Proxima Nova display and a bold neon brand grammar.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.tiktok.com
 spec: design.md/v1.5

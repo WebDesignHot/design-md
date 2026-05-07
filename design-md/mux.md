@@ -1,6 +1,8 @@
 ---
 name: Mux
 tagline: Video API for developers — Aeonik on light-cream, Rotonto display, JetBrainsMono CTAs, sharp 0px corners.
+updated_at: 2026-05-05T20:18:33+12:00
+published_at: 2026-05-05T20:18:33+12:00
 author: webdesignhot
 source_url: https://www.mux.com
 spec: design.md/v1.5

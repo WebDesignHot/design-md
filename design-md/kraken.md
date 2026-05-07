@@ -1,6 +1,8 @@
 ---
 name: Kraken
 tagline: Kraken Purple `#7132f5` on white — Kraken-Brand display + Kraken-Product UI for a calmer, less-bombastic crypto exchange.
+updated_at: 2026-05-03T20:43:35+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://www.kraken.com
 spec: design.md/v1.5

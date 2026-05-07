@@ -1,6 +1,8 @@
 ---
 name: Epic Games
 tagline: Pure-black canvas with custom Brutal Type / Heading Now display — Fortnite-saturated marketing meets PC-storefront merchandising.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.epicgames.com
 spec: design.md/v1.5

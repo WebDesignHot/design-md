@@ -1,6 +1,8 @@
 ---
 name: Grafana
 tagline: Dark observability canvas with the iconic `#f46800` orange — Inter for body, Roboto Mono everywhere a label hides, multi-colour chart palette ripped straight from a real dashboard.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://grafana.com
 spec: design.md/v1.5

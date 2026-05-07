@@ -1,6 +1,8 @@
 ---
 name: BBC News
 tagline: Signature BBC red (`#bb1919`), Reith Sans + Reith Serif, the global broadcaster authority typography of the world''s public-service news.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://www.bbc.com
 spec: design.md/v1.5

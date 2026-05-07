@@ -1,6 +1,8 @@
 ---
 name: Starbucks
 tagline: Forest-green storefront — SoDoSans, full-pill buttons, warm-cream canvas, and a floating Frap CTA the brand calls home.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.starbucks.com
 spec: design.md/v1.5

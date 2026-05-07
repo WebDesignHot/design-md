@@ -1,6 +1,8 @@
 ---
 name: NVIDIA
 tagline: Engineering-grade canvas — pure black hero / paper-white body / one violently saturated `#76b900` green that carries every CTA and corner square.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.nvidia.com
 spec: design.md/v1.5

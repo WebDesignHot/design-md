@@ -1,6 +1,8 @@
 ---
 name: Cohere
 tagline: Stark white editorial canvas with deep green-black product bands and a CohereText/Unica77 type split.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://cohere.com
 spec: design.md/v1.5

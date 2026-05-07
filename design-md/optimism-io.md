@@ -1,6 +1,8 @@
 ---
 name: Optimism
 tagline: Pure-white canvas, signature `#ff0420` red voltage, and Inter at confident L2 register — Ethereum rollup as bold optimistic infrastructure.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://optimism.io
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Airbnb
 tagline: Pure-white marketplace canvas with one Rausch coral and Cereal — generous photography, soft pills, modest type.
+updated_at: 2026-05-03T20:43:35+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://www.airbnb.com
 spec: design.md/v1.5

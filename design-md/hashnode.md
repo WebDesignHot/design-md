@@ -1,6 +1,8 @@
 ---
 name: Hashnode
 tagline: Developer publishing platform — deep navy canvas, electric blue brand, Inter sans + JetBrains Mono code chrome.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://hashnode.com
 spec: design.md/v1.5

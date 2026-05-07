@@ -1,6 +1,8 @@
 ---
 name: Roblox
 tagline: Bright `#ed1d24` red on white with Builder Sans — the youth-block-builder playground turned multi-billion-game social platform.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.roblox.com
 spec: design.md/v1.5

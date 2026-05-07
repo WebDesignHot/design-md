@@ -1,6 +1,8 @@
 ---
 name: Cloudinary
 tagline: Media-API technical infrastructure in confident blue — Inter at modest weights with a deep navy-blue brand and a single chromatic accent for media moments.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://cloudinary.com
 spec: design.md/v1.5

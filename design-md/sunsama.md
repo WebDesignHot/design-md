@@ -1,6 +1,8 @@
 ---
 name: Sunsama
 tagline: Thoughtful daily planning in warm cream and ink — Inter at modest weights over a paper-cream canvas with sage and rose accents and a calm, unhurried voice.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://sunsama.com
 spec: design.md/v1.5

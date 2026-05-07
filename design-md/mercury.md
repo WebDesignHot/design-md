@@ -1,6 +1,8 @@
 ---
 name: Mercury
 tagline: A near-pure white canvas with a literary serif headline and a signature mercury-mint accent — banking dressed as a quiet magazine.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://mercury.com
 spec: design.md/v1.5

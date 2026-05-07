@@ -1,6 +1,8 @@
 ---
 name: The New Yorker
 tagline: 'Adobe Caslon Pro + Irvin headline cap — a century of editorial gravitas in cream paper, ink black, and signature cartoon line.'
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.newyorker.com
 spec: design.md/v1.5

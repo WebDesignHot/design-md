@@ -1,6 +1,8 @@
 ---
 name: Steam
 tagline: Deep blue-gray `#1b2838` with Motiva Sans — the utilitarian PC-gaming library that runs the world's largest digital storefront.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://store.steampowered.com
 spec: design.md/v1.5

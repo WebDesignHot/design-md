@@ -1,6 +1,8 @@
 ---
 name: Ford
 tagline: American-truck heritage in corporate blue — Antenna sans, oval-script wordmark, and a deep `#003478` voltage that has carried the brand since 1927.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.ford.com
 spec: design.md/v1.5

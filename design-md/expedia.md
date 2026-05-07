@@ -1,6 +1,8 @@
 ---
 name: Expedia
 tagline: Navy commerce + Mango yellow voltage — Expedia Sans, dense travel-funnel density with One Key loyalty colour-coding.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.expedia.com
 spec: design.md/v1.5

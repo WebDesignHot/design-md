@@ -1,6 +1,8 @@
 ---
 name: Udemy
 tagline: Signature `#a435f0` purple on white with Sailec sans — the open course-marketplace bazaar made approachable.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.udemy.com
 spec: design.md/v1.5

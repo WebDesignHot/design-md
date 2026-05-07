@@ -1,6 +1,8 @@
 ---
 name: KAYAK
 tagline: Burnt-orange flight-search density — Open Sans on white, comparison-engine maximalism, price-graph data viz.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.kayak.com
 spec: design.md/v1.5

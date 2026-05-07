@@ -1,6 +1,8 @@
 ---
 name: Astro
 tagline: Cosmos navy canvas with violet-to-orange brand gradient — Mona Sans display, Inter body, Astro''s star-chart MPA framework dressed as an observatory dashboard.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://astro.build
 spec: design.md/v1.5

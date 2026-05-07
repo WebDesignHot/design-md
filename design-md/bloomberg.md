@@ -1,6 +1,8 @@
 ---
 name: Bloomberg
 tagline: Iconic black-orange financial broadsheet — BWHaasHead headlines, AvenirNextPForBBG chrome, terminal-grade data density.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.bloomberg.com
 spec: design.md/v1.5

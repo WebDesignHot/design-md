@@ -1,6 +1,8 @@
 ---
 name: Amazon
 tagline: Smile-orange CTA, Amazon Ember sans, dense product grids — the canonical everything-store interface.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.amazon.com
 spec: design.md/v1.5

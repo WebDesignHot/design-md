@@ -1,6 +1,8 @@
 ---
 name: Volkswagen
 tagline: People's-car blue — the deep `#001e50` corporate hue, custom VW Sans, and a friendly-German marketing surface that sells everyday mobility with confidence.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.volkswagen.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Tailwind CSS
 tagline: 'The system applied to itself — Inter Variable on white canvas, signature cyan #06b6d4, every component built from Tailwind utilities.'
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://tailwindcss.com
 spec: design.md/v1.5

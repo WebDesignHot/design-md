@@ -1,6 +1,8 @@
 ---
 name: ElevenLabs
 tagline: Near-black voice-tech ground with white voice-wave aesthetic — Inter at studio scale, pill CTAs, and a single saturated accent that reads as both wayfinding and brand.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://elevenlabs.io
 spec: design.md/v1.5

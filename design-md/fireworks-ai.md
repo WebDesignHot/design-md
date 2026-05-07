@@ -1,6 +1,8 @@
 ---
 name: Fireworks AI
 tagline: Light canvas with Inter sans and a signature `#6720ff` purple-amber-orange spark — fast-inference platform dressed in speed-of-light kinetic chrome.
+updated_at: 2026-05-04T21:08:09+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://fireworks.ai
 spec: design.md/v1.5

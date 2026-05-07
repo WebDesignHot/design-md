@@ -1,6 +1,8 @@
 ---
 name: Twitch
 tagline: Purple `#9146ff` on `#0e0e10` canvas with Inter — the live-streaming UI built around chat, raids, and gaming density.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://twitch.tv
 spec: design.md/v1.5

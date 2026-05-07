@@ -1,6 +1,8 @@
 ---
 name: Khan Academy
 tagline: Signature `#14bf96` mint green on white with Lato sans — free-for-everyone education in a warm, encouraging register.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.khanacademy.org
 spec: design.md/v1.5

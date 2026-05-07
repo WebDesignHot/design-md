@@ -1,6 +1,8 @@
 ---
 name: Apple
 tagline: White-canvas product theatre — SF Pro Text, 980px pill CTAs, and a single-blue accent system.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.apple.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Krea
 tagline: A pure-black studio with Suisse Intl set quietly at 60px — a creative-AI gallery that lets the work and the cobalt CTA carry the colour.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://www.krea.ai
 spec: design.md/v1.5

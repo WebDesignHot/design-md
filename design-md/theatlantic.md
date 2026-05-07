@@ -1,6 +1,8 @@
 ---
 name: The Atlantic
 tagline: Modern serif headlines on cream-paper, signature Atlantic orange `#fbb33b`, long-form magazine reading rendered for the web.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.theatlantic.com
 spec: design.md/v1.5

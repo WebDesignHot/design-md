@@ -1,6 +1,8 @@
 ---
 name: Adobe
 tagline: Creative-suite chrome — paper-white canvas, magenta-to-orange wordmark gradient, and Adobe Clean carrying every product grid.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.adobe.com
 spec: design.md/v1.5

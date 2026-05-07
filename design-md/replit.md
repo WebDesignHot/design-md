@@ -1,6 +1,8 @@
 ---
 name: Replit
 tagline: Saturated turquoise on `#0e1525` ink — the cloud-IDE aesthetic with IBM Plex DNA and a JetBrains Mono soul.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://replit.com
 spec: design.md/v1.5

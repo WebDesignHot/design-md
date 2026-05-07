@@ -1,6 +1,8 @@
 ---
 name: Vercel
 tagline: Brutalist developer-product polish — near-white canvas, near-pure black-on-near-white type, Geist sans + mono, conic-gradient accents.
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://vercel.com
 spec: design.md/v1.5

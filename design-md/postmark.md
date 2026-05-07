@@ -1,6 +1,8 @@
 ---
 name: Postmark
 tagline: 'Postal-yellow #ffde00 + warm-black #1c1d1f + paper-white canvas — the transactional email API designed like a friendly post office sign.'
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://postmarkapp.com
 spec: design.md/v1.5

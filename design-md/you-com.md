@@ -1,6 +1,8 @@
 ---
 name: You.com
 tagline: 'Crisp white developer-doc canvas, custom Lumen Sans, and the indigo `#5368EE` accent — a search API rebrand done as enterprise infrastructure.'
+updated_at: 2026-05-05T20:18:33+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://you.com
 spec: design.md/v1.5

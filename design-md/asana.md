@@ -1,6 +1,8 @@
 ---
 name: Asana
 tagline: Approachable work management in soft purple — Asana Sans at modest weights with a rainbow accent palette and warm sky-tinted whitespace.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://asana.com
 spec: design.md/v1.5

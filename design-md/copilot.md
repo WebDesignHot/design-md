@@ -1,6 +1,8 @@
 ---
 name: GitHub Copilot
 tagline: 'Pure-white canvas, pure-black inverted CTAs, Mona Sans display — GitHub''s editorial confidence applied to AI tooling.'
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://github.com/features/copilot
 spec: design.md/v1.5

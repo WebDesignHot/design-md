@@ -1,6 +1,8 @@
 ---
 name: Workday
 tagline: HR-warm professional in tangerine — Adelle Sans humanist curves, signature `#f37721` orange, and a calm white people-first canvas.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.workday.com
 spec: design.md/v1.5

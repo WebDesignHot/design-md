@@ -1,6 +1,8 @@
 ---
 name: Razer
 tagline: Neon `#44d62c` snake-green on jet black with Roboto — the For Gamers, By Gamers visual signature.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T09:41:09+12:00
 author: webdesignhot
 source_url: https://www.razer.com
 spec: design.md/v1.5

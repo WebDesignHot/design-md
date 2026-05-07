@@ -1,6 +1,8 @@
 ---
 name: Auth0
 tagline: Twilight-blue dark canvas with TWK Lausanne 300 display + Aeonik body — the original identity-platform aesthetic.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://auth0.com
 spec: design.md/v1.5

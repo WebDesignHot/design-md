@@ -1,6 +1,8 @@
 ---
 name: Cash App
 tagline: Electric `#00d54b` green on near-black, Cash Sans monospace-flavoured geometry, and p2p-money youth aesthetic.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://cash.app
 spec: design.md/v1.5

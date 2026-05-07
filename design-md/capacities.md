@@ -1,6 +1,8 @@
 ---
 name: Capacities
 tagline: Cream-yellow canvas, Inter at 700 with a Crimson Pro serif fallback, and a yellow underline as page ornament — a PKM that thinks like a sketchbook.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://capacities.io
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: SAP
 tagline: Enterprise-ERP precision in cobalt — SAP72 sans, signal-blue accents, and a calm white canvas built for trust.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.sap.com
 spec: design.md/v1.5

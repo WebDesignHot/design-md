@@ -1,6 +1,8 @@
 ---
 name: DeepSeek
 tagline: 'Deep-blue Chinese-tech minimalism — a research lab dressed in `#4d6bfe` and stark white space.'
+updated_at: 2026-05-05T20:18:33+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://www.deepseek.com
 spec: design.md/v1.5

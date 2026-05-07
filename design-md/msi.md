@@ -1,6 +1,8 @@
 ---
 name: MSI
 tagline: Dragon-red `#ff0000` on jet black with bold display sans — the Taipei dragon-heritage gaming hardware brand.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.msi.com
 spec: design.md/v1.5

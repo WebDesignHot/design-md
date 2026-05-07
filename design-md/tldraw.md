@@ -1,6 +1,8 @@
 ---
 name: tldraw
 tagline: Casual whiteboard sketchy — hand-drawn UI primitives, dotted-grid canvas, and a soft pastel palette that wears its toy-like energy with confidence.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://tldraw.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Walmart
 tagline: Spark-yellow on big-box blue, Antonio Display + Bogle sans — everyday low prices made loud.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.walmart.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Adidas
 tagline: Pure-black sport-utility, AdihausDIN/adidasFG uppercase, three-stripe geometry — the engineering canon for global sportswear.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.adidas.com
 spec: design.md/v1.5

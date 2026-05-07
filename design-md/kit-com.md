@@ -1,6 +1,8 @@
 ---
 name: Kit
 tagline: A cream newsletter canvas with a custom KitSans display, a Libre Franklin secondary, and a pastel-rainbow chip set — the editorial register reborn from ConvertKit.
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://kit.com
 spec: design.md/v1.5

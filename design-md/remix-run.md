@@ -1,6 +1,8 @@
 ---
 name: Remix
 tagline: 'Signature `#3992ff` blue on pure white with Inter — a nested-routes web framework dressed as a manifesto poster.'
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://remix.run
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Mistral
 tagline: Butter-yellow canvas, Arial as a deliberate anti-tech statement, and zero-radius rectangles — French AI as a brutalist art-school manifesto.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://mistral.ai
 spec: design.md/v1.5

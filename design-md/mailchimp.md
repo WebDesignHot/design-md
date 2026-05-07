@@ -1,6 +1,8 @@
 ---
 name: Mailchimp
 tagline: Cavendish-yellow chunkiness — a custom display serif (Cooper Light), the signature `#ffe01b` block, and a brand voice that hugs you while it ships campaigns.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://mailchimp.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: DoorDash
 tagline: Signature red-orange CTA, custom DoorDash Sans, delivery-funnel commerce — the dominant on-demand local marketplace.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://doordash.com
 spec: design.md/v1.5

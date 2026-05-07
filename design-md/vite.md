@@ -1,6 +1,8 @@
 ---
 name: Vite
 tagline: 'Electric purple #646cff + Manrope display + a literal lightning-bolt mark — the build tool that designed itself to feel as fast as it is.'
+updated_at: 2026-05-06T08:15:13+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://vite.dev
 spec: design.md/v1.5

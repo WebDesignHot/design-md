@@ -1,6 +1,8 @@
 ---
 name: Datadog
 tagline: NationalWeb on white with the iconic `#632ca6` purple — observability dressed as an enterprise dashboard, structurally dense, chromatically restrained, multicolour where the data demands it.
+updated_at: 2026-05-06T08:15:13+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://www.datadoghq.com
 spec: design.md/v1.5

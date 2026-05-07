@@ -1,6 +1,8 @@
 ---
 name: LlamaIndex
 tagline: White canvas with Inter and a signature `#1b9aff` blue — RAG infrastructure dressed as a clean technical reference card.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://www.llamaindex.ai
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Fantastical
 tagline: White paper, Effra geometric sans, full-round blue pills, and a rainbow of app-icon glass squares — a calendar app marketed like Apple''s Pro Apps.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://flexibits.com/fantastical
 spec: design.md/v1.5

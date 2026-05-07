@@ -1,6 +1,8 @@
 ---
 name: BMW M
 tagline: Performance black on M-blue/M-violet/M-red — the motorsport variant that turns BMW corporate into track-day theatre.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://www.bmw-m.com
 spec: design.md/v1.5

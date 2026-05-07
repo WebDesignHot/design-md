@@ -1,6 +1,8 @@
 ---
 name: Mintlify
 tagline: Documentation-platform marketing — pure white canvas, mint-green accent, Inter at tight tracking, near-black pill CTAs.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://mintlify.com
 spec: design.md/v1.5

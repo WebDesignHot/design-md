@@ -1,6 +1,8 @@
 ---
 name: Telegram
 tagline: Cloud-blue messaging — #2aabee voltage on white, custom paper-plane wordmark, and a friendly geometric sans across every chat surface.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://telegram.org
 spec: design.md/v1.5

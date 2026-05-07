@@ -1,6 +1,8 @@
 ---
 name: Supreme
 tagline: Box-logo red, Courier monospace, skate-deadpan minimalism — the most influential streetwear store on the web.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://supreme.com
 spec: design.md/v1.5

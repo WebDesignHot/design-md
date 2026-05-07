@@ -1,6 +1,8 @@
 ---
 name: Etsy
 tagline: Burnt-orange CTA, Graphik humanist sans, handcrafted-warmth aesthetic — the marketplace for makers and small batch.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.etsy.com
 spec: design.md/v1.5

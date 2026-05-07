@@ -1,6 +1,8 @@
 ---
 name: X
 tagline: Pure-black canvas with Chirp display — algorithmic minimalism, single-letter wordmark, ruthless type discipline.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://x.com
 spec: design.md/v1.5

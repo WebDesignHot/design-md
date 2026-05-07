@@ -1,6 +1,8 @@
 ---
 name: Bluesky
 tagline: Sky-blue `#0085ff` on bright white with Inter sans — the AT-Protocol social network rendered as airy, federated, open.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-05T20:30:27+12:00
 author: webdesignhot
 source_url: https://bsky.app
 spec: design.md/v1.5

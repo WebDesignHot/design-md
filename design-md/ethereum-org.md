@@ -1,6 +1,8 @@
 ---
 name: Ethereum
 tagline: Off-white canvas, ethereum-blue `#1c64f2` voltage, and Inter + serif duet — community-owned protocol as open documentation.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://ethereum.org
 spec: design.md/v1.5

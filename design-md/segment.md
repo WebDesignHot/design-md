@@ -1,6 +1,8 @@
 ---
 name: Segment
 tagline: Twilio Segment's customer-data-platform canvas — Whitney SSm humanist sans, navy-on-white, single confident `#1866ee` blue.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://segment.com
 spec: design.md/v1.5

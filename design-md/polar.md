@@ -1,6 +1,8 @@
 ---
 name: Polar
 tagline: Dev-tool obsidian — 8rem editorial display headlines, indigo accents, Louize serif moments.
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://polar.sh
 spec: design.md/v1.5

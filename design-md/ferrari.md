@@ -1,6 +1,8 @@
 ---
 name: Ferrari
 tagline: Cinematic editorial in near-black — Rosso Corsa restraint, FerrariSans 500, and full-bleed cavallino photography.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.ferrari.com
 spec: design.md/v1.5

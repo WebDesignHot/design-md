@@ -1,6 +1,8 @@
 ---
 name: Monday.com
 tagline: Project management in confident red-pink — Poppins display at bold weights with a colorful saturated palette and a playfully energetic visual rhythm.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://monday.com
 spec: design.md/v1.5

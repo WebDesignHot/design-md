@@ -1,6 +1,8 @@
 ---
 name: Arc
 tagline: Browser-as-personality marketing — buttery cream canvas, Marlin Soft display, hand-tooled blue-and-coral palette.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://arc.net
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Riot Games
 tagline: Crimson `#d13639` red on near-black with custom Riot Beam display — esports-tournament drama and competitive-MOBA editorial.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.riotgames.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: LangChain
 tagline: Deep navy canvas with Inter precision and a quietly confident teal accent — agent orchestration dressed as engineering documentation.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://www.langchain.com
 spec: design.md/v1.5

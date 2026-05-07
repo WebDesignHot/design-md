@@ -1,6 +1,8 @@
 ---
 name: SolidJS
 tagline: 'Deep navy with a blue-to-cyan brand gradient — reactive primitives dressed as a circuit diagram.'
+updated_at: 2026-05-06T20:10:21+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.solidjs.com
 spec: design.md/v1.5

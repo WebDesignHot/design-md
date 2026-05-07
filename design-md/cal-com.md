@@ -1,6 +1,8 @@
 ---
 name: Cal.com
 tagline: Open-source calendly with one bold custom font — Cal Sans on a soft `#f4f4f4` paper canvas.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://cal.com
 spec: design.md/v1.5

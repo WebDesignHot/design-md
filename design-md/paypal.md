@@ -1,6 +1,8 @@
 ---
 name: PayPal
 tagline: Dual-blue corporate trust — PayPal Sans Big over white, with a deep-navy ink and a sky-blue counterpoint.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.paypal.com
 spec: design.md/v1.5

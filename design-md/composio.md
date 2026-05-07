@@ -1,6 +1,8 @@
 ---
 name: Composio
 tagline: Near-black canvas with deep-electric-blue voltage and a 2x2 terminal-mockup hero — agent infrastructure dressed as developer instrumentation.
+updated_at: 2026-05-03T20:43:35+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://composio.dev
 spec: design.md/v1.5

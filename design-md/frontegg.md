@@ -1,6 +1,8 @@
 ---
 name: Frontegg
 tagline: PP Neue Machina display + Neue Montreal body — plug-and-play user-management with deep-blue gravitas.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T21:19:12+12:00
 author: webdesignhot
 source_url: https://frontegg.com
 spec: design.md/v1.5

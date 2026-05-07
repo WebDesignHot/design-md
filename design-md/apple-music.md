@@ -1,6 +1,8 @@
 ---
 name: Apple Music
 tagline: Pink-red gradient hero with album-grid kinesthetics — SF Pro precision, signature `#fa233b` brand pink, glassy dark canvas.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://music.apple.com
 spec: design.md/v1.5

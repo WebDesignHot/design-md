@@ -1,6 +1,8 @@
 ---
 name: The Guardian
 tagline: Guardian Egyptian slab serif, signature navy `#052962`, structured ruled hierarchy with bold section accents.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.theguardian.com
 spec: design.md/v1.5

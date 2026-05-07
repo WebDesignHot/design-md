@@ -1,6 +1,8 @@
 ---
 name: Turbo
 tagline: 'Vercel-grade pure-black canvas with a magenta-to-blue Turbo gradient — the build system that wears its speed as a sweep.'
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://turbo.build
 spec: design.md/v1.5

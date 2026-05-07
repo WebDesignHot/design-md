@@ -1,6 +1,8 @@
 ---
 name: The Economist
 tagline: Deep cinnabar red `#e3120b`, Milo serif body, Econ Sans labels — the global-affairs weekly rendered with cover-illustration discipline.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.economist.com
 spec: design.md/v1.5

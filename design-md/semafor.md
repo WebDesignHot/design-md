@@ -1,6 +1,8 @@
 ---
 name: Semafor
 tagline: Paper-cream canvas (`#f8f5d7`) with FeatureFlatHeadline serif and signature flag-style topic columns — global-news editorial built for the post-Twitter era.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.semafor.com
 spec: design.md/v1.5

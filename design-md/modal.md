@@ -1,6 +1,8 @@
 ---
 name: Modal
 tagline: 'Serverless GPU infra in lime-green — `#0c0c0c` canvas, electric `#7fee64` accent, custom Modal Mono on every chip and code block.'
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://modal.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Railway
 tagline: 'Ship software peacefully — IBM Plex Serif headlines on a deep eggplant canvas, with a single confident violet for action.'
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://railway.com
 spec: design.md/v1.5

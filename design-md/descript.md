@@ -1,6 +1,8 @@
 ---
 name: Descript
 tagline: Cream-pink canvas, a custom Brett display serif, and a wine-dark CTA — an AI video editor that ships like a magazine.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.descript.com
 spec: design.md/v1.5

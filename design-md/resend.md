@@ -1,6 +1,8 @@
 ---
 name: Resend
 tagline: Pure-black canvas with Domaine Display serif at 96px and Commit Mono code chips — email infra that thinks in italics.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://resend.com
 spec: design.md/v1.5

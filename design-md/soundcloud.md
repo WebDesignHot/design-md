@@ -1,6 +1,8 @@
 ---
 name: SoundCloud
 tagline: Signature `#ff5500` orange on `#f2f2f2` paper with Interstate sans — waveform-first audio social UI.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://soundcloud.com
 spec: design.md/v1.5

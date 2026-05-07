@@ -1,6 +1,8 @@
 ---
 name: WorkOS
 tagline: Pure-white canvas with Untitled Sans 80/500 display + indigo-violet h2 — the B2B-enterprise gravitas aesthetic.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://workos.com
 spec: design.md/v1.5

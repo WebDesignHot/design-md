@@ -1,6 +1,8 @@
 ---
 name: Binance
 tagline: Trading-floor near-black with a single high-voltage Binance Yellow doing all the brand work — BinanceNova for type, BinancePlex for numbers.
+updated_at: 2026-05-03T20:43:35+12:00
+published_at: 2026-05-03T20:43:35+12:00
 author: webdesignhot
 source_url: https://www.binance.com
 spec: design.md/v1.5

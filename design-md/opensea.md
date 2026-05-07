@@ -1,6 +1,8 @@
 ---
 name: OpenSea
 tagline: Pure-black canvas, electric `#2081e2` blue, and Inter at trader-pro density — the original NFT marketplace as financial terminal.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://opensea.io
 spec: design.md/v1.5

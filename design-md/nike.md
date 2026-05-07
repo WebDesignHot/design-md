@@ -1,6 +1,8 @@
 ---
 name: Nike
 tagline: Pure black, pure white, Helvetica Now — pill CTAs and full-bleed athletic photography on a single soft cloud gray.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.nike.com
 spec: design.md/v1.5

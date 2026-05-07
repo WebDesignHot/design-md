@@ -1,6 +1,8 @@
 ---
 name: Character.AI
 tagline: 'Cool zinc canvas, custom atHauss sans, and dark pill CTAs — a roleplay social product dressed in TikTok-grade neutrality.'
+updated_at: 2026-05-05T20:18:33+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://character.ai
 spec: design.md/v1.5

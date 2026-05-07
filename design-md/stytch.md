@@ -1,6 +1,8 @@
 ---
 name: Stytch
 tagline: Paper-cream canvas with Booton display + Chivo Mono body — passwordless-modern auth, joined Twilio.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T21:19:12+12:00
 author: webdesignhot
 source_url: https://stytch.com
 spec: design.md/v1.5

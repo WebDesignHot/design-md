@@ -1,6 +1,8 @@
 ---
 name: Ideogram
 tagline: A bright white canvas with a single saturated violet cue — a typography-first AI image tool that lets the gallery do all the talking.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://ideogram.ai
 spec: design.md/v1.5

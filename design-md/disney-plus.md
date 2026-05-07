@@ -1,6 +1,8 @@
 ---
 name: Disney+
 tagline: Deep navy gradient streaming hall with custom Inspire display sans and the unmistakable Disney+ wordmark arc.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.disneyplus.com
 spec: design.md/v1.5

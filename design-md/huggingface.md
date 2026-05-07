@@ -1,6 +1,8 @@
 ---
 name: Hugging Face
 tagline: AI community canvas — deep blue-black ground, Source Sans Pro headlines, pill auth + 8px tile cards.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://huggingface.co
 spec: design.md/v1.5

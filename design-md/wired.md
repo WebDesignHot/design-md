@@ -1,6 +1,8 @@
 ---
 name: WIRED
 tagline: Newsstand-density editorial grid, sharp-corner buttons, mono ALL-CAPS kickers — Conde Nast meets engineering lab.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.wired.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Clerk
 tagline: Geist + Suisse on near-black canvas with `#6c47ff` violet CTA — the drop-in-auth dev-tool aesthetic.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://clerk.com
 spec: design.md/v1.5

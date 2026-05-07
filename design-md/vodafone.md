@@ -1,6 +1,8 @@
 ---
 name: Vodafone
 tagline: Vodafone Red broadcast band, monumental 144px display, two-tier button system — corporate-newsroom telecom design.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.vodafone.com
 spec: design.md/v1.5

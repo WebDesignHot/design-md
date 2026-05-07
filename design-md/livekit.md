@@ -1,6 +1,8 @@
 ---
 name: LiveKit
 tagline: Realtime audio-video infra — Public Sans 300 weight on near-black, signature cyan #1fd5f9 voltage, dev-tools confidence.
+updated_at: 2026-05-05T20:30:27+12:00
+published_at: 2026-05-05T20:30:27+12:00
 author: webdesignhot
 source_url: https://livekit.io
 spec: design.md/v1.5

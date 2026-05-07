@@ -1,6 +1,8 @@
 ---
 name: OpenRouter
 tagline: Pure-black canvas with custom display typography and pragmatic mono — LLM-router infrastructure dressed as a terminal billing dashboard.
+updated_at: 2026-05-04T21:08:09+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://openrouter.ai
 spec: design.md/v1.5

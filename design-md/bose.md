@@ -1,6 +1,8 @@
 ---
 name: Bose
 tagline: Pure black canvas, Helvetica restraint, and premium-audio confidence — sound presented as engineering art.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://www.bose.com
 spec: design.md/v1.5

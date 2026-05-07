@@ -1,6 +1,8 @@
 ---
 name: Reuters
 tagline: Global newswire restraint — signature orange (`#ff8000`), Knowledge Medium custom sans, broadsheet rigor for the world''s oldest news agency.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.reuters.com
 spec: design.md/v1.5

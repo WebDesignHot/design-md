@@ -1,6 +1,8 @@
 ---
 name: Kinde
 tagline: White canvas with Inter 72/500 display + dev-friendly pink-coral accent — the approachable auth-billing-access platform.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://kinde.com
 spec: design.md/v1.5

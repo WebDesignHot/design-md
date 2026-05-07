@@ -1,6 +1,8 @@
 ---
 name: Audi
 tagline: Vorsprung durch Technik on near-black — Audi Type sans, four-rings precision, and a near-monochrome canvas with `#bb0a30` reserved for sport.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.audi.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Nuxt
 tagline: Forest-green `#00dc82` glow on a near-black canvas — Vue-flavored warmth dressed for the cosmos.
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://nuxt.com
 spec: design.md/v1.5

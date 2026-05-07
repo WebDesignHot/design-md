@@ -1,6 +1,8 @@
 ---
 name: Baseten
 tagline: White canvas with Inter and a signature `#6c5ce7` purple — ML model deployment dressed in approachable workshop chrome.
+updated_at: 2026-05-04T21:08:09+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://www.baseten.co
 spec: design.md/v1.5

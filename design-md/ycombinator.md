@@ -1,6 +1,8 @@
 ---
 name: Y Combinator
 tagline: Brutalist orange monolith — system-font sans on white canvas, signature `#f26625` orange-red blocks with hard 0px corners.
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.ycombinator.com
 spec: design.md/v1.5

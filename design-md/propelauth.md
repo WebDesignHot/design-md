@@ -1,6 +1,8 @@
 ---
 name: PropelAuth
 tagline: White canvas with SF Pro Rounded display 60/900 + deep-navy ink — B2B multi-tenant auth with Apple-tinted polish.
+updated_at: 2026-05-04T21:19:12+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://propelauth.com
 spec: design.md/v1.5

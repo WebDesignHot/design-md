@@ -1,6 +1,8 @@
 ---
 name: Signal
 tagline: Privacy-first messaging in `#3a76f0` Signal blue with Inter sans — minimal, ad-free, end-to-end-encrypted by default.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-05T20:30:27+12:00
 author: webdesignhot
 source_url: https://signal.org
 spec: design.md/v1.5

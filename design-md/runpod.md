@@ -1,6 +1,8 @@
 ---
 name: RunPod
 tagline: Deep slate canvas with Inter and a signature `#673ab7` purple — accessible GPU cloud dressed in friendly developer chrome.
+updated_at: 2026-05-04T21:08:09+12:00
+published_at: 2026-05-04T21:08:09+12:00
 author: webdesignhot
 source_url: https://www.runpod.io
 spec: design.md/v1.5

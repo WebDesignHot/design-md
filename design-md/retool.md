@@ -1,6 +1,8 @@
 ---
 name: Retool
 tagline: 'Pragmatic blue #3a55fc + Inter + dense product mocks — the internal-tool platform that designed itself like a well-organised admin panel.'
+updated_at: 2026-05-06T08:44:32+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://retool.com
 spec: design.md/v1.5

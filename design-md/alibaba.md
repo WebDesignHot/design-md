@@ -1,6 +1,8 @@
 ---
 name: Alibaba
 tagline: 'Electric orange `#ff6a00` + dense merchant grids — the global B2B wholesale floor as a website.'
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.alibaba.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Sentry
 tagline: 'Deep-aubergine observability — Dammit Sans display, Rubik body, JetBrains Mono code, signature violet #7553ff and pill CTAs.'
+updated_at: 2026-05-06T09:01:10+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://sentry.io
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Uniqlo
 tagline: Signature red `#ff0000`, Helvetica Neue system stack, japanese-utility-functional grid — the LifeWear engine.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.uniqlo.com
 spec: design.md/v1.5

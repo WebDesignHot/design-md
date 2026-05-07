@@ -1,6 +1,8 @@
 ---
 name: SendGrid
 tagline: Functional API-blue on white — the email-platform dashboard aesthetic, now folded under the Twilio umbrella.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.twilio.com/en-us/sendgrid
 spec: design.md/v1.5

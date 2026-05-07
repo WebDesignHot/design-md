@@ -1,6 +1,8 @@
 ---
 name: Coursera
 tagline: University-blue `#0056d2` on warm-white parchment with Source Sans — the canonical online-degree marketplace.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://coursera.org
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Deel
 tagline: 'A warm dark canvas with electric coral and orange accents — global payroll dressed as a confident product portrait.'
+updated_at: 2026-05-06T08:50:03+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.deel.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Runway
 tagline: A near-black research canvas with ABC Normal headlines pulled tight at -2.5px — a film studio, an ML lab, and a brutalist gallery in one shell.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://runwayml.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Render
 tagline: 'Lavender on white — a PaaS that swapped Heroku purple for a candy-bright #8a05ff and kept the airy whitespace.'
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://render.com
 spec: design.md/v1.5

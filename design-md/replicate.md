@@ -1,6 +1,8 @@
 ---
 name: Replicate
 tagline: AI-API marketing — light page chrome, dark hero canvas, rb-Freigeist Neue display, JetBrains Mono code, sharp 0px corners.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://replicate.com
 spec: design.md/v1.5

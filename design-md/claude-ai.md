@@ -1,6 +1,8 @@
 ---
 name: Claude.ai
 tagline: 'Cream paper canvas, Anthropic Sans for body and Anthropic Serif for the headline — an AI assistant set in literary type.'
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://claude.com
 spec: design.md/v1.5

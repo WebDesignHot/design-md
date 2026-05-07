@@ -1,6 +1,8 @@
 ---
 name: IBM
 tagline: Carbon Design System made literal — pure-white canvas, IBM Plex Sans at light 300, square corners, and one assertive `#0f62fe` blue.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.ibm.com
 spec: design.md/v1.5

@@ -1,6 +1,8 @@
 ---
 name: Calm
 tagline: Signature `#0066ff` deep blue + Aktiv Grotesk + meditation-deep cool atmospheric calm.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T14:31:15+12:00
 author: webdesignhot
 source_url: https://www.calm.com
 spec: design.md/v1.5

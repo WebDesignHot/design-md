@@ -1,6 +1,8 @@
 ---
 name: ASUS
 tagline: Republic of Gamers red `#cd0000` on black with bold sans — Taiwan engineering meets esports brutalism.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.asus.com
 spec: design.md/v1.5

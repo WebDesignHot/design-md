@@ -1,6 +1,8 @@
 ---
 name: Oura
 tagline: Pure-black canvas with Inter precision and gold-stamped scores — the premium-ring health-precision aesthetic.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://ouraring.com
 spec: design.md/v1.5

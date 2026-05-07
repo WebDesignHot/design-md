@@ -1,6 +1,8 @@
 ---
 name: Instacart
 tagline: Grocery-shopping-list practical — Instacart Sans on white, signature carrot green #0aad0a, friendly-functional clarity.
+updated_at: 2026-05-05T20:12:58+12:00
+published_at: 2026-05-05T20:12:58+12:00
 author: webdesignhot
 source_url: https://www.instacart.com
 spec: design.md/v1.5

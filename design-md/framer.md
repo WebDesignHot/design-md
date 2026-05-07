@@ -1,6 +1,8 @@
 ---
 name: Framer
 tagline: Black-on-white maximalism with electric gradient floods — Inter Display at heroic sizes, motion as a first-class material.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.framer.com
 spec: design.md/v1.5

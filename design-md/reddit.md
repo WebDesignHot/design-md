@@ -1,6 +1,8 @@
 ---
 name: Reddit
 tagline: Front-page-of-the-internet orange — community-card density, IBM Plex Sans display, and a confident #ff4500 voltage on warm grey.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.reddit.com
 spec: design.md/v1.5

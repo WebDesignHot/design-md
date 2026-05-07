@@ -1,6 +1,8 @@
 ---
 name: Corsair
 tagline: Yellow `#ffff00` lightning on black with Roboto — RGB-everything peripherals and PC components.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.corsair.com
 spec: design.md/v1.5

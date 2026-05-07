@@ -1,6 +1,8 @@
 ---
 name: Stripe
 tagline: Editorial fintech polish — light Söhne headlines at weight 300, navy-not-black text, signature `#533afd` purple CTAs.
+updated_at: 2026-05-06T01:20:47+12:00
+published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://stripe.com
 spec: design.md/v1.5

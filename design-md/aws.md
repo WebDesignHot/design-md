@@ -1,6 +1,8 @@
 ---
 name: Amazon Web Services
 tagline: Squid-ink navy with Smile-orange CTAs — the densest tile-portal on the cloud-platform internet.
+updated_at: 2026-05-04T20:53:02+12:00
+published_at: 2026-05-04T20:53:02+12:00
 author: webdesignhot
 source_url: https://aws.amazon.com
 spec: design.md/v1.5

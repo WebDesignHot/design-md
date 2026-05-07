@@ -1,6 +1,8 @@
 ---
 name: WHOOP
 tagline: Lime `#a0d10b` voltage on jet-black, Inter precision, recovery-data athlete-grade aesthetic.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://www.whoop.com
 spec: design.md/v1.5

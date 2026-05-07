@@ -1,6 +1,8 @@
 ---
 name: Prime Video
 tagline: Amazon-blue streaming canvas with Ember sans and the dense, utility-first marketplace UI vocabulary.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.primevideo.com
 spec: design.md/v1.5

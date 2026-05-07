@@ -1,6 +1,8 @@
 ---
 name: Bear
 tagline: Off-white canvas, a custom bearsans display, a red bear icon, and tealish handwritten underlines — a Markdown notes app dressed as a Mac Pro magazine.
+updated_at: 2026-05-05T14:31:15+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://bear.app
 spec: design.md/v1.5

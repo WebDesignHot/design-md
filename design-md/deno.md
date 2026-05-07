@@ -1,6 +1,8 @@
 ---
 name: Deno
 tagline: 'Inkwell black on warm white with the dinosaur mascot — TypeScript runtime as Eric Carle children''s book.'
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://deno.com
 spec: design.md/v1.5

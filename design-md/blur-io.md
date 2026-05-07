@@ -1,6 +1,8 @@
 ---
 name: Blur
 tagline: Pure-black canvas, neon `#ff8700` orange voltage, and JetBrains-Mono-default everywhere — brutalist NFT trader terminal as competitive instrument.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-05T10:17:17+12:00
 author: webdesignhot
 source_url: https://blur.io
 spec: design.md/v1.5

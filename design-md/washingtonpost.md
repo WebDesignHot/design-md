@@ -1,6 +1,8 @@
 ---
 name: The Washington Post
 tagline: Postoni serif blackletter masthead, "Democracy Dies in Darkness" tagline, sober ink-on-paper political broadsheet.
+updated_at: 2026-05-03T21:06:23+12:00
+published_at: 2026-05-03T21:06:23+12:00
 author: webdesignhot
 source_url: https://www.washingtonpost.com
 spec: design.md/v1.5

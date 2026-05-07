@@ -1,6 +1,8 @@
 ---
 name: Together AI
 tagline: Deep navy on near-white with Inter sans — open-source LLM cloud rendered as developer-platform infrastructure.
+updated_at: 2026-05-06T19:53:28+12:00
+published_at: 2026-05-05T20:18:33+12:00
 author: webdesignhot
 source_url: https://www.together.ai
 spec: design.md/v1.5

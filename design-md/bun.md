@@ -1,6 +1,8 @@
 ---
 name: Bun
 tagline: 'Cream canvas with chunky pink accents and the wide-eyed mascot — a JS runtime dressed as a 1970s bakery sign.'
+updated_at: 2026-05-05T20:10:49+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://bun.sh
 spec: design.md/v1.5

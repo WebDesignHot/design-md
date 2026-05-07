@@ -1,6 +1,8 @@
 ---
 name: Cursor
 tagline: Warm cream IDE-marketing — `#f7f7f4` canvas, `#26251e` ink, custom CursorGothic display, JetBrains Mono code, vivid orange accent.
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://www.cursor.com
 spec: design.md/v1.5

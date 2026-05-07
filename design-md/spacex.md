@@ -1,6 +1,8 @@
 ---
 name: SpaceX
 tagline: Pure-black cinematic photography, D-DIN aerospace stencil type, ghost-button minimalism — the interface disappears.
+updated_at: 2026-05-04T19:57:58+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://www.spacex.com
 spec: design.md/v1.5

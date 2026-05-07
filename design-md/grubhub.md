@@ -1,6 +1,8 @@
 ---
 name: Grubhub
 tagline: Friendly red-orange CTA, Sentinel display + Avenir body, dense delivery-app commerce — the long-running incumbent.
+updated_at: 2026-05-05T19:20:38+12:00
+published_at: 2026-05-04T19:57:58+12:00
 author: webdesignhot
 source_url: https://grubhub.com
 spec: design.md/v1.5

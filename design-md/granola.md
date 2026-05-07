@@ -1,6 +1,8 @@
 ---
 name: Granola
 tagline: White paper, a custom Quadrant book serif, and an olive-green CTA — an AI notepad that dresses like a stationery shop.
+updated_at: 2026-05-05T10:17:17+12:00
+published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://www.granola.ai
 spec: design.md/v1.5

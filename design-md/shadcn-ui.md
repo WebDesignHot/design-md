@@ -1,6 +1,8 @@
 ---
 name: shadcn/ui
 tagline: Copy-paste components in pure black-on-white — the most influential design system not actually shipped as a library.
+updated_at: 2026-05-06T15:27:43+12:00
+published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://ui.shadcn.com
 spec: design.md/v1.5

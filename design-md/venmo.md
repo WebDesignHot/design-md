@@ -1,6 +1,8 @@
 ---
 name: Venmo
 tagline: A single confident `#3d95ce` blue, Aktiv Grotesk geometry, and a social-feed informality — payments dressed as group chat.
+updated_at: 2026-05-04T14:57:35+12:00
+published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://venmo.com
 spec: design.md/v1.5
