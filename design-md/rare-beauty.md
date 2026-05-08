@@ -1,0 +1,359 @@
+---
+name: Rare Beauty
+tagline: Soft lavender on cream — Selena Gomez's beauty brand with mental-health-aware editorial restraint and serif-led product cards.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-08T00:00:00.000Z
+author: webdesignhot
+source_url: https://www.rarebeauty.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [fashion, marketplace]
+tags: [light, soft, serif, sans, warm, spacious]
+preview_swatch: ['#fdf6f0', '#9b6dd4', '#1a1a1a']
+related: [glossier, fenty-beauty, calm-app]
+description: 'Rare Beauty''s site is the editorial-restrained counterpart to Glossier''s candy-pink. The canvas is warm cream `#fdf6f0`, display headings sit in a serif (Recoleta or Tiempos Headline) at 48–72px, and the brand color is "Rare Lavender" `#9b6dd4` — a soft purple picked for both Selena Gomez''s personal aesthetic and the brand''s mental-health advocacy positioning. Where Glossier went candy-pink-and-white and Fenty went bold-and-inclusive-jewel-tones, Rare went soft-lavender-and-cream-and-serif. Photography is shot on warm-amber backgrounds, never against pure white. The Rare Impact Fund (1% of sales for mental health) threads through the brand voice. The whole site reads as "beauty brand that has read a self-help book and finished it".'
+
+colors:
+  bg: '#fdf6f0'
+  bg-soft: '#faf0e6'
+  bg-deeper: '#f5e8d8'
+  bg-warm: '#fdf3e8'
+  surface: '#ffffff'
+  surface-soft: '#fdf8f0'
+  surface-cream: '#f9efe0'
+  brand: '#9b6dd4'
+  brand-hover: '#8557c0'
+  brand-pressed: '#6e44a8'
+  brand-deep: '#583590'
+  brand-tint: '#e8dbf5'
+  brand-soft: '#d2bfe8'
+  on-brand: '#ffffff'
+  text: '#1a1a1a'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#9b6dd4'
+  link-hover: '#6e44a8'
+  selected-bg: '#e8dbf5'
+  border: '#e8dccd'
+  border-strong: '#cdb89c'
+  border-soft: '#f0e6d8'
+  border-brand: '#9b6dd4'
+  blush: '#e8a8a8'
+  rose: '#d4847a'
+  amber: '#cb9c45'
+  success: '#3d8b62'
+  warning: '#cb9c45'
+  danger: '#a85353'
+  info: '#9b6dd4'
+
+typography:
+  display:
+    family: '"Recoleta", "Tiempos Headline", "Garamond Premier Pro", Georgia, serif'
+    weights: [400, 600]
+  body:
+    family: '"Inter", "Avenir Next", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 600]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 72, weight: 600, lineHeight: 1.05, tracking: '-0.015em', family: display }
+    display-xl:      { size: 56, weight: 600, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    display-lg:      { size: 48, weight: 600, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h1:              { size: 36, weight: 600, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h2:              { size: 28, weight: 600, lineHeight: 1.25, tracking: '0',        family: display }
+    h3:              { size: 22, weight: 600, lineHeight: 1.3,  tracking: '0',        family: body }
+    h4:              { size: 18, weight: 600, lineHeight: 1.35, tracking: '0',        family: body }
+    eyebrow:         { size: 11, weight: 600, lineHeight: 1.2,  tracking: '0.20em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.65, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.65, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    label:           { size: 12, weight: 600, lineHeight: 1.3,  tracking: '0.10em',   family: body }
+    button:          { size: 13, weight: 600, lineHeight: 1.0,  tracking: '0.10em',   family: body }
+    caption:         { size: 12, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+
+radius:
+  micro: 2
+  sm: 4
+  md: 6
+  lg: 8
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120, 160]
+
+layout:
+  page-width: 1280
+  prose-width: 680
+  header-height: 80
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 200
+  duration-standard: 320
+  duration-slow: 480
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 12px rgba(155, 109, 212, 0.06)'
+  card-hover: '0 6px 20px rgba(155, 109, 212, 0.12)'
+  modal: '0 24px 64px rgba(155, 109, 212, 0.18)'
+
+accessibility:
+  contrast-text-on-bg: 13.8
+  contrast-text-on-brand: 4.6
+  focus-ring: '2px solid #9b6dd4 + 2px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 32px', radius: 0, font: button }
+  button-secondary: { bg: transparent, text: brand, padding: '12px 30px', radius: 0, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 4, padding: 24, shadow: 'card' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: surface, border: '1px solid border-strong', text: text, radius: 0, padding: '14px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Rare Beauty''s marketing system descends from Selena Gomez''s 2020 brand launch, refined through positioning that explicitly centers mental-health advocacy (1% of sales fund the Rare Impact Fund). Rare Lavender `#9b6dd4` was picked specifically to differentiate from Glossier''s candy-pink and Fenty''s jewel-tone palette — soft, calming, slightly clinical-meets-romantic. Recoleta or Tiempos Headline (warm-modern serif by Latinotype) anchors display; Inter or Avenir Next handles body. Photography is shot on warm-amber backgrounds, never pure white — recalling editorial-magazine product photography. The brand reads as "beauty brand that has read a self-help book and finished it" — restrained, sincere, slightly literary.'
+  influences:
+    - { name: 'Selena Gomez (founder, 2020)', role: 'mental-health-aware brand positioning', url: 'https://www.rarebeauty.com/about' }
+    - { name: 'Recoleta by Latinotype', role: 'warm-modern serif for soft-luxe display typography', url: 'https://www.latinotype.com/recoleta' }
+    - { name: 'Glossier + Fenty Beauty', role: 'beauty contemporaries differentiated against', url: 'https://www.glossier.com' }
+    - { name: 'Editorial-magazine product photography', role: 'warm-amber backgrounds + soft styling lineage', url: 'https://www.vogue.com' }
+    - { name: 'The Rare Impact Fund', role: '1% of sales mental-health initiative shaping brand voice', url: 'https://www.rarebeauty.com/pages/rare-impact-fund' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Rare Beauty's site is the editorial-restrained counterpart to Glossier's candy-pink. The canvas is **warm cream** `#fdf6f0`, display headings sit in a warm-modern serif (Recoleta or Tiempos Headline) at 48–72px, body in Inter at 16px line-height 1.65. The brand color is **Rare Lavender** `#9b6dd4` — a soft purple picked for both Selena Gomez's personal aesthetic and the brand's mental-health advocacy positioning.
+
+Where Glossier went candy-pink-and-white and Fenty went bold-and-inclusive-jewel-tones, Rare went **soft-lavender-and-cream-and-serif**. Photography is shot on warm-amber backgrounds, never against pure white — recalling editorial-magazine product photography. CTAs are 0px-radius rectangular, lavender bg with white text. The Rare Impact Fund (1% of sales fund mental health initiatives) threads through the brand voice and footer.
+
+The whole site reads as "beauty brand that has read a self-help book and finished it" — restrained, sincere, slightly literary. Voice is gentle-confident without going self-help-cliché.
+
+**Key Characteristics:**
+- Warm cream canvas `#fdf6f0`
+- Rare Lavender `#9b6dd4` brand color
+- Recoleta / Tiempos Headline warm-modern serif display
+- Inter body at line-height 1.65
+- 0–4px radius on UI (rectangular-restrained)
+- Photography on warm-amber backgrounds, never white
+- Rare Impact Fund prominent in nav and footer
+- Mixed case display, UPPER eyebrows + buttons
+- Light-only canvas
+- Gentle-confident voice
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#fdf6f0`): warm cream off-white.
+- **Bg Soft** (`#faf0e6`): deeper cream alternate band.
+- **Surface** (`#ffffff`): cards lift from cream.
+- **Text** (`#1a1a1a`): body. Soft near-black.
+
+### Brand — Rare Lavender
+- **Brand** (`#9b6dd4`): primary CTA + brand mark.
+- **Brand Hover** (`#8557c0`), **Pressed** (`#6e44a8`), **Deep** (`#583590`).
+- **Brand Tint** (`#e8dbf5`): selection wash.
+
+### Accent
+- **Blush** (`#e8a8a8`): warm pink for blush-product photography moments.
+- **Rose** (`#d4847a`): warmer rose for editorial accents.
+- **Amber** (`#cb9c45`): warm gold for warning + Rare Impact Fund branding.
+
+### Borders
+- **Border** (`#e8dccd`): warm cream hairline.
+- **Border Strong** (`#cdb89c`): emphasis.
+
+### Semantic
+- success `#3d8b62`, warning amber, danger `#a85353`, info brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display**: Recoleta / Tiempos Headline (warm-modern serifs by Latinotype/Klim). Falls back to Garamond Premier Pro → Georgia → serif.
+- **Body**: Inter regular. Falls back to Avenir Next → system stacks.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Recoleta | 72 | 600 | 1.05 | -0.015em |
+| display-lg | Recoleta | 48 | 600 | 1.15 | -0.008em |
+| h1 | Recoleta | 36 | 600 | 1.2 | -0.005em |
+| h2 | Recoleta | 28 | 600 | 1.25 | 0 |
+| h3 | Inter | 22 | 600 | 1.3 | 0 |
+| eyebrow | Inter | 11 | 600 | 1.2 | 0.20em UPPER |
+| body | Inter | 16 | 400 | 1.65 | 0 |
+| label | Inter | 12 | 600 | 1.3 | 0.10em |
+| button | Inter | 13 | 600 | 1.0 | 0.10em UPPER |
+
+### Principles
+- **Serif for display, sans for body + UI** — the dichotomy is the brand.
+- **Body line-height 1.65** — generous editorial.
+- **Mixed case display, UPPER eyebrows + buttons.**
+- **Heavy tracking on uppercase** (0.10–0.20em).
+
+## 4. Component Stylings
+
+### Buttons (3 variants — 0px radius)
+
+**Primary** — Rare Lavender:
+- bg `#9b6dd4`, text white, 13px Inter 600 0.10em UPPER
+- Padding 14×32, **radius 0**
+- Hover: bg `#8557c0`
+
+**Secondary** — bordered:
+- bg transparent, text lavender, 1px lavender border, radius 0
+
+**Ghost**: bg transparent, text lavender, padding 10×20.
+
+### Cards
+- bg white, **4px radius**, padding 24
+- Soft lavender-tinted shadow `0 2px 12px rgba(155,109,212,0.06)`
+
+### Pills (shade selectors, product tags)
+- bg `brand-tint`, text `brand-pressed`, pill radius
+
+### Inputs
+- bg white, 1px gray-cream border, radius 0
+- Focus: border lavender
+
+### Navigation
+- 80px sticky header, cream bg with hairline
+- Rare Beauty wordmark left (lavender, serif italic), top-level nav center, "Rare Impact" + cart right
+
+## 5. Layout Principles
+
+- Base 4px, 96-160px between sections (editorial)
+- Page max width 1280px, prose 680px
+- Hero: full-bleed warm-amber product photography with overlapping serif headline
+- Product grid: 3-up at desktop, 2-up at tablet, 1-up at mobile
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 2 | indicators |
+| Standard | 4 | **cards** |
+| Comfortable | 6 | tooltips |
+| Relaxed | 8 | featured |
+| None | 0 | **buttons + inputs** |
+| Pill | 9999 | shade pills |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 12px rgba(155,109,212,0.06)` resting |
+| 2 | `0 6px 20px rgba(155,109,212,0.12)` hover |
+| 3 | `0 12px 32px rgba(155,109,212,0.16)` featured |
+| 4 | `0 24px 64px rgba(155,109,212,0.18)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, slower durations (200-480ms) — soft brand pacing
+- Card hover: shadow lift, no transform
+- Photography slow-pan on key product images
+
+## 9. Accessibility & A11y
+
+- text on bg: `#1a1a1a` on `#fdf6f0` = **13.8:1** AAA
+- on-brand on brand: `#ffffff` on `#9b6dd4` = **4.6:1** AA
+- 2px lavender focus ring + 2px outset
+
+Shade swatches use `aria-label="Soft Pink Tint, suits warm undertones"`. Photography decorative `aria-hidden`.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 72→44; nav hamburger; 1-up grid. tablet: 2-up. desktop+: 3-up.
+
+## 11. Content & Voice
+
+### Tone
+**Gentle-confident.** Restrained, sincere, slightly literary.
+
+### Microcopy patterns
+- Primary CTA: **"Add to Bag"** / **"Shop the line"**
+- Sign-up: **"Join Rare Beauty"**
+- Errors: **"Something didn't quite work — let's try that again."**
+- Empty: **"Your bag is empty — start with our bestsellers."**
+
+### CTA verb conventions
+- **Shop / Add / Discover / Read more**
+- Avoid: urgent ("Last chance"), too-casual ("Yum")
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Cream canvas IS the brand.
+
+## 13. Lineage & Influences
+
+Rare Beauty descends from Selena Gomez's 2020 brand launch, with explicit mental-health-advocacy positioning (Rare Impact Fund — 1% of sales). Rare Lavender `#9b6dd4` differentiates from Glossier candy-pink and Fenty jewel-tones. Recoleta serif anchors display; Inter handles body.
+
+**Named influences:**
+- **Selena Gomez (founder, 2020)** — mental-health-aware positioning
+- **Recoleta by Latinotype** — warm-modern serif
+- **Glossier + Fenty Beauty** — beauty contemporaries
+- **Editorial-magazine product photography** — warm-amber lineage
+- **Rare Impact Fund** — 1% sales mental-health initiative
+
+## 14. Do's and Don'ts
+
+### Do
+- **Cream canvas + Rare Lavender + Recoleta serif.**
+- **0px radius on buttons + inputs.**
+- **Photography on warm-amber backgrounds, never pure white.**
+- **Mixed case display, UPPER eyebrows + buttons.**
+- **Body line-height 1.65 — editorial.**
+- **Mention Rare Impact Fund where relevant.**
+
+### Don't
+- **Don't use pure white bg.** Cream is the brand.
+- **Don't substitute Rare Lavender** with Tailwind purple.
+- **Don't add gradients on CTA.**
+- **Don't use serif for body.** Display only.
+- **Don't add a friendly mascot.**
+- **Don't use urgency microcopy.**
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg (cream): `#fdf6f0`
+- text: `#1a1a1a`
+- brand (Rare Lavender): `#9b6dd4` / hover `#8557c0`
+- blush: `#e8a8a8` / rose: `#d4847a`
+- border: `#e8dccd`
+
+### Example Component Prompts
+
+> Build a Rare Beauty-style hero: cream canvas, full-bleed product photo on warm-amber background right 50%, 72px Recoleta serif heading "Rare Beauty" mixed-case left, 18px Inter subhead. Primary CTA "Shop the line" 0px-radius lavender `#9b6dd4` 13px Inter 600 0.10em UPPER, padding 14×32.
+
+> Design a product card: white surface (lifts from cream), 4px radius, 24px pad, soft lavender-tinted shadow. Product photo top, 22px Inter h3 product name, eyebrow "BLUSH · MATTE" in 11px UPPER 0.20em lavender. Price right-aligned in 18px serif.
+
+> Render a shade swatch pill: pill radius, brand-tint bg, lavender text 12px Inter 600 0.10em UPPER "SOFT PINK".
+
+> Build a "Add to Bag" CTA: 0px radius, Rare Lavender bg, white 13px Inter 600 0.10em UPPER, padding 14×32.
+
+> Design a Rare Impact callout: warm cream surface, amber accent, 11px UPPER 0.20em eyebrow "RARE IMPACT FUND" amber, 22px Recoleta heading + 16px Inter body about mental-health initiative.
+
+### Iteration Guide
+
+1. **Cream canvas + Rare Lavender + Recoleta serif.**
+2. **0px radius buttons + 4px cards — restrained-rectangular.**
+3. **Warm-amber photography backgrounds, never white.**
+4. **Mixed case display, UPPER eyebrows + buttons.**
+5. **Mention Rare Impact Fund for mental-health-relevant copy.**
+6. **Gentle-confident voice — sincere, slightly literary.**
+7. **Reject pure white, candy-pink (that's Glossier), gradient CTAs.**

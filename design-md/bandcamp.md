@@ -1,0 +1,387 @@
+---
+name: Bandcamp
+tagline: Bandcamp Cyan + Helvetica — indie-music marketplace honesty, no streaming-platform polish, no algorithmic carousels.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-08T00:00:00.000Z
+author: webdesignhot
+source_url: https://bandcamp.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [media, marketplace]
+tags: [light, structured, sans, warm, dense]
+preview_swatch: ['#fafaf6', '#629aa0', '#1a1a1a']
+related: [soundcloud, youtube, audiocom]
+description: 'Bandcamp''s site is the rare music-marketplace that has not been redesigned by a Spotify alumnus. The canvas is warm off-white `#fafaf6`, headings sit in Helvetica (or Inter as fallback) at 28–48px, and the brand color is "Bandcamp Cyan" `#629aa0` — a muted teal that has barely shifted since the 2008 founding. Where Spotify chose dark + green and Apple Music chose dark + red, Bandcamp chose **light + cyan + Helvetica** — visually closer to a SoundCloud-of-2010 or an early-2000s indie label site than to modern streaming UI. Cards have 0px radius, hairline borders, and dense album-info layouts (artist name + track count + price + format). Voice is direct-utility: "Buy now", "Stream", "Pay what you want". The whole brand reads as "music marketplace built by music people, not data scientists".'
+
+colors:
+  bg: '#fafaf6'
+  bg-soft: '#f5f5f0'
+  bg-deeper: '#eeeee8'
+  bg-warm: '#fdfdf6'
+  surface: '#ffffff'
+  surface-soft: '#fafafa'
+  surface-strong: '#f0f0eb'
+  brand: '#629aa0'
+  brand-hover: '#4a8087'
+  brand-pressed: '#3a6770'
+  brand-deep: '#2a4f56'
+  brand-tint: '#dfeded'
+  brand-soft: '#b8d5d8'
+  on-brand: '#ffffff'
+  text: '#1a1a1a'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#629aa0'
+  link-hover: '#3a6770'
+  selected-bg: '#dfeded'
+  border: '#dcdcd6'
+  border-strong: '#bcbcb6'
+  border-soft: '#ebebe5'
+  border-brand: '#629aa0'
+  buy-now-orange: '#cc7a3a'
+  vinyl-warm: '#c97558'
+  cassette-warm: '#bf8a3c'
+  success: '#3d8b62'
+  warning: '#cc7a3a'
+  danger: '#a83a3a'
+  info: '#629aa0'
+
+typography:
+  display:
+    family: '"Helvetica Neue", "Helvetica", "Arial", "Inter", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 700]
+  body:
+    family: '"Helvetica Neue", "Helvetica", "Arial", "Inter", -apple-system, sans-serif'
+    weights: [400, 500, 700]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    display-xl:      { size: 40, weight: 700, lineHeight: 1.15, tracking: '-0.01em',  family: display }
+    display-lg:      { size: 32, weight: 700, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h1:              { size: 24, weight: 700, lineHeight: 1.25, tracking: '0',        family: display }
+    h2:              { size: 20, weight: 700, lineHeight: 1.3,  tracking: '0',        family: display }
+    h3:              { size: 17, weight: 700, lineHeight: 1.35, tracking: '0',        family: display }
+    h4:              { size: 15, weight: 700, lineHeight: 1.4,  tracking: '0',        family: display }
+    eyebrow:         { size: 11, weight: 700, lineHeight: 1.2,  tracking: '0.10em',   family: body }
+    body-lg:         { size: 15, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body:            { size: 13, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    body-sm:         { size: 12, weight: 400, lineHeight: 1.45, tracking: '0',        family: body }
+    label:           { size: 11, weight: 700, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 13, weight: 700, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    caption:         { size: 11, weight: 400, lineHeight: 1.4,  tracking: '0',        family: body }
+    track-row:       { size: 13, weight: 400, lineHeight: 1.4,  tracking: '0',        family: body }
+    duration:        { size: 12, weight: 400, lineHeight: 1.3,  tracking: '0',        family: mono }
+
+radius:
+  none: 0
+  micro: 1
+  sm: 2
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80]
+
+layout:
+  page-width: 1180
+  prose-width: 720
+  header-height: 56
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  duration-fast: 100
+  duration-standard: 180
+  duration-slow: 280
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1180
+  wide: 1280
+
+shadows:
+  card: '0 1px 0 0 rgba(0, 0, 0, 0.04)'
+  card-hover: 'none'
+  modal: '0 16px 40px rgba(0, 0, 0, 0.16)'
+
+accessibility:
+  contrast-text-on-bg: 16.0
+  contrast-text-on-brand: 5.6
+  focus-ring: '2px solid #629aa0 + 1px outset gap'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '8px 16px', radius: 0, font: button }
+  button-buy-now: { bg: buy-now-orange, text: on-brand, padding: '8px 16px', radius: 0, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '8px 16px', radius: 0, border: '1px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '4px 8px' }
+  card: { bg: surface, radius: 0, padding: 12, border: '1px solid border' }
+  pill: { bg: surface-strong, text: text, radius: pill, padding: '2px 8px', font: 'caption' }
+  input: { bg: bg, border: '1px solid border-strong', text: text, radius: 0, padding: '8px 10px', focus-border: brand }
+  track-row: { bg: 'transparent', text: text, padding: '6px 0', border-bottom: '1px solid border-soft' }
+
+lineage:
+  summary: 'Bandcamp''s marketing system descends from Ethan Diamond''s 2008 founding as a direct-to-fan music distribution platform — built explicitly to skip Spotify-style streaming-economics. Bandcamp Cyan `#629aa0` (originally a default CSS color tweaked over the years) has barely shifted since 2008. Helvetica handles every heading — chosen specifically for its system-default honesty rather than custom-typography polish. Cards have 0px radius, hairline borders, dense album-info layouts. Voice is direct-utility: "Buy now", "Stream", "Pay what you want". The whole brand reads as music-marketplace built by music people, not data scientists — Spotify''s anti-pattern, intentionally.'
+  influences:
+    - { name: 'Ethan Diamond (founder, 2008)', role: 'direct-to-fan distribution origin shaping anti-streaming brand instinct', url: 'https://en.wikipedia.org/wiki/Bandcamp' }
+    - { name: 'Helvetica Neue / Linotype 1957', role: 'system-default honesty in typography', url: 'https://www.linotype.com/523/helvetica-neue.html' }
+    - { name: 'SoundCloud (early-2010s)', role: 'indie-music UI peer differentiated against', url: 'https://soundcloud.com' }
+    - { name: 'Early-2000s indie label sites (Sub Pop, Matador)', role: 'utilitarian indie aesthetic lineage', url: 'https://www.subpop.com' }
+    - { name: 'Bandcamp Friday', role: '0% platform fee community marketing initiative since 2020', url: 'https://bandcamp.com/bandcamp-fridays' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Bandcamp's site is the rare music-marketplace that has not been redesigned by a Spotify alumnus. The canvas is warm off-white `#fafaf6`, display headings sit in **Helvetica** (or Helvetica Neue, falling back to Arial / Inter) at 24–48px, body in 13px Helvetica line-height 1.5. The brand color is **Bandcamp Cyan** `#629aa0` — a muted teal that has barely shifted since the 2008 founding.
+
+Where Spotify chose dark + green and Apple Music chose dark + red, Bandcamp chose **light + cyan + Helvetica** — visually closer to a SoundCloud-of-2010 or an early-2000s indie label site than to modern streaming UI. Cards have **0px radius**, hairline borders, and dense album-info layouts (artist name + track count + price + format options + duration in mono).
+
+Voice is direct-utility: "Buy now", "Stream", "Pay what you want". A "Buy Now" orange `#cc7a3a` is a secondary CTA color reserved for purchase flows. Vinyl + cassette tags get warm-amber accents. The whole brand reads as **music marketplace built by music people, not data scientists** — Spotify's anti-pattern, intentionally.
+
+**Key Characteristics:**
+- Warm off-white canvas `#fafaf6`
+- Bandcamp Cyan `#629aa0` (muted teal)
+- Helvetica Neue for everything (no custom typography)
+- 0px radius on UI (utilitarian-rectangular)
+- Body 13px (denser than typical SaaS — album-list optimized)
+- Hairline borders, minimal shadows
+- "Buy Now" orange `#cc7a3a` for purchase CTAs
+- Vinyl/cassette warm accents on physical-format tags
+- Mono font for track durations
+- Light-only canvas
+- Direct-utility voice (anti-Spotify)
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#fafaf6`): warm off-white, slight cream tilt.
+- **Bg Soft** (`#f5f5f0`): deeper alternate band.
+- **Surface** (`#ffffff`): cards lift very subtly from cream.
+- **Text** (`#1a1a1a`): body.
+
+### Brand — Bandcamp Cyan
+- **Brand** (`#629aa0`): primary CTA + brand mark + links.
+- **Brand Hover** (`#4a8087`), **Pressed** (`#3a6770`), **Deep** (`#2a4f56`).
+- **Brand Tint** (`#dfeded`): selection wash.
+
+### Buy-Now Orange (purchase CTA)
+- **Buy Now Orange** (`#cc7a3a`): "Buy now" buttons specifically — distinguishes purchase from streaming.
+
+### Format Accents (physical tags)
+- **Vinyl Warm** (`#c97558`): vinyl-format tag accent.
+- **Cassette Warm** (`#bf8a3c`): cassette-format tag accent.
+
+### Borders
+- **Border** (`#dcdcd6`), **Border Strong** (`#bcbcb6`), **Border Soft** (`#ebebe5`).
+
+### Semantic
+- success `#3d8b62`, warning orange, danger `#a83a3a`, info brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Helvetica Neue. Falls back to Helvetica → Arial → Inter → system-ui.
+- **Mono**: system mono only (used for track durations).
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Helvetica | 48 | 700 | 1.1 | -0.012em |
+| display-lg | Helvetica | 32 | 700 | 1.2 | -0.005em |
+| h1 | Helvetica | 24 | 700 | 1.25 | 0 |
+| h2 | Helvetica | 20 | 700 | 1.3 | 0 |
+| h3 | Helvetica | 17 | 700 | 1.35 | 0 |
+| eyebrow | Helvetica | 11 | 700 | 1.2 | 0.10em UPPER |
+| body | Helvetica | 13 | 400 | 1.5 | 0 |
+| label | Helvetica | 11 | 700 | 1.3 | 0.04em |
+| button | Helvetica | 13 | 700 | 1.0 | 0.02em |
+| duration | system mono | 12 | 400 | 1.3 | 0 |
+
+### Principles
+- **Helvetica everywhere** — no custom webfont.
+- **Smaller body 13px** — album-listing density.
+- **Tight smaller-than-typical heading scale** — H1 24px not 32px+.
+- **Mixed case display, UPPER eyebrows + buttons.**
+- **Mono for track durations only.**
+
+## 4. Component Stylings
+
+### Buttons (4 variants — 0px radius, smaller padding)
+
+**Primary** — Cyan:
+- bg `#629aa0`, text white, 13px Helvetica 700 0.02em
+- Padding 8×16, **radius 0** (rectangular)
+- Hover: bg `#4a8087`
+
+**Buy Now** — Orange purchase CTA:
+- bg `#cc7a3a`, text white, otherwise primary
+- Used exclusively on "Buy now" buttons in purchase flow
+
+**Secondary** — bordered:
+- bg cream, text cyan, 1px cyan border, radius 0
+
+**Ghost**: bg transparent, text cyan, padding 4×8.
+
+### Cards
+- bg white, **0px radius**, padding 12
+- 1px gray border + minimal shadow `0 1px 0 0 rgba(0,0,0,0.04)`
+- No hover transform — utility-first
+
+### Track Row (album-page signature)
+- Transparent bg, 6px vertical padding
+- 1px bottom border for separation
+- Track number left in mono, title middle in 13px Helvetica, duration right in mono 12px
+
+### Pills (genre tags, format tags)
+- Default: `surface-strong` bg, dark text, pill radius
+- Vinyl: vinyl-warm bg
+- Cassette: cassette-warm bg
+
+### Inputs
+- bg cream, 1px gray border, radius 0
+- Focus: border cyan
+
+### Navigation
+- 56px sticky header (denser than typical), cream bg with hairline
+- Bandcamp wordmark left (cyan), top-level nav center, "Sign in" right
+
+## 5. Layout Principles
+
+- Base 4px, 32-56px between sections (denser than editorial)
+- Page max width 1180px (denser than 1280px standard)
+- Hero often album cover + tracklist combo
+- Album grid: 4-up at desktop, 2-up at tablet, 1-up at mobile
+- Track listings dense, 6px vertical padding per row
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| None | 0 | **default for buttons, cards, inputs** |
+| Micro | 1 | indicators |
+| Standard | 2 | rare; tooltip only |
+| Pill | 9999 | format/genre tags |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 0 | none | inline |
+| 1 | `0 1px 0 0 rgba(0,0,0,0.04)` resting | barely-perceptible |
+| 2 | hairline highlight on hover |
+| 3 | none | featured cards just use border |
+| 4 | `0 16px 40px rgba(0,0,0,0.16)` modal |
+
+### Shadow Philosophy
+The brand commits to **near-zero shadows** — 1px cards, no soft blurs. Density is the priority.
+
+## 8. Interaction & Motion
+
+- Standard ease, fast durations (100-280ms)
+- No hover transforms — clicks fire instantly
+- Audio play/pause: 100ms feedback
+- Cart updates: instant
+
+## 9. Accessibility & A11y
+
+- text on bg = **16.0:1** AAA
+- on-brand on brand: white on cyan = **5.6:1** AA
+- 2px cyan focus ring + 1px outset
+
+Track rows use semantic `<table>` with `<th scope="col">` for headers. Audio players have visible play/pause/scrub controls + keyboard support. Album covers have `aria-label` with full title + artist.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 48→24; nav hamburger; 1-up album grid; track rows stack with smaller font. tablet 480-767: 2-up. desktop+: 4-up.
+
+## 11. Content & Voice
+
+### Tone
+**Direct-utility, anti-Spotify.** Honest, slightly indie-snarky. Voice is the record-store clerk who knows what you want.
+
+### Microcopy patterns
+- Primary CTA: **"Buy now"** / **"Stream"** / **"Pay what you want"**
+- Sign-up: **"Sign up"** (no proper-noun branding)
+- Errors: **"Something didn't work — try again."**
+- Empty: **"Your collection is empty — discover artists below."**
+- Bandcamp Friday: **"Today's $0 platform fee"** (community-positive)
+
+### CTA verb conventions
+- **Buy / Stream / Download / Add to cart / Follow**
+- Avoid: streaming-platform language ("Discover Weekly"), aspirational ("Curate your sound")
+
+## 12. Dark Mode & Theming
+
+**Light-only on web.** Cream canvas IS the brand — anti-dark-streaming-platform identity. Bandcamp users have requested dark mode; the brand has stayed light.
+
+## 13. Lineage & Influences
+
+Bandcamp descends from Ethan Diamond's 2008 founding as direct-to-fan music distribution — built to skip Spotify-style streaming-economics. Bandcamp Cyan has barely shifted since 2008. Helvetica chosen for system-default honesty rather than custom-typography polish.
+
+**Named influences:**
+- **Ethan Diamond (2008)** — direct-to-fan distribution origin
+- **Helvetica Neue (1957)** — system-default honesty
+- **SoundCloud (early-2010s)** — indie peer
+- **Early-2000s indie labels (Sub Pop, Matador)** — utilitarian indie aesthetic
+- **Bandcamp Friday** — community-marketing initiative
+
+## 14. Do's and Don'ts
+
+### Do
+- **Cream canvas + Bandcamp Cyan + Helvetica.**
+- **0px radius on UI** — utilitarian-rectangular.
+- **Body 13px** — album-listing density.
+- **Buy Now orange `#cc7a3a` for purchase CTAs only.**
+- **Mono for track durations.**
+- **Hairline borders, minimal shadows.**
+- **Mixed case display, UPPER eyebrows + buttons.**
+
+### Don't
+- **Don't use custom webfonts.** Helvetica is the brand.
+- **Don't round corners.** Indie utilitarian is rectangular.
+- **Don't add streaming-platform polish** (algorithm carousels, "Discover" sections).
+- **Don't use streaming-platform microcopy** ("Curate your sound").
+- **Don't add dark mode** — the brand is anti-dark by design.
+- **Don't add gradients.**
+- **Don't substitute Bandcamp Cyan.**
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg (warm off-white): `#fafaf6`
+- text: `#1a1a1a`
+- brand (Bandcamp Cyan): `#629aa0` / hover `#4a8087`
+- buy-now-orange: `#cc7a3a`
+- vinyl-warm `#c97558`, cassette-warm `#bf8a3c`
+- border: `#dcdcd6`
+
+### Example Component Prompts
+
+> Build a Bandcamp-style album page: cream canvas `#fafaf6`, album cover left 320×320, tracklist right with track-rows (number / title / duration in mono). 32px Helvetica album title, 17px artist link in cyan. Primary CTA "Buy Digital Album" 0px-radius cyan `#629aa0`, secondary "Stream" link.
+
+> Design a release card: white surface (lifts barely from cream), 0px radius, 12px pad, 1px gray border. Album cover top, 17px Helvetica 700 album title, 13px artist + label below in dark gray. Genre pill in 11px UPPER 0.10em.
+
+> Render a track row: transparent bg, 6px vertical pad, 1px bottom border. Track number left in mono 12px, title 13px Helvetica middle, duration right in mono 12px gray.
+
+> Build a "Buy Now" CTA: 0px radius, orange `#cc7a3a` bg, white 13px Helvetica 700 0.02em "Buy Now", padding 8×16.
+
+> Design a format tag pill: pill radius, vinyl-warm `#c97558` bg for vinyl / cassette-warm `#bf8a3c` for cassette / surface-strong for digital. White text 11px Helvetica 700 0.04em UPPER.
+
+### Iteration Guide
+
+1. **Cream canvas + Cyan + Helvetica.** No custom fonts.
+2. **0px radius — utilitarian-rectangular.**
+3. **Body 13px** — denser than SaaS.
+4. **Buy-Now orange for purchase CTAs only.**
+5. **Mono for track durations.**
+6. **Hairline borders, minimal shadows.**
+7. **Indie-direct voice — anti-Spotify-platform.**
+8. **Reject custom webfonts, dark mode, streaming-platform language, rounded corners.**

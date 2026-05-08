@@ -1,0 +1,365 @@
+---
+name: Patreon
+tagline: Patreon Coral on white — creator-economy patronage with Söhne sans, photographer-led marketing, mid-2024 brand refresh language.
+updated_at: 2026-05-08T00:00:00.000Z
+published_at: 2026-05-08T00:00:00.000Z
+author: webdesignhot
+source_url: https://www.patreon.com
+spec: webdesignhot/0.1
+quality: curated
+featured: false
+categories: [saas, marketplace]
+tags: [light, warm, sans, playful, structured]
+preview_swatch: ['#ffffff', '#ff424d', '#1a1a1a']
+related: [substack, gumroad, bandcamp]
+description: 'Patreon''s site is the creator-economy marketplace anchor — patronage rather than subscription, recurring rather than one-time. The canvas is white, headings sit in Söhne (Klim Type Foundry''s neo-grotesque, used by Linear and Vercel) at 48–80px, and the brand color is "Patreon Coral" `#ff424d` — a warm pink-coral picked to evoke creator-energy without going as candy as Glossier. The mid-2024 rebrand introduced a more confident voice and a tighter palette. Photography is creator-portrait-led: real artists at workbenches, in studios, mid-record. Cards have 12-16px radius, soft warm shadows. Voice is enthusiastic-direct: "Get paid by patrons", "Build your patron community". The brand reads as creator-side, not platform-side — Patreon helps you, not extracts from you.'
+
+colors:
+  bg: '#ffffff'
+  bg-soft: '#fafaf6'
+  bg-warm: '#fff8f3'
+  surface: '#ffffff'
+  surface-soft: '#fafbfd'
+  surface-warm: '#fef0eb'
+  brand: '#ff424d'
+  brand-hover: '#e63540'
+  brand-pressed: '#cc2a35'
+  brand-deep: '#a02028'
+  brand-tint: '#ffe0e3'
+  brand-soft: '#ffb8bf'
+  on-brand: '#ffffff'
+  text: '#1a1a1a'
+  text-strong: '#000000'
+  text-muted: '#5a5a5a'
+  text-soft: '#8a8a8a'
+  text-faint: '#bcbcbc'
+  text-on-brand: '#ffffff'
+  link: '#ff424d'
+  link-hover: '#cc2a35'
+  selected-bg: '#ffe0e3'
+  border: '#e0e0e0'
+  border-strong: '#bcbcbc'
+  border-soft: '#eeeeee'
+  border-brand: '#ff424d'
+  amber: '#cb9c45'
+  forest: '#3d8b62'
+  cream: '#fff5e8'
+  success: '#3d8b62'
+  warning: '#cb9c45'
+  danger: '#a02028'
+  info: '#ff424d'
+
+typography:
+  display:
+    family: '"Söhne", "Inter", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [500, 600, 700, 800]
+  body:
+    family: '"Söhne", "Inter", -apple-system, BlinkMacSystemFont, sans-serif'
+    weights: [400, 500, 600, 700]
+  mono:
+    family: 'ui-monospace, SFMono-Regular, Menlo, monospace'
+    weights: [400, 500]
+  scale:
+    display-hero:    { size: 80, weight: 800, lineHeight: 1.0,  tracking: '-0.02em',  family: display }
+    display-xl:      { size: 64, weight: 800, lineHeight: 1.05, tracking: '-0.018em', family: display }
+    display-lg:      { size: 48, weight: 700, lineHeight: 1.1,  tracking: '-0.012em', family: display }
+    h1:              { size: 36, weight: 700, lineHeight: 1.15, tracking: '-0.008em', family: display }
+    h2:              { size: 28, weight: 700, lineHeight: 1.2,  tracking: '-0.005em', family: display }
+    h3:              { size: 22, weight: 700, lineHeight: 1.25, tracking: '0',        family: display }
+    h4:              { size: 18, weight: 600, lineHeight: 1.3,  tracking: '0',        family: display }
+    eyebrow:         { size: 12, weight: 700, lineHeight: 1.2,  tracking: '0.10em',   family: body }
+    body-lg:         { size: 18, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body:            { size: 16, weight: 400, lineHeight: 1.55, tracking: '0',        family: body }
+    body-sm:         { size: 14, weight: 400, lineHeight: 1.5,  tracking: '0',        family: body }
+    label:           { size: 13, weight: 600, lineHeight: 1.3,  tracking: '0.04em',   family: body }
+    button:          { size: 15, weight: 600, lineHeight: 1.0,  tracking: '0.02em',   family: body }
+    caption:         { size: 12, weight: 500, lineHeight: 1.4,  tracking: '0',        family: body }
+
+radius:
+  micro: 4
+  sm: 8
+  md: 12
+  lg: 16
+  xl: 24
+  pill: 9999
+
+spacing:
+  base: 4
+  scale: [0, 4, 8, 12, 16, 20, 24, 32, 40, 56, 80, 96, 120]
+
+layout:
+  page-width: 1280
+  prose-width: 720
+  header-height: 72
+
+motion:
+  ease-standard: 'cubic-bezier(0.25, 0.1, 0.25, 1)'
+  ease-emphasized: 'cubic-bezier(0.34, 1.56, 0.64, 1)'
+  duration-fast: 150
+  duration-standard: 240
+  duration-slow: 400
+  reduced-motion: 'respects prefers-reduced-motion: reduce'
+
+breakpoints:
+  mobile: 480
+  tablet: 768
+  desktop: 1280
+  wide: 1440
+
+shadows:
+  card: '0 2px 12px rgba(255, 66, 77, 0.06)'
+  card-hover: '0 6px 20px rgba(255, 66, 77, 0.12)'
+  modal: '0 24px 64px rgba(0, 0, 0, 0.20)'
+
+accessibility:
+  contrast-text-on-bg: 16.1
+  contrast-text-on-brand: 4.6
+  focus-ring: '3px solid #ff424d'
+  reduced-motion-honored: true
+
+components:
+  button-primary: { bg: brand, text: on-brand, padding: '14px 28px', radius: pill, font: button }
+  button-secondary: { bg: bg, text: brand, padding: '12px 26px', radius: pill, border: '2px solid border-brand' }
+  button-ghost: { bg: transparent, text: brand, padding: '10px 20px' }
+  card: { bg: surface, radius: 12, padding: 24, shadow: 'card' }
+  pill: { bg: brand-tint, text: brand-pressed, radius: pill, padding: '4px 12px', font: 'label' }
+  input: { bg: bg, border: '1px solid border-strong', text: text, radius: 8, padding: '12px 16px', focus-border: brand }
+
+lineage:
+  summary: 'Patreon''s marketing system descends from Jack Conte''s 2013 founding (musician + tech-CEO origin shaping creator-side instinct). The 2024 brand refresh introduced Söhne typography (Linear/Vercel sibling) and tightened the palette around Patreon Coral `#ff424d` — a warm pink-coral picked specifically to read creator-energy without going as candy as Glossier. Photography is creator-portrait-led: real artists at workbenches, in studios, mid-record. The brand commits to creator-side framing: voice talks to creators ("Get paid by patrons"), not patrons. Patreon Coral has shifted slightly across iterations but the warm-pink-coral identity has been stable since the initial brand wordmark.'
+  influences:
+    - { name: 'Jack Conte (founder, 2013)', role: 'musician + tech-CEO origin shaping creator-side voice', url: 'https://en.wikipedia.org/wiki/Patreon' }
+    - { name: 'Söhne by Klim Type Foundry', role: 'neo-grotesque sans, Linear/Vercel sibling', url: 'https://klim.co.nz/retail-fonts/sohne/' }
+    - { name: '2024 Patreon brand refresh', role: 'tightened palette + Söhne adoption', url: 'https://www.patreon.com' }
+    - { name: 'Substack + Gumroad', role: 'creator-economy peers', url: 'https://substack.com' }
+    - { name: 'Editorial portrait photography', role: 'creator-at-workbench style lineage', url: 'https://www.theverge.com' }
+---
+
+## 1. Visual Theme & Atmosphere
+
+Patreon's site is the creator-economy marketplace anchor — patronage rather than subscription, recurring rather than one-time. The canvas is white `#ffffff`, headings sit in Söhne (Klim Type Foundry's neo-grotesque, used by Linear and Vercel) at 48–80px, and the brand color is **Patreon Coral** `#ff424d` — a warm pink-coral picked to evoke creator-energy without going as candy as Glossier.
+
+The mid-2024 rebrand introduced more confident voice and a tighter palette. Photography is **creator-portrait-led**: real artists at workbenches, real podcasters at consoles, real illustrators mid-stroke. Cards have 12-16px radius, soft warm-coral-tinted shadows. Voice is enthusiastic-direct: "Get paid by patrons", "Build your patron community". The brand reads as **creator-side**, not platform-side — Patreon helps you, not extracts from you.
+
+CTAs are pill-radius, coral bg with white text. Body uses 16px line-height 1.55. Primary CTA is "Get started" or "Create your page" — never the more-corporate "Sign up" alone.
+
+**Key Characteristics:**
+- White canvas + Patreon Coral `#ff424d`
+- Söhne grotesque sans (Linear/Vercel sibling)
+- Pill-radius CTAs
+- 12-16px card radius
+- Soft warm-coral-tinted shadows
+- Creator-portrait photography (workbench / studio / mid-record)
+- Mixed case display, UPPER eyebrows + labels
+- Creator-side voice
+- Light-only canvas
+- 2024 brand-refresh confidence
+
+## 2. Color Palette & Roles
+
+### Primary
+- **Background** (`#ffffff`): white.
+- **Bg Warm** (`#fff8f3`): pale-coral hero wash.
+- **Text** (`#1a1a1a`): body.
+
+### Brand — Patreon Coral
+- **Brand** (`#ff424d`): primary CTA + brand mark.
+- **Brand Hover** (`#e63540`), **Pressed** (`#cc2a35`), **Deep** (`#a02028`).
+- **Brand Tint** (`#ffe0e3`): selection wash.
+
+### Accent
+- **Cream** (`#fff5e8`): warm cream for editorial moments.
+- **Forest** (`#3d8b62`): success.
+- **Amber** (`#cb9c45`): warning.
+
+### Surface
+- **Surface** (`#ffffff`), **Surface Soft** (`#fafbfd`), **Surface Warm** (`#fef0eb`).
+
+### Borders
+- **Border** (`#e0e0e0`), **Border Strong** (`#bcbcbc`), **Border Soft** (`#eeeeee`).
+
+### Semantic
+- success forest, warning amber, danger brand-deep, info brand.
+
+## 3. Typography Rules
+
+### Font Family
+- **Display + Body**: Söhne. Falls back to Inter → Helvetica Neue.
+- **Mono**: system mono.
+
+### Hierarchy
+
+| Role | Font | Size | Weight | LH | Tracking |
+|------|------|------|--------|-----|----------|
+| display-hero | Söhne | 80 | 800 | 1.0 | -0.02em |
+| display-lg | Söhne | 48 | 700 | 1.1 | -0.012em |
+| h1 | Söhne | 36 | 700 | 1.15 | -0.008em |
+| h2 | Söhne | 28 | 700 | 1.2 | -0.005em |
+| h3 | Söhne | 22 | 700 | 1.25 | 0 |
+| eyebrow | Söhne | 12 | 700 | 1.2 | 0.10em UPPER |
+| body | Söhne | 16 | 400 | 1.55 | 0 |
+| label | Söhne | 13 | 600 | 1.3 | 0.04em |
+| button | Söhne | 15 | 600 | 1.0 | 0.02em |
+
+### Principles
+- **Söhne for everything**, Inter as fallback.
+- **Heavy weights on display** (700-800).
+- **Mixed case display, UPPER eyebrows + labels.**
+
+## 4. Component Stylings
+
+### Buttons (3 variants — pill-radius)
+
+**Primary** — Patreon Coral:
+- bg `#ff424d`, text white, 15px Söhne 600 0.02em
+- Padding 14×28, **radius 9999 (pill)**
+- Hover: bg `#e63540`, scale 1.02
+
+**Secondary** — bordered:
+- bg white, text coral, 2px coral border, pill radius
+
+**Ghost**: bg transparent, text coral, padding 10×20.
+
+### Cards
+- bg white, **12px radius**, padding 24
+- Soft coral-tinted shadow `0 2px 12px rgba(255,66,77,0.06)`
+- Hover: shadow `0 6px 20px rgba(255,66,77,0.12)`
+
+### Pills (creator-tier badges, content tags)
+- bg `brand-tint`, text `brand-pressed`, pill radius
+
+### Inputs
+- bg white, 1px gray border, 8px radius
+- Focus: border coral
+
+### Navigation
+- 72px sticky header, white bg
+- Patreon wordmark left (coral), top-level nav center, "Sign in" + "Get started" coral pill CTA right
+
+## 5. Layout Principles
+
+- Base 4px, 96-120px between sections
+- Page max width 1280px
+- Hero: creator-portrait photo right + headline left (or full-bleed photo with overlapping)
+- Creator-grid: 3-up at desktop, 2-up at tablet, 1-up at mobile
+
+## 6. Shapes & Radius Scale
+
+| Tier | Value | Use |
+|------|-------|-----|
+| Micro | 4 | tags |
+| Standard | 8 | inputs, dropdowns |
+| Comfortable | 12 | **cards** |
+| Relaxed | 16 | featured cards |
+| Featured | 24 | hero modules |
+| Pill | 9999 | **buttons + pills** |
+
+## 7. Depth & Elevation
+
+| Level | Treatment |
+|-------|-----------|
+| 1 | `0 2px 12px rgba(255,66,77,0.06)` resting |
+| 2 | `0 6px 20px rgba(255,66,77,0.12)` hover |
+| 3 | `0 12px 32px rgba(255,66,77,0.16)` featured |
+| 4 | `0 24px 64px rgba(0,0,0,0.20)` modal |
+
+## 8. Interaction & Motion
+
+- Standard ease, emphasized for celebrate
+- 150ms hover, 240ms standard, 400ms slow
+- Card hover: scale 1.02 + shadow lift
+- Creator-photo carousel: 480ms slide
+
+## 9. Accessibility & A11y
+
+- text on bg = **16.1:1** AAA
+- on-brand on brand: white on coral = **4.6:1** AA
+- 3px coral focus ring
+
+Creator profile cards `role="link"` with full creator name + tier aria-label. Photography decorative `aria-hidden`.
+
+## 10. Responsive Behavior
+
+mobile <479: hero 80→44; nav hamburger; 1-up. tablet: 2-up. desktop+: 3-up.
+
+## 11. Content & Voice
+
+### Tone
+**Creator-side enthusiastic.** Confident, direct, never platform-extractive.
+
+### Microcopy patterns
+- Primary CTA: **"Get started"** / **"Create your page"** / **"Become a patron"**
+- Sign-up: **"Get started — it's free"**
+- Errors: **"Something didn't work. Try again."**
+- Empty: **"You haven't created any tiers yet — start with a $5 tier."**
+- Creator copy: **"Get paid by patrons"** (creator-side framing, not "Earn money")
+
+### CTA verb conventions
+- **Get started / Create / Become a patron / Subscribe**
+- Avoid: corporate ("Onboard"), aspirational ("Transform")
+
+## 12. Dark Mode & Theming
+
+**Light-only on web** (post-2024 refresh). Mobile app has dark mode optional.
+
+## 13. Lineage & Influences
+
+Patreon descends from Jack Conte's 2013 founding (musician + tech-CEO origin shaping creator-side instinct). The 2024 brand refresh introduced Söhne typography (Linear/Vercel sibling) and tightened the palette around Patreon Coral. Photography is creator-portrait-led.
+
+**Named influences:**
+- **Jack Conte (founder, 2013)** — creator-side voice
+- **Söhne by Klim Type Foundry** — Linear/Vercel sibling
+- **2024 Patreon brand refresh** — palette + typography tightening
+- **Substack + Gumroad** — creator-economy peers
+- **Editorial portrait photography** — creator-at-workbench style
+
+## 14. Do's and Don'ts
+
+### Do
+- **Patreon Coral `#ff424d` for primary CTA + brand only.**
+- **Söhne (or Inter fallback) for everything.**
+- **Pill-radius CTAs, 12-16px cards.**
+- **Soft coral-tinted shadows.**
+- **Creator-portrait photography** — workbench / studio / mid-record.
+- **Creator-side voice** — "Get paid by patrons" not "Earn money on Patreon".
+- **Mixed case display, UPPER eyebrows.**
+
+### Don't
+- **Don't substitute Patreon Coral.**
+- **Don't add gradients on CTA.**
+- **Don't all-caps headlines.**
+- **Don't use platform-extractive language.** ("Monetize your audience" off-brand).
+- **Don't use stock-photo cheerful office images.** Real creators only.
+- **Don't add a friendly mascot.**
+
+## 15. Agent Prompt Guide
+
+### Quick Color Reference
+- bg: `#ffffff`
+- text: `#1a1a1a`
+- brand (Patreon Coral): `#ff424d` / hover `#e63540`
+- cream: `#fff5e8`
+- border: `#e0e0e0`
+
+### Example Component Prompts
+
+> Build a Patreon-style hero: white canvas, creator-portrait photo right 50% (artist at workbench), 80px Söhne 800 heading "Get paid by patrons" left, 18px subhead. Primary CTA "Get started" pill-radius coral `#ff424d` 15px Söhne 600 0.02em.
+
+> Design a creator card: white surface, 12px radius, 24px pad, soft coral-tinted shadow. Creator portrait top, 22px Söhne 700 creator name + tier name below, "BECOME A PATRON" pill-radius coral CTA bottom.
+
+> Render a tier-pricing pill: pill radius, brand-tint bg, brand-pressed text 13px Söhne 600 0.04em UPPER "$5 / MONTH".
+
+> Build a "Become a Patron" CTA: pill radius, Patreon Coral bg, white 15px Söhne 600 0.02em "Become a patron", padding 14×28.
+
+> Design a creator-stats block: 4-column row, each cell labelled in 12px UPPER 0.10em eyebrow gray, value in 32px Söhne 700 dark "$2,400 / month patrons" etc.
+
+### Iteration Guide
+
+1. **White + Patreon Coral + Söhne.**
+2. **Pill-radius CTAs, 12-16px cards.**
+3. **Creator-portrait photography** — never office-stock.
+4. **Soft coral-tinted shadows.**
+5. **Creator-side voice** — "Get paid", not "Monetize".
+6. **Mixed case display, UPPER eyebrows.**
+7. **2024 brand-refresh confidence — direct, no platform-corporate-speak.**
+8. **Reject gradients, stock photography, mascots, dark mode.**
