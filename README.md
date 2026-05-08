@@ -6,7 +6,7 @@
 
 ```bash
 # Drop any one into your repo in seconds
-npx @webdesignhot/design-md add linear   # writes ./DESIGN.md
+npx @webdesignhot/design-md add stripe   # writes ./DESIGN.md
 ```
 
 [**Browse all 282 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
@@ -70,8 +70,8 @@ The remaining 257 entries ship a single canonical theme — that's how the brand
 
 ```
 design-md/
-├── linear.md          # Linear's design system, webdesignhot/0.1 spec
 ├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
+├── linear.md          # Linear's design system, webdesignhot/0.1 spec
 ├── anthropic.md
 ├── ...                # 282 entries total
 └── webdesignhot.md    # The catalog's own site
@@ -83,8 +83,8 @@ Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose 
 
 **Option 1 — CLI** (one command):
 ```bash
-npx @webdesignhot/design-md add linear            # → ./DESIGN.md
-npx @webdesignhot/design-md add stripe -o brand.md # custom path
+npx @webdesignhot/design-md add stripe            # → ./DESIGN.md
+npx @webdesignhot/design-md add linear -o brand.md # custom path
 npx @webdesignhot/design-md list                  # browse all 282
 ```
 
@@ -136,7 +136,7 @@ Install globally if you'd rather skip `npx`:
 
 ```bash
 npm i -g @webdesignhot/design-md
-design-md add linear
+design-md add stripe
 ```
 
 Requires Node 18+.
@@ -191,7 +191,7 @@ Cline / Roo / any stdio-MCP client: same `npx -y @webdesignhot/design-md-mcp` co
 **Option 3 — direct download**:
 
 ```bash
-curl https://raw.githubusercontent.com/WebDesignHot/design-md/main/design-md/linear.md > DESIGN.md
+curl https://raw.githubusercontent.com/WebDesignHot/design-md/main/design-md/stripe.md > DESIGN.md
 ```
 
 **Option 4 — fork this repo** and curate your own.
