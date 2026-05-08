@@ -1,0 +1,100 @@
+name: Enrich PR
+
+# Auto-labels PRs by category from frontmatter and runs a theme-toggle
+# audit on each entry's source_url, posting the result as a sticky comment.
+# Pairs with `lint-pr.yml` — lint = correctness, enrich = metadata.
+
+on:
+  pull_request:
+    paths:
+      - 'design-md/**.md'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: List changed .md files
+        id: changed
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          FILES=$(git diff --name-only --diff-filter=AM "$BASE_SHA" "$HEAD_SHA" -- 'design-md/*.md' | tr '\n' ' ')
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "Changed files: $FILES"
+
+      - name: Run enrichment script
+        if: steps.changed.outputs.files != ''
+        id: enrich
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+        run: node .github/scripts/enrich-pr.mjs
+
+      - name: Comment enrichment results on PR
+        if: steps.changed.outputs.files != ''
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: /tmp/enrich-report.md
+          header: design-md-enrich
+
+      - name: Apply category labels
+        if: steps.changed.outputs.files != '' && steps.enrich.outputs.labels != '[]'
+        uses: actions/github-script@v7
+        env:
+          LABELS_JSON: ${{ steps.enrich.outputs.labels }}
+        with:
+          script: |
+            const labels = JSON.parse(process.env.LABELS_JSON || '[]')
+            if (!labels.length) return
+            // Ensure each label exists; create with a stable color when missing.
+            const colorMap = {
+              'category:gaming':       '7e57c2',
+              'category:hospitality':  '8d6e63',
+              'category:education':    '42a5f5',
+              'category:healthcare':   '66bb6a',
+              'category:saas':         '5c6bc0',
+              'category:dev-tools':    '26a69a',
+              'category:fintech':      '26c6da',
+              'category:marketplace':  'ff7043',
+              'category:media':        'ec407a',
+              'category:social':       'ab47bc',
+              'category:fashion':      'd4af37',
+              'category:automotive':   '78909c',
+            }
+            for (const name of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner: context.repo.owner, repo: context.repo.repo, name })
+              } catch (e) {
+                if (e.status === 404) {
+                  await github.rest.issues.createLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    name,
+                    color: colorMap[name] || 'cfd8dc',
+                  })
+                } else {
+                  throw e
+                }
+              }
+            }
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels,
+            })
