@@ -1,15 +1,42 @@
 # design-md catalog
 
-> The largest curated open catalog of real-brand `DESIGN.md` files for AI coding agents.
+> The largest curated open catalog of `DESIGN.md` files inspired by real production design systems — for AI coding agents.
 
-**254 production design systems** extracted from real marketing sites — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) DESIGN.md spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
+**282 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
 
 ```bash
 # Drop any one into your repo in seconds
 npx @webdesignhot/design-md add linear   # writes ./DESIGN.md
 ```
 
-[**Browse all 254 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
+[**Browse all 282 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
+
+---
+
+## ✨ Contribute your DESIGN.md in one command
+
+Already have a `DESIGN.md` in your repo? `design-md submit` auto-forks this repo, opens a PR, and our GitHub Actions workflow lints + audits it for you — you don't write any git commands.
+
+```bash
+$ npx @webdesignhot/design-md submit ./DESIGN.md
+
+✓ Lint passed
+→ Forking WebDesignHot/design-md to your-username/design-md
+→ Branch: submit/your-brand-x4f2
+→ Pushing to your-username/design-md:submit/your-brand-x4f2
+→ Opening PR
+
+✓ Submitted.
+  https://github.com/WebDesignHot/design-md/pull/47
+```
+
+**Three ways to contribute:**
+
+1. **CLI submit** *(easiest)* — `npx @webdesignhot/design-md submit ./DESIGN.md`. Requires [`gh` CLI](https://cli.github.com) installed + authed.
+2. **Manual PR** — fork this repo, add your file at `design-md/<slug>.md`, open a PR. Our workflows auto-lint + auto-label by category.
+3. **From scratch** — `npx @webdesignhot/design-md extract https://yoursite.com` generates a draft from your live site; review and submit.
+
+Each PR is reviewed within 48h. We accept editorial DESIGN.md files inspired by real production sites (your own product preferred) — see [CONTRIBUTING.md](./CONTRIBUTING.md) for quality bar + [SPEC.md](./SPEC.md) for the full schema.
 
 ---
 
@@ -17,14 +44,14 @@ npx @webdesignhot/design-md add linear   # writes ./DESIGN.md
 
 Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. [Google Labs](https://github.com/google-labs-code/design.md) introduced the DESIGN.md format. We:
 
-1. **Extracted 254 real brands** from production marketing sites (not invented "vibes")
+1. **Extracted 282 real brands** from production marketing sites (not invented "vibes")
 2. **Published our own webdesignhot/0.1 spec** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode — plus a richer machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
 vs the alternatives:
 - [Google Labs alpha](https://github.com/google-labs-code/design.md) — official format, currently labelled `version: alpha`. webdesignhot/0.1 is a parallel format alongside it; both are cross-readable.
 - [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) — 70 brands, MIT (we built on top of their work for ~30 brands; see attribution in each file's `lineage` block)
-- [designdotmd.directory](https://designdotmd.directory) — 216 mostly AI-generated "vibe" entries, single author, closed source
+- [designdotmd.directory](https://designdotmd.directory) — ~216 mostly AI-generated "vibe" entries, single author, closed source (we lead by 66+)
 
 ## 25 multi-theme entries — real `light + dark` from production
 
@@ -42,7 +69,7 @@ These brands ship both modes on their actual sites. Each PNG below is a Kitchen 
 | <a href="https://www.webdesignhot.com/design.md/beehiiv/"><img src="screenshots/beehiiv.png" alt="beehiiv — light / dark" width="380"></a><br/>**beehiiv** | <a href="https://www.webdesignhot.com/design.md/bluesky/"><img src="screenshots/bluesky.png" alt="Bluesky — light / dark" width="380"></a><br/>**Bluesky** | <a href="https://www.webdesignhot.com/design.md/signal-app/"><img src="screenshots/signal-app.png" alt="Signal — light / dark" width="380"></a><br/>**Signal** |
 | <a href="https://www.webdesignhot.com/design.md/kit-com/"><img src="screenshots/kit-com.png" alt="Kit — light / dark" width="380"></a><br/>**Kit** | | |
 
-The remaining 229 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
+The remaining 257 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
 
 ## Catalog structure
 
@@ -51,7 +78,7 @@ design-md/
 ├── linear.md          # Linear's design system, webdesignhot/0.1 spec
 ├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
 ├── anthropic.md
-├── ...                # 254 entries total
+├── ...                # 282 entries total
 └── webdesignhot.md    # The catalog's own site
 ```
 
@@ -63,7 +90,7 @@ Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose 
 ```bash
 npx @webdesignhot/design-md add linear            # → ./DESIGN.md
 npx @webdesignhot/design-md add stripe -o brand.md # custom path
-npx @webdesignhot/design-md list                  # browse all 254
+npx @webdesignhot/design-md list                  # browse all 282
 ```
 
 <details>
