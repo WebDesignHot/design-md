@@ -48,11 +48,6 @@ Coding agents need a *file* that captures a brand's design system — colors, ty
 2. **Published our own webdesignhot/0.1 spec** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode — plus a richer machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
-vs the alternatives:
-- [Google Labs alpha](https://github.com/google-labs-code/design.md) — official format, currently labelled `version: alpha`. webdesignhot/0.1 is a parallel format alongside it; both are cross-readable.
-- [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) — 70 brands, MIT (we built on top of their work for ~30 brands; see attribution in each file's `lineage` block)
-- [designdotmd.directory](https://designdotmd.directory) — ~216 mostly AI-generated "vibe" entries, single author, closed source (we lead by 66+)
-
 ## 25 multi-theme entries — real `light + dark` from production
 
 These brands ship both modes on their actual sites. Each PNG below is a Kitchen Sink rendering of the brand's tokens in both themes — same skeleton (nav + display headline + buttons + cards), only the design tokens swap. Click any to open the live preview.
@@ -254,7 +249,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the workflow + schema validation to
 - 📦 **CLI**: <https://www.npmjs.com/package/@webdesignhot/design-md>
 - 🔌 **MCP server**: <https://www.npmjs.com/package/@webdesignhot/design-md-mcp>
 - 📜 **Google Labs alpha spec**: <https://github.com/google-labs-code/design.md>
-- 🌱 **Inspired by / built on**: <https://github.com/VoltAgent/awesome-design-md>
 
 ## License
 
