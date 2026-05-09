@@ -2,14 +2,14 @@
 
 > The largest curated open catalog of `DESIGN.md` files inspired by real production design systems — for AI coding agents.
 
-**282 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
+**285 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
 
 ```bash
 # Drop any one into your repo in seconds
 npx @webdesignhot/design-md add stripe   # writes ./DESIGN.md
 ```
 
-[**Browse all 282 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
+[**Browse all 285 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
 
 ---
 
@@ -44,7 +44,7 @@ Each PR is reviewed within 48h. We accept editorial DESIGN.md files inspired by 
 
 Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. [Google Labs](https://github.com/google-labs-code/design.md) introduced the DESIGN.md format. We:
 
-1. **Extracted 282 real brands** from production marketing sites (not invented "vibes")
+1. **Extracted 285 real brands** from production marketing sites (not invented "vibes")
 2. **Published our own webdesignhot/0.1 spec** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode — plus a richer machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
@@ -64,7 +64,7 @@ These brands ship both modes on their actual sites. Each PNG below is a Kitchen 
 | <a href="https://www.webdesignhot.com/design.md/beehiiv/"><img src="screenshots/beehiiv.png" alt="beehiiv — light / dark" width="380"></a><br/>**beehiiv** | <a href="https://www.webdesignhot.com/design.md/bluesky/"><img src="screenshots/bluesky.png" alt="Bluesky — light / dark" width="380"></a><br/>**Bluesky** | <a href="https://www.webdesignhot.com/design.md/signal-app/"><img src="screenshots/signal-app.png" alt="Signal — light / dark" width="380"></a><br/>**Signal** |
 | <a href="https://www.webdesignhot.com/design.md/kit-com/"><img src="screenshots/kit-com.png" alt="Kit — light / dark" width="380"></a><br/>**Kit** | | |
 
-The remaining 257 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
+The remaining 260 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
 
 ## Catalog structure
 
@@ -73,7 +73,7 @@ design-md/
 ├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
 ├── linear.md          # Linear's design system, webdesignhot/0.1 spec
 ├── anthropic.md
-├── ...                # 282 entries total
+├── ...                # 285 entries total
 └── webdesignhot.md    # The catalog's own site
 ```
 
@@ -85,7 +85,7 @@ Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose 
 ```bash
 npx @webdesignhot/design-md add stripe            # → ./DESIGN.md
 npx @webdesignhot/design-md add linear -o brand.md # custom path
-npx @webdesignhot/design-md list                  # browse all 282
+npx @webdesignhot/design-md list                  # browse all 285
 ```
 
 <details>
