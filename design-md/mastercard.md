@@ -14,6 +14,24 @@ preview_swatch: ['#F3F0EE', '#141413', '#CF4500']
 related: [paypal, square, venmo]
 description: 'Mastercard''s experience reads like a warm, editorial magazine built from soft stone and signal orange. The canvas is a muted putty-cream (`#F3F0EE`) — not white, not gray, but a colour that feels like the paper of a premium annual report. On top of that canvas, everything that matters is shaped like a stadium, a pill, or a perfect circle. The dominant visual gesture is the oversized radius: heroes carry 40-point corners, cards go fully pill-shaped, service images are cropped into circular orbits, and buttons either complete the pill or fit snugly at 20 points. The second gesture is orbit and trajectory: circular image masks don''t sit still — they''re connected by thin, hand-drawn-feeling orange arcs that span entire viewport widths, implying a constellation of services rather than a list. Each circle has a small attached "satellite" — a white micro-CTA holding an arrow icon — docked onto its perimeter like a moon. Typography is rendered entirely in MarkForMC, Mastercard''s proprietary geometric sans, with the load-bearing 450 body weight that creates an unusually soft reading tone. The whole system feels simultaneously institutional (a 60-year-old payments network) and editorial (a modern brand magazine).'
 
+# Canonical 8-role aliases (per google-labs-code/design.md PR #76).
+# Hand-mapped — Mastercard uses a non-standard token vocabulary
+# (`brand-red` / `brand-yellow` / `text-ink` / `text-charcoal` / etc.)
+# that doesn't fit the auto-generator's role-priority list. Picks
+# below preserve role intent: brand-red is the primary signal action,
+# brand-yellow is the secondary accent, text-ink is the darkest body
+# stop, text-slate is the mid-tier muted, border-strong stands in
+# for ring (no dedicated focus-ring token).
+aliases:
+  background: bg
+  foreground: text-ink
+  primary: brand-red
+  primary-foreground: on-brand
+  accent: brand-yellow
+  muted: text-slate
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#F3F0EE'                    # canvas cream — page floor, warm putty-toned
   bg-lifted: '#FCFBFA'             # one step lighter for nested raised sections
