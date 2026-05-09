@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fbf8f1'                  # cream paper — Atlantic's signature warm canvas
   bg-section: '#f5f1e6'           # slightly darker cream sub-band

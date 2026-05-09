@@ -28,6 +28,7 @@ aliases:
   accent: accent-cream
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas, the workspace-as-stationery metaphor
   bg-soft: '#fafaf8'             # warm-white panel base for grouped feature blocks

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # canvas — KAYAK has app-only dark mode
   bg-alt: '#f8f8f8'              # alt-band footer, secondary surfaces

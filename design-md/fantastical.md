@@ -27,6 +27,7 @@ aliases:
   accent: accent-cyan
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas
   bg-soft: '#f7f8fa'             # subtle cool grey for nested sections

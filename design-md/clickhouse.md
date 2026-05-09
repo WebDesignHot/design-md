@@ -28,6 +28,7 @@ aliases:
   accent: accent-emerald
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0a0a0a'                # canvas — near-pure black
   bg-deep: '#000000'            # absolute black for terminal panes

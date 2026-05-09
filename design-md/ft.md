@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fff1e5'                  # the iconic FT salmon-pink — the brand''s most identifying asset
   bg-section-news: '#fff1e5'      # news section default

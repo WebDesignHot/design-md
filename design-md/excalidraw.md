@@ -28,6 +28,7 @@ aliases:
   accent: accent-yellow
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fffefd'                  # paper-white with cream undertone
   bg-canvas: '#ffffff'           # pure white for embedded canvas demos

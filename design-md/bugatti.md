@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # canvas — pure black, the system has no light mode
   bg-deep: '#000000'             # same as bg — Bugatti does not have a separate footer ground

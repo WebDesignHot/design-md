@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # — Primary —
   bg: '#ffffff'                  # pure paper-white canvas

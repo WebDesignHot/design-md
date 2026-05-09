@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#5865f2'                  # --brand — page canvas, the brand-canvas register
   bg-deep: '#1a2081'             # --bg-animated-gradient-background-indigo-1 hsl(241.5,57%,27%) — gradient toner

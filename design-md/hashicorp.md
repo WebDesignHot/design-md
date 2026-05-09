@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # canvas — pure black
   surface: '#15181e'              # surface-1: charcoal one step above canvas

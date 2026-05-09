@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                   # canvas — bright white, the playground default
   bg-alt: '#f7f8fa'               # secondary band, alternate row

@@ -28,6 +28,7 @@ aliases:
   accent: accent-olive-bg
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                   # paper-white canvas — the notebook metaphor
   bg-soft: '#faf8f3'              # soft cream nested panel

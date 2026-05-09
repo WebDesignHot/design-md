@@ -28,6 +28,7 @@ aliases:
   accent: accent-pink
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary canvas — warm aubergine ladder
   bg: '#1f1633'                    # primary body canvas — deep aubergine, warm not cool

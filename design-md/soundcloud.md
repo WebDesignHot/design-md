@@ -28,6 +28,7 @@ aliases:
   accent: accent-brand-2
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f2f2f2'                    # canvas — SoundCloud signature paper-grey
   bg-deep: '#ffffff'                # card surface (white above the grey ground)

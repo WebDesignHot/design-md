@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                # page canvas
   bg-soft: '#f5f5f5'           # alternating section

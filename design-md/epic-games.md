@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                    # canvas — pure black, the brand's signature
   bg-alt: '#0a0a0a'                # alt section band, slightly cooler

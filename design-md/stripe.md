@@ -28,6 +28,7 @@ aliases:
   accent: accent-ruby
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'
   bg-quiet: '#f8fafd'

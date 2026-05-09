@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0a0a0a'                  # carbon-black ground
   bg-elev: '#161616'              # surface-elevated card

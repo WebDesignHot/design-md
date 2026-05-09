@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-faint
   border: border
+  ring: border-strong
 colors:
   bg: '#07080a'                # canvas — body backdrop, all surfaces lift from this
   bg-100: '#101111'             # first-tier elevated panel — cards, code blocks

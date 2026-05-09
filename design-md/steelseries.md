@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#0a0a0a'                  # canvas — near-black (warmer than Razer's pure black)
   bg-pure: '#000000'              # darkest surface, modal backdrop

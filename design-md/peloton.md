@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0d0d0d'                  # near-black canvas — Peloton's signature dark ground
   bg-strong: '#000000'           # pure-black for hero video overlay

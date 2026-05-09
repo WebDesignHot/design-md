@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f8f8f6'                    # cream — observed body background
   bg-soft: '#faf9f5'               # softer module surface

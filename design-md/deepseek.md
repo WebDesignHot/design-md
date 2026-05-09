@@ -25,6 +25,10 @@ aliases:
   foreground: text
   primary-foreground: on-brand
   muted: text-muted
+  primary: brand
+  accent: accent-cyan
+  border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#ffffff'                          # stark white canvas — the working surface

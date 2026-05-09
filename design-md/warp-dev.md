@@ -26,6 +26,7 @@ aliases:
   primary: brand
   primary-foreground: on-brand
   border: border
+  ring: border-strong
 colors:
   bg: '#121212'                  # body backdrop, observed as rgb(18,18,18) — matches macOS Terminal default
   bg-100: '#1a1a1a'              # elevated panel base — first tier card

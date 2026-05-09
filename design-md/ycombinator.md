@@ -28,6 +28,7 @@ aliases:
   accent: accent-startup-school
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#ffffff'                          # pure white canvas, zero tint

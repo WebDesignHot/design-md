@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper canvas
   bg-section: '#f7f7f0'           # warm-off-white sub-band on Briefing/Leaders

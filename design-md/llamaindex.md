@@ -28,6 +28,7 @@ aliases:
   accent: accent-llama
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # canvas — pure white
   bg-soft: '#fafbfc'              # slightly tinted band for section alternation

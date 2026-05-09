@@ -26,6 +26,7 @@ aliases:
   primary: brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper canvas
   bg-section: '#f7f7f5'          # warm-gray editorial sub-band (Opinion, Magazine)

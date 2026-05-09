@@ -26,6 +26,7 @@ aliases:
   primary: brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                     # primary white canvas
   bg-page: '#ffffff'

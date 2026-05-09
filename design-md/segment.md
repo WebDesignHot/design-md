@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # default canvas
   bg-dark: '#000d25'             # hero/footer dark band — Twilio Segment near-black navy

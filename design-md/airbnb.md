@@ -28,6 +28,7 @@ aliases:
   accent: accent-luxe
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # canvas — Airbnb has no public dark mode
   surface: '#ffffff'             # cards inherit canvas

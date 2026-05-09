@@ -28,6 +28,7 @@ aliases:
   accent: accent-emerald
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # canvas — pure black
   bg-deep: '#000000'              # same as bg — no separation needed

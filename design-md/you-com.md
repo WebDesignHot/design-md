@@ -25,6 +25,9 @@ aliases:
   foreground: text
   primary-foreground: on-brand
   muted: text-muted
+  primary: brand
+  border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#ffffff'                          # pure white developer-doc canvas

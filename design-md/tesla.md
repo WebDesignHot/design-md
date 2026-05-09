@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                 # Pure White — page canvas, nav panel, dropdowns
   bg-alt: '#f4f4f4'             # Light Ash — barely-perceptible alternate surface

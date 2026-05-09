@@ -28,6 +28,7 @@ aliases:
   accent: accent-cobalt
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#101012'                  # near-black with slight warm tint, the booth ground

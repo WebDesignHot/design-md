@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#dae0e6'                  # warm-grey canvas — the reading-room ground
   bg-soft: '#f6f7f8'             # secondary background for cards

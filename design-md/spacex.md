@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-faint
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                            # space black — page floor, the void
   bg-overlay: 'rgba(0, 0, 0, 0.5)'         # gradient scrim over hero photography for legibility

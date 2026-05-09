@@ -28,6 +28,7 @@ aliases:
   accent: accent-gold
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#141414'                    # canvas — Netflix near-black, never pure 0
   bg-deep: '#000000'               # billboard gradient terminus, video player

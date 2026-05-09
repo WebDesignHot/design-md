@@ -28,6 +28,7 @@ aliases:
   accent: accent-iced
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#0c0c0c'                   # research near-black, warmer than #000

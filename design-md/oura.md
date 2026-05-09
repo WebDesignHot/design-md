@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # pure black canvas — Oura's signature deep ground
   bg-elev: '#0d0d0d'             # subtle card lift on dark

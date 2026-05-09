@@ -28,6 +28,7 @@ aliases:
   accent: accent-pink
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#121212'                    # canvas — Spotify near-black, never pure 0
   bg-deep: '#000000'                # extreme background, sidebar bottom on TV

@@ -28,6 +28,7 @@ aliases:
   accent: accent-green
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#0b0f19'                  # page canvas, Tailwind slate-950 family

@@ -28,6 +28,7 @@ aliases:
   accent: accent-gold
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas — engineering catalog ground
   bg-dark: '#000000'             # full-bleed dark photo bands, footer, racing-content sections

@@ -28,6 +28,7 @@ aliases:
   accent: accent-emerald
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0e1a2b'                  # canvas — deep slate-blue (NOT pure black, NOT pure navy)
   bg-deep: '#080f1a'              # near-black footer band

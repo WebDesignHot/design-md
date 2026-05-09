@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                     # pure black canvas — Apple's standard for media properties
   bg-panel: '#1d1d1f'               # raised panel surface (matches Apple TV+ standard)

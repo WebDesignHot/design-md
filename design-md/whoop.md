@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # jet-black canvas
   bg-elev: '#0a0a0a'             # subtle card lift

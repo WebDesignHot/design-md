@@ -28,6 +28,7 @@ aliases:
   accent: accent-blue
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                   # paper-white canvas — the post-office-counter ground
   bg-soft: '#fafaf7'              # warm-tinted secondary section bg (toward cream, not gray)

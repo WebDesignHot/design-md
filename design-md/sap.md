@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                     # primary page canvas — paper white
   bg-soft: '#f5f6f7'                # quiet section wash

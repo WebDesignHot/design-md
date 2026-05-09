@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f8f4ec'                  # paper-cream canvas — warmer than Notion
   bg-soft: '#f4eee0'             # softer dawn surface

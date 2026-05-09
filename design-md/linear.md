@@ -28,6 +28,7 @@ aliases:
   accent: accent
   border: border
   ring: border-brand
+  muted: text-secondary
 colors:
   # Page grounds
   bg: '#08090a'                  # canvas, pure-near-black with a hint of warmth

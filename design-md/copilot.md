@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                    # Primer canvas-default — paper white canvas
   bg-inverse: '#0d1117'            # Primer canvas-default (dark) — near-black hero band

@@ -28,6 +28,7 @@ aliases:
   accent: accent-gold
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                                # canvas — white merchant floor
   bg-soft: '#f5f5f5'                            # alt tint, supplier-row band

@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fbf8f3'
   bg-alt: '#ffffff'

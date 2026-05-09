@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                      # --color-background-base; paper-white canvas
   bg-campaign: '#191918'             # observed hero band; warm near-black ground

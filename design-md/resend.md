@@ -28,6 +28,7 @@ aliases:
   accent: accent-mint
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # observed body bg, also --color-background — pure black, no calibration
   bg-elevated: '#141517'         # --color-gray-1 — first surface stop

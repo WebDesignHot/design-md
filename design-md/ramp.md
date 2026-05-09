@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                         # primary white canvas — magazine-margin discipline
   bg-soft: '#fafaf7'                    # softest off-white panel, barely tinted warm

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                   # canvas — Expedia has limited public dark mode (app-only)
   bg-alt: '#f7f7f7'               # alt-band footer, secondary surfaces

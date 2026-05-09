@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                    # Bose Black — primary canvas
   bg-light: '#ffffff'              # White editorial bands — alternating ground

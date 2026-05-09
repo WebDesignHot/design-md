@@ -28,6 +28,7 @@ aliases:
   accent: accent-electric
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fbfaf9'                  # paper-cream canvas — Stytch's signature
   bg-soft: '#f7f5f3'             # softer cream for alt sections

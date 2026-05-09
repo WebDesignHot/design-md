@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f4f4f4'                # soft paper canvas — warmer than #fafafa, cooler than #ffffff
   bg-soft: '#fafafa'            # alternate light surface

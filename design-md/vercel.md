@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-faint
   border: border
+  ring: border-strong
 themes:
   default: light
   available: [light, dark]

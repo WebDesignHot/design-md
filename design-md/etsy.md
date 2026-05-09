@@ -26,6 +26,7 @@ aliases:
   primary: brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # default canvas
   bg-page: '#fff8f0'             # warm cream page floor on certain bands

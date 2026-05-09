@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fdfcf9'                  # near-paper cream canvas
   bg-soft: '#f7f6f1'             # softer card surface

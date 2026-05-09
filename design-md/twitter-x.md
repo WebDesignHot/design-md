@@ -26,6 +26,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # absolute black — default dim mode
   bg-light: '#ffffff'            # light-mode flip

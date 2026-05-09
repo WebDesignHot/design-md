@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                       # canvas white — the dominant editorial surface
   bg-page: '#ffffff'                  # same

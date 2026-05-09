@@ -26,6 +26,7 @@ aliases:
   primary: brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # default canvas
   bg-page: '#eaeded'             # page floor (between content cards on category pages)

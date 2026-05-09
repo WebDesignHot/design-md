@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                    # pure white canvas — no warmth, no tint
   bg-soft: '#f1f1f1'               # locale picker, tab base, subtle module floor

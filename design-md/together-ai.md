@@ -28,6 +28,7 @@ aliases:
   accent: accent-blue
   muted: text-muted
   border: border
+  ring: border-strong
 themes:
   default: light
   available: [light, dark]

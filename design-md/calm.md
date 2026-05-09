@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0a1f3a'                  # deep navy canvas — Calm's signature ground
   bg-strong: '#040c1a'           # deepest navy for footer + dark bands

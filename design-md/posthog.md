@@ -28,6 +28,7 @@ aliases:
   accent: accent-mint
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#eeefe9'                  # cream/paper canvas — defining warm ground
   bg-deep: '#e6e7df'             # slightly deeper cream for nested sections

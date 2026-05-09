@@ -26,6 +26,7 @@ aliases:
   primary: brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # default canvas
   bg-strong: '#f7f7fa'           # subtle off-white feed band

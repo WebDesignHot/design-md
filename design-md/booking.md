@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # canvas — Booking has no public dark mode
   bg-alt: '#f5f5f5'              # alt-band footer, secondary surfaces

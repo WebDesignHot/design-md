@@ -28,6 +28,7 @@ aliases:
   accent: accent-red
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                          # bone-white canvas — page paper
   bg-cream: '#fdfaf2'                     # rare warm tint on archive / longform sub-pages

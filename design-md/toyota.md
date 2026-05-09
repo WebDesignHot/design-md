@@ -28,6 +28,7 @@ aliases:
   accent: accent-blue-hybrid
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'
   bg-soft: '#f5f5f5'              # surface alternation

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                    # Sonos Black — page canvas, hero, footer
   bg-elev: '#0a0a0a'               # Elevated dark surface — modal backdrops

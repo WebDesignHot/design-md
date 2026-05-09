@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0a141c'                   # canvas — deep ink-blue near-black
   bg-alt: '#091118'               # alternate band, slightly cooler

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas
   bg-soft: '#f5f7fa'             # near-white surface tier 1

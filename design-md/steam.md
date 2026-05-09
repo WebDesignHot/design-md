@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#1b2838'                  # canvas — Steam blue-gray ground
   bg-deep: '#171a21'             # header gradient floor, footer

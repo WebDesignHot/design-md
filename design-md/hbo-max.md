@@ -28,6 +28,7 @@ aliases:
   accent: accent-gold
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0b0c0f'                    # canvas — Max deep blue-black
   bg-deep: '#000000'                # billboard scrim terminus, video player

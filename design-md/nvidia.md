@@ -28,6 +28,7 @@ aliases:
   accent: accent-purple
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # canvas — paper-white body
   bg-hero: '#000000'             # surface-dark — hero / footer chapters

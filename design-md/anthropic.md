@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#faf9f5'                          # --swatch--ivory-light — defining cream canvas

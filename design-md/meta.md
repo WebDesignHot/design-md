@@ -28,6 +28,7 @@ aliases:
   accent: accent-instagram
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'
   bg-deep: '#1c2b33'                # dark hero band, occasional inverted section

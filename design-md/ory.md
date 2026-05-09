@@ -28,6 +28,7 @@ aliases:
   accent: accent-violet
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # white canvas
   bg-soft: '#f8fafc'             # softest off-white for alt sections

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                    # canvas — page floor
   bg-soft: '#f8fafc'               # surface-soft — tabbed feature cards, featured pricing tier

@@ -28,6 +28,7 @@ aliases:
   accent: accent-magenta
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                # default page canvas
   bg-soft: '#f7f7f5'           # template card / illustration tile

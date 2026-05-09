@@ -28,6 +28,7 @@ aliases:
   accent: accent-blue
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                    # primary canvas
   bg-warm: '#f7f8fa'                # alt section band

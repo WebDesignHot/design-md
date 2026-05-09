@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # pure white canvas
   bg-soft: '#f9f8f6'             # warm cream-tinted soft surface

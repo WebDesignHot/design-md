@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#fff8ed'                    # warm cream marketing canvas

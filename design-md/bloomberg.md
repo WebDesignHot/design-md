@@ -28,6 +28,7 @@ aliases:
   accent: accent-deep-orange
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # editorial reading canvas
   bg-masthead: '#000000'          # the iconic Bloomberg black band — masthead, top nav, terminal-mode

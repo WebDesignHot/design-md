@@ -26,6 +26,7 @@ aliases:
   primary: brand
   primary-foreground: on-brand
   muted: text-muted
+  ring: border-strong
 colors:
   bg: '#ffffff'                        # paper white — the entire site canvas
   bg-dark: '#1a1a1a'                   # the only inverted region — footer ink

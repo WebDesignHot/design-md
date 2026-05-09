@@ -28,6 +28,7 @@ aliases:
   accent: accent-magenta
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0e0e10'                    # canvas — Twitch deepest charcoal
   bg-alt: '#18181b'                # secondary panel surface, content area

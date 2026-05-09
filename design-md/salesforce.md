@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                # page canvas
   bg-cloud: '#ebf6fe'           # Salesforce light-blue Mica-tint

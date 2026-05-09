@@ -28,6 +28,7 @@ aliases:
   accent: accent-yellow
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fdfcf8'                  # warm off-white canvas — nods to print not screen
   bg-strong: '#f5f3ec'           # slightly deeper neutral band

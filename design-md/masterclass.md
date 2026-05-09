@@ -28,6 +28,7 @@ aliases:
   accent: accent-cream
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                    # primary canvas — pure black, the brand''s defining ground
   bg-alt: '#0a0a0a'                # alt section band, faintly lifted from pure black

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # marketing canvas — clean white
   bg-soft: '#f4f4f5'             # secondary background

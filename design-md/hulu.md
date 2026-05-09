@@ -28,6 +28,7 @@ aliases:
   accent: accent-purple
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0b0c0f'                    # canvas — Hulu near-black, very close to Max
   bg-deep: '#000000'                # video player surface

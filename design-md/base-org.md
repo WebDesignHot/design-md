@@ -28,6 +28,7 @@ aliases:
   accent: accent-cream
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas
   bg-elevated: '#fafafa'         # near-white surface variant

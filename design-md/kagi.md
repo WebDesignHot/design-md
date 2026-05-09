@@ -25,6 +25,10 @@ aliases:
   foreground: text
   primary-foreground: on-brand
   muted: text-muted
+  primary: brand
+  accent: accent
+  border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#fffbf5'                          # warm cream canvas — defining surface

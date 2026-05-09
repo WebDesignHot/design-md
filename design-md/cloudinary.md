@@ -28,6 +28,7 @@ aliases:
   accent: accent-coral
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # pure white canvas
   bg-soft: '#f5f7fb'             # cool soft surface

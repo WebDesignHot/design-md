@@ -28,6 +28,7 @@ aliases:
   accent: accent-purple
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                    # canvas — light marketing pages, docs, learning
   bg-dark: '#001e2b'               # canvas-dark — deep teal hero bands, dark CTA strips

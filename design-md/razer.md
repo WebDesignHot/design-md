@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # canvas — jet black, the brand ground
   bg-deep: '#0d0d0d'             # near-black header / footer band

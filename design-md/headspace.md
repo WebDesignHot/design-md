@@ -27,6 +27,7 @@ aliases:
   primary-foreground: text-on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fdf2e1'                  # warm cream canvas — Headspace's signature ground
   bg-strong: '#fae5c4'            # alt warm-cream band

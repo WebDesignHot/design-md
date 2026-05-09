@@ -26,6 +26,7 @@ aliases:
   accent: accent-red
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # paper-white canvas — the macOS metaphor
   bg-soft: '#fafaf8'             # warm-white nested panel

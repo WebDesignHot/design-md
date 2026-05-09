@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0f171e'                    # canvas — Amazon Prime deep blue-grey
   bg-deep: '#000000'                 # video player surface

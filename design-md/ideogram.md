@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#ffffff'                  # paper-white canvas, the gallery wall

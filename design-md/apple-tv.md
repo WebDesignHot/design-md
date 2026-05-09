@@ -28,6 +28,7 @@ aliases:
   accent: accent-pink
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                    # canvas — pure-black, the Apple TV+ signature
   bg-deep: '#000000'                # consistent — no gradient

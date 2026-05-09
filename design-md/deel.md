@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0c0c0c'                         # warm near-black hero canvas — slight brown cast
   bg-soft: '#141414'                    # softer dark panel, slightly lifted

@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f8f5d7'                  # the paper-cream Semafor canvas (observed)
   bg-section: '#f8f5d7'

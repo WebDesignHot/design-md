@@ -28,6 +28,7 @@ aliases:
   accent: accent
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#fffbf5'                         # warm cream off-white canvas — the brand neutral
   bg-soft: '#fbf6ec'                    # softer cream tier

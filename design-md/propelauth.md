@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # white canvas
   bg-soft: '#f8f9fa'             # softest off-white for alt sections

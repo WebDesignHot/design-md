@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                   # canvas — pure white magazine page
   bg-elev: '#fafaf7'              # warm off-white for elevated rails

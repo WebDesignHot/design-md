@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0e1735'                    # canvas — navy gradient origin
   bg-deep: '#040714'                # gradient terminus, video player

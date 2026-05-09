@@ -23,8 +23,12 @@ description: 'Fortnite''s site is the AAA battle-royale brand at maximum saturat
 aliases:
   background: bg
   foreground: text
+  primary: brand-yellow
+  primary-foreground: on-brand-yellow
+  accent: brand-blue
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0e1218'
   bg-deep: '#06090d'

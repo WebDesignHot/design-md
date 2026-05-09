@@ -27,6 +27,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#000000'                  # pure black canvas — default theme
   bg-light: '#ffffff'            # light-mode flip

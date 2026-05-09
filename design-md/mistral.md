@@ -28,6 +28,7 @@ aliases:
   accent: accent-flame
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   # Primary
   bg: '#fffaeb'                          # observed butter-yellow body bg — defining canvas

@@ -28,6 +28,7 @@ aliases:
   accent: accent-link
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#0f0f0f'                            # canvas — dark theme default
   bg-deep: '#000000'                       # video player bg, full-screen

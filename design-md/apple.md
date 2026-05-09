@@ -28,6 +28,7 @@ aliases:
   accent: accent-product-tv
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#ffffff'                  # --sk-fill — primary canvas
   surface: '#fafafc'             # --sk-fill-secondary — header, footer, gutters

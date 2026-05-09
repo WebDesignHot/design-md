@@ -26,6 +26,7 @@ aliases:
   primary-foreground: on-brand
   muted: text-soft
   border: border
+  ring: border-strong
 colors:
   bg: '#0a0a0a'                  # gaming canvas — near-black
   bg-pure: '#000000'              # darkest surface, modal backdrop

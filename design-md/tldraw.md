@@ -28,6 +28,7 @@ aliases:
   accent: accent-yellow
   muted: text-muted
   border: border
+  ring: border-strong
 colors:
   bg: '#f8f9fa'                  # soft off-white canvas with dotted grid
   bg-canvas: '#fdfdfd'           # slightly brighter for embedded scenes
