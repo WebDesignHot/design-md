@@ -42,13 +42,13 @@ Each PR is reviewed within 48h. We accept editorial DESIGN.md files inspired by 
 
 ## Why this exists
 
-Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. [Google Labs](https://github.com/google-labs-code/design.md) introduced the DESIGN.md format. We:
+Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. So we built it:
 
 1. **Extracted 403 real brands** from production marketing sites (not invented "vibes")
-2. **Published our own webdesignhot/0.1 spec** with four sections every agent eventually asks about: Motion, Accessibility, Voice, Dark Mode — plus a richer machine-readable token layer
+2. **Designed the webdesignhot/0.1 spec** around what agents actually ask for — Motion, Accessibility, Voice, and Dark Mode as first-class sections, plus a rich machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
-## 39 multi-theme entries — real `light + dark` from production
+## 29 multi-theme entries — real `light + dark` from production
 
 These brands ship both modes on their actual sites. Each PNG below is a Kitchen Sink rendering of the brand's tokens in both themes — same skeleton (nav + display headline + buttons + cards), only the design tokens swap. Click any to open the live preview.
 
@@ -62,9 +62,10 @@ These brands ship both modes on their actual sites. Each PNG below is a Kitchen 
 | <a href="https://www.webdesignhot.com/design.md/elevenlabs/"><img src="screenshots/elevenlabs.png" alt="ElevenLabs — light / dark" width="380"></a><br/>**ElevenLabs** | <a href="https://www.webdesignhot.com/design.md/lovable-dev/"><img src="screenshots/lovable-dev.png" alt="Lovable — light / dark" width="380"></a><br/>**Lovable** | <a href="https://www.webdesignhot.com/design.md/replicate/"><img src="screenshots/replicate.png" alt="Replicate — light / dark" width="380"></a><br/>**Replicate** |
 | <a href="https://www.webdesignhot.com/design.md/together-ai/"><img src="screenshots/together-ai.png" alt="Together AI — light / dark" width="380"></a><br/>**Together AI** | <a href="https://www.webdesignhot.com/design.md/gemini-google/"><img src="screenshots/gemini-google.png" alt="Gemini — light / dark" width="380"></a><br/>**Gemini** | <a href="https://www.webdesignhot.com/design.md/omnivore/"><img src="screenshots/omnivore.png" alt="Omnivore — light / dark" width="380"></a><br/>**Omnivore** |
 | <a href="https://www.webdesignhot.com/design.md/beehiiv/"><img src="screenshots/beehiiv.png" alt="beehiiv — light / dark" width="380"></a><br/>**beehiiv** | <a href="https://www.webdesignhot.com/design.md/bluesky/"><img src="screenshots/bluesky.png" alt="Bluesky — light / dark" width="380"></a><br/>**Bluesky** | <a href="https://www.webdesignhot.com/design.md/signal-app/"><img src="screenshots/signal-app.png" alt="Signal — light / dark" width="380"></a><br/>**Signal** |
-| <a href="https://www.webdesignhot.com/design.md/kit-com/"><img src="screenshots/kit-com.png" alt="Kit — light / dark" width="380"></a><br/>**Kit** | | |
+| <a href="https://www.webdesignhot.com/design.md/kit-com/"><img src="screenshots/kit-com.png" alt="Kit — light / dark" width="380"></a><br/>**Kit** | <a href="https://www.webdesignhot.com/design.md/glif/"><img src="screenshots/glif.png" alt="Glif — light / dark" width="380"></a><br/>**Glif** | <a href="https://www.webdesignhot.com/design.md/netlify/"><img src="screenshots/netlify.png" alt="Netlify — light / dark" width="380"></a><br/>**Netlify** |
+| <a href="https://www.webdesignhot.com/design.md/picoko/"><img src="screenshots/picoko.png" alt="Picoko — light / dark" width="380"></a><br/>**Picoko** | <a href="https://www.webdesignhot.com/design.md/storybook/"><img src="screenshots/storybook.png" alt="Storybook — light / dark" width="380"></a><br/>**Storybook** | |
 
-The remaining 364 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
+The remaining 374 entries ship a single canonical theme — that's how the brand designs at the source. We don't synthesize a fake light Linear or fake dark Stripe to pad the multi-theme count.
 
 ## Catalog structure
 
@@ -214,7 +215,7 @@ declared there. Quote the section number when citing a token
 
 15 numbered sections in every file's body:
 
-| # | Section | webdesignhot/0.1 addition |
+| # | Section | Signature focus |
 |---|---------|-------------|
 | 1 | Visual Theme & Atmosphere | |
 | 2 | Color Palette & Roles | |
@@ -232,7 +233,7 @@ declared there. Quote the section number when citing a token
 | 14 | Do's and Don'ts | |
 | 15 | Agent Prompt Guide | |
 
-webdesignhot/0.1 is a parallel format alongside the [Google Labs alpha](https://github.com/google-labs-code/design.md) spec — both are cross-readable by any tool that opens a markdown file. See [`SPEC.md`](./SPEC.md) for field-by-field comparison.
+webdesignhot/0.1 is our own format — one Markdown file any tool or agent can read, no special parser required. See [`SPEC.md`](./SPEC.md) for the full field-by-field schema.
 
 ## Contributing
 
@@ -248,7 +249,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the workflow + schema validation to
 - 🌐 **Web app**: <https://www.webdesignhot.com/design.md/> (browse, preview, search, AI generator)
 - 📦 **CLI**: <https://www.npmjs.com/package/@webdesignhot/design-md>
 - 🔌 **MCP server**: <https://www.npmjs.com/package/@webdesignhot/design-md-mcp>
-- 📜 **Google Labs alpha spec**: <https://github.com/google-labs-code/design.md>
 
 ## License
 
