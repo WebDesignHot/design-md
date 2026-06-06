@@ -15,7 +15,7 @@ related: [rare-beauty, patagonia, lego]
 description: 'Glossier''s site in 2026 is the most surprising rebrand in DTC: the company that spent a decade making "millennial pink" the default DTC chrome has, in its current redesign, retired pink from the storefront entirely and rebuilt the system around a single typeface (Apercu Pro), a pure-white canvas, and 0px-radius rectangles. The famous Glossier Pink survives only as a "Top-rated" badge color `#f6e3e6` and a single footer wash `#faf2f4` — both noticeably grayer and paler than the candy-pink era. CTAs are sharp light-gray rectangles `#e8e8e8`, not pills. Display copy is set 32px Apercu Regular, sentence case, tracked −0.32px — a magazine-deck rhythm rather than a marketing headline. Section eyebrows are 12px UPPERCASE Apercu with +0.04px tracking. The wordmark hovers to "You look good." The femininity has migrated entirely into the photography and product names — the chrome is now closer to Calvin Klein-stripped-luxury-in-beauty-drag than to the 2014 Soho-flagship version. Where Rare Beauty went lavender + cream + Recoleta and Fenty went jewel-tone-bold, Glossier 2026 went **post-pink Apercu-monolith on white**.'
 
 
-# Canonical 8-role aliases (per google-labs-code/design.md PR #76).
+# Canonical 8-role aliases (bg / text / brand / border / accent / muted / surface / danger).
 # Maps role names to this entry's actual token names so role-aware
 # downstream tools resolve `theme.background` → entry's `bg`, etc.
 aliases:

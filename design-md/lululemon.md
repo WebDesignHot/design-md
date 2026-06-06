@@ -15,7 +15,7 @@ related: [patagonia, nike, rare-beauty]
 description: 'lululemon''s site is what happens when an athletic brand decides it would rather look like Aritzia or COS than Nike. The canvas is bone-off-white `#fafafa` (faintly cool, not pure white), body ink is **off-black** `#140f0f` (`rgb(20,15,15)` — *not* pure black, ever), display type is **Saans** (Display Type Foundry) at unusual variable-font weight stops (`380`, `570`, `670`), and headlines get aggressive negative tracking (`-4px` on a 64px H1). The brand color is **lululemon Red** `#c8102e` — the exact red of the omega-A "yogo" symbol — paired with a brighter coral `#de212f` (internal token name *"Hot Heat"*) for marketing surfaces. Where Nike chose ALL-CAPS-AGGRESSIVE and Patagonia chose cream-and-Futura-cooperative, lululemon chose **mixed-case-confident-Vancouver-yoga-studio**. Voice is breath/movement-metaphors at sentence case ("Breathes easy.", "Stretch the possibilities", "Shoulder the load.") — punchy but never yelling. The signature contrast: **square-cornered product cards** (`0px` radius, photograph carries identity) paired with **fully pill-shaped CTAs** (`999px` radius, off-black fill, warm-white label) — hardware is hard-edged, voice is soft. Buried in the tokens: `#f4ff8e` acid-lemon as the canonical primary-CTA text color on hero/marketing surfaces — their secret-handshake accent that no other DTC brand uses.'
 
 
-# Canonical 8-role aliases (per google-labs-code/design.md PR #76).
+# Canonical 8-role aliases (bg / text / brand / border / accent / muted / surface / danger).
 # Maps role names to this entry's actual token names so role-aware
 # downstream tools resolve `theme.background` → entry's `bg`, etc.
 aliases:
