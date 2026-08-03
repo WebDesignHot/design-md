@@ -14,6 +14,16 @@ preview_swatch: ['#ffffff', '#6c4df7', '#ff1476']
 related: [descript, framer, linear]
 description: 'Captions is an AI video editor that throws out the dark-slab playbook of its category and ships on a near-white studio canvas (`#ffffff`, cooled to `#f5f9fa` / `#eef4f6` on raised surfaces) with charcoal `#1d1f20` text. The display face is a tall, confident sans called **Exposure** (h1 at 48px on the live site, scaling to 80px on the hero); body copy runs in **DenimINK**, a humanist working sans. What makes the brand is not the chrome — the hero CTAs are deliberately quiet grey pills (`#eef4f6`, 9999px) and grey upload tiles (`#f5f9fa`, 12px) — but a sprawling, joyful palette declared as `--color-*` CSS variables: violet `#6c4df7` as the primary accent, then sea `#00d0ff`, sunset `#f99f3f`, barbie-pink `#ff1476`, meadow `#5bf6bb`, yellow `#fcff41`, peach, cloud, lime and a dozen more. It reads like a creator''s sticker pack: the neutral canvas is the wall, and the color vars are what you tack onto it. Where Runway and Pika reach for chrome-on-black and Descript reaches for cream-pink editorial, Captions reaches for a bright, near-white studio with a multi-hue accent system — bold, creator-native, playful, and unmistakably built for people who make short-form video for a living.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-brand
+
 colors:
   # Canvas
   bg: '#ffffff'                          # near-white studio canvas (audit body bg transparent → page white)

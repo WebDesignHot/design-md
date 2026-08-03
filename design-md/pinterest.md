@@ -11,7 +11,7 @@ featured: false
 categories: [social, media]
 tags: [light, minimal, sans, grid, image-first, masonry, mobile-first]
 preview_swatch: ['#ffffff', '#e60023', '#000000']
-related: [are-na, instagram-not-yet, tldraw]
+related: [are-na, reddit, tldraw]
 description: 'Pinterest is the masonry feed perfected — a near-white `#fff` canvas, plain `#000` text, restrained sans-serif chrome that gets out of the way of images, and a single `#e60023` red ("Pushpin") reserved for primary actions and brand moments. The product is the feed: 2-6 column masonry of image cards at 12px radius, hover-reveal save buttons, ellipsis-driven secondary actions, and tonal grayscale chrome (`#62625b` subtle text, `#e5e5e0` hairline borders) so the chromatic load lives entirely in the images. Typography runs on a custom variable font ("Pin Sans") with a Helvetica-class system stack as fallback. The visual lineage runs through the literal pin metaphor (Polaroid + cork-board scrapbooks), parallel-evolved with Tumblr''s pre-collapse masonry feeds, and disciplined by Material Design''s tonal-container restraint — the chrome recedes so the images carry the page.'
 
 

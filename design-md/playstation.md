@@ -11,7 +11,7 @@ featured: false
 categories: [gaming]
 tags: [dark, structured, sans, cool, spacious]
 preview_swatch: ['#000000', '#0070d1', '#ffffff']
-related: [xbox, valorant, sony]
+related: [xbox, valorant, nintendo]
 description: 'PlayStation''s site reads like a cinema poster from a hardware company that knows it. The canvas is true black `#000000`, headings sit in SST (Sony''s in-house sans descended from Frutiger''s FF Mark) at 56–96px, and the only chromatic accent is "PS Blue" `#0070d1`. Body text is pure white, structured grids hold dense game grids next to full-bleed video heroes, and the layout philosophy traces directly to Sony''s industrial-design heritage: Bauhaus, Dieter Rams, and 1980s automotive marketing. Every CTA is rectangular with crisp 4-6px corners; cards have hairline rules, never blur shadows. The whole brand reads premium, technical, and slightly cinematic.'
 
 

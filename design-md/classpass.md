@@ -11,7 +11,7 @@ featured: false
 categories: [healthcare, saas, marketplace]
 tags: [light, playful, sans, warm, bright, rounded]
 preview_swatch: ['#fffaf6', '#ec5e8a', '#1a1a1a']
-related: [strava, peloton, classpass]
+related: [strava, peloton, headspace]
 description: 'ClassPass''s site is the wellness-marketplace counterpart to MyFitnessPal''s tracker-utility. The canvas is warm off-white `#fffaf6` (slight cream tilt), headings sit in GT America (Grilli Type''s neo-grotesque sans) at 48–72px, and the brand color is "ClassPass Coral" `#ec5e8a` — a warm pink-coral picked for energetic-friendly wellness without going as candy as Glossier or as muted as Calm. Photography drives the visual experience — full-bleed yoga, pilates, dance, boxing studio interiors at 16:9. Cards have 12-16px radius and warm-pink-tinted shadows. Voice is enthusiastic-discovery: "Try a thousand studios", "Find your next favorite workout". The whole brand reads as wellness-marketplace energy: enough variety that you''ll find your thing, enough quality that you won''t regret the pick.'
 
 

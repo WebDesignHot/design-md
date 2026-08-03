@@ -23,6 +23,7 @@ description: 'Bear''s site mirrors the macOS Markdown app it sells — paper-whi
 aliases:
   background: bg
   foreground: text
+  primary: accent-red
   accent: accent-red
   muted: text-muted
   border: border

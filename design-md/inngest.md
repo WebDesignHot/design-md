@@ -14,6 +14,16 @@ preview_swatch: ['#0c0a09', '#cbb26a', '#fafaf9']
 related: [railway, vercel, linear]
 description: 'Inngest''s marketing site is a near-black canvas (`#0c0a09`) carrying near-white display type set in Whyte at 72px/400 — a calm, infrastructural register for a durable-workflow platform. Action lives on a single muted-gold button (`#cbb26a`) printed with dark `#1a161c` text and a signature arrow, every corner held at a sharp 0px. The body is Circular XX, the mood is restrained, developer-first, and engineered rather than expressive.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: accent
+  muted: text-muted
+  border: border
+  ring: border-brand
+
 colors:
   # Primary
   bg: '#0c0a09'                  # near-black canvas — warm-leaning, the entire page sits on it

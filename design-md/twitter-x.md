@@ -23,7 +23,9 @@ description: 'X (formerly Twitter) renders the most chromatically-disciplined su
 aliases:
   background: bg
   foreground: text
+  primary: primary-action
   primary-foreground: on-brand
+  accent: brand-blue
   muted: text-muted
   border: border
   ring: border-strong

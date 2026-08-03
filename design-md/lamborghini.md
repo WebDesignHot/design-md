@@ -42,7 +42,7 @@ colors:
   text-strong: '#ffffff'         # Same as text — no separate strong
   text-soft: '#f5f5f5'           # Smoke — secondary text on dark, slightly softer
   text-on-light: '#202020'       # Charcoal text on light surfaces
-  text-on-light-strong: '#000000'# Pure black for highest emphasis on light
+  text-on-light-strong: '#000000' # Pure black for highest emphasis on light
   text-graphite: '#494949'       # Graphite — dark gray text on light
   text-ash: '#7d7d7d'            # Ash — mid-range gray for muted, timestamps, metadata
   text-steel: '#969696'          # Steel — disabled text, subtle labels
@@ -56,7 +56,7 @@ colors:
   accent-cyan: '#29abe2'         # Cyan Pulse — informational accent, interactive highlight
   accent-link-blue: '#3860be'    # Link Blue — universal link hover state
   accent-teal-action: '#1eaedb'  # Teal Action — ghost button hover background
-  border: 'rgba(255,255,255,0.5)'# White at 50% — ghost button border
+  border: 'rgba(255,255,255,0.5)' # White at 50% — ghost button border
   border-divider: '#202020'      # Section divider hairline (same hex as Charcoal)
   border-light-input: '#dddddd'  # Switch element borders, light mode inputs
   ring: '#ffc000'                # Focus ring — Lamborghini Gold

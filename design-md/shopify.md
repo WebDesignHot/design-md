@@ -23,6 +23,7 @@ description: 'Shopify.com is a **dark-first digital theatre** — a website that
 aliases:
   background: bg
   foreground: text
+  primary: accent-neon
   primary-foreground: on-brand
   accent: accent-neon
   muted: text-muted

@@ -23,6 +23,7 @@ description: 'Capacities'' site dresses a personal-knowledge-management tool in 
 aliases:
   background: bg
   foreground: text
+  primary: brand-yellow
   primary-foreground: on-brand
   muted: text-muted
   border: border

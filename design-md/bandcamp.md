@@ -11,7 +11,7 @@ featured: false
 categories: [media, marketplace]
 tags: [light, structured, sans, warm, dense]
 preview_swatch: ['#fafaf6', '#629aa0', '#1a1a1a']
-related: [soundcloud, youtube, audiocom]
+related: [soundcloud, youtube, spotify]
 description: 'Bandcamp''s site is the rare music-marketplace that has not been redesigned by a Spotify alumnus. The canvas is warm off-white `#fafaf6`, headings sit in Helvetica (or Inter as fallback) at 28–48px, and the brand color is "Bandcamp Cyan" `#629aa0` — a muted teal that has barely shifted since the 2008 founding. Where Spotify chose dark + green and Apple Music chose dark + red, Bandcamp chose **light + cyan + Helvetica** — visually closer to a SoundCloud-of-2010 or an early-2000s indie label site than to modern streaming UI. Cards have 0px radius, hairline borders, and dense album-info layouts (artist name + track count + price + format). Voice is direct-utility: "Buy now", "Stream", "Pay what you want". The whole brand reads as "music marketplace built by music people, not data scientists".'
 
 

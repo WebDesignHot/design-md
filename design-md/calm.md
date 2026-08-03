@@ -8,7 +8,7 @@ source_url: https://www.calm.com
 spec: webdesignhot/0.1
 quality: curated
 featured: false
-categories: [media, saas]
+categories: [healthcare, media, saas]
 tags: [dark, wellness, sans, atmospheric, photographic, meditation, calm, blue, contemplative]
 preview_swatch: ['#0a1f3a', '#0066ff', '#ffffff']
 related: [headspace, oura, apple-music]

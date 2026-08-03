@@ -14,6 +14,16 @@ preview_swatch: ['#ffffff', '#31efb8', '#14ceca']
 related: [figma]
 description: 'Penpot is the open-source design tool built for designers and developers working in the same file. Its marketing site pairs a white working canvas with a deep-indigo `#151035` dark hero, narrated in Work Sans at 72px / weight 500 against an off-white `#fafafa` headline. The action surface is unmistakable: a signature mint-green `#31efb8` paired with cyan `#14ceca`, both carrying deep-indigo `#151035` text rather than white — a high-energy, accessible combination that reads as friendly and technical at once. CTAs sit at an 8px radius; chrome stays flat, generous, and code-aware, the way a tool that exports real CSS should.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#ffffff'                # default page canvas — white working surface
   bg-soft: '#f5f8fb'           # tinted panel / secondary CTA fill

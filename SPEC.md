@@ -236,7 +236,10 @@ Three subsections:
 
 ## Validation
 
-Run `design-md lint <file>` for required fields + section presence. CI lints all entries on PR.
+Run `design-md lint <file>` for portable single-file checks. Canonical catalog
+repositories run `design-md lint <directory> --strict`, which also enforces the
+complete metadata contract, 15 sections, canonical aliases, controlled
+categories, unique source URLs, and valid `related` targets.
 
 ## Compatibility with Google Labs alpha
 

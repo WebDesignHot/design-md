@@ -11,7 +11,7 @@ featured: false
 categories: [media]
 tags: [light, structured, serif, minimal, dense, editorial]
 preview_swatch: ['#ffffff', '#3366cc', '#202122']
-related: [archive-org, theatlantic, theguardian]
+related: [bbc, theatlantic, theguardian]
 description: 'Wikipedia''s site is the rare brand whose design philosophy is **deliberately non-branded**. The canvas is white, headings sit in Linux Libertine (a free serif by Free Software Foundation contributors) at 24–48px, and the only chromatic accent is "Wikilink Blue" `#3366cc` — preserved from the early-2000s MediaWiki default. The Vector skin (current default) was last refreshed in 2023, but the visual DNA traces directly to the 2002 wiki origin: serif headings, blue links, footnote markers, info-boxes in pale-gray. Where every other media brand chose ownership of their design language, Wikipedia chose **encyclopedic transparency** — the design gets out of the way of the content. Voice is institutional-neutral: "[edit]", "Citation needed", "This article is a stub". The whole brand reads as the Britannica of the open web — authoritative, public-good, intentionally not exciting.'
 
 

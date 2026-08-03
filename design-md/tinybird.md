@@ -14,6 +14,16 @@ preview_swatch: ['#0a0a0a', '#27f795', '#ffffff']
 related: [clickhouse, vercel, supabase]
 description: 'Tinybird''s marketing surface is a near-black developer canvas (#0a0a0a) carrying white Roboto type and one electric mint-green (#27f795) that handles every primary CTA, every accent label, and every "success" token in the embedded code. The mint reads like a live terminal cursor — it appears as a sharp zero-radius "Sign up" button, as bright bracketed eyebrow labels ([Real-Time Analytics]), and as the green that lights up query results inside dark code panels. A darker forest variant (#008060) carries secondary and "diff-added" states. Where ClickHouse paints with electric yellow, Tinybird paints with mint — the same near-black-plus-one-voltage discipline, tuned to the colour of a passing test.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#0a0a0a'                  # canvas — near-pure black, runs the whole page
   bg-deep: '#000000'            # absolute black for code-pane interiors and footer

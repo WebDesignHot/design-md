@@ -23,7 +23,9 @@ description: 'Solana''s site is the Layer 1 chain marketing closest in spirit to
 aliases:
   background: bg
   foreground: text
+  primary: brand-purple
   primary-foreground: on-brand
+  accent: brand-cyan
   muted: text-muted
   border: border
   ring: border-brand

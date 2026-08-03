@@ -8,7 +8,7 @@ source_url: https://www.booking.com
 spec: webdesignhot/0.1
 quality: curated
 featured: false
-categories: [marketplace]
+categories: [hospitality, marketplace]
 tags: [light, marketplace, travel, sans, dense, commercial, booking-funnel, e-commerce]
 preview_swatch: ['#ffffff', '#003580', '#feba02']
 related: [airbnb, expedia, kayak]

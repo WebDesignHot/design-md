@@ -34,7 +34,7 @@ colors:
   surface: '#303030'             # canvas-elevated — driver cards, livery plates
   surface-card: '#303030'        # primary card surface on dark
   surface-soft-light: '#f7f7f7'  # alternating editorial light band
-  surface-strong-light: '#ebebeb'# light-canvas dividers, badges
+  surface-strong-light: '#ebebeb' # light-canvas dividers, badges
   surface-light: '#ffffff'       # canvas-light — preowned, pricing
   text: '#ffffff'                # ink — display + emphasis on dark
   text-body: '#969696'           # default running text on dark
@@ -59,7 +59,7 @@ colors:
   link-hover: '#da291c'          # rare red-shift on hover for inline links
   promo-red: '#da291c'           # promotional callouts ("Configure", "Race Position")
   gradient-dark-top: '#3c3c3c'   # linear-gradient(180deg, #3c3c3c, #030303 64%)
-  gradient-dark-bottom: '#030303'# atmospheric darken at section transitions
+  gradient-dark-bottom: '#030303' # atmospheric darken at section transitions
   success: '#03904a'             # confirmation
   warning: '#f13a2c'             # validation warning (orange-red, distinct from brand)
   info: '#4c98b9'                # info badges, callouts

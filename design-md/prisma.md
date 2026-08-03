@@ -14,6 +14,15 @@ preview_swatch: ['#ffffff', '#14b8a6', '#6366f1']
 related: [planetscale, supabase, vercel]
 description: 'Prisma runs a bright white canvas (`#ffffff`) with navy body ink (`#1d242f`) and near-black headings (`#111827`), then spends its entire color budget on one signature teal (`#14b8a6`) for the primary "Get started" CTA. Mona Sans sets the display voice — a wide variable grotesque pulled tight at 64px hero scale — while Inter carries the body. A secondary indigo (`#6366f1`) marks the ORM product line, teal marks Prisma Postgres, and the marketing surface stays paper-light even though the docs theme ships dark. The result reads like a well-typeset technical white paper: calm, legible, type-safe.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  border: border
+  ring: brand
+
 colors:
   bg: '#ffffff'
   surface: '#f9fafb'

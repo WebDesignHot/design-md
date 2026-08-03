@@ -11,7 +11,7 @@ featured: false
 categories: [ai, dev-tools]
 tags: [dark, bold, sans, ai, builder]
 preview_swatch: ['#1e1e21', '#1488fc', '#2ba6ff']
-related: [v0, vercel, linear]
+related: [cursor, vercel, linear]
 description: 'Bolt is StackBlitz''s AI app and website builder, and its surface is a dark developer console dressed for prompting. The canvas sits at a near-black `#1e1e21` (warm-neutral, not pure black), display copy uses **Inter Display** at 48px weight 700 with tight `-0.018em` tracking, and body runs **Inter** at 16px/400. The whole identity hinges on one electric move: a high-voltage blue `#1488fc` (rgb 20, 136, 252) that lights the primary CTA, the prompt-submit affordance, and every "go" moment on the page. Where v0 strips all chroma to make the prompt the hero, Bolt does the opposite — it keeps the dark IDE register but charges it with a single saturated blue so the page reads like a terminal with one glowing run button. Radius is a deliberate mix: 6px on the workhorse "Get started" button, full pills on the brighter `#2ba6ff` secondary and the dark utility buttons.'
 
 

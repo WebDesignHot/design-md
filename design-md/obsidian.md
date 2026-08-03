@@ -23,6 +23,8 @@ description: 'Obsidian''s site is the editor it sells, rendered as a marketing p
 aliases:
   background: bg
   foreground: text
+  primary: brand
+  primary-foreground: on-brand
   accent: brand
   muted: text-muted
   border: border

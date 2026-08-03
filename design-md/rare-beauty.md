@@ -11,7 +11,7 @@ featured: false
 categories: [fashion, marketplace]
 tags: [light, soft, serif, sans, warm, spacious]
 preview_swatch: ['#fdf6f0', '#9b6dd4', '#1a1a1a']
-related: [glossier, fenty-beauty, calm-app]
+related: [glossier, aesop, calm]
 description: 'Rare Beauty''s site is the editorial-restrained counterpart to Glossier''s candy-pink. The canvas is warm cream `#fdf6f0`, display headings sit in a serif (Recoleta or Tiempos Headline) at 48–72px, and the brand color is "Rare Lavender" `#9b6dd4` — a soft purple picked for both Selena Gomez''s personal aesthetic and the brand''s mental-health advocacy positioning. Where Glossier went candy-pink-and-white and Fenty went bold-and-inclusive-jewel-tones, Rare went soft-lavender-and-cream-and-serif. Photography is shot on warm-amber backgrounds, never against pure white. The Rare Impact Fund (1% of sales for mental health) threads through the brand voice. The whole site reads as "beauty brand that has read a self-help book and finished it".'
 
 

@@ -11,7 +11,7 @@ featured: true
 categories: [dev-tools, saas, oss]
 tags: [light, sans, mono, structured, utility, open-source]
 preview_swatch: ['#ffffff', '#06b6d4', '#0f172a']
-related: [vercel, linear, refactoring-ui]
+related: [vercel, linear, shadcn-ui]
 description: 'Tailwind''s marketing site is the framework demonstrating itself — Inter Variable headlines, the canonical slate-on-white palette, signature cyan ''#06b6d4'' brand, and every component composable from the utility classes the site is selling. The most self-referential design system on the web — when you ship a CSS framework, your marketing page is your demo.'
 
 

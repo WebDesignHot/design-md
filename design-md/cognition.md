@@ -14,6 +14,16 @@ preview_swatch: ['#f7f6f5', '#191919', '#000000']
 related: []
 description: 'Cognition — the lab behind Devin, the AI software engineer — runs a near-perfect monochrome system: a warm off-white `#f7f6f5` canvas, pure-black `#000` ink, and a single near-black `#191919` CTA. The whole identity is black-on-warm-white with zero rounding (`0px` everywhere) and an editorial type pairing that pulls against the genre — a tight grotesk display (`nbInternational`, h1 at 36px / 400) over a serif body (`stkBureauSerif` at 16px). No gradients, no accent colour, no chrome. Where most AI labs reach for purple meshes or chrome-on-black, Cognition reads like a printed research bulletin: restrained, serious-engineering, and confident enough to ship a landing page with exactly one non-black value on it.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: brand
+
 colors:
   # Primary
   bg: '#f7f6f5'                          # warm off-white canvas — the defining ground

@@ -59,7 +59,7 @@ colors:
   # Accent (vivid multi-accent set)
   accent-pink: '#ff00af'         # hot pink (--color-pink)
   accent-pink-light: '#ff7ad5'   # (--color-pink-light)
-  accent-pink-lightest: '#ffcbef'# (--color-pink-lightest)
+  accent-pink-lightest: '#ffcbef' # (--color-pink-lightest)
   accent-orange: '#ff5600'       # orange (--color-orange) — also Fin product color
   accent-orange-light: '#ffa77a' # (--color-orange-light)
   accent-orange-lightest: '#ffdccc' # (--color-orange-lightest)
@@ -76,7 +76,7 @@ colors:
   product-helpdesk: '#0007cb'    # helpdesk (--color-helpdesk) = deep cobalt
   product-operator: '#441572'    # operator (--color-operator) = violet
   product-sales: '#055895'       # sales (--color-sales) = steel blue
-  product-sales-accent: '#a3b3ff'# (--color-sales-accent)
+  product-sales-accent: '#a3b3ff' # (--color-sales-accent)
   product-ecom: '#2f6a5e'        # ecom (--color-ecom) = forest
   product-ecom-accent: '#e2f947' # (--color-ecom-accent)
   product-voice: '#5de071'       # voice accent (--color-voice-accent)

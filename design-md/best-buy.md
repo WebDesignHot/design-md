@@ -1,7 +1,7 @@
 ---
 name: Best Buy
 tagline: Yellow price-tag mark, electric blue trust, bold sans — big-box electronics design with Geek-Squad confidence.
-updated_at: 2026-05-28T00:00:00+12:00
+updated_at: 2026-05-28T00:00:00.000Z
 published_at: 2026-05-27T23:17:35.551Z
 author: webdesignhot
 source_url: https://www.bestbuy.com

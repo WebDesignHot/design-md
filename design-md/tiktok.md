@@ -23,7 +23,9 @@ description: 'TikTok''s visual identity is the most aggressive neon-on-black sys
 aliases:
   background: bg
   foreground: text
+  primary: brand-rose
   primary-foreground: on-brand
+  accent: brand-cyan
   muted: text-muted
   border: border
   ring: border-strong

@@ -23,6 +23,7 @@ description: 'ASUS is Taiwan''s flagship PC engineering brand, anchored by the *
 aliases:
   background: bg
   foreground: text
+  primary: brand-rog
   primary-foreground: on-brand
   muted: text-soft
   border: border

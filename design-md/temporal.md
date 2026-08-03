@@ -14,6 +14,16 @@ preview_swatch: ['#141414', '#444ce7', '#34d399']
 related: [hashicorp, vercel, fly-io]
 description: 'Temporal''s marketing surface is a near-black `#141414` engineering canvas carrying near-white `#f8fafc` type set in Aeonik at deliberately light weights — the hero h1 runs 68px at weight 300, the h2 at 48px/100, a hairline-thin display register that reads as composed reliability rather than startup loudness. The single chromatic anchor is an electric indigo-blue `#444ce7` reserved for primary CTAs, links, and focus, with a mint-green `#34d399` carrying live/healthy status — the two colors that matter to a durable-execution platform: the action you take, and the signal that your workflow is still running. Code surfaces drop into a deep slate `#243349` Shiki block where a warm yellow `#fed553` lights the keywords. The whole system is built for developers reading about reliability at 2am.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#141414'                  # canvas — near-black engineering ground
   surface: '#1a1a1a'             # surface-1: cards one step above canvas

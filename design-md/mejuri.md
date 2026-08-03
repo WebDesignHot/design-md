@@ -11,7 +11,7 @@ featured: false
 categories: [retail, fashion]
 tags: [light, white, minimal, editorial, sharp, mono]
 preview_swatch: ['#ffffff', '#0a0a0a', '#c9a86a']
-related: [glossier, aesop, cos]
+related: [glossier, aesop, uniqlo]
 description: 'Mejuri''s site in 2026 is accessible-luxury jewelry rendered as monochrome editorial: a pure-white canvas `#ffffff`, near-black ink `#0a0a0a`, and almost no chrome color at all. The whole palette is white + near-black; the *warmth* — the gold, the rose, the skin tones — lives entirely in the warm-lit jewelry photography, never in the UI. Type is the differentiator: display is set in **Syndicat Grotesk** (a sharp grotesque) at deliberately *restrained* sizes — the live H1 is just 24px / weight 500, small and confident rather than shouting — while body and editorial accents run in **Simon Mono**, a monospaced face that gives prices, specs, and labels a quiet jeweler''s-ledger precision. Corners are sharp: `0px` radius across buttons, cards, and inputs, no pills, no soft luxury. Where Glossier went post-pink Apercu-monolith and Aesop went amber-and-serif apothecary, Mejuri 2026 is **white-and-near-black, grotesque-plus-mono, sharp-cornered editorial** — elevated but unfussy, the chrome stepping back so the metal can shine.'
 
 

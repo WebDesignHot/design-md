@@ -15,6 +15,16 @@ related: []
 description: 'dbt Labs builds the data-transformation layer that turned "analytics engineering" into a job title, and its marketing system matches that disciplined-but-creative register: a white-first canvas, near-black ink (#030711) for headlines and body, and a single saturated dbt orange (#fe6703) carrying the CTA. The standout calibration is the CTA itself — the orange "Book a demo" button takes near-black text, not white (the orange is too light for white to clear AA), which makes dbt''s primary action read warmer and more editorial than the white-on-color CTAs of most data tools. Type is set in Polymath (display) and Polymath Text (body), a paired type system that gives dbt headlines a structured, slightly literary character distinct from the geometric sans of Snowflake or the DM Sans of Databricks. The system runs on a 12px button radius, a "Get started" white-pill / "Book a demo" orange-pill CTA pair, and a voice anchored in dbt''s own vocabulary — models, lineage, tests, trusted data, the analytics development lifecycle.'
 
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#ffffff'                       # canvas — marketing, docs, product pages
   bg-soft: '#f8fafc'                  # softer surface for nested content

@@ -11,7 +11,7 @@ featured: false
 categories: [fashion, marketplace]
 tags: [light, warm, sans, structured, spacious, editorial]
 preview_swatch: ['#f6efe1', '#cd0000', '#1c1c1c']
-related: [rei, lego, lululemon]
+related: [nike, lego, lululemon]
 description: 'Patagonia''s site is what an outdoor-cooperative looks like when it has been an outdoor-cooperative for 50 years and refuses to look corporate. The canvas is cream `#f6efe1` (warm off-white that recalls field-journal paper), headings sit in Futura Bold (or its in-house geometric variant) at 48–80px, and the brand color is "Patagonia Red" `#cd0000` — drawn from the iconic mountain wordmark. Photography is the dominant visual instrument: full-bleed climbing-and-fishing-and-environmental-activism shots at 16:9, color-graded warm. Where REI chose green and North Face chose white-and-black, Patagonia chose cream + red + Futura. Voice is essay-confident: long-form articles about activism, climate, repair-not-replace philosophy alongside the product grid.'
 
 

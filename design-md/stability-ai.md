@@ -14,6 +14,16 @@ preview_swatch: ['#1e1e1e', '#a381ff', '#330066']
 related: [midjourney]
 description: 'Stability AI''s site is a near-black studio floor at `#1e1e1e` — warmer than pure black, the grey of a darkroom. Headlines run in Archivo at 72px and a surprisingly light weight, refusing the marketing-bold of typical AI launch pages. The whole surface is monochrome white-on-charcoal until a single accent breaks through: a soft lavender `#a381ff` that fills the primary call-to-action as a fully rounded 300px pill. A deep violet `#330066` anchors the brand''s darker register. The result reads as open-source research lab rather than SaaS funnel — quiet, technical, and confident enough to spend its only saturated colour on one button.'
 
+aliases:
+  background: bg
+  foreground: text
+  primary: brand
+  primary-foreground: on-brand
+  accent: brand
+  muted: text-muted
+  border: border
+  ring: border-strong
+
 colors:
   bg: '#1e1e1e'
   bg-alt: '#191919'
