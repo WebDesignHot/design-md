@@ -19,7 +19,7 @@ aliases:
   foreground: text
   primary: brand
   primary-foreground: on-brand
-  accent: accent
+  accent: brand-soft
   muted: text-muted
   border: border
   ring: brand

@@ -23,7 +23,7 @@ aliases:
   foreground: text
   primary: brand
   primary-foreground: on-brand
-  accent: accent-sand
+  accent: pastel-sand
   muted: text-muted
   border: border
   ring: text

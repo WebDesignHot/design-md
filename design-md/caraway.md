@@ -23,7 +23,7 @@ aliases:
   foreground: text
   primary: brand
   primary-foreground: on-brand
-  accent: accent-marigold
+  accent: colorway-marigold
   muted: text-muted
   border: border
   ring: brand

@@ -26,8 +26,8 @@ aliases:
   primary: brand
   primary-foreground: on-brand
   accent: accent-gold
-  muted: text-muted
-  border: border
+  muted: text-muted-on-dark
+  border: border-on-dark
   ring: focus-ring
 colors:
   bg: '#000000'                       # pure black — homepage default, not the near-black other fintechs pick

@@ -25,7 +25,7 @@ aliases:
   foreground: text
   primary: brand
   primary-foreground: on-brand
-  accent: accent
+  accent: ring
   muted: text-muted
   border: border
   ring: ring
@@ -48,7 +48,7 @@ colors:
   brand: '#0a0a0a'                 # primary CTA fill — stark near-black pill
   brand-hover: '#1f1f1f'           # subtle warm-up on hover
   brand-active: '#2c2c2c'          # pressed state
-  on-brand: '#0a0a0a'
+  on-brand: '#ffffff'
   link: '#111827'                  # prose links — cool near-black (--tw-prose-links)
   link-hover: '#0a0a0a'            # link hover deepens to the brand ink
   link-visited: '#111827'          # xAI doesn't differentiate visited

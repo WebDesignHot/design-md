@@ -21,7 +21,7 @@ aliases:
   foreground: text
   primary: brand
   primary-foreground: on-brand
-  accent: accent
+  accent: accent-pink
   muted: text-muted
   border: border
 colors:
