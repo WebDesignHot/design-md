@@ -2,14 +2,14 @@
 
 > The largest curated open catalog of `DESIGN.md` files inspired by real production design systems — for AI coding agents.
 
-**430 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
+**440 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
 
 ```bash
 # Drop any one into your repo in seconds
 npx @webdesignhot/design-md add stripe   # writes ./DESIGN.md
 ```
 
-[**Browse all 430 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
+[**Browse all 440 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
 
 ---
 
@@ -44,7 +44,7 @@ Each PR is reviewed within 48h. We accept editorial DESIGN.md files inspired by 
 
 Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. So we built it:
 
-1. **Extracted 430 real brands** from production marketing sites (not invented "vibes")
+1. **Extracted 440 real brands** from production marketing sites (not invented "vibes")
 2. **Designed the webdesignhot/0.1 spec** around what agents actually ask for — Motion, Accessibility, Voice, and Dark Mode as first-class sections, plus a rich machine-readable token layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
@@ -74,7 +74,7 @@ design-md/
 ├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
 ├── linear.md          # Linear's design system, webdesignhot/0.1 spec
 ├── anthropic.md
-├── ...                # 430 entries total
+├── ...                # 440 entries total
 └── webdesignhot.md    # The catalog's own site
 ```
 
@@ -86,7 +86,7 @@ Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose 
 ```bash
 npx @webdesignhot/design-md add stripe            # → ./DESIGN.md
 npx @webdesignhot/design-md add linear -o brand.md # custom path
-npx @webdesignhot/design-md list                  # browse all 430
+npx @webdesignhot/design-md list                  # browse all 440
 ```
 
 <details>
