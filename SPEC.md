@@ -238,7 +238,8 @@ Three subsections:
 
 Run `design-md lint <file>` for portable single-file checks. Canonical catalog
 repositories run `design-md lint <directory> --strict`, which also enforces the
-complete metadata contract, 15 sections, canonical aliases, controlled
+complete metadata contract, numbered sections 1 through 15 exactly once,
+canonical aliases that resolve to default-theme color tokens, controlled
 categories, unique source URLs, and valid `related` targets.
 
 ## Compatibility with Google Labs alpha

@@ -25,8 +25,10 @@ guidance, or prose. Explain the evidence for factual changes in the PR.
 - Real `published_at` and `updated_at` values, with the update not earlier than publication.
 - Non-empty controlled categories and tags.
 - Exactly three valid `preview_swatch` colors.
-- Canonical `background`, `foreground`, and `primary` aliases.
-- At least 15 `##` sections with no unfinished marker text.
+- Canonical `background`, `foreground`, and `primary` aliases whose values
+  resolve to color tokens in the default theme.
+- Numbered `##` sections 1 through 15, each appearing exactly once, with no
+  unfinished marker text.
 - Every `related` slug exists; no self-reference or repeated relationship.
 - Honest `lineage` sources using absolute HTTP(S) URLs.
 
