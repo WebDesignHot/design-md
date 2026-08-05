@@ -31,7 +31,6 @@ aliases:
 colors:
   bg: '#0e1735'                    # canvas — navy gradient origin
   bg-deep: '#040714'                # gradient terminus, video player
-  bg-gradient: 'linear-gradient(180deg, #0e1735 0%, #1a2151 50%, #040714 100%)'  # subtle sky-fade
   surface: '#1a2151'                # secondary panel
   surface-strong: '#2a3170'         # input fill, hover surface
   surface-soft: '#0a132a'           # alt row band
@@ -67,8 +66,10 @@ colors:
   info: '#0089ec'
   progress-watched: '#0089ec'
   progress-rail: '#3a3f5e'
-  scrim-bottom: 'linear-gradient(0deg, #0e1735 0%, transparent 100%)'
 
+gradients:
+  bg-gradient: 'linear-gradient(180deg, #0e1735 0%, #1a2151 50%, #040714 100%)'  # subtle sky-fade
+  scrim-bottom: 'linear-gradient(0deg, #0e1735 0%, transparent 100%)'
 typography:
   display:
     family: '"Inspire", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif'

@@ -77,9 +77,10 @@ colors:
   info-text: '#1e40af'
 
   # Shadow tints
+
+shadow-tints:
   shadow-rgb: '0, 0, 0'                  # neutral black-tinted shadow base
   shadow-blue: '37, 99, 235'             # rare blue-tinted focus glow
-
 typography:
   display:
     family: 'Inter, "InterDisplay", -apple-system, "system-ui", "Helvetica Neue", sans-serif'

@@ -40,7 +40,6 @@ colors:
   surface-strong: '#e2e8ef'      # hovered card, selected sidebar
   surface-elevated: '#ffffff'    # elevated panel with shadow
   surface-input: '#ffffff'       # form input fill (white with border)
-  surface-product-band: 'linear-gradient(180deg, #f0f8ff 0%, #ffffff 100%)' # product hero gradient
   text: '#1d1d1d'                # primary body — soft near-black
   text-strong: '#000000'         # display headlines on white
   text-soft: '#5a5a5a'           # secondary metadata
@@ -53,8 +52,6 @@ colors:
   brand-deep: '#003a7a'          # Logitech Deep — darkest brand blue
   brand-hover: '#0095d3'         # hovered brand
   brand-active: '#005bb8'        # pressed brand
-  brand-gradient: 'linear-gradient(135deg, #00b8fc 0%, #0073e6 50%, #003a7a 100%)' # signature brand gradient
-  brand-gradient-soft: 'linear-gradient(135deg, #d4f0ff 0%, #b3deff 100%)' # soft pastel gradient for product backdrops
   brand-pastel-pink: '#ffb5c5'   # G-series creator pink accent
   brand-pastel-mint: '#a8e6d3'   # G-series creator mint accent
   brand-pastel-yellow: '#ffe082' # G-series creator yellow accent
@@ -85,6 +82,10 @@ colors:
   danger: '#d63838'
   info: '#0073e6'
 
+gradients:
+  surface-product-band: 'linear-gradient(180deg, #f0f8ff 0%, #ffffff 100%)' # product hero gradient
+  brand-gradient: 'linear-gradient(135deg, #00b8fc 0%, #0073e6 50%, #003a7a 100%)' # signature brand gradient
+  brand-gradient-soft: 'linear-gradient(135deg, #d4f0ff 0%, #b3deff 100%)' # soft pastel gradient for product backdrops
 typography:
   display:
     family: '"Brown", "BrownStd", "Helvetica Neue", Arial, sans-serif'

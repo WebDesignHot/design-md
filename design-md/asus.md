@@ -51,7 +51,6 @@ colors:
   brand-rog-bright: '#ff1a1a'     # brighter ROG red on hover
   brand-rog-deep: '#8b0000'       # deeper ROG red for gradient floor
   brand-rog-glow: 'rgba(205,0,0,0.5)' # ROG red glow halo
-  brand-rog-gradient: 'linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)' # ROG signature gradient
   brand-tuf-yellow: '#ffd700'     # TUF Gaming sub-sub-brand yellow
   brand-tuf-deep: '#b8860b'       # TUF deep gold
   brand-asus-blue: '#003a78'      # ASUS corporate dark blue
@@ -87,6 +86,8 @@ colors:
   danger: '#cd0000'
   info: '#0073e6'
 
+gradients:
+  brand-rog-gradient: 'linear-gradient(135deg, #ff1a1a 0%, #cd0000 50%, #8b0000 100%)' # ROG signature gradient
 typography:
   display:
     family: '"Saira", "Rajdhani", "Roboto", "Helvetica Neue", Arial, sans-serif'

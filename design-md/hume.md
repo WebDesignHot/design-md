@@ -72,9 +72,10 @@ colors:
   info-text: '#3a3633'
 
   # Shadow tints
+
+shadow-tints:
   shadow-rgb: '34, 28, 22'                # warm brown-black shadow base — never neutral grey
   shadow-warm: '160, 120, 80'            # rare warm-amber glow for hero illustration lift
-
 typography:
   display:
     family: 'Fellix, system-ui, -apple-system, "Helvetica Neue", sans-serif'

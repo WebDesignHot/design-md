@@ -70,7 +70,6 @@ colors:
   chroma-blue: '#0099ff'
   chroma-purple: '#aa00ff'
   chroma-pink: '#ff0088'
-  rgb-gradient: 'linear-gradient(90deg, #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088)'
   badge-new: '#44d62c'           # "NEW" badge fill
   badge-pre-order: '#44d62c'     # "PRE-ORDER" green
   badge-out-of-stock: '#7a7a7a'  # muted out-of-stock
@@ -84,6 +83,8 @@ colors:
   danger: '#ff3030'
   info: '#44d62c'
 
+gradients:
+  rgb-gradient: 'linear-gradient(90deg, #ff0000, #ff8800, #ffee00, #44d62c, #00ffff, #0099ff, #aa00ff, #ff0088)'
 typography:
   display:
     family: '"Roboto", "Helvetica Neue", Arial, sans-serif'

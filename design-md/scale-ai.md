@@ -54,8 +54,6 @@ colors:
   brand-light: '#9068c2'              # light lavender — gradient top stop
   brand-mauve: '#8a507e'               # gradient mid-stop — dusty mauve
   brand-periwinkle: '#7b8ce7'          # gradient mid-stop — cool periwinkle blue
-  gradient-hero: 'linear-gradient(135deg, #5933b2 0%, #8a507e 45%, #9068c2 100%)'
-  gradient-cool: 'linear-gradient(135deg, #5933b2 0%, #7b8ce7 100%)'
   accent-lavender: '#9068c2'           # accent — light lavender highlight, links on dark
   accent-violet: '#5933b2'             # accent — deep violet, data-viz fills
   link: '#000000'                      # links are black on light (--tw-prose-links: #000)
@@ -71,6 +69,9 @@ colors:
   semantic-error: '#d12d2d'
   semantic-info: '#5933b2'             # info notices reuse the brand purple
 
+gradients:
+  gradient-hero: 'linear-gradient(135deg, #5933b2 0%, #8a507e 45%, #9068c2 100%)'
+  gradient-cool: 'linear-gradient(135deg, #5933b2 0%, #7b8ce7 100%)'
 typography:
   display:
     family: '"Aeonik", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'

@@ -73,11 +73,6 @@ colors:
   border-strong: 'rgba(22, 51, 0, 0.18)' # 18% forest for focused inputs
   border-on-forest: 'rgba(255, 251, 245, 0.14)'  # cream hairline on forest band
   shadow-ambient: 'rgba(22, 51, 0, 0.04)'   # subtle forest-tinted ambient
-  shadow-card: 'rgba(22, 51, 0, 0.06) 0 2px 8px'  # quiet card shadow
-  shadow-elev: 'rgba(22, 51, 0, 0.10) 0 12px 32px -8px'  # elevated dropdown
-  shadow-popover: 'rgba(22, 51, 0, 0.12) 0 16px 40px -16px'
-  shadow-modal: 'rgba(22, 51, 0, 0.20) 0 24px 64px -16px'
-  shadow-glow-lime: 'rgba(159, 232, 112, 0.32) 0 8px 24px -8px'  # lime glow under primary CTA
   scrim: 'rgba(22, 51, 0, 0.50)'        # modal backdrop, forest-tinted
   success: '#1a7f3a'                    # forest-green confirmation
   success-soft: 'rgba(26, 127, 58, 0.10)'

@@ -52,7 +52,6 @@ colors:
   brand-darkest: '#003654'       # darkest brand
   brand-hover: '#005a8a'         # hovered brand
   brand-active: '#003654'        # pressed brand
-  brand-gradient: 'linear-gradient(135deg, #007db8 0%, #005a8a 100%)' # Dell brand gradient
   brand-emc-purple: '#5d3fd3'    # Dell EMC enterprise sub-brand purple
   alienware-blue: '#00d6ff'      # Alienware sub-brand cyan
   alienware-glow: 'rgba(0,214,255,0.5)' # Alienware glow halo
@@ -86,6 +85,8 @@ colors:
   danger: '#cc0000'
   info: '#007db8'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #007db8 0%, #005a8a 100%)' # Dell brand gradient
 typography:
   display:
     family: '"Roboto", "Helvetica Neue", Arial, sans-serif'

@@ -84,9 +84,10 @@ colors:
   info-text: '#2a3eb1'
 
   # Shadow tints
+
+shadow-tints:
   shadow-rgb: '10, 10, 35'               # deep-navy tinted shadow base
   shadow-blue: '77, 107, 254'            # rare blue focus glow
-
 typography:
   display:
     family: 'Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", -apple-system, "system-ui", sans-serif'

@@ -50,7 +50,6 @@ colors:
   brand-red: '#e24329'        # tanuki red — gradient mid-stop, hover/active orange
   brand-purple: '#6e49cb'     # tanuki purple — gradient end-stop, editorial accent
   brand-soft: 'rgba(252, 109, 38, 0.10)'   # tinted orange wash — eyebrow chips
-  brand-gradient: 'linear-gradient(135deg, #fc6d26 0%, #e24329 50%, #6e49cb 100%)'  # tanuki gradient
   cta-bg: '#171321'           # primary CTA — dark-on-white block
   cta-text: '#ffffff'
   cta-hover: '#2b2640'        # dark CTA hover — lifted ink
@@ -67,6 +66,8 @@ colors:
   semantic-info: '#6e49cb'    # info — purple
   shadow-tint: 'rgba(23, 19, 33, 0.10)'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #fc6d26 0%, #e24329 50%, #6e49cb 100%)'  # tanuki gradient
 typography:
   display:
     family: '"GitLab Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'

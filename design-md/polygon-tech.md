@@ -62,13 +62,14 @@ colors:
   semantic-down: '#ef4444'
   semantic-warning: '#f59e0b'
   semantic-info: '#8247e5'
-  gradient-hero: 'linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)'
-  gradient-card: 'linear-gradient(135deg, rgba(130,71,229,0.10) 0%, rgba(130,71,229,0.02) 100%)'
   focus-ring: 'rgba(130,71,229,0.40)'
   scrim: 'rgba(14,8,32,0.60)'
   link: '#8247e5'
   link-hover: '#6a35c4'
 
+gradients:
+  gradient-hero: 'linear-gradient(135deg, #1a1233 0%, #2d1c5c 50%, #8247e5 100%)'
+  gradient-card: 'linear-gradient(135deg, rgba(130,71,229,0.10) 0%, rgba(130,71,229,0.02) 100%)'
 typography:
   display:
     family: '"Polygon Display", "DM Sans", Inter, -apple-system, system-ui, sans-serif'

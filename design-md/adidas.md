@@ -50,7 +50,6 @@ colors:
   text-on-cta: '#ffffff'            # white on primary CTA
   link: '#000000'                   # default ink link
   link-hover: '#000000'              # link colour stays — only the underline animates
-  link-underline: 'currentColor'    # link underline matches text colour
   border: '#cccccc'                 # default 1px hairline (lighter than text)
   border-soft: '#ececec'             # editorial dividers
   border-strong: '#000000'           # focus state hairline + selected outline
@@ -68,6 +67,8 @@ colors:
   rating-fill: '#000000'             # ratings stay black, never gold
   rating-empty: '#cccccc'
 
+effects:
+  link-underline: 'currentColor'    # link underline matches text colour
 typography:
   display:
     family: 'adidasFG, AdihausDIN, "Helvetica Neue", Helvetica, Arial, sans-serif'

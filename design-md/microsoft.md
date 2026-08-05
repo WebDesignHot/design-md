@@ -64,8 +64,6 @@ colors:
   border-strong: '#737373'     # table-row separator
   border-subtle: 'rgba(6,22,31,0.06)' # faintest divider
   ring-focus: '#0067b8'        # 2px focus ring
-  shadow-fluent: 'rgba(0,0,0,0.10) 0 6.4px 14.4px' # Fluent depth-8
-  shadow-fluent-lifted: 'rgba(0,0,0,0.12) 0 12.8px 28.8px' # Fluent depth-16
   on-brand: '#ffffff'          # white on Cortana blue
   on-accent: '#ffffff'         # white on cyan
   success: '#0e7c41'
@@ -170,6 +168,8 @@ shadows:
   fluent-32: 'rgba(0,0,0,0.14) 0 25.6px 57.6px, rgba(0,0,0,0.07) 0 4.8px 14.4px'
   ring: '0 0 0 2px #0067b8'
 
+  source-shadow-fluent: 'rgba(0,0,0,0.10) 0 6.4px 14.4px' # Fluent depth-8
+  source-shadow-fluent-lifted: 'rgba(0,0,0,0.12) 0 12.8px 28.8px' # Fluent depth-16
 accessibility:
   contrast-text-on-bg: 16.8           # #0e1726 on #fffdfb — AAA
   contrast-text-on-brand: 5.4         # #fff on #0067b8 — AA

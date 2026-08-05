@@ -55,8 +55,6 @@ colors:
   border: '#2a2d33'                  # default 1px hairline
   border-soft: '#1f2126'             # divider
   border-strong: '#4d5159'           # focused input
-  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%)'
-  scrim-bottom: 'linear-gradient(0deg, #0b0c0f 0%, transparent 100%)'
   shadow-card: 'rgba(0,0,0,0.7)'    # poster hover shadow
   shadow-billboard: 'rgba(0,0,0,0.85)'
   success: '#00c08a'                 # subscription confirmed
@@ -69,6 +67,9 @@ colors:
   progress-rail: '#3a3d44'
   hbo-prestige: '#7a1fa2'             # legacy HBO logo purple, on archive titles
 
+gradients:
+  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%)'
+  scrim-bottom: 'linear-gradient(0deg, #0b0c0f 0%, transparent 100%)'
 typography:
   display:
     family: '"Sharp Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif'

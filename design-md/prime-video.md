@@ -65,8 +65,9 @@ colors:
   info: '#1399ff'
   progress-watched: '#1399ff'
   progress-rail: '#3a4856'
-  scrim-bottom: 'linear-gradient(0deg, #0f171e 0%, transparent 100%)'
 
+gradients:
+  scrim-bottom: 'linear-gradient(0deg, #0f171e 0%, transparent 100%)'
 typography:
   display:
     family: '"Amazon Ember Display", "Amazon Ember", Arial, "Helvetica Neue", Helvetica, sans-serif'

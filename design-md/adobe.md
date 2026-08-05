@@ -73,8 +73,9 @@ colors:
   danger-bg: '#fce9ea'
   info: '#1473e6'
   info-bg: '#e1f0ff'
-  gradient-wordmark: 'linear-gradient(135deg, #ff0f5b 0%, #fa0f00 50%, #ff7a00 100%)'
 
+gradients:
+  gradient-wordmark: 'linear-gradient(135deg, #ff0f5b 0%, #fa0f00 50%, #ff7a00 100%)'
 typography:
   display:
     family: '"Adobe Clean", "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif'

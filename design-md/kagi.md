@@ -85,9 +85,10 @@ colors:
   info-text: '#3a3a6a'
 
   # Shadow tints
+
+shadow-tints:
   shadow-rgb: '43, 36, 23'               # warm-brown tinted shadow base
   shadow-warm: '201, 122, 59'            # rare brand-warm focus glow
-
 typography:
   display:
     family: '"IBM Plex Sans", -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'

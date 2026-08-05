@@ -58,7 +58,6 @@ colors:
   border-strong: '#48484a'                # focused input
   shadow-card: 'rgba(0,0,0,0.7)'
   shadow-billboard: 'rgba(0,0,0,0.9)'
-  scrim-bottom: 'linear-gradient(0deg, #000000 0%, transparent 100%)'
   success: '#34c759'
   warning: '#ff9f0a'
   danger: '#ff453a'
@@ -68,6 +67,8 @@ colors:
   rating-badge: '#ffffff'                  # white maturity chip on dark
   liquid-glass-tint: 'rgba(255,255,255,0.18)'  # iOS 26 liquid-glass tint for player chrome
 
+gradients:
+  scrim-bottom: 'linear-gradient(0deg, #000000 0%, transparent 100%)'
 typography:
   display:
     family: '"SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif'

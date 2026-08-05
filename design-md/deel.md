@@ -82,13 +82,6 @@ colors:
   border-coral: 'rgba(255, 77, 46, 0.40)'   # coral-tinted border for emphasis
   shadow-ambient-dark: 'rgba(0, 0, 0, 0.20)'   # ambient shadow on dark canvas
   shadow-ambient-light: 'rgba(12, 12, 12, 0.06)'  # ambient on cream
-  shadow-card-dark: 'rgba(0, 0, 0, 0.32) 0 4px 20px'  # signature dark card shadow
-  shadow-card-light: 'rgba(12, 12, 12, 0.08) 0 4px 20px'  # signature light card shadow
-  shadow-elev: 'rgba(0, 0, 0, 0.40) 0 12px 32px -8px'  # elevated dropdown
-  shadow-popover: 'rgba(0, 0, 0, 0.50) 0 16px 40px -16px'
-  shadow-modal: 'rgba(0, 0, 0, 0.60) 0 24px 64px -16px'
-  shadow-glow-coral: 'rgba(255, 77, 46, 0.32) 0 8px 24px -8px'  # coral glow under primary CTA
-  shadow-light-leak: 'rgba(255, 77, 46, 0.16) 0 30px 60px -30px'  # the signature orange light-leak under product stills
   scrim: 'rgba(0, 0, 0, 0.70)'          # modal backdrop on either canvas
   success: '#3aa75c'                    # forest-green confirmation
   success-soft-dark: 'rgba(58, 167, 92, 0.16)'

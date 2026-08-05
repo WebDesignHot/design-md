@@ -63,7 +63,6 @@ colors:
   border: '#3a3a3d'                 # default low-contrast hairline
   border-soft: '#26262c'            # divider between rows
   border-strong: '#53535f'          # focused input outline
-  scrim-card: 'linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%)'
   shadow-card: 'rgba(0,0,0,0.5)'
   shadow-modal: 'rgba(0,0,0,0.76)'
   success: '#00f593'                # online/live indicator green
@@ -82,6 +81,8 @@ colors:
   highlight-broadcaster: '#eb0400'  # broadcaster chat name colour
   highlight-prime: '#3ea6f5'        # Prime sub chat indicator
 
+gradients:
+  scrim-card: 'linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%)'
 typography:
   display:
     family: '"Inter", "Helvetica Neue", Helvetica, Arial, sans-serif'

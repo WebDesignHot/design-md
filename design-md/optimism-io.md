@@ -58,13 +58,14 @@ colors:
   semantic-down: '#ef4444'
   semantic-warning: '#f59e0b'
   semantic-info: '#ff0420'
-  gradient-hero: 'linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #7d020f 100%)'
-  gradient-red: 'linear-gradient(135deg, #ff0420 0%, #cc0319 100%)'
   focus-ring: 'rgba(255,4,32,0.45)'
   scrim: 'rgba(0,0,0,0.65)'
   link: '#ff0420'
   link-hover: '#cc0319'
 
+gradients:
+  gradient-hero: 'linear-gradient(135deg, #000000 0%, #1a1a1a 60%, #7d020f 100%)'
+  gradient-red: 'linear-gradient(135deg, #ff0420 0%, #cc0319 100%)'
 typography:
   display:
     family: '"Optimism Display", "Inter Display", Inter, -apple-system, system-ui, sans-serif'

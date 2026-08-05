@@ -59,8 +59,6 @@ colors:
   border: '#282828'                 # default low-contrast hairline
   border-soft: '#181818'            # divider between rows
   border-strong: '#727272'          # focused input outline
-  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%)'
-  scrim-card: 'linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%)'
   shadow-card: 'rgba(0,0,0,0.5)'   # tile hover lift
   shadow-modal: 'rgba(0,0,0,0.76)'
   success: '#1ed760'                # uses brand green — uncommon
@@ -73,6 +71,9 @@ colors:
   premium-badge: '#1ed760'          # Premium subscriber tag
   equalizer-bar: '#1ed760'          # animated equalizer on currently-playing row
 
+gradients:
+  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 100%)'
+  scrim-card: 'linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%)'
 typography:
   display:
     family: '"Spotify Mix", "CircularSp", "Circular", "Helvetica Neue", Helvetica, Arial, sans-serif'

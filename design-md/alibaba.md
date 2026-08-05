@@ -71,9 +71,7 @@ colors:
   border-card: '#dddddd'                                # supplier-card outline
   shadow-card: 'rgba(0,0,0,0.08)'
   shadow-card-hover: 'rgba(0,0,0,0.16)'
-  shadow-modal: 'rgba(0,0,0,0.25) 0 8px 24px'
   shadow-orange: 'rgba(255,106,0,0.3)'
-  flash-deal-bg: 'linear-gradient(90deg, #ff6a00, #ff8533)'    # promotional banner gradient
   flash-deal-pulse: 'rgba(255,106,0,0.6)'
   rfq-ribbon: '#ff6a00'                                  # RFQ banner ribbon
   trade-assurance: '#1976d2'                              # blue trust shield
@@ -85,6 +83,8 @@ colors:
   danger: '#d62828'
   info: '#1976d2'
 
+gradients:
+  flash-deal-bg: 'linear-gradient(90deg, #ff6a00, #ff8533)'    # promotional banner gradient
 typography:
   display:
     family: '"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif'

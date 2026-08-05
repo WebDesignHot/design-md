@@ -49,7 +49,6 @@ colors:
   brand-deep: '#cccc00'          # deeper yellow
   brand-darkest: '#999900'       # darkest yellow
   brand-glow: 'rgba(255,255,0,0.4)' # yellow glow halo
-  brand-gradient: 'linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)' # Corsair yellow gradient
   on-brand: '#000000'            # text on yellow is black (high contrast)
   cta-primary: '#ffff00'         # yellow CTA
   cta-primary-hover: '#ffff66'
@@ -63,7 +62,6 @@ colors:
   shadow-card: 'rgba(0,0,0,0.6)'
   shadow-elev: 'rgba(0,0,0,0.8)'
   shadow-corsair-glow: 'rgba(255,255,0,0.4)' # yellow glow halo
-  rgb-spectrum: 'linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #0066ff, #aa00ff, #ff0088)' # iCUE RGB spectrum
   badge-new: '#ffff00'
   badge-pre-order: 'transparent'
   badge-icue: '#0066ff'           # iCUE compatibility badge
@@ -77,6 +75,9 @@ colors:
   danger: '#ff3030'
   info: '#0066ff'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #ffff66 0%, #ffff00 50%, #cccc00 100%)' # Corsair yellow gradient
+  rgb-spectrum: 'linear-gradient(90deg, #ff0000, #ff8800, #ffff00, #00ff00, #00ffff, #0066ff, #aa00ff, #ff0088)' # iCUE RGB spectrum
 typography:
   display:
     family: '"Roboto", "Helvetica Neue", Arial, sans-serif'

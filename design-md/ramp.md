@@ -68,8 +68,6 @@ colors:
   link-hover: '#000000'                 # hover stays black; underline thickens
   link-visited: '#3a3a36'               # quieter visited tone, rare
   shadow-ambient: 'rgba(10, 10, 10, 0.04)'  # rare ambient — Ramp largely avoids shadows
-  shadow-card: 'rgba(10, 10, 10, 0.04) 0 1px 2px'  # the absolute minimum shadow tier
-  shadow-elev: 'rgba(10, 10, 10, 0.08) 0 8px 24px -8px'  # used only on dropdowns / popovers
   scrim: 'rgba(10, 10, 10, 0.50)'       # modal backdrop
   success: '#1a7f3a'                    # forest-green confirmation — quiet, editorial
   success-soft: 'rgba(26, 127, 58, 0.10)'
@@ -280,6 +278,7 @@ shadows:
   modal: 'rgba(10, 10, 10, 0.20) 0 24px 64px -16px'
   ring: '0 0 0 2px rgba(10, 10, 10, 0.16)'
 
+  source-shadow-card: 'rgba(10, 10, 10, 0.04) 0 1px 2px'  # the absolute minimum shadow tier
 accessibility:
   contrast-text-on-bg: 19.6                   # #0a0a0a on #ffffff — AAA at all sizes
   contrast-text-on-bg-soft: 18.7              # #0a0a0a on #fafaf7 — AAA at all sizes

@@ -62,8 +62,6 @@ colors:
   shadow-color-md: 'rgba(0, 0, 0, 0.50)' # standard
   shadow-color-lg: 'rgba(0, 0, 0, 0.60)' # elevated
   shadow-glow-purple: 'rgba(100, 108, 255, 0.25)' # rare brand glow on bolt mark
-  gradient-bolt: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # signature mark gradient
-  gradient-text: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # rare display-headline highlight
   success: '#22c55e'
   warning: '#f59e0b'
   danger: '#ef4444'
@@ -74,6 +72,9 @@ colors:
   code-comment: '#697098'
   code-number: '#f78c6c'
 
+gradients:
+  gradient-bolt: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # signature mark gradient
+  gradient-text: 'linear-gradient(120deg, #bd34fe 30%, #41d1ff)'  # rare display-headline highlight
 typography:
   display:
     family: 'Manrope, "Inter Variable", Inter, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif'

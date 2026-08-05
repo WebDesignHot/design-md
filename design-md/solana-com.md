@@ -40,7 +40,6 @@ colors:
   brand-magenta: '#dc1fff'
   brand-purple: '#9945ff'
   brand-cyan: '#14f195'
-  brand-gradient: 'linear-gradient(90deg, #dc1fff 0%, #9945ff 50%, #14f195 100%)'
   brand-tint: 'rgba(153, 69, 255, 0.15)'
   on-brand: '#000000'
   text: '#ffffff'
@@ -63,6 +62,8 @@ colors:
   danger: '#ff4757'
   info: '#9945ff'
 
+gradients:
+  brand-gradient: 'linear-gradient(90deg, #dc1fff 0%, #9945ff 50%, #14f195 100%)'
 typography:
   display:
     family: '"ABC Diatype", "Söhne", "Inter", -apple-system, BlinkMacSystemFont, sans-serif'

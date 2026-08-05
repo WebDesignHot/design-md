@@ -36,7 +36,6 @@ colors:
   bg-soft-2: '#f7f7f9'           # softer panel, between bg-soft and white
   bg-ink: '#0e0f12'              # near-black hero band — rare, used for testimonials/inverted sections
   bg-violet: '#1a0d2e'           # deep aubergine band — rare emotional emphasis
-  bg-gradient-wash: 'linear-gradient(180deg, rgba(255, 92, 173, 0.06) 0%, rgba(168, 85, 255, 0.06) 50%, rgba(91, 109, 255, 0.06) 100%)'
   surface: '#ffffff'             # default card surface
   surface-soft: '#f7f7f9'        # secondary card surface
   surface-cool: '#f0f0f3'        # tertiary tile surface
@@ -69,17 +68,7 @@ colors:
   border-strong: 'rgba(14, 15, 18, 0.16)'  # 16% near-black, focused inputs
   border-brand: 'rgba(168, 85, 255, 0.40)' # purple-tinted border for emphasis
   shadow-ambient: 'rgba(14, 15, 18, 0.04)'           # subtle ambient
-  shadow-card: 'rgba(14, 15, 18, 0.04) 0 4px 20px'   # the signature soft elevated shadow
-  shadow-elev: 'rgba(14, 15, 18, 0.08) 0 12px 32px -8px'  # elevated dropdown
-  shadow-popover: 'rgba(14, 15, 18, 0.10) 0 16px 40px -16px'
-  shadow-modal: 'rgba(14, 15, 18, 0.20) 0 24px 64px -16px'
-  shadow-glow-brand: 'rgba(168, 85, 255, 0.24) 0 8px 32px -4px'  # purple glow on hero gradient ground
   scrim: 'rgba(14, 15, 18, 0.60)'           # modal backdrop
-  gradient-primary: 'linear-gradient(135deg, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
-  gradient-hero: 'linear-gradient(135deg, #ff5cad 0%, #a855ff 60%, #5b6dff 100%)'
-  gradient-wash: 'linear-gradient(135deg, rgba(255, 92, 173, 0.10) 0%, rgba(168, 85, 255, 0.10) 50%, rgba(91, 109, 255, 0.10) 100%)'
-  gradient-vertical: 'linear-gradient(180deg, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
-  gradient-radial: 'radial-gradient(circle at 30% 30%, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
   success: '#10b981'             # emerald-green confirmation
   success-soft: 'rgba(16, 185, 129, 0.10)'
   warning: '#f59e0b'             # advisory amber
@@ -89,6 +78,13 @@ colors:
   info: '#5b6dff'                # info reads as indigo accent
   info-soft: 'rgba(91, 109, 255, 0.10)'
 
+gradients:
+  bg-gradient-wash: 'linear-gradient(180deg, rgba(255, 92, 173, 0.06) 0%, rgba(168, 85, 255, 0.06) 50%, rgba(91, 109, 255, 0.06) 100%)'
+  gradient-primary: 'linear-gradient(135deg, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
+  gradient-hero: 'linear-gradient(135deg, #ff5cad 0%, #a855ff 60%, #5b6dff 100%)'
+  gradient-wash: 'linear-gradient(135deg, rgba(255, 92, 173, 0.10) 0%, rgba(168, 85, 255, 0.10) 50%, rgba(91, 109, 255, 0.10) 100%)'
+  gradient-vertical: 'linear-gradient(180deg, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
+  gradient-radial: 'radial-gradient(circle at 30% 30%, #ff5cad 0%, #a855ff 50%, #5b6dff 100%)'
 typography:
   display:
     family: '"Söhne", "Söhne Breit", "Inter Display", Inter, "Helvetica Neue", Arial, sans-serif'
@@ -296,6 +292,7 @@ shadows:
   brand-glow-hover: 'rgba(168, 85, 255, 0.40) 0 12px 32px -8px'
   ring: '0 0 0 3px rgba(168, 85, 255, 0.24)'
 
+  source-shadow-glow-brand: 'rgba(168, 85, 255, 0.24) 0 8px 32px -4px'  # purple glow on hero gradient ground
 accessibility:
   contrast-text-on-bg: 16.8                   # #0e0f12 on #ffffff — AAA at all sizes
   contrast-text-on-bg-soft: 14.2              # #0e0f12 on #f5f5f7 — AAA at all sizes

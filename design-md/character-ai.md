@@ -86,9 +86,10 @@ colors:
   info-text: '#5a2ee0'
 
   # Shadow tints
+
+shadow-tints:
   shadow-rgb: '38, 39, 43'               # zinc-900 tinted shadows
   shadow-glow: '155, 108, 255'           # lavender focus glow
-
 typography:
   display:
     family: 'atHauss, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'

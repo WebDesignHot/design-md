@@ -52,7 +52,6 @@ colors:
   brand-darkest: '#002d4c'       # darkest brand
   brand-hover: '#0080b8'         # hovered brand
   brand-active: '#005d83'        # pressed brand
-  brand-gradient: 'linear-gradient(135deg, #0096d6 0%, #005d83 100%)' # signature HP gradient
   on-brand: '#ffffff'
   cta-primary: '#0096d6'         # HP cyan CTA
   cta-primary-hover: '#0080b8'
@@ -84,6 +83,8 @@ colors:
   danger: '#e60000'
   info: '#0096d6'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #0096d6 0%, #005d83 100%)' # signature HP gradient
 typography:
   display:
     family: '"Forma DJR Display", "Forma DJR Banner", "Helvetica Neue", Arial, sans-serif'

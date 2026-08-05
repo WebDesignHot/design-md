@@ -49,7 +49,6 @@ colors:
   brand-deep: '#cc5500'           # deeper orange
   brand-darkest: '#993f00'        # darkest orange
   brand-glow: 'rgba(255,105,0,0.4)' # orange glow halo
-  brand-gradient: 'linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)' # SteelSeries gradient
   on-brand: '#ffffff'             # text on orange — white (slightly lower contrast than black-on-yellow)
   cta-primary: '#ff6900'          # orange CTA
   cta-primary-hover: '#ff8533'
@@ -76,6 +75,8 @@ colors:
   danger: '#ff3030'
   info: '#0099ff'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #ff8533 0%, #ff6900 50%, #cc5500 100%)' # SteelSeries gradient
 typography:
   display:
     family: '"Inter", "Helvetica Neue", Arial, sans-serif'

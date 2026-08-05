@@ -64,7 +64,6 @@ colors:
     shadow-elev: 'rgba(24, 26, 28, 0.10)'
     shadow-deep: 'rgba(24, 26, 28, 0.16)'
     scrim: 'rgba(10, 10, 12, 0.50)'
-    gradient-teal: 'linear-gradient(135deg, #32e6e2 0%, #5653ed 100%)'   # teal→indigo brand sweep
     success: '#1aa179'
     success-soft: 'rgba(26, 161, 121, 0.12)'
     warning: '#d98b00'
@@ -101,7 +100,6 @@ colors:
     shadow-elev: 'rgba(0, 0, 0, 0.60)'
     shadow-deep: 'rgba(0, 0, 0, 0.72)'
     scrim: 'rgba(0, 0, 0, 0.70)'
-    gradient-teal: 'linear-gradient(135deg, #32e6e2 0%, #8886ff 100%)'
     success: '#3dd9a3'
     success-soft: 'rgba(61, 217, 163, 0.16)'
     warning: '#f0b429'
@@ -111,6 +109,11 @@ colors:
     info: '#8886ff'
     info-soft: 'rgba(136, 134, 255, 0.14)'
 
+gradients:
+  light:
+    gradient-teal: 'linear-gradient(135deg, #32e6e2 0%, #5653ed 100%)'   # teal→indigo brand sweep
+  dark:
+    gradient-teal: 'linear-gradient(135deg, #32e6e2 0%, #8886ff 100%)'
 typography:
   display:
     family: 'Figtree, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'

@@ -97,8 +97,9 @@ colors:
   danger-tint: 'rgba(239, 68, 68, 0.12)'
   info: '#60a5fa'
   info-tint: 'rgba(96, 165, 250, 0.12)'
-  grain-radial: 'radial-gradient(60% 40% at 50% 0%, rgba(198,244,50,0.04), transparent 70%)'
 
+gradients:
+  grain-radial: 'radial-gradient(60% 40% at 50% 0%, rgba(198,244,50,0.04), transparent 70%)'
 typography:
   display:
     family: 'Inter Variable, Inter, -apple-system, sans-serif'

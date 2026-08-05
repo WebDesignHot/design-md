@@ -49,7 +49,6 @@ colors:
   brand-deep: '#cc0000'          # deeper MSI red
   brand-darkest: '#990000'       # darkest MSI red
   brand-glow: 'rgba(255,0,0,0.4)' # MSI red glow halo
-  brand-gradient: 'linear-gradient(135deg, #ff3333 0%, #ff0000 50%, #990000 100%)' # MSI dragon gradient
   brand-aero-blue: '#00bfff'     # MSI Aero (creator/business) sub-brand cyan
   brand-prestige-rose-gold: '#b87333' # MSI Prestige creator brand rose-gold
   on-brand: '#ffffff'
@@ -77,6 +76,8 @@ colors:
   danger: '#ff0000'
   info: '#00bfff'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #ff3333 0%, #ff0000 50%, #990000 100%)' # MSI dragon gradient
 typography:
   display:
     family: '"Bebas Neue", "Oswald", "Arial Narrow", "Roboto Condensed", sans-serif'

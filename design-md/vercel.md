@@ -72,9 +72,6 @@ colors:
     shadow-elev: 'rgba(0, 0, 0, 0.06)'
     shadow-deep: 'rgba(0, 0, 0, 0.10)'
     scrim: 'rgba(0, 0, 0, 0.40)'
-    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
-    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
-    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.20) 100%)'
     success: '#0070f3'
     success-soft: 'rgba(0, 112, 243, 0.10)'
     warning: '#f5a623'
@@ -122,9 +119,6 @@ colors:
     shadow-elev: 'rgba(0, 0, 0, 0.55)'
     shadow-deep: 'rgba(0, 0, 0, 0.70)'
     scrim: 'rgba(0, 0, 0, 0.70)'
-    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
-    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
-    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.30) 100%)'
     success: '#0070f3'
     success-soft: 'rgba(0, 112, 243, 0.16)'
     warning: '#f5a623'
@@ -134,6 +128,15 @@ colors:
     info: '#0070f3'
     info-soft: 'rgba(0, 112, 243, 0.16)'
 
+gradients:
+  light:
+    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
+    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
+    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.20) 100%)'
+  dark:
+    gradient-conic: 'conic-gradient(from 230deg at 50% 50%, #0070f3, #00b8ff, #7928ca, #ff0080, #0070f3)'
+    gradient-blue: 'linear-gradient(135deg, #0070f3 0%, #00b8ff 100%)'
+    gradient-edge: 'linear-gradient(180deg, transparent 0%, rgba(0, 112, 243, 0.30) 100%)'
 typography:
   display:
     family: 'Geist, "GeistVariable", "Geist Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'

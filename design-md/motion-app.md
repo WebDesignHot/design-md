@@ -55,7 +55,6 @@ colors:
   link-hover: '#1e40af'
   gradient-stop-1: '#16a34a'     # green stop
   gradient-stop-2: '#7c3aed'     # purple stop
-  gradient-hero: 'linear-gradient(105deg, #16a34a 0%, #4f46e5 50%, #7c3aed 100%)'  # green→indigo→purple
   pastel-mint: '#dcf2e3'         # demo card — calendar / time-block
   pastel-lavender: '#ede9fe'     # demo card — AI scheduler
   pastel-sky: '#dbeafe'          # demo card — meetings / availability
@@ -76,6 +75,8 @@ colors:
   ring-brand: 'rgba(22, 163, 74, 0.45)'
   ring-ai: 'rgba(124, 58, 237, 0.45)'
 
+gradients:
+  gradient-hero: 'linear-gradient(105deg, #16a34a 0%, #4f46e5 50%, #7c3aed 100%)'  # green→indigo→purple
 typography:
   display:
     family: '"Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'

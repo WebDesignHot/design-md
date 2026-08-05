@@ -43,7 +43,6 @@ colors:
   brand-blue: '#27c2ff'
   brand-blue-deep: '#1da0d8'
   brand-blue-soft: 'rgba(39, 194, 255, 0.20)'
-  brand-gradient: 'linear-gradient(135deg, #fcfd00 0%, #27c2ff 100%)'
   on-brand-yellow: '#0e1218'
   on-brand-blue: '#ffffff'
   text: '#ffffff'
@@ -69,6 +68,8 @@ colors:
   danger: '#ff4757'
   info: '#27c2ff'
 
+gradients:
+  brand-gradient: 'linear-gradient(135deg, #fcfd00 0%, #27c2ff 100%)'
 typography:
   display:
     family: '"Burbank Big Condensed", "Burbank Big", "Bebas Neue", "Oswald", Impact, sans-serif'

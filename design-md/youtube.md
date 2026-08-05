@@ -65,8 +65,6 @@ colors:
   border-strong: '#5e5e5e'                   # focused input
   border-light: '#e5e5e5'                    # light theme hairline
   shadow-card: 'rgba(0,0,0,0.4)'             # rare — most cards are flat
-  shadow-modal: 'rgba(0,0,0,0.5) 0 8px 24px'
-  scrim-thumb: 'linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 60%)'
   progress-watched: '#ff0000'                 # the iconic red watch-progress bar
   progress-rail: 'rgba(255,255,255,0.2)'
   progress-buffer: 'rgba(255,255,255,0.4)'
@@ -80,6 +78,8 @@ colors:
   shorts-tab: '#ff0033'                       # Shorts vertical-feed accent
   community-tab: '#3ea6ff'
 
+gradients:
+  scrim-thumb: 'linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 60%)'
 typography:
   display:
     family: '"YouTube Sans", Roboto, Arial, sans-serif'

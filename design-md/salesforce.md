@@ -66,8 +66,6 @@ colors:
   border-strong: '#c9c7c5'      # table separator
   border-subtle: '#ecebea'      # faint divider
   ring-focus: '#1589ee'         # Lightning focus ring
-  shadow-card: 'rgba(0,0,0,0.10) 0 2px 4px'
-  shadow-elevated: 'rgba(0,0,0,0.16) 0 4px 12px'
   on-brand: '#ffffff'
   on-cyan: '#ffffff'
   success: '#04844b'
@@ -78,8 +76,9 @@ colors:
   danger-bg: '#feded8'
   info: '#0176d3'
   info-bg: '#aacbff'
-  gradient-hero: 'linear-gradient(135deg, #032d60 0%, #0b5cab 50%, #0d9dda 100%)'
 
+gradients:
+  gradient-hero: 'linear-gradient(135deg, #032d60 0%, #0b5cab 50%, #0d9dda 100%)'
 typography:
   display:
     family: '"ITC Avant Garde", "Salesforce Sans", Arial, sans-serif'

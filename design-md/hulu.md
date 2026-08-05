@@ -64,10 +64,11 @@ colors:
   info: '#0089ec'
   progress-watched: '#1ce783'              # green progress
   progress-rail: '#3a3f48'
-  scrim-bottom: 'linear-gradient(0deg, #0b0c0f 0%, transparent 100%)'
   live-tv-red: '#ff3b30'                    # live-now indicator pulse
   ads-tier: '#a0a4ab'                       # "with ads" tier label muted
 
+gradients:
+  scrim-bottom: 'linear-gradient(0deg, #0b0c0f 0%, transparent 100%)'
 typography:
   display:
     family: '"Graphik", "Helvetica Neue", Helvetica, Arial, sans-serif'

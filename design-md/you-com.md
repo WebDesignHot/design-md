@@ -84,8 +84,6 @@ colors:
   info-text: '#293b9a'
 
   # Shadow tints
-  shadow-rgb: '18, 18, 18'               # near-black tinted shadows
-  shadow-blue: '83, 104, 238'            # rare indigo focus glow
 
   # Benchmark-specific
   benchmark-our: '#5368ee'               # our-data bar fill
@@ -93,6 +91,9 @@ colors:
   benchmark-ground: '#fafafa'            # plot backdrop
   benchmark-axis: 'rgba(18, 18, 18, 0.12)' # axis line
 
+shadow-tints:
+  shadow-rgb: '18, 18, 18'               # near-black tinted shadows
+  shadow-blue: '83, 104, 238'            # rare indigo focus glow
 typography:
   display:
     family: '"Lumen Sans", Arial, ui-sans-serif, system-ui, sans-serif'

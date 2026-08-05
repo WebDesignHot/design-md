@@ -53,8 +53,6 @@ colors:
   border: '#404040'                # default 1px hairline at low contrast
   border-soft: '#2a2a2a'           # divider between rows
   border-strong: '#737373'         # focused input outline
-  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%)'
-  scrim-bottom: 'linear-gradient(0deg, #141414 0%, transparent 100%)'
   shadow-card: 'rgba(0,0,0,0.75)'  # poster hover lift shadow
   shadow-billboard: 'rgba(0,0,0,0.85)' # heavy under-billboard tint
   success: '#46d369'               # download-complete, mature OK
@@ -69,6 +67,9 @@ colors:
   player-rail: 'rgba(255,255,255,0.3)'    # video scrubber rail
   download-fill: '#0071eb'         # blue legacy download accent
 
+gradients:
+  scrim-top: 'linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%)'
+  scrim-bottom: 'linear-gradient(0deg, #141414 0%, transparent 100%)'
 typography:
   display:
     family: '"Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'
