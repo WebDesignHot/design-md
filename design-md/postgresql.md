@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:54:44.676Z
 published_at: 2026-08-05T01:54:44.676Z
 author: webdesignhot
 source_url: https://www.postgresql.org/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [oss, dev-tools]

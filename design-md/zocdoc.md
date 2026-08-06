@@ -5,7 +5,8 @@ updated_at: 2026-07-26T12:00:00+12:00
 published_at: 2026-07-26T12:00:00+12:00
 author: webdesignhot
 source_url: https://www.zocdoc.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: auto
 featured: false
 categories: [healthcare, marketplace]

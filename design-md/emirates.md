@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:51.961Z
 published_at: 2026-05-28T22:15:51.961Z
 author: webdesignhot
 source_url: https://www.emirates.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

@@ -5,7 +5,8 @@ updated_at: 2026-07-09T13:20:00+12:00
 published_at: 2026-07-09T13:20:00+12:00
 author: webdesignhot
 source_url: https://www.edx.org
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [education, marketplace]

@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:11:25.190Z
 published_at: 2026-05-28T23:11:25.190Z
 author: webdesignhot
 source_url: https://bolt.new
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

@@ -1,11 +1,16 @@
-# DESIGN.md / webdesignhot 0.1
+# DESIGN.md / webdesignhot 0.2
 
-The next additive specification is [WebDesignHot 0.2](SPEC-V0.2.md). The
-catalog remains mixed-version during rollout: existing entries stay on 0.1,
-while validated pilot entries may use `spec: webdesignhot/0.2`.
+The canonical catalog now ships under [WebDesignHot 0.2](SPEC-V0.2.md). The
+parser and public contribution path continue to read `webdesignhot/0.1` as a
+backwards-compatible legacy input, but all current catalog entries declare
+`spec: webdesignhot/0.2` and `profile: catalog`.
 
-This is the spec every entry on `www.webdesignhot.com/design.md` ships under:
-`spec: webdesignhot/0.1`.
+This is the spec every current entry on `www.webdesignhot.com/design.md` ships
+under: `spec: webdesignhot/0.2`.
+
+The detailed v0.1 field baseline below remains as a compatibility reference;
+the v0.2 additions, migration contract, and portable serializer rules are
+normative in [SPEC-V0.2.md](SPEC-V0.2.md).
 
 ## Why a parallel spec
 
@@ -18,7 +23,8 @@ free-form prose.
 VoltAgent's awesome-design-md ships dense numbered sections + per-component
 spec depth — but no machine-readable frontmatter, no motion, no a11y.
 
-webdesignhot/0.1 takes the union of both, then adds **four new sections** they
+webdesignhot/0.2 takes the union of both, preserves the readable v0.1 field
+baseline, then adds **four new sections** they
 don't cover and a **richer machine-readable layer**:
 
 - **§8 Interaction & Motion** — easing curves, durations, hover micro-states, page transitions, reduced-motion
@@ -28,18 +34,19 @@ don't cover and a **richer machine-readable layer**:
 
 Net: **15 sections**, ~600–900 lines per entry.
 
-webdesignhot/0.1 is a **parallel format**, not a fork of Google Labs alpha.
+webdesignhot/0.2 is a **parallel format**, not a fork of Google Labs alpha.
 Both formats share the same DESIGN.md philosophy — YAML frontmatter
 holding machine-readable tokens + markdown prose holding human-readable
 guidance, designed to be read by an AI coding agent as a project's style
 source of truth. Field names and section structures differ; the prose
 body of one can be opened by any tool that opens markdown, but the
 **YAML frontmatter is not currently bidirectionally parser-compatible**:
-webdesignhot/0.1 entries use enriched fields (multi-theme palettes,
+webdesignhot/0.2 entries use enriched fields (multi-theme palettes,
 motion, breakpoints, shadows, accessibility, 15-section structure) that
-Google Labs alpha's official linter (`@google/design.md@0.1.1`) does not
-yet recognize and will reject when validating. See [Compatibility with
-Google Labs alpha](#compatibility-with-google-labs-alpha) below for the
+Google Labs alpha's portable core does not directly recognize. The portable
+serializer emits a reduced Google-compatible view; CI validates that view with
+`@google/design.md@0.4.0` and requires zero core errors. See [Compatibility
+with Google Labs alpha](#compatibility-with-google-labs-alpha) below for the
 field-by-field comparison and current interop limits.
 
 ## YAML frontmatter (machine-readable)
@@ -51,7 +58,8 @@ name: Brand
 tagline: One-line essence — 80 chars max
 author: webdesignhot
 source_url: https://example.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [...]
@@ -248,33 +256,36 @@ categories, unique source URLs, and valid `related` targets.
 
 ## Compatibility with Google Labs alpha
 
-webdesignhot/0.1 is a parallel format alongside the Google Labs alpha spec.
+webdesignhot/0.2 is a parallel format alongside the Google Labs alpha spec.
 The two formats share the same DESIGN.md philosophy (YAML frontmatter +
 markdown prose, AI-agent-readable) but use different field names and
 structures:
 
-| Concern | Google Labs alpha | webdesignhot/0.1 |
+| Concern | Google Labs alpha | webdesignhot/0.2 catalog |
 |---|---|---|
-| Spec version field | `version: alpha` | `spec: webdesignhot/0.1` |
+| Spec version field | `version: alpha` | `spec: webdesignhot/0.2` + `profile: catalog` |
 | Color scale roles | `primary` / `secondary` / `tertiary` | `bg` / `surface` / `text` / `brand` |
 | Typography | `typography.h1` / `typography.body` | `typography.scale.display-hero` (15–20 rows) |
 | Radius | `rounded.{xs\|sm\|md\|lg\|xl\|full}` | `radius.{micro\|sm\|md\|lg\|xl\|pill}` |
 | Body structure | Free-form markdown | 15 numbered sections |
 | Motion / a11y / voice | Optional, free-form | First-class frontmatter blocks + sections §8/§9/§11 |
 
-### Current interop limits (verified 2026-05-09)
+### Current interop limits (verified 2026-08-06)
 
-The prose body of a webdesignhot/0.1 entry can be read by any markdown
-tool. The YAML frontmatter, however, **is not currently a valid input to
-`@google/design.md@0.1.1`'s `lint` command** — it throws on the enriched
-fields above. Practically:
+The prose body of a webdesignhot/0.2 entry can be read by any markdown
+tool. The YAML frontmatter, however, is intentionally richer than Google's
+portable core and is not sent directly to the Google linter. The
+`design-md export --to google-alpha` serializer emits the portable view and
+reports catalog-only losses. Practically:
 
 - ✅ **Reading our prose**: any markdown reader works
 - ✅ **Reading our basic identity** (name, tagline, description, source_url):
   any YAML parser works
-- ❌ **Validating against Google's linter**: errors today (parser does not
-  yet handle nested `colors.<theme>`, `themes:`, `motion:`, `shadows:`,
-  `accessibility:`, `breakpoints:`, or `typography.scale.<role>`)
+- ✅ **Validating the portable export against Google's linter**: the full
+  catalog currently passes `@google/design.md@0.4.0` with zero core errors
+- ❌ **Validating the enriched source directly**: the source uses catalog-only
+  fields such as nested `colors.<theme>`, `themes:`, `motion:`, `shadows:`,
+  `accessibility:`, `breakpoints:`, and `typography.scale.<role>`
 - ✅ **Reading via `@webdesignhot/design-md` CLI / MCP**: full support
   (we ship our own parser that handles both shapes)
 
@@ -290,7 +301,7 @@ canonical 8-role vocabulary (`background`, `foreground`, `primary`,
 `primary-foreground`, `accent`, `muted`, `border`, `ring`) to our
 project-specific token names. This lets role-aware tools resolve our
 tokens by canonical name without renaming the underlying fields. Every
-webdesignhot/0.1 entry includes an auto-generated `aliases:` block (see
+Every catalog entry includes an auto-generated `aliases:` block (see
 [YAML frontmatter](#yaml-frontmatter-machine-readable) example above).
 
 ## Migration

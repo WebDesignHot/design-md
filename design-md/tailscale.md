@@ -5,7 +5,8 @@ updated_at: 2026-05-29T00:00:00.000Z
 published_at: 2026-05-28T22:16:01.704Z
 author: webdesignhot
 source_url: https://tailscale.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [dev-tools]

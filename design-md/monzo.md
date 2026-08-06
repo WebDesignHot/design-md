@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:26.033Z
 published_at: 2026-05-28T22:15:26.033Z
 author: webdesignhot
 source_url: https://monzo.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

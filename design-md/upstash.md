@@ -4,7 +4,8 @@ tagline: 'Serverless data, daylight calm — a pale-grey canvas, deep green-blac
 updated_at: 2026-05-30T00:00:00.000Z
 published_at: 2026-05-29T21:44:16.080Z
 author: webdesignhot
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 source_url: https://upstash.com
 quality: curated
 featured: false

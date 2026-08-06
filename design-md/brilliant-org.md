@@ -5,7 +5,8 @@ updated_at: 2026-05-08T00:00:00.000Z
 published_at: 2026-05-07T20:02:18.801Z
 author: webdesignhot
 source_url: https://brilliant.org
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [education]

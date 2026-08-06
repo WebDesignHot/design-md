@@ -1,7 +1,8 @@
 # DESIGN.md / WebDesignHot 0.2
 
-Status: implementation specification. The active catalog may contain both
-`webdesignhot/0.1` and `webdesignhot/0.2` entries.
+Status: implementation specification. The canonical catalog currently uses
+`webdesignhot/0.2`; the parser and public contribution path still accept
+`webdesignhot/0.1` for backwards compatibility.
 
 WebDesignHot 0.2 is a catalog profile with a portable Google DESIGN.md Alpha
 view. It is compatible with the Google core vocabulary where practical, but it
@@ -109,8 +110,9 @@ The MCP server keeps the raw `get_design` response stable and adds
 
 ## Migration
 
-v0.1 remains valid. Upgrade is deterministic and dry-run by default; it adds
-the v0.2 identity/profile but does not infer icons, component states, or design
-intent from prose. Canonical and public catalogs accept v0.1 and v0.2 during
-the transition. A full catalog rewrite is intentionally deferred until the
-v0.2 pilot and portable compatibility checks are stable.
+v0.1 remains valid for input and submissions. Upgrade is deterministic and
+dry-run by default; it adds the v0.2 identity/profile but does not infer icons,
+component states, or design intent from prose. The canonical catalog has now
+completed the full identity migration; future public contributions may still
+use either version and are normalized through the same validator and portable
+compatibility gate.

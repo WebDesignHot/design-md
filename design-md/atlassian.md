@@ -5,7 +5,8 @@ updated_at: 2026-05-27T23:16:39.404Z
 published_at: 2026-05-27T23:16:39.404Z
 author: webdesignhot
 source_url: https://www.atlassian.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: auto
 featured: false
 categories: [saas, dev-tools]

@@ -5,7 +5,8 @@ updated_at: 2026-05-06T15:27:43+12:00
 published_at: 2026-05-03T10:27:49+12:00
 author: webdesignhot
 source_url: https://github.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [dev-tools, saas]

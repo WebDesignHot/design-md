@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:45:30.347Z
 published_at: 2026-05-29T21:45:30.347Z
 author: webdesignhot
 source_url: https://fromourplace.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [retail]

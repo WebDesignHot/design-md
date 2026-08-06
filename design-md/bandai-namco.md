@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:54:28.905Z
 published_at: 2026-08-05T01:54:28.905Z
 author: webdesignhot
 source_url: https://www.bandainamcoent.co.jp/english
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [gaming, media]

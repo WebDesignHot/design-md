@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:43:38.103Z
 published_at: 2026-05-29T21:43:38.103Z
 author: webdesignhot
 source_url: https://magic.dev
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

@@ -5,7 +5,8 @@ updated_at: 2026-05-29T00:00:00.000Z
 published_at: 2026-05-28T23:12:35.496Z
 author: webdesignhot
 source_url: https://www.lemonsqueezy.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

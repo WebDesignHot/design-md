@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:26:02.912Z
 published_at: 2026-08-05T01:26:02.912Z
 author: webdesignhot
 source_url: https://supercell.com/en/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [gaming, media]

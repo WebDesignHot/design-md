@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:03.151Z
 published_at: 2026-05-29T21:44:03.151Z
 author: webdesignhot
 source_url: https://lambda.ai
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:55:54.299Z
 published_at: 2026-08-05T01:55:54.299Z
 author: webdesignhot
 source_url: https://www.lush.com/us/en_us
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [retail, ecommerce]

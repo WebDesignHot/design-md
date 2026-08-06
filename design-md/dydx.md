@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:13:57.213Z
 published_at: 2026-05-28T23:13:57.213Z
 author: webdesignhot
 source_url: https://dydx.exchange
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

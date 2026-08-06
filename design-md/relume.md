@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:54.486Z
 published_at: 2026-05-29T21:44:54.486Z
 author: webdesignhot
 source_url: https://www.relume.io
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools, dev-tools]

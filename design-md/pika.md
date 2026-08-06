@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:10:59.523Z
 published_at: 2026-05-28T23:10:59.523Z
 author: webdesignhot
 source_url: https://pika.art
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, media]
