@@ -5,7 +5,8 @@ updated_at: 2026-05-06T08:44:32+12:00
 published_at: 2026-05-03T16:49:18+12:00
 author: webdesignhot
 source_url: https://grafana.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [dev-tools, saas, observability]

@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:56.999Z
 published_at: 2026-05-28T22:15:56.999Z
 author: webdesignhot
 source_url: https://www.cvshealth.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas, retail]

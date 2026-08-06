@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:25:38.054Z
 published_at: 2026-08-05T01:25:38.054Z
 author: webdesignhot
 source_url: https://www.pluralsight.com/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [education, saas]

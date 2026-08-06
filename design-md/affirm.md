@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:35.438Z
 published_at: 2026-05-28T22:15:35.438Z
 author: webdesignhot
 source_url: https://www.affirm.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

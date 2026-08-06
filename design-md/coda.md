@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:57.076Z
 published_at: 2026-05-29T21:44:57.076Z
 author: webdesignhot
 source_url: https://coda.io
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

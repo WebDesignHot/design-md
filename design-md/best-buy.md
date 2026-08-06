@@ -5,7 +5,8 @@ updated_at: 2026-05-28T00:00:00.000Z
 published_at: 2026-05-27T23:17:35.551Z
 author: webdesignhot
 source_url: https://www.bestbuy.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [retail]

@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:25:58.507Z
 published_at: 2026-08-05T01:25:58.507Z
 author: webdesignhot
 source_url: https://www.ubisoft.com/en-us
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [gaming, media]

@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:54:35.032Z
 published_at: 2026-08-05T01:54:35.032Z
 author: webdesignhot
 source_url: https://all.accor.com/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [hospitality, marketplace]

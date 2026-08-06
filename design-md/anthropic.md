@@ -5,7 +5,8 @@ updated_at: 2026-05-04T20:53:02+12:00
 published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://anthropic.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

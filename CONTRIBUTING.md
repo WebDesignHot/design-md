@@ -45,7 +45,7 @@ Controlled categories are:
 Run the same complete-catalog check used by CI:
 
 ```bash
-npx -y @webdesignhot/design-md@0.6.0 lint design-md --strict
+npx -y @webdesignhot/design-md@0.6.1 lint design-md --strict
 ```
 
 Validating only the changed file is insufficient because source URL uniqueness

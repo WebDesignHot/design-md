@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:54:51.958Z
 published_at: 2026-08-05T01:54:51.958Z
 author: webdesignhot
 source_url: https://zeplin.io/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools, saas]

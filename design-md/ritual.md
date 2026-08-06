@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:13:34.023Z
 published_at: 2026-05-28T23:13:34.023Z
 author: webdesignhot
 source_url: https://ritual.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [retail]

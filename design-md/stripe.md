@@ -5,7 +5,8 @@ updated_at: 2026-05-06T01:20:47+12:00
 published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://stripe.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: true
 categories: [fintech, saas]

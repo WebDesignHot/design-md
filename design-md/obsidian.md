@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:12:43.991Z
 published_at: 2026-05-28T23:12:43.991Z
 author: webdesignhot
 source_url: https://obsidian.md
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

@@ -5,7 +5,8 @@ updated_at: 2026-08-03T05:54:39.000Z
 published_at: 2026-08-03T05:54:39.000Z
 author: webdesignhot
 source_url: https://www.blizzard.com/en-us/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [gaming]

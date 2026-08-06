@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:43:56.803Z
 published_at: 2026-05-29T21:43:56.803Z
 author: webdesignhot
 source_url: https://vapi.ai
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:35.710Z
 published_at: 2026-05-29T21:44:35.710Z
 author: webdesignhot
 source_url: https://www.intercom.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

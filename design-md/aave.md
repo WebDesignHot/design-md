@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:13:45.033Z
 published_at: 2026-05-28T23:13:45.033Z
 author: webdesignhot
 source_url: https://aave.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

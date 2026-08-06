@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:25:48.961Z
 published_at: 2026-08-05T01:25:48.961Z
 author: webdesignhot
 source_url: https://www.healthgrades.com/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [healthcare, marketplace]

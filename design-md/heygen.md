@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:43:22.571Z
 published_at: 2026-05-29T21:43:22.571Z
 author: webdesignhot
 source_url: https://www.heygen.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, saas]
