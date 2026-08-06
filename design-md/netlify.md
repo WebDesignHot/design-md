@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:05.216Z
 published_at: 2026-05-29T21:44:05.216Z
 author: webdesignhot
 source_url: https://www.netlify.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [dev-tools, saas]

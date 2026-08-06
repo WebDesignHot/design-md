@@ -5,6 +5,7 @@ on:
     paths:
       - 'design-md/**.md'
       - 'SPEC.md'
+      - 'SPEC-V0.2.md'
 
 permissions:
   contents: read
@@ -22,4 +23,4 @@ jobs:
           node-version: 22
 
       - name: Validate the complete catalog
-        run: npx -y @webdesignhot/design-md@0.5.5 lint design-md --strict
+        run: npx -y @webdesignhot/design-md@0.6.0 lint design-md --strict

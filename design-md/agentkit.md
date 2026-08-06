@@ -5,7 +5,8 @@ updated_at: 2026-05-06T08:44:32+12:00
 published_at: 2026-05-02T09:19:36+12:00
 author: webdesignhot
 source_url: https://agentkit.webdesignhot.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: true
 categories: [dev-tools, ai]

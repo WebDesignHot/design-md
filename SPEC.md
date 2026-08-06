@@ -1,5 +1,9 @@
 # DESIGN.md / webdesignhot 0.1
 
+The next additive specification is [WebDesignHot 0.2](SPEC-V0.2.md). The
+catalog remains mixed-version during rollout: existing entries stay on 0.1,
+while validated pilot entries may use `spec: webdesignhot/0.2`.
+
 This is the spec every entry on `www.webdesignhot.com/design.md` ships under:
 `spec: webdesignhot/0.1`.
 
