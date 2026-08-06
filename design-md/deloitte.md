@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:42.806Z
 published_at: 2026-05-28T22:15:42.806Z
 author: webdesignhot
 source_url: https://www.deloitte.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

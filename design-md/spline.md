@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:44.452Z
 published_at: 2026-05-29T21:44:44.452Z
 author: webdesignhot
 source_url: https://spline.design
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools]

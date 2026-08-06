@@ -5,7 +5,8 @@ updated_at: 2026-08-03T06:36:00.000Z
 published_at: 2026-08-03T06:36:00.000Z
 author: webdesignhot
 source_url: https://www.affinity.studio/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools]

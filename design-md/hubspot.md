@@ -5,7 +5,8 @@ updated_at: 2026-05-27T23:16:48.365Z
 published_at: 2026-05-27T23:16:48.365Z
 author: webdesignhot
 source_url: https://www.hubspot.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

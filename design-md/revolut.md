@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:20.985Z
 published_at: 2026-05-28T22:15:20.985Z
 author: webdesignhot
 source_url: https://www.revolut.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

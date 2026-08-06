@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:44:49.221Z
 published_at: 2026-05-29T21:44:49.221Z
 author: webdesignhot
 source_url: https://penpot.app
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools, dev-tools]

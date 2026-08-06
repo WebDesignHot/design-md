@@ -5,7 +5,8 @@ updated_at: 2026-05-05T20:10:49+12:00
 published_at: 2026-05-05T20:10:49+12:00
 author: webdesignhot
 source_url: https://www.mercedes-benz.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [automotive]

@@ -5,7 +5,8 @@ updated_at: 2026-05-06T20:10:21+12:00
 published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://astro.build
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [dev-tools, frameworks]

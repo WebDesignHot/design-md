@@ -5,7 +5,8 @@ updated_at: 2026-05-28T22:15:06.661Z
 published_at: 2026-05-28T22:15:06.661Z
 author: webdesignhot
 source_url: https://www.chase.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

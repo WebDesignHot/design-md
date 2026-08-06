@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:45:22.003Z
 published_at: 2026-05-29T21:45:22.003Z
 author: webdesignhot
 source_url: https://vuori.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [retail, fashion]

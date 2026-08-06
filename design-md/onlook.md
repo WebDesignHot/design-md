@@ -5,7 +5,8 @@ updated_at: 2026-07-08T21:21:00+12:00
 published_at: 2026-07-08T21:21:00+12:00
 author: webdesignhot
 source_url: https://www.onlook.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, design-tools, dev-tools]

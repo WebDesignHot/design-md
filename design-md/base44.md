@@ -5,7 +5,8 @@ updated_at: 2026-07-08T21:18:00+12:00
 published_at: 2026-07-08T21:18:00+12:00
 author: webdesignhot
 source_url: https://base44.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools, saas]

@@ -5,7 +5,8 @@ updated_at: 2026-08-05T01:54:47.440Z
 published_at: 2026-08-05T01:54:47.440Z
 author: webdesignhot
 source_url: https://www.rust-lang.org/
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [oss, dev-tools]

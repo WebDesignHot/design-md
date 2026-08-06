@@ -5,7 +5,8 @@ updated_at: 2026-05-29T21:45:07.329Z
 published_at: 2026-05-29T21:45:07.329Z
 author: webdesignhot
 source_url: https://www.craft.do
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [saas]

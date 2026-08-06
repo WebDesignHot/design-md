@@ -5,7 +5,8 @@ updated_at: 2026-05-05T20:18:33+12:00
 published_at: 2026-05-03T16:32:19+12:00
 author: webdesignhot
 source_url: https://cartesia.ai
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]

@@ -5,7 +5,8 @@ updated_at: 2026-05-04T14:57:35+12:00
 published_at: 2026-05-04T14:57:35+12:00
 author: webdesignhot
 source_url: https://www.starbucks.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [media, marketplace]
@@ -61,8 +62,8 @@ colors:
   black: '#000000'                  # top-of-page Join CTA strip, sign-in button
   red: '#c82014'                    # error / destructive
   yellow: '#fbbc05'                 # warning / legacy
-  red-tint: 'hsl(4 82% 43% / 5%)'   # invalid field tint
-  green-light-tint: 'hsl(160 32% 87% / 33%)' # valid field tint
+  red-tint: 'rgba(200, 32, 20, 0.05)'   # invalid field tint
+  green-light-tint: 'rgba(211, 232, 225, 0.33)' # valid field tint
   scrim: 'rgba(0,0,0,0.5)'
   shadow-card-1: 'rgba(0,0,0,0.14)' # 0.5px ring layer
   shadow-card-2: 'rgba(0,0,0,0.24)' # 1px direct layer

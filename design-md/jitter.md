@@ -5,7 +5,8 @@ updated_at: 2026-07-08T21:19:00+12:00
 published_at: 2026-07-08T21:19:00+12:00
 author: webdesignhot
 source_url: https://jitter.video
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [design-tools, media]

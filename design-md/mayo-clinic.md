@@ -5,7 +5,8 @@ updated_at: 2026-07-09T13:19:00+12:00
 published_at: 2026-07-09T13:19:00+12:00
 author: webdesignhot
 source_url: https://www.mayoclinic.org
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [healthcare]

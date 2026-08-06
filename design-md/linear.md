@@ -5,7 +5,8 @@ updated_at: 2026-05-06T08:15:13+12:00
 published_at: 2026-05-02T23:10:16+12:00
 author: webdesignhot
 source_url: https://linear.app
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: true
 categories: [dev-tools, saas]

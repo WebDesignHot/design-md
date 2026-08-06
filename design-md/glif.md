@@ -5,7 +5,8 @@ updated_at: 2026-05-28T23:11:41.344Z
 published_at: 2026-05-28T23:11:41.344Z
 author: webdesignhot
 source_url: https://glif.app
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: false
 categories: [ai, dev-tools]
