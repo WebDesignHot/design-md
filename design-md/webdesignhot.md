@@ -5,7 +5,8 @@ published_at: 2026-05-28T09:06:33+12:00
 updated_at: 2026-05-28T09:06:33+12:00
 author: webdesignhot
 source_url: https://www.webdesignhot.com
-spec: webdesignhot/0.1
+spec: webdesignhot/0.2
+profile: catalog
 quality: curated
 featured: true
 categories: [marketplace, dev-tools]

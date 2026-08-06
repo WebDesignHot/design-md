@@ -9,8 +9,9 @@ request. The public repository is then refreshed from that canonical source.
 
 ### New entry
 
-Add `design-md/{kebab-case-slug}.md` using the `webdesignhot/0.1` schema in
-[`SPEC.md`](./SPEC.md). Values must come from a current desktop and mobile audit
+Add `design-md/{kebab-case-slug}.md` using either the `webdesignhot/0.1` schema
+in [`SPEC.md`](./SPEC.md) or the `webdesignhot/0.2` catalog profile in
+[`SPEC-V0.2.md`](./SPEC-V0.2.md). Values must come from a current desktop and mobile audit
 of the declared `source_url`, not from memory or an invented style direction.
 
 ### Existing entry refinement
@@ -20,7 +21,7 @@ guidance, or prose. Explain the evidence for factual changes in the PR.
 
 ## Required quality
 
-- Valid YAML frontmatter and `spec: webdesignhot/0.1`.
+- Valid YAML frontmatter and `spec: webdesignhot/0.1`, or `spec: webdesignhot/0.2` with `profile: catalog`.
 - Unique normalized `source_url` and a lowercase kebab-case filename.
 - Real `published_at` and `updated_at` values, with the update not earlier than publication.
 - Non-empty controlled categories and tags.
@@ -44,7 +45,7 @@ Controlled categories are:
 Run the same complete-catalog check used by CI:
 
 ```bash
-npx -y @webdesignhot/design-md@0.5.5 lint design-md --strict
+npx -y @webdesignhot/design-md@0.6.0 lint design-md --strict
 ```
 
 Validating only the changed file is insufficient because source URL uniqueness
