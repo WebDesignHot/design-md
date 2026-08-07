@@ -2,11 +2,11 @@
 
 > The largest curated open catalog of `DESIGN.md` files inspired by real production design systems — for AI coding agents.
 
-**470 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the open [webdesignhot/0.1](./SPEC.md) spec so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth.
+**470 production design systems** as editorial DESIGN.md files — Linear, Vercel, Stripe, Anthropic, Apple, Tesla, Spotify, Netflix, and more — written to the canonical [webdesignhot/0.2](./SPEC-V0.2.md) catalog profile so AI agents (Claude, Cursor, Cline, GitHub Copilot, v0, Lovable) can read them as the visual source of truth. Legacy `webdesignhot/0.1` files remain accepted for backwards-compatible submissions.
 
 ```bash
 # Drop any one into your repo in seconds
-npx @webdesignhot/design-md add stripe   # writes ./DESIGN.md
+npx -y @webdesignhot/design-md add stripe   # writes ./DESIGN.md
 ```
 
 [**Browse all 470 →**](https://www.webdesignhot.com/design.md/) · [**Install the CLI**](https://www.npmjs.com/package/@webdesignhot/design-md) · [**MCP server**](https://www.npmjs.com/package/@webdesignhot/design-md-mcp)
@@ -45,7 +45,7 @@ Each PR is reviewed within 48h. We accept editorial DESIGN.md files inspired by 
 Coding agents need a *file* that captures a brand's design system — colors, typography, spacing, components, motion, accessibility — in plain text they can read on every prompt. So we built it:
 
 1. **Extracted 470 real brands** from production marketing sites (not invented "vibes")
-2. **Designed the webdesignhot/0.1 spec** around what agents actually ask for — Motion, Accessibility, Voice, and Dark Mode as first-class sections, plus a rich machine-readable token layer
+2. **Designed the webdesignhot/0.2 spec** around what agents actually ask for — Motion, Accessibility, Voice, and Dark Mode as first-class sections, plus typed tokens, prompts, component states, and a rich machine-readable layer
 3. **Open-sourced the entire catalog** so any AI agent, IDE, or design tool can consume it
 
 ## 29 multi-theme entries — real `light + dark` from production
@@ -71,22 +71,22 @@ The catalog currently contains 39 entries with explicit named theme sets; 29 are
 
 ```
 design-md/
-├── stripe.md          # Stripe's design system, webdesignhot/0.1 spec
-├── linear.md          # Linear's design system, webdesignhot/0.1 spec
+├── stripe.md          # Stripe's design system, webdesignhot/0.2 catalog profile
+├── linear.md          # Linear's design system, webdesignhot/0.2 catalog profile
 ├── anthropic.md
 ├── ...                # 470 entries total
 └── webdesignhot.md    # The catalog's own site
 ```
 
-Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose sections (human-readable principles).
+Each file: YAML frontmatter (machine-readable token bundle) + 15 numbered prose sections (human-readable principles). Current entries declare `spec: webdesignhot/0.2` and `profile: catalog`.
 
 ## How to use one
 
 **Option 1 — CLI** (one command):
 ```bash
-npx @webdesignhot/design-md add stripe            # → ./DESIGN.md
-npx @webdesignhot/design-md add linear -o brand.md # custom path
-npx @webdesignhot/design-md list                  # browse all 470
+npx -y @webdesignhot/design-md add stripe             # → ./DESIGN.md
+npx -y @webdesignhot/design-md add linear -o brand.md # custom path
+npx -y @webdesignhot/design-md list                   # browse all 470
 ```
 
 <details>
@@ -106,18 +106,22 @@ category [name]
 init
   Interactive picker (default if no command given).
 
-lint <file> [--format=text|json]
-  Validate a DESIGN.md for spec compliance.
+lint <file-or-directory> [--strict] [--spec auto|0.1|0.2] [--compat google-alpha] [--format=text|json]
+  Validate a DESIGN.md for spec compliance, metadata, relationships, and
+  optional Google portability.
 
 diff <a> <b> [--format=text|json]
   Token-level diff between two DESIGN.md files.
 
-export <file> --to <tailwind|css|dtcg|figma>
+export <file> --to <tailwind|css-tailwind|json-tailwind|css|dtcg|figma|google-alpha>
   Convert tokens to one of:
-    tailwind   — theme.extend block for tailwind.config.js
+    tailwind   — Tailwind v4 @theme CSS (use --tailwind-version v3 for JSON)
+    css-tailwind — explicit Tailwind v4 @theme alias
+    json-tailwind — Tailwind v3 theme JSON alias
     css        — :root { --color-bg, --radius-card, … }
     dtcg       — W3C Design Tokens Community Group JSON
     figma      — Figma Variables import format
+    google-alpha — portable Google DESIGN.md Alpha output with a loss report
 
 extract <url> [-o <path>] [--token-only]
   Extract a draft DESIGN.md from any production URL.
@@ -125,6 +129,12 @@ extract <url> [-o <path>] [--token-only]
 
 theme <slug> [--dark|--light]
   Compute a dark/light variant of any design.
+
+upgrade <file-or-directory> --to webdesignhot/0.2 [--write] [--format=json]
+  Dry-run by default; only deterministic version/profile changes are made.
+
+submit <file> [--dry-run]
+  Validate and open a contribution PR. Both v0.1 and v0.2 submissions work.
 
 preview <slug>
   Open the directory detail page in your browser.
@@ -162,15 +172,17 @@ Then in chat: *"install Stripe's DESIGN.md here"* — your agent does the rest.
 <details>
 <summary><b>All MCP tools</b></summary>
 
-The MCP server exposes 6 tools any compliant agent can call:
+The MCP server exposes 8 tools any compliant agent can call:
 
 | Tool | What it does |
 |---|---|
 | `list_designs` | List every design with optional `featured_only` / `category` / `tag` filters |
-| `get_design` | Fetch the full DESIGN.md (webdesignhot/0.1) source for a slug |
+| `get_design` | Fetch the full DESIGN.md (v0.2 or legacy v0.1) source; optionally include resolved tokens |
 | `search_designs` | Fuzzy search by name, tagline, tags, categories |
 | `diff_designs` | Token-level diff between any two designs |
-| `export_design` | Render tokens to tailwind / css / dtcg / figma |
+| `export_design` | Render tokens to tailwind / css / dtcg / figma / google-alpha |
+| `get_component` | Resolve a v0.2 component variant, state, and size |
+| `evaluate_token` | Evaluate a safe v0.2 color reference or expression |
 | `install_design` | Get the npx command + raw markdown to install one |
 
 Try it once connected:
@@ -209,9 +221,14 @@ declared there. Quote the section number when citing a token
 (e.g. "per §3 Typography Rules").
 ```
 
-## The webdesignhot/0.1 spec
+## The webdesignhot/0.2 spec
 
-[Read the full spec → `SPEC.md`](./SPEC.md)
+[Read the full spec → `SPEC-V0.2.md`](./SPEC-V0.2.md)
+
+`SPEC.md` remains the compatibility reference for legacy v0.1 input. The
+canonical catalog uses `spec: webdesignhot/0.2` and `profile: catalog`. The CLI
+can export a portable Google view with `--to google-alpha`; that output uses
+`version: alpha` and includes an explicit loss report for catalog-only fields.
 
 15 numbered sections in every file's body:
 
@@ -233,12 +250,15 @@ declared there. Quote the section number when citing a token
 | 14 | Do's and Don'ts | |
 | 15 | Agent Prompt Guide | |
 
-webdesignhot/0.1 is our own format — one Markdown file any tool or agent can read, no special parser required. See [`SPEC.md`](./SPEC.md) for the full field-by-field schema.
+webdesignhot/0.2 is our own catalog profile — one Markdown file any tool or
+agent can read, with a richer typed token layer and the same 15 prose sections.
+See [`SPEC-V0.2.md`](./SPEC-V0.2.md) for the normative schema and
+[`SPEC.md`](./SPEC.md) for the legacy v0.1 compatibility baseline.
 
 ## Contributing
 
 We welcome:
-- 🆕 **New brands** — add `design-md/{slug}.md` following the webdesignhot/0.1 schema
+- 🆕 **New brands** — add `design-md/{slug}.md` following the webdesignhot/0.2 catalog profile (v0.1 is still accepted)
 - 🔧 **Refinements** — better tokens, missing sections, prose improvements
 - 🐛 **Corrections** — wrong colors, broken URLs, factual errors
 
