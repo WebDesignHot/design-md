@@ -5,6 +5,10 @@ catalog lives in the WebDesignHot monorepo. A merged public pull request is
 imported into the canonical source through an automated, conflict-aware pull
 request. The public repository is then refreshed from that canonical source.
 
+The canonical catalog currently uses `webdesignhot/0.2` with
+`profile: catalog`. Submissions may still use `webdesignhot/0.1`; the same
+validator and portable compatibility gate will check both versions.
+
 ## Changes we accept
 
 ### New entry
@@ -21,7 +25,8 @@ guidance, or prose. Explain the evidence for factual changes in the PR.
 
 ## Required quality
 
-- Valid YAML frontmatter and `spec: webdesignhot/0.1`, or `spec: webdesignhot/0.2` with `profile: catalog`.
+- Valid YAML frontmatter and either `spec: webdesignhot/0.1`, or
+  `spec: webdesignhot/0.2` with `profile: catalog`.
 - Unique normalized `source_url` and a lowercase kebab-case filename.
 - Real `published_at` and `updated_at` values, with the update not earlier than publication.
 - Non-empty controlled categories and tags.
