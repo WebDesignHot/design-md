@@ -281,7 +281,7 @@ stack:
   framework: 'Next.js 16 (App Router, Turbopack, React Compiler)'
   ui-runtime: React 19
   styling: 'Tailwind CSS 4 (CSS-first config, @theme directive)'
-  ai-sdk: 'Vercel AI SDK v6'
+  ai-sdk: 'Vercel AI SDK v7'
   primitives: 'Radix UI (accordion, dialog, slot, tabs, tooltip, popover)'
   fonts: '@fontsource — Inter Variable, Instrument Serif, JetBrains Mono Variable'
   icons: 'lucide-react'
@@ -399,8 +399,8 @@ hue. A user moving from editorial-dark to bright should feel a
 palette shift, not a redesign.
 
 The brand voice is **technical, calm, agent-aware**. Headlines are
-imperative and ground-truthed (*"Ship your AI agent's landing page
-<em>this afternoon</em>"*). Section labels are mono uppercase with a
+concrete and ground-truthed (*"A landing page where your agent
+<em>actually works</em>"*). Section labels are mono uppercase with a
 6px brand dot — the rhythm anchor of every page. The streaming
 cursor is a brand-colored `▋` character that blinks at 1 Hz only
 during active stream and disappears the moment the agent finishes
@@ -897,10 +897,9 @@ panel is in a sidebar vs full-width context.
 ### Tone
 
 **Technical, calm, agent-aware.** AgentKit writes for the developer
-shipping their first agent product. Headlines are imperative and
+shipping their first agent product. Headlines are concrete and
 ground-truthed. Adjectives are sparse; verbs are specific. Sample
-hero: *"Ship your AI agent's landing page <em>this afternoon</em>.
-65 components. 9 sections. Three swappable themes. One install."*
+hero: *"A landing page where your agent <em>actually works</em>."*
 
 ### Microcopy patterns
 
