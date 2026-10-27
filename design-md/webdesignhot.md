@@ -827,8 +827,8 @@ appears in a 1-up vs 3-up grid. Default behavior is media-query based.
 
 **Measured, technical, slightly dry.** webdesignhot writes like a
 design publication, not a startup. Pricing pages read like spec sheets,
-not sales letters. Headlines are imperative and ground-truthed
-(*"Ship your AI agent's landing page <em>this afternoon</em>"*) rather
+not sales letters. Headlines are concrete and ground-truthed
+(*"A landing page where your agent <em>actually works</em>"*) rather
 than aspirational (*"Transform your business with AI"*). Adjectives are
 used sparingly; numbers are used often.
 
